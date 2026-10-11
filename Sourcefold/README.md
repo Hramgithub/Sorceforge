@@ -71,3 +71,15 @@ On Windows, the equivalent wrapper is:
 Sourcefold is currently in Phase 0. Candidate evidence and probe results do not
 establish a production-ready pipeline, whole-book acceptance, or permission to
 process new source material.
+
+## Model handoff
+
+For a new model or maintainer, start with:
+
+- `docs/handoff/MODEL_HANDOFF_SUMMARY.md`;
+- `docs/handoff/MODEL_HANDOFF_SPEC.md`;
+- `docs/handoff/NEW_MODEL_PROMPT.md`.
+
+The handoff distinguishes the active global Phase 0/Gate 1 roadmap from exact
+bounded acceptance records and documents the current standalone runtime/test
+limitations.

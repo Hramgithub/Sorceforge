@@ -22,6 +22,16 @@ Standalone repository transition:
   `161aec0a474ad5160a6a44a063e662f8ea182bad`. This transition does not change
   any Phase 0 gate or acceptance state.
 
+Model handoff:
+
+- `docs/handoff/MODEL_HANDOFF_SUMMARY.md`, `MODEL_HANDOFF_SPEC.md`, and
+  `NEW_MODEL_PROMPT.md` now provide a bounded onboarding path for another model.
+- The handoff preserves both current facts: global Phase 0/Gate 1 roadmap nodes
+  remain active, while exact scoped page/fixture/Gate acceptance records exist.
+- Documentation review and publication are tracked by goal
+  `20261011-sourcefold-model-handoff`; the handoff does not authorize OCR,
+  translation, proofreading, production assembly, or a new book run.
+
 Current bounded continuation:
 
 - `C01TEISP-G1-VIRAL-001` has moved from implementation-prep planning into a

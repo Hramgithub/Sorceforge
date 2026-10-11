@@ -20,6 +20,10 @@ python -B -m pytest -p no:cacheprovider
 
 Read these files before changing the project:
 
+- `Sourcefold/docs/handoff/MODEL_HANDOFF_SUMMARY.md` — quick orientation for a
+  new model or maintainer;
+- `Sourcefold/docs/handoff/MODEL_HANDOFF_SPEC.md` — operational handoff and
+  safe continuation contract;
 - `Sourcefold/AGENTS.md` — project rules and current gate constraints;
 - `Sourcefold/README.md` — project structure and development entry points;
 - `Sourcefold/PROJECT_STATUS.md` — current Phase 0 state;

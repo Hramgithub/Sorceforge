@@ -1,0 +1,109 @@
+{
+  "smoke_id": "C01TESP-G1-VIRAL-001",
+  "authorization_id": "BA-G1-VIRAL-CORE-0-1-TEXT-EXTRACTION-SMOKE-P009-001",
+  "status": "candidate_ocr_smoke_completed_no_source_mutation",
+  "source_decision": "C01TETD-G1-VIRAL-001",
+  "page": "009",
+  "page_021_plus_included": false,
+  "ocr_candidate_manifest_id": "OCM-G1-VIRAL-001",
+  "ocr_candidate_id": "OCR-G1-VIRAL-TESSERACT-ENG-PSM6-001",
+  "ocr_engine": "Tesseract OCR",
+  "ocr_executable": "D:\\NRI\\.tools\\tesseract\\tesseract.exe",
+  "ocr_execution_performed": true,
+  "pdf_parsing_performed": false,
+  "pdf_text_layer_extraction_performed": false,
+  "render_execution_performed": false,
+  "source_or_raw_mutation_performed": false,
+  "accepted_text_mutation_performed": false,
+  "runtime_implementation_created": false,
+  "runtime_start_performed": false,
+  "translation_or_proofreading_performed": false,
+  "push_performed": false,
+  "input_policy": "read_only_existing_p009_text_evidence_crops",
+  "output_policy": "candidate_only_separate_directory",
+  "raw_results": {
+    "left_profile_text_evidence": {
+      "input_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/page_complete_review_p009_G1_VIRAL_001/review_assets/3b_P009-left-profile-text-column-text-evidence.png",
+      "input_sha256": "AB7AEB6B921E4B461B20EAF1DFA44F2AFBD3393056946745AE27442B1C79AA5C",
+      "txt_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/core_0_1_text_extraction_smoke_p009_G1_VIRAL_001/ocr_raw/left_profile_text_evidence.txt",
+      "txt_sha256": "25A213B5703B717DD2F9A0936AE1EE7102F02837D1D8977AE561AB7855716CB9",
+      "tsv_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/core_0_1_text_extraction_smoke_p009_G1_VIRAL_001/ocr_raw/left_profile_text_evidence.tsv",
+      "tsv_sha256": "615E1EB528F02D5D218985A3FAC2425E455A66452D79DFC8A2ABD52BAE9E6060"
+    },
+    "right_profile_text_evidence": {
+      "input_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/page_complete_review_p009_G1_VIRAL_001/review_assets/4b_P009-right-profile-text-column-text-evidence.png",
+      "input_sha256": "7186DA08828115C940850BA4E929D12A8E5C11901A734839CF092DC5AA0168E5",
+      "txt_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/core_0_1_text_extraction_smoke_p009_G1_VIRAL_001/ocr_raw/right_profile_text_evidence.txt",
+      "txt_sha256": "FE6B1D966700047B51A23B7C2DE839586708CA7BAAED16FBEE3360BC73C5F52B",
+      "tsv_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/core_0_1_text_extraction_smoke_p009_G1_VIRAL_001/ocr_raw/right_profile_text_evidence.tsv",
+      "tsv_sha256": "3137049756088BBA424569B31ADEF6B56B127CC48D20A9D6F974E89CA866AD2A"
+    }
+  },
+  "reference_text_map": {
+    "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/page_complete_review_p009_G1_VIRAL_001/review_assets/page_009_ocr_verified_text_map.md",
+    "sha256": "3D3A2F6A197AD553BCEA95D20B880A64BE58B4C085392F7B1A149344BE3A4A6B"
+  },
+  "metrics": {
+    "normalized_candidate_chars": 3006,
+    "reference_chars": 2934,
+    "sequence_similarity_ratio": 0.460269
+  },
+  "commands": [
+    {
+      "stdout": "",
+      "stderr": "",
+      "command": "D:\\NRI\\.tools\\tesseract\\tesseract.exe D:\\NRI\\Sourcefold\\fixtures\\candidate_inputs\\viral\\render_trials\\RT-G1-VIRAL-RENDER-001\\page_complete_review_p009_G1_VIRAL_001\\review_assets\\3b_P009-left-profile-text-column-text-evidence.png D:\\NRI\\Sourcefold\\fixtures\\candidate_inputs\\viral\\render_trials\\RT-G1-VIRAL-RENDER-001\\core_0_1_text_extraction_smoke_p009_G1_VIRAL_001\\ocr_raw\\left_profile_text_evidence -l eng --oem 1 --psm 6 txt tsv"
+    },
+    {
+      "stdout": "",
+      "stderr": "",
+      "command": "D:\\NRI\\.tools\\tesseract\\tesseract.exe D:\\NRI\\Sourcefold\\fixtures\\candidate_inputs\\viral\\render_trials\\RT-G1-VIRAL-RENDER-001\\page_complete_review_p009_G1_VIRAL_001\\review_assets\\4b_P009-right-profile-text-column-text-evidence.png D:\\NRI\\Sourcefold\\fixtures\\candidate_inputs\\viral\\render_trials\\RT-G1-VIRAL-RENDER-001\\core_0_1_text_extraction_smoke_p009_G1_VIRAL_001\\ocr_raw\\right_profile_text_evidence -l eng --oem 1 --psm 6 txt tsv"
+    }
+  ],
+  "verified_inputs": {
+    "C01TETD-G1-VIRAL-001.decision": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/c01tetd_G1_VIRAL_001/c01tetd.json",
+      "sha256": "30787FEA297DD4164CC1B4E83CB1AA1595442F52F08FFACFFCE530E1DF4CB2B8"
+    },
+    "C01TETD-G1-VIRAL-001.report": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/c01tetd_G1_VIRAL_001/c01tetd_report.json",
+      "sha256": "C0F083C25F93D8FC7CEA747C8704476A73DD12B5C73E8C815D1EC2623EAC2ABA"
+    },
+    "C01TETD-G1-VIRAL-001.summary": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/c01tetd_G1_VIRAL_001/c01tetd_summary.md",
+      "sha256": "C407BF77CE1E474FDF459100E54EFF76AB197BD08DD4FE0F744DFEA5315010D8"
+    },
+    "C01TETD-G1-VIRAL-001.manifest": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/c01tetd_G1_VIRAL_001/c01tetd_manifest.md",
+      "sha256": "B956ACFD4B6C23A3CDF05BB898949369018322E8CA4BEF5F2C5B8F80A77F678A"
+    },
+    "OCM-G1-VIRAL-001.ocr_candidate_manifest": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/ocr_candidate_manifest.md",
+      "sha256": "6FBDC9463A670968D335DFB8F841819CEB55CDC24B2CFC1C32EF9AA9BD323842"
+    },
+    "P009.reference_ocr_verified_text_map": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/page_complete_review_p009_G1_VIRAL_001/review_assets/page_009_ocr_verified_text_map.md",
+      "sha256": "3D3A2F6A197AD553BCEA95D20B880A64BE58B4C085392F7B1A149344BE3A4A6B"
+    },
+    "P009.reference_semantic_map": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/page_complete_review_p009_G1_VIRAL_001/review_assets/page_009_semantic_text_map.md",
+      "sha256": "F1E68F77BB75AF085A6D8880667F706AFF792A1DDEB9C0BDA51DD0013E27B6F2"
+    },
+    "P009.reference_semantic_json": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/page_complete_review_p009_G1_VIRAL_001/review_assets/page_009_semantic_text_map.json",
+      "sha256": "0F70D747A559FCE651339F2FD5192F3E4A04B2112FE4CA698BF65D7893A7AA4C"
+    },
+    "P009.full_page_image_read_only": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/page_complete_review_p009_G1_VIRAL_001/review_assets/page_009.png",
+      "sha256": "3EC853C61DED9F5009F3FD567A03D499408C25EE385169DFE0EC82A2C47FC456"
+    },
+    "P009.left_profile_text_evidence": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/page_complete_review_p009_G1_VIRAL_001/review_assets/3b_P009-left-profile-text-column-text-evidence.png",
+      "sha256": "AB7AEB6B921E4B461B20EAF1DFA44F2AFBD3393056946745AE27442B1C79AA5C"
+    },
+    "P009.right_profile_text_evidence": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/page_complete_review_p009_G1_VIRAL_001/review_assets/4b_P009-right-profile-text-column-text-evidence.png",
+      "sha256": "7186DA08828115C940850BA4E929D12A8E5C11901A734839CF092DC5AA0168E5"
+    }
+  }
+}

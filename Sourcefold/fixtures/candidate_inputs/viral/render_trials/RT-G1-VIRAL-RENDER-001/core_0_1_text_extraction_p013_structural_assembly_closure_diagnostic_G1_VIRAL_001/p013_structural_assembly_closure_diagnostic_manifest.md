@@ -1,0 +1,32 @@
+# P013 Structural Assembly Closure Diagnostic Manifest - C01TEP013SAC-G1-VIRAL-001
+
+| Output | SHA-256 |
+|---|---|
+| `assembly_traces/p013_sac_a0_ssp_best_baseline/page_013_assembly_trace.json` | `995BE63C348B210DFD17F78FCE25EFA7BFF5BAAA9A47561199490F7EEC46BE93` |
+| `assembly_traces/p013_sac_b_noise_after_ssp/page_013_assembly_trace.json` | `70693E356646E5B9F6ADC1BC0F8222B5A8674308325669B1FEA9B2D162BE2950` |
+| `assembly_traces/p013_sac_c_declared_seam_fracture_after_ssp/page_013_assembly_trace.json` | `448024EDAA128FCE0BD07365EF369BB061C01C3D5DDBE0852B762A1C4EA5F3CF` |
+| `assembly_traces/p013_sac_d_noise_then_declared_seam_fracture/page_013_assembly_trace.json` | `EC9A97A032A1562C25839AFCD46B15792A6498AAC3FB3D5B14A7B0FEC471C62D` |
+| `assembly_traces/p013_sac_e_paragraph_join_d/page_013_assembly_trace.json` | `635529A3A53AB7D52E547C6609A8B9AD61E1BD63ADB713AE8E01BD8AD95A9F14` |
+| `candidate_texts/p013_sac_a0_ssp_best_baseline/page_013_candidate.md` | `F02D342C7FFA21FC396169294EF01713D36BB4555D3DDB54094472BC0F3EC36D` |
+| `candidate_texts/p013_sac_b_noise_after_ssp/page_013_candidate.md` | `373C4A87D0D12F6C8FCDF18399056B85FE6867BCDE3742F43BB6303F483AE3E4` |
+| `candidate_texts/p013_sac_c_declared_seam_fracture_after_ssp/page_013_candidate.md` | `AAB6A64C444029A6C47F4F170340DF79D23E81D0D75708D02AB6EF7A739AB9AC` |
+| `candidate_texts/p013_sac_d_noise_then_declared_seam_fracture/page_013_candidate.md` | `E24D29CE34A61755E9B92214007EFEB8FEADC4B77D4C35468ACF64DDF9D41DE4` |
+| `candidate_texts/p013_sac_e_paragraph_join_d/page_013_candidate.md` | `3150AEA9688A0D4333A708348D1E2F4A44AC1732EE9C266A14323BC631B46B61` |
+| `normalized_candidate_texts/p013_sac_a0_ssp_best_baseline/page_013_candidate_normalized.txt` | `909B81B4614346DBD0F0C74A012CD6935A2EA3A46AEA1847E46E7401B792B8E0` |
+| `normalized_candidate_texts/p013_sac_b_noise_after_ssp/page_013_candidate_normalized.txt` | `AB039278BC38FEAE5CBDE2EB679ACC54D47956815D762064975A139C3DE1F31F` |
+| `normalized_candidate_texts/p013_sac_c_declared_seam_fracture_after_ssp/page_013_candidate_normalized.txt` | `E8CFFB305D4A4067D1B1FC91B9BED75C9215E128A8C99AEB1C58FBD6BCA808BA` |
+| `normalized_candidate_texts/p013_sac_d_noise_then_declared_seam_fracture/page_013_candidate_normalized.txt` | `69E406E7C3890A3862D06284B7E77D16FBBCA5B9E486E62ECC8AEA971B878E3D` |
+| `normalized_candidate_texts/p013_sac_e_paragraph_join_d/page_013_candidate_normalized.txt` | `69E406E7C3890A3862D06284B7E77D16FBBCA5B9E486E62ECC8AEA971B878E3D` |
+| `p013_structural_assembly_closure_diagnostic_report.json` | `E5436DFC3839735D7544A072B8764E57D757D45EF8AED331CD23907AEAEC29D4` |
+| `p013_structural_assembly_closure_diagnostic_summary.md` | `353CA98438634BA64347B9FE8F545D3BFE3A8E8FAC002677A2A9D0073A065898` |
+| `rankings/page_013_candidate_rankings.json` | `613455DDA093EC5F7E01E4F993481D344AB37643257BF5259AC546D5A557D47A` |
+| `retained_record_traces/p013_sac_a0_ssp_best_baseline/page_013_retained_records.json` | `6C9703A0255BA3B97A5C3872C6AF7513FFACBDAE153CB899A3E5AA1CF303A9A2` |
+| `retained_record_traces/p013_sac_b_noise_after_ssp/page_013_retained_records.json` | `04472C5AC5B3EB6B864481DB15B97A6A8F6FBEC6B815A5422B8644FC9BEC5280` |
+| `retained_record_traces/p013_sac_c_declared_seam_fracture_after_ssp/page_013_retained_records.json` | `8B841202443DF0E73BE71649390E264AF3B2BA69F3DA54D8C217D42F5D7CD28F` |
+| `retained_record_traces/p013_sac_d_noise_then_declared_seam_fracture/page_013_retained_records.json` | `4B0628DE7BC5EF395DAAB107F6B6448A230C2E08FA24C0B4005F37FE90389A19` |
+| `retained_record_traces/p013_sac_e_paragraph_join_d/page_013_retained_records.json` | `4B0628DE7BC5EF395DAAB107F6B6448A230C2E08FA24C0B4005F37FE90389A19` |
+| `suppression_ledgers/p013_sac_a0_ssp_best_baseline/page_013_suppression_ledger.json` | `37517E5F3DC66819F61F5A7BB8ACE1921282415F10551D2DEFA5C3EB0985B570` |
+| `suppression_ledgers/p013_sac_b_noise_after_ssp/page_013_suppression_ledger.json` | `CD7FFDB01DCF6CE8C70F1F90C2BD85C91E579257D943E4E5A5E22EFC38641A18` |
+| `suppression_ledgers/p013_sac_c_declared_seam_fracture_after_ssp/page_013_suppression_ledger.json` | `5316F877328CF8E9C6BF44F3EE012B4D8BC9891016464C59749369BA496F7B99` |
+| `suppression_ledgers/p013_sac_d_noise_then_declared_seam_fracture/page_013_suppression_ledger.json` | `4A54B31E63C66AE28939FAF9A9A63A8F131F19B2E1AD2E0BBA61B29DD96B5F03` |
+| `suppression_ledgers/p013_sac_e_paragraph_join_d/page_013_suppression_ledger.json` | `4A54B31E63C66AE28939FAF9A9A63A8F131F19B2E1AD2E0BBA61B29DD96B5F03` |

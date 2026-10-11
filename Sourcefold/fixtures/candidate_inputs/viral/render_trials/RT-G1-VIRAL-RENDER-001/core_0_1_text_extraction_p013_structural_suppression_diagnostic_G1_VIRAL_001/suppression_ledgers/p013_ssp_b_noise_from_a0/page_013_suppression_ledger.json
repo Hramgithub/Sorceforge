@@ -1,0 +1,41 @@
+[
+  {
+    "rule_id": "low_confidence_thin_noise_or_punctuation_fragment",
+    "parameters": {
+      "max_mean_confidence": 50.0,
+      "max_height_px": 14,
+      "neighbor_vertical_edge_gap_px": 36,
+      "punctuation_regex": "^[^\\w]*[.,;:!?'\\u2018\\u2019\\u201c\\u201d\\\"-]+[^\\w]*$",
+      "evaluation_mode": "simultaneous_against_variant_input_records"
+    },
+    "suppressed_records": [
+      {
+        "record_id": "P013-B001-TES:3.1.1",
+        "source_order": "01.009",
+        "tsv_line_key": "P013-B001-TES:3.1.1",
+        "text": "n a m1 a \u2122 RT at ia A rela",
+        "normalized_text": "n a m1 a rt at ia a rela",
+        "page_bbox_half_open": [
+          276,
+          659,
+          1151,
+          669
+        ],
+        "mean_confidence": 44.93795,
+        "reason": "noise_or_punctuation_fragment",
+        "proof": {
+          "mean_confidence": 44.93795,
+          "height_px": 10,
+          "punctuation_fragment": false,
+          "same_lane_neighbor_requirement": "at_least_one_neighbor_with_vertical_edge_gap_le_36_px",
+          "nearest_same_lane_neighbor": {
+            "record_id": "P013-B002-TES:1.1.2",
+            "vertical_edge_gap_px": 0,
+            "horizontal_edge_gap_px": 0
+          },
+          "decision_basis": "low_conf_thin_fragment_or_punctuation_fragment"
+        }
+      }
+    ]
+  }
+]

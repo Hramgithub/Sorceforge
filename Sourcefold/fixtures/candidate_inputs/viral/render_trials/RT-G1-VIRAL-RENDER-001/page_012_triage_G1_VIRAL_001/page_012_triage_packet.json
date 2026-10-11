@@ -1,0 +1,264 @@
+{
+  "package_id": "P012TR-G1-VIRAL-001",
+  "authorization_id": "BA-G1-VIRAL-PAGE-012-AGGRESSIVE-BATCH-001",
+  "lane_id": "P012BATCH-G1-VIRAL-001",
+  "status": "triage_crop_contract_machine_reviewed_human_review_skipped",
+  "page": "012",
+  "page_id": "PG-G1-VIRAL-P012",
+  "predecessors": [
+    {
+      "name": "post_p011_status_route_packet",
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/gate_1_status_packet_G1_VIRAL_006/gate_1_status_packet.json",
+      "sha256": "E79EF8C4941184724D2E654799DA7DAEAAD4E0B29E4D52C9379D0DA5BD533822"
+    },
+    {
+      "name": "page_012_image",
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/images/page_012.png",
+      "sha256": "D5040085668216E68E617A06B513DC09CE3797E4D3F6BC6AC7BF35B68BD08ED6"
+    }
+  ],
+  "review_gate": {
+    "human_review_state": "human_review_skipped_by_explicit_authorization",
+    "delegated_review_state": "review_delegated_to_Sol_Terra",
+    "lane_authority": "BA-G1-VIRAL-PAGE-012-AGGRESSIVE-BATCH-001",
+    "sol": {
+      "status": "OK",
+      "finding": "OK: page 012 is bounded to the existing page image and split into text-only review surfaces without OCR/render/PDF/raw mutation."
+    },
+    "terra": {
+      "status": "OK",
+      "finding": "OK: no page 013 asset is inspected; no page acceptance or broad Gate authority is created by triage."
+    },
+    "status": "passed",
+    "blockers": []
+  },
+  "review_blocks": [
+    {
+      "block_id": "P012-B001",
+      "role": "emily_continuation_left_upper_text",
+      "source_region_id": "PRM-G1-VIRAL-001-P012-R01",
+      "crop_box_px": [
+        170,
+        220,
+        1080,
+        600
+      ],
+      "crop_contract": {
+        "coverage": "full_text_region",
+        "context_allowed": false,
+        "expected_bounds": {
+          "min_x": 150,
+          "max_x": 190,
+          "min_y": 200,
+          "max_y": 240,
+          "min_width": 1050,
+          "min_height": 560
+        }
+      },
+      "asset": "review_assets/1_P012-emily-continuation-left-upper-text-evidence.png",
+      "reading_order": 1,
+      "content_kind": "text_like_region",
+      "text_evidence_crop_id": "P012-B001-TES",
+      "asset_sha256": "0034E3BD16FE0A150CB6E1854953AECD1E2A9C2E6ED5A377F2EF4C55845FD22A"
+    },
+    {
+      "block_id": "P012-B002",
+      "role": "appearance_super_fan_option_box",
+      "source_region_id": "PRM-G1-VIRAL-001-P012-R02",
+      "crop_box_px": [
+        170,
+        820,
+        1080,
+        475
+      ],
+      "crop_contract": {
+        "coverage": "full_text_box",
+        "context_allowed": false,
+        "expected_bounds": {
+          "min_x": 150,
+          "max_x": 190,
+          "min_y": 800,
+          "max_y": 850,
+          "min_width": 1050,
+          "min_height": 450
+        }
+      },
+      "asset": "review_assets/2_P012-appearance-super-fan-option-box-text-evidence.png",
+      "reading_order": 2,
+      "content_kind": "text_like_region",
+      "text_evidence_crop_id": "P012-B002-TES",
+      "asset_sha256": "67538139BCC8A85E518603C08692120DC74E4F95C0D3D039E8567F198805E1E1"
+    },
+    {
+      "block_id": "P012-B003",
+      "role": "another_ghost_hunter_option_body_left_column",
+      "source_region_id": "PRM-G1-VIRAL-001-P012-R03",
+      "crop_box_px": [
+        170,
+        1285,
+        1080,
+        1815
+      ],
+      "crop_contract": {
+        "coverage": "full_text_region_part",
+        "context_allowed": false,
+        "expected_bounds": {
+          "min_x": 150,
+          "max_x": 190,
+          "min_y": 1260,
+          "max_y": 1300,
+          "min_width": 1050,
+          "min_height": 1780
+        }
+      },
+      "asset": "review_assets/3_P012-another-ghost-hunter-option-left-column-text-evidence.png",
+      "reading_order": 3,
+      "content_kind": "text_like_region",
+      "text_evidence_crop_id": "P012-B003-TES",
+      "asset_sha256": "C0A2FB5819758BC2B5C49A4939A31C1F8E26EF9E38F42C1B6678E063412FE9D7"
+    },
+    {
+      "block_id": "P012-B004",
+      "role": "another_ghost_hunter_option_body_right_upper",
+      "source_region_id": "PRM-G1-VIRAL-001-P012-R04",
+      "crop_box_px": [
+        1285,
+        210,
+        1120,
+        260
+      ],
+      "crop_contract": {
+        "coverage": "full_text_region_part",
+        "context_allowed": false,
+        "expected_bounds": {
+          "min_x": 1260,
+          "max_x": 1310,
+          "min_y": 190,
+          "max_y": 230,
+          "min_width": 1080,
+          "min_height": 230
+        }
+      },
+      "asset": "review_assets/4_P012-another-ghost-hunter-option-right-upper-text-evidence.png",
+      "reading_order": 4,
+      "content_kind": "text_like_region",
+      "text_evidence_crop_id": "P012-B004-TES",
+      "asset_sha256": "107720A05A06984E0D7EC89BB05B0FD7B9473A3833ABB6F4718EF1DE4D9B825D"
+    },
+    {
+      "block_id": "P012-B005",
+      "role": "appearance_another_ghost_hunter_option_box",
+      "source_region_id": "PRM-G1-VIRAL-001-P012-R05",
+      "crop_box_px": [
+        1305,
+        450,
+        1100,
+        340
+      ],
+      "crop_contract": {
+        "coverage": "full_text_box",
+        "context_allowed": false,
+        "expected_bounds": {
+          "min_x": 1280,
+          "max_x": 1320,
+          "min_y": 430,
+          "max_y": 470,
+          "min_width": 1050,
+          "min_height": 300
+        }
+      },
+      "asset": "review_assets/5_P012-appearance-another-ghost-hunter-option-box-text-evidence.png",
+      "reading_order": 5,
+      "content_kind": "text_like_region",
+      "text_evidence_crop_id": "P012-B005-TES",
+      "asset_sha256": "B576F0FCC760A27EE6B301A373B7423F62D045D27D5603CF0C65BA36439F0D41"
+    },
+    {
+      "block_id": "P012-B006",
+      "role": "keepers_notes_box",
+      "source_region_id": "PRM-G1-VIRAL-001-P012-R06",
+      "crop_box_px": [
+        1305,
+        790,
+        1100,
+        400
+      ],
+      "crop_contract": {
+        "coverage": "full_text_box",
+        "context_allowed": false,
+        "neighbor_text_exclusion": [
+          "PRM-G1-VIRAL-001-P012-R03"
+        ],
+        "expected_bounds": {
+          "min_x": 1280,
+          "max_x": 1320,
+          "min_y": 770,
+          "max_y": 810,
+          "min_width": 1050,
+          "min_height": 380
+        },
+        "source_note": "Keeper's Notes box only; excludes left-column Another Ghost Hunter Option text."
+      },
+      "asset": "review_assets/6_P012-keepers-notes-box-text-evidence.png",
+      "reading_order": 6,
+      "content_kind": "text_like_region",
+      "text_evidence_crop_id": "P012-B006-TES",
+      "asset_sha256": "CA9E7EBD792CBFD8A5BABA8F93CAD1A9792D88DCFB05CDD5A28158B841DAD045"
+    },
+    {
+      "block_id": "P012-B007",
+      "role": "creating_new_investigators_section",
+      "source_region_id": "PRM-G1-VIRAL-001-P012-R07",
+      "crop_box_px": [
+        1300,
+        1260,
+        1120,
+        1900
+      ],
+      "crop_contract": {
+        "coverage": "full_text_region",
+        "context_allowed": false,
+        "expected_bounds": {
+          "min_x": 1270,
+          "max_x": 1320,
+          "min_y": 1240,
+          "max_y": 1280,
+          "min_width": 1080,
+          "min_height": 1850
+        }
+      },
+      "asset": "review_assets/7_P012-creating-new-investigators-section-text-evidence.png",
+      "continues_to_page": "013",
+      "reading_order": 7,
+      "content_kind": "text_like_region",
+      "text_evidence_crop_id": "P012-B007-TES",
+      "asset_sha256": "762E6064C88116E8529B2A68607764463627AE1DAED3F1CF23392FA8BCCE74A8"
+    }
+  ],
+  "logical_text_order": [
+    "P012-B001-TES",
+    "P012-B002-TES",
+    "P012-B003-TES",
+    "P012-B004-TES",
+    "P012-B005-TES",
+    "P012-B006-TES",
+    "P012-B007-TES"
+  ],
+  "visual_only_blocks": [],
+  "guardrails": {
+    "whole_gate_1_acceptance": false,
+    "fixture_admission": false,
+    "source_acceptance_mutation": false,
+    "ocr_execution": false,
+    "render_execution": false,
+    "pdf_parsing_or_text_layer_extraction": false,
+    "raw_mutation": false,
+    "translation": false,
+    "proofreading": false,
+    "renderer_profile_acceptance": false,
+    "implementation": false,
+    "push": false,
+    "page_013_processing": false,
+    "triage_created": true
+  }
+}

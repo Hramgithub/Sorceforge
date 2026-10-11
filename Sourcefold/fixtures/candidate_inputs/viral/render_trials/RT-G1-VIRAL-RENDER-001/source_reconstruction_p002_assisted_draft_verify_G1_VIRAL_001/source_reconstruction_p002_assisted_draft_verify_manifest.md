@@ -1,0 +1,30 @@
+# Page 002 Assisted Draft Human Verification Manifest - SRADV-G1-VIRAL-002
+
+Status: `assisted_draft_human_verified_not_source_accepted`
+
+Boundary: no source acceptance, QA, fixtures, Gate 1 advancement, OCR execution, PDF parsing/rendering, raw OCR mutation, translation, proofreading, implementation, or push.
+
+## Generator Hashes
+
+- Script `scripts/verify_source_reconstruction_p002_assisted_draft.py` SHA-256: `8C54503E16C223119B9829925ABFCD289C7334DEC2375909B9578E9802106C05`
+- Test `tests/test_source_reconstruction_p002_assisted_draft_verify.py` SHA-256: `0CA4EE3198E74C0DFA3E900C6E533EBD602AF738D1F7627B7CDE332645A2350E`
+
+## Input Hashes
+
+- SRAD report SHA-256: `296763B5942B937B66822E4988C30FF5B96FBFBFF08952987FA5E8D22CE07F05`
+- SRAD manifest SHA-256: `D6E50079093DEDA2F178D744E19DA29650CF3B2667B1F5418D4CB02F018E4280`
+- SRAD assisted draft Markdown SHA-256: `256568A3889A1BA9417662F8E897D818416A7FCBA664E0A896CB7F931F2C769B`
+
+## Records
+
+| Question | Source region | Crop SHA-256 | Verified text SHA-256 | Decision |
+|---:|---|---|---|---|
+| 1 | `PRM-G1-VIRAL-001-P002-R01` | `D281969D790D4BF7661DDF841924FA6A0B9F8965088580A0FA89B64DA9599E6D` | `DB8E9F76402DAA24D266F56275A3A5096E089B11EF332F74A3431BDCB30AE798` | `ok` |
+| 2 | `PRM-G1-VIRAL-001-P002-R02` | `D167F253964076DA67D7A6D625BB236875CA05E634710C10F1FD816C46B1BE4B` | `7CCFDB428367DD0E6680C57FE716769F5A651A9D80EA5C63A353E841E75A66A5` | `ok` |
+
+## Output Hashes
+
+| Output | SHA-256 |
+|---|---|
+| `assisted_draft_human_verification_summary.md` | `225DC38D81F9BD4133D05823ACDDBED538E5CBA790DEF1A33A4E4AFCCBF7E13D` |
+| `source_reconstruction_p002_assisted_draft_verify_report.json` | `BC248426E89709A2D028A68C69ACE24764A48DDEB61BC51DBD0BDA3413F84F52` |

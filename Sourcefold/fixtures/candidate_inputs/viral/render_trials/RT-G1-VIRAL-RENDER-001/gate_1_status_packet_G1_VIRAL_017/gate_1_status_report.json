@@ -1,0 +1,49 @@
+{
+  "status_packet_id": "G1SP-G1-VIRAL-017",
+  "authorization_id": "BA-G1-VIRAL-POST-OCR-HARDENING-STATUS-READINESS-001",
+  "status": "gate_1_status_post_ocr_hardening_ready_for_route_decision",
+  "generator_script": "scripts/build_gate_1_status_refresh_post_ocr_hardening.py",
+  "generator_script_sha256": "399AD6BCFE36026F0E45F1776AB12C971645F1F19D6744FBA84C1240FF0D94A9",
+  "test_contract": "tests/test_gate_1_status_refresh_post_ocr_hardening.py",
+  "test_contract_sha256": "C97E34395DB4D7F2AC47CAC29F454F61D3AA0A2158446F7F4E63E83A6CA658EE",
+  "creates_acceptance": false,
+  "creates_parking_decision": false,
+  "executes_ocr": false,
+  "remaining_blockers": [
+    "source_profile_acceptance_or_parking_decisions_not_recorded",
+    "unsupported_profiles_and_negative_fixtures_need_decision",
+    "page_021_plus_disposition_not_authorized",
+    "whole_gate_1_acceptance_not_recorded",
+    "fixture_admission_not_recorded"
+  ],
+  "recommended_next_candidates": [
+    {
+      "candidate": "gate_1_source_profile_review_or_parking_decision",
+      "why": "pages 001-020, matrix review, and OCR methodology hardening are ready as decision-prep evidence",
+      "requires_new_bounded_authorization": true
+    },
+    {
+      "candidate": "page_021_or_p021_p025_aggressive_lane",
+      "why": "only if Bogdan chooses to continue page-complete processing instead of Gate 1 decisions",
+      "requires_new_bounded_authorization": true
+    }
+  ],
+  "negative_capability_matrix": {
+    "source_profile_acceptance": false,
+    "creates_parking_decision": false,
+    "whole_gate_1_acceptance": false,
+    "fixture_admission": false,
+    "ocr_execution": false,
+    "ocr_remediation_execution": false,
+    "page_021_plus_processing": false,
+    "source_mutation": false,
+    "render_execution": false,
+    "pdf_parsing_or_text_layer_extraction": false,
+    "raw_mutation": false,
+    "translation": false,
+    "proofreading": false,
+    "renderer_profile_acceptance": false,
+    "implementation": false,
+    "push": false
+  }
+}

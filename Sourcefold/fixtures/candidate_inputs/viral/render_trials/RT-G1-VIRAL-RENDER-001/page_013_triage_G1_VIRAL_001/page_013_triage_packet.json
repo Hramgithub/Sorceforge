@@ -1,0 +1,201 @@
+{
+  "package_id": "P013TR-G1-VIRAL-001",
+  "authorization_id": "BA-G1-VIRAL-PAGE-013-AGGRESSIVE-BATCH-001",
+  "lane_id": "P013BATCH-G1-VIRAL-001",
+  "status": "triage_crop_contract_machine_reviewed_human_review_skipped",
+  "page": "013",
+  "page_id": "PG-G1-VIRAL-P013",
+  "predecessors": [
+    {
+      "name": "post_p012_status_route_packet",
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/gate_1_status_packet_G1_VIRAL_007/gate_1_status_packet.json",
+      "sha256": "37651668FD8FF162DC6205A7EB244589548C78789BBB0083E2E5FCD85C224E9B"
+    },
+    {
+      "name": "page_013_image",
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/images/page_013.png",
+      "sha256": "DC9BF562A4B3B7E43B38F29F484B64B13958330F449672D6A695B36E0D8F0935"
+    }
+  ],
+  "review_gate": {
+    "human_review_state": "human_review_skipped_by_explicit_authorization",
+    "delegated_review_state": "review_delegated_to_Sol_Terra",
+    "lane_authority": "BA-G1-VIRAL-PAGE-013-AGGRESSIVE-BATCH-001",
+    "sol": {
+      "status": "OK",
+      "finding": "OK: page 013 is bounded to the existing page image and uses explicit crop provenance contracts for all text evidence surfaces."
+    },
+    "terra": {
+      "status": "OK",
+      "finding": "OK: triage is hash-bound to G1SP-G1-VIRAL-007 and page_013.png; page 014+ is not processed."
+    },
+    "status": "passed",
+    "blockers": []
+  },
+  "review_blocks": [
+    {
+      "block_id": "P013-B001",
+      "role": "mythos_investigators_continuation_left_upper",
+      "source_region_id": "PRM-G1-VIRAL-001-P013-R01",
+      "crop_box_px": [
+        160,
+        205,
+        1100,
+        440
+      ],
+      "crop_contract": {
+        "coverage": "full_text_region",
+        "context_allowed": false,
+        "expected_bounds": {
+          "min_x": 140,
+          "max_x": 180,
+          "min_y": 185,
+          "max_y": 225,
+          "min_width": 1060,
+          "min_height": 400
+        }
+      },
+      "asset": "review_assets/1_P013-mythos-investigators-continuation-text-evidence.png",
+      "reading_order": 1,
+      "content_kind": "text_like_region",
+      "text_evidence_crop_id": "P013-B001-TES",
+      "asset_sha256": "ABAAAEB861D635FA34F05B304A495CC02EB2F76D91A63A1FA7290FC0117A8598"
+    },
+    {
+      "block_id": "P013-B002",
+      "role": "documentary_film_crew_option",
+      "source_region_id": "PRM-G1-VIRAL-001-P013-R02",
+      "crop_box_px": [
+        210,
+        625,
+        1060,
+        340
+      ],
+      "crop_contract": {
+        "coverage": "full_text_region",
+        "context_allowed": false,
+        "expected_bounds": {
+          "min_x": 190,
+          "max_x": 230,
+          "min_y": 600,
+          "max_y": 650,
+          "min_width": 1020,
+          "min_height": 315
+        }
+      },
+      "asset": "review_assets/2_P013-documentary-film-crew-text-evidence.png",
+      "reading_order": 2,
+      "content_kind": "text_like_region",
+      "text_evidence_crop_id": "P013-B002-TES",
+      "asset_sha256": "24A95E0B9A82E7468FAA939366B9F1D9D2D13ADF2A0B54C8EFB2DD5A377752C4"
+    },
+    {
+      "block_id": "P013-B003",
+      "role": "tourists_option_left_start",
+      "source_region_id": "PRM-G1-VIRAL-001-P013-R03",
+      "crop_box_px": [
+        210,
+        960,
+        1060,
+        140
+      ],
+      "crop_contract": {
+        "coverage": "full_text_region_part",
+        "context_allowed": false,
+        "expected_bounds": {
+          "min_x": 190,
+          "max_x": 230,
+          "min_y": 935,
+          "max_y": 980,
+          "min_width": 1020,
+          "min_height": 120
+        }
+      },
+      "asset": "review_assets/3_P013-tourists-left-start-text-evidence.png",
+      "reading_order": 3,
+      "content_kind": "text_like_region",
+      "text_evidence_crop_id": "P013-B003-TES",
+      "asset_sha256": "2E9534CBF59F9965E00544538AC3174D8AF3EA1E2485659A5E30A3F6381260E1"
+    },
+    {
+      "block_id": "P013-B004",
+      "role": "tourists_option_right_continuation",
+      "source_region_id": "PRM-G1-VIRAL-001-P013-R04",
+      "crop_box_px": [
+        1290,
+        205,
+        1120,
+        700
+      ],
+      "crop_contract": {
+        "coverage": "full_text_region_part",
+        "context_allowed": false,
+        "expected_bounds": {
+          "min_x": 1265,
+          "max_x": 1310,
+          "min_y": 185,
+          "max_y": 225,
+          "min_width": 1080,
+          "min_height": 660
+        }
+      },
+      "asset": "review_assets/4_P013-tourists-right-continuation-text-evidence.png",
+      "reading_order": 4,
+      "content_kind": "text_like_region",
+      "text_evidence_crop_id": "P013-B004-TES",
+      "asset_sha256": "4214B685AAAD24240A2558FB7EE5E51323B2C618932E63801DF24377409C7D93"
+    },
+    {
+      "block_id": "P013-B005",
+      "role": "pesky_teenagers_option",
+      "source_region_id": "PRM-G1-VIRAL-001-P013-R05",
+      "crop_box_px": [
+        1335,
+        905,
+        1060,
+        190
+      ],
+      "crop_contract": {
+        "coverage": "full_text_region",
+        "context_allowed": false,
+        "expected_bounds": {
+          "min_x": 1310,
+          "max_x": 1360,
+          "min_y": 880,
+          "max_y": 930,
+          "min_width": 1010,
+          "min_height": 160
+        }
+      },
+      "asset": "review_assets/5_P013-pesky-teenagers-text-evidence.png",
+      "reading_order": 5,
+      "content_kind": "text_like_region",
+      "text_evidence_crop_id": "P013-B005-TES",
+      "asset_sha256": "3C0D42B954177EFBB9C02A8D08BC0E392A6ACF41A6ED76565B2ABDEE80C546DE"
+    }
+  ],
+  "logical_text_order": [
+    "P013-B001-TES",
+    "P013-B002-TES",
+    "P013-B003-TES",
+    "P013-B004-TES",
+    "P013-B005-TES"
+  ],
+  "visual_only_blocks": [],
+  "guardrails": {
+    "whole_gate_1_acceptance": false,
+    "fixture_admission": false,
+    "source_acceptance_mutation": false,
+    "ocr_execution": false,
+    "render_execution": false,
+    "pdf_parsing_or_text_layer_extraction": false,
+    "raw_mutation": false,
+    "translation": false,
+    "proofreading": false,
+    "renderer_profile_acceptance": false,
+    "implementation": false,
+    "push": false,
+    "page_014_plus_processing": false,
+    "triage_created": true
+  }
+}

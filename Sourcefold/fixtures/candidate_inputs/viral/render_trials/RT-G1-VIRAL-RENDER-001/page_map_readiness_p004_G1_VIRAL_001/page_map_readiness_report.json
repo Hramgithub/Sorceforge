@@ -1,0 +1,272 @@
+{
+  "package_id": "PMRP-G1-VIRAL-P004-001",
+  "authorization_id": "BA-G1-VIRAL-PAGE-MAP-READINESS-P004-001",
+  "pipeline_id": "page_map_readiness_pipeline_v0",
+  "profile_id": "page_map_profile_G1_VIRAL_P004_v0",
+  "status": "ready_for_page_complete_review_packet",
+  "scope": "page_map_readiness_only_no_page_acceptance",
+  "generator": {
+    "script": "scripts/build_page_map_readiness.py",
+    "script_sha256": "024A051ADD6D01DDCF7FDB8AA88223FB0BBBFE570EB580744B98BBD45DFBF53F",
+    "test": "tests/test_page_map_readiness.py",
+    "test_sha256": "0E9314D6616A2607C68EF2B5E371B203D33CE1ED3031491D87F5FFD845B36A35"
+  },
+  "page": "004",
+  "page_id": "PG-G1-VIRAL-P004",
+  "image_id": "IMG-G1-VIRAL-RENDER-001-P004",
+  "input_packages": [
+    "PRM-G1-VIRAL-001",
+    "P004A-G1-VIRAL-004",
+    "P004COD-G1-VIRAL-001"
+  ],
+  "profile": {
+    "page_label": "Page 004",
+    "expected_block_count": 2,
+    "declared_none": [
+      "art",
+      "table",
+      "unknown",
+      "missing"
+    ],
+    "context_only_regions": [
+      {
+        "source_region_id": "PRM-G1-VIRAL-001-P004-R01",
+        "status": "context_only_not_peer_crop_record",
+        "reason": "Full tilted inset contains the accepted title/body regions and would overlap peer crops."
+      }
+    ],
+    "page_specific": true,
+    "reusable_pipeline": true
+  },
+  "block_inventory": [
+    {
+      "block_id": "P004-B001",
+      "block_type": "text",
+      "role": "warning_title",
+      "source_region_id": "PRM-G1-VIRAL-001-P004-R02",
+      "source_review_id": "SRCR-G1-VIRAL-004-R01",
+      "source_acceptance_record_id": "SRSA-G1-VIRAL-004-R01",
+      "reading_order": 1,
+      "required": true,
+      "status": "ready_for_page_complete_review",
+      "anchor": {
+        "page_image": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/images/page_004.png",
+        "page_image_sha256": "45A61639C922FD6CCD085BA259BA114DD92FBCB96E86A17D216F5387DCCA9B88",
+        "source_region_id": "PRM-G1-VIRAL-001-P004-R02",
+        "corrected_crop_reference": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/source_reconstruction_next_slice_G1_VIRAL_004/region_refs/1_SRCR-G1-VIRAL-004-R01__PRM-G1-VIRAL-001-P004-R02.png",
+        "corrected_crop_reference_sha256": "ADD3C344100356249BF38C85A7C89D2A2DB9FF23B48141509A47F86C6A32C219",
+        "box_px": [
+          720,
+          330,
+          1100,
+          270
+        ]
+      },
+      "text_fidelity": {
+        "draft_text_sha256": "86F56FE8221F029DB2C9755CC998669A7D873C32BFA83BC9431BAFE0BB814400",
+        "verified_text_sha256": "86F56FE8221F029DB2C9755CC998669A7D873C32BFA83BC9431BAFE0BB814400",
+        "draft_metrics": {
+          "character_count": 7,
+          "normalized_character_count": 7,
+          "line_count": 1,
+          "non_empty_line_count": 1
+        },
+        "verified_metrics": {
+          "character_count": 7,
+          "normalized_character_count": 7,
+          "line_count": 1,
+          "non_empty_line_count": 1
+        },
+        "draft_matches_verified": true,
+        "raw_ocr_available": false,
+        "raw_ocr_comparison": "not_available_for_this_authorization",
+        "protected_tokens": [
+          {
+            "token": "WARNING",
+            "present": true
+          }
+        ],
+        "missing_protected_tokens": [],
+        "discrepancy": [],
+        "discrepancy_disposition": "none"
+      },
+      "structure_semantics": {
+        "structure_record_id": "SRSA-G1-VIRAL-004-R01",
+        "semantic_roles": [
+          "warning_title"
+        ],
+        "missing_semantic_expectations": [],
+        "spans": [
+          {
+            "semantic_role": "warning_title",
+            "heading_level": "h1_candidate",
+            "bold": "yes",
+            "italic": false,
+            "underline": false,
+            "font_scale": "large",
+            "confidence": "medium"
+          }
+        ]
+      },
+      "overlay_recovery": {
+        "overlay_state": "no_overlap_or_duplicate_detected_in_current_profile",
+        "parent_child_relation": "none",
+        "recovery_role": "warning_title",
+        "reading_order_note": "declared by page profile"
+      }
+    },
+    {
+      "block_id": "P004-B002",
+      "block_type": "text",
+      "role": "safety_warning_body",
+      "source_region_id": "PRM-G1-VIRAL-001-P004-R03",
+      "source_review_id": "SRCR-G1-VIRAL-004-R02",
+      "source_acceptance_record_id": "SRSA-G1-VIRAL-004-R02",
+      "reading_order": 2,
+      "required": true,
+      "status": "ready_for_page_complete_review",
+      "anchor": {
+        "page_image": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/images/page_004.png",
+        "page_image_sha256": "45A61639C922FD6CCD085BA259BA114DD92FBCB96E86A17D216F5387DCCA9B88",
+        "source_region_id": "PRM-G1-VIRAL-001-P004-R03",
+        "corrected_crop_reference": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/source_reconstruction_next_slice_G1_VIRAL_004/region_refs/2_SRCR-G1-VIRAL-004-R02__PRM-G1-VIRAL-001-P004-R03.png",
+        "corrected_crop_reference_sha256": "EFB82E2F8ECE14585CFD83F71C301B7024C437680703B18765A259A7E3B234C8",
+        "box_px": [
+          330,
+          630,
+          1950,
+          2520
+        ]
+      },
+      "text_fidelity": {
+        "draft_text_sha256": "430246F1327C4554B2D16C8D5BFE11704EE515B4B5C3DB298A7B3492716E14A2",
+        "verified_text_sha256": "430246F1327C4554B2D16C8D5BFE11704EE515B4B5C3DB298A7B3492716E14A2",
+        "draft_metrics": {
+          "character_count": 1917,
+          "normalized_character_count": 1912,
+          "line_count": 34,
+          "non_empty_line_count": 29
+        },
+        "verified_metrics": {
+          "character_count": 1917,
+          "normalized_character_count": 1912,
+          "line_count": 34,
+          "non_empty_line_count": 29
+        },
+        "draft_matches_verified": true,
+        "raw_ocr_available": false,
+        "raw_ocr_comparison": "not_available_for_this_authorization",
+        "protected_tokens": [
+          {
+            "token": "mature audiences",
+            "present": true
+          },
+          {
+            "token": "real life trauma",
+            "present": true
+          },
+          {
+            "token": "secret vote",
+            "present": true
+          },
+          {
+            "token": "safe word",
+            "present": true
+          },
+          {
+            "token": "fading to black",
+            "present": true
+          },
+          {
+            "token": "Sanity loss",
+            "present": true
+          },
+          {
+            "token": "roleplaying games",
+            "present": true
+          }
+        ],
+        "missing_protected_tokens": [],
+        "discrepancy": [],
+        "discrepancy_disposition": "none"
+      },
+      "structure_semantics": {
+        "structure_record_id": "SRSA-G1-VIRAL-004-R02",
+        "semantic_roles": [
+          "safety_warning_body"
+        ],
+        "missing_semantic_expectations": [],
+        "spans": [
+          {
+            "semantic_role": "safety_warning_body",
+            "heading_level": "none",
+            "bold": false,
+            "italic": false,
+            "underline": false,
+            "font_scale": "normal",
+            "confidence": "medium"
+          }
+        ]
+      },
+      "overlay_recovery": {
+        "overlay_state": "no_overlap_or_duplicate_detected_in_current_profile",
+        "parent_child_relation": "none",
+        "recovery_role": "safety_warning_body",
+        "reading_order_note": "declared by page profile"
+      }
+    }
+  ],
+  "coverage_summary": {
+    "inventory_coverage": {
+      "count": 2,
+      "expected": 2,
+      "percent": 100.0,
+      "advisory_only": true
+    },
+    "source_ready_in_scope_text_blocks": {
+      "count": 2,
+      "expected": 2,
+      "percent": 100.0,
+      "advisory_only": true
+    },
+    "anchor_coverage": {
+      "count": 2,
+      "expected": 2,
+      "percent": 100.0,
+      "advisory_only": true
+    },
+    "reading_order_coverage": {
+      "count": 2,
+      "expected": 2,
+      "percent": 100.0,
+      "advisory_only": true
+    },
+    "declared_none_categories": [
+      "art",
+      "table",
+      "unknown",
+      "missing"
+    ],
+    "coverage_accepts_page": false
+  },
+  "readiness_decision": {
+    "readiness": "ready_for_later_page_complete_review_packet",
+    "blockers": [],
+    "open_questions": [],
+    "page_complete_acceptance_created": false,
+    "whole_gate_1_acceptance_created": false
+  },
+  "guardrails": {
+    "ocr_executed": false,
+    "pdf_opened_or_parsed": false,
+    "pdf_text_layer_used": false,
+    "render_executed": false,
+    "raw_artifacts_modified": false,
+    "fixture_admission": false,
+    "translation_authorized": false,
+    "proofreading_authorized": false,
+    "renderer_profile_acceptance": false,
+    "implementation_authorized": false,
+    "push_authorized": false
+  }
+}

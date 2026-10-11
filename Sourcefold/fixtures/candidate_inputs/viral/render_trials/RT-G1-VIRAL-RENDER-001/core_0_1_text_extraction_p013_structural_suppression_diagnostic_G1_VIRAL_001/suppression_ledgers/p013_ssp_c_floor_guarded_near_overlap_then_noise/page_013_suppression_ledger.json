@@ -1,0 +1,169 @@
+[
+  {
+    "rule_id": "floor_guarded_combined_probe",
+    "candidate_output_policy": "preserve_sealed_elo_a0_retained_set",
+    "probe_retained_record_ids": [
+      "P013-B001-TES:1.1.1",
+      "P013-B001-TES:1.1.2",
+      "P013-B001-TES:1.1.3",
+      "P013-B001-TES:1.1.4",
+      "P013-B001-TES:1.1.5",
+      "P013-B001-TES:1.1.6",
+      "P013-B001-TES:1.1.7",
+      "P013-B001-TES:2.1.1",
+      "P013-B002-TES:1.1.2",
+      "P013-B002-TES:3.1.1",
+      "P013-B002-TES:3.1.2",
+      "P013-B002-TES:3.1.3",
+      "P013-B002-TES:3.1.4",
+      "P013-B002-TES:3.1.5",
+      "P013-B003-TES:1.1.2",
+      "P013-B003-TES:1.1.3",
+      "P013-B004-TES:1.1.1",
+      "P013-B004-TES:1.1.2",
+      "P013-B004-TES:1.1.3",
+      "P013-B004-TES:1.1.4",
+      "P013-B004-TES:1.1.5",
+      "P013-B004-TES:1.1.6",
+      "P013-B004-TES:1.1.7",
+      "P013-B004-TES:1.1.8",
+      "P013-B004-TES:1.1.9",
+      "P013-B004-TES:1.1.10",
+      "P013-B004-TES:1.1.11",
+      "P013-B004-TES:1.1.12",
+      "P013-B004-TES:1.1.13",
+      "P013-B005-TES:1.1.1",
+      "P013-B005-TES:1.1.2",
+      "P013-B005-TES:1.1.3",
+      "P013-B005-TES:2.1.1"
+    ],
+    "probe_suppressed_record_ids": [
+      "P013-B001-TES:3.1.1",
+      "P013-B003-TES:1.1.1"
+    ],
+    "floor_guard": {
+      "sequence_similarity_ratio": 0.433325,
+      "token_recall": 0.993939,
+      "reason": "combined suppression cannot replace A0 as candidate output in prep unless a separately reviewed selector rule defines non-regression behavior"
+    },
+    "probe_ledgers": [
+      {
+        "rule_id": "near_overlap_component_highest_confidence",
+        "parameters": {
+          "same_lane_required": true,
+          "min_area_overlap_ratio": 0.72,
+          "max_center_y_gap_px": 8,
+          "min_token_dice": 0.84,
+          "confidence_tie_margin": 1.0,
+          "tie_behavior": "preserve_all_records_in_component"
+        },
+        "edges": [
+          {
+            "left_record_id": "P013-B002-TES:3.1.5",
+            "right_record_id": "P013-B003-TES:1.1.1",
+            "same_lane": true,
+            "center_y_gap_px": 3.0,
+            "min_area_overlap_ratio": 1.0,
+            "token_dice": 0.916667
+          },
+          {
+            "left_record_id": "P013-B004-TES:1.1.13",
+            "right_record_id": "P013-B005-TES:1.1.1",
+            "same_lane": true,
+            "center_y_gap_px": 2.5,
+            "min_area_overlap_ratio": 1.0,
+            "token_dice": 0.909091
+          }
+        ],
+        "components": [
+          {
+            "component_record_ids": [
+              "P013-B002-TES:3.1.5",
+              "P013-B003-TES:1.1.1"
+            ],
+            "decision": "retained_highest_mean_confidence",
+            "retained_record_ids": [
+              "P013-B002-TES:3.1.5"
+            ],
+            "suppressed_record_ids": [
+              "P013-B003-TES:1.1.1"
+            ],
+            "confidence_delta": 2.072482,
+            "tie_margin": 1.0
+          },
+          {
+            "component_record_ids": [
+              "P013-B004-TES:1.1.13",
+              "P013-B005-TES:1.1.1"
+            ],
+            "decision": "preserved_ambiguous_confidence_tie",
+            "retained_record_ids": [
+              "P013-B004-TES:1.1.13",
+              "P013-B005-TES:1.1.1"
+            ],
+            "suppressed_record_ids": [],
+            "confidence_delta": 0.489962,
+            "tie_margin": 1.0
+          }
+        ],
+        "suppressed_records": [
+          {
+            "record_id": "P013-B003-TES:1.1.1",
+            "source_order": "03.001",
+            "tsv_line_key": "P013-B003-TES:1.1.1",
+            "text": "realize that it's someone who knows tar too much about them.",
+            "normalized_text": "realize that it s someone who knows tar too much about them",
+            "page_bbox_half_open": [
+              226,
+              936,
+              1200,
+              958
+            ],
+            "mean_confidence": 93.358057,
+            "reason": "near_overlap_lower_confidence"
+          }
+        ]
+      },
+      {
+        "rule_id": "low_confidence_thin_noise_or_punctuation_fragment",
+        "parameters": {
+          "max_mean_confidence": 50.0,
+          "max_height_px": 14,
+          "neighbor_vertical_edge_gap_px": 36,
+          "punctuation_regex": "^[^\\w]*[.,;:!?'\\u2018\\u2019\\u201c\\u201d\\\"-]+[^\\w]*$",
+          "evaluation_mode": "simultaneous_against_variant_input_records"
+        },
+        "suppressed_records": [
+          {
+            "record_id": "P013-B001-TES:3.1.1",
+            "source_order": "01.009",
+            "tsv_line_key": "P013-B001-TES:3.1.1",
+            "text": "n a m1 a \u2122 RT at ia A rela",
+            "normalized_text": "n a m1 a rt at ia a rela",
+            "page_bbox_half_open": [
+              276,
+              659,
+              1151,
+              669
+            ],
+            "mean_confidence": 44.93795,
+            "reason": "noise_or_punctuation_fragment",
+            "proof": {
+              "mean_confidence": 44.93795,
+              "height_px": 10,
+              "punctuation_fragment": false,
+              "same_lane_neighbor_requirement": "at_least_one_neighbor_with_vertical_edge_gap_le_36_px",
+              "nearest_same_lane_neighbor": {
+                "record_id": "P013-B002-TES:1.1.2",
+                "vertical_edge_gap_px": 0,
+                "horizontal_edge_gap_px": 0
+              },
+              "decision_basis": "low_conf_thin_fragment_or_punctuation_fragment"
+            }
+          }
+        ],
+        "evaluation_mode": "sequential_after_near_overlap_confidence"
+      }
+    ]
+  }
+]

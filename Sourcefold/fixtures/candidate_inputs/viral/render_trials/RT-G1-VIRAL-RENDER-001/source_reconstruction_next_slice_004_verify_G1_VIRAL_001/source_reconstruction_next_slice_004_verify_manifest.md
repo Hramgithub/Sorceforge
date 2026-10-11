@@ -1,0 +1,30 @@
+# Page 004 Review Packet Human Verification Manifest - SRCRV-G1-VIRAL-004
+
+Status: `page_004_review_packet_human_verified_not_source_accepted`
+
+Boundary: no source acceptance, QA acceptance, fixtures, Gate 1 advancement, OCR execution, PDF parsing/rendering, raw OCR mutation, translation, proofreading, implementation, or push.
+
+## Generator Hashes
+
+- Script `scripts/verify_source_reconstruction_next_slice_004.py` SHA-256: `4CF92D208279C47FE43CC0AF5E603E9D6FDECCBF5C01CCD265A1053F55AA4D2A`
+- Test `tests/test_source_reconstruction_next_slice_004_verify.py` SHA-256: `9061B611BF815646B1244129BFFC85B5D7A08FC1C29A88F57B7200BE558BF05A`
+
+## Input Hashes
+
+- SRCR report SHA-256: `C3441CEA1C3F68200BD7134882A00C303D3B549EA94FE87FE4E17C79A6A0475A`
+- SRCR manifest SHA-256: `30120887FEECD7277D12B8BBC3892546DB71A908C27D06BC18256E22B7045EF4`
+- SRCR human review packet SHA-256: `1E084D1BEE01A02BC53E8E7D482F0ED216282DC5E9291BCA78382E730F30F446`
+
+## Records
+
+| Question | Source region | Crop SHA-256 | Verified draft text SHA-256 | Decision |
+|---:|---|---|---|---|
+| 1 | `PRM-G1-VIRAL-001-P004-R02` | `ADD3C344100356249BF38C85A7C89D2A2DB9FF23B48141509A47F86C6A32C219` | `86F56FE8221F029DB2C9755CC998669A7D873C32BFA83BC9431BAFE0BB814400` | `ok` |
+| 2 | `PRM-G1-VIRAL-001-P004-R03` | `EFB82E2F8ECE14585CFD83F71C301B7024C437680703B18765A259A7E3B234C8` | `430246F1327C4554B2D16C8D5BFE11704EE515B4B5C3DB298A7B3492716E14A2` | `ok` |
+
+## Output Hashes
+
+| Output | SHA-256 |
+|---|---|
+| `page_004_human_verification_summary.md` | `F342D7DA0CBB7245812B8B3291F2C5585D880DA67D6C24DCAFEC4FF8B86D9011` |
+| `source_reconstruction_next_slice_004_verify_report.json` | `95041F808A1C2F44A417245BF3E25318C9BDE36183CCE7C4E372DF9363812FBA` |

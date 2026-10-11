@@ -1,0 +1,140 @@
+{
+  "package_id": "P015TR-G1-VIRAL-001",
+  "authorization_id": "BA-G1-VIRAL-PAGE-015-AGGRESSIVE-BATCH-001",
+  "lane_id": "P015BATCH-G1-VIRAL-001",
+  "status": "triage_crop_contract_machine_reviewed_human_review_skipped",
+  "page": "015",
+  "page_id": "PG-G1-VIRAL-P015",
+  "predecessors": [
+    {
+      "name": "post_p014_status_route_packet",
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/gate_1_status_packet_G1_VIRAL_009/gate_1_status_packet.json",
+      "sha256": "E0F15FCA01D32C95D41EBCA87D87EDCEEEE59A2C503FF0965614169BF0159B54"
+    },
+    {
+      "name": "p014_final_batch_review",
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/page_014_aggressive_batch_final_review_G1_VIRAL_001/page_014_aggressive_batch_final_review_report.json",
+      "sha256": "FF8C193BB61A5D6A12F1E60EC7C853EB164CD1EC10A92A058A591200B430A76B"
+    },
+    {
+      "name": "page_015_image",
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/images/page_015.png",
+      "sha256": "023836CD8DF8B77073F977E22F00CA87391F96855765D77B5C2826B0F00EDBBA"
+    }
+  ],
+  "review_gate": {
+    "human_review_state": "human_review_skipped_by_explicit_authorization",
+    "delegated_review_state": "review_delegated_to_Sol_Terra",
+    "lane_authority": "BA-G1-VIRAL-PAGE-015-AGGRESSIVE-BATCH-001",
+    "sol": {
+      "status": "OK",
+      "finding": "OK: page 015 is bounded to the exact page image with two text evidence crops and one visual-only photo anchor."
+    },
+    "terra": {
+      "status": "OK",
+      "finding": "OK: preflight materializes page 015 authority and page 016+ remains blocked."
+    },
+    "status": "passed",
+    "blockers": []
+  },
+  "review_blocks": [
+    {
+      "block_id": "P015-B001",
+      "role": "timeline_text_panel",
+      "source_region_id": "PRM-G1-VIRAL-001-P015-R01",
+      "crop_box_px": [
+        220,
+        220,
+        1040,
+        2910
+      ],
+      "crop_contract": {
+        "coverage": "full_text_region",
+        "context_allowed": false,
+        "expected_bounds": {
+          "min_x": 200,
+          "max_x": 240,
+          "min_y": 200,
+          "max_y": 240,
+          "min_width": 1000,
+          "min_height": 2850
+        }
+      },
+      "asset": "review_assets/1_P015-timeline-text-evidence.png",
+      "reading_order": 1,
+      "content_kind": "text_like_region",
+      "text_evidence_crop_id": "P015-B001-TES",
+      "asset_sha256": "8EF13F08B1544E4B2B900991E4A7ECB9DB046007CAB1202C428A637293C1B8D5"
+    },
+    {
+      "block_id": "P015-B002",
+      "role": "history_text_visible_continuation",
+      "source_region_id": "PRM-G1-VIRAL-001-P015-R03",
+      "crop_box_px": [
+        1285,
+        1650,
+        1120,
+        1400
+      ],
+      "crop_contract": {
+        "coverage": "full_text_region_part",
+        "context_allowed": false,
+        "expected_bounds": {
+          "min_x": 1260,
+          "max_x": 1310,
+          "min_y": 1620,
+          "max_y": 1680,
+          "min_width": 1080,
+          "min_height": 1360
+        }
+      },
+      "continues_to_next_page": true,
+      "asset": "review_assets/2_P015-history-text-evidence.png",
+      "reading_order": 2,
+      "content_kind": "text_like_region",
+      "text_evidence_crop_id": "P015-B002-TES",
+      "asset_sha256": "9AF0CBB311DFDE4F518E3C63B9901BD919B1930561FBCC802B9CD43A9093DBE4"
+    }
+  ],
+  "logical_text_order": [
+    "P015-B001-TES",
+    "P015-B002-TES"
+  ],
+  "visual_only_blocks": [
+    {
+      "block_id": "P015-V001",
+      "role": "upper_right_stone_structure_photo",
+      "source_region_id": "PRM-G1-VIRAL-001-P015-R02",
+      "crop_box_px": [
+        1310,
+        220,
+        1050,
+        1430
+      ],
+      "asset": "review_assets/3_P015-stone-structure-photo-visual-anchor.png",
+      "visual_only": true,
+      "text_extraction": "excluded_visual_anchor"
+    }
+  ],
+  "continuation": {
+    "history_continues_to_page": "016",
+    "page_016_processed": false
+  },
+  "guardrails": {
+    "whole_gate_1_acceptance": false,
+    "fixture_admission": false,
+    "source_acceptance_mutation": false,
+    "ocr_execution": false,
+    "render_execution": false,
+    "pdf_parsing_or_text_layer_extraction": false,
+    "raw_mutation": false,
+    "translation": false,
+    "proofreading": false,
+    "renderer_profile_acceptance": false,
+    "implementation": false,
+    "push": false,
+    "page_016_plus_processing": false,
+    "final_human_batch_review_acceptance": false,
+    "triage_created": true
+  }
+}

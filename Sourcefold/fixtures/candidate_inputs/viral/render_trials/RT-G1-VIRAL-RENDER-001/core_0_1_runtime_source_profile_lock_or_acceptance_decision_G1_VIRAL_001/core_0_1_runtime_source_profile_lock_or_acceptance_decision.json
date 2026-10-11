@@ -1,0 +1,181 @@
+{
+  "decision_id": "C01RSPLAD-G1-VIRAL-001",
+  "authorization_id": "BA-G1-VIRAL-CORE-0-1-RUNTIME-SOURCE-PROFILE-LOCK-OR-ACCEPTANCE-DECISION-001",
+  "status": "runtime_source_profile_lock_or_acceptance_decision_recorded_no_runtime_profile_lock_or_acceptance",
+  "purpose": "bounded_runtime_source_profile_lock_or_acceptance_decision_for_c01wp_01_after_non_executing_runtime_authorization",
+  "human_decision": "c01rsad packet ok; proceed to prepare Core 0.1 runtime source-profile lock-or-acceptance decision for C01WP-01 from C01RSAD; no runtime implementation, no runtime start/execution, no OCR/render/PDF/raw mutation, no translation/proofreading, no page 021+, no push, commit",
+  "human_review_consumed": "c01rsad_packet_ok",
+  "source_first_slice_runtime_authorization_decision": "C01RSAD-G1-VIRAL-001",
+  "source_first_slice_runtime_authorization_prep": "C01RSAP-G1-VIRAL-001",
+  "source_runtime_source_profile_lock_or_parking_decision": "C01RSPLP-G1-VIRAL-001",
+  "source_acceptance_matrix_trace_review": "C01AMTR-G1-VIRAL-001",
+  "source_architecture_review_packet": "C01FSARP-G1-VIRAL-001",
+  "source_profile_lock_or_parking_receipt": "C01SPLPR-G1-VIRAL-001",
+  "source_first_slice_design_prep_packet": "C01FSDP-G1-VIRAL-001",
+  "source_implementation_authorization_receipt": "C01IAR-G1-VIRAL-001",
+  "source_whole_gate_1_acceptance_decision": "G1WGADR-G1-VIRAL-001",
+  "accepted_gate_1_scope": {
+    "page_complete_accepted_pages": [
+      "001",
+      "002",
+      "003",
+      "004",
+      "005",
+      "006",
+      "007",
+      "008",
+      "009",
+      "010",
+      "011",
+      "012",
+      "013",
+      "014",
+      "015",
+      "016",
+      "017",
+      "018",
+      "019",
+      "020"
+    ],
+    "fixture_admission_decision": "G1FADAR-G1-VIRAL-001",
+    "positive_fixture_groups": [
+      {
+        "group_id": "positive_page_complete_seed_pages_001_020",
+        "candidate_pages": [
+          "001",
+          "002",
+          "003",
+          "004",
+          "005",
+          "006",
+          "007",
+          "008",
+          "009",
+          "010",
+          "011",
+          "012",
+          "013",
+          "014",
+          "015",
+          "016",
+          "017",
+          "018",
+          "019",
+          "020"
+        ],
+        "status": "admitted_by_fixture_admission_decision",
+        "meaning": "Pages 001-020 are admitted as the positive fixture seed group by this decision."
+      }
+    ],
+    "negative_fixture_groups": [
+      {
+        "group_id": "negative_unsupported_profile_claim",
+        "expected_failure_class": "unsupported_profile_claim",
+        "status": "admitted_by_fixture_admission_decision"
+      },
+      {
+        "group_id": "negative_missing_or_unresolved_policy",
+        "expected_failure_class": "missing_unresolved_negative_fixture_policy",
+        "status": "admitted_by_fixture_admission_decision"
+      },
+      {
+        "group_id": "negative_stale_lineage_or_invalidation_trigger",
+        "expected_failure_class": "stale_lineage_or_invalidation_trigger",
+        "status": "admitted_by_fixture_admission_decision"
+      },
+      {
+        "group_id": "negative_page_021_plus_boundary_violation",
+        "expected_failure_class": "page_021_plus_boundary_violation",
+        "status": "admitted_by_fixture_admission_decision"
+      }
+    ],
+    "page_021_plus_included": false,
+    "source_profile_acceptance_beyond_g1wgadr": false
+  },
+  "first_slice_id": "C01WP-01-phase-1-scaffold-contracts",
+  "canonical_packet_name": "core_0_1_runtime_source_profile_lock_or_acceptance_decision",
+  "runtime_source_profile_lock_or_acceptance_decision_recorded": true,
+  "runtime_source_profile_decision_outcome": {
+    "decision": "no_runtime_source_profile_lock_or_acceptance",
+    "reason": "no_concrete_runtime_source_profile_evidence_admitted_for_lock_or_acceptance",
+    "runtime_source_profile_lock_granted": false,
+    "runtime_source_profile_acceptance_granted": false,
+    "runtime_source_profile_remains_parked": true,
+    "blocks_runtime_implementation": true,
+    "requires_future_profile_evidence_or_authorization": true
+  },
+  "runtime_source_profile_lock_granted": false,
+  "runtime_source_profile_acceptance_granted": false,
+  "runtime_source_profile_lock_created": false,
+  "runtime_source_profile_acceptance_created": false,
+  "runtime_source_profile_remains_parked": true,
+  "runtime_start_authorized": false,
+  "runtime_execution_authorized": false,
+  "runtime_implementation_authorized": false,
+  "creates_runtime_implementation": false,
+  "source_profile_lock_created": false,
+  "source_profile_acceptance_created": false,
+  "accepts_source_profile_beyond_c01splpr": false,
+  "executes_ocr": false,
+  "executes_render": false,
+  "mutates_source_ocr_render_pdf_raw": false,
+  "creates_translation_or_proofreading": false,
+  "processes_page_021_plus": false,
+  "admits_new_or_broader_fixture": false,
+  "push_performed": false,
+  "remaining_blockers": [
+    "runtime_source_profile_lock_or_acceptance_not_granted_blocks_implementation",
+    "human_review_c01rsplad_required",
+    "runtime_start_execution_requires_separate_authorization",
+    "runtime_implementation_authorization_required",
+    "roadmap_validation_required_for_c01wp_01_runtime_start",
+    "ocr_render_pdf_raw_mutation_requires_separate_authorization",
+    "translation_proofreading_requires_separate_authorization",
+    "page_021_plus_remains_separate_bounded_lane_if_selected",
+    "push_requires_separate_authorization"
+  ],
+  "next_possible_packets": [
+    "human_review_c01rsplad_packet",
+    "runtime_source_profile_evidence_prep_if_separately_authorized",
+    "runtime_implementation_authorization_prep_only_after_profile_lock_or_acceptance_if_separately_authorized"
+  ],
+  "negative_capability_matrix": {
+    "runtime_implementation": false,
+    "first_slice_runtime_start": false,
+    "runtime_execution": false,
+    "runtime_source_profile_lock": false,
+    "runtime_source_profile_acceptance": false,
+    "source_profile_acceptance_beyond_c01splpr": false,
+    "ocr_execution": false,
+    "ocr_remediation_execution": false,
+    "render_execution": false,
+    "pdf_parsing_or_text_layer_extraction": false,
+    "source_mutation": false,
+    "raw_mutation": false,
+    "translation": false,
+    "proofreading": false,
+    "page_021_plus_processing": false,
+    "page_021_plus_authorization": false,
+    "new_or_broader_fixture_admission": false,
+    "renderer_profile_acceptance": false,
+    "push": false
+  },
+  "verified_inputs": {
+    "C01RSAD-G1-VIRAL-001.packet": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/core_0_1_first_slice_runtime_authorization_decision_G1_VIRAL_001/core_0_1_first_slice_runtime_authorization_decision.json",
+      "sha256": "6C5C1481D1E77693E49F2A3670B0E4D0870292CA2C42C075F297379C975F514C"
+    },
+    "C01RSAD-G1-VIRAL-001.report": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/core_0_1_first_slice_runtime_authorization_decision_G1_VIRAL_001/core_0_1_first_slice_runtime_authorization_decision_report.json",
+      "sha256": "490EB27DAD6026951825859779999B5D06B4A1D56F306EB6727E6E9F8FEC1EAC"
+    },
+    "C01RSAD-G1-VIRAL-001.summary": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/core_0_1_first_slice_runtime_authorization_decision_G1_VIRAL_001/core_0_1_first_slice_runtime_authorization_decision_summary.md",
+      "sha256": "03F19C1FF29E60425899982070E427E4497055BEA8016044C950982F8F4275AE"
+    },
+    "C01RSAD-G1-VIRAL-001.manifest": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/core_0_1_first_slice_runtime_authorization_decision_G1_VIRAL_001/core_0_1_first_slice_runtime_authorization_decision_manifest.md",
+      "sha256": "E9D6DA05E6509919008F67C9356DEC397E1F8A56F4A54B44047EBF0266DD0762"
+    }
+  }
+}

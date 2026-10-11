@@ -1,0 +1,114 @@
+{
+  "package_id": "P004CDP-G1-VIRAL-001",
+  "authorization_id": "BA-G1-VIRAL-PAGE-004-CONTEXT-DECISION-001",
+  "status": "ready_for_bogdan_page_004_context_only_decision",
+  "scope": "page_004_context_only_decision_packet_no_acceptance",
+  "generator": {
+    "script": "scripts/build_page_004_context_decision.py",
+    "script_sha256": "8A480B846D675059F528A5983523031147F31D4D75B9E76ECB0E3B05C94EC231",
+    "test": "tests/test_page_004_context_decision.py",
+    "test_sha256": "756CADB41C1B2B46A9AD7BB120C3B37D123659CEDD6BE1C7C913DF7632767697"
+  },
+  "page": "004",
+  "page_id": "PG-G1-VIRAL-P004",
+  "image_id": "IMG-G1-VIRAL-RENDER-001-P004",
+  "input_packages": [
+    "SRCR-G1-VIRAL-004",
+    "P004A-G1-VIRAL-004"
+  ],
+  "review_attachments": [
+    {
+      "attachment_id": "P004-ATT-PAGE",
+      "role": "source_page_image",
+      "source_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/images/page_004.png",
+      "package_path": "review_assets/page_004.png",
+      "sha256": "45A61639C922FD6CCD085BA259BA114DD92FBCB96E86A17D216F5387DCCA9B88"
+    },
+    {
+      "attachment_id": "P004-ATT-BLOCK-R02",
+      "role": "block_crop",
+      "source_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/source_reconstruction_next_slice_G1_VIRAL_004/region_refs/1_SRCR-G1-VIRAL-004-R01__PRM-G1-VIRAL-001-P004-R02.png",
+      "package_path": "review_assets/1_SRCR-G1-VIRAL-004-R01__PRM-G1-VIRAL-001-P004-R02.png",
+      "sha256": "ADD3C344100356249BF38C85A7C89D2A2DB9FF23B48141509A47F86C6A32C219"
+    },
+    {
+      "attachment_id": "P004-ATT-BLOCK-R03",
+      "role": "block_crop",
+      "source_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/source_reconstruction_next_slice_G1_VIRAL_004/region_refs/2_SRCR-G1-VIRAL-004-R02__PRM-G1-VIRAL-001-P004-R03.png",
+      "package_path": "review_assets/2_SRCR-G1-VIRAL-004-R02__PRM-G1-VIRAL-001-P004-R03.png",
+      "sha256": "EFB82E2F8ECE14585CFD83F71C301B7024C437680703B18765A259A7E3B234C8"
+    },
+    {
+      "attachment_id": "P004-ATT-BLOCK-TEXT",
+      "role": "ocr_block_text_markdown",
+      "source_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/source_reconstruction_next_slice_G1_VIRAL_004/human_review_packet.md",
+      "package_path": "review_assets/page_004_ocr_block_text.md",
+      "sha256": "7994F6D597C0041052361533BDDBCC63511B784F1BC24D6E7A089588BAAD3DDB"
+    }
+  ],
+  "context_decision": {
+    "requires_bogdan_decision": true,
+    "context_region_id": "PRM-G1-VIRAL-001-P004-R01",
+    "proposed_status": "context_only_not_peer_crop_record",
+    "reason": "Full tilted inset contains the title/body regions and would overlap peer crops under the global crop layout guardrail.",
+    "full_tilted_inset": true,
+    "display_normalization": {
+      "scope": "review_asset_only",
+      "rule": "body-only text blocks use text_body instead of none in human-facing structure labels",
+      "predecessor_source_review_packet_mutated": false
+    },
+    "accepted_peer_records": [
+      {
+        "source_region_id": "PRM-G1-VIRAL-001-P004-R02",
+        "role": "warning_title",
+        "review_id": "SRCR-G1-VIRAL-004-R01",
+        "crop_reference": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/source_reconstruction_next_slice_G1_VIRAL_004/region_refs/1_SRCR-G1-VIRAL-004-R01__PRM-G1-VIRAL-001-P004-R02.png",
+        "crop_reference_sha256": "ADD3C344100356249BF38C85A7C89D2A2DB9FF23B48141509A47F86C6A32C219",
+        "accepted_text_sha256": "86F56FE8221F029DB2C9755CC998669A7D873C32BFA83BC9431BAFE0BB814400"
+      },
+      {
+        "source_region_id": "PRM-G1-VIRAL-001-P004-R03",
+        "role": "safety_warning_body",
+        "review_id": "SRCR-G1-VIRAL-004-R02",
+        "crop_reference": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/source_reconstruction_next_slice_G1_VIRAL_004/region_refs/2_SRCR-G1-VIRAL-004-R02__PRM-G1-VIRAL-001-P004-R03.png",
+        "crop_reference_sha256": "EFB82E2F8ECE14585CFD83F71C301B7024C437680703B18765A259A7E3B234C8",
+        "accepted_text_sha256": "430246F1327C4554B2D16C8D5BFE11704EE515B4B5C3DB298A7B3492716E14A2"
+      }
+    ],
+    "recommendation": "confirm_PRM-G1-VIRAL-001-P004-R01_as_context_only_before_page_map_readiness",
+    "decision_options": [
+      "confirm_page_004_full_tilted_inset_context_only",
+      "hold_page_004_context_decision_for_additional_review"
+    ]
+  },
+  "predecessors": {
+    "source_review": {
+      "package_id": "SRCR-G1-VIRAL-004",
+      "report_sha256": "C3441CEA1C3F68200BD7134882A00C303D3B549EA94FE87FE4E17C79A6A0475A",
+      "packet_sha256": "1E084D1BEE01A02BC53E8E7D482F0ED216282DC5E9291BCA78382E730F30F446"
+    },
+    "source_acceptance": {
+      "package_id": "P004A-G1-VIRAL-004",
+      "report_sha256": "0CCB4AA33481BDB0B95B02D32A0E49FB1A20FD9A957DB7DAE1ECB0B00307622E",
+      "manifest_sha256": "75C0C0BD96FF77E64D2F7C827D7D21B12F7EF15964E8EC9734F9428CCC064C06",
+      "summary_sha256": "BF664162A899765C3B614F87002792D213D70DB82A7ED4142686AA439D50C64C"
+    }
+  },
+  "guardrails": {
+    "ocr_executed": false,
+    "pdf_opened_or_parsed": false,
+    "pdf_text_layer_used": false,
+    "render_executed": false,
+    "raw_artifacts_modified": false,
+    "source_acceptance_created_or_mutated": false,
+    "page_complete_acceptance_created": false,
+    "accepted_pages_as_complete": [],
+    "whole_gate_1_acceptance_created": false,
+    "fixture_admission": false,
+    "translation_authorized": false,
+    "proofreading_authorized": false,
+    "renderer_profile_acceptance": false,
+    "implementation_authorized": false,
+    "push_authorized": false
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "status_packet_id": "G1SP-G1-VIRAL-010",
+  "authorization_id": "BA-G1-VIRAL-PAGE-015-AGGRESSIVE-BATCH-001",
+  "lane_id": "P015BATCH-G1-VIRAL-001",
+  "status": "gate_1_status_route_packet_ready_for_final_human_batch_review",
+  "page_complete_accepted_pages": [
+    "001",
+    "002",
+    "003",
+    "004",
+    "005",
+    "006",
+    "007",
+    "008",
+    "009",
+    "010",
+    "011",
+    "012",
+    "013",
+    "014",
+    "015"
+  ],
+  "remaining_page_complete_pages_unstarted": [
+    "016",
+    "017",
+    "018",
+    "019",
+    "020"
+  ],
+  "recommended_next_candidate": "page_016_triage_readiness_not_authorized",
+  "predecessor": {
+    "package_id": "P015PCA-G1-VIRAL-001",
+    "sha256": "BDE3B2E95EB62040D9F65C7276068A40C14C081EA5C587654912E95886372AB3"
+  },
+  "review_gate": {
+    "human_review_state": "human_review_skipped_by_explicit_authorization",
+    "delegated_review_state": "review_delegated_to_Sol_Terra",
+    "lane_authority": "BA-G1-VIRAL-PAGE-015-AGGRESSIVE-BATCH-001",
+    "sol": {
+      "status": "OK",
+      "finding": "OK: status refresh records pages 001-015 accepted-only and pages 016-020 unstarted."
+    },
+    "terra": {
+      "status": "OK",
+      "finding": "OK: page 016 is only a recommended next candidate and is not authorized by the status packet."
+    },
+    "status": "passed",
+    "blockers": []
+  },
+  "continuation": {
+    "history_continues_to_page": "016",
+    "page_016_processed": false
+  },
+  "guardrails": {
+    "whole_gate_1_acceptance": false,
+    "fixture_admission": false,
+    "source_acceptance_mutation": false,
+    "ocr_execution": false,
+    "render_execution": false,
+    "pdf_parsing_or_text_layer_extraction": false,
+    "raw_mutation": false,
+    "translation": false,
+    "proofreading": false,
+    "renderer_profile_acceptance": false,
+    "implementation": false,
+    "push": false,
+    "page_016_plus_processing": false,
+    "final_human_batch_review_acceptance": false
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "package_id": "SRNS-G1-VIRAL-002",
+  "authorization_id": "BA-G1-VIRAL-SOURCE-RECON-NEXT-SLICE-001",
+  "status": "next_source_reconstruction_slice_ready_for_bogdan_review_not_accepted",
+  "generator": {
+    "script": "scripts/build_source_reconstruction_next_slice.py",
+    "script_sha256": "3FE89535AD5F2A43AFA827DF4C5281CFA9DD8901AEABE8646AF6883132595CC4",
+    "test": "tests/test_source_reconstruction_next_slice.py",
+    "test_sha256": "5C20FB61C33368A3C3EFE758A7B48B513397029B117DD2DE345D3B40FD1B16F8"
+  },
+  "input_status_packet_id": "G1SP-G1-VIRAL-001",
+  "input_status_packet_report_sha256": "4F0AD3C7553863636B6FD15E329815EE26E62329D668C9FA8AC756CE04B24644",
+  "input_status_packet_payload_sha256": "4C7EFAFDC60DF52A09F9358AB7F334FC5354B51E95A130F5BC86D42DC0C4BE68",
+  "input_region_map_id": "PRM-G1-VIRAL-001",
+  "input_region_map_sha256": "A37F734D9D1B9DA1456FE7C3D5804D70FE352DB7197495843561B40D7A4DD35C",
+  "selected_page": "002",
+  "selected_page_image_sha256": "ABC72B84D6CE89FE6C9B28981A39ADA33C5B9488B2864E8B35B41B120D6036C9",
+  "selected_scope": "page_002_two_region_review_packet_only",
+  "records": [
+    {
+      "question_id": "1",
+      "slice_region_id": "SRNS-G1-VIRAL-002-R01",
+      "source_region_id": "PRM-G1-VIRAL-001-P002-R01",
+      "page_id": "PG-G1-VIRAL-P002",
+      "image_id": "IMG-G1-VIRAL-RENDER-001-P002",
+      "region_class": "text_like",
+      "candidate_layer": "content_map_candidate",
+      "box_px": [
+        520,
+        350,
+        1500,
+        2100
+      ],
+      "review_prompt": "Transcribe/confirm the centered credits/legal-like text block, or mark blocker.",
+      "expected_answer_shape": "1 - text: <transcription> | 1 - blocker: <reason> | 1 - visual-only",
+      "page_image": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/images/page_002.png",
+      "page_image_sha256": "ABC72B84D6CE89FE6C9B28981A39ADA33C5B9488B2864E8B35B41B120D6036C9",
+      "crop_reference": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/source_reconstruction_next_slice_G1_VIRAL_002/region_refs/1_SRNS-G1-VIRAL-002-R01__PRM-G1-VIRAL-001-P002-R01.png",
+      "crop_reference_sha256": "3E8CF28342ED6FA0BA497A2DB6B81AB376EF6B1CA68A326C442D7724A68738D7",
+      "candidate_text": null,
+      "candidate_text_created": false,
+      "requires_bogdan_review": true,
+      "source_acceptance": false,
+      "qa_acceptance": false,
+      "fixture_admission": false,
+      "gate_1_advancement": false
+    },
+    {
+      "question_id": "2",
+      "slice_region_id": "SRNS-G1-VIRAL-002-R02",
+      "source_region_id": "PRM-G1-VIRAL-001-P002-R02",
+      "page_id": "PG-G1-VIRAL-P002",
+      "image_id": "IMG-G1-VIRAL-RENDER-001-P002",
+      "region_class": "mixed",
+      "candidate_layer": "content_map_candidate",
+      "box_px": [
+        520,
+        2480,
+        1500,
+        420
+      ],
+      "review_prompt": "Decide whether the boxed/footer legal-like block is source text and transcribe it if yes.",
+      "expected_answer_shape": "2 - text: <transcription> | 2 - visual-only | 2 - blocker: <reason>",
+      "page_image": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/images/page_002.png",
+      "page_image_sha256": "ABC72B84D6CE89FE6C9B28981A39ADA33C5B9488B2864E8B35B41B120D6036C9",
+      "crop_reference": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/source_reconstruction_next_slice_G1_VIRAL_002/region_refs/2_SRNS-G1-VIRAL-002-R02__PRM-G1-VIRAL-001-P002-R02.png",
+      "crop_reference_sha256": "081F8BD3676AFF4A8C34BFCA0CD38245F75D0202933EF8D67269B0F6F240FD6D",
+      "candidate_text": null,
+      "candidate_text_created": false,
+      "requires_bogdan_review": true,
+      "source_acceptance": false,
+      "qa_acceptance": false,
+      "fixture_admission": false,
+      "gate_1_advancement": false
+    }
+  ],
+  "crop_layout_guardrail": {
+    "guardrail_policy_id": "SRCG-GLOBAL-CROP-BOX-LAYOUT-001",
+    "policy_version": 1,
+    "policy_source_sha256": "D6231B222A4602ECA01C89575CAC40CC6F01B165C0B4EF97DB3F68B9245A9C6B",
+    "status": "passed",
+    "validated_at_stage": "SRNS-G1-VIRAL-002.review_crop_generation",
+    "image_size": {
+      "width": 2550,
+      "height": 3300
+    },
+    "min_gutter_px": 24,
+    "checks": [
+      "integer_geometry",
+      "bounds",
+      "historical_blocked_tight_boxes",
+      "approved_boxes",
+      "no_overlap",
+      "min_gutter"
+    ],
+    "validated_boxes": [
+      {
+        "region_id": "SRNS-G1-VIRAL-002-R01",
+        "box_px": [
+          520,
+          350,
+          1500,
+          2100
+        ]
+      },
+      {
+        "region_id": "SRNS-G1-VIRAL-002-R02",
+        "box_px": [
+          520,
+          2480,
+          1500,
+          420
+        ]
+      }
+    ]
+  },
+  "summary": {
+    "records": 2,
+    "source_text_candidate_records": 0,
+    "requires_bogdan_review_records": 2,
+    "accepted_records": 0,
+    "accepted_pages_as_complete": false,
+    "whole_gate_1_acceptance": false
+  },
+  "previous_accepted_scope_preserved": "G1SP-G1-VIRAL-001 seven-record slice remains unchanged",
+  "source_acceptance": false,
+  "qa_acceptance": false,
+  "fixture_admission": false,
+  "gate_1_advancement": false,
+  "page_complete_acceptance": false,
+  "whole_gate_1_acceptance": false,
+  "translation_authorized": false,
+  "proofreading_authorized": false,
+  "renderer_profile_acceptance": false,
+  "implementation_authorized": false,
+  "push_authorized": false,
+  "ocr_executed": false,
+  "pdf_opened_or_parsed": false,
+  "raw_ocr_outputs_modified": false,
+  "next_authorization_recommendation": "BA-G1-VIRAL-SOURCE-RECON-NEXT-SLICE-HUMAN-REVIEW-001"
+}

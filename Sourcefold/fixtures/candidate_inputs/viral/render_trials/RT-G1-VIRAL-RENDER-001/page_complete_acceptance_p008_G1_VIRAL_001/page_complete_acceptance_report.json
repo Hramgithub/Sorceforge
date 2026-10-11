@@ -1,0 +1,77 @@
+{
+  "package_id": "P008PCA-G1-VIRAL-001",
+  "authorization_id": "BA-G1-VIRAL-PAGE-COMPLETE-ACCEPT-P008-001",
+  "status": "page_008_complete_accepted",
+  "scope": "page_008_complete_acceptance_only",
+  "generator": {
+    "script": "scripts/accept_page_008_complete.py",
+    "script_sha256": "AEBA761297225AC7E287B1D0AB7FC8A750EBF11AE1CC0151B308D96B3E68C693",
+    "test": "tests/test_page_008_complete_acceptance.py",
+    "test_sha256": "201F0B382C514E7DFF089A03020396BC1BCB4286C3E9A80608239FC437CBA2A8"
+  },
+  "page": "008",
+  "page_id": "PG-G1-VIRAL-P008",
+  "image_id": "IMG-G1-VIRAL-RENDER-001-P008",
+  "input_packages": [
+    "PCRP-G1-VIRAL-P008-001"
+  ],
+  "review_input": {
+    "package_id": "PCRP-G1-VIRAL-P008-001",
+    "authorization_id": "BA-G1-VIRAL-PAGE-COMPLETE-REVIEW-P008-001",
+    "report_sha256": "B03A397B1C1C6F117DBC79D4525EBE9BDFD2E22C420A84E39B1E62DB80C34B69",
+    "packet_sha256": "97222823611E3F7A0A14D6E2545B8948B1135DA22E4300E5161DB058F551CA1A",
+    "summary_sha256": "FE257745A3E2D8E5BD48B5C4C9D0A96C016507AF908ED84B6501CFE62E037683",
+    "manifest_sha256": "D832FA00C861FDC9432BE7E39CB6AE725FA53BD2476D98FC7A414B09CF0357AD"
+  },
+  "human_decision": {
+    "telegram_message_id": "1178",
+    "decision": "page 008 complete ok",
+    "raw_text": "page 008 complete ok"
+  },
+  "page_complete_acceptance": {
+    "acceptance_id": "P008-PAGE-COMPLETE-ACCEPTANCE-001",
+    "accepted": true,
+    "accepted_page": "008",
+    "accepted_pages_as_complete": [
+      "008"
+    ],
+    "basis": "PCRP-G1-VIRAL-P008-001 with 7/7 ready blocks, two deferred art/photo anchors, validated paragraph-preserving semantic map, valid inventory reconciliation, no structural findings, no blockers, no open questions, and Bogdan explicit ok",
+    "reviewed_blocks": 7,
+    "ready_blocks": 7,
+    "reading_order": [
+      "marco_proudfoot_body_page_008_continuation",
+      "marco_proudfoot_appearance_gear_box",
+      "corrina_trench_portrait_anchor",
+      "corrina_trench_body_left_column",
+      "corrina_trench_body_right_column",
+      "corrina_trench_appearance_gear_box",
+      "crystal_object_art_anchor"
+    ],
+    "declared_none_categories": [
+      "table",
+      "unknown",
+      "missing"
+    ],
+    "blockers": [],
+    "open_questions": []
+  },
+  "guardrails": {
+    "only_page_008_accepted_as_complete": true,
+    "accepted_pages_as_complete": [
+      "008"
+    ],
+    "whole_gate_1_acceptance_created": false,
+    "fixture_admission": false,
+    "source_acceptance_created_or_mutated": false,
+    "ocr_executed": false,
+    "pdf_opened_or_parsed": false,
+    "pdf_text_layer_used": false,
+    "render_executed": false,
+    "raw_artifacts_modified": false,
+    "translation_authorized": false,
+    "proofreading_authorized": false,
+    "renderer_profile_acceptance": false,
+    "implementation_authorized": false,
+    "push_authorized": false
+  }
+}

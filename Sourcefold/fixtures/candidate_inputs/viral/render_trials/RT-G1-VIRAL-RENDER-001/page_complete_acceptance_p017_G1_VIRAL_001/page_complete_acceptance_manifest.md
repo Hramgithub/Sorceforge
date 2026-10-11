@@ -1,0 +1,7 @@
+# Page 017 Complete Acceptance Manifest
+
+| Output | SHA-256 |
+|---|---|
+| `page_complete_acceptance_record.md` | `34A5F3AA3E8C0084949D9B5B61C4BD94B67F232766A4D7F2CC0E8AEF3DB524B0` |
+| `page_complete_acceptance_report.json` | `D79B3AF7052BF70F05C98219E95118BC0F2A93AE2AEBE4DAAEE1BCF398FEF562` |
+| `page_complete_acceptance_summary.md` | `DBA680461B273DF1C870A66CFECCA72CCB490CC5ECC51F502F9D08E8E4B35DB9` |

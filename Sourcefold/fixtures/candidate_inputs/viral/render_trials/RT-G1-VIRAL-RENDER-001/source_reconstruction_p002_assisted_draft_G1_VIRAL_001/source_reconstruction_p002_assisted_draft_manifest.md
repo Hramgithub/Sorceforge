@@ -1,0 +1,26 @@
+# Page 002 Assisted Draft Manifest - SRAD-G1-VIRAL-002
+
+Status: `assisted_text_draft_ready_for_bogdan_verification_not_accepted`
+
+Boundary: no source acceptance, QA, fixtures, Gate 1 advancement, OCR execution, PDF parsing/rendering, raw OCR mutation, translation, proofreading, implementation, or push.
+
+## Generator Hashes
+
+- Script `scripts/prepare_source_reconstruction_p002_assisted_draft.py` SHA-256: `23925C6A95648CCB002623E61A5EE109A4216F3C9A76BFF866DE896417E5CE4B`
+- Test `tests/test_source_reconstruction_p002_assisted_draft.py` SHA-256: `9A6C01FD0D6F345E6BF829120168AE367DD9A2346CB6D331AD3E45269CCFF2D0`
+
+## Records
+
+| Question | Source region | Corrected crop SHA-256 | Draft text SHA-256 |
+|---:|---|---|---|
+| 1 | `PRM-G1-VIRAL-001-P002-R01` | `D281969D790D4BF7661DDF841924FA6A0B9F8965088580A0FA89B64DA9599E6D` | `DB8E9F76402DAA24D266F56275A3A5096E089B11EF332F74A3431BDCB30AE798` |
+| 2 | `PRM-G1-VIRAL-001-P002-R02` | `D167F253964076DA67D7A6D625BB236875CA05E634710C10F1FD816C46B1BE4B` | `7CCFDB428367DD0E6680C57FE716769F5A651A9D80EA5C63A353E841E75A66A5` |
+
+## Output Hashes
+
+| Output | SHA-256 |
+|---|---|
+| `assisted_text_draft_for_bogdan.md` | `256568A3889A1BA9417662F8E897D818416A7FCBA664E0A896CB7F931F2C769B` |
+| `corrected_region_refs/1_SRAD-G1-VIRAL-002-R01__SRAD-G1-VIRAL-002-R01-C01.png` | `D281969D790D4BF7661DDF841924FA6A0B9F8965088580A0FA89B64DA9599E6D` |
+| `corrected_region_refs/2_SRAD-G1-VIRAL-002-R02__SRAD-G1-VIRAL-002-R02-C01.png` | `D167F253964076DA67D7A6D625BB236875CA05E634710C10F1FD816C46B1BE4B` |
+| `source_reconstruction_p002_assisted_draft_report.json` | `296763B5942B937B66822E4988C30FF5B96FBFBFF08952987FA5E8D22CE07F05` |

@@ -1,0 +1,143 @@
+{
+  "lane_id": "C01TEP002FRESHDECIDE-G1-VIRAL-001",
+  "authorization_id": "BA-G1-VIRAL-CORE-0-1-TEXT-EXTRACTION-P002-FRESH-OCR-SCORING-DECISION-001",
+  "status": "p002_fresh_ocr_scoring_decision_completed_remediation_required",
+  "base_commit": "91d1b763",
+  "input_lane_id": "C01TEP002FRESHSCOREAUD-G1-VIRAL-001",
+  "input_audit_status": "p002_fresh_ocr_scoring_reference_audit_completed",
+  "page": "002",
+  "verified_inputs": {
+    "C01TEP002FRESHSCOREAUD-G1-VIRAL-001.report": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/core_0_1_text_extraction_p002_fresh_ocr_scoring_reference_audit_G1_VIRAL_001/p002_fresh_ocr_scoring_reference_audit_report.json",
+      "sha256": "0834F4A864105F6D15D243198F743158C9D91ECDAF5AAEA4A4281913DD481740"
+    },
+    "C01TEP002FRESHSCOREAUD-G1-VIRAL-001.summary": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/core_0_1_text_extraction_p002_fresh_ocr_scoring_reference_audit_G1_VIRAL_001/p002_fresh_ocr_scoring_reference_audit_summary.md",
+      "sha256": "3E42702616B3C4F1267559290F9D4BE303DC1A5CDC342C10ED11F8E32C396D7E"
+    },
+    "C01TEP002FRESHSCOREAUD-G1-VIRAL-001.manifest": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/core_0_1_text_extraction_p002_fresh_ocr_scoring_reference_audit_G1_VIRAL_001/p002_fresh_ocr_scoring_reference_audit_manifest.md",
+      "sha256": "BF9B57598F7FAC66DEDFAF25D6CC1692C278AB9CA185BAC9DE06FD0AE4839FFB"
+    },
+    "candidate.psm4": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/core_0_1_text_extraction_p002_fresh_ocr_candidate_G1_VIRAL_001/candidate_texts/page_002_full_page_psm4_candidate.md",
+      "sha256": "301EF78077B32935E17BCD113024AA2650A12867680286FF3439E873536395AC"
+    },
+    "candidate.psm6": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/core_0_1_text_extraction_p002_fresh_ocr_candidate_G1_VIRAL_001/candidate_texts/page_002_full_page_psm6_candidate.md",
+      "sha256": "901EC2451AB5CC1465F7E2E57C20F4E31588FC00EE300D88BDA32E3AAD3DA7E9"
+    },
+    "source_reconstruction_p002_assisted_draft_verify.report": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/source_reconstruction_p002_assisted_draft_verify_G1_VIRAL_001/source_reconstruction_p002_assisted_draft_verify_report.json",
+      "sha256": "BC248426E89709A2D028A68C69ACE24764A48DDEB61BC51DBD0BDA3413F84F52"
+    },
+    "source_reconstruction_p002_assisted_draft_verify.summary": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/source_reconstruction_p002_assisted_draft_verify_G1_VIRAL_001/assisted_draft_human_verification_summary.md",
+      "sha256": "225DC38D81F9BD4133D05823ACDDBED538E5CBA790DEF1A33A4E4AFCCBF7E13D"
+    },
+    "source_reconstruction_p002_assisted_draft_verify.manifest": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/source_reconstruction_p002_assisted_draft_verify_G1_VIRAL_001/source_reconstruction_p002_assisted_draft_verify_manifest.md",
+      "sha256": "B6E3D871FCA061D1672CB5E73A1BFF6C73AAE7D0C7F8B2A7044BD451FAC9159A"
+    }
+  },
+  "reference_surface_authority": "human_verified_source_reconstruction_comparison_only_not_acceptance_truth",
+  "candidate_entries": [
+    {
+      "candidate_label": "psm4",
+      "candidate_text_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/core_0_1_text_extraction_p002_fresh_ocr_candidate_G1_VIRAL_001/candidate_texts/page_002_full_page_psm4_candidate.md",
+      "candidate_text_sha256": "301EF78077B32935E17BCD113024AA2650A12867680286FF3439E873536395AC",
+      "candidate_hash_verified_before_reference_load": true,
+      "reference_surface": "source_reconstruction_p002_assisted_draft_verify.verified_text",
+      "reference_surface_authority": "human_verified_source_reconstruction_comparison_only",
+      "diagnostic_metrics": {
+        "sequence_similarity_ratio": 0.996182,
+        "token_recall": 0.985507,
+        "candidate_chars": 1174,
+        "reference_chars": 1183,
+        "missing_reference_tokens_sample": [
+          "credits",
+          "dragongirl174"
+        ],
+        "extra_candidate_tokens_sample": [
+          "dragongirl74"
+        ]
+      },
+      "strict_threshold": 0.997,
+      "threshold_met": false,
+      "fresh_ocr_success": false,
+      "promotable": false,
+      "bridge_removal_effect": "none"
+    },
+    {
+      "candidate_label": "psm6",
+      "candidate_text_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/core_0_1_text_extraction_p002_fresh_ocr_candidate_G1_VIRAL_001/candidate_texts/page_002_full_page_psm6_candidate.md",
+      "candidate_text_sha256": "901EC2451AB5CC1465F7E2E57C20F4E31588FC00EE300D88BDA32E3AAD3DA7E9",
+      "candidate_hash_verified_before_reference_load": true,
+      "reference_surface": "source_reconstruction_p002_assisted_draft_verify.verified_text",
+      "reference_surface_authority": "human_verified_source_reconstruction_comparison_only",
+      "diagnostic_metrics": {
+        "sequence_similarity_ratio": 0.307332,
+        "token_recall": 0.978261,
+        "candidate_chars": 1381,
+        "reference_chars": 1183,
+        "missing_reference_tokens_sample": [
+          "dragongirl174",
+          "play",
+          "testers"
+        ],
+        "extra_candidate_tokens_sample": [
+          "2",
+          "3",
+          "4",
+          "5",
+          "7",
+          "ae",
+          "aes",
+          "ag",
+          "anmey",
+          "ay",
+          "bs",
+          "dragongirl74",
+          "fo",
+          "i",
+          "ie",
+          "ies",
+          "j",
+          "lan",
+          "me",
+          "mp"
+        ]
+      },
+      "strict_threshold": 0.997,
+      "threshold_met": false,
+      "fresh_ocr_success": false,
+      "promotable": false,
+      "bridge_removal_effect": "none"
+    }
+  ],
+  "selected_best_candidate": "psm4",
+  "selected_best_candidate_threshold_met": false,
+  "strict_threshold": 0.997,
+  "decision": "remediation_required_before_fresh_ocr_success",
+  "fresh_ocr_success_pages": [],
+  "bridge_removed_for_pages": [],
+  "promotable_pages": [],
+  "allowed_next_action": "bounded_p002_candidate_remediation_from_best_candidate_and_visual_verified_diffs",
+  "ocr_execution_performed": false,
+  "tesseract_invoked": false,
+  "render_execution_performed": false,
+  "pdf_parsing_or_text_layer_extraction_performed": false,
+  "production_ready": false,
+  "production_assembly_authorized": false,
+  "production_assembly_created": false,
+  "acceptance_performed": false,
+  "accepted_text_mutation_performed": false,
+  "semantic_text_mutation_performed": false,
+  "page_status_mutation_performed": false,
+  "source_or_raw_mutation_performed": false,
+  "fixture_admission_performed": false,
+  "page_021_plus_included": false,
+  "promotion_performed": false,
+  "push_performed": false,
+  "downstream_execution_performed": false
+}

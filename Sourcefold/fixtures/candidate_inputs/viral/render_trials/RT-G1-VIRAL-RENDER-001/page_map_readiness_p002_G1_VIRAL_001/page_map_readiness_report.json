@@ -1,0 +1,447 @@
+{
+  "package_id": "PMRP-G1-VIRAL-P002-001",
+  "authorization_id": "BA-G1-VIRAL-PAGE-MAP-READINESS-PIPELINE-PILOT-002-001",
+  "pipeline_id": "page_map_readiness_pipeline_v0",
+  "profile_id": "page_map_profile_G1_VIRAL_P002_v0",
+  "status": "ready_for_page_complete_review_packet",
+  "scope": "page_map_readiness_only_no_page_acceptance",
+  "generator": {
+    "script": "scripts/build_page_map_readiness.py",
+    "script_sha256": "9E2B79D685F5EAAD7D0C0AE424BF7557F71992DC19CDB745B6972BECE71BD09D",
+    "test": "tests/test_page_map_readiness.py",
+    "test_sha256": "5411C8DA86CD93D9B7599FE716EA380876381396B29735210FB55F9B47E3AD62"
+  },
+  "page": "002",
+  "page_id": "PG-G1-VIRAL-P002",
+  "image_id": "IMG-G1-VIRAL-RENDER-001-P002",
+  "input_packages": [
+    "PRM-G1-VIRAL-001",
+    "SRAD-G1-VIRAL-002",
+    "SRADV-G1-VIRAL-002",
+    "P002C-G1-VIRAL-002"
+  ],
+  "profile": {
+    "page_label": "Page 002",
+    "expected_block_count": 2,
+    "declared_none": [
+      "art",
+      "inset",
+      "table",
+      "title_only",
+      "unknown",
+      "missing",
+      "context_only"
+    ],
+    "page_specific": true,
+    "reusable_pipeline": true
+  },
+  "block_inventory": [
+    {
+      "block_id": "P002-B001",
+      "block_type": "text",
+      "role": "credits",
+      "source_region_id": "PRM-G1-VIRAL-001-P002-R01",
+      "reading_order": 1,
+      "required": true,
+      "status": "ready_for_page_complete_review",
+      "anchor": {
+        "page_image": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/images/page_002.png",
+        "page_image_sha256": "ABC72B84D6CE89FE6C9B28981A39ADA33C5B9488B2864E8B35B41B120D6036C9",
+        "source_region_id": "PRM-G1-VIRAL-001-P002-R01",
+        "corrected_crop_reference": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/source_reconstruction_p002_assisted_draft_G1_VIRAL_001/corrected_region_refs/1_SRAD-G1-VIRAL-002-R01__SRAD-G1-VIRAL-002-R01-C01.png",
+        "corrected_crop_reference_sha256": "D281969D790D4BF7661DDF841924FA6A0B9F8965088580A0FA89B64DA9599E6D",
+        "box_px": [
+          180,
+          90,
+          2190,
+          1860
+        ]
+      },
+      "text_fidelity": {
+        "draft_text_sha256": "DB8E9F76402DAA24D266F56275A3A5096E089B11EF332F74A3431BDCB30AE798",
+        "verified_text_sha256": "DB8E9F76402DAA24D266F56275A3A5096E089B11EF332F74A3431BDCB30AE798",
+        "draft_metrics": {
+          "character_count": 719,
+          "normalized_character_count": 713,
+          "line_count": 24,
+          "non_empty_line_count": 18
+        },
+        "verified_metrics": {
+          "character_count": 719,
+          "normalized_character_count": 713,
+          "line_count": 24,
+          "non_empty_line_count": 18
+        },
+        "draft_matches_verified": true,
+        "raw_ocr_available": false,
+        "raw_ocr_comparison": "not_available_for_this_authorization",
+        "protected_tokens": [
+          {
+            "token": "Credits",
+            "present": true
+          },
+          {
+            "token": "Alex Guillotte",
+            "present": true
+          },
+          {
+            "token": "Buds RPG Review",
+            "present": true
+          },
+          {
+            "token": "Matthew Pook",
+            "present": true
+          },
+          {
+            "token": "Keith Mageau",
+            "present": true
+          },
+          {
+            "token": "Luca Alexander Volpino",
+            "present": true
+          },
+          {
+            "token": "Seth Skorkowsky",
+            "present": true
+          }
+        ],
+        "missing_protected_tokens": [],
+        "discrepancy": [],
+        "discrepancy_disposition": "none"
+      },
+      "structure_semantics": {
+        "structure_record_id": "SRSS-G1-VIRAL-002-R01",
+        "semantic_roles": [
+          "credit_role_label",
+          "credit_value_list",
+          "credits_title"
+        ],
+        "missing_semantic_expectations": [],
+        "spans": [
+          {
+            "text": "Credits",
+            "semantic_role": "credits_title",
+            "heading_level": "h1",
+            "bold": "likely",
+            "italic": false,
+            "underline": false,
+            "centered": true,
+            "font_scale": "large",
+            "confidence": "medium"
+          },
+          {
+            "text": "Writing",
+            "semantic_role": "credit_role_label",
+            "heading_level": "none",
+            "bold": "likely",
+            "italic": false,
+            "underline": false,
+            "centered": true,
+            "font_scale": "normal",
+            "confidence": "medium"
+          },
+          {
+            "text": "Illustrations, Design & Layout",
+            "semantic_role": "credit_role_label",
+            "heading_level": "none",
+            "bold": "likely",
+            "italic": false,
+            "underline": false,
+            "centered": true,
+            "font_scale": "normal",
+            "confidence": "medium"
+          },
+          {
+            "text": "Editing",
+            "semantic_role": "credit_role_label",
+            "heading_level": "none",
+            "bold": "likely",
+            "italic": false,
+            "underline": false,
+            "centered": true,
+            "font_scale": "normal",
+            "confidence": "medium"
+          },
+          {
+            "text": "Additional Editing",
+            "semantic_role": "credit_role_label",
+            "heading_level": "none",
+            "bold": "likely",
+            "italic": false,
+            "underline": false,
+            "centered": true,
+            "font_scale": "normal",
+            "confidence": "medium"
+          },
+          {
+            "text": "Language Consultant",
+            "semantic_role": "credit_role_label",
+            "heading_level": "none",
+            "bold": "likely",
+            "italic": false,
+            "underline": false,
+            "centered": true,
+            "font_scale": "normal",
+            "confidence": "medium"
+          },
+          {
+            "text": "Play Testers",
+            "semantic_role": "credit_role_label",
+            "heading_level": "none",
+            "bold": "likely",
+            "italic": false,
+            "underline": false,
+            "centered": true,
+            "font_scale": "normal",
+            "confidence": "medium"
+          },
+          {
+            "text": "credit names",
+            "semantic_role": "credit_value_list",
+            "heading_level": "none",
+            "bold": "unknown",
+            "italic": "unknown",
+            "underline": "unknown",
+            "centered": true,
+            "font_scale": "normal",
+            "confidence": "medium"
+          }
+        ]
+      },
+      "overlay_recovery": {
+        "overlay_state": "no_overlap_or_duplicate_detected_in_current_profile",
+        "parent_child_relation": "none",
+        "recovery_role": "credits",
+        "reading_order_note": "declared by page profile"
+      }
+    },
+    {
+      "block_id": "P002-B002",
+      "block_type": "text",
+      "role": "boxed_legal_footer",
+      "source_region_id": "PRM-G1-VIRAL-001-P002-R02",
+      "reading_order": 2,
+      "required": true,
+      "status": "ready_for_page_complete_review",
+      "anchor": {
+        "page_image": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/images/page_002.png",
+        "page_image_sha256": "ABC72B84D6CE89FE6C9B28981A39ADA33C5B9488B2864E8B35B41B120D6036C9",
+        "source_region_id": "PRM-G1-VIRAL-001-P002-R02",
+        "corrected_crop_reference": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/source_reconstruction_p002_assisted_draft_G1_VIRAL_001/corrected_region_refs/2_SRAD-G1-VIRAL-002-R02__SRAD-G1-VIRAL-002-R02-C01.png",
+        "corrected_crop_reference_sha256": "D167F253964076DA67D7A6D625BB236875CA05E634710C10F1FD816C46B1BE4B",
+        "box_px": [
+          200,
+          1980,
+          2150,
+          1220
+        ]
+      },
+      "text_fidelity": {
+        "draft_text_sha256": "7CCFDB428367DD0E6680C57FE716769F5A651A9D80EA5C63A353E841E75A66A5",
+        "verified_text_sha256": "7CCFDB428367DD0E6680C57FE716769F5A651A9D80EA5C63A353E841E75A66A5",
+        "draft_metrics": {
+          "character_count": 474,
+          "normalized_character_count": 469,
+          "line_count": 15,
+          "non_empty_line_count": 10
+        },
+        "verified_metrics": {
+          "character_count": 474,
+          "normalized_character_count": 469,
+          "line_count": 15,
+          "non_empty_line_count": 10
+        },
+        "draft_matches_verified": true,
+        "raw_ocr_available": false,
+        "raw_ocr_comparison": "not_available_for_this_authorization",
+        "protected_tokens": [
+          {
+            "token": "Seth Skorkowsky",
+            "present": true
+          },
+          {
+            "token": "Viral",
+            "present": true
+          },
+          {
+            "token": "2022",
+            "present": true
+          },
+          {
+            "token": "Alex Guillotte",
+            "present": true
+          },
+          {
+            "token": "Buds RPG Review",
+            "present": true
+          },
+          {
+            "token": "Call of Cthulhu",
+            "present": true
+          },
+          {
+            "token": "Chaosium Inc.",
+            "present": true
+          },
+          {
+            "token": "OBS Community Content",
+            "present": true
+          },
+          {
+            "token": "www.Chaosium.com",
+            "present": true
+          },
+          {
+            "token": "Miskatonic Repository Logo",
+            "present": true
+          }
+        ],
+        "missing_protected_tokens": [],
+        "discrepancy": [],
+        "discrepancy_disposition": "none"
+      },
+      "structure_semantics": {
+        "structure_record_id": "SRSS-G1-VIRAL-002-R02",
+        "semantic_roles": [
+          "copyright_notice",
+          "logo_license_notice",
+          "publisher_url",
+          "special_thanks_body",
+          "special_thanks_sentence",
+          "trademark_notice"
+        ],
+        "missing_semantic_expectations": [],
+        "spans": [
+          {
+            "text": "Special Thanks to Seth Skorkowsky.",
+            "semantic_role": "special_thanks_sentence",
+            "heading_level": "none",
+            "bold": "unknown",
+            "italic": "unknown",
+            "underline": false,
+            "centered": "unknown",
+            "font_scale": "normal",
+            "confidence": "high"
+          },
+          {
+            "text": "In creating this unredacted version of Viral...",
+            "semantic_role": "special_thanks_body",
+            "heading_level": "none",
+            "bold": false,
+            "italic": false,
+            "underline": false,
+            "centered": "unknown",
+            "font_scale": "normal",
+            "confidence": "medium"
+          },
+          {
+            "text": "(C) Copyright 2022 - Alex Guillotte, Buds RPG Review",
+            "semantic_role": "copyright_notice",
+            "heading_level": "none",
+            "bold": false,
+            "italic": false,
+            "underline": false,
+            "centered": "unknown",
+            "font_scale": "small_or_normal",
+            "confidence": "medium"
+          },
+          {
+            "text": "Call of Cthulhu is a Trademark of Chaosium Inc.",
+            "semantic_role": "trademark_notice",
+            "heading_level": "none",
+            "bold": false,
+            "italic": false,
+            "underline": false,
+            "centered": "unknown",
+            "font_scale": "small_or_normal",
+            "confidence": "medium"
+          },
+          {
+            "text": "www.Chaosium.com",
+            "semantic_role": "publisher_url",
+            "heading_level": "none",
+            "bold": false,
+            "italic": false,
+            "underline": false,
+            "centered": "unknown",
+            "font_scale": "small_or_normal",
+            "confidence": "medium"
+          },
+          {
+            "text": "The Miskatonic Repository Logo is used under license.",
+            "semantic_role": "logo_license_notice",
+            "heading_level": "none",
+            "bold": false,
+            "italic": false,
+            "underline": false,
+            "centered": "unknown",
+            "font_scale": "small_or_normal",
+            "confidence": "medium"
+          }
+        ]
+      },
+      "overlay_recovery": {
+        "overlay_state": "no_overlap_or_duplicate_detected_in_current_profile",
+        "parent_child_relation": "none",
+        "recovery_role": "boxed_legal_footer",
+        "reading_order_note": "declared by page profile"
+      }
+    }
+  ],
+  "coverage_summary": {
+    "inventory_coverage": {
+      "count": 2,
+      "expected": 2,
+      "percent": 100.0,
+      "advisory_only": true
+    },
+    "source_ready_in_scope_text_blocks": {
+      "count": 2,
+      "expected": 2,
+      "percent": 100.0,
+      "advisory_only": true
+    },
+    "anchor_coverage": {
+      "count": 2,
+      "expected": 2,
+      "percent": 100.0,
+      "advisory_only": true
+    },
+    "reading_order_coverage": {
+      "count": 2,
+      "expected": 2,
+      "percent": 100.0,
+      "advisory_only": true
+    },
+    "declared_none_categories": [
+      "art",
+      "inset",
+      "table",
+      "title_only",
+      "unknown",
+      "missing",
+      "context_only"
+    ],
+    "coverage_accepts_page": false
+  },
+  "readiness_decision": {
+    "readiness": "ready_for_later_page_complete_review_packet",
+    "blockers": [],
+    "open_questions": [],
+    "page_complete_acceptance_created": false,
+    "whole_gate_1_acceptance_created": false
+  },
+  "guardrails": {
+    "ocr_executed": false,
+    "pdf_opened_or_parsed": false,
+    "pdf_text_layer_used": false,
+    "render_executed": false,
+    "raw_artifacts_modified": false,
+    "fixture_admission": false,
+    "translation_authorized": false,
+    "proofreading_authorized": false,
+    "renderer_profile_acceptance": false,
+    "implementation_authorized": false,
+    "push_authorized": false
+  }
+}

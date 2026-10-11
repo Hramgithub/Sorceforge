@@ -1,0 +1,11 @@
+# Page Map Readiness Manifest
+
+Package: `PMRP-G1-VIRAL-P004-001`
+
+## Output Hashes
+
+| Output | SHA-256 |
+|---|---|
+| `page_map_readiness_packet.md` | `1C9BE9076C84D9A577DA9CC0895ED6D84EE6E0A68EB0F34CA0DC1F9E0018DC43` |
+| `page_map_readiness_report.json` | `DEEBDA76EE371ABA8AC7761573FE5DDAA8B7D2268943C2DEC67C115F932EF39F` |
+| `page_map_readiness_summary.md` | `2943A0BA671F4E4C6B2B00161EAD89054BA1857895BE6F89AA6A2555B6DF1E02` |

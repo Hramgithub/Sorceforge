@@ -1,0 +1,260 @@
+{
+  "lane_id": "C01TEP013GNO-G1-VIRAL-001",
+  "parent_commit": "e8af6677",
+  "page": "P013",
+  "coordinate_semantics": "half_open_xyxy",
+  "original_box_encoding": "triage_xywh",
+  "clipping_rule": "for declared vertical conflicts, previous/top block bottom is clipped to current block top; no padding or expansion",
+  "box_records": {
+    "P013-B001": {
+      "original_xywh": [
+        160,
+        205,
+        1100,
+        440
+      ],
+      "original_half_open": [
+        160,
+        205,
+        1260,
+        645
+      ],
+      "clipped_half_open": [
+        160,
+        205,
+        1260,
+        625
+      ],
+      "role": "mythos_investigators_continuation"
+    },
+    "P013-B002": {
+      "original_xywh": [
+        210,
+        625,
+        1060,
+        340
+      ],
+      "original_half_open": [
+        210,
+        625,
+        1270,
+        965
+      ],
+      "clipped_half_open": [
+        210,
+        625,
+        1270,
+        960
+      ],
+      "role": "documentary_film_crew"
+    },
+    "P013-B003": {
+      "original_xywh": [
+        210,
+        960,
+        1060,
+        140
+      ],
+      "original_half_open": [
+        210,
+        960,
+        1270,
+        1100
+      ],
+      "clipped_half_open": [
+        210,
+        960,
+        1270,
+        1100
+      ],
+      "role": "tourists_left_start"
+    },
+    "P013-B004": {
+      "original_xywh": [
+        1290,
+        205,
+        1120,
+        700
+      ],
+      "original_half_open": [
+        1290,
+        205,
+        2410,
+        905
+      ],
+      "clipped_half_open": [
+        1290,
+        205,
+        2410,
+        905
+      ],
+      "role": "tourists_right_continuation"
+    },
+    "P013-B005": {
+      "original_xywh": [
+        1335,
+        905,
+        1060,
+        190
+      ],
+      "original_half_open": [
+        1335,
+        905,
+        2395,
+        1095
+      ],
+      "clipped_half_open": [
+        1335,
+        905,
+        2395,
+        1095
+      ],
+      "role": "pesky_teenagers"
+    },
+    "_adjustments": [
+      {
+        "previous_block_yielded": "P013-B001",
+        "current_block": "P013-B002",
+        "rule": "half_open_previous_bottom_clipped_to_current_top",
+        "previous_before": [
+          160,
+          205,
+          1260,
+          645
+        ],
+        "current_before": [
+          210,
+          625,
+          1270,
+          965
+        ],
+        "previous_after": [
+          160,
+          205,
+          1260,
+          625
+        ],
+        "current_after": [
+          210,
+          625,
+          1270,
+          965
+        ]
+      },
+      {
+        "previous_block_yielded": "P013-B002",
+        "current_block": "P013-B003",
+        "rule": "half_open_previous_bottom_clipped_to_current_top",
+        "previous_before": [
+          210,
+          625,
+          1270,
+          965
+        ],
+        "current_before": [
+          210,
+          960,
+          1270,
+          1100
+        ],
+        "previous_after": [
+          210,
+          625,
+          1270,
+          960
+        ],
+        "current_after": [
+          210,
+          960,
+          1270,
+          1100
+        ]
+      },
+      {
+        "previous_block_yielded": null,
+        "block_pair": [
+          "P013-B004",
+          "P013-B005"
+        ],
+        "rule": "half_open_no_overlap_no_clip",
+        "previous_before": [
+          1290,
+          205,
+          2410,
+          905
+        ],
+        "current_before": [
+          1335,
+          905,
+          2395,
+          1095
+        ]
+      }
+    ]
+  },
+  "ocr_engine_profile": "eng_oem1_psm4",
+  "no_expansion": true,
+  "padding_px": 0,
+  "dedupe_enabled": false,
+  "candidate_assemblies": [
+    {
+      "id": "p013_geo_noexp_5box_triage_order",
+      "description": "No-expansion non-overlap OCR assembled in sealed triage physical block order.",
+      "units": [
+        [
+          "P013-B001"
+        ],
+        [
+          "P013-B002"
+        ],
+        [
+          "P013-B003"
+        ],
+        [
+          "P013-B004"
+        ],
+        [
+          "P013-B005"
+        ]
+      ]
+    },
+    {
+      "id": "p013_geo_noexp_4unit_triage_logical_order",
+      "description": "No-expansion non-overlap OCR assembled by sealed triage logical roles: B003+B004 forms the Tourists unit.",
+      "units": [
+        [
+          "P013-B001"
+        ],
+        [
+          "P013-B002"
+        ],
+        [
+          "P013-B003",
+          "P013-B004"
+        ],
+        [
+          "P013-B005"
+        ]
+      ]
+    },
+    {
+      "id": "p013_geo_noexp_4unit_column_order_control",
+      "description": "Fixed reading-order control using the same OCR crops with the Tourists unit ordered B004+B003.",
+      "units": [
+        [
+          "P013-B001"
+        ],
+        [
+          "P013-B002"
+        ],
+        [
+          "P013-B004",
+          "P013-B003"
+        ],
+        [
+          "P013-B005"
+        ]
+      ]
+    }
+  ]
+}

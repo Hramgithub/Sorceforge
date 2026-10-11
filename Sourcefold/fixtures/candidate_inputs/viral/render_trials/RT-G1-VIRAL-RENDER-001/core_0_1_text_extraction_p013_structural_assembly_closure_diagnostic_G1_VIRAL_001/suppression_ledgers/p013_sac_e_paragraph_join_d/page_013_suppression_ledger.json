@@ -1,0 +1,138 @@
+[
+  {
+    "rule_id": "low_confidence_thin_noise_or_punctuation_fragment",
+    "parameters": {
+      "max_mean_confidence": 50.0,
+      "max_height_px": 14,
+      "neighbor_vertical_edge_gap_px": 36,
+      "punctuation_regex": "^[^\\w]*[.,;:!?'\\u2018\\u2019\\u201c\\u201d\\\"-]+[^\\w]*$",
+      "evaluation_mode": "simultaneous_against_variant_input_records"
+    },
+    "suppressed_records": [
+      {
+        "record_id": "P013-B001-TES:3.1.1",
+        "source_order": "01.009",
+        "tsv_line_key": "P013-B001-TES:3.1.1",
+        "text": "n a m1 a \u2122 RT at ia A rela",
+        "normalized_text": "n a m1 a rt at ia a rela",
+        "page_bbox_half_open": [
+          276,
+          659,
+          1151,
+          669
+        ],
+        "mean_confidence": 44.93795,
+        "reason": "noise_or_punctuation_fragment",
+        "proof": {
+          "mean_confidence": 44.93795,
+          "height_px": 10,
+          "punctuation_fragment": false,
+          "same_lane_neighbor_requirement": "at_least_one_neighbor_with_vertical_edge_gap_le_36_px",
+          "nearest_same_lane_neighbor": {
+            "record_id": "P013-B002-TES:1.1.2",
+            "vertical_edge_gap_px": 0,
+            "horizontal_edge_gap_px": 0
+          },
+          "decision_basis": "low_conf_thin_fragment_or_punctuation_fragment"
+        }
+      }
+    ]
+  },
+  {
+    "rule_id": "declared_seam_fractured_duplicate",
+    "parameters": {
+      "declared_seam_pairs": [
+        [
+          "P013-B004-TES",
+          "P013-B005-TES"
+        ]
+      ],
+      "same_lane_required": true,
+      "min_area_overlap_ratio": 0.72,
+      "min_area_size_ratio": 0.8,
+      "max_center_y_gap_px": 8,
+      "min_token_dice": 0.9,
+      "earlier_source_order_required": true,
+      "earlier_lower_boundary_required": true,
+      "later_upper_boundary_required": true,
+      "earlier_normalized_token_support_gte_later": true,
+      "later_tokens_contained_in_earlier_except_bounded_edge_fragment_drop": true,
+      "text_literal_matching": false
+    },
+    "edges": [
+      {
+        "earlier_record_id": "P013-B004-TES:1.1.13",
+        "later_record_id": "P013-B005-TES:1.1.1",
+        "declared_seam_pair": [
+          "P013-B004-TES",
+          "P013-B005-TES"
+        ],
+        "same_lane": true,
+        "center_y_gap_px": 2.5,
+        "min_area_overlap_ratio": 1.0,
+        "area_size_ratio": 0.84466,
+        "token_dice": 0.909091,
+        "earlier_normalized_token_support": 11,
+        "later_normalized_token_support": 11,
+        "boundary_position_proof": {
+          "earlier_is_lower_boundary_record": true,
+          "later_is_upper_boundary_record": true
+        },
+        "token_containment_proof": {
+          "earlier_tokens": [
+            "to",
+            "him",
+            "he",
+            "ll",
+            "get",
+            "them",
+            "off",
+            "the",
+            "island",
+            "by",
+            "dawn"
+          ],
+          "later_tokens": [
+            "o",
+            "him",
+            "he",
+            "ll",
+            "get",
+            "them",
+            "off",
+            "the",
+            "island",
+            "by",
+            "dawn"
+          ],
+          "mismatch_count": 1,
+          "bounded_fragment_drop": true,
+          "fragment_drop": {
+            "token_index": 0,
+            "earlier_token": "to",
+            "later_token": "o",
+            "dropped_prefix_chars": "t"
+          }
+        },
+        "decision": "suppress_later_declared_seam_fragment"
+      }
+    ],
+    "suppressed_records": [
+      {
+        "record_id": "P013-B005-TES:1.1.1",
+        "source_order": "05.001",
+        "tsv_line_key": "P013-B005-TES:1.1.1",
+        "text": "\u2018o him, he'll get them off the island by dawn.",
+        "normalized_text": "o him he ll get them off the island by dawn",
+        "page_bbox_half_open": [
+          1311,
+          881,
+          2025,
+          910
+        ],
+        "mean_confidence": 89.60661,
+        "reason": "declared_seam_fractured_duplicate_later_fragment"
+      }
+    ]
+  }
+]

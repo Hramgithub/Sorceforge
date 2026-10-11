@@ -1,0 +1,100 @@
+{
+  "decision_id": "C01TECPD-G1-VIRAL-001",
+  "authorization_id": "BA-G1-VIRAL-CORE-0-1-TEXT-EXTRACTION-CANDIDATE-PROFILE-DECISION-001",
+  "status": "text_extraction_candidate_profile_decision_recorded_candidate_profile_frozen",
+  "generator_script": "scripts/build_core_0_1_text_extraction_candidate_profile_decision.py",
+  "generator_script_sha256": "CA48980C4D0D1E0B6A0F7358F77A687338086EC150043275B8AD0FC98A1C3EBB",
+  "test_contract": "tests/test_core_0_1_text_extraction_candidate_profile_decision.py",
+  "test_contract_sha256": "76AD5C41E6A0ADDED19CCDBB3DA56693B1D235E703A3B367A1602428CB8CCFC4",
+  "candidate_profile_id": "trim_mask_psm4",
+  "candidate_profile_freeze_granted": true,
+  "source_profile_acceptance_created": false,
+  "runtime_source_profile_lock_created": false,
+  "runtime_source_profile_acceptance_created": false,
+  "ocr_execution_performed": false,
+  "render_execution_performed": false,
+  "pdf_parsing_or_text_layer_extraction_performed": false,
+  "source_or_raw_mutation_performed": false,
+  "accepted_text_mutation_performed": false,
+  "semantic_text_mutation_performed": false,
+  "page_status_mutation_performed": false,
+  "page_021_plus_included": false,
+  "push_performed": false,
+  "evidence": [
+    {
+      "evidence_id": "C01TESRM-G1-VIRAL-001",
+      "page": "009",
+      "role": "remediation_selection",
+      "reference_label": "reference_ocr_verified_text_map",
+      "selected_candidate": "trim_mask_psm4",
+      "variant": "edge_mask_trim",
+      "psm": 4,
+      "sequence_similarity_ratio": 0.9993,
+      "token_recall": 0.996324
+    },
+    {
+      "evidence_id": "C01TESP010-G1-VIRAL-001",
+      "page": "010",
+      "role": "same_profile_generalization",
+      "reference_label": "reference_ocr_verified_text_map",
+      "selected_candidate": "trim_mask_psm4",
+      "variant": "edge_mask_trim",
+      "psm": 4,
+      "sequence_similarity_ratio": 0.998867,
+      "token_recall": 0.995825
+    },
+    {
+      "evidence_id": "C01TESP015-G1-VIRAL-001",
+      "page": "015",
+      "role": "same_profile_ladder_evidence",
+      "reference_label": "reference_text_map_not_ocr_verified",
+      "selected_candidate": "trim_mask_psm4",
+      "variant": "edge_mask_trim",
+      "psm": 4,
+      "sequence_similarity_ratio": 0.997252,
+      "token_recall": 0.993985
+    }
+  ],
+  "aggregate_metrics": {
+    "min_sequence_similarity_ratio": 0.997252,
+    "min_token_recall": 0.993985,
+    "page_count": 3,
+    "same_profile_pages": [
+      "010",
+      "015"
+    ],
+    "selection_page": "009"
+  },
+  "negative_capability_matrix": {
+    "ocr_execution": false,
+    "ocr_remediation_execution": false,
+    "render_execution": false,
+    "pdf_parsing_or_text_layer_extraction": false,
+    "source_mutation": false,
+    "raw_mutation": false,
+    "accepted_text_mutation": false,
+    "semantic_text_mutation": false,
+    "page_status_mutation": false,
+    "source_profile_acceptance": false,
+    "runtime_source_profile_lock": false,
+    "runtime_source_profile_acceptance": false,
+    "runtime_implementation": false,
+    "runtime_start": false,
+    "runtime_execution": false,
+    "page_016_plus_processing": false,
+    "page_021_plus_processing": false,
+    "page_021_plus_authorization": false,
+    "translation": false,
+    "proofreading": false,
+    "push": false
+  },
+  "remaining_blockers": [
+    "frozen_profile_config_requires_separate_authorization",
+    "replay_regression_smoke_requires_separate_authorization",
+    "runtime_integration_design_requires_separate_authorization",
+    "runtime_source_profile_lock_requires_separate_authorization",
+    "accepted_text_or_semantic_mutation_requires_separate_authorization",
+    "page_021_plus_remains_separate_bounded_lane_if_selected",
+    "push_requires_separate_authorization"
+  ]
+}

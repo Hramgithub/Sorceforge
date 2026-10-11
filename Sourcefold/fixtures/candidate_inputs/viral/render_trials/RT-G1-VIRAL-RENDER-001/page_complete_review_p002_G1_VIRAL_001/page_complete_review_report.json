@@ -1,0 +1,127 @@
+{
+  "package_id": "PCRP-G1-VIRAL-P002-001",
+  "authorization_id": "BA-G1-VIRAL-PAGE-COMPLETE-REVIEW-P002-001",
+  "status": "ready_for_bogdan_page_complete_decision",
+  "scope": "page_complete_review_packet_only_no_acceptance",
+  "generator": {
+    "script": "scripts/build_page_complete_review.py",
+    "script_sha256": "C6CE27B3D90ACB662F14A9655C3DB734351B579BA0DF6C44C36E24418FEFA79E",
+    "test": "tests/test_page_complete_review.py",
+    "test_sha256": "96F42A5D2ABBB77147F3686C40072C87C10131ADB1574FA40C5531B5D9D209D4"
+  },
+  "page": "002",
+  "page_id": "PG-G1-VIRAL-P002",
+  "image_id": "IMG-G1-VIRAL-RENDER-001-P002",
+  "input_packages": [
+    "PMRP-G1-VIRAL-P002-001"
+  ],
+  "readiness_input": {
+    "package_id": "PMRP-G1-VIRAL-P002-001",
+    "authorization_id": "BA-G1-VIRAL-PAGE-MAP-READINESS-PIPELINE-PILOT-002-001",
+    "pipeline_id": "page_map_readiness_pipeline_v0",
+    "profile_id": "page_map_profile_G1_VIRAL_P002_v0",
+    "report_sha256": "3F957442194211F6F0EC39775ED292DEF126222E98EEFB5BFFD1530D8EA702D6",
+    "packet_sha256": "5DAAB049DC28C9C4633490348991DF822FF8E049460AC0978EBF8163D75C1734",
+    "summary_sha256": "45104BC75F38DCA37612B308186EC8C877FE33369D564510941F03156AC0A52A",
+    "manifest_sha256": "5AB662AF36355A75F73758EF4B73BF13F0315986AF40B2F9234BBE84B489173A"
+  },
+  "page_complete_review": {
+    "expected_blocks": 2,
+    "reviewed_blocks": 2,
+    "ready_blocks": 2,
+    "reading_order": [
+      "credits",
+      "boxed_legal_footer"
+    ],
+    "declared_none_categories": [
+      "art",
+      "inset",
+      "table",
+      "title_only",
+      "unknown",
+      "missing",
+      "context_only"
+    ],
+    "declared_none_note": "No art/inset/table/title_only/unknown/missing/context_only blocks were identified by the current readiness profile.",
+    "coverage_advisory_only": true,
+    "blocks": [
+      {
+        "block_id": "P002-B001",
+        "role": "credits",
+        "source_region_id": "PRM-G1-VIRAL-001-P002-R01",
+        "reading_order": 1,
+        "status": "ready_for_page_complete_review",
+        "anchor_crop": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/source_reconstruction_p002_assisted_draft_G1_VIRAL_001/corrected_region_refs/1_SRAD-G1-VIRAL-002-R01__SRAD-G1-VIRAL-002-R01-C01.png",
+        "box_px": [
+          180,
+          90,
+          2190,
+          1860
+        ],
+        "draft_matches_verified": true,
+        "protected_tokens_matched": 7,
+        "protected_tokens_total": 7,
+        "missing_protected_tokens": [],
+        "discrepancy_disposition": "none",
+        "character_count": 719,
+        "normalized_character_count": 713,
+        "line_count": 24,
+        "non_empty_line_count": 18
+      },
+      {
+        "block_id": "P002-B002",
+        "role": "boxed_legal_footer",
+        "source_region_id": "PRM-G1-VIRAL-001-P002-R02",
+        "reading_order": 2,
+        "status": "ready_for_page_complete_review",
+        "anchor_crop": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/source_reconstruction_p002_assisted_draft_G1_VIRAL_001/corrected_region_refs/2_SRAD-G1-VIRAL-002-R02__SRAD-G1-VIRAL-002-R02-C01.png",
+        "box_px": [
+          200,
+          1980,
+          2150,
+          1220
+        ],
+        "draft_matches_verified": true,
+        "protected_tokens_matched": 10,
+        "protected_tokens_total": 10,
+        "missing_protected_tokens": [],
+        "discrepancy_disposition": "none",
+        "character_count": 474,
+        "normalized_character_count": 469,
+        "line_count": 15,
+        "non_empty_line_count": 10
+      }
+    ],
+    "blockers": [],
+    "open_questions": [],
+    "recommendation": "page_complete_decision_ready_for_bogdan",
+    "decision_options": [
+      "accept_page_002_as_complete_in_a_later_explicit_decision",
+      "hold_page_002_for_corrections_or_additional_review"
+    ]
+  },
+  "review_decision": {
+    "requires_bogdan_decision": true,
+    "page_complete_acceptance_created": false,
+    "page_complete_acceptance_record_id": null,
+    "accepted_pages_as_complete": [],
+    "whole_gate_1_acceptance_created": false,
+    "fixture_admission_created": false
+  },
+  "guardrails": {
+    "ocr_executed": false,
+    "pdf_opened_or_parsed": false,
+    "pdf_text_layer_used": false,
+    "render_executed": false,
+    "raw_artifacts_modified": false,
+    "source_acceptance_created": false,
+    "page_complete_acceptance_created": false,
+    "whole_gate_1_acceptance_created": false,
+    "fixture_admission": false,
+    "translation_authorized": false,
+    "proofreading_authorized": false,
+    "renderer_profile_acceptance": false,
+    "implementation_authorized": false,
+    "push_authorized": false
+  }
+}

@@ -1,0 +1,256 @@
+{
+  "packet_id": "G1SPDP-G1-VIRAL-001",
+  "authorization_id": "BA-G1-VIRAL-SOURCE-PROFILE-DECISION-PACKET-001",
+  "status": "gate_1_source_profile_decision_packet_ready_for_human_options_review",
+  "purpose": "decision_packet_prep_no_acceptance_no_parking",
+  "creates_acceptance": false,
+  "accepts_source_profile": false,
+  "creates_parking_decision": false,
+  "accepts_whole_gate_1": false,
+  "admits_fixture": false,
+  "processes_page_021_plus": false,
+  "executes_ocr": false,
+  "controlling_review": "G1SPRPDREV-G1-VIRAL-001",
+  "source_prep_packet": "G1SPRPD-G1-VIRAL-001",
+  "decision_rows": [
+    {
+      "source_matrix_row_id": "candidate_source_identity_and_selected_page_scope",
+      "source_matrix_disposition": "ready_for_gate_review",
+      "decision_prep_category": "accept_for_gate_review_candidate",
+      "category": "candidate_source_identity",
+      "basis": "Viral candidate input and selected pages 001-020 have stable project evidence, but fixture/source-profile acceptance remains separate.",
+      "creates_acceptance": false,
+      "creates_parking_decision": false,
+      "requires_future_explicit_decision": true
+    },
+    {
+      "source_matrix_row_id": "render_profile_and_render_trial_evidence",
+      "source_matrix_disposition": "evidence_only_not_accepting",
+      "decision_prep_category": "remain_evidence_only_not_accepting",
+      "category": "render_profile",
+      "basis": "Render-trial evidence exists and supports review workflows, but renderer/profile acceptance remains false.",
+      "creates_acceptance": false,
+      "creates_parking_decision": false,
+      "requires_future_explicit_decision": true
+    },
+    {
+      "source_matrix_row_id": "pages_001_020_page_complete_evidence",
+      "source_matrix_disposition": "ready_for_gate_review",
+      "decision_prep_category": "accept_for_gate_review_candidate",
+      "category": "page_complete_evidence",
+      "basis": "Pages 001-020 are page-complete accepted only according to G1SP-G1-VIRAL-016.",
+      "creates_acceptance": false,
+      "creates_parking_decision": false,
+      "requires_future_explicit_decision": true
+    },
+    {
+      "source_matrix_row_id": "page_021_plus_disposition",
+      "source_matrix_disposition": "blocked_needs_decision",
+      "decision_prep_category": "requires_separate_bounded_authorization",
+      "category": "page_scope",
+      "basis": "Page 021+ is unprocessed and not authorized; it is not part of the current route.",
+      "creates_acceptance": false,
+      "creates_parking_decision": false,
+      "requires_future_explicit_decision": true
+    },
+    {
+      "source_matrix_row_id": "pre_ocr_map_model_and_bundle_lineage",
+      "source_matrix_disposition": "ready_for_gate_review",
+      "decision_prep_category": "accept_for_gate_review_candidate",
+      "category": "pre_ocr_map_model",
+      "basis": "Map model and bundle lineage evidence exists for Gate 1 decision prep, not acceptance.",
+      "creates_acceptance": false,
+      "creates_parking_decision": false,
+      "requires_future_explicit_decision": true
+    },
+    {
+      "source_matrix_row_id": "ocr_engine_config_thresholds",
+      "source_matrix_disposition": "parked_pending_ocr_hardening",
+      "decision_prep_category": "park_for_0_1_with_invalidation_conditions",
+      "category": "ocr_methodology",
+      "basis": "OCR engine/config/thresholds remain evidence-gated and are selected for the next remediation/hardening branch.",
+      "creates_acceptance": false,
+      "creates_parking_decision": false,
+      "requires_future_explicit_decision": true
+    },
+    {
+      "source_matrix_row_id": "ocr_benchmark_remediation_debt",
+      "source_matrix_disposition": "parked_pending_ocr_hardening",
+      "decision_prep_category": "park_for_0_1_with_invalidation_conditions",
+      "category": "ocr_methodology",
+      "basis": "Existing ORR/ORM/ONC evidence is cited as unresolved/later input; no OCR remediation is started here.",
+      "creates_acceptance": false,
+      "creates_parking_decision": false,
+      "requires_future_explicit_decision": true
+    },
+    {
+      "source_matrix_row_id": "source_reconstruction_source_review_qa_fixture_evidence",
+      "source_matrix_disposition": "evidence_only_not_accepting",
+      "decision_prep_category": "remain_evidence_only_not_accepting",
+      "category": "source_reconstruction",
+      "basis": "Narrow source reconstruction and QA evidence exists, but fixture admission and source-profile acceptance remain false.",
+      "creates_acceptance": false,
+      "creates_parking_decision": false,
+      "requires_future_explicit_decision": true
+    },
+    {
+      "source_matrix_row_id": "semantic_crop_projection_inventory_gates",
+      "source_matrix_disposition": "ready_for_gate_review",
+      "decision_prep_category": "accept_for_gate_review_candidate",
+      "category": "semantic_and_page_review_pipeline",
+      "basis": "Current page pipeline evidence includes crop provenance, semantic split contracts, projection validation, inventory reconciliation, and page-complete gates.",
+      "creates_acceptance": false,
+      "creates_parking_decision": false,
+      "requires_future_explicit_decision": true
+    },
+    {
+      "source_matrix_row_id": "acceptance_authority_and_delegated_review_boundaries",
+      "source_matrix_disposition": "ready_for_gate_review",
+      "decision_prep_category": "accept_for_gate_review_candidate",
+      "category": "authority",
+      "basis": "Human/delegated review boundaries are explicit for current pages; direct per-stage Bogdan approval is not retroactively recorded.",
+      "creates_acceptance": false,
+      "creates_parking_decision": false,
+      "requires_future_explicit_decision": true
+    },
+    {
+      "source_matrix_row_id": "unsupported_profiles_and_negative_fixtures",
+      "source_matrix_disposition": "blocked_needs_decision",
+      "decision_prep_category": "hold_blocked_needs_decision",
+      "category": "unsupported_profiles",
+      "basis": "Unsupported profile and negative fixture obligations remain missing for Core 0.1 source-profile acceptance.",
+      "creates_acceptance": false,
+      "creates_parking_decision": false,
+      "requires_future_explicit_decision": true
+    },
+    {
+      "source_matrix_row_id": "whole_gate_1_acceptance",
+      "source_matrix_disposition": "blocked_needs_decision",
+      "decision_prep_category": "hold_blocked_needs_decision",
+      "category": "gate_acceptance",
+      "basis": "Page-complete acceptance through 020 is not whole Gate 1 acceptance.",
+      "creates_acceptance": false,
+      "creates_parking_decision": false,
+      "requires_future_explicit_decision": true
+    }
+  ],
+  "decision_options": [
+    {
+      "option_id": "accept_selected_source_profile_elements_for_gate_review_candidate_status",
+      "source_rows": [
+        "candidate_source_identity_and_selected_page_scope",
+        "pages_001_020_page_complete_evidence",
+        "pre_ocr_map_model_and_bundle_lineage",
+        "semantic_crop_projection_inventory_gates",
+        "acceptance_authority_and_delegated_review_boundaries"
+      ],
+      "title": "Accept selected source-profile elements for Gate review candidate status.",
+      "human_prompt": "Should these five rows advance to a future source-profile acceptance decision packet?",
+      "requires_future_explicit_decision": true,
+      "creates_acceptance": false,
+      "creates_parking_decision": false
+    },
+    {
+      "option_id": "park_ocr_methodology_for_core_0_1_with_invalidation_conditions",
+      "source_rows": [
+        "ocr_engine_config_thresholds",
+        "ocr_benchmark_remediation_debt"
+      ],
+      "title": "Park OCR methodology/remediation debt for Core 0.1 with invalidation conditions.",
+      "human_prompt": "Should these OCR rows be proposed for future parking rather than acceptance?",
+      "requires_future_explicit_decision": true,
+      "creates_acceptance": false,
+      "creates_parking_decision": false
+    },
+    {
+      "option_id": "keep_render_and_source_reconstruction_evidence_only",
+      "source_rows": [
+        "render_profile_and_render_trial_evidence",
+        "source_reconstruction_source_review_qa_fixture_evidence"
+      ],
+      "title": "Keep render/source-reconstruction evidence as evidence-only.",
+      "human_prompt": "Should these evidence rows remain non-accepting support material?",
+      "requires_future_explicit_decision": true,
+      "creates_acceptance": false,
+      "creates_parking_decision": false
+    },
+    {
+      "option_id": "hold_unsupported_profiles_and_whole_gate_1_blocked",
+      "source_rows": [
+        "unsupported_profiles_and_negative_fixtures",
+        "whole_gate_1_acceptance"
+      ],
+      "title": "Hold unsupported/negative fixture and whole Gate 1 questions as blocked.",
+      "human_prompt": "Should these rows remain blocked until a later explicit decision?",
+      "requires_future_explicit_decision": true,
+      "creates_acceptance": false,
+      "creates_parking_decision": false
+    },
+    {
+      "option_id": "require_separate_ba_for_page_021_plus",
+      "source_rows": [
+        "page_021_plus_disposition"
+      ],
+      "title": "Require separate bounded authorization for page 021+.",
+      "human_prompt": "Should page 021+ remain outside this Gate 1 decision path?",
+      "requires_future_explicit_decision": true,
+      "creates_acceptance": false,
+      "creates_parking_decision": false
+    }
+  ],
+  "remaining_actual_decisions": [
+    "source_profile_acceptance_or_parking",
+    "unsupported_profiles_and_negative_fixtures",
+    "fixture_admission",
+    "page_021_plus_disposition",
+    "whole_gate_1_acceptance"
+  ],
+  "negative_capability_matrix": {
+    "source_profile_acceptance": false,
+    "creates_parking_decision": false,
+    "whole_gate_1_acceptance": false,
+    "fixture_admission": false,
+    "ocr_execution": false,
+    "ocr_remediation_execution": false,
+    "page_021_plus_processing": false,
+    "source_mutation": false,
+    "render_execution": false,
+    "pdf_parsing_or_text_layer_extraction": false,
+    "raw_mutation": false,
+    "translation": false,
+    "proofreading": false,
+    "renderer_profile_acceptance": false,
+    "implementation": false,
+    "push": false
+  },
+  "verified_inputs": {
+    "G1SPRPDREV-G1-VIRAL-001.review": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/gate_1_source_profile_review_parking_decision_prep_review_G1_VIRAL_001/gate_1_source_profile_review_parking_decision_prep_review.json",
+      "sha256": "118241D5A8CFB01FBD0DFBB4C1D0424E97B52E976A52F4EA10045A452C4F8CE8"
+    },
+    "G1SPRPDREV-G1-VIRAL-001.summary": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/gate_1_source_profile_review_parking_decision_prep_review_G1_VIRAL_001/gate_1_source_profile_review_parking_decision_prep_review_summary.md",
+      "sha256": "AB6CEB2E5D3BD8A68F10C173D2700FA7413466082B8CAC91ACEB5D71B701541F"
+    },
+    "G1SPRPDREV-G1-VIRAL-001.manifest": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/gate_1_source_profile_review_parking_decision_prep_review_G1_VIRAL_001/gate_1_source_profile_review_parking_decision_prep_review_manifest.md",
+      "sha256": "FAD4F428CAA277D1F7E6537CC6BE9230EBF4865B69731CD7CC8AD350E78888D5"
+    },
+    "G1SPRPD-G1-VIRAL-001.packet": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/gate_1_source_profile_review_parking_decision_prep_G1_VIRAL_001/gate_1_source_profile_review_parking_decision_prep.json",
+      "sha256": "3572FBB2A2A23DD9B4B3A2D9C518849F91AF60367A5165CA72AECE6E1AB7A06C"
+    },
+    "G1SPRPD-G1-VIRAL-001.report": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/gate_1_source_profile_review_parking_decision_prep_G1_VIRAL_001/gate_1_source_profile_review_parking_decision_prep_report.json",
+      "sha256": "E31CFE5960F876EF483C5AEE8A65A8F4C5BD364D27201CC3ECC59E2E4DD94E44"
+    },
+    "G1SPRPD-G1-VIRAL-001.summary": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/gate_1_source_profile_review_parking_decision_prep_G1_VIRAL_001/gate_1_source_profile_review_parking_decision_prep_summary.md",
+      "sha256": "F9FEE23C6B5341E289C3776C590DA6918B82167AA9266942F4C47C8ED017C0B0"
+    },
+    "G1SPRPD-G1-VIRAL-001.manifest": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/gate_1_source_profile_review_parking_decision_prep_G1_VIRAL_001/gate_1_source_profile_review_parking_decision_prep_manifest.md",
+      "sha256": "E310CC116A9DA41BE833770F69C3FC92FE2E7B3C53B3EFF3C0CAB9ABC1BF84A7"
+    }
+  }
+}

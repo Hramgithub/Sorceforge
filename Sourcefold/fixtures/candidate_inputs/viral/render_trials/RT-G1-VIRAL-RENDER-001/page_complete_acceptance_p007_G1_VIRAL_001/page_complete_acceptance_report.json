@@ -1,0 +1,73 @@
+{
+  "package_id": "P007PCA-G1-VIRAL-001",
+  "authorization_id": "BA-G1-VIRAL-PAGE-COMPLETE-ACCEPT-P007-001",
+  "status": "page_007_complete_accepted",
+  "scope": "page_007_complete_acceptance_only",
+  "generator": {
+    "script": "scripts/accept_page_007_complete.py",
+    "script_sha256": "22A3D502338FC03AE0A2378E837561F87C065BC916A52D814EC50EB72B99DD49",
+    "test": "tests/test_page_007_complete_acceptance.py",
+    "test_sha256": "F724A8D3D62DAA0A5FE8CCAD78616559DB2FCADBE89D571EBD1A28B7222DF1E7"
+  },
+  "page": "007",
+  "page_id": "PG-G1-VIRAL-P007",
+  "image_id": "IMG-G1-VIRAL-RENDER-001-P007",
+  "input_packages": [
+    "PCRP-G1-VIRAL-P007-003"
+  ],
+  "review_input": {
+    "package_id": "PCRP-G1-VIRAL-P007-003",
+    "authorization_id": "BA-G1-VIRAL-PAGE-COMPLETE-REVIEW-P007-003",
+    "report_sha256": "6A88256EBA758EF8A03FE1B9F53FACDB288C05311BCE3AC35FFB662A88E1C851",
+    "packet_sha256": "65E288DE2763C6D235928E24FE86553B384C8DD7BED129915244AFDF8335B2B1",
+    "summary_sha256": "8B07975E1D0413D5824DBF641C11664456E2947A3B610D688F87B8AE85331372",
+    "manifest_sha256": "74CB0FC4D5BF8449AE4E843B1E86B30E1BE67CEE673F1B03A564DAE64F031676"
+  },
+  "human_decision": {
+    "telegram_message_id": "1118",
+    "decision": "page 007 complete ok",
+    "raw_text": "page 007 complete ok"
+  },
+  "page_complete_acceptance": {
+    "acceptance_id": "P007-PAGE-COMPLETE-ACCEPTANCE-001",
+    "accepted": true,
+    "accepted_page": "007",
+    "accepted_pages_as_complete": [
+      "007"
+    ],
+    "basis": "PCRP-G1-VIRAL-P007-003 with 3/3 ready blocks, deferred art anchor, validated paragraph-preserving semantic map, valid inventory reconciliation, no structural findings, no blockers, no open questions, and Bogdan explicit ok",
+    "reviewed_blocks": 3,
+    "ready_blocks": 3,
+    "reading_order": [
+      "spektral_krew_ui_art_anchor",
+      "marco_proudfoot_body_left_column",
+      "marco_proudfoot_body_right_column"
+    ],
+    "declared_none_categories": [
+      "table",
+      "unknown",
+      "missing"
+    ],
+    "blockers": [],
+    "open_questions": []
+  },
+  "guardrails": {
+    "only_page_007_accepted_as_complete": true,
+    "accepted_pages_as_complete": [
+      "007"
+    ],
+    "whole_gate_1_acceptance_created": false,
+    "fixture_admission": false,
+    "source_acceptance_created_or_mutated": false,
+    "ocr_executed": false,
+    "pdf_opened_or_parsed": false,
+    "pdf_text_layer_used": false,
+    "render_executed": false,
+    "raw_artifacts_modified": false,
+    "translation_authorized": false,
+    "proofreading_authorized": false,
+    "renderer_profile_acceptance": false,
+    "implementation_authorized": false,
+    "push_authorized": false
+  }
+}

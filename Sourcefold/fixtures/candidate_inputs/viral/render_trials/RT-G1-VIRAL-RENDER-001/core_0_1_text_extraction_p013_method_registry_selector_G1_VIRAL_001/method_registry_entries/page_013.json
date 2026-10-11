@@ -1,0 +1,116 @@
+{
+  "entry_id": "C01TEP013MRS-G1-VIRAL-001-P013",
+  "decision_id": "C01TEP013MRS-G1-VIRAL-001",
+  "authorization_id": "BA-G1-VIRAL-CORE-0-1-TEXT-EXTRACTION-P013-METHOD-REGISTRY-SELECTOR-001",
+  "page": "013",
+  "status": "candidate_selected_not_runtime",
+  "source_lane_id": "C01TEP013SAC-G1-VIRAL-001",
+  "selected_candidate_id": "p013_sac_d_noise_then_declared_seam_fracture",
+  "equivalent_candidate_not_selected": {
+    "candidate_id": "p013_sac_e_paragraph_join_d",
+    "reason": "same_normalized_hash_and_metrics_but_separator_only_variant",
+    "candidate_text_sha256": "3150AEA9688A0D4333A708348D1E2F4A44AC1732EE9C266A14323BC631B46B61",
+    "normalized_candidate_sha256": "69E406E7C3890A3862D06284B7E77D16FBBCA5B9E486E62ECC8AEA971B878E3D",
+    "assembly_mode": "source_region_paragraph_join"
+  },
+  "tie_break": {
+    "rule": "prefer_line_join_over_separator_only_equivalent_when_normalized_hash_and_metrics_match",
+    "selected_assembly_mode": "line_join",
+    "excluded_equivalent_assembly_mode": "source_region_paragraph_join"
+  },
+  "metrics": {
+    "sequence_similarity_ratio": 0.998915,
+    "token_recall": 0.993939,
+    "normalized_candidate_chars": 1884,
+    "reference_chars": 1884,
+    "candidate_normalized_sha256": "69E406E7C3890A3862D06284B7E77D16FBBCA5B9E486E62ECC8AEA971B878E3D"
+  },
+  "thresholds": {
+    "sequence_similarity": 0.997,
+    "token_recall": 0.993939,
+    "method_registry_candidate_requires_threshold": true,
+    "acceptance_effect": "none"
+  },
+  "reference_dependency": {
+    "label": "reference_text_map_not_ocr_verified",
+    "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/page_complete_review_p013_G1_VIRAL_001/review_assets/page_013_text_map.md",
+    "sha256": "7E65E4DE7DB67FCBC5E384FF6A0E6AF54E0D375514E41F32066D530AA1561E67",
+    "note": "scored_against_reference_text_map_not_independently_source_accepted_ocr_truth"
+  },
+  "algorithm_contract": {
+    "inputs": [
+      "sealed_ssp_retained_records",
+      "sealed_sac_suppression_ledger",
+      "sealed_sac_assembly_trace"
+    ],
+    "steps": [
+      "start_from_sealed_ssp_best_retained_set",
+      "apply_low_confidence_thin_noise_suppression",
+      "apply_declared_seam_fracture_duplicate_suppression",
+      "assemble_with_line_join"
+    ],
+    "no_text_literal_matching": true,
+    "no_token_substitution_or_insertion": true,
+    "seam_fracture_parameters": {
+      "declared_seam_pairs": [
+        [
+          "P013-B004-TES",
+          "P013-B005-TES"
+        ]
+      ],
+      "min_area_overlap_ratio": 0.72,
+      "min_area_size_ratio": 0.8,
+      "max_center_y_gap_px": 8,
+      "min_token_dice": 0.9,
+      "text_literal_matching": false
+    }
+  },
+  "artifact_hashes": {
+    "sac_report_sha256": "E5436DFC3839735D7544A072B8764E57D757D45EF8AED331CD23907AEAEC29D4",
+    "sac_rankings_sha256": "613455DDA093EC5F7E01E4F993481D344AB37643257BF5259AC546D5A557D47A",
+    "candidate_text_sha256": "E24D29CE34A61755E9B92214007EFEB8FEADC4B77D4C35468ACF64DDF9D41DE4",
+    "normalized_candidate_sha256": "69E406E7C3890A3862D06284B7E77D16FBBCA5B9E486E62ECC8AEA971B878E3D",
+    "retained_record_trace_sha256": "4B0628DE7BC5EF395DAAB107F6B6448A230C2E08FA24C0B4005F37FE90389A19",
+    "suppression_ledger_sha256": "4A54B31E63C66AE28939FAF9A9A63A8F131F19B2E1AD2E0BBA61B29DD96B5F03",
+    "assembly_trace_sha256": "EC9A97A032A1562C25839AFCD46B15792A6498AAC3FB3D5B14A7B0FEC471C62D"
+  },
+  "excluded_variants": [
+    {
+      "candidate_id": "p013_sac_c_declared_seam_fracture_after_ssp",
+      "reason": "failed_threshold_or_superseded_by_combined_structural_candidate",
+      "diagnostic_threshold_met": false,
+      "method_registry_candidate": false
+    },
+    {
+      "candidate_id": "p013_sac_b_noise_after_ssp",
+      "reason": "failed_threshold_or_superseded_by_combined_structural_candidate",
+      "diagnostic_threshold_met": false,
+      "method_registry_candidate": false
+    },
+    {
+      "candidate_id": "p013_sac_a0_ssp_best_baseline",
+      "reason": "failed_threshold_or_superseded_by_combined_structural_candidate",
+      "diagnostic_threshold_met": false,
+      "method_registry_candidate": false
+    }
+  ],
+  "invalidation_triggers": [
+    "any_pinned_sac_hash_drift",
+    "sac_lane_rerun_or_supersession",
+    "threshold_policy_change",
+    "selector_schema_change",
+    "reference_status_or_evidence_status_change",
+    "future_source_acceptance_changes_page_013_ground_truth"
+  ],
+  "selector_rule_created": false,
+  "selector_enabled": false,
+  "runtime_selector_integration": false,
+  "runtime_implementation_created": false,
+  "production_assembly_created": false,
+  "accepted_text_mutation_performed": false,
+  "semantic_text_mutation_performed": false,
+  "page_status_mutation_performed": false,
+  "source_or_raw_mutation_performed": false,
+  "page_001_020_runtime_loop_created": false,
+  "page_021_plus_included": false
+}

@@ -1,0 +1,106 @@
+{
+  "package_id": "P011TXT-G1-VIRAL-001",
+  "authorization_id": "BA-G1-VIRAL-PAGE-011-TEXT-EXTRACTION-001",
+  "status": "draft_text_ready_for_bogdan_review_no_ocr_acceptance",
+  "scope": "page_011_text_extraction_review_only_no_semantic_map_no_pcrp_no_acceptance",
+  "predecessors": [
+    {
+      "name": "p011tr_001_packet",
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/page_011_triage_G1_VIRAL_001/page_011_triage_packet.json",
+      "sha256": "E27AF4DC0B601D7562DE240980C7F6BC8BAD008D05FC3841396B2B0F8289BE8B"
+    },
+    {
+      "name": "p011tr_001_report",
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/page_011_triage_G1_VIRAL_001/page_011_triage_report.json",
+      "sha256": "E1E3E3A43DAD0995142E9842C0DAC3BBE601385ADC9FE6E2D60F72641F227E6D"
+    },
+    {
+      "name": "p011tr_001_summary",
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/page_011_triage_G1_VIRAL_001/page_011_triage_summary.md",
+      "sha256": "30ECCD3E545209C8F7A7E64A50C3C0C4C8E5FD2D1029E3F3D60EA7FE137006B8"
+    },
+    {
+      "name": "p011tr_001_manifest",
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/page_011_triage_G1_VIRAL_001/page_011_triage_manifest.md",
+      "sha256": "A0F73DEA7B22DF264D1E5F7C638093FD54E51065F5EBE77C919EFA895281FC12"
+    }
+  ],
+  "human_review_decision": {
+    "decision": "p011_triage_ok",
+    "source_message_id": "1669",
+    "source_text": "p011 triage ok",
+    "accepted_package_id": "P011TR-G1-VIRAL-001",
+    "creates_page_complete_acceptance": false
+  },
+  "text_source_state": "manual_transcription_from_text_evidence_crops_draft",
+  "logical_reading_order": [
+    "P011-B001-TES",
+    "P011-B004-TES"
+  ],
+  "crop_order_validation": {
+    "schema_version": "sourcefold_crop_order_validation.v1",
+    "status": "passed",
+    "findings": [],
+    "logical_reading_order": [
+      "P011-B001-TES",
+      "P011-B004-TES"
+    ],
+    "expected_logical_reading_order": [
+      "P011-B001-TES",
+      "P011-B004-TES"
+    ],
+    "physical_crop_asset_order": [
+      "P011-B001-TES",
+      "P011-B004-TES"
+    ],
+    "logical_order_is_not_asset_order": false,
+    "continuation_edges": [],
+    "required_before": [
+      "semantic_map",
+      "pcrp"
+    ]
+  },
+  "ocr_execution_created": false,
+  "ocr_output_created": false,
+  "ocr_acceptance_created": false,
+  "source_acceptance_created": false,
+  "semantic_map_created": false,
+  "pcrp_created": false,
+  "page_complete_acceptance_created": false,
+  "whole_gate_1_acceptance_created": false,
+  "fixture_admission_created": false,
+  "pages_012_020_processing_created": false,
+  "text_map": {
+    "path": "page_011_text_map.md",
+    "sha256": "0564ABB708AEE61F6602926B67427460DE6B96167F98A2FB5F97468CF9EBCAF8",
+    "unit_count": 2,
+    "crop_ids": [
+      "P011-B001-TES",
+      "P011-B004-TES"
+    ],
+    "excluded_visual_only_blocks": [
+      "P011-B002",
+      "P011-B003"
+    ]
+  },
+  "continuation_notes": [
+    "P011-B001 continues Maya Adeduwon from page 010.",
+    "P011-B004 starts Emily 'Em' Lavigne and continues to page 012."
+  ],
+  "sol_terra_review": {
+    "sol": "OK: draft text is bound only to P011-B001-TES and P011-B004-TES, with visual-only B002/B003 excluded from extraction.",
+    "terra": "OK: this creates no OCR/source/semantic/PCRP/page acceptance and does not process page 012 beyond continuation metadata."
+  },
+  "decision_options": [
+    "p011 text ok",
+    "hold p011 text: <reason>"
+  ],
+  "text_extraction_contract_validation": {
+    "schema_version": "sourcefold_text_extraction_contract.v1",
+    "status": "passed",
+    "expected_predecessor_package_id": "P011TR-G1-VIRAL-001",
+    "requires_crop_order_validation": true,
+    "requires_continuation_notes": true,
+    "findings": []
+  }
+}

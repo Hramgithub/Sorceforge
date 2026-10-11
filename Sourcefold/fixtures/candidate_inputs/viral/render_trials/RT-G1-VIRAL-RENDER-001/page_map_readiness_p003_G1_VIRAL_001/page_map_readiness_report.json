@@ -1,0 +1,285 @@
+{
+  "package_id": "PMRP-G1-VIRAL-P003-001",
+  "authorization_id": "BA-G1-VIRAL-PAGE-MAP-READINESS-P003-001",
+  "pipeline_id": "page_map_readiness_pipeline_v0",
+  "profile_id": "page_map_profile_G1_VIRAL_P003_v0",
+  "status": "ready_for_page_complete_review_packet",
+  "scope": "page_map_readiness_only_no_page_acceptance",
+  "generator": {
+    "script": "scripts/build_page_map_readiness.py",
+    "script_sha256": "FFAFBBF81A37EA78961D1A577DD2624814321B63688FCF2C3F3E8B1C78C47499",
+    "test": "tests/test_page_map_readiness.py",
+    "test_sha256": "D2F50E25D6860FF3083A374D2E214C36C4867BD47AECD9D1C447786EE5E60E17"
+  },
+  "page": "003",
+  "page_id": "PG-G1-VIRAL-P003",
+  "image_id": "IMG-G1-VIRAL-RENDER-001-P003",
+  "input_packages": [
+    "PRM-G1-VIRAL-001",
+    "P002C-G1-VIRAL-002",
+    "P003A-G1-VIRAL-003"
+  ],
+  "profile": {
+    "page_label": "Page 003",
+    "expected_block_count": 2,
+    "declared_none": [
+      "art",
+      "inset",
+      "table",
+      "unknown",
+      "missing",
+      "context_only"
+    ],
+    "page_specific": true,
+    "reusable_pipeline": true
+  },
+  "block_inventory": [
+    {
+      "block_id": "P003-B001",
+      "block_type": "text",
+      "role": "title_heading_like",
+      "source_region_id": "PRM-G1-VIRAL-001-P003-R01",
+      "source_review_id": "SRCR-G1-VIRAL-003-R01",
+      "source_acceptance_record_id": "SRSA-G1-VIRAL-003-R01",
+      "reading_order": 1,
+      "required": true,
+      "status": "ready_for_page_complete_review",
+      "anchor": {
+        "page_image": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/images/page_003.png",
+        "page_image_sha256": "B6B5A48D498FDEFB050B67E7155E85502010799D05CC10317C9E179CEB97A6BF",
+        "source_region_id": "PRM-G1-VIRAL-001-P003-R01",
+        "corrected_crop_reference": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/source_reconstruction_p002_completion_and_next_review_G1_VIRAL_001/next_review_refs/1_SRCR-G1-VIRAL-003-R01.png",
+        "corrected_crop_reference_sha256": "CC942FC60C379EF8DC32083FBDE5F08CF222A07A943A6392B67A090DBDEC9F7E",
+        "box_px": [
+          500,
+          130,
+          1550,
+          650
+        ]
+      },
+      "text_fidelity": {
+        "draft_text_sha256": "9545AF01EEC12DD81530CB89FDAEFDB4997C9B79D5ACD4A58156BD739755B0C1",
+        "verified_text_sha256": "9545AF01EEC12DD81530CB89FDAEFDB4997C9B79D5ACD4A58156BD739755B0C1",
+        "draft_metrics": {
+          "character_count": 13,
+          "normalized_character_count": 13,
+          "line_count": 2,
+          "non_empty_line_count": 2
+        },
+        "verified_metrics": {
+          "character_count": 13,
+          "normalized_character_count": 13,
+          "line_count": 2,
+          "non_empty_line_count": 2
+        },
+        "draft_matches_verified": true,
+        "raw_ocr_available": false,
+        "raw_ocr_comparison": "not_available_for_this_authorization",
+        "protected_tokens": [
+          {
+            "token": "SPEKTRAL",
+            "present": true
+          },
+          {
+            "token": "KREW",
+            "present": true
+          }
+        ],
+        "missing_protected_tokens": [],
+        "discrepancy": [],
+        "discrepancy_disposition": "none"
+      },
+      "structure_semantics": {
+        "structure_record_id": "SRSA-G1-VIRAL-003-R01",
+        "semantic_roles": [
+          "title_heading_like"
+        ],
+        "missing_semantic_expectations": [],
+        "spans": [
+          {
+            "semantic_role": "title_heading_like",
+            "heading_level": "h1_candidate",
+            "bold": "unknown",
+            "italic": "unknown",
+            "underline": "unknown"
+          }
+        ]
+      },
+      "overlay_recovery": {
+        "overlay_state": "no_overlap_or_duplicate_detected_in_current_profile",
+        "parent_child_relation": "none",
+        "recovery_role": "title_heading_like",
+        "reading_order_note": "declared by page profile"
+      }
+    },
+    {
+      "block_id": "P003-B002",
+      "block_type": "text",
+      "role": "main_body_text",
+      "source_region_id": "PRM-G1-VIRAL-001-P003-R02",
+      "source_review_id": "SRCR-G1-VIRAL-003-R02",
+      "source_acceptance_record_id": "SRSA-G1-VIRAL-003-R02",
+      "reading_order": 2,
+      "required": true,
+      "status": "ready_for_page_complete_review",
+      "anchor": {
+        "page_image": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/images/page_003.png",
+        "page_image_sha256": "B6B5A48D498FDEFB050B67E7155E85502010799D05CC10317C9E179CEB97A6BF",
+        "source_region_id": "PRM-G1-VIRAL-001-P003-R02",
+        "corrected_crop_reference": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/source_reconstruction_p002_completion_and_next_review_G1_VIRAL_001/next_review_refs/2_SRCR-G1-VIRAL-003-R02.png",
+        "corrected_crop_reference_sha256": "ABDE2B383C0D8470F9923703A70560339ACAA1906B68867800A9B619EB3BB845",
+        "box_px": [
+          270,
+          860,
+          2050,
+          2240
+        ]
+      },
+      "text_fidelity": {
+        "draft_text_sha256": "7BC103FEA1820448E1FC3007532F3E964132B339D943D34CA0A36F4E0F4E0BEC",
+        "verified_text_sha256": "7BC103FEA1820448E1FC3007532F3E964132B339D943D34CA0A36F4E0F4E0BEC",
+        "draft_metrics": {
+          "character_count": 1817,
+          "normalized_character_count": 1813,
+          "line_count": 28,
+          "non_empty_line_count": 24
+        },
+        "verified_metrics": {
+          "character_count": 1817,
+          "normalized_character_count": 1813,
+          "line_count": 28,
+          "non_empty_line_count": 24
+        },
+        "draft_matches_verified": true,
+        "raw_ocr_available": false,
+        "raw_ocr_comparison": "not_available_for_this_authorization",
+        "protected_tokens": [
+          {
+            "token": "Italy baby",
+            "present": true
+          },
+          {
+            "token": "Maya",
+            "present": true
+          },
+          {
+            "token": "one million sub mark",
+            "present": true
+          },
+          {
+            "token": "Poveglia",
+            "present": true
+          },
+          {
+            "token": "Order of the Lamb",
+            "present": true
+          },
+          {
+            "token": "Living Jesus",
+            "present": true
+          },
+          {
+            "token": "Eye-talian Navy",
+            "present": true
+          },
+          {
+            "token": "Hyeon",
+            "present": true
+          },
+          {
+            "token": "second World War",
+            "present": true
+          },
+          {
+            "token": "A1",
+            "present": true
+          },
+          {
+            "token": "OK - so any questions?",
+            "present": true
+          }
+        ],
+        "missing_protected_tokens": [],
+        "discrepancy": [],
+        "discrepancy_disposition": "none"
+      },
+      "structure_semantics": {
+        "structure_record_id": "SRSA-G1-VIRAL-003-R02",
+        "semantic_roles": [
+          "body_text"
+        ],
+        "missing_semantic_expectations": [],
+        "spans": [
+          {
+            "semantic_role": "body_text",
+            "heading_level": "none",
+            "bold": "unknown",
+            "italic": "unknown",
+            "underline": "unknown"
+          }
+        ]
+      },
+      "overlay_recovery": {
+        "overlay_state": "no_overlap_or_duplicate_detected_in_current_profile",
+        "parent_child_relation": "none",
+        "recovery_role": "main_body_text",
+        "reading_order_note": "declared by page profile"
+      }
+    }
+  ],
+  "coverage_summary": {
+    "inventory_coverage": {
+      "count": 2,
+      "expected": 2,
+      "percent": 100.0,
+      "advisory_only": true
+    },
+    "source_ready_in_scope_text_blocks": {
+      "count": 2,
+      "expected": 2,
+      "percent": 100.0,
+      "advisory_only": true
+    },
+    "anchor_coverage": {
+      "count": 2,
+      "expected": 2,
+      "percent": 100.0,
+      "advisory_only": true
+    },
+    "reading_order_coverage": {
+      "count": 2,
+      "expected": 2,
+      "percent": 100.0,
+      "advisory_only": true
+    },
+    "declared_none_categories": [
+      "art",
+      "inset",
+      "table",
+      "unknown",
+      "missing",
+      "context_only"
+    ],
+    "coverage_accepts_page": false
+  },
+  "readiness_decision": {
+    "readiness": "ready_for_later_page_complete_review_packet",
+    "blockers": [],
+    "open_questions": [],
+    "page_complete_acceptance_created": false,
+    "whole_gate_1_acceptance_created": false
+  },
+  "guardrails": {
+    "ocr_executed": false,
+    "pdf_opened_or_parsed": false,
+    "pdf_text_layer_used": false,
+    "render_executed": false,
+    "raw_artifacts_modified": false,
+    "fixture_admission": false,
+    "translation_authorized": false,
+    "proofreading_authorized": false,
+    "renderer_profile_acceptance": false,
+    "implementation_authorized": false,
+    "push_authorized": false
+  }
+}

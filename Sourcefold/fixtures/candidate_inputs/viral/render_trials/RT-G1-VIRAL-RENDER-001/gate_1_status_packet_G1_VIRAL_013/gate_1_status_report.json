@@ -1,0 +1,67 @@
+{
+  "status_packet_id": "G1SP-G1-VIRAL-013",
+  "authorization_id": "BA-G1-VIRAL-PAGE-018-AGGRESSIVE-BATCH-001",
+  "lane_id": "P018BATCH-G1-VIRAL-001",
+  "status": "gate_1_status_route_packet_ready_for_final_human_batch_review",
+  "page_complete_accepted_pages": [
+    "001",
+    "002",
+    "003",
+    "004",
+    "005",
+    "006",
+    "007",
+    "008",
+    "009",
+    "010",
+    "011",
+    "012",
+    "013",
+    "014",
+    "015",
+    "016",
+    "017",
+    "018"
+  ],
+  "remaining_page_complete_pages_unstarted": [
+    "019",
+    "020"
+  ],
+  "recommended_next_candidate": "page_019_triage_readiness_not_authorized",
+  "predecessor": {
+    "package_id": "P018PCA-G1-VIRAL-001",
+    "sha256": "9260F524B2893049EF14100474F8DC12BAAF39B5ED3B16045156E64D554E3B62"
+  },
+  "review_gate": {
+    "human_review_state": "human_review_skipped_by_explicit_authorization",
+    "delegated_review_state": "review_delegated_to_Sol_Terra",
+    "lane_authority": "BA-G1-VIRAL-PAGE-018-AGGRESSIVE-BATCH-001",
+    "sol": {
+      "status": "OK",
+      "finding": "OK: status refresh advances accepted-only pages through 018."
+    },
+    "terra": {
+      "status": "OK",
+      "finding": "OK: page 019 is only a recommended next candidate unless the sequential run continues."
+    },
+    "status": "passed",
+    "blockers": []
+  },
+  "guardrails": {
+    "whole_gate_1_acceptance": false,
+    "fixture_admission": false,
+    "source_acceptance_mutation": false,
+    "ocr_execution": false,
+    "render_execution": false,
+    "pdf_parsing_or_text_layer_extraction": false,
+    "raw_mutation": false,
+    "translation": false,
+    "proofreading": false,
+    "renderer_profile_acceptance": false,
+    "implementation": false,
+    "push": false,
+    "page_019_plus_processing": false,
+    "page_021_plus_processing": false,
+    "final_human_batch_review_acceptance": false
+  }
+}

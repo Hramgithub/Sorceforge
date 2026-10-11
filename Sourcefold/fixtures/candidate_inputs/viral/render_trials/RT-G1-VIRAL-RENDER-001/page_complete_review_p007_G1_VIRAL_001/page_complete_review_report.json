@@ -1,0 +1,422 @@
+{
+  "package_id": "PCRP-G1-VIRAL-P007-001",
+  "authorization_id": "BA-G1-VIRAL-PAGE-COMPLETE-REVIEW-P007-001",
+  "status": "ready_for_bogdan_page_complete_decision",
+  "scope": "page_complete_review_packet_only_no_acceptance",
+  "generator": {
+    "script": "scripts/build_page_complete_review.py",
+    "script_sha256": "DE5B6F128DA3E93EB79894D1A6174521B8F6E177CE7B86754B8D21AC08C02F89",
+    "test": "tests/test_page_complete_review.py",
+    "test_sha256": "AF46DD65E51445B36EAE2261AA4355692644926BD0C820E450868479C0558949"
+  },
+  "page": "007",
+  "page_id": "PG-G1-VIRAL-P007",
+  "image_id": "IMG-G1-VIRAL-RENDER-001-P007",
+  "input_packages": [
+    "P007-INLINE-MAP-G1-VIRAL-001"
+  ],
+  "review_attachments": [
+    {
+      "attachment_id": "P007-001-ATT-PAGE",
+      "role": "source_page_image",
+      "source_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/images/page_007.png",
+      "package_path": "review_assets/page_007.png",
+      "sha256": "0271A5FB9A672248ABBC771C2F1F064D58640CCB6D8692C7AF7AAE58A160BC41"
+    },
+    {
+      "attachment_id": "P007-001-ATT-CROP-PROMO",
+      "role": "human_review_crop",
+      "label": "spektral_krew_promo_text",
+      "source_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/images/page_007.png",
+      "box_px": [
+        140,
+        140,
+        1380,
+        1890
+      ],
+      "covered_review_blocks": [
+        "P007-B001"
+      ],
+      "detect_dark_text": false,
+      "package_path": "review_assets/1_P007-spektral-krew-promo-text.png",
+      "sha256": "49CB1BA8A8C3B97F28D870E50F6177948694F7A1CB20F6BFF90CB6E6B8492C69"
+    },
+    {
+      "attachment_id": "P007-001-ATT-CROP-PROMO-LINKS",
+      "role": "human_review_crop",
+      "label": "spektral_krew_promo_links",
+      "source_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/images/page_007.png",
+      "box_px": [
+        35,
+        1720,
+        1200,
+        460
+      ],
+      "covered_review_blocks": [
+        "P007-B001"
+      ],
+      "detect_dark_text": false,
+      "package_path": "review_assets/1b_P007-spektral-krew-promo-links.png",
+      "sha256": "C5F3CD334E4D3B67B69BD89A944A45BC3103A6B9B327E3EEF3D736D23BF0DFDF"
+    },
+    {
+      "attachment_id": "P007-001-ATT-CROP-HEADING",
+      "role": "human_review_crop",
+      "label": "marco_proudfoot_heading",
+      "source_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/images/page_007.png",
+      "box_px": [
+        120,
+        2260,
+        1200,
+        105
+      ],
+      "covered_review_blocks": [
+        "P007-B002"
+      ],
+      "detect_dark_text": false,
+      "package_path": "review_assets/2_P007-marco-proudfoot-heading.png",
+      "sha256": "436879C04FEDCD5B5B0821558A712FE2B2CEACA071D8924925D9664B7673E9F0"
+    },
+    {
+      "attachment_id": "P007-001-ATT-CROP-LEFT",
+      "role": "human_review_crop",
+      "label": "marco_proudfoot_body_left_column",
+      "source_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/images/page_007.png",
+      "box_px": [
+        80,
+        2290,
+        1210,
+        840
+      ],
+      "covered_review_blocks": [
+        "P007-B003"
+      ],
+      "detect_dark_text": true,
+      "package_path": "review_assets/3_P007-marco-proudfoot-body-left.png",
+      "sha256": "A5950F57E4C9E592BD04CA6907205685AD023EF2F4C94BFAE2FA9D9B791CA007"
+    },
+    {
+      "attachment_id": "P007-001-ATT-CROP-RIGHT",
+      "role": "human_review_crop",
+      "label": "marco_proudfoot_body_right_column",
+      "source_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/images/page_007.png",
+      "box_px": [
+        1260,
+        2290,
+        1180,
+        840
+      ],
+      "covered_review_blocks": [
+        "P007-B004"
+      ],
+      "detect_dark_text": true,
+      "package_path": "review_assets/4_P007-marco-proudfoot-body-right.png",
+      "sha256": "A1928D6D780B3E7DCED35C7F0FBD2F549C5973FA3F3A6D2654EBA5039AD5F873"
+    },
+    {
+      "attachment_id": "P007-001-ATT-TEXT-MAP",
+      "role": "ocr_verified_text_map_markdown",
+      "source_path": "generated_from_ocr_verified_crop_text_map",
+      "package_path": "review_assets/page_007_ocr_verified_text_map.md",
+      "sha256": "0CDC59D7A7FC6B08BFE1926BB9C9C900BAB834FED37FE5B47043A2564DA0B6B1"
+    },
+    {
+      "attachment_id": "P007-001-ATT-SEMANTIC-MAP-JSON",
+      "role": "semantic_text_map_json",
+      "source_path": "generated_from_inline_readiness_spans",
+      "package_path": "review_assets/page_007_semantic_text_map.json",
+      "sha256": "A93045C0694D980321D656DA0F2A8E8FE6D574AB5CC9AC34C6BBAF9D36164617",
+      "semantic_validation": {
+        "schema_version": "page_review_semantic_units.v1",
+        "taxonomy_version": "sourcefold_page_review_taxonomy.v1",
+        "unit_count": 11,
+        "valid": true,
+        "readiness_blocked": false,
+        "findings": []
+      },
+      "markdown_projection_validation": {
+        "valid": true,
+        "readiness_blocked": false,
+        "findings": []
+      }
+    },
+    {
+      "attachment_id": "P007-001-ATT-SEMANTIC-MAP-MD",
+      "role": "semantic_text_map_markdown",
+      "source_path": "generated_from_inline_readiness_spans",
+      "package_path": "review_assets/page_007_semantic_text_map.md",
+      "sha256": "0C8EADBABC54D8EE601CD0EA760DA6DFE0FD556B1682C03DCB7101E51E8475CF",
+      "semantic_validation": {
+        "schema_version": "page_review_semantic_units.v1",
+        "taxonomy_version": "sourcefold_page_review_taxonomy.v1",
+        "unit_count": 11,
+        "valid": true,
+        "readiness_blocked": false,
+        "findings": []
+      },
+      "markdown_projection_validation": {
+        "valid": true,
+        "readiness_blocked": false,
+        "findings": []
+      }
+    }
+  ],
+  "readiness_input": {
+    "package_id": "P007-INLINE-MAP-G1-VIRAL-001",
+    "authorization_id": "BA-G1-VIRAL-PAGE-COMPLETE-REVIEW-P007-001",
+    "pipeline_id": "inline_readable_page_map_profile_v0",
+    "profile_id": "page_map_profile_G1_VIRAL_P007_readable_v0",
+    "report_sha256": "inline_page_007_verified_text_map",
+    "packet_sha256": "inline_page_007_verified_text_map",
+    "summary_sha256": "inline_page_007_verified_text_map",
+    "manifest_sha256": "inline_page_007_verified_text_map"
+  },
+  "page_complete_review": {
+    "expected_blocks": 4,
+    "reviewed_blocks": 4,
+    "ready_blocks": 4,
+    "reading_order": [
+      "spektral_krew_promo_text",
+      "marco_proudfoot_heading",
+      "marco_proudfoot_body_left_column",
+      "marco_proudfoot_body_right_column"
+    ],
+    "declared_none_categories": [
+      "table",
+      "unknown",
+      "missing"
+    ],
+    "context_only_regions": [
+      {
+        "source_region_id": "PRM-G1-VIRAL-001-P007-R02",
+        "status": "visual_context_not_source_text_record",
+        "reason": "Portrait/photo area is packaged in the full page image and excluded from source text transcription."
+      },
+      {
+        "source_region_id": "PRM-G1-VIRAL-001-P007-PAGE-NUMBER",
+        "status": "visual_exclusion_not_source_text_record",
+        "reason": "Bottom page marker is layout/page-number context, not body source text."
+      }
+    ],
+    "declared_none_note": "table/unknown/missing: none identified by the readiness profile.",
+    "coverage_advisory_only": true,
+    "visual_proof_checks": [],
+    "human_review_crop_checks": [
+      {
+        "attachment_id": "P007-001-ATT-CROP-PROMO",
+        "label": "spektral_krew_promo_text",
+        "status": "passed",
+        "reason": null,
+        "edge_ink_ratios": {
+          "left": 0.0,
+          "right": 0.0,
+          "top": 0.0,
+          "bottom": 0.0003
+        },
+        "maximum_allowed_edge_ink_ratio": 0.02
+      },
+      {
+        "attachment_id": "P007-001-ATT-CROP-PROMO-LINKS",
+        "label": "spektral_krew_promo_links",
+        "status": "passed",
+        "reason": null,
+        "edge_ink_ratios": {
+          "left": 0.0,
+          "right": 0.0,
+          "top": 0.0085,
+          "bottom": 0.005
+        },
+        "maximum_allowed_edge_ink_ratio": 0.02
+      },
+      {
+        "attachment_id": "P007-001-ATT-CROP-HEADING",
+        "label": "marco_proudfoot_heading",
+        "status": "passed",
+        "reason": null,
+        "edge_ink_ratios": {
+          "left": 0.0,
+          "right": 0.0,
+          "top": 0.0,
+          "bottom": 0.0
+        },
+        "maximum_allowed_edge_ink_ratio": 0.02
+      },
+      {
+        "attachment_id": "P007-001-ATT-CROP-LEFT",
+        "label": "marco_proudfoot_body_left_column",
+        "status": "passed",
+        "reason": null,
+        "edge_ink_ratios": {
+          "left": 0.0,
+          "right": 0.0,
+          "top": 0.0044,
+          "bottom": 0.0
+        },
+        "maximum_allowed_edge_ink_ratio": 0.02
+      },
+      {
+        "attachment_id": "P007-001-ATT-CROP-RIGHT",
+        "label": "marco_proudfoot_body_right_column",
+        "status": "passed",
+        "reason": null,
+        "edge_ink_ratios": {
+          "left": 0.0,
+          "right": 0.0,
+          "top": 0.0,
+          "bottom": 0.0
+        },
+        "maximum_allowed_edge_ink_ratio": 0.02
+      }
+    ],
+    "semantic_units_validated": true,
+    "semantic_validation": {
+      "schema_version": "page_review_semantic_units.v1",
+      "taxonomy_version": "sourcefold_page_review_taxonomy.v1",
+      "unit_count": 11,
+      "valid": true,
+      "readiness_blocked": false,
+      "findings": []
+    },
+    "markdown_projection_validation": {
+      "valid": true,
+      "readiness_blocked": false,
+      "findings": []
+    },
+    "inventory_reconciliation": {
+      "region_count": 6,
+      "unit_count": 11,
+      "valid": true,
+      "readiness_blocked": false,
+      "findings": []
+    },
+    "structural_findings": [],
+    "blocks": [
+      {
+        "block_id": "P007-B001",
+        "role": "spektral_krew_promo_text",
+        "source_region_id": "PRM-G1-VIRAL-001-P007-R01",
+        "reading_order": 1,
+        "status": "ready_for_page_complete_review",
+        "anchor_crop": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/images/page_007.png",
+        "box_px": [
+          70,
+          70,
+          1580,
+          2140
+        ],
+        "draft_matches_verified": true,
+        "protected_tokens_matched": 3,
+        "protected_tokens_total": 3,
+        "missing_protected_tokens": [],
+        "discrepancy_disposition": "none",
+        "character_count": 136,
+        "normalized_character_count": 135,
+        "line_count": 10,
+        "non_empty_line_count": 9
+      },
+      {
+        "block_id": "P007-B002",
+        "role": "marco_proudfoot_heading",
+        "source_region_id": "PRM-G1-VIRAL-001-P007-R03",
+        "reading_order": 2,
+        "status": "ready_for_page_complete_review",
+        "anchor_crop": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/images/page_007.png",
+        "box_px": [
+          200,
+          2250,
+          1120,
+          60
+        ],
+        "draft_matches_verified": true,
+        "protected_tokens_matched": 3,
+        "protected_tokens_total": 3,
+        "missing_protected_tokens": [],
+        "discrepancy_disposition": "none",
+        "character_count": 46,
+        "normalized_character_count": 46,
+        "line_count": 1,
+        "non_empty_line_count": 1
+      },
+      {
+        "block_id": "P007-B003",
+        "role": "marco_proudfoot_body_left_column",
+        "source_region_id": "PRM-G1-VIRAL-001-P007-R04-L",
+        "reading_order": 3,
+        "status": "ready_for_page_complete_review",
+        "anchor_crop": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/images/page_007.png",
+        "box_px": [
+          200,
+          2340,
+          960,
+          720
+        ],
+        "draft_matches_verified": true,
+        "protected_tokens_matched": 5,
+        "protected_tokens_total": 5,
+        "missing_protected_tokens": [],
+        "discrepancy_disposition": "none",
+        "character_count": 762,
+        "normalized_character_count": 761,
+        "line_count": 14,
+        "non_empty_line_count": 13
+      },
+      {
+        "block_id": "P007-B004",
+        "role": "marco_proudfoot_body_right_column",
+        "source_region_id": "PRM-G1-VIRAL-001-P007-R04-R",
+        "reading_order": 4,
+        "status": "ready_for_page_complete_review",
+        "anchor_crop": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/images/page_007.png",
+        "box_px": [
+          1260,
+          2340,
+          1060,
+          710
+        ],
+        "draft_matches_verified": true,
+        "protected_tokens_matched": 4,
+        "protected_tokens_total": 4,
+        "missing_protected_tokens": [],
+        "discrepancy_disposition": "none",
+        "character_count": 684,
+        "normalized_character_count": 681,
+        "line_count": 16,
+        "non_empty_line_count": 13
+      }
+    ],
+    "blockers": [],
+    "open_questions": [],
+    "recommendation": "page_complete_decision_ready_for_bogdan",
+    "decision_options": [
+      "accept_page_007_as_complete_in_a_later_explicit_decision",
+      "hold_page_007_for_corrections_or_additional_review"
+    ]
+  },
+  "review_decision": {
+    "requires_bogdan_decision": true,
+    "requires_superseding_review_packet": false,
+    "requires_superseding_package_id": null,
+    "page_complete_acceptance_created": false,
+    "page_complete_acceptance_record_id": null,
+    "accepted_pages_as_complete": [],
+    "whole_gate_1_acceptance_created": false,
+    "fixture_admission_created": false
+  },
+  "post_review_state": null,
+  "guardrails": {
+    "ocr_executed": false,
+    "pdf_opened_or_parsed": false,
+    "pdf_text_layer_used": false,
+    "render_executed": false,
+    "raw_artifacts_modified": false,
+    "source_acceptance_created": false,
+    "page_complete_acceptance_created": false,
+    "whole_gate_1_acceptance_created": false,
+    "fixture_admission": false,
+    "translation_authorized": false,
+    "proofreading_authorized": false,
+    "renderer_profile_acceptance": false,
+    "implementation_authorized": false,
+    "push_authorized": false
+  }
+}

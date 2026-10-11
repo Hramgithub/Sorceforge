@@ -1,0 +1,105 @@
+{
+  "packet_id": "P018TR-G1-VIRAL-001",
+  "authorization_id": "BA-G1-VIRAL-PAGE-018-AGGRESSIVE-BATCH-001",
+  "page": "018",
+  "status": "page_triage_machine_reviewed_human_review_skipped",
+  "predecessors": [
+    {
+      "name": "G1SP-G1-VIRAL-012",
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/gate_1_status_packet_G1_VIRAL_012/gate_1_status_packet.json",
+      "sha256": "F8EFF7DD2047C6CAC6490FE3820BCC6EA8BA91C758EA70DD1348ECE4B44D9861"
+    },
+    {
+      "name": "P017BATCH-G1-VIRAL-001",
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/page_017_aggressive_batch_G1_VIRAL_001/page_017_aggressive_batch_report.json",
+      "sha256": "5D57D75DE8B0E21F535EDAFF0E1CB67C5143FAE1FAAD83F57B04DDC24FD354A7"
+    },
+    {
+      "name": "page_018_image",
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/images/page_018.png",
+      "sha256": "6E8F440CEB5F11A4081722ADF5CD65F74E622641884192390E9DA0CAE6C6BFD4"
+    }
+  ],
+  "text_blocks": [
+    {
+      "block_id": "P018-B001",
+      "role": "welcome_left_column",
+      "crop_box_px": [
+        205,
+        220,
+        1045,
+        2800
+      ],
+      "crop_contract": {
+        "coverage": "full_text_region",
+        "context_allowed": false,
+        "expected_bounds": {
+          "min_x": 180,
+          "max_x": 235,
+          "min_y": 190,
+          "max_y": 250,
+          "min_width": 1000,
+          "min_height": 2700
+        }
+      },
+      "asset": "review_assets/1_P018-left-text-evidence.png"
+    },
+    {
+      "block_id": "P018-B002",
+      "role": "welcome_right_column",
+      "crop_box_px": [
+        1315,
+        220,
+        1040,
+        2800
+      ],
+      "crop_contract": {
+        "coverage": "full_text_region_part",
+        "context_allowed": false,
+        "expected_bounds": {
+          "min_x": 1280,
+          "max_x": 1350,
+          "min_y": 190,
+          "max_y": 250,
+          "min_width": 1000,
+          "min_height": 2700
+        }
+      },
+      "asset": "review_assets/2_P018-right-text-evidence.png",
+      "continues_to_next_page": true
+    }
+  ],
+  "visual_only_blocks": [],
+  "review_gate": {
+    "human_review_state": "human_review_skipped_by_explicit_authorization",
+    "delegated_review_state": "review_delegated_to_Sol_Terra",
+    "lane_authority": "BA-G1-VIRAL-PAGE-018-AGGRESSIVE-BATCH-001",
+    "sol": {
+      "status": "OK",
+      "finding": "OK: page 018 triage is bounded to the exact page image and declared evidence regions."
+    },
+    "terra": {
+      "status": "OK",
+      "finding": "OK: page 019+ remains blocked by the page 018 lane guardrails."
+    },
+    "status": "passed",
+    "blockers": []
+  },
+  "guardrails": {
+    "whole_gate_1_acceptance": false,
+    "fixture_admission": false,
+    "source_acceptance_mutation": false,
+    "ocr_execution": false,
+    "render_execution": false,
+    "pdf_parsing_or_text_layer_extraction": false,
+    "raw_mutation": false,
+    "translation": false,
+    "proofreading": false,
+    "renderer_profile_acceptance": false,
+    "implementation": false,
+    "push": false,
+    "page_019_plus_processing": false,
+    "page_021_plus_processing": false,
+    "final_human_batch_review_acceptance": false
+  }
+}

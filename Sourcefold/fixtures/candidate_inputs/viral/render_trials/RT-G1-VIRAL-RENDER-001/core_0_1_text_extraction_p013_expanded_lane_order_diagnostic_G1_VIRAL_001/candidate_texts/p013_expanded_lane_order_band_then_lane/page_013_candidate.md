@@ -1,0 +1,36 @@
+government. They are given cameras and communications
+there. They immediately begin trying to call for help on their
+equipment to investigate the paranormal events reported on the
+cell phones to no avail. As the darkness sets in, they receive
+island, and so rather than YouTube commenters, the Investigators
+a call from Nuncio on a walkie-talkie that he planted on one
+could be getting feedback from their peers back at Miskatonic
+of them or in their bags. He tells them that there is a chest of
+University or some other experts with whom they’re consulting.
+gold bars on the island that dates back to World War II, and if
+In this case, Hastalyk could still manipulate them through their
+they agree to find it, he'll split it with them. If they don’t, they’ll
+electronic gear, posing as a mysterious expert or benefactor who
+never leave the island. Nuncio directs the Investigators to the
+funded the expedition.
+funded the expedition.
+dock where he has left wireless head cams for each of them
+n a m1 a ™ RT at ia A rela
+Documentary Film Crew — The National Geographic Society
+and a transmitter so that he can more easily direct them. At
+has funded a documentary about Isola di Malamente, and they
+some point during their exploration of the island, their radios
+somehow manage to get permission to film on the island. The
+begin to pick up someone else (actually Hastalyk) who claims
+film crew begins receiving phone calls from someone claiming to
+that Nuncio is going to kill them, but if the Investigators listen
+be from National Geographic (actually Hastalyk), but they soon
+to him, he'll get them off the island by dawn.
+‘o him, he'll get them off the island by dawn.
+realize that it’s someone who knows far too much about them.
+realize that it's someone who knows tar too much about them.
+Pesky Teenagers — A group of local teens decide to take the
+Tourists — A local tour guide (Nuncio Vendra) brings a
+site of passage to explore the island and, well, you know what
+group of tourists to Isola di Malamente and abandons them
+lappens next.

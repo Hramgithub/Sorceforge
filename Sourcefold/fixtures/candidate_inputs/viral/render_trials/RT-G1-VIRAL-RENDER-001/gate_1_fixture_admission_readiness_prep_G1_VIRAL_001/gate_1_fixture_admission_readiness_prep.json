@@ -1,0 +1,154 @@
+{
+  "packet_id": "G1FARP-G1-VIRAL-001",
+  "authorization_id": "BA-G1-VIRAL-FIXTURE-GATE-1-READINESS-PREP-001",
+  "status": "gate_1_fixture_admission_readiness_prep_ready_for_review",
+  "purpose": "fixture_admission_and_whole_gate_acceptance_readiness_prep_only",
+  "source_decision_record": "G1SPDR-G1-VIRAL-001",
+  "source_status_packet": "G1SP-G1-VIRAL-017",
+  "admits_fixture": false,
+  "creates_fixture_manifest": false,
+  "accepts_whole_gate_1": false,
+  "accepts_source_profile": false,
+  "creates_new_parking_decision": false,
+  "processes_page_021_plus": false,
+  "executes_ocr": false,
+  "accepted_gate_review_candidate_rows": [
+    "candidate_source_identity_and_selected_page_scope",
+    "pages_001_020_page_complete_evidence",
+    "pre_ocr_map_model_and_bundle_lineage",
+    "semantic_crop_projection_inventory_gates",
+    "acceptance_authority_and_delegated_review_boundaries"
+  ],
+  "parked_ocr_methodology_rows": [
+    {
+      "source_matrix_row_id": "ocr_engine_config_thresholds",
+      "parking_scope": "core_0_1_only",
+      "invalidation_conditions": [
+        "new OCR benchmark evidence contradicts OCRHM-G1-VIRAL-001",
+        "page 021+ introduces a required OCR methodology blocker",
+        "Gate 1 authority decides OCR methodology must be accepted rather than parked"
+      ]
+    },
+    {
+      "source_matrix_row_id": "ocr_benchmark_remediation_debt",
+      "parking_scope": "core_0_1_only",
+      "invalidation_conditions": [
+        "new OCR benchmark evidence contradicts OCRHM-G1-VIRAL-001",
+        "page 021+ introduces a required OCR methodology blocker",
+        "Gate 1 authority decides OCR methodology must be accepted rather than parked"
+      ]
+    }
+  ],
+  "evidence_only_rows": [
+    "render_profile_and_render_trial_evidence",
+    "source_reconstruction_source_review_qa_fixture_evidence"
+  ],
+  "blocked_rows": [
+    "unsupported_profiles_and_negative_fixtures",
+    "whole_gate_1_acceptance"
+  ],
+  "page_021_plus_boundary": {
+    "rows": [
+      "page_021_plus_disposition"
+    ],
+    "requires_separate_bounded_authorization": true,
+    "included_in_this_packet": false
+  },
+  "readiness_rows": [
+    {
+      "row_id": "fixture_admission_readiness",
+      "status": "not_ready_requires_future_decision",
+      "present_evidence": [
+        "G1SPDR gate-review candidate rows",
+        "G1SP-G1-VIRAL-017 pages 001-020 page-complete accepted-only status",
+        "render/source reconstruction evidence kept non-accepting"
+      ],
+      "missing_or_blocked": [
+        "fixture admission decision",
+        "fixture strategy fit check",
+        "unsupported/negative fixture policy decision",
+        "whole Gate 1 acceptance decision"
+      ]
+    },
+    {
+      "row_id": "unsupported_negative_fixture_policy",
+      "status": "blocked_needs_future_decision",
+      "present_evidence": [
+        "G1SPDR keeps unsupported/negative fixture row blocked"
+      ],
+      "missing_or_blocked": [
+        "future explicit unsupported/negative fixture policy decision"
+      ]
+    },
+    {
+      "row_id": "whole_gate_1_acceptance_readiness",
+      "status": "not_ready_requires_future_decision",
+      "present_evidence": [
+        "G1SPDR candidate/parking/evidence-only decisions"
+      ],
+      "missing_or_blocked": [
+        "fixture admission decision",
+        "whole Gate 1 acceptance decision",
+        "page 021+ disposition remains separate"
+      ]
+    }
+  ],
+  "remaining_actual_decisions": [
+    "fixture_admission",
+    "whole_gate_1_acceptance",
+    "unsupported_profiles_and_negative_fixtures_acceptance_or_fixture_policy",
+    "page_021_plus_disposition"
+  ],
+  "negative_capability_matrix": {
+    "source_profile_acceptance": false,
+    "whole_gate_1_acceptance": false,
+    "fixture_admission": false,
+    "fixture_manifest_creation": false,
+    "ocr_execution": false,
+    "ocr_remediation_execution": false,
+    "page_021_plus_processing": false,
+    "source_mutation": false,
+    "render_execution": false,
+    "pdf_parsing_or_text_layer_extraction": false,
+    "raw_mutation": false,
+    "translation": false,
+    "proofreading": false,
+    "renderer_profile_acceptance": false,
+    "implementation": false,
+    "push": false
+  },
+  "verified_inputs": {
+    "G1SPDR-G1-VIRAL-001.record": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/gate_1_source_profile_decision_record_G1_VIRAL_001/gate_1_source_profile_decision_record.json",
+      "sha256": "E00E17879BE98340A00582B8C128E8C1C7C984657FDC142513447618591691C1"
+    },
+    "G1SPDR-G1-VIRAL-001.report": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/gate_1_source_profile_decision_record_G1_VIRAL_001/gate_1_source_profile_decision_record_report.json",
+      "sha256": "15EA6C81E2269D0289549C0BC682418CE581D8391EB07D20759461CF436BB125"
+    },
+    "G1SPDR-G1-VIRAL-001.summary": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/gate_1_source_profile_decision_record_G1_VIRAL_001/gate_1_source_profile_decision_record_summary.md",
+      "sha256": "8E4A21C9EF5AD8661867F5D12A285EBA3DC54282BECA644CABBCBDE4E5A1EA26"
+    },
+    "G1SPDR-G1-VIRAL-001.manifest": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/gate_1_source_profile_decision_record_G1_VIRAL_001/gate_1_source_profile_decision_record_manifest.md",
+      "sha256": "E2908F97C39BB32F317B318E76286E06375A3637C30A367C2A20C2CDEEBA8C1D"
+    },
+    "G1SP-G1-VIRAL-017.packet": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/gate_1_status_packet_G1_VIRAL_017/gate_1_status_packet.json",
+      "sha256": "DA9B421CD8A5BC503FCCEE24F6043FBCEC9F86262AF3E9E9018C460D871E4ED6"
+    },
+    "G1SP-G1-VIRAL-017.report": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/gate_1_status_packet_G1_VIRAL_017/gate_1_status_report.json",
+      "sha256": "007F7F1F6FC73FC4F9B9268CB3969F895517D20B054FCC1D787851E4609D2F68"
+    },
+    "G1SP-G1-VIRAL-017.summary": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/gate_1_status_packet_G1_VIRAL_017/gate_1_status_summary.md",
+      "sha256": "FF3F3D7F9F3EA0352C95448124821DE2C2255E63DCFEB9D6879A6EA722166CF3"
+    },
+    "G1SP-G1-VIRAL-017.manifest": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/gate_1_status_packet_G1_VIRAL_017/gate_1_status_manifest.md",
+      "sha256": "4A7DDDC454034FC8CFC75C184856B66D27B17ECEA0E5E8447C331B07CCD381A9"
+    }
+  }
+}

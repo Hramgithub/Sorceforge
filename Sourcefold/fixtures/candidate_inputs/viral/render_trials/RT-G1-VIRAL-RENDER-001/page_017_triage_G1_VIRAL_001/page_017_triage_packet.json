@@ -1,0 +1,118 @@
+{
+  "packet_id": "P017TR-G1-VIRAL-001",
+  "authorization_id": "BA-G1-VIRAL-PAGE-017-AGGRESSIVE-BATCH-001",
+  "page": "017",
+  "status": "page_triage_machine_reviewed_human_review_skipped",
+  "predecessors": [
+    {
+      "name": "G1SP-G1-VIRAL-011",
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/gate_1_status_packet_G1_VIRAL_011/gate_1_status_packet.json",
+      "sha256": "0BBE1F41D8F7D0D09911B360A73F2092C8F0E62E48E9EE60B47D7B20AF75ACAB"
+    },
+    {
+      "name": "P016BATCH-G1-VIRAL-001",
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/page_016_aggressive_batch_G1_VIRAL_001/page_016_aggressive_batch_report.json",
+      "sha256": "921A63EF578E23D388A8F232B760E46270D91911399142894117502143A3DD67"
+    },
+    {
+      "name": "page_017_image",
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/images/page_017.png",
+      "sha256": "1198CBB7D55877B31FEEA3E32CD95EABEB504A4610CA98D7CB2047C30142E08F"
+    }
+  ],
+  "text_blocks": [
+    {
+      "block_id": "P017-B001",
+      "role": "one_night_in_perla_intro",
+      "crop_box_px": [
+        210,
+        1780,
+        1040,
+        1270
+      ],
+      "crop_contract": {
+        "coverage": "full_text_region",
+        "context_allowed": false,
+        "expected_bounds": {
+          "min_x": 180,
+          "max_x": 240,
+          "min_y": 1740,
+          "max_y": 1820,
+          "min_width": 1000,
+          "min_height": 1200
+        }
+      },
+      "asset": "review_assets/1_P017-left-text-evidence.png"
+    },
+    {
+      "block_id": "P017-B002",
+      "role": "internet_search_and_keeper_notes",
+      "crop_box_px": [
+        1315,
+        1780,
+        1040,
+        1230
+      ],
+      "crop_contract": {
+        "coverage": "full_text_region",
+        "context_allowed": false,
+        "expected_bounds": {
+          "min_x": 1280,
+          "max_x": 1350,
+          "min_y": 1740,
+          "max_y": 1820,
+          "min_width": 1000,
+          "min_height": 1160
+        }
+      },
+      "asset": "review_assets/2_P017-right-text-evidence.png"
+    }
+  ],
+  "visual_only_blocks": [
+    {
+      "block_id": "P017-V001",
+      "role": "perla_village_hero_art",
+      "crop_box_px": [
+        0,
+        0,
+        2550,
+        1760
+      ],
+      "asset": "review_assets/3_P017-perla-hero-visual-anchor.png",
+      "visual_only": true,
+      "text_extraction": "excluded_visual_anchor"
+    }
+  ],
+  "review_gate": {
+    "human_review_state": "human_review_skipped_by_explicit_authorization",
+    "delegated_review_state": "review_delegated_to_Sol_Terra",
+    "lane_authority": "BA-G1-VIRAL-PAGE-017-AGGRESSIVE-BATCH-001",
+    "sol": {
+      "status": "OK",
+      "finding": "OK: page 017 triage is bounded to the exact page image and declared evidence regions."
+    },
+    "terra": {
+      "status": "OK",
+      "finding": "OK: page 018+ remains blocked by the page 017 lane guardrails."
+    },
+    "status": "passed",
+    "blockers": []
+  },
+  "guardrails": {
+    "whole_gate_1_acceptance": false,
+    "fixture_admission": false,
+    "source_acceptance_mutation": false,
+    "ocr_execution": false,
+    "render_execution": false,
+    "pdf_parsing_or_text_layer_extraction": false,
+    "raw_mutation": false,
+    "translation": false,
+    "proofreading": false,
+    "renderer_profile_acceptance": false,
+    "implementation": false,
+    "push": false,
+    "page_018_plus_processing": false,
+    "page_021_plus_processing": false,
+    "final_human_batch_review_acceptance": false
+  }
+}

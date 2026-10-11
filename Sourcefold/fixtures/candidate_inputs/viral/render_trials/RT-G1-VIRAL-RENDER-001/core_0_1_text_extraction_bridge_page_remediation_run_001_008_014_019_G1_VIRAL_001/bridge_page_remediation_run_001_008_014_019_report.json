@@ -1,0 +1,660 @@
+{
+  "lane_id": "C01TEBRIDGEREM020-G1-VIRAL-001",
+  "authorization_id": "BA-G1-VIRAL-CORE-0-1-TEXT-EXTRACTION-BRIDGE-PAGE-REMEDIATION-AUTHORIZATION-001-008-014-019-001",
+  "status": "bridge_page_remediation_run_materialized_candidate_only",
+  "base_commit": "c99006fd",
+  "input_lane_id": "C01TEBRIDGEREMAUTH020-G1-VIRAL-001",
+  "audit_lane_id": "C01TEBRIDGEAUD020-G1-VIRAL-001",
+  "requested_pages": [
+    "001",
+    "002",
+    "003",
+    "004",
+    "005",
+    "006",
+    "007",
+    "008",
+    "014",
+    "019"
+  ],
+  "visual_only_no_text_rule_pages": [
+    "001"
+  ],
+  "full_page_region_ocr_pages": [
+    "003",
+    "004",
+    "005",
+    "006",
+    "007",
+    "008"
+  ],
+  "text_evidence_smoke_non_promotable_pages": [
+    "014",
+    "019"
+  ],
+  "needs_source_asset_recovery_pages": [
+    "002"
+  ],
+  "page_entries": [
+    {
+      "page": "001",
+      "page_id": "P001",
+      "route_family": "visual_only_no_text_rule",
+      "materialized": true,
+      "fresh_ocr_candidate_created": false,
+      "fresh_ocr_success": false,
+      "ocr_execution_performed": false,
+      "output_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/core_0_1_text_extraction_bridge_page_remediation_run_001_008_014_019_G1_VIRAL_001/visual_only/page_001_visual_only_no_text_rule.md",
+      "output_sha256": "5BC82F6FEA2C2FAF3B93BA97A82461F4A1F0C8269B26C00F3A96B21465ABD1E1"
+    },
+    {
+      "page": "002",
+      "page_id": "P002",
+      "route_family": "needs_source_asset_recovery",
+      "materialized": false,
+      "fresh_ocr_candidate_created": false,
+      "fresh_ocr_success": false,
+      "ocr_execution_performed": false,
+      "output_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/core_0_1_text_extraction_bridge_page_remediation_run_001_008_014_019_G1_VIRAL_001/blockers/page_002_needs_source_asset_recovery.md",
+      "output_sha256": "9AEDCC9FFCA17DD97D96C74B6265A5C63B4FBB34635EF36BACD9DF3EAF47273E"
+    },
+    {
+      "page": "003",
+      "page_id": "P003",
+      "route_family": "full_page_region_candidate_policy",
+      "ocr_execution_performed": true,
+      "tesseract_invoked_for_page": true,
+      "surface_validation_before_ocr": {
+        "schema_version": "sourcefold_ocr_input_surface_policy.v1",
+        "status": "passed",
+        "surface_class": "full_page_region",
+        "allowed_purpose": "candidate_policy",
+        "findings": []
+      },
+      "ocr_run": {
+        "engine": "tesseract",
+        "command_profile": "tesseract -l eng --oem 1 --psm 6 txt tsv",
+        "input_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/page_complete_review_p003_G1_VIRAL_001/review_assets/page_003.png",
+        "input_sha256": "B6B5A48D498FDEFB050B67E7155E85502010799D05CC10317C9E179CEB97A6BF",
+        "transient_ocr_output_persisted": false,
+        "transient_txt_sha256": "7DD3AB82753B6887D4F23E173DE641B5333E9E00A7390CB8CF6372AE3B624B94",
+        "transient_tsv_sha256": "76B50F4C4FB1AC0BED4F71518080133D131EC91C5AB2C406ED04C5CB76C8BBB3",
+        "stdout_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+        "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+        "returncode": 0
+      },
+      "candidate_text_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/core_0_1_text_extraction_bridge_page_remediation_run_001_008_014_019_G1_VIRAL_001/candidate_texts/page_003_full_page_psm6_candidate.md",
+      "candidate_text_sha256": "7DD3AB82753B6887D4F23E173DE641B5333E9E00A7390CB8CF6372AE3B624B94",
+      "candidate_hash_sealed_before_reference_scoring": true,
+      "metrics": {
+        "sequence_similarity_ratio": 0.0,
+        "token_recall": 0.0
+      },
+      "reference": {
+        "reference_status": "not_loaded_no_pinned_reference_for_remediation_run",
+        "reference_loaded_after_candidate_hash_sealed": false
+      },
+      "policy_route": {
+        "schema_version": "sourcefold_ocr_input_surface_policy.v1",
+        "status": "blocked",
+        "route_decision": "park_candidate_policy",
+        "findings": [],
+        "acceptance_effect": "none",
+        "policy_promotion_effect": "none",
+        "ocr_execution_effect": "none",
+        "observed_control_measurement_evaluation": {
+          "observed_control_measurement": {
+            "page_id": "P018",
+            "candidate_family": "full_page_expanded_overlap_psm4",
+            "sequence_similarity_ratio": 0.999466,
+            "token_recall": 0.996067,
+            "lane_id": "C01TEFG017018-G1-VIRAL-001",
+            "manifest_sha256": "A754D100659FA7900677C7BBAF49ACC06F991A8E8C2A02DECE59506EF8C6DAC0",
+            "acceptance_effect": "none"
+          },
+          "sequence_similarity_delta": -0.999466,
+          "token_recall_delta": -0.996067,
+          "structure_order_assessment": "diagnostic_only",
+          "completeness_assessment": "diagnostic_only",
+          "auto_pass": false,
+          "auto_fail": false,
+          "auto_promote": false,
+          "auto_accept": false
+        }
+      },
+      "fresh_ocr_candidate_created": true,
+      "fresh_ocr_success": false,
+      "acceptance_effect": "none",
+      "promotion_effect": "none",
+      "ocr_metadata_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/core_0_1_text_extraction_bridge_page_remediation_run_001_008_014_019_G1_VIRAL_001/ocr_metadata/page_003_full_page_psm6_ocr_metadata.json",
+      "ocr_metadata_sha256": "6A504C2B800563EB3124F3B42B308CC120827B3A0BA740C0E968A74C12D4630E"
+    },
+    {
+      "page": "004",
+      "page_id": "P004",
+      "route_family": "full_page_region_candidate_policy",
+      "ocr_execution_performed": true,
+      "tesseract_invoked_for_page": true,
+      "surface_validation_before_ocr": {
+        "schema_version": "sourcefold_ocr_input_surface_policy.v1",
+        "status": "passed",
+        "surface_class": "full_page_region",
+        "allowed_purpose": "candidate_policy",
+        "findings": []
+      },
+      "ocr_run": {
+        "engine": "tesseract",
+        "command_profile": "tesseract -l eng --oem 1 --psm 6 txt tsv",
+        "input_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/page_complete_review_p004_G1_VIRAL_001/review_assets/page_004.png",
+        "input_sha256": "45A61639C922FD6CCD085BA259BA114DD92FBCB96E86A17D216F5387DCCA9B88",
+        "transient_ocr_output_persisted": false,
+        "transient_txt_sha256": "89A33BADB6D31AFF09C673D4FD38327416AEF39967B4886547B82EF6D70E9268",
+        "transient_tsv_sha256": "080A62D57274A3E3F53AF10748601FD3AB9AB6732194C331036B37E32592B71C",
+        "stdout_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+        "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+        "returncode": 0
+      },
+      "candidate_text_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/core_0_1_text_extraction_bridge_page_remediation_run_001_008_014_019_G1_VIRAL_001/candidate_texts/page_004_full_page_psm6_candidate.md",
+      "candidate_text_sha256": "89A33BADB6D31AFF09C673D4FD38327416AEF39967B4886547B82EF6D70E9268",
+      "candidate_hash_sealed_before_reference_scoring": true,
+      "metrics": {
+        "sequence_similarity_ratio": 0.0,
+        "token_recall": 0.0
+      },
+      "reference": {
+        "reference_status": "not_loaded_no_pinned_reference_for_remediation_run",
+        "reference_loaded_after_candidate_hash_sealed": false
+      },
+      "policy_route": {
+        "schema_version": "sourcefold_ocr_input_surface_policy.v1",
+        "status": "blocked",
+        "route_decision": "park_candidate_policy",
+        "findings": [],
+        "acceptance_effect": "none",
+        "policy_promotion_effect": "none",
+        "ocr_execution_effect": "none",
+        "observed_control_measurement_evaluation": {
+          "observed_control_measurement": {
+            "page_id": "P018",
+            "candidate_family": "full_page_expanded_overlap_psm4",
+            "sequence_similarity_ratio": 0.999466,
+            "token_recall": 0.996067,
+            "lane_id": "C01TEFG017018-G1-VIRAL-001",
+            "manifest_sha256": "A754D100659FA7900677C7BBAF49ACC06F991A8E8C2A02DECE59506EF8C6DAC0",
+            "acceptance_effect": "none"
+          },
+          "sequence_similarity_delta": -0.999466,
+          "token_recall_delta": -0.996067,
+          "structure_order_assessment": "diagnostic_only",
+          "completeness_assessment": "diagnostic_only",
+          "auto_pass": false,
+          "auto_fail": false,
+          "auto_promote": false,
+          "auto_accept": false
+        }
+      },
+      "fresh_ocr_candidate_created": true,
+      "fresh_ocr_success": false,
+      "acceptance_effect": "none",
+      "promotion_effect": "none",
+      "ocr_metadata_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/core_0_1_text_extraction_bridge_page_remediation_run_001_008_014_019_G1_VIRAL_001/ocr_metadata/page_004_full_page_psm6_ocr_metadata.json",
+      "ocr_metadata_sha256": "476936B1A7581CF87CFE64E38F9B03B489A0FEBFC0B5BE6E1E95216E59CD9AD5"
+    },
+    {
+      "page": "005",
+      "page_id": "P005",
+      "route_family": "full_page_region_candidate_policy",
+      "ocr_execution_performed": true,
+      "tesseract_invoked_for_page": true,
+      "surface_validation_before_ocr": {
+        "schema_version": "sourcefold_ocr_input_surface_policy.v1",
+        "status": "passed",
+        "surface_class": "full_page_region",
+        "allowed_purpose": "candidate_policy",
+        "findings": []
+      },
+      "ocr_run": {
+        "engine": "tesseract",
+        "command_profile": "tesseract -l eng --oem 1 --psm 6 txt tsv",
+        "input_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/page_complete_review_p005_G1_VIRAL_004/review_assets/page_005.png",
+        "input_sha256": "0E60ECF12F10657851617AB9F2467DDF7B8CC6C5AE52EF6A7FF960873C0C93BE",
+        "transient_ocr_output_persisted": false,
+        "transient_txt_sha256": "E8511E024041F4691D58AC8E17E6BC10B1D2BACA3B36AF3CEABDE02025FF7999",
+        "transient_tsv_sha256": "09D01E48F4EBD83C42356C57966F33F0A16BAED15B81C097ABCF1CEB9CD1106F",
+        "stdout_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+        "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+        "returncode": 0
+      },
+      "candidate_text_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/core_0_1_text_extraction_bridge_page_remediation_run_001_008_014_019_G1_VIRAL_001/candidate_texts/page_005_full_page_psm6_candidate.md",
+      "candidate_text_sha256": "E8511E024041F4691D58AC8E17E6BC10B1D2BACA3B36AF3CEABDE02025FF7999",
+      "candidate_hash_sealed_before_reference_scoring": true,
+      "metrics": {
+        "sequence_similarity_ratio": 0.0,
+        "token_recall": 0.0
+      },
+      "reference": {
+        "reference_status": "not_loaded_no_pinned_reference_for_remediation_run",
+        "reference_loaded_after_candidate_hash_sealed": false
+      },
+      "policy_route": {
+        "schema_version": "sourcefold_ocr_input_surface_policy.v1",
+        "status": "blocked",
+        "route_decision": "park_candidate_policy",
+        "findings": [],
+        "acceptance_effect": "none",
+        "policy_promotion_effect": "none",
+        "ocr_execution_effect": "none",
+        "observed_control_measurement_evaluation": {
+          "observed_control_measurement": {
+            "page_id": "P018",
+            "candidate_family": "full_page_expanded_overlap_psm4",
+            "sequence_similarity_ratio": 0.999466,
+            "token_recall": 0.996067,
+            "lane_id": "C01TEFG017018-G1-VIRAL-001",
+            "manifest_sha256": "A754D100659FA7900677C7BBAF49ACC06F991A8E8C2A02DECE59506EF8C6DAC0",
+            "acceptance_effect": "none"
+          },
+          "sequence_similarity_delta": -0.999466,
+          "token_recall_delta": -0.996067,
+          "structure_order_assessment": "diagnostic_only",
+          "completeness_assessment": "diagnostic_only",
+          "auto_pass": false,
+          "auto_fail": false,
+          "auto_promote": false,
+          "auto_accept": false
+        }
+      },
+      "fresh_ocr_candidate_created": true,
+      "fresh_ocr_success": false,
+      "acceptance_effect": "none",
+      "promotion_effect": "none",
+      "ocr_metadata_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/core_0_1_text_extraction_bridge_page_remediation_run_001_008_014_019_G1_VIRAL_001/ocr_metadata/page_005_full_page_psm6_ocr_metadata.json",
+      "ocr_metadata_sha256": "DF88E17A64749068A2B612ACCB3C368648A75935F140EB4325289E520C9FFC80"
+    },
+    {
+      "page": "006",
+      "page_id": "P006",
+      "route_family": "full_page_region_candidate_policy",
+      "ocr_execution_performed": true,
+      "tesseract_invoked_for_page": true,
+      "surface_validation_before_ocr": {
+        "schema_version": "sourcefold_ocr_input_surface_policy.v1",
+        "status": "passed",
+        "surface_class": "full_page_region",
+        "allowed_purpose": "candidate_policy",
+        "findings": []
+      },
+      "ocr_run": {
+        "engine": "tesseract",
+        "command_profile": "tesseract -l eng --oem 1 --psm 6 txt tsv",
+        "input_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/page_complete_review_p006_G1_VIRAL_002/review_assets/page_006.png",
+        "input_sha256": "B0BE1CC101217D0732B5C8D32F731C7A22C1F1C852F67B673F5E2F38AC2B46BF",
+        "transient_ocr_output_persisted": false,
+        "transient_txt_sha256": "897533EA70B021368E2A7A5953082817C1F80997C564BD9D4535AFBE33D9C162",
+        "transient_tsv_sha256": "E092DF6CE4DD31BC7A1BD6D8223AA982148FB4AFF74DBC6BC4B8965DB6452748",
+        "stdout_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+        "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+        "returncode": 0
+      },
+      "candidate_text_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/core_0_1_text_extraction_bridge_page_remediation_run_001_008_014_019_G1_VIRAL_001/candidate_texts/page_006_full_page_psm6_candidate.md",
+      "candidate_text_sha256": "897533EA70B021368E2A7A5953082817C1F80997C564BD9D4535AFBE33D9C162",
+      "candidate_hash_sealed_before_reference_scoring": true,
+      "metrics": {
+        "sequence_similarity_ratio": 0.0,
+        "token_recall": 0.0
+      },
+      "reference": {
+        "reference_status": "not_loaded_no_pinned_reference_for_remediation_run",
+        "reference_loaded_after_candidate_hash_sealed": false
+      },
+      "policy_route": {
+        "schema_version": "sourcefold_ocr_input_surface_policy.v1",
+        "status": "blocked",
+        "route_decision": "park_candidate_policy",
+        "findings": [],
+        "acceptance_effect": "none",
+        "policy_promotion_effect": "none",
+        "ocr_execution_effect": "none",
+        "observed_control_measurement_evaluation": {
+          "observed_control_measurement": {
+            "page_id": "P018",
+            "candidate_family": "full_page_expanded_overlap_psm4",
+            "sequence_similarity_ratio": 0.999466,
+            "token_recall": 0.996067,
+            "lane_id": "C01TEFG017018-G1-VIRAL-001",
+            "manifest_sha256": "A754D100659FA7900677C7BBAF49ACC06F991A8E8C2A02DECE59506EF8C6DAC0",
+            "acceptance_effect": "none"
+          },
+          "sequence_similarity_delta": -0.999466,
+          "token_recall_delta": -0.996067,
+          "structure_order_assessment": "diagnostic_only",
+          "completeness_assessment": "diagnostic_only",
+          "auto_pass": false,
+          "auto_fail": false,
+          "auto_promote": false,
+          "auto_accept": false
+        }
+      },
+      "fresh_ocr_candidate_created": true,
+      "fresh_ocr_success": false,
+      "acceptance_effect": "none",
+      "promotion_effect": "none",
+      "ocr_metadata_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/core_0_1_text_extraction_bridge_page_remediation_run_001_008_014_019_G1_VIRAL_001/ocr_metadata/page_006_full_page_psm6_ocr_metadata.json",
+      "ocr_metadata_sha256": "A38FB24E15E19CAF5143F65B72033C631512D23EC5A518110864970AFDFAA357"
+    },
+    {
+      "page": "007",
+      "page_id": "P007",
+      "route_family": "full_page_region_candidate_policy",
+      "ocr_execution_performed": true,
+      "tesseract_invoked_for_page": true,
+      "surface_validation_before_ocr": {
+        "schema_version": "sourcefold_ocr_input_surface_policy.v1",
+        "status": "passed",
+        "surface_class": "full_page_region",
+        "allowed_purpose": "candidate_policy",
+        "findings": []
+      },
+      "ocr_run": {
+        "engine": "tesseract",
+        "command_profile": "tesseract -l eng --oem 1 --psm 6 txt tsv",
+        "input_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/page_complete_review_p007_G1_VIRAL_003/review_assets/page_007.png",
+        "input_sha256": "0271A5FB9A672248ABBC771C2F1F064D58640CCB6D8692C7AF7AAE58A160BC41",
+        "transient_ocr_output_persisted": false,
+        "transient_txt_sha256": "8A6405797F1F8E646059C64FA1CD54A4DA803B11B52BBAADADEC04CF59BE9F59",
+        "transient_tsv_sha256": "3F8FF1A1B3E3BF0A2348404ACEA0170D496CB476C4956D980EA8D06855141236",
+        "stdout_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+        "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+        "returncode": 0
+      },
+      "candidate_text_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/core_0_1_text_extraction_bridge_page_remediation_run_001_008_014_019_G1_VIRAL_001/candidate_texts/page_007_full_page_psm6_candidate.md",
+      "candidate_text_sha256": "8A6405797F1F8E646059C64FA1CD54A4DA803B11B52BBAADADEC04CF59BE9F59",
+      "candidate_hash_sealed_before_reference_scoring": true,
+      "metrics": {
+        "sequence_similarity_ratio": 0.0,
+        "token_recall": 0.0
+      },
+      "reference": {
+        "reference_status": "not_loaded_no_pinned_reference_for_remediation_run",
+        "reference_loaded_after_candidate_hash_sealed": false
+      },
+      "policy_route": {
+        "schema_version": "sourcefold_ocr_input_surface_policy.v1",
+        "status": "blocked",
+        "route_decision": "park_candidate_policy",
+        "findings": [],
+        "acceptance_effect": "none",
+        "policy_promotion_effect": "none",
+        "ocr_execution_effect": "none",
+        "observed_control_measurement_evaluation": {
+          "observed_control_measurement": {
+            "page_id": "P018",
+            "candidate_family": "full_page_expanded_overlap_psm4",
+            "sequence_similarity_ratio": 0.999466,
+            "token_recall": 0.996067,
+            "lane_id": "C01TEFG017018-G1-VIRAL-001",
+            "manifest_sha256": "A754D100659FA7900677C7BBAF49ACC06F991A8E8C2A02DECE59506EF8C6DAC0",
+            "acceptance_effect": "none"
+          },
+          "sequence_similarity_delta": -0.999466,
+          "token_recall_delta": -0.996067,
+          "structure_order_assessment": "diagnostic_only",
+          "completeness_assessment": "diagnostic_only",
+          "auto_pass": false,
+          "auto_fail": false,
+          "auto_promote": false,
+          "auto_accept": false
+        }
+      },
+      "fresh_ocr_candidate_created": true,
+      "fresh_ocr_success": false,
+      "acceptance_effect": "none",
+      "promotion_effect": "none",
+      "ocr_metadata_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/core_0_1_text_extraction_bridge_page_remediation_run_001_008_014_019_G1_VIRAL_001/ocr_metadata/page_007_full_page_psm6_ocr_metadata.json",
+      "ocr_metadata_sha256": "D46DF1A19E886B060E3C46BA8FD9EACE3352C07AD01A530EA245E093B1FF120A"
+    },
+    {
+      "page": "008",
+      "page_id": "P008",
+      "route_family": "full_page_region_candidate_policy",
+      "ocr_execution_performed": true,
+      "tesseract_invoked_for_page": true,
+      "surface_validation_before_ocr": {
+        "schema_version": "sourcefold_ocr_input_surface_policy.v1",
+        "status": "passed",
+        "surface_class": "full_page_region",
+        "allowed_purpose": "candidate_policy",
+        "findings": []
+      },
+      "ocr_run": {
+        "engine": "tesseract",
+        "command_profile": "tesseract -l eng --oem 1 --psm 6 txt tsv",
+        "input_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/page_complete_review_p008_G1_VIRAL_001/review_assets/page_008.png",
+        "input_sha256": "237676B562EFE6A51A99E073B4AB3BA73796A89466D3B90DA5F1D9174C29BBE0",
+        "transient_ocr_output_persisted": false,
+        "transient_txt_sha256": "00E6C5700EA835552EBB6E1F1D8D776D4DD7AA7713018A7A74D6B992A01ACBE6",
+        "transient_tsv_sha256": "1C0DA90CB8C92F6AF93B34F91433BBEA850674122B96A42C8787D6B3E6687A61",
+        "stdout_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+        "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+        "returncode": 0
+      },
+      "candidate_text_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/core_0_1_text_extraction_bridge_page_remediation_run_001_008_014_019_G1_VIRAL_001/candidate_texts/page_008_full_page_psm6_candidate.md",
+      "candidate_text_sha256": "00E6C5700EA835552EBB6E1F1D8D776D4DD7AA7713018A7A74D6B992A01ACBE6",
+      "candidate_hash_sealed_before_reference_scoring": true,
+      "metrics": {
+        "sequence_similarity_ratio": 0.0,
+        "token_recall": 0.0
+      },
+      "reference": {
+        "reference_status": "not_loaded_no_pinned_reference_for_remediation_run",
+        "reference_loaded_after_candidate_hash_sealed": false
+      },
+      "policy_route": {
+        "schema_version": "sourcefold_ocr_input_surface_policy.v1",
+        "status": "blocked",
+        "route_decision": "park_candidate_policy",
+        "findings": [],
+        "acceptance_effect": "none",
+        "policy_promotion_effect": "none",
+        "ocr_execution_effect": "none",
+        "observed_control_measurement_evaluation": {
+          "observed_control_measurement": {
+            "page_id": "P018",
+            "candidate_family": "full_page_expanded_overlap_psm4",
+            "sequence_similarity_ratio": 0.999466,
+            "token_recall": 0.996067,
+            "lane_id": "C01TEFG017018-G1-VIRAL-001",
+            "manifest_sha256": "A754D100659FA7900677C7BBAF49ACC06F991A8E8C2A02DECE59506EF8C6DAC0",
+            "acceptance_effect": "none"
+          },
+          "sequence_similarity_delta": -0.999466,
+          "token_recall_delta": -0.996067,
+          "structure_order_assessment": "diagnostic_only",
+          "completeness_assessment": "diagnostic_only",
+          "auto_pass": false,
+          "auto_fail": false,
+          "auto_promote": false,
+          "auto_accept": false
+        }
+      },
+      "fresh_ocr_candidate_created": true,
+      "fresh_ocr_success": false,
+      "acceptance_effect": "none",
+      "promotion_effect": "none",
+      "ocr_metadata_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/core_0_1_text_extraction_bridge_page_remediation_run_001_008_014_019_G1_VIRAL_001/ocr_metadata/page_008_full_page_psm6_ocr_metadata.json",
+      "ocr_metadata_sha256": "FE39BE2768494E38E5369AB9024D8EFF616EAA1D23C109194932A59E8614CC04"
+    },
+    {
+      "page": "014",
+      "page_id": "P014",
+      "route_family": "text_evidence_smoke_non_promotable",
+      "surface_validation": {
+        "schema_version": "sourcefold_ocr_input_surface_policy.v1",
+        "status": "passed",
+        "surface_class": "text_evidence_crop",
+        "allowed_purpose": "smoke_non_promotable",
+        "findings": []
+      },
+      "policy_route": {
+        "schema_version": "sourcefold_ocr_input_surface_policy.v1",
+        "status": "passed",
+        "route_decision": "smoke_non_promotable",
+        "findings": [],
+        "acceptance_effect": "none",
+        "policy_promotion_effect": "none",
+        "ocr_execution_effect": "none"
+      },
+      "materialized": true,
+      "fresh_ocr_candidate_created": false,
+      "fresh_ocr_success": false,
+      "ocr_execution_performed": false,
+      "tesseract_invoked_for_page": false,
+      "output_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/core_0_1_text_extraction_bridge_page_remediation_run_001_008_014_019_G1_VIRAL_001/smoke_non_promotable/page_014_text_evidence_smoke_non_promotable.md",
+      "output_sha256": "D244B834FB301405B3D414B779E5C2B7070752D10B81ED5BEC2D65F13447D784",
+      "source_artifact": {
+        "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/page_complete_review_p014_G1_VIRAL_001/review_assets/1_P014-title-carried-intro-text-evidence.png",
+        "sha256": "9EF384C4CA4AF8D334E820F44EA5B95E638BE18DA51746ACF1E4A9A975A2298E",
+        "hash_status": "matched"
+      }
+    },
+    {
+      "page": "019",
+      "page_id": "P019",
+      "route_family": "text_evidence_smoke_non_promotable",
+      "surface_validation": {
+        "schema_version": "sourcefold_ocr_input_surface_policy.v1",
+        "status": "passed",
+        "surface_class": "text_evidence_crop",
+        "allowed_purpose": "smoke_non_promotable",
+        "findings": []
+      },
+      "policy_route": {
+        "schema_version": "sourcefold_ocr_input_surface_policy.v1",
+        "status": "passed",
+        "route_decision": "smoke_non_promotable",
+        "findings": [],
+        "acceptance_effect": "none",
+        "policy_promotion_effect": "none",
+        "ocr_execution_effect": "none"
+      },
+      "materialized": true,
+      "fresh_ocr_candidate_created": false,
+      "fresh_ocr_success": false,
+      "ocr_execution_performed": false,
+      "tesseract_invoked_for_page": false,
+      "output_path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/core_0_1_text_extraction_bridge_page_remediation_run_001_008_014_019_G1_VIRAL_001/smoke_non_promotable/page_019_text_evidence_smoke_non_promotable.md",
+      "output_sha256": "E5CA55E21274E249DF46D09B2D367A3385A51BC6AFFB6AD394676E5603774192",
+      "source_artifact": {
+        "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/page_complete_review_p019_G1_VIRAL_001/review_assets/1_P019-left-continuation-text-evidence.png",
+        "sha256": "C4D6A87291779BC440ABE57DDD5C0519C00BDBD170FD3E522EEE6B9E7075DCD0",
+        "hash_status": "matched"
+      }
+    }
+  ],
+  "fresh_ocr_candidate_pages": [
+    "003",
+    "004",
+    "005",
+    "006",
+    "007",
+    "008"
+  ],
+  "fresh_ocr_success_pages": [],
+  "fresh_ocr_blocked_or_unresolved_pages": [
+    "001",
+    "002",
+    "003",
+    "004",
+    "005",
+    "006",
+    "007",
+    "008",
+    "014",
+    "019"
+  ],
+  "all_requested_pages_resolved_as_fresh_first_pass": false,
+  "bridge_removed_for_pages": [],
+  "bridge_remaining_pages": [
+    "001",
+    "002",
+    "003",
+    "004",
+    "005",
+    "006",
+    "007",
+    "008",
+    "014",
+    "019"
+  ],
+  "ocr_execution_performed": true,
+  "ocr_execution_pages": [
+    "003",
+    "004",
+    "005",
+    "006",
+    "007",
+    "008"
+  ],
+  "tesseract_invoked_pages": [
+    "003",
+    "004",
+    "005",
+    "006",
+    "007",
+    "008"
+  ],
+  "tesseract_not_invoked_pages": [
+    "001",
+    "002",
+    "014",
+    "019"
+  ],
+  "text_evidence_smoke_pages_non_promotable": true,
+  "runtime_execution_performed": true,
+  "runtime_output_surface_created": true,
+  "candidate_only": true,
+  "production_ready": false,
+  "production_assembly_authorized": false,
+  "production_assembly_created": false,
+  "acceptance_performed": false,
+  "accepted_text_mutation_performed": false,
+  "semantic_text_mutation_performed": false,
+  "page_status_mutation_performed": false,
+  "source_or_raw_mutation_performed": false,
+  "persisted_raw_ocr_output_created": false,
+  "prepared_temp_artifact_created": false,
+  "fixture_admission_performed": false,
+  "clean_production_output_folder_created": false,
+  "page_021_plus_included": false,
+  "promotion_performed": false,
+  "push_performed": false,
+  "downstream_execution_performed": false,
+  "verified_inputs": {
+    "C01TEBRIDGEREMAUTH020-G1-VIRAL-001.report": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/core_0_1_text_extraction_bridge_page_remediation_authorization_001_008_014_019_G1_VIRAL_001/bridge_page_remediation_authorization_001_008_014_019_report.json",
+      "sha256": "9DD604336DA642FB575DEBD5180885DC04289ECE82647FB4ECD4518056C74A60"
+    },
+    "C01TEBRIDGEREMAUTH020-G1-VIRAL-001.summary": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/core_0_1_text_extraction_bridge_page_remediation_authorization_001_008_014_019_G1_VIRAL_001/bridge_page_remediation_authorization_001_008_014_019_summary.md",
+      "sha256": "0C2B64917035F58F9142671AECEFA11880A0E4568408381748EAB46A24B7E00C"
+    },
+    "C01TEBRIDGEREMAUTH020-G1-VIRAL-001.manifest": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/core_0_1_text_extraction_bridge_page_remediation_authorization_001_008_014_019_G1_VIRAL_001/bridge_page_remediation_authorization_001_008_014_019_manifest.md",
+      "sha256": "E19100825A3E157179A72341A9EE8E59DB3D533273AACF87C394C4774EF49AE5"
+    },
+    "C01TEBRIDGEAUD020-G1-VIRAL-001.report": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/core_0_1_text_extraction_bridge_page_audit_001_008_014_019_G1_VIRAL_001/bridge_page_audit_001_008_014_019_report.json",
+      "sha256": "25CF7B2DB7864EFD1FA7B58095905724FFE087E84E34BDEB81FB34D404008E02"
+    },
+    "C01TEBRIDGEAUD020-G1-VIRAL-001.summary": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/core_0_1_text_extraction_bridge_page_audit_001_008_014_019_G1_VIRAL_001/bridge_page_audit_001_008_014_019_summary.md",
+      "sha256": "744A454B62EAA08F197276C770C4CEAEF496FF7ED173E1D9B909A65CD64A6639"
+    },
+    "C01TEBRIDGEAUD020-G1-VIRAL-001.manifest": {
+      "path": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/core_0_1_text_extraction_bridge_page_audit_001_008_014_019_G1_VIRAL_001/bridge_page_audit_001_008_014_019_manifest.md",
+      "sha256": "D69D1286238213ECDB957667428D0FC721C352DB44FB737B34E5BC7B26E6B738"
+    }
+  },
+  "audit_input_consumed_directly": true,
+  "allowed_next_action": "source_asset_recovery_for_page_002_and_non_promotable_route_decision_for_014_019"
+}

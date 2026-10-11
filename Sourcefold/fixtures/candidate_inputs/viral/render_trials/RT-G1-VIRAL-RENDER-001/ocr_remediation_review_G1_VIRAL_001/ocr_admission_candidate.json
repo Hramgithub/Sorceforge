@@ -1,0 +1,126 @@
+{
+  "candidate_id": "OAC-G1-VIRAL-001",
+  "authorization_id": "BA-G1-VIRAL-REMEDIATION-REVIEW-001",
+  "status": "remediation_evidence_only",
+  "candidate_state": "candidate_for_future_gate_review",
+  "basis": "ORR-G1-VIRAL-001",
+  "recommended_profile_scope": "five-sample-remediation-evidence-only",
+  "recommended_default_psm_modes": [
+    1,
+    4,
+    8,
+    11
+  ],
+  "disabled_default_psm_modes": [
+    3,
+    6
+  ],
+  "recommended_variants": [
+    "binary_x3",
+    "enhanced_x2",
+    "original",
+    "white_mask_x4"
+  ],
+  "route_rules": {
+    "ocr": "Use only where route and sample evidence support normalized-exact OCR inspection.",
+    "visual_qc": "Route decorative, ambiguous, or page-number-like components to visual QC without text acceptance."
+  },
+  "selected_ocr_configs": [
+    {
+      "sample_id": "GS-G1-VIRAL-001",
+      "sample_type": "decorative_cover_title",
+      "zone_id": "z02",
+      "route": "ocr",
+      "finding": "ocr_normalized_exact",
+      "expected_label": "cover_title_ocr_component",
+      "crop_sha256": "6D34BF801BED6A81890DA573C92514C063566A428F371C0F45F6125E170B59EB",
+      "selected_config": "white_mask_x4__psm4",
+      "selected_text_sha256": "D5BDEC0C1DB3C98CBCF6F32648FB9B7775AB613A157ABC0ABAE4F78FE6885D6D",
+      "selected_tsv_sha256": "FD1402A977AB09957D5DDB78C65296BF1BF05A78CC2BF13EA517EE92202012E0",
+      "normalized_exact": true,
+      "token_recall": 1.0,
+      "char_error_rate": 0.0,
+      "overlay_qc_status": "bad_geometry",
+      "order_qc_status": "auto_qc_pass"
+    },
+    {
+      "sample_id": "GS-G1-VIRAL-002",
+      "sample_type": "heading",
+      "zone_id": "z01",
+      "route": "ocr",
+      "finding": "ocr_normalized_exact",
+      "expected_label": "contents_heading",
+      "crop_sha256": "8A3A979381FB476C3B6D9831D7665E50F3171C4D4300EB7C3373E4216738CF24",
+      "selected_config": "original__psm11",
+      "selected_text_sha256": "66725B0AA1EE5F38CBD242128278CBEB1659B96AE77F1FA88B22F6AFBABF66AE",
+      "selected_tsv_sha256": "4887AEB44FCB53A78098F0FE82B21E666FC5AB586511B671089D213D2AF9CE9E",
+      "normalized_exact": true,
+      "token_recall": 1.0,
+      "char_error_rate": 0.375,
+      "overlay_qc_status": "needs_visual_review",
+      "order_qc_status": "auto_qc_pass"
+    },
+    {
+      "sample_id": "GS-G1-VIRAL-003",
+      "sample_type": "table_list_entry_group",
+      "zone_id": "z01",
+      "route": "ocr",
+      "finding": "ocr_normalized_exact",
+      "expected_label": "contents_entry_words",
+      "crop_sha256": "54E0E3B0A956EA0BA215987D25B242EED3A803100AD87C2E8949E3EA4592F66A",
+      "selected_config": "binary_x3__psm11",
+      "selected_text_sha256": "09B06CBDAC2B3013245A9439CD0D05B8DD2027070EA770528969815FFA30E9BB",
+      "selected_tsv_sha256": "E0FA915A772AFBC0BEC153A0920C77225DF031E15523853488C4AADCB007D62A",
+      "normalized_exact": true,
+      "token_recall": 1.0,
+      "char_error_rate": 0.6207,
+      "overlay_qc_status": "likely_visual_page",
+      "order_qc_status": "auto_qc_pass"
+    },
+    {
+      "sample_id": "GS-G1-VIRAL-004",
+      "sample_type": "section_heading",
+      "zone_id": "z01",
+      "route": "ocr",
+      "finding": "ocr_normalized_exact",
+      "expected_label": "introduction_heading",
+      "crop_sha256": "B07232F8A6CC6673E1B848221E31B33BE67AC31743A93E6924F65493B0AC835A",
+      "selected_config": "original__psm11",
+      "selected_text_sha256": "3FA53FC0DAB8EF96D05D8FD4C7E41B490182803725C67B86A531E09EFFC5FA77",
+      "selected_tsv_sha256": "7CC9BE521F7F0A21FBB5E91C59A41AC74BDA3222186B8F9BA6CA1F961A7E7F43",
+      "normalized_exact": true,
+      "token_recall": 1.0,
+      "char_error_rate": 0.0,
+      "overlay_qc_status": "bad_geometry",
+      "order_qc_status": "auto_qc_pass"
+    },
+    {
+      "sample_id": "GS-G1-VIRAL-005",
+      "sample_type": "body_quote",
+      "zone_id": "z01",
+      "route": "ocr",
+      "finding": "ocr_normalized_exact",
+      "expected_label": "short_quote",
+      "crop_sha256": "C8D19E8904F77CCEFF0EABF300FA24AD740124BF038762A233FC77FC7C3A2B3D",
+      "selected_config": "enhanced_x2__psm1",
+      "selected_text_sha256": "583BB36EDDE0E76E022896E78B2BDB455B9BBF93A27BDD616F9019D271BD49B9",
+      "selected_tsv_sha256": "A96DB59309E573BE5AD6C826468F841EC919ADE73285C157A0014FAB89D10DAA",
+      "normalized_exact": true,
+      "token_recall": 1.0,
+      "char_error_rate": 0.0,
+      "overlay_qc_status": "ok",
+      "order_qc_status": "auto_qc_pass"
+    }
+  ],
+  "not_authorized": [
+    "source_acceptance",
+    "gate_1_advancement",
+    "accepted_source_text",
+    "translation",
+    "proofreading",
+    "renderer_profile_acceptance",
+    "implementation",
+    "new_ocr_execution"
+  ],
+  "approved_by_score": false
+}

@@ -1,0 +1,76 @@
+{
+  "package_id": "P004COD-G1-VIRAL-001",
+  "authorization_id": "BA-G1-VIRAL-PAGE-004-CONTEXT-ONLY-CONFIRM-001",
+  "status": "page_004_context_only_confirmed",
+  "scope": "page_004_context_region_decision_only_no_page_complete_acceptance",
+  "generator": {
+    "script": "scripts/accept_page_004_context_only.py",
+    "script_sha256": "1655277A04AF550EB00C104EA0CD96955C6947E8E27715D46F006B0E431ED747",
+    "test": "tests/test_page_004_context_only_acceptance.py",
+    "test_sha256": "F0A3C886E6E469265F09E89AB0728AA73C6CBC8736B0C53AAF18ACF2F0DDEB14"
+  },
+  "page": "004",
+  "page_id": "PG-G1-VIRAL-P004",
+  "image_id": "IMG-G1-VIRAL-RENDER-001-P004",
+  "input_packages": [
+    "P004CDP-G1-VIRAL-001"
+  ],
+  "decision_input": {
+    "package_id": "P004CDP-G1-VIRAL-001",
+    "authorization_id": "BA-G1-VIRAL-PAGE-004-CONTEXT-DECISION-001",
+    "report_sha256": "B790887E0002F132D5CB27B6F2E7E5894183C73924C3181EAAB46374D2AF3C81",
+    "packet_sha256": "A638817C20AA39243A4C4FC2AC61499BF75EFAA86AF6DE2A2361781A9D622EA2",
+    "summary_sha256": "C133C0BCAE7C0322761A2B093D630D47EC67FC41E0768CF4EA5BE3A65073CAA5",
+    "manifest_sha256": "FC55B5368B88B59292226D4E6A64923870ECC6A55526851C456FB43EB65D662F"
+  },
+  "human_decision": {
+    "telegram_message_id": "758",
+    "decision": "page 004 context-only ok",
+    "raw_text": "\u043d\u0430\u0441\u043a\u043e\u043b\u044c\u043a\u043e \u0432\u0438\u0436\u0443 \u0432\u0441\u0435 \u043f\u0440\u0430\u0432\u0438\u043b\u044c\u043d\u043e \u043a\u0440\u043e\u043f\u043d\u0443\u043b\u043e\u0441\u044c, \u0432\u0435\u0441\u044c \u0442\u0435\u043a\u0441\u0442 \u0441\u043d\u044f\u0442. \u0432\u0441\u0435\u0433\u043e \u0434\u0432\u0430 \u043a\u0440\u043e\u043f\u0430 \u043d\u0430 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0443 \u0442\u043e\u0436\u0435 \u043f\u0440\u0430\u0432\u0438\u043b\u044c\u043d\u043e. ... \u0432\u0442\u043e\u0440\u043e\u0439 \u043a\u0440\u043e\u043f - \u043f\u0440\u0438\u043d\u044f\u0442, `page 004 context-only ok`"
+  },
+  "context_only_confirmation": {
+    "confirmation_id": "P004-CONTEXT-ONLY-CONFIRMATION-001",
+    "accepted": true,
+    "context_region_id": "PRM-G1-VIRAL-001-P004-R01",
+    "confirmed_status": "context_only_not_peer_crop_record",
+    "reason": "Full tilted inset contains the title/body regions and would overlap peer crops under the global crop layout guardrail.",
+    "full_tilted_inset": true,
+    "accepted_peer_records": [
+      {
+        "source_region_id": "PRM-G1-VIRAL-001-P004-R02",
+        "role": "warning_title",
+        "review_id": "SRCR-G1-VIRAL-004-R01",
+        "crop_reference": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/source_reconstruction_next_slice_G1_VIRAL_004/region_refs/1_SRCR-G1-VIRAL-004-R01__PRM-G1-VIRAL-001-P004-R02.png",
+        "crop_reference_sha256": "ADD3C344100356249BF38C85A7C89D2A2DB9FF23B48141509A47F86C6A32C219",
+        "accepted_text_sha256": "86F56FE8221F029DB2C9755CC998669A7D873C32BFA83BC9431BAFE0BB814400"
+      },
+      {
+        "source_region_id": "PRM-G1-VIRAL-001-P004-R03",
+        "role": "safety_warning_body",
+        "review_id": "SRCR-G1-VIRAL-004-R02",
+        "crop_reference": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/source_reconstruction_next_slice_G1_VIRAL_004/region_refs/2_SRCR-G1-VIRAL-004-R02__PRM-G1-VIRAL-001-P004-R03.png",
+        "crop_reference_sha256": "EFB82E2F8ECE14585CFD83F71C301B7024C437680703B18765A259A7E3B234C8",
+        "accepted_text_sha256": "430246F1327C4554B2D16C8D5BFE11704EE515B4B5C3DB298A7B3492716E14A2"
+      }
+    ],
+    "body_only_structure_label": "text_body",
+    "predecessor_source_review_packet_mutated": false
+  },
+  "guardrails": {
+    "page_complete_acceptance_created": false,
+    "accepted_pages_as_complete": [],
+    "whole_gate_1_acceptance_created": false,
+    "fixture_admission": false,
+    "source_acceptance_created_or_mutated": false,
+    "ocr_executed": false,
+    "pdf_opened_or_parsed": false,
+    "pdf_text_layer_used": false,
+    "render_executed": false,
+    "raw_artifacts_modified": false,
+    "translation_authorized": false,
+    "proofreading_authorized": false,
+    "renderer_profile_acceptance": false,
+    "implementation_authorized": false,
+    "push_authorized": false
+  }
+}

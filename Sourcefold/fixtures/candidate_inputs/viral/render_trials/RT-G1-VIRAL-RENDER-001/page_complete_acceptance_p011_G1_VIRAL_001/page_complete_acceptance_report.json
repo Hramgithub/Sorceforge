@@ -1,0 +1,102 @@
+{
+  "package_id": "P011PCA-G1-VIRAL-001",
+  "authorization_id": "BA-G1-VIRAL-PAGE-COMPLETE-ACCEPT-P011-001",
+  "status": "page_011_complete_accepted",
+  "scope": "page_011_complete_acceptance_only",
+  "generator": {
+    "script": "scripts/accept_page_011_complete.py",
+    "script_sha256": "1F0AC00EB34AC2BDE351C7CD5718C239D19C4B53AEC59F31E2A460B51CE51C7B",
+    "test": "tests/test_page_011_complete_acceptance.py",
+    "test_sha256": "E9A861D8007996BE32F3C32F8F7C047BDE7B9FDD64AB38437227B607DCFDD9CB"
+  },
+  "page": "011",
+  "page_id": "PG-G1-VIRAL-P011",
+  "image_id": "IMG-G1-VIRAL-RENDER-001-P011",
+  "input_packages": [
+    "PCRP-G1-VIRAL-P011-001"
+  ],
+  "review_input": {
+    "package_id": "PCRP-G1-VIRAL-P011-001",
+    "authorization_id": "BA-G1-VIRAL-PAGE-COMPLETE-REVIEW-P011-001",
+    "report_sha256": "C52244B870C222B8406FC45AD6A791ECB4BF068E8C65D12160488AF70D0704F6",
+    "packet_sha256": "A5A159B9EB525F8DDDE2B3A7E743A89FC3F2C4A2C81E59CA1DD6DAB493BAE8A3",
+    "summary_sha256": "50801CC5C7F8ADD58432C4B2EB35444DF00626AC63841FC32768D01974A34119",
+    "manifest_sha256": "4C4F79D58123C27345B559F4108A21F72316DD76DF21F2F89976647F1896C729",
+    "review_asset_deduplication": {
+      "schema_version": "sourcefold_review_asset_deduplication.v1",
+      "status": "passed",
+      "findings": [],
+      "physical_asset_count": 10,
+      "logical_attachment_count": 12,
+      "deduplicated_binding_count": 2,
+      "deduplicated_bindings": [
+        {
+          "attachment_id": "P011-001-ATT-HUMAN-MAYA-TEXT",
+          "role": "human_context_crop",
+          "package_path": "review_assets/1b_P011-left-maya-continuation-secret-appearance-text-evidence.png",
+          "sha256": "6AE73BB523A34DC9D59F901C08633E67D7270108D6CA59C10A1D38EDD463232B",
+          "deduplicated_with": "P011-B001-TEXT-EVIDENCE",
+          "original_package_path": "review_assets/1_P011-left-maya-continuation-secret-appearance-human-context.png"
+        },
+        {
+          "attachment_id": "P011-001-ATT-HUMAN-EMILY-TEXT",
+          "role": "human_context_crop",
+          "package_path": "review_assets/4b_P011-right-emily-profile-text-text-evidence.png",
+          "sha256": "B61C33FA2CBE276B605EB207014EACBD39D7B46925E8D9377921CF57C24E1D4A",
+          "deduplicated_with": "P011-B004-TEXT-EVIDENCE",
+          "original_package_path": "review_assets/4_P011-right-emily-profile-text-human-context.png"
+        }
+      ]
+    }
+  },
+  "human_decision": {
+    "telegram_message_id": "1760",
+    "decision": "page 011 complete ok",
+    "raw_text": "\u041f\u0435\u0439\u0434\u0436 11 \u043e\u043a"
+  },
+  "page_complete_acceptance": {
+    "acceptance_id": "P011-PAGE-COMPLETE-ACCEPTANCE-001",
+    "accepted": true,
+    "accepted_page": "011",
+    "accepted_pages_as_complete": [
+      "011"
+    ],
+    "basis": "PCRP-G1-VIRAL-P011-001 with 4/4 ready blocks, validated semantic map, valid inventory reconciliation, passed review asset deduplication, no structural findings, no blockers, no open questions, and Bogdan explicit ok",
+    "reviewed_blocks": 4,
+    "ready_blocks": 4,
+    "reading_order": [
+      "left_maya_continuation_secret_appearance_text",
+      "right_emily_profile_text_start",
+      "emily_em_lavigne_portrait_image_area_art_anchor",
+      "lower_left_screen_image_area_art_anchor"
+    ],
+    "declared_none_categories": [
+      "table",
+      "unknown",
+      "missing"
+    ],
+    "blockers": [],
+    "open_questions": []
+  },
+  "guardrails": {
+    "only_page_011_accepted_as_complete": true,
+    "accepted_pages_as_complete": [
+      "011"
+    ],
+    "whole_gate_1_acceptance_created": false,
+    "fixture_admission": false,
+    "source_acceptance_created_or_mutated": false,
+    "ocr_executed": false,
+    "pdf_opened_or_parsed": false,
+    "pdf_text_layer_used": false,
+    "render_executed": false,
+    "raw_artifacts_modified": false,
+    "page_012_processed": false,
+    "pages_012_020_processed": false,
+    "translation_authorized": false,
+    "proofreading_authorized": false,
+    "renderer_profile_acceptance": false,
+    "implementation_authorized": false,
+    "push_authorized": false
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "package_id": "P004PCA-G1-VIRAL-001",
+  "authorization_id": "BA-G1-VIRAL-PAGE-COMPLETE-ACCEPT-P004-001",
+  "status": "page_004_complete_accepted",
+  "scope": "page_004_complete_acceptance_only",
+  "generator": {
+    "script": "scripts/accept_page_004_complete.py",
+    "script_sha256": "FC72004FE926FA9C8F43B74499831201587532226721673A16D836999625ACF4",
+    "test": "tests/test_page_004_complete_acceptance.py",
+    "test_sha256": "0DB21B2DC3DCDEC0AFACF83768276F4A1C90EB26838049AC591B96AD3FE70409"
+  },
+  "page": "004",
+  "page_id": "PG-G1-VIRAL-P004",
+  "image_id": "IMG-G1-VIRAL-RENDER-001-P004",
+  "input_packages": [
+    "PCRP-G1-VIRAL-P004-001"
+  ],
+  "review_input": {
+    "package_id": "PCRP-G1-VIRAL-P004-001",
+    "authorization_id": "BA-G1-VIRAL-PAGE-COMPLETE-REVIEW-P004-001",
+    "report_sha256": "8AA0A7D8D00B21997BF54A440EFEA087A545AA0A4250A1A50F9BCE005F65ADCA",
+    "packet_sha256": "A573FB40440370862A19CBB82F5FE5631BF70CF31967790AFBF87A2923B90E0C",
+    "summary_sha256": "3C8B7B1D1C709F5FED04456ACB00724665ACBDC164F848FFE30B808A56C7C00B",
+    "manifest_sha256": "EE668D049639CA857146EDE78DBF95D33458491DA446C209921BD4E82EFBDB62"
+  },
+  "human_decision": {
+    "telegram_message_id": "793",
+    "decision": "page 004 complete ok",
+    "raw_text": "`page 004 complete ok`"
+  },
+  "page_complete_acceptance": {
+    "acceptance_id": "P004-PAGE-COMPLETE-ACCEPTANCE-001",
+    "accepted": true,
+    "accepted_page": "004",
+    "accepted_pages_as_complete": [
+      "004"
+    ],
+    "basis": "PCRP-G1-VIRAL-P004-001 with 2/2 ready blocks, one confirmed context-only region, no blockers, no open questions, and Bogdan explicit ok",
+    "reviewed_blocks": 2,
+    "ready_blocks": 2,
+    "reading_order": [
+      "warning_title",
+      "safety_warning_body"
+    ],
+    "declared_none_categories": [
+      "art",
+      "table",
+      "unknown",
+      "missing"
+    ],
+    "blockers": [],
+    "open_questions": []
+  },
+  "guardrails": {
+    "only_page_004_accepted_as_complete": true,
+    "accepted_pages_as_complete": [
+      "004"
+    ],
+    "whole_gate_1_acceptance_created": false,
+    "fixture_admission": false,
+    "source_acceptance_created_or_mutated": false,
+    "ocr_executed": false,
+    "pdf_opened_or_parsed": false,
+    "pdf_text_layer_used": false,
+    "render_executed": false,
+    "raw_artifacts_modified": false,
+    "translation_authorized": false,
+    "proofreading_authorized": false,
+    "renderer_profile_acceptance": false,
+    "implementation_authorized": false,
+    "push_authorized": false
+  }
+}

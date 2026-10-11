@@ -1,0 +1,151 @@
+{
+  "package_id": "P003A-G1-VIRAL-003",
+  "authorization_id": "BA-G1-VIRAL-P003-QA-SOURCE-ACCEPTANCE-001",
+  "status": "p003_two_record_source_acceptance_ready",
+  "generator": {
+    "script": "scripts/accept_p003_verified_review.py",
+    "script_sha256": "076687DC53A042FC116BAB28B90A620BF6025C001097693EA1197311B3185B23",
+    "test": "tests/test_p003_verified_review_acceptance.py",
+    "test_sha256": "0E84AD3505B56AEAF23FD188D993513AF06FE9D83A79D4C209DBE6888A089668"
+  },
+  "input_package_id": "P002C-G1-VIRAL-002",
+  "input_report_sha256": "A2A1AD3B7AAC2CF99C9CD41608FDC00F3775302C1641D3100FE003A692D8116F",
+  "input_manifest_sha256": "8CF3BA7D578D1445C33833481325C57AD92711FBC2EC1585B6436E40B4F54DB6",
+  "input_next_review_packet_sha256": "81BC5D2AB40C6C76BBC42940D727A2E9300CE9EB51009E6ED6718DF7B9E0DCEF",
+  "user_authority": {
+    "telegram_message_id": "441",
+    "raw_text": "Commit, then QA acceptance, then fix crop."
+  },
+  "qa": {
+    "qa_id": "SRCRQ-G1-VIRAL-003",
+    "status": "passed",
+    "records": 2,
+    "verified_message_id": "437"
+  },
+  "crop_guardrail": {
+    "guardrail_id": "SRCG-G1-VIRAL-003",
+    "status": "passed",
+    "predecessor_guardrail": {
+      "guardrail_policy_id": "SRCG-GLOBAL-CROP-BOX-LAYOUT-001",
+      "policy_version": 1,
+      "policy_source_sha256": "D6231B222A4602ECA01C89575CAC40CC6F01B165C0B4EF97DB3F68B9245A9C6B",
+      "status": "passed",
+      "validated_at_stage": "SRCR-G1-VIRAL-003.review_crop_generation",
+      "image_size": {
+        "width": 2550,
+        "height": 3300
+      },
+      "min_gutter_px": 24,
+      "checks": [
+        "integer_geometry",
+        "bounds",
+        "historical_blocked_tight_boxes",
+        "approved_boxes",
+        "no_overlap",
+        "min_gutter"
+      ],
+      "validated_boxes": [
+        {
+          "region_id": "SRCR-G1-VIRAL-003-R01",
+          "box_px": [
+            500,
+            130,
+            1550,
+            650
+          ]
+        },
+        {
+          "region_id": "SRCR-G1-VIRAL-003-R02",
+          "box_px": [
+            270,
+            860,
+            2050,
+            2240
+          ]
+        }
+      ]
+    },
+    "global_policy_id": "SRCG-GLOBAL-CROP-BOX-LAYOUT-001",
+    "policy_version": 1,
+    "accepted_validated_boxes": [
+      {
+        "region_id": "SRCR-G1-VIRAL-003-R01",
+        "box_px": [
+          500,
+          130,
+          1550,
+          650
+        ]
+      },
+      {
+        "region_id": "SRCR-G1-VIRAL-003-R02",
+        "box_px": [
+          270,
+          860,
+          2050,
+          2240
+        ]
+      }
+    ],
+    "debt": "Future review packet generators must reject unapproved page/region boxes that cut readable text at crop edges, overlap another crop, or violate the minimum gutter."
+  },
+  "source_acceptance": {
+    "source_acceptance_id": "SRSA-G1-VIRAL-003",
+    "status": "accepted_two_page_003_records_only",
+    "accepted_records": [
+      {
+        "source_acceptance_record_id": "SRSA-G1-VIRAL-003-R01",
+        "review_id": "SRCR-G1-VIRAL-003-R01",
+        "page": "003",
+        "crop_reference": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/source_reconstruction_p002_completion_and_next_review_G1_VIRAL_001/next_review_refs/1_SRCR-G1-VIRAL-003-R01.png",
+        "crop_reference_sha256": "CC942FC60C379EF8DC32083FBDE5F08CF222A07A943A6392B67A090DBDEC9F7E",
+        "accepted_text_sha256": "9545AF01EEC12DD81530CB89FDAEFDB4997C9B79D5ACD4A58156BD739755B0C1",
+        "accepted_structure": [
+          {
+            "semantic_role": "title_heading_like",
+            "heading_level": "h1_candidate",
+            "bold": "unknown",
+            "italic": "unknown",
+            "underline": "unknown"
+          }
+        ],
+        "human_verification_id": "SRCRV-G1-VIRAL-003"
+      },
+      {
+        "source_acceptance_record_id": "SRSA-G1-VIRAL-003-R02",
+        "review_id": "SRCR-G1-VIRAL-003-R02",
+        "page": "003",
+        "crop_reference": "fixtures/candidate_inputs/viral/render_trials/RT-G1-VIRAL-RENDER-001/source_reconstruction_p002_completion_and_next_review_G1_VIRAL_001/next_review_refs/2_SRCR-G1-VIRAL-003-R02.png",
+        "crop_reference_sha256": "ABDE2B383C0D8470F9923703A70560339ACAA1906B68867800A9B619EB3BB845",
+        "accepted_text_sha256": "7BC103FEA1820448E1FC3007532F3E964132B339D943D34CA0A36F4E0F4E0BEC",
+        "accepted_structure": [
+          {
+            "semantic_role": "body_text",
+            "heading_level": "none",
+            "bold": "unknown",
+            "italic": "unknown",
+            "underline": "unknown"
+          }
+        ],
+        "human_verification_id": "SRCRV-G1-VIRAL-003"
+      }
+    ]
+  },
+  "rollup": {
+    "rollup_id": "G1SRER-G1-VIRAL-003",
+    "status": "third_source_reconstruction_slice_rolled_up",
+    "prior_accepted_records": 9,
+    "new_accepted_records": 2,
+    "total_accepted_records": 11,
+    "accepted_pages_as_complete": false,
+    "whole_gate_1_acceptance": false
+  },
+  "page_complete_acceptance": false,
+  "whole_gate_1_acceptance": false,
+  "fixture_admission": false,
+  "translation_authorized": false,
+  "proofreading_authorized": false,
+  "renderer_profile_acceptance": false,
+  "implementation_authorized": false,
+  "push_authorized": false
+}

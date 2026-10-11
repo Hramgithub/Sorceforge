@@ -4,9 +4,9 @@
 - Release class: documentation-only model handoff
 - Product acceptance effect: none
 - Candidate baseline: `7c880d60320ba11c7a80f62fb804722cfac1548b`
-- Candidate revision: to be frozen by the release-candidate commit
+- Reviewed candidate revision: `4d49307e18b238de10733ccbdaa05ff101574f86`
 - Publication target: `origin/main`
-- State: awaiting independent release review
+- State: published and remotely verified
 
 ## Candidate contents
 
@@ -24,6 +24,8 @@ is changed by this release.
 
 - A1 architecture receipt: `handoffs/A1-architecture-map.md`.
 - Q1 bounded QA receipt: `handoffs/Q1-handoff-qa.md`, result **PASS**.
+- R1 independent release receipt: `handoffs/R1-release-review.md`, exact
+  candidate **APPROVED** with no findings or blockers.
 - Baseline inventory independently recounted: 3987 tracked paths, 3981 under
   `Sourcefold/`.
 - Local Markdown links checked: 23, missing: 0.
@@ -43,5 +45,9 @@ This package transfers context and working constraints. It does not authorize
 OCR, rendering, translation, proofreading, production assembly, a new source
 package, repair of immutable lineage evidence, or a broader Gate decision.
 
-Publication requires an independent critic decision on the exact frozen
-candidate and a fresh non-force remote check.
+The exact approved candidate was published by ordinary fast-forward on
+2026-10-11. A fresh `ls-remote` verified `origin/main` at
+`4d49307e18b238de10733ccbdaa05ff101574f86` immediately after publication.
+This administrative successor adds the immutable R1 receipt and truthful goal
+bookkeeping under the critic's explicit allowance; it does not mutate the
+reviewed handoff documents or extend approval to product state.

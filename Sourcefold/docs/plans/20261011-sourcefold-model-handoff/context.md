@@ -1,7 +1,7 @@
 # Context: Sourcefold model handoff
 
 - Goal ID: `20261011-sourcefold-model-handoff`
-- State: `active`
+- State: `completed`
 - Repository: `https://github.com/Hramgithub/Sorceforge.git`
 - Local root: `C:\_Hobby\_work\Sorceforge`
 - Product root: `Sourcefold/`
@@ -21,8 +21,8 @@
 
 ## Current step
 
-R1 preparation: freeze the QA-passed documentation candidate, then obtain an
-independent critic decision on its exact commit before publication.
+Completed. The exact documentation candidate was independently approved and
+published; this context records the result without changing product state.
 
 ## Completed evidence
 
@@ -49,8 +49,16 @@ independent critic decision on its exact commit before publication.
   boundary, first-pass/P002 distinction, technology limitations, links, and
   authority language. Main chat separately verified the worktree state that
   was unavailable in the QA mount.
+- R1 independently approved exact commit
+  `4d49307e18b238de10733ccbdaa05ff101574f86` with no findings or blockers.
+  The receipt binds the three handoff documents to SHA-256 and permits only
+  this bounded post-publication bookkeeping successor.
+- Remote `origin/main` was freshly checked at parent `7c880d6`, the approved
+  commit was published by ordinary fast-forward, and remote was verified at
+  `4d49307e18b238de10733ccbdaa05ff101574f86` on 2026-10-11.
 
 ## Next action
 
-Freeze a release-candidate commit, ask the independent critic to review that
-exact revision, and publish only after approval plus a fresh remote check.
+Await a user-selected continuation. The documented default is a separate
+read-only baseline debt and continuation audit; no OCR or new-book execution is
+authorized by this completed goal.

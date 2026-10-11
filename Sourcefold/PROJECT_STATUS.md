@@ -28,9 +28,12 @@ Model handoff:
   `NEW_MODEL_PROMPT.md` now provide a bounded onboarding path for another model.
 - The handoff preserves both current facts: global Phase 0/Gate 1 roadmap nodes
   remain active, while exact scoped page/fixture/Gate acceptance records exist.
-- Documentation review and publication are tracked by goal
-  `20261011-sourcefold-model-handoff`; the handoff does not authorize OCR,
-  translation, proofreading, production assembly, or a new book run.
+- Bounded QA passed and the independent critic approved exact commit
+  `4d49307e18b238de10733ccbdaa05ff101574f86`; it was published and verified on
+  `origin/main` on 2026-10-11. Goal `20261011-sourcefold-model-handoff` retains
+  the architecture, QA, release, and publication receipts.
+- The handoff does not authorize OCR, translation, proofreading, production
+  assembly, or a new book run.
 
 Current bounded continuation:
 

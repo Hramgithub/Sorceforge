@@ -1,7 +1,7 @@
 # Goal plan: Sourcefold model handoff
 
 - Goal ID: `20261011-sourcefold-model-handoff`
-- State: `active`
+- State: `completed`
 - Objective: prepare a concise but operationally complete handoff package for
   a new model such as Claude Opus 5.5, publish it in the standalone repository,
   and leave the project at a safe continuation boundary.
@@ -18,8 +18,8 @@
 | I1 write summary, operational spec, and onboarding prompt | main-chat orchestrator | medium | completed |
 | V1 verify paths, claims, counts, links, and current revision | main-chat orchestrator | medium | completed |
 | Q1 bounded handoff QA | `gpt-6-luna` QA | medium | completed |
-| R1 independent release review | `gpt-6-astra` critic | high | active |
-| P1 commit and publish documentation | main-chat orchestrator | medium | pending |
+| R1 independent release review | `gpt-6-astra` critic | high | completed |
+| P1 commit and publish documentation | main-chat orchestrator | medium | completed |
 
 The critic must not implement or materially design the handoff candidate.
 

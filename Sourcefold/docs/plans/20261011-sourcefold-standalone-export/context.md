@@ -25,8 +25,9 @@
 
 ## Current step
 
-R1: freeze the QA-passed candidate as a commit and obtain an independent
-`gpt-6-astra` release decision before publication.
+P1: integrate the independent review receipt as an administrative delta, obtain
+a bounded delta review, then publish `main` without force and verify the remote
+revision.
 
 ## Completed evidence
 
@@ -54,6 +55,10 @@ R1: freeze the QA-passed candidate as a commit and obtain an independent
   `0A80B6F389821B87553D26746D2BE171B4482BA9BBC6E3EB3FEC26274EDBED05`.
 - Q1 bounded QA passed and recorded its immutable receipt at
   `handoffs/Q1-import-qa.md`.
+- R1 independently approved candidate commit
+  `c557381c119ec03d420a0121784a5e111ebd94e8`; receipt:
+  `handoffs/R1-release-review.md`. The receipt itself and owned goal-state
+  bookkeeping require a bounded successor-delta review before publication.
 
 ## Remote mutation
 

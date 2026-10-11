@@ -10,14 +10,15 @@ a rename or copy of `translator`.
 Standalone repository transition:
 
 - A tracked snapshot of `Sourcefold/` from NRI commit
-  `22fafc14942e925b2e5f088f3c7ab1cd8efe3003` is being prepared in the
+  `22fafc14942e925b2e5f088f3c7ab1cd8efe3003` has been prepared in the
   standalone `Sorceforge` repository. The nested topology is intentional
   because roadmap and evidence contracts use canonical `Sourcefold/...` paths.
 - All governed candidate inputs, fixtures, and bounded-run evidence remain in
   scope. Local caches, dependency folders, credentials, temporary logs,
   browser profiles, and unrelated NRI projects are excluded.
-- Standalone validation and release review remain required before publication;
-  this transition does not change any Phase 0 gate or acceptance state.
+- Standalone validation and independent release review passed for candidate
+  `c557381c119ec03d420a0121784a5e111ebd94e8`. Publication remains pending; this
+  transition does not change any Phase 0 gate or acceptance state.
 
 Current bounded continuation:
 

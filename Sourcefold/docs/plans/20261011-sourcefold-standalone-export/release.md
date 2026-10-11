@@ -1,8 +1,10 @@
 # Release candidate: Sourcefold standalone export
 
 - Goal ID: `20261011-sourcefold-standalone-export`
-- Candidate state: QA-passed and frozen for the initial candidate commit; not
-  published
+- Candidate state: initial commit
+  `c557381c119ec03d420a0121784a5e111ebd94e8` independently approved; review
+  receipt integration and administrative state update pending delta review;
+  not published
 - Source: NRI `22fafc14942e925b2e5f088f3c7ab1cd8efe3003`
 - Destination remote: `https://github.com/Hramgithub/Sorceforge.git`
 - Product topology: `Sourcefold/` nested under repository root
@@ -47,3 +49,11 @@
 - Historical evidence and machine-specific provenance remain immutable.
 - Publication awaits bounded QA and an independent `gpt-6-astra` release
   decision over the exact candidate.
+
+## Independent release decision
+
+R1 **APPROVED** exact candidate
+`c557381c119ec03d420a0121784a5e111ebd94e8`. The immutable decision is recorded
+in `handoffs/R1-release-review.md`. It permits a normal non-force initial push
+after a fresh empty-remote check. The receipt-integration commit must receive a
+bounded delta review before it becomes the publication target.

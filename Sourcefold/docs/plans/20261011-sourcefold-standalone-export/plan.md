@@ -18,8 +18,8 @@
 | I2 integrate minimal standalone portability changes | main-chat orchestrator | medium | completed |
 | V1 roadmap, tests, blob identity, and secret checks | main-chat orchestrator | medium | completed with inherited gaps documented |
 | Q1 bounded import QA | `gpt-6-luna` QA | medium | completed: PASS |
-| R1 independent release review | `gpt-6-astra` critic | high | active |
-| P1 commit and publish `main` | main-chat orchestrator | medium | pending |
+| R1 independent release review | `gpt-6-astra` critic | high | completed: APPROVED for `c557381c119ec03d420a0121784a5e111ebd94e8` |
+| P1 commit and publish `main` | main-chat orchestrator | medium | active |
 
 The critic must not implement or materially design the candidate.
 

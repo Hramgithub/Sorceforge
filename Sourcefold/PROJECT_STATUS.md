@@ -16,9 +16,11 @@ Standalone repository transition:
 - All governed candidate inputs, fixtures, and bounded-run evidence remain in
   scope. Local caches, dependency folders, credentials, temporary logs,
   browser profiles, and unrelated NRI projects are excluded.
-- Standalone validation and independent release review passed for candidate
-  `c557381c119ec03d420a0121784a5e111ebd94e8`. Publication remains pending; this
-  transition does not change any Phase 0 gate or acceptance state.
+- Standalone validation and independent release review passed. The standalone
+  repository was published at `https://github.com/Hramgithub/Sorceforge.git`;
+  remote `main` was verified at approved revision
+  `161aec0a474ad5160a6a44a063e662f8ea182bad`. This transition does not change
+  any Phase 0 gate or acceptance state.
 
 Current bounded continuation:
 

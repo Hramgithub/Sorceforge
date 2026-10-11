@@ -1,10 +1,10 @@
 # Release candidate: Sourcefold standalone export
 
 - Goal ID: `20261011-sourcefold-standalone-export`
-- Candidate state: initial commit
-  `c557381c119ec03d420a0121784a5e111ebd94e8` independently approved; review
-  receipt integration and administrative state update pending delta review;
-  not published
+- Candidate state: published. Initial candidate
+  `c557381c119ec03d420a0121784a5e111ebd94e8` and administrative successor
+  `161aec0a474ad5160a6a44a063e662f8ea182bad` were independently approved.
+  Remote `refs/heads/main` was verified at the successor SHA.
 - Source: NRI `22fafc14942e925b2e5f088f3c7ab1cd8efe3003`
 - Destination remote: `https://github.com/Hramgithub/Sorceforge.git`
 - Product topology: `Sourcefold/` nested under repository root
@@ -57,3 +57,9 @@ R1 **APPROVED** exact candidate
 in `handoffs/R1-release-review.md`. It permits a normal non-force initial push
 after a fresh empty-remote check. The receipt-integration commit must receive a
 bounded delta review before it becomes the publication target.
+
+The successor delta review subsequently **APPROVED**
+`161aec0a474ad5160a6a44a063e662f8ea182bad`; see
+`handoffs/R1-successor-delta-review.md`. A normal non-force push created remote
+`main`, and `git ls-remote --heads origin` verified that SHA at
+`2026-10-11T23:24:00+03:00`.

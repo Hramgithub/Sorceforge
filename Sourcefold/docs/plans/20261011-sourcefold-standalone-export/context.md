@@ -1,7 +1,7 @@
 # Context: Sourcefold standalone export
 
 - Goal ID: `20261011-sourcefold-standalone-export`
-- State: `active`
+- State: `completed`
 - Destination: `C:\_Hobby\_work\Sorceforge`
 - Remote: `https://github.com/Hramgithub/Sorceforge.git`
 - Remote state at preflight: empty (`git ls-remote` returned no refs)
@@ -25,9 +25,8 @@
 
 ## Current step
 
-P1: integrate the independent review receipt as an administrative delta, obtain
-a bounded delta review, then publish `main` without force and verify the remote
-revision.
+Completed: `main` was published without force and the remote revision was
+verified. No project acceptance state changed.
 
 ## Completed evidence
 
@@ -62,4 +61,10 @@ revision.
 
 ## Remote mutation
 
-None. Commit and push are deferred until QA and independent release review.
+- `refs/heads/main` was created by a normal non-force push at
+  `161aec0a474ad5160a6a44a063e662f8ea182bad`.
+- `git ls-remote --heads origin` verified the same SHA at
+  `2026-10-11T23:24:00+03:00`.
+- Local `main` tracks `origin/main`.
+- Source NRI remained on its original branch and retained only the two
+  pre-existing user modifications outside `Sourcefold/`.

@@ -1,7 +1,7 @@
 # Goal plan: Sourcefold standalone export
 
 - Goal ID: `20261011-sourcefold-standalone-export`
-- State: `active`
+- State: `completed`
 - Objective: publish a clean, portable Sourcefold snapshot from NRI to
   `https://github.com/Hramgithub/Sorceforge.git` without mutating the source
   checkout or importing unrelated NRI state.
@@ -19,7 +19,7 @@
 | V1 roadmap, tests, blob identity, and secret checks | main-chat orchestrator | medium | completed with inherited gaps documented |
 | Q1 bounded import QA | `gpt-6-luna` QA | medium | completed: PASS |
 | R1 independent release review | `gpt-6-astra` critic | high | completed: APPROVED for `c557381c119ec03d420a0121784a5e111ebd94e8` |
-| P1 commit and publish `main` | main-chat orchestrator | medium | active |
+| P1 commit and publish `main` | main-chat orchestrator | medium | completed |
 
 The critic must not implement or materially design the candidate.
 
@@ -80,3 +80,16 @@ The critic must not implement or materially design the candidate.
 - QA passes and the independent critic approves the exact candidate;
 - `main` is published to the user-provided remote and verified clean;
 - the NRI source checkout retains only its pre-existing user changes.
+
+## Publication evidence
+
+- Initial standalone commit:
+  `c557381c119ec03d420a0121784a5e111ebd94e8`.
+- Independently approved administrative successor:
+  `161aec0a474ad5160a6a44a063e662f8ea182bad`.
+- Normal non-force publication created `refs/heads/main` at the successor SHA.
+- Fresh `git ls-remote --heads origin` verification at
+  `2026-10-11T23:24:00+03:00` returned the exact successor SHA for
+  `refs/heads/main`.
+- The separate successor review receipt is stored at
+  `handoffs/R1-successor-delta-review.md`.

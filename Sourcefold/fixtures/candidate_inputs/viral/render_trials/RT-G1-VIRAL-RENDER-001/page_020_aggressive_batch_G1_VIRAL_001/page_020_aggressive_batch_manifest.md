@@ -1,6 +1,0 @@
-# Page 020 Aggressive Batch Manifest
-
-| Output | SHA-256 |
-|---|---|
-| `page_020_aggressive_batch_report.json` | `BDE77046D2070A82396B6EBDA0C0DF9E5027FC8A9D4B08744C09C06BDAADD75E` |
-| `page_020_aggressive_batch_summary.md` | `D53C1C376D02CEA7BBACD29300530840C6DADD90F206D88A44C5E728CA1EA3F1` |

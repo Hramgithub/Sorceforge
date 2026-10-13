@@ -1,7 +1,0 @@
-# Page 020 Complete Acceptance Manifest
-
-| Output | SHA-256 |
-|---|---|
-| `page_complete_acceptance_record.md` | `D80114C1C0A9C48F8E78BD09671F6667122F02C82F8BB47B229BB7E35D931D41` |
-| `page_complete_acceptance_report.json` | `8135647EBF0B010490FC8C6CCB15C680DAAB7828129B5A15DC36FDA821AE1157` |
-| `page_complete_acceptance_summary.md` | `EA401C1FADA8C0ABECA0B8A3F83B0A0E9222B6410E054FA4F4F96C3A9F559AEB` |

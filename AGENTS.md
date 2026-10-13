@@ -12,8 +12,11 @@
 
 - Think in English; write every user-facing message in Russian.
 - Report results only; no step-by-step reasoning in chat.
-- Every finished artifact is committed immediately (rollback is preferred over
-  uncommitted work). Push only when the owner asks.
+- Every finished artifact is committed and pushed to `main` immediately
+  (rollback is preferred over uncommitted work). Force push and history
+  rewrites only with explicit confirmation.
+- Discuss decisions one question at a time with a recommended option; record
+  each answer in the decision log and commit it.
 
 ## Safety
 

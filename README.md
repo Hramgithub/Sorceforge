@@ -19,6 +19,8 @@ Sourcefold Phase 0 удалены из рабочей ветки.
 
 ## Что здесь
 
+- `docs/project-goal.md` — **цель проекта**, место в экосистеме (kb_creator,
+  git_coc, Foundry, словарь CoC), критерии достижения и открытые вопросы.
 - `Sourcefold/docs/audit/20261013-idea-vs-implementation.md` — аудит идеи и
   реализации; выводы и варианты дальнейшего пути.
 - `Sourcefold/docs/plans/20261012-sourcefold-baseline-debt-audit/` —

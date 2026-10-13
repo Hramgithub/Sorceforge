@@ -836,6 +836,7 @@ The accepted product boundary is:
 | `20260715-sourcefold-doc-checkpoint-command` | completed | Added a script-backed documentation/status checkpoint command. | `docs/plans/20260715-sourcefold-doc-checkpoint-command/plan.md` |
 | `20260715-sourcefold-roadmap-validator` | completed | Added a package-backed roadmap YAML contract validator. | `docs/plans/20260715-sourcefold-roadmap-validator/plan.md` |
 | `20260715-sourcefold-phase-0-release-charter` | active | Draft OCR-first Phase 0 release charter and Gate 1 roadmap before implementation. The original 2026-07-15 ten-step bootstrap plan is complete; current continuation is governed by the global Gate 1 roadmap. | `docs/plans/20260715-sourcefold-phase-0-release-charter/plan.md` |
+| `20261012-sourcefold-baseline-debt-audit` | paused | Read-only audit of the 13 inherited test failures, OCR runtime portability, and Python dependency declaration; proposes one next bounded implementation task. No OCR, evidence, test, or acceptance change. | `docs/plans/20261012-sourcefold-baseline-debt-audit/plan.md` |
 
 ## Decisions
 

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sourcefold.local/schemas/creature.schema.json",
+  "title": "Существо",
+  "description": "Существо, зверь или божество Мифов. Отдельная сущность от персонажа, статблок — общий шаблон (Р-01).",
+  "type": "object",
+  "required": ["schema", "id", "kind", "name", "category", "axes", "statblock", "sources"],
+  "additionalProperties": false,
+  "properties": {
+    "schema": { "const": "sourcefold.creature.v0" },
+    "id": { "$ref": "common.schema.json#/$defs/id" },
+    "kind": { "const": "creature" },
+    "name": { "$ref": "common.schema.json#/$defs/text" },
+    "aliases": { "type": "array", "items": { "type": "string" } },
+    "category": {
+      "enum": ["animal", "mythos_monster", "mythos_deity", "avatar", "supernatural"],
+      "description": "animal — звери; mythos_monster — расы и твари Мифов; mythos_deity — Великие Древние и Внешние боги; avatar — воплощение божества; supernatural — нежить, привидения и т. п."
+    },
+    "subcategory": { "type": ["string", "null"], "description": "Подкатегория так, как в источнике: независимая раса, Великий Древний, ..." },
+    "axes": { "$ref": "common.schema.json#/$defs/axes" },
+    "same_as": {
+      "type": "array",
+      "items": { "$ref": "common.schema.json#/$defs/id" },
+      "description": "Ссылка на каноническую запись, если это вариант из другой книги (D12c kb_creator)."
+    },
+    "statblock": { "$ref": "common.schema.json#/$defs/statblock" },
+    "abilities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "summary"],
+        "additionalProperties": false,
+        "properties": {
+          "name": { "type": "string" },
+          "summary": { "type": "string" }
+        }
+      }
+    },
+    "description": { "$ref": "common.schema.json#/$defs/text" },
+    "habitat": { "type": ["string", "null"] },
+    "sources": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/source_ref" }, "minItems": 1 },
+    "corrections": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/correction" } },
+    "quality": { "$ref": "common.schema.json#/$defs/quality" }
+  }
+}

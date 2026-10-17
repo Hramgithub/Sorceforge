@@ -1,0 +1,225 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sourcefold.local/schemas/common.schema.json",
+  "title": "Общие типы базы знаний",
+  "description": "Типы, которые используют все сущности: значение с исходной записью, текст, источник, оси, флаги качества, общий шаблон статблока (Р-01).",
+  "$defs": {
+    "id": {
+      "description": "Стабильный идентификатор сущности: coc:<тип>:<slug>. Для вариантов из сценариев: <book_id>/<тип>/<slug>.",
+      "type": "string",
+      "pattern": "^[a-z0-9-]+([:/][a-z0-9-]+)+$"
+    },
+    "text": {
+      "description": "Текст на одном или двух языках. Источник истины — язык книги; ru обязателен, en — если известен.",
+      "type": "object",
+      "required": ["ru"],
+      "additionalProperties": false,
+      "properties": {
+        "ru": { "type": "string" },
+        "en": { "type": ["string", "null"] }
+      }
+    },
+    "value": {
+      "description": "Число или выражение так, как в книге (raw), и разобранное значение (value). raw — доказательство, value может ошибаться.",
+      "type": "object",
+      "required": ["raw"],
+      "additionalProperties": false,
+      "properties": {
+        "raw": { "type": "string" },
+        "value": { "type": ["number", "string", "null"] },
+        "note": { "type": ["string", "null"] }
+      }
+    },
+    "percent": {
+      "description": "Процентное значение навыка или атаки с половиной и пятой частью (как в книге: 50% (25/10)).",
+      "type": "object",
+      "required": ["raw", "value"],
+      "additionalProperties": false,
+      "properties": {
+        "raw": { "type": "string" },
+        "value": { "type": ["integer", "null"] },
+        "half": { "type": ["integer", "null"] },
+        "fifth": { "type": ["integer", "null"] }
+      }
+    },
+    "damage": {
+      "description": "Урон: raw как в книге, dice — кубы без БкУ, adds_db — прибавляется ли бонус к урону.",
+      "type": "object",
+      "required": ["raw"],
+      "additionalProperties": false,
+      "properties": {
+        "raw": { "type": "string" },
+        "dice": { "type": ["string", "null"] },
+        "adds_db": { "type": "boolean" },
+        "extra": { "type": ["string", "null"] }
+      }
+    },
+    "source_ref": {
+      "description": "Откуда взята запись: книга, страница, способ получения.",
+      "type": "object",
+      "required": ["book_id", "method"],
+      "additionalProperties": false,
+      "properties": {
+        "book_id": { "type": "string" },
+        "physical_page": { "type": ["integer", "null"] },
+        "printed_page": { "type": ["integer", "null"] },
+        "method": {
+          "enum": ["book_text", "helper_migration", "mineru", "manual"],
+          "description": "book_text — сверено с книгой; helper_migration — перенесено из веб-помощника; mineru — извлечено MinerU; manual — введено вручную."
+        },
+        "verified": { "type": "boolean", "description": "Числа сверены с книгой." }
+      }
+    },
+    "correction": {
+      "description": "Исправление относительно предыдущего источника (например, данных веб-помощника).",
+      "type": "object",
+      "required": ["field", "from", "to", "reason"],
+      "additionalProperties": false,
+      "properties": {
+        "field": { "type": "string" },
+        "from": { "type": ["string", "number", "null"] },
+        "to": { "type": ["string", "number", "null"] },
+        "reason": { "type": "string" },
+        "ref": { "type": ["string", "null"] }
+      }
+    },
+    "axes": {
+      "description": "Оси записи (§3.1 документа цели). Эпоха по умолчанию — 1920s (Р-04); any — не зависит от эпохи.",
+      "type": "object",
+      "required": ["era", "ruleset"],
+      "additionalProperties": false,
+      "properties": {
+        "era": {
+          "type": "array",
+          "items": { "enum": ["any", "1920s", "gaslight", "wild-west", "dark-ages", "modern", "other"] },
+          "minItems": 1
+        },
+        "ruleset": { "enum": ["core", "pulp", "other"] }
+      }
+    },
+    "quality": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "needs_review": { "type": "boolean" },
+        "flags": {
+          "type": "array",
+          "items": { "enum": ["ocr_suspect", "parse_uncertain", "incomplete", "editorial_text"] }
+        },
+        "notes": { "type": ["string", "null"] }
+      }
+    },
+    "characteristic": {
+      "type": "object",
+      "required": ["raw", "value"],
+      "additionalProperties": false,
+      "properties": {
+        "raw": { "type": "string" },
+        "value": { "type": ["integer", "null"] },
+        "roll": { "type": ["string", "null"], "description": "Формула броска, как в книге: 3d6×5, (2d6+6)×5." }
+      }
+    },
+    "statblock": {
+      "description": "Общий шаблон статблока для существ и персонажей (Р-01).",
+      "type": "object",
+      "required": ["characteristics", "hp"],
+      "additionalProperties": false,
+      "properties": {
+        "characteristics": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "STR": { "$ref": "#/$defs/characteristic" },
+            "CON": { "$ref": "#/$defs/characteristic" },
+            "SIZ": { "$ref": "#/$defs/characteristic" },
+            "DEX": { "$ref": "#/$defs/characteristic" },
+            "APP": { "$ref": "#/$defs/characteristic" },
+            "INT": { "$ref": "#/$defs/characteristic" },
+            "POW": { "$ref": "#/$defs/characteristic" },
+            "EDU": { "$ref": "#/$defs/characteristic" }
+          }
+        },
+        "averages": { "type": "boolean", "description": "true — в книге даны средние значения вида (среднее + бросок)." },
+        "hp": { "$ref": "#/$defs/value" },
+        "mp": { "$ref": "#/$defs/value" },
+        "damage_bonus": { "$ref": "#/$defs/value" },
+        "build": { "$ref": "#/$defs/value" },
+        "move": {
+          "type": "object",
+          "required": ["raw"],
+          "additionalProperties": false,
+          "properties": {
+            "raw": { "type": "string" },
+            "value": { "type": ["integer", "null"] },
+            "modes": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["mode", "value"],
+                "additionalProperties": false,
+                "properties": {
+                  "mode": { "enum": ["walk", "fly", "swim", "burrow", "other"] },
+                  "value": { "type": ["integer", "null"] },
+                  "note": { "type": ["string", "null"] }
+                }
+              }
+            }
+          }
+        },
+        "armor": { "$ref": "#/$defs/value" },
+        "attacks_per_round": { "$ref": "#/$defs/value" },
+        "attacks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "kind", "chance"],
+            "additionalProperties": false,
+            "properties": {
+              "name": { "$ref": "#/$defs/text" },
+              "kind": { "enum": ["attack", "maneuver", "special"] },
+              "skill": { "type": ["string", "null"], "description": "Навык атаки: Ближний бой, Стрельба и т. п." },
+              "chance": { "$ref": "#/$defs/percent" },
+              "damage": { "$ref": "#/$defs/damage" },
+              "notes": { "type": ["string", "null"] }
+            }
+          }
+        },
+        "dodge": { "$ref": "#/$defs/percent" },
+        "skills": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "value"],
+            "additionalProperties": false,
+            "properties": {
+              "name": { "type": "string" },
+              "value": { "$ref": "#/$defs/percent" }
+            }
+          }
+        },
+        "spells": {
+          "type": "object",
+          "required": ["raw"],
+          "additionalProperties": false,
+          "properties": {
+            "raw": { "type": "string" },
+            "spell_ids": { "type": "array", "items": { "$ref": "#/$defs/id" } }
+          }
+        },
+        "sanity_loss": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["success", "fail"],
+            "additionalProperties": false,
+            "properties": {
+              "success": { "type": "string" },
+              "fail": { "type": "string" },
+              "trigger": { "type": ["string", "null"] }
+            }
+          }
+        }
+      }
+    }
+  }
+}

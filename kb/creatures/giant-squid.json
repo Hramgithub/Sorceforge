@@ -30,15 +30,25 @@
         "roll": "(2d6+6)×5"
       },
       "SIZ": {
-        "raw": "105",
-        "value": 105,
-        "roll": "6d6×5"
+        "raw": "135",
+        "value": 135,
+        "roll": "(6d6+6)×5"
+      },
+      "DEX": {
+        "raw": "95",
+        "value": 95,
+        "roll": "(2d6+12)×5"
+      },
+      "POW": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
       }
     },
     "averages": true,
     "hp": {
-      "raw": "17",
-      "value": 17
+      "raw": "20",
+      "value": 20
     },
     "damage_bonus": {
       "raw": "+2к6",
@@ -49,13 +59,9 @@
       "value": 3
     },
     "move": {
-      "raw": "4 / плавание 10",
-      "value": 4,
+      "raw": "плавание 10",
+      "value": 10,
       "modes": [
-        {
-          "mode": "walk",
-          "value": 4
-        },
         {
           "mode": "swim",
           "value": 10
@@ -68,7 +74,7 @@
       "note": "кожа"
     },
     "attacks_per_round": {
-      "raw": "4",
+      "raw": "4 (удар щупальцем, укус, захват)",
       "value": 4
     },
     "attacks": [
@@ -86,9 +92,9 @@
           "fifth": 9
         },
         "damage": {
-          "raw": "1к6+ БкУ",
+          "raw": "1к6",
           "dice": "1d6",
-          "adds_db": true
+          "adds_db": false
         }
       },
       {
@@ -109,6 +115,27 @@
           "dice": "1d10",
           "adds_db": false
         }
+      },
+      {
+        "name": {
+          "ru": "Захват",
+          "en": "Seize"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "удержание; может раздавить или подтянуть жертву к клюву (см. выше)",
+          "dice": null,
+          "adds_db": false,
+          "extra": "раздавливание 2к6 за раунд"
+        },
+        "notes": "каждое следующее щупальце получает бонусную кость; вырваться — встречная проверка СИЛ; щупальце отрывается при 6+ урона за одну атаку (атака по щупальцу — со штрафной костью)"
       }
     ],
     "dodge": {
@@ -134,24 +161,83 @@
   },
   "sources": [
     {
-      "book_id": "keeper-rulebook-ru",
-      "physical_page": 314,
-      "printed_page": 335,
-      "method": "helper_migration",
-      "verified": true
-    },
-    {
       "book_id": "malleus-monstrorum-1-en",
       "physical_page": 199,
       "printed_page": 198,
       "method": "book_text",
       "verified": true
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 314,
+      "printed_page": 335,
+      "method": "helper_migration",
+      "verified": true
     }
   ],
-  "corrections": [],
+  "corrections": [
+    {
+      "field": "statblock.characteristics.SIZ",
+      "from": "105 6d6×5",
+      "to": "135 (6d6+6)×5",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.198"
+    },
+    {
+      "field": "statblock.characteristics.DEX",
+      "from": null,
+      "to": "95 (2d6+12)×5",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.198"
+    },
+    {
+      "field": "statblock.characteristics.POW",
+      "from": null,
+      "to": "50–55 3d6×5",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.198"
+    },
+    {
+      "field": "statblock.hp",
+      "from": "17",
+      "to": "20",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.198"
+    },
+    {
+      "field": "statblock.move",
+      "from": "4 / плавание 10",
+      "to": "плавание 10",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.198"
+    },
+    {
+      "field": "statblock.attacks_per_round",
+      "from": "4",
+      "to": "4 (удар щупальцем, укус, захват)",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.198"
+    },
+    {
+      "field": "statblock.attacks[Ближний бой].damage",
+      "from": "1к6+ БкУ",
+      "to": "1к6",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.200"
+    },
+    {
+      "field": "statblock.attacks[Захват]",
+      "from": null,
+      "to": "45% (22/9), урон удержание; может раздавить или подтянуть жертву к клюву (см. выше)",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.200"
+    }
+  ],
   "quality": {
     "needs_review": false,
-    "flags": [],
-    "notes": "в «Malleus Monstrorum» другие значения: ТЕЛ 135; ПЗ 20; Скорость 10 swimming; Ближний бой 45% (22/9), damage 1D6; в записи — значения основного источника (Р-19)"
+    "flags": [
+      "translated"
+    ],
+    "notes": null
   }
 }

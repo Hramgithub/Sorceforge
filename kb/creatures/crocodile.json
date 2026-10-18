@@ -21,12 +21,13 @@
     "characteristics": {
       "STR": {
         "raw": "130",
-        "value": 130
+        "value": 130,
+        "roll": "(4d6+12)×5"
       },
       "CON": {
         "raw": "90",
         "value": 90,
-        "roll": "(3d6+8)×5"
+        "roll": "(4d6+4)×5"
       },
       "SIZ": {
         "raw": "130",
@@ -34,8 +35,14 @@
         "roll": "(4d6+12)×5"
       },
       "DEX": {
-        "raw": "35",
-        "value": 35
+        "raw": "55",
+        "value": 55,
+        "roll": "(2d6+4)×5"
+      },
+      "POW": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
       }
     },
     "averages": true,
@@ -52,7 +59,7 @@
       "value": 3
     },
     "move": {
-      "raw": "6 / плавание 8",
+      "raw": "6 / плавание 10",
       "value": 6,
       "modes": [
         {
@@ -61,7 +68,7 @@
         },
         {
           "mode": "swim",
-          "value": 8
+          "value": 10
         }
       ]
     },
@@ -71,7 +78,7 @@
       "note": "шкура"
     },
     "attacks_per_round": {
-      "raw": "1",
+      "raw": "1 (укус, трёпка)",
       "value": 1
     },
     "attacks": [
@@ -93,20 +100,59 @@
           "dice": null,
           "adds_db": true
         }
+      },
+      {
+        "name": {
+          "ru": "Трёпка",
+          "en": "Thrash"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1к6 + удержание (см. выше)",
+          "dice": "1d6",
+          "adds_db": false,
+          "extra": "со следующего раунда — 2к6 за раунд"
+        },
+        "notes": "челюсти смыкаются на жертве; в следующем раунде её утаскивают под воду и треплют (2к6 урона за раунд); вырваться — чрезвычайная проверка СИЛ; 8+ урона заставляют отпустить"
       }
     ],
     "dodge": {
-      "raw": "17% (8/3)",
-      "value": 17,
-      "half": 8,
-      "fifth": 3
+      "raw": "25% (12/5)",
+      "value": 25,
+      "half": 12,
+      "fifth": 5
     },
     "skills": [
       {
-        "name": "Скрытность (в воде 80%)",
+        "name": "Высматривание добычи",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Скрытность (в воде 85%)",
         "value": {
           "raw": "60%",
           "value": 60
+        }
+      },
+      {
+        "name": "Плавание",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
         }
       }
     ],
@@ -118,24 +164,90 @@
   },
   "sources": [
     {
-      "book_id": "keeper-rulebook-ru",
-      "physical_page": 314,
-      "printed_page": 335,
-      "method": "helper_migration",
-      "verified": true
-    },
-    {
       "book_id": "malleus-monstrorum-1-en",
       "physical_page": 186,
       "printed_page": 185,
       "method": "book_text",
       "verified": true
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 314,
+      "printed_page": 335,
+      "method": "helper_migration",
+      "verified": true
     }
   ],
-  "corrections": [],
+  "corrections": [
+    {
+      "field": "statblock.characteristics.STR",
+      "from": "130",
+      "to": "130 (4d6+12)×5",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.185"
+    },
+    {
+      "field": "statblock.characteristics.CON",
+      "from": "90 (3d6+8)×5",
+      "to": "90 (4d6+4)×5",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.185"
+    },
+    {
+      "field": "statblock.characteristics.DEX",
+      "from": "35",
+      "to": "55 (2d6+4)×5",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.185"
+    },
+    {
+      "field": "statblock.characteristics.POW",
+      "from": null,
+      "to": "50–55 3d6×5",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.185"
+    },
+    {
+      "field": "statblock.move",
+      "from": "6 / плавание 8",
+      "to": "6 / плавание 10",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.185"
+    },
+    {
+      "field": "statblock.attacks_per_round",
+      "from": "1",
+      "to": "1 (укус, трёпка)",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.185"
+    },
+    {
+      "field": "statblock.attacks[Трёпка]",
+      "from": null,
+      "to": "50% (25/10), урон 1к6 + удержание (см. выше)",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.185"
+    },
+    {
+      "field": "statblock.dodge",
+      "from": "17% (8/3)",
+      "to": "25% (12/5)",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.185"
+    },
+    {
+      "field": "statblock.skills",
+      "from": "Скрытность (в воде 80%) 60%",
+      "to": "Высматривание добычи 75%; Скрытность (в воде 85%) 60%; Плавание 80%",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.185"
+    }
+  ],
   "quality": {
     "needs_review": false,
-    "flags": [],
-    "notes": "в «Malleus Monstrorum» другие значения: ЛВК 55; Скорость 6 / 10 swimming; Уклонение 25% (12/5); Скрытность в воде 85%; в записи — значения основного источника (Р-19)"
+    "flags": [
+      "translated"
+    ],
+    "notes": "в Malleus аллигатор и крокодил даны одной таблицей; взяты значения столбца «Crocodile»; у СИЛ в Malleus пропущена открывающая скобка («4D6+12)×5»)"
   }
 }

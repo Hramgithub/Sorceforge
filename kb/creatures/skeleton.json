@@ -20,19 +20,31 @@
   "statblock": {
     "characteristics": {
       "STR": {
-        "raw": "50",
+        "raw": "50–55",
         "value": 50,
         "roll": "3d6×5"
+      },
+      "CON": {
+        "raw": "—",
+        "value": null
       },
       "SIZ": {
         "raw": "65",
         "value": 65,
         "roll": "(2d6+6)×5"
       },
-      "INT": {
-        "raw": "50",
+      "DEX": {
+        "raw": "50–55",
         "value": 50,
         "roll": "3d6×5"
+      },
+      "INT": {
+        "raw": "05",
+        "value": 5
+      },
+      "POW": {
+        "raw": "05",
+        "value": 5
       }
     },
     "averages": true,
@@ -45,20 +57,20 @@
       "value": 1
     },
     "damage_bonus": {
-      "raw": "нет",
-      "value": null
+      "raw": "0",
+      "value": 0
     },
     "build": {
       "raw": "0",
       "value": 0
     },
     "move": {
-      "raw": "7",
-      "value": 7,
+      "raw": "8",
+      "value": 8,
       "modes": [
         {
           "mode": "walk",
-          "value": 7
+          "value": 8
         }
       ]
     },
@@ -68,7 +80,7 @@
       "note": null
     },
     "attacks_per_round": {
-      "raw": "1",
+      "raw": "1 (оружие, удушение, укус)",
       "value": 1
     },
     "attacks": [
@@ -80,14 +92,72 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "45% (22/9)",
-          "value": 45,
-          "half": 22,
-          "fifth": 9
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
         },
         "damage": {
           "raw": "1к3+БкУ или по виду оружия",
           "dice": "1d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Удушение",
+          "en": "Strangle"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "—",
+          "value": null,
+          "half": null,
+          "fifth": null
+        },
+        "damage": {
+          "raw": "1к4+1+БкУ за раунд",
+          "dice": "1d4+1",
+          "adds_db": true
+        },
+        "notes": "костлявые пальцы сжимают горло; урон каждый раунд, пока жертва не погибнет, не потеряет сознание или не сбросит скелет; вырваться — встречная проверка СИЛ"
+      },
+      {
+        "name": {
+          "ru": "Меч",
+          "en": "Sword"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1к6+1+БкУ",
+          "dice": "1d6+1",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Копьё",
+          "en": "Spear"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1к8+1+БкУ",
+          "dice": "1d8+1",
           "adds_db": true
         }
       }
@@ -98,7 +168,17 @@
       "half": 15,
       "fifth": 6
     },
-    "skills": [],
+    "skills": [
+      {
+        "name": "Неумолимое наступление",
+        "value": {
+          "raw": "100%",
+          "value": 100,
+          "half": 50,
+          "fifth": 20
+        }
+      }
+    ],
     "sanity_loss": [
       {
         "success": "0",
@@ -113,24 +193,118 @@
   },
   "sources": [
     {
-      "book_id": "keeper-rulebook-ru",
-      "physical_page": 312,
-      "printed_page": 333,
-      "method": "helper_migration",
-      "verified": true
-    },
-    {
       "book_id": "malleus-monstrorum-1-en",
       "physical_page": 181,
       "printed_page": 180,
       "method": "book_text",
       "verified": true
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 312,
+      "printed_page": 333,
+      "method": "helper_migration",
+      "verified": true
     }
   ],
-  "corrections": [],
+  "corrections": [
+    {
+      "field": "statblock.characteristics.STR",
+      "from": "50 3d6×5",
+      "to": "50–55 3d6×5",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.180"
+    },
+    {
+      "field": "statblock.characteristics.CON",
+      "from": null,
+      "to": "—",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.180"
+    },
+    {
+      "field": "statblock.characteristics.DEX",
+      "from": null,
+      "to": "50–55 3d6×5",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.180"
+    },
+    {
+      "field": "statblock.characteristics.INT",
+      "from": "50 3d6×5",
+      "to": "05",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.180"
+    },
+    {
+      "field": "statblock.characteristics.POW",
+      "from": null,
+      "to": "05",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.180"
+    },
+    {
+      "field": "statblock.damage_bonus",
+      "from": "нет",
+      "to": "0",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.180"
+    },
+    {
+      "field": "statblock.move",
+      "from": "7",
+      "to": "8",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.180"
+    },
+    {
+      "field": "statblock.attacks_per_round",
+      "from": "1",
+      "to": "1 (оружие, удушение, укус)",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.180"
+    },
+    {
+      "field": "statblock.attacks[Ближний бой].chance",
+      "from": "45% (22/9)",
+      "to": "50% (25/10)",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.181"
+    },
+    {
+      "field": "statblock.attacks[Удушение]",
+      "from": null,
+      "to": "—, урон 1к4+1+БкУ за раунд",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.181"
+    },
+    {
+      "field": "statblock.attacks[Меч]",
+      "from": null,
+      "to": "50% (25/10), урон 1к6+1+БкУ",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.181"
+    },
+    {
+      "field": "statblock.attacks[Копьё]",
+      "from": null,
+      "to": "50% (25/10), урон 1к8+1+БкУ",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.181"
+    },
+    {
+      "field": "statblock.skills",
+      "from": null,
+      "to": "Неумолимое наступление 100%",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.181"
+    }
+  ],
   "quality": {
     "needs_review": false,
-    "flags": [],
-    "notes": "в «Malleus Monstrorum» другие значения: СИЛ 50–55; ИНТ 05; Бонус к урону 0; Скорость 8; Ближний бой 50% (25/10), damage 1D3+DB; в записи — значения основного источника (Р-19)"
+    "flags": [
+      "translated"
+    ],
+    "notes": "Malleus не печатает ПМ (при МОЩ 05 это 1 ПМ) — оставлено значение «Книги хранителя»; у манёвра «Удушение» процент в Malleus не указан"
   }
 }

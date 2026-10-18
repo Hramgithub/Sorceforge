@@ -77,7 +77,7 @@
       "note": "сверхплотная шкура) против зачарованного проникающего оружия. Обычное оружие и механические устройства не наносят урона. Шагнер Фан выдерживает даже сильнейшее воздействие в течение 15 минут, а потом развоплощается. Если Шагнер Фан теряет более 90 ПЗ, он становится неподвижным и безжизненным. Для того чтобы вернуть его к жизни, потребуются месяцы, десятилетия или столетия ритуалов и жертвоприношений — в зависимости от положения небесных светил"
     },
     "attacks_per_round": {
-      "raw": "2",
+      "raw": "2 (ближний бой) или 1 (захват и высасывание)",
       "value": 2
     },
     "attacks": [
@@ -89,16 +89,37 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "80% (40/16)",
+          "raw": "80% (40/18)",
           "value": 80,
           "half": 40,
-          "fifth": 16
+          "fifth": 18
         },
         "damage": {
-          "raw": "1к6 + БкУ",
-          "dice": "1d6",
-          "adds_db": true
+          "raw": "6к6",
+          "dice": "6d6",
+          "adds_db": false
         }
+      },
+      {
+        "name": {
+          "ru": "Захват и высасывание",
+          "en": "Hold and Drain"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "80% (40/18)",
+          "value": 80,
+          "half": 40,
+          "fifth": 18
+        },
+        "damage": {
+          "raw": "1к6 плюс 5 ВЫН (см. выше)",
+          "dice": "1d6",
+          "adds_db": false,
+          "extra": "−5 ВЫН каждый раунд"
+        },
+        "notes": "хоботок-щупальце впивается в жертву и не отпускает; оторвать — чрезвычайная проверка СИЛ или 20 урона по щупальцу (со штрафной костью); заживает лишь половина потерянных ПЗ и ВЫН"
       }
     ],
     "skills": [],
@@ -113,11 +134,11 @@
       },
       {
         "success": "1d4",
-        "fail": "2d6+1",
+        "fail": "2d6+2",
         "trigger": "при виде живого и активного"
       },
       {
-        "success": "1",
+        "success": "0",
         "fail": "1d6",
         "trigger": "при виде искажённого спутника Шагнера Фана"
       }
@@ -129,24 +150,70 @@
   },
   "sources": [
     {
-      "book_id": "keeper-rulebook-ru",
-      "physical_page": 307,
-      "printed_page": 328,
-      "method": "helper_migration",
-      "verified": true
-    },
-    {
       "book_id": "malleus-monstrorum-2-en",
       "physical_page": 49,
       "printed_page": 48,
       "method": "book_text",
       "verified": true
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 307,
+      "printed_page": 328,
+      "method": "helper_migration",
+      "verified": true
     }
   ],
-  "corrections": [],
+  "corrections": [
+    {
+      "field": "statblock.attacks_per_round",
+      "from": "2",
+      "to": "2 (ближний бой) или 1 (захват и высасывание)",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.48"
+    },
+    {
+      "field": "statblock.attacks[Ближний бой].chance",
+      "from": "80% (40/16)",
+      "to": "80% (40/18)",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.48"
+    },
+    {
+      "field": "statblock.attacks[Ближний бой].damage",
+      "from": "1к6 + БкУ",
+      "to": "6к6",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.48"
+    },
+    {
+      "field": "statblock.attacks[Захват и высасывание]",
+      "from": null,
+      "to": "80% (40/18), урон 1к6 плюс 5 ВЫН (см. выше)",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.48"
+    },
+    {
+      "field": "statblock.sanity_loss[1]",
+      "from": "1d4/2d6+1",
+      "to": "1d4/2d6+2",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.48"
+    },
+    {
+      "field": "statblock.sanity_loss[2]",
+      "from": "1/1d6",
+      "to": "0/1d6",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.49"
+    }
+  ],
   "quality": {
     "needs_review": false,
-    "flags": [],
-    "notes": "в «Malleus Monstrorum» другие значения: Ближний бой Fighting 80% (40/18 sic), damage 6D6; Hold and drain (mnvr) 80%, 1D6 + 5 CON; Потеря рассудка 0/1D6 inert; 1D4/2D6+2 living god; в записи — значения основного источника (Р-19)"
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "опечатка Malleus: пятая часть 80% напечатана как 18 (должно быть 16); оставлено как напечатано; ИНТ в Malleus не указан — оставлено значение «Книги хранителя»"
   }
 }

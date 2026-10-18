@@ -30,16 +30,16 @@
         "value": 700
       },
       "DEX": {
-        "raw": "105",
-        "value": 105
+        "raw": "100",
+        "value": 100
       },
       "INT": {
         "raw": "105",
         "value": 105
       },
       "POW": {
-        "raw": "210",
-        "value": 210
+        "raw": "200",
+        "value": 200
       }
     },
     "averages": false,
@@ -48,8 +48,8 @@
       "value": 130
     },
     "mp": {
-      "raw": "42",
-      "value": 42
+      "raw": "40",
+      "value": 40
     },
     "damage_bonus": {
       "raw": "+13к6",
@@ -60,13 +60,12 @@
       "value": 14
     },
     "move": {
-      "raw": "0 (парит в воздухе)",
-      "value": 0,
+      "raw": "4 (парит в воздухе)",
+      "value": 4,
       "modes": [
         {
-          "mode": "other",
-          "value": 0,
-          "note": "0 (парит в воздухе)"
+          "mode": "fly",
+          "value": 4
         }
       ]
     },
@@ -76,7 +75,7 @@
       "note": "Соприкоснувшееся с Ктугхой оружие уничтожается"
     },
     "attacks_per_round": {
-      "raw": "3",
+      "raw": "3 (пылающие ложноножки) или 1 (сполох пламени)",
       "value": 3
     },
     "attacks": [
@@ -94,9 +93,10 @@
           "fifth": 8
         },
         "damage": {
-          "raw": "1к6 + 1/2 БкУ",
-          "dice": "1d6",
-          "adds_db": true
+          "raw": "6к6 плюс возгорание",
+          "dice": "6d6",
+          "adds_db": false,
+          "extra": "возгорание: проверка Удачи, при провале одежда или волосы горят (1к6 за раунд)"
         }
       },
       {
@@ -107,7 +107,7 @@
         "kind": "special",
         "skill": null,
         "chance": {
-          "raw": "цели должны пройти чрезвычайную проверку ВЫН",
+          "raw": "цели должны пройти проверку Удачи",
           "value": null,
           "half": null,
           "fifth": null
@@ -118,7 +118,7 @@
           "adds_db": false,
           "extra": "при провале проверки — смерть"
         },
-        "notes": "вместо хлёстких ложноножек; полоса длиной 150 м и шириной 20 м; нательная броня не защищает, можно укрыться за стеной или насыпью"
+        "notes": "вместо хлёстких ложноножек, не чаще раза в два раунда; полоса длиной 150 м и шириной 20 м; нательная броня не защищает, можно укрыться за стеной или насыпью"
       }
     ],
     "skills": [],
@@ -139,17 +139,17 @@
   },
   "sources": [
     {
-      "book_id": "keeper-rulebook-ru",
-      "physical_page": 299,
-      "printed_page": 320,
-      "method": "helper_migration",
-      "verified": true
-    },
-    {
       "book_id": "malleus-monstrorum-2-en",
       "physical_page": 51,
       "printed_page": 50,
       "method": "book_text",
+      "verified": true
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 299,
+      "printed_page": 320,
+      "method": "helper_migration",
       "verified": true
     }
   ],
@@ -160,11 +160,62 @@
       "to": "Сполох пламени",
       "reason": "Не было атаки «Сполох пламени»; процента у неё в книге нет — цели проходят чрезвычайную проверку ВЫН.",
       "ref": "книга, стр. 300 PDF (проверка по изображению страницы)"
+    },
+    {
+      "field": "statblock.characteristics.DEX",
+      "from": "105",
+      "to": "100",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.50"
+    },
+    {
+      "field": "statblock.characteristics.POW",
+      "from": "210",
+      "to": "200",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.50"
+    },
+    {
+      "field": "statblock.mp",
+      "from": "42",
+      "to": "40",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.50"
+    },
+    {
+      "field": "statblock.move",
+      "from": "0 (парит в воздухе)",
+      "to": "4 (парит в воздухе)",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.50"
+    },
+    {
+      "field": "statblock.attacks_per_round",
+      "from": "3",
+      "to": "3 (пылающие ложноножки) или 1 (сполох пламени)",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.50"
+    },
+    {
+      "field": "statblock.attacks[Ближний бой].damage",
+      "from": "1к6 + 1/2 БкУ",
+      "to": "6к6 плюс возгорание",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.50"
+    },
+    {
+      "field": "statblock.attacks[Сполох пламени].chance",
+      "from": "цели должны пройти чрезвычайную проверку ВЫН",
+      "to": "цели должны пройти проверку Удачи",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.50"
     }
   ],
   "quality": {
     "needs_review": false,
-    "flags": [],
-    "notes": "Особое умение «Автоматическое сожжение» (1 ПЗ за раунд при провале проверки ВЫН) в атаки не добавлено.; в «Malleus Monstrorum» другие значения: ЛВК 100; МОЩ 200; ПМ 40; Скорость 4 flying; Ближний бой 40% (20/8), damage 6D6 plus burning; в записи — значения основного источника (Р-19)"
+    "flags": [
+      "translated"
+    ],
+    "notes": "Особое умение «Автоматическое сожжение» (1 ПЗ за раунд при провале проверки ВЫН) в атаки не добавлено (в Malleus, умение «Flaming Entrance»: 1 урон от жара, после проваленной проверки ВЫН — 2 урона за раунд); ИНТ в Malleus не указан — оставлено значение «Книги хранителя»"
   }
 }

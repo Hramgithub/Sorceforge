@@ -22,35 +22,36 @@
       "STR": {
         "raw": "35",
         "value": 35,
-        "roll": "(1d6+4)×5"
+        "roll": "(2d3+3)×5"
       },
       "CON": {
-        "raw": "55",
-        "value": 55,
-        "roll": "(2d6+4)×5"
+        "raw": "60",
+        "value": 60,
+        "roll": "(2d6+5)×5"
       },
       "SIZ": {
-        "raw": "35",
-        "value": 35
+        "raw": "40",
+        "value": 40,
+        "roll": "(2d3+4)×5"
       },
       "DEX": {
         "raw": "70",
         "value": 70,
-        "roll": "4d6×5"
+        "roll": "(2d6+7)×5"
       },
       "POW": {
-        "raw": "50",
+        "raw": "50–55",
         "value": 50,
         "roll": "3d6×5"
       }
     },
     "averages": true,
     "hp": {
-      "raw": "9",
-      "value": 9
+      "raw": "10 (по 1 на крысу)",
+      "value": 10
     },
     "damage_bonus": {
-      "raw": "-1",
+      "raw": "нет",
       "value": null
     },
     "build": {
@@ -73,7 +74,7 @@
       "note": null
     },
     "attacks_per_round": {
-      "raw": "1",
+      "raw": "1 (укус, натиск)",
       "value": 1
     },
     "attacks": [
@@ -85,16 +86,37 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "40% (20/8)",
-          "value": 40,
-          "half": 20,
-          "fifth": 8
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
         },
         "damage": {
           "raw": "1к3",
           "dice": "1d3",
           "adds_db": false
-        }
+        },
+        "notes": "стая из 10 крыс; процент Ближнего боя = число крыс × 5, его можно делить между целями"
+      },
+      {
+        "name": {
+          "ru": "Натиск",
+          "en": "Overwhelm"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1 за каждую пару крыс (см. выше)",
+          "dice": null,
+          "adds_db": false
+        },
+        "notes": "стая наваливается на одного противника (вместо атак по нескольким); стая из десяти крыс получает бонусную кость"
       }
     ],
     "dodge": {
@@ -112,24 +134,97 @@
   },
   "sources": [
     {
-      "book_id": "keeper-rulebook-ru",
-      "physical_page": 315,
-      "printed_page": 336,
-      "method": "helper_migration",
-      "verified": true
-    },
-    {
       "book_id": "malleus-monstrorum-1-en",
       "physical_page": 195,
       "printed_page": 194,
       "method": "book_text",
       "verified": true
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 315,
+      "printed_page": 336,
+      "method": "helper_migration",
+      "verified": true
     }
   ],
-  "corrections": [],
+  "corrections": [
+    {
+      "field": "statblock.characteristics.STR",
+      "from": "35 (1d6+4)×5",
+      "to": "35 (2d3+3)×5",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.194"
+    },
+    {
+      "field": "statblock.characteristics.CON",
+      "from": "55 (2d6+4)×5",
+      "to": "60 (2d6+5)×5",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.194"
+    },
+    {
+      "field": "statblock.characteristics.SIZ",
+      "from": "35",
+      "to": "40 (2d3+4)×5",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.194"
+    },
+    {
+      "field": "statblock.characteristics.DEX",
+      "from": "70 4d6×5",
+      "to": "70 (2d6+7)×5",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.194"
+    },
+    {
+      "field": "statblock.characteristics.POW",
+      "from": "50 3d6×5",
+      "to": "50–55 3d6×5",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.194"
+    },
+    {
+      "field": "statblock.hp",
+      "from": "9",
+      "to": "10 (по 1 на крысу)",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.194"
+    },
+    {
+      "field": "statblock.damage_bonus",
+      "from": "-1",
+      "to": "нет",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.194"
+    },
+    {
+      "field": "statblock.attacks_per_round",
+      "from": "1",
+      "to": "1 (укус, натиск)",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.194"
+    },
+    {
+      "field": "statblock.attacks[Ближний бой].chance",
+      "from": "40% (20/8)",
+      "to": "50% (25/10)",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.194"
+    },
+    {
+      "field": "statblock.attacks[Натиск]",
+      "from": null,
+      "to": "50% (25/10), урон 1 за каждую пару крыс (см. выше)",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.194"
+    }
+  ],
   "quality": {
     "needs_review": false,
-    "flags": [],
-    "notes": "в «Malleus Monstrorum» другие значения: ВЫН 60; ТЕЛ 40; МОЩ 50–55; ПЗ 10 (1 per rat); Бонус к урону n/a; Ближний бой 50% (25/10), damage 1D3 (pack of 10); в записи — значения основного источника (Р-19)"
+    "flags": [
+      "translated"
+    ],
+    "notes": null
   }
 }

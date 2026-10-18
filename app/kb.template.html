@@ -233,8 +233,6 @@ function characterCard(c) {
 
 function skillCard(c) {
   const specs = (c.specializations||[]).map(s => `<tr><td>${esc(s.name.ru)}${s.name.en ? ` <span class="muted">${esc(s.name.en)}</span>` : ''}</td><td class="num">${s.base ? esc(s.base.raw) : '—'}</td></tr>`).join('');
-  const users = DATA.characters.flatMap(p => (p.statblock?.skills||[]).filter(s => s.skill === c.id).map(s => [p, s]));
-  const used = users.map(([p, s]) => `<tr><td>${link(p.id, p.name.ru)}</td><td>${esc(s.specialization || '')}</td><td class="num">${esc(s.value.raw)}</td></tr>`).join('');
   const era = (c.axes?.era||[]).filter(e => e !== 'any');
   return `<h2>${esc(c.name.ru)}</h2>
     <div class="sub">${esc(c.name.en||'')} · ${esc(c.category)}${c.uncommon ? ' <span class="tag">редкий</span>' : ''}${era.length ? ' · эпоха: ' + era.map(esc).join(', ') : ''}${(c.aliases||[]).length ? ' · также: ' + c.aliases.map(esc).join(', ') : ''}</div>
@@ -243,7 +241,6 @@ function skillCard(c) {
     ${c.description?.ru ? `<p>${esc(c.description.ru)}</p>` : ''}
     ${specs ? `<section><h3>Специализации</h3><table><tr><th>Название</th><th>База</th></tr>${specs}</table></section>` : ''}
     ${(c.examples||[]).length ? `<section><h3>Примеры</h3><ul>${c.examples.map(e => `<li>${esc(e)}</li>`).join('')}</ul></section>` : ''}
-    ${used ? `<section><h3>У персонажей</h3><table><tr><th>Персонаж</th><th>Специализация</th><th>Значение</th></tr>${used}</table></section>` : ''}
     <section><h3>Источник</h3><div>${sources(c)}</div></section>
     ${corrections(c)}`;
 }

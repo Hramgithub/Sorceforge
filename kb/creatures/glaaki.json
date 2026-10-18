@@ -73,8 +73,7 @@
     },
     "armor": {
       "raw": "40 пунктов (оболочка). У каждого шипа 4 пункта брони и 6 ПЗ",
-      "value": 40,
-      "note": "оболочка). У каждого шипа 4 пункта брони и 6 ПЗ"
+      "value": 40
     },
     "attacks_per_round": {
       "raw": "1",
@@ -166,6 +165,14 @@
       "verified": true
     }
   ],
+  "errata": [
+    {
+      "field": "ПЗ",
+      "printed": "140",
+      "expected": "75",
+      "note": "по формуле (ВЫН 300 + ТЕЛ 450)/10 = 75, как в «Книге хранителя»; возможна опечатка Malleus"
+    }
+  ],
   "corrections": [
     {
       "field": "statblock.hp",
@@ -173,6 +180,13 @@
       "to": "140",
       "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
       "ref": "malleus-monstrorum-2-en p.90"
+    },
+    {
+      "field": "statblock.characteristics.INT",
+      "from": null,
+      "to": "150",
+      "reason": "в Malleus Monstrorum 7e ИНТ не указан — оставлено значение «Книги хранителя»",
+      "ref": "keeper-rulebook-ru p.314"
     }
   ],
   "quality": {
@@ -181,6 +195,6 @@
       "translated",
       "parse_uncertain"
     ],
-    "notes": "ПЗ 140 — как напечатано в Malleus; по формуле (ВЫН 300 + ТЕЛ 450)/10 = 75 (как в «Книге хранителя»), возможна опечатка; ИНТ в Malleus Monstrorum не указан — оставлено значение «Книги хранителя»"
+    "notes": null
   }
 }

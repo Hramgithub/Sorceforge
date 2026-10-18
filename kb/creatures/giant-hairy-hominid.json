@@ -80,11 +80,11 @@
       ]
     },
     "armor": {
-      "raw": "3-point though skin and fur.",
+      "raw": "3 пункта (жёсткая шкура и мех).",
       "value": 3
     },
     "attacks_per_round": {
-      "raw": "2 (punch, kick, bite) or 1 (throw rock)",
+      "raw": "2 (удар кулаком, пинок, укус) или 1 (бросок камня)",
       "value": 2
     },
     "attacks": [
@@ -96,13 +96,13 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "65% (32/13), damage1d3+DB",
+          "raw": "65% (32/13), урон 1d3+БкУ",
           "value": 65,
           "half": 32,
           "fifth": 13
         },
         "damage": {
-          "raw": "1d3+DB",
+          "raw": "1d3+БкУ",
           "dice": "1d3",
           "adds_db": true
         }
@@ -115,13 +115,13 @@
         "kind": "attack",
         "skill": "Метание",
         "chance": {
-          "raw": "50% (25/10), damage 1d6+½DB",
+          "raw": "50% (25/10), урон 1d6+½БкУ",
           "value": 50,
           "half": 25,
           "fifth": 10
         },
         "damage": {
-          "raw": "1d6+½DB",
+          "raw": "1d6+½БкУ",
           "dice": "1d6",
           "adds_db": true,
           "extra": "прибавляется половина БкУ"
@@ -226,12 +226,20 @@
       "verified": true
     }
   ],
+  "errata": [
+    {
+      "field": "Броня",
+      "printed": "though skin",
+      "expected": "tough skin",
+      "note": "опечатка в строке брони: по смыслу «жёсткая шкура»"
+    }
+  ],
   "corrections": [],
   "quality": {
     "needs_review": false,
     "flags": [
       "translated"
     ],
-    "notes": "Для йети ТЕЛ делится пополам (сноска к таблице). Опечатки печати сохранены в raw: «damage1d3+DB» без пробела, «though skin» вместо «tough skin». Пункты магии в книге не указаны."
+    "notes": "Пункты магии в книге не указаны."
   }
 }

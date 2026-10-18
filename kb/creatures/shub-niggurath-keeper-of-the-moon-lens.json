@@ -75,12 +75,11 @@
       ]
     },
     "armor": {
-      "raw": "None. Mundane weapons (incl. bullets) inflict a single point of damage (two points if successfully impaling). Regenerates 1d10 hit points round (death at zero hit points). If reduced to zero hit points, the Keeper of the Moon-Lens bursts and its bodily fluids wash into the ground. It reforms in 4d100+100 years within its lair.",
-      "value": 0,
-      "note": "обычное оружие наносит 1 урон (2 при пронзании); регенерирует 1d10 ПЗ за раунд; при 0 ПЗ лопается и воссоздаётся в логове через 4d100+100 лет"
+      "raw": "Нет. Обычное оружие (включая пули) наносит лишь 1 пункт урона (2 пункта при успешном пронзании). Регенерирует 1d10 ПЗ за раунд (гибнет при 0 ПЗ). При 0 ПЗ Страж Лунной линзы лопается, и жидкости его тела уходят в землю. Он воссоздаётся в своём логове через 4d100+100 лет.",
+      "value": 0
     },
     "attacks_per_round": {
-      "raw": "1 (bite, swallow, strike, or crush)",
+      "raw": "1 (укус, проглатывание, удар или сокрушение)",
       "value": 1
     },
     "attacks": [
@@ -92,7 +91,7 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "90% (45/18), damage 3d6",
+          "raw": "90% (45/18), урон 3d6",
           "value": 90,
           "half": 45,
           "fifth": 18
@@ -112,13 +111,13 @@
         "kind": "maneuver",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "90% (45/18), swallowed (see above)",
+          "raw": "90% (45/18), проглатывает (см. выше)",
           "value": 90,
           "half": 45,
           "fifth": 18
         },
         "damage": {
-          "raw": "swallowed (see above)",
+          "raw": "проглатывает (см. выше)",
           "dice": null,
           "adds_db": false,
           "extra": "жертва заключена в студенистой голове до поедания или превращения"
@@ -133,7 +132,7 @@
         "kind": "maneuver",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "90% (45/18), damage 7d6",
+          "raw": "90% (45/18), урон 7d6",
           "value": 90,
           "half": 45,
           "fifth": 18
@@ -148,7 +147,7 @@
     ],
     "skills": [],
     "spells": {
-      "raw": "Call Lightning, Control Elements, The Red Sign, Summon/Bind Dark Young, Wrack; others as the Keeper desires."
+      "raw": "Call Lightning, Control Elements, The Red Sign, Summon/Bind Dark Young, Wrack; другие — по желанию Хранителя."
     },
     "sanity_loss": [
       {
@@ -198,15 +197,32 @@
       "physical_page": 199,
       "printed_page": 198,
       "method": "book_text",
-      "verified": true
+      "verified": true,
+      "entry_page": 198,
+      "note": "рассудок, «Magic» и способности — на следующей странице (стр. 199 книги, PDF 200)"
+    }
+  ],
+  "errata": [
+    {
+      "field": "Броня",
+      "printed": "Regenerates 1d10 hit points round",
+      "expected": "Regenerates 1d10 hit points per round",
+      "note": "пропущено «per»"
+    },
+    {
+      "field": "Врезка «Goatswood»",
+      "printed": "Seven Valley",
+      "expected": "Severn Valley",
+      "note": "опечатка в названии долины"
     }
   ],
   "corrections": [],
   "quality": {
     "needs_review": false,
     "flags": [
-      "translated"
+      "translated",
+      "parse_uncertain"
     ],
-    "notes": "Статья начинается на стр. 197 (PDF 198), профиль и врезка «Goatswood» (описание города, без характеристик) — на стр. 198 (PDF 199), рассудок, «Magic» и способности — на стр. 199 (PDF 200). Другие имена в книге: «none known». Мелкие опечатки книги: «Regenerates 1d10 hit points round» (пропущено per); во врезке «Seven Valley» вместо Severn Valley."
+    "notes": null
   }
 }

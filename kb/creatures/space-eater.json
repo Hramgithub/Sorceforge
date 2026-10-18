@@ -62,7 +62,7 @@
       "value": 20
     },
     "damage_bonus": {
-      "raw": "n/a",
+      "raw": "—",
       "value": null
     },
     "build": {
@@ -70,7 +70,7 @@
       "value": 3
     },
     "move": {
-      "raw": "5 floating / flying",
+      "raw": "5 паря / летая",
       "value": 5,
       "modes": [
         {
@@ -81,12 +81,11 @@
       ]
     },
     "armor": {
-      "raw": "none; can be harmed only with magic or fire-based attacks; cold and mundane weapons have no effect.",
-      "value": 0,
-      "note": "вредят только магия и огонь"
+      "raw": "нет; ранить его можно только магией или огнём; холод и обычное оружие не действуют.",
+      "value": 0
     },
     "attacks_per_round": {
-      "raw": "1 (swipe, slice, or consume)",
+      "raw": "1 (взмах, рассечение или поглощение)",
       "value": 1
     },
     "attacks": [
@@ -98,7 +97,7 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "60% (30/12), damage 1d6",
+          "raw": "60% (30/12), урон 1d6",
           "value": 60,
           "half": 30,
           "fifth": 12
@@ -118,13 +117,13 @@
         "kind": "special",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "30% (15/6), damage 3d10 drained from INT, POW, & 1d10 Sanity loss",
+          "raw": "30% (15/6), урон: высасывание 3d10 ИНТ и МОЩ и потеря 1d10 Рассудка",
           "value": 30,
           "half": 15,
           "fifth": 6
         },
         "damage": {
-          "raw": "3d10 drained from INT, POW, & 1d10 Sanity loss",
+          "raw": "высасывание 3d10 ИНТ и МОЩ и потеря 1d10 Рассудка",
           "dice": "3d10",
           "adds_db": false,
           "extra": "высасывание ИНТ и МОЩ, потеря 1d10 рассудка за раунд"
@@ -140,7 +139,7 @@
     },
     "skills": [],
     "spells": {
-      "raw": "30% chance to know 1d6 spells."
+      "raw": "с вероятностью 30% знает 1d6 заклинаний."
     },
     "sanity_loss": [
       {
@@ -186,7 +185,16 @@
       "physical_page": 130,
       "printed_page": 129,
       "method": "book_text",
-      "verified": true
+      "verified": true,
+      "entry_page": 129
+    }
+  ],
+  "errata": [
+    {
+      "field": "Поглощение мозга",
+      "printed": "3d10",
+      "expected": null,
+      "note": "в описании «Consume» мозг поедается по 2d10 ИНТ и МОЩ за раунд, а в строке атаки — 3d10; в записи сохранена строка атаки"
     }
   ],
   "corrections": [],
@@ -196,6 +204,6 @@
       "translated",
       "parse_uncertain"
     ],
-    "notes": "Расхождение в книге: в описании «Consume» мозг поедается по 2d10 ИНТ и МОЩ за раунд, а в строке атаки указано 3d10. В записи сохранена строка атаки. Блок характеристик — на стр. 130 PDF (статья начинается на стр. 129)."
+    "notes": null
   }
 }

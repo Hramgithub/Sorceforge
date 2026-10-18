@@ -82,12 +82,11 @@
       ]
     },
     "armor": {
-      "raw": "None. Regenerates 1 hit point per hit point of blood leeched from a human (death at zero hit points). If reduced to zero hit points, in human form, the monstrous form bursts forth (at full hit points) and proceeds to attack anything nearby, fighting for a few rounds before dissolving into the ground. The Lady reforms as desired by Shub-Niggurath after 2d100 days, appearing wherever there is work to be done.",
-      "value": 0,
-      "note": "восстанавливает 1 ПЗ за каждый пункт высосанной у человека крови; при 0 ПЗ в человеческом облике из него вырывается чудовищный облик с полными ПЗ; воссоздаётся через 2d100 дней"
+      "raw": "Нет. Восстанавливает 1 ПЗ за каждый пункт крови, высосанной у человека (гибнет при 0 ПЗ). При 0 ПЗ в человеческом облике из него вырывается чудовищный облик (с полными ПЗ) и нападает на всё вокруг, сражаясь несколько раундов, а затем растворяется в земле. Госпожа воссоздаётся по воле Шуб-Ниггурат через 2d100 дней и появляется там, где для неё есть работа.",
+      "value": 0
     },
     "attacks_per_round": {
-      "raw": "1 (human form) or 2 (monstrous form)",
+      "raw": "1 (человеческий облик) или 2 (чудовищный облик)",
       "value": 1
     },
     "attacks": [
@@ -99,7 +98,7 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "90% (45/19), damage 1d4+1d6",
+          "raw": "90% (45/19), урон 1d4+1d6",
           "value": 90,
           "half": 45,
           "fifth": 19
@@ -119,7 +118,7 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "90% (45/19), damage 1d6+1d6",
+          "raw": "90% (45/19), урон 1d6+1d6",
           "value": 90,
           "half": 45,
           "fifth": 19
@@ -139,13 +138,13 @@
         "kind": "maneuver",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "90% (45/19), damage 1d6 or bite 1d6+4 (see above)",
+          "raw": "90% (45/19), урон 1d6 или укус 1d6+4 (см. выше)",
           "value": 90,
           "half": 45,
           "fifth": 19
         },
         "damage": {
-          "raw": "1d6 or bite 1d6+4 (see above)",
+          "raw": "1d6 или укус 1d6+4 (см. выше)",
           "dice": "1d6",
           "adds_db": false,
           "extra": "на следующем раунде — сдавливание 1d6 за раунд или укус с высасыванием крови 1d6+4 за раунд"
@@ -161,7 +160,7 @@
     },
     "skills": [],
     "spells": {
-      "raw": "Augury, Awaken the Beast, Bind Soul, Cloud Memory, Command Animal, Command Plants, Control Elements, Dampen Light, Enthrall Victim, Fury, Healing (variant), Human Shrub, The Red Sign, Return of the Beloved, Summon/Bind Dark Young; others as the Keeper desires."
+      "raw": "Augury, Awaken the Beast, Bind Soul, Cloud Memory, Command Animal, Command Plants, Control Elements, Dampen Light, Enthrall Victim, Fury, Healing (вариант), Human Shrub, The Red Sign, Return of the Beloved, Summon/Bind Dark Young; другие — по желанию Хранителя."
     },
     "sanity_loss": [
       {
@@ -230,7 +229,23 @@
       "physical_page": 195,
       "printed_page": 194,
       "method": "book_text",
-      "verified": true
+      "verified": true,
+      "entry_page": 193,
+      "note": "окончание способностей — на стр. 195 книги (PDF 196)"
+    }
+  ],
+  "errata": [
+    {
+      "field": "Ближний бой и захват",
+      "printed": "90% (45/19)",
+      "expected": "90% (45/18)",
+      "note": "у трёх атак пятая часть от 90 напечатана как 19; оставлено как напечатано"
+    },
+    {
+      "field": "Ближний бой (чудовищный облик): урон",
+      "printed": "1d6+1d6",
+      "expected": null,
+      "note": "не соответствует БкУ чудовищного облика +3d6; оставлено как напечатано"
     }
   ],
   "corrections": [],
@@ -240,6 +255,6 @@
       "translated",
       "parse_uncertain"
     ],
-    "notes": "Статья начинается на стр. 192 (PDF 193), профиль — на стр. 194 (PDF 195), окончание способностей — на стр. 195 (PDF 196). Основной облик записи — человеческий; значения чудовищного облика (в скобках) — в способностях. Опечатки книги: у трёх атак напечатано «90% (45/19)» — пятая часть от 90 равна 18; урон чудовищного облика «1d6+1d6» не соответствует его БкУ +3d6. Значения оставлены как напечатано."
+    "notes": "Основной облик записи — человеческий; значения чудовищного облика (в скобках) — в способностях."
   }
 }

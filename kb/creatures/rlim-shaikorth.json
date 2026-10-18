@@ -78,14 +78,12 @@
       ]
     },
     "armor": {
-      "raw": "10-point blubber. Slashing and piercing weapons cause the Old One’s blood to splatter (see Blood above). If reduced to zero hit points, Rlim Shaikorth melts into a pool of slurry, which then freezes over; if this takes place on Yikilth, the iceberg dematerializes in 1d10 rounds to another dimension. The Old One reforms in 4d100 years on Yikilth (wherever it is).",
-      "value": 10,
-      "note": "режущее и колющее оружие вызывает брызги ледяной крови; при 0 ПЗ растекается и замерзает, Йикилт исчезает в другое измерение через 1d10 раундов; воссоздаётся через 4d100 лет"
+      "raw": "10 пунктов (подкожный жир). Режущее и колющее оружие вызывает брызги крови Древнего (см. «Ледяная кровь» выше). При снижении ПЗ до нуля Рлим Шайкорт растекается лужей жижи, которая затем замерзает; если это происходит на Йикилте, айсберг через 1d10 раундов дематериализуется в другое измерение. Древний воссоздаётся через 4d100 лет на Йикилте (где бы тот ни был).",
+      "value": 10
     },
     "attacks_per_round": {
       "raw": "",
-      "value": null,
-      "note": "в книге значение после «Attacks per round:» не напечатано"
+      "value": null
     },
     "attacks": [
       {
@@ -96,13 +94,13 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "75% (37/15), damage 1d10 freezing",
+          "raw": "75% (37/15), урон 1d10 холодом",
           "value": 75,
           "half": 37,
           "fifth": 15
         },
         "damage": {
-          "raw": "1d10 freezing",
+          "raw": "1d10 холодом",
           "dice": "1d10",
           "adds_db": false,
           "extra": "Ледяное касание: при провале Экстремальной проверки МОЩ потеря 10 ВЫН за раунд (успех проверки ВЫН — 1d6 ВЫН)"
@@ -117,13 +115,13 @@
         "kind": "special",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "50% (25/10), death (assumes a moving target, otherwise automatic success)",
+          "raw": "50% (25/10), смерть (для движущейся цели, иначе автоматический успех)",
           "value": 50,
           "half": 25,
           "fifth": 10
         },
         "damage": {
-          "raw": "death",
+          "raw": "смерть",
           "dice": null,
           "adds_db": false,
           "extra": "смерть, если жертва не выпрыгнет из пасти следующим действием (Прыжки или Трудная проверка ЛВК)"
@@ -133,7 +131,7 @@
     ],
     "skills": [],
     "spells": {
-      "raw": "Bloat (variant), Breath of Pazzuzu, Create Mist of R’lyeh, Power Drain, Send Dream, Siren’s Song, Wrath of Pazzuzu; others as desired by the Keeper."
+      "raw": "Bloat (вариант), Breath of Pazzuzu, Create Mist of R’lyeh, Power Drain, Send Dream, Siren’s Song, Wrath of Pazzuzu; другие на усмотрение Хранителя."
     },
     "sanity_loss": [
       {
@@ -199,16 +197,33 @@
       "physical_page": 184,
       "printed_page": 183,
       "method": "book_text",
-      "verified": true
+      "verified": true,
+      "entry_page": 183,
+      "note": "рассудок, магия и способности — на следующей странице (PDF 185)"
     }
   ],
   "corrections": [],
+  "errata": [
+    {
+      "field": "Атаки за раунд",
+      "printed": null,
+      "expected": null,
+      "note": "после «Attacks per round:» число атак не напечатано"
+    },
+    {
+      "field": "Ближний бой",
+      "printed": "freezing touch (see above)",
+      "expected": null,
+      "note": "ссылка «см. выше», хотя описание силы «Ледяное касание» находится дальше, на следующей странице"
+    }
+  ],
   "quality": {
     "needs_review": false,
     "flags": [
       "translated",
-      "incomplete"
+      "incomplete",
+      "parse_uncertain"
     ],
-    "notes": "Статья начинается на стр. 182 (PDF 183), профиль — на стр. 183 (PDF 184), рассудок, «Magic» и способности — на стр. 184 (PDF 185). Опечатка книги: после «Attacks per round:» число атак не напечатано. Атака Ближнего боя ссылается на «freezing touch (see above)», хотя описание силы находится дальше, на следующей странице."
+    "notes": "Число атак за раунд в книге не напечатано."
   }
 }

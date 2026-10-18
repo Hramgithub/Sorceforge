@@ -67,14 +67,12 @@
       ]
     },
     "armor": {
-      "raw": "none; avoids falling damage 90 percent of the time, landing on its feet and suffering no damage at all.",
-      "value": 0,
-      "note": "в 90% случаев приземляется на лапы и не получает урона от падения"
+      "raw": "нет; в 90% случаев избегает урона от падения, приземляясь на лапы и не получая никакого урона.",
+      "value": 0
     },
     "attacks_per_round": {
-      "raw": "3 (bite, claw)",
-      "value": 3,
-      "note": "в книге заголовок строки напечатан как «Attacker per Round»"
+      "raw": "3 (укус, когти)",
+      "value": 3
     },
     "attacks": [
       {
@@ -85,13 +83,13 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "30% (15/6), damage 1d4–DB (min 1)",
+          "raw": "30% (15/6), урон 1d4–БкУ (мин. 1)",
           "value": 30,
           "half": 15,
           "fifth": 6
         },
         "damage": {
-          "raw": "1d4–DB (min 1)",
+          "raw": "1d4–БкУ (мин. 1)",
           "dice": "1d4",
           "adds_db": true
         },
@@ -185,10 +183,19 @@
     }
   ],
   "corrections": [],
+  "errata": [
+    {
+      "field": "Атаки за раунд (заголовок строки)",
+      "printed": "Attacker per Round",
+      "expected": "Attacks per Round",
+      "note": "опечатка в заголовке строки профиля"
+    }
+  ],
   "quality": {
     "needs_review": false,
     "flags": [
-      "translated"
+      "translated",
+      "parse_uncertain"
     ],
     "notes": null
   }

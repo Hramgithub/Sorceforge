@@ -78,12 +78,11 @@
       ]
     },
     "armor": {
-      "raw": "None. Immune to mundane weapon (incl. bullets) attacks; mundane weapons rapidly age (rust, crumble, break) when they touch Quachil Uttaus. If reduced to zero hit points, Quachil Uttaus turns into a cloud of dust. It reforms in 24 hours in its home dimension.",
-      "value": 0,
-      "note": "неуязвим для обычного оружия, которое при касании мгновенно ветшает; при 0 ПЗ рассыпается облаком пыли и воссоздаётся через 24 часа в своём измерении"
+      "raw": "Нет. Невосприимчив к атакам обычным оружием (включая пули); обычное оружие при касании Квачила Уттауса стремительно стареет (ржавеет, крошится, ломается). При снижении ПЗ до нуля Квачил Уттаус обращается в облако пыли. Воссоздаётся через 24 часа в своём родном измерении.",
+      "value": 0
     },
     "attacks_per_round": {
-      "raw": "1 (touch)",
+      "raw": "1 (касание)",
       "value": 1
     },
     "attacks": [
@@ -95,13 +94,13 @@
         "kind": "special",
         "skill": null,
         "chance": {
-          "raw": "automatic unless dodged, damage 1d10 per round",
+          "raw": "автоматически, если цель не уклонилась, урон 1d10 за раунд",
           "value": null,
           "half": null,
           "fifth": null
         },
         "damage": {
-          "raw": "1d10 per round",
+          "raw": "1d10 за раунд",
           "dice": "1d10",
           "adds_db": false,
           "extra": "за каждый раунд касания, до смерти (Энтропия)"
@@ -111,7 +110,7 @@
     ],
     "skills": [],
     "spells": {
-      "raw": "Bestow Glimpse of Truth, Death’s Breath, Drain Youth, Incinerate, Necrosis; others as desired by the Keeper."
+      "raw": "Bestow Glimpse of Truth, Death’s Breath, Drain Youth, Incinerate, Necrosis; другие на усмотрение Хранителя."
     },
     "sanity_loss": [
       {
@@ -170,15 +169,31 @@
       "physical_page": 178,
       "printed_page": 177,
       "method": "book_text",
-      "verified": true
+      "verified": true,
+      "entry_page": 176
     }
   ],
   "corrections": [],
+  "errata": [
+    {
+      "field": "способность «Управление пространством»",
+      "printed": "100 year/meter radius",
+      "expected": "100 yard/meter radius",
+      "note": "опечатка: year вместо yard"
+    },
+    {
+      "field": "благословения",
+      "printed": "Immorality",
+      "expected": "Immortality",
+      "note": "опечатка в названии благословения «Бессмертие»"
+    }
+  ],
   "quality": {
     "needs_review": false,
     "flags": [
-      "translated"
+      "translated",
+      "parse_uncertain"
     ],
-    "notes": "Статья начинается на стр. 175 (PDF 176), профиль и блок «Magic» — на стр. 177 (PDF 178). Опечатки книги: в «Manipulate Space» — «100 year/meter radius» (вместо yard/meter); в списке благословений — «Immorality» вместо Immortality."
+    "notes": null
   }
 }

@@ -91,12 +91,11 @@
       ]
     },
     "armor": {
-      "raw": "none; may dematerialize (all physical attacks deal no damage).",
-      "value": 0,
-      "note": "в дематериализованном состоянии физические атаки не наносят урона"
+      "raw": "нет; может дематериализоваться (тогда физические атаки не наносят урона).",
+      "value": 0
     },
     "attacks_per_round": {
-      "raw": "1 (unarmed, weapon, or psychic attack)",
+      "raw": "1 (безоружная атака, оружие или психическая атака)",
       "value": 1
     },
     "attacks": [
@@ -108,13 +107,13 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "40% (20/8), damage 1d3+DB or by weapon type",
+          "raw": "40% (20/8), урон 1d3+БкУ или по типу оружия",
           "value": 40,
           "half": 20,
           "fifth": 8
         },
         "damage": {
-          "raw": "damage 1d3+DB or by weapon type",
+          "raw": "урон 1d3+БкУ или по типу оружия",
           "dice": "1d3",
           "adds_db": true
         },
@@ -131,10 +130,10 @@
           "value": null,
           "half": null,
           "fifth": null,
-          "raw": "opposed POW roll with target, damage 1d10 magic points"
+          "raw": "встречная проверка МОЩ с целью, урон 1d10 пунктов магии"
         },
         "damage": {
-          "raw": "damage 1d10 magic points",
+          "raw": "урон 1d10 пунктов магии",
           "dice": "1d10",
           "adds_db": false,
           "extra": "урон по пунктам магии; при 0 ПМ цель теряет сознание"
@@ -149,13 +148,13 @@
         "kind": "attack",
         "skill": "Стрельба",
         "chance": {
-          "raw": "35% (17/7), damage 1d10",
+          "raw": "35% (17/7), урон 1d10",
           "value": 35,
           "half": 17,
           "fifth": 7
         },
         "damage": {
-          "raw": "damage 1d10",
+          "raw": "урон 1d10",
           "dice": "1d10",
           "adds_db": false
         },
@@ -216,7 +215,7 @@
       }
     ],
     "spells": {
-      "raw": "1d6 spells of the Keeper’s choosing."
+      "raw": "1d6 заклинаний на выбор Хранителя."
     },
     "sanity_loss": [
       {
@@ -268,6 +267,6 @@
     "flags": [
       "translated"
     ],
-    "notes": "профиль описывает «цивилизованного» жителя К'н-яна; у атаки «Disintegration-ray» навык в книге не указан, в записи — Стрельба"
+    "notes": "Профиль описывает «цивилизованного» жителя К'н-яна; у атаки «Дезинтегрирующий излучатель» навык в книге не указан, в записи — Стрельба."
   }
 }

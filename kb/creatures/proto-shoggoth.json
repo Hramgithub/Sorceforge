@@ -87,12 +87,11 @@
       ]
     },
     "armor": {
-      "raw": "none; mundane weapons (incl. bullets) deal only 1 point of damage per hit; regenerates 2 hit points per round (death at zero hit points).",
-      "value": 0,
-      "note": "обычное оружие и пули — 1 урон за попадание; регенерация 2 ПЗ за раунд"
+      "raw": "нет; обычное оружие (включая пули) наносит лишь 1 пункт урона за попадание; регенерирует 2 ПЗ за раунд (гибель при нуле ПЗ).",
+      "value": 0
     },
     "attacks_per_round": {
-      "raw": "1+ (crush, rake, whip, kick, fist)",
+      "raw": "1+ (раздавливание, царапание, хлёст, пинок, удар кулаком)",
       "value": "1+",
       "note": "1 атака на каждые 50 ТЕЛ (ТЕЛ 160 — 3 конечности); поглощать может только одну цель"
     },
@@ -105,13 +104,13 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "40% (20/8), damage 1d3+DB",
+          "raw": "40% (20/8), урон 1d3+БкУ",
           "value": 40,
           "half": 20,
           "fifth": 8
         },
         "damage": {
-          "raw": "1d3+DB",
+          "raw": "1d3+БкУ",
           "dice": "1d3",
           "adds_db": true
         },
@@ -125,13 +124,13 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "50% (25/10), damage DB",
+          "raw": "50% (25/10), урон БкУ",
           "value": 50,
           "half": 25,
           "fifth": 10
         },
         "damage": {
-          "raw": "DB",
+          "raw": "БкУ",
           "dice": null,
           "adds_db": true
         }
@@ -144,13 +143,13 @@
         "kind": "maneuver",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "50% (25/10), damage DB",
+          "raw": "50% (25/10), урон БкУ",
           "value": 50,
           "half": 25,
           "fifth": 10
         },
         "damage": {
-          "raw": "DB",
+          "raw": "БкУ",
           "dice": null,
           "adds_db": true
         },
@@ -165,7 +164,7 @@
     },
     "skills": [],
     "spells": {
-      "raw": "none; if a proto-shoggoth was created from humans who knew spells, it retains the knowledge and use of those spells."
+      "raw": "нет; если прото-шоггот создан из людей, знавших заклинания, он сохраняет знание этих заклинаний и умение ими пользоваться."
     },
     "sanity_loss": [
       {
@@ -211,7 +210,8 @@
       "physical_page": 125,
       "printed_page": 124,
       "method": "book_text",
-      "verified": true
+      "verified": true,
+      "note": "блок продолжается на стр. 126 PDF"
     }
   ],
   "corrections": [],
@@ -220,6 +220,6 @@
     "flags": [
       "translated"
     ],
-    "notes": "Навыки в книге: «Varies; may retain skill knowledge of the human the proto-shoggoth was created from.» Блок продолжается на стр. 126 PDF. Основной вид — coc:creature:shoggoth."
+    "notes": "Навыки в книге: разные; может сохранять навыки человека, из которого создан прото-шоггот."
   }
 }

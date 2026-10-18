@@ -60,7 +60,7 @@
       "value": 10
     },
     "move": {
-      "raw": "0 (unable to move)",
+      "raw": "0 (неподвижен)",
       "value": 0,
       "modes": [
         {
@@ -71,12 +71,11 @@
       ]
     },
     "armor": {
-      "raw": "15-point hard crystal. Regenerates 1d10 hit points per round (death at zero hit points). Susceptible to sound; a sustained sound level (circa 200+ decibels) may be enough to cause the Old One’s form to shatter, while also permanently damaging any human hearing it. If reduced to zero hit points, Q’yth-az form is shattered into millions of pieces. Each piece may be regrown into the Old One over the course of one million years.",
-      "value": 15,
-      "note": "регенерирует 1d10 ПЗ за раунд; уязвим к звуку (около 200+ дБ может его расколоть); при 0 ПЗ разлетается на миллионы осколков, каждый из которых за миллион лет может вырасти в бога"
+      "raw": "15 пунктов (твёрдый кристалл). Регенерирует 1d10 ПЗ за раунд (гибель при нуле ПЗ). Уязвим к звуку: продолжительный звук (около 200+ децибел) может расколоть тело Древнего, но и навсегда повредит слух всем людям, которые его слышат. При снижении ПЗ до нуля тело К'ит-аза разлетается на миллионы осколков. Из каждого осколка за миллион лет может вновь вырасти Древний.",
+      "value": 15
     },
     "attacks_per_round": {
-      "raw": "1d6 (strike, batter, crush)",
+      "raw": "1d6 (удар, избиение, раздавливание)",
       "value": "1d6"
     },
     "attacks": [
@@ -88,13 +87,13 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "80% (40/16), damage 9d6 + touch (see above)",
+          "raw": "80% (40/16), урон 9d6 + касание (см. выше)",
           "value": 80,
           "half": 40,
           "fifth": 16
         },
         "damage": {
-          "raw": "9d6 + touch (see above)",
+          "raw": "9d6 + касание (см. выше)",
           "dice": "9d6",
           "adds_db": false,
           "extra": "касание: при провале Экстремальной проверки МОЩ задетая плоть превращается в минерал"
@@ -109,13 +108,13 @@
         "kind": "maneuver",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "80% (40/16), damage 19d6 + touch (see above)",
+          "raw": "80% (40/16), урон 19d6 + касание (см. выше)",
           "value": 80,
           "half": 40,
           "fifth": 16
         },
         "damage": {
-          "raw": "19d6 + touch (see above)",
+          "raw": "19d6 + касание (см. выше)",
           "dice": "19d6",
           "adds_db": false,
           "extra": "жертва превращается в кристалл и разбивается, как стекло"
@@ -125,7 +124,7 @@
     ],
     "skills": [],
     "spells": {
-      "raw": "Bait Human (variant), Enthrall Victim, Mental Suggestion, Send Dream; others as desired by the Keeper."
+      "raw": "Bait Human (вариант), Enthrall Victim, Mental Suggestion, Send Dream; другие на усмотрение Хранителя."
     },
     "sanity_loss": [
       {
@@ -199,15 +198,32 @@
       "physical_page": 180,
       "printed_page": 179,
       "method": "book_text",
-      "verified": true
+      "verified": true,
+      "entry_page": 179,
+      "note": "рассудок, магия и способности — на следующей странице (PDF 181)"
     }
   ],
   "corrections": [],
+  "errata": [
+    {
+      "field": "способность «Каменеющее касание»",
+      "printed": "page @@",
+      "expected": null,
+      "note": "номер страницы в ссылке на таблицу мест попадания не проставлен"
+    },
+    {
+      "field": "Ближний бой (урон)",
+      "printed": "9d6",
+      "expected": null,
+      "note": "урон 9d6 при БкУ +19d6 — оставлено как напечатано"
+    }
+  ],
   "quality": {
     "needs_review": false,
     "flags": [
-      "translated"
+      "translated",
+      "parse_uncertain"
     ],
-    "notes": "Статья начинается на стр. 178 (PDF 179), профиль — на стр. 179 (PDF 180), рассудок, «Magic» и способности — на стр. 180 (PDF 181). Опечатки книги: ссылка на таблицу мест попадания «page @@» (номер страницы не проставлен); урон Ближнего боя 9d6 при БкУ +19d6 — как напечатано."
+    "notes": null
   }
 }

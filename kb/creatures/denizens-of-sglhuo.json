@@ -1,0 +1,180 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:denizens-of-sglhuo",
+  "kind": "creature",
+  "name": {
+    "ru": "Обитатели С'глуо",
+    "en": "Denizens of S'glhuo"
+  },
+  "aliases": [
+    "Living Sound",
+    "Tru'nembrians"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "раса служителей (Тру'нембра)",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "n/a",
+        "value": null,
+        "roll": null
+      },
+      "CON": {
+        "raw": "n/a",
+        "value": null,
+        "roll": null
+      },
+      "SIZ": {
+        "raw": "n/a",
+        "value": null,
+        "roll": null
+      },
+      "DEX": {
+        "raw": "100",
+        "value": 100,
+        "roll": "(4d6+6)×5"
+      },
+      "INT": {
+        "raw": "100",
+        "value": 100,
+        "roll": "(4d6+6)×5"
+      },
+      "POW": {
+        "raw": "110",
+        "value": 110,
+        "roll": "(6d6+1)×5"
+      }
+    },
+    "hp": {
+      "raw": "22",
+      "value": 22,
+      "note": "здоровье равно 1/5 МОЩ"
+    },
+    "mp": {
+      "raw": "22",
+      "value": 22
+    },
+    "damage_bonus": {
+      "raw": "n/a",
+      "value": null
+    },
+    "build": {
+      "raw": "n/a",
+      "value": null
+    },
+    "move": {
+      "raw": "40",
+      "value": 40,
+      "modes": [
+        {
+          "mode": "other",
+          "value": 40,
+          "note": "форма живого звука"
+        }
+      ]
+    },
+    "armor": {
+      "raw": "none; immune to all physical damage; certain spells affecting INT or POW cause harm, as well as particularly discordant sounds, which can cause between 1D4 to 1D6 damage per round depending on the volume and complexity of the sound.",
+      "value": 0,
+      "note": "неуязвимы к физическому урону; вредят заклинания против ИНТ или МОЩ и резкие диссонирующие звуки (1d4–1d6 за раунд)"
+    },
+    "attacks_per_round": {
+      "raw": "1 (sonic)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Звуковой удар",
+          "en": "Sonic Blast"
+        },
+        "kind": "attack",
+        "skill": null,
+        "chance": {
+          "raw": "35% (17/7), damage 1D6",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "1D6",
+          "dice": "1d6",
+          "adds_db": false
+        },
+        "notes": "звуковые волны игнорируют обычную броню, от них нельзя увернуться"
+      }
+    ],
+    "dodge": {
+      "raw": "42% (21/8)",
+      "value": 42,
+      "half": 21,
+      "fifth": 8
+    },
+    "skills": [],
+    "spells": {
+      "raw": "none."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d2",
+        "trigger": "при звуке обитателей С'глуо"
+      },
+      {
+        "success": "0",
+        "fail": "1d4",
+        "trigger": "при виде их рептилоидной формы с синей чешуёй"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Живой звук",
+      "summary": "Состоят из разумного звука: неуязвимы к физическому урону; вредят только заклинания против ИНТ или МОЩ и резкие диссонирующие звуки (1d4–1d6 урона за раунд)."
+    },
+    {
+      "name": "Звуковой удар",
+      "summary": "Атакуют всплесками звуковых волн, которые игнорируют обычную броню и от которых нельзя увернуться; рвут барабанные перепонки и плоть."
+    },
+    {
+      "name": "Мысленные послания",
+      "summary": "Передают мысленные послания на огромные расстояния; люди воспринимают их как сны или внутренние голоса."
+    },
+    {
+      "name": "Рептилоидная форма",
+      "summary": "Могут принимать полутелесный облик высоких худых существ с синей чешуёй: РАЗ 85 ((2D6+10)×5), ЛВК 100, ИНТ 100, МОЩ 110, ПЗ 22, ПМ 22, Движение 18; СИЛ, ВЫН, БкУ и Комплекция — n/a."
+    }
+  ],
+  "description": {
+    "ru": "Существа из далёкой вселенной, где всё состоит из звука: разумный живой звук, иногда принимающий полутелесный облик высоких худых рептилоидов с синей чешуёй и пустыми глазами.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Поклоняются Внешнему богу Тру'нембре, тоже состоящему из живого звука. Покинуть свою вселенную могут только с помощью «переводчика» — прибора, чертежи которого есть в девятом томе «Откровений Гла'аки»; своими посланиями они подталкивают людей построить его. Зачем им другие миры — неизвестно.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 116,
+      "printed_page": 115,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Основная форма — живой звук; рептилоидная форма из второй колонки таблицы описана в способностях. Блок продолжается на стр. 117 PDF."
+  }
+}

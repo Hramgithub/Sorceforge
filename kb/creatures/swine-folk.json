@@ -1,0 +1,231 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:swine-folk",
+  "kind": "creature",
+  "name": {
+    "ru": "Свинолюди",
+    "en": "Swine Folk"
+  },
+  "aliases": [
+    "Once Men",
+    "the Ones Before",
+    "Herdlings",
+    "Snorting Lurkers"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "прочие (бывшие люди)",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      },
+      "CON": {
+        "raw": "75",
+        "value": 75,
+        "roll": "(2d6+8)×5"
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      },
+      "DEX": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      },
+      "INT": {
+        "raw": "55",
+        "value": 55,
+        "roll": "(2d6+4)×5"
+      },
+      "POW": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      }
+    },
+    "hp": {
+      "raw": "14",
+      "value": 14
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "damage_bonus": {
+      "raw": "+1D4",
+      "value": "1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "none.",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1 (claw, bite, tusk gore)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (когти, укус)",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8), damage 1D6+DB",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1D6+DB",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Удар клыками",
+          "en": "Tusk Gore"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8), damage 1D6+2+DB",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1D6+2+DB",
+          "dice": "1d6+2",
+          "adds_db": true
+        },
+        "notes": "только у особей с большими клыками"
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Слух",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Чутьё на магию",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Скрытность",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Выслеживание",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      }
+    ],
+    "spells": {
+      "raw": "none; however, those with INT 70 or higher may know 1D3 spells."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "при встрече со свинолюдьми"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Тяга к магии",
+      "summary": "Их притягивают колдовство, магические Врата и места, где пространство и время повреждены; чуют магию (Чутьё на магию 80%)."
+    },
+    {
+      "name": "Стая",
+      "summary": "Обычно встречаются большими стаями: сперва осторожничают, потом смелеют и нападают скопом."
+    }
+  ],
+  "description": {
+    "ru": "Подземные бывшие люди с мертвенно-бледной кожей, свиными рылами и ушами, иногда с изогнутыми клыками; ходят то на копытных задних ногах, то на четвереньках.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Одни колдуны считают, что они «питаются» магическими колебаниями, другие — что просто плотью и кровью самонадеянных волшебников. Живут в глухих местах Земли, в иных измерениях и в Мире грёз.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 134,
+      "printed_page": 133,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Блок характеристик — на стр. 134 PDF (статья начинается на стр. 133)."
+  }
+}

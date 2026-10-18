@@ -1,0 +1,239 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:voor",
+  "kind": "creature",
+  "name": {
+    "ru": "Вур",
+    "en": "Voor"
+  },
+  "aliases": [
+    "Boggarts",
+    "Creepers",
+    "Goblins",
+    "Lurkers",
+    "Stranglers"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "независимая раса",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "30",
+        "value": 30,
+        "roll": "3d3×5"
+      },
+      "CON": {
+        "raw": "55",
+        "value": 55,
+        "roll": "(2d6+4)×5"
+      },
+      "SIZ": {
+        "raw": "35",
+        "value": 35,
+        "roll": "(2d3+3)×5"
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      },
+      "INT": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      },
+      "POW": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      }
+    },
+    "hp": {
+      "raw": "9",
+      "value": 9
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "damage_bonus": {
+      "raw": "–1",
+      "value": -1
+    },
+    "build": {
+      "raw": "–1",
+      "value": -1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "none; direct sunlight is harmful, causing 1 damage per round.",
+      "value": 0,
+      "note": "прямой солнечный свет — 1 урон за раунд"
+    },
+    "attacks_per_round": {
+      "raw": "1 (claw, bite, or weapon, or strangulation)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (когти, укус)",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8), damage 1D4–DB (minimum of 1 damage) or by weapon type",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1D4–DB (minimum of 1 damage) or by weapon type",
+          "dice": "1d4",
+          "adds_db": true
+        },
+        "notes": "может пользоваться простым оружием из камня или кости"
+      },
+      {
+        "name": {
+          "ru": "Удушение",
+          "en": "Strangulation (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8), damage 1D2 per round (see above)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1D2 per round (see above)",
+          "dice": "1d2",
+          "adds_db": false
+        },
+        "notes": "после успешной внезапной атаки; при потере половины ПЗ жертва может потерять сознание (проверка ВЫН); вырваться — встречная СИЛ раз в раунд"
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Прыжки",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Слух",
+        "value": {
+          "raw": "95%",
+          "value": 95,
+          "half": 47,
+          "fifth": 19
+        }
+      },
+      {
+        "name": "Чутьё на добычу",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Скрытность",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      }
+    ],
+    "spells": {
+      "raw": "none; shaman-like priest may know 1D6 spells, usually concerning Tsathoggua, Abhoth, Atlach-Nacha, and/or Ubbo-Sathla."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d4",
+        "trigger": "при встрече с вуром"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Удушение",
+      "summary": "Подкравшись, хватает жертву за горло: 1d2 урона за раунд, потерявшую сознание жертву уносит или добивает."
+    },
+    {
+      "name": "Слепые охотники",
+      "summary": "Глаз нет; охотятся по звуку и запаху (Слух 95%)."
+    },
+    {
+      "name": "Боязнь солнца",
+      "summary": "Прямой солнечный свет обжигает их плоть: 1 урон за раунд."
+    }
+  ],
+  "description": {
+    "ru": "Маленькие безглазые гуманоиды с бледной безволосой кожей, покрытой слизью, младенческими опухшими головами и ртом-сфинктером; движутся, извиваясь, как змеи.",
+    "en": null
+  },
+  "legend": {
+    "ru": "До ледникового периода были могущественной расой со своими городами; люди загнали их под землю. Поклоняются Цатхоггуа, Абхоту, Атлач-Наче и Уббо-Сатле и, возможно, породили легенды о гномах, гоблинах и фейри. Сейчас, вероятно, близки к вымиранию.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 148,
+      "printed_page": 147,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Вероятная опечатка в книге: урон «1D4–DB» при БкУ –1; скорее всего имеется в виду 1D4+DB (то есть 1D4–1, минимум 1). В записи сохранено напечатанное."
+  }
+}

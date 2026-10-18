@@ -1,0 +1,224 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:tomb-herd",
+  "kind": "creature",
+  "name": {
+    "ru": "Могильное стадо",
+    "en": "Tomb-Herd"
+  },
+  "aliases": [
+    "Crypt Lurkers",
+    "Dead Feeders",
+    "Festering Ones",
+    "Tomb Leeches"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "раса служителей (Йог-Сотот)",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      },
+      "CON": {
+        "raw": "55",
+        "value": 55,
+        "roll": "(2d6+4)×5"
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      },
+      "DEX": {
+        "raw": "35",
+        "value": 35,
+        "roll": "2d6×5"
+      },
+      "INT": {
+        "raw": "55",
+        "value": 55,
+        "roll": "(2d6+4)×5"
+      },
+      "POW": {
+        "raw": "80",
+        "value": 80,
+        "roll": "(4d6+2)×5"
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "16",
+      "value": 16
+    },
+    "damage_bonus": {
+      "raw": "+1D4",
+      "value": "1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "armor": {
+      "raw": "(natural form) none; immune to all attacks (except spells or artifacts); (statue form) 3-point armor; mundane weapons deal normal damage.",
+      "value": 3,
+      "note": "в форме статуи; естественная форма неуязвима ко всему, кроме заклинаний и артефактов"
+    },
+    "attacks_per_round": {
+      "raw": "1 (bite, claw, smother, or human host's attacks)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (статуя)",
+          "en": "Fighting (Statue)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8), damage 1D4+DB",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1D4+DB",
+          "dice": "1d4",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Удушение (статуя)",
+          "en": "Smother (Statue; mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8), smothered, damage 1D6 (see above)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "smothered, damage 1D6 (see above)",
+          "dice": "1d6",
+          "adds_db": false
+        },
+        "notes": "нужно не меньше четырёх тварей на одного противника; жертва задыхается, проверка ВЫН каждый раунд, после провала 1d6 урона за раунд; выбраться — Трудная проверка ЛВК"
+      },
+      {
+        "name": {
+          "ru": "Ближний бой (тело человека)",
+          "en": "Fighting (Human)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8), damage 1D3+DB",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1D3+DB",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "notes": "в захваченном человеке; простое оружие (дубина, нож)"
+      }
+    ],
+    "dodge": {
+      "raw": "20% (10/4)",
+      "value": 20,
+      "half": 10,
+      "fifth": 4
+    },
+    "skills": [],
+    "spells": {
+      "raw": "none."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "при встрече с бесплотной естественной формой"
+      },
+      {
+        "success": "0",
+        "fail": "1d3",
+        "trigger": "при виде незанятых статуй стада"
+      },
+      {
+        "success": "1",
+        "fail": "1d6+2",
+        "trigger": "при встрече с одержимой статуей"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Естественная форма",
+      "summary": "Бесплотна, неуязвима ко всему, кроме заклинаний и артефактов, физически атаковать не может: ИНТ 55 ((2D6+4)×5), МОЩ 80 ((4D6+2)×5), ПМ 16; остальное n/a."
+    },
+    {
+      "name": "Статуи-вместилища",
+      "summary": "Вселяется в каменные изваяния, которые размягчаются; пустая статуя имеет 20 ПЗ и броню 3, пронзающее оружие наносит ей половину урона. Если статую разрушить, тварь возвращается в своё измерение."
+    },
+    {
+      "name": "Одержимость",
+      "summary": "За 10 ПМ и победу во встречной проверке МОЩ вселяется в человека на 1d3 часа (физические характеристики человека, ИНТ и МОЩ твари); жертва может изгнать её Трудной проверкой МОЩ раз в час."
+    },
+    {
+      "name": "Свёртывание пространства",
+      "summary": "Как заклинание Врат, замыкает пространство вокруг логова (до 8 км): уходящие возвращаются обратно и теряют 1 рассудок; выбраться — Чрезвычайная проверка МОЩ; 1 ПМ за каждую жертву."
+    }
+  ],
+  "description": {
+    "ru": "Бесплотные существа, которые проявляются в нашем мире через каменные статуи полугуманоидов-полуракообразных в склепах и гробницах, связанных с Йог-Сототом. Вместе выглядят как масса бледных студенистых тел.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Говорят, это потомство Йог-Сотота, обитающее в изгибах пространства-времени и питающееся потусторонними выделениями мёртвых. Культисты изготавливают для них статуи; без статуй стадо вселяется в людей.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 144,
+      "printed_page": 143,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Основной статблок — форма статуи (боевая форма); естественная форма описана в способностях. Навыки: «None; possession of a human may provide access to that person's existing skills.»"
+  }
+}

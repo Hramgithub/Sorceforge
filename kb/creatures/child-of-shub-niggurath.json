@@ -1,0 +1,231 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:child-of-shub-niggurath",
+  "kind": "creature",
+  "name": {
+    "ru": "Дитя Шуб-Ниггурат",
+    "en": "Child of Shub-Niggurath"
+  },
+  "aliases": [
+    "Children of the Grove",
+    "the Cursed",
+    "the Joined",
+    "Pale Ones",
+    "Spawn of the Mother",
+    "the Transformed"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "порождение Шуб-Ниггурат",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "80",
+        "value": 80,
+        "roll": "(4d6+2)×5"
+      },
+      "CON": {
+        "raw": "90",
+        "value": 90,
+        "roll": "(4d6+4)×5"
+      },
+      "SIZ": {
+        "raw": "80",
+        "value": 80,
+        "roll": "(4d6+2)×5"
+      },
+      "DEX": {
+        "raw": "80",
+        "value": 80,
+        "roll": "(4d6+2)×5"
+      },
+      "INT": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      },
+      "POW": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      }
+    },
+    "hp": {
+      "raw": "17",
+      "value": 17
+    },
+    "mp": {
+      "raw": "13",
+      "value": 13
+    },
+    "damage_bonus": {
+      "raw": "+1D4",
+      "value": "1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "none; minimum damage from bullets; immune to fire and chemical based attacks.",
+      "value": 0,
+      "note": "пули наносят минимальный урон; иммунитет к огню и химии"
+    },
+    "attacks_per_round": {
+      "raw": "2 (whip, bite, grab)",
+      "value": 2,
+      "note": "может атаковать до 2 разных целей за раунд"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (хлещущие щупальца, укусы)",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "70% (35/14), damage 1D4+DB",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "1D4+DB",
+          "dice": "1d4",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Захват",
+          "en": "Grab (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "70% (35/14), held, damage 1D6+1 per round after first",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "1D6+1 per round after first",
+          "dice": "1d6+1",
+          "adds_db": false
+        },
+        "notes": "жертву подтаскивают к центральной пасти и пожирают со следующего раунда; вырваться — встречная СИЛ; если дитя получит 5+ урона, жертва может проверить Удачу, чтобы хватка ослабла"
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/16)",
+      "value": 40,
+      "half": 20,
+      "fifth": 16
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Бормотание мудрости Мифов",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Чутьё на добычу",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Скрытность",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Contact Shub-Niggurath, plus 30% chance to know 1D4 spells."
+    },
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d6",
+        "trigger": "при встрече с дитя Шуб-Ниггурат"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Захват и пожирание",
+      "summary": "Щупальцами и малыми ртами хватает жертву и тянет к главной пасти; со следующего раунда — 1d6+1 урона за раунд."
+    },
+    {
+      "name": "Рождение из семени",
+      "summary": "Вырастает из семенной капсулы, напитанной человеческой кровью; внутри живого человека созревает за 24–48 часов и вырывается из тела носителя."
+    },
+    {
+      "name": "Заражение пылью",
+      "summary": "Пыль из молотых капсул, подмешанная в еду, у провалившего совмещённую проверку ВЫН и МОЩ превращает его в дитя за 4d6+24 часа; промывание желудка (Трудная проверка ВЫН) может помочь, если сделано сразу."
+    }
+  ],
+  "description": {
+    "ru": "Бледное, отдалённо человекоподобное чудовище из пучков корнеподобных щупалец, покрытых глазами и ртами, с огромной пастью вместо головы. Вырастает из семенной капсулы Шуб-Ниггурат, питающейся человеческой кровью.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Капсулы дарят культистам, их приносит солнечный ветер или оставляют после себя богиня и тёмная молодь. Культы Тёмной Матери почитают созревших детей как голос божества; без культа дитя ищет укромное логово рядом с пищей.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 127,
+      "printed_page": 126,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Опечатка в книге: Уклонение напечатано «40% (20/16)»; пятая часть от 40 должна быть 8. В записи сохранено напечатанное значение."
+  }
+}

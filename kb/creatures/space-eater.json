@@ -1,0 +1,196 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:space-eater",
+  "kind": "creature",
+  "name": {
+    "ru": "Пожиратель пространства",
+    "en": "Space Eater"
+  },
+  "aliases": [
+    "Angels",
+    "Light Bringers",
+    "the Others"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "независимая раса",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "35",
+        "value": 35,
+        "roll": "2d6×5"
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70,
+        "roll": "4d6×5"
+      },
+      "SIZ": {
+        "raw": "170",
+        "value": 170,
+        "roll": "(8d6+6)×5"
+      },
+      "DEX": {
+        "raw": "55",
+        "value": 55,
+        "roll": "(2d6+4)×5"
+      },
+      "INT": {
+        "raw": "70",
+        "value": 70,
+        "roll": "4d6×5"
+      },
+      "POW": {
+        "raw": "100",
+        "value": 100,
+        "roll": "(4d6+6)×5"
+      }
+    },
+    "hp": {
+      "raw": "24",
+      "value": 24
+    },
+    "mp": {
+      "raw": "20",
+      "value": 20
+    },
+    "damage_bonus": {
+      "raw": "n/a",
+      "value": null
+    },
+    "build": {
+      "raw": "3",
+      "value": 3
+    },
+    "move": {
+      "raw": "5 floating / flying",
+      "value": 5,
+      "modes": [
+        {
+          "mode": "fly",
+          "value": 5,
+          "note": "парит"
+        }
+      ]
+    },
+    "armor": {
+      "raw": "none; can be harmed only with magic or fire-based attacks; cold and mundane weapons have no effect.",
+      "value": 0,
+      "note": "вредят только магия и огонь"
+    },
+    "attacks_per_round": {
+      "raw": "1 (swipe, slice, or consume)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (временная конечность)",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "60% (30/12), damage 1D6",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1D6",
+          "dice": "1d6",
+          "adds_db": false
+        }
+      },
+      {
+        "name": {
+          "ru": "Поглощение мозга",
+          "en": "Consume"
+        },
+        "kind": "special",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "30% (15/6), damage 3D10 drained from INT, POW, & 1D10 Sanity loss",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "3D10 drained from INT, POW, & 1D10 Sanity loss",
+          "dice": "3d10",
+          "adds_db": false,
+          "extra": "высасывание ИНТ и МОЩ, потеря 1d10 рассудка за раунд"
+        },
+        "notes": "присасывается к голове; со следующего раунда поедает мозг; при ИНТ или МОЩ 0 жертва умирает; вырваться — встречная СИЛ; МОЩ восстанавливается по 1 в день, ИНТ — нет"
+      }
+    ],
+    "dodge": {
+      "raw": "26% (13/5)",
+      "value": 26,
+      "half": 13,
+      "fifth": 5
+    },
+    "skills": [],
+    "spells": {
+      "raw": "30% chance to know 1D6 spells."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "при встрече с пожирателем пространства"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Бестелесность",
+      "summary": "Бесплотен, но может создавать временные телесные конечности; СИЛ и ЛВК относятся только к ним. Вредят ему лишь магия и огонь."
+    },
+    {
+      "name": "Поглощение мозга",
+      "summary": "Сверлит череп жертвы и поедает мозг, высасывая ИНТ и МОЩ и вызывая потерю 1d10 рассудка за раунд."
+    },
+    {
+      "name": "Ослепительный свет",
+      "summary": "За каждые 5 ПМ свечение усиливается: от временной слепоты на 1d4 раунда при проваленной проверке ВЫН до слепоты на 10 раундов при проваленной Трудной проверке; на четвёртом раунде существо рискует само исчезнуть. Защитные очки снижают сложность."
+    },
+    {
+      "name": "Холод и туман",
+      "summary": "С их появлением воздух в радиусе до 200 м становится сырым и холодным, приходит туман."
+    }
+  ],
+  "description": {
+    "ru": "Межзвёздные бесплотные существа, похожие на столбы света; выпускают временные конечности с пальцеобразными отростками и высасывают мозг жертвы.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Возможно, связаны с Даолотом или Йог-Сототом и приходят из другого измерения, «прогрызая» ткань пространства. Видевшие их издалека порой почитают их как ангелов и пытаются призвать обратно.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 130,
+      "printed_page": 129,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Расхождение в книге: в описании «Consume» мозг поедается по 2D10 ИНТ и МОЩ за раунд, а в строке атаки указано 3D10. В записи сохранена строка атаки. Блок характеристик — на стр. 130 PDF (статья начинается на стр. 129)."
+  }
+}

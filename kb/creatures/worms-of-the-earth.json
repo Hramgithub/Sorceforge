@@ -1,0 +1,280 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:worms-of-the-earth",
+  "kind": "creature",
+  "name": {
+    "ru": "Черви земли",
+    "en": "Worms of the Earth"
+  },
+  "aliases": [
+    "Cursed Ones",
+    "Serpent Folk",
+    "Primal Ones",
+    "Trognophides"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "независимая раса (Йиг)",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70,
+        "roll": "(2d6+7)×5"
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60,
+        "roll": "(2d6+5)×5"
+      },
+      "SIZ": {
+        "raw": "40",
+        "value": 40,
+        "roll": "(2d6+1)×5"
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50,
+        "roll": "(2d6+3)×5"
+      },
+      "INT": {
+        "raw": "40",
+        "value": 40,
+        "roll": "(2d6+1)×5"
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50,
+        "roll": "(2d6+3)×5"
+      }
+    },
+    "hp": {
+      "raw": "10",
+      "value": 10
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "1-point scales.",
+      "value": 1
+    },
+    "attacks_per_round": {
+      "raw": "1 or 2 (varies by form; claw, bite, or weapon)",
+      "value": 1,
+      "note": "существа с несколькими руками или головами — 2 и больше атак"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8), damage 1D4+1+DB or by weapon type",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1D4+1+DB or by weapon type",
+          "dice": "1d4+1",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Укус",
+          "en": "Bite"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8), damage 1D4 + poison",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1D4 + poison",
+          "dice": "1d4",
+          "adds_db": false,
+          "extra": "яд: Чрезвычайная проверка ВЫН, иначе +1d4 урона"
+        },
+        "notes": "у некоторых яд смертоноснее — 1d6 или 1d10 урона (вдвое меньше при успешной Чрезвычайной проверке ВЫН)"
+      },
+      {
+        "name": {
+          "ru": "Камень (бросок)",
+          "en": "Rock (thrown)"
+        },
+        "kind": "attack",
+        "skill": "Метание",
+        "chance": {
+          "raw": "40% (20/8), damage 1D6+½DB",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1D6+½DB",
+          "dice": "1d6",
+          "adds_db": true,
+          "extra": "прибавляется половина БкУ"
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Язык (вариант наакаля)",
+        "value": {
+          "raw": "20–60%",
+          "value": null,
+          "half": null,
+          "fifth": null
+        }
+      },
+      {
+        "name": "Язык (различные человеческие)",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Слух",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Внимательность",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Скрытность",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      }
+    ],
+    "spells": {
+      "raw": "type A & B none; type C may know 1D4 spells if possessing POW and INT greater than 55."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "0",
+        "trigger": "тип A (змееподобные)"
+      },
+      {
+        "success": "0",
+        "fail": "1d4",
+        "trigger": "тип B (полузмеи)"
+      },
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "тип C (человекоподобные)"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Ядовитый укус",
+      "summary": "Укусы всех червей ядовиты: Чрезвычайная проверка ВЫН, иначе +1d4 урона; у некоторых яд наносит 1d6 или 1d10 (вдвое меньше при успехе)."
+    },
+    {
+      "name": "Тип A (змееподобные)",
+      "summary": "Похожи на обычных змей, иногда огромных; понимают команды говорящих сородичей. STR (2D6+3)×5 50, CON (2D6+3)×5 50, SIZ (1D6+3)×5 30, DEX (2D6+5)×5 60, INT 10, POW (2D6+1)×5 40; ПЗ 8, БкУ –1, Комплекция –1, ПМ 8, Движение 9. Ближний бой 40% (20/8), 1D4+DB; укус 40% (20/8), 1D4+яд; Уклонение 30% (15/6)."
+    },
+    {
+      "name": "Тип B (полузмеи)",
+      "summary": "Змееподобные с рудиментарными конечностями, некоторые говорят. STR (2D6+5)×5 60, CON (2D6+3)×5 50, SIZ 2D6×5 35, DEX (2D6+5)×5 60, INT (1D6+1)×5 20–25, POW (2D6+1)×5 40; ПЗ 8, БкУ 0, Комплекция 0, ПМ 8, Движение 9. Атаки как у типа A."
+    },
+    {
+      "name": "Тип C, чудовищный",
+      "summary": "Гиганты 2,4–3,6 м, обычно глупее. STR (4D6+4)×5 90, CON (4D6+2)×5 80, SIZ (4D6+6)×5 100, DEX (2D6+5)×5 60, INT (1D6+1)×5 20–25, POW (2D6+3)×5 50; ПЗ 18, БкУ +1D6, Комплекция 2, ПМ 10, Движение 7. Атаки как у типа C."
+    }
+  ],
+  "description": {
+    "ru": "Выродившиеся потомки змеелюдей, не ушедших в спячку: от безногих змей до уродливых полугуманоидов с хвостом, иногда с лишними руками или головами.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Одни считают их проклятыми за то, что они отвернулись от Йига ради Цатхоггуа, другие — потомками змеелюдей, смешавшихся с первобытными людьми. Общины «трогнофидов» есть в американском Западе, на Британских островах и в Африке; возможно, от них пошли легенды о «маленьком народце». Пробудившиеся змеелюди используют их как слуг и стражей.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 153,
+      "printed_page": 152,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Основной статблок — тип C (человекоподобные, стр. 154 PDF); типы A, B (стр. 153 PDF) и чудовищный тип C описаны в способностях. Навыки указаны для типа C; у остальных «Varies by type». Санити-потери: «no loss for type A»."
+  }
+}

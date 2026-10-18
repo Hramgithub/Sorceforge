@@ -1,0 +1,187 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:spider-parasites-of-atlach-nacha",
+  "kind": "creature",
+  "name": {
+    "ru": "Пауки-паразиты Атлач-Нача",
+    "en": "Spider Parasites of Atlach-Nacha"
+  },
+  "aliases": [],
+  "category": "mythos_monster",
+  "subcategory": "порождение Атлач-Нача",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "50",
+        "value": 50
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "05",
+        "value": 5
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "POW": {
+        "raw": "70",
+        "value": 70
+      }
+    },
+    "hp": {
+      "raw": "5",
+      "value": 5
+    },
+    "mp": {
+      "raw": "14",
+      "value": 14
+    },
+    "damage_bonus": {
+      "raw": "–2",
+      "value": -2
+    },
+    "build": {
+      "raw": "–2",
+      "value": -2
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "none.",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1 (bite, attach)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (укус)",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8), damage 1D4–2 (minimum 1)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1D4–2 (minimum 1)",
+          "dice": "1d4-2",
+          "adds_db": false,
+          "extra": "минимум 1"
+        }
+      },
+      {
+        "name": {
+          "ru": "Прицепиться",
+          "en": "Attach (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8), attaches to target, may attempt control (see above)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "attaches to target, may attempt control (see above)",
+          "dice": null,
+          "adds_db": false,
+          "extra": "после этого — попытка подчинить носителя"
+        },
+        "notes": "спящего или подчинённого Атлач-Наче человека захватывает автоматически, иначе должен запрыгнуть на него"
+      }
+    ],
+    "dodge": {
+      "raw": "50% (25/10)",
+      "value": 50,
+      "half": 25,
+      "fifth": 10
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "value": {
+          "raw": "100%",
+          "value": 100,
+          "half": 50,
+          "fifth": 20
+        }
+      },
+      {
+        "name": "Скрытность",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      }
+    ],
+    "spells": {
+      "raw": "none."
+    },
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d4",
+        "trigger": "при встрече и осознании, что паук-паразит управляет знакомым"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Подчинение носителя",
+      "summary": "Прицепившись к человеку, проводит встречную проверку МОЩ; при успехе полностью управляет телом и речью носителя, пока не перейдёт к другому или не будет снят либо убит. Носитель может не помнить периоды подчинения."
+    }
+  ],
+  "description": {
+    "ru": "Маленькие паукообразные существа, которых рождает Атлач-Нача; паразит садится человеку на спину и превращает его в марионетку божества.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Сновидец видел, как прислужники Атлач-Нача приносили людей к великой паутине, божество порождало паразита, тот цеплялся к спине жертвы — и обоих отправляли обратно в мир с неведомой целью.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 32,
+      "printed_page": 31,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "врезка внутри статьи об Атлач-Наче (coc:creature:atlach-nacha); характеристики даны фиксированными значениями без формул, ИНТ не указан."
+  }
+}

@@ -62,11 +62,15 @@
       "value": null
     },
     "move": {
-      "raw": "100",
-      "value": 100,
+      "raw": "0 / полёт 100",
+      "value": 0,
       "modes": [
         {
           "mode": "walk",
+          "value": 0
+        },
+        {
+          "mode": "fly",
           "value": 100
         }
       ]
@@ -89,16 +93,18 @@
         "kind": "attack",
         "skill": "Сферы",
         "chance": {
-          "raw": "100% (50/20)",
-          "value": 100,
-          "half": 50,
-          "fifth": 20
+          "raw": "80% (40/18)",
+          "value": 80,
+          "half": 40,
+          "fifth": 18
         },
         "damage": {
-          "raw": "необратимая потеря 3к10 ВЫН",
+          "raw": "необратимая потеря 3к10 ВЫН и 2к10 НАР",
           "dice": "3d10",
-          "adds_db": false
-        }
+          "adds_db": false,
+          "extra": "необратимая потеря 3d10 ВЫН и 2d10 НАР; при ВЫН 0 жертва умирает, обращаясь в «основные соли»"
+        },
+        "notes": "липкая сфера касается одной цели в пределах 20 метров; от неё можно увернуться"
       },
       {
         "name": {
@@ -108,16 +114,17 @@
         "kind": "attack",
         "skill": "Разряды",
         "chance": {
-          "raw": "80% (40/16)",
+          "raw": "80% (40/18)",
           "value": 80,
           "half": 40,
-          "fifth": 16
+          "fifth": 18
         },
         "damage": {
-          "raw": "смерть всех в области диаметром 5 метров",
-          "dice": null,
+          "raw": "5к10",
+          "dice": "5d10",
           "adds_db": false
-        }
+        },
+        "notes": "до 5 разрядов серебристого огня за раунд, каждый стоит 5 пунктов магии; дальность до 500 метров; от разряда можно увернуться; убитый обращается в «основные соли»"
       }
     ],
     "skills": [],
@@ -138,24 +145,63 @@
   },
   "sources": [
     {
-      "book_id": "keeper-rulebook-ru",
-      "physical_page": 298,
-      "printed_page": 319,
-      "method": "helper_migration",
-      "verified": true
-    },
-    {
       "book_id": "malleus-monstrorum-2-en",
       "physical_page": 235,
       "printed_page": 234,
       "method": "book_text",
       "verified": true
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 298,
+      "printed_page": 319,
+      "method": "helper_migration",
+      "verified": true
     }
   ],
-  "corrections": [],
+  "corrections": [
+    {
+      "field": "statblock.move",
+      "from": "100",
+      "to": "0 / полёт 100",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.234"
+    },
+    {
+      "field": "statblock.attacks[0].chance",
+      "from": "100% (50/20)",
+      "to": "80% (40/18)",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.234"
+    },
+    {
+      "field": "statblock.attacks[0].damage",
+      "from": "необратимая потеря 3к10 ВЫН",
+      "to": "необратимая потеря 3к10 ВЫН и 2к10 НАР",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.234"
+    },
+    {
+      "field": "statblock.attacks[1].chance",
+      "from": "80% (40/16)",
+      "to": "80% (40/18)",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.234"
+    },
+    {
+      "field": "statblock.attacks[1].damage",
+      "from": "смерть всех в области диаметром 5 метров",
+      "to": "5к10",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.234"
+    }
+  ],
   "quality": {
     "needs_review": false,
-    "flags": [],
-    "notes": "в «Malleus Monstrorum» другие значения: Сферы 80% (40/18 sic), damage 3D10 CON + 2D10 APP; Разряды Bolts 80% (40/18 sic), damage 5D10 (up to 5 per round, 5 MP each); Броня None; immune to mundane weapons (incl. bullets); в записи — значения основного источника (Р-19)"
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "ИНТ — по «Книге хранителя» (в Malleus ИНТ не указан); в Malleus у «Сфер» и «Разрядов» напечатано 80% (40/18) — пятая часть должна быть 16; оставлено как в книге; в Malleus РАЗ варьируется от 5 до 2000 (обычно 100 или 1000)"
   }
 }

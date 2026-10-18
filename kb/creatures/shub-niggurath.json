@@ -95,9 +95,9 @@
           "fifth": 15
         },
         "damage": {
-          "raw": "равен 1/2 БкУ",
-          "dice": null,
-          "adds_db": true
+          "raw": "5к6",
+          "dice": "5d6",
+          "adds_db": false
         }
       },
       {
@@ -114,10 +114,32 @@
           "fifth": 15
         },
         "damage": {
-          "raw": "равен БкУ",
+          "raw": "11к6",
+          "dice": "11d6",
+          "adds_db": false
+        },
+        "notes": "топчет существ с РАЗ 300 и меньше в радиусе 20 метров; спастись — Экстремальная проверка Уклонения или Прыжков"
+      },
+      {
+        "name": {
+          "ru": "Захват (манёвр)",
+          "en": "Seize"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "75% (37/15)",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        },
+        "damage": {
+          "raw": "удерживает, затем высасывает 3к10 СИЛ за раунд",
           "dice": null,
-          "adds_db": true
-        }
+          "adds_db": false,
+          "extra": "необратимая потеря 3d10 СИЛ за раунд"
+        },
+        "notes": "одну жертву за раунд затягивает в тело; схваченный беспомощен; одна попытка вырваться — Экстремальная проверка СИЛ или ЛВК на следующем действии"
       }
     ],
     "skills": [],
@@ -138,24 +160,48 @@
   },
   "sources": [
     {
-      "book_id": "keeper-rulebook-ru",
-      "physical_page": 307,
-      "printed_page": 328,
-      "method": "helper_migration",
-      "verified": true
-    },
-    {
       "book_id": "malleus-monstrorum-2-en",
       "physical_page": 193,
       "printed_page": 192,
       "method": "book_text",
       "verified": true
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 307,
+      "printed_page": 328,
+      "method": "helper_migration",
+      "verified": true
     }
   ],
-  "corrections": [],
+  "corrections": [
+    {
+      "field": "statblock.attacks[0].damage",
+      "from": "равен 1/2 БкУ",
+      "to": "5к6",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.192"
+    },
+    {
+      "field": "statblock.attacks[1].damage",
+      "from": "равен БкУ",
+      "to": "11к6",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.192"
+    },
+    {
+      "field": "statblock.attacks[2]",
+      "from": null,
+      "to": "Захват (манёвр) 75% (37/15), 3к10 СИЛ за раунд",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.192"
+    }
+  ],
   "quality": {
     "needs_review": false,
-    "flags": [],
-    "notes": "в «Malleus Monstrorum» другие значения: Ближний бой 75% (37/15), damage 5D6; в записи — значения основного источника (Р-19)"
+    "flags": [
+      "translated"
+    ],
+    "notes": "ИНТ — по «Книге хранителя» (в Malleus ИНТ не указан)"
   }
 }

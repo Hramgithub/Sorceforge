@@ -32,8 +32,8 @@
         "value": 300
       },
       "DEX": {
-        "raw": "60",
-        "value": 60
+        "raw": "100",
+        "value": 100
       },
       "INT": {
         "raw": "100",
@@ -62,23 +62,27 @@
       "value": 6
     },
     "move": {
-      "raw": "25",
-      "value": 25,
+      "raw": "9 / плавание 25",
+      "value": 9,
       "modes": [
         {
           "mode": "walk",
+          "value": 9
+        },
+        {
+          "mode": "swim",
           "value": 25
         }
       ]
     },
     "armor": {
-      "raw": "10 пунктов (толстая бородавчатая шкура). Регенерирует по 3 ПЗ за боевой раунд",
+      "raw": "10 пунктов (толстая бородавчатая шкура). Регенерирует по 3 ПЗ за каждый потраченный пункт магии",
       "value": 10,
-      "note": "толстая бородавчатая шкура). Регенерирует по 3 ПЗ за боевой раунд"
+      "note": "толстая бородавчатая шкура; регенерирует по 3 ПЗ за каждый потраченный пункт магии"
     },
     "attacks_per_round": {
-      "raw": "1",
-      "value": 1
+      "raw": "2–4 (большие щупальца) или 1 (таран или хвост)",
+      "value": "2-4"
     },
     "attacks": [
       {
@@ -95,10 +99,51 @@
           "fifth": 18
         },
         "damage": {
-          "raw": "равен БкУ",
-          "dice": null,
-          "adds_db": true
-        }
+          "raw": "2к6",
+          "dice": "2d6",
+          "adds_db": false
+        },
+        "notes": "в воде или в воздухе бьёт четырьмя большими щупальцами, на суше — двумя"
+      },
+      {
+        "name": {
+          "ru": "Таран",
+          "en": "Ram"
+        },
+        "kind": "attack",
+        "skill": null,
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "5к6",
+          "dice": "5d6",
+          "adds_db": false
+        },
+        "notes": "бросается всем телом на группу целей (в пределах 2 метров друг от друга)"
+      },
+      {
+        "name": {
+          "ru": "Хвост",
+          "en": "Tail"
+        },
+        "kind": "attack",
+        "skill": null,
+        "chance": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "3к6",
+          "dice": "3d6",
+          "adds_db": false
+        },
+        "notes": "бьёт хвостом стоящих рядом (в пределах 5 метров друг от друга)"
       }
     ],
     "skills": [],
@@ -108,7 +153,7 @@
     "sanity_loss": [
       {
         "success": "1d6",
-        "fail": "1d20",
+        "fail": "2d10",
         "trigger": "пунктов при виде Зот-Оммога"
       }
     ]
@@ -119,24 +164,84 @@
   },
   "sources": [
     {
-      "book_id": "keeper-rulebook-ru",
-      "physical_page": 295,
-      "printed_page": 316,
-      "method": "helper_migration",
-      "verified": true
-    },
-    {
       "book_id": "malleus-monstrorum-2-en",
       "physical_page": 249,
       "printed_page": 248,
       "method": "book_text",
       "verified": true
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 295,
+      "printed_page": 316,
+      "method": "helper_migration",
+      "verified": true
     }
   ],
-  "corrections": [],
+  "corrections": [
+    {
+      "field": "statblock.characteristics.DEX",
+      "from": "60",
+      "to": "100",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.248"
+    },
+    {
+      "field": "statblock.move",
+      "from": "25",
+      "to": "9 / плавание 25",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.248"
+    },
+    {
+      "field": "statblock.attacks_per_round",
+      "from": "1",
+      "to": "2–4 (большие щупальца) или 1 (таран или хвост)",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.248"
+    },
+    {
+      "field": "statblock.attacks[0].damage",
+      "from": "равен БкУ",
+      "to": "2к6",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.248"
+    },
+    {
+      "field": "statblock.attacks[1]",
+      "from": null,
+      "to": "Таран 60% (30/12), 5к6",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.248"
+    },
+    {
+      "field": "statblock.attacks[2]",
+      "from": null,
+      "to": "Хвост 70% (35/14), 3к6",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.248"
+    },
+    {
+      "field": "statblock.armor",
+      "from": "10 пунктов (толстая бородавчатая шкура). Регенерирует по 3 ПЗ за боевой раунд",
+      "to": "10 пунктов (толстая бородавчатая шкура). Регенерирует по 3 ПЗ за каждый потраченный пункт магии",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.248"
+    },
+    {
+      "field": "statblock.sanity_loss[0]",
+      "from": "1d6/1d20",
+      "to": "1d6/2d10",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.247"
+    }
+  ],
   "quality": {
     "needs_review": false,
-    "flags": [],
-    "notes": "в «Malleus Monstrorum» другие значения: ЛВК 100; Скорость 9 / 25 swimming; Атак за раунд 2 to 4 (large tentacles) or 1 (ram or tail); Ближний бой 90% (45/18), damage 2D6; Ram 60% (30/12) 5D6; Tail 70% (35/14) 3D6; Броня 10-point rubbery hide; regenerates 3 HP per magic point (not per round); Потеря рассудка 1D6/2D10; в записи — значения основного источника (Р-19)"
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "ИНТ — по «Книге хранителя» (в Malleus ИНТ не указан); в Malleus статблок по ошибке озаглавлен «Zhar & Lloigor», но стоит в статье Зот-Оммога и в тексте брони назван Зот-Оммог"
   }
 }

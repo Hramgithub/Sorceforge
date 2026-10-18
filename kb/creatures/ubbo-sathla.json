@@ -20,8 +20,8 @@
   "statblock": {
     "characteristics": {
       "STR": {
-        "raw": "—",
-        "value": null
+        "raw": "300",
+        "value": 300
       },
       "CON": {
         "raw": "1000",
@@ -33,8 +33,8 @@
         "value": 1000
       },
       "DEX": {
-        "raw": "—",
-        "value": null,
+        "raw": "80",
+        "value": 80,
         "roll": "4d6×5"
       },
       "INT": {
@@ -56,12 +56,12 @@
       "value": 75
     },
     "damage_bonus": {
-      "raw": "—",
-      "value": null
+      "raw": "+15к6",
+      "value": "15d6"
     },
     "build": {
-      "raw": "9",
-      "value": 9
+      "raw": "16",
+      "value": 16
     },
     "move": {
       "raw": "0",
@@ -91,35 +91,39 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "90% (45/18)",
-          "value": 90,
-          "half": 45,
-          "fifth": 18
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
         },
         "damage": {
-          "raw": "— захват и поглощение",
+          "raw": "варьируется, 1к6: 1 — 1к4, 2 — 1к6, 3 — 2к6, 4 — 4к6, 5 — 7к6, 6 — 15к6",
           "dice": null,
-          "adds_db": false
-        }
+          "adds_db": false,
+          "extra": "сила удара определяется броском 1d6"
+        },
+        "notes": "хлещет ложноножками, щупальцами или конечностями; может атаковать случайных противников в пределах 5 метров"
       },
       {
         "name": {
-          "ru": "Ближний бой",
-          "en": null
+          "ru": "Захват (манёвр)",
+          "en": "Grab"
         },
-        "kind": "attack",
+        "kind": "maneuver",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "75% (37/15)",
-          "value": 75,
-          "half": 37,
-          "fifth": 15
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
         },
         "damage": {
-          "raw": "проглоченная цель получает 1к6 урона за раунд",
+          "raw": "удерживает (1к6 урона от касания), затем сдавливание 7к6 или поглощение 15к6 за раунд",
           "dice": "1d6",
-          "adds_db": false
-        }
+          "adds_db": false,
+          "extra": "на следующих раундах 7d6 (сдавливание) или 15d6 за раунд (затягивание в массу)"
+        },
+        "notes": "вырваться — Экстремальная проверка СИЛ или Трудная ЛВК; затянутые в массу погибают, если не вырвутся на следующем действии"
       }
     ],
     "skills": [
@@ -136,8 +140,8 @@
     },
     "sanity_loss": [
       {
-        "success": "1d8",
-        "fail": "5d10",
+        "success": "1d6",
+        "fail": "2d10",
         "trigger": "пунктов при виде Уббо-Сатлы"
       }
     ]
@@ -148,24 +152,83 @@
   },
   "sources": [
     {
-      "book_id": "keeper-rulebook-ru",
-      "physical_page": 304,
-      "printed_page": 325,
-      "method": "helper_migration",
-      "verified": true
-    },
-    {
       "book_id": "malleus-monstrorum-2-en",
       "physical_page": 211,
       "printed_page": 210,
       "method": "book_text",
       "verified": true
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 304,
+      "printed_page": 325,
+      "method": "helper_migration",
+      "verified": true
     }
   ],
-  "corrections": [],
+  "corrections": [
+    {
+      "field": "statblock.characteristics.STR",
+      "from": "—",
+      "to": "300",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.210"
+    },
+    {
+      "field": "statblock.characteristics.DEX",
+      "from": "—",
+      "to": "80",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.210"
+    },
+    {
+      "field": "statblock.damage_bonus",
+      "from": "—",
+      "to": "+15к6",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.210"
+    },
+    {
+      "field": "statblock.build",
+      "from": "9",
+      "to": "16",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.210"
+    },
+    {
+      "field": "statblock.attacks[0].chance",
+      "from": "90% (45/18)",
+      "to": "80% (40/16)",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.210"
+    },
+    {
+      "field": "statblock.attacks[0].damage",
+      "from": "— захват и поглощение",
+      "to": "варьируется, 1к6: 1 — 1к4, 2 — 1к6, 3 — 2к6, 4 — 4к6, 5 — 7к6, 6 — 15к6",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.210"
+    },
+    {
+      "field": "statblock.attacks[1]",
+      "from": "Ближний бой 75% (37/15), проглоченная цель получает 1к6 урона за раунд",
+      "to": "Захват (манёвр) 80% (40/16), удерживает, затем 7к6 или 15к6 за раунд",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.210"
+    },
+    {
+      "field": "statblock.sanity_loss[0]",
+      "from": "1d8/5d10",
+      "to": "1d6/2d10",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.210"
+    }
+  ],
   "quality": {
     "needs_review": false,
-    "flags": [],
-    "notes": "в «Malleus Monstrorum» другие значения: СИЛ 300; ЛВК 80; Бонус к урону +15D6; Комплекция 16; Ближний бой Fighting 80% (40/16), damage varies 1D4..15D6 by 1D6; Ближний бой (второй) Grab (mnvr) 80% (40/16), held; then 7D6 squeeze or absorbed 15D6 per round; Потеря рассудка 1D6/2D10; в записи — значения основного источника (Р-19)"
+    "flags": [
+      "translated"
+    ],
+    "notes": "ИНТ, формулы бросков ВЫН и ЛВК и навык «Породить отродье 100%» — по «Книге хранителя» (в Malleus их нет; там способность «Отродье Уббо-Сатлы»: 1к10 отпрысков за раунд); в Malleus против брони: пронзающее оружие наносит минимальный урон"
   }
 }

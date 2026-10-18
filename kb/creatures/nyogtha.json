@@ -101,6 +101,27 @@
           "extra": "всем целям в радиусе 10 метров"
         },
         "notes": "удар наносит множество крохотных ран всем целям в пределах 10 метров"
+      },
+      {
+        "name": {
+          "ru": "Вампиризм (манёвр)",
+          "en": "Vampiric"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "100% (50/20)",
+          "value": 100,
+          "half": 50,
+          "fifth": 20
+        },
+        "damage": {
+          "raw": "1к10 МОЩ за раунд",
+          "dice": null,
+          "adds_db": false,
+          "extra": "потеря 1d10 МОЩ за раунд"
+        },
+        "notes": "конец ложноножки присасывается к цели и высасывает жизненную силу; оторвать её — Экстремальная проверка СИЛ, отрубить — нанести 10 урона режущим оружием"
       }
     ],
     "skills": [],
@@ -110,7 +131,7 @@
     "sanity_loss": [
       {
         "success": "1d6",
-        "fail": "1d20",
+        "fail": "2d10",
         "trigger": "при виде Ниогты"
       }
     ]
@@ -135,24 +156,41 @@
   },
   "sources": [
     {
-      "book_id": "keeper-rulebook-ru",
-      "physical_page": 301,
-      "printed_page": 322,
-      "method": "book_text",
-      "verified": true
-    },
-    {
       "book_id": "malleus-monstrorum-2-en",
       "physical_page": 166,
       "printed_page": 165,
       "method": "book_text",
       "verified": true
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 301,
+      "printed_page": 322,
+      "method": "book_text",
+      "verified": true
     }
   ],
-  "corrections": [],
+  "corrections": [
+    {
+      "field": "statblock.sanity_loss[0]",
+      "from": "1d6/1d20",
+      "to": "1d6/2d10",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.167"
+    },
+    {
+      "field": "statblock.attacks[1]",
+      "from": null,
+      "to": "Вампиризм (манёвр) 100% (50/20), 1к10 МОЩ за раунд",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.165"
+    }
+  ],
   "quality": {
     "needs_review": false,
-    "flags": [],
-    "notes": "книга называет Ниогту «одним из малых божеств»; подкатегория «Великий Древний» — по классификации базы. Порождение — coc:creature:spawn-of-nyogtha-monster-form.; в «Malleus Monstrorum» другие значения: Потеря рассудка 1D6/2D10; в записи — значения основного источника (Р-19)"
+    "flags": [
+      "translated"
+    ],
+    "notes": "книга называет Ниогту «одним из малых божеств»; подкатегория «Великий Древний» — по классификации базы. Порождение — coc:creature:spawn-of-nyogtha-monster-form.; ИНТ — по «Книге хранителя» (в Malleus ИНТ не указан)"
   }
 }

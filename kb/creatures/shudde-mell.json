@@ -62,7 +62,7 @@
       "value": 13
     },
     "move": {
-      "raw": "8 / рытьё 8",
+      "raw": "8 / рытьё 10",
       "value": 8,
       "modes": [
         {
@@ -71,18 +71,18 @@
         },
         {
           "mode": "burrow",
-          "value": 8
+          "value": 10
         }
       ]
     },
     "armor": {
-      "raw": "8 пунктов (кожа). Регенерирует по 5 ПЗ за раунд",
+      "raw": "8 пунктов (кожа). Регенерирует по 5 ПЗ за каждый пункт магии",
       "value": 8,
-      "note": "кожа; регенерирует по 5 ПЗ за раунд"
+      "note": "кожа; регенерирует по 5 ПЗ за каждый потраченный пункт магии"
     },
     "attacks_per_round": {
-      "raw": "1",
-      "value": 1
+      "raw": "1к4+4 (щупальца), или 1к4 (захват), или 1 (раздавливание)",
+      "value": "1d4+4"
     },
     "attacks": [
       {
@@ -99,9 +99,9 @@
           "fifth": 20
         },
         "damage": {
-          "raw": "равен БкУ",
-          "dice": null,
-          "adds_db": true
+          "raw": "6к6",
+          "dice": "6d6",
+          "adds_db": false
         }
       },
       {
@@ -112,16 +112,16 @@
         "kind": "attack",
         "skill": "Раздавливание",
         "chance": {
-          "raw": "90% (45/18)",
-          "value": 90,
-          "half": 45,
-          "fifth": 18
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
         },
         "damage": {
-          "raw": "12d6 всем в радиусе 12 метров",
+          "raw": "12d6 всем в области диаметром 12 метров",
           "dice": "12d6",
           "adds_db": false,
-          "extra": "по площади, радиус 12 м"
+          "extra": "по площади, диаметр 12 м; спастись — Уклонение, Прыжки или Трудная проверка ЛВК"
         },
         "notes": "один раз за раунд может своей тушей раздавить всех перед собой"
       },
@@ -133,18 +133,18 @@
         "kind": "maneuver",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "как Ближний бой",
+          "raw": "100% (50/20)",
           "value": 100,
           "half": 50,
           "fifth": 20
         },
         "damage": {
-          "raw": "6d6 + вытягивание 3d10 ВЫН за раунд",
+          "raw": "6d6 или вытягивание 3d10 ВЫН за раунд",
           "dice": "6d6",
           "adds_db": false,
-          "extra": "вытягивание 3d10 ВЫН за раунд"
+          "extra": "или необратимое вытягивание 3d10 ВЫН за раунд"
         },
-        "notes": "процент в строке манёвра не указан, взят процент Ближнего боя; хватает противника щупальцем"
+        "notes": "хватает противника щупальцем, на следующем раунде раздавливает или высасывает жидкости; при ВЫН 0 жертва умирает; вырваться — Экстремальная проверка СИЛ или Трудная ЛВК"
       }
     ],
     "skills": [],
@@ -153,8 +153,8 @@
     },
     "sanity_loss": [
       {
-        "success": "1d3",
-        "fail": "1d20",
+        "success": "1d10",
+        "fail": "1d100",
         "trigger": "при виде Шудде-Мьелла"
       }
     ]
@@ -165,17 +165,17 @@
   },
   "sources": [
     {
-      "book_id": "keeper-rulebook-ru",
-      "physical_page": 308,
-      "printed_page": 329,
-      "method": "helper_migration",
-      "verified": true
-    },
-    {
       "book_id": "malleus-monstrorum-2-en",
       "physical_page": 201,
       "printed_page": 200,
       "method": "book_text",
+      "verified": true
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 308,
+      "printed_page": 329,
+      "method": "helper_migration",
       "verified": true
     }
   ],
@@ -221,11 +221,76 @@
       "to": "[{\"success\": \"1d3\", \"fail\": \"1d20\", \"trigger\": \"при виде Шудде-Мьелла\"}]",
       "reason": "Заклинания обрезаны с мусором OCR; у «Раздавливания» не было урона; не было манёвра «Захват и поедание»; пропущена ИНТ; уточнены потеря рассудка и броня.",
       "ref": "книга, стр. 309 PDF (проверка по изображению страницы)"
+    },
+    {
+      "field": "statblock.move",
+      "from": "8 / рытьё 8",
+      "to": "8 / рытьё 10",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.200"
+    },
+    {
+      "field": "statblock.attacks_per_round",
+      "from": "1",
+      "to": "1к4+4 (щупальца), или 1к4 (захват), или 1 (раздавливание)",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.200"
+    },
+    {
+      "field": "statblock.attacks[0].damage",
+      "from": "равен БкУ",
+      "to": "6к6",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.200"
+    },
+    {
+      "field": "statblock.attacks[1].chance",
+      "from": "90% (45/18)",
+      "to": "80% (40/16)",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.200"
+    },
+    {
+      "field": "statblock.attacks[1].damage",
+      "from": "12d6 всем в радиусе 12 метров",
+      "to": "12d6 всем в области диаметром 12 метров",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.200"
+    },
+    {
+      "field": "statblock.attacks[2].chance",
+      "from": "как Ближний бой",
+      "to": "100% (50/20)",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.200"
+    },
+    {
+      "field": "statblock.attacks[2].damage",
+      "from": "6d6 + вытягивание 3d10 ВЫН за раунд",
+      "to": "6d6 или вытягивание 3d10 ВЫН за раунд",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.200"
+    },
+    {
+      "field": "statblock.armor",
+      "from": "8 пунктов (кожа). Регенерирует по 5 ПЗ за раунд",
+      "to": "8 пунктов (кожа). Регенерирует по 5 ПЗ за каждый пункт магии",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.200"
+    },
+    {
+      "field": "statblock.sanity_loss[0]",
+      "from": "1d3/1d20",
+      "to": "1d10/1d100",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.201"
     }
   ],
   "quality": {
     "needs_review": false,
-    "flags": [],
-    "notes": "Статблок на стр. 309 (печ. 330), а не 308.; в «Malleus Monstrorum» другие значения: Скорость 8 / 10 burrowing; Атак за раунд 1D4+4 (tentacles) or 1D4 (grab) or 1 (smash); Ближний бой 100% (50/20), damage 6D6; Раздавливание Smash 80% (40/16), damage 12D6; Броня 8-point hide; regenerates 5 HP per magic point (not per round); Потеря рассудка 1D10/1D100; в записи — значения основного источника (Р-19)"
+    "flags": [
+      "translated"
+    ],
+    "notes": "Статблок на стр. 309 (печ. 330), а не 308.; ИНТ — по «Книге хранителя» (в Malleus ИНТ не указан)"
   }
 }

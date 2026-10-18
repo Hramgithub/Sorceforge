@@ -77,8 +77,8 @@
       "note": null
     },
     "attacks_per_round": {
-      "raw": "1",
-      "value": 1
+      "raw": "1к4 (пинок, удар или захват) или 1 (проглатывание или раздавливание)",
+      "value": "1d4"
     },
     "attacks": [
       {
@@ -95,10 +95,71 @@
           "fifth": 20
         },
         "damage": {
-          "raw": "равен БкУ",
-          "dice": null,
-          "adds_db": true
+          "raw": "2к6",
+          "dice": "2d6",
+          "adds_db": false
         }
+      },
+      {
+        "name": {
+          "ru": "Захват (манёвр)",
+          "en": "Grab"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "100% (50/20)",
+          "value": 100,
+          "half": 50,
+          "fifth": 20
+        },
+        "damage": {
+          "raw": "удерживает, урон 3к6",
+          "dice": "3d6",
+          "adds_db": false
+        },
+        "notes": "голодный Цатхоггуа хватает цель и сдавливает или кусает её (3к6); на следующем раунде может проглотить; вырваться — Экстремальная проверка СИЛ или ЛВК"
+      },
+      {
+        "name": {
+          "ru": "Раздавливание (манёвр)",
+          "en": "Crush"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "100% (50/20)",
+          "value": 100,
+          "half": 50,
+          "fifth": 20
+        },
+        "damage": {
+          "raw": "4к6",
+          "dice": "4d6",
+          "adds_db": false
+        },
+        "notes": "катится или прыгает, давя противников в пределах 10 метров (до четырёх, если стоят рядом); спастись — Уклонение или Прыжки"
+      },
+      {
+        "name": {
+          "ru": "Проглатывание",
+          "en": "Swallow"
+        },
+        "kind": "attack",
+        "skill": null,
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1к6, затем потеря 5 ВЫН и 5 НАР за раунд",
+          "dice": "1d6",
+          "adds_db": false,
+          "extra": "затем необратимая потеря 5 ВЫН и 5 НАР за раунд"
+        },
+        "notes": "заглатывает цель в пределах 5 метров; выбраться — нанести 10 урона изнутри или стать несъедобным (на усмотрение Хранителя)"
       }
     ],
     "skills": [],
@@ -109,7 +170,12 @@
       {
         "success": "0",
         "fail": "1d10",
-        "trigger": "пунктов при виде Цатхоггуа"
+        "trigger": "при виде психической проекции Цатхоггуа"
+      },
+      {
+        "success": "1d4",
+        "fail": "2d10",
+        "trigger": "при встрече с Цатхоггуа во плоти"
       }
     ]
   },
@@ -119,24 +185,76 @@
   },
   "sources": [
     {
-      "book_id": "keeper-rulebook-ru",
-      "physical_page": 306,
-      "printed_page": 327,
-      "method": "helper_migration",
-      "verified": true
-    },
-    {
       "book_id": "malleus-monstrorum-2-en",
       "physical_page": 206,
       "printed_page": 205,
       "method": "book_text",
       "verified": true
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 306,
+      "printed_page": 327,
+      "method": "helper_migration",
+      "verified": true
     }
   ],
-  "corrections": [],
+  "corrections": [
+    {
+      "field": "statblock.attacks_per_round",
+      "from": "1",
+      "to": "1к4 (пинок, удар или захват) или 1 (проглатывание или раздавливание)",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.205"
+    },
+    {
+      "field": "statblock.attacks[0].damage",
+      "from": "равен БкУ",
+      "to": "2к6",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.205"
+    },
+    {
+      "field": "statblock.attacks[1]",
+      "from": null,
+      "to": "Захват (манёвр) 100% (50/20), 3к6",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.205"
+    },
+    {
+      "field": "statblock.attacks[2]",
+      "from": null,
+      "to": "Раздавливание (манёвр) 100% (50/20), 4к6",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.205"
+    },
+    {
+      "field": "statblock.attacks[3]",
+      "from": null,
+      "to": "Проглатывание 60% (30/12), 1к6, затем 5 ВЫН и 5 НАР за раунд",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.205"
+    },
+    {
+      "field": "statblock.sanity_loss[0].trigger",
+      "from": "пунктов при виде Цатхоггуа",
+      "to": "при виде психической проекции Цатхоггуа",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.206"
+    },
+    {
+      "field": "statblock.sanity_loss[1]",
+      "from": null,
+      "to": "1d4/2d10",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.206"
+    }
+  ],
   "quality": {
     "needs_review": false,
-    "flags": [],
-    "notes": "в «Malleus Monstrorum» другие значения: Атак за раунд 1D4 (kick, strike, grab) or 1 (swallow or crush); Ближний бой 100% (50/20), damage 2D6 (Grab 3D6, Crush 4D6, Swallow 60%); Потеря рассудка 0/1D10 psychic projection; 1D4/2D10 physical form; в записи — значения основного источника (Р-19)"
+    "flags": [
+      "translated"
+    ],
+    "notes": "ИНТ — по «Книге хранителя» (в Malleus ИНТ не указан)"
   }
 }

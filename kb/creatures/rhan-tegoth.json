@@ -63,16 +63,12 @@
       "value": 4
     },
     "move": {
-      "raw": "10 / плавание 14",
+      "raw": "10",
       "value": 10,
       "modes": [
         {
           "mode": "walk",
           "value": 10
-        },
-        {
-          "mode": "swim",
-          "value": 14
         }
       ]
     },
@@ -82,8 +78,8 @@
       "note": "толстая, покрытая слизью кожа и щупальца). Регенерирует по 1 ПЗ за раунд"
     },
     "attacks_per_round": {
-      "raw": "1к6+2",
-      "value": "1d6+2"
+      "raw": "1к6 (клешни) или 1 (кормление)",
+      "value": "1d6"
     },
     "attacks": [
       {
@@ -100,10 +96,12 @@
           "fifth": 16
         },
         "damage": {
-          "raw": "1к6+БкУ",
-          "dice": "1d6",
-          "adds_db": true
-        }
+          "raw": "2к6 (3к6 при раздавливании)",
+          "dice": "2d6",
+          "adds_db": false,
+          "extra": "3d6, если схваченную цель раздавливают"
+        },
+        "notes": "клешнями бьёт, пронзает и хватает; схваченную цель на следующем раунде раздавливает (3к6) или затягивает в тело и кормится (1к6+1 урона за раунд); вырваться — Экстремальная проверка СИЛ или Трудная ЛВК"
       }
     ],
     "skills": [],
@@ -112,9 +110,14 @@
     },
     "sanity_loss": [
       {
-        "success": "1d8",
-        "fail": "1d20",
+        "success": "1d6",
+        "fail": "2d10",
         "trigger": "пунктов при виде Ран-Тегота"
+      },
+      {
+        "success": "1",
+        "fail": "1d6",
+        "trigger": "при виде того, как Ран-Тигот кормится"
       }
     ]
   },
@@ -124,17 +127,17 @@
   },
   "sources": [
     {
-      "book_id": "keeper-rulebook-ru",
-      "physical_page": 302,
-      "printed_page": 323,
-      "method": "helper_migration",
-      "verified": true
-    },
-    {
       "book_id": "malleus-monstrorum-2-en",
       "physical_page": 182,
       "printed_page": 181,
       "method": "book_text",
+      "verified": true
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 302,
+      "printed_page": 323,
+      "method": "helper_migration",
       "verified": true
     }
   ],
@@ -145,11 +148,48 @@
       "to": "Ран-Тигот",
       "reason": "в книге имя пишется «Ран-Тигот» (стр. 302–303 PDF)",
       "ref": "checks/20261018-creatures (проверка по изображениям страниц)"
+    },
+    {
+      "field": "statblock.move",
+      "from": "10 / плавание 14",
+      "to": "10",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.181"
+    },
+    {
+      "field": "statblock.attacks_per_round",
+      "from": "1к6+2",
+      "to": "1к6 (клешни) или 1 (кормление)",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.181"
+    },
+    {
+      "field": "statblock.attacks[0].damage",
+      "from": "1к6+БкУ",
+      "to": "2к6 (3к6 при раздавливании)",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.181"
+    },
+    {
+      "field": "statblock.sanity_loss[0]",
+      "from": "1d8/1d20",
+      "to": "1d6/2d10",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.181"
+    },
+    {
+      "field": "statblock.sanity_loss[1]",
+      "from": null,
+      "to": "1/1d6",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.181"
     }
   ],
   "quality": {
     "needs_review": false,
-    "flags": [],
-    "notes": "в книге к ВЫН 300 есть сноска, в запись не перенесена; в «Malleus Monstrorum» другие значения: Скорость 10 (no swimming value); Атак за раунд 1D6 (claws) or 1 (feed); Ближний бой 80% (40/16), damage 2D6 (3D6 if crushed); Потеря рассудка 1D6/2D10; 1/1D6 witnessing feeding; в записи — значения основного источника (Р-19)"
+    "flags": [
+      "translated"
+    ],
+    "notes": "в книге к ВЫН 300 есть сноска, в запись не перенесена; ИНТ — по «Книге хранителя» (в Malleus ИНТ не указан)"
   }
 }

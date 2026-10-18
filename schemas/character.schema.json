@@ -4,7 +4,7 @@
   "title": "Персонаж",
   "description": "Человек или человекоподобный персонаж: NPC для Хранителя и/или готовый персонаж для игрока (§3.2). Статблок — общий шаблон с существами (Р-01).",
   "type": "object",
-  "required": ["schema", "id", "kind", "name", "roles", "axes", "statblock", "sources"],
+  "required": ["schema", "id", "kind", "name", "axes", "statblock", "sources"],
   "additionalProperties": false,
   "properties": {
     "schema": { "const": "sourcefold.character.v0" },
@@ -20,11 +20,11 @@
       "minItems": 1,
       "uniqueItems": true,
       "items": { "enum": ["npc", "pregen"] },
-      "description": "npc — для Хранителя; pregen — готовый персонаж для игрока."
+      "description": "Как персонаж подан в источнике: npc — для Хранителя, pregen — готовый персонаж для игрока. Подсказка, а не ограничение: любой NPC может стать персонажем игрока и наоборот."
     },
-    "archetype": {
+    "stock_type": {
       "type": ["string", "null"],
-      "description": "Типовой персонаж, а не конкретный человек (культист, полицейский) — короткое русское обозначение."
+      "description": "Типаж: типовой персонаж, а не конкретный человек (культист, полицейский). Не путать с архетипами Pulp Cthulhu."
     },
     "player_chooses": {
       "type": "array",
@@ -65,7 +65,7 @@
         "encounters": { "type": "string" }
       }
     },
-    "scenario_role": { "type": ["string", "null"], "description": "Роль в сценарии (для прегенов и NPC сценария)." },
+    "scenario_role": { "type": ["string", "null"], "description": "Изначально заданная роль в сценарии (у NPC сценария и прегенов)." },
     "possessions": { "type": "array", "items": { "type": "string" } },
     "wealth": {
       "type": "object",

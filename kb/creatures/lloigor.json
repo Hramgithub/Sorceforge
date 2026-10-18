@@ -22,23 +22,33 @@
     "characteristics": {
       "STR": {
         "raw": "200*",
-        "value": null
+        "value": null,
+        "roll": "(6d6+19)×5"
+      },
+      "CON": {
+        "raw": "140*",
+        "value": null,
+        "roll": "8d6×5"
       },
       "SIZ": {
         "raw": "250*",
-        "value": null
+        "value": null,
+        "roll": "2d4×50"
       },
       "DEX": {
-        "raw": "50",
-        "value": 50
+        "raw": "55",
+        "value": 55,
+        "roll": "(2d6+4)×5"
       },
       "INT": {
         "raw": "100",
-        "value": 100
+        "value": 100,
+        "roll": "(4d6+6)×5"
       },
       "POW": {
         "raw": "70",
-        "value": 70
+        "value": 70,
+        "roll": "4d6×5"
       }
     },
     "averages": false,
@@ -47,8 +57,8 @@
       "value": null
     },
     "mp": {
-      "raw": "14",
-      "value": 14
+      "raw": "35 (14+6к6*)",
+      "value": 35
     },
     "damage_bonus": {
       "raw": "+5к6*",
@@ -109,7 +119,35 @@
       "half": 13,
       "fifth": 5
     },
-    "skills": [],
+    "skills": [
+      {
+        "name": "Чувствовать людей",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Лазание (в форме рептилии)",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Скрытность (в форме рептилии)",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      }
+    ],
     "spells": {
       "raw": "Ллойгорам известно как минимум 1к4 заклинания"
     },
@@ -127,24 +165,97 @@
   },
   "sources": [
     {
-      "book_id": "keeper-rulebook-ru",
-      "physical_page": 272,
-      "printed_page": 293,
-      "method": "helper_migration",
-      "verified": true
-    },
-    {
       "book_id": "malleus-monstrorum-1-en",
       "physical_page": 93,
       "printed_page": 92,
       "method": "book_text",
       "verified": true
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 272,
+      "printed_page": 293,
+      "method": "helper_migration",
+      "verified": true
     }
   ],
-  "corrections": [],
+  "corrections": [
+    {
+      "field": "statblock.characteristics.STR",
+      "from": "200*",
+      "to": "200* [(6d6+19)×5]",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.92"
+    },
+    {
+      "field": "statblock.characteristics.CON",
+      "from": null,
+      "to": "140* [8d6×5]",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.92"
+    },
+    {
+      "field": "statblock.characteristics.SIZ",
+      "from": "250*",
+      "to": "250* [2d4×50]",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.92"
+    },
+    {
+      "field": "statblock.characteristics.DEX",
+      "from": "50",
+      "to": "55 [(2d6+4)×5]",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.92"
+    },
+    {
+      "field": "statblock.characteristics.INT",
+      "from": "100",
+      "to": "100 [(4d6+6)×5]",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.92"
+    },
+    {
+      "field": "statblock.characteristics.POW",
+      "from": "70",
+      "to": "70 [4d6×5]",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.92"
+    },
+    {
+      "field": "statblock.mp",
+      "from": "14",
+      "to": "35 (14+6к6*)",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.92"
+    },
+    {
+      "field": "statblock.skills",
+      "from": null,
+      "to": "Чувствовать людей 40%",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.92"
+    },
+    {
+      "field": "statblock.skills",
+      "from": null,
+      "to": "Лазание (в форме рептилии) 50%",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.92"
+    },
+    {
+      "field": "statblock.skills",
+      "from": null,
+      "to": "Скрытность (в форме рептилии) 40%",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.92"
+    }
+  ],
   "quality": {
     "needs_review": false,
-    "flags": [],
-    "notes": "в «Malleus Monstrorum» другие значения: ЛВК 55 ((2D6+4)×5); ВЫН (140) (absent in record); ПМ 35 (14+6D6); Чувствовать людей 40% (absent in record); Лазание 50% in reptile form (absent in record); Скрытность 40% in reptile form (absent in record); в записи — значения основного источника (Р-19)"
+    "flags": [
+      "translated"
+    ],
+    "notes": "Значения со звёздочкой (СИЛ, ВЫН, ТЕЛ, ПЗ, БкУ) — только в форме рептилии; в нематериальной форме у ллойгора есть лишь ИНТ, МОЩ и ЛВК. ПМ 35 — при лёгком питании (14 + 6к6, в среднем 21), могут быть намного выше. Навыки добавлены по Malleus (наш перевод)."
   }
 }

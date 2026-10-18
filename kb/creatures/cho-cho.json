@@ -18,12 +18,12 @@
   "statblock": {
     "characteristics": {
       "STR": {
-        "raw": "50",
+        "raw": "50–55",
         "value": 50,
         "roll": "3d6×5"
       },
       "CON": {
-        "raw": "50",
+        "raw": "50–55",
         "value": 50,
         "roll": "3d6×5"
       },
@@ -33,24 +33,29 @@
         "roll": "(2d6+2)×5"
       },
       "DEX": {
-        "raw": "50",
+        "raw": "50–55",
         "value": 50,
         "roll": "3d6×5"
       },
       "INT": {
-        "raw": "50",
+        "raw": "50–55",
         "value": 50,
         "roll": "3d6×5"
       },
       "POW": {
-        "raw": "50",
-        "value": 50
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
       }
     },
     "averages": true,
     "hp": {
-      "raw": "9",
+      "raw": "9–10",
       "value": 9
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
     },
     "damage_bonus": {
       "raw": "нет",
@@ -61,12 +66,12 @@
       "value": 0
     },
     "move": {
-      "raw": "8",
-      "value": 8,
+      "raw": "9",
+      "value": 9,
       "modes": [
         {
           "mode": "walk",
-          "value": 8
+          "value": 9
         }
       ]
     },
@@ -134,22 +139,41 @@
           "raw": "50%",
           "value": 50
         }
+      },
+      {
+        "name": "Лазание",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Прыжки",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
       }
     ],
     "spells": {
-      "raw": "Жрец или послушник чо-чо знает как минимум три заклинания. Обычно среди них есть «Вурский знак» и заклинание связи с божеством"
+      "raw": "Разное: от 1к3 до 1к6. Жрец или послушник чо-чо знает как минимум три заклинания. Обычно среди них есть «Вурский знак» и заклинание связи с божеством"
     },
     "sanity_loss": [
       {
         "success": "0",
-        "fail": "1d3",
+        "fail": "0",
         "trigger": "при виде этих выродившихся созданий"
+      },
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "тем, кто поймёт, что чо-чо — людоеды"
       }
-    ],
-    "mp": {
-      "raw": "10",
-      "value": 10
-    }
+    ]
   },
   "description": {
     "ru": "Низкорослый и жестокий народ, связанный с Ленгом, Цангом и культами Великих Древних.",
@@ -157,17 +181,17 @@
   },
   "sources": [
     {
-      "book_id": "keeper-rulebook-ru",
-      "physical_page": 284,
-      "printed_page": 305,
-      "method": "helper_migration",
-      "verified": true
-    },
-    {
       "book_id": "malleus-monstrorum-1-en",
       "physical_page": 136,
       "printed_page": 135,
       "method": "book_text",
+      "verified": true
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 284,
+      "printed_page": 305,
+      "method": "helper_migration",
       "verified": true
     }
   ],
@@ -192,11 +216,90 @@
       "to": "Запугивание 40%, Плавание 45%, Скрытность 60%, Чтение следов 50%",
       "reason": "в данных веб-помощника нет МОЩ, ПМ и навыков; добавлено по книге (стр. 284 PDF)",
       "ref": "checks/20261018-creatures (проверка по изображениям страниц)"
+    },
+    {
+      "field": "statblock.characteristics.STR",
+      "from": "50 [3d6×5]",
+      "to": "50–55 [3d6×5]",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.135"
+    },
+    {
+      "field": "statblock.characteristics.CON",
+      "from": "50 [3d6×5]",
+      "to": "50–55 [3d6×5]",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.135"
+    },
+    {
+      "field": "statblock.characteristics.DEX",
+      "from": "50 [3d6×5]",
+      "to": "50–55 [3d6×5]",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.135"
+    },
+    {
+      "field": "statblock.characteristics.INT",
+      "from": "50 [3d6×5]",
+      "to": "50–55 [3d6×5]",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.135"
+    },
+    {
+      "field": "statblock.characteristics.POW",
+      "from": "50",
+      "to": "50–55 [3d6×5]",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.135"
+    },
+    {
+      "field": "statblock.hp",
+      "from": "9",
+      "to": "9–10",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.135"
+    },
+    {
+      "field": "statblock.move",
+      "from": "8",
+      "to": "9",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.135"
+    },
+    {
+      "field": "statblock.skills",
+      "from": null,
+      "to": "Лазание 60%",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.135"
+    },
+    {
+      "field": "statblock.skills",
+      "from": null,
+      "to": "Прыжки 60%",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.135"
+    },
+    {
+      "field": "statblock.sanity_loss",
+      "from": "0/1d3 при виде",
+      "to": "0/0 при виде; 0/1к6 при осознании, что они людоеды",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.135"
+    },
+    {
+      "field": "statblock.spells",
+      "from": "Жрец или послушник чо-чо знает как минимум три заклинания. Обычно среди них есть «Вурский знак» и заклинание связи с божеством",
+      "to": "от 1к3 до 1к6; жрец знает не менее трёх",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.135"
     }
   ],
   "quality": {
     "needs_review": false,
-    "flags": [],
-    "notes": "в «Malleus Monstrorum» другие значения: СИЛ 50–55; ВЫН 50–55; ЛВК 50–55; ИНТ 50–55; МОЩ 50–55; ПЗ 9–10; Скорость 9; Плавание not in book (record 45%); Лазание 60% (absent in record); Прыжки 60% (absent in record); Потеря рассудка no loss for seeing a tcho-tcho; 0/1D6 for realizing they are cannibals; в записи — значения основного источника (Р-19)"
+    "flags": [
+      "translated"
+    ],
+    "notes": "Профиль Malleus — для чо-чо, знающих о Мифах. Плавание 45% в Malleus нет — оставлено по «Книге хранителя»."
   }
 }

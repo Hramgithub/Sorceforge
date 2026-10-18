@@ -33,16 +33,23 @@
       },
       "SIZ": {
         "raw": "2775",
-        "value": 2775
+        "value": 2775,
+        "roll": "(100+СИЛ/5)×5"
       },
       "DEX": {
         "raw": "10",
         "value": 10,
         "roll": "1d4×5"
       },
+      "INT": {
+        "raw": "35",
+        "value": 35,
+        "roll": "2d6×5"
+      },
       "POW": {
         "raw": "170",
-        "value": 170
+        "value": 170,
+        "roll": "10d6×5"
       }
     },
     "averages": true,
@@ -78,8 +85,8 @@
       ]
     },
     "armor": {
-      "raw": "1/5 МОЩ дхоула",
-      "value": null,
+      "raw": "1/5 МОЩ дхоула (34)",
+      "value": 34,
       "note": null
     },
     "attacks_per_round": {
@@ -166,24 +173,53 @@
   },
   "sources": [
     {
-      "book_id": "keeper-rulebook-ru",
-      "physical_page": 267,
-      "printed_page": 288,
-      "method": "helper_migration",
-      "verified": true
-    },
-    {
       "book_id": "malleus-monstrorum-1-en",
       "physical_page": 60,
       "printed_page": 59,
       "method": "book_text",
       "verified": true
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 267,
+      "printed_page": 288,
+      "method": "helper_migration",
+      "verified": true
     }
   ],
-  "corrections": [],
+  "corrections": [
+    {
+      "field": "statblock.characteristics.SIZ",
+      "from": "2775",
+      "to": "2775 [(100+СИЛ/5)×5]",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.59"
+    },
+    {
+      "field": "statblock.characteristics.INT",
+      "from": null,
+      "to": "35 [2d6×5]",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.59"
+    },
+    {
+      "field": "statblock.characteristics.POW",
+      "from": "170",
+      "to": "170 [10d6×5]",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.59"
+    },
+    {
+      "field": "statblock.armor",
+      "from": "1/5 МОЩ дхоула",
+      "to": "1/5 МОЩ дхоула (34)",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.59"
+    }
+  ],
   "quality": {
     "needs_review": false,
     "flags": [],
-    "notes": "в «Malleus Monstrorum» другие значения: ИНТ 35; в записи — значения основного источника (Р-19)"
+    "notes": null
   }
 }

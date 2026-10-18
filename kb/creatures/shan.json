@@ -37,9 +37,20 @@
         "raw": "05",
         "value": 5
       },
+      "DEX": {
+        "raw": "85",
+        "value": 85,
+        "roll": "(2d6+10)×5"
+      },
       "INT": {
         "raw": "80",
-        "value": 80
+        "value": 80,
+        "roll": "(2d6+9)×5"
+      },
+      "POW": {
+        "raw": "80",
+        "value": 80,
+        "roll": "(4d6+2)×5"
       }
     },
     "averages": true,
@@ -47,13 +58,17 @@
       "raw": "1",
       "value": 1
     },
+    "mp": {
+      "raw": "16",
+      "value": 16
+    },
     "damage_bonus": {
       "raw": "нет",
       "value": null
     },
     "build": {
       "raw": "-2",
-      "value": null
+      "value": -2
     },
     "move": {
       "raw": "4 / полёт 20",
@@ -70,15 +85,29 @@
       ]
     },
     "armor": {
-      "raw": "",
-      "value": null,
-      "note": "в данных помощника нет"
+      "raw": "нет",
+      "value": 0,
+      "note": null
     },
     "attacks_per_round": {
       "raw": "1",
       "value": 1
     },
     "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "варьируется; используйте параметры носителя",
+          "value": null,
+          "half": null,
+          "fifth": null
+        }
+      },
       {
         "name": {
           "ru": "Нейрокнут",
@@ -103,13 +132,13 @@
           "ru": "Слияние",
           "en": null
         },
-        "kind": "attack",
-        "skill": "Слияние",
+        "kind": "special",
+        "skill": null,
         "chance": {
-          "raw": "60% (30/12)",
-          "value": 60,
-          "half": 30,
-          "fifth": 12
+          "raw": "встречная проверка МОЩ (стоит 1 ПМ)",
+          "value": null,
+          "half": null,
+          "fifth": null
         },
         "damage": {
           "raw": "не наносит урона, но если насекомое проникнет в мозг, оно постепенно подчинит себе цель",
@@ -118,11 +147,23 @@
         }
       }
     ],
+    "dodge": {
+      "raw": "70% (35/14)",
+      "value": 70,
+      "half": 35,
+      "fifth": 14
+    },
     "skills": [],
     "spells": {
       "raw": "Шан с вероятностью 80% знает 2к10 заклинаний, куда обычно входит «Вызов Азатота»"
     },
-    "sanity_loss": []
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "при встрече с шаном"
+      }
+    ]
   },
   "description": {
     "ru": "Разумный психический паразит размером с крупную птицу, способный проникать в мозг носителя и управлять его волей.",
@@ -130,24 +171,97 @@
   },
   "sources": [
     {
-      "book_id": "keeper-rulebook-ru",
-      "physical_page": 273,
-      "printed_page": 294,
-      "method": "helper_migration",
-      "verified": true
-    },
-    {
       "book_id": "malleus-monstrorum-1-en",
       "physical_page": 119,
       "printed_page": 118,
       "method": "book_text",
       "verified": true
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 273,
+      "printed_page": 294,
+      "method": "helper_migration",
+      "verified": true
     }
   ],
-  "corrections": [],
+  "corrections": [
+    {
+      "field": "statblock.characteristics.DEX",
+      "from": null,
+      "to": "85 [(2d6+10)×5]",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.118"
+    },
+    {
+      "field": "statblock.characteristics.INT",
+      "from": "80",
+      "to": "80 [(2d6+9)×5]",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.118"
+    },
+    {
+      "field": "statblock.characteristics.POW",
+      "from": null,
+      "to": "80 [(4d6+2)×5]",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.118"
+    },
+    {
+      "field": "statblock.build.value",
+      "from": null,
+      "to": -2,
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.118"
+    },
+    {
+      "field": "statblock.mp",
+      "from": null,
+      "to": "16",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.118"
+    },
+    {
+      "field": "statblock.armor",
+      "from": null,
+      "to": "нет",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.119"
+    },
+    {
+      "field": "statblock.attacks[Слияние].chance",
+      "from": "60% (30/12)",
+      "to": "встречная проверка МОЩ (стоит 1 ПМ), без процента",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.118"
+    },
+    {
+      "field": "statblock.attacks",
+      "from": null,
+      "to": "Ближний бой: варьируется, по параметрам носителя",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.119"
+    },
+    {
+      "field": "statblock.dodge",
+      "from": null,
+      "to": "70% (35/14)",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.119"
+    },
+    {
+      "field": "statblock.sanity_loss",
+      "from": null,
+      "to": "0/1к6 при встрече с шаном",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.119"
+    }
+  ],
   "quality": {
     "needs_review": false,
-    "flags": [],
-    "notes": "в «Malleus Monstrorum» другие значения: ЛВК 85 (absent in record); МОЩ 80 (absent in record); ПМ 16 (absent in record); Уклонение 70% (35/14) (absent in record); Слияние no percentage; an opposed POW roll costing 1 MP (record has 60% (30/12)); Броня none; Потеря рассудка 0/1D6 (absent in record); в записи — значения основного источника (Р-19)"
+    "flags": [
+      "translated"
+    ],
+    "notes": "Слияние в Malleus — не атака с процентом, а встречная проверка МОЩ за 1 ПМ (см. описание). Ближний бой, уклонение и потеря рассудка добавлены по Malleus (наш перевод)."
   }
 }

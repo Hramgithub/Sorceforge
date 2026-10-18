@@ -25,6 +25,11 @@
         "value": 70,
         "roll": "4d6×5"
       },
+      "CON": {
+        "raw": "80",
+        "value": 80,
+        "roll": "(4d6+2)×5"
+      },
       "SIZ": {
         "raw": "100",
         "value": 100,
@@ -32,15 +37,18 @@
       },
       "DEX": {
         "raw": "80",
-        "value": 80
+        "value": 80,
+        "roll": "(4d6+2)×5"
       },
       "INT": {
         "raw": "85",
-        "value": 85
+        "value": 85,
+        "roll": "(4d6+3)×5"
       },
       "POW": {
         "raw": "95",
-        "value": 95
+        "value": 95,
+        "roll": "(2d6+12)×5"
       }
     },
     "averages": true,
@@ -94,15 +102,36 @@
           "fifth": 9
         },
         "damage": {
-          "raw": "1к6+ БкУ за каждое щупальце",
+          "raw": "1к6 за каждое щупальце",
           "dice": "1d6",
-          "adds_db": true
-        }
+          "adds_db": false
+        },
+        "notes": "при каждой успешной атаке бросьте 1к3 — сколько щупалец наносит урон (1к6 за щупальце); щупальцами можно также схватить до четырёх противников"
+      },
+      {
+        "name": {
+          "ru": "Захват щупальцами (манёвр)",
+          "en": "Tentacle grab (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "цель удержана (см. выше)",
+          "dice": null,
+          "adds_db": false
+        },
+        "notes": "дальность 20 м, до четырёх целей; удержанную цель можно раздавить (1к6 урона) или отшвырнуть (2к6 урона, как при падении). Освободиться — встречная проверка СИЛ или ЛВК в свой ход"
       }
     ],
     "dodge": {
-      "raw": "41% (20/8)",
-      "value": 41,
+      "raw": "40% (20/8)",
+      "value": 40,
       "half": 20,
       "fifth": 8
     },
@@ -124,24 +153,76 @@
   },
   "sources": [
     {
-      "book_id": "keeper-rulebook-ru",
-      "physical_page": 278,
-      "printed_page": 299,
-      "method": "helper_migration",
-      "verified": true
-    },
-    {
       "book_id": "malleus-monstrorum-1-en",
       "physical_page": 110,
       "printed_page": 109,
       "method": "book_text",
       "verified": true
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 278,
+      "printed_page": 299,
+      "method": "helper_migration",
+      "verified": true
     }
   ],
-  "corrections": [],
+  "corrections": [
+    {
+      "field": "statblock.characteristics.CON",
+      "from": null,
+      "to": "80 [(4d6+2)×5]",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.109"
+    },
+    {
+      "field": "statblock.characteristics.DEX",
+      "from": "80",
+      "to": "80 [(4d6+2)×5]",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.109"
+    },
+    {
+      "field": "statblock.characteristics.INT",
+      "from": "85",
+      "to": "85 [(4d6+3)×5]",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.109"
+    },
+    {
+      "field": "statblock.characteristics.POW",
+      "from": "95",
+      "to": "95 [(2d6+12)×5]",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.109"
+    },
+    {
+      "field": "statblock.attacks[0].damage",
+      "from": "1к6+ БкУ за каждое щупальце",
+      "to": "1к6 за каждое щупальце (без БкУ)",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.109"
+    },
+    {
+      "field": "statblock.attacks",
+      "from": null,
+      "to": "Захват щупальцами (манёвр) 45% (22/9), цель удержана",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.109"
+    },
+    {
+      "field": "statblock.dodge",
+      "from": "41% (20/8)",
+      "to": "40% (20/8)",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.109"
+    }
+  ],
   "quality": {
     "needs_review": false,
-    "flags": [],
-    "notes": "в «Malleus Monstrorum» другие значения: ВЫН 80 (absent in record); Уклонение 40% (20/8); Ближний бой 45% (22/9), damage 1D6 per tentacle (no DB); Захват щупальцами (манёвр) 45% (22/9), held (absent in record); в записи — значения основного источника (Р-19)"
+    "flags": [
+      "translated"
+    ],
+    "notes": "Манёвр «Захват щупальцами» добавлен по Malleus (наш перевод)."
   }
 }

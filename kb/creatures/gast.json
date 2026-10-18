@@ -21,18 +21,24 @@
   "statblock": {
     "characteristics": {
       "STR": {
-        "raw": "110",
+        "raw": "110–115",
         "value": 110,
         "roll": "(3d6+12)×5"
       },
       "CON": {
         "raw": "70",
-        "value": 70
+        "value": 70,
+        "roll": "4d6×5"
       },
       "SIZ": {
         "raw": "130",
         "value": 130,
         "roll": "(4d6+12)×5"
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
       },
       "INT": {
         "raw": "15",
@@ -40,7 +46,7 @@
         "roll": "1d6×5"
       },
       "POW": {
-        "raw": "50",
+        "raw": "50–55",
         "value": 50,
         "roll": "3d6×5"
       }
@@ -49,6 +55,10 @@
     "hp": {
       "raw": "20",
       "value": 20
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
     },
     "damage_bonus": {
       "raw": "+2к6",
@@ -127,24 +137,60 @@
   },
   "sources": [
     {
-      "book_id": "keeper-rulebook-ru",
-      "physical_page": 263,
-      "printed_page": 284,
-      "method": "helper_migration",
-      "verified": true
-    },
-    {
       "book_id": "malleus-monstrorum-1-en",
       "physical_page": 70,
       "printed_page": 69,
       "method": "book_text",
       "verified": true
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 263,
+      "printed_page": 284,
+      "method": "helper_migration",
+      "verified": true
     }
   ],
-  "corrections": [],
+  "corrections": [
+    {
+      "field": "statblock.characteristics.STR",
+      "from": "110 [(3d6+12)×5]",
+      "to": "110–115 [(3d6+12)×5]",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.69"
+    },
+    {
+      "field": "statblock.characteristics.CON",
+      "from": "70",
+      "to": "70 [4d6×5]",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.69"
+    },
+    {
+      "field": "statblock.characteristics.DEX",
+      "from": null,
+      "to": "65 [(2d6+6)×5]",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.69"
+    },
+    {
+      "field": "statblock.characteristics.POW",
+      "from": "50 [3d6×5]",
+      "to": "50–55 [3d6×5]",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.69"
+    },
+    {
+      "field": "statblock.mp",
+      "from": null,
+      "to": "10",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-1-en p.69"
+    }
+  ],
   "quality": {
     "needs_review": false,
     "flags": [],
-    "notes": "в «Malleus Monstrorum» другие значения: ЛВК 65; ПМ 10; СИЛ 110–115; МОЩ 50–55; в записи — значения основного источника (Р-19)"
+    "notes": null
   }
 }

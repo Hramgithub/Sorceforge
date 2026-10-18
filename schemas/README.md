@@ -24,6 +24,9 @@ python tools\validate.py schemas\creature.schema.json schemas\examples\creature\
   ссылаются другие записи и сценарии (`same_as`). Другая форма, стадия или
   вид того же существа из той же статьи — отдельная запись со ссылкой на
   основную (`form_of`).
+- **`statblock`** — необязателен: статья книги без блока характеристик
+  (например, ядовитые пауки с таблицей ядов) заводится без него, сведения —
+  в `abilities` и `description`.
 - **`name`** — `ru` обязательно, `en` если известно.
 - **`category`** — `animal | mythos_monster | mythos_deity | avatar |
   supernatural`; `subcategory` — как в книге.

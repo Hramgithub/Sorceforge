@@ -81,7 +81,7 @@ function renderList() {
 
 function show(id) {
   current = id; renderList();
-  const c = DATA.find(x => x.id === id); const sb = c.statblock;
+  const c = DATA.find(x => x.id === id); const sb = c.statblock || { characteristics: {} };
   const chars = CH.filter(([k]) => sb.characteristics[k]).map(([k, ru]) => {
     const v = sb.characteristics[k];
     return `<div><b>${ru}</b><span>${esc(v.raw)}</span>${v.roll ? `<i>${esc(v.roll)}</i>` : ''}</div>`; }).join('');
@@ -102,13 +102,14 @@ function show(id) {
     <h2>${esc(c.name.ru)}</h2>
     <div class="sub">${esc(c.name.en||'')} · ${CAT[c.category]||''}${c.subcategory ? ' · ' + esc(c.subcategory) : ''}${(c.aliases||[]).length ? ' · также: ' + c.aliases.map(esc).join(', ') : ''}</div>
     ${flags ? `<div>${flags} <span class="muted">${esc(c.quality.notes||'')}</span></div>` : ''}
+    ${(c.form_of||[]).length ? `<div>Другая форма: ${c.form_of.map(i => { const b = DATA.find(x => x.id === i); return b ? `<a href="#" onclick="show('${i}');return false">${esc(b.name.ru)}</a>` : esc(i); }).join(', ')}</div>` : ''}
     ${c.description?.ru ? `<p>${esc(c.description.ru)}</p>` : ''}
     <div class="chars">${chars}</div>
     <table>${derived}</table>
-    <section><h3>Бой</h3>
+    ${c.statblock ? `<section><h3>Бой</h3>
       <table><tr><th>Атака</th><th>Шанс</th><th>Урон</th></tr>${attacks || '<tr><td colspan="3" class="muted">нет данных</td></tr>'}</table>
       ${sb.dodge ? `<div>Уклонение ${esc(sb.dodge.raw)}</div>` : ''}
-    </section>
+    </section>` : '<p class="muted">Блока характеристик в книге нет.</p>'}
     ${skills ? `<section><h3>Навыки</h3><div>${skills}</div></section>` : ''}
     ${sb.spells ? `<section><h3>Заклинания</h3><div>${esc(sb.spells.raw)}</div></section>` : ''}
     ${san ? `<section><h3>Потеря рассудка</h3><ul>${san}</ul></section>` : ''}

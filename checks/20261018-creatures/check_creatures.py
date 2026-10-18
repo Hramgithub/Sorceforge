@@ -23,7 +23,7 @@ from check_entries import norm, numbers, tokens  # noqa: E402
 
 
 def record_numbers(rec: dict) -> set[str]:
-    sb = rec["statblock"]
+    sb = rec.get("statblock") or {}
     parts: list[str] = []
     for c in sb.get("characteristics", {}).values():
         parts.append(c.get("raw", ""))

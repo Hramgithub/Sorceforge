@@ -1,0 +1,179 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:shaggai-human-form-queen",
+  "kind": "creature",
+  "name": {
+    "ru": "Шаггай, королева (человеческая форма)",
+    "en": "Shaggai Queen, Human Form"
+  },
+  "aliases": [
+    "Insect People",
+    "Iridescent Ones",
+    "the Joined",
+    "Space Wasps"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "гибрид Мифов",
+  "form_of": [
+    "coc:creature:shaggai-shan-human-hybrid"
+  ],
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "55",
+        "value": 55,
+        "roll": "(2D6+4)×5"
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70,
+        "roll": "(2D6+4)×5 +15"
+      },
+      "SIZ": {
+        "raw": "45",
+        "value": 45,
+        "roll": "(2D6+4)×5 −10"
+      },
+      "DEX": {
+        "raw": "55",
+        "value": 55,
+        "roll": "(2D6+4)×5"
+      },
+      "APP": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3D6×5"
+      },
+      "INT": {
+        "raw": "95",
+        "value": 95,
+        "roll": "(2D6+6)×5 +30"
+      },
+      "POW": {
+        "raw": "85",
+        "value": 85,
+        "roll": "(2D6+4)×5 +30"
+      },
+      "EDU": {
+        "raw": "80–85",
+        "value": 80,
+        "roll": "3D6×5 +30"
+      }
+    },
+    "hp": {
+      "raw": "11",
+      "value": 11
+    },
+    "mp": {
+      "raw": "17",
+      "value": 17
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "none.",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1 (unarmed or weapon)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "1D3+DB",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "notes": "обычные человеческие безоружные атаки и простое оружие"
+      }
+    ],
+    "dodge": {
+      "raw": "27% (13/5)",
+      "value": 27,
+      "half": 13,
+      "fifth": 5
+    },
+    "skills": [],
+    "spells": {
+      "raw": "none; young queens may know 1D2 spells."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "0",
+        "trigger": "при встрече с шаггаем в человеческой форме"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Будущая королева",
+      "summary": "Сильнее и умнее обычных шаггаев, хотя обычно меньше; навыки, основанные на знаниях, выше, чем у сверстников. Молодая королева может знать 1D2 заклинаний."
+    },
+    {
+      "name": "Метаморфоза",
+      "summary": "К половому созреванию превращается в крылатую королеву-насекомое и бьётся насмерть со второй претенденткой за власть над ульем."
+    }
+  ],
+  "description": {
+    "ru": "Будущая королева улья шаггаев до метаморфозы: внешне человеческий ребёнок или подросток, необычно умный и волевой.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Шаггаи вылупляются из личинкоподобного яйца человеческими младенцами и растут как люди, но видят всё более жуткие чужие сны. К половому созреванию они полностью теряют Рассудок, прячутся и линяют в крылатых насекомоподобных существ, затем собираются в ульи. В каждом улье появляются две возможные королевы; при метаморфозе они бьются насмерть, и выжившая правит ульем.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 117,
+      "printed_page": 116,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Значения королевы в скобках из блока «Human Form Shaggai»; поправка к броску указана в книге отдельно (столбец «queen*»), здесь записана в roll. Атаки, уклонение и навыки в книге общие с обычным шаггаем (навыки — как у ребёнка или подростка, у королев выше навыки знаний)."
+  }
+}

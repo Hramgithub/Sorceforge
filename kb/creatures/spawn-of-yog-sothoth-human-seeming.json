@@ -1,0 +1,275 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:spawn-of-yog-sothoth-human-seeming",
+  "kind": "creature",
+  "name": {
+    "ru": "Порождение Йог-Сотота (человекоподобное)",
+    "en": "Children of Yog-Sothoth, Human-Seeming"
+  },
+  "aliases": [
+    "Horrors",
+    "Festering Things",
+    "Spawn of the All-in-One"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "порождение Внешнего бога",
+  "form_of": [
+    "coc:creature:spawn-of-yog-sothoth-monster"
+  ],
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "110",
+        "value": 110,
+        "roll": "(4D6+8)×5"
+      },
+      "CON": {
+        "raw": "170",
+        "value": 170,
+        "roll": "(8D6+6)×5"
+      },
+      "SIZ": {
+        "raw": "75",
+        "value": 75,
+        "roll": "(2D6+8)×5"
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2D6+6)×5"
+      },
+      "APP": {
+        "raw": "35",
+        "value": 35,
+        "roll": "2D6×5"
+      },
+      "INT": {
+        "raw": "105",
+        "value": 105,
+        "roll": "6D6×5"
+      },
+      "POW": {
+        "raw": "105",
+        "value": 105,
+        "roll": "6D6×5"
+      },
+      "EDU": {
+        "raw": "75",
+        "value": 75,
+        "roll": "(2D6+8)×5"
+      }
+    },
+    "hp": {
+      "raw": "24",
+      "value": 24
+    },
+    "mp": {
+      "raw": "21",
+      "value": 21
+    },
+    "damage_bonus": {
+      "raw": "+1D6",
+      "value": "1d6"
+    },
+    "build": {
+      "raw": "2",
+      "value": 2
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "none; monstrous spawn cannot be harmed by mundane weapons and enchanted weapons deal minimum possible damage; monstrous spawn are invisible.",
+      "value": 0,
+      "note": "у человекоподобного порождения брони нет; неуязвимость к обычному оружию и невидимость относятся к чудовищным"
+    },
+    "attacks_per_round": {
+      "raw": "1 (human-seeming)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1D4+DB or by weapon type",
+          "dice": "1d4",
+          "adds_db": true
+        },
+        "notes": "обычные безоружные атаки или оружие"
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "skills": [
+      {
+        "name": "Обаяние",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Лазание",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "value": {
+          "raw": "20%",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Красноречие",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Запугивание",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Работа в библиотеке",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Оккультизм",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Убеждение",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Психология",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Скрытность",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      }
+    ],
+    "spells": {
+      "raw": "varies; human-seeming children may know 1D4 to 2D6 spells depending on their learning, while monstrous spawn have a 20% chance to know 1D6 spells."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "0",
+        "trigger": "если порождение замаскировано"
+      },
+      {
+        "success": "1",
+        "fail": "1d6",
+        "trigger": "при виде полностью раскрывшегося человекоподобного порождения Йог-Сотота"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Тяга к знаниям Мифов",
+      "summary": "Инстинктивно тянется к старым книгам и обрядам, ищет способ связаться с Йог-Сототом и призвать его на Землю; знает от 1D4 до 2D6 заклинаний в зависимости от изученного."
+    },
+    {
+      "name": "Нечеловеческая природа",
+      "summary": "Может выглядеть почти человеком (например, с козлиным лицом), но скрывает чужие черты и внутренние органы; быстро взрослеет и нуждается в большом количестве свежего мяса."
+    }
+  ],
+  "description": {
+    "ru": "Отпрыск Йог-Сотота и человека, способный сойти за человека при подходящей одежде или маскировке; обычно очень умён, как Уилбур Уэйтли из «Данвичского ужаса».",
+    "en": null
+  },
+  "legend": {
+    "ru": "Порождения появляются, когда Внешний бог соединяется с человеком или вселяет в него часть себя. Лишённые «родительского» наставления, они сами добывают знание Мифов из книг, людей и обрядов, стремясь призвать Йог-Сотота и очистить Землю от людей.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 166,
+      "printed_page": 165,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Столбец «Human-Seeming» блока Children of Yog-Sothoth; атаки и уклонение — на стр. 167 PDF. Чудовищная форма — в записи coc:creature:spawn-of-yog-sothoth-monster."
+  }
+}

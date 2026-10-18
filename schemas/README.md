@@ -21,7 +21,9 @@ python tools\validate.py schemas\creature.schema.json schemas\examples\creature\
 ## Как устроена запись
 
 - **`id`** — стабильный идентификатор `coc:creature:<slug>`. По нему
-  ссылаются другие записи и сценарии (`same_as`).
+  ссылаются другие записи и сценарии (`same_as`). Другая форма, стадия или
+  вид того же существа из той же статьи — отдельная запись со ссылкой на
+  основную (`form_of`).
 - **`name`** — `ru` обязательно, `en` если известно.
 - **`category`** — `animal | mythos_monster | mythos_deity | avatar |
   supernatural`; `subcategory` — как в книге.

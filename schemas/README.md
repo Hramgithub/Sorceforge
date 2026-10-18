@@ -44,7 +44,8 @@ python tools\validate.py schemas\creature.schema.json schemas\examples\creature\
 - **`corrections`** — что исправлено относительно данных веб-помощника и
   почему.
 - **`quality`** — флаги: `ocr_suspect`, `parse_uncertain`, `incomplete`,
-  `editorial_text`.
+  `editorial_text`, `translated` (русский текст — наш перевод, русского
+  источника нет; `raw` тогда на языке книги, решение Р-21).
 
 Принцип: рядом с каждым разобранным числом лежит запись как в книге (`raw`).
 Если разбор ошибся, исходник остаётся доказательством.

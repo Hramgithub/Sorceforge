@@ -60,7 +60,7 @@ section h3 { font-size:15px; margin:0 0 6px; color:var(--accent); text-transform
 const DATA = JSON.parse(document.getElementById('data').textContent);
 const CAT = { animal:'Зверь', mythos_monster:'Тварь Мифов', mythos_deity:'Божество Мифов', avatar:'Воплощение', supernatural:'Сверхъестественное' };
 const CH = [['STR','СИЛ'],['CON','ВЫН'],['SIZ','ТЕЛ'],['DEX','ЛВК'],['APP','НАР'],['INT','ИНТ'],['POW','МОЩ'],['EDU','ОБР']];
-const BOOKS = { 'keeper-rulebook-ru': 'Книга хранителя', 'lightless-beacon-ru': 'Погасший маяк' };
+const BOOKS = { 'keeper-rulebook-ru': 'Книга хранителя', 'lightless-beacon-ru': 'Погасший маяк', 'malleus-keeper-deck-en': 'Malleus Keeper Deck', 'malleus-monstrorum-1-en': 'Malleus Monstrorum, т. I', 'malleus-monstrorum-2-en': 'Malleus Monstrorum, т. II' };
 const METHOD = { book_text: 'сверено с книгой', helper_migration: 'перенесено из веб-помощника', mineru: 'извлечено MinerU', manual: 'введено вручную' };
 const bookOf = c => c.sources?.[0]?.book_id;
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));

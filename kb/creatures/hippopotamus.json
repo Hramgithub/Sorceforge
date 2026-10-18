@@ -57,7 +57,7 @@
       "value": 4
     },
     "move": {
-      "raw": "8 / 14 swimming",
+      "raw": "8 / 14 плавая",
       "value": 8,
       "modes": [
         {
@@ -71,12 +71,11 @@
       ]
     },
     "armor": {
-      "raw": "3-point thick hide.",
-      "value": 3,
-      "note": "толстая шкура"
+      "raw": "3 пункта, толстая шкура.",
+      "value": 3
     },
     "attacks_per_round": {
-      "raw": "1 (bite, maul, crush, charge boat)",
+      "raw": "1 (укус, трёпка, таран, атака на лодку)",
       "value": 1
     },
     "attacks": [
@@ -88,7 +87,7 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "50% (25/10), damage 2d6",
+          "raw": "50% (25/10), урон 2d6",
           "value": 50,
           "half": 25,
           "fifth": 10
@@ -107,13 +106,13 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "50% (25/10), damage 2d6 per round (see above)",
+          "raw": "50% (25/10), урон 2d6 за раунд (см. выше)",
           "value": 50,
           "half": 25,
           "fifth": 10
         },
         "damage": {
-          "raw": "2d6 per round (see above)",
+          "raw": "2d6 за раунд (см. выше)",
           "dice": "2d6",
           "adds_db": false
         },
@@ -127,13 +126,13 @@
         "kind": "maneuver",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "50% (25/10), damage 3d6 (see above)",
+          "raw": "50% (25/10), урон 3d6 (см. выше)",
           "value": 50,
           "half": 25,
           "fifth": 10
         },
         "damage": {
-          "raw": "3d6 (see above)",
+          "raw": "3d6 (см. выше)",
           "dice": "3d6",
           "adds_db": false
         },
@@ -147,7 +146,7 @@
         "kind": "maneuver",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "50% (25/10), see above",
+          "raw": "50% (25/10), см. выше",
           "value": 50,
           "half": 25,
           "fifth": 10
@@ -202,12 +201,20 @@
     }
   ],
   "corrections": [],
+  "errata": [
+    {
+      "field": "СИЛ",
+      "printed": "80",
+      "expected": "180",
+      "note": "бросок (6d6+15)×5 даёт 180; ПЗ 31 и БкУ +3d6 соответствуют СИЛ 180; в записи — напечатанное 80"
+    }
+  ],
   "quality": {
     "needs_review": false,
     "flags": [
       "translated",
       "parse_uncertain"
     ],
-    "notes": "опечатка в книге: среднее СИЛ напечатано как 80, хотя бросок (6d6+15)×5 даёт 180; ПЗ 31 и БкУ +3d6 соответствуют СИЛ 180. В записи сохранено напечатанное значение 80."
+    "notes": null
   }
 }

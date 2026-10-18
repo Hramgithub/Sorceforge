@@ -176,6 +176,8 @@ function creatureCard(c) {
     ${statblock(c)}
     ${abilities(c)}
     ${c.encounters?.ru ? `<section><h3>Встречи</h3><p>${esc(c.encounters.ru)}</p></section>` : ''}
+    ${c.cult?.ru ? `<section><h3>Культ</h3><p>${esc(c.cult.ru)}</p></section>` : ''}
+    ${c.blessings?.ru ? `<section><h3>Возможные дары</h3><p>${esc(c.blessings.ru)}</p></section>` : ''}
     ${c.legend?.ru ? `<section><h3>Легенда</h3><p>${esc(c.legend.ru)}</p></section>` : ''}
     ${c.habitat ? `<section><h3>Обитает</h3><p>${esc(c.habitat)}</p></section>` : ''}
     <section><h3>Источник</h3><div>${sources(c)}</div></section>

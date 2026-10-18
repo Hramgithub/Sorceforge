@@ -90,5 +90,5 @@ python tools\validate.py schemas\creature.schema.json schemas\examples\creature\
 полицейский) отмечается `stock_type` — «типаж» (слово «архетип» занято Pulp Cthulhu). Пример: `examples/character/cult-enforcer.json`.
 
 Разделы Malleus Monstrorum в записи существа (решение Р-28): Aura → `aura`, Powers →
-`abilities`, Magic → `statblock.spells`, Encounters → `encounters`, пояснения к атакам →
+`abilities`, Magic → `statblock.spells`, Encounters → `encounters`, Cult → `cult`, Possible Blessings → `blessings` (Р-29), пояснения к атакам →
 `statblock.attacks[].notes`.

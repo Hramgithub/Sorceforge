@@ -88,12 +88,11 @@
       ]
     },
     "armor": {
-      "raw": "none; for every 6 hit points drained from a victim, a lurker gains 1 temporary hit point (these points do not heal and can only be regained through further feeding).",
-      "value": 0,
-      "note": "за каждые 6 ПЗ, высосанных у жертвы, получает 1 временный ПЗ"
+      "raw": "нет; за каждые 6 ПЗ, высосанных у жертвы, скрытень получает 1 временный ПЗ (эти пункты не восстанавливаются и возвращаются только новым кормлением).",
+      "value": 0
     },
     "attacks_per_round": {
-      "raw": "1 (claw, bite, weapon, or feed)",
+      "raw": "1 (когти, укус, оружие или кормление)",
       "value": 1
     },
     "attacks": [
@@ -105,13 +104,13 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "60% (30/12), damage 1d4+DB, or by weapon type",
+          "raw": "60% (30/12), урон 1d4+БкУ или по оружию",
           "value": 60,
           "half": 30,
           "fifth": 12
         },
         "damage": {
-          "raw": "damage 1d4+DB, or by weapon type",
+          "raw": "урон 1d4+БкУ или по оружию",
           "dice": "1d4",
           "adds_db": true
         },
@@ -125,13 +124,13 @@
         "kind": "maneuver",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "60% (30/12), damage 1d6 per round (see above)",
+          "raw": "60% (30/12), урон 1d6 за раунд (см. описание)",
           "value": 60,
           "half": 30,
           "fifth": 12
         },
         "damage": {
-          "raw": "damage 1d6 per round (see above)",
+          "raw": "урон 1d6 за раунд (см. описание)",
           "dice": "1d6",
           "adds_db": false,
           "extra": "за раунд, пока присосался к ране"
@@ -202,7 +201,7 @@
       }
     ],
     "spells": {
-      "raw": "none."
+      "raw": "нет."
     },
     "sanity_loss": [
       {
@@ -252,7 +251,16 @@
       "physical_page": 94,
       "printed_page": 93,
       "method": "book_text",
-      "verified": true
+      "verified": true,
+      "entry_page": 93
+    }
+  ],
+  "errata": [
+    {
+      "field": "ИНТ",
+      "printed": "65–70",
+      "expected": "70–75",
+      "note": "возможная опечатка: для (3d6+4)×5 расчётное среднее 70–75; в записи — напечатанное"
     }
   ],
   "corrections": [],
@@ -262,6 +270,6 @@
       "translated",
       "parse_uncertain"
     ],
-    "notes": "возможная опечатка в книге: для ИНТ (3d6+4)×5 напечатано среднее «65–70», расчётное — 70–75; в записи — напечатанное значение. Описание существа — на стр. 93 PDF."
+    "notes": null
   }
 }

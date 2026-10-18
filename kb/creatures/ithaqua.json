@@ -78,8 +78,7 @@
     },
     "armor": {
       "raw": "10 пунктов (шкура, покрытая толстым слоем изморози)",
-      "value": 10,
-      "note": "шкура, покрытая толстым слоем изморози"
+      "value": 10
     },
     "attacks_per_round": {
       "raw": "1",
@@ -149,7 +148,7 @@
     ],
     "skills": [],
     "spells": {
-      "raw": "Call Lightning, Fury (cast upon another), Nullify Device (variant), Possess Corpse (variant), Send Dream, Temporal Rip, Wrath of Pazzuzu; others as desired by the Keeper."
+      "raw": "Call Lightning, Fury (cast upon another), Nullify Device (variant), Possess Corpse (variant), Send Dream, Temporal Rip, Wrath of Pazzuzu; другие — на усмотрение Хранителя."
     },
     "sanity_loss": [
       {
@@ -172,7 +171,7 @@
   "abilities": [
     {
       "name": "Вой",
-      "summary": "Услышавший вой проверяет Рассудок (1/1d6); при провале — проверка МОЩ, и при её провале человек отмечен Итакуа: при новой встрече с ним или у его святилища может подпасть под его власть (сопротивление — трудная проверка МОЩ). При «провале» (fumble) любой из этих проверок МОЩ начинается медленное превращение в ходящего с ветром; обратить его могут магия или другое божество Мифов.",
+      "summary": "Услышавший вой проверяет Рассудок (1/1d6); при провале — проверка МОЩ, и при её провале человек отмечен Итакуа: при новой встрече с ним или у его святилища может подпасть под его власть (сопротивление — трудная проверка МОЩ). При критическом провале любой из этих проверок МОЩ начинается медленное превращение в ходящего с ветром; обратить его могут магия или другое божество Мифов.",
       "refs": [
         "coc:creature:wind-walker"
       ]
@@ -266,6 +265,20 @@
       "to": "Call Lightning, Fury (cast upon another), Nullify Device (variant), Possess Corpse (variant), Send Dream, Temporal Rip, Wrath of Pazzuzu; others as desired by the Keeper.",
       "reason": "список заклинаний по Malleus Monstrorum 7e (Р-28)",
       "ref": "malleus-monstrorum-2-en p.119"
+    },
+    {
+      "field": "statblock.characteristics.INT",
+      "from": null,
+      "to": "50",
+      "reason": "в Malleus Monstrorum 7e ИНТ не указан — оставлено значение «Книги хранителя»",
+      "ref": "keeper-rulebook-ru p.317"
+    },
+    {
+      "field": "statblock.attacks[1].chance",
+      "from": null,
+      "to": "100% (50/20)",
+      "reason": "для порыва ветра Malleus процента не даёт (жертва проходит проверку СИЛ) — оставлено значение «Книги хранителя»",
+      "ref": "keeper-rulebook-ru p.317"
     }
   ],
   "quality": {
@@ -273,6 +286,6 @@
     "flags": [
       "translated"
     ],
-    "notes": "ИНТ в Malleus Monstrorum не указан — оставлено значение «Книги хранителя»; для порыва ветра Malleus процента не даёт (жертва проходит проверку СИЛ) — оставлено 100% из «Книги хранителя»"
+    "notes": null
   }
 }

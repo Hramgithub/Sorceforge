@@ -70,7 +70,7 @@
       "value": 5
     },
     "move": {
-      "raw": "20 / 60 flying",
+      "raw": "20 / 60 летая",
       "value": 20,
       "modes": [
         {
@@ -84,12 +84,11 @@
       ]
     },
     "armor": {
-      "raw": "4-point skin; regenerates 8 hit points per round (death at zero hit points); immune to mundane weapons (enchanted weapons and spells deal full damage); at zero hit points, a lord shatters into crystal fragments.",
-      "value": 4,
-      "note": "регенерация 8 ПЗ за раунд; иммунитет к обычному оружию"
+      "raw": "4 пункта (кожа); регенерирует 8 ПЗ за раунд (гибнет при 0 ПЗ); невосприимчив к обычному оружию (зачарованное оружие и заклинания наносят полный урон); при 0 ПЗ владыка разлетается на кристаллические осколки.",
+      "value": 4
     },
     "attacks_per_round": {
-      "raw": "1 (claw, bite, tongue)",
+      "raw": "1 (когти, укус, язык)",
       "value": 1
     },
     "attacks": [
@@ -101,13 +100,13 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "90% (45/18), damage 1d6+DB, plus blue ichor (see above)",
+          "raw": "90% (45/18), урон 1d6+БкУ и синий ихор (см. описание)",
           "value": 90,
           "half": 45,
           "fifth": 18
         },
         "damage": {
-          "raw": "1d6+DB, plus blue ichor (see above)",
+          "raw": "1d6+БкУ и синий ихор (см. описание)",
           "dice": "1d6",
           "adds_db": true,
           "extra": "синий ихор: 2d6 урона сразу и каждый раунд, пока не стёрт"
@@ -121,13 +120,13 @@
         "kind": "special",
         "skill": null,
         "chance": {
-          "raw": "70%% (35/14), damage 1d4 + 1d10 STR, DEX, CON, APP per round (see above)",
+          "raw": "70%% (35/14), урон 1d4 + 1d10 СИЛ, ЛВК, ВЫН, НАР за раунд (см. описание)",
           "value": 70,
           "half": 35,
           "fifth": 14
         },
         "damage": {
-          "raw": "1d4 + 1d10 STR, DEX, CON, APP per round (see above)",
+          "raw": "1d4 + 1d10 СИЛ, ЛВК, ВЫН, НАР за раунд (см. описание)",
           "dice": "1d4",
           "adds_db": false,
           "extra": "потеря 1d10 СИЛ, ЛВК, ВЫН и НАР за раунд"
@@ -142,13 +141,13 @@
         "kind": "special",
         "skill": null,
         "chance": {
-          "raw": "90% (45/18), damage 3d6 POW and STR drain (see above)",
+          "raw": "90% (45/18), урон 3d6 — высасывание МОЩ и СИЛ (см. описание)",
           "value": 90,
           "half": 45,
           "fifth": 18
         },
         "damage": {
-          "raw": "3d6 POW and STR drain (see above)",
+          "raw": "3d6 — высасывание МОЩ и СИЛ (см. описание)",
           "dice": "3d6",
           "adds_db": false,
           "extra": "высасывание 3d6 МОЩ и СИЛ"
@@ -164,7 +163,7 @@
     },
     "skills": [],
     "spells": {
-      "raw": "any, as the Keeper desires, particularly those dealing with time and space."
+      "raw": "любые на усмотрение Хранителя, особенно связанные со временем и пространством."
     },
     "sanity_loss": [
       {
@@ -214,7 +213,16 @@
       "physical_page": 139,
       "printed_page": 138,
       "method": "book_text",
-      "verified": true
+      "verified": true,
+      "note": "бой и защита — на стр. 141 PDF (стр. 140 — иллюстрация); тиндальские силы — из врезки «Tindalosian Powers»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "Укус (проглатывание): шанс",
+      "printed": "70%%",
+      "expected": "70%",
+      "note": "лишний знак процента; значение 70"
     }
   ],
   "corrections": [],
@@ -224,6 +232,6 @@
       "translated",
       "parse_uncertain"
     ],
-    "notes": "Опечатка в книге: шанс укуса напечатан «70%%» (лишний знак процента); значение 70. Бой и защита — на стр. 141 PDF (стр. 140 — иллюстрация). Тиндальские силы взяты из врезки «Tindalosian Powers»."
+    "notes": null
   }
 }

@@ -80,11 +80,11 @@
       ]
     },
     "armor": {
-      "raw": "10-point metal skin.",
+      "raw": "10 пунктов (металлическая кожа).",
       "value": 10
     },
     "attacks_per_round": {
-      "raw": "1 (unarmed or weapon)",
+      "raw": "1 (без оружия или оружием)",
       "value": 1
     },
     "attacks": [
@@ -96,13 +96,13 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "35% (17/7), damage 1d4+DB",
+          "raw": "35% (17/7), урон 1d4+БкУ",
           "value": 35,
           "half": 17,
           "fifth": 7
         },
         "damage": {
-          "raw": "damage 1d4+DB",
+          "raw": "урон 1d4+БкУ",
           "dice": "1d4",
           "adds_db": true
         }
@@ -115,13 +115,13 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "35% (17/7), damage 1d6+DB",
+          "raw": "35% (17/7), урон 1d6+БкУ",
           "value": 35,
           "half": 17,
           "fifth": 7
         },
         "damage": {
-          "raw": "damage 1d6+DB",
+          "raw": "урон 1d6+БкУ",
           "dice": "1d6",
           "adds_db": true
         },
@@ -135,13 +135,13 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "30% (15/6), damage 1d4+1d6 electrical damage (see above)",
+          "raw": "30% (15/6), урон 1d4+1d6 электричеством (см. описание)",
           "value": 30,
           "half": 15,
           "fifth": 6
         },
         "damage": {
-          "raw": "damage 1d4+1d6 electrical damage (see above)",
+          "raw": "урон 1d4+1d6 электричеством (см. описание)",
           "dice": "1d4+1d6",
           "adds_db": false,
           "extra": "электрический разряд"
@@ -156,13 +156,13 @@
         "kind": "attack",
         "skill": "Стрельба",
         "chance": {
-          "raw": "30% (15/6), damage 1d6+2 (see above)",
+          "raw": "30% (15/6), урон 1d6+2 (см. описание)",
           "value": 30,
           "half": 15,
           "fifth": 6
         },
         "damage": {
-          "raw": "damage 1d6+2 (see above)",
+          "raw": "урон 1d6+2 (см. описание)",
           "dice": "1d6+2",
           "adds_db": false
         },
@@ -232,7 +232,7 @@
       }
     ],
     "spells": {
-      "raw": "15% chance to know one spell; mostly Contact Lrogg."
+      "raw": "с вероятностью 15% знает одно заклинание, чаще всего Contact Lrogg."
     },
     "sanity_loss": [
       {
@@ -270,6 +270,14 @@
       "verified": true
     }
   ],
+  "errata": [
+    {
+      "field": "ВЫН (бросок)",
+      "printed": "(2d6+10×5",
+      "expected": "(2d6+10)×5",
+      "note": "нет закрывающей скобки; напечатанное среднее 85 соответствует исправленной формуле"
+    }
+  ],
   "corrections": [],
   "quality": {
     "needs_review": false,
@@ -277,7 +285,7 @@
       "translated",
       "parse_uncertain"
     ],
-    "notes": "опечатка в книге: бросок ВЫН напечатан как «(2d6+10×5» без закрывающей скобки; в записи — (2d6+10)×5, напечатанное среднее 85 этому соответствует"
+    "notes": null
   },
   "relations": [
     {

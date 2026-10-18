@@ -52,9 +52,8 @@
       }
     },
     "hp": {
-      "raw": "HP 18 / Average Hit Points: 19",
-      "value": 19,
-      "note": "в строке характеристик напечатано HP 18, ниже — Average Hit Points 19; по формуле (ВЫН+ТЕЛ)/10 = 19"
+      "raw": "ПЗ 18 / средние ПЗ: 19",
+      "value": 19
     },
     "damage_bonus": {
       "raw": "+1d6",
@@ -65,7 +64,7 @@
       "value": 2
     },
     "move": {
-      "raw": "7 / 9 flying",
+      "raw": "7 / 9 летая",
       "value": 7,
       "modes": [
         {
@@ -79,11 +78,11 @@
       ]
     },
     "armor": {
-      "raw": "2-point tough hide.",
+      "raw": "2 пункта (прочная шкура).",
       "value": 2
     },
     "attacks_per_round": {
-      "raw": "2 (hooves)",
+      "raw": "2 (копыта)",
       "value": 2
     },
     "attacks": [
@@ -95,13 +94,13 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "80% (40/16), damage 1d6+DB",
+          "raw": "80% (40/16), урон 1d6+БкУ",
           "value": 80,
           "half": 40,
           "fifth": 16
         },
         "damage": {
-          "raw": "1d6+DB",
+          "raw": "1d6+БкУ",
           "dice": "1d6",
           "adds_db": true
         }
@@ -182,6 +181,14 @@
       "verified": true
     }
   ],
+  "errata": [
+    {
+      "field": "ПЗ",
+      "printed": "18 (строка характеристик) / 19 (средние ПЗ)",
+      "expected": "19",
+      "note": "по формуле (ВЫН+ТЕЛ)/10 = 19; в записи — 19"
+    }
+  ],
   "corrections": [],
   "quality": {
     "needs_review": false,
@@ -189,6 +196,6 @@
       "translated",
       "parse_uncertain"
     ],
-    "notes": "Расхождение в книге: в строке характеристик HP 18, а в строке Average Hit Points — 19 (по формуле 19). Значение value — 19. Пункты магии в книге не указаны (МОЩ 70)."
+    "notes": "Пункты магии в книге не указаны (МОЩ 70)."
   }
 }

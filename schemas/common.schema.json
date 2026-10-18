@@ -19,6 +19,16 @@
         "en": { "type": ["string", "null"] }
       }
     },
+    "legend": {
+      "description": "Лорная часть: предыстория персонажа, история NPC, история и культ монстра или божества. Пересказ, а не полный текст книги.",
+      "type": "object",
+      "required": ["ru"],
+      "additionalProperties": false,
+      "properties": {
+        "ru": { "type": "string" },
+        "en": { "type": ["string", "null"] }
+      }
+    },
     "value": {
       "description": "Число или выражение так, как в книге (raw), и разобранное значение (value). raw — доказательство, value может ошибаться.",
       "type": "object",

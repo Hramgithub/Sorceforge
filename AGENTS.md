@@ -1,12 +1,24 @@
 # Repository guidance
 
 - Product name is `Sourcefold`; `Sorceforge` is only the repository slug.
-- As of 2026-10-13 `main` holds only audit and handoff documents. The full
-  Sourcefold Phase 0 code and evidence live in `https://github.com/Hramgithub/NRI`
-  under `Sourcefold/` (commit `22fafc14`); kb_creator lives there under
-  `kb_creator/`. The pre-cleanup snapshot of this repository is commit `72ea9be`.
-- Read `README.md` and `Sourcefold/docs/audit/20261013-idea-vs-implementation.md`
-  before proposing new work.
+- `main` holds the Call of Cthulhu 7e knowledge base (since 2026-10-17): JSON data
+  in `kb/`, schemas in `schemas/`, viewer in `app/`, tools in `tools/` and
+  `pipeline/`, book checks in `checks/`. The old Sourcefold Phase 0 code and
+  evidence live in `https://github.com/Hramgithub/NRI` under `Sourcefold/`
+  (commit `22fafc14`); kb_creator lives there under `kb_creator/`. The
+  pre-cleanup snapshot of this repository is commit `72ea9be`.
+- Read `README.md` and `docs/project-goal.md` (§6 decisions, §8 status) before
+  proposing new work.
+
+## Data rules
+
+- Validate every changed record: `python tools/validate.py schemas/<kind>.schema.json <files>`;
+  rebuild the viewer with `python tools/build_viewer.py` and commit `app/kb.html` with the data.
+- Numbers come from the primary source named in the decisions (Malleus Monstrorum
+  over the Keeper Rulebook and the Keeper Deck); every changed value goes to
+  `corrections`; book misprints are kept as printed and flagged.
+- Dice as `6d6`; characteristic abbreviations as in the Russian Keeper Rulebook;
+  kb JSON is UTF-8, 2-space indent, LF (`pipeline/fix/normalize_terms.py`).
 
 ## Working with the owner
 

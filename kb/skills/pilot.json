@@ -1,0 +1,79 @@
+{
+  "schema": "sourcefold.skill.v0",
+  "id": "coc:skill:pilot",
+  "kind": "skill",
+  "name": {
+    "ru": "Пилотирование",
+    "en": "Pilot"
+  },
+  "base": {
+    "raw": "01%",
+    "value": 1,
+    "formula": null
+  },
+  "category": "движение",
+  "uncommon": false,
+  "specializations": [
+    {
+      "name": {
+        "ru": "Лодка",
+        "en": "Boat"
+      },
+      "base": {
+        "raw": "01%",
+        "value": 1,
+        "formula": null
+      }
+    },
+    {
+      "name": {
+        "ru": "Самолёт",
+        "en": "Aircraft"
+      },
+      "base": {
+        "raw": "01%",
+        "value": 1,
+        "formula": null
+      }
+    },
+    {
+      "name": {
+        "ru": "Дирижабль",
+        "en": "Airship"
+      },
+      "base": {
+        "raw": "01%",
+        "value": 1,
+        "formula": null
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "description": {
+    "ru": "Отдельная специализация для воздушного или водного транспорта.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 64,
+      "printed_page": 68,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [
+    {
+      "field": "specializations",
+      "from": "Самолёт, Корабль, Лодка, Вертолёт",
+      "to": "Лодка, Самолёт, Дирижабль",
+      "reason": "значение по «Книге хранителя» (вертолёт — класс воздушных судов внутри Пилотирования (самолёт))",
+      "ref": "«Книга хранителя», с. 68–69 (физ. 64–65)"
+    }
+  ]
+}

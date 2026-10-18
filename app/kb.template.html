@@ -163,7 +163,7 @@ function statblock(c) {
 }
 
 function abilities(c) {
-  return (c.abilities||[]).length ? `<section><h3>Особые умения</h3>${c.abilities.map(a => `<p><b>${esc(a.name)}.</b> ${esc(a.summary)}</p>`).join('')}</section>` : '';
+  return (c.abilities||[]).length ? `<section><h3>Способности</h3>${c.abilities.map(a => `<p><b>${esc(a.name)}.</b> ${esc(a.summary)}</p>`).join('')}</section>` : '';
 }
 
 function creatureCard(c) {
@@ -172,8 +172,10 @@ function creatureCard(c) {
     ${flags(c)}
     ${(c.form_of||[]).length ? `<div>Другая форма: ${c.form_of.map(i => byId(i) ? link(i, byId(i).name.ru) : esc(i)).join(', ')}</div>` : ''}
     ${c.description?.ru ? `<p>${esc(c.description.ru)}</p>` : ''}
+    ${c.aura?.ru ? `<section><h3>Аура</h3><p>${esc(c.aura.ru)}</p></section>` : ''}
     ${statblock(c)}
     ${abilities(c)}
+    ${c.encounters?.ru ? `<section><h3>Встречи</h3><p>${esc(c.encounters.ru)}</p></section>` : ''}
     ${c.legend?.ru ? `<section><h3>Легенда</h3><p>${esc(c.legend.ru)}</p></section>` : ''}
     ${c.habitat ? `<section><h3>Обитает</h3><p>${esc(c.habitat)}</p></section>` : ''}
     <section><h3>Источник</h3><div>${sources(c)}</div></section>

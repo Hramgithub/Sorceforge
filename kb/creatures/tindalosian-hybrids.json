@@ -93,12 +93,11 @@
       ]
     },
     "armor": {
-      "raw": "2-point skin; regenerates 3 hit points per round (death at zero hit points); at zero hit points, a hybrid shatters into crystal fragments.",
-      "value": 2,
-      "note": "регенерация 3 ПЗ за раунд"
+      "raw": "2 пункта (кожа); восстанавливает 3 ПЗ за раунд (гибнет при нуле ПЗ); при нуле ПЗ гибрид рассыпается на кристаллические осколки.",
+      "value": 2
     },
     "attacks_per_round": {
-      "raw": "2 (claw, bite) or 1 (tongue lash or bite)",
+      "raw": "2 (когти, укус) или 1 (удар языком или укус)",
       "value": 2,
       "note": "или 1 удар языком (досягаемость 2 м) либо укус; первыми атакует цели с наибольшей МОЩ"
     },
@@ -111,13 +110,13 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "50% (25/10), damage 1d4+DB, plus blue ichor (see above)",
+          "raw": "50% (25/10), урон 1d4+БкУ, плюс синий ихор (см. выше)",
           "value": 50,
           "half": 25,
           "fifth": 10
         },
         "damage": {
-          "raw": "1d4+DB, plus blue ichor (see above)",
+          "raw": "1d4+БкУ, плюс синий ихор (см. выше)",
           "dice": "1d4",
           "adds_db": true,
           "extra": "синий ихор: 2d6 урона сразу и каждый раунд, пока не стёрт"
@@ -132,13 +131,13 @@
         "kind": "special",
         "skill": null,
         "chance": {
-          "raw": "50% (25/10), damage 1d4 + 1d10 STR, DEX, CON, APP per round (see above)",
+          "raw": "50% (25/10), урон 1d4 + 1d10 СИЛ, ЛВК, ВЫН, НАР за раунд (см. выше)",
           "value": 50,
           "half": 25,
           "fifth": 10
         },
         "damage": {
-          "raw": "1d4 + 1d10 STR, DEX, CON, APP per round (see above)",
+          "raw": "1d4 + 1d10 СИЛ, ЛВК, ВЫН, НАР за раунд (см. выше)",
           "dice": "1d4",
           "adds_db": false,
           "extra": "потеря 1d10 СИЛ, ЛВК, ВЫН и НАР за раунд"
@@ -153,13 +152,13 @@
         "kind": "special",
         "skill": null,
         "chance": {
-          "raw": "60% (30/12), damage 1d10 POW + 3d10 CON drain (see above)",
+          "raw": "60% (30/12), урон: высасывание 1d10 МОЩ + 3d10 ВЫН (см. выше)",
           "value": 60,
           "half": 30,
           "fifth": 12
         },
         "damage": {
-          "raw": "1d10 POW + 3d10 CON drain (see above)",
+          "raw": "высасывание 1d10 МОЩ + 3d10 ВЫН (см. выше)",
           "dice": "1d10",
           "adds_db": false,
           "extra": "высасывание 1d10 МОЩ и 3d10 ВЫН за раунд"
@@ -221,7 +220,7 @@
       }
     ],
     "spells": {
-      "raw": "none."
+      "raw": "нет."
     },
     "sanity_loss": [
       {
@@ -266,16 +265,31 @@
       "physical_page": 142,
       "printed_page": 141,
       "method": "book_text",
-      "verified": true
+      "verified": true,
+      "note": "блок продолжается на стр. 143 PDF"
     }
   ],
   "corrections": [],
+  "errata": [
+    {
+      "field": "Гиперзрение",
+      "printed": "costs of magic points for 1 round",
+      "expected": null,
+      "note": "пропущено число пунктов магии"
+    },
+    {
+      "field": "Гиперзрение",
+      "printed": "5-foot (3 m)",
+      "expected": null,
+      "note": "футы и метры не совпадают"
+    }
+  ],
   "quality": {
     "needs_review": false,
     "flags": [
       "translated",
       "parse_uncertain"
     ],
-    "notes": "Опечатки в книге: у силы Hyper-Sight пропущено число («costs of magic points for 1 round»), а «5-foot (3 m)» не совпадает по единицам. Блок продолжается на стр. 143 PDF."
+    "notes": null
   }
 }

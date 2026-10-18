@@ -29,19 +29,19 @@
   "statblock": {
     "characteristics": {
       "STR": {
-        "raw": "n/a",
+        "raw": "—",
         "value": null
       },
       "CON": {
-        "raw": "n/a",
+        "raw": "—",
         "value": null
       },
       "SIZ": {
-        "raw": "n/a",
+        "raw": "—",
         "value": null
       },
       "DEX": {
-        "raw": "n/a",
+        "raw": "—",
         "value": null
       },
       "POW": {
@@ -59,15 +59,15 @@
       "value": 60
     },
     "damage_bonus": {
-      "raw": "n/a",
+      "raw": "—",
       "value": null
     },
     "build": {
-      "raw": "n/a",
+      "raw": "—",
       "value": null
     },
     "move": {
-      "raw": "speed of sound",
+      "raw": "скорость звука",
       "value": null,
       "modes": [
         {
@@ -78,12 +78,11 @@
       ]
     },
     "armor": {
-      "raw": "None. Immune to all physical attacks (incl. enchanted weapons). Certain artifacts may limit or negate Tru’nembra’s powers, or cause the Outer God harm. Certain spells and magically infused music (instrument or voice) may temporarily ward off, harm, or dispel Tru’nembra. If reduced to zero hit points, or dispelled, Tru’nembra’s music ceases, leaving only a deathly quiet. It reforms close to Azathoth within 24 hours.",
-      "value": 0,
-      "note": "неуязвим для любых физических атак, включая зачарованное оружие; вредить ему могут некоторые артефакты, заклинания и магическая музыка; при 0 ПЗ или изгнании воссоздаётся у Азатота за 24 часа"
+      "raw": "Нет. Неуязвим для всех физических атак (включая зачарованное оружие). Некоторые артефакты могут ограничить или свести на нет силы Тру'нембры либо причинить Внешнему богу вред. Некоторые заклинания и магическая музыка (инструментальная или вокальная) могут временно отогнать, ранить или изгнать Тру'нембру. Если его ПЗ снижены до нуля или он изгнан, музыка Тру'нембры смолкает, оставляя лишь мёртвую тишину. Он воссоздаётся рядом с Азатотом в течение 24 часов.",
+      "value": 0
     },
     "attacks_per_round": {
-      "raw": "1 (sonic wave)",
+      "raw": "1 (звуковая волна)",
       "value": 1
     },
     "attacks": [
@@ -95,13 +94,13 @@
         "kind": "special",
         "skill": null,
         "chance": {
-          "raw": "automatic, based on magic points expended (see above)",
+          "raw": "автоматически, зависит от потраченных ПМ (см. выше)",
           "value": null,
           "half": null,
           "fifth": null
         },
         "damage": {
-          "raw": "based on magic points expended",
+          "raw": "зависит от потраченных ПМ",
           "dice": null,
           "adds_db": false,
           "extra": "число ПМ = грани кубика (4 ПМ — 1d4, 6 — 1d6, 10 — 1d10); за 100 ПМ — 1d100, каждые следующие 100 ПМ — ещё +1d100"
@@ -111,7 +110,7 @@
     ],
     "skills": [],
     "spells": {
-      "raw": "none."
+      "raw": "нет."
     },
     "sanity_loss": [
       {
@@ -181,15 +180,26 @@
       "physical_page": 203,
       "printed_page": 202,
       "method": "book_text",
-      "verified": true
+      "verified": true,
+      "entry_page": 202,
+      "note": "профиль — на стр. 203 PDF; рассудок, «Magic» и способности — на стр. 204 PDF"
     }
   ],
   "corrections": [],
+  "errata": [
+    {
+      "field": "Звуковая волна",
+      "printed": "(see above)",
+      "expected": "(см. ниже)",
+      "note": "профиль ссылается на описание силы выше, но оно дано дальше, на следующей странице"
+    }
+  ],
   "quality": {
     "needs_review": false,
     "flags": [
-      "translated"
+      "translated",
+      "parse_uncertain"
     ],
-    "notes": "Статья начинается на стр. 201 (PDF 202), профиль — на стр. 202 (PDF 203), рассудок, «Magic» и способности — на стр. 203 (PDF 204). Характеристики СИЛ/ВЫН/СИЗ/ЛВК — n/a. Потеря Рассудка в книге: «1d4/2d10 Sanity points to hear or experience Tru’nembra», с градацией по расстоянию в силе «Symphonic Manifestation». Профиль ссылается на Sonic Wave «(see above)», хотя описание силы дано дальше, на следующей странице."
+    "notes": "Потеря Рассудка в книге — «1d4/2d10 за то, чтобы услышать или ощутить Тру'нембру», с градацией по расстоянию в силе «Симфоническое явление»."
   }
 }

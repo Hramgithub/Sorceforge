@@ -75,12 +75,11 @@
       ]
     },
     "armor": {
-      "raw": "3-point metal exoskeleton in humanoid form; 120-point metal frame/housing in machine form. Expending 5 magic points regenerates (self-repairs) 1 hit point (death at zero hit points). If reduced to zero hit points, the Tick Tock Man ceases to function (either simply powering down or exploding). It cannot reform/possess a machine for 1d10 years.",
-      "value": 3,
-      "note": "3 — металлический экзоскелет человекоподобного тела; 120 — корпус машинной формы; 5 ПМ восстанавливают 1 ПЗ"
+      "raw": "3 пункта (металлический экзоскелет) в человекоподобном облике; 120 пунктов (металлический каркас/корпус) в машинной форме. Тратя 5 ПМ, восстанавливает (сам чинит) 1 ПЗ (гибнет при нуле ПЗ). При нуле ПЗ Человек Тик-Так перестаёт работать (просто отключается или взрывается) и 1d10 лет не может воссоздаться или вселиться в машину.",
+      "value": 3
     },
     "attacks_per_round": {
-      "raw": "1 (energy discharge or physical—strike, strangle, and so on)",
+      "raw": "1 (энергетический разряд или физическая атака — удар, удушение и т. п.)",
       "value": 1
     },
     "attacks": [
@@ -92,7 +91,7 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "90% (45/18), damage 2d6",
+          "raw": "90% (45/18), урон 2d6",
           "value": 90,
           "half": 45,
           "fifth": 18
@@ -112,13 +111,13 @@
         "kind": "attack",
         "skill": null,
         "chance": {
-          "raw": "90% (45/18), damage varies (1d6+2 to 2d6+1)",
+          "raw": "90% (45/18), урон варьируется (от 1d6+2 до 2d6+1)",
           "value": 90,
           "half": 45,
           "fifth": 18
         },
         "damage": {
-          "raw": "varies (1d6+2 to 2d6+1)",
+          "raw": "варьируется (от 1d6+2 до 2d6+1)",
           "dice": null,
           "adds_db": false,
           "extra": "от 1d6+2 до 2d6+1; при электрическом уроне — проверка ВЫН, иначе оглушение на 1d6 раундов (при «провале» — остановка сердца)"
@@ -128,7 +127,7 @@
     ],
     "skills": [],
     "spells": {
-      "raw": "this avatar does not utilize spells."
+      "raw": "этот аватар не пользуется заклинаниями."
     },
     "sanity_loss": [
       {
@@ -151,7 +150,7 @@
   "abilities": [
     {
       "name": "Машинная форма",
-      "summary": "Обитает в стационарной машине (по таблице: ВЫН 250, ПЗ 95, ТЕЛ «varies», СИЛ/ЛВК/БкУ/комплекция n/a, скорость 0; броня корпуса 120). За 20 ПМ создаёт себе человекоподобное тело и может действовать в обоих сразу."
+      "summary": "Обитает в стационарной машине (по таблице: ВЫН 250, ПЗ 95, ТЕЛ «варьируется», СИЛ/ЛВК/БкУ/комплекция «—», скорость 0; броня корпуса 120). За 20 ПМ создаёт себе человекоподобное тело и может действовать в обоих сразу."
     },
     {
       "name": "Управление машинами",
@@ -176,22 +175,33 @@
       "physical_page": 154,
       "printed_page": 153,
       "method": "book_text",
-      "verified": true
+      "verified": true,
+      "note": "врезка «Profile» аватара: боевые данные, силы и потеря рассудка"
     },
     {
       "book_id": "malleus-monstrorum-2-en",
       "physical_page": 165,
       "printed_page": 164,
       "method": "book_text",
-      "verified": true
+      "verified": true,
+      "note": "общая таблица «Nyarlathotep: Avatar Profiles»: характеристики, ПЗ, БкУ, комплекция и скорость; МОЩ 500, ПМ 100 и заклинания — общие для всех аватаров"
     }
   ],
   "corrections": [],
+  "errata": [
+    {
+      "field": "Заклинания",
+      "printed": "this avatar does not utilize spells",
+      "expected": null,
+      "note": "профиль аватара противоречит общей таблице аватаров («любые заклинания»); в записи — текст профиля"
+    }
+  ],
   "quality": {
     "needs_review": false,
     "flags": [
-      "translated"
+      "translated",
+      "parse_uncertain"
     ],
-    "notes": "Характеристики, ПЗ, БкУ, комплекция и скорость — из общей таблицы «Nyarlathotep: Avatar Profiles» (стр. 165 PDF / 164 книги); МОЩ 500, ПМ 100 и заклинания — общие для всех аватаров (там же). Боевые данные, силы и потеря рассудка — из врезки «Profile» аватара. В таблице две строки; основным взят человекоподобный облик (human form), машинная форма описана в умениях. В профиле указано, что аватар не пользуется заклинаниями, хотя общие атрибуты таблицы дают «любые заклинания»; в spells — текст профиля."
+    "notes": "В таблице две строки: основным взят человекоподобный облик, машинная форма описана в способностях."
   }
 }

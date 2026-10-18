@@ -73,14 +73,12 @@
       ]
     },
     "armor": {
-      "raw": "2-point fur and skin",
-      "value": 2,
-      "note": "мех и шкура"
+      "raw": "2 пункта (мех и шкура)",
+      "value": 2
     },
     "attacks_per_round": {
-      "raw": "2 (bite, claw) or 1 (wrestle, if lion or tiger)",
-      "value": 2,
-      "note": "2 атаки (укус, когти) или 1 (борьба)"
+      "raw": "2 (укус, когти) или 1 (борьба, у льва или тигра)",
+      "value": 2
     },
     "attacks": [
       {
@@ -91,13 +89,13 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "70% (35/14), damage 1d8+DB",
+          "raw": "70% (35/14), урон 1d8+БкУ",
           "value": 70,
           "half": 35,
           "fifth": 14
         },
         "damage": {
-          "raw": "1d8+DB",
+          "raw": "1d8+БкУ",
           "dice": "1d8",
           "adds_db": true
         }
@@ -110,13 +108,13 @@
         "kind": "maneuver",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "70% (35/14), pinned (see above)",
+          "raw": "70% (35/14), жертва прижата (см. выше)",
           "value": 70,
           "half": 35,
           "fifth": 14
         },
         "damage": {
-          "raw": "pinned (see above)",
+          "raw": "жертва прижата (см. выше)",
           "dice": null,
           "adds_db": false
         },
@@ -189,16 +187,25 @@
       "physical_page": 189,
       "printed_page": 188,
       "method": "book_text",
-      "verified": true
+      "verified": true,
+      "note": "колонка «Tiger» таблицы «Big Cats»; колонка «Lion» — в записи lion-big-cat"
     }
   ],
   "corrections": [],
+  "errata": [
+    {
+      "field": "ВЫН",
+      "printed": "(2d6+6)×5 [60]",
+      "expected": "(2d6+6)×5 [65]",
+      "note": "среднее по формуле — 65; в записи — напечатанное значение (ПЗ 14 при любом варианте)"
+    }
+  ],
   "quality": {
     "needs_review": false,
     "flags": [
       "translated",
       "parse_uncertain"
     ],
-    "notes": "Колонка «Tiger» таблицы «Big Cats». Опечатка в книге: CON (2d6+6)×5 напечатано со средним [60], по формуле среднее 65; оставлено печатное значение (ПЗ 14 при любом варианте). Колонка «Lion» соответствует существующей записи lion-big-cat."
+    "notes": null
   }
 }

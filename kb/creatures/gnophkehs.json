@@ -1,0 +1,196 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:gnophkehs",
+  "kind": "creature",
+  "name": {
+    "ru": "Гнофкехс",
+    "en": "Gnophkehs"
+  },
+  "aliases": [
+    "Go-Nup-Sis",
+    "Horror of the North",
+    "No-Phren-Ka"
+  ],
+  "category": "mythos_deity",
+  "subcategory": "Великий Древний / уникальная сущность",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "characteristics": {
+      "STR": {
+        "raw": "200",
+        "value": 200
+      },
+      "CON": {
+        "raw": "500",
+        "value": 500
+      },
+      "SIZ": {
+        "raw": "150",
+        "value": 150
+      },
+      "DEX": {
+        "raw": "90",
+        "value": 90
+      },
+      "POW": {
+        "raw": "150",
+        "value": 150
+      }
+    },
+    "averages": false,
+    "hp": {
+      "raw": "65",
+      "value": 65
+    },
+    "mp": {
+      "raw": "30",
+      "value": 30
+    },
+    "damage_bonus": {
+      "raw": "+3D6",
+      "value": "3d6"
+    },
+    "build": {
+      "raw": "4",
+      "value": 4
+    },
+    "move": {
+      "raw": "12",
+      "value": 12,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 12
+        }
+      ]
+    },
+    "armor": {
+      "raw": "10-point thick fur and flesh. If reduced to zero hit points, Gnophkehs’ body rapidly rots down into a greasy and bloody mess. It reforms within its ice prison in 1D100 years.",
+      "value": 10,
+      "note": "10 пунктов густого меха и плоти; при 0 ПЗ сгнивает в кровавую массу и воссоздаётся в ледяной темнице через 1d100 лет"
+    },
+    "attacks_per_round": {
+      "raw": "4 (claws) or 1 (horn or grab/bite)",
+      "value": 4
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (когти)",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "75% (37/15), damage 3D6",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        },
+        "damage": {
+          "raw": "3D6",
+          "dice": "3d6",
+          "adds_db": false
+        },
+        "notes": "до четырёх лап за раунд"
+      },
+      {
+        "name": {
+          "ru": "Удар рогом",
+          "en": "Horn Gore"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "60% (30/12), damage 3D6+1D6",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "3D6+1D6",
+          "dice": "3d6+1d6",
+          "adds_db": false
+        },
+        "notes": "вместо ударов когтями"
+      },
+      {
+        "name": {
+          "ru": "Захват",
+          "en": "Grab (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "75% (37/15), held and then bitten (see above)",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        },
+        "damage": {
+          "raw": "held and then bitten (see above)",
+          "dice": "3d6+6",
+          "adds_db": false,
+          "extra": "на следующий раунд укус 3d6+6"
+        },
+        "notes": "вырваться — Экстремальная проверка СИЛ или ЛВК"
+      }
+    ],
+    "skills": [],
+    "spells": {
+      "raw": "Call Ithaqua, Contact Gnoph-keh, Death’s Breath, Knot Flesh, Possess Corpse, Utterance of Bile; others as desired by the Keeper."
+    },
+    "sanity_loss": [
+      {
+        "success": "1d8",
+        "fail": "1d20",
+        "trigger": "при виде Гнофкехса"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Пробуждение",
+      "summary": "Спит во льду; пробудить можно ритуалом с жертвами общей ТЕЛ не меньше 150, кровь которых разливают по льду. Бодрствует 2d10+5 раундов и обязан поесть — иначе пожирает тех, кто рядом."
+    },
+    {
+      "name": "Ледяная буря",
+      "summary": "Вызывает вокруг себя метель диаметром около 30 м; в пределах 2 м от него каждый раунд нужна проверка ВЫН, иначе −1 ПЗ от холода."
+    },
+    {
+      "name": "Вой",
+      "summary": "В радиусе 10 м — Экстремальная проверка МОЩ, иначе −1d10 Рассудка, глухота и оцепенение на 2d10 раундов; устоявшие теряют 1 Рассудок и получают штрафной кубик к слуху на 1d10 раундов. Дальше 10 м хватает Трудной (до 50 м) или обычной (до 100 м) проверки МОЩ."
+    }
+  ],
+  "description": {
+    "ru": "Смутно человекоподобное существо, вмороженное в лёд: густой белый мех, шесть или восемь конечностей с когтями, огромная голова с единственным рогом и пастью, полной зубов.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Загадочное божество, связанное (или смешиваемое) с расой гноф-кехов; по «Книге Гнофкехса» Кнаппа, явилось на «сияющей звезде», требовало человеческих жертв и строило «трон крови» в северных пустошах, пока «незнакомые огни» не заточили его во льду — вероятно, в Гренландии или Исландии. Культ, приносящий ему кровавые жертвы, и чтит, и удерживает его в заточении; северные племена считают его младшим союзником Итакуа.",
+    "en": null
+  },
+  "habitat": "ледяная темница на севере, вероятно в Гренландии или Исландии",
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 93,
+      "printed_page": 92,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Статья начинается на стр. 91 (PDF 92), профиль и блок «Magic» — на стр. 92 (PDF 93)."
+  }
+}

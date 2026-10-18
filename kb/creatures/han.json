@@ -1,0 +1,162 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:han",
+  "kind": "creature",
+  "name": {
+    "ru": "Хан",
+    "en": "Han"
+  },
+  "aliases": [
+    "Bringer of Madness",
+    "the Dark One",
+    "Grinning Abomination",
+    "Hand of Yig",
+    "Thing of the Mists"
+  ],
+  "category": "mythos_deity",
+  "subcategory": "Великий Древний / уникальная сущность",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "characteristics": {
+      "STR": {
+        "raw": "n/a",
+        "value": null
+      },
+      "CON": {
+        "raw": "150",
+        "value": 150
+      },
+      "SIZ": {
+        "raw": "125",
+        "value": 125
+      },
+      "DEX": {
+        "raw": "100",
+        "value": 100
+      },
+      "POW": {
+        "raw": "200",
+        "value": 200
+      }
+    },
+    "averages": false,
+    "hp": {
+      "raw": "27",
+      "value": 27
+    },
+    "mp": {
+      "raw": "40",
+      "value": 40
+    },
+    "damage_bonus": {
+      "raw": "n/a",
+      "value": null
+    },
+    "build": {
+      "raw": "n/a",
+      "value": null
+    },
+    "move": {
+      "raw": "10",
+      "value": 10,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 10
+        }
+      ]
+    },
+    "armor": {
+      "raw": "None. Being a living shadow, Han is immune to mundane weapons (incl. bullets). If reduced to zero hit points, Han fades away to nothingness. It reforms in 1D100 days.",
+      "value": 0,
+      "note": "живая тень: неуязвим для обычного оружия; при 0 ПЗ растворяется в ничто и воссоздаётся через 1d100 дней"
+    },
+    "attacks_per_round": {
+      "raw": "1 (withering touch)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Иссушающее касание",
+          "en": "Withering touch"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "75% (37/15), damage 1D100 POW drain (see above)",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        },
+        "damage": {
+          "raw": "1D100 POW drain (see above)",
+          "dice": "1d100",
+          "adds_db": false,
+          "extra": "высасывает 1d100 МОЩ навсегда; при МОЩ 0 жертва умирает, оставляя иссохшую оболочку; выжившие стареют на 1d10 лет за каждые 5 потерянных МОЩ"
+        },
+        "notes": "достаёт любого в своём туманном плаще; заметивший тянущуюся руку (Внимательность, Слух или МОЩ) может уклониться"
+      }
+    ],
+    "skills": [],
+    "spells": {
+      "raw": "mainly those concerning divination; others as the Keeper desires."
+    },
+    "sanity_loss": [
+      {
+        "success": "1d6",
+        "fail": "2d6+4",
+        "trigger": "при встрече с полной формой Хана"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Пророчество",
+      "summary": "Даёт точные, но всегда зловещие предсказания, иногда требуя плату; получивший пророчество проверяет Рассудок (от 1/1d6 до 1d4+1/2d10)."
+    },
+    {
+      "name": "Чёрный шквал",
+      "summary": "За 5 ПМ раскручивает туман в ветер, бьющий стёкла и швыряющий людей: проверка ЛВК, иначе 1d6 урона; каждые следующие 5 ПМ повышают сложность и добавляют 1d6 урона."
+    },
+    {
+      "name": "Теневые твари",
+      "summary": "Обрывки плаща становятся теневыми летучими и ползучими тварями-шпионами; может выпустить 1d100 таких тварей, каждая наносит 1 урон в раунд; за раунд можно прихлопнуть 1d10."
+    },
+    {
+      "name": "Завеса тумана",
+      "summary": "Туман радиусом 50 м: видения и звуки ужаса, −1 Рассудка за раунд, повышенная сложность или штрафной кубик для зрения и слуха."
+    }
+  ],
+  "description": {
+    "ru": "Фигура выше человеческого роста в чёрном плаще и тумане, с ухмыляющимся черепом вместо головы, глазницы и рот которого горят странным пламенем; его появление сопровождает вой собак или волков.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Младшая сущность, связанная с Йигом — его отпрыск или избранник; по «De Vermiis Mysteriis», обитает на плато Ленг, охраняя важные для Йига предметы, и явится, «когда время Древних начнётся вновь». Вестник рока и пророчеств, иногда неделями следует за человеком тенью; входит в «Триумвират судьбы» с Биатисом и безымянным третьим, через который говорит Ньярлатхотеп. Его чтут часть культа Йига, змеелюди и Храм Будущего в Стране снов.",
+    "en": null
+  },
+  "habitat": "плато Ленг",
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 99,
+      "printed_page": 98,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Статья начинается на стр. 97 (PDF 98), профиль и блок «Magic» — на стр. 98 (PDF 99); описание Чёрного шквала продолжается на стр. 99 (PDF 100)."
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:fthaggua",
+  "kind": "creature",
+  "name": {
+    "ru": "Фтаггуа",
+    "en": "Fthaggua"
+  },
+  "aliases": [
+    "the Blue God",
+    "Child of Cthugha",
+    "the Divine Flame",
+    "Lord of K’Thagg-Ua"
+  ],
+  "category": "mythos_deity",
+  "subcategory": "уникальная сущность",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "characteristics": {
+      "STR": {
+        "raw": "n/a",
+        "value": null
+      },
+      "CON": {
+        "raw": "175",
+        "value": 175
+      },
+      "SIZ": {
+        "raw": "400",
+        "value": 400
+      },
+      "DEX": {
+        "raw": "300",
+        "value": 300
+      },
+      "POW": {
+        "raw": "100",
+        "value": 100
+      }
+    },
+    "averages": false,
+    "hp": {
+      "raw": "57",
+      "value": 57
+    },
+    "mp": {
+      "raw": "20",
+      "value": 20
+    },
+    "damage_bonus": {
+      "raw": "n/a",
+      "value": null
+    },
+    "build": {
+      "raw": "n/a",
+      "value": null
+    },
+    "move": {
+      "raw": "100 flying",
+      "value": 100,
+      "modes": [
+        {
+          "mode": "fly",
+          "value": 100
+        }
+      ]
+    },
+    "armor": {
+      "raw": "None. Immune to mundane weapons (incl. bullets). Water causes 2 damage per gallon, a bucket of sand inflicts 1D3 damage, and a handheld fire extinguisher deals 1D6+1 damage. Electrical attacks of sufficient strength may cause 1D6 damage per round. If reduced to zero hit points, Fthaggua’s fire burns green, then yellow, then white, leaving a meteorite-like sphere behind. It reforms in 50 days.",
+      "value": 0,
+      "note": "неуязвим для обычного оружия; вода — 2 урона за галлон, ведро песка — 1d3, ручной огнетушитель — 1d6+1, сильный ток — 1d6 за раунд; при 0 ПЗ оставляет шар, похожий на метеорит, и воссоздаётся через 50 дней"
+    },
+    "attacks_per_round": {
+      "raw": "1D4+1 (flaming coils)",
+      "value": "1d4+1"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Огненные кольца",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10), damage 4D6 burn",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "4D6 burn",
+          "dice": "4d6",
+          "adds_db": false,
+          "extra": "ожог"
+        },
+        "notes": "мечет или роняет кольца голубого молниеподобного пламени"
+      }
+    ],
+    "skills": [],
+    "spells": {
+      "raw": "Call Cthugha, Incinerate, Power Drain, Summon Fire Vampire, Wither Limb; others as desired by the Keeper."
+    },
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d8",
+        "trigger": "при виде Фтаггуа"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Жар",
+      "summary": "Горит при 1100 °C, поджигает касанием горючее и наносит от 2d6 до 8d6 урона ожогом в зависимости от силы касания."
+    },
+    {
+      "name": "Свита",
+      "summary": "Странствуя между мирами (световой год в день), ведёт с собой 4d10 огненных вампиров и через них общается с людьми, выжигая слова и образы."
+    },
+    {
+      "name": "Выжигание разума",
+      "summary": "Огненный усик обвивает голову и пожирает память; можно уклониться, затем — встречная проверка МОЩ. Проваленная Удача — 4d6 урона, голова сгорает дотла."
+    }
+  ],
+  "description": {
+    "ru": "Огромная масса газообразного голубого пламени с огненным хвостом, как у кометы; верховный жрец и повелитель огненных вампиров.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Считается проводником, сосудом или отпрыском Ктугхи и обитает у Фомальгаута. Фон Юнцт пишет о его изгнании в Ктингу — «комету Норби» у Антареса, которая, по расчётам учёных, приблизится к Земле через четыре столетия. Как отдельное божество его почитают лишь таинственные Учителя Голубого солнца; колдуны призывают его, чтобы обрушить на врагов рой огненных вампиров.",
+    "en": null
+  },
+  "habitat": "у Фомальгаута; по фон Юнцту — в Ктинге («комета Норби»)",
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 84,
+      "printed_page": 83,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Статья и блок «Magic» — на стр. 82 (PDF 83), профиль — на стр. 83 (PDF 84). В тексте мир изгнания назван Ktynga, а затем Keltyss — расхождение книги."
+  }
+}

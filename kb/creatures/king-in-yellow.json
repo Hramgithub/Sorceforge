@@ -101,19 +101,18 @@
           "fifth": 20
         },
         "damage": {
-          "raw": "1d6+БкУ и потеря 1d6 МОЩ",
+          "raw": "1d6+БкУ",
           "dice": "1d6",
-          "adds_db": true,
-          "extra": "потеря 1d6 МОЩ"
+          "adds_db": true
         },
         "notes": "до 6 лоскутов за раунд"
       },
       {
         "name": {
           "ru": "Лицевое щупальце",
-          "en": null
+          "en": "Kiss (mnvr)"
         },
-        "kind": "attack",
+        "kind": "maneuver",
         "skill": "Ближний бой",
         "chance": {
           "raw": "100% (50/20)",
@@ -122,10 +121,10 @@
           "fifth": 20
         },
         "damage": {
-          "raw": "1d10+БкУ и потеря 1d10 МОЩ за раунд, пока щупальце не отцепится",
+          "raw": "потеря 1d10 МОЩ за раунд, пока щупальце не отцепится",
           "dice": "1d10",
-          "adds_db": true,
-          "extra": "потеря 1d10 МОЩ за раунд, пока щупальце не отцепится"
+          "adds_db": false,
+          "extra": "потеря МОЩ, а не ПЗ"
         }
       },
       {
@@ -182,16 +181,16 @@
   "habitat": null,
   "sources": [
     {
-      "book_id": "keeper-rulebook-ru",
-      "physical_page": 299,
-      "printed_page": 320,
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 110,
+      "printed_page": 109,
       "method": "book_text",
       "verified": true
     },
     {
-      "book_id": "malleus-monstrorum-2-en",
-      "physical_page": 110,
-      "printed_page": 109,
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 299,
+      "printed_page": 320,
       "method": "book_text",
       "verified": true
     }
@@ -210,11 +209,32 @@
       "to": "0/0 в маске; 1d3/1d10 без маски",
       "reason": "в данных веб-помощника потеря рассудка обрезана",
       "ref": "checks/20261017-rules-core/report.md, «Существа»"
+    },
+    {
+      "field": "statblock.attacks[0].damage",
+      "from": "1d6+БкУ и потеря 1d6 МОЩ",
+      "to": "1d6+БкУ",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.109"
+    },
+    {
+      "field": "statblock.attacks[1].kind",
+      "from": "attack",
+      "to": "maneuver",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.109"
+    },
+    {
+      "field": "statblock.attacks[1].damage",
+      "from": "1d10+БкУ и потеря 1d10 МОЩ за раунд, пока щупальце не отцепится",
+      "to": "потеря 1d10 МОЩ за раунд, пока щупальце не отцепится",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.109"
     }
   ],
   "quality": {
     "needs_review": false,
     "flags": [],
-    "notes": "в «Malleus Monstrorum» другие значения: Острые лохмотья Fighting 100% (50/20), damage 1D6+1D6 (no POW loss); Лицевое щупальце Kiss (mnvr) 100% (50/20), damage 1D10 POW per round (no physical damage); в записи — значения основного источника (Р-19)"
+    "notes": "ИНТ в Malleus Monstrorum не указан — оставлено значение «Книги хранителя»"
   }
 }

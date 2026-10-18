@@ -100,10 +100,11 @@
           "fifth": 16
         },
         "damage": {
-          "raw": "равен БкУ",
-          "dice": null,
-          "adds_db": true
-        }
+          "raw": "4к6",
+          "dice": "4d6",
+          "adds_db": false
+        },
+        "notes": "когти и укус игнорируют обычную броню"
       },
       {
         "name": {
@@ -123,6 +124,26 @@
           "dice": null,
           "adds_db": false
         }
+      },
+      {
+        "name": {
+          "ru": "Захват (манёвр)",
+          "en": "Grab (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "варьирует (см. примечание)",
+          "dice": null,
+          "adds_db": false
+        },
+        "notes": "в следующем раунде схваченного кусают (6к6), давят (8к6) или отбрасывают (4к6); вырваться — чрезвычайная проверка СИЛ или ЛВК"
       }
     ],
     "skills": [],
@@ -148,24 +169,41 @@
   },
   "sources": [
     {
-      "book_id": "keeper-rulebook-ru",
-      "physical_page": 296,
-      "printed_page": 317,
-      "method": "helper_migration",
-      "verified": true
-    },
-    {
       "book_id": "malleus-monstrorum-2-en",
       "physical_page": 121,
       "printed_page": 120,
       "method": "book_text",
       "verified": true
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 296,
+      "printed_page": 317,
+      "method": "helper_migration",
+      "verified": true
     }
   ],
-  "corrections": [],
+  "corrections": [
+    {
+      "field": "statblock.attacks[0].damage",
+      "from": "равен БкУ",
+      "to": "4к6",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.120"
+    },
+    {
+      "field": "statblock.attacks[2]",
+      "from": null,
+      "to": "Захват (манёвр) 80% (40/16), урон варьирует (см. примечание)",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.120"
+    }
+  ],
   "quality": {
     "needs_review": false,
-    "flags": [],
-    "notes": "в «Malleus Monstrorum» другие значения: Ближний бой 80% (40/16), damage 4D6 (Grab 80%, varies); в записи — значения основного источника (Р-19)"
+    "flags": [
+      "translated"
+    ],
+    "notes": "ИНТ в Malleus Monstrorum не указан — оставлено значение «Книги хранителя»; для порыва ветра Malleus процента не даёт (жертва проходит проверку СИЛ) — оставлено 100% из «Книги хранителя»"
   }
 }

@@ -59,12 +59,16 @@
       "value": 14
     },
     "move": {
-      "raw": "16 / полёт 25",
+      "raw": "16 / плавание 24 / полёт 25",
       "value": 16,
       "modes": [
         {
           "mode": "walk",
           "value": 16
+        },
+        {
+          "mode": "swim",
+          "value": 24
         },
         {
           "mode": "fly",
@@ -73,12 +77,12 @@
       ]
     },
     "armor": {
-      "raw": "30 пунктов (толстая, чешуйчатая, мешковатая шкура)",
+      "raw": "30 пунктов (толстая, чешуйчатая, мешковатая шкура). Регенерирует по 5 ПЗ за раунд",
       "value": 30,
       "note": "толстая, чешуйчатая, мешковатая шкура"
     },
     "attacks_per_round": {
-      "raw": "3",
+      "raw": "3 (когти и/или щупальца) плюс 1к3 (сгребающие щупальца)",
       "value": 3
     },
     "attacks": [
@@ -96,10 +100,49 @@
           "fifth": 20
         },
         "damage": {
-          "raw": "— мгновенная смерть",
-          "dice": null,
+          "raw": "6к6",
+          "dice": "6d6",
           "adds_db": false
         }
+      },
+      {
+        "name": {
+          "ru": "Раздавливание",
+          "en": "Crush"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "100% (50/20)",
+          "value": 100,
+          "half": 50,
+          "fifth": 20
+        },
+        "damage": {
+          "raw": "13к6",
+          "dice": "13d6",
+          "adds_db": false
+        }
+      },
+      {
+        "name": {
+          "ru": "Сгрести (манёвр)",
+          "en": "Gather (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "раздавлен (13к6) или удержан на 1к4 раунда (1к6), затем отпущен",
+          "dice": null,
+          "adds_db": false
+        },
+        "notes": "каждый раунд щупальца хватают 1к3 случайных людей в пределах 10 метров; судьбу схваченного определяет проверка Удачи"
       }
     ],
     "skills": [],
@@ -120,24 +163,69 @@
   },
   "sources": [
     {
-      "book_id": "keeper-rulebook-ru",
-      "physical_page": 305,
-      "printed_page": 326,
-      "method": "helper_migration",
-      "verified": true
-    },
-    {
       "book_id": "malleus-monstrorum-2-en",
       "physical_page": 105,
       "printed_page": 104,
       "method": "book_text",
       "verified": true
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 305,
+      "printed_page": 326,
+      "method": "helper_migration",
+      "verified": true
     }
   ],
-  "corrections": [],
+  "corrections": [
+    {
+      "field": "statblock.move",
+      "from": "16 / полёт 25",
+      "to": "16 / плавание 24 / полёт 25",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.104"
+    },
+    {
+      "field": "statblock.attacks_per_round",
+      "from": "3",
+      "to": "3 (когти и/или щупальца) плюс 1к3 (сгребающие щупальца)",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.104"
+    },
+    {
+      "field": "statblock.attacks[0].damage",
+      "from": "— мгновенная смерть",
+      "to": "6к6",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.104"
+    },
+    {
+      "field": "statblock.attacks[1]",
+      "from": null,
+      "to": "Раздавливание 100% (50/20), урон 13к6",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.104"
+    },
+    {
+      "field": "statblock.attacks[2]",
+      "from": null,
+      "to": "Сгрести (манёвр) 60% (30/12), урон раздавлен (13к6) или удержан на 1к4 раунда (1к6), затем отпущен",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.104"
+    },
+    {
+      "field": "statblock.armor",
+      "from": "30 пунктов (толстая, чешуйчатая, мешковатая шкура)",
+      "to": "30 пунктов (толстая, чешуйчатая, мешковатая шкура). Регенерирует по 5 ПЗ за раунд",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.104"
+    }
+  ],
   "quality": {
     "needs_review": false,
-    "flags": [],
-    "notes": "в «Malleus Monstrorum» другие значения: Скорость 16 / 24 swimming / 25 flying; Атак за раунд 3 (claw and/or tentacle) plus 1D3 (gathering tentacles); Ближний бой 100% (50/20), 6D6; Crush 100% 13D6; Gather 60% (30/12); в записи — значения основного источника (Р-19)"
+    "flags": [
+      "translated"
+    ],
+    "notes": null
   }
 }

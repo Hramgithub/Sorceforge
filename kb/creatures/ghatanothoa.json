@@ -62,12 +62,12 @@
       "value": 14
     },
     "move": {
-      "raw": "9",
-      "value": 9,
+      "raw": "6",
+      "value": 6,
       "modes": [
         {
           "mode": "walk",
-          "value": 9
+          "value": 6
         }
       ]
     },
@@ -77,8 +77,8 @@
       "note": "шкура). Регенерирует по 10 ПЗ за раунд"
     },
     "attacks_per_round": {
-      "raw": "1",
-      "value": 1
+      "raw": "1к4 (щупальца) или 1 (раздавливание)",
+      "value": "1d4"
     },
     "attacks": [
       {
@@ -95,8 +95,47 @@
           "fifth": 16
         },
         "damage": {
-          "raw": "7к6",
+          "raw": "4к6 за щупальце",
+          "dice": "4d6",
+          "adds_db": false
+        }
+      },
+      {
+        "name": {
+          "ru": "Захват (манёвр)",
+          "en": "Grab (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "удержание, 7к6 за раунд",
           "dice": "7d6",
+          "adds_db": false
+        },
+        "notes": "схваченный щупальцем получает 7к6 урона каждый раунд; вырваться — чрезвычайная проверка СИЛ или обычная ЛВК; щупальце отсекается при 6+ урона (учитывая 10 пунктов брони)"
+      },
+      {
+        "name": {
+          "ru": "Раздавливание",
+          "en": "Crush"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "13к6",
+          "dice": "13d6",
           "adds_db": false
         }
       }
@@ -119,17 +158,17 @@
   },
   "sources": [
     {
-      "book_id": "keeper-rulebook-ru",
-      "physical_page": 292,
-      "printed_page": 313,
-      "method": "helper_migration",
-      "verified": true
-    },
-    {
       "book_id": "malleus-monstrorum-2-en",
       "physical_page": 86,
       "printed_page": 85,
       "method": "book_text",
+      "verified": true
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 292,
+      "printed_page": 313,
+      "method": "helper_migration",
       "verified": true
     }
   ],
@@ -140,11 +179,48 @@
       "to": "100",
       "reason": "значение перетекло из соседнего блока характеристик; в книге ИНТ 100 (стр. 293 PDF)",
       "ref": "checks/20261017-rules-core/report.md"
+    },
+    {
+      "field": "statblock.move",
+      "from": "9",
+      "to": "6",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.85"
+    },
+    {
+      "field": "statblock.attacks_per_round",
+      "from": "1",
+      "to": "1к4 (щупальца) или 1 (раздавливание)",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.85"
+    },
+    {
+      "field": "statblock.attacks[0].damage",
+      "from": "7к6",
+      "to": "4к6 за щупальце",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.85"
+    },
+    {
+      "field": "statblock.attacks[1]",
+      "from": null,
+      "to": "Захват (манёвр) 80% (40/16), урон удержание, 7к6 за раунд",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.85"
+    },
+    {
+      "field": "statblock.attacks[2]",
+      "from": null,
+      "to": "Раздавливание 50% (25/10), урон 13к6",
+      "reason": "значение по Malleus Monstrorum 7e (решение владельца Р-22)",
+      "ref": "malleus-monstrorum-2-en p.85"
     }
   ],
   "quality": {
     "needs_review": false,
-    "flags": [],
-    "notes": "в «Malleus Monstrorum» другие значения: Скорость 6; Атак за раунд 1D4 (tentacles) or 1 (crush); Ближний бой 80% (40/16), damage 4D6 per tentacle; Grab 80% 7D6; Crush 50% (25/10) 13D6; в записи — значения основного источника (Р-19)"
+    "flags": [
+      "translated"
+    ],
+    "notes": "ИНТ в Malleus Monstrorum не указан — оставлено значение «Книги хранителя»"
   }
 }

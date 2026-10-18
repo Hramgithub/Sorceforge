@@ -28,13 +28,63 @@ CHAPTER14_OFFSET = 21  # printed page - physical page in chapter 14 (checked on 
 MOVE_MODES = {"полёт": "fly", "плавание": "swim", "рытьё": "burrow", "ходьба": "walk"}
 STOP_HEADS = ("Уклонение", "Броня:", "Навыки:", "Обитает:", "Потеря рассудка:")
 ATTACK = re.compile(r"^(?P<name>[^%]*?)\s*(?P<pct>\d+)%\s*\((?P<h>\d+)\s*/\s*(?P<f>\d+)\)\s*,?\s*(?P<rest>.*)$")
-DICE = re.compile(r"\d+\s*[кd]\s*\d+(?:\s*[+−-]\s*\d+(?!\s*[кd]))?")
+DICE = re.compile(r"\d+\s*[кd]\s*\d+(?:\s*[+−-]\s*\d+(?!\s*[кd/\d]))?")  # "1к6 + 1/2 БкУ" -> "1к6"
 SAN = re.compile(r"(\d+(?:\s*[кd]\s*\d+)?)\s*/\s*(\d+\s*[кd]\s*\d+(?:\s*\+\s*\d+)?|\d+)")
 ROLL = re.compile(r"\b(СИЛ|ВЫН|ТЕЛ|ЛВК|НАР|ИНТ|МОЩ|ОБР)\s+(\d+)\s+(\(?\d+\s*[кd]\s*\d+(?:\s*[+−-]\s*\d+)?\)?\s*[×xх]\s*\d+)")
 CORRECTIONS = {
     "ghatanothoa": [("statblock.characteristics.INT", "210", "100",
                      "значение перетекло из соседнего блока характеристик; в книге ИНТ 100 (стр. 293 PDF)")],
 }
+REF_IMAGES = "checks/20261018-creatures (проверка по изображениям страниц)"
+# Additions found by checking page images (checks/20261018-creatures/verify.jsonl).
+OVERRIDES = {
+    "cho-cho": {
+        "characteristics": {"POW": {"raw": "50", "value": 50}},
+        "fields": {"mp": {"raw": "10", "value": 10}},
+        "skills": [("Запугивание", 40), ("Плавание", 45), ("Скрытность", 60), ("Чтение следов", 50)],
+        "reason": "в данных веб-помощника нет МОЩ, ПМ и навыков; добавлено по книге (стр. 284 PDF)",
+    },
+    "rhan-tegoth": {
+        "name_ru": "Ран-Тигот",
+        "reason": "в книге имя пишется «Ран-Тигот» (стр. 302–303 PDF)",
+        "note": "в книге к ВЫН 300 есть сноска, в запись не перенесена",
+    },
+    "cthugha": {
+        "flag": "incomplete",
+        "note": "в данных веб-помощника нет атаки «Сполох пламени» (стр. 300 PDF); нужно добавить по книге",
+    },
+}
+
+
+def apply_overrides(rec: dict, cid: str) -> None:
+    o = OVERRIDES.get(cid)
+    if not o:
+        return
+    sb = rec["statblock"]
+    for key, val in o.get("characteristics", {}).items():
+        rec["corrections"].append({"field": f"statblock.characteristics.{key}", "from": None, "to": val["raw"],
+                                   "reason": o["reason"], "ref": REF_IMAGES})
+        sb["characteristics"][key] = val
+    for key, val in o.get("fields", {}).items():
+        rec["corrections"].append({"field": f"statblock.{key}", "from": None, "to": val["raw"],
+                                   "reason": o["reason"], "ref": REF_IMAGES})
+        sb[key] = val
+    if o.get("skills"):
+        sb["skills"] = [{"name": n, "value": {"raw": f"{v}%", "value": v}} for n, v in o["skills"]]
+        rec["corrections"].append({"field": "statblock.skills", "from": None,
+                                   "to": ", ".join(f"{n} {v}%" for n, v in o["skills"]),
+                                   "reason": o["reason"], "ref": REF_IMAGES})
+    if o.get("name_ru"):
+        old = rec["name"]["ru"]
+        rec["name"]["ru"] = o["name_ru"]
+        rec["aliases"] = sorted(set(rec["aliases"]) | {old})
+        rec["corrections"].append({"field": "name.ru", "from": old, "to": o["name_ru"], "reason": o["reason"], "ref": REF_IMAGES})
+    q = rec["quality"]
+    if o.get("flag"):
+        q["flags"] = sorted(set(q["flags"]) | {o["flag"]})
+        q["needs_review"] = True
+    if o.get("note"):
+        q["notes"] = "; ".join(x for x in (q.get("notes"), o["note"]) if x)
 
 
 def dice(text: str) -> str:
@@ -258,7 +308,34 @@ def migrate(h: dict) -> dict:
                                                        **({"roll": chars[key]["roll"]} if "roll" in chars.get(key, {}) else {})}
         record["corrections"].append({"field": field, "from": old, "to": new, "reason": reason,
                                       "ref": "checks/20261017-rules-core/report.md"})
+    apply_overrides(record, h["id"])
     return record
+
+
+def mark_verified(out: Path, results: Path | None, verify: Path | None) -> int:
+    """Set sources[0].verified for records whose numbers matched the book (step 3)."""
+    ok: set[str] = set()
+    if results and results.exists():
+        for r in json.loads(results.read_text(encoding="utf-8"))["results"]:
+            if r["status"] == "ok":
+                ok.add(r["id"].split(":")[-1])
+    if verify and verify.exists():
+        for line in verify.read_text(encoding="utf-8").splitlines():
+            if line.strip():
+                v = json.loads(line)
+                if v.get("verdict") == "ok_ocr":
+                    ok.add(v["slug"])
+    n = 0
+    for slug in ok:
+        p = out / f"{slug}.json"
+        if not p.exists():
+            continue
+        rec = json.loads(p.read_text(encoding="utf-8"))
+        if rec["sources"][0]["method"] == "helper_migration" and not rec["sources"][0].get("verified"):
+            rec["sources"][0]["verified"] = True
+            p.write_text(json.dumps(rec, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+            n += 1
+    return n
 
 
 def main() -> None:
@@ -266,6 +343,8 @@ def main() -> None:
     ap.add_argument("--helper", type=Path, required=True)
     ap.add_argument("--examples", type=Path, required=True)
     ap.add_argument("--out", type=Path, required=True)
+    ap.add_argument("--check-results", type=Path, help="checks/20261018-creatures/results.json")
+    ap.add_argument("--verify", type=Path, help="checks/20261018-creatures/verify.jsonl")
     a = ap.parse_args()
     a.out.mkdir(parents=True, exist_ok=True)
     curated = {p.stem for p in a.examples.glob("*.json")}
@@ -281,7 +360,8 @@ def main() -> None:
         rec = migrate(h)
         flagged += bool(rec["quality"]["flags"])
         (a.out / f"{h['id']}.json").write_text(json.dumps(rec, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"creatures: {n}, curated: {len(curated)}, flagged: {flagged}")
+    verified = mark_verified(a.out, a.check_results, a.verify)
+    print(f"creatures: {n}, curated: {len(curated)}, flagged: {flagged}, marked verified: {verified}")
 
 
 if __name__ == "__main__":

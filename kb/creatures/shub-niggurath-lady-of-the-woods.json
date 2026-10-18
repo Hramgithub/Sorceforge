@@ -1,0 +1,223 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:shub-niggurath-lady-of-the-woods",
+  "kind": "creature",
+  "name": {
+    "ru": "Шуб-Ниггурат: Лесная госпожа",
+    "en": "Shub-Niggurath: The Lady of the Woods"
+  },
+  "aliases": [
+    "The Lady of the Woods",
+    "Arwena",
+    "Babalon/Babylon",
+    "Lady of Abominations",
+    "the Huntsman",
+    "the Red Woman"
+  ],
+  "category": "avatar",
+  "subcategory": "аватар Шуб-Ниггурат",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "characteristics": {
+      "STR": {
+        "raw": "100 (150*)",
+        "value": 100
+      },
+      "CON": {
+        "raw": "100",
+        "value": 100
+      },
+      "SIZ": {
+        "raw": "70 (150*)",
+        "value": 70
+      },
+      "DEX": {
+        "raw": "100",
+        "value": 100
+      },
+      "POW": {
+        "raw": "350",
+        "value": 350
+      }
+    },
+    "averages": false,
+    "hp": {
+      "raw": "17 (25*)",
+      "value": 17,
+      "note": "25 в чудовищном облике"
+    },
+    "mp": {
+      "raw": "70",
+      "value": 70
+    },
+    "damage_bonus": {
+      "raw": "+1D6 (+3D6)",
+      "value": "1d6",
+      "note": "+3d6 в чудовищном облике"
+    },
+    "build": {
+      "raw": "2 (4)",
+      "value": 2,
+      "note": "4 в чудовищном облике"
+    },
+    "move": {
+      "raw": "10",
+      "value": 10,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 10
+        }
+      ]
+    },
+    "armor": {
+      "raw": "None. Regenerates 1 hit point per hit point of blood leeched from a human (death at zero hit points). If reduced to zero hit points, in human form, the monstrous form bursts forth (at full hit points) and proceeds to attack anything nearby, fighting for a few rounds before dissolving into the ground. The Lady reforms as desired by Shub-Niggurath after 2D100 days, appearing wherever there is work to be done.",
+      "value": 0,
+      "note": "восстанавливает 1 ПЗ за каждый пункт высосанной у человека крови; при 0 ПЗ в человеческом облике из него вырывается чудовищный облик с полными ПЗ; воссоздаётся через 2d100 дней"
+    },
+    "attacks_per_round": {
+      "raw": "1 (human form) or 2 (monstrous form)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (человеческий облик)",
+          "en": "Fighting (human)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "90% (45/19), damage 1D4+1D6",
+          "value": 90,
+          "half": 45,
+          "fifth": 19
+        },
+        "damage": {
+          "raw": "1D4+1D6",
+          "dice": "1d4",
+          "adds_db": true
+        },
+        "notes": "безоружный удар или оружие; в напечатанном уроне БкУ +1D6 уже учтён"
+      },
+      {
+        "name": {
+          "ru": "Ближний бой (чудовищный облик)",
+          "en": "Fighting (monstrous)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "90% (45/19), damage 1D6+1D6",
+          "value": 90,
+          "half": 45,
+          "fifth": 19
+        },
+        "damage": {
+          "raw": "1D6+1D6",
+          "dice": "2d6",
+          "adds_db": false
+        },
+        "notes": "руки из растительной и животной плоти; напечатано «+1D6», хотя БкУ чудовищного облика +3D6"
+      },
+      {
+        "name": {
+          "ru": "Захват",
+          "en": "Grab (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "90% (45/19), damage 1D6 or bite 1D6+4 (see above)",
+          "value": 90,
+          "half": 45,
+          "fifth": 19
+        },
+        "damage": {
+          "raw": "1D6 or bite 1D6+4 (see above)",
+          "dice": "1d6",
+          "adds_db": false,
+          "extra": "на следующем раунде — сдавливание 1d6 за раунд или укус с высасыванием крови 1d6+4 за раунд"
+        },
+        "notes": "корнеподобные усики в чудовищном облике; вырваться — Экстремальная проверка СИЛ или Трудная ЛВК"
+      }
+    ],
+    "dodge": {
+      "raw": "70% (35/14)",
+      "value": 70,
+      "half": 35,
+      "fifth": 14
+    },
+    "skills": [],
+    "spells": {
+      "raw": "Augury, Awaken the Beast, Bind Soul, Cloud Memory, Command Animal, Command Plants, Control Elements, Dampen Light, Enthrall Victim, Fury, Healing (variant), Human Shrub, The Red Sign, Return of the Beloved, Summon/Bind Dark Young; others as the Keeper desires."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "0",
+        "trigger": "при встрече с Лесной госпожой"
+      },
+      {
+        "success": "1d4",
+        "fail": "1d8",
+        "trigger": "при виде Лесной госпожи без маски, в чудовищном облике"
+      },
+      {
+        "success": "1",
+        "fail": "1d6+1",
+        "trigger": "когда аватар сбрасывает человеческий облик (сила «Мыслеобраз»)"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Чудовищный облик",
+      "summary": "Может сбросить человеческую личину и стать чудовищным гуманоидом из корней, плоти и мёртвой материи: СИЛ 150, СИЗ 150, ПЗ 25, БкУ +3d6, комплекция 4, 2 атаки за раунд."
+    },
+    {
+      "name": "Мыслеобраз",
+      "summary": "Облик аватара берётся из сознания смотрящих: каждый видит воплощение своего идеала привлекательности, мужское или женское."
+    },
+    {
+      "name": "Приказ",
+      "summary": "Люди, к которым она обращается, повинуются вплоть до самоуничтожения; сопротивление — Экстремальная проверка МОЩ, дальше 100 м — Трудная, дальше 1,6 км — обычная, дальше двух миль сила не действует."
+    },
+    {
+      "name": "Разгул",
+      "summary": "Люди, видящие или слышащие её, сбрасывают моральные и законные запреты; чем дольше она рядом, тем сильнее распад вплоть до кровавой резни. Сопротивление — Трудная проверка МОЩ (на окраине — обычная)."
+    }
+  ],
+  "description": {
+    "ru": "Человекоподобный аватар Шуб-Ниггурат — высокая, уверенная, ослепительно привлекательная женщина (иногда мужчина), олицетворение огня, страсти и крайностей.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Является чаще всего там, где призыв Шуб-Ниггурат не удался или где уже остался её след, и доводит местных жителей до разгула и гибели, готовя людей стать «как Древние». Её отождествляли с Бабалон, Вавилонской блудницей и Исидой. Ей поклоняются небольшие культы — Красное сестринство, Пылающие сердца и расчётливые Дочери крови.",
+    "en": null
+  },
+  "habitat": "глухие леса; любые места, где есть работа для неё",
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 195,
+      "printed_page": 194,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Статья начинается на стр. 192 (PDF 193), профиль — на стр. 194 (PDF 195), окончание способностей — на стр. 195 (PDF 196). Основной облик записи — человеческий; значения чудовищного облика (в скобках) — в способностях. Опечатки книги: у трёх атак напечатано «90% (45/19)» — пятая часть от 90 равна 18; урон чудовищного облика «1D6+1D6» не соответствует его БкУ +3D6. Значения оставлены как напечатано."
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:trunembra",
+  "kind": "creature",
+  "name": {
+    "ru": "Тру'нембра",
+    "en": "Tru’nembra"
+  },
+  "aliases": [
+    "Angel of Music",
+    "Azathoth’s Lullaby",
+    "the Discordance"
+  ],
+  "category": "mythos_deity",
+  "subcategory": "Внешний бог",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "characteristics": {
+      "STR": {
+        "raw": "n/a",
+        "value": null
+      },
+      "CON": {
+        "raw": "n/a",
+        "value": null
+      },
+      "SIZ": {
+        "raw": "n/a",
+        "value": null
+      },
+      "DEX": {
+        "raw": "n/a",
+        "value": null
+      },
+      "POW": {
+        "raw": "300",
+        "value": 300
+      }
+    },
+    "averages": false,
+    "hp": {
+      "raw": "60",
+      "value": 60
+    },
+    "mp": {
+      "raw": "60",
+      "value": 60
+    },
+    "damage_bonus": {
+      "raw": "n/a",
+      "value": null
+    },
+    "build": {
+      "raw": "n/a",
+      "value": null
+    },
+    "move": {
+      "raw": "speed of sound",
+      "value": null,
+      "modes": [
+        {
+          "mode": "other",
+          "value": null,
+          "note": "со скоростью звука"
+        }
+      ]
+    },
+    "armor": {
+      "raw": "None. Immune to all physical attacks (incl. enchanted weapons). Certain artifacts may limit or negate Tru’nembra’s powers, or cause the Outer God harm. Certain spells and magically infused music (instrument or voice) may temporarily ward off, harm, or dispel Tru’nembra. If reduced to zero hit points, or dispelled, Tru’nembra’s music ceases, leaving only a deathly quiet. It reforms close to Azathoth within 24 hours.",
+      "value": 0,
+      "note": "неуязвим для любых физических атак, включая зачарованное оружие; вредить ему могут некоторые артефакты, заклинания и магическая музыка; при 0 ПЗ или изгнании воссоздаётся у Азатота за 24 часа"
+    },
+    "attacks_per_round": {
+      "raw": "1 (sonic wave)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Звуковая волна",
+          "en": "Fighting"
+        },
+        "kind": "special",
+        "skill": null,
+        "chance": {
+          "raw": "automatic, based on magic points expended (see above)",
+          "value": null,
+          "half": null,
+          "fifth": null
+        },
+        "damage": {
+          "raw": "based on magic points expended",
+          "dice": null,
+          "adds_db": false,
+          "extra": "число ПМ = грани кубика (4 ПМ — 1d4, 6 — 1d6, 10 — 1d10); за 100 ПМ — 1d100, каждые следующие 100 ПМ — ещё +1d100"
+        },
+        "notes": "поражает всё живое в радиусе 100 м, бьёт стёкла и кирпич; иначе физически не взаимодействует"
+      }
+    ],
+    "skills": [],
+    "spells": {
+      "raw": "none."
+    },
+    "sanity_loss": [
+      {
+        "success": "1d4",
+        "fail": "2d10",
+        "trigger": "услышав или ощутив Тру'нембру (ближе 1,6 км)"
+      },
+      {
+        "success": "1d2",
+        "fail": "1d10",
+        "trigger": "в пределах 1,6 км"
+      },
+      {
+        "success": "1",
+        "fail": "1d6",
+        "trigger": "в пределах 5 км"
+      },
+      {
+        "success": "0",
+        "fail": "1d4",
+        "trigger": "в пределах 8 км"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Симфоническое явление",
+      "summary": "Никогда не умолкает: даже тихая музыка слышна в голове за 8 км, и каждый слышащий проверяет Рассудок, потери растут с приближением. Беруши могут уменьшить потери вдвое, но полностью защищает лишь магия."
+    },
+    {
+      "name": "Звуковая волна",
+      "summary": "Раз в раунд посылает звук, ранящий всё живое в радиусе 100 м: урон зависит от потраченных ПМ (4 ПМ — 1d4 … 10 ПМ — 1d10); за 100 ПМ — 1d100 урона, гнёт сталь и рушит здания, каждые 100 ПМ сверх этого — ещё +1d100."
+    },
+    {
+      "name": "Скорость звука",
+      "summary": "Перемещается со скоростью звука."
+    }
+  ],
+  "description": {
+    "ru": "Бесплотная сущность из живого звука — непрерывная, то нарастающая, то стихающая музыка, полная диссонансов и глубокого пульсирующего ритма; её присутствие ощущается как дрожь воздуха.",
+    "en": null
+  },
+  "legend": {
+    "ru": "По «Некрономикону», главный из музыкантов, поддерживающих сон Азатота Музыкой сфер; для него тишина — смерть. «Пнакотические рукописи» приписывают ему звук, разрушивший тюрьмы летающих полипов. Организованного культа нет: его музыка проникает в сны одарённых музыкантов (возможно, Эриха Цанна), которые записывают её и сходят с ума.",
+    "en": null
+  },
+  "habitat": "двор Азатота в центре мироздания",
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 203,
+      "printed_page": 202,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Статья начинается на стр. 201 (PDF 202), профиль — на стр. 202 (PDF 203), рассудок, «Magic» и способности — на стр. 203 (PDF 204). Характеристики СИЛ/ВЫН/СИЗ/ЛВК — n/a. Потеря Рассудка в книге: «1D4/2D10 Sanity points to hear or experience Tru’nembra», с градацией по расстоянию в силе «Symphonic Manifestation». Профиль ссылается на Sonic Wave «(see above)», хотя описание силы дано дальше, на следующей странице."
+  }
+}

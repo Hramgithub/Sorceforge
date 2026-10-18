@@ -1,0 +1,228 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:shub-niggurath-great-god-pan",
+  "kind": "creature",
+  "name": {
+    "ru": "Шуб-Ниггурат: Великий бог Пан",
+    "en": "Shub-Niggurath: The Great God Pan"
+  },
+  "aliases": [
+    "The Great God Pan",
+    "Horned One",
+    "Goat Eyes",
+    "Lord of the Forest",
+    "Wood Talker"
+  ],
+  "category": "avatar",
+  "subcategory": "аватар Шуб-Ниггурат",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "characteristics": {
+      "STR": {
+        "raw": "100",
+        "value": 100
+      },
+      "CON": {
+        "raw": "100",
+        "value": 100
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "80",
+        "value": 80
+      },
+      "POW": {
+        "raw": "350",
+        "value": 350
+      }
+    },
+    "averages": false,
+    "hp": {
+      "raw": "n/a / 16 / 30",
+      "value": 16,
+      "note": "бесформенный / сатир / чудовищный; в записи — облик сатира"
+    },
+    "mp": {
+      "raw": "70",
+      "value": 70
+    },
+    "damage_bonus": {
+      "raw": "n/a / +1D4 / +4D6",
+      "value": "1d4"
+    },
+    "build": {
+      "raw": "n/a / 1 / 5",
+      "value": 1
+    },
+    "move": {
+      "raw": "10 / 10 / 8",
+      "value": 10,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 10
+        }
+      ]
+    },
+    "armor": {
+      "raw": "None. Only magical attacks/spells may dispel or bind the avatar’s formless aspect. If reduced to zero hit points, in satyr form the avatar’s body disintegrates to the ground and then reforms in its monstrous aspect. If the monstrous aspect is destroyed, its constituent parts fall to the ground and the avatar fades from this reality. It reforms as desired by Shub-Niggurath after 4D100 days, appearing wherever there is work to be done.",
+      "value": 0,
+      "note": "бесформенный облик развеять или связать можно только магией; при 0 ПЗ сатир рассыпается и восстаёт в чудовищном облике; после гибели чудовищного облика воссоздаётся через 4d100 дней"
+    },
+    "attacks_per_round": {
+      "raw": "1 (formless) or 2 (satyr) or 4 (monstrous)",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (сатир)",
+          "en": "Fighting (satyr)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "70% (35/14), damage 1D6+1D4",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "1D6+1D4",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "notes": "копыта, кулаки, укус; в напечатанном уроне БкУ +1D4 уже учтён"
+      },
+      {
+        "name": {
+          "ru": "Ближний бой (чудовищный облик)",
+          "en": "Fighting (monstrous)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "80% (40/16), damage 2D6",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "2D6",
+          "dice": "2d6",
+          "adds_db": false
+        },
+        "notes": "лозоподобные щупальца; только в чудовищном облике"
+      },
+      {
+        "name": {
+          "ru": "Натиск и сокрушение (чудовищный облик)",
+          "en": "Charge & Crush (monstrous)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "60% (40/16), damage 4D6",
+          "value": 60,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "4D6",
+          "dice": "4d6",
+          "adds_db": false
+        },
+        "notes": "до четырёх стоящих рядом целей; только в чудовищном облике"
+      }
+    ],
+    "dodge": {
+      "raw": "60% (30/12)",
+      "value": 60,
+      "half": 30,
+      "fifth": 12
+    },
+    "skills": [],
+    "spells": {
+      "raw": "Awaken the Beast, Call Lightning, Control Elements, The Red Sign, Summon/Bind Dark Young, Wrack; others as the Keeper desires."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d4",
+        "trigger": "услышав бесформенный голос Пана"
+      },
+      {
+        "success": "1",
+        "fail": "1d6",
+        "trigger": "при встрече с Паном в облике сатира"
+      },
+      {
+        "success": "1d10",
+        "fail": "1d100",
+        "trigger": "при виде чудовищного облика"
+      },
+      {
+        "success": "0",
+        "fail": "1d8",
+        "trigger": "услышав его сводящую с ума музыку"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Тройственный облик",
+      "summary": "Естественное состояние — бесформенное (характеристики n/a, Скорость 10): обитает в растениях, не сражается физически, но творит заклинания. Может воплотиться сатиром или чудовищной массой из корней, плоти и мёртвой материи (СИЛ 200, ВЫН 100, СИЗ 200, ЛВК 50, ПЗ 30, БкУ +4d6, комплекция 5, Скорость 8, 4 атаки за раунд)."
+    },
+    {
+      "name": "Сводящая с ума музыка",
+      "summary": "Его музыка вызывает ужас (Рассудок 0/1d8); при провале с критической неудачей — проверка ВЫН, и её критический провал означает смерть от разрыва сердца."
+    },
+    {
+      "name": "Чарующая музыка",
+      "summary": "Вместо страха музыка может очаровать: провал проверки МОЩ — неудержимый танец до изнеможения, критический провал — рабство на 1d6 дней (Трудная проверка МОЩ раз в день). Товарищи могут привести в чувство, нанеся хотя бы 1 урон."
+    },
+    {
+      "name": "Власть над природой",
+      "summary": "Искажает и подчиняет себе окрестных животных и растения, порождая чудовищ."
+    },
+    {
+      "name": "Разгул",
+      "summary": "Люди в пределах 10 м теряют моральные и законные запреты и склонны к насилию; защищает Трудная проверка МОЩ."
+    }
+  ],
+  "description": {
+    "ru": "«Мужской» аспект Шуб-Ниггурат, воплощение дикой природы: бесформенный дух растений, который лепит себе тело сатира — мускулистый торс, козлиные ноги, рога, остроконечные уши и козьи глаза с горизонтальными зрачками.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Джером Макласки в книге «Среди народа зелёной чащи» (Йорк, 1872) описывает встречу с Паном внутри огромного дуба и шесть месяцев беспамятства в Нью-Форесте. Союзы Пана с людьми дают «подменышей» с нечеловеческими силами. Организованного культа нет, но фанатичные группы — Зелёная рука, Братство дуба, Пожиратели земли — живут в глуши, справляя кровавые обряды и практикуя каннибализм.",
+    "en": null
+  },
+  "habitat": "древние леса и глухие места",
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 197,
+      "printed_page": 196,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Статья начинается на стр. 195 (PDF 196), профиль — на стр. 196 (PDF 197), окончание способностей — на стр. 197 (PDF 198). Таблица из трёх колонок (formless / satyr / monstrous): в записи — облик сатира, бесформенный и чудовищный облики — в способностях; raw производных значений — все три колонки, как напечатано. Опечатка книги: «Charge & Crush 60% (40/16)» — для 60% должно быть (30/12); оставлено как напечатано."
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:shub-niggurath-keeper-of-the-moon-lens",
+  "kind": "creature",
+  "name": {
+    "ru": "Шуб-Ниггурат: Страж Лунной линзы",
+    "en": "Shub-Niggurath: The Keeper of the Moon-Lens"
+  },
+  "aliases": [
+    "The Keeper of the Moon-Lens"
+  ],
+  "category": "avatar",
+  "subcategory": "аватар Шуб-Ниггурат",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "characteristics": {
+      "STR": {
+        "raw": "275",
+        "value": 275
+      },
+      "CON": {
+        "raw": "300",
+        "value": 300
+      },
+      "SIZ": {
+        "raw": "400",
+        "value": 400
+      },
+      "DEX": {
+        "raw": "80",
+        "value": 80
+      },
+      "POW": {
+        "raw": "350",
+        "value": 350
+      }
+    },
+    "averages": false,
+    "hp": {
+      "raw": "70",
+      "value": 70
+    },
+    "mp": {
+      "raw": "70",
+      "value": 70
+    },
+    "damage_bonus": {
+      "raw": "+7D6",
+      "value": "7d6"
+    },
+    "build": {
+      "raw": "8",
+      "value": 8
+    },
+    "move": {
+      "raw": "12",
+      "value": 12,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 12
+        }
+      ]
+    },
+    "armor": {
+      "raw": "None. Mundane weapons (incl. bullets) inflict a single point of damage (two points if successfully impaling). Regenerates 1D10 hit points round (death at zero hit points). If reduced to zero hit points, the Keeper of the Moon-Lens bursts and its bodily fluids wash into the ground. It reforms in 4D100+100 years within its lair.",
+      "value": 0,
+      "note": "обычное оружие наносит 1 урон (2 при пронзании); регенерирует 1d10 ПЗ за раунд; при 0 ПЗ лопается и воссоздаётся в логове через 4d100+100 лет"
+    },
+    "attacks_per_round": {
+      "raw": "1 (bite, swallow, strike, or crush)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "90% (45/18), damage 3D6",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        },
+        "damage": {
+          "raw": "3D6",
+          "dice": "3d6",
+          "adds_db": false
+        },
+        "notes": "укус клювом или удар ногами и шипами"
+      },
+      {
+        "name": {
+          "ru": "Проглатывание",
+          "en": "Swallow (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "90% (45/18), swallowed (see above)",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        },
+        "damage": {
+          "raw": "swallowed (see above)",
+          "dice": null,
+          "adds_db": false,
+          "extra": "жертва заключена в студенистой голове до поедания или превращения"
+        },
+        "notes": "вместо укуса; физические проверки внутри головы — со штрафной костью; 10+ урона голове открывает путь наружу (товарищи бьют со штрафной костью); дышать в студне можно"
+      },
+      {
+        "name": {
+          "ru": "Сокрушение",
+          "en": "Crush (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "90% (45/18), damage 7D6",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        },
+        "damage": {
+          "raw": "7D6",
+          "dice": "7d6",
+          "adds_db": false
+        },
+        "notes": "обрушивается всей массой на группу до четырёх стоящих рядом целей"
+      }
+    ],
+    "skills": [],
+    "spells": {
+      "raw": "Call Lightning, Control Elements, The Red Sign, Summon/Bind Dark Young, Wrack; others as the Keeper desires."
+    },
+    "sanity_loss": [
+      {
+        "success": "1d8",
+        "fail": "4d10",
+        "trigger": "при виде Стража Лунной линзы"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Превращение",
+      "summary": "«Съеденных» аватар может превратить в гоф'нн хупадгх и выпустить, обычно у серого конического камня в лесах вокруг Гоутсвуда; такие люди навсегда безумны. Съеден или превращён сыщик — решает Хранитель (можно проверкой Удачи)."
+    }
+  ],
+  "description": {
+    "ru": "Мертвенно-белое многоногое создание с присосками вместо ступней и тремя изогнутыми шипами на спине; студенистая голова из толстых мясистых колец усеяна плачущими глазами и увенчана щёлкающим зубастым клювом.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Обитает под Гоутсвудом в долине Северна, в сети древних туннелей. На праздниках лунный свет, пройдя через линзу и зеркала металлического пилона Лунной линзы на городской площади, призывает его принять жертвы; некоторые проглоченные возвращаются сатироподобными существами. Весь город, по-видимому, входит в Культ Чёрной Козы; ми-го тоже знают этого аватара. Возможно, это осколок Шуб-Ниггурат, оставшийся после древнего призыва.",
+    "en": null
+  },
+  "habitat": "туннели под Гоутсвудом (долина Северна, Англия)",
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 199,
+      "printed_page": 198,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Статья начинается на стр. 197 (PDF 198), профиль и врезка «Goatswood» (описание города, без характеристик) — на стр. 198 (PDF 199), рассудок, «Magic» и способности — на стр. 199 (PDF 200). Другие имена в книге: «none known». Мелкие опечатки книги: «Regenerates 1D10 hit points round» (пропущено per); во врезке «Seven Valley» вместо Severn Valley."
+  }
+}

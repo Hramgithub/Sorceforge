@@ -1,0 +1,199 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:sebek",
+  "kind": "creature",
+  "name": {
+    "ru": "Себек",
+    "en": "Sebek"
+  },
+  "aliases": [
+    "the Cunning One",
+    "the Scaled One",
+    "Sol-b’ak",
+    "S’se-b’lok"
+  ],
+  "category": "mythos_deity",
+  "subcategory": "малый Древний / уникальная сущность",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "characteristics": {
+      "STR": {
+        "raw": "265",
+        "value": 265
+      },
+      "CON": {
+        "raw": "325",
+        "value": 325
+      },
+      "SIZ": {
+        "raw": "95 (125*)",
+        "value": 95
+      },
+      "DEX": {
+        "raw": "125",
+        "value": 125
+      },
+      "POW": {
+        "raw": "135",
+        "value": 135
+      }
+    },
+    "averages": false,
+    "hp": {
+      "raw": "45",
+      "value": 45
+    },
+    "mp": {
+      "raw": "27 (60)**",
+      "value": 27,
+      "note": "от природы 27 ПМ, но после недавнего питания в среднем 60"
+    },
+    "damage_bonus": {
+      "raw": "+3D6 (+4D6*)",
+      "value": "3d6",
+      "note": "+4d6 в облике чудовищного ящера"
+    },
+    "build": {
+      "raw": "5 (6*)",
+      "value": 5,
+      "note": "6 в облике чудовищного ящера"
+    },
+    "move": {
+      "raw": "14",
+      "value": 14,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 14
+        }
+      ]
+    },
+    "armor": {
+      "raw": "4-point magical ward in human-crocodile form; 8-point hide in monstrous form, and while incorporeal Sebek cannot be harmed by mundane weapons (incl. bullets). Regenerates 1 hit point per magic point spent in healing itself (death at zero hit points). If reduced to zero hit points, Sebek physical form turns to dust, or, if incorporeal, a wave of cold is felt. It reforms in 1,000 years.",
+      "value": 4,
+      "note": "4 — магическая защита в облике человека-крокодила, 8 — шкура в облике чудовища; бесплотного не ранит обычное оружие; лечит 1 ПЗ за 1 ПМ; воссоздаётся через 1000 лет"
+    },
+    "attacks_per_round": {
+      "raw": "1 (incorporeal), 2 (human-reptilian form), or 4 (monstrous form)",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "80% (40/16), damage 3D6 (4D6 if monstrous)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "3D6 (4D6 if monstrous)",
+          "dice": "3d6",
+          "adds_db": false,
+          "extra": "4d6 в облике чудовища"
+        },
+        "notes": "когти и укус; только в телесном облике"
+      },
+      {
+        "name": {
+          "ru": "Вихревая атака",
+          "en": "Vortex Attack"
+        },
+        "kind": "special",
+        "skill": null,
+        "chance": {
+          "raw": "Everything within the vortex suffers 1D100 damage.",
+          "value": null,
+          "half": null,
+          "fifth": null
+        },
+        "damage": {
+          "raw": "1D100",
+          "dice": "1d100",
+          "adds_db": false,
+          "extra": "20 ПМ — зона 5 м в диаметре, 40 ПМ — 10 м и т. д."
+        },
+        "notes": "доступна и в бесплотном облике; внимательные сыщики могут заметить признаки и отпрыгнуть"
+      }
+    ],
+    "skills": [],
+    "spells": {
+      "raw": "Animate Mummy, Appear Human (variant), Bind Enemy, Bring Haboob, Contact Lloigor, Create Child of the Sphinx, Implant Fear, Parting Sands; others as the Keeper desires."
+    },
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d8",
+        "trigger": "при встрече с Себеком в телесном облике"
+      },
+      {
+        "success": "0",
+        "fail": "1d4",
+        "trigger": "при встрече с бесплотным Себеком"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Облик",
+      "summary": "Обычно бесплотен; по желанию принимает облик человека с головой крокодила или чудовищного искажённого ящера (СИЗ 125, БкУ +4d6, комплекция 6, 4 атаки за раунд, броня 8, урон 4d6). Тело может сохранять сколь угодно долго или развеять."
+    },
+    {
+      "name": "Поглощение жизненной силы",
+      "summary": "Выпивает 1d10 ПМ у человека в пределах 20 м, а у спящих людей на расстоянии нескольких миль — по 1d6 ПМ за ночь, как ллойгор. ПМ не восстанавливаются, пока жертва не пройдёт проверку ВЫН (раз в день); опустошённые до нуля впадают в беспробудный сон и умирают."
+    },
+    {
+      "name": "Повелевание животными",
+      "summary": "За 1 ПМ на животное управляет любыми животными в пределах 50 м, предпочитая рептилий."
+    },
+    {
+      "name": "Мысленный контакт",
+      "summary": "За 1 ПМ посылает мысли человеку в пределах 32 км (сопротивление — Экстремальная проверка МОЩ); контакт стоит 1/1d4 Рассудка."
+    },
+    {
+      "name": "Воскрешение",
+      "summary": "За 10 ПМ возвращает к жизни низшее существо, ещё за 5 ПМ дарует бессмертие; воскрешённый человек сразу теряет 2d10 Рассудка."
+    },
+    {
+      "name": "Телекинез",
+      "summary": "За 5 ПМ создаёт в пределах 60 м силу, равную СИЛ 10; каждые следующие 5 ПМ добавляют ещё 10 СИЛ."
+    }
+  ],
+  "description": {
+    "ru": "Трёхметровый гуманоид с крокодильей, почти драконьей головой, длинными руками с когтями, глубоко посаженными изумрудными глазами и влажной зелёной чешуёй.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Возможно, мутировавший или очень древний ллойгор, выдававший себя за египетского Собека, чтобы питаться верой и жизненной силой поклонников. Культ учил о воскрешении и бессмертии; жрецы носили золотые крокодильи маски. С упадком Египта Себек покинул Землю ради иной пищи. Основной источник — «De Vermis Mysteriis» Людвига Принна с обрядом временного призыва.",
+    "en": null
+  },
+  "habitat": "вне Земли; гробницы культа в Египте и за его пределами",
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 189,
+      "printed_page": 188,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "В заголовке — Lesser Old One/Unique Entity, в указателе «Deities by Type» — Great Old One. Статья начинается на стр. 186 (PDF 187), рассудок, «Magic» и способности — на стр. 187 (PDF 188), профиль — на стр. 188 (PDF 189). В записи основной облик — человек-крокодил; значения чудовищного облика (в скобках) — в способностях. Несоответствие книги: ПЗ 45 соответствуют (ВЫН 325 + СИЗ 125)/10, т. е. облику ящера; для СИЗ 95 было бы 42 — оставлено напечатанное значение."
+  }
+}

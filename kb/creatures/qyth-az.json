@@ -1,0 +1,187 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:qyth-az",
+  "kind": "creature",
+  "name": {
+    "ru": "К'ит-аз",
+    "en": "Q’yth-az"
+  },
+  "aliases": [
+    "Crystalloid Intellect",
+    "the Singing Crystal",
+    "Voice of the Stones"
+  ],
+  "category": "mythos_deity",
+  "subcategory": "Великий Древний",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "characteristics": {
+      "STR": {
+        "raw": "1,000",
+        "value": 1000
+      },
+      "CON": {
+        "raw": "475",
+        "value": 475
+      },
+      "SIZ": {
+        "raw": "575",
+        "value": 575
+      },
+      "DEX": {
+        "raw": "30",
+        "value": 30
+      },
+      "POW": {
+        "raw": "125",
+        "value": 125
+      }
+    },
+    "averages": false,
+    "hp": {
+      "raw": "105",
+      "value": 105
+    },
+    "mp": {
+      "raw": "25",
+      "value": 25
+    },
+    "damage_bonus": {
+      "raw": "+19D6",
+      "value": "19d6"
+    },
+    "build": {
+      "raw": "10",
+      "value": 10
+    },
+    "move": {
+      "raw": "0 (unable to move)",
+      "value": 0,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 0,
+          "note": "неподвижен"
+        }
+      ]
+    },
+    "armor": {
+      "raw": "15-point hard crystal. Regenerates 1D10 hit points per round (death at zero hit points). Susceptible to sound; a sustained sound level (circa 200+ decibels) may be enough to cause the Old One’s form to shatter, while also permanently damaging any human hearing it. If reduced to zero hit points, Q’yth-az form is shattered into millions of pieces. Each piece may be regrown into the Old One over the course of one million years.",
+      "value": 15,
+      "note": "регенерирует 1d10 ПЗ за раунд; уязвим к звуку (около 200+ дБ может его расколоть); при 0 ПЗ разлетается на миллионы осколков, каждый из которых за миллион лет может вырасти в бога"
+    },
+    "attacks_per_round": {
+      "raw": "1D6 (strike, batter, crush)",
+      "value": "1d6"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "80% (40/16), damage 9D6 + touch (see above)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "9D6 + touch (see above)",
+          "dice": "9d6",
+          "adds_db": false,
+          "extra": "касание: при провале Экстремальной проверки МОЩ задетая плоть превращается в минерал"
+        },
+        "notes": "кристаллические наросты — острые щупальца или тяжёлые шары"
+      },
+      {
+        "name": {
+          "ru": "Сокрушение",
+          "en": "Crush (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "80% (40/16), damage 19D6 + touch (see above)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "19D6 + touch (see above)",
+          "dice": "19d6",
+          "adds_db": false,
+          "extra": "жертва превращается в кристалл и разбивается, как стекло"
+        },
+        "notes": "щупальцеобразные отростки обвивают цель"
+      }
+    ],
+    "skills": [],
+    "spells": {
+      "raw": "Bait Human (variant), Enthrall Victim, Mental Suggestion, Send Dream; others as desired by the Keeper."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "при получении послания от К'ит-аза"
+      },
+      {
+        "success": "1d6",
+        "fail": "2d10",
+        "trigger": "в присутствии К'ит-аза"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Каменеющее касание",
+      "summary": "Живые ткани, которых коснулись его отростки, превращаются в минерал при провале Экстремальной проверки МОЩ; поражённая часть тела мертва и подлежит ампутации (место попадания — по таблице, проверка Удачи — задета ли плоть, а не одежда)."
+    },
+    {
+      "name": "Призыв",
+      "summary": "Может явиться на Земле лишь при ясном небе, когда виден пояс Ориона."
+    },
+    {
+      "name": "Кристаллическая связь",
+      "summary": "За 1 ПМ на линию связи передаёт мысли через любые минеральные образования в космосе; люди с МОЩ 50+, касающиеся кристаллов, слышат его во снах или наяву (Рассудок 0/1d6)."
+    },
+    {
+      "name": "Преображение плоти",
+      "summary": "Психически превращает плоть человека в кристалл (сопротивление — Трудная проверка МОЩ). Преображённый теряет Рассудок (1d4/1d8, затем 1d4 в день), получает броню 8 и удар 1d6+БкУ, а в итоге становится слугой К'ит-аза или безумной тварью."
+    }
+  ],
+  "description": {
+    "ru": "Исполинская колонна из сросшихся кристаллов, которые непрерывно растут и распадаются, пульсируя ослепительным внутренним светом; некоторые кристаллы вытягиваются в щупальцевидные отростки.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Неподвижно укоренён на тёмном мире Мтура близ Альнилама в Орионе. Известен как Голос Камней: общается через любые кристаллы, а отколотые части его массы могут прорастать на других мирах. Человеческого культа нет; эдвардианский коллекционер минералов Говард Лонгбридж, оставивший «Дневники Лонгбриджа», исчез в 1907 году — возможно, «став единым» с К'ит-азом.",
+    "en": null
+  },
+  "habitat": "мир Мтура близ Альнилама (созвездие Ориона)",
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 180,
+      "printed_page": 179,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Статья начинается на стр. 178 (PDF 179), профиль — на стр. 179 (PDF 180), рассудок, «Magic» и способности — на стр. 180 (PDF 181). Опечатки книги: ссылка на таблицу мест попадания «page @@» (номер страницы не проставлен); урон Ближнего боя 9D6 при БкУ +19D6 — как напечатано."
+  }
+}

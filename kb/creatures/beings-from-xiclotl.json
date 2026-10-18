@@ -1,0 +1,200 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:beings-from-xiclotl",
+  "kind": "creature",
+  "name": {
+    "ru": "Существо с Ксиклотля",
+    "en": "Beings from Xiclotl"
+  },
+  "aliases": [
+    "Tree Monsters",
+    "Xiclotlans"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "раса служителей (насекомых с Шаггаи) / независимая раса",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "170",
+        "value": 170,
+        "roll": "(4d6+20)×5"
+      },
+      "CON": {
+        "raw": "170",
+        "value": 170,
+        "roll": "(4d6+20)×5"
+      },
+      "SIZ": {
+        "raw": "220",
+        "value": 220,
+        "roll": "(4d6+30)×5"
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70,
+        "roll": "4d6×5"
+      },
+      "INT": {
+        "raw": "35",
+        "value": 35,
+        "roll": "2d6×5"
+      },
+      "POW": {
+        "raw": "60",
+        "value": 60,
+        "roll": "(2d6+5)×5"
+      }
+    },
+    "hp": {
+      "raw": "39",
+      "value": 39
+    },
+    "mp": {
+      "raw": "12",
+      "value": 12
+    },
+    "damage_bonus": {
+      "raw": "+4D6",
+      "value": "4d6"
+    },
+    "build": {
+      "raw": "5",
+      "value": 5
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "armor": {
+      "raw": "6-point hide; cold-based attacks deal double damage.",
+      "value": 6,
+      "note": "атаки холодом наносят двойной урон"
+    },
+    "attacks_per_round": {
+      "raw": "6 (strike, seize, rip)",
+      "value": 6
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (удар ветвью)",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10), damage DB",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "DB",
+          "dice": null,
+          "adds_db": true
+        },
+        "notes": "может бить всеми шестью ветвями за раунд; каждая наносит половину БкУ"
+      },
+      {
+        "name": {
+          "ru": "Захват (манёвр)",
+          "en": "Seize (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10), held, may be devoured or crushed (see above)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "held, may be devoured or crushed (see above)",
+          "dice": null,
+          "adds_db": false,
+          "extra": "пожирание 1d6 за раунд или раздавливание (урон = БкУ); существо до половины ТЕЛ может быть проглочено (БкУ урона за раунд)"
+        },
+        "notes": "вырваться — встречный бросок ЛВК или СИЛ; получив 6+ урона за раунд, отпускает жертву"
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "skills": [
+      {
+        "name": "Скрытность (лес)",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      }
+    ],
+    "spells": {
+      "raw": "none."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "при встрече с существом с Ксиклотля"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Шесть ветвей",
+      "summary": "За раунд может бить, рвать и хватать всеми шестью ветвеподобными руками; каждая наносит половину бонуса к урону."
+    },
+    {
+      "name": "Захват и пожирание",
+      "summary": "Схваченную жертву подносит ко рту и пожирает (1d6 за раунд) или раздавливает (урон = БкУ); существо до половины своего ТЕЛ может проглотить целиком. Получив 6+ урона за раунд, отпускает добычу."
+    },
+    {
+      "name": "Уязвимость к холоду",
+      "summary": "Атаки холодом наносят двойной урон."
+    }
+  ],
+  "description": {
+    "ru": "Плотоядные пришельцы, похожие на металлические деревья высотой около пяти метров: цилиндрический «ствол», шесть ветвей-рук с плоскими треугольными «пальцами» и овальная голова с огромной пастью. Передвигаются на коротких «корнях».",
+    "en": null
+  },
+  "legend": {
+    "ru": "Родом с планеты Ксиклотль, где поклоняются хищным растениям и приносят себя им в жертву. На Землю их привезли насекомые с Шаггаи (шан) как рабочую силу и стражей; ненужных рабов шан жертвуют Азатоту. Освободившиеся от хозяев особи бывают растеряны и опасны, а некоторые, возможно, обрели собственную волю и жаждут мести шан.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 155,
+      "printed_page": 154,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Описание начинается на стр. 153 (PDF 154), статблок — на стр. 154 (PDF 155)."
+  }
+}

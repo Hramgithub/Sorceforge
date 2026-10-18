@@ -1,0 +1,270 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:spawn-of-yig",
+  "kind": "creature",
+  "name": {
+    "ru": "Порождение Йига",
+    "en": "Spawn of Yig"
+  },
+  "aliases": [
+    "Blessed of Yig",
+    "Chosen of Yig",
+    "Snake Person"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "неклассифицированное (порождение Йига)",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "120",
+        "value": 120,
+        "roll": "(6d6+3)×5"
+      },
+      "CON": {
+        "raw": "120",
+        "value": 120,
+        "roll": "(6d6+3)×5"
+      },
+      "SIZ": {
+        "raw": "120",
+        "value": 120,
+        "roll": "(6d6+3)×5"
+      },
+      "DEX": {
+        "raw": "120",
+        "value": 120,
+        "roll": "(6d6+3)×5"
+      },
+      "INT": {
+        "raw": "35",
+        "value": 35,
+        "roll": "2d6×5"
+      },
+      "POW": {
+        "raw": "55",
+        "value": 55,
+        "roll": "(2d6+4)×5"
+      }
+    },
+    "hp": {
+      "raw": "24",
+      "value": 24
+    },
+    "mp": {
+      "raw": "11",
+      "value": 11
+    },
+    "damage_bonus": {
+      "raw": "+2D6",
+      "value": "2d6"
+    },
+    "build": {
+      "raw": "3",
+      "value": 3
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "2-point scaly skin.",
+      "value": 2
+    },
+    "attacks_per_round": {
+      "raw": "2 (strike, rip, bite, crush) or 1 (swallow)",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9), damage DB",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "DB",
+          "dice": null,
+          "adds_db": true
+        },
+        "notes": "удары и когти, если есть конечности; с несколькими парами рук — до 4 атак за раунд"
+      },
+      {
+        "name": {
+          "ru": "Укус",
+          "en": "Bite"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9), damage 1D6 + venom (see above)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1D6 + venom (see above)",
+          "dice": "1d6",
+          "adds_db": false,
+          "extra": "яд 1d10 и потеря сознания на 1d6 раундов; у некоторых смертельный яд 4d10"
+        }
+      },
+      {
+        "name": {
+          "ru": "Сдавливание (манёвр)",
+          "en": "Crush (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9), held and then damage DB per round (see above)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "held and then damage DB per round (see above)",
+          "dice": null,
+          "adds_db": true
+        },
+        "notes": "вырваться — встречный бросок СИЛ или ЛВК каждый раунд"
+      },
+      {
+        "name": {
+          "ru": "Заглатывание (манёвр)",
+          "en": "Swallow (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9), damage 1D4+ (see above)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1D4+ (see above)",
+          "dice": "1d4",
+          "adds_db": false,
+          "extra": "плюс 1 урон за каждые 10 минут внутри"
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "60% (30/12)",
+      "value": 60,
+      "half": 30,
+      "fifth": 12
+    },
+    "skills": [
+      {
+        "name": "Слух",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Чуять добычу",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Скрытность",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Плавание",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      }
+    ],
+    "spells": {
+      "raw": "none."
+    },
+    "sanity_loss": [
+      {
+        "success": "1d4+2",
+        "fail": "2d4+2",
+        "trigger": "при встрече с порождением Йига"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Яд",
+      "summary": "1d10 урона, мучительная боль и потеря сознания на 1d6 раундов; Экстремальный бросок ВЫН вдвое снижает урон и время. Помогает отсасывание яда (Первая помощь, Естествознание или Выживание) или ампутация. У некоторых порождений яд смертелен (4d10)."
+    },
+    {
+      "name": "Сдавливание",
+      "summary": "Хватает противника и в следующих раундах наносит урон, равный бонусу к урону; жертва вырывается встречным броском СИЛ или ЛВК."
+    },
+    {
+      "name": "Заглатывание",
+      "summary": "Вывихнув челюсть, глотает целиком одну жертву не больше своего ТЕЛ (1d4 урона и 1 урон за каждые 10 минут внутри). Переваривает 1d4+1 дней: движение вдвое меньше, штрафная кость на боевые броски. Проглоченный может прорезать себе путь наружу со штрафной костью."
+    },
+    {
+      "name": "Варианты",
+      "summary": "Человеку в процессе превращения добавьте +20 к СИЛ, ВЫН и ЛВК. Бывают крупнее (ТЕЛ 190, (8d6+10)×5) или умнее (ИНТ 70, 4d6×5)."
+    }
+  ],
+  "description": {
+    "ru": "Гибридное потомство Йига и человека или змеечеловека: чешуйчатая кожа змеиной окраски, иногда усохшие бесполезные конечности, у других — облик крупного змеечеловека, порой с несколькими парами рук.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Одни рождаются похожими на людей и меняются позже, другие сразу напоминают Йига или вылупляются из яйца; прикосновение Великого Древнего тоже может превратить человека в порождение. Гибриды быстро теряют рассудок и агрессивны. Змеелюди почитают их, а змеиные культы держат как живых идолов. После смерти тело превращается в липкую чёрную слизь, которую некоторые культисты поедают в обрядах.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 161,
+      "printed_page": 160,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": null
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sourcefold.local/schemas/character.schema.json",
+  "title": "Персонаж",
+  "description": "Человек или человекоподобный персонаж: NPC для Хранителя и/или готовый персонаж для игрока (§3.2). Статблок — общий шаблон с существами (Р-01).",
+  "type": "object",
+  "required": ["schema", "id", "kind", "name", "roles", "axes", "statblock", "sources"],
+  "additionalProperties": false,
+  "properties": {
+    "schema": { "const": "sourcefold.character.v0" },
+    "id": { "$ref": "common.schema.json#/$defs/id" },
+    "kind": { "const": "character" },
+    "name": {
+      "$ref": "common.schema.json#/$defs/text",
+      "description": "Имя; у безымянного прегена — его обозначение («Торговец антиквариатом»), а в player_chooses есть name."
+    },
+    "aliases": { "type": "array", "items": { "type": "string" } },
+    "roles": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "enum": ["npc", "pregen"] },
+      "description": "npc — для Хранителя; pregen — готовый персонаж для игрока."
+    },
+    "archetype": {
+      "type": ["string", "null"],
+      "description": "Типовой персонаж, а не конкретный человек (культист, полицейский) — короткое русское обозначение."
+    },
+    "player_chooses": {
+      "type": "array",
+      "items": { "enum": ["name", "sex", "age", "luck", "skills", "background"] },
+      "description": "Что игрок выбирает или бросает сам (у прегенов)."
+    },
+    "occupation": { "$ref": "common.schema.json#/$defs/text" },
+    "age": { "$ref": "common.schema.json#/$defs/value" },
+    "sex": { "type": ["string", "null"] },
+    "residence": { "type": ["string", "null"] },
+    "birthplace": { "type": ["string", "null"] },
+    "axes": { "$ref": "common.schema.json#/$defs/axes" },
+    "same_as": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/id" } },
+    "statblock": { "$ref": "common.schema.json#/$defs/statblock" },
+    "abilities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "summary"],
+        "additionalProperties": false,
+        "properties": { "name": { "type": "string" }, "summary": { "type": "string" }, "raw": { "type": ["string", "null"] } }
+      }
+    },
+    "background": {
+      "type": "object",
+      "description": "Предыстория по листу сыщика 7-й редакции; всё — короткий русский текст.",
+      "additionalProperties": false,
+      "properties": {
+        "description": { "type": "string" },
+        "ideology": { "type": "string" },
+        "significant_people": { "type": "string" },
+        "meaningful_locations": { "type": "string" },
+        "treasured_possessions": { "type": "string" },
+        "traits": { "type": "string" },
+        "injuries": { "type": "string" },
+        "phobias_manias": { "type": "string" },
+        "arcane_tomes": { "type": "string" },
+        "encounters": { "type": "string" }
+      }
+    },
+    "scenario_role": { "type": ["string", "null"], "description": "Роль в сценарии (для прегенов и NPC сценария)." },
+    "possessions": { "type": "array", "items": { "type": "string" } },
+    "wealth": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "spending_level": { "type": ["string", "null"] },
+        "cash": { "type": ["string", "null"] },
+        "assets": { "type": ["string", "null"] }
+      }
+    },
+    "description": { "$ref": "common.schema.json#/$defs/text" },
+    "legend": { "$ref": "common.schema.json#/$defs/legend" },
+    "sources": { "type": "array", "minItems": 1, "items": { "$ref": "common.schema.json#/$defs/source_ref" } },
+    "corrections": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/correction" } },
+    "quality": { "$ref": "common.schema.json#/$defs/quality" }
+  }
+}

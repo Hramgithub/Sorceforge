@@ -204,9 +204,19 @@
             "additionalProperties": false,
             "properties": {
               "name": { "type": "string" },
+              "skill": { "$ref": "#/$defs/id", "description": "Ссылка на навык из справочника kb/skills (Р-25)." },
+              "specialization": { "type": ["string", "null"] },
               "value": { "$ref": "#/$defs/percent" }
             }
           }
+        },
+        "luck": { "$ref": "#/$defs/value", "description": "Удача (у персонажей; у NPC Pulp — со сноской)." },
+        "sanity": {
+          "type": "object",
+          "description": "Рассудок персонажа: начальный (raw/value) и максимум.",
+          "required": ["raw"],
+          "additionalProperties": false,
+          "properties": { "raw": { "type": "string" }, "value": { "type": ["integer", "null"] }, "max": { "type": ["integer", "null"] } }
         },
         "spells": {
           "type": "object",

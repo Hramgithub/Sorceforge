@@ -77,3 +77,14 @@ python tools\validate.py schemas\creature.schema.json schemas\examples\creature\
 `base` (`raw`, `value`, `formula`: `half_dex` — половина ЛВК, `edu` — ОБР, `varies`),
 `category`, `uncommon`, `specializations` (название и своё базовое значение),
 `description`, `examples`, `sources`. Пример: `examples/skill/dodge.json`.
+
+## Персонаж (`character.schema.json`) — черновик v0
+
+Одна сущность с двумя ролями (§3.2): `roles` — `npc` (для Хранителя) и/или `pregen`
+(готовый персонаж для игрока). Статблок общий с существами; в нём добавлены `luck`,
+`sanity` и ссылка навыка на справочник (`skills[].skill`, `specialization`).
+Поля листа сыщика: `occupation`, `age`, `sex`, `residence`, `birthplace`,
+`background` (описание, убеждения, значимые люди и места, ценности, черты, травмы,
+фобии, тайные знания, встречи), `possessions`, `wealth`; для сценария — `scenario_role`;
+у прегенов — `player_chooses` (что выбирает игрок). Типовой NPC (культист,
+полицейский) отмечается `archetype`. Пример: `examples/character/cult-enforcer.json`.

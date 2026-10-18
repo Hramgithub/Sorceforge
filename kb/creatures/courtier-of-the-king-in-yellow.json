@@ -1,0 +1,196 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:courtier-of-the-king-in-yellow",
+  "kind": "creature",
+  "name": {
+    "ru": "Придворный Короля в Жёлтом",
+    "en": "Courtier of the King in Yellow"
+  },
+  "aliases": [],
+  "category": "mythos_monster",
+  "subcategory": "служитель божества",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70,
+        "roll": null
+      },
+      "CON": {
+        "raw": "80",
+        "value": 80,
+        "roll": null
+      },
+      "SIZ": {
+        "raw": "50",
+        "value": 50,
+        "roll": null
+      },
+      "DEX": {
+        "raw": "120",
+        "value": 120,
+        "roll": null
+      },
+      "INT": {
+        "raw": "100",
+        "value": 100,
+        "roll": null
+      },
+      "POW": {
+        "raw": "100",
+        "value": 100,
+        "roll": null
+      }
+    },
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "15",
+      "value": 15,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 15
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет.",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1 (плети робы или оружие)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (плети робы)",
+          "en": "Fighting (razor robes)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "70% (32/13)",
+          "value": 70,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "1к4 (плети робы)",
+          "dice": "1d4",
+          "adds_db": false
+        },
+        "notes": "одежды, острые как бритва; половина и пятая часть напечатаны на карточке как 32/13"
+      },
+      {
+        "name": {
+          "ru": "Скимитар",
+          "en": "Scimitar"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (скимитар)",
+        "chance": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "1к6",
+          "dice": "1d6",
+          "adds_db": false
+        },
+        "notes": "достаёт скимитар из-под мантии"
+      }
+    ],
+    "dodge": {
+      "raw": "60% (30/12)",
+      "value": 60,
+      "half": 30,
+      "fifth": 12
+    },
+    "skills": [
+      {
+        "name": "Прыжки",
+        "value": {
+          "raw": "70%",
+          "value": 70
+        }
+      },
+      {
+        "name": "Скрытность",
+        "value": {
+          "raw": "70%",
+          "value": 70
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Призыв/Укрощение бьякхи и другие на усмотрение Хранителя."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d3",
+        "trigger": "при виде придворного"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Смертельный танец",
+      "summary": "Когда придворные не заняты смертельным танцем, их одежды служат острым, как бритва, оружием."
+    },
+    {
+      "name": "Единый профиль",
+      "summary": "Все придворные имеют одинаковые характеристики."
+    }
+  ],
+  "description": {
+    "ru": "Танцующие придворные Короля в Жёлтом в масках и развевающихся жёлтых одеждах, острых как бритва; могут доставать скимитары из-под мантий.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-keeper-deck-en",
+      "physical_page": 8,
+      "printed_page": null,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [
+    {
+      "field": "statblock.attacks[0].chance",
+      "from": "70% (35/14)",
+      "to": "70% (32/13)",
+      "reason": "значение по карточке Malleus Keeper Deck (решение владельца Р-19)",
+      "ref": "malleus-keeper-deck-en p.08"
+    }
+  ],
+  "quality": {
+    "needs_review": true,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": "На карточке у Ближнего боя напечатано 70% (32/13); для 70% должно быть 35/14, вероятно опечатка карточки. Записано как на карточке (решение Р-19). Характеристики на карточке фиксированные, без бросков, поэтому averages=false."
+  }
+}

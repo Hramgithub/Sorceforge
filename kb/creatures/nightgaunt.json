@@ -1,0 +1,212 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:nightgaunt",
+  "kind": "creature",
+  "name": {
+    "ru": "Ночной призрак",
+    "en": "Nightgaunt"
+  },
+  "aliases": [],
+  "category": "mythos_monster",
+  "subcategory": "служитель",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "50",
+        "value": 50,
+        "roll": "(2d6+3)×5"
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50,
+        "roll": "(2d6+3)×5"
+      },
+      "SIZ": {
+        "raw": "70",
+        "value": 70,
+        "roll": "4d6×5"
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      },
+      "INT": {
+        "raw": "20",
+        "value": 20,
+        "roll": "1d6×5"
+      },
+      "POW": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "6 / 12 полёт",
+      "value": 6,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 6
+        },
+        {
+          "mode": "fly",
+          "value": 12
+        }
+      ]
+    },
+    "armor": {
+      "raw": "2 пункта (кожа)",
+      "value": 2
+    },
+    "attacks_per_round": {
+      "raw": "1 (удар, колючий хвост, когти, бодание рогами, захват)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "урон 1к4+БкУ",
+          "dice": "1d4",
+          "adds_db": true
+        },
+        "notes": "лапы, колючий хвост, рога"
+      },
+      {
+        "name": {
+          "ru": "Захват (манёвр)",
+          "en": "Seize (m)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "цель схвачена (см. выше)",
+          "dice": null,
+          "adds_db": false,
+          "extra": "падение — 1d6 урона за каждые 3 м"
+        }
+      },
+      {
+        "name": {
+          "ru": "Щекотка",
+          "en": "Tickle"
+        },
+        "kind": "special",
+        "skill": "Щекотка",
+        "chance": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "цель обездвижена 1к6+1 раундов (см. выше)",
+          "dice": null,
+          "adds_db": false,
+          "extra": "штрафная кость на все проверки 1d6+1 раундов или пока щекотка не прекратится"
+        },
+        "notes": "только против схваченной цели"
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "skills": [
+      {
+        "name": "Скрытность",
+        "value": {
+          "raw": "90%",
+          "value": 90
+        }
+      }
+    ],
+    "spells": {
+      "raw": "нет"
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "при виде ночного призрака"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Захват",
+      "summary": "Схваченного противника поднимают в воздух, уносят, роняют (1d6 урона за каждые 3 м) или щекочут; вырваться — проверка ЛВК или СИЛ (урон от падения всё равно возможен)."
+    },
+    {
+      "name": "Щекотка",
+      "summary": "Схваченная цель обездвижена, сбита с толку и получает штрафную кость на все проверки на 1d6+1 раундов или пока щекотка не прекратится."
+    },
+    {
+      "name": "Нападение группой",
+      "summary": "Если захват объединяют 2–4 призрака, первая атака получает бонусную кость, если 5 и больше — две бонусные кости (одна проверка на всех)."
+    }
+  ],
+  "description": {
+    "ru": "Безликие чёрные рогатые существа с перепончатыми крыльями и колючим хвостом, служащие Ноденсу. Безмолвно хватают жертв и уносят их прочь.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-keeper-deck-en",
+      "physical_page": 35,
+      "printed_page": null,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

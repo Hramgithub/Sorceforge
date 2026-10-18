@@ -1,0 +1,232 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:voormis",
+  "kind": "creature",
+  "name": {
+    "ru": "Вурмис",
+    "en": "Voormis"
+  },
+  "aliases": [
+    "Вуурмис",
+    "Вурмы"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "независимая раса",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "75",
+        "value": 75,
+        "roll": "(2d6+8)×5"
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60,
+        "roll": "(2d6+5)×5"
+      },
+      "SIZ": {
+        "raw": "50",
+        "value": 50,
+        "roll": "(2d6+3)×5"
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60,
+        "roll": "(2d6+5)×5"
+      },
+      "INT": {
+        "raw": "40",
+        "value": 40,
+        "roll": "(2d6+1)×5"
+      },
+      "POW": {
+        "raw": "60",
+        "value": 60,
+        "roll": "(2d6+5)×5"
+      }
+    },
+    "hp": {
+      "raw": "11",
+      "value": 11
+    },
+    "mp": {
+      "raw": "12",
+      "value": 12
+    },
+    "damage_bonus": {
+      "raw": "+1к4",
+      "value": "1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "2 пункта (густой мех)",
+      "value": 2
+    },
+    "attacks_per_round": {
+      "raw": "3 (когти и клыки) или 1 (оружие)",
+      "value": 3,
+      "note": "или 1 атака оружием"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (когти)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1к6+БкУ или копьё 1к6+БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "notes": "может использовать копьё, нож или другое простое оружие"
+      },
+      {
+        "name": {
+          "ru": "Клыки",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1к4",
+          "dice": "1d4",
+          "adds_db": false
+        }
+      },
+      {
+        "name": {
+          "ru": "Копьё (метание)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Метание",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1к8+половина БкУ",
+          "dice": "1d8",
+          "adds_db": true,
+          "extra": "прибавляется половина БкУ"
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Слух",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      },
+      {
+        "name": "Чутьё",
+        "value": {
+          "raw": "75%",
+          "value": 75
+        }
+      },
+      {
+        "name": "Внимание",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      },
+      {
+        "name": "Скрытность",
+        "value": {
+          "raw": "30%",
+          "value": 30
+        }
+      },
+      {
+        "name": "Метание",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "value": {
+          "raw": "75%",
+          "value": 75
+        }
+      }
+    ],
+    "spells": {
+      "raw": "нет; шаман может знать Связь с бесформенным отродьем, Связь с божеством (Тсатхоггуа), Дурной глаз, Иссушение."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "при виде вурмиса"
+      }
+    ]
+  },
+  "abilities": [],
+  "description": {
+    "ru": "Первобытные гуманоиды, покрытые густым мехом; их шаманы поклоняются Тсатхоггуа. Сражаются когтями и клыками или простым оружием вроде копья.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-keeper-deck-en",
+      "physical_page": 52,
+      "printed_page": null,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

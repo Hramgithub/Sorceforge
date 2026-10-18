@@ -1,0 +1,215 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:lesser-satyr-gof-nn-hupadgh",
+  "kind": "creature",
+  "name": {
+    "ru": "Меньший сатир / Гоф'нн Хупадгх",
+    "en": "Lesser Satyr / Gof'nn Hupadgh"
+  },
+  "aliases": [
+    "Гоф'нн Хупадгх",
+    "Меньший сатир"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "служитель Шуб-Ниггурат (мутант)",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "55",
+        "value": 55,
+        "roll": "(2d6+4)×5"
+      },
+      "CON": {
+        "raw": "90",
+        "value": 90,
+        "roll": "(4d6+4)×5"
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      },
+      "DEX": {
+        "raw": "80",
+        "value": 80,
+        "roll": "(4d6+2)×5"
+      },
+      "INT": {
+        "raw": "60",
+        "value": 60,
+        "roll": "(2d6+5)×5"
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50,
+        "roll": "(2d6+3)×5"
+      }
+    },
+    "hp": {
+      "raw": "15",
+      "value": 15
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1 (без оружия или с оружием; зависит от мутации)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "от 1к4+БкУ до 1к6+БкУ (зависит от формы или оружия)",
+          "dice": "1d4",
+          "adds_db": true,
+          "extra": "до 1d6+БкУ в зависимости от формы или оружия"
+        },
+        "notes": "клыки, рога, когти, копыта, пинки или кулаки; некоторые используют простое оружие (дубинку, нож, меч)"
+      },
+      {
+        "name": {
+          "ru": "Бодание",
+          "en": "Horn gore"
+        },
+        "kind": "attack",
+        "skill": "Бодание",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1к6+1+БкУ",
+          "dice": "1d6+1",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Прыжки",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Слух",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Скрытность",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      },
+      {
+        "name": "Метание",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      }
+    ],
+    "spells": {
+      "raw": "с вероятностью 30% Гоф’нн Хупадгх знает 1к3 заклинаний; меньший сатир не знает заклинаний."
+    },
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d3",
+        "trigger": "при виде сатира"
+      },
+      {
+        "success": "1",
+        "fail": "1d6",
+        "trigger": "при виде особо ужасающих мутаций сатира"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Мутации",
+      "summary": "Атаки меньшего сатира зависят от животного, на которое он похож: собака — укус; козёл — рога, копыта, укус; лягушка — язык. Навыки меньших сатиров тоже могут меняться в зависимости от формы."
+    }
+  ],
+  "description": {
+    "ru": "Сатироподобные существа из культа Шуб-Ниггурат: рогатые получеловеческие создания со звериными чертами. Гоф’нн Хупадгх могут знать заклинания, меньшие сатиры — нет.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-keeper-deck-en",
+      "physical_page": 41,
+      "printed_page": null,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

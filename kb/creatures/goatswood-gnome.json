@@ -1,0 +1,187 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:goatswood-gnome",
+  "kind": "creature",
+  "name": {
+    "ru": "Гном Гоатсвуда",
+    "en": "Goatswood Gnome"
+  },
+  "aliases": [],
+  "category": "mythos_monster",
+  "subcategory": "малое существо Мифов",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "35",
+        "value": 35,
+        "roll": "2d6×5"
+      },
+      "CON": {
+        "raw": "85",
+        "value": 85,
+        "roll": "(4d6+3)×5"
+      },
+      "SIZ": {
+        "raw": "20",
+        "value": 20,
+        "roll": "(1d3+2)×5"
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50,
+        "roll": "(2d6+3)×5"
+      },
+      "INT": {
+        "raw": "50",
+        "value": 50,
+        "roll": "(2d6+3)×5"
+      },
+      "POW": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      }
+    },
+    "hp": {
+      "raw": "10",
+      "value": 10
+    },
+    "mp": {
+      "raw": "13",
+      "value": 13
+    },
+    "damage_bonus": {
+      "raw": "–2",
+      "value": -2
+    },
+    "build": {
+      "raw": "–2",
+      "value": -2
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "9 пунктов каменной шкуры против клинков/проникающего оружия; 3 пункта брони против тупого оружия.",
+      "value": 9,
+      "note": "против тупого оружия — 3 пункта"
+    },
+    "attacks_per_round": {
+      "raw": "1 (когти, укус)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Когти или укус",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "урон 1к4+БкУ",
+          "dice": "1d4",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "value": {
+          "raw": "70%",
+          "value": 70
+        }
+      },
+      {
+        "name": "Рыть туннели",
+        "value": {
+          "raw": "70%",
+          "value": 70
+        }
+      },
+      {
+        "name": "Прыжки",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      },
+      {
+        "name": "Слесарное дело",
+        "value": {
+          "raw": "55%",
+          "value": 55
+        }
+      },
+      {
+        "name": "Скрытность",
+        "value": {
+          "raw": "70%",
+          "value": 70
+        }
+      }
+    ],
+    "spells": {
+      "raw": "с вероятностью 50% знает 1к3 заклинаний; обычно они связаны с Шуб-Ниггурат или дарованы колдуном."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d3",
+        "trigger": "при встрече с «живым» гномом Гоатсвуда"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Каменная шкура",
+      "summary": "Твёрдая оболочка: 9 пунктов брони против клинков и проникающего оружия, 3 пункта против тупого. Если её пробить, наружу вываливаются кровь или отвратительные розовые органы."
+    }
+  ],
+  "description": {
+    "ru": "Маленькие каменные существа из лесов Гоатсвуда, похожие на садовых гномов. Кромсают плоть когтями и акульими зубами и роют туннели.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-keeper-deck-en",
+      "physical_page": 63,
+      "printed_page": null,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

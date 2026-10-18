@@ -1,0 +1,224 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:child-of-the-sphinx",
+  "kind": "creature",
+  "name": {
+    "ru": "Дитя Сфинкса",
+    "en": "Child of the Sphinx"
+  },
+  "aliases": [],
+  "category": "mythos_monster",
+  "subcategory": "мифологический гибрид",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70,
+        "roll": "4d6×5"
+      },
+      "CON": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      },
+      "SIZ": {
+        "raw": "75",
+        "value": 75,
+        "roll": "(2d6+8)×5"
+      },
+      "DEX": {
+        "raw": "35",
+        "value": 35,
+        "roll": "2d6×5"
+      },
+      "INT": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      },
+      "POW": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      }
+    },
+    "hp": {
+      "raw": "14",
+      "value": 14
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "damage_bonus": {
+      "raw": "+1к4",
+      "value": "1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "armor": {
+      "raw": "4 пункта (1 пункт кожа и 3 пункта доспех).",
+      "value": 4
+    },
+    "attacks_per_round": {
+      "raw": "1 (варьируется; естественная безоружная или оружием)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (безоружная атака или хопеш)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "урон 1к3+БкУ, или хопеш 1к6+БкУ",
+          "dice": "1d3",
+          "adds_db": true,
+          "extra": "хопеш: 1d6+БкУ"
+        }
+      },
+      {
+        "name": {
+          "ru": "Клыки или когти",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "урон от 1к4 до 1к8 +БкУ",
+          "dice": "1d4–1d8",
+          "adds_db": true
+        },
+        "notes": "урон зависит от формы существа"
+      },
+      {
+        "name": {
+          "ru": "Клюв (удар или разрывание)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "урон 2к3+БкУ",
+          "dice": "2d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Бодание рогами",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "урон 2к6+БкУ",
+          "dice": "2d6",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "20% (10/4)",
+      "value": 20,
+      "half": 10,
+      "fifth": 4
+    },
+    "skills": [
+      {
+        "name": "Слух",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Скрытность",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      }
+    ],
+    "spells": {
+      "raw": "нет."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d8",
+        "trigger": "при виде детей Сфинкса"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Звериный облик",
+      "summary": "Голова человека и тело животного или наоборот; пользуется оружием или естественными атаками в зависимости от формы."
+    }
+  ],
+  "description": {
+    "ru": "Египетские гибриды людей и животных: голова человека на теле зверя или звериная голова на человеческом теле. Сражаются оружием (например, хопешем) или клыками, когтями, клювом и рогами.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-keeper-deck-en",
+      "physical_page": 6,
+      "printed_page": null,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

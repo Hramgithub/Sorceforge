@@ -1,0 +1,216 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:deep-one-hybrid",
+  "kind": "creature",
+  "name": {
+    "ru": "Гибрид глубоководного",
+    "en": "Deep One Hybrid"
+  },
+  "aliases": [],
+  "category": "mythos_monster",
+  "subcategory": "гуманоид Мифов",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      },
+      "CON": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      },
+      "SIZ": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      },
+      "APP": {
+        "raw": "35",
+        "value": 35,
+        "roll": "2d6×5"
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      },
+      "POW": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      }
+    },
+    "hp": {
+      "raw": "11–12",
+      "value": 11
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "9 / 8 плавание",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        },
+        {
+          "mode": "swim",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет.",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1 (без оружия, оружием)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (без оружия или оружием)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "урон 1к3+БкУ, или оружие",
+          "dice": "1d3",
+          "adds_db": true,
+          "extra": "или по оружию"
+        },
+        "notes": "может пользоваться оружием, в том числе огнестрельным, как люди"
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Мифы Ктулху (варьируется)",
+        "value": {
+          "raw": "от 00% до 30%",
+          "value": null
+        }
+      },
+      {
+        "name": "Прыжки",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Слух",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      },
+      {
+        "name": "Внимание",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Скрытность",
+        "value": {
+          "raw": "46%",
+          "value": 46
+        }
+      },
+      {
+        "name": "Плавание",
+        "value": {
+          "raw": "70%",
+          "value": 70
+        }
+      }
+    ],
+    "spells": {
+      "raw": "более старые гибриды, принявшие своё наследие, с вероятностью 10% знают 1к3 заклинаний."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d4",
+        "trigger": "при виде гибрида глубоководного"
+      },
+      {
+        "success": "1",
+        "fail": "1d6+",
+        "trigger": "для особо жутких представителей"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Человеческое оружие",
+      "summary": "Атакует без оружия или пользуется оружием, в том числе огнестрельным, как люди."
+    }
+  ],
+  "description": {
+    "ru": "Потомки людей и Глубоководных: внешне люди, со временем приобретающие рыбьи черты. Старшие гибриды, принявшие наследие, иногда владеют магией.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-keeper-deck-en",
+      "physical_page": 13,
+      "printed_page": null,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

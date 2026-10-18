@@ -1,0 +1,179 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:hastur-ravening-one",
+  "kind": "creature",
+  "name": {
+    "ru": "Хастур: Ненасытный",
+    "en": "Hastur: Ravening One, The"
+  },
+  "aliases": [
+    "Star Eater",
+    "Strange Devourer",
+    "Unspeakable Beast"
+  ],
+  "category": "avatar",
+  "subcategory": "аватар Хастура",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "characteristics": {
+      "STR": {
+        "raw": "245",
+        "value": 245
+      },
+      "CON": {
+        "raw": "500",
+        "value": 500
+      },
+      "SIZ": {
+        "raw": "160",
+        "value": 160
+      },
+      "DEX": {
+        "raw": "100",
+        "value": 100
+      },
+      "POW": {
+        "raw": "175",
+        "value": 175
+      }
+    },
+    "averages": false,
+    "hp": {
+      "raw": "66",
+      "value": 66
+    },
+    "mp": {
+      "raw": "35",
+      "value": 35
+    },
+    "damage_bonus": {
+      "raw": "+4D6",
+      "value": "4d6"
+    },
+    "build": {
+      "raw": "5",
+      "value": 5
+    },
+    "move": {
+      "raw": "10 / 30 flying",
+      "value": 10,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 10
+        },
+        {
+          "mode": "fly",
+          "value": 30
+        }
+      ]
+    },
+    "armor": {
+      "raw": "20-point extra-terrene wrinkled hide. If reduced to zero hit points, the Feaster falls to the ground and bursts, sending viscera flying everywhere. It reforms in 1D100 days with the will of Hastur.",
+      "value": 20,
+      "note": "при 0 ПЗ лопается; восстанавливается через 1d100 дней"
+    },
+    "attacks_per_round": {
+      "raw": "1 (tentacle strike or devour brain)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (удар щупальцами)",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "2D10 (see above)",
+          "dice": "2d10",
+          "adds_db": false
+        },
+        "notes": "2d10 когтей-лезвий бьют одну цель, каждый наносит 1 урон"
+      },
+      {
+        "name": {
+          "ru": "Пожирание мозга",
+          "en": "Devour brain (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "1D6 + 1D10 INT per round (see above)",
+          "dice": "1d6",
+          "adds_db": false,
+          "extra": "1d10 ИНТ за раунд"
+        },
+        "notes": "в следующем раунде щупальца пробивают череп (1d6 урона) и высасывают мозг; далее только −1d10 ИНТ за раунд; при ИНТ 0 жертва умирает через 1d2 часа"
+      }
+    ],
+    "skills": [],
+    "spells": {
+      "raw": "Bait Human (variant), Circle of Nausea, Death’s Breath, Drain Youth, Grasp of Cthulhu, Wrack; others as the Keeper desires."
+    },
+    "sanity_loss": [
+      {
+        "success": "1d8",
+        "fail": "2d10",
+        "trigger": "при встрече с аватаром"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Внушение страха",
+      "summary": "В радиусе 100 м нужна трудная проверка МОЩ: при провале — паника и штрафная кость ко всем проверкам навыков и характеристик (кроме боя); при неудаче (fumble) — безрассудство или полуступор."
+    },
+    {
+      "name": "Пожирание мозга",
+      "summary": "Опутанная жертва теряет 1d6 ПЗ и по 1d10 ИНТ за раунд; ИНТ естественным путём не восстанавливается."
+    },
+    {
+      "name": "Кошмары-предвестники",
+      "summary": "Его появление вызывает у знающих Мифы кошмары о погоне (проверка Рассудка 0/1d2 при пробуждении)."
+    }
+  ],
+  "description": {
+    "ru": "Яростный аватар Хастура: тёмное яйцевидное тело с длинными извивающимися отростками, оканчивающимися множеством щупалец-лезвий, с подобием рта и четырьмя глазами неземного цвета.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Воплощает гнев Неизречённого и посылается карать тех, кто ему навредил. «Некрономикон» упоминает заклинания, чтобы призвать его, когда Альдебаран над горизонтом, и временно подчинить. Человеческого культа нет; культисты Хастура и колдуны приносят ему умилостивительные жертвы.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 108,
+      "printed_page": 107,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Статья начинается на стр. 107 PDF, блок характеристик — на стр. 108."
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:hypnos",
+  "kind": "creature",
+  "name": {
+    "ru": "Гипнос",
+    "en": "Hypnos"
+  },
+  "aliases": [
+    "Lord of Dream",
+    "Lord of Sleep",
+    "Somnus"
+  ],
+  "category": "mythos_deity",
+  "subcategory": "Старший бог",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "characteristics": {
+      "STR": {
+        "raw": "100",
+        "value": 100
+      },
+      "CON": {
+        "raw": "500",
+        "value": 500
+      },
+      "SIZ": {
+        "raw": "60*",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "150",
+        "value": 150
+      },
+      "POW": {
+        "raw": "425",
+        "value": 425
+      }
+    },
+    "averages": false,
+    "hp": {
+      "raw": "56",
+      "value": 56
+    },
+    "mp": {
+      "raw": "85",
+      "value": 85
+    },
+    "damage_bonus": {
+      "raw": "+1D4",
+      "value": "1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "None. May only be affected by enchanted weapons and magical artifacts. If reduced to zero hit points, Hypnos transforms into gray dust that is carried away on a sudden wind. It reforms in 1D6 hours somewhere in the Dreamlands.",
+      "value": 0,
+      "note": "уязвим только для зачарованного оружия и магических артефактов; восстанавливается в Мире грёз через 1d6 часов"
+    },
+    "attacks_per_round": {
+      "raw": "1 (unarmed or weapon, or overwhelm mind)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "90% (45/18)",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        },
+        "damage": {
+          "raw": "1D4+1D4 or, if armed, 1D8+1D4",
+          "dice": "1d4",
+          "adds_db": true,
+          "extra": "с оружием (обычно мечом) 1d8+БкУ"
+        }
+      },
+      {
+        "name": {
+          "ru": "Подавление разума",
+          "en": "Overwhelm mind"
+        },
+        "kind": "special",
+        "skill": null,
+        "chance": {
+          "raw": "90% (45/18)",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        },
+        "damage": {
+          "raw": "(see above)",
+          "dice": null,
+          "adds_db": false
+        },
+        "notes": "только в истинном облике; см. способность «Подавление разума»"
+      }
+    ],
+    "skills": [],
+    "spells": {
+      "raw": "Elder Sign and those related to dreams, sleep, transformation, and memory, with the Keeper determining spells as needed."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "0",
+        "trigger": "при встрече с Гипносом в человеческом облике"
+      },
+      {
+        "success": "1d6",
+        "fail": "1d20",
+        "trigger": "при встрече с истинным обликом"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Преображение сновидца",
+      "summary": "Может изменить спящего во благо или во вред: поднять или снизить характеристики в пределах 200 пунктов, превратить в кошку или зуга, дать или отнять способности, предметы, знания; эффект временный (1d100 дней) или постоянный в Мире грёз."
+    },
+    {
+      "name": "Подавление разума",
+      "summary": "Касанием (10 ПМ) обрушивает на жертву множество реальностей. Защита — экстремальная проверка МОЩ; иначе проверка Удачи: успех — без сознания 1d10+2 раунда, +1d10+1 Мифов Ктулху, +1d10 Знания снов, −1d10+3 Рассудка; провал — −4d10 Рассудка и потеря личности сновидца."
+    }
+  ],
+  "description": {
+    "ru": "Старший бог сна и сновидений, хранитель Мира грёз; обычно является красивым бородатым мужчиной с ракушками в бороде, венком из маков и лучистым глазом на лбу, а истинный облик — вечно меняющаяся масса кошмаров.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Известен с античности как Гипнос и Сомнус; возможно, питается снами человечества и оберегает их как пастух. Небольшие культы недолговечны; исключение — «Дети сна», хранящие обряды путешествий в сновидения со времён Древнего Рима.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 113,
+      "printed_page": 112,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Статья начинается на стр. 111 PDF, Рассудок и магия — на стр. 112, блок характеристик — на стр. 113. *ВЕЛ может доходить до 150."
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:hastur-amber-elder",
+  "kind": "creature",
+  "name": {
+    "ru": "Хастур: Янтарный старец",
+    "en": "Hastur: Amber Elder"
+  },
+  "aliases": [
+    "Divine Teacher",
+    "He Who Reveals",
+    "the Unholy Monk",
+    "Yellow Lama"
+  ],
+  "category": "avatar",
+  "subcategory": "аватар Хастура",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "characteristics": {
+      "STR": {
+        "raw": "100",
+        "value": 100
+      },
+      "CON": {
+        "raw": "100",
+        "value": 100
+      },
+      "SIZ": {
+        "raw": "70",
+        "value": 70
+      },
+      "DEX": {
+        "raw": "100",
+        "value": 100
+      },
+      "POW": {
+        "raw": "175",
+        "value": 175
+      }
+    },
+    "averages": false,
+    "hp": {
+      "raw": "17",
+      "value": 17
+    },
+    "mp": {
+      "raw": "35",
+      "value": 35
+    },
+    "damage_bonus": {
+      "raw": "+1D6",
+      "value": "1d6"
+    },
+    "build": {
+      "raw": "2",
+      "value": 2
+    },
+    "move": {
+      "raw": "12",
+      "value": 12,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 12
+        }
+      ]
+    },
+    "armor": {
+      "raw": "None. If reduced to zero hit points, the avatar crumbles into dust. The will of Hastur causes the avatar to reform in 24 hours in a place of its choosing.",
+      "value": 0,
+      "note": "при 0 ПЗ рассыпается в прах и через 24 часа восстанавливается в выбранном месте"
+    },
+    "attacks_per_round": {
+      "raw": "2 (tentacles) or 1 (embrace or psychic blast)",
+      "value": 2,
+      "note": "2 удара щупальцами или 1 объятие либо психический удар"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "1D6+1D6",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "notes": "удары двумя щупальцами-конечностями"
+      },
+      {
+        "name": {
+          "ru": "Объятие",
+          "en": "Embrace (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "1D4 damage + 1D10+5 CON (see above)",
+          "dice": "1d4",
+          "adds_db": false,
+          "extra": "1d10+5 ВЫН за раунд"
+        },
+        "notes": "со следующего раунда жертва каждый раунд теряет 1d10+5 ВЫН и 1d4 ПЗ до смерти; вырваться — экстремальная проверка СИЛ или ЛВК"
+      },
+      {
+        "name": {
+          "ru": "Психический удар",
+          "en": "Psychic Blast"
+        },
+        "kind": "special",
+        "skill": null,
+        "chance": {
+          "raw": "automatic (see above)",
+          "value": null,
+          "half": null,
+          "fifth": null
+        },
+        "damage": {
+          "raw": "1D10 damage to all within 5 yards/meters",
+          "dice": "1d10",
+          "adds_db": false,
+          "extra": "всем в радиусе 5 м"
+        },
+        "notes": "успешная экстремальная проверка МОЩ вдвое снижает урон"
+      }
+    ],
+    "skills": [],
+    "spells": {
+      "raw": "knows all spells."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "0",
+        "trigger": "при встрече с аватаром, пока он не открыл лицо"
+      },
+      {
+        "success": "1d3",
+        "fail": "1d10",
+        "trigger": "если аватар открывает лицо и иссохшее тело"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Неразрешимая головоломка",
+      "summary": "Подошедший к аватару проходит проверку ИНТ; при провале получает головоломку и застывает в кататонии, пока не решит её (критический успех «01» в проверке ИНТ, не более трёх попыток) или не умрёт. Помощь — Психоанализ или трудная проверка Психологии с новыми знаниями либо магия."
+    },
+    {
+      "name": "Мрачное прозрение",
+      "summary": "Сообщает знания любого рода, заклинания, ритуалы и пророчества — прямо или туманно, словами или видениями; видения могут требовать проверок Рассудка."
+    },
+    {
+      "name": "Стать Вратами",
+      "summary": "По желанию открывает Врата и посылает просителей сквозь них за ответом, не говоря, куда они ведут."
+    },
+    {
+      "name": "Объятие",
+      "summary": "Схваченная жертва со следующего раунда теряет 1d10+5 ВЫН и 1d4 ПЗ за раунд; вырваться — экстремальная проверка СИЛ или ЛВК."
+    }
+  ],
+  "description": {
+    "ru": "Человекоподобный аватар Хастура в мерцающих янтарных одеждах, под которыми — иссохшее бледное тело с единственным жёлтым глазом во лбу и руками-щупальцами; вокруг гудит рой крошечных чёрных насекомых.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Обитает в храме «Янтарные палаты», который может появиться где угодно — на плато Ленг, в Мире грёз или в обычном доме. Выступает вестником Неизречённого: предрекает бедствия и открывает космические тайны избранным. Возможно, для воплощения ему нужно тело человека, принёсшего Неизречённую клятву.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 107,
+      "printed_page": 106,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Статья начинается на стр. 105 PDF, Рассудок и магия — на стр. 106, блок характеристик — на стр. 107."
+  }
+}

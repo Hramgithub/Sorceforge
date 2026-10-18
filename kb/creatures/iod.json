@@ -1,0 +1,158 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:iod",
+  "kind": "creature",
+  "name": {
+    "ru": "Иод",
+    "en": "Iod"
+  },
+  "aliases": [
+    "Shining Hunter",
+    "the Source"
+  ],
+  "category": "mythos_deity",
+  "subcategory": "Великий Древний",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "characteristics": {
+      "STR": {
+        "raw": "375",
+        "value": 375
+      },
+      "CON": {
+        "raw": "300",
+        "value": 300
+      },
+      "SIZ": {
+        "raw": "500",
+        "value": 500
+      },
+      "DEX": {
+        "raw": "80",
+        "value": 80
+      },
+      "POW": {
+        "raw": "150",
+        "value": 150
+      }
+    },
+    "averages": false,
+    "hp": {
+      "raw": "80",
+      "value": 80
+    },
+    "mp": {
+      "raw": "30",
+      "value": 30
+    },
+    "damage_bonus": {
+      "raw": "+10D6",
+      "value": "10d6"
+    },
+    "build": {
+      "raw": "11",
+      "value": 11
+    },
+    "move": {
+      "raw": "20 flying",
+      "value": 20,
+      "modes": [
+        {
+          "mode": "fly",
+          "value": 20
+        }
+      ]
+    },
+    "armor": {
+      "raw": "10-point extra-dimensional armor. Mundane weapons (incl. bullets) deal minimum damage. If reduced to zero hit points, Iod bursts in a dazzling white light and winks out of existence. It reforms in 2D100 years.",
+      "value": 10,
+      "note": "обычное оружие (и пули) наносит минимальный урон"
+    },
+    "attacks_per_round": {
+      "raw": "1 (strike or flash)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "3D6 + risk of being paralyzed (see above)",
+          "dice": "3d6",
+          "adds_db": false,
+          "extra": "риск паралича"
+        },
+        "notes": "удар щупальцеподобной конечностью; см. «Паралич» и «Высасывание жизни»"
+      }
+    ],
+    "skills": [],
+    "spells": {
+      "raw": "Animate Flesh Thing, Awful Doom of Cerrit, Breath of Pazzuzu (variant), Enthrall Victim, Liquid Death, Possession, Sense Life, Siren’s Song; others as the Keeper desires."
+    },
+    "sanity_loss": [
+      {
+        "success": "1d6",
+        "fail": "3d10",
+        "trigger": "при встрече с Иодом"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Паралич",
+      "summary": "Задетый конечностью обездвижен, если провалит экстремальную проверку МОЩ (защитные чары снижают сложность); повторять проверку можно раз в раунд."
+    },
+    {
+      "name": "Высасывание жизни",
+      "summary": "Вонзает конечности в парализованную жертву и выпивает 20 МОЩ за раунд; при МОЩ 0 мозг остаётся жить в мёртвом гниющем теле."
+    },
+    {
+      "name": "Вспышка",
+      "summary": "Ослепительный свет на 360°: все в радиусе 10 м проходят совмещённую проверку ВЫН и МОЩ или получают 1d4 урона ожогами."
+    },
+    {
+      "name": "Охота",
+      "summary": "Отмеченного Иодом преследуют кошмары (−1 Рассудок в день); Иод настигает его за 1d100 дней. Спасают изгнание, «убийство» Иода, заклинания сокрытия, возможно — Старший знак."
+    }
+  ],
+  "description": {
+    "ru": "Полупрозрачное сочетание кристалла, плоти и растения с огромным фасеточным глазом и кристально-растительными конечностями, пульсирующее тошнотворным внутренним светом; беспощадный охотник и воплощение смерти.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Почитается обитателями планеты Бел-Ярнак за Бетельгейзе; в Атлантиде и Му его знали как «Сияющего охотника». Подробнее всего о нём говорит единственный известный экземпляр «Книги Иода». Его культисты практикуют ритуальные убийства.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 118,
+      "printed_page": 117,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Статья начинается на стр. 117 PDF, блок характеристик — на стр. 118."
+  }
+}

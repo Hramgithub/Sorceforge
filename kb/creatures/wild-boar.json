@@ -1,0 +1,176 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:wild-boar",
+  "kind": "creature",
+  "name": {
+    "ru": "Кабан (и кистеухие свиньи)",
+    "en": "Wild Boar (& Bush Pigs)"
+  },
+  "aliases": [
+    "Bush Pig"
+  ],
+  "category": "animal",
+  "subcategory": "зверь",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "55",
+        "value": 55,
+        "roll": "(2d6+4)×5"
+      },
+      "CON": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      },
+      "SIZ": {
+        "raw": "55",
+        "value": 55,
+        "roll": "(2d6+4)×5"
+      },
+      "DEX": {
+        "raw": "35",
+        "value": 35,
+        "roll": "2d6×5"
+      },
+      "POW": {
+        "raw": "35",
+        "value": 35,
+        "roll": "2d6×5"
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "10",
+      "value": 10,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 10
+        }
+      ]
+    },
+    "armor": {
+      "raw": "3-point hide.",
+      "value": 3,
+      "note": "шкура"
+    },
+    "attacks_per_round": {
+      "raw": "1 (bite, bash, gore)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8), damage 1D4+DB",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1D4+DB",
+          "dice": "1d4",
+          "adds_db": true
+        },
+        "notes": "укус или удар телом"
+      },
+      {
+        "name": {
+          "ru": "Удар клыками",
+          "en": "Gore"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8), damage 1D6+DB",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1D6+DB",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "skills": [
+      {
+        "name": "Внимание (нюх)",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Скрытность",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      }
+    ],
+    "sanity_loss": []
+  },
+  "abilities": [
+    {
+      "name": "Натиск",
+      "summary": "Таранит противников телом, кусает или распарывает клыками."
+    }
+  ],
+  "description": {
+    "ru": "Дикая свинья с острыми клыками; те же значения подходят и для африканских кистеухих свиней.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 202,
+      "printed_page": 201,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": null
+  }
+}

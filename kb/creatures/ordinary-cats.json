@@ -1,0 +1,191 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:ordinary-cats",
+  "kind": "creature",
+  "name": {
+    "ru": "Обычные кошки",
+    "en": "Ordinary Cats"
+  },
+  "aliases": [],
+  "category": "animal",
+  "subcategory": "зверь",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "10",
+        "value": 10,
+        "roll": "(1d3)×5"
+      },
+      "CON": {
+        "raw": "35",
+        "value": 35,
+        "roll": "(2d6)×5"
+      },
+      "SIZ": {
+        "raw": "05",
+        "value": 5,
+        "roll": null
+      },
+      "DEX": {
+        "raw": "95",
+        "value": 95,
+        "roll": "(2d6+12)×5"
+      },
+      "POW": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      }
+    },
+    "hp": {
+      "raw": "4",
+      "value": 4
+    },
+    "damage_bonus": {
+      "raw": "–2",
+      "value": -2
+    },
+    "build": {
+      "raw": "–2",
+      "value": -2
+    },
+    "move": {
+      "raw": "10",
+      "value": 10,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 10
+        }
+      ]
+    },
+    "armor": {
+      "raw": "none; avoids falling damage 90 percent of the time, landing on its feet and suffering no damage at all.",
+      "value": 0,
+      "note": "в 90% случаев приземляется на лапы и не получает урона от падения"
+    },
+    "attacks_per_round": {
+      "raw": "3 (bite, claw)",
+      "value": 3,
+      "note": "в книге заголовок строки напечатан как «Attacker per Round»"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "30% (15/6), damage 1D4–DB (min 1)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "1D4–DB (min 1)",
+          "dice": "1d4",
+          "adds_db": true
+        },
+        "notes": "отрицательный БкУ уменьшает урон, минимум 1"
+      }
+    ],
+    "dodge": {
+      "raw": "80% (40/16)",
+      "value": 80,
+      "half": 40,
+      "fifth": 16
+    },
+    "skills": [
+      {
+        "name": "Слух",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Ночное зрение",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Скрытность",
+        "value": {
+          "raw": "90%",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        }
+      },
+      {
+        "name": "Внимание",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Путешествие в Страну снов",
+        "value": {
+          "raw": "100%",
+          "value": 100,
+          "half": 50,
+          "fifth": 20
+        }
+      }
+    ],
+    "sanity_loss": []
+  },
+  "abilities": [
+    {
+      "name": "Хватка когтями",
+      "summary": "Три атаки за раунд. Если обе атаки когтями попали, кошка повисает на жертве, кусает и дерёт задними лапами; сбросить её можно Экстремальной проверкой ЛВК, а пока она держится, жертва не может делать ничего другого."
+    },
+    {
+      "name": "Между мирами",
+      "summary": "В отличие от большинства земных существ, кошки ходят и в Мире бодрствования, и в Стране снов."
+    },
+    {
+      "name": "Стая",
+      "summary": "Одна кошка почти безобидна, но несколько кошек, нападающих на одного человека, по-настоящему опасны."
+    }
+  ],
+  "description": {
+    "ru": "Обычные домашние кошки: ловкие, чуткие и почти не получающие урона при падении. Умеют попадать в Страну снов.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 191,
+      "printed_page": 190,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": null
+  }
+}

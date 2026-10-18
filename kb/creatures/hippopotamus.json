@@ -1,0 +1,212 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:hippopotamus",
+  "kind": "creature",
+  "name": {
+    "ru": "Бегемот",
+    "en": "Hippopotamus"
+  },
+  "aliases": [],
+  "category": "animal",
+  "subcategory": "зверь",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "80",
+        "value": 80,
+        "roll": "(6d6+15)×5"
+      },
+      "CON": {
+        "raw": "135",
+        "value": 135,
+        "roll": "(6d6+6)×5"
+      },
+      "SIZ": {
+        "raw": "180",
+        "value": 180,
+        "roll": "(6d6+15)×5"
+      },
+      "DEX": {
+        "raw": "55",
+        "value": 55,
+        "roll": "(2d6+4)×5"
+      },
+      "POW": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      }
+    },
+    "hp": {
+      "raw": "31",
+      "value": 31
+    },
+    "damage_bonus": {
+      "raw": "+3D6",
+      "value": "3d6"
+    },
+    "build": {
+      "raw": "4",
+      "value": 4
+    },
+    "move": {
+      "raw": "8 / 14 swimming",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        },
+        {
+          "mode": "swim",
+          "value": 14
+        }
+      ]
+    },
+    "armor": {
+      "raw": "3-point thick hide.",
+      "value": 3,
+      "note": "толстая шкура"
+    },
+    "attacks_per_round": {
+      "raw": "1 (bite, maul, crush, charge boat)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10), damage 2D6",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "2D6",
+          "dice": "2d6",
+          "adds_db": false
+        }
+      },
+      {
+        "name": {
+          "ru": "Трёпка",
+          "en": "Maul"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10), damage 2D6 per round (see above)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "2D6 per round (see above)",
+          "dice": "2d6",
+          "adds_db": false
+        },
+        "notes": "хватает зубами и треплет; вырваться — встречная ЛВК (в воде — Плавание против ЛВК бегемота)"
+      },
+      {
+        "name": {
+          "ru": "Таран",
+          "en": "Crush (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10), damage 3D6 (see above)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "3D6 (see above)",
+          "dice": "3d6",
+          "adds_db": false
+        }
+      },
+      {
+        "name": {
+          "ru": "Атака на лодку",
+          "en": "Charge Boat (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10), see above",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "notes": "при Трудном успехе малая лодка может перевернуться (групповая проверка Удачи)"
+      }
+    ],
+    "dodge": {
+      "raw": "27% (13/5)",
+      "value": 27,
+      "half": 13,
+      "fifth": 5
+    },
+    "skills": [
+      {
+        "name": "Скрытность в воде",
+        "value": {
+          "raw": "85%",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        }
+      }
+    ],
+    "sanity_loss": []
+  },
+  "abilities": [
+    {
+      "name": "Трёпка",
+      "summary": "Бросается на цель на суше или в воде, хватает зубами, подбрасывает и трясёт (2d6 урона за раунд). Вырваться — встречной проверкой ЛВК, в воде — Плаванием против ЛВК бегемота."
+    },
+    {
+      "name": "Таран",
+      "summary": "Бьёт цель всей массой тела (3d6 урона)."
+    },
+    {
+      "name": "Атака на лодку",
+      "summary": "При Трудном успехе (непротивопоставленная проверка) может опрокинуть малую лодку; это решает групповая проверка Удачи, а пассажиры оказываются в воде."
+    }
+  ],
+  "description": {
+    "ru": "Очень агрессивное животное с острыми зубами, способное раздавить человека или опрокинуть лодку. Одинаково опасен на суше и в воде.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 193,
+      "printed_page": 192,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "опечатка в книге: среднее СИЛ напечатано как 80, хотя бросок (6D6+15)×5 даёт 180; ПЗ 31 и БкУ +3D6 соответствуют СИЛ 180. В записи сохранено напечатанное значение 80."
+  }
+}

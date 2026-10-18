@@ -1,0 +1,146 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:moray-eel",
+  "kind": "creature",
+  "name": {
+    "ru": "Мурена",
+    "en": "Moray Eel"
+  },
+  "aliases": [],
+  "category": "animal",
+  "subcategory": "зверь",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "35",
+        "value": 35,
+        "roll": "2d6×5"
+      },
+      "CON": {
+        "raw": "35",
+        "value": 35,
+        "roll": "2d6×5"
+      },
+      "SIZ": {
+        "raw": "35",
+        "value": 35,
+        "roll": "2d6×5"
+      },
+      "DEX": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      },
+      "POW": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      }
+    },
+    "hp": {
+      "raw": "7",
+      "value": 7
+    },
+    "damage_bonus": {
+      "raw": "–1",
+      "value": -1
+    },
+    "build": {
+      "raw": "–1",
+      "value": -1
+    },
+    "move": {
+      "raw": "10 swimming",
+      "value": 10,
+      "modes": [
+        {
+          "mode": "swim",
+          "value": 10
+        }
+      ]
+    },
+    "armor": {
+      "raw": "2-point hide.",
+      "value": 2,
+      "note": "шкура"
+    },
+    "attacks_per_round": {
+      "raw": "1 (bite)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Укус",
+          "en": "Bite"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10), damage 1D6–DB (min 1)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1D6–DB (min 1)",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "notes": "отрицательный БкУ уменьшает урон, минимум 1"
+      }
+    ],
+    "dodge": {
+      "raw": "25% (12/5)",
+      "value": 25,
+      "half": 12,
+      "fifth": 5
+    },
+    "skills": [
+      {
+        "name": "Скрытность",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      }
+    ],
+    "sanity_loss": []
+  },
+  "abilities": [
+    {
+      "name": "Опасный укус",
+      "summary": "Укус мурены может быть серьёзным, но без провокации она редко нападает."
+    }
+  ],
+  "description": {
+    "ru": "Хищная морская рыба, прячущаяся в расщелинах. Не слишком агрессивна, пока её не потревожат.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 191,
+      "printed_page": 190,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": null
+  }
+}

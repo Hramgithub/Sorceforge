@@ -120,15 +120,28 @@ function setTab(t, keep) {
 }
 
 function sources(c) {
-  return c.sources.map(s => `${esc(BOOKS[s.book_id] || s.book_id)}: стр. ${s.printed_page ?? '—'} книги (стр. ${s.physical_page ?? '—'} PDF), ${METHOD[s.method] || esc(s.method)}${s.verified ? ' <span class="tag ok">сверено</span>' : ''}`).join('<br>');
+  return c.sources.map(s => `${esc(BOOKS[s.book_id] || s.book_id)}: стр. ${s.printed_page ?? '—'} книги (стр. ${s.physical_page ?? '—'} PDF)${s.entry_page ? `, статья начинается на стр. ${esc(s.entry_page)} PDF` : ''}, ${METHOD[s.method] || esc(s.method)}${s.verified ? ' <span class="tag ok">сверено</span>' : ''}${s.note ? ` <span class="muted">— ${esc(s.note)}</span>` : ''}`).join('<br>');
+}
+function errata(c) {
+  const e = (c.errata||[]).map(x => `<li><b>${esc(x.field)}</b>: ${x.printed ? 'напечатано ' + esc(x.printed) : ''}${x.expected ? ', ожидалось ' + esc(x.expected) : ''}${x.printed || x.expected ? ' — ' : ''}${esc(x.note)}</li>`).join('');
+  return e ? `<section><h3>Опечатки книги</h3><p class="muted">В записи оставлено как напечатано.</p><ul>${e}</ul></section>` : '';
 }
 function corrections(c) {
   const corr = (c.corrections||[]).map(x => `<li><b>${esc(x.field)}</b>: ${x.from ? esc(x.from) + ' → ' : ''}${esc(x.to)} <span class="muted">— ${esc(x.reason)}</span></li>`).join('');
   return corr ? `<section><h3>Исправления</h3><ul>${corr}</ul></section>` : '';
 }
+const FLAG = {
+  translated: ['перевод', 'Русский текст — наш перевод с английского (Р-21).'],
+  parse_uncertain: ['опечатка книги', 'В книге опечатка или противоречие; значение оставлено как напечатано, см. «Опечатки книги».'],
+  incomplete: ['неполно', 'В книге нет части данных (характеристик, процента атаки и т. п.).'],
+  ocr_suspect: ['распознавание', 'Текст получен распознаванием и может содержать ошибки.'],
+  editorial_text: ['текст редакции', 'Текст не из книги, а написан при переносе.'],
+};
 function flags(c) {
-  const f = (c.quality?.flags||[]).map(x => `<span class="tag warn">${esc(x)}</span>`).join('');
-  return f ? `<div>${f} <span class="muted">${esc(c.quality.notes||'')}</span></div>` : '';
+  const q = c.quality || {};
+  const f = (q.flags||[]).map(x => { const [label, tip] = FLAG[x] || [x, '']; return `<span class="tag ${x === 'translated' ? '' : 'warn'}" title="${esc(tip)}">${esc(label)}</span>`; }).join('')
+    + (q.needs_review ? '<span class="tag warn" title="Запись требует проверки.">на проверку</span>' : '');
+  return f || q.notes ? `<div>${f} <span class="muted">${esc(q.notes||'')}</span></div>` : '';
 }
 
 function statblock(c) {
@@ -203,6 +216,7 @@ function creatureCard(c) {
     ${c.blessings?.ru ? `<section><h3>Возможные дары</h3><p>${esc(c.blessings.ru)}</p></section>` : ''}
     ${c.legend?.ru ? `<section><h3>Легенда</h3><p>${esc(c.legend.ru)}</p></section>` : ''}
     ${c.habitat ? `<section><h3>Обитает</h3><p>${esc(c.habitat)}</p></section>` : ''}
+    ${errata(c)}
     <section><h3>Источник</h3><div>${sources(c)}</div></section>
     ${corrections(c)}`;
 }
@@ -227,6 +241,7 @@ function characterCard(c) {
     ${(c.possessions||[]).length ? `<section><h3>Снаряжение</h3><ul>${c.possessions.map(p => `<li>${esc(p)}</li>`).join('')}</ul></section>` : ''}
     ${wealth ? `<section><h3>Деньги</h3><dl>${wealth}</dl></section>` : ''}
     ${c.legend?.ru ? `<section><h3>Легенда</h3><p>${esc(c.legend.ru)}</p></section>` : ''}
+    ${errata(c)}
     <section><h3>Источник</h3><div>${sources(c)}</div></section>
     ${corrections(c)}`;
 }
@@ -241,6 +256,7 @@ function skillCard(c) {
     ${c.description?.ru ? `<p>${esc(c.description.ru)}</p>` : ''}
     ${specs ? `<section><h3>Специализации</h3><table><tr><th>Название</th><th>База</th></tr>${specs}</table></section>` : ''}
     ${(c.examples||[]).length ? `<section><h3>Примеры</h3><ul>${c.examples.map(e => `<li>${esc(e)}</li>`).join('')}</ul></section>` : ''}
+    ${errata(c)}
     <section><h3>Источник</h3><div>${sources(c)}</div></section>
     ${corrections(c)}`;
 }

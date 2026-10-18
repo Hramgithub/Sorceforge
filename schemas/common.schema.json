@@ -23,6 +23,21 @@
         }
       }
     },
+    "errata": {
+      "description": "Опечатки и противоречия книги (Р-32): значение в записи оставлено как напечатано, здесь — что напечатано, что ожидалось и почему.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["field", "note"],
+        "additionalProperties": false,
+        "properties": {
+          "field": { "type": "string" },
+          "printed": { "type": ["string", "null"] },
+          "expected": { "type": ["string", "null"] },
+          "note": { "type": "string" }
+        }
+      }
+    },
     "ability": {
       "description": "Способность: название, краткое описание и ссылки на записи, которые она упоминает (Р-30).",
       "type": "object",
@@ -103,7 +118,9 @@
           "enum": ["book_text", "helper_migration", "mineru", "manual"],
           "description": "book_text — сверено с книгой; helper_migration — перенесено из веб-помощника; mineru — извлечено MinerU; manual — введено вручную."
         },
-        "verified": { "type": "boolean", "description": "Числа сверены с книгой." }
+        "verified": { "type": "boolean", "description": "Числа сверены с книгой." },
+        "entry_page": { "type": ["integer", "null"], "description": "Физическая страница начала статьи, если она раньше страницы блока характеристик (Р-32)." },
+        "note": { "type": ["string", "null"], "description": "Пояснение к источнику (например, что взято из общей таблицы)." }
       }
     },
     "correction": {

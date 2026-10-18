@@ -92,3 +92,5 @@ python tools\validate.py schemas\creature.schema.json schemas\examples\creature\
 Разделы Malleus Monstrorum в записи существа (решение Р-28): Aura → `aura`, Powers →
 `abilities`, Magic → `statblock.spells`, Encounters → `encounters`, Cult → `cult`, Possible Blessings → `blessings` (Р-29), пояснения к атакам →
 `statblock.attacks[].notes`.
+
+Опечатки книги — `errata` (поле, напечатано, ожидалось, пояснение); страница начала статьи — `sources[].entry_page`; пояснение к источнику — `sources[].note` (Р-32).

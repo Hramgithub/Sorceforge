@@ -89,12 +89,11 @@
       ]
     },
     "armor": {
-      "raw": "none; minimum damage from bullets; immune to fire and chemical based attacks.",
-      "value": 0,
-      "note": "пули наносят минимальный урон; иммунитет к огню и химии"
+      "raw": "нет; пули наносят минимальный урон; невосприимчив к огню и химическим атакам.",
+      "value": 0
     },
     "attacks_per_round": {
-      "raw": "2 (whip, bite, grab)",
+      "raw": "2 (хлёст, укус, захват)",
       "value": 2,
       "note": "может атаковать до 2 разных целей за раунд"
     },
@@ -107,13 +106,13 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "70% (35/14), damage 1d4+DB",
+          "raw": "70% (35/14), урон 1d4+БкУ",
           "value": 70,
           "half": 35,
           "fifth": 14
         },
         "damage": {
-          "raw": "1d4+DB",
+          "raw": "1d4+БкУ",
           "dice": "1d4",
           "adds_db": true
         },
@@ -127,13 +126,13 @@
         "kind": "maneuver",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "70% (35/14), held, damage 1d6+1 per round after first",
+          "raw": "70% (35/14), удержание, урон 1d6+1 за раунд после первого",
           "value": 70,
           "half": 35,
           "fifth": 14
         },
         "damage": {
-          "raw": "1d6+1 per round after first",
+          "raw": "1d6+1 за раунд после первого",
           "dice": "1d6+1",
           "adds_db": false
         },
@@ -185,7 +184,7 @@
       }
     ],
     "spells": {
-      "raw": "Contact Shub-Niggurath, plus 30% chance to know 1d4 spells."
+      "raw": "Contact Shub-Niggurath, а также с вероятностью 30% знает 1d4 заклинаний."
     },
     "sanity_loss": [
       {
@@ -226,6 +225,14 @@
       "verified": true
     }
   ],
+  "errata": [
+    {
+      "field": "Уклонение",
+      "printed": "40% (20/16)",
+      "expected": "40% (20/8)",
+      "note": "пятая часть от 40 — 8; сохранено напечатанное"
+    }
+  ],
   "corrections": [],
   "quality": {
     "needs_review": false,
@@ -233,6 +240,6 @@
       "translated",
       "parse_uncertain"
     ],
-    "notes": "Опечатка в книге: Уклонение напечатано «40% (20/16)»; пятая часть от 40 должна быть 8. В записи сохранено напечатанное значение."
+    "notes": null
   }
 }

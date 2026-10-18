@@ -72,12 +72,11 @@
       ]
     },
     "armor": {
-      "raw": "None. Immune to mundane weapons (incl. bullets). Abhors light; bright light deals 1d10 damage per round while normal light sources inflict 1 damage per round (see Control Light, above). If reduced to zero hit points, Bugg-Shash reduces quickly into a festering pool of slime. It reforms six months later.",
-      "value": 0,
-      "note": "неуязвим для обычного оружия и пуль; яркий свет — 1d10 урона за раунд, обычные источники света — по 1; при 0 ПЗ растекается гниющей слизью и возрождается через полгода"
+      "raw": "Нет. Невосприимчив к обычному оружию (включая пули). Не выносит света: яркий свет наносит 1d10 урона за раунд, обычные источники света — 1 урон за раунд (см. «Власть над светом» выше). Если ПЗ падают до нуля, Бугг-Шаш быстро растекается гниющей лужей слизи. Через полгода он воссоздаётся.",
+      "value": 0
     },
     "attacks_per_round": {
-      "raw": "3 (crush, bash, swipe, kiss)",
+      "raw": "3 (сдавливание, удар, взмах, поцелуй)",
       "value": 3,
       "note": "удары массой тела или «поцелуй» — до трёх жертв за раунд"
     },
@@ -90,7 +89,7 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "90% (45/18), damage 6d6",
+          "raw": "90% (45/18), урон 6d6",
           "value": 90,
           "half": 45,
           "fifth": 18
@@ -110,13 +109,13 @@
         "kind": "maneuver",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "90% (45/18), held then suffocated (see above)",
+          "raw": "90% (45/18), удержание, затем удушение (см. выше)",
           "value": 90,
           "half": 45,
           "fifth": 18
         },
         "damage": {
-          "raw": "held then suffocated (see above)",
+          "raw": "удержание, затем удушение (см. выше)",
           "dice": null,
           "adds_db": false,
           "extra": "удушение: проверка ВЫН каждый раунд; после первого провала 1d6 урона за раунд до смерти (правило серьёзной раны не действует)"
@@ -126,7 +125,7 @@
     ],
     "skills": [],
     "spells": {
-      "raw": "Contact Yibb-Tstll, plus any others the Keeper desires, although does not possess any Gate or related spells."
+      "raw": "Contact Yibb-Tstll, а также любые другие на усмотрение Хранителя, но без заклинаний Gate и подобных им."
     },
     "sanity_loss": [
       {
@@ -175,7 +174,16 @@
       "physical_page": 45,
       "printed_page": 44,
       "method": "book_text",
-      "verified": true
+      "verified": true,
+      "note": "способности «Шёпот» и «Создание марионетки» — на следующей странице (PDF 46)"
+    }
+  ],
+  "errata": [
+    {
+      "field": "Броня",
+      "printed": "яркий свет — 1d10 урона за раунд",
+      "expected": null,
+      "note": "в способности «Власть над светом» (Control Light) сильный свет наносит 10 урона за раунд; в записи сохранено напечатанное"
     }
   ],
   "corrections": [],
@@ -185,7 +193,7 @@
       "translated",
       "parse_uncertain"
     ],
-    "notes": "несогласованность в книге: в Control Light сильный свет наносит 10 урона за раунд, в разделе Armor — 1d10 за раунд; в записи сохранено напечатанное. Способности Whisper и Create Puppet — на следующей странице (физ. 46). ИНТ в книге не указан; МОЩ взята из раздела Magic."
+    "notes": "ИНТ в книге не указан; МОЩ — из раздела «Магия»."
   },
   "aura": {
     "ru": "Тьма рождает страх неизвестного, таящегося на расстоянии вздоха. В присутствии Бугг-Шаша и его марионеток все источники света внезапно гаснут; в животе крутит, нарастающее напряжение вызывает обильный пот и обостряет чувства.",

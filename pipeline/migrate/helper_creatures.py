@@ -312,6 +312,49 @@ def migrate(h: dict) -> dict:
     return record
 
 
+def apply_fixes(rec: dict, fix: dict) -> None:
+    """Apply a book-checked fix (pipeline/migrate/creature_fixes.json) to a migrated record.
+
+    ops: {"op": "set", "path": "statblock.armor", "value": ...}
+         {"op": "append", "path": "statblock.attacks", "value": ...}
+         {"op": "replace_attack", "match": "<substring of name.ru or chance.raw>", "value": ...}
+    """
+    ref = f"книга, стр. {fix.get('page')} PDF (проверка по изображению страницы)"
+    for op in fix.get("ops", []):
+        if op["op"] == "replace_attack":
+            attacks = rec["statblock"].setdefault("attacks", [])
+            idx = next((i for i, a in enumerate(attacks)
+                        if op["match"] in a["name"]["ru"] or op["match"] in a["chance"].get("raw", "")), None)
+            old = attacks[idx]["chance"].get("raw") if idx is not None else None
+            if idx is None:
+                attacks.append(op["value"])
+            else:
+                attacks[idx] = op["value"]
+            rec["corrections"].append({"field": "statblock.attacks", "from": old, "to": op["value"]["name"]["ru"],
+                                       "reason": fix["reason"], "ref": ref})
+            continue
+        *parents, last = op["path"].split(".")
+        node = rec
+        for key in parents:
+            node = node.setdefault(key, {})
+        before = node.get(last)
+        if op["op"] == "append":
+            node.setdefault(last, []).append(op["value"])
+            to = op["value"].get("name", {}).get("ru") if isinstance(op["value"], dict) else op["value"]
+            rec["corrections"].append({"field": op["path"], "from": None, "to": to, "reason": fix["reason"], "ref": ref})
+        else:
+            node[last] = op["value"]
+            def text(v):
+                return v.get("raw") if isinstance(v, dict) else (json.dumps(v, ensure_ascii=False)[:200] if v is not None else None)
+            rec["corrections"].append({"field": op["path"], "from": text(before), "to": text(op["value"]),
+                                       "reason": fix["reason"], "ref": ref})
+    if fix.get("resolved"):
+        q = rec["quality"]
+        q["flags"] = [f for f in q.get("flags", []) if f not in ("incomplete", "parse_uncertain")]
+        q["needs_review"] = bool(q["flags"])
+        q["notes"] = fix.get("note") or None
+
+
 def mark_verified(out: Path, results: Path | None, verify: Path | None) -> int:
     """Set sources[0].verified for records whose numbers matched the book (step 3)."""
     ok: set[str] = set()
@@ -345,7 +388,10 @@ def main() -> None:
     ap.add_argument("--out", type=Path, required=True)
     ap.add_argument("--check-results", type=Path, help="checks/20261018-creatures/results.json")
     ap.add_argument("--verify", type=Path, help="checks/20261018-creatures/verify.jsonl")
+    ap.add_argument("--fixes", type=Path, default=Path(__file__).with_name("creature_fixes.json"),
+                    help="book-checked fixes applied after migration")
     a = ap.parse_args()
+    fixes = {f["slug"]: f for f in json.loads(a.fixes.read_text(encoding="utf-8"))} if a.fixes.exists() else {}
     a.out.mkdir(parents=True, exist_ok=True)
     curated = {p.stem for p in a.examples.glob("*.json")}
     n = flagged = 0
@@ -355,9 +401,15 @@ def main() -> None:
             continue
         n += 1
         if h["id"] in curated:
-            shutil.copyfile(a.examples / f"{h['id']}.json", a.out / f"{h['id']}.json")
+            rec = json.loads((a.examples / f"{h['id']}.json").read_text(encoding="utf-8"))
+            if h["id"] in fixes:
+                apply_fixes(rec, fixes[h["id"]])
+            flagged += bool(rec["quality"].get("flags"))
+            (a.out / f"{h['id']}.json").write_text(json.dumps(rec, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
             continue
         rec = migrate(h)
+        if h["id"] in fixes:
+            apply_fixes(rec, fixes[h["id"]])
         flagged += bool(rec["quality"]["flags"])
         (a.out / f"{h['id']}.json").write_text(json.dumps(rec, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     verified = mark_verified(a.out, a.check_results, a.verify)

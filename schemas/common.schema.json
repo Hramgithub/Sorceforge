@@ -9,6 +9,32 @@
       "type": "string",
       "pattern": "^[a-z0-9-]+([:/][a-z0-9-]+)+$"
     },
+    "relations": {
+      "description": "Связи с другими записями (Р-30). Связь хранится в одной записи; обратную сторону показывает просмотрщик. form_of — другая форма, стадия или вид того же существа; avatar_of — воплощение божества; spawn_of — порождение, потомство, личинки; servitor_of — служит божеству или существу; transforms_into — может превращаться в другое существо.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "target"],
+        "additionalProperties": false,
+        "properties": {
+          "type": { "enum": ["form_of", "avatar_of", "spawn_of", "servitor_of", "transforms_into"] },
+          "target": { "$ref": "#/$defs/id" },
+          "note": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "ability": {
+      "description": "Способность: название, краткое описание и ссылки на записи, которые она упоминает (Р-30).",
+      "type": "object",
+      "required": ["name", "summary"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string" },
+        "summary": { "type": "string" },
+        "raw": { "type": ["string", "null"] },
+        "refs": { "type": "array", "items": { "$ref": "#/$defs/id" } }
+      }
+    },
     "text": {
       "description": "Текст на одном или двух языках. Источник истины — язык книги; ru обязателен, en — если известен.",
       "type": "object",

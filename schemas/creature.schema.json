@@ -23,24 +23,9 @@
       "items": { "$ref": "common.schema.json#/$defs/id" },
       "description": "Ссылка на каноническую запись, если это вариант из другой книги (D12c kb_creator)."
     },
-    "form_of": {
-      "type": "array",
-      "items": { "$ref": "common.schema.json#/$defs/id" },
-      "description": "Ссылка на основную запись, если это другая форма, стадия или вид того же существа из той же статьи книги."
-    },
+    "relations": { "$ref": "common.schema.json#/$defs/relations" },
     "statblock": { "$ref": "common.schema.json#/$defs/statblock" },
-    "abilities": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "required": ["name", "summary"],
-        "additionalProperties": false,
-        "properties": {
-          "name": { "type": "string" },
-          "summary": { "type": "string" }
-        }
-      }
-    },
+    "abilities": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/ability" } },
     "description": { "$ref": "common.schema.json#/$defs/text" },
     "legend": { "$ref": "common.schema.json#/$defs/legend" },
     "aura": { "$ref": "common.schema.json#/$defs/text", "description": "Аура — что чувствуют рядом с существом (раздел Aura в Malleus Monstrorum)." },

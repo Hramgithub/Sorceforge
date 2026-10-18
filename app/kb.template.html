@@ -162,16 +162,39 @@ function statblock(c) {
     ${san ? `<section><h3>Потеря рассудка</h3><ul>${san}</ul></section>` : ''}`;
 }
 
+function refLinks(ids) {
+  return (ids||[]).map(i => byId(i) ? link(i, byId(i).name.ru) : esc(i)).join(', ');
+}
 function abilities(c) {
-  return (c.abilities||[]).length ? `<section><h3>Способности</h3>${c.abilities.map(a => `<p><b>${esc(a.name)}.</b> ${esc(a.summary)}</p>`).join('')}</section>` : '';
+  return (c.abilities||[]).length ? `<section><h3>Способности</h3>${c.abilities.map(a => `<p><b>${esc(a.name)}.</b> ${esc(a.summary)}${(a.refs||[]).length ? ` <span class="muted">→ ${refLinks(a.refs)}</span>` : ''}</p>`).join('')}</section>` : '';
+}
+// relation labels: forward (this record → target) and reverse (records pointing here)
+const REL = {
+  form_of: ['Форма существа', 'Другие формы'],
+  avatar_of: ['Аватар божества', 'Аватары'],
+  spawn_of: ['Порождение', 'Порождения'],
+  servitor_of: ['Служит', 'Служители'],
+  transforms_into: ['Превращается в', 'Превращаются в это существо'],
+};
+function relations(c) {
+  const rows = [];
+  for (const [type, [fwd, rev]] of Object.entries(REL)) {
+    const out = (c.relations||[]).filter(r => r.type === type).map(r => r.target);
+    const inc = ALL.filter(x => (x.relations||[]).some(r => r.type === type && r.target === c.id)).map(x => x.id);
+    if (out.length) rows.push(`<dt>${fwd}</dt><dd>${refLinks(out)}</dd>`);
+    if (inc.length) rows.push(`<dt>${rev}</dt><dd>${refLinks(inc)}</dd>`);
+  }
+  const same = (c.same_as||[]).filter(byId);
+  if (same.length) rows.push(`<dt>То же существо</dt><dd>${refLinks(same)}</dd>`);
+  return rows.length ? `<section><h3>Связи</h3><dl>${rows.join('')}</dl></section>` : '';
 }
 
 function creatureCard(c) {
   return `<h2>${esc(c.name.ru)}</h2>
     <div class="sub">${esc(c.name.en||'')} · ${CAT[c.category]||''}${c.subcategory ? ' · ' + esc(c.subcategory) : ''}${(c.aliases||[]).length ? ' · также: ' + c.aliases.map(esc).join(', ') : ''}</div>
     ${flags(c)}
-    ${(c.form_of||[]).length ? `<div>Другая форма: ${c.form_of.map(i => byId(i) ? link(i, byId(i).name.ru) : esc(i)).join(', ')}</div>` : ''}
     ${c.description?.ru ? `<p>${esc(c.description.ru)}</p>` : ''}
+    ${relations(c)}
     ${c.aura?.ru ? `<section><h3>Аура</h3><p>${esc(c.aura.ru)}</p></section>` : ''}
     ${statblock(c)}
     ${abilities(c)}
@@ -197,6 +220,7 @@ function characterCard(c) {
     ${facts ? `<dl>${facts}</dl>` : ''}
     ${c.scenario_role ? `<section><h3>Роль в сценарии</h3><p>${esc(c.scenario_role)}</p></section>` : ''}
     ${c.description?.ru ? `<p>${esc(c.description.ru)}</p>` : ''}
+    ${relations(c)}
     ${statblock(c)}
     ${abilities(c)}
     ${bg ? `<section><h3>Предыстория</h3><dl>${bg}</dl></section>` : ''}
@@ -240,10 +264,14 @@ document.getElementById('q').oninput = renderList;
 document.getElementById('cat').onchange = renderList;
 document.querySelectorAll('.tabs button').forEach(b => b.onclick = () => setTab(b.dataset.tab));
 Object.values(SET).forEach(s => s.sort((a, b) => a.name.ru.localeCompare(b.name.ru, 'ru')));
-const [hk, hs] = decodeURIComponent(location.hash.slice(1)).split('/');
-const start = hs && SET[hk] ? SET[hk].find(c => c.id.split(/[:/]/).pop() === hs) : null;
-setTab(start ? start.kind : (SET[hk] ? hk : 'creature'), true);
+function fromHash() {
+  const [hk, hs] = decodeURIComponent(location.hash.slice(1)).split('/');
+  return hs && SET[hk] ? SET[hk].find(c => c.id.split(/[:/]/).pop() === hs) : null;
+}
+const start = fromHash();
+setTab(start ? start.kind : 'creature', true);
 show(start ? start.id : SET[tab][0]?.id);
+window.addEventListener('hashchange', () => { const c = fromHash(); if (c && c.id !== current) show(c.id); });
 </script>
 </body>
 </html>

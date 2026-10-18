@@ -1,0 +1,163 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:black-pharaoh",
+  "kind": "creature",
+  "name": {
+    "ru": "Чёрный фараон",
+    "en": "The Black Pharaoh"
+  },
+  "aliases": [
+    "Set",
+    "Tezcatlipoca",
+    "Thoth"
+  ],
+  "category": "avatar",
+  "subcategory": "аватар Ньярлатхотепа",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "95",
+        "value": 95
+      },
+      "SIZ": {
+        "raw": "55",
+        "value": 55
+      },
+      "DEX": {
+        "raw": "95",
+        "value": 95
+      },
+      "POW": {
+        "raw": "500",
+        "value": 500
+      }
+    },
+    "averages": false,
+    "hp": {
+      "raw": "15",
+      "value": 15
+    },
+    "mp": {
+      "raw": "100",
+      "value": 100
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "12",
+      "value": 12,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 12
+        }
+      ]
+    },
+    "armor": {
+      "raw": "None. Mundane weapons (incl. bullets) deal minimum damage. Regenerates 1D6 hit points per round spent healing itself (death at zero hit points). If reduced to zero hit points, Nyarlathotep's human form collapses and then begins to bubble and change form into a monstrous avatar form (usually the Bloody Tongue).",
+      "value": 0,
+      "note": "обычное оружие наносит минимальный урон; восстанавливает 1d6 ПЗ за раунд лечения; при 0 ПЗ превращается в чудовищный аватар (обычно Кровавый Язык)"
+    },
+    "attacks_per_round": {
+      "raw": "1 per two rounds (energy blast)",
+      "value": "1 за 2 раунда"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Энергетический удар",
+          "en": "Energy Blast"
+        },
+        "kind": "special",
+        "skill": null,
+        "chance": {
+          "raw": "automatic, damage 20 points",
+          "value": null,
+          "half": null,
+          "fifth": null
+        },
+        "damage": {
+          "raw": "20 points",
+          "dice": null,
+          "adds_db": false,
+          "extra": "жертва обожжена и иссушена"
+        },
+        "notes": "раз в два раунда через два скипетра (с крюком и перевёрнутым анхом); цель случайная (можно определить проверкой Удачи)"
+      }
+    ],
+    "skills": [],
+    "spells": {
+      "raw": "any the Keeper desires, but none concerning Elder God and associated matters."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d2",
+        "trigger": "при встрече с Чёрным фараоном в полностью человеческом облике"
+      },
+      {
+        "success": "1d4",
+        "fail": "1d8",
+        "trigger": "при виде Чёрного фараона с лицом из щупалец"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Охотничьи ужасы",
+      "summary": "Всегда сопровождается двумя (обычно невидимыми) охотничьими ужасами и предпочитает сражаться их руками."
+    },
+    {
+      "name": "Энергетические удары",
+      "summary": "Раз в два раунда автоматически наносит 20 урона случайной цели."
+    }
+  ],
+  "description": {
+    "ru": "Высокий красивый смуглый человек (обычно мужчина) в одеянии египетского фараона или в тёмном костюме; лицо может сменяться жуткой массой шевелящихся щупалец.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Ему поклоняется Братство Чёрного фараона, основанное в Египте при III династии и в XX веке возглавляемое Омаром аль-Шакти; английскую ветвь создал сэр Обри Пенхью. Братство чтит и Зверя (Безликого бога) как раскрытое космическое величие Чёрного фараона.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 147,
+      "printed_page": 146,
+      "method": "book_text",
+      "verified": true
+    },
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 165,
+      "printed_page": 164,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Характеристики, ПЗ, БкУ, комплекция и скорость — из общей таблицы «Nyarlathotep: Avatar Profiles» (стр. 165 PDF / 164 книги); МОЩ 500, ПМ 100 и заклинания — общие для всех аватаров (там же). Боевые данные, силы и потеря рассудка — из врезки «Profile» аватара."
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:skinless-one",
+  "kind": "creature",
+  "name": {
+    "ru": "Бескожий",
+    "en": "The Skinless One"
+  },
+  "category": "avatar",
+  "subcategory": "аватар Ньярлатхотепа",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "characteristics": {
+      "STR": {
+        "raw": "100",
+        "value": 100
+      },
+      "CON": {
+        "raw": "100",
+        "value": 100
+      },
+      "SIZ": {
+        "raw": "100",
+        "value": 100
+      },
+      "DEX": {
+        "raw": "100",
+        "value": 100
+      },
+      "POW": {
+        "raw": "500",
+        "value": 500
+      }
+    },
+    "averages": false,
+    "hp": {
+      "raw": "20",
+      "value": 20
+    },
+    "mp": {
+      "raw": "100",
+      "value": 100
+    },
+    "damage_bonus": {
+      "raw": "+1D6",
+      "value": "1d6"
+    },
+    "build": {
+      "raw": "2",
+      "value": 2
+    },
+    "move": {
+      "raw": "10",
+      "value": 10,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 10
+        }
+      ]
+    },
+    "armor": {
+      "raw": "None. Those shooting or striking at the Skinless One develop an unbearable itch in their weapon hand(s), and unless they succeed with a CON roll, they automatically miss their target. Mundane weapons (incl. bullets) inflict minimum damage. If reduced to zero hit points, the Skinless One crumbles into nothingness or the body splits open and a monstrous form squeezes its way out before departing (usually Bloody Tongue form). It reforms in 1D6 rounds and may reappear to trouble those who thought it dead.",
+      "value": 0,
+      "note": "атакующие без проверки ВЫН автоматически промахиваются; обычное оружие наносит минимальный урон; возрождается через 1d6 раундов"
+    },
+    "attacks_per_round": {
+      "raw": "3",
+      "value": 3
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "100% (50/20), damage 1D8+1D6",
+          "value": 100,
+          "half": 50,
+          "fifth": 20
+        },
+        "damage": {
+          "raw": "1D8+1D6",
+          "dice": "1d8",
+          "adds_db": true
+        }
+      }
+    ],
+    "skills": [],
+    "spells": {
+      "raw": "while the Skinless One has access to any spells desired by the Keeper, the following spells are particularly suitable— Animate Flesh Thing, Control Skin, Create Flesh Creeper, Knot Flesh, Melt Flesh, Skin Walker, Wither Limb."
+    },
+    "sanity_loss": [
+      {
+        "success": "1d10",
+        "fail": "1d100",
+        "trigger": "при встрече с Бескожим"
+      },
+      {
+        "success": "1",
+        "fail": "1d10",
+        "trigger": "при виде Свежующего взгляда"
+      },
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "при долгом пребывании в его ауре зуда"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Мерзкая аура",
+      "summary": "У людей в радиусе 100 м начинает зудеть кожа; при долгом воздействии — проверка рассудка 0/1d6."
+    },
+    {
+      "name": "Свежующий взгляд",
+      "summary": "За 1 ПМ на цель сдирает с человека кожу, если тот не прошёл проверку МОЩ Экстремальной сложности: 4d6 урона, скорость падает до 1, затем 1 урон за раунд до смерти."
+    }
+  ],
+  "description": {
+    "ru": "Мускулистый человек ростом 2,4 м с содранной кожей — одни мышцы, сухожилия и кости, иногда с третьим глазом во лбу; воздух вокруг потрескивает от силы.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Ему поклоняются Братья Кожи, по преданию основанные Седефкаром Османли в Константинополе в XI веке (по другим данным — в Турции XIX века, с центром в Красной мечети Стамбула); их обряды связаны с увечьями и сдиранием кожи.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 153,
+      "printed_page": 152,
+      "method": "book_text",
+      "verified": true
+    },
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 165,
+      "printed_page": 164,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Характеристики, ПЗ, БкУ, комплекция и скорость — из общей таблицы «Nyarlathotep: Avatar Profiles» (стр. 165 PDF / 164 книги); МОЩ 500, ПМ 100 и заклинания — общие для всех аватаров (там же). Боевые данные, силы и потеря рассудка — из врезки «Profile» аватара. Для этого аватара в профиле дан собственный список подходящих заклинаний."
+  }
+}

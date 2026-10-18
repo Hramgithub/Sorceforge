@@ -1,0 +1,179 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:nug-and-yeb",
+  "kind": "creature",
+  "name": {
+    "ru": "Нуг и Йеб",
+    "en": "Nug & Yeb"
+  },
+  "aliases": [
+    "the Twin Blasphemies",
+    "the Twin Monstrosities",
+    "Nug",
+    "Yeb"
+  ],
+  "category": "mythos_deity",
+  "subcategory": "Великие Древние",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "characteristics": {
+      "STR": {
+        "raw": "450",
+        "value": 450
+      },
+      "CON": {
+        "raw": "800",
+        "value": 800
+      },
+      "SIZ": {
+        "raw": "445",
+        "value": 445
+      },
+      "DEX": {
+        "raw": "80",
+        "value": 80
+      },
+      "POW": {
+        "raw": "180",
+        "value": 180
+      }
+    },
+    "averages": false,
+    "hp": {
+      "raw": "124",
+      "value": 124
+    },
+    "mp": {
+      "raw": "36",
+      "value": 36
+    },
+    "damage_bonus": {
+      "raw": "+10D6",
+      "value": "10d6"
+    },
+    "build": {
+      "raw": "11",
+      "value": 11
+    },
+    "move": {
+      "raw": "25 (contained within the black sun)",
+      "value": 25,
+      "modes": [
+        {
+          "mode": "other",
+          "value": 25,
+          "note": "только внутри чёрного солнца"
+        }
+      ]
+    },
+    "armor": {
+      "raw": "None. Immune to mundane weapons (incl. bullets). If reduced to zero hit points, Nug and Yeb simply appear to grow smaller and their movement slows to a stop. They reactive in 1D100 years.",
+      "value": 0,
+      "note": "неуязвимы для обычного оружия; при 0 ПЗ замирают и пробуждаются через 1d100 лет"
+    },
+    "attacks_per_round": {
+      "raw": "5 (crush or black flame)",
+      "value": 5
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Раздавливание",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "90% (45/18), damage 10D6",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        },
+        "damage": {
+          "raw": "10D6",
+          "dice": "10d6",
+          "adds_db": false
+        },
+        "notes": "давят тех, кто подходит слишком близко"
+      },
+      {
+        "name": {
+          "ru": "Чёрное пламя",
+          "en": "Black flame"
+        },
+        "kind": "attack",
+        "skill": null,
+        "chance": {
+          "raw": "60% (30/12), damage 4D10",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "4D10",
+          "dice": "4d10",
+          "adds_db": false
+        },
+        "notes": "выбросы чёрного пламени на дальность 100 м"
+      }
+    ],
+    "skills": [],
+    "spells": {
+      "raw": "none; these entities will gain spells when they finally detach from one another."
+    },
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d10",
+        "trigger": "при виде Йан-Хо и чёрного солнца"
+      },
+      {
+        "success": "1d10",
+        "fail": "1d100",
+        "trigger": "при встрече с Нугом и Йебом вблизи"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Порождения",
+      "summary": "Непрерывно порождают чудовищ — податливые чёрные комки со слюнявыми пастями и разномастными конечностями: 8 ПЗ, 2 атаки за раунд, 50% (25/10), урон 1d6."
+    },
+    {
+      "name": "Чёрное солнце",
+      "summary": "Заключены в чёрной сфере диаметром 80 км над городом Йан-Хо; само их тело — шар около 90 м в чёрном пламени."
+    }
+  ],
+  "description": {
+    "ru": "Близнецы-порождения Йог-Сотота и Шуб-Ниггурат, навечно слитые в клубящуюся массу чёрно-серых паров с открывающимися и исчезающими глазами и ртами.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Висят в чёрном солнце над Йан-Хо в глубине Земли, за миром К'н-яна; жители К'н-яна почитают их оргиастическими обрядами в золотых святилищах. Когда близнецы насытятся и разделятся, начнётся конец света: освобождение Великих Древних и гибель Старших богов.",
+    "en": null
+  },
+  "habitat": "чёрное солнце над Йан-Хо, под миром К'н-яна",
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 142,
+      "printed_page": 141,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Один профиль на обоих («Nug and Yeb have an identical profile»). Потеря рассудка, магия и силы — стр. 143 PDF. Опечатка в книге: «They reactive in 1D100 years» (вместо «reactivate»); сохранено как напечатано. Порождения даны в силах строкой, отдельного статблока нет."
+  }
+}

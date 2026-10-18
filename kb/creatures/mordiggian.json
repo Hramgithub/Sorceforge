@@ -1,0 +1,182 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:mordiggian",
+  "kind": "creature",
+  "name": {
+    "ru": "Мордиггиан",
+    "en": "Mordiggian"
+  },
+  "aliases": [
+    "Charnel One",
+    "Old Gnaw",
+    "Worm of Corruption",
+    "the Charnel God"
+  ],
+  "category": "mythos_deity",
+  "subcategory": "Великий Древний",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "characteristics": {
+      "STR": {
+        "raw": "175",
+        "value": 175
+      },
+      "CON": {
+        "raw": "380",
+        "value": 380
+      },
+      "SIZ": {
+        "raw": "200*",
+        "value": 200
+      },
+      "DEX": {
+        "raw": "100",
+        "value": 100
+      },
+      "POW": {
+        "raw": "125",
+        "value": 125
+      }
+    },
+    "averages": false,
+    "hp": {
+      "raw": "58",
+      "value": 58
+    },
+    "mp": {
+      "raw": "25",
+      "value": 25
+    },
+    "damage_bonus": {
+      "raw": "+4D6 to +5D6 (depending on SIZ)",
+      "value": "4d6",
+      "note": "при РАЗ 200 — +4d6"
+    },
+    "build": {
+      "raw": "5 to 6 (depending on SIZ)",
+      "value": 5,
+      "note": "при РАЗ 200 — 5"
+    },
+    "move": {
+      "raw": "16",
+      "value": 16,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 16
+        }
+      ]
+    },
+    "armor": {
+      "raw": "None. Immune to mundane weapons (incl. bullets). If reduced to zero hit points, Mordiggian turns into a shower of foul-smelling liquid, covering everyone in the area and making them smell like rotting meat (the smell cannot be removed for 1D6 days). It reforms in the Dreamlands in 1D100 days.",
+      "value": 0,
+      "note": "неуязвим для обычного оружия; при 0 ПЗ возрождается в Мире грёз через 1d100 дней"
+    },
+    "attacks_per_round": {
+      "raw": "4 (striking, bludgeoning) or 1 (engulf )",
+      "value": "4 или 1"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (удары)",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "80% (40/16), damage 3D6",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "3D6",
+          "dice": "3d6",
+          "adds_db": false
+        }
+      },
+      {
+        "name": {
+          "ru": "Поглощение",
+          "en": "Engulf"
+        },
+        "kind": "special",
+        "skill": null,
+        "chance": {
+          "raw": "70% (35/14), damage death (see Total Consumption above)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "death (see Total Consumption above)",
+          "dice": null,
+          "adds_db": false,
+          "extra": "смерть: жертва поглощается целиком"
+        },
+        "notes": "поглощает, если цель не сумела Увернуться (контратака может нанести урон, но цель всё равно поглощена); от жертвы остаются только одежда и вещи"
+      }
+    ],
+    "skills": [],
+    "spells": {
+      "raw": "Animate Flesh Thing, Assist Dreamer, Bring Pestilence, Circle of Nausea, Maggots. Nightmare, Send Dream, Stupefying Blast, Summon Ghouls, Transfer Organ; others as the Keeper desires."
+    },
+    "sanity_loss": [
+      {
+        "success": "1d8",
+        "fail": "1d20",
+        "trigger": "при встрече с Мордиггианом"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Ослепляющие формы",
+      "summary": "Постоянно меняет облик; кто провалит совмещённую проверку ИНТ и МОЩ, атакует его со штрафной костью, пока находится рядом (эффект проходит через 1d10 минут после ухода)."
+    },
+    {
+      "name": "Пожиратель света",
+      "summary": "С его появлением гаснут огонь и все источники тепла и света; вокруг становится мертвенно холодно."
+    },
+    {
+      "name": "Полное поглощение",
+      "summary": "Съеденные им исчезают навсегда — душа и жизненная сила поглощены, их нельзя оживить или воскресить магией."
+    },
+    {
+      "name": "Изменчивый размер",
+      "summary": "РАЗ меняется от 100 до 300 в зависимости от облика; БкУ и комплекция меняются вместе с ним."
+    }
+  ],
+  "description": {
+    "ru": "Божество упырей: облакоподобная масса живой смерти и тьмы, принимающая то облик упыря, то вихря щупалец с огромной пастью; приносит с собой трупный смрад и могильный холод.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Упыри считают себя его избранниками; культ Мордиггиана («Бога склепов») доступен только упырям, хотя некоторые людские семьи и тайные общества подражают им. Странствует между Миром грёз и Бодрствующим миром по упырьим тоннелям; в далёком будущем — покровитель города Зул-Бха-Саир на Зотике.",
+    "en": null
+  },
+  "habitat": "тоннели и катакомбы упырей между Миром грёз и Бодрствующим миром",
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 133,
+      "printed_page": 132,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Характеристики и бой — стр. 133 PDF, потеря рассудка — стр. 134, магия и силы — стр. 135. ИНТ в книге не указан. В списке заклинаний опечатка: точка вместо запятой («Maggots. Nightmare»); сохранено как напечатано."
+  }
+}

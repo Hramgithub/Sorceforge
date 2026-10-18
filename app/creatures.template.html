@@ -84,7 +84,10 @@ function show(id) {
     return `<div><b>${ru}</b><span>${esc(v.raw)}</span>${v.roll ? `<i>${esc(v.roll)}</i>` : ''}</div>`; }).join('');
   const derived = [['ПЗ', sb.hp], ['ПМ', sb.mp], ['Бонус к урону', sb.damage_bonus], ['Комплекция', sb.build],
     ['Скорость', sb.move], ['Броня', sb.armor], ['Атак за раунд', sb.attacks_per_round]]
-    .filter(([, v]) => v && v.raw).map(([k, v]) => `<tr><th>${k}</th><td>${esc(v.raw)}${v.note ? ` <span class="muted">(${esc(v.note)})</span>` : ''}</td></tr>`).join('');
+    .filter(([, v]) => v && v.raw).map(([k, v]) => {
+      // note is shown only when it adds something; parsed notes are usually already inside raw
+      const extra = v.note && !v.raw.includes(v.note) ? ` <span class="muted">(${esc(v.note)})</span>` : '';
+      return `<tr><th>${k}</th><td>${esc(v.raw)}${extra}</td></tr>`; }).join('');
   const attacks = (sb.attacks||[]).map(a => `<tr><td>${esc(a.name.ru)}${a.kind==='maneuver'?' <span class="tag">манёвр</span>':''}${a.kind==='special'?' <span class="tag">особое</span>':''}</td>
     <td>${esc(a.chance.raw)}</td><td>${a.damage ? esc(a.damage.raw) : '—'}${a.notes ? `<div class="muted">${esc(a.notes)}</div>` : ''}</td></tr>`).join('');
   const san = (sb.sanity_loss||[]).map(s => `<li>${esc(s.success)}/${esc(s.fail)}${s.trigger ? ' — ' + esc(s.trigger) : ''}</li>`).join('');

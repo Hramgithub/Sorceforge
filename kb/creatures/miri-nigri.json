@@ -1,0 +1,204 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:miri-nigri",
+  "kind": "creature",
+  "name": {
+    "ru": "Мири нигри",
+    "en": "Miri Nigri"
+  },
+  "aliases": [
+    "Silent Ones",
+    "Spawn of Faugn",
+    "Toad Folk",
+    "Voiceless Creepers"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "раса служителей (Шагнер Фан)",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "35",
+        "value": 35,
+        "roll": "2d6×5"
+      },
+      "CON": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      },
+      "SIZ": {
+        "raw": "30",
+        "value": 30,
+        "roll": "(2d6−1)×5"
+      },
+      "DEX": {
+        "raw": "80–85",
+        "value": 80,
+        "roll": "(3d6+6)×5"
+      },
+      "INT": {
+        "raw": "35",
+        "value": 35,
+        "roll": "2d6×5"
+      },
+      "POW": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      }
+    },
+    "hp": {
+      "raw": "8",
+      "value": 8
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "damage_bonus": {
+      "raw": "–1",
+      "value": -1
+    },
+    "build": {
+      "raw": "–1",
+      "value": -1
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "none.",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1 (punch, kick, bite)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9), damage 1D3+DB or by weapon type",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "damage 1D3+DB or by weapon type",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "notes": "предпочитают нападать толпой или заманивать жертв в ловушки"
+      }
+    ],
+    "dodge": {
+      "raw": "45% (20/8)",
+      "value": 45,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Прыжки",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Скрытность",
+        "value": {
+          "raw": "90%",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        }
+      },
+      {
+        "name": "Плавание",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      }
+    ],
+    "spells": {
+      "raw": "none."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d4",
+        "trigger": "при встрече с мири нигри"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Безгласные",
+      "summary": "Не имеют голоса; общаются между собой телепатически или едва заметными жестами."
+    },
+    {
+      "name": "Стая",
+      "summary": "Обычно встречаются группами от 10 и больше и берут числом."
+    }
+  ],
+  "description": {
+    "ru": "Маленькие тёмные карлики, вылепленные из порченой плоти жаб: холодные выпуклые водянистые глаза, влажная слизистая кожа в шишках и наростах, безмолвные рты. Неустанно служат Шагнер Фану.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Мири нигри день и ночь ползают по неподвижному телу Шагнер Фана и ухаживают за ним. Дважды в год он отправляет их в мир за юношами и девушками, чтобы напитаться их кровью; иногда их посылают заключать союзы с другими культами.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 101,
+      "printed_page": 100,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "опечатка в книге: Уклонение напечатано как «45% (20/8)» — половина и пятая соответствуют 40%, а ЛВК 80–85 даёт 40–42%; в записи — напечатанные значения"
+  }
+}

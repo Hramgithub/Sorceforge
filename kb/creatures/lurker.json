@@ -1,0 +1,257 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:lurker",
+  "kind": "creature",
+  "name": {
+    "ru": "Скрытень",
+    "en": "Lurker"
+  },
+  "aliases": [
+    "Children of Yidhra",
+    "Creeps",
+    "Fruit of Yidhra",
+    "Vampires"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "раса служителей (Йидра)",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "80",
+        "value": 80,
+        "roll": "(4d6+2)×5"
+      },
+      "CON": {
+        "raw": "85",
+        "value": 85,
+        "roll": "(4d6+3)×5"
+      },
+      "SIZ": {
+        "raw": "75",
+        "value": 75,
+        "roll": "(2d6+8)×5"
+      },
+      "DEX": {
+        "raw": "80",
+        "value": 80,
+        "roll": "(4d6+2)×5"
+      },
+      "INT": {
+        "raw": "65–70",
+        "value": 65,
+        "roll": "(3d6+4)×5"
+      },
+      "POW": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      }
+    },
+    "hp": {
+      "raw": "16",
+      "value": 16
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "damage_bonus": {
+      "raw": "+1D4",
+      "value": "1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "none; for every 6 hit points drained from a victim, a lurker gains 1 temporary hit point (these points do not heal and can only be regained through further feeding).",
+      "value": 0,
+      "note": "за каждые 6 ПЗ, высосанных у жертвы, получает 1 временный ПЗ"
+    },
+    "attacks_per_round": {
+      "raw": "1 (claw, bite, weapon, or feed)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "60% (30/12), damage 1D4+DB, or by weapon type",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "damage 1D4+DB, or by weapon type",
+          "dice": "1d4",
+          "adds_db": true
+        },
+        "notes": "менее человекоподобные скрытни не пользуются оружием, но по решению Хранителя могут атаковать 1d4 раза за раунд"
+      },
+      {
+        "name": {
+          "ru": "Питание (манёвр)",
+          "en": "Feed (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "60% (30/12), damage 1D6 per round (see above)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "damage 1D6 per round (see above)",
+          "dice": "1d6",
+          "adds_db": false,
+          "extra": "за раунд, пока присосался к ране"
+        },
+        "notes": "только по уже раненой жертве; вырваться — встречная проверка СИЛ или ЛВК раз в раунд (после потери половины ПЗ — со штрафной костью); 8 урона скрытню за раунд заставляет его отцепиться"
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Прыжки",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Слух",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Чувствовать добычу",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Скрытность",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Внимание",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      }
+    ],
+    "spells": {
+      "raw": "none."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "при встрече с человекоподобным скрытнем"
+      },
+      {
+        "success": "1",
+        "fail": "1d6+2",
+        "trigger": "при встрече с менее человекоподобным скрытнем"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Психическая связь",
+      "summary": "Йидра видит глазами скрытня и чувствует то же, что он; может отозвать скрытней, чтобы поглотить их и собранную ими жизненную силу."
+    },
+    {
+      "name": "Жажда крови",
+      "summary": "Нужно не меньше 2 ПЗ живой крови за 4 дня; иначе штрафная кость ко всем навыкам, а через 8+ дней — движение 1 и 2 урона в день; при 0 ПЗ впадает в оцепенение."
+    },
+    {
+      "name": "Сойти за человека",
+      "summary": "Самые человекоподобные скрытни живут среди людей и сохраняют часть прежних навыков (40–80 очков: Обаяние, Красноречие, Запугивание, Убеждение, Психология и т. п.)."
+    },
+    {
+      "name": "Питание",
+      "summary": "Присасывается к ране и пьёт кровь (1d6 урона за раунд)."
+    }
+  ],
+  "description": {
+    "ru": "Бывшие люди, поглощённые Йидрой и рождённые заново: одни похожи на раздутые мешки плоти на коротких ногах, другие почти неотличимы от людей, но у всех огромные клыкастые пасти. Небольшими группами прячутся рядом с людьми и пьют кровь жертв.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Каждый скрытень — продолжение воли Йидры, которая может призвать их на помощь. Возможно, именно они породили мифы о вампирах; сколько их всего, неизвестно.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 94,
+      "printed_page": 93,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "возможная опечатка в книге: для ИНТ (3D6+4)×5 напечатано среднее «65–70», расчётное — 70–75; в записи — напечатанное значение. Описание существа — на стр. 93 PDF."
+  }
+}

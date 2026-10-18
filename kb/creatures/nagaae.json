@@ -1,0 +1,214 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:nagaae",
+  "kind": "creature",
+  "name": {
+    "ru": "Нагаэ",
+    "en": "Nagäae"
+  },
+  "aliases": [
+    "Cyäegha’s Claws",
+    "Nagae",
+    "Toad Kin"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "раса служителей (Сиэгха)",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "130",
+        "value": 130,
+        "roll": "(4d6+12)×5"
+      },
+      "CON": {
+        "raw": "120",
+        "value": 120,
+        "roll": "(4d6+10)×5"
+      },
+      "SIZ": {
+        "raw": "110",
+        "value": 110,
+        "roll": "(4d6+8)×5"
+      },
+      "DEX": {
+        "raw": "30",
+        "value": 30,
+        "roll": "(1d6+3)×5"
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      },
+      "POW": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      }
+    },
+    "hp": {
+      "raw": "23",
+      "value": 23
+    },
+    "mp": {
+      "raw": "13",
+      "value": 13
+    },
+    "damage_bonus": {
+      "raw": "+2D6",
+      "value": "2d6"
+    },
+    "build": {
+      "raw": "3",
+      "value": 3
+    },
+    "move": {
+      "raw": "6",
+      "value": 6,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 6
+        }
+      ]
+    },
+    "armor": {
+      "raw": "2-point tough, leathery, translucent skin.",
+      "value": 2
+    },
+    "attacks_per_round": {
+      "raw": "4 (claw) or 3 (claw and bite)",
+      "value": 4
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "60% (30/12), damage 1D6+DB",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "damage 1D6+DB",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "notes": "четыре удара когтями за раунд или два удара когтями и укус"
+      },
+      {
+        "name": {
+          "ru": "Укус",
+          "en": "Bite"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8), damage 1D8+venom",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "damage 1D8+venom",
+          "dice": "1d8",
+          "adds_db": false,
+          "extra": "яд"
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "20% (10/4)",
+      "value": 20,
+      "half": 10,
+      "fifth": 4
+    },
+    "skills": [
+      {
+        "name": "Слух",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Бесшумно ползти",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Учуять жертву",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      }
+    ],
+    "spells": {
+      "raw": "10% chance of knowing 1D4 spells."
+    },
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d8",
+        "trigger": "при встрече с нагаэ"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Ядовитый укус",
+      "summary": "Укушенный проходит Экстремальную проверку ВЫН: при успехе — галлюцинации и бред, штрафная кость ко всем навыкам на 3d6 раундов; при провале — по выбору нагаэ 4d10 урона или паралич на 3d6 раундов."
+    },
+    {
+      "name": "Распад после смерти",
+      "summary": "Убитый нагаэ за 2d4 минуты растекается едкой чёрной слизью: учуявший её без Трудной проверки ВЫН мучается рвотой, контакт с кожей — 1 урон за раунд."
+    }
+  ],
+  "description": {
+    "ru": "Прозрачные жабоподобные твари, помесь человека и лягушки, с четырьмя богомольими передними конечностями и двумя лягушачьими задними; ползают боком, как крабы, и смердят гнилью. Тянутся к воде и болотам и уничтожают всё живое вокруг своего логова.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Служат Сиэгхе, но их порождают и другие сущности Мифов как слуг и прислужников.",
+    "en": null
+  },
+  "habitat": "болота, топи и другие тёмные сырые места",
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 102,
+      "printed_page": 101,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": null
+  }
+}

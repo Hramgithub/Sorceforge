@@ -60,7 +60,7 @@
       "value": 5
     },
     "move": {
-      "raw": "8 / 6 burrowing / 16 flying",
+      "raw": "8 / 6 роя / 16 летая",
       "value": 8,
       "modes": [
         {
@@ -78,14 +78,12 @@
       ]
     },
     "armor": {
-      "raw": "15-point chitinous shell. Immune to mundane non-impaling weapons (bullets and other impaling weapons can cause harm). If reduced to zero hit points, Baoht Z'uqqa-Mogg dissolves suddenly into a viscous black liquid containing wriggling carrion worms and other nasties, which then sinks into the ground. It reforms 1d4 years later, somewhere other than Earth.",
-      "value": 15,
-      "note": "хитиновый панцирь; неуязвим для обычного непроникающего оружия (пули и колющее оружие ранят); при 0 ПЗ растекается чёрной жижей с червями и возрождается через 1d4 года не на Земле"
+      "raw": "15 пунктов (хитиновый панцирь). Неуязвим для обычного неколющего оружия (пули и прочее колющее оружие ранят). При 0 ПЗ Баот З'укка-Могг внезапно растекается вязкой чёрной жижей с извивающимися трупными червями и прочей мерзостью, которая уходит в землю. Возрождается через 1d4 года где-нибудь не на Земле.",
+      "value": 15
     },
     "attacks_per_round": {
-      "raw": "2 (claws, mandibles) or 1 (tail sting)",
-      "value": 2,
-      "note": "клешни и жвала либо 1 удар жалом"
+      "raw": "2 (клешни, жвала) или 1 (удар жалом)",
+      "value": 2
     },
     "attacks": [
       {
@@ -96,7 +94,7 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "90% (45/18), damage 4d6",
+          "raw": "90% (45/18), урон 4d6",
           "value": 90,
           "half": 45,
           "fifth": 18
@@ -116,13 +114,13 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "60% (30,12), (see above)",
+          "raw": "60% (30,12), (см. выше)",
           "value": 60,
           "half": 30,
           "fifth": 12
         },
         "damage": {
-          "raw": "(see above)",
+          "raw": "(см. выше)",
           "dice": "1d6+4",
           "adds_db": false,
           "extra": "яд: при провале Экстремальной проверки ВЫН мучительная смерть через 1d100 минут, если не помочь Трудной Первой помощью или Медициной (тогда навсегда −2d10 ВЫН)"
@@ -153,7 +151,7 @@
     ],
     "skills": [],
     "spells": {
-      "raw": "most Summon, Bind, Contact, and Call spells; others as desired by the Keeper."
+      "raw": "большинство заклинаний Summon, Bind, Contact и Call; другие — по желанию Хранителя."
     },
     "sanity_loss": [
       {
@@ -191,16 +189,25 @@
       "physical_page": 41,
       "printed_page": 40,
       "method": "book_text",
-      "verified": true
+      "verified": true,
+      "note": "МОЩ — из раздела Magic"
     }
   ],
   "corrections": [],
+  "errata": [
+    {
+      "field": "шанс атаки «Жало»",
+      "printed": "60% (30,12)",
+      "expected": "60% (30/12)",
+      "note": "запятая вместо косой черты; разобрано как 30/12"
+    }
+  ],
   "quality": {
     "needs_review": false,
     "flags": [
       "translated"
     ],
-    "notes": "опечатка в книге: шанс жала напечатан «60% (30,12)» с запятой вместо косой черты; разобрано как 30/12. ИНТ в книге не указан; МОЩ взята из раздела Magic."
+    "notes": "ИНТ в книге не указан."
   },
   "aura": {
     "ru": "Баота и его дела сопровождает ощущение нечистоты: грязь и мерзость давят, человек чувствует себя осквернённым. Тянущиеся к божеству паразиты, насекомые и прочие ползучие твари только усиливают это.",

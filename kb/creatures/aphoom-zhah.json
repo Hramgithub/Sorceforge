@@ -59,11 +59,11 @@
       "value": 48
     },
     "damage_bonus": {
-      "raw": "n/a",
+      "raw": "—",
       "value": null
     },
     "build": {
-      "raw": "n/a",
+      "raw": "—",
       "value": null
     },
     "move": {
@@ -77,14 +77,12 @@
       ]
     },
     "armor": {
-      "raw": "None. Mundane weapons (incl. bullets) are ineffective, freezing and shattering on contact. Enchanted weapons cause harm, although (at the Keeper's discretion) some may also shatter after their first successful strike. Enchantments against cold are particularly useful. Fire is harmful; an incendiary missile or bomb causes 1d10 damage, while larger fire-based attacks may deal 2d10 to 6d10 damage at the Keeper's discretion. If reduced to zero hit points, Aphoom Zhah vanishes back to its home. It reforms in 2d10 hours.",
-      "value": 0,
-      "note": "обычное оружие и пули бесполезны (замерзают и разлетаются); зачарованное оружие ранит; огонь наносит 1d10 (зажигательный снаряд) или 2d10–6d10; при 0 ПЗ исчезает и возрождается через 2d10 часов"
+      "raw": "Нет. Обычное оружие (в т. ч. пули) бесполезно: при соприкосновении замерзает и разлетается. Зачарованное оружие ранит, хотя (на усмотрение Хранителя) некоторое тоже может разлететься после первого успешного удара. Особенно полезны чары против холода. Огонь вредит: зажигательный снаряд или бомба наносит 1d10 урона, более мощные огненные атаки — от 2d10 до 6d10 на усмотрение Хранителя. При 0 ПЗ Афум-Жа исчезает, возвращаясь в своё обиталище. Возрождается через 2d10 часов.",
+      "value": 0
     },
     "attacks_per_round": {
-      "raw": "1d4 (cold strike) or 1 (ice touch)",
-      "value": "1d4",
-      "note": "1d4 ударов холода или 1 ледяное касание"
+      "raw": "1d4 (удар холода) или 1 (ледяное касание)",
+      "value": "1d4"
     },
     "attacks": [
       {
@@ -95,13 +93,13 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "60% (30/12), damage 3d6 (per strike)",
+          "raw": "60% (30/12), урон 3d6 (за удар)",
           "value": 60,
           "half": 30,
           "fifth": 12
         },
         "damage": {
-          "raw": "3d6 (per strike)",
+          "raw": "3d6 (за удар)",
           "dice": "3d6",
           "adds_db": false
         },
@@ -115,13 +113,13 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "50% (25/10), damage instant death or 1d10 + 1d6 CON (see above)",
+          "raw": "50% (25/10), урон: мгновенная смерть или 1d10 + 1d6 ВЫН (см. выше)",
           "value": 50,
           "half": 25,
           "fifth": 10
         },
         "damage": {
-          "raw": "instant death or 1d10 + 1d6 CON (see above)",
+          "raw": "мгновенная смерть или 1d10 + 1d6 ВЫН (см. выше)",
           "dice": "1d10",
           "adds_db": false,
           "extra": "мгновенная смерть при провале Трудной проверки ВЫН (часть тела по таблице попаданий); при успехе 1d10 урона и временная потеря ВЫН"
@@ -131,7 +129,7 @@
     ],
     "skills": [],
     "spells": {
-      "raw": "any as determined by the Keeper; suggest Alter Weather, Create Mist of R'lyeh (frosty variant), Dominate (extended range)."
+      "raw": "любые на усмотрение Хранителя; рекомендуются Alter Weather, Create Mist of R'lyeh (морозный вариант), Dominate (увеличенная дальность)."
     },
     "sanity_loss": [
       {
@@ -173,17 +171,32 @@
       "physical_page": 27,
       "printed_page": 26,
       "method": "book_text",
-      "verified": true
+      "verified": true,
+      "note": "МОЩ — из раздела Magic"
     }
   ],
   "corrections": [],
+  "errata": [
+    {
+      "field": "атака «Ледяное касание»: название",
+      "printed": "Flame Touch",
+      "expected": "Ice Touch",
+      "note": "в таблице атака названа Flame Touch, в описании — Ice Touch"
+    },
+    {
+      "field": "атака «Ледяное касание»: потеря ВЫН",
+      "printed": "1d10 + 1d6 ВЫН",
+      "expected": null,
+      "note": "в описании — 1d10 урона и временная потеря 3d10 ВЫН; в записи сохранено напечатанное в таблице"
+    }
+  ],
   "quality": {
     "needs_review": false,
     "flags": [
       "translated",
       "parse_uncertain"
     ],
-    "notes": "несогласованность в книге: в таблице атака названа «Flame Touch» с уроном «1d10 + 1d6 CON», а в описании — «Ice Touch» с временной потерей 3d10 ВЫН; в записи сохранено напечатанное. ИНТ в книге не указан; МОЩ взята из раздела Magic."
+    "notes": "ИНТ в книге не указан."
   },
   "aura": {
     "ru": "Холод сильнее любой стужи — будто кол пронзает сердце или ледяная рука сжимает его в груди, перекрывая дыхание. Потустороннее, трудно определимое чувство странного чуда — манящего и опасного.",

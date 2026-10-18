@@ -82,12 +82,11 @@
       ]
     },
     "armor": {
-      "raw": "none; direct sunlight is harmful, causing 1 damage per round.",
-      "value": 0,
-      "note": "прямой солнечный свет — 1 урон за раунд"
+      "raw": "нет; прямой солнечный свет вредит — 1 урон за раунд.",
+      "value": 0
     },
     "attacks_per_round": {
-      "raw": "1 (claw, bite, or weapon, or strangulation)",
+      "raw": "1 (когти, укус, оружие или удушение)",
       "value": 1
     },
     "attacks": [
@@ -99,13 +98,13 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "40% (20/8), damage 1d4–DB (minimum of 1 damage) or by weapon type",
+          "raw": "40% (20/8), урон 1d4–БкУ (минимум 1 урона) или по типу оружия",
           "value": 40,
           "half": 20,
           "fifth": 8
         },
         "damage": {
-          "raw": "1d4–DB (minimum of 1 damage) or by weapon type",
+          "raw": "1d4–БкУ (минимум 1 урона) или по типу оружия",
           "dice": "1d4",
           "adds_db": true
         },
@@ -119,13 +118,13 @@
         "kind": "maneuver",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "40% (20/8), damage 1d2 per round (see above)",
+          "raw": "40% (20/8), урон 1d2 за раунд (см. описание)",
           "value": 40,
           "half": 20,
           "fifth": 8
         },
         "damage": {
-          "raw": "1d2 per round (see above)",
+          "raw": "1d2 за раунд (см. описание)",
           "dice": "1d2",
           "adds_db": false
         },
@@ -186,7 +185,7 @@
       }
     ],
     "spells": {
-      "raw": "none; shaman-like priest may know 1d6 spells, usually concerning Tsathoggua, Abhoth, Atlach-Nacha, and/or Ubbo-Sathla."
+      "raw": "нет; жрец-шаман может знать 1d6 заклинаний, обычно касающихся Цатхоггуа, Абхота, Атлач-Начи и/или Уббо-Сатлы."
     },
     "sanity_loss": [
       {
@@ -227,6 +226,14 @@
       "verified": true
     }
   ],
+  "errata": [
+    {
+      "field": "Ближний бой: урон",
+      "printed": "1d4–DB",
+      "expected": "1d4+DB",
+      "note": "при БкУ –1 вероятно имелось в виду 1d4+БкУ (то есть 1d4–1, минимум 1); оставлено как напечатано"
+    }
+  ],
   "corrections": [],
   "quality": {
     "needs_review": false,
@@ -234,6 +241,6 @@
       "translated",
       "parse_uncertain"
     ],
-    "notes": "Вероятная опечатка в книге: урон «1d4–DB» при БкУ –1; скорее всего имеется в виду 1d4+DB (то есть 1d4–1, минимум 1). В записи сохранено напечатанное."
+    "notes": null
   }
 }

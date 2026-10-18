@@ -79,12 +79,11 @@
       ]
     },
     "armor": {
-      "raw": "None. Immune to mundane weapons (incl. bullets). If reduced to zero hit points, Tawil at’Umr’s form shines with intense light and seems to implode until nothing remains. It reforms in 1d10 hours.",
-      "value": 0,
-      "note": "иммунитет к обычному оружию; при 0 ПЗ исчезает во вспышке света и возрождается через 1d10 часов"
+      "raw": "Нет. Иммунитет к обычному оружию (в т. ч. пулям). При 0 ПЗ облик Тавила ат-Умра сияет ярким светом и словно схлопывается внутрь, пока от него ничего не останется. Восстанавливается через 1d10 часов.",
+      "value": 0
     },
     "attacks_per_round": {
-      "raw": "1 (touch)",
+      "raw": "1 (касание)",
       "value": 1
     },
     "attacks": [
@@ -96,13 +95,13 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "100% (50/20), damage 2d10+2d6 or transportation (see above)",
+          "raw": "100% (50/20), урон 2d10+2d6 или перенос (см. описание)",
           "value": 100,
           "half": 50,
           "fifth": 20
         },
         "damage": {
-          "raw": "2d10+2d6 or transportation (see above)",
+          "raw": "2d10+2d6 или перенос (см. описание)",
           "dice": "2d10",
           "adds_db": true,
           "extra": "или мгновенный перенос цели в другое место"
@@ -112,7 +111,7 @@
     ],
     "skills": [],
     "spells": {
-      "raw": "Augury, Bestow Glimpse of Truth, Fist of Yog-Sothoth, Summon (various monsters); others dealing with time and space at the Keeper’s discretion."
+      "raw": "Augury, Bestow Glimpse of Truth, Fist of Yog-Sothoth, Summon (various monsters); другие, связанные со временем и пространством, — на усмотрение Хранителя."
     },
     "sanity_loss": [
       {
@@ -175,22 +174,34 @@
       "physical_page": 239,
       "printed_page": 238,
       "method": "book_text",
-      "verified": true
+      "verified": true,
+      "entry_page": 238,
+      "note": "профиль, потеря рассудка и магия"
     },
     {
       "book_id": "malleus-monstrorum-2-en",
       "physical_page": 240,
       "printed_page": 239,
       "method": "book_text",
-      "verified": true
+      "verified": true,
+      "note": "силы"
+    }
+  ],
+  "errata": [
+    {
+      "field": "ПЗ",
+      "printed": "85",
+      "expected": "42",
+      "note": "по формуле (ВЫН 300 + ТЕЛ 125) / 10 = 42; оставлено как напечатано"
     }
   ],
   "corrections": [],
   "quality": {
     "needs_review": false,
     "flags": [
-      "translated"
+      "translated",
+      "parse_uncertain"
     ],
-    "notes": "Заголовок и описание — стр. 237 печатн. (238 PDF); профиль, ущерб рассудку и магия — стр. 238 печатн. (239 PDF); силы — стр. 239 печатн. (240 PDF). ПЗ 85 не сходятся с расчётом (ВЫН 300 + ТЕЛ 125) / 10 = 42; оставлено напечатанное значение. Связанная запись — coc:creature:yog-sothoth."
+    "notes": null
   }
 }

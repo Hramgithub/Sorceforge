@@ -82,9 +82,8 @@
       ]
     },
     "armor": {
-      "raw": "None. Mundane weapons (incl. bullets) deal minimum damage. Regenerates 2 hit points per magic point spent in healing itself (death at zero hit points). If reduced to zero hit points, Vulthoom withers into a blackened husk. It regrows in 5d100 years.",
-      "value": 0,
-      "note": "обычное оружие наносит минимальный урон; лечит 2 ПЗ за 1 ПМ; при 0 ПЗ увядает в почерневшую шелуху и отрастает через 5d100 лет"
+      "raw": "Нет. Обычное оружие (в т. ч. пули) наносит минимальный урон. Регенерирует 2 ПЗ за каждый пункт магии, потраченный на исцеление (гибнет при 0 ПЗ). При 0 ПЗ Вултум увядает в почерневшую шелуху. Отрастает заново через 5d100 лет.",
+      "value": 0
     },
     "attacks_per_round": {
       "raw": "1d4+2",
@@ -99,7 +98,7 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "65% (32/13), damage 1d6",
+          "raw": "65% (32/13), урон 1d6",
           "value": 65,
           "half": 32,
           "fifth": 13
@@ -119,13 +118,13 @@
         "kind": "maneuver",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "65% (32/13), held (see above)",
+          "raw": "65% (32/13), захвачен (см. описание)",
           "value": 65,
           "half": 32,
           "fifth": 13
         },
         "damage": {
-          "raw": "held (see above)",
+          "raw": "захвачен (см. описание)",
           "dice": null,
           "adds_db": false,
           "extra": "на следующем раунде удушение 1d6 за раунд или затягивание в массу с раздавливанием 6d6"
@@ -135,7 +134,7 @@
     ],
     "skills": [],
     "spells": {
-      "raw": "Special—see Powers, which mirror certain spell effects."
+      "raw": "особые — см. силы, повторяющие эффекты некоторых заклинаний."
     },
     "sanity_loss": [
       {
@@ -194,15 +193,38 @@
       "physical_page": 217,
       "printed_page": 216,
       "method": "book_text",
-      "verified": true
+      "verified": true,
+      "entry_page": 216,
+      "note": "профиль, рассудок и магия; способности — на стр. 218 PDF"
+    }
+  ],
+  "errata": [
+    {
+      "field": "текст статьи",
+      "printed": "Aihasi",
+      "expected": "Aihais",
+      "note": "опечатка в названии"
+    },
+    {
+      "field": "текст статьи",
+      "printed": "his deity’s seed pods",
+      "expected": "this deity’s seed pods",
+      "note": "опечатка в тексте"
+    },
+    {
+      "field": "текст статьи",
+      "printed": "Mar’s surface",
+      "expected": "Mars’ surface",
+      "note": "опечатка в тексте"
     }
   ],
   "corrections": [],
   "quality": {
     "needs_review": false,
     "flags": [
-      "translated"
+      "translated",
+      "parse_uncertain"
     ],
-    "notes": "Статья начинается на стр. 215 (PDF 216), профиль, рассудок и «Magic» — на стр. 216 (PDF 217), способности — на стр. 217 (PDF 218). Мелкие опечатки книги: «Aihasi» вместо Aihais, «his deity’s seed pods» вместо this, «Mar’s surface»."
+    "notes": null
   }
 }

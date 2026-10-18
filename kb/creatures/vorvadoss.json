@@ -79,12 +79,11 @@
       ]
     },
     "armor": {
-      "raw": "None; may expend magic points to gain armor points (one for one basis); such armor points last for the duration of a single encounter. Regenerates 1d3 hit points per magic point spent in healing itself (death at zero hit points). If reduced to zero hit points, Vorvadoss is engulfed in green flames and disappears. It reforms in 1d100 days somewhere in space.",
-      "value": 0,
-      "note": "может покупать броню за ПМ (1d1) на одну встречу; лечит 1d3 ПЗ за 1 ПМ; при 0 ПЗ исчезает в зелёном пламени и воссоздаётся через 1d100 дней где-то в космосе"
+      "raw": "Нет; может тратить пункты магии на пункты брони (один к одному); такая броня действует до конца одной встречи. Регенерирует 1d3 ПЗ за каждый пункт магии, потраченный на исцеление (гибнет при 0 ПЗ). При 0 ПЗ Ворвадосса охватывает зелёное пламя, и он исчезает. Восстанавливается через 1d100 дней где-то в космосе.",
+      "value": 0
     },
     "attacks_per_round": {
-      "raw": "2 (strike, smash, or flame)",
+      "raw": "2 (удар, сокрушение или пламя)",
       "value": 2
     },
     "attacks": [
@@ -96,7 +95,7 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "100% (50/20), damage 4d6",
+          "raw": "100% (50/20), урон 4d6",
           "value": 100,
           "half": 50,
           "fifth": 20
@@ -116,13 +115,13 @@
         "kind": "special",
         "skill": null,
         "chance": {
-          "raw": "reaching opponents up to 10 yards/meters away, and dealing 3d6 burning damage",
+          "raw": "поражает противников на расстоянии до 10 ярдов/метров и наносит 3d6 урона огнём",
           "value": null,
           "half": null,
           "fifth": null
         },
         "damage": {
-          "raw": "3d6 burning damage",
+          "raw": "3d6 урона огнём",
           "dice": "3d6",
           "adds_db": false,
           "extra": "без успешной проверки Удачи загорается одежда: ещё 1d6 за раунд в течение 1d4 раундов"
@@ -132,13 +131,13 @@
     ],
     "skills": [],
     "spells": {
-      "raw": "Assist Dreamer (variant), Bliss, Cast Out the Devil, Cloud Memory, Command Animal (all), Deflection, Dominate, Drown Mind, Elder Sign, Enchant Item (any), Implant Fear, Mental Suggestion, Shrivelling, Wrack; others as desired by the Keeper."
+      "raw": "Assist Dreamer (variant), Bliss, Cast Out the Devil, Cloud Memory, Command Animal (all), Deflection, Dominate, Drown Mind, Elder Sign, Enchant Item (any), Implant Fear, Mental Suggestion, Shrivelling, Wrack; другие — на усмотрение Хранителя."
     },
     "sanity_loss": [
       {
         "success": "0",
         "fail": "1d4",
-        "trigger": "при встрече с Ворвадоссом в получеловеческом облике (нижняя граница; книга даёт диапазон «0/1d4 to 1/1d6»)"
+        "trigger": "при встрече с Ворвадоссом в получеловеческом облике (нижняя граница; книга даёт диапазон «от 0/1d4 до 1/1d6»)"
       },
       {
         "success": "1",
@@ -197,15 +196,26 @@
       "physical_page": 216,
       "printed_page": 215,
       "method": "book_text",
-      "verified": true
+      "verified": true,
+      "entry_page": 214,
+      "note": "профиль и остальные силы; рассудок, магия и «Смена облика» — на стр. 215 PDF"
+    }
+  ],
+  "errata": [
+    {
+      "field": "Видеть истину (текст)",
+      "printed": "rouse",
+      "expected": "ruse",
+      "note": "опечатка в тексте способности"
     }
   ],
   "corrections": [],
   "quality": {
     "needs_review": false,
     "flags": [
-      "translated"
+      "translated",
+      "parse_uncertain"
     ],
-    "notes": "Статья начинается на стр. 213 (PDF 214), рассудок, «Magic» и «Change Form» — на стр. 214 (PDF 215), профиль и остальные силы — на стр. 215 (PDF 216). Сноска к СИЗ: «SIZ: may decrease to SIZ 90 if appearing in semi-human guise». Мелкая опечатка книги: «rouse» вместо ruse в «See Truth»."
+    "notes": "Сноска к ТЕЛ: в получеловеческом облике ТЕЛ может снижаться до 90."
   }
 }

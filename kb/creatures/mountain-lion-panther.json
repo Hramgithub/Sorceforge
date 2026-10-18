@@ -1,0 +1,199 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:mountain-lion-panther",
+  "kind": "creature",
+  "name": {
+    "ru": "Пума / пантера",
+    "en": "Mountain Lion/Panther"
+  },
+  "aliases": [
+    "Mountain Lion",
+    "Panther"
+  ],
+  "category": "animal",
+  "subcategory": "зверь",
+  "form_of": [
+    "coc:creature:lion-big-cat"
+  ],
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "80",
+        "value": 80,
+        "roll": "(4d6+2)×5"
+      },
+      "CON": {
+        "raw": "55",
+        "value": 55,
+        "roll": "(2d6+4)×5"
+      },
+      "SIZ": {
+        "raw": "75",
+        "value": 75,
+        "roll": "(2d6+8)×5"
+      },
+      "DEX": {
+        "raw": "95",
+        "value": 95,
+        "roll": "(2d6+12)×5"
+      },
+      "POW": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      }
+    },
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "damage_bonus": {
+      "raw": "+1D4",
+      "value": "1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "12",
+      "value": 12,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 12
+        }
+      ]
+    },
+    "armor": {
+      "raw": "1-point fur and skin",
+      "value": 1,
+      "note": "мех и шкура"
+    },
+    "attacks_per_round": {
+      "raw": "2 (bite, claw) or 1 (wrestle, if lion or tiger)",
+      "value": 2,
+      "note": "пума атакует 2 раза (когти и укус); борьба — только у льва и тигра"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10), damage DB+1",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "DB+1",
+          "dice": null,
+          "adds_db": true
+        },
+        "notes": "урон равен БкУ+1"
+      },
+      {
+        "name": {
+          "ru": "Укус",
+          "en": "Bite"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10), damage 1D4+DB",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1D4+DB",
+          "dice": "1d4",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "47% (23/9)",
+      "value": 47,
+      "half": 23,
+      "fifth": 9
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Прыжки",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Скрытность",
+        "value": {
+          "raw": "90%",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        }
+      },
+      {
+        "name": "Выслеживание добычи",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      }
+    ],
+    "sanity_loss": []
+  },
+  "abilities": [
+    {
+      "name": "Мёртвая хватка",
+      "summary": "Успешный укус позволяет кошке вцепиться и повалить добычу массой тела и когтями; жертва не вырвется, пока она или товарищи не нанесут кошке 5+ урона за один раунд."
+    }
+  ],
+  "description": {
+    "ru": "Крупная одиночная кошка Америки (пума, кугуар) или пантера; лазает, прыгает и подкрадывается почти бесшумно.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 189,
+      "printed_page": 188,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Колонка «Mountain Lion/Panther» таблицы «Big Cats»."
+  }
+}

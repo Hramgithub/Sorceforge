@@ -1,0 +1,176 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:jackal",
+  "kind": "creature",
+  "name": {
+    "ru": "Шакал",
+    "en": "Jackal"
+  },
+  "aliases": [],
+  "category": "animal",
+  "subcategory": "зверь",
+  "form_of": [
+    "coc:creature:dog"
+  ],
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "20",
+        "value": 20,
+        "roll": "(2d3)×5"
+      },
+      "CON": {
+        "raw": "45",
+        "value": 45,
+        "roll": "(2d3+5)×5"
+      },
+      "SIZ": {
+        "raw": "20",
+        "value": 20,
+        "roll": "(2d3)×5"
+      },
+      "DEX": {
+        "raw": "75",
+        "value": 75,
+        "roll": "(2d6+8)×5"
+      },
+      "POW": {
+        "raw": "40",
+        "value": 40,
+        "roll": "(2d3+4)×5"
+      }
+    },
+    "hp": {
+      "raw": "6",
+      "value": 6
+    },
+    "damage_bonus": {
+      "raw": "–2",
+      "value": -2
+    },
+    "build": {
+      "raw": "–2",
+      "value": -2
+    },
+    "move": {
+      "raw": "14",
+      "value": 14,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 14
+        }
+      ]
+    },
+    "armor": {
+      "raw": "none",
+      "value": 0,
+      "note": null
+    },
+    "attacks_per_round": {
+      "raw": "1(bite, claw, maul)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "30% (15/6), damage 1D4–DB (min 1)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "1D4–DB (min 1)",
+          "dice": "1d4",
+          "adds_db": true
+        },
+        "notes": "отрицательный БкУ уменьшает урон, минимум 1"
+      }
+    ],
+    "dodge": {
+      "raw": "45% (22/9)",
+      "value": 45,
+      "half": 22,
+      "fifth": 9
+    },
+    "skills": [
+      {
+        "name": "Прыжки",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Слух",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Выслеживание (по запаху)",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Внимание",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      }
+    ],
+    "sanity_loss": []
+  },
+  "abilities": [
+    {
+      "name": "Стая",
+      "summary": "В дикой природе псовые охотятся стаями по 1d8+3 особи."
+    }
+  ],
+  "description": {
+    "ru": "Небольшой падальщик и охотник из семейства псовых, быстрый и осторожный; обычно держится стаей.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 190,
+      "printed_page": 189,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Колонка «Jackal» таблицы «Dogs, Various Canines, & Hyena». Колонка «Dog» соответствует записи dog, «Wolf» — записи wolf."
+  }
+}

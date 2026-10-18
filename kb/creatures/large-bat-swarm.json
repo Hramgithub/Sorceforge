@@ -1,0 +1,155 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:large-bat-swarm",
+  "kind": "creature",
+  "name": {
+    "ru": "Крупные летучие мыши, стая",
+    "en": "Bat, Large (Swarm)"
+  },
+  "aliases": [
+    "Large Bat Swarm"
+  ],
+  "category": "animal",
+  "subcategory": "зверь",
+  "form_of": [
+    "coc:creature:large-bat"
+  ],
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "20",
+        "value": 20,
+        "roll": "2d3×5"
+      },
+      "CON": {
+        "raw": "35",
+        "value": 35,
+        "roll": "2d6×5"
+      },
+      "SIZ": {
+        "raw": "10",
+        "value": 10,
+        "roll": "1d3×5"
+      },
+      "DEX": {
+        "raw": "100",
+        "value": 100,
+        "roll": "(4d6+6)×5"
+      },
+      "POW": {
+        "raw": "35",
+        "value": 35,
+        "roll": "2d6×5"
+      }
+    },
+    "hp": {
+      "raw": "4",
+      "value": 4
+    },
+    "damage_bonus": {
+      "raw": "n/a",
+      "value": null
+    },
+    "build": {
+      "raw": "–2",
+      "value": -2
+    },
+    "move": {
+      "raw": "1 / 12 flying",
+      "value": 1,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 1
+        },
+        {
+          "mode": "fly",
+          "value": 12
+        }
+      ]
+    },
+    "armor": {
+      "raw": "none",
+      "value": 0,
+      "note": null
+    },
+    "attacks_per_round": {
+      "raw": "1 (bite, claw)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8), damage 1 (+1 per additional 10 bats in the swarm, to maximum of 6)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1 (+1 per additional 10 bats in the swarm, to maximum of 6)",
+          "dice": null,
+          "adds_db": false
+        },
+        "notes": "фиксированный урон 1, +1 за каждые следующие 10 мышей в стае, максимум 6"
+      }
+    ],
+    "dodge": {
+      "raw": "50% (25/10)",
+      "value": 50,
+      "half": 25,
+      "fifth": 10
+    },
+    "skills": [
+      {
+        "name": "Внимание (эхолокация)",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      }
+    ],
+    "sanity_loss": []
+  },
+  "abilities": [
+    {
+      "name": "Стая",
+      "summary": "Профиль описывает стаю из десяти крупных летучих мышей. За каждые следующие 10 мышей РАЗ +10 и ОЗ +4 (и столько же снимается за потери). Каждая победа противника в схватке со стаей убивает одну мышь без броска урона; гибель четырёх мышей снимает 1 ОЗ стаи."
+    }
+  ],
+  "description": {
+    "ru": "Стая из десятка крупных летучих мышей, действующая как одно существо: кусает и царапает, ориентируется эхолокацией.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 187,
+      "printed_page": 186,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Статблок стаи из 10 особей; запись large-bat описывает одну особь (Книга хранителя)."
+  }
+}

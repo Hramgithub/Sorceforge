@@ -1,0 +1,148 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:golden-eagle",
+  "kind": "creature",
+  "name": {
+    "ru": "Беркут",
+    "en": "Golden Eagle"
+  },
+  "aliases": [],
+  "category": "animal",
+  "subcategory": "зверь",
+  "form_of": [
+    "coc:creature:condor-large-bird"
+  ],
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60,
+        "roll": "(2d6+5)×5"
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50,
+        "roll": "(2d6+3)×5"
+      },
+      "SIZ": {
+        "raw": "35",
+        "value": 35,
+        "roll": "2d6×5"
+      },
+      "DEX": {
+        "raw": "95",
+        "value": 95,
+        "roll": "(2d6+12)×5"
+      },
+      "POW": {
+        "raw": "60",
+        "value": 60,
+        "roll": "(2d6+5)×5"
+      }
+    },
+    "hp": {
+      "raw": "8",
+      "value": 8
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "5 / 12 flying",
+      "value": 5,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 5
+        },
+        {
+          "mode": "fly",
+          "value": 12
+        }
+      ]
+    },
+    "armor": {
+      "raw": "none",
+      "value": 0,
+      "note": null
+    },
+    "attacks_per_round": {
+      "raw": "1(bite, rake)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9), damage 1D4+DB",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1D4+DB",
+          "dice": "1d4",
+          "adds_db": true
+        },
+        "notes": "в основном клюёт, может драть когтями"
+      }
+    ],
+    "dodge": {
+      "raw": "47% (23/9)",
+      "value": 47,
+      "half": 23,
+      "fifth": 9
+    },
+    "skills": [
+      {
+        "name": "Внимание",
+        "value": {
+          "raw": "90%",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        }
+      }
+    ],
+    "sanity_loss": []
+  },
+  "abilities": [],
+  "description": {
+    "ru": "Крупный хищный орёл с острым зрением; нападает с воздуха клювом и когтями.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 188,
+      "printed_page": 187,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Колонка «Golden Eagle» таблицы «Bird (Eagle, Condor, & Vulture)». В строке SIZ таблицы стоит звёздочка (SIZ*), но сноски к ней на странице нет."
+  }
+}

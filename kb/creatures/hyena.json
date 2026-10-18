@@ -1,0 +1,179 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:hyena",
+  "kind": "creature",
+  "name": {
+    "ru": "Гиена",
+    "en": "Hyena"
+  },
+  "aliases": [],
+  "category": "animal",
+  "subcategory": "зверь",
+  "form_of": [
+    "coc:creature:dog"
+  ],
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "95",
+        "value": 95,
+        "roll": "(2d6+12)×5"
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60,
+        "roll": "(2d6+5)×5"
+      },
+      "SIZ": {
+        "raw": "45",
+        "value": 45,
+        "roll": "(2d6+2)×5"
+      },
+      "DEX": {
+        "raw": "75",
+        "value": 75,
+        "roll": "(2d6+8)×5"
+      },
+      "POW": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      }
+    },
+    "hp": {
+      "raw": "10",
+      "value": 10
+    },
+    "damage_bonus": {
+      "raw": "+1D4",
+      "value": "1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "12",
+      "value": 12,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 12
+        }
+      ]
+    },
+    "armor": {
+      "raw": "2-point fur and skin",
+      "value": 2,
+      "note": "мех и шкура"
+    },
+    "attacks_per_round": {
+      "raw": "1(bite, claw, maul)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8), damage 1D4+DB",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1D4+DB",
+          "dice": "1d4",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "45% (22/9)",
+      "value": 45,
+      "half": 22,
+      "fifth": 9
+    },
+    "skills": [
+      {
+        "name": "Прыжки",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Слух",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Выслеживание (по запаху)",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Внимание",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      }
+    ],
+    "sanity_loss": []
+  },
+  "abilities": [
+    {
+      "name": "Трёпка",
+      "summary": "После успешного укуса челюсти смыкаются на цели и каждый следующий раунд наносят 1d2±БкУ урона; жертва освобождается, только ранив зверя (2+ урона)."
+    },
+    {
+      "name": "Стая",
+      "summary": "В дикой природе охотятся стаями по 1d8+3 особи."
+    }
+  ],
+  "description": {
+    "ru": "Сильный стайный хищник и падальщик с мощными челюстями; подходит и как профиль крупной гончей.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 190,
+      "printed_page": 189,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Колонка «Hyena» таблицы «Dogs, Various Canines, & Hyena». Книга советует брать колонку волка или гиены для крупных собак."
+  }
+}

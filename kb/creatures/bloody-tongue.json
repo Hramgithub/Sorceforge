@@ -1,0 +1,201 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:bloody-tongue",
+  "kind": "creature",
+  "name": {
+    "ru": "Кровавый язык",
+    "en": "The Bloody Tongue"
+  },
+  "aliases": [],
+  "category": "avatar",
+  "subcategory": "аватар Ньярлатхотепа",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "characteristics": {
+      "STR": {
+        "raw": "400",
+        "value": 400
+      },
+      "CON": {
+        "raw": "250",
+        "value": 250
+      },
+      "SIZ": {
+        "raw": "450",
+        "value": 450
+      },
+      "DEX": {
+        "raw": "95",
+        "value": 95
+      },
+      "POW": {
+        "raw": "500",
+        "value": 500
+      }
+    },
+    "averages": false,
+    "hp": {
+      "raw": "70",
+      "value": 70
+    },
+    "mp": {
+      "raw": "100",
+      "value": 100
+    },
+    "damage_bonus": {
+      "raw": "+10D6",
+      "value": "10d6"
+    },
+    "build": {
+      "raw": "11",
+      "value": 11
+    },
+    "move": {
+      "raw": "16",
+      "value": 16,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 16
+        }
+      ]
+    },
+    "armor": {
+      "raw": "None.",
+      "value": 0,
+      "note": "при 0 ПЗ падает и меняет облик (обычно на Чёрный ветер), затем уходит в межзвёздное пространство"
+    },
+    "attacks_per_round": {
+      "raw": "1 per target (crushing, rending, slamming)",
+      "value": 1,
+      "note": "досягаемость 9 м"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "85% (42/17), damage 1D6+10D6",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        },
+        "damage": {
+          "raw": "1D6+10D6",
+          "dice": "1d6",
+          "adds_db": true,
+          "extra": null
+        },
+        "notes": "+10D6 — бонус к урону, вписанный в книге числом"
+      },
+      {
+        "name": {
+          "ru": "Коготь",
+          "en": "Claw"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "85% (42/17), damage 3D6+10D6",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        },
+        "damage": {
+          "raw": "3D6+10D6",
+          "dice": "3d6",
+          "adds_db": true,
+          "extra": null
+        },
+        "notes": "+10D6 — бонус к урону, вписанный в книге числом"
+      },
+      {
+        "name": {
+          "ru": "Лицевое щупальце",
+          "en": "Face-tentacle"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "85% (42/17), damage 10D6",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        },
+        "damage": {
+          "raw": "10D6",
+          "dice": "10d6",
+          "adds_db": false,
+          "extra": null
+        }
+      }
+    ],
+    "skills": [],
+    "spells": {
+      "raw": "any the Keeper desires, but none concerning Elder God and associated matters."
+    },
+    "sanity_loss": [
+      {
+        "success": "1d10",
+        "fail": "1d100",
+        "trigger": "при встрече с Кровавым языком"
+      },
+      {
+        "success": "1",
+        "fail": "1",
+        "trigger": "вой — автоматически, раз в раунд"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Вой",
+      "summary": "Леденящий вой автоматически отнимает 1 пункт рассудка у всех, кто его слышит; раз в раунд."
+    },
+    {
+      "name": "Призыв чудовищ",
+      "summary": "Призывает тварей Мифов за 1 ПМ на каждые 5 МОЩ твари; шантака, ловчего ужаса или служителя Внешних богов — всего за 1 ПМ."
+    }
+  ],
+  "description": {
+    "ru": "Огромная чёрно-красная человекоподобная фигура на трёх ногах, с двумя когтистыми руками и одним гигантским кроваво-красным щупальцем вместо головы; не меньше чем в десять раз выше человека.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Любимая маска Ньярлатхотепа, воплощение его ярости: часто восстаёт из тела погибшего или меняющегося аватара. Ей поклоняется хорошо организованный культ Кровавого языка с центром в Кении, рассылающий миссионеров по всему миру.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 158,
+      "printed_page": 157,
+      "method": "book_text",
+      "verified": true
+    },
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 165,
+      "printed_page": 164,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "СИЛ, ВЫН, РАЗ, ЛВК, ПЗ, БкУ, комплекция и Движение — из общей таблицы «Nyarlathotep: Avatar Profiles» (стр. 164 печатн., 165 PDF); МОЩ 500, ПМ 100 и заклинания — общие атрибуты всех аватаров из той же таблицы. ИНТ в книге не указан."
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:haunter-of-the-dark",
+  "kind": "creature",
+  "name": {
+    "ru": "Скиталец тьмы",
+    "en": "The Haunter of the Dark"
+  },
+  "aliases": [
+    "Father of All Bats",
+    "Fly-the Light"
+  ],
+  "category": "avatar",
+  "subcategory": "аватар Ньярлатхотепа",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "characteristics": {
+      "STR": {
+        "raw": "140",
+        "value": 140
+      },
+      "CON": {
+        "raw": "110",
+        "value": 110
+      },
+      "SIZ": {
+        "raw": "120",
+        "value": 120
+      },
+      "DEX": {
+        "raw": "115",
+        "value": 115
+      },
+      "POW": {
+        "raw": "500",
+        "value": 500
+      }
+    },
+    "averages": false,
+    "hp": {
+      "raw": "23",
+      "value": 23
+    },
+    "mp": {
+      "raw": "100",
+      "value": 100
+    },
+    "damage_bonus": {
+      "raw": "+2D6",
+      "value": "2d6"
+    },
+    "build": {
+      "raw": "3",
+      "value": 3
+    },
+    "move": {
+      "raw": "10 / 20 flying",
+      "value": 10,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 10
+        },
+        {
+          "mode": "fly",
+          "value": 20
+        }
+      ]
+    },
+    "armor": {
+      "raw": "None. Immune to mundane weapons (incl. bullets). Immune to cold, fire, chemicals, and electricity. Light causes harm (see above).",
+      "value": 0,
+      "note": "иммунитет к обычному оружию, холоду, огню, химии и электричеству; уязвим к свету; при 0 ПЗ меняет облик (обычно на Кровавый язык)"
+    },
+    "attacks_per_round": {
+      "raw": "1+ (engulf, grab, or devour)",
+      "value": null
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Обволакивание (манёвр)",
+          "en": "Engulf (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "100% (50/20), damage 2D6",
+          "value": 100,
+          "half": 50,
+          "fifth": 20
+        },
+        "damage": {
+          "raw": "2D6",
+          "dice": "2d6",
+          "adds_db": false,
+          "extra": "ожог 2d6 за раунд"
+        },
+        "notes": "вырваться — чрезвычайная проверка СИЛ или ЛВК"
+      },
+      {
+        "name": {
+          "ru": "Захват (манёвр)",
+          "en": "Grab (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "95% (47/19), held, then either dropped from a height or brain devoured (see above)",
+          "value": 95,
+          "half": 47,
+          "fifth": 19
+        },
+        "damage": {
+          "raw": "held, then either dropped from a height or brain devoured (see above)",
+          "dice": null,
+          "adds_db": false,
+          "extra": "падение с высоты 3d6–10d6 или пожирание мозга: 1d6 урона и 2d10 ИНТ за раунд"
+        },
+        "notes": "по одному щупальцу на каждую цель под размахом крыльев 15 м; вырваться — встречная чрезвычайная проверка СИЛ или ЛВК"
+      }
+    ],
+    "skills": [],
+    "spells": {
+      "raw": "any the Keeper desires, but none concerning Elder God and associated matters."
+    },
+    "sanity_loss": [
+      {
+        "success": "1d6",
+        "fail": "1d20",
+        "trigger": "при виде Скитальца тьмы"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Тьма",
+      "summary": "Может быть призван или появиться только в темноте."
+    },
+    {
+      "name": "Полуматериальность",
+      "summary": "Пролетает сквозь твёрдые предметы по желанию и может унести жертву сквозь стены."
+    },
+    {
+      "name": "Сияющий трапецоэдр",
+      "summary": "Связан с этим древним артефактом: ритуал с ним в темноте гарантирует призыв, а выставленный на свет камень изгоняет аватара."
+    },
+    {
+      "name": "Уязвимость к свету",
+      "summary": "Терпит лишь звёздный свет. Мощный фонарь — 1d6 урона, свеча в пределах 15 м — 1 урон за раунд, дуговая лампа — 3d6, свет полной луны — 2d6, дневной свет — 10d6 за раунд; вспышки отпугивают, но почти не вредят."
+    }
+  ],
+  "description": {
+    "ru": "Подобие гигантской летучей мыши с крыльями, за которыми тянутся щупальца, будто сотканные из густого чёрного дыма; единственная черта лица — горящий красный трёхдольный глаз, рук и ног нет.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Одно из древнейших воплощений Ньярлатхотепа, известное ми-го и другим расам. На Земле ему поклонялись Церковь Звёздной мудрости в Провиденсе (основана около 1844 г., изгнана из города; рассеявшиеся члены, по слухам, осели в Чикаго, Сан-Франциско и на севере Англии) и австралийский культ Песчаной летучей мыши.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 160,
+      "printed_page": 159,
+      "method": "book_text",
+      "verified": true
+    },
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 165,
+      "printed_page": 164,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "СИЛ, ВЫН, РАЗ, ЛВК, ПЗ, БкУ, комплекция и Движение — из общей таблицы «Nyarlathotep: Avatar Profiles» (стр. 164 печатн., 165 PDF); МОЩ 500, ПМ 100 и заклинания — общие атрибуты всех аватаров из той же таблицы. ИНТ в книге не указан. Заголовок и описание — на стр. 158 печатн. (159 PDF), профиль — на стр. 159 печатн."
+  }
+}

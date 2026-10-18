@@ -1,0 +1,212 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:ossadagowah",
+  "kind": "creature",
+  "name": {
+    "ru": "Оссадагова",
+    "en": "Ossadagowah"
+  },
+  "aliases": [
+    "Star Beast",
+    "Void Feaster",
+    "Zvilpoggua",
+    "Star Demon"
+  ],
+  "category": "mythos_deity",
+  "subcategory": "Великий Древний",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "characteristics": {
+      "STR": {
+        "raw": "175",
+        "value": 175
+      },
+      "CON": {
+        "raw": "260",
+        "value": 260
+      },
+      "SIZ": {
+        "raw": "230",
+        "value": 230
+      },
+      "DEX": {
+        "raw": "100",
+        "value": 100
+      },
+      "POW": {
+        "raw": "250",
+        "value": 250
+      }
+    },
+    "averages": false,
+    "hp": {
+      "raw": "49",
+      "value": 49
+    },
+    "mp": {
+      "raw": "50",
+      "value": 50
+    },
+    "damage_bonus": {
+      "raw": "+4D6",
+      "value": "4d6"
+    },
+    "build": {
+      "raw": "5",
+      "value": 5
+    },
+    "move": {
+      "raw": "10 / 17 flying",
+      "value": 10,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 10
+        },
+        {
+          "mode": "fly",
+          "value": 17
+        }
+      ]
+    },
+    "armor": {
+      "raw": "None. All mundane weapons (incl. bullets) deal minimum damage.",
+      "value": 0,
+      "note": "обычное оружие наносит минимальный урон; при 0 ПЗ рассеивается облаком и восстанавливается через 4d10 лет"
+    },
+    "attacks_per_round": {
+      "raw": "1 (face tendrils or kick or stomp)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (пинок)",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "80% (40/16), damage 2D6",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "2D6",
+          "dice": "2d6",
+          "adds_db": false,
+          "extra": null
+        }
+      },
+      {
+        "name": {
+          "ru": "Лицевые щупальца",
+          "en": "Tendrils"
+        },
+        "kind": "special",
+        "skill": null,
+        "chance": {
+          "raw": "60% (30/12), damage 2D6 + 5D10 STR (see above)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "2D6 + 5D10 STR (see above)",
+          "dice": "2d6",
+          "adds_db": false,
+          "extra": "высасывание крови: 5d10 СИЛ за раунд"
+        },
+        "notes": "дальность 10 м; вырваться — чрезвычайная проверка СИЛ или перерубить щупальца рубящим оружием"
+      },
+      {
+        "name": {
+          "ru": "Топтание",
+          "en": "Stomp"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8), damage 4D6",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "4D6",
+          "dice": "4d6",
+          "adds_db": false,
+          "extra": null
+        }
+      }
+    ],
+    "skills": [],
+    "spells": {
+      "raw": "Bait Human (variant), Contact Formless Spawn, Fist of Yog-Sothoth, Summon Dimensional Shambler; others as the Keeper desires."
+    },
+    "sanity_loss": [
+      {
+        "success": "1d6",
+        "fail": "2d10+2",
+        "trigger": "при встрече с Оссадаговой"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Летучее высасывание",
+      "summary": "Взлетает с жертвой на щупальцах; может продолжать питаться или бросить её (1d6–10d6 урона в зависимости от высоты)."
+    },
+    {
+      "name": "Поглощение магии",
+      "summary": "Вместо крови может высасывать 1d8 ПМ за раунд, затем ПЗ, превращая их в ПМ, и тратит их прежде собственных."
+    },
+    {
+      "name": "Теневая форма",
+      "summary": "За 10 ПМ становится тенью, исчезающей во тьме, и может бесплатно снова воплотиться; тень материальна и уязвима, её, возможно, легче изгнать."
+    },
+    {
+      "name": "Призыв",
+      "summary": "Может быть призван на Землю только когда звезда Алголь над горизонтом."
+    }
+  ],
+  "description": {
+    "ru": "Крылатая раздутая масса, отдалённо похожая на жабу: рук нет, лишь две ноги с огромными когтистыми ступнями, а безликая голова — бесформенный нарост, из которого шевелятся червеобразные щупальца.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Порождение (по некоторым данным — первенец) Цатхоггуа, «рождённое» на Яксе (Нептуне) и ныне обитающее (или заточённое) на Ираутроме у Алголя. Больше всего о нём сказано в книге «Of Evil Sorceries Done in New England…», где он — «Звёздный демон», призываемый особым кругом; обращённый круг отбрасывает его назад. Организованного культа нет; часть культа Четырёхпалой руки отпала и под именем Искателей пустоты почитает Оссадагову.",
+    "en": null
+  },
+  "habitat": "планета Ираутром у Алголя; на Земле — Новая Англия",
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 169,
+      "printed_page": 168,
+      "method": "book_text",
+      "verified": true
+    },
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 170,
+      "printed_page": 169,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Характеристики и бой — на стр. 168 печатн. (169 PDF); потеря рассудка, магия и силы — на стр. 169 печатн. (170 PDF). ИНТ не указан."
+  }
+}

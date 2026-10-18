@@ -1,0 +1,129 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:shark",
+  "kind": "creature",
+  "name": {
+    "ru": "Акула",
+    "en": "Shark"
+  },
+  "aliases": [
+    "Акулы"
+  ],
+  "category": "animal",
+  "subcategory": "водный хищник",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "characteristics": {
+      "STR": {
+        "raw": "90",
+        "value": 90,
+        "roll": "5d6×5"
+      },
+      "CON": {
+        "raw": "90",
+        "value": 90,
+        "roll": "5d6×5"
+      },
+      "SIZ": {
+        "raw": "90",
+        "value": 90,
+        "roll": "5d6×5"
+      }
+    },
+    "averages": true,
+    "hp": {
+      "raw": "18",
+      "value": 18
+    },
+    "damage_bonus": {
+      "raw": "+1к6",
+      "value": "1d6"
+    },
+    "build": {
+      "raw": "2",
+      "value": 2
+    },
+    "move": {
+      "raw": "плавание 12",
+      "value": 12,
+      "modes": [
+        {
+          "mode": "swim",
+          "value": 12
+        }
+      ]
+    },
+    "armor": {
+      "raw": "5 пунктов (толстая кожа)",
+      "value": 5,
+      "note": "толстая кожа"
+    },
+    "attacks_per_round": {
+      "raw": "2 (может схватить и удерживать только одну жертву)",
+      "value": null
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "75% (37/15)",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        },
+        "damage": {
+          "raw": "2к3 + 1/2 БкУ",
+          "dice": "2d3+1",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "25% (12/5)",
+      "value": 25,
+      "half": 12,
+      "fifth": 5
+    },
+    "skills": [
+      {
+        "name": "Чутьё на живое",
+        "value": {
+          "raw": "95%",
+          "value": 95
+        }
+      }
+    ],
+    "sanity_loss": []
+  },
+  "description": {
+    "ru": "Крупная хищная рыба: опасна укусом, захватом и средой боя, особенно если жертва в воде.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 313,
+      "printed_page": 334,
+      "method": "helper_migration",
+      "verified": false
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": true,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": "не разобрано: Ближний бой: укусы, удары всем телом и острые плавники. | Укус и захват (манёвр): акула может укусить жертву и вцепиться в неё, нанося автоматический урон в следующих раундах, пока её не сбросят успешной встречной проверкой СИЛ."
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:shoggoth-lord",
+  "kind": "creature",
+  "name": {
+    "ru": "Шоггот-владыка",
+    "en": "Shoggoth Lord"
+  },
+  "aliases": [
+    "Шоггот-владыки",
+    "Shoggoth Lords"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "уникальная разновидность",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "characteristics": {
+      "STR": {
+        "raw": "75",
+        "value": 75,
+        "roll": "(4d6+10)×5"
+      },
+      "CON": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(6d6+10)×5"
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(3d6+3)×5"
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50,
+        "roll": "3d6×5"
+      },
+      "APP": {
+        "raw": "30",
+        "value": 30,
+        "roll": "(1d6+3)×5"
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      },
+      "EDU": {
+        "raw": "50",
+        "value": 50,
+        "roll": "3d6×5"
+      }
+    },
+    "averages": true,
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "damage_bonus": {
+      "raw": "+1к4 (форма человека) / +1к6 (форма шоггота)",
+      "value": "1d4"
+    },
+    "build": {
+      "raw": "1 (форма человека) / 2 (форма шоггота)",
+      "value": null
+    },
+    "move": {
+      "raw": "ходьба 8 / перекатывание 10",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        },
+        {
+          "mode": "other",
+          "value": 10,
+          "note": "перекатывание 10"
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет. Атаки огнём и электричеством наносят шогготу-владыке лишь половину урона. Физическое оружие вроде пистолетов",
+      "value": 0,
+      "note": "Атаки огнём и электричеством наносят шогготу-владыке лишь половину урона. Физическое оружие вроде пистолетов"
+    },
+    "attacks_per_round": {
+      "raw": "2",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "90% (45/18)",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        },
+        "damage": {
+          "raw": "1к6+2+БкУ текущей формы. Либо поглощение: урон кислотой 1к6 за раунд, пока жертва не умрёт",
+          "dice": "1d6+2",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "26% (13/5)",
+      "value": 26,
+      "half": 13,
+      "fifth": 5
+    },
+    "skills": [
+      {
+        "name": "Запугивание",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Обаяние",
+        "value": {
+          "raw": "70%",
+          "value": 70
+        }
+      },
+      {
+        "name": "Скрытность",
+        "value": {
+          "raw": "65%",
+          "value": 65
+        }
+      },
+      {
+        "name": "Убеждение",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Знает 1к3 заклинания на усмотрение Хранителя"
+    },
+    "sanity_loss": [
+      {
+        "success": "1d6",
+        "fail": "1d20",
+        "trigger": "пунктов при виде шоггота-владыки в истинной форме"
+      },
+      {
+        "success": "1",
+        "fail": "1d3",
+        "trigger": "для тех, кто стал свидетелем превращения владыки из человека в шоггота"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Разумный меньший шоггот, умеющий выглядеть человеком и охотиться среди людей, не раскрывая истинной формы.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 285,
+      "printed_page": 306,
+      "method": "helper_migration",
+      "verified": false
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

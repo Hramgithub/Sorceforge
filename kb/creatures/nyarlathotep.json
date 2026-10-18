@@ -1,0 +1,142 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:nyarlathotep",
+  "kind": "creature",
+  "name": {
+    "ru": "Ньярлатхотеп",
+    "en": "Nyarlathotep"
+  },
+  "aliases": [
+    "Ползучий Хаос",
+    "Чёрный человек"
+  ],
+  "category": "mythos_deity",
+  "subcategory": "Внешний бог",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "95",
+        "value": 95
+      },
+      "SIZ": {
+        "raw": "55",
+        "value": 55
+      },
+      "DEX": {
+        "raw": "95",
+        "value": 95
+      },
+      "APP": {
+        "raw": "90",
+        "value": 90
+      },
+      "INT": {
+        "raw": "430",
+        "value": 430
+      },
+      "POW": {
+        "raw": "500",
+        "value": 500
+      }
+    },
+    "averages": false,
+    "hp": {
+      "raw": "15",
+      "value": 15
+    },
+    "mp": {
+      "raw": "100",
+      "value": 100
+    },
+    "damage_bonus": {
+      "raw": "нет",
+      "value": null
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "12",
+      "value": 12,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 12
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет. Если здоровье Ньярлатхотепа снижается до 0, он падает наземь, меняет форму (всегда на чудовищную, вызывающую у наблюдателей потерю рассудка) и улетает в межзвёздное пространство",
+      "value": 0,
+      "note": "Если здоровье Ньярлатхотепа снижается до 0, он падает наземь, меняет форму (всегда на чудовищную, вызывающую у наблюдателей потерю рассудка) и улетает в межзвёздное пространство"
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (чудовище)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "85% (42/17)",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        },
+        "damage": {
+          "raw": "10к6 + БкУ",
+          "dice": "10d6",
+          "adds_db": true
+        }
+      }
+    ],
+    "skills": [],
+    "spells": {
+      "raw": "Ньярлатхотеп знает все заклинания Мифов и может призывать чудовищ по 1 пункту магии за каждые 5 МОЩ призванного существа. Он может призвать шантака, охотящегося ужаса или служителя Внешних богов всего за 1 пункт магии"
+    },
+    "sanity_loss": [
+      {
+        "success": "1d10",
+        "fail": "1d100",
+        "trigger": "пунктов рассудка"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Посланник и душа богов, принимающий множество личин; предпочитает интриги, культы и разрушение разума прямой силе.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 301,
+      "printed_page": 322,
+      "method": "helper_migration",
+      "verified": false
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": true,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": "не разобрано: (50/20), урон 1к3 или по виду оружия"
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:large-bat",
+  "kind": "creature",
+  "name": {
+    "ru": "Крупная летучая мышь",
+    "en": "Large Bat"
+  },
+  "aliases": [
+    "Летучая мышь"
+  ],
+  "category": "animal",
+  "subcategory": "летающее животное",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "characteristics": {
+      "STR": {
+        "raw": "25",
+        "value": 25,
+        "roll": "2d4×5"
+      },
+      "SIZ": {
+        "raw": "15",
+        "value": 15,
+        "roll": "2d4×5"
+      }
+    },
+    "averages": true,
+    "hp": {
+      "raw": "5",
+      "value": 5
+    },
+    "damage_bonus": {
+      "raw": "-2",
+      "value": null
+    },
+    "build": {
+      "raw": "-2",
+      "value": null
+    },
+    "move": {
+      "raw": "1 / 12 полёт",
+      "value": 1,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 1
+        },
+        {
+          "mode": "fly",
+          "value": 12
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0,
+      "note": null
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1к2 (+1 к размеру кости за каждую особь в стае)",
+          "dice": "1d2",
+          "adds_db": false
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "52% (26/10)",
+      "value": 52,
+      "half": 26,
+      "fifth": 10
+    },
+    "skills": [
+      {
+        "name": "Внимание (эхолокация)",
+        "value": {
+          "raw": "75%",
+          "value": 75
+        }
+      }
+    ],
+    "sanity_loss": []
+  },
+  "description": {
+    "ru": "Гигантская летучая мышь или стая крупных рукокрылых; использует зубы, когти и полёт.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 315,
+      "printed_page": 336,
+      "method": "helper_migration",
+      "verified": false
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:yig",
+  "kind": "creature",
+  "name": {
+    "ru": "Йиг",
+    "en": "Yig"
+  },
+  "aliases": [
+    "Отец змей"
+  ],
+  "category": "mythos_deity",
+  "subcategory": "Великий Древний",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "characteristics": {
+      "STR": {
+        "raw": "150",
+        "value": 150
+      },
+      "CON": {
+        "raw": "600",
+        "value": 600
+      },
+      "SIZ": {
+        "raw": "100",
+        "value": 100
+      },
+      "POW": {
+        "raw": "140",
+        "value": 140
+      }
+    },
+    "averages": false,
+    "hp": {
+      "raw": "70",
+      "value": 70
+    },
+    "mp": {
+      "raw": "28",
+      "value": 28
+    },
+    "damage_bonus": {
+      "raw": "+2к6",
+      "value": "2d6"
+    },
+    "build": {
+      "raw": "3",
+      "value": 3
+    },
+    "move": {
+      "raw": "10",
+      "value": 10,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 10
+        }
+      ]
+    },
+    "armor": {
+      "raw": "6 пунктов (чешуя). Критические попадания игнорируют броню. Атаки в ближнем бою наносят",
+      "value": 6,
+      "note": "чешуя). Критические попадания игнорируют броню. Атаки в ближнем бою наносят"
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "90% (45/18)",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        },
+        "damage": {
+          "raw": "равен БкУ Хватка (манёвр): сдавливающий урон 2к6",
+          "dice": "2d6",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Укус (после хватки)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Укус (после хватки)",
+        "chance": {
+          "raw": "95% (47/19)",
+          "value": 95,
+          "half": 47,
+          "fifth": 19
+        },
+        "damage": {
+          "raw": "1к8+ мгновенная смерть, если пробита броня",
+          "dice": "1d8",
+          "adds_db": false
+        }
+      }
+    ],
+    "skills": [],
+    "spells": {
+      "raw": "Когда кто-то раскрывает тайны культа или наносит ему вред, Йиг посылает священную змею убить святотатца"
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d8",
+        "trigger": "пунктов при виде Йига"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Отец змей и карающий бог змеиных культов; особенно мстит тем, кто убивает его детей.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 297,
+      "printed_page": 318,
+      "method": "helper_migration",
+      "verified": false
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": true,
+    "flags": [
+      "incomplete"
+    ],
+    "notes": "armor выглядит обрезанным"
+  }
+}

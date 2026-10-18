@@ -1,0 +1,145 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:servant-of-glaaki",
+  "kind": "creature",
+  "name": {
+    "ru": "Служитель Гла’аки",
+    "en": "Servant of Glaaki"
+  },
+  "aliases": [
+    "Раб Глааки",
+    "Слуга Глааки"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "нежить-служитель",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "characteristics": {
+      "STR": {
+        "raw": "50",
+        "value": 50,
+        "roll": "3d6×5"
+      },
+      "CON": {
+        "raw": "105",
+        "value": 105,
+        "roll": "3d6×10"
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "15",
+        "value": 15
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      }
+    },
+    "averages": true,
+    "hp": {
+      "raw": "17",
+      "value": 17
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "damage_bonus": {
+      "raw": "нет",
+      "value": null
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "5",
+      "value": 5,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 5
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0,
+      "note": null
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1к3+БкУ или по виду оружия (обычно серп: 1к6+1+БкУ)",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "10% (5/2)",
+      "value": 10,
+      "half": 5,
+      "fifth": 2
+    },
+    "skills": [],
+    "spells": {
+      "raw": "Как правило, у служителей Гла’аки нет заклинаний, но они сохраняют те заклинания, что знали при жизни, и могут получить новые от Гла’аки (на усмотрение Хранителя)"
+    },
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d8",
+        "trigger": "пунктов, если он выглядит как оживший труп"
+      },
+      {
+        "success": "1",
+        "fail": "1d10",
+        "trigger": "пунктов, если он умер от «Зелёного гниения»"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Мёртвый раб Гла’аки: внешне похож на иссохшего человека, но несёт волю Великого Древнего.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 278,
+      "printed_page": 299,
+      "method": "helper_migration",
+      "verified": false
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:skeleton",
+  "kind": "creature",
+  "name": {
+    "ru": "Скелет",
+    "en": "Skeleton"
+  },
+  "aliases": [
+    "Скелеты"
+  ],
+  "category": "supernatural",
+  "subcategory": "нежить",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "characteristics": {
+      "STR": {
+        "raw": "50",
+        "value": 50,
+        "roll": "3d6×5"
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      },
+      "INT": {
+        "raw": "50",
+        "value": 50,
+        "roll": "3d6×5"
+      }
+    },
+    "averages": true,
+    "hp": {
+      "raw": "—",
+      "value": null
+    },
+    "mp": {
+      "raw": "1",
+      "value": 1
+    },
+    "damage_bonus": {
+      "raw": "нет",
+      "value": null
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "armor": {
+      "raw": "сопротивление урону (см. особые умения)",
+      "value": null,
+      "note": null
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1к3+БкУ или по виду оружия",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "skills": [],
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "пунктов при виде ожившего скелета"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Ожившие кости без плоти и явных слабых мест; простая, но атмосферная нежить для гробниц и ритуалов.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 312,
+      "printed_page": 333,
+      "method": "helper_migration",
+      "verified": false
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

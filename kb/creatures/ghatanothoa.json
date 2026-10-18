@@ -1,0 +1,143 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:ghatanothoa",
+  "kind": "creature",
+  "name": {
+    "ru": "Гатанотоа",
+    "en": "Ghatanothoa"
+  },
+  "aliases": [
+    "Владыка вулкана"
+  ],
+  "category": "mythos_deity",
+  "subcategory": "Великий Древний",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "characteristics": {
+      "STR": {
+        "raw": "450",
+        "value": 450
+      },
+      "CON": {
+        "raw": "400",
+        "value": 400
+      },
+      "SIZ": {
+        "raw": "700",
+        "value": 700
+      },
+      "DEX": {
+        "raw": "40",
+        "value": 40
+      },
+      "INT": {
+        "raw": "100",
+        "value": 100
+      },
+      "POW": {
+        "raw": "175",
+        "value": 175
+      }
+    },
+    "averages": false,
+    "hp": {
+      "raw": "110",
+      "value": 110
+    },
+    "mp": {
+      "raw": "35",
+      "value": 35
+    },
+    "damage_bonus": {
+      "raw": "+13к6",
+      "value": "13d6"
+    },
+    "build": {
+      "raw": "14",
+      "value": 14
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "10 пунктов (шкура). Регенерирует по 10 ПЗ за раунд",
+      "value": 10,
+      "note": "шкура). Регенерирует по 10 ПЗ за раунд"
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "7к6",
+          "dice": "7d6",
+          "adds_db": false
+        }
+      }
+    ],
+    "skills": [],
+    "spells": {
+      "raw": "Знает все заклинания призыва/укрощения, а также связи с Великими Древними, хтонийцами, Глубоководными, летучими полипами, упырями, звёздными отродьями Ктулху и обитателями песков"
+    },
+    "sanity_loss": [
+      {
+        "success": "1d10",
+        "fail": "1d100",
+        "trigger": "пунктов при виде Гатанотоа, но это наименьшая из бед"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Ужасный владыка вулкана с Му; даже точное изображение этого божества может окаменить живого.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 292,
+      "printed_page": 313,
+      "method": "helper_migration",
+      "verified": false
+    }
+  ],
+  "corrections": [
+    {
+      "field": "statblock.characteristics.INT",
+      "from": "210",
+      "to": "100",
+      "reason": "значение перетекло из соседнего блока характеристик; в книге ИНТ 100 (стр. 293 PDF)",
+      "ref": "checks/20261017-rules-core/report.md"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

@@ -12,6 +12,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import sys
 from pathlib import Path
 
 MOVE = [(re.compile(r"\bлетая\b"), "полёт"), (re.compile(r"\bплавая\b"), "плавание"), (re.compile(r"\bпаря\b"), "парение")]
@@ -34,6 +35,7 @@ def english(v, path, out):
 
 
 def main() -> None:
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     ap = argparse.ArgumentParser()
     ap.add_argument("--kb", type=Path, default=Path(__file__).resolve().parents[2] / "kb")
     ap.add_argument("--dry-run", action="store_true")

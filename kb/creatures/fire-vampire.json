@@ -1,0 +1,197 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:fire-vampire",
+  "kind": "creature",
+  "name": {
+    "ru": "Огненный вампир",
+    "en": "Fire Vampire"
+  },
+  "aliases": [],
+  "category": "mythos_monster",
+  "subcategory": "служитель",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "—",
+        "value": null,
+        "roll": null
+      },
+      "CON": {
+        "raw": "35",
+        "value": 35,
+        "roll": "2d6×5"
+      },
+      "SIZ": {
+        "raw": "01",
+        "value": 1,
+        "roll": "01"
+      },
+      "DEX": {
+        "raw": "80",
+        "value": 80,
+        "roll": "(3d6+6)×5"
+      },
+      "INT": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      },
+      "POW": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      }
+    },
+    "hp": {
+      "raw": "3",
+      "value": 3
+    },
+    "mp": {
+      "raw": "13",
+      "value": 13
+    },
+    "damage_bonus": {
+      "raw": "нет",
+      "value": null
+    },
+    "build": {
+      "raw": "–2",
+      "value": -2
+    },
+    "move": {
+      "raw": "11 полёт",
+      "value": 11,
+      "modes": [
+        {
+          "mode": "fly",
+          "value": 11
+        }
+      ]
+    },
+    "armor": {
+      "raw": "невосприимчив к обычному оружию; вода наносит 1 урон за полгаллона (2 литра).",
+      "value": 0,
+      "note": "обычное оружие не причиняет вреда"
+    },
+    "attacks_per_round": {
+      "raw": "1 (индивидуальный или объединённый урон)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (касание)",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "85% (42/17), урон 2к6 (см. выше)",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        },
+        "damage": {
+          "raw": "урон 2к6",
+          "dice": "2d6",
+          "adds_db": false,
+          "extra": "кража 1к10 ПМ; поджог одежды"
+        },
+        "notes": "комбинированная проверка ВЫН и МОЩ уменьшает урон вдвое; тот же бросок — встречная проверка МОЩ: при провале вампир крадёт 1к10 ПМ, при победе жертвы вампир теряет 1 ПМ; проверка Удачи — загорелась ли одежда (1 урон в следующем раунде, далее удваивается: 2, 4, 8…)"
+      },
+      {
+        "name": {
+          "ru": "Объединённый урон",
+          "en": "Cluster"
+        },
+        "kind": "attack",
+        "skill": "Объединённый урон",
+        "chance": {
+          "raw": "45% (22/9), урон 6к6 (см. выше)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "урон 6к6",
+          "dice": "6d6",
+          "adds_db": false,
+          "extra": "горящая одежда: +1к6 урона за раунд"
+        },
+        "notes": "вампиры объединяются в большой пылающий шар; проверка ВЫН уменьшает урон вдвое; трудная проверка Удачи — подожжена ли одежда; в скоплении ПМ не крадут"
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [],
+    "spells": {
+      "raw": "с вероятностью 20% знает 1к3 заклинаний."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "при виде огненного вампира"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Пламенное тело",
+      "summary": "Невосприимчив к обычному оружию; вода наносит 1 урон за каждые полгаллона (2 литра)."
+    },
+    {
+      "name": "Кража магии",
+      "summary": "При касании встречной проверкой МОЩ похищает у жертвы 1к10 ПМ; если жертва побеждает, вампир теряет 1 ПМ."
+    },
+    {
+      "name": "Огненный шар",
+      "summary": "Вампиры могут объединяться в большой пылающий шар и наносить 6к6 урона, но в таком виде не крадут ПМ."
+    }
+  ],
+  "description": {
+    "ru": "Разумные сгустки живого пламени, служители Ктугхи. Летают, сжигают жертв прикосновением и поджигают всё вокруг.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-keeper-deck-en",
+      "physical_page": 18,
+      "printed_page": null,
+      "method": "book_text",
+      "verified": true
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 275,
+      "printed_page": 296,
+      "method": "book_text",
+      "verified": false
+    }
+  ],
+  "corrections": [
+    {
+      "field": "statblock.attacks[1].notes",
+      "from": "проверка Удачи (подожжена ли одежда)",
+      "to": "трудная проверка Удачи (Hard Luck roll)",
+      "reason": "значение по карточке Malleus Keeper Deck (решение владельца Р-19)",
+      "ref": "malleus-keeper-deck-en p.18"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

@@ -53,17 +53,28 @@ def main() -> None:
     ap.add_argument("--kb", type=Path, required=True)
     ap.add_argument("--pages", type=Path, required=True)
     ap.add_argument("--out", type=Path, required=True)
+    ap.add_argument("--book-id", default=None, help="check against this source (default: first source of each record)")
+    ap.add_argument("--window", default="-1,0,1,2", help="page offsets to look at")
+    ap.add_argument("--name-lang", default="ru", choices=["ru", "en"])
     a = ap.parse_args()
     raw_pages = {int(f.stem[1:]): f.read_text(encoding="utf-8") for f in a.pages.glob("p*.txt")}
+    offsets = [int(x) for x in a.window.split(",")]
     results = []
     for f in sorted(a.kb.glob("*.json")):
         rec = json.loads(f.read_text(encoding="utf-8"))
-        page = rec["sources"][0].get("physical_page")
-        window = [p for p in (page - 1, page, page + 1, page + 2) if page and p in raw_pages] if page else []
+        src = next((s for s in rec["sources"] if a.book_id in (None, s["book_id"])), None)
+        if src is None:
+            continue
+        page = src.get("physical_page")
+        window = [page + o for o in offsets if page and page + o in raw_pages] if page else []
         text = "\n".join(raw_pages[p] for p in window)
         page_nums = numbers(text)
-        name_tok = (tokens(rec["name"]["ru"]) or [""])[0]
-        name_found = bool(name_tok) and name_tok[:6] in norm(text)
+        if a.name_lang == "en":
+            words = [w for w in (rec["name"].get("en") or "").lower().split() if len(w) >= 4]
+            name_found = bool(words) and all(w[:5] in text.lower() for w in words)
+        else:
+            name_tok = (tokens(rec["name"]["ru"]) or [""])[0]
+            name_found = bool(name_tok) and name_tok[:6] in norm(text)
         want = record_numbers(rec)
         missing = sorted(want - page_nums)
         recall = round(1 - len(missing) / len(want), 3) if want else 1.0

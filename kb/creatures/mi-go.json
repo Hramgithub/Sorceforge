@@ -1,0 +1,190 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:mi-go",
+  "kind": "creature",
+  "name": {
+    "ru": "Ми-го",
+    "en": "Mi-Go"
+  },
+  "aliases": [
+    "Грибы с Юггота"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "независимая раса",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      },
+      "CON": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      },
+      "SIZ": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70,
+        "roll": "4d6×5"
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      },
+      "POW": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      }
+    },
+    "hp": {
+      "raw": "10–11",
+      "value": 10
+    },
+    "mp": {
+      "raw": "13",
+      "value": 13
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "7 / 13 полёт",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        },
+        {
+          "mode": "fly",
+          "value": 13
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет; благодаря внеземному телу проникающее оружие наносит минимальный урон.",
+      "value": 0,
+      "note": "проникающее оружие наносит минимальный урон"
+    },
+    "attacks_per_round": {
+      "raw": "2 (клешни) или 1 (захват или оружие)",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1к6+БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "notes": "двумя клешнями, как у краба, или оружием"
+      },
+      {
+        "name": {
+          "ru": "Захват (манёвр)",
+          "en": "Seize (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9), см. выше",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "падение с высоты: 1к6 за каждые 10 футов/3 м",
+          "dice": null,
+          "adds_db": false,
+          "extra": "1d6 за каждые 3 м падения"
+        },
+        "notes": "хватает цель равной Комплекции или меньше, взлетает и сбрасывает её с высоты или уносит"
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "skills": [],
+    "spells": {
+      "raw": "с вероятностью 25% знает 1к3 заклинаний."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "при виде ми-го"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Внеземное тело",
+      "summary": "Резонирующее внеземное тело: всё проникающее оружие наносит минимальный урон."
+    },
+    {
+      "name": "Захват и полёт",
+      "summary": "Хватает цель не больше своей Комплекции, взлетает и сбрасывает её (1к6 урона за каждые 3 м) или уносит."
+    }
+  ],
+  "description": {
+    "ru": "Разумные пришельцы с Юггота, похожие на крылатых ракообразных с грибовидным телом и головой из щупалец. Владеют высокоразвитой наукой и ведут на Земле тайные раскопки.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-keeper-deck-en",
+      "physical_page": 33,
+      "printed_page": null,
+      "method": "book_text",
+      "verified": true
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 263,
+      "printed_page": 284,
+      "method": "book_text",
+      "verified": false
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Навыки на карточке: варьируются, на усмотрение Хранителя."
+  }
+}

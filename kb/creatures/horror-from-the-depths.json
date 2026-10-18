@@ -1,0 +1,198 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:horror-from-the-depths",
+  "kind": "creature",
+  "name": {
+    "ru": "Ужас из глубин",
+    "en": "Terrors from Beyond"
+  },
+  "aliases": [],
+  "category": "mythos_monster",
+  "subcategory": "паразит",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      },
+      "CON": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      },
+      "SIZ": {
+        "raw": "35",
+        "value": 35,
+        "roll": "2d6×5"
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70,
+        "roll": "4d6×5"
+      },
+      "INT": {
+        "raw": "70",
+        "value": 70,
+        "roll": "4d6×5"
+      },
+      "POW": {
+        "raw": "70",
+        "value": 70,
+        "roll": "4d6×5"
+      }
+    },
+    "hp": {
+      "raw": "10",
+      "value": 10
+    },
+    "mp": {
+      "raw": "14",
+      "value": 14
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "варьируется; охотники среднего размера имеют 1 пункт брони; чудовищные охотники имеют 4 пункта брони; все восстанавливают 2 ПЗ за раунд (смерть при 0 ПЗ).",
+      "value": null,
+      "note": "1 пункт у охотников среднего размера, 4 у чудовищных; регенерация 2 ПЗ за раунд"
+    },
+    "attacks_per_round": {
+      "raw": "1 (укус, проникновение)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1к4+БкУ",
+          "dice": "1d4",
+          "adds_db": true
+        },
+        "notes": "кусает, откусывая куски плоти"
+      },
+      {
+        "name": {
+          "ru": "Проникновение (манёвр)",
+          "en": "Burrow (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Проникновение (м)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "урон 1к6, затем Истощение",
+          "dice": "1d6",
+          "adds_db": false,
+          "extra": "затем Истощение"
+        },
+        "notes": "остаётся в теле, сколько пожелает или пока его не извлекут"
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "skills": [],
+    "spells": {
+      "raw": "от нуля до 1к4 заклинаний."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "при виде существа"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Незримость",
+      "summary": "Нападают только на людей, способных их воспринимать; для остальных раны появляются словно из ниоткуда."
+    },
+    {
+      "name": "Истощение",
+      "summary": "Внедрившийся паразит раз в день отнимает 1d6 пунктов каждой характеристики (ТЕЛ — 1 пункт в день, пока не потеряна половина); каждый следующий паразит усиливает эффект."
+    },
+    {
+      "name": "Регенерация",
+      "summary": "Восстанавливают 2 ПЗ за раунд; гибнут при 0 ПЗ."
+    }
+  ],
+  "description": {
+    "ru": "Существа из-за пределов привычного восприятия: видеть их и стать их жертвой могут лишь те, чьё восприятие расширено. Кусают плоть и внедряются в тело жертвы, истощая её.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-keeper-deck-en",
+      "physical_page": 49,
+      "printed_page": null,
+      "method": "book_text",
+      "verified": true
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 289,
+      "printed_page": 310,
+      "method": "book_text",
+      "verified": false
+    }
+  ],
+  "corrections": [
+    {
+      "field": "name.en",
+      "from": "Horror from the Depths",
+      "to": "Terrors from Beyond",
+      "reason": "заголовок карточки Malleus Keeper Deck (решение владельца Р-19); в веб-помощнике английское название указано неверно",
+      "ref": "malleus-keeper-deck-en p.49"
+    }
+  ],
+  "quality": {
+    "needs_review": true,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": "Карточка колоды называется «Terrors from Beyond», а не «Horror from the Depths»; русское название «Ужас из глубин» взято из веб-помощника и, вероятно, неточно, slug оставлен по заданию. В тексте стр. 289, 303, 304 Книги хранителя это существо не найдено — ссылка на Книгу хранителя не подтверждена."
+  }
+}

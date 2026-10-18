@@ -1,0 +1,225 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:serpent-person",
+  "kind": "creature",
+  "name": {
+    "ru": "Змеечеловек",
+    "en": "Serpent Person"
+  },
+  "aliases": [],
+  "category": "mythos_monster",
+  "subcategory": "независимая раса",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      },
+      "CON": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      },
+      "SIZ": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      },
+      "INT": {
+        "raw": "80–85",
+        "value": 80,
+        "roll": "(3d6+6)×5"
+      },
+      "POW": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      }
+    },
+    "hp": {
+      "raw": "10–11",
+      "value": 10
+    },
+    "mp": {
+      "raw": "13",
+      "value": 13
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "1 пункт (чешуя).",
+      "value": 1
+    },
+    "attacks_per_round": {
+      "raw": "1 (безоружные или оружием)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1к3+БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "notes": "обычные безоружные атаки гуманоидов; может использовать любое оружие, в том числе пистолеты"
+      },
+      {
+        "name": {
+          "ru": "Укус",
+          "en": "Bite"
+        },
+        "kind": "attack",
+        "skill": "Укус",
+        "chance": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "1к8+яд",
+          "dice": "1d8",
+          "adds_db": false,
+          "extra": "яд: чрезвычайная проверка ВЫН или 1d8 урона"
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "32% (16/6)",
+      "value": 32,
+      "half": 16,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Запугивание",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Язык (человеческие, варьируются)",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      },
+      {
+        "name": "Язык (наакал)",
+        "value": {
+          "raw": "70%",
+          "value": 70
+        }
+      },
+      {
+        "name": "Наука (биология)",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Наука (химия)",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Внимание",
+        "value": {
+          "raw": "35%",
+          "value": 35
+        }
+      }
+    ],
+    "spells": {
+      "raw": "знает 2к6 заклинаний, среди которых рекомендуется Затуманить память, Околдовать жертву, Поглощение образа."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "при виде змеечеловека"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Ядовитый укус",
+      "summary": "Укушенный проходит чрезвычайную проверку ВЫН, иначе получает ещё 1d8 урона."
+    },
+    {
+      "name": "Оружие",
+      "summary": "Пользуется любым оружием, включая огнестрельное."
+    }
+  ],
+  "description": {
+    "ru": "Древняя раса разумных змеелюдей, правившая до появления человечества. Уцелевшие прячутся в подземельях или среди людей под чужой личиной, владеют наукой и магией.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-keeper-deck-en",
+      "physical_page": 43,
+      "printed_page": null,
+      "method": "book_text",
+      "verified": true
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 269,
+      "printed_page": 290,
+      "method": "book_text",
+      "verified": false
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

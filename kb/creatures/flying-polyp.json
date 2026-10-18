@@ -1,0 +1,244 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:flying-polyp",
+  "kind": "creature",
+  "name": {
+    "ru": "Летучий полип",
+    "en": "Flying Polyp"
+  },
+  "aliases": [],
+  "category": "mythos_monster",
+  "subcategory": "независимая раса",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "250",
+        "value": 250,
+        "roll": "(4d6+36)×5"
+      },
+      "CON": {
+        "raw": "125",
+        "value": 125,
+        "roll": "(2d6+18)×5"
+      },
+      "SIZ": {
+        "raw": "250",
+        "value": 250,
+        "roll": "(4d6+36)×5"
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      },
+      "INT": {
+        "raw": "70",
+        "value": 70,
+        "roll": "4d6×5"
+      },
+      "POW": {
+        "raw": "80–85",
+        "value": 80,
+        "roll": "(3d6+6)×5"
+      }
+    },
+    "hp": {
+      "raw": "37",
+      "value": 37
+    },
+    "mp": {
+      "raw": "16",
+      "value": 16
+    },
+    "damage_bonus": {
+      "raw": "+5к6 (только для Порыва ветра)",
+      "value": "5d6",
+      "note": "только для Порыва ветра"
+    },
+    "build": {
+      "raw": "6",
+      "value": 6
+    },
+    "move": {
+      "raw": "8 / парение 12",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        },
+        {
+          "mode": "fly",
+          "value": 12,
+          "note": "парение (floating)"
+        }
+      ]
+    },
+    "armor": {
+      "raw": "4 пункта; обычное оружие наносит минимальный урон",
+      "value": 4
+    },
+    "attacks_per_round": {
+      "raw": "2к6 (щупальца) или 1 (атака ветром)",
+      "value": "2d6"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Щупальца",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "85% (42/17)",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        },
+        "damage": {
+          "raw": "1к10 за каждое щупальце",
+          "dice": "1d10",
+          "adds_db": false,
+          "extra": "урон наносится прямо ПЗ, игнорируя любую броню"
+        },
+        "notes": "2к6 щупалец за раунд"
+      },
+      {
+        "name": {
+          "ru": "Порыв ветра",
+          "en": null
+        },
+        "kind": "special",
+        "skill": null,
+        "chance": {
+          "raw": "см. основную запись",
+          "value": null
+        },
+        "damage": {
+          "raw": "урон, равный БкУ (+5к6)",
+          "dice": null,
+          "adds_db": true
+        },
+        "notes": "1 ПМ; порыв на 20 метров, зона — цилиндр диаметром 10 метров"
+      },
+      {
+        "name": {
+          "ru": "Сковывающий порыв",
+          "en": null
+        },
+        "kind": "special",
+        "skill": null,
+        "chance": {
+          "raw": "встречная проверка СИЛ жертвы против МОЩ полипа",
+          "value": null
+        },
+        "damage": {
+          "raw": "жертва не может двигаться",
+          "dice": null,
+          "adds_db": false
+        },
+        "notes": "1 ПМ; дальность 1000 метров"
+      },
+      {
+        "name": {
+          "ru": "Буря",
+          "en": null
+        },
+        "kind": "special",
+        "skill": null,
+        "chance": {
+          "raw": "см. основную запись",
+          "value": null
+        },
+        "damage": {
+          "raw": "1к4 за каждые 20 миль/ч сверх 100 миль/ч",
+          "dice": "1d4",
+          "adds_db": false
+        },
+        "notes": "скорость ветра — 1 миля/ч за каждые 2 МОЩ каждого участвующего полипа"
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Чувствовать добычу",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      }
+    ],
+    "spells": {
+      "raw": "с вероятностью 70% знает 1к10 заклинаний."
+    },
+    "sanity_loss": [
+      {
+        "success": "1d3",
+        "fail": "1d20",
+        "trigger": "при виде летучего полипа"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Власть над ветром",
+      "summary": "Тратя пункты магии, создаёт порывы ветра, сковывающие и сбивающие с ног, а вместе с другими полипами — бурю."
+    },
+    {
+      "name": "Невидимость",
+      "summary": "Частично материальны и могут становиться полностью невидимыми."
+    }
+  ],
+  "description": {
+    "ru": "Древняя внеземная раса чудовищных полупрозрачных созданий, похожих на полипы, способных становиться невидимыми и повелевать ветрами. Летают, несмотря на отсутствие крыльев.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Миллионы лет назад полипы явились на Землю из космоса и воздвигли базальтовые города, но Великая Раса Йита победила их и загнала под землю. Полипы до сих пор обитают в глубоких колодцах и пещерах.",
+    "en": null
+  },
+  "habitat": null,
+  "sources": [
+    {
+      "book_id": "malleus-keeper-deck-en",
+      "physical_page": 20,
+      "printed_page": null,
+      "method": "book_text",
+      "verified": true
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 262,
+      "printed_page": 283,
+      "method": "book_text",
+      "verified": false
+    }
+  ],
+  "corrections": [
+    {
+      "field": "statblock.move",
+      "from": "8 / 12 плавание",
+      "to": "8 / парение 12",
+      "reason": "перевод по карточке Malleus Keeper Deck: «floating» — парение (полёт), а не плавание",
+      "ref": "malleus-keeper-deck-en p.20"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

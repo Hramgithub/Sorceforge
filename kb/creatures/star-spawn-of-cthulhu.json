@@ -1,0 +1,163 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:star-spawn-of-cthulhu",
+  "kind": "creature",
+  "name": {
+    "ru": "Звёздное отродье Ктулху",
+    "en": "Star-Spawn of Cthulhu"
+  },
+  "aliases": [],
+  "category": "mythos_monster",
+  "subcategory": "служитель Ктулху",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "350",
+        "value": 350,
+        "roll": "2d6×50"
+      },
+      "CON": {
+        "raw": "260",
+        "value": 260,
+        "roll": "3d6×25"
+      },
+      "SIZ": {
+        "raw": "525",
+        "value": 525,
+        "roll": "3d6×50"
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50,
+        "roll": "3d6×5"
+      },
+      "INT": {
+        "raw": "105",
+        "value": 105,
+        "roll": "6d6×5"
+      },
+      "POW": {
+        "raw": "105",
+        "value": 105,
+        "roll": "6d6×5"
+      }
+    },
+    "hp": {
+      "raw": "78",
+      "value": 78
+    },
+    "mp": {
+      "raw": "21",
+      "value": 21
+    },
+    "damage_bonus": {
+      "raw": "+10к6",
+      "value": "10d6"
+    },
+    "build": {
+      "raw": "11",
+      "value": 11
+    },
+    "move": {
+      "raw": "15 / 15 плавание",
+      "value": 15,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 15
+        },
+        {
+          "mode": "swim",
+          "value": 15
+        }
+      ]
+    },
+    "armor": {
+      "raw": "10 пунктов (шкура и жир); восстанавливает 3 ПЗ за раунд (смерть при нуле ПЗ).",
+      "value": 10,
+      "note": "регенерация 3 ПЗ за раунд; гибнет при 0 ПЗ"
+    },
+    "attacks_per_round": {
+      "raw": "4 (когти, щупальца, удар телом)",
+      "value": 4
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "урон равен БкУ",
+          "dice": null,
+          "adds_db": true
+        },
+        "notes": "когти, щупальца, удар телом: давит, рвёт или хватает, может обрушиться всем телом"
+      }
+    ],
+    "dodge": {
+      "raw": "26% (13/5)",
+      "value": 26,
+      "half": 13,
+      "fifth": 5
+    },
+    "skills": [],
+    "spells": {
+      "raw": "знает 3к6 заклинаний; возможно Связь с Ктулху, Сотворить туман Р’льеха, Хватка Ктулху, Наслать грёзы."
+    },
+    "sanity_loss": [
+      {
+        "success": "1d6",
+        "fail": "1d20",
+        "trigger": "при виде звёздного отродья"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Регенерация",
+      "summary": "Восстанавливает 3 ПЗ за раунд; гибнет при 0 ПЗ."
+    }
+  ],
+  "description": {
+    "ru": "Исполинские существа, похожие на уменьшенные подобия Ктулху: голова спрута, щупальца, крылья и чешуйчатое тело. Пришли на Землю вместе с Ктулху и спят в затонувшем Р’льехе.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-keeper-deck-en",
+      "physical_page": 10,
+      "printed_page": null,
+      "method": "book_text",
+      "verified": true
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 279,
+      "printed_page": 300,
+      "method": "book_text",
+      "verified": false
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

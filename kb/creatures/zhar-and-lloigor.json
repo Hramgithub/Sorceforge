@@ -71,12 +71,11 @@
       ]
     },
     "armor": {
-      "raw": "22-point rubbery and sinuous flesh. If reduced to zero hit points, Zhar and Lloigor rapidly dissolve into a pool of unspeakably foul goo and matter, which either drains away or floats and then submerges in water. The pair reform in 4d100 years.",
-      "value": 22,
-      "note": "22 пункта резиновой гибкой плоти; при 0 ПЗ растекаются лужей зловонной слизи и воссоздаются через 4d100 лет"
+      "raw": "22 пункта резиновой гибкой плоти. Если ПЗ падают до нуля, Жар и Ллойгор быстро растворяются в лужу невыразимо мерзкой слизи и материи, которая либо утекает, либо всплывает, а затем погружается в воду. Пара возрождается через 4d100 лет.",
+      "value": 22
     },
     "attacks_per_round": {
-      "raw": "1d4+1 (tentacles) or 1 (grab, crush)",
+      "raw": "1d4+1 (щупальца) или 1 (захват, раздавливание)",
       "value": null
     },
     "attacks": [
@@ -88,7 +87,7 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "80% (40/16), damage 2d6",
+          "raw": "80% (40/16), урон 2d6",
           "value": 80,
           "half": 40,
           "fifth": 16
@@ -108,13 +107,13 @@
         "kind": "maneuver",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "80% (40/16), damage 1d6 + 10 CON (see above)",
+          "raw": "80% (40/16), урон 1d6 + 10 ВЫН (см. выше)",
           "value": 80,
           "half": 40,
           "fifth": 16
         },
         "damage": {
-          "raw": "1d6 + 10 CON (see above)",
+          "raw": "1d6 + 10 ВЫН (см. выше)",
           "dice": "1d6",
           "adds_db": false,
           "extra": "и потеря 10 ВЫН"
@@ -129,7 +128,7 @@
         "kind": "maneuver",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "80% (40/16), damage 5d6",
+          "raw": "80% (40/16), урон 5d6",
           "value": 80,
           "half": 40,
           "fifth": 16
@@ -144,7 +143,7 @@
     ],
     "skills": [],
     "spells": {
-      "raw": "Clutch of Nyogtha, Contact Human (variant), Summon/Bind Byakhee, Contact Lloigor, Dominate; others as desired by the Keeper."
+      "raw": "Clutch of Nyogtha, Contact Human (вариант), Summon/Bind Byakhee, Contact Lloigor, Dominate; другие на усмотрение Хранителя."
     },
     "sanity_loss": [
       {
@@ -203,16 +202,32 @@
       "physical_page": 247,
       "printed_page": 246,
       "method": "book_text",
-      "verified": true
+      "verified": true,
+      "entry_page": 245,
+      "note": "заголовок статьи — стр. 244 (PDF 245), профиль — стр. 246 (PDF 247)"
     }
   ],
   "corrections": [],
+  "errata": [
+    {
+      "field": "Раздавливание (манёвр): урон",
+      "printed": "damage 1d6 + 10 CON (see above)",
+      "expected": "5d6",
+      "note": "по описанию манёвра раздавливание даёт 5d6, после чего жертва поглощается; значения в таблице, видимо, перепутаны с захватом; сохранено как в таблице"
+    },
+    {
+      "field": "Захват (манёвр): урон",
+      "printed": "damage 5d6",
+      "expected": "1d6 и потеря 10 ВЫН",
+      "note": "по описанию схваченная жертва получает 1d6 урона и теряет 10 ВЫН за раунд; сохранено как в таблице"
+    }
+  ],
   "quality": {
     "needs_review": false,
     "flags": [
       "translated",
       "parse_uncertain"
     ],
-    "notes": "Книга: «these two entities have identical profiles» — один профиль на обоих. Опечатка в книге: в таблице атак Crush (mnvr) — «damage 1d6 + 10 CON (see above)», Grab (mnvr) — «damage 5d6», тогда как по описаниям манёвров раздавливание даёт 5d6, а захват — 1d6 и потерю 10 ВЫН; сохранены значения таблицы. Заголовок статьи — стр. 244 печатн. (245 PDF), профиль — стр. 246 (247 PDF). Раса ллойгоров — отдельная запись coc:creature:lloigor."
+    "notes": "Один профиль на обоих (в книге: профили двух сущностей одинаковы). Раса ллойгоров — отдельная запись coc:creature:lloigor."
   }
 }

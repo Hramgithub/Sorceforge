@@ -74,12 +74,11 @@
       ]
     },
     "armor": {
-      "raw": "None. Regenerates 1 hit point per 10 points of SIZ it consumes (death at zero hit points); thus, if eating a SIZ 60 person it regenerates 6 damage. If reduced to zero hit points, Yu-meng’tis explodes in a shower of offal. It reforms in 5d100 years.",
-      "value": 0,
-      "note": "восстанавливает 1 ПЗ за каждые 10 съеденных ТЕЛ; при 0 ПЗ взрывается дождём требухи, возрождается через 5d100 лет"
+      "raw": "Нет. Восстанавливает 1 ПЗ за каждые 10 пунктов съеденного ТЕЛ (гибнет при нуле ПЗ); так, съев человека с ТЕЛ 60, восстанавливает 6 урона. Если ПЗ падают до нуля, Ю-Менг’тис взрывается дождём требухи. Возрождается через 5d100 лет.",
+      "value": 0
     },
     "attacks_per_round": {
-      "raw": "1 (smash, crush, eat)",
+      "raw": "1 (удар, раздавливание, пожирание)",
       "value": 1
     },
     "attacks": [
@@ -91,7 +90,7 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "60% (30/12), damage 2d6 (8d6)",
+          "raw": "60% (30/12), урон 2d6 (8d6)",
           "value": 60,
           "half": 30,
           "fifth": 12
@@ -112,7 +111,7 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "70% (40/16), damage 3d6",
+          "raw": "70% (40/16), урон 3d6",
           "value": 70,
           "half": 40,
           "fifth": 16
@@ -123,12 +122,12 @@
           "adds_db": false,
           "extra": "жертва при 0 ПЗ проглочена"
         },
-        "notes": "в книге половина и пятая (40/16) не соответствуют 70% (должно быть 35/14)"
+        "notes": null
       }
     ],
     "skills": [],
     "spells": {
-      "raw": "Animate Flesh Thing, Circle of Nausea, Cloud Memory, Dominate, Grasp of Cthulhu, Mental Suggestion, Send Dream, Utterance of Bile; others as desired by the Keeper."
+      "raw": "Animate Flesh Thing, Circle of Nausea, Cloud Memory, Dominate, Grasp of Cthulhu, Mental Suggestion, Send Dream, Utterance of Bile; другие на усмотрение Хранителя."
     },
     "sanity_loss": [
       {
@@ -197,12 +196,20 @@
     }
   ],
   "corrections": [],
+  "errata": [
+    {
+      "field": "Укус: шанс",
+      "printed": "70% (40/16)",
+      "expected": "70% (35/14)",
+      "note": "половина и пятая не соответствуют 70%; сохранено как напечатано"
+    }
+  ],
   "quality": {
     "needs_review": false,
     "flags": [
       "translated",
       "parse_uncertain"
     ],
-    "notes": "Основной статблок — человекоподобная форма; значения со звёздочкой в книге относятся к истинной форме (ТЕЛ 600, ПЗ 120, БкУ +8d6, комплекция 9). Опечатка: у атаки Bite напечатано «70% (40/16)» — половина и пятая не соответствуют 70% (35/14); сохранено как напечатано. Связанная запись — coc:creature:ygolonac."
+    "notes": "Основной статблок — человекоподобная форма; значения со звёздочкой в книге относятся к истинной форме (ТЕЛ 600, ПЗ 120, БкУ +8d6, комплекция 9). Связанная запись — coc:creature:ygolonac."
   }
 }

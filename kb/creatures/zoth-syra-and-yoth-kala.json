@@ -66,7 +66,7 @@
       "value": 10
     },
     "move": {
-      "raw": "8 floating/swimming",
+      "raw": "8 паря/плавая",
       "value": 8,
       "modes": [
         {
@@ -77,12 +77,11 @@
       ]
     },
     "armor": {
-      "raw": "None. Immune to mundane weapons (incl. bullets). Regenerates 1 hit point per magic point spent in healing itself (death at zero hit points). If reduced to zero hit points, (33/13), Zoth Syra/Yoth Kala dissolve into nothingness. They do not reform, with other spawn of the Green Abyss growing in 1d10 years to take their place.",
-      "value": 0,
-      "note": "брони нет; неуязвимы для обычного оружия (включая пули); восстанавливают 1 ПЗ за каждый потраченный ПМ; при 0 ПЗ растворяются в ничто и не возрождаются — через 1d10 лет их место занимают другие порождения Зелёной бездны"
+      "raw": "Нет. Неуязвимы для обычного оружия (включая пули). Восстанавливают 1 ПЗ за каждый пункт магии, потраченный на самоисцеление (гибнут при нуле ПЗ). Если ПЗ падают до нуля, (33/13), Зот Сира/Йот Кала растворяются в ничто. Они не возрождаются: через 1d10 лет их место занимают выросшие другие порождения Зелёной бездны.",
+      "value": 0
     },
     "attacks_per_round": {
-      "raw": "1d4 (pseudopods) or 1 (envelope)",
+      "raw": "1d4 (ложноножки) или 1 (поглощение)",
       "value": null
     },
     "attacks": [
@@ -94,7 +93,7 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "65% (33/13), damage 4d6",
+          "raw": "65% (33/13), урон 4d6",
           "value": 65,
           "half": 33,
           "fifth": 13
@@ -114,13 +113,13 @@
         "kind": "maneuver",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "65% (33/13), held, damage 9d6 (see above)",
+          "raw": "65% (33/13), удержание, урон 9d6 (см. выше)",
           "value": 65,
           "half": 33,
           "fifth": 13
         },
         "damage": {
-          "raw": "held, damage 9d6 (see above)",
+          "raw": "удержание, урон 9d6 (см. выше)",
           "dice": "9d6",
           "adds_db": false,
           "extra": "жертва втянута в массу, на следующий раунд раздавлена"
@@ -130,7 +129,7 @@
     ],
     "skills": [],
     "spells": {
-      "raw": "Contact Deep Ones, Grasp of Cthulhu; others as the Keeper desires."
+      "raw": "Contact Deep Ones, Grasp of Cthulhu; другие на усмотрение Хранителя."
     },
     "sanity_loss": [
       {
@@ -184,16 +183,26 @@
       "physical_page": 250,
       "printed_page": 249,
       "method": "book_text",
-      "verified": true
+      "verified": true,
+      "entry_page": 249,
+      "note": "заголовок статьи — стр. 248 (PDF 249), профиль — стр. 249 (PDF 250), описание сил — до стр. 250 (PDF 251)"
     }
   ],
   "corrections": [],
+  "errata": [
+    {
+      "field": "Броня",
+      "printed": "If reduced to zero hit points, (33/13), Zoth Syra/Yoth Kala dissolve into nothingness.",
+      "expected": "If reduced to zero hit points, Zoth Syra/Yoth Kala dissolve into nothingness.",
+      "note": "посторонний фрагмент «(33/13)»; сохранён как напечатано"
+    }
+  ],
   "quality": {
     "needs_review": false,
     "flags": [
       "translated",
       "parse_uncertain"
     ],
-    "notes": "Книга: «These entities share the same profile» — один профиль на обоих. Опечатка в книге: в пункте брони затесался посторонний фрагмент «(33/13)» после «If reduced to zero hit points,»; сохранён как напечатано. Заголовок статьи и описание сил — стр. 248 и 250 печатн. (249 и 251 PDF), профиль — стр. 249 (250 PDF). Порождения — coc:creature:spawn-of-the-green-abyss."
+    "notes": "Один профиль на обоих (так в книге)."
   }
 }

@@ -1,0 +1,83 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:chthonian-hatchling",
+  "kind": "creature",
+  "name": {
+    "ru": "Хтониец, детёныш (до первой стадии)",
+    "en": "Chthonian hatchling"
+  },
+  "category": "mythos_monster",
+  "subcategory": "независимая раса",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "form_of",
+      "target": "coc:creature:chthonian-adult",
+      "note": "начальная стадия роста, до первой линьки (1st instar)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "POW": {
+        "raw": "1d6",
+        "value": null,
+        "roll": "1d6"
+      }
+    },
+    "hp": {
+      "raw": "1 hit point",
+      "value": 1
+    },
+    "skills": [],
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "0",
+        "trigger": "при встрече с детёнышем (no Sanity points to encounter a hatchling)"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Уязвимость к жару",
+      "summary": "Выдерживает не более 104 °F (40 °C): горящая сигара может иссушить и убить детёныша.",
+      "raw": "can withstand only only 104 degrees F (40 degrees C); a burning cigar could wither and kill one."
+    }
+  ],
+  "description": {
+    "ru": "Детёныш — начальная стадия роста хтонийца до первой линьки; живёт в этом виде лишь несколько месяцев после вылупления. Выйдя из скорлупы, он размером с крупного дождевого червя. Яйца хтонийцев похожи на жеоды около 30 см в поперечнике со скорлупой толщиной 5 см.",
+    "en": null
+  },
+  "habitat": "под землёй, в кладках хтонийцев",
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 42,
+      "printed_page": 41,
+      "method": "book_text",
+      "verified": true
+    },
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 43,
+      "printed_page": 42,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "incomplete"
+    ],
+    "notes": "блока характеристик в книге нет: в тексте статьи «Chthonians» (стр. 41, PDF 42) указаны только 1 ПЗ и «1D6 POW» — МОЩ напечатана без ×5, сохранена как в книге; потеря рассудка — из блока взрослого хтонийца (стр. 42, PDF 43)."
+  }
+}

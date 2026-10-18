@@ -81,7 +81,7 @@
       "value": 4
     },
     "attacks_per_round": {
-      "raw": "1к6+1 (варьируется: когти, укус, щупальце и т. п.)",
+      "raw": "1к6+1 (варьируется: когти, укус, сдавливание щупальцем, жуткий звук и т. п.)",
       "value": "1d6+1"
     },
     "attacks": [
@@ -99,11 +99,12 @@
           "fifth": 9
         },
         "damage": {
-          "raw": "урон БкУ",
+          "raw": "урон БкУ или 1к6+1 для звуковых атак",
           "dice": null,
-          "adds_db": true
+          "adds_db": true,
+          "extra": "звуковые атаки: 1d6+1 без БкУ"
         },
-        "notes": "каждая личинка уникальна; форму и атаки (шипы, когти, раздавливание) определяет Хранитель"
+        "notes": "каждая личинка уникальна; форму и атаки (шипы, когти, раздавливание, звук) определяет Хранитель"
       }
     ],
     "dodge": {
@@ -149,24 +150,41 @@
   },
   "sources": [
     {
-      "book_id": "malleus-keeper-deck-en",
-      "physical_page": 65,
-      "printed_page": null,
-      "method": "book_text",
-      "verified": true
-    },
-    {
       "book_id": "malleus-monstrorum-1-en",
       "physical_page": 79,
       "printed_page": 78,
       "method": "book_text",
       "verified": true
+    },
+    {
+      "book_id": "malleus-keeper-deck-en",
+      "physical_page": 65,
+      "printed_page": null,
+      "method": "book_text",
+      "verified": true
     }
   ],
-  "corrections": [],
+  "corrections": [
+    {
+      "field": "statblock.attacks_per_round",
+      "from": "1к6+1 (варьируется: когти, укус, щупальце и т. п.)",
+      "to": "1к6+1 (варьируется: когти, укус, сдавливание щупальцем, жуткий звук и т. п.)",
+      "reason": "значение по книге Malleus Monstrorum 7e (решение владельца Р-23)",
+      "ref": "malleus-monstrorum-1-en p.78"
+    },
+    {
+      "field": "statblock.attacks[Ближний бой].damage",
+      "from": "урон БкУ",
+      "to": "урон БкУ или 1к6+1 для звуковых атак",
+      "reason": "значение по книге Malleus Monstrorum 7e (решение владельца Р-23)",
+      "ref": "malleus-monstrorum-1-en p.78"
+    }
+  ],
   "quality": {
     "needs_review": false,
-    "flags": [],
-    "notes": "в «Книге хранителя» статблока нет; источник — только Malleus Keeper Deck; в «Malleus Monstrorum» другие значения: Ближний бой 45% (22/9), damage DB or 1D6+1 for sound attacks; в записи — значения основного источника (Р-19)"
+    "flags": [
+      "translated"
+    ],
+    "notes": "в «Книге хранителя» статблока нет; «жуткий звук» и звуковые атаки — наш перевод по книге Malleus (Р-21)"
   }
 }

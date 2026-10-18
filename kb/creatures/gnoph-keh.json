@@ -80,8 +80,8 @@
       "value": 9
     },
     "attacks_per_round": {
-      "raw": "4 (когти, удары) или 1 (бодание рогом)",
-      "value": 4
+      "raw": "5 (когти, удары) или 1 (бодание рогом)",
+      "value": 5
     },
     "attacks": [
       {
@@ -178,6 +178,13 @@
   "habitat": null,
   "sources": [
     {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 74,
+      "printed_page": 73,
+      "method": "book_text",
+      "verified": true
+    },
+    {
       "book_id": "malleus-keeper-deck-en",
       "physical_page": 23,
       "printed_page": null,
@@ -190,19 +197,20 @@
       "printed_page": 285,
       "method": "book_text",
       "verified": true
-    },
-    {
-      "book_id": "malleus-monstrorum-1-en",
-      "physical_page": 74,
-      "printed_page": 73,
-      "method": "book_text",
-      "verified": true
     }
   ],
-  "corrections": [],
+  "corrections": [
+    {
+      "field": "statblock.attacks_per_round",
+      "from": "4 (когти, удары) или 1 (бодание рогом)",
+      "to": "5 (когти, удары) или 1 (бодание рогом)",
+      "reason": "значение по книге Malleus Monstrorum 7e (решение владельца Р-23)",
+      "ref": "malleus-monstrorum-1-en p.73"
+    }
+  ],
   "quality": {
     "needs_review": false,
     "flags": [],
-    "notes": "в «Malleus Monstrorum» другие значения: Атак за раунд 5 (claws, bash) or 1 (horn gore); в записи — значения основного источника (Р-19)"
+    "notes": "в «Книге хранителя» другие значения: Атак за раунд 4 (когти, удары) или 1 (бодание рогом); в записи — значения Malleus (Р-22, Р-23)"
   }
 }

@@ -22,54 +22,57 @@
     "averages": true,
     "characteristics": {
       "STR": {
-        "raw": "65",
+        "raw": "65 (10)",
         "value": 65,
         "roll": "(2d6+6)×5"
       },
       "CON": {
-        "raw": "5000",
-        "value": 5000,
-        "roll": "(1d2+499)×5"
+        "raw": "— (10)",
+        "value": null,
+        "roll": null
       },
       "SIZ": {
-        "raw": "500",
-        "value": 500,
-        "roll": "(1d2+49)×5"
+        "raw": "— (1)",
+        "value": null,
+        "roll": null
       },
       "DEX": {
-        "raw": "65",
+        "raw": "65 (65)",
         "value": 65,
         "roll": "(2d6+6)×5"
       },
       "INT": {
-        "raw": "115",
+        "raw": "115 (100)",
         "value": 115,
         "roll": "(6d6+2)×5"
       },
       "POW": {
-        "raw": "65",
+        "raw": "65 (65)",
         "value": 65,
         "roll": "(2d6+6)×5"
       }
     },
     "hp": {
-      "raw": "550",
-      "value": 550
+      "raw": "500 (1)",
+      "value": 500,
+      "note": "в скобках — отдельный жук"
     },
     "mp": {
-      "raw": "13",
-      "value": 13
+      "raw": "13 (1)",
+      "value": 13,
+      "note": "в скобках — отдельный жук"
     },
     "damage_bonus": {
       "raw": "нет",
       "value": null
     },
     "build": {
-      "raw": "нет",
-      "value": null
+      "raw": "нет (–2)",
+      "value": null,
+      "note": "у роя нет; у отдельного жука −2"
     },
     "move": {
-      "raw": "4 / 7 полёт",
+      "raw": "4 / 10 полёт",
       "value": 4,
       "modes": [
         {
@@ -78,7 +81,7 @@
         },
         {
           "mode": "fly",
-          "value": 7
+          "value": 10
         }
       ]
     },
@@ -100,10 +103,10 @@
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "40% (20/8)",
+          "raw": "40% (20/9)",
           "value": 40,
           "half": 20,
-          "fifth": 8
+          "fifth": 9
         },
         "damage": {
           "raw": "1к6+2",
@@ -133,14 +136,14 @@
       }
     ],
     "dodge": {
-      "raw": "40% (20/8)",
+      "raw": "40% (20/9)",
       "value": 40,
       "half": 20,
-      "fifth": 8
+      "fifth": 9
     },
     "skills": [
       {
-        "name": "Электроника",
+        "name": "Электрика",
         "value": {
           "raw": "60%",
           "value": 60
@@ -169,7 +172,7 @@
       }
     ],
     "spells": {
-      "raw": "с вероятностью 10% знает 1к4 заклинаний."
+      "raw": "с вероятностью 10% (для каждого роя) знает 1к4 заклинаний."
     },
     "sanity_loss": [
       {
@@ -195,26 +198,83 @@
   },
   "sources": [
     {
-      "book_id": "malleus-keeper-deck-en",
-      "physical_page": 24,
-      "printed_page": null,
-      "method": "book_text",
-      "verified": true
-    },
-    {
       "book_id": "malleus-monstrorum-1-en",
       "physical_page": 165,
       "printed_page": 164,
       "method": "book_text",
       "verified": true
+    },
+    {
+      "book_id": "malleus-keeper-deck-en",
+      "physical_page": 24,
+      "printed_page": null,
+      "method": "book_text",
+      "verified": true
     }
   ],
-  "corrections": [],
+  "corrections": [
+    {
+      "field": "statblock.characteristics.CON",
+      "from": "5000 ((1d2+499)×5)",
+      "to": "— (10) (бросок n/a)",
+      "reason": "значение по книге Malleus Monstrorum 7e (решение владельца Р-23)",
+      "ref": "malleus-monstrorum-1-en p.164"
+    },
+    {
+      "field": "statblock.characteristics.SIZ",
+      "from": "500 ((1d2+49)×5)",
+      "to": "— (1) (бросок n/a)",
+      "reason": "значение по книге Malleus Monstrorum 7e (решение владельца Р-23)",
+      "ref": "malleus-monstrorum-1-en p.164"
+    },
+    {
+      "field": "statblock.hp",
+      "from": "550",
+      "to": "500 (1)",
+      "reason": "значение по книге Malleus Monstrorum 7e (решение владельца Р-23)",
+      "ref": "malleus-monstrorum-1-en p.164"
+    },
+    {
+      "field": "statblock.build",
+      "from": "нет",
+      "to": "нет (–2)",
+      "reason": "значение по книге Malleus Monstrorum 7e (решение владельца Р-23)",
+      "ref": "malleus-monstrorum-1-en p.164"
+    },
+    {
+      "field": "statblock.move",
+      "from": "4 / 7 полёт",
+      "to": "4 / 10 полёт",
+      "reason": "значение по книге Malleus Monstrorum 7e (решение владельца Р-23)",
+      "ref": "malleus-monstrorum-1-en p.164"
+    },
+    {
+      "field": "statblock.attacks[Ближний бой].chance",
+      "from": "40% (20/8)",
+      "to": "40% (20/9)",
+      "reason": "значение по книге Malleus Monstrorum 7e (решение владельца Р-23)",
+      "ref": "malleus-monstrorum-1-en p.164"
+    },
+    {
+      "field": "statblock.dodge",
+      "from": "40% (20/8)",
+      "to": "40% (20/9)",
+      "reason": "значение по книге Malleus Monstrorum 7e (решение владельца Р-23)",
+      "ref": "malleus-monstrorum-1-en p.164"
+    },
+    {
+      "field": "statblock.skills[Электроника]",
+      "from": "Электроника 60%",
+      "to": "Электрика 60%",
+      "reason": "значение по книге Malleus Monstrorum 7e (решение владельца Р-23)",
+      "ref": "malleus-monstrorum-1-en p.164"
+    }
+  ],
   "quality": {
     "needs_review": false,
     "flags": [
       "parse_uncertain"
     ],
-    "notes": "ВЫН и ТЕЛ напечатаны как (1D2+499)×5 со средним 5000 и (1D2+49)×5 со средним 500: средние не соответствуют формулам (≈2502 и ≈252), но согласуются со Ср. ПЗ 550. Записано как на карточке.; в «Книге хранителя» статблока нет; источник — только Malleus Keeper Deck; в «Malleus Monstrorum» другие значения: ВЫН — (10); ТЕЛ — (1); ПЗ 500 (1); Скорость 4 / 10 flying; Ближний бой (укус) 40% (20/9), damage 1D6+2; Уклонение 40% (20/9); в записи — значения основного источника (Р-19)"
+    "notes": "Характеристики и производные значения — для роя, в скобках — для отдельного жука (так в книге); ВЫН и ТЕЛ роя в книге не указаны (n/a). Ближний бой и Уклонение в книге напечатаны как «40% (20/9)»: для 40% пятая — 8; записано как напечатано. На карточке ВЫН (1D2+499)×5 = 5000, ТЕЛ (1D2+49)×5 = 500, ПЗ 550 — средние не соответствуют формулам; в записи — значения книги.; в «Книге хранителя» статблока нет"
   }
 }

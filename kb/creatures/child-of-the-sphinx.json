@@ -106,7 +106,7 @@
       },
       {
         "name": {
-          "ru": "Клыки или когти",
+          "ru": "Укус или когти (голова кошки или сокола)",
           "en": null
         },
         "kind": "attack",
@@ -118,11 +118,71 @@
           "fifth": 10
         },
         "damage": {
-          "raw": "урон от 1к4 до 1к8 +БкУ",
-          "dice": "1d4–1d8",
+          "raw": "урон 1к4+БкУ",
+          "dice": "1d4",
           "adds_db": true
         },
-        "notes": "урон зависит от формы существа"
+        "notes": "голова кошки или сокола"
+      },
+      {
+        "name": {
+          "ru": "Укус (голова осла или бабуина)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "урон 1к4+1+БкУ",
+          "dice": "1d4+1",
+          "adds_db": true
+        },
+        "notes": "голова осла или бабуина"
+      },
+      {
+        "name": {
+          "ru": "Укус (голова крокодила)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "урон 1к8+1+БкУ",
+          "dice": "1d8+1",
+          "adds_db": true
+        },
+        "notes": "голова крокодила"
+      },
+      {
+        "name": {
+          "ru": "Укус (голова шакала или гиены)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "урон 1к6+БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "notes": "голова шакала или гиены"
       },
       {
         "name": {
@@ -141,7 +201,8 @@
           "raw": "урон 2к3+БкУ",
           "dice": "2d3",
           "adds_db": true
-        }
+        },
+        "notes": "голова грифа"
       },
       {
         "name": {
@@ -160,7 +221,8 @@
           "raw": "урон 2к6+БкУ",
           "dice": "2d6",
           "adds_db": true
-        }
+        },
+        "notes": "голова быка"
       }
     ],
     "dodge": {
@@ -208,24 +270,34 @@
   },
   "sources": [
     {
-      "book_id": "malleus-keeper-deck-en",
-      "physical_page": 6,
-      "printed_page": null,
-      "method": "book_text",
-      "verified": true
-    },
-    {
       "book_id": "malleus-monstrorum-1-en",
       "physical_page": 132,
       "printed_page": 131,
       "method": "book_text",
       "verified": true
+    },
+    {
+      "book_id": "malleus-keeper-deck-en",
+      "physical_page": 6,
+      "printed_page": null,
+      "method": "book_text",
+      "verified": true
     }
   ],
-  "corrections": [],
+  "corrections": [
+    {
+      "field": "statblock.attacks[Клыки или когти]",
+      "from": "50% (25/10), урон от 1к4 до 1к8 +БкУ",
+      "to": "разделено по форме головы: кошка или сокол 1к4+БкУ; осёл или бабуин 1к4+1+БкУ; крокодил 1к8+1+БкУ; шакал или гиена 1к6+БкУ",
+      "reason": "значение по книге Malleus Monstrorum 7e (решение владельца Р-23)",
+      "ref": "malleus-monstrorum-1-en p.131"
+    }
+  ],
   "quality": {
     "needs_review": false,
-    "flags": [],
-    "notes": "в «Книге хранителя» статблока нет; источник — только Malleus Keeper Deck; в «Malleus Monstrorum» другие значения: Клыки или когти 50% (25/10); cat/falcon 1D4+DB, donkey/baboon 1D4+1+DB, crocodile 1D8+1+DB, jackal/hyena 1D6+DB; в записи — значения основного источника (Р-19)"
+    "flags": [
+      "translated"
+    ],
+    "notes": "укусы по формам головы и пометки о форме (гриф, бык) — наш перевод по книге Malleus; в «Книге хранителя» статблока нет"
   }
 }

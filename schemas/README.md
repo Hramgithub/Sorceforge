@@ -70,3 +70,10 @@ python tools\validate.py schemas\creature.schema.json schemas\examples\creature\
 1. Достаточно ли полей? Чего не хватает для просмотра и для Foundry?
 2. Описание (`description`) — краткий пересказ или полный текст книги?
 3. Подходит ли деление на категории?
+
+## Навык (`skill.schema.json`)
+
+Справочник навыков (решение Р-25): `id` вида `coc:skill:<slug>`, `name`, `aliases`,
+`base` (`raw`, `value`, `formula`: `half_dex` — половина ЛВК, `edu` — ОБР, `varies`),
+`category`, `uncommon`, `specializations` (название и своё базовое значение),
+`description`, `examples`, `sources`. Пример: `examples/skill/dodge.json`.

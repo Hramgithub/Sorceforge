@@ -1,0 +1,195 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:spawn-of-the-green-abyss",
+  "kind": "creature",
+  "name": {
+    "ru": "Порождение Зелёной бездны",
+    "en": "Spawn of the Green Abyss"
+  },
+  "aliases": [
+    "Deep Spawn",
+    "Kraken Brood",
+    "Monstrous Jellyfish",
+    "Sea Slime"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "раса служителей Зот Сайры и Йот Калы",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "175",
+        "value": 175,
+        "roll": "10D6×5"
+      },
+      "CON": {
+        "raw": "120–125",
+        "value": 120,
+        "roll": "7D6×5"
+      },
+      "SIZ": {
+        "raw": "245–250",
+        "value": 245,
+        "roll": "(7D6+25)×5"
+      },
+      "DEX": {
+        "raw": "15",
+        "value": 15,
+        "roll": "1D6×5"
+      },
+      "INT": {
+        "raw": "85",
+        "value": 85,
+        "roll": "(2D6+10)×5"
+      },
+      "POW": {
+        "raw": "85",
+        "value": 85,
+        "roll": "(2D6+10)×5"
+      }
+    },
+    "hp": {
+      "raw": "36–37",
+      "value": 36
+    },
+    "mp": {
+      "raw": "17",
+      "value": 17
+    },
+    "damage_bonus": {
+      "raw": "+4D6",
+      "value": "4d6"
+    },
+    "build": {
+      "raw": "5",
+      "value": 5
+    },
+    "move": {
+      "raw": "8 rolling (land) / 12 swimming",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8,
+          "note": "катится по суше"
+        },
+        {
+          "mode": "swim",
+          "value": 12
+        }
+      ]
+    },
+    "armor": {
+      "raw": "none; immune to mundane weapons; fire, electrical, and chemical based attacks cause harm; regenerates 1D3 hit points per round (death at zero hit points).",
+      "value": 0,
+      "note": "неуязвимо для обычного оружия; вредят огонь, ток и химия; восстанавливает 1d3 ПЗ за раунд"
+    },
+    "attacks_per_round": {
+      "raw": "1D3 (strike, whip) or 1 (crush)",
+      "value": "1d3",
+      "note": "1d3 ложноножек или 1 раздавливание"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "half DB",
+          "dice": null,
+          "adds_db": true,
+          "extra": "половина БкУ"
+        },
+        "notes": "удары и хлёсткие ложноножки с досягаемостью 30 м"
+      },
+      {
+        "name": {
+          "ru": "Раздавливание",
+          "en": "Crush"
+        },
+        "kind": "attack",
+        "skill": "Раздавливание",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "DB",
+          "dice": null,
+          "adds_db": true
+        },
+        "notes": "вместо ударов перекатывается через цель всей массой"
+      }
+    ],
+    "dodge": {
+      "raw": "unable to dodge on land; 30% (15/6) in water",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "skills": [],
+    "spells": {
+      "raw": "15% chance of knowing 1D4 spells."
+    },
+    "sanity_loss": [
+      {
+        "success": "1d6",
+        "fail": "2d10",
+        "trigger": "при встрече с порождением Зелёной бездны"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Гипнотическая песнь",
+      "summary": "Поёт чуждые мелодии, слышные далеко над водой и под ней; слушатель проходит встречную проверку МОЩ, при провале подчиняется. Каждый следующий раунд можно освободиться экстремальной проверкой МОЩ (трудной — если друзья помогают Убеждением или Психоанализом либо причиняют боль)."
+    },
+    {
+      "name": "Изменчивое тело",
+      "summary": "Отращивает конечности и органы чувств по необходимости; может говорить, в том числе на человеческих языках."
+    },
+    {
+      "name": "Регенерация",
+      "summary": "Восстанавливает 1d3 ПЗ за раунд; погибает при 0 ПЗ."
+    }
+  ],
+  "description": {
+    "ru": "Студенистые иссиня-чёрные твари крупнее человека с упругой плотью, ложноножками и сфинктерной пастью. Пришли из космоса и живут в глубинах океанов; служат существам по имени Зот Сайра и Йот Кала.",
+    "en": null
+  },
+  "habitat": "глубокие воды океанов и подводные города",
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 81,
+      "printed_page": 80,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Начало статьи — на стр. 79 PDF, блок характеристик — на стр. 81. Уклонение на суше невозможно, 30% — в воде. Навыки: n/a."
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:ashen-one",
+  "kind": "creature",
+  "name": {
+    "ru": "Пепельное создание",
+    "en": "Ashen One"
+  },
+  "aliases": [
+    "Dust Chokers",
+    "Dust of Hate",
+    "Hell Ash",
+    "Scattered Things",
+    "Whirling Ones"
+  ],
+  "category": "supernatural",
+  "subcategory": "прочее: магическое создание из праха",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "45",
+        "value": 45,
+        "roll": "(2D6+2)×5"
+      },
+      "CON": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3D6×5"
+      },
+      "SIZ": {
+        "raw": "45",
+        "value": 45,
+        "roll": "(2D6+2)×5"
+      },
+      "DEX": {
+        "raw": "80–85",
+        "value": 80,
+        "roll": "(3D6+6)×5"
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2D6+6)×5"
+      },
+      "POW": {
+        "raw": "45",
+        "value": 45,
+        "roll": "(2D6+2)×5"
+      }
+    },
+    "hp": {
+      "raw": "9–10",
+      "value": 9,
+      "note": "ПЗ равны 1/5 МОЩ"
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8 / 10 flying dust",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        },
+        {
+          "mode": "fly",
+          "value": 10,
+          "note": "в виде вихря пыли"
+        }
+      ]
+    },
+    "armor": {
+      "raw": "none; all impaling weapons (incl. bullets) cause minimum damage.",
+      "value": 0,
+      "note": "колющее оружие и пули наносят минимальный урон"
+    },
+    "attacks_per_round": {
+      "raw": "1 (smash, rake, or disperse)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1D4+2+DB",
+          "dice": "1d4+2",
+          "adds_db": true
+        },
+        "notes": "удары рвут и царапают плоть костяной пылью"
+      },
+      {
+        "name": {
+          "ru": "Вихрь пыли",
+          "en": "Whirling dust"
+        },
+        "kind": "special",
+        "skill": null,
+        "chance": {
+          "raw": "automatic",
+          "value": null,
+          "half": null,
+          "fifth": null
+        },
+        "damage": {
+          "raw": "2D4 per round (see above)",
+          "dice": "2d4",
+          "adds_db": false
+        },
+        "notes": "без броска атаки всем в радиусе 5 м; не действует на цели с бронёй 2+ или при успешном Уклонении (уклонившийся теряет следующее действие)"
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Скрытность",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      }
+    ],
+    "spells": {
+      "raw": "only those granted by a controlling wizard or god."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d4",
+        "trigger": "при встрече с пепельным созданием в физической форме"
+      },
+      {
+        "success": "0",
+        "fail": "0",
+        "trigger": "при встрече в виде вихря пыли"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Вихрь пыли",
+      "summary": "Отказавшись от тела и обычных атак, за раунд превращается в вихрь костяной пыли (движение 10): все в радиусе 5 м автоматически получают 2d4 урона за раунд, если на них нет брони 2+ или они не уклонились."
+    },
+    {
+      "name": "Одержимость прахом",
+      "summary": "Рассыпается и проникает в рот, нос и уши цели; за 1d2 раунда должен выиграть встречную проверку МОЩ. Одержимый выполняет его приказы, кроме прямого самоповреждения; осознающий это может раз в день изгнать его трудной проверкой МОЩ."
+    },
+    {
+      "name": "Создание",
+      "summary": "Создаётся заклинанием Create Ashen One (вариант Воскрешения: 5 ПМ, 1d8 Рассудка) из праха сожжённых и перемолотых останков; подчиняется только создателю, после его смерти становится свободным."
+    }
+  ],
+  "description": {
+    "ru": "Ожившая пыль из перемолотых костей мертвецов, принимающая облик человека или чего-то нечеловеческого. Создаётся магией колдуна или волей божества Мифов и служит своему создателю.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 35,
+      "printed_page": 34,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Описание и альтернативные имена — на стр. 34 PDF, блок характеристик и врезка с заклинанием Create Ashen One — на стр. 35."
+  }
+}

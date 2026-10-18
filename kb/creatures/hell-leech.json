@@ -1,0 +1,243 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:hell-leech",
+  "kind": "creature",
+  "name": {
+    "ru": "Адская пиявка",
+    "en": "Hell Leech"
+  },
+  "aliases": [
+    "Blood Devils",
+    "River Kings",
+    "Swamp Lurkers",
+    "Water Demons"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "прочее: гигантская пиявка",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "85",
+        "value": 85,
+        "roll": "(2D6+10)×5"
+      },
+      "CON": {
+        "raw": "85",
+        "value": 85,
+        "roll": "(2D6+10)×5"
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2D6+6)×5"
+      },
+      "DEX": {
+        "raw": "35",
+        "value": 35,
+        "roll": "2D6×5"
+      },
+      "INT": {
+        "raw": "15",
+        "value": 15,
+        "roll": "1D6×5"
+      },
+      "POW": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2D6+6)×5"
+      }
+    },
+    "hp": {
+      "raw": "15",
+      "value": 15
+    },
+    "mp": {
+      "raw": "13",
+      "value": 13
+    },
+    "damage_bonus": {
+      "raw": "+1D4",
+      "value": "1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "12 swimming",
+      "value": 12,
+      "modes": [
+        {
+          "mode": "swim",
+          "value": 12
+        }
+      ]
+    },
+    "armor": {
+      "raw": "2-point slimy hide; fire attacks cause double damage.",
+      "value": 2,
+      "note": "огонь наносит двойной урон"
+    },
+    "attacks_per_round": {
+      "raw": "2 (tentacles) or 1 (lunge)",
+      "value": 2,
+      "note": "2 щупальца или 1 бросок"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1D4+DB +poison",
+          "dice": "1d4",
+          "adds_db": true,
+          "extra": "яд"
+        },
+        "notes": "укус после присасывания или бросок всем телом"
+      },
+      {
+        "name": {
+          "ru": "Присасывание щупальцем",
+          "en": "Tentacle Latch (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "no damage, attached to victim",
+          "dice": null,
+          "adds_db": false
+        },
+        "notes": "в следующем раунде автоматически кусает (1D4 + яд); вырваться — трудная проверка СИЛ (экстремальная, если присосались оба щупальца); у каждого щупальца 4 ПЗ"
+      },
+      {
+        "name": {
+          "ru": "Высасывание крови",
+          "en": "Blood Drain"
+        },
+        "kind": "special",
+        "skill": null,
+        "chance": {
+          "raw": "automatic on bite",
+          "value": null,
+          "half": null,
+          "fifth": null
+        },
+        "damage": {
+          "raw": "3D6 STR damage per round",
+          "dice": "3d6",
+          "adds_db": false,
+          "extra": "урон СИЛ"
+        },
+        "notes": "после того как яд парализовал жертву; при 0 СИЛ жертва умирает"
+      }
+    ],
+    "dodge": {
+      "raw": "20% (10/4)",
+      "value": 20,
+      "half": 10,
+      "fifth": 4
+    },
+    "skills": [
+      {
+        "name": "Обнаружение добычи",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Прыжки",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Скрытность",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      }
+    ],
+    "spells": {
+      "raw": "none."
+    },
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d4",
+        "trigger": "при встрече с адской пиявкой"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Присасывание",
+      "summary": "Цепляется к жертве щупальцами (обоими — только к одной цели) и в следующем раунде автоматически кусает; атаки по щупальцам идут со штрафной костью у союзников жертвы."
+    },
+    {
+      "name": "Бросок",
+      "summary": "Всей массой прыгает на добычу и кусает: 1d4+БкУ и яд."
+    },
+    {
+      "name": "Яд",
+      "summary": "Укус требует трудной проверки ВЫН; при провале жертва парализована, а пиявка пьёт кровь, отнимая 3d6 СИЛ за раунд. Выжившая жертва остаётся парализованной 1d4 часа; СИЛ восстанавливается по 1d6 в сутки."
+    },
+    {
+      "name": "Запах крови",
+      "summary": "Кровь в воде быстро привлекает других адских пиявок."
+    }
+  ],
+  "description": {
+    "ru": "Огромные, размером с человека, чёрные пиявки с щупальцами над пастью и рядами зазубренных зубов. Таятся в водах джунглей и затерянных плато и нападают на всё, что проходит мимо.",
+    "en": null
+  },
+  "habitat": "воды джунглей и странных плато",
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 83,
+      "printed_page": 82,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Начало статьи — на стр. 82 PDF, блок характеристик — на стр. 83."
+  }
+}

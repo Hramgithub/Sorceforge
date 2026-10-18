@@ -1,0 +1,190 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:adherent-of-the-unspeakable-oath",
+  "kind": "creature",
+  "name": {
+    "ru": "Приверженец Неизречённой клятвы",
+    "en": "Adherent of the Unspeakable Oath"
+  },
+  "aliases": [
+    "Bloated Ones",
+    "Child of Hali",
+    "Nameless Walkers",
+    "Sinister Devotee",
+    "Servants of Carcosa",
+    "Things from Hali",
+    "Unspeakable Possessors"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "раса служителей Хастура",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "120–140",
+        "value": 120,
+        "roll": "host×2"
+      },
+      "CON": {
+        "raw": "165",
+        "value": 165,
+        "roll": "host×3"
+      },
+      "SIZ": {
+        "raw": "82",
+        "value": 82,
+        "roll": "host×1.5"
+      },
+      "DEX": {
+        "raw": "110",
+        "value": 110,
+        "roll": "host×2"
+      },
+      "INT": {
+        "raw": "75",
+        "value": 75
+      },
+      "POW": {
+        "raw": "175",
+        "value": 175
+      }
+    },
+    "hp": {
+      "raw": "24",
+      "value": 24,
+      "note": "базовое значение: растёт при кормлении и падает, если существо не кормилось"
+    },
+    "damage_bonus": {
+      "raw": "+1D6",
+      "value": "1d6",
+      "note": "базовое значение"
+    },
+    "build": {
+      "raw": "2",
+      "value": 2,
+      "note": "базовое значение"
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "6-point scales and rubbery flesh.",
+      "value": 6
+    },
+    "attacks_per_round": {
+      "raw": "1 (strike or grab)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "1D8+DB",
+          "dice": "1d8",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Хватка",
+          "en": "Grab (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "held, damage 1D10 per round following (see above)",
+          "dice": "1d10",
+          "adds_db": false
+        },
+        "notes": "хватает студенистыми руками, в следующем раунде сдавливает на 1d10; цель вырывается встречной проверкой СИЛ или ЛВК"
+      }
+    ],
+    "dodge": {
+      "raw": "55% (27/11)",
+      "value": 55,
+      "half": 27,
+      "fifth": 11
+    },
+    "skills": [],
+    "spells": {
+      "raw": "any known before the transformation into an adherent, plus those granted by Hastur."
+    },
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d6",
+        "trigger": "при встрече с приверженцем"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Характеристики носителя",
+      "summary": "СИЛ, ВЫН, ВЕЛ и ЛВК зависят от исходного тела: СИЛ ×2, ВЫН ×3, ВЕЛ ×1,5, ЛВК ×2; ИНТ и МОЩ фиксированы. Навыки сохраняются от прежней жизни."
+    },
+    {
+      "name": "Ночное кормление",
+      "summary": "Каждую ночь должен питаться: хватает жертву и со следующего раунда высасывает телесные жидкости по 1d10 урона за раунд (вырваться — встречная проверка СИЛ или ЛВК против его СИЛ). Нанесённый урон прибавляется к его СИЛ и ВЕЛ."
+    },
+    {
+      "name": "Голод",
+      "summary": "Если не кормился ночью, утром теряет по 2d10 СИЛ и ВЕЛ; когда одна из них падает до нуля, растекается лужей жирной слизи."
+    },
+    {
+      "name": "Воля Хастура",
+      "summary": "Навсегда связан с Хастуром и исполняет его приказы; отрезанный от этой воли магией цепенеет или становится диким и агрессивным."
+    }
+  ],
+  "description": {
+    "ru": "Люди (а иногда и иные существа), произнёсшие Неизречённую клятву Хастуру и превратившиеся в студенистых тварей, способных протискиваться в узкие щели. Служат Хастуру и вербуют ему новых слуг.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 34,
+      "printed_page": 33,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Вероятная опечатка в книге: у СИЛ формула host×2, но среднее напечатано 120–140, тогда как для человека (3D6×5, в среднем 50–55) получается 100–110; напечатанные БкУ +1D6 и комплекция 2 согласуются скорее со 100–110. В записи оставлено напечатанное значение. ПМ в блоке не указаны. Статья начинается на стр. 33 PDF, блок характеристик — на стр. 34."
+  }
+}

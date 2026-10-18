@@ -1,0 +1,247 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:brother-of-chaugnar-faugn",
+  "kind": "creature",
+  "name": {
+    "ru": "Брат Шагнер Фана",
+    "en": "Brother of Chaugnar Faugn"
+  },
+  "aliases": [
+    "Horrendous Statue",
+    "Mountain Things",
+    "Servants of the Waiting One",
+    "Still Ones",
+    "Yethi"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "порождение/служитель божества (Шагнер Фан)",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "80–85",
+        "value": 80,
+        "roll": "(3D6+6)×5"
+      },
+      "CON": {
+        "raw": "80–85",
+        "value": 80,
+        "roll": "(3D6+6)×5"
+      },
+      "SIZ": {
+        "raw": "85–95",
+        "value": 85,
+        "roll": "(3D6+7)×5"
+      },
+      "DEX": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3D6×5"
+      },
+      "INT": {
+        "raw": "35",
+        "value": 35,
+        "roll": "2D6×5"
+      },
+      "POW": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3D6×5"
+      }
+    },
+    "hp": {
+      "raw": "16–18",
+      "value": 16
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "damage_bonus": {
+      "raw": "+1D6",
+      "value": "1d6"
+    },
+    "build": {
+      "raw": "2",
+      "value": 2
+    },
+    "move": {
+      "raw": "10",
+      "value": 10,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 10
+        }
+      ]
+    },
+    "armor": {
+      "raw": "2-point folds of flesh.",
+      "value": 2
+    },
+    "attacks_per_round": {
+      "raw": "1 (claw, crush, bite)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1D4+DB",
+          "dice": "1d4",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Укус",
+          "en": "Bite"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1D3, plus latches on for automatic 1-point blood drain (see above)",
+          "dice": "1d3",
+          "adds_db": false,
+          "extra": "присасывается хоботом: 1 урон каждый раунд"
+        }
+      },
+      {
+        "name": {
+          "ru": "Сдавливание",
+          "en": "Crush (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "held, damage 1D4 each round.",
+          "dice": "1d4",
+          "adds_db": false
+        },
+        "notes": "цель вырывается проверкой СИЛ или ЛВК против СИЛ существа"
+      }
+    ],
+    "dodge": {
+      "raw": "25% (12/5)",
+      "value": 25,
+      "half": 12,
+      "fifth": 5
+    },
+    "skills": [
+      {
+        "name": "Слух",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Внимание",
+        "value": {
+          "raw": "15%",
+          "value": 15,
+          "half": 7,
+          "fifth": 3
+        }
+      }
+    ],
+    "spells": {
+      "raw": "none."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d2",
+        "trigger": "при встрече с неподвижным (как статуя) младшим братом"
+      },
+      {
+        "success": "1",
+        "fail": "1d4",
+        "trigger": "при встрече с ожившим и активным младшим братом"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Высасывание крови",
+      "summary": "Попав укусом, присасывается хоботом и пьёт кровь каждый раунд. Жертва вырывается проверкой СИЛ или ЛВК против СИЛ существа либо перерубает хобот атакой со штрафной костью (нужно 4 урона у младших, 6 у старших)."
+    },
+    {
+      "name": "Острый слух",
+      "summary": "Слышит малейший звук в радиусе 100 м, что возмещает слабое зрение."
+    },
+    {
+      "name": "Психическая связь",
+      "summary": "Связаны с Шагнер Фаном: когда ему вредят, страдают и они (но не наоборот)."
+    },
+    {
+      "name": "Старшие братья",
+      "summary": "Второй блок (стр. 41 PDF): СИЛ 165 ±5D6 (250/80), ВЫН 350 ±5D6 (435/265), ВЕЛ 100, ЛВК 75 ±2D6 (110/40), ИНТ 65, МОЩ 90 ±2D6 (125/55); ПЗ 53/36, БкУ +3D6/+1D6, комплекция 4/2, ПМ 25/11, движение 12. Ближний бой 55% (1D4+БкУ), укус 55% (1D3 и навсегда 3D10 ВЫН за раунд), сдавливание 50% (1D4), Уклонение 45%; Слух 80%, Внимание 25%; броня 3. Заклинания: Contact Chaugnar Faugn, Summon/Bind Lesser Brothers of Chaugnar Faugn и ещё 1D10. Рассудок 0/1D4 (неподвижен), 1D3/1D8 (активен)."
+    },
+    {
+      "name": "Психическая сила (только старшие)",
+      "summary": "За 3 ПМ насылают на жертву кошмары о Шагнер Фане; за 4 ПМ и победу во встречной проверке МОЩ призывают человека к себе."
+    }
+  ],
+  "description": {
+    "ru": "Слуги Шагнер Фана, похожие на него, но меньше: слоноподобные головы с перепончатыми ушами, бивнями и хоботом с зубастым диском на конце, тучное человекоподобное тело. Подолгу неподвижно сидят, как статуи, охраняя святыни.",
+    "en": null
+  },
+  "habitat": "горы северной Испании (Пиренеи), Анды, горные районы Азии",
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 40,
+      "printed_page": 39,
+      "method": "book_text",
+      "verified": true
+    },
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 41,
+      "printed_page": 40,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "В статье два блока: младшие братья (стр. 40 PDF) — основной статблок; старшие братья (стр. 41 PDF) — в способностях. В блоке старших братьев формулы «165 +/–5D6» и т. п. не согласуются со средними 250/80 (разброс ±85 соответствует 5D6×5, а не 5D6) — вероятно, пропущено «×5»; оставлено напечатанное."
+  }
+}

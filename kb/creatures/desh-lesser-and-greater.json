@@ -1,0 +1,205 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:desh-lesser-and-greater",
+  "kind": "creature",
+  "name": {
+    "ru": "Деш (малые и великие)",
+    "en": "Desh (Lesser and Greater)"
+  },
+  "aliases": [
+    "Flapping Horrors",
+    "Things from Outside",
+    "Veelens"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "независимая раса",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "40",
+        "value": 40,
+        "roll": "(2D6+1)×5"
+      },
+      "CON": {
+        "raw": "25",
+        "value": 25,
+        "roll": "(2D4)×5"
+      },
+      "SIZ": {
+        "raw": "25",
+        "value": 25,
+        "roll": "(2D4)×5"
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2D6+6)×5"
+      },
+      "INT": {
+        "raw": "10",
+        "value": 10,
+        "roll": "1D4×5"
+      },
+      "POW": {
+        "raw": "10",
+        "value": 10,
+        "roll": "1D4×5"
+      }
+    },
+    "hp": {
+      "raw": "5 (10*)",
+      "value": 5,
+      "note": "в скобках — великий деш"
+    },
+    "mp": {
+      "raw": "2 (13*)",
+      "value": 2,
+      "note": "в скобках — великий деш"
+    },
+    "damage_bonus": {
+      "raw": "–1 (0*)",
+      "value": -1,
+      "note": "в скобках — великий деш"
+    },
+    "build": {
+      "raw": "–1 (0*)",
+      "value": -1,
+      "note": "в скобках — великий деш"
+    },
+    "move": {
+      "raw": "15 (30*)",
+      "value": 15,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 15,
+          "note": "у великого деша 30"
+        }
+      ]
+    },
+    "armor": {
+      "raw": "none; if successfully hitting a greater desh, multiply the damage rolled by five, with the result being the percentage chance of killing the greater desh outright (e.g. 3 damage provides a 15% chance of killing the desh), if this roll is failed, the attack causes no damage to the greater desh at all.",
+      "value": 0,
+      "note": "по великому дешу: урон ×5 = шанс убить сразу, иначе урона нет"
+    },
+    "attacks_per_round": {
+      "raw": "1D4 (2D4*) (vine whip, bite, grab)",
+      "value": "1d4",
+      "note": "у великого деша 2d4"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (малый деш)",
+          "en": "Lesser—Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "1D2–1 (min. 1)",
+          "dice": "1d2-1",
+          "adds_db": false
+        },
+        "notes": "царапает кожу когтями; минимум 1 урон"
+      },
+      {
+        "name": {
+          "ru": "Опутывание (малый деш)",
+          "en": "Lesser—Ensnare (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "DEX roll or fall damage (see above)",
+          "dice": "1d4",
+          "adds_db": false,
+          "extra": "при падении 1D4–1D6 урона по обстоятельствам"
+        },
+        "notes": "обвивает цель конечностями; при провале проверки ЛВК цель падает; вырваться — проверка ЛВК или СИЛ"
+      }
+    ],
+    "skills": [],
+    "spells": {
+      "raw": "none."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d3",
+        "trigger": "при встрече с малым дешем"
+      },
+      {
+        "success": "1",
+        "fail": "1d4+1",
+        "trigger": "при встрече с великим дешем"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Врата через мозг",
+      "summary": "Проникают в наш мир, используя мозг человека как врата; для него это обычно смертельно, а на черепе остаётся звездообразная дыра. Их также можно призвать через человеческий мозг."
+    },
+    {
+      "name": "Невидимость",
+      "summary": "В нашем мире невидимы и полуматериальны; некоторые чары и порошки делают их видимыми."
+    },
+    {
+      "name": "Скорость",
+      "summary": "Кажутся медлительными, но на деле за пару секунд преодолевают около 100 м."
+    },
+    {
+      "name": "Недолговечность",
+      "summary": "Малые деши обычно распадаются в нашем мире через несколько дней."
+    },
+    {
+      "name": "Великий деш",
+      "summary": "Колонка характеристик: СИЛ 85 ((4D6+3)×5), ВЫН 65 ((2D6+3)×5), ВЕЛ 35 (2D6×5), ЛВК 110 ((6D6+1)×5), ИНТ 35 (2D6×5), МОЩ 65 ((2D6+6)×5); ПЗ 10, БкУ 0, комплекция 0, ПМ 13, движение 30, атак 2D4. Ближний бой 45% (1D6), хватка 45% (удерживает, со следующего раунда кусает на 1D6+1; вырваться — трудная СИЛ или экстремальная ЛВК)."
+    },
+    {
+      "name": "Уязвимость великого деша",
+      "summary": "При попадании урон умножается на 5 — это шанс в процентах убить великого деша сразу; при неудаче атака не наносит ему вреда."
+    }
+  ],
+  "description": {
+    "ru": "Существа из иного измерения, названные так гиперборейцами: малые — с маленьким яйцевидным телом и беззубой пастью, великие — длиннорукие, с широкой пастью, полной загнутых зубов. Пробираются в наш мир через человеческий мозг.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 58,
+      "printed_page": 57,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "В книге один блок с двумя колонками; основной статблок — малый деш, великий — в способностях. Уклонение в блоке не указано. В строке атак за раунд упомянут «vine whip» — вероятно, перенесено из соседней статьи Devil Creeper; оставлено напечатанное. Описание — на стр. 57 PDF, блок — на стр. 58."
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:guardian-of-crystallizers-of-dreams",
+  "kind": "creature",
+  "name": {
+    "ru": "Страж Кристаллизаторов снов",
+    "en": "Guardian of the Crystallizers of Dreams"
+  },
+  "aliases": [
+    "Keepers of the Heart of Dream",
+    "Nightmares",
+    "Silent and Dark Ones",
+    "Dream Creepers"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "прочее: страж Гипноса",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "—",
+        "value": null,
+        "roll": "n/a"
+      },
+      "CON": {
+        "raw": "—",
+        "value": null,
+        "roll": "n/a"
+      },
+      "SIZ": {
+        "raw": "65–70",
+        "value": 65,
+        "roll": "(3D6+3)×5"
+      },
+      "DEX": {
+        "raw": "75",
+        "value": 75,
+        "roll": "(2D6+8)×5"
+      },
+      "INT": {
+        "raw": "75",
+        "value": 75,
+        "roll": "(2D6+8)×5"
+      },
+      "POW": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2D6+6)×5"
+      }
+    },
+    "hp": {
+      "raw": "(one-fifth of POW) 13",
+      "value": 13
+    },
+    "mp": {
+      "raw": "13",
+      "value": 13
+    },
+    "damage_bonus": {
+      "raw": "n/a",
+      "value": null
+    },
+    "build": {
+      "raw": "n/a",
+      "value": null
+    },
+    "move": {
+      "raw": "10 flying",
+      "value": 10,
+      "modes": [
+        {
+          "mode": "fly",
+          "value": 10
+        }
+      ]
+    },
+    "armor": {
+      "raw": "none; immune to mundane physical damage (incl. bullets).",
+      "value": 0,
+      "note": "неуязвим для обычного физического урона, включая пули"
+    },
+    "attacks_per_round": {
+      "raw": "1 (entangle)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Опутывание",
+          "en": "Entangle"
+        },
+        "kind": "special",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "special (see above)",
+          "dice": "1d4",
+          "adds_db": false,
+          "extra": "проверка Рассудка 1D4/1D8; через три раунда опутывания жертва утаскивается в царство Гипноса"
+        },
+        "notes": "почти всегда нападает внезапно; вырваться — встречная проверка СИЛ против МОЩ стража или заклинание (Curse of Darkness, Prinn's Crux Ansata, Знак Древних)"
+      }
+    ],
+    "dodge": {
+      "raw": "45% (22/9)",
+      "value": 45,
+      "half": 22,
+      "fifth": 9
+    },
+    "skills": [
+      {
+        "name": "Скрытность",
+        "value": {
+          "raw": "100%",
+          "value": 100,
+          "half": 50,
+          "fifth": 20
+        }
+      }
+    ],
+    "spells": {
+      "raw": "roll 1D100, if the result is equal to or fewer than one-fifth of the guardian’s INT, then it knows that many spells. These creatures have the unique ability of being able to cast Dreamlands spells in the Waking World."
+    },
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d6",
+        "trigger": "при встрече со стражем Кристаллизаторов снов"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Призыв",
+      "summary": "Каждое использование Кристаллизатора снов накапливает +1d10% шанса привлечь стражей (обычно двух), которые карают нарушителя от имени Гипноса."
+    },
+    {
+      "name": "Неумолимый охотник",
+      "summary": "В погонях всегда успешно проходит проверку ВЫН для определения скорости; будучи бесплотным, игнорирует обычные препятствия."
+    },
+    {
+      "name": "Проявление",
+      "summary": "Может появляться и нападать и в Мире бодрствования, и в любом из миров сна."
+    },
+    {
+      "name": "Похищение в сон",
+      "summary": "Жертва, опутанная три раунда подряд, на четвёртый утаскивается в царство Гипноса; её тело в Мире бодрствования не просыпается обычными средствами."
+    },
+    {
+      "name": "Магия Страны снов",
+      "summary": "Может творить заклинания Страны снов в Мире бодрствования."
+    }
+  ],
+  "description": {
+    "ru": "Тенеподобные сущности, связанные с Кристаллизаторами снов и Старшим богом Гипносом; являются в виде кошмара, тёмной тени или чёрного пса с жёлтыми глазами, а истинный облик похож на парящую медузу.",
+    "en": null
+  },
+  "habitat": "Мир бодрствования и Страна снов",
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 48,
+      "printed_page": 47,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "СИЛ и ВЫН у стражей нет (в книге n/a и «—»); ПЗ равны 1/5 МОЩ. Описание — на стр. 47 PDF, блок характеристик — на стр. 48."
+  }
+}

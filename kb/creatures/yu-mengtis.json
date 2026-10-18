@@ -1,0 +1,187 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:yu-mengtis",
+  "kind": "creature",
+  "name": {
+    "ru": "Ю-Менг’тис",
+    "en": "Yu-meng’tis"
+  },
+  "aliases": [
+    "Abhorrent One",
+    "the Consumer",
+    "Feasting Thing",
+    "Vile One"
+  ],
+  "category": "mythos_deity",
+  "subcategory": "Великий Древний",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "characteristics": {
+      "STR": {
+        "raw": "120",
+        "value": 120
+      },
+      "CON": {
+        "raw": "600",
+        "value": 600
+      },
+      "SIZ": {
+        "raw": "125 (600*)",
+        "value": 125
+      },
+      "DEX": {
+        "raw": "30",
+        "value": 30
+      },
+      "POW": {
+        "raw": "140",
+        "value": 140
+      }
+    },
+    "averages": false,
+    "hp": {
+      "raw": "72 (120*)",
+      "value": 72,
+      "note": "в истинной форме 120"
+    },
+    "mp": {
+      "raw": "28",
+      "value": 28
+    },
+    "damage_bonus": {
+      "raw": "+2D6 (+8D6*)",
+      "value": "2d6",
+      "note": "в истинной форме +8D6"
+    },
+    "build": {
+      "raw": "3 (9*)",
+      "value": 3,
+      "note": "в истинной форме 9"
+    },
+    "move": {
+      "raw": "5",
+      "value": 5,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 5
+        }
+      ]
+    },
+    "armor": {
+      "raw": "None. Regenerates 1 hit point per 10 points of SIZ it consumes (death at zero hit points); thus, if eating a SIZ 60 person it regenerates 6 damage. If reduced to zero hit points, Yu-meng’tis explodes in a shower of offal. It reforms in 5D100 years.",
+      "value": 0,
+      "note": "восстанавливает 1 ПЗ за каждые 10 съеденных РАЗ; при 0 ПЗ взрывается дождём требухи, возрождается через 5d100 лет"
+    },
+    "attacks_per_round": {
+      "raw": "1 (smash, crush, eat)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "60% (30/12), damage 2D6 (8D6)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "2D6 (8D6)",
+          "dice": "2d6",
+          "adds_db": false,
+          "extra": "8d6 в полноразмерной истинной форме"
+        },
+        "notes": "удары руками или телом"
+      },
+      {
+        "name": {
+          "ru": "Укус",
+          "en": "Bite"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "70% (40/16), damage 3D6",
+          "value": 70,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "3D6",
+          "dice": "3d6",
+          "adds_db": false,
+          "extra": "жертва при 0 ПЗ проглочена"
+        },
+        "notes": "в книге половина и пятая (40/16) не соответствуют 70% (должно быть 35/14)"
+      }
+    ],
+    "skills": [],
+    "spells": {
+      "raw": "Animate Flesh Thing, Circle of Nausea, Cloud Memory, Dominate, Grasp of Cthulhu, Mental Suggestion, Send Dream, Utterance of Bile; others as desired by the Keeper."
+    },
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "2d10",
+        "trigger": "при проявлении Ю-Менг’тиса через одержимого человека"
+      },
+      {
+        "success": "1",
+        "fail": "1d10+1",
+        "trigger": "при встрече с человекоподобной формой"
+      },
+      {
+        "success": "1d6",
+        "fail": "4d10",
+        "trigger": "при встрече с истинной формой"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Рост",
+      "summary": "В своём карманном измерении не превышает РАЗ 600, но в нашем мире растёт: +1 РАЗ за каждые 100 съеденных РАЗ живой материи."
+    },
+    {
+      "name": "Одержимость",
+      "summary": "Съевший кусок его плоти должен пройти чрезвычайную проверку МОЩ, иначе Ю-Менг’тис тайно вселяется в него до 7 дней, после чего тело носителя перерождается в его подобие ещё на 7 дней."
+    }
+  ],
+  "description": {
+    "ru": "Раздутая фигура выше трёх метров на трёх тонких ногах, с яйцевидным туловищем и тремя руками; бледная серо-жёлтая плоть то гладкая, то чешуйчатая, а голова — гноящееся отверстие, извергающее кровавую мокроту.",
+    "en": null
+  },
+  "legend": {
+    "ru": "По «Жёлтой книге боли», родствен И’голонаку (возможно, своего рода близнец) и заточён в «Палате нечистот» — карманном измерении, куда ведут тайные двери. Культ Мерзкого, возникший в Англии во второй половине XIX века, откармливает жертв до «зрелости» и ищет все двери, чтобы открыть их разом и освободить бога.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 243,
+      "printed_page": 242,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Основной статблок — человекоподобная форма; значения со звёздочкой в книге относятся к истинной форме (РАЗ 600, ПЗ 120, БкУ +8D6, комплекция 9). Опечатка: у атаки Bite напечатано «70% (40/16)» — половина и пятая не соответствуют 70% (35/14); сохранено как напечатано. Связанная запись — coc:creature:ygolonac."
+  }
+}

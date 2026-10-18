@@ -1,0 +1,176 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:yegg-ha",
+  "kind": "creature",
+  "name": {
+    "ru": "Йегг-Ха",
+    "en": "Yegg-Ha"
+  },
+  "aliases": [
+    "Child of Yibb-Tstll",
+    "the Faceless Demon",
+    "Master of Gaunts"
+  ],
+  "category": "mythos_deity",
+  "subcategory": "Малый Древний / уникальная сущность",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "characteristics": {
+      "STR": {
+        "raw": "130",
+        "value": 130
+      },
+      "CON": {
+        "raw": "490",
+        "value": 490
+      },
+      "SIZ": {
+        "raw": "130",
+        "value": 130
+      },
+      "DEX": {
+        "raw": "150",
+        "value": 150
+      },
+      "POW": {
+        "raw": "125",
+        "value": 125
+      }
+    },
+    "averages": false,
+    "hp": {
+      "raw": "62",
+      "value": 62
+    },
+    "mp": {
+      "raw": "25",
+      "value": 25
+    },
+    "damage_bonus": {
+      "raw": "+2D6",
+      "value": "2d6"
+    },
+    "build": {
+      "raw": "3",
+      "value": 3
+    },
+    "move": {
+      "raw": "12 / 16 flying",
+      "value": 12,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 12
+        },
+        {
+          "mode": "fly",
+          "value": 16
+        }
+      ]
+    },
+    "armor": {
+      "raw": "8-point tough skin. Regenerates 1 hit point per 1 point of damage it inflicts on another (death at zero hit points). If reduced to zero hit points, Yegg-Ha collapses and dies, its body decaying over time. Any portion of its remains may be enough to reform, which can take place in 2,000 or so years.",
+      "value": 8,
+      "note": "прочная шкура 8; восстанавливает 1 ПЗ за каждый нанесённый пункт урона; при 0 ПЗ умирает, но из любых останков может возродиться примерно через 2000 лет"
+    },
+    "attacks_per_round": {
+      "raw": "4 (claws, tail, seize)",
+      "value": 4
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "80% (40/16), damage 1D6+2D6",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "1D6+2D6",
+          "dice": "1d6",
+          "adds_db": true,
+          "extra": null
+        },
+        "notes": "два удара когтями или удар шипастым хвостом; +2D6 — бонус к урону, вписанный в книге числом"
+      }
+    ],
+    "dodge": {
+      "raw": "75% (37/15)",
+      "value": 75,
+      "half": 37,
+      "fifth": 15
+    },
+    "skills": [],
+    "spells": {
+      "raw": "Fist of Yog-Sothoth, Shrivelling, Wrack."
+    },
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "2d6",
+        "trigger": "при виде Йегг-Ха"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Схватить (манёвр)",
+      "summary": "Хватает противника и сжимает его (1d6+2d6 урона) либо уносит в воздух и позже бросает с высоты (1d6 урона за каждые 3 м). Вырваться — чрезвычайная проверка ЛВК или СИЛ."
+    },
+    {
+      "name": "Возрождение",
+      "summary": "Может быть оживлён особым обрядом даже над крошечной частью останков; со временем возрождается и сам."
+    },
+    {
+      "name": "Тёмная аура",
+      "summary": "Живой или в виде костей, вызывает у людей усталость и подавленность; чувствительные (МОЩ 70+ или экстрасенсы) испытывают отчаяние и видят мрачные сны."
+    },
+    {
+      "name": "Призыв ночных призраков",
+      "summary": "Живым может призвать себе на службу 1d10+2 ночных призраков."
+    }
+  ],
+  "description": {
+    "ru": "Крылатый безглазый великан ростом около трёх метров, с рогами и ленивцеподобным телом в серой обвисшей плоти, покрытой наростами и нарывами; рот — беззубая пасть.",
+    "en": null
+  },
+  "legend": {
+    "ru": "По «Некрономикону», порождение Йибб-Тистла; иные считают его просто огромным ночным призраком, а некоторые связывают с Ноденсом. В 128 г. н. э. гарнизон Адрианова вала убил его «мечом и магией» и тайно похоронил; по слухам, кости недавно найдены, а его тень жива в Мире грёз. С ним, возможно, связана группа «Безликие» («Люди-тени»).",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 219,
+      "printed_page": 218,
+      "method": "book_text",
+      "verified": true
+    },
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 220,
+      "printed_page": 219,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Заголовок и описание — на стр. 217 печатн. (218 PDF); профиль — стр. 218 печатн. (219 PDF); ущерб рассудку, магия и силы — стр. 219 печатн. (220 PDF). Связанные записи: coc:creature:yibb-tstll, coc:creature:nightgaunt."
+  }
+}

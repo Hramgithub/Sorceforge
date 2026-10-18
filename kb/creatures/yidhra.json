@@ -1,0 +1,205 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:yidhra",
+  "kind": "creature",
+  "name": {
+    "ru": "Йидра",
+    "en": "Yidhra"
+  },
+  "aliases": [
+    "the Dream-Witch",
+    "Mother of Woe",
+    "the Shroud",
+    "Yee-Tho-Rah"
+  ],
+  "category": "mythos_deity",
+  "subcategory": "Внешний бог / Великий Древний",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "characteristics": {
+      "STR": {
+        "raw": "300",
+        "value": 300
+      },
+      "CON": {
+        "raw": "600",
+        "value": 600
+      },
+      "SIZ": {
+        "raw": "260",
+        "value": 260
+      },
+      "DEX": {
+        "raw": "200",
+        "value": 200
+      },
+      "POW": {
+        "raw": "300",
+        "value": 300
+      }
+    },
+    "averages": false,
+    "hp": {
+      "raw": "86",
+      "value": 86
+    },
+    "mp": {
+      "raw": "60",
+      "value": 60
+    },
+    "damage_bonus": {
+      "raw": "+6D6",
+      "value": "6d6"
+    },
+    "build": {
+      "raw": "7",
+      "value": 7
+    },
+    "move": {
+      "raw": "14",
+      "value": 14,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 14
+        }
+      ]
+    },
+    "armor": {
+      "raw": "None. Immune to mundane weapons (incl. bullets). Regenerates 3 hit points per magic point spent in healing itself (death at zero hit points). If reduced to zero hit points, Yidhra’s coherence loses stability, its flesh dissolving into pools of fetid matter. Once killed in its true form, Yidhra may not reform.",
+      "value": 0,
+      "note": "иммунитет к обычному оружию; 3 ПЗ за каждый потраченный ПМ; убитая в истинной форме, Йидра не возрождается"
+    },
+    "attacks_per_round": {
+      "raw": "6 (varied; claw, pseudopod, bite) or 1 (consume or roll)",
+      "value": 6
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "100% (50/20), damage 3D6",
+          "value": 100,
+          "half": 50,
+          "fifth": 20
+        },
+        "damage": {
+          "raw": "3D6",
+          "dice": "3d6",
+          "adds_db": false,
+          "extra": null
+        },
+        "notes": "когти, ложноножки или укусы"
+      },
+      {
+        "name": {
+          "ru": "Поглощение (манёвр)",
+          "en": "Consume (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "100% (50/20), absorbed (see above)",
+          "value": 100,
+          "half": 50,
+          "fifth": 20
+        },
+        "damage": {
+          "raw": "absorbed (see above)",
+          "dice": null,
+          "adds_db": false,
+          "extra": "поглощение за 1d4 раунда; вырвавшийся получает 1d8 урона и теряет навсегда 10 ВЫН и 10 НАР"
+        },
+        "notes": "вырваться — чрезвычайная проверка СИЛ или ЛВК до конца следующего раунда, потом жертва удержана намертво"
+      },
+      {
+        "name": {
+          "ru": "Перекатывание (манёвр)",
+          "en": "Roll (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "100% (50/20), damage 6D6",
+          "value": 100,
+          "half": 50,
+          "fifth": 20
+        },
+        "damage": {
+          "raw": "6D6",
+          "dice": "6d6",
+          "adds_db": false,
+          "extra": null
+        },
+        "notes": "вся масса перекатывается через цель, если та не уклонилась"
+      }
+    ],
+    "skills": [],
+    "spells": {
+      "raw": "Barrier of Pain, Bestow Glimpse of Truth, Bind Enemy, Blight/Bless Crop, Call Lightning, Cause Disease, Command Shoggoth, Curse, Deflect Harm, Dominate, Enthrall Victim, Levitate, Shrivelling, Siren’s Song; others as the Keeper desires."
+    },
+    "sanity_loss": [
+      {
+        "success": "2d10",
+        "fail": "1d100",
+        "trigger": "при встрече с истинной формой Йидры"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Поглощение",
+      "summary": "Пожирая живых существ, получает их память и эволюционные особенности и может «переродить» съеденное — копией, изменённым или совсем иным; перерождённые мысленно связаны с ней. Без пищи Йидра и её аватары чахнут и превращаются в инертную протоплазму."
+    },
+    {
+      "name": "Деление и изменение",
+      "summary": "Может принять облик почти любого земного существа или человека и смешивать их черты; части её существуют как отдельные аватары с общим сознанием."
+    },
+    {
+      "name": "Скрытни",
+      "summary": "С помощью поглощения создаёт скрытней — вампирических чудовищ, служащих её воле."
+    }
+  ],
+  "description": {
+    "ru": "Отвратительная масса протоплазмы, выбрасывающая ложноножки и отращивающая когтистые конечности и пасти, — истинный облик существа, которое веками поглощало земную жизнь и научилось её копировать.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Возможно, личинка, упавшая со звёзд в юности Земли; разделила себя на независимые аватары с общим сознанием. Вурми приносили жертвы Й’хату, современные культы почитают Мадам Йи и Йоланду; избранные последователи получают долголетие и клыки (возможный корень мифов о вампирах), но платят кровавыми жертвами.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 227,
+      "printed_page": 226,
+      "method": "book_text",
+      "verified": true
+    },
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 230,
+      "printed_page": 229,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Основной статблок — «Typical Physical Manifestation: Yidhra’s True Form» (стр. 226 печатн., 227 PDF); ущерб рассудку, магия и силы — стр. 229 печатн. (230 PDF); заголовок — стр. 225 печатн. Аватары: coc:creature:madam-yi, coc:creature:yhath, coc:creature:yolanda, coc:creature:yidhra-monstrous-form; созданные ею твари — coc:creature:lurker."
+  }
+}

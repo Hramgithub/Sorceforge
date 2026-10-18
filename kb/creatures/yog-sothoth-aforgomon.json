@@ -1,0 +1,161 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:yog-sothoth-aforgomon",
+  "kind": "creature",
+  "name": {
+    "ru": "Йог-Сотот: Афоргомон",
+    "en": "Yog-Sothoth: Aforgomon"
+  },
+  "aliases": [
+    "Time Eater"
+  ],
+  "category": "avatar",
+  "subcategory": "аватар Йог-Сотота",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "characteristics": {
+      "STR": {
+        "raw": "n/a",
+        "value": null
+      },
+      "CON": {
+        "raw": "1,000",
+        "value": 1000
+      },
+      "SIZ": {
+        "raw": "200",
+        "value": 200
+      },
+      "DEX": {
+        "raw": "500",
+        "value": 500
+      },
+      "POW": {
+        "raw": "500",
+        "value": 500
+      }
+    },
+    "averages": false,
+    "hp": {
+      "raw": "120",
+      "value": 120
+    },
+    "mp": {
+      "raw": "100",
+      "value": 100
+    },
+    "damage_bonus": {
+      "raw": "n/a",
+      "value": null
+    },
+    "build": {
+      "raw": "n/a",
+      "value": null
+    },
+    "move": {
+      "raw": "infinite",
+      "value": null,
+      "modes": [
+        {
+          "mode": "other",
+          "value": null,
+          "note": "бесконечная скорость"
+        }
+      ]
+    },
+    "armor": {
+      "raw": "None. Immune to mundane weapons (incl. bullets); mundane weapons have a 50 percent chance of disintegrating upon contact with Aforgomon. If reduced to zero hit points, Aforgomon vanishes. It is undying and has no need to reform.",
+      "value": 0,
+      "note": "иммунитет к обычному оружию, которое с вероятностью 50% рассыпается при касании; при 0 ПЗ исчезает, бессмертен"
+    },
+    "attacks_per_round": {
+      "raw": "1 (bolt)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (разряд)",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "80% (40/16), damage 1D10 + aged (see above)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "1D10 + aged (see above)",
+          "dice": "1d10",
+          "adds_db": false,
+          "extra": "возраст цели меняется на ±3d10 лет (направление — проверка Удачи); при возрасте 0 или старше 140 лет — смерть"
+        },
+        "notes": "разряд странного огня; навыки, ИНТ и ОБР не меняются"
+      }
+    ],
+    "skills": [],
+    "spells": {
+      "raw": "Augury, Bestow Glimpse of Truth, Fist of Yog-Sothoth; others dealing with time at the Keeper’s discretion."
+    },
+    "sanity_loss": [
+      {
+        "success": "1d6",
+        "fail": "2d10",
+        "trigger": "при встрече с Афоргомоном"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Цепи Афоргомона",
+      "summary": "Касанием (можно уклониться) переносит прогневавшего его в Мир грёз, где тот сидит прикованным к каменному креслу над бездной, пока цепи не раскалятся и не убьют его; со временем память о жертве стирается из мира."
+    },
+    {
+      "name": "Власть над временем",
+      "summary": "Останавливает и искажает время в радиусе 16 км; люди, предметы и места вокруг то стареют, то молодеют, а след его прохода держится от часа до сотен лет (трудная проверка МОЩ, чтобы стряхнуть эффект)."
+    },
+    {
+      "name": "Путешествия во времени",
+      "summary": "Свободно входит во время и выходит из него, но не может вернуться в то же место и время в пределах 100 лет; касанием переносит другое существо во времени (трудная проверка МОЩ или магическая защита)."
+    }
+  ],
+  "description": {
+    "ru": "Луч или струя потрескивающей энергии — извилистая, вечно движущаяся линия силы, пронзающая преграды нашего мира из углов времени.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Редкий аватар Йог-Сотота, связанный со временем: по «Книге Эйбона», является тем, кто прогневал Йог-Сотота вмешательством во время. Почитается в иных измерениях, в Мире грёз и на далёких планетах вроде Йоомура и Мо-Хоба; культы Мх'итрхи враждуют с ним.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 238,
+      "printed_page": 237,
+      "method": "book_text",
+      "verified": true
+    },
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 237,
+      "printed_page": 236,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Заголовок и описание — стр. 234 печатн. (235 PDF); ущерб рассудку, магия и силы — стр. 236 печатн. (237 PDF); профиль — стр. 237 печатн. (238 PDF). Связанные записи: coc:creature:yog-sothoth, coc:creature:mhithrha."
+  }
+}

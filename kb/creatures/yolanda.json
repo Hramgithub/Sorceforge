@@ -1,0 +1,177 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:yolanda",
+  "kind": "creature",
+  "name": {
+    "ru": "Йоланда",
+    "en": "Yolanda"
+  },
+  "aliases": [],
+  "category": "avatar",
+  "subcategory": "аватар Йидры",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "characteristics": {
+      "STR": {
+        "raw": "100",
+        "value": 100
+      },
+      "CON": {
+        "raw": "200",
+        "value": 200
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "90",
+        "value": 90
+      },
+      "POW": {
+        "raw": "100",
+        "value": 100
+      }
+    },
+    "averages": false,
+    "hp": {
+      "raw": "26",
+      "value": 26
+    },
+    "mp": {
+      "raw": "20",
+      "value": 20
+    },
+    "damage_bonus": {
+      "raw": "+1D4",
+      "value": "1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "None; Yolanda cannot be harmed by normal weapons; if the avatar is reduced to zero hit points, it transforms into a monstrous form (these vary and are subject to the Keeper’s design).",
+      "value": 0,
+      "note": "неуязвима для обычного оружия; при 0 ПЗ превращается в чудовищную форму"
+    },
+    "attacks_per_round": {
+      "raw": "1 (weapon, unarmed, or consume)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "70% (35/14), damage 1D4+1D4 or by weapon",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "1D4+1D4 or by weapon",
+          "dice": "1d4",
+          "adds_db": true,
+          "extra": "или по оружию"
+        },
+        "notes": "+1D4 — бонус к урону, вписанный в книге числом"
+      },
+      {
+        "name": {
+          "ru": "Поглощение (манёвр)",
+          "en": "Consume (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "70% (35/14), absorbed (see above)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "absorbed (see above)",
+          "dice": null,
+          "adds_db": false,
+          "extra": "1d4 урона и потеря 10 ВЫН и 10 НАР за раунд, 6 раундов"
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "45% (22/9)",
+      "value": 45,
+      "half": 22,
+      "fifth": 9
+    },
+    "skills": [],
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "0",
+        "trigger": "при виде Йоланды"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Поглощение (манёвр)",
+      "summary": "Прыгает на цель и поглощает её за 6 раундов: каждый раунд 1d4 урона и безвозвратная потеря 10 ВЫН и 10 НАР; к концу шестого раунда жертва исчезает. Вырваться — чрезвычайная проверка СИЛ или ЛВК."
+    },
+    {
+      "name": "Силы истинной формы",
+      "summary": "Как и любой аватар Йидры, может пользоваться всеми силами её истинной формы (поглощение, деление и изменение облика, создание скрытней)."
+    }
+  ],
+  "description": {
+    "ru": "Высокая стройная женщина с овальным лицом и светящимися серыми глазами; дерётся оружием или как обычный человек.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Один из трёх лучше всего описанных аватаров Йидры; вокруг Йоланды в новое время сложились собственные культы.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 229,
+      "printed_page": 228,
+      "method": "book_text",
+      "verified": true
+    },
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 228,
+      "printed_page": 227,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Характеристики, ПЗ, ПМ, БкУ, комплекция и Движение — из таблицы «Yidhra’s Avatars» (стр. 227 печатн., 228 PDF); бой, броня и ущерб рассудку — стр. 228 печатн. (229 PDF). Основная запись — coc:creature:yidhra."
+  }
+}

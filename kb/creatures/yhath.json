@@ -1,0 +1,186 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:yhath",
+  "kind": "creature",
+  "name": {
+    "ru": "Й’хат",
+    "en": "Y’hath"
+  },
+  "aliases": [],
+  "category": "avatar",
+  "subcategory": "аватар Йидры",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "characteristics": {
+      "STR": {
+        "raw": "160",
+        "value": 160
+      },
+      "CON": {
+        "raw": "380",
+        "value": 380
+      },
+      "SIZ": {
+        "raw": "160",
+        "value": 160
+      },
+      "DEX": {
+        "raw": "150",
+        "value": 150
+      },
+      "POW": {
+        "raw": "100",
+        "value": 100
+      }
+    },
+    "averages": false,
+    "hp": {
+      "raw": "54",
+      "value": 54
+    },
+    "mp": {
+      "raw": "20",
+      "value": 20
+    },
+    "damage_bonus": {
+      "raw": "+3D6",
+      "value": "3d6"
+    },
+    "build": {
+      "raw": "4",
+      "value": 4
+    },
+    "move": {
+      "raw": "8 / 25 flying",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        },
+        {
+          "mode": "fly",
+          "value": 25
+        }
+      ]
+    },
+    "armor": {
+      "raw": "5-point thick hide; if the avatar is reduced to zero hit points, it transforms into another monstrous form (these vary and are subject to the Keeper’s design).",
+      "value": 5,
+      "note": "толстая шкура 5; при 0 ПЗ превращается в другую чудовищную форму"
+    },
+    "attacks_per_round": {
+      "raw": "1 or 2 (claws, bite) or 1 (snatch or consume)",
+      "value": 2,
+      "note": "в воздухе — оба когтя или укус; на земле — только одна атака за раунд"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "80% (40/16), damage 3D6",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "3D6",
+          "dice": "3d6",
+          "adds_db": false,
+          "extra": null
+        },
+        "notes": "когти или укус"
+      },
+      {
+        "name": {
+          "ru": "Поглощение (манёвр)",
+          "en": "Consume (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "80% (40/16) absorbed (see above)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "absorbed (see above)",
+          "dice": null,
+          "adds_db": false,
+          "extra": "1d4 урона и потеря 10 ВЫН и 10 НАР за раунд, 6 раундов"
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "75% (37/15)",
+      "value": 75,
+      "half": 37,
+      "fifth": 15
+    },
+    "skills": [],
+    "sanity_loss": [
+      {
+        "success": "1d3",
+        "fail": "1d8",
+        "trigger": "при виде Й’хата"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Схватить",
+      "summary": "Бесшумно пикирует с неба и хватает жертву, затем давит её (2d6 урона), кусает (2d6) или бросает с высоты (1d6 урона за каждые 3 м)."
+    },
+    {
+      "name": "Поглощение (манёвр)",
+      "summary": "Прыгает на цель и поглощает её за 6 раундов: каждый раунд 1d4 урона и безвозвратная потеря 10 ВЫН и 10 НАР; к концу шестого раунда жертва исчезает. Вырваться — чрезвычайная проверка СИЛ или ЛВК."
+    },
+    {
+      "name": "Силы истинной формы",
+      "summary": "Как и любой аватар Йидры, может пользоваться всеми силами её истинной формы (поглощение, деление и изменение облика, создание скрытней)."
+    }
+  ],
+  "description": {
+    "ru": "Грифоподобный ужас с пылающими глазами и клювом, полным клыков; бесшумно пикирует с неба на жертву.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Чудовищный аватар Йидры, которому в доисторические времена приносили жертвы вурми; Йидра пользуется такими обликами там, где страх полезнее любви.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 229,
+      "printed_page": 228,
+      "method": "book_text",
+      "verified": true
+    },
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 228,
+      "printed_page": 227,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Характеристики, ПЗ, ПМ, БкУ, комплекция и Движение — из таблицы «Yidhra’s Avatars» (стр. 227 печатн., 228 PDF); бой, броня и ущерб рассудку — стр. 228 печатн. (229 PDF). Основная запись — coc:creature:yidhra."
+  }
+}

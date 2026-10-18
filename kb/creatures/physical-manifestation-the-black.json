@@ -1,0 +1,174 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:physical-manifestation-the-black",
+  "kind": "creature",
+  "name": {
+    "ru": "Физическое проявление: Чернота",
+    "en": "Physical Manifestation: The Black"
+  },
+  "aliases": [
+    "The Black",
+    "black milk"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "разумная частица Йибб-Тистла (кровь)",
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "characteristics": {
+      "STR": {
+        "raw": "50 (+30)",
+        "value": 50
+      },
+      "CON": {
+        "raw": "60 (—)",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "60 (—)",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "70 (+40)",
+        "value": 70
+      },
+      "POW": {
+        "raw": "(3D6+5)×5",
+        "value": null,
+        "roll": "(3d6+5)×5"
+      }
+    },
+    "averages": false,
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "None. Immune to mundane weapon (incl. bullets). Running water destroys the Black; sprayed water causes 5 damage per round, water immersion kills in 1 round. Regenerates 1 hit point per round (death at zero hit points); cannot regenerate if immersed/sprayed with running water. If reduced to zero hit points, The Black fades to nothingness, causing any nightgaunts to rapidly depart. It reforms in 1D100 days.",
+      "value": 0,
+      "note": "иммунитет к обычному оружию; проточная вода уничтожает (струя — 5 урона за раунд, погружение — гибель за 1 раунд); регенерирует 1 ПЗ за раунд; при 0 ПЗ исчезает и возрождается через 1d100 дней"
+    },
+    "attacks_per_round": {
+      "raw": "1 (asphyxiate or possession)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Удушение",
+          "en": "Asphyxiate"
+        },
+        "kind": "special",
+        "skill": null,
+        "chance": {
+          "raw": "automatic unless Dodged (see The Black, page 224); damage determined by CON rolls",
+          "value": null,
+          "half": null,
+          "fifth": null
+        },
+        "damage": {
+          "raw": "determined by CON rolls",
+          "dice": null,
+          "adds_db": false,
+          "extra": "1d2/1d4 в первый раунд, 1d4/1d6 во второй (трудная проверка ВЫН), 1d6/1d8 далее (чрезвычайная) — меньшее при успехе проверки ВЫН"
+        },
+        "notes": "попадает автоматически, если цель не уклонилась"
+      },
+      {
+        "name": {
+          "ru": "Вселение",
+          "en": "Possession"
+        },
+        "kind": "special",
+        "skill": null,
+        "chance": {
+          "raw": "opposed POW roll (see The Black, page 224)",
+          "value": null,
+          "half": null,
+          "fifth": null
+        },
+        "notes": "встречная проверка МОЩ с носителем"
+      }
+    ],
+    "skills": [],
+    "sanity_loss": [
+      {
+        "success": "1d4",
+        "fail": "1d10",
+        "trigger": "при встрече с кровью Йибб-Тистла в разумной внешней форме"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Удушение",
+      "summary": "Обволакивает цель чёрными «снежинками» и душит, пока цель не умрёт, Черноту не отзовут или цель не окатит себя проточной водой."
+    },
+    {
+      "name": "Вселение",
+      "summary": "Победив носителя во встречной проверке МОЩ, вселяется в него: выдают только глаза, ставшие сплошь чёрными, и чёрная кровь из ран; может говорить голосом носителя. Проточная вода уничтожает Черноту и освобождает носителя."
+    },
+    {
+      "name": "Смена облика",
+      "summary": "Принимает человеческий, звериный или чуждый облик, но остаётся чёрной и не может подражать другим цветам и фактурам."
+    },
+    {
+      "name": "Дар и связь",
+      "summary": "Малая порция, данная как благословение и выпитая, открывает мысленную связь с Йибб-Тистлом на любом расстоянии и сквозь измерения."
+    }
+  ],
+  "description": {
+    "ru": "Разумная часть крови Йибб-Тистла — «чёрного молока», — способная покинуть тело божества, принять любую форму (оставаясь чёрной) или вселиться в носителя.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Кровь Йибб-Тистла считается полуразумной: заклинания позволяют призвать её и направить на убийство, а «Ктаат Аквадинген» говорит, что, пока Йибб-Тистл спит, его чёрное молоко может уходить и вершить его волю в иных местах.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 226,
+      "printed_page": 225,
+      "method": "book_text",
+      "verified": true
+    },
+    {
+      "book_id": "malleus-monstrorum-2-en",
+      "physical_page": 224,
+      "printed_page": 223,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "corrections": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Профиль — во врезке внутри статьи о Йибб-Тистле (стр. 225 печатн., 226 PDF). Числа в скобках — поправки к характеристикам носителя при вселении (СИЛ +30, ЛВК +40, ВЫН и РАЗ не меняются); МОЩ = (3D6+5)×5 и не зависит от МОЩ носителя, поэтому value = null. ПМ и заклинания не указаны. Ущерб рассудку — из профиля Йибб-Тистла (стр. 223 печатн., 224 PDF); ссылки «page 224» в книге — на печатную страницу (225 PDF). Связанная запись — coc:creature:yibb-tstll."
+  }
+}

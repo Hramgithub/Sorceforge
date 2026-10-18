@@ -17,7 +17,8 @@ def main() -> None:
     ap.add_argument("--template", type=Path, default=root / "app" / "creatures.template.html")
     ap.add_argument("--out", type=Path, default=root / "app" / "creatures.html")
     a = ap.parse_args()
-    records = [json.loads(p.read_text(encoding="utf-8")) for p in sorted(a.kb.glob("*.json"))]
+    paths = sorted(a.kb.glob("*.json")) + sorted((a.kb.parent / "books").glob("*/creatures/*.json"))
+    records = [json.loads(p.read_text(encoding="utf-8")) for p in paths]
     payload = json.dumps(records, ensure_ascii=False).replace("</", "<\\/")
     html = a.template.read_text(encoding="utf-8").replace("__DATA__", payload)
     a.out.write_text(html, encoding="utf-8")

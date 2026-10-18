@@ -60,6 +60,9 @@ section h3 { font-size:15px; margin:0 0 6px; color:var(--accent); text-transform
 const DATA = JSON.parse(document.getElementById('data').textContent);
 const CAT = { animal:'Зверь', mythos_monster:'Тварь Мифов', mythos_deity:'Божество Мифов', avatar:'Воплощение', supernatural:'Сверхъестественное' };
 const CH = [['STR','СИЛ'],['CON','ВЫН'],['SIZ','ТЕЛ'],['DEX','ЛВК'],['APP','НАР'],['INT','ИНТ'],['POW','МОЩ'],['EDU','ОБР']];
+const BOOKS = { 'keeper-rulebook-ru': 'Книга хранителя', 'lightless-beacon-ru': 'Погасший маяк' };
+const METHOD = { book_text: 'сверено с книгой', helper_migration: 'перенесено из веб-помощника', mineru: 'извлечено MinerU', manual: 'введено вручную' };
+const bookOf = c => c.sources?.[0]?.book_id;
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const raw = v => v ? esc(v.raw) : '—';
 let current = null;
@@ -72,7 +75,7 @@ function renderList() {
   document.getElementById('count').textContent = items.length + ' из ' + DATA.length;
   const list = document.getElementById('list');
   list.innerHTML = items.map(c => `<button data-id="${esc(c.id)}" class="${c.id===current?'active':''}">${esc(c.name.ru)}
-    ${(c.quality?.flags||[]).length ? '<span class="tag warn">!</span>' : ''}<small>${esc(c.name.en||'')} · ${CAT[c.category]||''}</small></button>`).join('');
+    ${(c.quality?.flags||[]).length ? '<span class="tag warn">!</span>' : ''}<small>${esc(c.name.en||'')} · ${CAT[c.category]||''}${bookOf(c) !== 'keeper-rulebook-ru' ? ' · ' + esc(BOOKS[bookOf(c)] || bookOf(c)) : ''}</small></button>`).join('');
   list.querySelectorAll('button').forEach(b => b.onclick = () => show(b.dataset.id));
 }
 
@@ -92,7 +95,7 @@ function show(id) {
     <td>${esc(a.chance.raw)}</td><td>${a.damage ? esc(a.damage.raw) : '—'}${a.notes ? `<div class="muted">${esc(a.notes)}</div>` : ''}</td></tr>`).join('');
   const san = (sb.sanity_loss||[]).map(s => `<li>${esc(s.success)}/${esc(s.fail)}${s.trigger ? ' — ' + esc(s.trigger) : ''}</li>`).join('');
   const skills = (sb.skills||[]).map(s => `${esc(s.name)} ${esc(s.value.raw)}`).join(', ');
-  const src = c.sources.map(s => `стр. ${s.printed_page ?? '—'} книги (стр. ${s.physical_page ?? '—'} PDF), ${s.method === 'book_text' ? 'сверено с книгой' : 'перенесено из веб-помощника'}${s.verified ? ' <span class="tag ok">сверено</span>' : ''}`).join('<br>');
+  const src = c.sources.map(s => `${esc(BOOKS[s.book_id] || s.book_id)}: стр. ${s.printed_page ?? '—'} книги (стр. ${s.physical_page ?? '—'} PDF), ${METHOD[s.method] || esc(s.method)}${s.verified ? ' <span class="tag ok">сверено</span>' : ''}`).join('<br>');
   const corr = (c.corrections||[]).map(x => `<li><b>${esc(x.field)}</b>: ${x.from ? esc(x.from) + ' → ' : ''}${esc(x.to)} <span class="muted">— ${esc(x.reason)}</span></li>`).join('');
   const flags = (c.quality?.flags||[]).map(f => `<span class="tag warn">${esc(f)}</span>`).join('');
   document.getElementById('card').innerHTML = `

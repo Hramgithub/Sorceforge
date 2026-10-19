@@ -247,7 +247,6 @@ function characterCard(c) {
     <div class="sub">${esc(c.name.en||'')}${(c.roles||[]).map(r => ` <span class="tag">${ROLE[r]}</span>`).join('')}${(c.aliases||[]).length ? ' · также: ' + c.aliases.map(esc).join(', ') : ''}</div>
     ${flags(c)}
     ${facts ? `<dl>${facts}</dl>` : ''}
-    ${c.scenario_role ? `<section><h3>Роль в сценарии</h3><p>${esc(c.scenario_role)}</p></section>` : ''}
     ${c.description?.ru ? `<p>${esc(c.description.ru)}</p>` : ''}
     ${relations(c)}
     ${statblock(c)}

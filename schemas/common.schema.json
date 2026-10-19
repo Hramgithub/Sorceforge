@@ -10,14 +10,14 @@
       "pattern": "^[a-z0-9-]+([:/][a-z0-9-]+)+$"
     },
     "relations": {
-      "description": "Связи с другими записями (Р-30). Связь хранится в одной записи; обратную сторону показывает просмотрщик. form_of — другая форма, стадия или вид того же существа; avatar_of — воплощение божества; spawn_of — порождение, потомство, личинки; servitor_of — служит божеству или существу; transforms_into — может превращаться в другое существо.",
+      "description": "Связи с другими записями (Р-30). Связь хранится в одной записи; обратную сторону показывает просмотрщик. form_of — другая форма, стадия или вид того же существа; avatar_of — воплощение божества; spawn_of — порождение, потомство, личинки; servitor_of — служит божеству или существу; transforms_into — может превращаться в другое существо. Между персонажами (Р-42): relative_of — родственник (кем приходится — в note), knows — знакомый, друг, коллега, works_for — работает на, подчиняется, rival_of — недруг, соперник, variant_of — тот же преген в другом варианте; relative_of, knows и rival_of взаимны.",
       "type": "array",
       "items": {
         "type": "object",
         "required": ["type", "target"],
         "additionalProperties": false,
         "properties": {
-          "type": { "enum": ["form_of", "avatar_of", "spawn_of", "servitor_of", "transforms_into"] },
+          "type": { "enum": ["form_of", "avatar_of", "spawn_of", "servitor_of", "transforms_into", "relative_of", "knows", "works_for", "rival_of", "variant_of"] },
           "target": { "$ref": "#/$defs/id" },
           "note": { "type": ["string", "null"] }
         }

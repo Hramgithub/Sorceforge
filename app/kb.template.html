@@ -189,14 +189,28 @@ const REL = {
   spawn_of: ['Порождение', 'Порождения'],
   servitor_of: ['Служит', 'Служители'],
   transforms_into: ['Превращается в', 'Превращаются в это существо'],
+  relative_of: ['Родственники', null],
+  knows: ['Знакомые', null],
+  rival_of: ['Недруги', null],
+  works_for: ['Работает на', 'На него работают'],
+  variant_of: ['Вариант прегена', 'Другие варианты'],
 };
+function relLinks(items) {
+  return items.map(([id, note]) => (byId(id) ? link(id, byId(id).name.ru) : esc(id)) + (note ? ` <span class="muted">(${esc(note)})</span>` : '')).join(', ');
+}
 function relations(c) {
   const rows = [];
   for (const [type, [fwd, rev]] of Object.entries(REL)) {
-    const out = (c.relations||[]).filter(r => r.type === type).map(r => r.target);
-    const inc = ALL.filter(x => (x.relations||[]).some(r => r.type === type && r.target === c.id)).map(x => x.id);
-    if (out.length) rows.push(`<dt>${fwd}</dt><dd>${refLinks(out)}</dd>`);
-    if (inc.length) rows.push(`<dt>${rev}</dt><dd>${refLinks(inc)}</dd>`);
+    const out = (c.relations||[]).filter(r => r.type === type).map(r => [r.target, r.note]);
+    const inc = ALL.flatMap(x => (x.relations||[]).filter(r => r.type === type && r.target === c.id).map(r => [x.id, r.note]));
+    if (rev === null) {
+      // symmetric relation: both directions in one row, without duplicates
+      const all = [...out, ...inc.filter(([id]) => !out.some(([o]) => o === id))];
+      if (all.length) rows.push(`<dt>${fwd}</dt><dd>${relLinks(all)}</dd>`);
+      continue;
+    }
+    if (out.length) rows.push(`<dt>${fwd}</dt><dd>${relLinks(out)}</dd>`);
+    if (inc.length) rows.push(`<dt>${rev}</dt><dd>${relLinks(inc)}</dd>`);
   }
   const same = (c.same_as||[]).filter(byId);
   if (same.length) rows.push(`<dt>То же существо</dt><dd>${refLinks(same)}</dd>`);

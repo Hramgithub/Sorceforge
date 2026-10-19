@@ -35,6 +35,7 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--kb", type=Path, default=Path(__file__).resolve().parents[2] / "kb")
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--fix-percent", action="store_true", help="also fix the percent when half and fifth both fit another one")
     a = ap.parse_args()
     fixed = files = 0
     ambiguous: list[str] = []
@@ -51,24 +52,34 @@ def main() -> None:
             if (half, fifth) == (h, f) and not re.search(r"\(\s*\d+\s*,", v.get("raw", "")):
                 continue
             printed = v.get("raw", "")
+            orig = val
             other = [q for q in range(1, 201) if abs(q - val) >= 5 and q // 2 == half and q // 5 == fifth]
             if (half, fifth) != (h, f) and other:
-                # half and fifth both fit a clearly different percent: the percent itself may be the misprint
-                ambiguous.append(f"{p.stem}: {field} {printed} (половина и пятая подходят к {other[0]}%)")
-                continue
-            v["half"], v["fifth"] = h, f
-            if PARTS.search(printed):
-                v["raw"] = PARTS.sub(f"({h}/{f})", printed, count=1)
-            expected = f"{val}% ({h}/{f})"
+                # half and fifth both fit a clearly different percent: the percent itself is the misprint
+                q = next((x for x in other if x % 5 == 0), other[0])
+                if not a.fix_percent:
+                    ambiguous.append(f"{p.stem}: {field} {printed} (половина и пятая подходят к {q}%)")
+                    continue
+                v["value"] = q
+                v["raw"] = re.sub(rf"\b{val}%", f"{q}%", printed, count=1)
+                expected = f"{q}% ({half}/{fifth})"
+                note = f"опечатка в проценте: половина и пятая соответствуют {q}%; исправлено (Р-35)"
+                val = q
+            else:
+                v["half"], v["fifth"] = h, f
+                if PARTS.search(printed):
+                    v["raw"] = PARTS.sub(f"({h}/{f})", printed, count=1)
+                expected = f"{val}% ({h}/{f})"
+                note = "половина и пятая не следуют из процента; исправлено по правилу 7-й редакции (Р-35)"
             errata = r.setdefault("errata", [])
             match = next((e for e in errata if field.lower() in (e.get("field") or "").lower()
-                          and re.search(rf"\b{val}\b", (e.get("printed") or "") + (e.get("expected") or ""))), None)
+                          and re.search(rf"\b({orig}|{val})\b", (e.get("printed") or "") + (e.get("expected") or ""))), None)
             if match:
                 match["fixed"] = True
                 match["expected"] = match.get("expected") or expected
             else:
                 errata.append({"field": field, "printed": printed, "expected": expected,
-                               "note": "половина и пятая не следуют из процента; исправлено по правилу 7-й редакции (Р-35)",
+                               "note": note,
                                "fixed": True})
             fixed += 1
             changed = True

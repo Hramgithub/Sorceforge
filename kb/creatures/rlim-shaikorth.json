@@ -82,8 +82,9 @@
       "value": 10
     },
     "attacks_per_round": {
-      "raw": "",
-      "value": null
+      "raw": "1 (ледяное касание или проглатывание)",
+      "value": 1,
+      "note": "в книге не напечатано; вывод из текста (Р-41)"
     },
     "attacks": [
       {
@@ -202,13 +203,22 @@
       "note": "рассудок, магия и способности — на следующей странице (PDF 185)"
     }
   ],
-  "corrections": [],
+  "corrections": [
+    {
+      "field": "statblock.attacks_per_round",
+      "from": "",
+      "to": "1 (ледяное касание или проглатывание)",
+      "reason": "в книге не напечатано; вывод из текста (Р-41)",
+      "ref": "malleus-monstrorum-2-en p.184"
+    }
+  ],
   "errata": [
     {
       "field": "Атаки за раунд",
       "printed": null,
-      "expected": null,
-      "note": "после «Attacks per round:» число атак не напечатано"
+      "expected": "1 (ледяное касание или проглатывание)",
+      "note": "после «Attacks per round:» число атак не напечатано; число восстановлено по тексту и списку атак — вывод (Р-41)",
+      "fixed": true
     },
     {
       "field": "Ближний бой",
@@ -221,9 +231,8 @@
     "needs_review": false,
     "flags": [
       "translated",
-      "incomplete",
       "parse_uncertain"
     ],
-    "notes": "Число атак за раунд в книге не напечатано."
+    "notes": "число атак за раунд — вывод из текста, в книге не напечатано"
   }
 }

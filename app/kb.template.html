@@ -251,7 +251,7 @@ function characterCard(c) {
     ${relations(c)}
     ${statblock(c)}
     ${abilities(c)}
-    ${bg ? `<section><h3>Предыстория</h3><dl>${bg}</dl></section>` : ''}
+    ${bg ? `<section><h3>Характер и окружение</h3><dl>${bg}</dl></section>` : ''}
     ${(c.possessions||[]).length ? `<section><h3>Снаряжение</h3><ul>${c.possessions.map(p => `<li>${esc(p)}</li>`).join('')}</ul></section>` : ''}
     ${wealth ? `<section><h3>Деньги</h3><dl>${wealth}</dl></section>` : ''}
     ${c.legend?.ru ? `<section><h3>Легенда</h3><p>${esc(c.legend.ru)}</p></section>` : ''}

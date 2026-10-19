@@ -84,8 +84,8 @@ python tools\validate.py schemas\creature.schema.json schemas\examples\creature\
 подсказка, а не ограничение: любой NPC может стать персонажем игрока и наоборот. Статблок общий с существами; в нём добавлены `luck`,
 `sanity` и ссылка навыка на справочник (`skills[].skill`, `specialization`).
 Поля листа сыщика: `occupation`, `age`, `sex`, `residence`, `birthplace`,
-`background` (описание, убеждения, значимые люди и места, ценности, черты, травмы,
-фобии, тайные знания, встречи), `possessions`, `wealth`;
+`background` — «Характер и окружение» (описание, убеждения, значимые люди и места, ценности, черты, травмы,
+фобии, тайные знания, встречи; Р-44), `possessions`, `wealth`;
 у прегенов — `player_chooses` (что выбирает игрок). Типовой NPC (культист,
 полицейский) отмечается `stock_type` — «типаж» (слово «архетип» занято Pulp Cthulhu). Пример: `examples/character/cult-enforcer.json`.
 

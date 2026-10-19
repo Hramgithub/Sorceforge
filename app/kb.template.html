@@ -123,8 +123,8 @@ function sources(c) {
   return c.sources.map(s => `${esc(BOOKS[s.book_id] || s.book_id)}: стр. ${s.printed_page ?? '—'} книги (стр. ${s.physical_page ?? '—'} PDF)${s.entry_page ? `, статья начинается на стр. ${esc(s.entry_page)} PDF` : ''}, ${METHOD[s.method] || esc(s.method)}${s.verified ? ' <span class="tag ok">сверено</span>' : ''}${s.note ? ` <span class="muted">— ${esc(s.note)}</span>` : ''}`).join('<br>');
 }
 function errata(c) {
-  const e = (c.errata||[]).map(x => `<li><b>${esc(x.field)}</b>: ${x.printed ? 'напечатано ' + esc(x.printed) : ''}${x.expected ? ', ожидалось ' + esc(x.expected) : ''}${x.printed || x.expected ? ' — ' : ''}${esc(x.note)}</li>`).join('');
-  return e ? `<section><h3>Опечатки книги</h3><p class="muted">В записи оставлено как напечатано.</p><ul>${e}</ul></section>` : '';
+  const e = (c.errata||[]).map(x => `<li><b>${esc(x.field)}</b>: ${x.printed ? 'напечатано ' + esc(x.printed) : ''}${x.expected ? ', ожидалось ' + esc(x.expected) : ''}${x.printed || x.expected ? ' — ' : ''}${esc(x.note)} <span class="tag ${x.fixed ? 'ok' : ''}">${x.fixed ? 'исправлено в записи' : 'оставлено как напечатано'}</span></li>`).join('');
+  return e ? `<section><h3>Опечатки книги</h3><ul>${e}</ul></section>` : '';
 }
 function corrections(c) {
   const corr = (c.corrections||[]).map(x => `<li><b>${esc(x.field)}</b>: ${x.from ? esc(x.from) + ' → ' : ''}${esc(x.to)} <span class="muted">— ${esc(x.reason)}</span></li>`).join('');

@@ -74,7 +74,8 @@ const BG = [['description','Описание'],['ideology','Убеждения']
   ['treasured_possessions','Ценности'],['traits','Черты'],['injuries','Травмы и шрамы'],['phobias_manias','Фобии и мании'],['arcane_tomes','Тайные знания'],['encounters','Встречи со странными сущностями']];
 const FILTERS = {
   creature: [['', 'Все категории'], ...Object.entries(CAT)],
-  character: [['', 'Все'], ['npc', 'NPC'], ['pregen', 'Прегены']],
+  character: [['', 'Все персонажи'], ['role:npc', 'NPC'], ['era:1920s', 'Эпоха: 1920-е'], ['era:modern', 'Эпоха: современность'],
+    ...[...new Set(DATA.characters.map(c => c.sources?.[0]?.book_id))].filter(Boolean).sort().map(b => ['book:' + b, (BOOKS[b] || b).replace(': готовые персонажи', '')])],
   skill: [['', 'Все категории'], ...[...new Set(DATA.skills.map(s => s.category))].sort().map(c => [c, c])],
 };
 const SET = { creature: DATA.creatures, character: DATA.characters, skill: DATA.skills };
@@ -90,7 +91,7 @@ function matches(c, q, f) {
   if (q && ![c.name.ru, c.name.en, ...(c.aliases||[])].some(n => (n||'').toLowerCase().includes(q))) return false;
   if (!f) return true;
   if (tab === 'creature') return c.category === f;
-  if (tab === 'character') return (c.roles||[]).includes(f);
+  if (tab === 'character') { const [k, v] = f.split(':'); return k === 'role' ? (c.roles||[]).includes(v) : k === 'era' ? (c.axes?.era||[]).includes(v) : bookOf(c) === v; }
   return c.category === f;
 }
 

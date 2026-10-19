@@ -202,7 +202,7 @@ function relations(c) {
   const rows = [];
   for (const [type, [fwd, rev]] of Object.entries(REL)) {
     const out = (c.relations||[]).filter(r => r.type === type).map(r => [r.target, r.note]);
-    const inc = ALL.flatMap(x => (x.relations||[]).filter(r => r.type === type && r.target === c.id).map(r => [x.id, r.note]));
+    const inc = ALL.flatMap(x => (x.relations||[]).filter(r => r.type === type && r.target === c.id).map(r => [x.id, r.note_back ?? (['relative_of', 'knows', 'rival_of', 'works_for', 'variant_of'].includes(type) ? null : r.note)]));
     if (rev === null) {
       // symmetric relation: both directions in one row, without duplicates
       const all = [...out, ...inc.filter(([id]) => !out.some(([o]) => o === id))];

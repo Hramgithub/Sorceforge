@@ -19,7 +19,8 @@
         "properties": {
           "type": { "enum": ["form_of", "avatar_of", "spawn_of", "servitor_of", "transforms_into", "relative_of", "knows", "works_for", "rival_of", "variant_of"] },
           "target": { "$ref": "#/$defs/id" },
-          "note": { "type": ["string", "null"] }
+          "note": { "type": ["string", "null"], "description": "Кем цель приходится этой записи (у Дебры: Джаред — «муж»)." },
+          "note_back": { "type": ["string", "null"], "description": "Кем эта запись приходится цели — показывается в карточке цели (у Джареда: Дебра — «жена»)." }
         }
       }
     },

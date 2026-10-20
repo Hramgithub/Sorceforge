@@ -4,53 +4,169 @@
   "title": "Навык",
   "description": "Навык из списка навыков книги правил. Персонажи ссылаются на навык по id и, если нужно, по специализации (Р-25).",
   "type": "object",
-  "required": ["schema", "id", "kind", "name", "base", "category", "axes", "sources"],
+  "required": [
+    "schema",
+    "id",
+    "kind",
+    "name",
+    "base",
+    "category",
+    "axes",
+    "sources"
+  ],
   "additionalProperties": false,
   "properties": {
-    "schema": { "const": "sourcefold.skill.v0" },
-    "id": { "$ref": "common.schema.json#/$defs/id" },
-    "kind": { "const": "skill" },
-    "name": { "$ref": "common.schema.json#/$defs/text" },
+    "schema": {
+      "const": "sourcefold.skill.v0"
+    },
+    "id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "kind": {
+      "const": "skill"
+    },
+    "name": {
+      "$ref": "common.schema.json#/$defs/text"
+    },
     "aliases": {
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "description": "Другие названия того же навыка в книгах и переводах («Средства» = «Кредитный рейтинг»)."
     },
-    "base": { "$ref": "#/$defs/base" },
-    "category": {
-      "enum": ["бой", "восприятие", "движение", "знания", "медицина", "мифы", "расследование", "социальные", "техника", "языки"]
+    "base": {
+      "$ref": "#/$defs/base"
     },
-    "uncommon": { "type": "boolean", "description": "Редкий навык (не входит в основной список листа персонажа)." },
+    "category": {
+      "enum": [
+        "бой",
+        "восприятие",
+        "движение",
+        "знания",
+        "медицина",
+        "мифы",
+        "расследование",
+        "социальные",
+        "техника",
+        "языки"
+      ]
+    },
+    "uncommon": {
+      "type": "boolean",
+      "description": "Редкий навык (не входит в основной список листа персонажа)."
+    },
     "specializations": {
       "type": "array",
       "description": "Специализации навыка-группы (Ближний бой, Стрельба, Наука, Иностранный язык…).",
       "items": {
         "type": "object",
-        "required": ["name"],
+        "required": [
+          "name"
+        ],
         "additionalProperties": false,
         "properties": {
-          "name": { "$ref": "common.schema.json#/$defs/text" },
-          "base": { "$ref": "#/$defs/base" }
+          "name": {
+            "$ref": "common.schema.json#/$defs/text"
+          },
+          "base": {
+            "$ref": "#/$defs/base"
+          }
         }
       }
     },
-    "axes": { "$ref": "common.schema.json#/$defs/axes" },
-    "description": { "$ref": "common.schema.json#/$defs/text" },
-    "examples": { "type": "array", "items": { "type": "string" } },
-    "sources": { "type": "array", "minItems": 1, "items": { "$ref": "common.schema.json#/$defs/source_ref" } },
-    "corrections": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/correction" } },
-    "quality": { "$ref": "common.schema.json#/$defs/quality" }
+    "axes": {
+      "$ref": "common.schema.json#/$defs/axes"
+    },
+    "description": {
+      "$ref": "common.schema.json#/$defs/text"
+    },
+    "examples": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "common.schema.json#/$defs/source_ref"
+      }
+    },
+    "corrections": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/correction"
+      }
+    },
+    "quality": {
+      "$ref": "common.schema.json#/$defs/quality"
+    },
+    "opposed_by": {
+      "type": "array",
+      "description": "Контрнавыки (Р-47): чем противник отвечает на проверку этого навыка во встречной проверке (Скрытность ← Слух, Внимание; Красноречие ← Психология).",
+      "items": {
+        "type": "object",
+        "required": [
+          "skill"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "skill": {
+            "type": "string",
+            "description": "id навыка или характеристики (coc:characteristic:pow и т. п.)"
+          },
+          "specialization": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "когда применяется"
+          },
+          "ref": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "книга и страница"
+          }
+        }
+      }
+    }
   },
   "$defs": {
     "base": {
       "description": "Базовое значение: число процентов или формула от характеристики (Уклонение — половина ЛВК, Родной язык — ОБР).",
       "type": "object",
-      "required": ["raw"],
+      "required": [
+        "raw"
+      ],
       "additionalProperties": false,
       "properties": {
-        "raw": { "type": "string" },
-        "value": { "type": ["integer", "null"] },
-        "formula": { "enum": ["half_dex", "edu", "varies", null] }
+        "raw": {
+          "type": "string"
+        },
+        "value": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "formula": {
+          "enum": [
+            "half_dex",
+            "edu",
+            "varies",
+            null
+          ]
+        }
       }
     }
   }

@@ -277,6 +277,19 @@ function characterCard(c) {
     ${corrections(c)}`;
 }
 
+const CHAR_RU = { str: 'СИЛ', con: 'ВЫН', siz: 'ТЕЛ', dex: 'ЛВК', app: 'НАР', int: 'ИНТ', pow: 'МОЩ', edu: 'ОБР' };
+function oppName(o) {
+  const m = /^coc:characteristic:(\w+)$/.exec(o.skill);
+  const base = m ? esc(CHAR_RU[m[1]] || m[1]) : byId(o.skill) ? link(o.skill, byId(o.skill).name.ru) : esc(o.skill);
+  return base + (o.specialization ? ` (${esc(o.specialization)})` : '');
+}
+function opposed(c) {
+  const out = (c.opposed_by||[]).map(o => `<li>${oppName(o)}${o.note ? ` <span class="muted">— ${esc(o.note)}</span>` : ''}</li>`).join('');
+  const own = new Set((c.opposed_by||[]).map(o => o.skill));
+  const inc = DATA.skills.filter(x => x.id !== c.id && !own.has(x.id) && (x.opposed_by||[]).some(o => o.skill === c.id)).map(x => link(x.id, x.name.ru)).join(', ');
+  return (out ? `<section><h3>Контрнавыки</h3><p class="muted">Чем противник отвечает во встречной проверке.</p><ul>${out}</ul></section>` : '')
+    + (inc ? `<section><h3>Сам служит контрнавыком для</h3><p>${inc}</p></section>` : '');
+}
 function skillCard(c) {
   const specs = (c.specializations||[]).map(s => `<tr><td>${esc(s.name.ru)}${s.name.en ? ` <span class="muted">${esc(s.name.en)}</span>` : ''}</td><td class="num">${s.base ? esc(s.base.raw) : '—'}</td></tr>`).join('');
   const era = (c.axes?.era||[]).filter(e => e !== 'any');
@@ -285,6 +298,7 @@ function skillCard(c) {
     ${flags(c)}
     <div class="chars"><div><b>База</b><span>${esc(c.base.raw)}</span></div></div>
     ${c.description?.ru ? `<p>${esc(c.description.ru)}</p>` : ''}
+    ${opposed(c)}
     ${specs ? `<section><h3>Специализации</h3><table><tr><th>Название</th><th>База</th></tr>${specs}</table></section>` : ''}
     ${(c.examples||[]).length ? `<section><h3>Примеры</h3><ul>${c.examples.map(e => `<li>${esc(e)}</li>`).join('')}</ul></section>` : ''}
     ${errata(c)}

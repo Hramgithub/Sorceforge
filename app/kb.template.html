@@ -52,6 +52,7 @@ a { color:var(--accent); }
     <button data-tab="creature">Существа</button>
     <button data-tab="character">Персонажи</button>
     <button data-tab="skill">Навыки</button>
+    <button data-tab="occupation">Профессии</button>
   </div>
   <input id="q" type="search" placeholder="Поиск по имени" aria-label="Поиск">
   <select id="cat" aria-label="Фильтр"></select>
@@ -77,10 +78,11 @@ const FILTERS = {
   creature: [['', 'Все категории'], ...Object.entries(CAT)],
   character: [['', 'Все персонажи'], ['role:npc', 'NPC'], ['era:1920s', 'Эпоха: 1920-е'], ['era:modern', 'Эпоха: современность'],
     ...[...new Set(DATA.characters.map(c => c.sources?.[0]?.book_id))].filter(Boolean).sort().map(b => ['book:' + b, (BOOKS[b] || b).replace(': готовые персонажи', '')])],
+  occupation: [['', 'Все профессии'], ['lovecraftian', 'Лавкрафтовские'], ['era:1920s', 'Эпоха: 1920-е'], ['era:modern', 'Эпоха: современность']],
   skill: [['', 'Все категории'], ...[...new Set(DATA.skills.map(s => s.category))].sort().map(c => [c, c])],
 };
-const SET = { creature: DATA.creatures, character: DATA.characters, skill: DATA.skills };
-const ALL = [...DATA.creatures, ...DATA.characters, ...DATA.skills];
+const SET = { creature: DATA.creatures, character: DATA.characters, skill: DATA.skills, occupation: DATA.occupations };
+const ALL = [...DATA.creatures, ...DATA.characters, ...DATA.skills, ...DATA.occupations];
 const byId = id => ALL.find(x => x.id === id);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const bookOf = c => c.sources?.[0]?.book_id;
@@ -88,7 +90,7 @@ const kindOf = c => c.kind;
 const link = (id, text) => `<a href="#" data-go="${esc(id)}">${esc(text)}</a>`;
 let tab = 'creature', current = null;
 
-const occOf = c => (c.occupation?.ru || '').trim().toLowerCase();
+const occOf = c => c.occupation_ref ? c.occupation_ref : (c.occupation?.ru || '').trim().toLowerCase();
 function matches(c, q, f) {
   if (q && ![c.name.ru, c.name.en, ...(c.aliases||[]), c.occupation?.ru].some(n => (n||'').toLowerCase().includes(q))) return false;
   const o = document.getElementById('occ').value;
@@ -96,12 +98,14 @@ function matches(c, q, f) {
   if (!f) return true;
   if (tab === 'creature') return c.category === f;
   if (tab === 'character') { const [k, v] = f.split(':'); return k === 'role' ? (c.roles||[]).includes(v) : k === 'era' ? (c.axes?.era||[]).includes(v) : bookOf(c) === v; }
+  if (tab === 'occupation') return f === 'lovecraftian' ? c.lovecraftian : (c.axes?.era||[]).includes(f.split(':')[1]);
   return c.category === f;
 }
 
 function subtitle(c) {
   if (c.kind === 'creature') return `${esc(c.name.en||'')} · ${CAT[c.category]||''}${bookOf(c) !== 'keeper-rulebook-ru' ? ' · ' + esc(BOOKS[bookOf(c)] || bookOf(c)) : ''}`;
   if (c.kind === 'character') return [c.occupation?.ru, ...(c.roles||[]).map(r => ROLE[r]), BOOKS[bookOf(c)]].filter(Boolean).map(esc).join(' · ');
+  if (c.kind === 'occupation') return `Средства ${esc(c.credit_rating.raw)}${c.lovecraftian ? ' · лавкрафтовская' : ''}${c.group ? ' · ' + esc(c.group) : ''}`;
   return `${esc(c.name.en||'')} · база ${esc(c.base.raw)}`;
 }
 
@@ -125,7 +129,7 @@ function setTab(t, keep) {
   if (t === 'character') {
     const counts = {};
     const label = {};
-    DATA.characters.forEach(c => { const o = occOf(c); if (o) { counts[o] = (counts[o] || 0) + 1; label[o] = label[o] || c.occupation.ru.trim(); } });
+    DATA.characters.forEach(c => { const o = occOf(c); if (o) { counts[o] = (counts[o] || 0) + 1; label[o] = label[o] || (c.occupation_ref && byId(c.occupation_ref) ? byId(c.occupation_ref).name.ru : c.occupation.ru.trim()); } });
     occ.innerHTML = '<option value="">Все профессии</option>' + Object.keys(counts).sort((a, b) => a.localeCompare(b, 'ru'))
       .map(o => `<option value="${esc(o)}">${esc(label[o].charAt(0).toUpperCase() + label[o].slice(1))} (${counts[o]})</option>`).join('');
   }
@@ -249,9 +253,10 @@ function creatureCard(c) {
 }
 
 function characterCard(c) {
+  const occRef = c.occupation_ref && byId(c.occupation_ref);
   const facts = [['Профессия', c.occupation?.ru], ['Возраст', c.age?.raw], ['Пол', c.sex], ['Место жительства', c.residence], ['Место рождения', c.birthplace],
     ['Типаж', c.stock_type], ['Игрок выбирает', (c.player_chooses||[]).map(x => CHOOSES[x] || x).join(', ')]]
-    .filter(([, v]) => v).map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join('');
+    .filter(([, v]) => v).map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}${k === 'Профессия' && occRef ? ` <span class="muted">→ ${link(occRef.id, occRef.name.ru)}</span>` : ''}</dd>`).join('');
   const bg = BG.filter(([k]) => c.background?.[k]).map(([k, t]) => `<dt>${t}</dt><dd>${esc(c.background[k])}</dd>`).join('');
   const w = c.wealth || {};
   const wealth = [['Уровень трат', w.spending_level], ['Наличные', w.cash], ['Имущество', w.assets]].filter(([, v]) => v).map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join('');
@@ -287,13 +292,42 @@ function skillCard(c) {
     ${corrections(c)}`;
 }
 
+const CHN = { STR: 'СИЛ', CON: 'ВЫН', SIZ: 'ТЕЛ', DEX: 'ЛВК', APP: 'НАР', INT: 'ИНТ', POW: 'МОЩ', EDU: 'ОБР' };
+function skillRef(x) {
+  if (typeof x === 'string') return byId(x) ? link(x, byId(x).name.ru) : esc(x);
+  const base = x.skill && byId(x.skill) ? link(x.skill, byId(x.skill).name.ru) : esc(x.raw || '');
+  return base + (x.specialization ? ` (${esc(x.specialization)})` : '');
+}
+function occupationCard(c) {
+  const skills = (c.skills||[]).map(s => {
+    if (s.choice) return `<li>${esc(s.raw)}${Array.isArray(s.choice.of) ? `<div class="muted">на выбор ${s.choice.count}: ${s.choice.of.map(skillRef).join(', ')}</div>` : ''}</li>`;
+    return `<li>${s.skill && byId(s.skill) ? skillRef(s) : esc(s.raw)}${s.count ? ` <span class="muted">×${s.count}</span>` : ''}</li>`;
+  }).join('');
+  const era = (c.axes?.era||[]).filter(e => e !== 'any');
+  const variants = DATA.occupations.filter(o => o.group && o.group === c.name.ru).map(o => link(o.id, o.name.ru)).join(', ');
+  const parent = c.group ? DATA.occupations.find(o => o.name.ru === c.group && !o.group) : null;
+  return `<h2>${esc(c.name.ru)}</h2>
+    <div class="sub">${c.lovecraftian ? '<span class="tag">лавкрафтовская</span> ' : ''}${era.length ? 'эпоха: ' + era.map(esc).join(', ') : ''}${c.group ? ' · вариант профессии ' + (parent ? link(parent.id, parent.name.ru) : esc(c.group)) : ''}</div>
+    ${flags(c)}
+    <dl>
+      <dt>Пункты навыков</dt><dd>${esc(c.skill_points.raw)}</dd>
+      <dt>Средства</dt><dd>${esc(c.credit_rating.raw)}</dd>
+      ${c.contacts ? `<dt>Вероятные связи</dt><dd>${esc(c.contacts)}</dd>` : ''}
+      ${variants ? `<dt>Варианты</dt><dd>${variants}</dd>` : ''}
+    </dl>
+    ${c.description?.ru ? `<section><h3>Описание</h3>${c.description.ru.split('\n').filter(Boolean).map(p => `<p>${esc(p)}</p>`).join('')}</section>` : ''}
+    <section><h3>Навыки профессии</h3><ul>${skills}</ul></section>
+    <section><h3>Источник</h3><div>${sources(c)}</div></section>
+    ${corrections(c)}`;
+}
+
 function show(id) {
   const c = id && byId(id);
   if (!c) { document.getElementById('card').innerHTML = '<p class="muted">Нет записей.</p>'; renderList(); return; }
   if (c.kind !== tab) setTab(c.kind, true);
   current = id; renderList();
   const card = document.getElementById('card');
-  card.innerHTML = c.kind === 'creature' ? creatureCard(c) : c.kind === 'character' ? characterCard(c) : skillCard(c);
+  card.innerHTML = c.kind === 'creature' ? creatureCard(c) : c.kind === 'character' ? characterCard(c) : c.kind === 'occupation' ? occupationCard(c) : skillCard(c);
   card.querySelectorAll('[data-go]').forEach(a => a.onclick = e => { e.preventDefault(); show(a.dataset.go); });
   history.replaceState(null, '', '#' + encodeURIComponent(c.kind + '/' + id.split(/[:/]/).pop()));
   window.scrollTo(0, 0);

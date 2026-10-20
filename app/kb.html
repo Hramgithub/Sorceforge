@@ -55,6 +55,7 @@ a { color:var(--accent); }
   </div>
   <input id="q" type="search" placeholder="Поиск по имени" aria-label="Поиск">
   <select id="cat" aria-label="Фильтр"></select>
+  <select id="occ" aria-label="Профессия" hidden></select>
   <span id="count" class="muted"></span>
 </header>
 <main>
@@ -87,8 +88,11 @@ const kindOf = c => c.kind;
 const link = (id, text) => `<a href="#" data-go="${esc(id)}">${esc(text)}</a>`;
 let tab = 'creature', current = null;
 
+const occOf = c => (c.occupation?.ru || '').trim().toLowerCase();
 function matches(c, q, f) {
-  if (q && ![c.name.ru, c.name.en, ...(c.aliases||[])].some(n => (n||'').toLowerCase().includes(q))) return false;
+  if (q && ![c.name.ru, c.name.en, ...(c.aliases||[]), c.occupation?.ru].some(n => (n||'').toLowerCase().includes(q))) return false;
+  const o = document.getElementById('occ').value;
+  if (tab === 'character' && o && occOf(c) !== o) return false;
   if (!f) return true;
   if (tab === 'creature') return c.category === f;
   if (tab === 'character') { const [k, v] = f.split(':'); return k === 'role' ? (c.roles||[]).includes(v) : k === 'era' ? (c.axes?.era||[]).includes(v) : bookOf(c) === v; }
@@ -117,6 +121,14 @@ function setTab(t, keep) {
   tab = t;
   document.querySelectorAll('.tabs button').forEach(b => b.classList.toggle('active', b.dataset.tab === t));
   document.getElementById('cat').innerHTML = FILTERS[t].map(([v, l]) => `<option value="${esc(v)}">${esc(l)}</option>`).join('');
+  const occ = document.getElementById('occ'); occ.hidden = t !== 'character';
+  if (t === 'character') {
+    const counts = {};
+    const label = {};
+    DATA.characters.forEach(c => { const o = occOf(c); if (o) { counts[o] = (counts[o] || 0) + 1; label[o] = label[o] || c.occupation.ru.trim(); } });
+    occ.innerHTML = '<option value="">Все профессии</option>' + Object.keys(counts).sort((a, b) => a.localeCompare(b, 'ru'))
+      .map(o => `<option value="${esc(o)}">${esc(label[o].charAt(0).toUpperCase() + label[o].slice(1))} (${counts[o]})</option>`).join('');
+  }
   if (!keep) { document.getElementById('q').value = ''; show(SET[t][0]?.id); } else renderList();
 }
 
@@ -289,6 +301,7 @@ function show(id) {
 
 document.getElementById('q').oninput = renderList;
 document.getElementById('cat').onchange = renderList;
+document.getElementById('occ').onchange = renderList;
 document.querySelectorAll('.tabs button').forEach(b => b.onclick = () => setTab(b.dataset.tab));
 Object.values(SET).forEach(s => s.sort((a, b) => a.name.ru.localeCompare(b.name.ru, 'ru')));
 function fromHash() {

@@ -94,3 +94,10 @@ python tools\validate.py schemas\creature.schema.json schemas\examples\creature\
 `statblock.attacks[].notes`.
 
 Опечатки книги — `errata` (поле, напечатано, ожидалось, пояснение); страница начала статьи — `sources[].entry_page`; пояснение к источнику — `sources[].note` (Р-32).
+
+## Профессия (`occupation.schema.json`)
+
+Справочник профессий из «Книги сыщика» (решение Р-46): `name`, `group` (общая профессия для вариантов), `lovecraftian`,
+`description`, `skill_points` (формула как в книге и разбор, варианты «ИЛИ»), `credit_rating` (Средства), `contacts`,
+`skills` (навык из справочника или выбор: `choice` — сколько и из чего). Персонаж ссылается на профессию полем `occupation_ref`.
+Пример: `examples/occupation/dilettante.json`.

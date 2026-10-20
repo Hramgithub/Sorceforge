@@ -1,0 +1,19 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:dilettante",
+  "kind": "occupation",
+  "name": { "ru": "Дилетант", "en": "Dilettante" },
+  "group": null,
+  "lovecraftian": true,
+  "description": { "ru": "Пример для проверки схемы.", "en": null },
+  "skill_points": { "raw": "ОБР × 2 + НАР × 2", "options": [[["EDU", 2], ["APP", 2]]] },
+  "credit_rating": { "raw": "50–99", "min": 50, "max": 99 },
+  "contacts": "обширные, в основном это люди того же круга",
+  "skills": [
+    { "raw": "Верховая езда", "skill": "coc:skill:ride" },
+    { "raw": "один социальный навык", "choice": { "count": 1, "of": ["coc:skill:intimidate", "coc:skill:fast-talk", "coc:skill:charm", "coc:skill:persuade"] } },
+    { "raw": "три любых других навыка", "choice": { "count": 3, "of": "any" } }
+  ],
+  "axes": { "era": ["any"], "ruleset": "core" },
+  "sources": [{ "book_id": "investigator-handbook-ru", "physical_page": 72, "printed_page": 76, "method": "book_text", "verified": true }]
+}

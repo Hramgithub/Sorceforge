@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sourcefold.local/schemas/occupation.schema.json",
+  "title": "Профессия",
+  "description": "Профессия (род занятий) сыщика из «Книги сыщика»: пункты навыков, Средства, связи, навыки профессии (Р-46). Персонажи ссылаются на профессию по id.",
+  "type": "object",
+  "required": ["schema", "id", "kind", "name", "skill_points", "credit_rating", "skills", "axes", "sources"],
+  "additionalProperties": false,
+  "properties": {
+    "schema": { "const": "sourcefold.occupation.v0" },
+    "id": { "$ref": "common.schema.json#/$defs/id" },
+    "kind": { "const": "occupation" },
+    "name": { "$ref": "common.schema.json#/$defs/text" },
+    "aliases": { "type": "array", "items": { "type": "string" } },
+    "group": { "type": ["string", "null"], "description": "Общая профессия, вариантом которой является эта (Журналист → Журналист-расследователь)." },
+    "lovecraftian": { "type": "boolean", "description": "Помечена в книге как «лавкрафтовская»." },
+    "description": { "$ref": "common.schema.json#/$defs/text" },
+    "skill_points": {
+      "type": "object",
+      "required": ["raw"],
+      "additionalProperties": false,
+      "description": "Пункты профессиональных навыков: формула как в книге и её разбор; несколько вариантов — «ИЛИ».",
+      "properties": {
+        "raw": { "type": "string" },
+        "options": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "prefixItems": [{ "enum": ["STR", "CON", "SIZ", "DEX", "APP", "INT", "POW", "EDU"] }, { "type": "integer" }],
+              "minItems": 2,
+              "maxItems": 2
+            }
+          }
+        }
+      }
+    },
+    "credit_rating": {
+      "type": "object",
+      "required": ["raw"],
+      "additionalProperties": false,
+      "properties": { "raw": { "type": "string" }, "min": { "type": ["integer", "null"] }, "max": { "type": ["integer", "null"] } }
+    },
+    "contacts": { "type": ["string", "null"], "description": "Вероятные связи." },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["raw"],
+        "additionalProperties": false,
+        "properties": {
+          "raw": { "type": "string" },
+          "skill": { "type": ["string", "null"] },
+          "specialization": { "type": ["string", "null"] },
+          "choice": {
+            "type": "object",
+            "required": ["count"],
+            "additionalProperties": false,
+            "properties": {
+              "count": { "type": "integer" },
+              "of": { "anyOf": [{ "const": "any" }, { "type": "array", "items": { "type": "string" } }] }
+            }
+          }
+        }
+      }
+    },
+    "axes": { "$ref": "common.schema.json#/$defs/axes" },
+    "sources": { "type": "array", "minItems": 1, "items": { "$ref": "common.schema.json#/$defs/source_ref" } },
+    "corrections": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/correction" } },
+    "errata": { "$ref": "common.schema.json#/$defs/errata" },
+    "quality": { "$ref": "common.schema.json#/$defs/quality" }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:laborant",
+  "kind": "occupation",
+  "name": {
+    "ru": "Лаборант",
+    "en": null
+  },
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Младший специалист или техник, работающий в научной сфере и выполняющий лабораторные и административные задачи под руководством более опытного научного сотрудника.\nОбязанности лаборанта зависят от конкретной научной дисциплины и направления исследований. В них могут входить взятие проб, выполнение испытаний, подготовка препаратов, ведение записей, подготовка и проведение экспериментов, обеспечение повседневных нужд лаборатории и контроль техники безопасности.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 4",
+    "options": [
+      [
+        [
+          "EDU",
+          4
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "10–30",
+    "min": 10,
+    "max": 30
+  },
+  "contacts": "сотрудники научных и учебных заведений, учёные, библиотекари",
+  "skills": [
+    {
+      "raw": "Внимание",
+      "skill": "coc:skill:spot-hidden"
+    },
+    {
+      "raw": "Иностранный язык",
+      "skill": "coc:skill:language-other"
+    },
+    {
+      "raw": "Наука (химия и две другие специализации)",
+      "skill": "coc:skill:science",
+      "specialization": "Химия"
+    },
+    {
+      "raw": "Наука (химия и две другие специализации)",
+      "choice": {
+        "count": 2,
+        "of": [
+          "coc:skill:science"
+        ]
+      }
+    },
+    {
+      "raw": "Работа в библиотеке или Работа с компьютером",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:library-use",
+          "coc:skill:computer-use"
+        ]
+      }
+    },
+    {
+      "raw": "Электрика",
+      "skill": "coc:skill:electrical-repair"
+    },
+    {
+      "raw": "один любой другой навык в зависимости от специальности",
+      "choice": {
+        "count": 1,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "investigator-handbook-ru",
+      "physical_page": 74,
+      "printed_page": 78,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

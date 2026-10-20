@@ -1,0 +1,114 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:khudozhnik",
+  "kind": "occupation",
+  "name": {
+    "ru": "Художник",
+    "en": null
+  },
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Сюда относятся живописцы, скульпторы и другие люди искусства. Порой художники поглощены собой и своим особым видением мира, и лишь немногим дан талант создавать произведения, способные вызывать восторг и сопереживание. Художнику, талантливому или не очень, нужно быть мужественным и решительным, чтобы преодолеть все испытания и нападки критиков и не бросить своё дело. Одни художники не думают о материальных благах, у других есть деловая жилка.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + ЛВК × 2 или ОБР × 2 + МОЩ × 2",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "DEX",
+          2
+        ]
+      ],
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "POW",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "9–50",
+    "min": 9,
+    "max": 50
+  },
+  "contacts": "художественные галереи, критики, богатые покровители и заказчики, рекламная сфера.",
+  "skills": [
+    {
+      "raw": "Внимание",
+      "skill": "coc:skill:spot-hidden"
+    },
+    {
+      "raw": "Естествознание или История",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:natural-world",
+          "coc:skill:history"
+        ]
+      }
+    },
+    {
+      "raw": "Иностранный язык",
+      "skill": "coc:skill:language-other"
+    },
+    {
+      "raw": "Искусство/ремесло (любое)",
+      "skill": "coc:skill:art-craft",
+      "specialization": "Любое"
+    },
+    {
+      "raw": "Психология",
+      "skill": "coc:skill:psychology"
+    },
+    {
+      "raw": "один социальный навык (Запугивание, Красноречие, Обаяние или Убеждение)",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:intimidate",
+          "coc:skill:fast-talk",
+          "coc:skill:charm",
+          "coc:skill:persuade"
+        ]
+      }
+    },
+    {
+      "raw": "два любых других навыка в зависимости от специальности и эпохи",
+      "choice": {
+        "count": 2,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "investigator-handbook-ru",
+      "physical_page": 87,
+      "printed_page": 91,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

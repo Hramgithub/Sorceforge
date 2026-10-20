@@ -1,0 +1,89 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:yurist",
+  "kind": "occupation",
+  "name": {
+    "ru": "Юрист",
+    "en": null
+  },
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Юристы хорошо знают законы своего государства. Они умеют применять абстрактные юридические теории и знания для решения проблем своих клиентов и работают адвокатами, прокурорами, консультантами, нотариусами. Юриста может назначить суд, а может в частном порядке нанять состоятельный клиент или компания.\nВ США юрист — фактически то же самое, что адвокат, в Британии же это представитель любой юридической профессии, включая адвокатов любого ранга, нотариусов и судебных исполнителей.\nЗащищая знаменитых клиентов, адвокат может и сам прославиться. Некоторые даже используют внимание прессы ради собственной политической или финансовой выгоды.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 4",
+    "options": [
+      [
+        [
+          "EDU",
+          4
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "30–80",
+    "min": 30,
+    "max": 80
+  },
+  "contacts": "мафия, коммерсанты, окружные прокуроры и судьи.",
+  "skills": [
+    {
+      "raw": "Бухгалтерское дело",
+      "skill": "coc:skill:accounting"
+    },
+    {
+      "raw": "Психология",
+      "skill": "coc:skill:psychology"
+    },
+    {
+      "raw": "Работа в библиотеке",
+      "skill": "coc:skill:library-use"
+    },
+    {
+      "raw": "Юриспруденция",
+      "skill": "coc:skill:law"
+    },
+    {
+      "raw": "два социальных навыка (Запугивание, Красноречие, Обаяние или Убеждение)",
+      "choice": {
+        "count": 2,
+        "of": [
+          "coc:skill:intimidate",
+          "coc:skill:fast-talk",
+          "coc:skill:charm",
+          "coc:skill:persuade"
+        ]
+      }
+    },
+    {
+      "raw": "два любых других навыка",
+      "choice": {
+        "count": 2,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "investigator-handbook-ru",
+      "physical_page": 87,
+      "printed_page": 91,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "entry continues on p. 89 (printed 93); p. 88 is a full-page illustration"
+  }
+}

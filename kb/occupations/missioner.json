@@ -1,0 +1,94 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:missioner",
+  "kind": "occupation",
+  "name": {
+    "ru": "Миссионер",
+    "en": null
+  },
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Миссионеры отправляются в отдалённые уголки земного шара нести слово божье «несчастным дикарям» — или «заблудшим душам» в более цивилизованных местах. Свои миссионеры есть у разных конфессий — католиков, протестантов, мусульман. Особенно известны миссионеры-мормоны, которые обязуются два года проповедовать свою веру в городах, в том числе в США и Европе.\nОдни миссионеры действуют самостоятельно, отвечая лишь перед своим богом, другие принадлежат к той или иной организации, необязательно церкви.\nХристианского, исламского, буддийского или индуистского проповедника можно встретить практически в любой стране и в любую эпоху.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 4",
+    "options": [
+      [
+        [
+          "EDU",
+          4
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "0–30",
+    "min": 0,
+    "max": 30
+  },
+  "contacts": "священнослужители, иностранные чиновники",
+  "skills": [
+    {
+      "raw": "Естествознание",
+      "skill": "coc:skill:natural-world"
+    },
+    {
+      "raw": "Искусство/ремесло (любое)",
+      "skill": "coc:skill:art-craft",
+      "specialization": "любое"
+    },
+    {
+      "raw": "Медицина",
+      "skill": "coc:skill:medicine"
+    },
+    {
+      "raw": "Механика",
+      "skill": "coc:skill:mechanical-repair"
+    },
+    {
+      "raw": "Первая помощь",
+      "skill": "coc:skill:first-aid"
+    },
+    {
+      "raw": "один социальный навык (Запугивание, Красноречие, Обаяние или Убеждение)",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:intimidate",
+          "coc:skill:fast-talk",
+          "coc:skill:charm",
+          "coc:skill:persuade"
+        ]
+      }
+    },
+    {
+      "raw": "два любых других навыка в зависимости от специальности и эпохи",
+      "choice": {
+        "count": 2,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "investigator-handbook-ru",
+      "physical_page": 76,
+      "printed_page": 80,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

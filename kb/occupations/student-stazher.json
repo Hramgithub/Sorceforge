@@ -1,0 +1,86 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:student-stazher",
+  "kind": "occupation",
+  "name": {
+    "ru": "Студент/стажёр",
+    "en": null
+  },
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Это может быть учащийся колледжа или университета, а может быть сотрудник компании, получающий минимальную плату во время обучения.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 4",
+    "options": [
+      [
+        [
+          "EDU",
+          4
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "5–10",
+    "min": 5,
+    "max": 10
+  },
+  "contacts": "преподаватели, другие студенты, у стажёра — другие работники компании.",
+  "skills": [
+    {
+      "raw": "Работа в библиотеке",
+      "skill": "coc:skill:library-use"
+    },
+    {
+      "raw": "Слух",
+      "skill": "coc:skill:listen"
+    },
+    {
+      "raw": "Язык (родной или иностранный)",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:language-own",
+          "coc:skill:language-other"
+        ]
+      }
+    },
+    {
+      "raw": "три изучаемые дисциплины",
+      "choice": {
+        "count": 3,
+        "of": "any"
+      }
+    },
+    {
+      "raw": "два любых других навыка в зависимости от специальности и эпохи",
+      "choice": {
+        "count": 2,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "investigator-handbook-ru",
+      "physical_page": 85,
+      "printed_page": 89,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

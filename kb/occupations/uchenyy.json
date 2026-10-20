@@ -1,0 +1,94 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:uchenyy",
+  "kind": "occupation",
+  "name": {
+    "ru": "Учёный",
+    "en": null
+  },
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Учёные изучают окружающий мир в поисках новых знаний. Там, где нужно применить научные открытия для создания новых предметов и технологий, достаточно инженера, но для того, чтобы раздвинуть границы возможного, требуются учёные. Учёные в основном работают в университетах и научно-исследовательских организациях.\nХотя у каждого учёного своё направление исследований, он должен разбираться и в смежных областях. Чтобы писать и публиковать научные статьи, нужно хорошо владеть родным языком и иметь научную степень (в США это доктор философии — аналог кандидата наук).",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 4",
+    "options": [
+      [
+        [
+          "EDU",
+          4
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "9–50",
+    "min": 9,
+    "max": 50
+  },
+  "contacts": "другие учёные и преподаватели, сотрудники университета.",
+  "skills": [
+    {
+      "raw": "любые три специализации Науки",
+      "skill": "coc:skill:science",
+      "specialization": "Любые три",
+      "count": 3
+    },
+    {
+      "raw": "Внимание",
+      "skill": "coc:skill:spot-hidden"
+    },
+    {
+      "raw": "Иностранный язык",
+      "skill": "coc:skill:language-other"
+    },
+    {
+      "raw": "Работа в библиотеке или Работа с компьютером",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:library-use",
+          "coc:skill:computer-use"
+        ]
+      }
+    },
+    {
+      "raw": "Родной язык",
+      "skill": "coc:skill:language-own"
+    },
+    {
+      "raw": "один социальный навык (Запугивание, Красноречие, Обаяние или Убеждение)",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:intimidate",
+          "coc:skill:fast-talk",
+          "coc:skill:charm",
+          "coc:skill:persuade"
+        ]
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "investigator-handbook-ru",
+      "physical_page": 85,
+      "printed_page": 89,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Пункты/Средства/связи/навыки on p. 86 (printed 90)"
+  }
+}

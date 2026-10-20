@@ -1,0 +1,87 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:remeslennik",
+  "kind": "occupation",
+  "name": {
+    "ru": "Ремесленник",
+    "en": null
+  },
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Его можно также назвать умельцем или мастеровым. Ремесленник — тот, кто вручную изготавливает предметы или материалы. Обычно это весьма одарённые люди. Некоторые из них пользуются большим уважением за свой труд, а другие просто делают полезные вещи.\nРемёсла бывают разные: мебельщик, ювелир, часовщик, гончар, кузнец, ткач, каллиграф, портной, плотник, переплётчик, стеклодув, игрушечник, витражист и так далее.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + ЛВК × 2",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "DEX",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "10–40",
+    "min": 10,
+    "max": 40
+  },
+  "contacts": "местные предприниматели, другие мастера и художники.",
+  "skills": [
+    {
+      "raw": "Бухгалтерское дело",
+      "skill": "coc:skill:accounting"
+    },
+    {
+      "raw": "Внимание",
+      "skill": "coc:skill:spot-hidden"
+    },
+    {
+      "raw": "Естествознание",
+      "skill": "coc:skill:natural-world"
+    },
+    {
+      "raw": "Искусство/ремесло (любые два)",
+      "skill": "coc:skill:art-craft",
+      "specialization": "Любые два",
+      "count": 2
+    },
+    {
+      "raw": "Механика",
+      "skill": "coc:skill:mechanical-repair"
+    },
+    {
+      "raw": "два любых других навыка в зависимости от специальности и эпохи",
+      "choice": {
+        "count": 2,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "investigator-handbook-ru",
+      "physical_page": 83,
+      "printed_page": 87,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

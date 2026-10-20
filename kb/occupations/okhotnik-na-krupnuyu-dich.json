@@ -1,0 +1,131 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:okhotnik-na-krupnuyu-dich",
+  "kind": "occupation",
+  "name": {
+    "ru": "Охотник на крупную дичь",
+    "en": null
+  },
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Охотники хорошо умеют выслеживать дичь и обычно зарабатывают тем, что возят на сафари богатых клиентов. Большинство специализируется на определённой местности: африканской саванне, лесах Канады и так далее. Некоторые охотники продают пойманных зверей частным коллекционерам либо торгуют на чёрном рынке нелегальными трофеями, такими как шкуры и слоновая кость. В 1920-х такой промысел встречался чаще, поскольку в большинстве стран законы его не запрещали.\nСамый расхожий тип — «белый охотник», но это может быть и туземец, служащий проводником, например при охоте на лося или медведя в лесах Юкона.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + ЛВК × 2 или ОБР × 2 + СИЛ × 2",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "DEX",
+          2
+        ]
+      ],
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "STR",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "20–50",
+    "min": 20,
+    "max": 50
+  },
+  "contacts": "иностранные чиновники, егеря, бывшие клиенты (обычно богатые), торговцы и бандиты с чёрного рынка, владельцы зверинцев и зоопарков.",
+  "skills": [
+    {
+      "raw": "Внимание или Слух",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:spot-hidden",
+          "coc:skill:listen"
+        ]
+      }
+    },
+    {
+      "raw": "Выживание (любое) или Иностранный язык",
+      "choice": {
+        "count": 1,
+        "of": [
+          {
+            "skill": "coc:skill:survival",
+            "specialization": "Любое"
+          },
+          "coc:skill:language-other"
+        ]
+      }
+    },
+    {
+      "raw": "Естествознание",
+      "skill": "coc:skill:natural-world"
+    },
+    {
+      "raw": "Наука (биология, ботаника или зоология)",
+      "choice": {
+        "count": 1,
+        "of": [
+          {
+            "skill": "coc:skill:science",
+            "specialization": "Биология"
+          },
+          {
+            "skill": "coc:skill:science",
+            "specialization": "Ботаника"
+          },
+          {
+            "skill": "coc:skill:science",
+            "specialization": "Зоология"
+          }
+        ]
+      }
+    },
+    {
+      "raw": "Ориентирование",
+      "skill": "coc:skill:navigate"
+    },
+    {
+      "raw": "Скрытность",
+      "skill": "coc:skill:stealth"
+    },
+    {
+      "raw": "Стрельба",
+      "skill": "coc:skill:firearms"
+    },
+    {
+      "raw": "Чтение следов",
+      "skill": "coc:skill:track"
+    }
+  ],
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "investigator-handbook-ru",
+      "physical_page": 77,
+      "printed_page": 81,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

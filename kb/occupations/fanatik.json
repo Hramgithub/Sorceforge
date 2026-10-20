@@ -1,0 +1,99 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:fanatik",
+  "kind": "occupation",
+  "name": {
+    "ru": "Фанатик",
+    "en": null
+  },
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Упёртый, помешанный на своей вере фанатик презирает лёгкие пути и стремится к улучшению жизни всего человечества или отдельной группы (которую он считает избранными). Некоторые фанатики продвигают свои идеи насильственным путём, но и мирное большинство бывает не менее жестоко и непримиримо. Все они мечтают о торжестве своей веры.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + НАР × 2 или ОБР × 2 + МОЩ × 2",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "APP",
+          2
+        ]
+      ],
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "POW",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "0–30",
+    "min": 0,
+    "max": 30
+  },
+  "contacts": "религиозные секты и братства, СМИ.",
+  "skills": [
+    {
+      "raw": "История",
+      "skill": "coc:skill:history"
+    },
+    {
+      "raw": "Психология",
+      "skill": "coc:skill:psychology"
+    },
+    {
+      "raw": "Скрытность",
+      "skill": "coc:skill:stealth"
+    },
+    {
+      "raw": "два социальных навыка (Запугивание, Красноречие, Обаяние или Убеждение)",
+      "choice": {
+        "count": 2,
+        "of": [
+          "coc:skill:intimidate",
+          "coc:skill:fast-talk",
+          "coc:skill:charm",
+          "coc:skill:persuade"
+        ]
+      }
+    },
+    {
+      "raw": "три любых других навыка в зависимости от специальности и эпохи",
+      "choice": {
+        "count": 3,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "investigator-handbook-ru",
+      "physical_page": 86,
+      "printed_page": 90,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

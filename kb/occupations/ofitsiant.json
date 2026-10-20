@@ -1,0 +1,108 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:ofitsiant",
+  "kind": "occupation",
+  "name": {
+    "ru": "Официант",
+    "en": null
+  },
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Обслуживает клиентов в баре, ресторане отеля или другом заведении общественного питания. Обычно официантам платят мало, и их заработок в основном состоит из чаевых, которые дают клиенты за приветливость и хорошее обслуживание.\nВо времена сухого закона запрещалось продавать спиртное, но официант мог неплохо заработать в подпольном баре, принадлежащем мафии.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + НАР × 2 или ОБР × 2 + ЛВК × 2",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "APP",
+          2
+        ]
+      ],
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "DEX",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "9–20",
+    "min": 9,
+    "max": 20
+  },
+  "contacts": "клиенты, мафия.",
+  "skills": [
+    {
+      "raw": "Бухгалтерское дело",
+      "skill": "coc:skill:accounting"
+    },
+    {
+      "raw": "Искусство/ремесло (любое)",
+      "skill": "coc:skill:art-craft",
+      "specialization": "Любое"
+    },
+    {
+      "raw": "Психология",
+      "skill": "coc:skill:psychology"
+    },
+    {
+      "raw": "Слух",
+      "skill": "coc:skill:listen"
+    },
+    {
+      "raw": "Уклонение",
+      "skill": "coc:skill:dodge"
+    },
+    {
+      "raw": "два социальных навыка (Запугивание, Красноречие, Обаяние или Убеждение)",
+      "choice": {
+        "count": 2,
+        "of": [
+          "coc:skill:intimidate",
+          "coc:skill:fast-talk",
+          "coc:skill:charm",
+          "coc:skill:persuade"
+        ]
+      }
+    },
+    {
+      "raw": "один любой другой навык в зависимости от личности и эпохи",
+      "choice": {
+        "count": 1,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "investigator-handbook-ru",
+      "physical_page": 77,
+      "printed_page": 81,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

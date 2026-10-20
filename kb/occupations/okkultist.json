@@ -1,0 +1,98 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:okkultist",
+  "kind": "occupation",
+  "name": {
+    "ru": "Оккультист",
+    "en": null
+  },
+  "group": null,
+  "lovecraftian": true,
+  "description": {
+    "ru": "Оккультисты изучают эзотерические знания и тайны магии. Они верят в сверхъестественные способности и стараются узнать о них как можно больше и обнаружить их у себя. Большинство оккультистов знакомо с множеством философских и мистических теорий, а некоторые верят, что сами способны творить магию, — правда это или нет, остаётся на усмотрение Хранителя.\nСтоит отметить, что в основном оккультисты знакомы с «земной» магией. Тайны Мифов им неведомы, за исключением интригующих намёков в древних книгах.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 4",
+    "options": [
+      [
+        [
+          "EDU",
+          4
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "9–65",
+    "min": 9,
+    "max": 65
+  },
+  "contacts": "библиотеки, оккультные сообщества или братства, другие оккультисты.",
+  "skills": [
+    {
+      "raw": "Антропология",
+      "skill": "coc:skill:anthropology"
+    },
+    {
+      "raw": "Иностранный язык",
+      "skill": "coc:skill:language-other"
+    },
+    {
+      "raw": "История",
+      "skill": "coc:skill:history"
+    },
+    {
+      "raw": "Наука (астрономия)",
+      "skill": "coc:skill:science",
+      "specialization": "Астрономия"
+    },
+    {
+      "raw": "Оккультизм",
+      "skill": "coc:skill:occult"
+    },
+    {
+      "raw": "Работа в библиотеке",
+      "skill": "coc:skill:library-use"
+    },
+    {
+      "raw": "один социальный навык (Запугивание, Красноречие, Обаяние или Убеждение)",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:intimidate",
+          "coc:skill:fast-talk",
+          "coc:skill:charm",
+          "coc:skill:persuade"
+        ]
+      }
+    },
+    {
+      "raw": "один любой другой навык в зависимости от специальности и эпохи — с разрешения Хранителя это могут быть Мифы Ктулху (рекомендуем не выше 10% в начале игры)",
+      "choice": {
+        "count": 1,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "investigator-handbook-ru",
+      "physical_page": 77,
+      "printed_page": 81,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

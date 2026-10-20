@@ -1,0 +1,89 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:menedzher-srednego-ili-vysshego-zvena",
+  "kind": "occupation",
+  "name": {
+    "ru": "Менеджер среднего или высшего звена",
+    "en": null
+  },
+  "group": "Служащий",
+  "lovecraftian": false,
+  "description": {
+    "ru": "Это занятие охватывает широкий спектр профессий, от мелкого клерка до руководителя среднего или высшего звена. Служащие работают как в небольших и средних местных компаниях, так и в крупных международных корпорациях.\nКлерки получают мало и занимаются тяжёлой монотонной работой, но те, кто хорошо себя проявит, могут надеяться на повышение. У руководителей среднего и высшего звена зарплата куда выше, при этом у них больше ответственности и возможности влиять на работу предприятия. Среди служащих большинство семейных, хотя есть и холостяки.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 4",
+    "options": [
+      [
+        [
+          "EDU",
+          4
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "20–80",
+    "min": 20,
+    "max": 80
+  },
+  "contacts": "сокурсники по университету, масоны или другое братство, местные и федеральные власти, СМИ и маркетологи.",
+  "skills": [
+    {
+      "raw": "Бухгалтерское дело",
+      "skill": "coc:skill:accounting"
+    },
+    {
+      "raw": "Иностранный язык",
+      "skill": "coc:skill:language-other"
+    },
+    {
+      "raw": "Психология",
+      "skill": "coc:skill:psychology"
+    },
+    {
+      "raw": "Юриспруденция",
+      "skill": "coc:skill:law"
+    },
+    {
+      "raw": "два социальных навыка (Запугивание, Красноречие, Обаяние или Убеждение)",
+      "choice": {
+        "count": 2,
+        "of": [
+          "coc:skill:intimidate",
+          "coc:skill:fast-talk",
+          "coc:skill:charm",
+          "coc:skill:persuade"
+        ]
+      }
+    },
+    {
+      "raw": "два любых других навыка в зависимости от специальности и эпохи",
+      "choice": {
+        "count": 2,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "investigator-handbook-ru",
+      "physical_page": 84,
+      "printed_page": 88,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

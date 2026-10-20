@@ -1,0 +1,93 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:redaktor",
+  "kind": "occupation",
+  "name": {
+    "ru": "Редактор",
+    "en": null
+  },
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Редакторы раздают задания журналистам, сами пишут статьи в газеты и журналы, решают проблемы и стараются сдать всё к сроку. А ещё иногда редактируют. В крупных газетах много редакторов, в том числе главный редактор и его заместители, которые занимаются больше управлением, чем новостями. Существуют редакторы моды, спорта и других тематических отделов. В маленьких газетах бывает всего один редактор, зачастую он же владелец и единственный штатный сотрудник.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 4",
+    "options": [
+      [
+        [
+          "EDU",
+          4
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "10–30",
+    "min": 10,
+    "max": 30
+  },
+  "contacts": "журналисты, местные власти, специалисты (например, кутюрье, спортсмены, бизнесмены), издатели.",
+  "skills": [
+    {
+      "raw": "Бухгалтерское дело",
+      "skill": "coc:skill:accounting"
+    },
+    {
+      "raw": "Внимание",
+      "skill": "coc:skill:spot-hidden"
+    },
+    {
+      "raw": "История",
+      "skill": "coc:skill:history"
+    },
+    {
+      "raw": "Психология",
+      "skill": "coc:skill:psychology"
+    },
+    {
+      "raw": "Родной язык",
+      "skill": "coc:skill:language-own"
+    },
+    {
+      "raw": "два социальных навыка (Запугивание, Красноречие, Обаяние или Убеждение)",
+      "choice": {
+        "count": 2,
+        "of": [
+          "coc:skill:intimidate",
+          "coc:skill:fast-talk",
+          "coc:skill:charm",
+          "coc:skill:persuade"
+        ]
+      }
+    },
+    {
+      "raw": "один любой другой навык в зависимости от специальности и эпохи",
+      "choice": {
+        "count": 1,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "investigator-handbook-ru",
+      "physical_page": 83,
+      "printed_page": 87,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

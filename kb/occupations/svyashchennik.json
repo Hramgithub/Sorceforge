@@ -1,0 +1,97 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:svyashchennik",
+  "kind": "occupation",
+  "name": {
+    "ru": "Священник",
+    "en": null
+  },
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Христианские священники обычно прикреплены к тому или иному приходу или проповедуют свою веру в других странах (см. «Миссионер» на стр. 80). Но у разных церквей своя иерархия. Например, католический священник может со временем получить сан епископа, архиепископа или кардинала, а пастор методистов стать суперинтендантом округа или епископом.\nМногие священники (не только католические) принимают исповедь. Хоть они и обязаны хранить тайну, никто не запрещает им действовать с учётом того, что было сказано на исповеди.\nНекоторые служители церкви владеют навыками и других профессий, например врача, юриста или учёного. В таком случае используйте шаблон занятия, лучше всего отражающего суть работы сыщика.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 4",
+    "options": [
+      [
+        [
+          "EDU",
+          4
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "9–60",
+    "min": 9,
+    "max": 60
+  },
+  "contacts": "другие священнослужители, прихожане, верхушка местного общества.",
+  "skills": [
+    {
+      "raw": "Бухгалтерское дело",
+      "skill": "coc:skill:accounting"
+    },
+    {
+      "raw": "Иностранный язык",
+      "skill": "coc:skill:language-other"
+    },
+    {
+      "raw": "История",
+      "skill": "coc:skill:history"
+    },
+    {
+      "raw": "Психология",
+      "skill": "coc:skill:psychology"
+    },
+    {
+      "raw": "Работа в библиотеке",
+      "skill": "coc:skill:library-use"
+    },
+    {
+      "raw": "Слух",
+      "skill": "coc:skill:listen"
+    },
+    {
+      "raw": "один социальный навык (Запугивание, Красноречие, Обаяние или Убеждение)",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:intimidate",
+          "coc:skill:fast-talk",
+          "coc:skill:charm",
+          "coc:skill:persuade"
+        ]
+      }
+    },
+    {
+      "raw": "один любой другой навык",
+      "choice": {
+        "count": 1,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "investigator-handbook-ru",
+      "physical_page": 83,
+      "printed_page": 87,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

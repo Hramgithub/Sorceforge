@@ -1,0 +1,109 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:detektiv-iz-agentstva",
+  "kind": "occupation",
+  "name": {
+    "ru": "Детектив из агентства",
+    "en": null
+  },
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "По всему миру существует множество детективных агентств. Пожалуй, самые известные — агентства Пинкертона и Бёрнса (в наше время они объединились). В крупных конторах служат агенты двух типов: охранники и оперативники.\nОхранники носят форму. Их нанимают компании и отдельные люди для защиты своей жизни и собственности от воров, убийц и похитителей. Для персонажей-охранников используйте параметры патрульного полицейского (см. стр. 83). Оперативники носят обычную одежду и занимаются расследованием загадочных событий, предотвращением убийств, поиском пропавших людей и так далее.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + СИЛ × 2 или ОБР × 2 + ЛВК × 2",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "STR",
+          2
+        ]
+      ],
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "DEX",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "20–45",
+    "min": 20,
+    "max": 45
+  },
+  "contacts": "местные правоохранительные органы, клиенты",
+  "skills": [
+    {
+      "raw": "Ближний бой (драка)",
+      "skill": "coc:skill:fighting",
+      "specialization": "Драка"
+    },
+    {
+      "raw": "Психология",
+      "skill": "coc:skill:psychology"
+    },
+    {
+      "raw": "Работа в библиотеке",
+      "skill": "coc:skill:library-use"
+    },
+    {
+      "raw": "Скрытность",
+      "skill": "coc:skill:stealth"
+    },
+    {
+      "raw": "Стрельба",
+      "skill": "coc:skill:firearms"
+    },
+    {
+      "raw": "Чтение следов",
+      "skill": "coc:skill:track"
+    },
+    {
+      "raw": "Юриспруденция",
+      "skill": "coc:skill:law"
+    },
+    {
+      "raw": "один социальный навык (Запугивание, Красноречие, Обаяние или Убеждение)",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:intimidate",
+          "coc:skill:fast-talk",
+          "coc:skill:charm",
+          "coc:skill:persuade"
+        ]
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "investigator-handbook-ru",
+      "physical_page": 71,
+      "printed_page": 75,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

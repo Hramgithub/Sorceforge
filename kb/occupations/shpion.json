@@ -1,0 +1,117 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:shpion",
+  "kind": "occupation",
+  "name": {
+    "ru": "Шпион",
+    "en": null
+  },
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Шпионы работают на разведку государства или организации. Они могут притворяться людьми любого рода занятий, от посла до уборщицы, лишь бы добыть необходимую информацию. Некоторые много лет живут под прикрытием, другие же меняют фальшивые личности как перчатки. Шпионы могут орудовать и в родной стране, но куда чаще работают за границей.\nОснову работы шпиона составляют сбор информации и избегание контрразведки, но у него могут быть и другие задачи, например вербовка агентов или политические убийства по заказу государства.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + НАР × 2 или ОБР × 2 + ЛВК × 2",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "APP",
+          2
+        ]
+      ],
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "DEX",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "20–60",
+    "min": 20,
+    "max": 60
+  },
+  "contacts": "обычно только связной, через которого шпион передаёт информацию, но могут быть и другие знакомства, заведённые под прикрытием.",
+  "skills": [
+    {
+      "raw": "Иностранный язык",
+      "skill": "coc:skill:language-other"
+    },
+    {
+      "raw": "Искусство/ремесло (актёрская игра) или Маскировка",
+      "choice": {
+        "count": 1,
+        "of": [
+          {
+            "skill": "coc:skill:art-craft",
+            "specialization": "Актёрская игра"
+          },
+          "coc:skill:disguise"
+        ]
+      }
+    },
+    {
+      "raw": "Ловкость рук",
+      "skill": "coc:skill:sleight-of-hand"
+    },
+    {
+      "raw": "Психология",
+      "skill": "coc:skill:psychology"
+    },
+    {
+      "raw": "Скрытность",
+      "skill": "coc:skill:stealth"
+    },
+    {
+      "raw": "Слух",
+      "skill": "coc:skill:listen"
+    },
+    {
+      "raw": "Стрельба",
+      "skill": "coc:skill:firearms"
+    },
+    {
+      "raw": "один социальный навык (Запугивание, Красноречие, Обаяние или Убеждение)",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:intimidate",
+          "coc:skill:fast-talk",
+          "coc:skill:charm",
+          "coc:skill:persuade"
+        ]
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "investigator-handbook-ru",
+      "physical_page": 87,
+      "printed_page": 91,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

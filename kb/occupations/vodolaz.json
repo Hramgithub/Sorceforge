@@ -1,0 +1,95 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:vodolaz",
+  "kind": "occupation",
+  "name": {
+    "ru": "Водолаз",
+    "en": null
+  },
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Одни водолазы служат в армии или полиции, другие имеют гражданскую специальность — например, занимаются сбором морских губок, подъёмом затонувших судов или даже охотой за сокровищами.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + ЛВК × 2",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "DEX",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "9–30",
+    "min": 9,
+    "max": 30
+  },
+  "contacts": "береговая охрана, капитаны судов, военные, полиция, контрабандисты",
+  "skills": [
+    {
+      "raw": "Внимание",
+      "skill": "coc:skill:spot-hidden"
+    },
+    {
+      "raw": "Механика",
+      "skill": "coc:skill:mechanical-repair"
+    },
+    {
+      "raw": "Наука (биология)",
+      "skill": "coc:skill:science",
+      "specialization": "Биология"
+    },
+    {
+      "raw": "Первая помощь",
+      "skill": "coc:skill:first-aid"
+    },
+    {
+      "raw": "Пилотирование (лодка)",
+      "skill": "coc:skill:pilot",
+      "specialization": "Лодка"
+    },
+    {
+      "raw": "Плавание",
+      "skill": "coc:skill:swim"
+    },
+    {
+      "raw": "Подводное плавание",
+      "skill": "coc:skill:diving"
+    },
+    {
+      "raw": "один любой другой навык в зависимости от специальности и эпохи",
+      "choice": {
+        "count": 1,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "investigator-handbook-ru",
+      "physical_page": 69,
+      "printed_page": 73,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

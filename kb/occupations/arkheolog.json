@@ -1,0 +1,93 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:arkheolog",
+  "kind": "occupation",
+  "name": {
+    "ru": "Археолог",
+    "en": null
+  },
+  "group": null,
+  "lovecraftian": true,
+  "description": {
+    "ru": "Археологи изучают прошлое. В основном они заняты опознанием, исследованием и анализом находок, связанных с историей человечества. Их работа требует не только тщательной подготовки и изучения материалов, но и привычки к физической работе.\nВ 1920-х успешные археологи становились знаменитостями наряду с путешественниками и искателями приключений. Одни из них пользовались научными методами, другие раскрывали тайны прошлого грубой силой, а самые беспринципные применяли динамит. В наше время подобное варварство осуждают.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 4",
+    "options": [
+      [
+        [
+          "EDU",
+          4
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "10–40",
+    "min": 10,
+    "max": 40
+  },
+  "contacts": "заказчики, музеи, университеты",
+  "skills": [
+    {
+      "raw": "Археология",
+      "skill": "coc:skill:archaeology"
+    },
+    {
+      "raw": "Внимание",
+      "skill": "coc:skill:spot-hidden"
+    },
+    {
+      "raw": "Иностранный язык (любой)",
+      "skill": "coc:skill:language-other",
+      "specialization": "любой"
+    },
+    {
+      "raw": "История",
+      "skill": "coc:skill:history"
+    },
+    {
+      "raw": "Механика",
+      "skill": "coc:skill:mechanical-repair"
+    },
+    {
+      "raw": "Наука (например, химия, физика, геология и т. д.) или Ориентирование",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:science",
+          "coc:skill:navigate"
+        ]
+      }
+    },
+    {
+      "raw": "Оценка",
+      "skill": "coc:skill:appraise"
+    },
+    {
+      "raw": "Работа в библиотеке",
+      "skill": "coc:skill:library-use"
+    }
+  ],
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "investigator-handbook-ru",
+      "physical_page": 67,
+      "printed_page": 71,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:dzhentlmen-ledi",
+  "kind": "occupation",
+  "name": {
+    "ru": "Джентльмен/леди",
+    "en": null
+  },
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Мужчина или женщина знатного происхождения с безупречным воспитанием и манерами. Обычно так называют людей из высших слоёв общества, обладающих большим состоянием (богатое наследство или пассивный доход).\nВ 1920-е годы у такого человека наверняка есть как минимум один слуга (дворецкий, лакей, горничная, шофёр), дом в городе и, вероятно, загородная резиденция. Джентльмен или леди необязательно богаты, ведь для высшего общества социальный статус зачастую важнее, чем состояние.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + НАР × 2",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "APP",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "40–90",
+    "min": 40,
+    "max": 90
+  },
+  "contacts": "высшее общество и землевладельцы, политики, слуги и сельские рабочие",
+  "skills": [
+    {
+      "raw": "Верховая езда",
+      "skill": "coc:skill:ride"
+    },
+    {
+      "raw": "Иностранный язык (любой)",
+      "skill": "coc:skill:language-other",
+      "specialization": "любой"
+    },
+    {
+      "raw": "Искусство/ремесло (любое)",
+      "skill": "coc:skill:art-craft",
+      "specialization": "любое"
+    },
+    {
+      "raw": "История",
+      "skill": "coc:skill:history"
+    },
+    {
+      "raw": "Ориентирование",
+      "skill": "coc:skill:navigate"
+    },
+    {
+      "raw": "Стрельба (винтовка/дробовик)",
+      "skill": "coc:skill:firearms",
+      "specialization": "Винтовка/дробовик"
+    },
+    {
+      "raw": "два социальных навыка (Запугивание, Красноречие, Обаяние или Убеждение)",
+      "choice": {
+        "count": 2,
+        "of": [
+          "coc:skill:intimidate",
+          "coc:skill:fast-talk",
+          "coc:skill:charm",
+          "coc:skill:persuade"
+        ]
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "investigator-handbook-ru",
+      "physical_page": 71,
+      "printed_page": 75,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

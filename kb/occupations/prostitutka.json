@@ -1,0 +1,98 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:prostitutka",
+  "kind": "occupation",
+  "name": {
+    "ru": "Проститутка",
+    "en": null
+  },
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "В зависимости от обстоятельств, происхождения и воспитания, проститутки могут быть как дорогими куртизанками или жиголо, так и уличными «ночными бабочками». Нередко на этот путь их толкают обстоятельства, и некоторые мечтают бросить это занятие. Есть и те, кто работает самостоятельно, но большинство женщин заманивают и удерживают безжалостные сутенёры, которых волнуют лишь деньги.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + НАР × 2",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "APP",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "5–50",
+    "min": 5,
+    "max": 50
+  },
+  "contacts": "завсегдатаи улиц, полиция, постоянные клиенты, возможно мафия.",
+  "skills": [
+    {
+      "raw": "Искусство/ремесло (любое)",
+      "skill": "coc:skill:art-craft",
+      "specialization": "Любое"
+    },
+    {
+      "raw": "Ловкость рук",
+      "skill": "coc:skill:sleight-of-hand"
+    },
+    {
+      "raw": "Психология",
+      "skill": "coc:skill:psychology"
+    },
+    {
+      "raw": "Скрытность",
+      "skill": "coc:skill:stealth"
+    },
+    {
+      "raw": "Уклонение",
+      "skill": "coc:skill:dodge"
+    },
+    {
+      "raw": "два социальных навыка (Запугивание, Красноречие, Обаяние или Убеждение)",
+      "choice": {
+        "count": 2,
+        "of": [
+          "coc:skill:intimidate",
+          "coc:skill:fast-talk",
+          "coc:skill:charm",
+          "coc:skill:persuade"
+        ]
+      }
+    },
+    {
+      "raw": "один любой другой навык в зависимости от личности и эпохи",
+      "choice": {
+        "count": 1,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "investigator-handbook-ru",
+      "physical_page": 81,
+      "printed_page": 85,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

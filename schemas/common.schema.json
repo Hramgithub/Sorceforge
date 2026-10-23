@@ -269,7 +269,19 @@
           "additionalProperties": false,
           "properties": {
             "raw": { "type": "string" },
-            "spell_ids": { "type": "array", "items": { "$ref": "#/$defs/id" } }
+            "items": {
+              "description": "Разбор строки raw (Р-52): каждое названное заклинание как напечатано и ссылка на справочник заклинаний.",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["name"],
+                "additionalProperties": false,
+                "properties": {
+                  "name": { "type": "string" },
+                  "spell": { "anyOf": [{ "$ref": "#/$defs/id" }, { "type": "null" }] }
+                }
+              }
+            }
           }
         },
         "sanity_loss": {

@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sourcefold.local/schemas/spell.schema.json",
+  "title": "Заклинание",
+  "description": "Заклинание Мифов (Р-51, Р-52). Существа и персонажи ссылаются на заклинание из statblock.spells.items[].spell.",
+  "type": "object",
+  "required": [
+    "schema",
+    "id",
+    "kind",
+    "name",
+    "cost",
+    "casting_time",
+    "description",
+    "axes",
+    "sources"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "sourcefold.spell.v0"
+    },
+    "id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "kind": {
+      "const": "spell"
+    },
+    "name": {
+      "$ref": "common.schema.json#/$defs/text",
+      "description": "ru — название в русском издании или наш перевод; en — оригинальное английское название (Р-33)."
+    },
+    "aliases": {
+      "type": "array",
+      "description": "Другие названия: английские альтернативные из Grand Grimoire как есть, русские варианты из разных переводов.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "category": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Тип заклинания: связь, призыв/укрощение, атака, защита…"
+    },
+    "cost": {
+      "type": "object",
+      "required": [
+        "raw"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "raw": {
+          "type": "string",
+          "description": "Как в книге, кубы — 1d6."
+        },
+        "magic_points": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sanity": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "pow": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "other": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Прочая цена: ВЫН, ПЗ, жертва, предметы."
+        }
+      }
+    },
+    "casting_time": {
+      "type": "object",
+      "required": [
+        "raw"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "raw": {
+          "type": "string"
+        }
+      }
+    },
+    "description": {
+      "$ref": "common.schema.json#/$defs/text",
+      "description": "Что делает заклинание и как работает механика — полный пересказ по-русски."
+    },
+    "deeper_magic": {
+      "$ref": "common.schema.json#/$defs/text",
+      "description": "Глубинная магия (Deeper Magic, Grand Grimoire)."
+    },
+    "variant_of": {
+      "anyOf": [
+        {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Семейство: id общего заклинания («Связь с божеством» для «Связи с Ньярлатхотепом»)."
+    },
+    "refs": {
+      "type": "array",
+      "description": "Связанные существа и персонажи: кого призывает, подчиняет, с кем связывает.",
+      "items": {
+        "$ref": "common.schema.json#/$defs/id"
+      }
+    },
+    "axes": {
+      "$ref": "common.schema.json#/$defs/axes"
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "common.schema.json#/$defs/source_ref"
+      }
+    },
+    "errata": {
+      "$ref": "common.schema.json#/$defs/errata"
+    },
+    "corrections": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/correction"
+      }
+    },
+    "quality": {
+      "$ref": "common.schema.json#/$defs/quality"
+    }
+  }
+}

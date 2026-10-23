@@ -14,6 +14,7 @@
 | `skill.schema.json` | навык | `kb/skills/` |
 | `occupation.schema.json` | профессия | `kb/occupations/` |
 | `spell.schema.json` | заклинание | `kb/spells/` |
+| `tome.schema.json` | книга Мифов, оккультная книга | `kb/tomes/` |
 | `examples/` | по примеру на каждый вид записи | — |
 
 Проверка (без внешних библиотек):
@@ -126,6 +127,19 @@ Pulp Cthulhu, Р-26). `occupation` — профессия как в источн
 (карточка существа показывает «Заклинания о нём»), `sources`, `errata`, `corrections`,
 `quality`. Числа: русская «Книга хранителя» > английская > Grand Grimoire > «Маски
 Ньярлатхотепа» 7e (для их заклинаний) > помощник; расхождения книг — в `quality.notes`.
+
+## Книга Мифов (`tome.schema.json`)
+
+Справочник (Р-55…Р-57): книги главы 11 «Книги хранителя» (таблица XI) и книги «Масок
+Ньярлатхотепа» 7e. Каждое издание — отдельная запись; `edition_of` ведёт на общую запись
+книги (история, описание, список изданий — у «Некрономикона», «Книги Эйбона» и др.).
+`name`, `aliases`, `tome_type` (`mythos_tome | occult_book`), `language`, `author`, `date`,
+`description` (пересказ), `reading` (`sanity_loss`, `mythos_initial`, `mythos_full`,
+`occult`, `mythos_rating`, `study_time`, строка `raw` как в книге), `spells` (название как
+напечатано в списке книги + ссылка `spell`), `refs` — существа и персонажи, о которых книга
+(их карточки показывают «Книги о нём»), `sources`, `errata`, `corrections`, `quality`.
+Числа — по русской «Книге хранителя»; данные конкретных экземпляров из «Масок» — в
+`quality.notes`.
 
 ## Профессия (`occupation.schema.json`)
 

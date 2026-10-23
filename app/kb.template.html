@@ -54,6 +54,7 @@ a { color:var(--accent); }
     <button data-tab="skill">Навыки</button>
     <button data-tab="occupation">Профессии</button>
     <button data-tab="spell">Заклинания</button>
+    <button data-tab="tome">Книги</button>
   </div>
   <input id="q" type="search" placeholder="Поиск по имени" aria-label="Поиск">
   <select id="cat" aria-label="Фильтр"></select>
@@ -83,8 +84,11 @@ const FILTERS = {
   skill: [['', 'Все категории'], ...[...new Set(DATA.skills.map(s => s.category))].sort().map(c => [c, c])],
   spell: [['', 'Все типы'], ['family', 'Только общие (семейства)'], ...[...new Set(DATA.spells.map(s => s.category).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'ru')).map(c => [c, c])],
 };
-const SET = { creature: DATA.creatures, character: DATA.characters, skill: DATA.skills, occupation: DATA.occupations, spell: DATA.spells };
-const ALL = [...DATA.creatures, ...DATA.characters, ...DATA.skills, ...DATA.occupations, ...DATA.spells];
+FILTERS.tome = [['', 'Все книги'], ['mythos_tome', 'Книги Мифов'], ['occult_book', 'Оккультные книги'], ['general', 'Только общие записи'],
+  ...[...new Set(DATA.tomes.map(t => t.language).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'ru')).map(l => ['lang:' + l, 'Язык: ' + l])];
+const SET = { creature: DATA.creatures, character: DATA.characters, skill: DATA.skills, occupation: DATA.occupations, spell: DATA.spells, tome: DATA.tomes };
+const ALL = [...DATA.creatures, ...DATA.characters, ...DATA.skills, ...DATA.occupations, ...DATA.spells, ...DATA.tomes];
+const TOME_TYPE = { mythos_tome: 'книга Мифов', occult_book: 'оккультная книга' };
 const byId = id => ALL.find(x => x.id === id);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const bookOf = c => c.sources?.[0]?.book_id;
@@ -102,6 +106,7 @@ function matches(c, q, f) {
   if (tab === 'character') { const [k, v] = f.split(':'); return k === 'role' ? (c.roles||[]).includes(v) : k === 'era' ? (c.axes?.era||[]).includes(v) : bookOf(c) === v; }
   if (tab === 'occupation') return f === 'lovecraftian' ? c.lovecraftian : (c.axes?.era||[]).includes(f.split(':')[1]);
   if (tab === 'spell' && f === 'family') return DATA.spells.some(s => s.variant_of === c.id);
+  if (tab === 'tome') return f === 'general' ? DATA.tomes.some(t => t.edition_of === c.id) : f.startsWith('lang:') ? c.language === f.slice(5) : c.tome_type === f;
   return c.category === f;
 }
 
@@ -109,6 +114,7 @@ function subtitle(c) {
   if (c.kind === 'creature') return `${esc(c.name.en||'')} · ${CAT[c.category]||''}${bookOf(c) !== 'keeper-rulebook-ru' ? ' · ' + esc(BOOKS[bookOf(c)] || bookOf(c)) : ''}`;
   if (c.kind === 'character') return [c.occupation?.ru, ...(c.roles||[]).map(r => ROLE[r]), BOOKS[bookOf(c)]].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'spell') return [c.name.en, c.category, c.cost?.raw].filter(Boolean).map(esc).join(' · ');
+  if (c.kind === 'tome') return [c.name.en, c.language, c.reading?.mythos_full && 'Мифы ' + c.reading.mythos_full].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'occupation') return `Средства ${esc(c.credit_rating.raw)}${c.lovecraftian ? ' · лавкрафтовская' : ''}${c.group ? ' · ' + esc(c.group) : ''}`;
   return `${esc(c.name.en||'')} · ${c.base.raw === '—' ? esc(c.category) : 'база ' + esc(c.base.raw)}`;
 }
@@ -207,14 +213,42 @@ function spellsText(sp) {
   }
   return out + esc(rest);
 }
-// spells that point at this record (summon, bind, contact…)
+// spells and tomes that point at this record (summon, bind, contact…; books about it)
 function spellsAbout(c) {
   const s = DATA.spells.filter(x => (x.refs||[]).includes(c.id));
-  return s.length ? `<section><h3>Заклинания о нём</h3><p>${s.map(x => link(x.id, x.name.ru)).join(', ')}</p></section>` : '';
+  const t = DATA.tomes.filter(x => (x.refs||[]).includes(c.id));
+  return (s.length ? `<section><h3>Заклинания о нём</h3><p>${s.map(x => link(x.id, x.name.ru)).join(', ')}</p></section>` : '')
+    + (t.length ? `<section><h3>Книги о нём</h3><p>${t.map(x => link(x.id, x.name.ru)).join(', ')}</p></section>` : '');
+}
+function tomeCard(c) {
+  const ed = c.edition_of && byId(c.edition_of);
+  const editions = DATA.tomes.filter(x => x.edition_of === c.id);
+  const r = c.reading || {};
+  const read = [['Потеря рассудка', r.sanity_loss], ['Мифы Ктулху (беглое чтение)', r.mythos_initial], ['Мифы Ктулху (полное изучение)', r.mythos_full],
+    ['Оккультизм', r.occult], ['Уровень Мифов', r.mythos_rating], ['Время изучения', r.study_time]].filter(([, v]) => v != null && v !== '');
+  const spells = (c.spells||[]).map(s => s.spell && byId(s.spell) ? link(s.spell, s.name) + (byId(s.spell).name.ru !== s.name ? ` <span class="muted">(${esc(byId(s.spell).name.ru)})</span>` : '') : esc(s.name)).join(', ');
+  return `<h2>${esc(c.name.ru)}</h2>
+    <div class="sub">${esc(c.name.en||'')} · ${TOME_TYPE[c.tome_type]||''}${(c.aliases||[]).length ? ' · также: ' + c.aliases.map(esc).join(', ') : ''}</div>
+    ${flags(c)}
+    <dl>
+      ${ed ? `<dt>Издание книги</dt><dd>${link(ed.id, ed.name.ru)}</dd>` : ''}
+      ${editions.length ? `<dt>Издания</dt><dd>${editions.map(x => link(x.id, x.name.ru)).join(', ')}</dd>` : ''}
+      ${c.language ? `<dt>Язык</dt><dd>${esc(c.language)}</dd>` : ''}
+      ${c.author ? `<dt>Автор</dt><dd>${esc(c.author)}</dd>` : ''}
+      ${c.date ? `<dt>Время</dt><dd>${esc(c.date)}</dd>` : ''}
+      ${(c.refs||[]).length ? `<dt>Связанные</dt><dd>${refLinks(c.refs)}</dd>` : ''}
+    </dl>
+    ${read.length ? `<section><h3>Чтение</h3><table>${read.map(([k, v]) => `<tr><th>${k}</th><td>${esc(v)}</td></tr>`).join('')}</table></section>` : ''}
+    ${c.description?.ru ? `<section><h3>Описание</h3>${c.description.ru.split('\n').filter(Boolean).map(p => `<p>${esc(p)}</p>`).join('')}</section>` : ''}
+    ${spells ? `<section><h3>Заклинания</h3><p>${spells}</p></section>` : ''}
+    ${errata(c)}
+    <section><h3>Источник</h3><div>${sources(c)}</div></section>
+    ${corrections(c)}`;
 }
 function spellCard(c) {
   const fam = c.variant_of && byId(c.variant_of);
   const variants = DATA.spells.filter(x => x.variant_of === c.id);
+  const where = DATA.tomes.filter(t => (t.spells||[]).some(s => s.spell === c.id));
   const cost = c.cost || {};
   const parts = [['ПМ', cost.magic_points], ['Рассудок', cost.sanity], ['МОЩ', cost.pow], ['Прочее', cost.other]].filter(([, v]) => v);
   return `<h2>${esc(c.name.ru)}</h2>
@@ -229,6 +263,7 @@ function spellCard(c) {
     </dl>
     ${c.description?.ru ? `<section><h3>Описание</h3>${c.description.ru.split('\n').filter(Boolean).map(p => `<p>${esc(p)}</p>`).join('')}</section>` : ''}
     ${c.deeper_magic?.ru ? `<section><h3>Глубинная магия</h3><p>${esc(c.deeper_magic.ru)}</p></section>` : ''}
+    ${where.length ? `<section><h3>Где изучить</h3><p>${where.map(x => link(x.id, x.name.ru)).join(', ')}</p></section>` : ''}
     ${errata(c)}
     <section><h3>Источник</h3><div>${sources(c)}</div></section>
     ${corrections(c)}`;
@@ -383,7 +418,7 @@ function show(id) {
   if (c.kind !== tab) setTab(c.kind, true);
   current = id; renderList();
   const card = document.getElementById('card');
-  card.innerHTML = c.kind === 'creature' ? creatureCard(c) : c.kind === 'character' ? characterCard(c) : c.kind === 'occupation' ? occupationCard(c) : c.kind === 'spell' ? spellCard(c) : skillCard(c);
+  card.innerHTML = c.kind === 'creature' ? creatureCard(c) : c.kind === 'character' ? characterCard(c) : c.kind === 'occupation' ? occupationCard(c) : c.kind === 'spell' ? spellCard(c) : c.kind === 'tome' ? tomeCard(c) : skillCard(c);
   card.querySelectorAll('[data-go]').forEach(a => a.onclick = e => { e.preventDefault(); show(a.dataset.go); });
   history.replaceState(null, '', '#' + encodeURIComponent(c.kind + '/' + id.split(/[:/]/).pop()));
   window.scrollTo(0, 0);

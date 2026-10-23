@@ -1,0 +1,201 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sourcefold.local/schemas/weapon.schema.json",
+  "title": "Оружие",
+  "description": "Позиция таблицы XVII «Книги хранителя» или модель расширенного каталога 1920-х (Р-58, Р-59). Атаки статблоков ссылаются на оружие полем attacks[].weapon.",
+  "type": "object",
+  "required": [
+    "schema",
+    "id",
+    "kind",
+    "name",
+    "group",
+    "damage",
+    "axes",
+    "sources"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "sourcefold.weapon.v0"
+    },
+    "id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "kind": {
+      "const": "weapon"
+    },
+    "name": {
+      "$ref": "common.schema.json#/$defs/text"
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "group": {
+      "enum": [
+        "melee",
+        "handgun",
+        "rifle",
+        "shotgun",
+        "automatic",
+        "heavy",
+        "other"
+      ],
+      "description": "ближний бой, пистолеты и револьверы, винтовки, дробовики, автоматическое оружие, тяжёлое и взрывчатка, прочее"
+    },
+    "skill": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "raw": {
+          "type": "string"
+        },
+        "skill": {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        "specialization": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "damage": {
+      "type": "object",
+      "required": [
+        "raw"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "raw": {
+          "type": "string"
+        },
+        "dice": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "db": {
+          "enum": [
+            "full",
+            "half",
+            "none",
+            null
+          ],
+          "description": "Добавляется ли бонус к урону: полностью, половина, нет."
+        },
+        "impaling": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Пронзающее оружие (в таблице помечено звёздочкой)."
+        }
+      }
+    },
+    "range": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "attacks": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Атак за раунд."
+    },
+    "ammo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Боезапас (патроны в магазине, стволы)."
+    },
+    "malfunction": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Осечка."
+    },
+    "cost": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "1920s": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "modern": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "description": {
+      "$ref": "common.schema.json#/$defs/text"
+    },
+    "model_of": {
+      "anyOf": [
+        {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Для модели каталога — позиция таблицы XVII, к которой она относится."
+    },
+    "caliber": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reload": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "availability": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "axes": {
+      "$ref": "common.schema.json#/$defs/axes"
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "common.schema.json#/$defs/source_ref"
+      }
+    },
+    "errata": {
+      "$ref": "common.schema.json#/$defs/errata"
+    },
+    "corrections": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/correction"
+      }
+    },
+    "quality": {
+      "$ref": "common.schema.json#/$defs/quality"
+    }
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sourcefold.local/schemas/tome.schema.json",
+  "title": "Книга Мифов",
+  "description": "Книга Мифов или оккультная книга (Р-55…Р-57). Каждое издание — отдельная запись; edition_of ведёт на общую запись книги.",
+  "type": "object",
+  "required": [
+    "schema",
+    "id",
+    "kind",
+    "name",
+    "tome_type",
+    "axes",
+    "sources"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "sourcefold.tome.v0"
+    },
+    "id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "kind": {
+      "const": "tome"
+    },
+    "name": {
+      "$ref": "common.schema.json#/$defs/text"
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tome_type": {
+      "enum": [
+        "mythos_tome",
+        "occult_book"
+      ],
+      "description": "книга Мифов или оккультная книга"
+    },
+    "edition_of": {
+      "anyOf": [
+        {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Общая запись книги для издания (Р-56); null — у общей записи и у книг без изданий."
+    },
+    "language": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "author": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Год или эпоха издания, как в книге."
+    },
+    "description": {
+      "$ref": "common.schema.json#/$defs/text",
+      "description": "История, внешний вид, содержание — пересказ по-русски."
+    },
+    "reading": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "sanity_loss": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Потеря рассудка, кубы 1d6."
+        },
+        "mythos_initial": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Прибавка к Мифам Ктулху за беглое чтение."
+        },
+        "mythos_full": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Прибавка к Мифам Ктулху за полное изучение."
+        },
+        "occult": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Прибавка к Оккультизму."
+        },
+        "mythos_rating": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "Уровень Мифов книги."
+        },
+        "study_time": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Время полного изучения."
+        },
+        "raw": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Строка характеристик как в книге."
+        }
+      }
+    },
+    "spells": {
+      "type": "array",
+      "description": "Заклинания книги: название, как напечатано в списке книги, и ссылка на справочник заклинаний.",
+      "items": {
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "spell": {
+            "anyOf": [
+              {
+                "$ref": "common.schema.json#/$defs/id"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "refs": {
+      "type": "array",
+      "description": "Существа и персонажи, о которых книга говорит или которым принадлежит.",
+      "items": {
+        "$ref": "common.schema.json#/$defs/id"
+      }
+    },
+    "axes": {
+      "$ref": "common.schema.json#/$defs/axes"
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "common.schema.json#/$defs/source_ref"
+      }
+    },
+    "errata": {
+      "$ref": "common.schema.json#/$defs/errata"
+    },
+    "corrections": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/correction"
+      }
+    },
+    "quality": {
+      "$ref": "common.schema.json#/$defs/quality"
+    }
+  }
+}

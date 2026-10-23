@@ -1,0 +1,72 @@
+{
+  "schema": "sourcefold.weapon.v0",
+  "id": "coc:weapon:mortar-81mm",
+  "kind": "weapon",
+  "name": {
+    "ru": "Миномёт калибра 81 мм",
+    "en": "81mm Mortar"
+  },
+  "aliases": [],
+  "group": "heavy",
+  "skill": {
+    "raw": "Артиллерия",
+    "skill": "coc:skill:artillery",
+    "specialization": null
+  },
+  "damage": {
+    "raw": "6d10/6 метров",
+    "dice": "6d10",
+    "db": "none",
+    "impaling": true
+  },
+  "range": "500 метров",
+  "attacks": "1",
+  "ammo": "Отдельно",
+  "malfunction": "100",
+  "cost": {
+    "1920s": "Нет",
+    "modern": "Нет"
+  },
+  "availability": "Наши дни",
+  "description": {
+    "ru": "Миномёт; мины подаются отдельно. Радиус поражения 6 м: до 12 м урон уменьшается вдвое, до 18 м — вчетверо, дальше урон не наносится.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 378,
+      "printed_page": 402,
+      "method": "book_text",
+      "verified": true,
+      "note": "Таблица XVII «Оружие»; примечания к таблице — физ. 380 (с. 404)."
+    },
+    {
+      "book_id": "keeper-rulebook-en",
+      "physical_page": 406,
+      "printed_page": 405,
+      "method": "book_text",
+      "verified": true,
+      "note": "Weapons table (английские названия, сверка)."
+    }
+  ],
+  "corrections": [
+    {
+      "field": "description.ru",
+      "from": "Радиус поражения 6 метров. Если расстояние до цели больше 6 м, но меньше 12, урон уменьшается вдвое; больше 12, но меньше 24 — вчетверо. Если расстояние больше 24, урон не наносится.",
+      "to": "Миномёт; мины подаются отдельно. Радиус поражения 6 м: до 12 м урон уменьшается вдвое, до 18 м — вчетверо, дальше урон не наносится.",
+      "reason": "таблица XVII, примечание «2 метра, 3 метра и т. д.»: урон вчетверо до 3x, дальше не наносится (в помощнике границы 2x и 4x)",
+      "ref": "«Книга хранителя», таблица XVII, примечания, с. 404 (физ. 380)"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "notes": "Атак за раунд: в русской таблице 1, в английской 2; оставлено по русскому изданию."
+  }
+}

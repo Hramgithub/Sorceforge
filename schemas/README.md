@@ -15,6 +15,7 @@
 | `occupation.schema.json` | профессия | `kb/occupations/` |
 | `spell.schema.json` | заклинание | `kb/spells/` |
 | `tome.schema.json` | книга Мифов, оккультная книга | `kb/tomes/` |
+| `weapon.schema.json` | оружие | `kb/weapons/` |
 | `examples/` | по примеру на каждый вид записи | — |
 
 Проверка (без внешних библиотек):
@@ -74,7 +75,7 @@ python tools\validate.py schemas\<вид>.schema.json <файлы>
 Характеристики `STR…EDU` (`raw`, `value`, бросок `roll` — остаётся на виду, Р-34),
 `averages`; `hp`, `mp`, `damage_bonus`, `build`, `move` (режимы: ходьба, полёт,
 плавание, рытьё…), `armor`, `attacks_per_round`; атаки (вид, навык, процент с
-половиной и пятой, урон, пояснение `notes`); `dodge`; навыки (`name`, ссылка
+половиной и пятой, урон, ссылка `weapon` на справочник оружия, пояснение `notes`); `dodge`; навыки (`name`, ссылка
 `skill` на справочник, `specialization`, значение); `spells` — строка `raw` как в
 книге и `items`: названия заклинаний из неё по порядку со ссылкой `spell` на
 справочник (Р-52; комментарии вроде «на усмотрение Хранителя» не разбираются); `sanity_loss`;
@@ -140,6 +141,19 @@ Pulp Cthulhu, Р-26). `occupation` — профессия как в источн
 (их карточки показывают «Книги о нём»), `sources`, `errata`, `corrections`, `quality`.
 Числа — по русской «Книге хранителя»; данные конкретных экземпляров из «Масок» — в
 `quality.notes`.
+
+## Оружие (`weapon.schema.json`)
+
+Справочник (Р-58, Р-59): 105 позиций таблицы XVII «Книги хранителя» (числа — по
+изображениям страниц русского издания) и 57 моделей расширенного каталога 1920-х из
+веб-помощника — пользовательский каталог, не книга (источник `weapons-catalog-1920s`,
+флаг `editorial_text`). `name`, `aliases`, `group` (`melee | handgun | rifle | shotgun |
+automatic | heavy | other`), `skill` (как в таблице + ссылка и специализация), `damage`
+(`raw`, `dice`, `db`: full/half/none, `impaling`), `range`, `attacks`, `ammo`,
+`malfunction`, `cost` (`1920s`, `modern`), `availability` (графа «Встречается»), эпохи в
+`axes.era`, `description` с особыми правилами из сносок таблицы; у моделей — `model_of`
+(позиция таблицы), `caliber`, `reload`. Атаки статблоков ссылаются на оружие
+(`attacks[].weapon`, `pipeline/migrate/link_weapons.py`).
 
 ## Профессия (`occupation.schema.json`)
 

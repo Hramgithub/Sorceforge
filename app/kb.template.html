@@ -55,6 +55,7 @@ a { color:var(--accent); }
     <button data-tab="occupation">Профессии</button>
     <button data-tab="spell">Заклинания</button>
     <button data-tab="tome">Книги</button>
+    <button data-tab="weapon">Оружие</button>
   </div>
   <input id="q" type="search" placeholder="Поиск по имени" aria-label="Поиск">
   <select id="cat" aria-label="Фильтр"></select>
@@ -71,7 +72,7 @@ const DATA = JSON.parse(document.getElementById('data').textContent);
 const CAT = { animal:'Зверь', mythos_monster:'Тварь Мифов', mythos_deity:'Божество Мифов', avatar:'Воплощение', supernatural:'Сверхъестественное' };
 const ROLE = { npc:'NPC', pregen:'преген' };
 const CH = [['STR','СИЛ'],['CON','ВЫН'],['SIZ','ТЕЛ'],['DEX','ЛВК'],['APP','НАР'],['INT','ИНТ'],['POW','МОЩ'],['EDU','ОБР']];
-const BOOKS = { 'investigator-handbook-ru': 'Книга сыщика', 'curious-characters-deck-en': 'Curious Characters Deck', 'keeper-rulebook-ru': 'Книга хранителя', 'keeper-rulebook-en': 'Keeper Rulebook (англ.)', 'grand-grimoire-en': 'Grand Grimoire of Cthulhu Mythos Magic', 'masks-of-nyarlathotep-en': 'Masks of Nyarlathotep (7e)', 'web-helper-coc': 'веб-помощник', 'lightless-beacon-ru': 'Погасший маяк', 'malleus-keeper-deck-en': 'Malleus Keeper Deck', 'malleus-monstrorum-1-en': 'Malleus Monstrorum, т. I', 'malleus-monstrorum-2-en': 'Malleus Monstrorum, т. II', 'digital-nightmares-pregens-ru': 'Кошмары цифровой эпохи: готовые персонажи', 'dveri-vo-tmu-pregens-ru': 'Двери во тьму: готовые персонажи', 'koshmarnyy-priliv-pregens-ru': 'Кошмарный прилив: готовые персонажи', 'naedine-s-tmoy-pregens-ru': 'Наедине с тьмой: готовые персонажи', 'startovyy-nabor-pregens-ru': 'Стартовый набор: готовые персонажи', 'mertvennyy-svet-pregens-ru': 'Мертвенный свет: готовые персонажи', 'kholodnyy-urozhay-pregens-ru': 'Холодный урожай: готовые персонажи', 'nabor-khranitelya-pregens-ru': 'Набор хранителя: готовые персонажи', 'les-vendigo-pregens-ru': 'Лес Вендиго: готовые персонажи', 'za-zakrytymi-dveryami-pregens-ru': 'За закрытыми дверьми: готовые персонажи' };
+const BOOKS = { 'investigator-handbook-ru': 'Книга сыщика', 'curious-characters-deck-en': 'Curious Characters Deck', 'keeper-rulebook-ru': 'Книга хранителя', 'keeper-rulebook-en': 'Keeper Rulebook (англ.)', 'grand-grimoire-en': 'Grand Grimoire of Cthulhu Mythos Magic', 'masks-of-nyarlathotep-en': 'Masks of Nyarlathotep (7e)', 'web-helper-coc': 'веб-помощник', 'weapons-catalog-1920s': 'каталог оружия 1920-х (пользовательский, не книга)', 'lightless-beacon-ru': 'Погасший маяк', 'malleus-keeper-deck-en': 'Malleus Keeper Deck', 'malleus-monstrorum-1-en': 'Malleus Monstrorum, т. I', 'malleus-monstrorum-2-en': 'Malleus Monstrorum, т. II', 'digital-nightmares-pregens-ru': 'Кошмары цифровой эпохи: готовые персонажи', 'dveri-vo-tmu-pregens-ru': 'Двери во тьму: готовые персонажи', 'koshmarnyy-priliv-pregens-ru': 'Кошмарный прилив: готовые персонажи', 'naedine-s-tmoy-pregens-ru': 'Наедине с тьмой: готовые персонажи', 'startovyy-nabor-pregens-ru': 'Стартовый набор: готовые персонажи', 'mertvennyy-svet-pregens-ru': 'Мертвенный свет: готовые персонажи', 'kholodnyy-urozhay-pregens-ru': 'Холодный урожай: готовые персонажи', 'nabor-khranitelya-pregens-ru': 'Набор хранителя: готовые персонажи', 'les-vendigo-pregens-ru': 'Лес Вендиго: готовые персонажи', 'za-zakrytymi-dveryami-pregens-ru': 'За закрытыми дверьми: готовые персонажи' };
 const METHOD = { book_text: 'сверено с книгой', helper_migration: 'перенесено из веб-помощника', mineru: 'извлечено MinerU', manual: 'введено вручную' };
 const CHOOSES = { name:'имя', sex:'пол', age:'возраст', luck:'Удача', skills:'навыки', background:'предыстория' };
 const BG = [['description','Описание'],['ideology','Убеждения'],['significant_people','Значимые люди'],['meaningful_locations','Значимые места'],
@@ -86,8 +87,10 @@ const FILTERS = {
 };
 FILTERS.tome = [['', 'Все книги'], ['mythos_tome', 'Книги Мифов'], ['occult_book', 'Оккультные книги'], ['general', 'Только общие записи'],
   ...[...new Set(DATA.tomes.map(t => t.language).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'ru')).map(l => ['lang:' + l, 'Язык: ' + l])];
-const SET = { creature: DATA.creatures, character: DATA.characters, skill: DATA.skills, occupation: DATA.occupations, spell: DATA.spells, tome: DATA.tomes };
-const ALL = [...DATA.creatures, ...DATA.characters, ...DATA.skills, ...DATA.occupations, ...DATA.spells, ...DATA.tomes];
+const WGROUP = { melee: 'Ближний бой', handgun: 'Пистолеты и револьверы', rifle: 'Винтовки', shotgun: 'Дробовики', automatic: 'Автоматическое оружие', heavy: 'Тяжёлое оружие и взрывчатка', other: 'Прочее' };
+FILTERS.weapon = [['', 'Всё оружие'], ['table', 'Таблица «Книги хранителя»'], ['model', 'Модели каталога 1920-х'], ...Object.entries(WGROUP), ['era:1920s', 'Эпоха: 1920-е'], ['era:modern', 'Эпоха: современность']];
+const SET = { creature: DATA.creatures, character: DATA.characters, skill: DATA.skills, occupation: DATA.occupations, spell: DATA.spells, tome: DATA.tomes, weapon: DATA.weapons };
+const ALL = [...DATA.creatures, ...DATA.characters, ...DATA.skills, ...DATA.occupations, ...DATA.spells, ...DATA.tomes, ...DATA.weapons];
 const TOME_TYPE = { mythos_tome: 'книга Мифов', occult_book: 'оккультная книга' };
 const byId = id => ALL.find(x => x.id === id);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -106,6 +109,7 @@ function matches(c, q, f) {
   if (tab === 'character') { const [k, v] = f.split(':'); return k === 'role' ? (c.roles||[]).includes(v) : k === 'era' ? (c.axes?.era||[]).includes(v) : bookOf(c) === v; }
   if (tab === 'occupation') return f === 'lovecraftian' ? c.lovecraftian : (c.axes?.era||[]).includes(f.split(':')[1]);
   if (tab === 'spell' && f === 'family') return DATA.spells.some(s => s.variant_of === c.id);
+  if (tab === 'weapon') return f === 'table' ? !c.model_of : f === 'model' ? !!c.model_of : f.startsWith('era:') ? (c.axes?.era||[]).includes(f.slice(4)) : c.group === f;
   if (tab === 'tome') return f === 'general' ? DATA.tomes.some(t => t.edition_of === c.id) : f.startsWith('lang:') ? c.language === f.slice(5) : c.tome_type === f;
   return c.category === f;
 }
@@ -114,6 +118,7 @@ function subtitle(c) {
   if (c.kind === 'creature') return `${esc(c.name.en||'')} · ${CAT[c.category]||''}${bookOf(c) !== 'keeper-rulebook-ru' ? ' · ' + esc(BOOKS[bookOf(c)] || bookOf(c)) : ''}`;
   if (c.kind === 'character') return [c.occupation?.ru, ...(c.roles||[]).map(r => ROLE[r]), BOOKS[bookOf(c)]].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'spell') return [c.name.en, c.category, c.cost?.raw].filter(Boolean).map(esc).join(' · ');
+  if (c.kind === 'weapon') return [c.name.en, c.damage?.raw, c.model_of ? 'модель' : WGROUP[c.group]].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'tome') return [c.name.en, c.language, c.reading?.mythos_full && 'Мифы ' + c.reading.mythos_full].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'occupation') return `Средства ${esc(c.credit_rating.raw)}${c.lovecraftian ? ' · лавкрафтовская' : ''}${c.group ? ' · ' + esc(c.group) : ''}`;
   return `${esc(c.name.en||'')} · ${c.base.raw === '—' ? esc(c.category) : 'база ' + esc(c.base.raw)}`;
@@ -184,7 +189,7 @@ function statblock(c) {
       // note is shown only when it adds something; parsed notes are usually already inside raw
       const extra = v.note && !v.raw.includes(v.note) ? ` <span class="muted">(${esc(v.note)})</span>` : '';
       return `<tr><th>${k}</th><td>${esc(v.raw)}${extra}</td></tr>`; }).join('');
-  const attacks = (sb.attacks||[]).map(a => `<tr><td>${esc(a.name.ru)}${a.kind==='maneuver'?' <span class="tag">манёвр</span>':''}${a.kind==='special'?' <span class="tag">особое</span>':''}</td>
+  const attacks = (sb.attacks||[]).map(a => `<tr><td>${a.weapon && byId(a.weapon) ? link(a.weapon, a.name.ru) : esc(a.name.ru)}${a.kind==='maneuver'?' <span class="tag">манёвр</span>':''}${a.kind==='special'?' <span class="tag">особое</span>':''}</td>
     <td>${esc(a.chance.raw)}</td><td>${a.damage ? esc(a.damage.raw) : '—'}${a.notes ? `<div class="muted">${esc(a.notes)}</div>` : ''}</td></tr>`).join('');
   const san = (sb.sanity_loss||[]).map(s => `<li>${esc(s.success)}/${esc(s.fail)}${s.trigger ? ' — ' + esc(s.trigger) : ''}</li>`).join('');
   const linked = (sb.skills||[]).some(s => s.skill);
@@ -219,6 +224,27 @@ function spellsAbout(c) {
   const t = DATA.tomes.filter(x => (x.refs||[]).includes(c.id));
   return (s.length ? `<section><h3>Заклинания о нём</h3><p>${s.map(x => link(x.id, x.name.ru)).join(', ')}</p></section>` : '')
     + (t.length ? `<section><h3>Книги о нём</h3><p>${t.map(x => link(x.id, x.name.ru)).join(', ')}</p></section>` : '');
+}
+const DB_RU = { full: 'плюс бонус к урону', half: 'плюс половина бонуса к урону', none: 'без бонуса к урону' };
+function weaponCard(c) {
+  const parent = c.model_of && byId(c.model_of);
+  const models = DATA.weapons.filter(x => x.model_of === c.id);
+  const d = c.damage || {};
+  const sk = c.skill ? (c.skill.skill && byId(c.skill.skill) ? link(c.skill.skill, c.skill.raw || byId(c.skill.skill).name.ru) : esc(c.skill.raw)) : '';
+  const rows = [['Навык', sk], ['Урон', esc(d.raw) + ([DB_RU[d.db], d.impaling ? 'пронзающее' : ''].filter(Boolean).length ? ` <span class="muted">(${[DB_RU[d.db], d.impaling ? 'пронзающее' : ''].filter(Boolean).join(', ')})</span>` : '')],
+    ['Дальность', esc(c.range)], ['Атак за раунд', esc(c.attacks)], ['Боезапас', esc(c.ammo)], ['Осечка', esc(c.malfunction)],
+    ['Калибр', esc(c.caliber)], ['Перезарядка', esc(c.reload)], ['Доступность', esc(c.availability)],
+    ['Цена в 1920-х', esc(c.cost?.['1920s'])], ['Цена сейчас', esc(c.cost?.modern)]].filter(([, v]) => v);
+  return `<h2>${esc(c.name.ru)}</h2>
+    <div class="sub">${esc(c.name.en||'')} · ${WGROUP[c.group]||''}${(c.aliases||[]).length ? ' · также: ' + c.aliases.map(esc).join(', ') : ''}</div>
+    ${flags(c)}
+    <table>${rows.map(([k, v]) => `<tr><th>${k}</th><td>${v}</td></tr>`).join('')}</table>
+    ${parent ? `<p>Позиция таблицы: ${link(parent.id, parent.name.ru)}</p>` : ''}
+    ${c.description?.ru ? `<section><h3>Описание</h3>${c.description.ru.split('\n').filter(Boolean).map(p => `<p>${esc(p)}</p>`).join('')}</section>` : ''}
+    ${models.length ? `<section><h3>Модели</h3><p>${models.map(x => link(x.id, x.name.ru)).join(', ')}</p></section>` : ''}
+    ${errata(c)}
+    <section><h3>Источник</h3><div>${sources(c)}</div></section>
+    ${corrections(c)}`;
 }
 function tomeCard(c) {
   const ed = c.edition_of && byId(c.edition_of);
@@ -418,7 +444,7 @@ function show(id) {
   if (c.kind !== tab) setTab(c.kind, true);
   current = id; renderList();
   const card = document.getElementById('card');
-  card.innerHTML = c.kind === 'creature' ? creatureCard(c) : c.kind === 'character' ? characterCard(c) : c.kind === 'occupation' ? occupationCard(c) : c.kind === 'spell' ? spellCard(c) : c.kind === 'tome' ? tomeCard(c) : skillCard(c);
+  card.innerHTML = c.kind === 'creature' ? creatureCard(c) : c.kind === 'character' ? characterCard(c) : c.kind === 'occupation' ? occupationCard(c) : c.kind === 'spell' ? spellCard(c) : c.kind === 'tome' ? tomeCard(c) : c.kind === 'weapon' ? weaponCard(c) : skillCard(c);
   card.querySelectorAll('[data-go]').forEach(a => a.onclick = e => { e.preventDefault(); show(a.dataset.go); });
   history.replaceState(null, '', '#' + encodeURIComponent(c.kind + '/' + id.split(/[:/]/).pop()));
   window.scrollTo(0, 0);
@@ -428,7 +454,9 @@ document.getElementById('q').oninput = renderList;
 document.getElementById('cat').onchange = renderList;
 document.getElementById('occ').onchange = renderList;
 document.querySelectorAll('.tabs button').forEach(b => b.onclick = () => setTab(b.dataset.tab));
-Object.values(SET).forEach(s => s.sort((a, b) => a.name.ru.localeCompare(b.name.ru, 'ru')));
+// sort by name without leading quotes («Браунинг» M1918 goes under Б)
+const sortName = c => c.name.ru.replace(/^[«"„.\s]+/, '');
+Object.values(SET).forEach(s => s.sort((a, b) => sortName(a).localeCompare(sortName(b), 'ru')));
 function fromHash() {
   const [hk, hs] = decodeURIComponent(location.hash.slice(1)).split('/');
   return hs && SET[hk] ? SET[hk].find(c => c.id.split(/[:/]/).pop() === hs) : null;

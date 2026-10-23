@@ -1,0 +1,72 @@
+{
+  "schema": "sourcefold.weapon.v0",
+  "id": "coc:weapon:anti-personnel-mine",
+  "kind": "weapon",
+  "name": {
+    "ru": "Противопехотная мина",
+    "en": "Anti-Personnel Mine"
+  },
+  "aliases": [],
+  "group": "heavy",
+  "skill": {
+    "raw": "Взрывчатка",
+    "skill": "coc:skill:explosives",
+    "specialization": null
+  },
+  "damage": {
+    "raw": "4d10/5 метров",
+    "dice": "4d10",
+    "db": "none",
+    "impaling": true
+  },
+  "range": "На месте",
+  "attacks": "На месте",
+  "ammo": "Однораз.",
+  "malfunction": "99",
+  "cost": {
+    "1920s": "Нет",
+    "modern": "Нет"
+  },
+  "availability": "1920-е, наши дни",
+  "description": {
+    "ru": "Мина, устанавливаемая на месте; срабатывает один раз. Радиус поражения 5 м: до 10 м урон уменьшается вдвое, до 15 м — вчетверо, дальше урон не наносится.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "1920s",
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 379,
+      "printed_page": 403,
+      "method": "book_text",
+      "verified": true,
+      "note": "Таблица XVII «Оружие»; примечания к таблице — физ. 380 (с. 404)."
+    },
+    {
+      "book_id": "keeper-rulebook-en",
+      "physical_page": 406,
+      "printed_page": 405,
+      "method": "book_text",
+      "verified": true,
+      "note": "Weapons table (английские названия, сверка)."
+    }
+  ],
+  "corrections": [
+    {
+      "field": "description.ru",
+      "from": "Радиус поражения 5 метров. Если расстояние до цели больше 5 м, но меньше 10, урон уменьшается вдвое; больше 10, но меньше 20 — вчетверо. Если расстояние больше 20, урон не наносится.",
+      "to": "Мина, устанавливаемая на месте; срабатывает один раз. Радиус поражения 5 м: до 10 м урон уменьшается вдвое, до 15 м — вчетверо, дальше урон не наносится.",
+      "reason": "таблица XVII, примечание «2 метра, 3 метра и т. д.»: урон вчетверо до 3x, дальше не наносится (в помощнике границы 2x и 4x)",
+      "ref": "«Книга хранителя», таблица XVII, примечания, с. 404 (физ. 380)"
+    }
+  ],
+  "quality": {
+    "needs_review": false
+  }
+}

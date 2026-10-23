@@ -1,0 +1,71 @@
+{
+  "schema": "sourcefold.weapon.v0",
+  "id": "coc:weapon:tank-gun-120mm",
+  "kind": "weapon",
+  "name": {
+    "ru": "Танковая пушка калибра 120 мм (со стабилизатором)",
+    "en": "120mm Tank Gun (stabilized)"
+  },
+  "aliases": [],
+  "group": "heavy",
+  "skill": {
+    "raw": "Артиллерия",
+    "skill": "coc:skill:artillery",
+    "specialization": null
+  },
+  "damage": {
+    "raw": "15d10/4 метра",
+    "dice": "15d10",
+    "db": "none",
+    "impaling": true
+  },
+  "range": "2000 метров",
+  "attacks": "1",
+  "ammo": "Отдельно",
+  "malfunction": "100",
+  "cost": {
+    "1920s": "Нет",
+    "modern": "Нет"
+  },
+  "availability": "Наши дни",
+  "description": {
+    "ru": "Стабилизированная танковая пушка; снаряды подаются отдельно. Радиус поражения 4 м: до 8 м урон уменьшается вдвое, до 12 м — вчетверо, дальше урон не наносится.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 379,
+      "printed_page": 403,
+      "method": "book_text",
+      "verified": true,
+      "note": "Таблица XVII «Оружие»; примечания к таблице — физ. 380 (с. 404)."
+    },
+    {
+      "book_id": "keeper-rulebook-en",
+      "physical_page": 406,
+      "printed_page": 405,
+      "method": "book_text",
+      "verified": true,
+      "note": "Weapons table (английские названия, сверка)."
+    }
+  ],
+  "corrections": [
+    {
+      "field": "description.ru",
+      "from": "Радиус поражения 4 метра. Если расстояние до цели больше 4 м, но меньше 8, урон уменьшается вдвое; больше 8, но меньше 16 — вчетверо. Если расстояние больше 16, урон не наносится.",
+      "to": "Стабилизированная танковая пушка; снаряды подаются отдельно. Радиус поражения 4 м: до 8 м урон уменьшается вдвое, до 12 м — вчетверо, дальше урон не наносится.",
+      "reason": "таблица XVII, примечание «2 метра, 3 метра и т. д.»: урон вчетверо до 3x, дальше не наносится (в помощнике границы 2x и 4x)",
+      "ref": "«Книга хранителя», таблица XVII, примечания, с. 404 (физ. 380)"
+    }
+  ],
+  "quality": {
+    "needs_review": false
+  }
+}

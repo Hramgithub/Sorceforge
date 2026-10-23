@@ -1,0 +1,72 @@
+{
+  "schema": "sourcefold.weapon.v0",
+  "id": "coc:weapon:spas-12-gauge",
+  "kind": "weapon",
+  "name": {
+    "ru": "SPAS 12-го калибра (со складным прикладом)",
+    "en": "12-gauge SPAS (folding stock)"
+  },
+  "aliases": [],
+  "group": "shotgun",
+  "skill": {
+    "raw": "Стрельба (В/Д)",
+    "skill": "coc:skill:firearms",
+    "specialization": "Винтовка/дробовик"
+  },
+  "damage": {
+    "raw": "4d6/2d6/1d6",
+    "dice": null,
+    "db": "none",
+    "impaling": false
+  },
+  "range": "10/20/50 метров",
+  "attacks": "1",
+  "ammo": "8",
+  "malfunction": "98",
+  "cost": {
+    "1920s": null,
+    "modern": "$600"
+  },
+  "availability": "Наши дни",
+  "description": {
+    "ru": "Современный боевой дробовик 12-го калибра со складным прикладом. Урон зависит от дальности (ближняя/средняя/большая). Дробь не наносит проникающих ран; пулевой патрон 12-го калибра — 1d10+6, базовая дальность 50 м, проникающий. Второй выстрел по той же цели — без штрафной кости, по другой цели — со штрафной.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 377,
+      "printed_page": 401,
+      "method": "book_text",
+      "verified": true,
+      "note": "Таблица XVII «Оружие»; примечания к таблице — физ. 380 (с. 404)."
+    },
+    {
+      "book_id": "keeper-rulebook-en",
+      "physical_page": 404,
+      "printed_page": 403,
+      "method": "book_text",
+      "verified": true,
+      "note": "Weapons table (английские названия, сверка)."
+    }
+  ],
+  "corrections": [
+    {
+      "field": "damage.impaling",
+      "from": "penetrating (damageType)",
+      "to": "false",
+      "reason": "таблица XVII, стр. 401: раздел «Дробовики» без пометки (пр); дробь не наносит проникающих ран",
+      "ref": "«Книга хранителя», таблица XVII «Оружие», с. 401 (физ. 377)"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "notes": "damage.dice не заполнено: урон зависит от дальности, см. damage.raw."
+  }
+}

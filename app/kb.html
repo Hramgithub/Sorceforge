@@ -266,7 +266,8 @@ function tomeCard(c) {
   const r = c.reading || {};
   const read = [['Потеря рассудка', r.sanity_loss], ['Мифы Ктулху (беглое чтение)', r.mythos_initial], ['Мифы Ктулху (полное изучение)', r.mythos_full],
     ['Оккультизм', r.occult], ['Уровень Мифов', r.mythos_rating], ['Время изучения', r.study_time]].filter(([, v]) => v != null && v !== '');
-  const spells = (c.spells||[]).map(s => s.spell && byId(s.spell) ? link(s.spell, s.name) + (byId(s.spell).name.ru !== s.name ? ` <span class="muted">(${esc(byId(s.spell).name.ru)})</span>` : '') : esc(s.name)).join(', ');
+  // printed name as the link; the reference name only as a tooltip (printed names already carry it in brackets)
+  const spells = (c.spells||[]).map(s => s.spell && byId(s.spell) ? link(s.spell, s.name).replace('<a ', `<a title="${esc(byId(s.spell).name.ru)}" `) : esc(s.name)).join(', ');
   return `<h2>${esc(c.name.ru)}</h2>
     <div class="sub">${esc(c.name.en||'')} · ${TOME_TYPE[c.tome_type]||''}${(c.aliases||[]).length ? ' · также: ' + c.aliases.map(esc).join(', ') : ''}</div>
     ${flags(c)}

@@ -61,6 +61,7 @@ a { color:var(--accent); }
   <input id="q" type="search" placeholder="Поиск по имени" aria-label="Поиск">
   <select id="cat" aria-label="Фильтр"></select>
   <select id="occ" aria-label="Профессия" hidden></select>
+  <select id="era" aria-label="Эпоха" hidden><option value="">Все эпохи</option><option value="1920s">1920-е</option><option value="modern">Современность</option></select>
   <span id="count" class="muted"></span>
 </header>
 <main>
@@ -89,7 +90,8 @@ const FILTERS = {
 FILTERS.tome = [['', 'Все книги'], ['mythos_tome', 'Книги Мифов'], ['occult_book', 'Оккультные книги'], ['general', 'Только общие записи'],
   ...[...new Set(DATA.tomes.map(t => t.language).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'ru')).map(l => ['lang:' + l, 'Язык: ' + l])];
 const WGROUP = { melee: 'Ближний бой', handgun: 'Пистолеты и револьверы', rifle: 'Винтовки', shotgun: 'Дробовики', automatic: 'Автоматическое оружие', heavy: 'Тяжёлое оружие и взрывчатка', other: 'Прочее' };
-FILTERS.weapon = [['', 'Всё оружие'], ['table', 'Таблица «Книги хранителя»'], ['model', 'Модели каталога 1920-х'], ...Object.entries(WGROUP), ['era:1920s', 'Эпоха: 1920-е'], ['era:modern', 'Эпоха: современность']];
+// weapon filters: type here, era in its own select (#era); the catalog split sits at the end under «Прочее»
+FILTERS.weapon = [['', 'Все типы'], ...Object.entries(WGROUP).filter(([k]) => k !== 'other'), ['other', 'Прочее'], ['table', 'Прочее: только таблица «Книги хранителя»'], ['model', 'Прочее: только пользовательский каталог']];
 const SET = { creature: DATA.creatures, character: DATA.characters, skill: DATA.skills, occupation: DATA.occupations, spell: DATA.spells, tome: DATA.tomes, weapon: DATA.weapons };
 const ALL = [...DATA.creatures, ...DATA.characters, ...DATA.skills, ...DATA.occupations, ...DATA.spells, ...DATA.tomes, ...DATA.weapons];
 const TOME_TYPE = { mythos_tome: 'книга Мифов', occult_book: 'оккультная книга' };
@@ -106,12 +108,17 @@ function matches(c, q, f) {
   if (q && !nameHit(c, q)) return false;
   const o = document.getElementById('occ').value;
   if (tab === 'character' && o && occOf(c) !== o) return false;
+  if (tab === 'weapon') {
+    const e = document.getElementById('era').value;
+    if (e && !(c.axes?.era||[]).some(x => x === e || x === 'any')) return false;
+    const catalog = c.sources?.[0]?.book_id === 'weapons-catalog-1920s';
+    return !f || (f === 'table' ? !catalog : f === 'model' ? catalog : c.group === f);
+  }
   if (!f) return true;
   if (tab === 'creature') return c.category === f;
   if (tab === 'character') { const [k, v] = f.split(':'); return k === 'role' ? (c.roles||[]).includes(v) : k === 'era' ? (c.axes?.era||[]).includes(v) : bookOf(c) === v; }
   if (tab === 'occupation') return f === 'lovecraftian' ? c.lovecraftian : (c.axes?.era||[]).includes(f.split(':')[1]);
   if (tab === 'spell' && f === 'family') return DATA.spells.some(s => s.variant_of === c.id);
-  if (tab === 'weapon') return f === 'table' ? !c.model_of : f === 'model' ? !!c.model_of : f.startsWith('era:') ? (c.axes?.era||[]).includes(f.slice(4)) : c.group === f;
   if (tab === 'tome') return f === 'general' ? DATA.tomes.some(t => t.edition_of === c.id) : f.startsWith('lang:') ? c.language === f.slice(5) : c.tome_type === f;
   return c.category === f;
 }
@@ -134,7 +141,7 @@ function renderList() {
   const f = document.getElementById('cat').value;
   const list = document.getElementById('list');
   // a query searches every tab: results grouped by tab, current tab first; tab filters do not apply
-  document.getElementById('cat').disabled = document.getElementById('occ').disabled = !!q;
+  document.getElementById('cat').disabled = document.getElementById('occ').disabled = document.getElementById('era').disabled = !!q;
   if (q) {
     const kinds = [tab, ...Object.keys(SET).filter(k => k !== tab)];
     const groups = kinds.map(k => [k, SET[k].filter(c => nameHit(c, q))]).filter(([, xs]) => xs.length);
@@ -155,6 +162,7 @@ function setTab(t, keep) {
   document.querySelectorAll('.tabs button').forEach(b => b.classList.toggle('active', b.dataset.tab === t));
   document.getElementById('cat').innerHTML = FILTERS[t].map(([v, l]) => `<option value="${esc(v)}">${esc(l)}</option>`).join('');
   const occ = document.getElementById('occ'); occ.hidden = t !== 'character';
+  document.getElementById('era').hidden = t !== 'weapon';
   if (t === 'character') {
     const counts = {};
     const label = {};
@@ -470,6 +478,7 @@ function show(id, how = 'push') {
 document.getElementById('q').oninput = renderList;
 document.getElementById('cat').onchange = renderList;
 document.getElementById('occ').onchange = renderList;
+document.getElementById('era').onchange = renderList;
 document.querySelectorAll('.tabs button').forEach(b => b.onclick = () => setTab(b.dataset.tab));
 // sort by name without leading quotes («Браунинг» M1918 goes under Б)
 const sortName = c => c.name.ru.replace(/^[«"„.\s]+/, '');

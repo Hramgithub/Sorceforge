@@ -20,6 +20,8 @@ main { display:grid; grid-template-columns: 300px 1fr; min-height: calc(100vh - 
 #list button { display:block; width:100%; text-align:left; padding:8px 16px; border:0; border-bottom:1px solid var(--line); background:none; color:inherit; font:inherit; cursor:pointer; }
 #list button:hover, #list button.active { background:var(--panel); }
 #list small { color:var(--muted); display:block; }
+details { border:1px solid var(--line); border-radius:6px; padding:4px 10px; margin:6px 0; }
+summary { cursor:pointer; font-weight:600; }
 #list h4 { margin:0; padding:10px 16px 4px; font-size:12px; color:var(--accent); text-transform:uppercase; letter-spacing:.04em; border-bottom:1px solid var(--line); }
 #card { padding:16px 24px; max-width: 900px; min-width:0; }
 h2 { margin:0 0 4px; font-size:24px; }
@@ -327,6 +329,11 @@ function spellCard(c) {
     <section><h3>Источник</h3><div>${sources(c)}</div></section>
     ${corrections(c)}`;
 }
+// group profiles (Р-74): every column of the book's table as a collapsible statblock
+function variants(c) {
+  const vs = c.variants || [];
+  return vs.length ? `<section><h3>Варианты (${vs.length})</h3>${vs.map(v => `<details><summary>${esc(v.label)}</summary>${statblock({ statblock: v.statblock })}</details>`).join('')}</section>` : '';
+}
 function refLinks(ids) {
   return (ids||[]).map(i => byId(i) ? link(i, byId(i).name.ru) : esc(i)).join(', ');
 }
@@ -376,6 +383,7 @@ function creatureCard(c) {
     ${relations(c)}
     ${c.aura?.ru ? `<section><h3>Аура</h3><p>${esc(c.aura.ru)}</p></section>` : ''}
     ${statblock(c)}
+    ${variants(c)}
     ${abilities(c)}
     ${spellsAbout(c)}
     ${c.encounters?.ru ? `<section><h3>Встречи</h3><p>${esc(c.encounters.ru)}</p></section>` : ''}
@@ -403,6 +411,7 @@ function characterCard(c) {
     ${c.description?.ru ? `<p>${esc(c.description.ru)}</p>` : ''}
     ${relations(c)}
     ${statblock(c)}
+    ${variants(c)}
     ${abilities(c)}
     ${bg ? `<section><h3>Характер и окружение</h3><dl>${bg}</dl></section>` : ''}
     ${(c.possessions||[]).length ? `<section><h3>Снаряжение</h3><ul>${c.possessions.map(p => `<li>${esc(p)}</li>`).join('')}</ul></section>` : ''}

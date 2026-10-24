@@ -1,0 +1,223 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "masks-of-nyarlathotep-en/creature/tun-tun",
+  "kind": "creature",
+  "name": {
+    "ru": "Тун-Тун",
+    "en": "Tun-Tun"
+  },
+  "aliases": [
+    "Tun-Tun"
+  ],
+  "category": "animal",
+  "subcategory": "белая горилла (особь вида)",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "form_of",
+      "target": "coc:creature:gorilla",
+      "note": "особь вида"
+    },
+    {
+      "type": "works_for",
+      "target": "masks-of-nyarlathotep-en/character/lin-yenyu",
+      "note": "хозяйка",
+      "note_back": "ручная горилла"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "150",
+        "value": 150
+      },
+      "CON": {
+        "raw": "75",
+        "value": 75
+      },
+      "SIZ": {
+        "raw": "100",
+        "value": 100
+      },
+      "DEX": {
+        "raw": "90",
+        "value": 90
+      },
+      "INT": {
+        "raw": "35",
+        "value": 35
+      },
+      "POW": {
+        "raw": "40",
+        "value": 40
+      }
+    },
+    "hp": {
+      "raw": "17",
+      "value": 17
+    },
+    "mp": {
+      "raw": "8",
+      "value": 8
+    },
+    "damage_bonus": {
+      "raw": "+2d6",
+      "value": "+2d6"
+    },
+    "build": {
+      "raw": "3",
+      "value": 3
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "2 пункта (кожа)",
+      "value": 2
+    },
+    "attacks_per_round": {
+      "raw": "3 (удар, укус, захват)",
+      "value": 3
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "1d6+2d6",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Захват и удержание",
+          "en": "Grab and hold (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "автоматически 2d6 за раунд после захвата",
+          "dice": "2d6",
+          "adds_db": false
+        },
+        "notes": "цель схвачена, если обе руки попали в неё в одном раунде"
+      },
+      {
+        "name": {
+          "ru": "Укус",
+          "en": "Bite"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d4",
+          "dice": "1d4",
+          "adds_db": false
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "60% (30/12)",
+      "value": 60,
+      "half": 30,
+      "fifth": 12
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Захват и удержание",
+      "summary": "Если обе руки попали в одну цель за раунд, она схвачена; затем каждый раунд получает 2d6 урона, пока не вырвется встречной проверкой СИЛ или ЛВК против СИЛ гориллы. Схваченного (или другого противника) горилла может ещё и укусить (1d4).",
+      "raw": "Grab and hold (mnvr): if the same target is hit with both hands in the same round, target is held..."
+    }
+  ],
+  "description": {
+    "ru": "Более крупная из двух белых горилл мадам Линь Яньюй (только для pulp-игры). Линь вырастила их с детёнышей и убеждена, что их похитили из легендарного Города белой гориллы в Конго; подчиняются гориллы только хозяйке. Обычно прячутся за занавесью позади её кушетки (заметить, что там кто-то есть, — проверка Внимания); по её зову запугивают грубиянов, участвуют в похищениях и охране. Если с гориллами что-то случится, мадам станет безутешной, мстительной и беспощадной.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "masks-of-nyarlathotep-en",
+      "physical_page": 608,
+      "printed_page": 605,
+      "method": "book_text",
+      "verified": true,
+      "entry_page": 571,
+      "note": "общий профиль двух горилл; в таблице атак первый столбец — Пинг, второй — Тун-Тун"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Особь вида «Горилла». Боевые проценты взяты из столбца Тун-Туна."
+  }
+}

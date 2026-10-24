@@ -1,0 +1,491 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "masks-of-nyarlathotep-en/character/zahra-shafik",
+  "kind": "character",
+  "name": {
+    "ru": "Захра Шафик",
+    "en": "Zahra Shafik"
+  },
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "торговка пряностями и верховная жрица",
+    "en": "spice dealer and high priestess"
+  },
+  "occupation_ref": "coc:occupation:lider-kulta",
+  "age": {
+    "raw": "36",
+    "value": 36
+  },
+  "sex": "женский",
+  "residence": "Лондон, Сохо",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:black-pharaoh",
+      "note": "Чёрный фараон",
+      "note_back": "верховная жрица лондонского Братства"
+    },
+    {
+      "type": "rival_of",
+      "target": "masks-of-nyarlathotep-en/character/edward-gavigan",
+      "note": "номинальный начальник, которого она хочет устранить",
+      "note_back": "соперница, верховная жрица"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "70",
+        "value": 70
+      },
+      "DEX": {
+        "raw": "90",
+        "value": 90
+      },
+      "APP": {
+        "raw": "85",
+        "value": 85
+      },
+      "INT": {
+        "raw": "90",
+        "value": 90
+      },
+      "POW": {
+        "raw": "100",
+        "value": 100
+      },
+      "EDU": {
+        "raw": "80",
+        "value": 80
+      }
+    },
+    "hp": {
+      "raw": "14",
+      "value": 14
+    },
+    "mp": {
+      "raw": "20",
+      "value": 20
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет, но два скипетра поглощают 1d10 урона от каждого магического воздействия (например, от каждого из трёх заклинаний Shrivelling — отдельный бросок). Защита действует без ограничения по времени, пока Шафик держит скипетры скрещёнными.",
+      "value": 0,
+      "note": "скипетры поглощают 1d10 магического урона"
+    },
+    "luck": {
+      "raw": "60",
+      "value": 60
+    },
+    "sanity": {
+      "raw": "00",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Нож",
+          "en": "knife"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d4+1d4",
+          "dice": "1d4",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:knife-small"
+      },
+      {
+        "name": {
+          "ru": "Дубинка",
+          "en": "club"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d6+1d4",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:club-small"
+      },
+      {
+        "name": {
+          "ru": "Автоматический пистолет .32",
+          "en": ".32 auto"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "1d8",
+          "dice": "1d8",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:32-automatic"
+      }
+    ],
+    "dodge": {
+      "raw": "50% (25/10)",
+      "value": 50,
+      "half": 25,
+      "fifth": 10
+    },
+    "skills": [
+      {
+        "name": "Бухгалтерское дело",
+        "skill": "coc:skill:accounting",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Археология",
+        "skill": "coc:skill:archaeology",
+        "value": {
+          "raw": "30%",
+          "value": 30
+        }
+      },
+      {
+        "name": "Обаяние",
+        "skill": "coc:skill:charm",
+        "value": {
+          "raw": "90%",
+          "value": 90
+        }
+      },
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "70%",
+          "value": 70
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "65%",
+          "value": 65
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "29%",
+          "value": 29
+        }
+      },
+      {
+        "name": "История (египетская)",
+        "skill": "coc:skill:history",
+        "specialization": "Египетская",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "30%",
+          "value": 30
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "70%",
+          "value": 70
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "70%",
+          "value": 70
+        }
+      },
+      {
+        "name": "Оккультизм",
+        "skill": "coc:skill:occult",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Ловкость рук",
+        "skill": "coc:skill:sleight-of-hand",
+        "value": {
+          "raw": "70%",
+          "value": 70
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "80%",
+          "value": 80
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Родной язык (арабский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "Арабский",
+        "value": {
+          "raw": "80%",
+          "value": 80
+        }
+      },
+      {
+        "name": "Иностранный язык (английский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "Английский",
+        "value": {
+          "raw": "65%",
+          "value": 65
+        }
+      },
+      {
+        "name": "Иностранный язык (египетские иероглифы)",
+        "skill": "coc:skill:language-other",
+        "specialization": "Египетские иероглифы",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Body Warping of Gorgoroth, Cloud Memory, Contact Nyarlathotep, Flesh Ward, Mental Suggestion, Mindblast, Power Drain*, Steal Life, Shrivelling, Summon/Bind Byakhee, Summon/Bind Hunting Horror, Voice of Ra* и другие по желанию Хранителя (* — см. приложение B «Заклинания»).",
+      "items": [
+        {
+          "name": "Body Warping of Gorgoroth",
+          "spell": "coc:spell:body-warping-of-gorgoroth"
+        },
+        {
+          "name": "Cloud Memory",
+          "spell": "coc:spell:cloud-memory"
+        },
+        {
+          "name": "Contact Nyarlathotep",
+          "spell": "coc:spell:contact-nyarlathotep"
+        },
+        {
+          "name": "Flesh Ward",
+          "spell": "coc:spell:flesh-ward"
+        },
+        {
+          "name": "Mental Suggestion",
+          "spell": "coc:spell:mental-suggestion"
+        },
+        {
+          "name": "Mindblast",
+          "spell": "coc:spell:mindblast"
+        },
+        {
+          "name": "Power Drain",
+          "spell": "coc:spell:power-drain"
+        },
+        {
+          "name": "Steal Life",
+          "spell": "coc:spell:steal-life"
+        },
+        {
+          "name": "Shrivelling",
+          "spell": "coc:spell:shrivelling"
+        },
+        {
+          "name": "Summon/Bind Byakhee",
+          "spell": "coc:spell:summon-bind-byakhee"
+        },
+        {
+          "name": "Summon/Bind Hunting Horror",
+          "spell": "coc:spell:summon-bind-hunting-horror"
+        },
+        {
+          "name": "Voice of Ra",
+          "spell": "coc:spell:voice-of-ra"
+        }
+      ]
+    }
+  },
+  "abilities": [
+    {
+      "name": "Два скипетра",
+      "summary": "Пара магических скипетров (приложение D «Артефакты», с. 651); обычно хранится у неё в квартире, на обряды в Миср-Хаус она берёт их с собой. Пока скипетры скрещены, они поглощают 1d10 урона от каждого магического воздействия, без ограничения по времени."
+    },
+    {
+      "name": "Зеркало Гала",
+      "summary": "Хранительница Зеркала Гала (приложение D, с. 650), которое можно использовать как оружие."
+    },
+    {
+      "name": "Талант Pulp: Стремительная атака (Rapid Attack)",
+      "summary": "Потратив 10 очков Удачи, получает одну дополнительную атаку в ближнем бою в одном раунде.",
+      "raw": "Rapid Attack: may spend 10 Luck points to gain one further attack in a single combat round."
+    },
+    {
+      "name": "Талант Pulp: Быстрая рука (Quick Draw)",
+      "summary": "Не нужно заранее готовить огнестрельное оружие, чтобы получить +50 к ЛВК для очерёдности в бою.",
+      "raw": "Quick Draw: does not need to have their firearm “readied” to gain +50 DEX for combat order."
+    }
+  ],
+  "description": {
+    "ru": "Верховная жрица лондонского Братства Чёрного фараона и хозяйка лавки пряностей «Эмпайр Спайсиз» в Сохо. Стройная красавица с длинными тёмными волосами и чарующими зелёными глазами (её сравнивают с Клеопатрой), обычно элегантно одета в чёрное. Часто маскируется, так что её истинное лицо сыщики могут узнать слишком поздно. Вспыльчива, не терпит неудач, искусная манипуляторша.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Глава «Англия». Родилась и выросла в Египте; талант к манипуляции и острый ум привлекли внимание Омара аль-Шакти, который приобщил её к культу Чёрного фараона и отправил в Лондон верховной жрицей при Эдварде Гэвигане и своими глазами и ушами. Из своей лавки управляет повседневными делами Братства, по сути озвучивая волю Гэвигана, и иногда консультирует экспедиции Фонда Пенхью о Каире и египетских обычаях. Презирает Гэвигана и метит на его место: месяцами вербует культистов, преданных лично ей, и выжидает момент. Может попытаться использовать сыщиков — обманом и ложными следами, магией смены облика или внушив кому-то из них приказ убить Гэвигана; уверена, что аль-Шакти одобрит её самоуправство. Роль в кампании — непредсказуемая, на усмотрение Хранителя.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "masks-of-nyarlathotep-en",
+      "physical_page": 291,
+      "printed_page": 288,
+      "method": "book_text",
+      "verified": true,
+      "entry_page": 188,
+      "note": "глава 3 «Англия»; описание — «Действующие лица: Англия», с. 185–186"
+    },
+    {
+      "book_id": "masks-of-nyarlathotep-en",
+      "physical_page": 292,
+      "printed_page": 289,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Звёздочки в строке заклинаний — как в книге (ссылка на приложение B). Родной язык указан по происхождению персонажа; в книге языки даны одним списком."
+  }
+}

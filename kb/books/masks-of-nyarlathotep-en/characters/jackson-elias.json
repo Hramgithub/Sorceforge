@@ -1,0 +1,418 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "masks-of-nyarlathotep-en/character/jackson-elias",
+  "kind": "character",
+  "name": {
+    "ru": "Джексон Элайас",
+    "en": "Jackson Elias"
+  },
+  "aliases": [
+    "Джексон Элиас",
+    "Jesse Hughes",
+    "Джесси Хьюз"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "писатель, бесстрашный исследователь",
+    "en": "fearless investigator"
+  },
+  "occupation_ref": "coc:occupation:pisatel",
+  "age": {
+    "raw": "41",
+    "value": 41
+  },
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "knows",
+      "target": "masks-of-nyarlathotep-en/character/nemesio-sanchez",
+      "note": "друг",
+      "note_back": "друг"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "85",
+        "value": 85
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65
+      },
+      "APP": {
+        "raw": "55",
+        "value": 55
+      },
+      "INT": {
+        "raw": "80",
+        "value": 80
+      },
+      "POW": {
+        "raw": "80",
+        "value": 80
+      },
+      "EDU": {
+        "raw": "70",
+        "value": 70
+      }
+    },
+    "hp": {
+      "raw": "15",
+      "value": 15
+    },
+    "mp": {
+      "raw": "16",
+      "value": 16
+    },
+    "sanity": {
+      "raw": "76",
+      "value": 76,
+      "max": null
+    },
+    "luck": {
+      "raw": "80",
+      "value": 80
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "6",
+      "value": 6,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 6
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed",
+        "notes": "или оружие"
+      },
+      {
+        "name": {
+          "ru": "Револьвер .45",
+          "en": ".45 revolver"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d10+2",
+          "dice": "1d10+2",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:45-revolver"
+      }
+    ],
+    "dodge": {
+      "raw": "50% (25/10)",
+      "value": 50,
+      "half": 25,
+      "fifth": 10
+    },
+    "skills": [
+      {
+        "name": "Искусство/ремесло (писательство)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "писательство",
+        "value": {
+          "raw": "70%",
+          "value": 70
+        }
+      },
+      {
+        "name": "Обаяние",
+        "skill": "coc:skill:charm",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "4%",
+          "value": 4
+        }
+      },
+      {
+        "name": "Вождение автомобиля",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "70%",
+          "value": 70
+        }
+      },
+      {
+        "name": "Работа в библиотеке",
+        "skill": "coc:skill:library-use",
+        "value": {
+          "raw": "65%",
+          "value": 65
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "55%",
+          "value": 55
+        }
+      },
+      {
+        "name": "Механика",
+        "skill": "coc:skill:mechanical-repair",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      },
+      {
+        "name": "Естествознание",
+        "skill": "coc:skill:natural-world",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Оккультизм",
+        "skill": "coc:skill:occult",
+        "value": {
+          "raw": "70%",
+          "value": 70
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "65%",
+          "value": 65
+        }
+      },
+      {
+        "name": "Выживание (горы)",
+        "skill": "coc:skill:survival",
+        "specialization": "горы",
+        "value": {
+          "raw": "25%",
+          "value": 25
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "35%",
+          "value": 35
+        }
+      },
+      {
+        "name": "Иностранный язык (китайский (кантонский))",
+        "skill": "coc:skill:language-other",
+        "specialization": "китайский (кантонский)",
+        "value": {
+          "raw": "20%",
+          "value": 20
+        }
+      },
+      {
+        "name": "Родной язык (английский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "английский",
+        "value": {
+          "raw": "85%",
+          "value": 85
+        }
+      },
+      {
+        "name": "Иностранный язык (французский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "французский",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Иностранный язык (хиндустани)",
+        "skill": "coc:skill:language-other",
+        "specialization": "хиндустани",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Иностранный язык (португальский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "португальский",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Иностранный язык (испанский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "испанский",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Скептик",
+      "summary": "Несмотря на навык Мифов Ктулху, до событий пролога в Мифы не верит: пока не увидит неопровержимое доказательство, считает любые сведения о Мифах фольклором или чепухой.",
+      "raw": "Although Elias has some Cthulhu Mythos skill, he is not a believer before the events of this scenario. Until presented with incontrovertible proof, he is quick to dismiss any Mythos-related knowledge as folklore or nonsense."
+    },
+    {
+      "name": "Pulp Cthulhu: бой",
+      "summary": "Драка 80% (40/16), урон 1d3+1d4 или оружие; револьвер .45 80% (40/16), урон 1d10+2; Уклонение 60% (30/12).",
+      "raw": "Brawl 80% (40/16), damage 1D3+1D4 or weapon; .45 revolver 80% (40/16), damage 1D10+2; Dodge 60% (30/12)"
+    },
+    {
+      "name": "Талант Pulp: Бдительный",
+      "summary": "никогда не бывает застигнут врасплох в бою",
+      "raw": "Alert: never surprised in combat."
+    },
+    {
+      "name": "Талант Pulp: Крепкий парень",
+      "summary": "может потратить 10 Удачи, чтобы не получить до 5 пунктов урона за один раунд боя",
+      "raw": "Tough Guy: soaks up damage, may spend 10 Luck points to shrug off up to 5 hit points worth of damage taken in one combat round."
+    }
+  ],
+  "background": {
+    "traits": "Мрачное чувство юмора и язвительные шуточки; за ними — благородная, тёплая натура: рискует собой, защищая близких и беззащитных."
+  },
+  "description": {
+    "ru": "Писатель, автор книг о странных и жестоких культах (самая известная — «Сыны смерти» о современных тхагах в Индии). Афроамериканец среднего роста и сложения, коротко стриженный, с привычной усмешкой; носит твидовые костюмы и фетровую шляпу, курит трубку и жестикулирует ею, подчёркивая слова. Сирота из Стратфорда (Коннектикут), без родни и постоянного адреса; самоучка, знает несколько языков, общителен, вынослив, пунктуален, не боится ни драк, ни чиновников.",
+    "en": null
+  },
+  "legend": {
+    "ru": "В Перу живёт под именем Джесси Хьюз и выдаёт себя за фольклориста, чтобы Августус Ларкин не узнал в нём автора, изучающего культ харисири и истинные цели Ларкина и де Мендосы. Приходит на ужин участников экспедиции в баре «Кордано», предупреждает сыщиков, что экспедиция не то, чем кажется, знакомит их с профессором Санчесом, а затем становится их проводником, переводчиком и спутником на пути к пирамиде. Убеждённый скептик: столкнувшись с неопровержимыми доказательствами Мифов, лишь сильнее решает докопаться до истины. Элайас должен пережить пролог — он важен для основной кампании (в главе «Америка» его убивают культисты Кровавого языка в Нью-Йорке).",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "masks-of-nyarlathotep-en",
+      "physical_page": 87,
+      "printed_page": 84,
+      "method": "book_text",
+      "verified": true,
+      "entry_page": 59
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Профиль из главы «Перу»; в главе «Америка» Элайас уже мёртв. Родной язык (английский) выбран по происхождению персонажа."
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "masks-of-nyarlathotep-en/character/domingo-cespedes",
+  "kind": "character",
+  "name": {
+    "ru": "Доминго Сеспедес",
+    "en": "Domingo Céspedes"
+  },
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "сын крестьянина",
+    "en": "gravely injured son"
+  },
+  "age": {
+    "raw": "15",
+    "value": 15
+  },
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "relative_of",
+      "target": "masks-of-nyarlathotep-en/character/julio-cespedes",
+      "note": "отец",
+      "note_back": "сын"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "55",
+        "value": 55
+      },
+      "SIZ": {
+        "raw": "55",
+        "value": 55
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65
+      },
+      "APP": {
+        "raw": "60",
+        "value": 60
+      },
+      "INT": {
+        "raw": "60",
+        "value": 60
+      },
+      "POW": {
+        "raw": "55",
+        "value": 55
+      },
+      "EDU": {
+        "raw": "50",
+        "value": 50
+      }
+    },
+    "hp": {
+      "raw": "11 (3*)",
+      "value": 11,
+      "note": "сейчас 3 ПЗ из-за ранения"
+    },
+    "mp": {
+      "raw": "11",
+      "value": 11
+    },
+    "sanity": {
+      "raw": "55",
+      "value": 55,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "9 (0*)",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9,
+          "note": "сейчас 0 из-за ранения"
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      }
+    ],
+    "dodge": {
+      "raw": "10% (5/2) (обычно 27% (13/5))",
+      "value": 10,
+      "half": 5,
+      "fifth": 2
+    },
+    "skills": [
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "35%",
+          "value": 35
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "30%",
+          "value": 30
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Родной язык (испанский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "испанский",
+        "value": {
+          "raw": "55%",
+          "value": 55
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Жилистый подросток с растрёпанными тёмными волосами и зияющей раной на груди после нападения харисири. Из-за ранения у него сейчас 3 ПЗ, он не может передвигаться сам, а Уклонение снижено до 10%.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Сын Хулио Сеспедеса; на него напали харисири, когда отец и сын искали пропавшую альпаку. Сыщики встречают их по пути к руинам.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "masks-of-nyarlathotep-en",
+      "physical_page": 88,
+      "printed_page": 85,
+      "method": "book_text",
+      "verified": true,
+      "entry_page": 63
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.dodge",
+      "printed": "10% (5/2) (normally 27% (13/5))",
+      "expected": null,
+      "note": "сноска «*Currently hit points and movement are reduced due to injury»; обычное Уклонение 27% не равно половине ЛВК 65 (32) — оставлено как напечатано"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Родной язык (испанский) выбран по происхождению персонажа."
+  }
+}

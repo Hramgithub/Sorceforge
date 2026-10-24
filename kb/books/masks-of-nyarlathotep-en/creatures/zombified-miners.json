@@ -1,0 +1,850 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "masks-of-nyarlathotep-en/creature/zombified-miners",
+  "kind": "creature",
+  "name": {
+    "ru": "Зомбированные шахтёры",
+    "en": "Zombified Miners"
+  },
+  "aliases": [
+    "Зомби-шахтёры"
+  ],
+  "category": "supernatural",
+  "subcategory": "жертвы машины контроля разума",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "form_of",
+      "target": "coc:creature:zombie",
+      "note": "особь вида"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "35",
+        "value": 35
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "05",
+        "value": 5
+      },
+      "POW": {
+        "raw": "40",
+        "value": 40
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "mp": {
+      "raw": "8",
+      "value": 8
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "не чувствуют боли и шока",
+      "value": 0
+    },
+    "sanity": {
+      "raw": "8",
+      "value": 8
+    },
+    "attacks_per_round": {
+      "raw": "1 (царапнуть, броситься, схватить и душить)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d3 + БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Захват",
+          "en": "Grab"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой (манёвр)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "удержание, затем удушение 1d3+БкУ в следующих раундах",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "notes": "схваченного держат за горло и каждый раунд душат на 1d3+БкУ; вырваться — встречная проверка СИЛ"
+      }
+    ],
+    "dodge": {
+      "raw": "нет",
+      "value": null
+    },
+    "skills": [
+      {
+        "name": "Выполнять приказы",
+        "value": {
+          "raw": "95%",
+          "value": 95
+        }
+      }
+    ]
+  },
+  "variants": [
+    {
+      "label": "1",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "60",
+            "value": 60
+          },
+          "CON": {
+            "raw": "70",
+            "value": 70
+          },
+          "SIZ": {
+            "raw": "60",
+            "value": 60
+          },
+          "DEX": {
+            "raw": "35",
+            "value": 35
+          },
+          "APP": {
+            "raw": "50",
+            "value": 50
+          },
+          "INT": {
+            "raw": "05",
+            "value": 5
+          },
+          "POW": {
+            "raw": "40",
+            "value": 40
+          },
+          "EDU": {
+            "raw": "—",
+            "value": null
+          }
+        },
+        "hp": {
+          "raw": "13",
+          "value": 13
+        },
+        "mp": {
+          "raw": "8",
+          "value": 8
+        },
+        "damage_bonus": {
+          "raw": "0",
+          "value": 0
+        },
+        "build": {
+          "raw": "0",
+          "value": 0
+        },
+        "move": {
+          "raw": "8",
+          "value": 8,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 8
+            }
+          ]
+        },
+        "armor": {
+          "raw": "не чувствуют боли и шока",
+          "value": 0
+        },
+        "sanity": {
+          "raw": "8",
+          "value": 8
+        },
+        "attacks_per_round": {
+          "raw": "1 (царапнуть, броситься, схватить и душить)",
+          "value": 1
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Ближний бой (драка)",
+              "en": "Brawl"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "60% (30/12)",
+              "value": 60,
+              "half": 30,
+              "fifth": 12
+            },
+            "damage": {
+              "raw": "1d3 + БкУ",
+              "dice": "1d3",
+              "adds_db": true
+            }
+          },
+          {
+            "name": {
+              "ru": "Захват",
+              "en": "Grab"
+            },
+            "kind": "maneuver",
+            "skill": "Ближний бой (манёвр)",
+            "chance": {
+              "raw": "60% (30/12)",
+              "value": 60,
+              "half": 30,
+              "fifth": 12
+            },
+            "damage": {
+              "raw": "удержание, затем удушение 1d3+БкУ в следующих раундах",
+              "dice": "1d3",
+              "adds_db": true
+            },
+            "notes": "схваченного держат за горло и каждый раунд душат на 1d3+БкУ; вырваться — встречная проверка СИЛ"
+          }
+        ],
+        "dodge": {
+          "raw": "нет",
+          "value": null
+        },
+        "skills": [
+          {
+            "name": "Выполнять приказы",
+            "value": {
+              "raw": "95%",
+              "value": 95
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "2",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "75",
+            "value": 75
+          },
+          "CON": {
+            "raw": "60",
+            "value": 60
+          },
+          "SIZ": {
+            "raw": "50",
+            "value": 50
+          },
+          "DEX": {
+            "raw": "35",
+            "value": 35
+          },
+          "APP": {
+            "raw": "55",
+            "value": 55
+          },
+          "INT": {
+            "raw": "05",
+            "value": 5
+          },
+          "POW": {
+            "raw": "40",
+            "value": 40
+          },
+          "EDU": {
+            "raw": "—",
+            "value": null
+          }
+        },
+        "hp": {
+          "raw": "11",
+          "value": 11
+        },
+        "mp": {
+          "raw": "8",
+          "value": 8
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "8",
+          "value": 8,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 8
+            }
+          ]
+        },
+        "armor": {
+          "raw": "не чувствуют боли и шока",
+          "value": 0
+        },
+        "sanity": {
+          "raw": "8",
+          "value": 8
+        },
+        "attacks_per_round": {
+          "raw": "1 (царапнуть, броситься, схватить и душить)",
+          "value": 1
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Ближний бой (драка)",
+              "en": "Brawl"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "60% (30/12)",
+              "value": 60,
+              "half": 30,
+              "fifth": 12
+            },
+            "damage": {
+              "raw": "1d3 + БкУ",
+              "dice": "1d3",
+              "adds_db": true
+            }
+          },
+          {
+            "name": {
+              "ru": "Захват",
+              "en": "Grab"
+            },
+            "kind": "maneuver",
+            "skill": "Ближний бой (манёвр)",
+            "chance": {
+              "raw": "60% (30/12)",
+              "value": 60,
+              "half": 30,
+              "fifth": 12
+            },
+            "damage": {
+              "raw": "удержание, затем удушение 1d3+БкУ в следующих раундах",
+              "dice": "1d3",
+              "adds_db": true
+            },
+            "notes": "схваченного держат за горло и каждый раунд душат на 1d3+БкУ; вырваться — встречная проверка СИЛ"
+          }
+        ],
+        "dodge": {
+          "raw": "нет",
+          "value": null
+        },
+        "skills": [
+          {
+            "name": "Выполнять приказы",
+            "value": {
+              "raw": "95%",
+              "value": 95
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "3",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "70",
+            "value": 70
+          },
+          "CON": {
+            "raw": "65",
+            "value": 65
+          },
+          "SIZ": {
+            "raw": "55",
+            "value": 55
+          },
+          "DEX": {
+            "raw": "35",
+            "value": 35
+          },
+          "APP": {
+            "raw": "60",
+            "value": 60
+          },
+          "INT": {
+            "raw": "05",
+            "value": 5
+          },
+          "POW": {
+            "raw": "35",
+            "value": 35
+          },
+          "EDU": {
+            "raw": "—",
+            "value": null
+          }
+        },
+        "hp": {
+          "raw": "12",
+          "value": 12
+        },
+        "mp": {
+          "raw": "7",
+          "value": 7
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "8",
+          "value": 8,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 8
+            }
+          ]
+        },
+        "armor": {
+          "raw": "не чувствуют боли и шока",
+          "value": 0
+        },
+        "sanity": {
+          "raw": "7",
+          "value": 7
+        },
+        "attacks_per_round": {
+          "raw": "1 (царапнуть, броситься, схватить и душить)",
+          "value": 1
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Ближний бой (драка)",
+              "en": "Brawl"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "60% (30/12)",
+              "value": 60,
+              "half": 30,
+              "fifth": 12
+            },
+            "damage": {
+              "raw": "1d3 + БкУ",
+              "dice": "1d3",
+              "adds_db": true
+            }
+          },
+          {
+            "name": {
+              "ru": "Захват",
+              "en": "Grab"
+            },
+            "kind": "maneuver",
+            "skill": "Ближний бой (манёвр)",
+            "chance": {
+              "raw": "60% (30/12)",
+              "value": 60,
+              "half": 30,
+              "fifth": 12
+            },
+            "damage": {
+              "raw": "удержание, затем удушение 1d3+БкУ в следующих раундах",
+              "dice": "1d3",
+              "adds_db": true
+            },
+            "notes": "схваченного держат за горло и каждый раунд душат на 1d3+БкУ; вырваться — встречная проверка СИЛ"
+          }
+        ],
+        "dodge": {
+          "raw": "нет",
+          "value": null
+        },
+        "skills": [
+          {
+            "name": "Выполнять приказы",
+            "value": {
+              "raw": "95%",
+              "value": 95
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "4",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "70",
+            "value": 70
+          },
+          "CON": {
+            "raw": "70",
+            "value": 70
+          },
+          "SIZ": {
+            "raw": "60",
+            "value": 60
+          },
+          "DEX": {
+            "raw": "35",
+            "value": 35
+          },
+          "APP": {
+            "raw": "65",
+            "value": 65
+          },
+          "INT": {
+            "raw": "05",
+            "value": 5
+          },
+          "POW": {
+            "raw": "40",
+            "value": 40
+          },
+          "EDU": {
+            "raw": "—",
+            "value": null
+          }
+        },
+        "hp": {
+          "raw": "13",
+          "value": 13
+        },
+        "mp": {
+          "raw": "8",
+          "value": 8
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "8",
+          "value": 8,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 8
+            }
+          ]
+        },
+        "armor": {
+          "raw": "не чувствуют боли и шока",
+          "value": 0
+        },
+        "sanity": {
+          "raw": "8",
+          "value": 8
+        },
+        "attacks_per_round": {
+          "raw": "1 (царапнуть, броситься, схватить и душить)",
+          "value": 1
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Ближний бой (драка)",
+              "en": "Brawl"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "60% (30/12)",
+              "value": 60,
+              "half": 30,
+              "fifth": 12
+            },
+            "damage": {
+              "raw": "1d3 + БкУ",
+              "dice": "1d3",
+              "adds_db": true
+            }
+          },
+          {
+            "name": {
+              "ru": "Захват",
+              "en": "Grab"
+            },
+            "kind": "maneuver",
+            "skill": "Ближний бой (манёвр)",
+            "chance": {
+              "raw": "60% (30/12)",
+              "value": 60,
+              "half": 30,
+              "fifth": 12
+            },
+            "damage": {
+              "raw": "удержание, затем удушение 1d3+БкУ в следующих раундах",
+              "dice": "1d3",
+              "adds_db": true
+            },
+            "notes": "схваченного держат за горло и каждый раунд душат на 1d3+БкУ; вырваться — встречная проверка СИЛ"
+          }
+        ],
+        "dodge": {
+          "raw": "нет",
+          "value": null
+        },
+        "skills": [
+          {
+            "name": "Выполнять приказы",
+            "value": {
+              "raw": "95%",
+              "value": 95
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "5",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "85",
+            "value": 85
+          },
+          "CON": {
+            "raw": "75",
+            "value": 75
+          },
+          "SIZ": {
+            "raw": "65",
+            "value": 65
+          },
+          "DEX": {
+            "raw": "35",
+            "value": 35
+          },
+          "APP": {
+            "raw": "70",
+            "value": 70
+          },
+          "INT": {
+            "raw": "05",
+            "value": 5
+          },
+          "POW": {
+            "raw": "45",
+            "value": 45
+          },
+          "EDU": {
+            "raw": "—",
+            "value": null
+          }
+        },
+        "hp": {
+          "raw": "14",
+          "value": 14
+        },
+        "mp": {
+          "raw": "9",
+          "value": 9
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "8",
+          "value": 8,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 8
+            }
+          ]
+        },
+        "armor": {
+          "raw": "не чувствуют боли и шока",
+          "value": 0
+        },
+        "sanity": {
+          "raw": "9",
+          "value": 9
+        },
+        "attacks_per_round": {
+          "raw": "1 (царапнуть, броситься, схватить и душить)",
+          "value": 1
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Ближний бой (драка)",
+              "en": "Brawl"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "60% (30/12)",
+              "value": 60,
+              "half": 30,
+              "fifth": 12
+            },
+            "damage": {
+              "raw": "1d3 + БкУ",
+              "dice": "1d3",
+              "adds_db": true
+            }
+          },
+          {
+            "name": {
+              "ru": "Захват",
+              "en": "Grab"
+            },
+            "kind": "maneuver",
+            "skill": "Ближний бой (манёвр)",
+            "chance": {
+              "raw": "60% (30/12)",
+              "value": 60,
+              "half": 30,
+              "fifth": 12
+            },
+            "damage": {
+              "raw": "удержание, затем удушение 1d3+БкУ в следующих раундах",
+              "dice": "1d3",
+              "adds_db": true
+            },
+            "notes": "схваченного держат за горло и каждый раунд душат на 1d3+БкУ; вырваться — встречная проверка СИЛ"
+          }
+        ],
+        "dodge": {
+          "raw": "нет",
+          "value": null
+        },
+        "skills": [
+          {
+            "name": "Выполнять приказы",
+            "value": {
+              "raw": "95%",
+              "value": 95
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "abilities": [
+    {
+      "name": "Послушание",
+      "summary": "Подчиняются простым, понятным приказам любого, кто их отдаёт; при противоречии слушают того, у кого выше МОЩ. С дальнобойным оружием не справляются, но в рукопашной опасны. Без приказа на сыщиков не реагируют."
+    }
+  ],
+  "description": {
+    "ru": "Шахтёры и другие пленники, похищенные Хьюстоном: машина контроля разума стёрла их долговременную память и вложила приказы, которым почти невозможно противиться. Тупо бредут под присмотром надзирателей Алана и Томаса, не поддаются уговорам, но откликаются на короткие твёрдые команды.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Рабочие партии по десять зомби с двумя надзирателями ежедневно ходят между штабом Хьюстона и раскопками, где пробивают туннель к древней лаборатории; ещё десять могут спать на первом этаже штаба. Одной беглянке из такой партии удалось вырваться. Какакатак может перенастроить машину и вернуть им память (+1d4 рассудка).",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "masks-of-nyarlathotep-en",
+      "physical_page": 517,
+      "printed_page": 514,
+      "method": "book_text",
+      "verified": true,
+      "entry_page": 497,
+      "note": "Глава 6 «Австралия», раздел «Персонажи и чудовища: Австралия»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Связь с записью «Зомби» условна: по книге это живые люди, превращённые в зомби машиной контроля разума, а не оживлённые мертвецы. Навык «Выполнять приказы» есть только в «Масках Ньярлатхотепа» и в справочнике навыков отсутствует."
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "masks-of-nyarlathotep-en/creature/animated-mummy",
+  "kind": "creature",
+  "name": {
+    "ru": "Оживлённая мумия",
+    "en": "Animated Mummy"
+  },
+  "aliases": [
+    "груда тряпья"
+  ],
+  "category": "supernatural",
+  "subcategory": "нежить, оживлённая личинкой",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:father-of-maggots",
+      "note": "её оживляет личинка Отца личинок"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "80",
+        "value": 80
+      },
+      "CON": {
+        "raw": "80",
+        "value": 80
+      },
+      "SIZ": {
+        "raw": "40",
+        "value": 40
+      },
+      "DEX": {
+        "raw": "35",
+        "value": 35
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "INT": {
+        "raw": "—",
+        "value": null
+      },
+      "POW": {
+        "raw": "05",
+        "value": 5
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "1",
+      "value": 1
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "6",
+      "value": 6,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 6
+        }
+      ]
+    },
+    "armor": {
+      "raw": "серьёзная рана отрывает конечность; в остальном урон игнорируется, кроме попаданий в голову (один штрафной кубик к атаке в голову).",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1 (удар, рвать когтями или личинка пытается перебраться из мумии в другую жертву)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      }
+    ],
+    "dodge": {
+      "raw": "мумии не уклоняются",
+      "value": null
+    },
+    "skills": [
+      {
+        "name": "Прикинуться грудой тряпья",
+        "value": {
+          "raw": "90%",
+          "value": 90
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      }
+    ],
+    "spells": {
+      "raw": "нет."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d8",
+        "trigger": "при виде оживлённой мумии"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Проникнуть в тело (манёвр)",
+      "summary": "Личинка внутри мумии может войти в тело цели через любое отверстие или рану, если потратит хотя бы раунд, чтобы подползти; это не обычный боевой манёвр, поэтому штрафы за малую комплекцию не действуют. Слизь личинки наносит 1 ПЗ урона за раунд при касании голой кожи.",
+      "raw": "Enter body (mnvr): a larva may enter a target's body via any orifice or wound, provided it spends at least one round crawling into position. As this is not a normal combat maneuver, the larva is not subject to the normal penalties for its small build. The slime exuded by the larva inflicts 1 hit point of damage per round if it comes into contact with bare skin.",
+      "refs": [
+        "masks-of-nyarlathotep-en/creature/kharisiri-larva"
+      ]
+    },
+    {
+      "name": "Pulp Cthulhu: бой",
+      "summary": "Драка 45% (22/9), урон 1d4; мумии не уклоняются.",
+      "raw": "Brawl 45% (22/9), damage 1D4; Dodge: mummies do not dodge"
+    }
+  ],
+  "description": {
+    "ru": "Высохшие останки жертв харисири, оживлённые личинкой Отца личинок. В отличие от харисири, мумии лишены разума. Издали мумия кажется кучей тряпья, палок и мусора; вернувшись позже, сыщик может заметить (ИНТ или Внимание), что она чуть сдвинулась.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Мумия ждёт сыщиков в подземельях пирамиды: подпустив жертву вплотную, хватает её и пытается удержать, чтобы личинка перебралась в новое тело. Уничтожив мумию, сыщик проходит проверку Удачи: при провале он повредил череп и выпустил личинку.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "masks-of-nyarlathotep-en",
+      "physical_page": 91,
+      "printed_page": 88,
+      "method": "book_text",
+      "verified": true,
+      "entry_page": 83
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Не мумия из Malleus Monstrorum (coc:creature:mummy), а жертва харисири, оживлённая личинкой."
+  }
+}

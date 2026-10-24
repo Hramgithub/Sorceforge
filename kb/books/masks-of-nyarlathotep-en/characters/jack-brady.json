@@ -1,0 +1,519 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "masks-of-nyarlathotep-en/character/jack-brady",
+  "kind": "character",
+  "name": {
+    "ru": "Джек «Медяк» Брэди",
+    "en": "Jack “Brass” Brady"
+  },
+  "aliases": [
+    "Brass",
+    "Медный",
+    "John Smith",
+    "Джон Смит"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "последний сохранивший рассудок участник экспедиции Карлайла",
+    "en": "last sane member of the Carlyle Expedition"
+  },
+  "occupation_ref": "coc:occupation:soldat",
+  "age": {
+    "raw": "41",
+    "value": 41
+  },
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "knows",
+      "target": "masks-of-nyarlathotep-en/character/chu-min",
+      "note": "соратник по «Новому Китаю»",
+      "note_back": "соратник"
+    },
+    {
+      "type": "rival_of",
+      "target": "masks-of-nyarlathotep-en/character/sir-aubrey-penhew",
+      "note": "враг",
+      "note_back": "беглый «предатель» экспедиции"
+    },
+    {
+      "type": "rival_of",
+      "target": "masks-of-nyarlathotep-en/character/ho-fang",
+      "note": "враг",
+      "note_back": "враг Ордена"
+    },
+    {
+      "type": "rival_of",
+      "target": "masks-of-nyarlathotep-en/character/carl-stanford",
+      "note": "охотится за ним и свитком",
+      "note_back": "добыча"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "85",
+        "value": 85
+      },
+      "CON": {
+        "raw": "80",
+        "value": 80
+      },
+      "SIZ": {
+        "raw": "85",
+        "value": 85
+      },
+      "DEX": {
+        "raw": "90",
+        "value": 90
+      },
+      "APP": {
+        "raw": "40",
+        "value": 40
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "80",
+        "value": 80
+      },
+      "EDU": {
+        "raw": "55",
+        "value": 55
+      }
+    },
+    "hp": {
+      "raw": "16",
+      "value": 16
+    },
+    "mp": {
+      "raw": "16",
+      "value": 16
+    },
+    "sanity": {
+      "raw": "24",
+      "value": 24
+    },
+    "luck": {
+      "raw": "80",
+      "value": 80
+    },
+    "damage_bonus": {
+      "raw": "+1d6",
+      "value": "+1d6"
+    },
+    "build": {
+      "raw": "2",
+      "value": 2
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "armor": {
+      "raw": "Латунная пластина, подаренная матерью: при успешной проверке Удачи отражает одну атаку колющим оружием за раунд, если удар нанесён спереди; удары в спину — по обычным правилам.",
+      "value": null
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "1d3+1d6",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed",
+        "notes": "с латунным кастетом (если успеет надеть) урон 1d3+2+1d6"
+      },
+      {
+        "name": {
+          "ru": "Боевой нож",
+          "en": "fighting knife"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "1d4+2+1d6",
+          "dice": "1d4+2",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:knife-medium"
+      },
+      {
+        "name": {
+          "ru": "Полицейская дубинка",
+          "en": "Nightstick"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "1d6+1d6",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:club-small"
+      },
+      {
+        "name": {
+          "ru": "Пистолет-пулемёт Томпсона",
+          "en": "Thompson SMG"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет-пулемёт)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d10+2",
+          "dice": "1d10+2",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:thompson-smg"
+      }
+    ],
+    "dodge": {
+      "raw": "65% (32/13)",
+      "value": 65,
+      "half": 32,
+      "fifth": 13
+    },
+    "skills": [
+      {
+        "name": "Обаяние",
+        "skill": "coc:skill:charm",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "28%",
+          "value": 28,
+          "half": 14,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Взрывчатка",
+        "skill": "coc:skill:explosives",
+        "value": {
+          "raw": "85%",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        }
+      },
+      {
+        "name": "Вождение автомобиля",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Механика",
+        "skill": "coc:skill:mechanical-repair",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Управление тяжёлыми машинами",
+        "skill": "coc:skill:heavy-machinery",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "85%",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Плавание",
+        "skill": "coc:skill:swim",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Иностранный язык (арабский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "арабский",
+        "value": {
+          "raw": "15%",
+          "value": 15,
+          "half": 7,
+          "fifth": 3
+        }
+      },
+      {
+        "name": "Иностранный язык (китайский, кантонский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "китайский (кантонский)",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Иностранный язык (китайский, мандаринский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "китайский (мандаринский)",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Иностранный язык (китайский, шанхайский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "китайский (шанхайский)",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Родной язык (английский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "английский",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Иностранный язык (турецкий)",
+        "skill": "coc:skill:language-other",
+        "specialization": "турецкий",
+        "value": {
+          "raw": "22%",
+          "value": 22,
+          "half": 11,
+          "fifth": 4
+        }
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Pulp Cthulhu: бой",
+      "summary": "Драка 90% (45/18), урон 1d3+1d6 (с кастетом 1d3+2+1d6) или боевой нож 1d4+2+1d6; полицейская дубинка 90% (45/18), урон 1d6+1d6; пистолет-пулемёт Томпсона 60% (30/12), урон 1d10+2; Уклонение 95% (47/19).",
+      "raw": "Brawl 90% (45/18), damage 1D3+1D6** or fighting knife 1D4+2+1D6; Nightstick 90% (45/18), damage 1D6+1D6; Thompson SMG 60% (30/12), damage 1D10+2; Dodge 95% (47/19)"
+    },
+    {
+      "name": "Талант Pulp: Везунчик",
+      "summary": "При восстановлении Удачи получает дополнительно 1d10 очков.",
+      "raw": "Lucky: regains +1D10 Luck on recovery rolls."
+    },
+    {
+      "name": "Талант Pulp: Крепкий парень",
+      "summary": "Может потратить 10 очков Удачи, чтобы проигнорировать до 5 пунктов урона за раунд.",
+      "raw": "Tough Guy: spend 10 Luck to shrug off up to 5 hit points damage in one round."
+    }
+  ],
+  "description": {
+    "ru": "Последний сохранивший рассудок участник экспедиции Карлайла, телохранитель Роджера Карлайла, бывший морской пехотинец. Высокий, загорелый, мускулистый, с высоким лбом и короткими каштановыми волосами, седеющими на висках; в глазах — затравленность. Жесток, живёт инстинктами и более чем параноидален (не без причины); убийца, с которым опасно ссориться. Рассудок на исходе: если он сойдёт с ума, то нападёт на всё, что сочтёт связанным с Мифами, включая сыщиков. Прячется в потайной комнате в доме Му Сяня, изредка выходит на склад «Решительного действия» и в чайную «Осеннее утро»; при слежке за домом Му его можно заметить Трудной проверкой Внимания. Всегда носит на груди латунную пластину, подаренную матерью.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Устроив обезумевшего Роджера Карлайла в санаторий в Гонконге (под именем Рэндольф Картер, с адресом «Спотыкающегося тигра»), в начале октября 1919 года приехал в Шанхай, надеясь забыть случившееся. Летом 1921-го увидел в гавани живого сэра Обри Пенхью на яхте «Темная Владычица» и решил действовать: сошёлся с революционными группами (Чу Минь и «Решительное действие», которое он обучал) и с оккультистами, в 1924 году рассказал свою историю Джексону Элиасу. Узнав от Му Сяня о «Семи загадочных книгах Хсана», украл свиток у Линь Яньюй, чтобы научиться создавать Око Света и Тьмы: хочет восстановить разбитую печать на острове Серого Дракона, уничтожить сэра Обри и его культистов, затем отправиться в Кению к Великому храму Ньярлатхотепа и в Австралию, чтобы поставить ещё две печати. Орден Раздутой женщины не раз покушался на него (клуб моряков, Фонарная улица). Вместе с Чу Минем планирует штурм острова; узнав о похищении Чой Мэйлин, бросается на особняк Хо Фана и, если сыщики не помогут, пропадает без вести. Его рассказ — Carlyle Papers China #8.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "masks-of-nyarlathotep-en",
+      "physical_page": 609,
+      "printed_page": 606,
+      "method": "book_text",
+      "verified": true,
+      "entry_page": 537,
+      "note": "профиль — с. 606–607; описание — «Действующие лица: Китай» (с. 534–535), «Встреча с Джеком Брэди» (с. 577–580)"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Родной язык выбран по происхождению персонажа: американец — английский. Имя — по указателю русского перевода «Масок» («Медяк»); в списке действующих лиц перевода — «Медный»."
+  }
+}

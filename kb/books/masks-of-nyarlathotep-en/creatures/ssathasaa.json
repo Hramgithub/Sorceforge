@@ -1,0 +1,842 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "masks-of-nyarlathotep-en/creature/ssathasaa",
+  "kind": "creature",
+  "name": {
+    "ru": "Ссатасаа",
+    "en": "Ssathasaa"
+  },
+  "aliases": [
+    "Bertha Shipley",
+    "Arthur Cotting",
+    "Берта Шипли",
+    "Артур Коттинг",
+    "Змей из Челси"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "змеечеловек, верховный колдун",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "form_of",
+      "target": "coc:creature:serpent-person",
+      "note": "особь вида",
+      "note_back": "именованная особь — Ссатасаа («Маски Ньярлатхотепа»)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "55",
+        "value": 55
+      },
+      "SIZ": {
+        "raw": "55",
+        "value": 55
+      },
+      "DEX": {
+        "raw": "75",
+        "value": 75
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "INT": {
+        "raw": "90",
+        "value": 90
+      },
+      "POW": {
+        "raw": "120",
+        "value": 120
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "11",
+      "value": 11
+    },
+    "mp": {
+      "raw": "24",
+      "value": 24
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "1 пункт (кожа и чешуя).",
+      "value": 1
+    },
+    "luck": {
+      "raw": "90",
+      "value": 90
+    },
+    "sanity": {
+      "raw": "—",
+      "value": null
+    },
+    "attacks_per_round": {
+      "raw": "1 (когти, укус, оружие)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Мясницкий тесак",
+          "en": "meat cleaver"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d4+2",
+          "dice": "1d4+2",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:knife-medium"
+      },
+      {
+        "name": {
+          "ru": "Вязальная спица",
+          "en": "Knitting Needle"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Укус",
+          "en": "Bite"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "1d8+яд",
+          "dice": "1d8",
+          "adds_db": false,
+          "extra": "яд: Экстремальная проверка ВЫН, иначе ещё 1d8 урона"
+        },
+        "notes": "очень ядовитый укус (см. «Ядовитый укус»)"
+      }
+    ],
+    "dodge": {
+      "raw": "37% (18/7)",
+      "value": 37,
+      "half": 18,
+      "fifth": 7
+    },
+    "skills": [
+      {
+        "name": "Искусство/ремесло (вязание)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "Вязание",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Обаяние",
+        "skill": "coc:skill:charm",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "70%",
+          "value": 70
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "65%",
+          "value": 65
+        }
+      },
+      {
+        "name": "Тайные знания (приготовление плутонианского наркотика)",
+        "skill": "coc:skill:lore",
+        "specialization": "Приготовление плутонианского наркотика",
+        "value": {
+          "raw": "80%",
+          "value": 80
+        }
+      },
+      {
+        "name": "Естествознание",
+        "skill": "coc:skill:natural-world",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Наука (биология)",
+        "skill": "coc:skill:science",
+        "specialization": "Биология",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Наука (химия)",
+        "skill": "coc:skill:science",
+        "specialization": "Химия",
+        "value": {
+          "raw": "80%",
+          "value": 80
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "85%",
+          "value": 85
+        }
+      },
+      {
+        "name": "Плавание",
+        "skill": "coc:skill:swim",
+        "value": {
+          "raw": "85%",
+          "value": 85
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "55%",
+          "value": 55
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Иностранный язык (арабский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "Арабский",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      },
+      {
+        "name": "Иностранный язык (английский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "Английский",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Иностранный язык (наакаль)",
+        "skill": "coc:skill:language-other",
+        "specialization": "Наакаль",
+        "value": {
+          "raw": "90%",
+          "value": 90
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Cloud Memory, Consume Likeness, Dread Curse of Azathoth, Dominate, Enthrall Victim, Mental Suggestion, Time Gate, Wrack. Другие заклинания, например Contact Yig (подробнее — в Grand Grimoire of Cthulhu Mythos Magic), — на усмотрение Хранителя.",
+      "items": [
+        {
+          "name": "Cloud Memory",
+          "spell": "coc:spell:cloud-memory"
+        },
+        {
+          "name": "Consume Likeness",
+          "spell": "coc:spell:consume-likeness"
+        },
+        {
+          "name": "Dread Curse of Azathoth",
+          "spell": "coc:spell:dread-curse-of-azathoth"
+        },
+        {
+          "name": "Dominate",
+          "spell": "coc:spell:dominate"
+        },
+        {
+          "name": "Enthrall Victim",
+          "spell": "coc:spell:enthrall-victim"
+        },
+        {
+          "name": "Mental Suggestion",
+          "spell": "coc:spell:mental-suggestion"
+        },
+        {
+          "name": "Time Gate",
+          "spell": "coc:spell:time-gate"
+        },
+        {
+          "name": "Wrack",
+          "spell": "coc:spell:wrack"
+        },
+        {
+          "name": "Contact Yig",
+          "spell": "coc:spell:contact-yig"
+        }
+      ]
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "при виде змеечеловека"
+      }
+    ]
+  },
+  "variants": [
+    {
+      "label": "в облике Берты Шипли",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "20",
+            "value": 20
+          },
+          "CON": {
+            "raw": "40",
+            "value": 40
+          },
+          "SIZ": {
+            "raw": "40",
+            "value": 40
+          },
+          "DEX": {
+            "raw": "30",
+            "value": 30
+          },
+          "APP": {
+            "raw": "45",
+            "value": 45
+          },
+          "INT": {
+            "raw": "45",
+            "value": 45
+          },
+          "POW": {
+            "raw": "40",
+            "value": 40
+          },
+          "EDU": {
+            "raw": "30",
+            "value": 30
+          }
+        },
+        "hp": {
+          "raw": "11",
+          "value": 11
+        },
+        "mp": {
+          "raw": "24",
+          "value": 24
+        },
+        "damage_bonus": {
+          "raw": "0",
+          "value": 0
+        },
+        "build": {
+          "raw": "0",
+          "value": 0
+        },
+        "move": {
+          "raw": "8",
+          "value": 8,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 8
+            }
+          ]
+        },
+        "armor": {
+          "raw": "1 пункт (кожа и чешуя).",
+          "value": 1
+        },
+        "luck": {
+          "raw": "90",
+          "value": 90
+        },
+        "sanity": {
+          "raw": "—",
+          "value": null
+        },
+        "attacks_per_round": {
+          "raw": "1 (когти, укус, оружие)",
+          "value": 1
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Ближний бой",
+              "en": "Fighting"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "60% (30/12)",
+              "value": 60,
+              "half": 30,
+              "fifth": 12
+            },
+            "damage": {
+              "raw": "1d3",
+              "dice": "1d3",
+              "adds_db": true
+            }
+          },
+          {
+            "name": {
+              "ru": "Мясницкий тесак",
+              "en": "meat cleaver"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "60% (30/12)",
+              "value": 60,
+              "half": 30,
+              "fifth": 12
+            },
+            "damage": {
+              "raw": "1d4+2",
+              "dice": "1d4+2",
+              "adds_db": true
+            },
+            "weapon": "coc:weapon:knife-medium"
+          },
+          {
+            "name": {
+              "ru": "Вязальная спица",
+              "en": "Knitting Needle"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "60% (30/12)",
+              "value": 60,
+              "half": 30,
+              "fifth": 12
+            },
+            "damage": {
+              "raw": "1d3",
+              "dice": "1d3",
+              "adds_db": true
+            }
+          },
+          {
+            "name": {
+              "ru": "Укус",
+              "en": "Bite"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "35% (17/7)",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            },
+            "damage": {
+              "raw": "1d8+яд",
+              "dice": "1d8",
+              "adds_db": false,
+              "extra": "яд: Экстремальная проверка ВЫН, иначе ещё 1d8 урона"
+            },
+            "notes": "очень ядовитый укус (см. «Ядовитый укус»)"
+          }
+        ],
+        "dodge": {
+          "raw": "37% (18/7)",
+          "value": 37,
+          "half": 18,
+          "fifth": 7
+        },
+        "skills": [
+          {
+            "name": "Искусство/ремесло (вязание)",
+            "skill": "coc:skill:art-craft",
+            "specialization": "Вязание",
+            "value": {
+              "raw": "45%",
+              "value": 45
+            }
+          },
+          {
+            "name": "Обаяние",
+            "skill": "coc:skill:charm",
+            "value": {
+              "raw": "60%",
+              "value": 60
+            }
+          },
+          {
+            "name": "Мифы Ктулху",
+            "skill": "coc:skill:cthulhu-mythos",
+            "value": {
+              "raw": "50%",
+              "value": 50
+            }
+          },
+          {
+            "name": "Запугивание",
+            "skill": "coc:skill:intimidate",
+            "value": {
+              "raw": "70%",
+              "value": 70
+            }
+          },
+          {
+            "name": "Прыжки",
+            "skill": "coc:skill:jump",
+            "value": {
+              "raw": "65%",
+              "value": 65
+            }
+          },
+          {
+            "name": "Тайные знания (приготовление плутонианского наркотика)",
+            "skill": "coc:skill:lore",
+            "specialization": "Приготовление плутонианского наркотика",
+            "value": {
+              "raw": "80%",
+              "value": 80
+            }
+          },
+          {
+            "name": "Естествознание",
+            "skill": "coc:skill:natural-world",
+            "value": {
+              "raw": "60%",
+              "value": 60
+            }
+          },
+          {
+            "name": "Наука (биология)",
+            "skill": "coc:skill:science",
+            "specialization": "Биология",
+            "value": {
+              "raw": "60%",
+              "value": 60
+            }
+          },
+          {
+            "name": "Наука (химия)",
+            "skill": "coc:skill:science",
+            "specialization": "Химия",
+            "value": {
+              "raw": "80%",
+              "value": 80
+            }
+          },
+          {
+            "name": "Внимание",
+            "skill": "coc:skill:spot-hidden",
+            "value": {
+              "raw": "40%",
+              "value": 40
+            }
+          },
+          {
+            "name": "Скрытность",
+            "skill": "coc:skill:stealth",
+            "value": {
+              "raw": "85%",
+              "value": 85
+            }
+          },
+          {
+            "name": "Плавание",
+            "skill": "coc:skill:swim",
+            "value": {
+              "raw": "85%",
+              "value": 85
+            }
+          },
+          {
+            "name": "Метание",
+            "skill": "coc:skill:throw",
+            "value": {
+              "raw": "55%",
+              "value": 55
+            }
+          },
+          {
+            "name": "Чтение следов",
+            "skill": "coc:skill:track",
+            "value": {
+              "raw": "60%",
+              "value": 60
+            }
+          },
+          {
+            "name": "Иностранный язык (арабский)",
+            "skill": "coc:skill:language-other",
+            "specialization": "Арабский",
+            "value": {
+              "raw": "50%",
+              "value": 50
+            }
+          },
+          {
+            "name": "Иностранный язык (английский)",
+            "skill": "coc:skill:language-other",
+            "specialization": "Английский",
+            "value": {
+              "raw": "60%",
+              "value": 60
+            }
+          },
+          {
+            "name": "Иностранный язык (наакаль)",
+            "skill": "coc:skill:language-other",
+            "specialization": "Наакаль",
+            "value": {
+              "raw": "90%",
+              "value": 90
+            }
+          }
+        ],
+        "spells": {
+          "raw": "Cloud Memory, Consume Likeness, Dread Curse of Azathoth, Dominate, Enthrall Victim, Mental Suggestion, Time Gate, Wrack. Другие заклинания, например Contact Yig (подробнее — в Grand Grimoire of Cthulhu Mythos Magic), — на усмотрение Хранителя.",
+          "items": [
+            {
+              "name": "Cloud Memory",
+              "spell": "coc:spell:cloud-memory"
+            },
+            {
+              "name": "Consume Likeness",
+              "spell": "coc:spell:consume-likeness"
+            },
+            {
+              "name": "Dread Curse of Azathoth",
+              "spell": "coc:spell:dread-curse-of-azathoth"
+            },
+            {
+              "name": "Dominate",
+              "spell": "coc:spell:dominate"
+            },
+            {
+              "name": "Enthrall Victim",
+              "spell": "coc:spell:enthrall-victim"
+            },
+            {
+              "name": "Mental Suggestion",
+              "spell": "coc:spell:mental-suggestion"
+            },
+            {
+              "name": "Time Gate",
+              "spell": "coc:spell:time-gate"
+            },
+            {
+              "name": "Wrack",
+              "spell": "coc:spell:wrack"
+            },
+            {
+              "name": "Contact Yig",
+              "spell": "coc:spell:contact-yig"
+            }
+          ]
+        },
+        "sanity_loss": [
+          {
+            "success": "0",
+            "fail": "1d6",
+            "trigger": "при виде змеечеловека"
+          }
+        ]
+      }
+    }
+  ],
+  "abilities": [
+    {
+      "name": "Три облика",
+      "summary": "Истинный облик змеечеловека; облик Берты Шипли, 70-летней матери Майлза (в нём он встречает гостей и греется в саду); облик Артура Коттинга — человека, которого он съел, пробудившись после векового сна. Из человеческого облика в змеиный переходит примерно за 20 секунд; чтобы принять облик Берты или Артура, нужен ритуал на 1d3 минуты (заклинание Consume Likeness). Потеряв в человеческом облике хотя бы 1 ПЗ, от потрясения возвращается в змеиный облик и пытается схватить или убить свидетелей.",
+      "refs": [
+        "coc:spell:consume-likeness"
+      ]
+    },
+    {
+      "name": "Змеиная тень",
+      "summary": "Даже под личиной его тень остаётся тенью змеечеловека; поэтому он не выходит днём и избегает ярко освещённых мест, а лондонский туман любит за размытые тени. Заметить странную тень «Берты» можно успешной проверкой Внимания или Удачи — в зависимости от места и обстоятельств."
+    },
+    {
+      "name": "Ядовитый укус",
+      "summary": "Укус очень ядовит: жертва проходит Экстремальную проверку ВЫН, при провале получает ещё 1d8 урона."
+    },
+    {
+      "name": "Pulp Cthulhu: бой",
+      "summary": "Ближний бой 80% (40/16), урон 1d3 или большой мясницкий тесак 1d8; Вязальная спица 80% (40/16), урон 1d3; Укус 45% (22/9), урон 1d8+яд (см. «Ядовитый укус»); Уклонение 37% (18/7).",
+      "raw": "Fighting 80% (40/12), damage 1d3 or large meat cleaver 1d8; Knitting Needle 80% (40/12), damage 1d3; Bite 45% (17/7), damage 1d8 + poison; Dodge 37% (18/7)"
+    },
+    {
+      "name": "Талант Pulp: Быстроногий (Fleet Footed)",
+      "summary": "Может потратить 10 очков Удачи, чтобы не оказаться в численном меньшинстве в течение одной боевой стычки.",
+      "raw": "Fleet Footed: spend 10 Luck to avoid being outnumbered for one combat encounter."
+    },
+    {
+      "name": "Талант Pulp: Стремительная атака (Rapid Attack)",
+      "summary": "Потратив 10 очков Удачи, получает одну дополнительную атаку в ближнем бою в одном раунде.",
+      "raw": "Rapid Attack: spend 10 Luck to gain one further melee attack in a single round."
+    }
+  ],
+  "description": {
+    "ru": "Верховный колдун змеелюдей, проспавший века и пробудившийся в Лондоне. Истинный облик — чешуя и когти, длинная крокодилья морда и толстый хвост; хитрый, коварный и опасный противник. В облике Берты Шипли — сгорбленная 70-летняя старушка с добрыми глазами и седыми волосами, рассеянная, бестолковая и забывчивая; в облике Артура Коттинга — 50-летний мужчина ниже среднего роста, с усами щёточкой и залысинами, тихий, сдержанный и готовый помочь.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Побочный сценарий «Змей из Челси»; к планам культов Ньярлатхотепа отношения не имеет. Под видом Артура Коттинга Ссатасаа подружился с художником Майлзом Шипли, гипнозом и плутонианским наркотиком показал ему эпоху владычества змеелюдей и свёл с ума, получив взамен убежище в доме на Холбейн-Мьюз и человеческое мясо раз-другой в неделю. Первой трапезой стала мать художника, Берта Шипли; теперь Ссатасаа живёт в её облике, изображает милую старушку и продаёт гостям картины «сына». Его великий замысел — напитать картины Шипли магией Врат: если таких полотен будет достаточно, он откроет Врата и приведёт сородичей из прошлого в настоящее, что грозит гибелью Англии. Хочет остаться незамеченным; узнавших его тайну сыщиков старается взять в плен (как полезных слуг и запас пищи) и убивает лишь в крайнем случае.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "masks-of-nyarlathotep-en",
+      "physical_page": 229,
+      "printed_page": 226,
+      "method": "book_text",
+      "verified": true,
+      "entry_page": 218,
+      "note": "глава 3 «Англия», побочный сценарий «Змей из Челси»; описание — с. 215–216"
+    }
+  ],
+  "errata": [
+    {
+      "field": "abilities[Pulp Cthulhu: бой].Ближний бой",
+      "printed": "80% (40/12)",
+      "expected": "80% (40/16)",
+      "note": "половина и пятая не следуют из процента; исправлено по правилу 7-й редакции (Р-35)",
+      "fixed": true
+    },
+    {
+      "field": "abilities[Pulp Cthulhu: бой].Вязальная спица",
+      "printed": "80% (40/12)",
+      "expected": "80% (40/16)",
+      "note": "половина и пятая не следуют из процента; исправлено по правилу 7-й редакции (Р-35)",
+      "fixed": true
+    },
+    {
+      "field": "abilities[Pulp Cthulhu: бой].Укус",
+      "printed": "45% (17/7)",
+      "expected": "45% (22/9)",
+      "note": "половина и пятая не следуют из процента; исправлено по правилу 7-й редакции (Р-35); напечатанные 17/7 совпадают с обычным укусом 35% — вероятно, при повышении процента для Pulp не пересчитали половину и пятую",
+      "fixed": true
+    },
+    {
+      "field": "variants[в облике Берты Шипли].statblock",
+      "printed": "ПЗ 11, ПМ 24, БкУ 0, комплекция 0",
+      "expected": "ПЗ 8, ПМ 8, БкУ −2, комплекция −2",
+      "note": "производные значения в профиле «Берты» не следуют из её характеристик (ВЫН 40, ВЕЛ 40, МОЩ 40, СИЛ+ВЕЛ 60); вероятно, книга сохранила ПЗ, ПМ и Удачу истинного облика. Оставлено как напечатано"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "В книге боевой блок (Ближний бой 60%, тесак, спица, укус) напечатан после профиля «Берты» без указания, к какому облику он относится; он повторён в обоих профилях. Блок Pulp Combat — в способности «Pulp Cthulhu: бой» (проценты исправлены по Р-35, напечатанное — в raw и errata). Родной язык не указан: книга даёт языки одним списком, у змеечеловека все языки записаны как иностранные."
+  }
+}

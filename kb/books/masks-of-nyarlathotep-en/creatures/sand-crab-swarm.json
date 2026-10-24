@@ -1,0 +1,176 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "masks-of-nyarlathotep-en/creature/sand-crab-swarm",
+  "kind": "creature",
+  "name": {
+    "ru": "Стая песчаных крабов",
+    "en": "Sand Crab Swarm"
+  },
+  "category": "animal",
+  "subcategory": "мутировавшие животные (стая)",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "45",
+        "value": 45,
+        "roll": "(1d6+6)×5"
+      },
+      "CON": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      },
+      "SIZ": {
+        "raw": "55",
+        "value": 55,
+        "roll": "(2d6+4)×5"
+      },
+      "DEX": {
+        "raw": "45",
+        "value": 45,
+        "roll": "(2d6+2)×5"
+      },
+      "POW": {
+        "raw": "35",
+        "value": 35,
+        "roll": "2d6×5"
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0,
+      "note": "среднее"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0,
+      "note": "среднее"
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "armor": {
+      "raw": "3 пункта (панцирь)",
+      "value": 3
+    },
+    "attacks_per_round": {
+      "raw": "2 (режущие и колющие клешни)",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": false
+        }
+      },
+      {
+        "name": {
+          "ru": "Рой",
+          "en": "Swarm (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "2d6",
+          "dice": "2d6",
+          "adds_db": false
+        },
+        "notes": "бонусный кубик за численное превосходство; урон наносит весь рой"
+      }
+    ],
+    "dodge": {
+      "raw": "n/a",
+      "value": null,
+      "half": null,
+      "fifth": null
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "0",
+        "trigger": "обычно потери нет"
+      },
+      {
+        "success": "0",
+        "fail": "1d3",
+        "trigger": "если у свидетеля кабурофобия — боязнь крабов и ракообразных"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Рой",
+      "summary": "Стая крабов наваливается на жертву, как крысы: получает бонусный кубик к атаке за численное превосходство и в сумме наносит 2d6 урона.",
+      "raw": "Swarm (mnvr): like rats, a group of sand crabs can overwhelm a much larger individual..."
+    }
+  ],
+  "description": {
+    "ru": "Песчаные (земляные) крабы острова Серого Дракона — только для pulp-игры. Обычно мелкие и безобидные, здесь, рядом со странными силами Мифов, они вырастают до 30 см. Хватательных клешней у них нет — вместо них острые шипы для рытья, которыми они режут и колют добычу. Подкарауливают тех, кто идёт по пляжу, выскакивая из нор в песке (внезапная атака, если не заметить их успешной проверкой Внимания); как крысы, стая способна задавить куда более крупное существо. Победа над гигантскими крабами — +1d3 Рассудка.",
+    "en": null
+  },
+  "habitat": "пляжи острова Серого Дракона",
+  "sources": [
+    {
+      "book_id": "masks-of-nyarlathotep-en",
+      "physical_page": 615,
+      "printed_page": 612,
+      "method": "book_text",
+      "verified": true,
+      "entry_page": 590,
+      "note": "описание — врезка «Pulp: нападение песчаных крабов!» (с. 587)"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.characteristics.STR",
+      "printed": "45, (1D6+6)×5",
+      "expected": null,
+      "note": "Среднее броска (1d6+6)×5 — 47,5, напечатано 45. Неясно, ошибочен бросок или среднее, поэтому оставлено как напечатано (Р-37); на ПЗ и БкУ не влияет."
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Средние значения стаи с бросками характеристик; ПЗ 12, средние БкУ 0 и комплекция 0."
+  }
+}

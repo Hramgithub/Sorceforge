@@ -122,8 +122,8 @@ function matches(c, q, f) {
   return c.category === f;
 }
 
-// table rows keep the calibre only in the English name (.303, 12-gauge, 9mm, 75mm)
-const caliberOf = c => c.caliber || (/(\.\d{2,3}(?:-\d{2})?|\d+(?:\.\d+)?\s?mm|\d+-gauge)/i.exec(c.name.en || '') || [])[1] || '';
+// every firearm has a calibre (Р-63); melee, thrown and explosives show «—»
+const caliberOf = c => c.caliber || '—';
 function subtitle(c) {
   if (c.kind === 'creature') return `${esc(c.name.en||'')} · ${CAT[c.category]||''}${bookOf(c) !== 'keeper-rulebook-ru' ? ' · ' + esc(BOOKS[bookOf(c)] || bookOf(c)) : ''}`;
   if (c.kind === 'character') return [c.occupation?.ru, ...(c.roles||[]).map(r => ROLE[r]), BOOKS[bookOf(c)]].filter(Boolean).map(esc).join(' · ');

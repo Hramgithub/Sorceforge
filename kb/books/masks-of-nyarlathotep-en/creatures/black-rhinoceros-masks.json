@@ -1,0 +1,187 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "masks-of-nyarlathotep-en/creature/black-rhinoceros-masks",
+  "kind": "creature",
+  "name": {
+    "ru": "Чёрный носорог («Маски»)",
+    "en": "Black Rhino (Masks of Nyarlathotep)"
+  },
+  "aliases": [],
+  "category": "animal",
+  "subcategory": "зверь",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "form_of",
+      "target": "coc:creature:black-rhinoceros",
+      "note": "профиль кампании"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "205",
+        "value": 205
+      },
+      "CON": {
+        "raw": "100",
+        "value": 100
+      },
+      "SIZ": {
+        "raw": "205",
+        "value": 205
+      },
+      "DEX": {
+        "raw": "35",
+        "value": 35
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      }
+    },
+    "hp": {
+      "raw": "30",
+      "value": 30
+    },
+    "damage_bonus": {
+      "raw": "+4d6",
+      "value": "+4d6"
+    },
+    "build": {
+      "raw": "5",
+      "value": 5
+    },
+    "move": {
+      "raw": "15",
+      "value": 15,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 15
+        }
+      ]
+    },
+    "armor": {
+      "raw": "10 пунктов (шкура)",
+      "value": 10
+    },
+    "attacks_per_round": {
+      "raw": "1 (удар, таранный удар, растаптывание)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "4d6",
+          "dice": "4d6",
+          "adds_db": false
+        }
+      },
+      {
+        "name": {
+          "ru": "Таранный удар",
+          "en": "Charge"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d10+4d6",
+          "dice": "1d10",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Растаптывание",
+          "en": "Trample"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "75% (37/15)",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        },
+        "damage": {
+          "raw": "3d10+4d6",
+          "dice": "3d10",
+          "adds_db": true
+        },
+        "notes": "против сбитого с ног противника"
+      }
+    ],
+    "dodge": {
+      "raw": "20% (10/4)",
+      "value": 20,
+      "half": 10,
+      "fifth": 4
+    },
+    "skills": [
+      {
+        "name": "Раздражаться",
+        "skill": "coc:skill:be-annoyed",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Учуять опасность",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Общий профиль из раздела «Африканские животные» главы «Кения».",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "masks-of-nyarlathotep-en",
+      "physical_page": 444,
+      "printed_page": 441,
+      "method": "book_text",
+      "verified": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Отличия от профиля вида в справочнике: движение 15 (вместо 14); Ближний бой 4d6 (вместо 2d6); растаптывание 3d10+4d6 против сбитого с ног (вместо урона, равного БкУ); навыки Раздражаться 70% и Учуять опасность 60% вместо Раздражаться, Слуха и Внимания (нюх) по 70%; МОЩ 50 (у вида 50–55)."
+  }
+}

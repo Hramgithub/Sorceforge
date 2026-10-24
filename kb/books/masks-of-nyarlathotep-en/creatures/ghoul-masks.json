@@ -1,0 +1,242 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "masks-of-nyarlathotep-en/creature/ghoul-masks",
+  "kind": "creature",
+  "name": {
+    "ru": "Упырь («Маски»)",
+    "en": "Ghoul (Masks of Nyarlathotep)"
+  },
+  "aliases": [],
+  "category": "mythos_monster",
+  "subcategory": "независимая раса",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "form_of",
+      "target": "coc:creature:ghoul",
+      "note": "профиль кампании"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "80",
+        "value": 80
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "70",
+        "value": 70
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "INT": {
+        "raw": "60",
+        "value": 60
+      },
+      "POW": {
+        "raw": "60",
+        "value": 60
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "14",
+      "value": 14
+    },
+    "mp": {
+      "raw": "8",
+      "value": 8
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "огнестрельное и метательное оружие наносит половину выпавшего урона (с округлением вниз)",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "3 (когти, укус, удержание)",
+      "value": 3
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "1d6+1d4",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Укус с удержанием (манёвр)",
+          "en": "Bite and hold (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "1d6+1d4, затем 1d4+1d4 каждый раунд",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "notes": "челюсти вцепляются и терзают цель: со следующего раунда клыки автоматически наносят урон в дополнение к другим атакам; освободиться — встречная проверка СИЛ"
+      }
+    ],
+    "dodge": {
+      "raw": "50% (25/10)",
+      "value": 50,
+      "half": 25,
+      "fifth": 10
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "85%",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "при виде упыря"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Зараза",
+      "summary": "Упыри питаются падалью: раненый упырём может получить заражение раны, если провалит проверку Удачи."
+    },
+    {
+      "name": "Укус с удержанием",
+      "summary": "При успехе челюсти упыря вцепляются в цель; со следующего раунда клыки автоматически наносят 1d4 (с БкУ) урона за раунд в дополнение к другим атакам. Схваченный может вырваться встречной проверкой СИЛ."
+    }
+  ],
+  "description": {
+    "ru": "Общий профиль упыря для pulp-варианта «Стая упырей» из главы «Англия»: на каждого героя приходится по два упыря. Небольшая стая, живущая под Эдейлом примерно в 10 км от Лессер-Эдейла, слышит по ночам вой Элоизы Вейн, перебирается пещерами Дербишира на кладбище Лессер-Эдейла и пугает деревню своим воем; Элоиза уходит к стае, и её превращение становится необратимым.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "masks-of-nyarlathotep-en",
+      "physical_page": 252,
+      "printed_page": 249,
+      "method": "book_text",
+      "verified": true,
+      "entry_page": 248,
+      "note": "врезка «Pulp Option: Ghoul Pack»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.mp",
+      "printed": "8",
+      "expected": "12",
+      "note": "ПМ — пятая часть МОЩ 60; оставлено как напечатано"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Отличия от профиля вида в справочнике: ВЫН, ТЕЛ и ЛВК 70 (вместо 65), ИНТ и МОЩ 60 (вместо 65), ПЗ 14, ПМ 8 (вместо 13), движение 9 (вместо 8); Ближний бой 65% (вместо 40%), урон удержания 1d4+1d4, уклонение 50% (вместо 40%); языка и заклинаний профиль не даёт. Профиль только для pulp-игры."
+  }
+}

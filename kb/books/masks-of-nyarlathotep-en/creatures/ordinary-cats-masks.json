@@ -1,0 +1,207 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "masks-of-nyarlathotep-en/creature/ordinary-cats-masks",
+  "kind": "creature",
+  "name": {
+    "ru": "Обычные кошки («Маски»)",
+    "en": "Miscellaneous Cats (Masks of Nyarlathotep)"
+  },
+  "aliases": [],
+  "category": "animal",
+  "subcategory": "зверь",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "form_of",
+      "target": "coc:creature:ordinary-cats",
+      "note": "профиль кампании"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "10",
+        "value": 10
+      },
+      "CON": {
+        "raw": "35",
+        "value": 35
+      },
+      "SIZ": {
+        "raw": "05",
+        "value": 5
+      },
+      "DEX": {
+        "raw": "75",
+        "value": 75
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "INT": {
+        "raw": "60",
+        "value": 60
+      },
+      "POW": {
+        "raw": "65",
+        "value": 65
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "4",
+      "value": 4
+    },
+    "mp": {
+      "raw": "13",
+      "value": 13
+    },
+    "damage_bonus": {
+      "raw": "–2",
+      "value": -2
+    },
+    "build": {
+      "raw": "–2",
+      "value": -2
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "2 (укус, когти)",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d3–2 (мин. 1)",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Захват (манёвр)",
+          "en": "Grab (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d3–2 (мин. 1), затем автоматический урон каждый раунд",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "notes": "кошка повисает на противнике, кусается и царапается, пока её не оторвут встречной проверкой СИЛ"
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "80% (95%)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Захват",
+      "summary": "Успешно схватив противника, кошка висит на нём, кусается и царапается, автоматически нанося урон каждый раунд, пока её не оторвут встречной проверкой СИЛ (её может сделать и жертва, и её спутники)."
+    },
+    {
+      "name": "Pulp Cthulhu: бой",
+      "summary": "Ближний бой 80% (40/16), урон 1d3–2 (мин. 1); Захват (манёвр) 80% (40/16), тот же урон и затем автоматический урон каждый раунд; Уклонение 50% (25/10); Скрытность 95%.",
+      "raw": "Fighting 80% (40/16), damage 1D3-2 (min 1); Grab (mnvr) 80% (40/16), damage 1D3–2 (min 1), then automatic damage each round thereafter until dislodged by an opposed STR roll; Dodge 50% (25/10)"
+    }
+  ],
+  "description": {
+    "ru": "Профиль для всех «домашних» кошек главы «Египет»; число кошек определяет Хранитель, несколько кошек могут нападать на одну цель. В святилище Баст в Старом городе Каира (история «Чёрная кошка») на нарушителей кидается целая орава: каждый раунд из стен выскакивают ещё 1d6 кошек. Для быстрой развязки можно заменить бой проверкой Ближнего боя (драки): при успехе участник выбирается с 2 урона, при провале — с 1d4+2. Потеря Рассудка — особая (см. текст сценария).",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "masks-of-nyarlathotep-en",
+      "physical_page": 338,
+      "printed_page": 335,
+      "method": "book_text",
+      "verified": true,
+      "entry_page": 335
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Отличия от профиля вида в справочнике: ЛВК 75 (вместо 95), ИНТ 60, МОЩ 65 (вместо 50–55), ПМ 13, движение 9 (вместо 10); 2 атаки за раунд (вместо 3); Ближний бой 40% и урон 1d3–2 (вместо 30% и 1d4–БкУ), добавлен захват; уклонение 40% (вместо 80%); навыки Внимание 80%, Скрытность 80% (в pulp-игре 95%), Чтение следов 65% вместо набора из Malleus Monstrorum; нет правила о приземлении на лапы."
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "masks-of-nyarlathotep-en/creature/death-adder-masks",
+  "kind": "creature",
+  "name": {
+    "ru": "Смертельная змея («Маски»)",
+    "en": "Death Adder (Masks of Nyarlathotep)"
+  },
+  "aliases": [
+    "Death Adder"
+  ],
+  "category": "animal",
+  "subcategory": "рептилия",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "form_of",
+      "target": "coc:creature:venomous-snake",
+      "note": "профиль кампании"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "35",
+        "value": 35
+      },
+      "CON": {
+        "raw": "30",
+        "value": 30
+      },
+      "SIZ": {
+        "raw": "10",
+        "value": 10
+      },
+      "DEX": {
+        "raw": "90",
+        "value": 90
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "INT": {
+        "raw": "—",
+        "value": null
+      },
+      "POW": {
+        "raw": "40",
+        "value": 40
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "4",
+      "value": 4
+    },
+    "damage_bonus": {
+      "raw": "–2",
+      "value": -2
+    },
+    "build": {
+      "raw": "–2",
+      "value": -2
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (укус)",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d4–2 + яд",
+          "dice": "1d4",
+          "adds_db": true,
+          "extra": "яд: 2d10"
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "50% (25/10)",
+      "value": 50,
+      "half": 25,
+      "fifth": 10
+    },
+    "skills": [
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "95%",
+          "value": 95,
+          "half": 47,
+          "fifth": 19
+        }
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Яд",
+      "summary": "Сильный яд: жертва получает 2d10 урона, вдвое меньше — при успешной чрезвычайной проверке ВЫН. Успешная проверка Медицины также уменьшает урон вдвое; подходящая сыворотка даёт бонусный кубик к Медицине (найти её почти невозможно — разве что после успешной проверки Удачи, на усмотрение Хранителя)."
+    }
+  ],
+  "description": {
+    "ru": "Ядовитая змея (death adder) из раздела «Животные» главы «Австралия». В одной из пещер — гнездо из 1d4+2 таких змей; встречаются и в случайных встречах в пустыне.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "masks-of-nyarlathotep-en",
+      "physical_page": 512,
+      "printed_page": 509,
+      "method": "book_text",
+      "verified": true,
+      "entry_page": 477
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Отличия от профиля вида в справочнике: ВЫН 30 (вместо 35), ТЕЛ 10 (вместо 15), ПЗ 4 (вместо 5), ЛВК 90 и МОЩ 40 (у вида не указаны), Ближний бой 50% (вместо 40%), уклонение 50% (вместо 42%), Скрытность 95% (вместо 90%); яд определён — 2d10 урона."
+  }
+}

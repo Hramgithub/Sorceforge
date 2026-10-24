@@ -121,7 +121,7 @@ function subtitle(c) {
   if (c.kind === 'character') return [c.occupation?.ru, ...(c.roles||[]).map(r => ROLE[r]), BOOKS[bookOf(c)]].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'spell') return [c.name.en, c.category, c.cost?.raw].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'weapon') return [c.name.en, c.damage?.raw, c.model_of ? 'модель' : WGROUP[c.group]].filter(Boolean).map(esc).join(' · ');
-  if (c.kind === 'tome') return [c.name.en, c.language, c.reading?.mythos_full && 'Мифы ' + c.reading.mythos_full].filter(Boolean).map(esc).join(' · ');
+  if (c.kind === 'tome') return [c.name.en, c.language].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'occupation') return `Средства ${esc(c.credit_rating.raw)}${c.lovecraftian ? ' · лавкрафтовская' : ''}${c.group ? ' · ' + esc(c.group) : ''}`;
   return `${esc(c.name.en||'')} · ${c.base.raw === '—' ? esc(c.category) : 'база ' + esc(c.base.raw)}`;
 }

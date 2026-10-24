@@ -34,9 +34,15 @@ def r71(r):
         return "поддерживаемое", r["why"].split(" (Р-")[0] + " (Р-71)"
 
 
-RULES = [r69, r70, r71]
-# numbered items of the «Спорные» section that the answers above settle
-SETTLED = ["Семейства «Связь с божеством»", "Поддержание сосредоточением без трат", "Длительность, оплаченная заранее или по ходу"]
+def r72(r):
+    # Р-72: the remaining disputed cases as recommended; extra MP that prolongs the effect is sustained
+    if r["slug"] in ("dho-formula", "levitate"):
+        return "поддерживаемое", "доп. ПМ продлевают эффект по ходу (Р-72)"
+
+
+RULES = [r69, r70, r71, r72]
+# numbered items of the «Спорные» section that the answers above settle (Р-72 settles all the rest)
+SETTLED = ["**"]
 
 
 def main():

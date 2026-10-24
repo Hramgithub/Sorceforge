@@ -61,6 +61,7 @@ a { color:var(--accent); }
   <input id="q" type="search" placeholder="Поиск по имени" aria-label="Поиск">
   <select id="cat" aria-label="Фильтр"></select>
   <select id="occ" aria-label="Профессия" hidden></select>
+  <select id="mech" aria-label="Механика" hidden><option value="">Все механики</option><option value="мгновенное">Мгновенные</option><option value="поддерживаемое">Поддерживаемые</option><option value="ритуал">Ритуалы</option></select>
   <select id="era" aria-label="Эпоха" hidden><option value="">Все эпохи</option><option value="1920s">1920-е</option><option value="modern">Современность</option></select>
   <span id="count" class="muted"></span>
 </header>
@@ -108,6 +109,8 @@ function matches(c, q, f) {
   if (q && !nameHit(c, q)) return false;
   const o = document.getElementById('occ').value;
   if (tab === 'character' && o && occOf(c) !== o) return false;
+  const mech = document.getElementById('mech').value;
+  if (tab === 'spell' && mech && c.mechanic !== mech) return false;
   if (tab === 'weapon') {
     const e = document.getElementById('era').value;
     if (e && !(c.axes?.era||[]).some(x => x === e || x === 'any')) return false;
@@ -142,7 +145,7 @@ function renderList() {
   const f = document.getElementById('cat').value;
   const list = document.getElementById('list');
   // a query searches every tab: results grouped by tab, current tab first; tab filters do not apply
-  document.getElementById('cat').disabled = document.getElementById('occ').disabled = document.getElementById('era').disabled = !!q;
+  document.getElementById('cat').disabled = document.getElementById('occ').disabled = document.getElementById('era').disabled = document.getElementById('mech').disabled = !!q;
   if (q) {
     const kinds = [tab, ...Object.keys(SET).filter(k => k !== tab)];
     const groups = kinds.map(k => [k, SET[k].filter(c => nameHit(c, q))]).filter(([, xs]) => xs.length);
@@ -164,6 +167,7 @@ function setTab(t, keep) {
   document.getElementById('cat').innerHTML = FILTERS[t].map(([v, l]) => `<option value="${esc(v)}">${esc(l)}</option>`).join('');
   const occ = document.getElementById('occ'); occ.hidden = t !== 'character';
   document.getElementById('era').hidden = t !== 'weapon';
+  document.getElementById('mech').hidden = t !== 'spell';
   if (t === 'character') {
     const counts = {};
     const label = {};
@@ -309,6 +313,7 @@ function spellCard(c) {
     <div class="sub">${esc(c.name.en||'')}${c.category ? ' · ' + esc(c.category) : ''}${(c.aliases||[]).length ? ' · также: ' + c.aliases.map(esc).join(', ') : ''}</div>
     ${flags(c)}
     <dl>
+      ${c.mechanic ? `<dt>Механика</dt><dd>${esc(c.mechanic)}</dd>` : ''}
       <dt>Стоимость</dt><dd>${esc(cost.raw)}</dd>
       <dt>Время сотворения</dt><dd>${esc(c.casting_time?.raw)}</dd>
       ${fam ? `<dt>Семейство</dt><dd>${link(fam.id, fam.name.ru)}</dd>` : ''}
@@ -485,6 +490,7 @@ document.getElementById('q').oninput = renderList;
 document.getElementById('cat').onchange = renderList;
 document.getElementById('occ').onchange = renderList;
 document.getElementById('era').onchange = renderList;
+document.getElementById('mech').onchange = renderList;
 document.querySelectorAll('.tabs button').forEach(b => b.onclick = () => setTab(b.dataset.tab));
 // sort by name without leading quotes («Браунинг» M1918 goes under Б)
 const sortName = c => c.name.ru.replace(/^[«"„.\s]+/, '');

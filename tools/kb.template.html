@@ -127,7 +127,7 @@ const caliberOf = c => c.caliber || '—';
 function subtitle(c) {
   if (c.kind === 'creature') return `${esc(c.name.en||'')} · ${CAT[c.category]||''}${bookOf(c) !== 'keeper-rulebook-ru' ? ' · ' + esc(BOOKS[bookOf(c)] || bookOf(c)) : ''}`;
   if (c.kind === 'character') return [c.occupation?.ru, ...(c.roles||[]).map(r => ROLE[r]), BOOKS[bookOf(c)]].filter(Boolean).map(esc).join(' · ');
-  if (c.kind === 'spell') return [c.name.en, c.category, c.cost?.raw].filter(Boolean).map(esc).join(' · ');
+  if (c.kind === 'spell') return esc(c.category || '');
   if (c.kind === 'weapon') return [caliberOf(c), WGROUP[c.group]].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'tome') return [c.name.en, c.language].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'occupation') return `Средства ${esc(c.credit_rating.raw)}${c.lovecraftian ? ' · лавкрафтовская' : ''}${c.group ? ' · ' + esc(c.group) : ''}`;

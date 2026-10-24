@@ -183,6 +183,66 @@
     },
     "quality": {
       "$ref": "common.schema.json#/$defs/quality"
+    },
+    "copies": {
+      "type": "array",
+      "description": "Отдельные экземпляры книги, описанные в сценариях и кампаниях (Р-65): где лежит и свой список заклинаний.",
+      "items": {
+        "type": "object",
+        "required": [
+          "book_id"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "book_id": {
+            "type": "string"
+          },
+          "physical_page": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "printed_page": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "where": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "где и у кого лежит экземпляр"
+          },
+          "spells": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "name"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "spell": {
+                  "anyOf": [
+                    {
+                      "$ref": "common.schema.json#/$defs/id"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

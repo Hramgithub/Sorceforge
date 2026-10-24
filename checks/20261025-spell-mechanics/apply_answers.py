@@ -28,9 +28,15 @@ def r70(r):
         return "мгновенное", "плата разом; эффект держится сосредоточением без трат (Р-70)"
 
 
-RULES = [r69, r70]
+def r71(r):
+    # Р-71: duration bought piece by piece while the effect lasts is sustained
+    if r["slug"] in ("compel-flesh", "bliss", "telepathy"):
+        return "поддерживаемое", r["why"].split(" (Р-")[0] + " (Р-71)"
+
+
+RULES = [r69, r70, r71]
 # numbered items of the «Спорные» section that the answers above settle
-SETTLED = ["Семейства «Связь с божеством»", "Поддержание сосредоточением без трат"]
+SETTLED = ["Семейства «Связь с божеством»", "Поддержание сосредоточением без трат", "Длительность, оплаченная заранее или по ходу"]
 
 
 def main():

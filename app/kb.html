@@ -130,7 +130,7 @@ function matches(c, q, f) {
 // every firearm has a calibre (Р-63); melee, thrown and explosives show «—»
 const caliberOf = c => c.caliber || '—';
 function subtitle(c) {
-  if (c.kind === 'creature') return `${esc(c.name.en||'')} · ${CAT[c.category]||''}${bookOf(c) !== 'keeper-rulebook-ru' ? ' · ' + esc(BOOKS[bookOf(c)] || bookOf(c)) : ''}`;
+  if (c.kind === 'creature') return esc(CAT[c.category] || '');
   if (c.kind === 'character') return [c.occupation?.ru, ...(c.roles||[]).map(r => ROLE[r])].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'spell') return [c.category, c.mechanic].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'weapon') return [caliberOf(c), WGROUP[c.group]].filter(Boolean).map(esc).join(' · ');

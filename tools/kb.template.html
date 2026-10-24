@@ -291,12 +291,11 @@ function spellCard(c) {
   const variants = DATA.spells.filter(x => x.variant_of === c.id);
   const where = DATA.tomes.filter(t => (t.spells||[]).some(s => s.spell === c.id));
   const cost = c.cost || {};
-  const parts = [['ПМ', cost.magic_points], ['Рассудок', cost.sanity], ['МОЩ', cost.pow], ['Прочее', cost.other]].filter(([, v]) => v);
   return `<h2>${esc(c.name.ru)}</h2>
     <div class="sub">${esc(c.name.en||'')}${c.category ? ' · ' + esc(c.category) : ''}${(c.aliases||[]).length ? ' · также: ' + c.aliases.map(esc).join(', ') : ''}</div>
     ${flags(c)}
     <dl>
-      <dt>Стоимость</dt><dd>${esc(cost.raw)}${parts.length ? ` <span class="muted">(${parts.map(([k, v]) => k + ': ' + esc(v)).join('; ')})</span>` : ''}</dd>
+      <dt>Стоимость</dt><dd>${esc(cost.raw)}</dd>
       <dt>Время сотворения</dt><dd>${esc(c.casting_time?.raw)}</dd>
       ${fam ? `<dt>Семейство</dt><dd>${link(fam.id, fam.name.ru)}</dd>` : ''}
       ${variants.length ? `<dt>Варианты</dt><dd>${variants.map(x => link(x.id, x.name.ru)).join(', ')}</dd>` : ''}

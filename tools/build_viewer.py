@@ -1,9 +1,10 @@
-"""Build the read-only knowledge base viewer: embed creatures, characters and skills into one HTML file.
+"""Build the read-only knowledge base viewer: embed all records into one HTML file.
 
-Sources: kb/creatures/*.json and kb/books/*/creatures/*.json; kb/characters/*.json and
-kb/books/*/characters/*.json; kb/skills/*.json; kb/occupations/*.json.
+Sources: kb/<kind>/*.json and kb/books/*/<kind>/*.json for creatures, characters, skills,
+occupations, spells, tomes and weapons; template tools/kb.template.html (placeholder
+__DATA__). app/index.html only redirects to app/kb.html.
 
-Usage: python tools/build_viewer.py [--kb kb] [--template app/kb.template.html] [--out app/kb.html]
+Usage: python tools/build_viewer.py [--kb kb] [--template tools/kb.template.html] [--out app/kb.html]
 """
 from __future__ import annotations
 
@@ -21,7 +22,7 @@ def main() -> None:
     root = Path(__file__).resolve().parents[1]
     ap = argparse.ArgumentParser()
     ap.add_argument("--kb", type=Path, default=root / "kb")
-    ap.add_argument("--template", type=Path, default=root / "app" / "kb.template.html")
+    ap.add_argument("--template", type=Path, default=root / "tools" / "kb.template.html")
     ap.add_argument("--out", type=Path, default=root / "app" / "kb.html")
     a = ap.parse_args()
     data = {"creatures": load(a.kb, "creatures"), "characters": load(a.kb, "characters"), "skills": load(a.kb, "skills"),

@@ -53,7 +53,7 @@ python tools/validate.py schemas/creature.schema.json kb/creatures/wolf.json
 | `docs/project-goal.md` | рабочий документ: цель, модель предметной области, решения, статус |
 | `schemas/` | JSON-схемы и описание полей (`schemas/README.md`), примеры |
 | `kb/` | данные базы |
-| `app/` | просмотрщик (`kb.template.html` → `kb.html`) |
+| `app/` | просмотрщик: `kb.html` (собирается `tools/build_viewer.py` из `tools/kb.template.html`), `index.html` открывает его |
 | `tools/` | сборка просмотрщика, валидатор схем |
 | `pipeline/` | перенос из веб-помощника, MinerU, предложения из сценариев, массовые правки (`fix/`) |
 | `checks/` | сверки с книгами: скрипты, результаты, инвентаризации |

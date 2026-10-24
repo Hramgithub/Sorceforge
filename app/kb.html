@@ -122,11 +122,13 @@ function matches(c, q, f) {
   return c.category === f;
 }
 
+// table rows keep the calibre only in the English name (.303, 12-gauge, 9mm, 75mm)
+const caliberOf = c => c.caliber || (/(\.\d{2,3}(?:-\d{2})?|\d+(?:\.\d+)?\s?mm|\d+-gauge)/i.exec(c.name.en || '') || [])[1] || '';
 function subtitle(c) {
   if (c.kind === 'creature') return `${esc(c.name.en||'')} · ${CAT[c.category]||''}${bookOf(c) !== 'keeper-rulebook-ru' ? ' · ' + esc(BOOKS[bookOf(c)] || bookOf(c)) : ''}`;
   if (c.kind === 'character') return [c.occupation?.ru, ...(c.roles||[]).map(r => ROLE[r]), BOOKS[bookOf(c)]].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'spell') return [c.name.en, c.category, c.cost?.raw].filter(Boolean).map(esc).join(' · ');
-  if (c.kind === 'weapon') return [c.name.en, c.damage?.raw, c.model_of ? 'модель' : WGROUP[c.group]].filter(Boolean).map(esc).join(' · ');
+  if (c.kind === 'weapon') return [caliberOf(c), WGROUP[c.group]].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'tome') return [c.name.en, c.language].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'occupation') return `Средства ${esc(c.credit_rating.raw)}${c.lovecraftian ? ' · лавкрафтовская' : ''}${c.group ? ' · ' + esc(c.group) : ''}`;
   return `${esc(c.name.en||'')} · ${c.base.raw === '—' ? esc(c.category) : 'база ' + esc(c.base.raw)}`;

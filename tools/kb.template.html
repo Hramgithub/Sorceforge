@@ -276,7 +276,11 @@ function tomeCard(c) {
   const read = [['Потеря рассудка', r.sanity_loss], ['Мифы Ктулху (беглое чтение)', r.mythos_initial], ['Мифы Ктулху (полное изучение)', r.mythos_full],
     ['Оккультизм', r.occult], ['Уровень Мифов', r.mythos_rating], ['Время изучения', r.study_time]].filter(([, v]) => v != null && v !== '');
   // printed name as the link; the reference name only as a tooltip (printed names already carry it in brackets)
-  const spells = (c.spells||[]).map(s => s.spell && byId(s.spell) ? link(s.spell, s.name).replace('<a ', `<a title="${esc(byId(s.spell).name.ru)}" `) : esc(s.name)).join(', ');
+  const spellList = xs => (xs||[]).map(s => s.spell && byId(s.spell) ? link(s.spell, s.name).replace('<a ', `<a title="${esc(byId(s.spell).name.ru)}" `) : esc(s.name)).join(', ');
+  const spells = spellList(c.spells);
+  const copies = (c.copies||[]).map(x => `<section><h3>Экземпляр: ${esc(BOOKS[x.book_id] || x.book_id)}</h3>
+    ${x.where ? `<p>${esc(x.where)}${x.printed_page ? ` <span class="muted">· статья о книге — с. ${esc(x.printed_page)}</span>` : ''}</p>` : ''}
+    ${(x.spells||[]).length ? `<p><b>Заклинания экземпляра:</b> ${spellList(x.spells)}</p>` : ''}</section>`).join('');
   return `<h2>${esc(c.name.ru)}</h2>
     <div class="sub">${esc(c.name.en||'')} · ${TOME_TYPE[c.tome_type]||''}${(c.aliases||[]).length ? ' · также: ' + c.aliases.map(esc).join(', ') : ''}</div>
     ${flags(c)}
@@ -291,6 +295,7 @@ function tomeCard(c) {
     ${read.length ? `<section><h3>Чтение</h3><table>${read.map(([k, v]) => `<tr><th>${k}</th><td>${esc(v)}</td></tr>`).join('')}</table></section>` : ''}
     ${c.description?.ru ? `<section><h3>Описание</h3>${c.description.ru.split('\n').filter(Boolean).map(p => `<p>${esc(p)}</p>`).join('')}</section>` : ''}
     ${spells ? `<section><h3>Заклинания</h3><p>${spells}</p></section>` : ''}
+    ${copies}
     ${errata(c)}
     <section><h3>Источник</h3><div>${sources(c)}</div></section>
     ${corrections(c)}`;
@@ -298,7 +303,7 @@ function tomeCard(c) {
 function spellCard(c) {
   const fam = c.variant_of && byId(c.variant_of);
   const variants = DATA.spells.filter(x => x.variant_of === c.id);
-  const where = DATA.tomes.filter(t => (t.spells||[]).some(s => s.spell === c.id));
+  const where = DATA.tomes.filter(t => [...(t.spells||[]), ...(t.copies||[]).flatMap(x => x.spells||[])].some(s => s.spell === c.id));
   const cost = c.cost || {};
   return `<h2>${esc(c.name.ru)}</h2>
     <div class="sub">${esc(c.name.en||'')}${c.category ? ' · ' + esc(c.category) : ''}${(c.aliases||[]).length ? ' · также: ' + c.aliases.map(esc).join(', ') : ''}</div>

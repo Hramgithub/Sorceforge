@@ -137,7 +137,8 @@ Pulp Cthulhu, Р-26). `occupation` — профессия как в источн
 `name`, `aliases`, `tome_type` (`mythos_tome | occult_book`), `language`, `author`, `date`,
 `description` (пересказ), `reading` (`sanity_loss`, `mythos_initial`, `mythos_full`,
 `occult`, `mythos_rating`, `study_time`, строка `raw` как в книге), `spells` (название как
-напечатано в списке книги + ссылка `spell`), `refs` — существа и персонажи, о которых книга
+напечатано в списке книги + ссылка `spell`), `copies` — экземпляры из сценариев
+(источник, страница, где лежит, свой список заклинаний со ссылками, Р-65), `refs` — существа и персонажи, о которых книга
 (их карточки показывают «Книги о нём»), `sources`, `errata`, `corrections`, `quality`.
 Числа — по русской «Книге хранителя»; данные конкретных экземпляров из «Масок» — в
 `quality.notes`.

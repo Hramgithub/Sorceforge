@@ -90,8 +90,8 @@ const FILTERS = {
 FILTERS.tome = [['', 'Все книги'], ['mythos_tome', 'Книги Мифов'], ['occult_book', 'Оккультные книги'], ['general', 'Только общие записи'],
   ...[...new Set(DATA.tomes.map(t => t.language).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'ru')).map(l => ['lang:' + l, 'Язык: ' + l])];
 const WGROUP = { melee: 'Ближний бой', handgun: 'Пистолеты и револьверы', rifle: 'Винтовки', shotgun: 'Дробовики', automatic: 'Автоматическое оружие', heavy: 'Тяжёлое оружие и взрывчатка', other: 'Прочее' };
-// weapon filters: type here, era in its own select (#era); the catalog split sits at the end under «Прочее»
-FILTERS.weapon = [['', 'Все типы'], ...Object.entries(WGROUP).filter(([k]) => k !== 'other'), ['other', 'Прочее'], ['table', 'Прочее: только таблица «Книги хранителя»'], ['model', 'Прочее: только пользовательский каталог']];
+// weapon filters: type here, era in its own select (#era)
+FILTERS.weapon = [['', 'Все типы'], ...Object.entries(WGROUP)];
 const SET = { creature: DATA.creatures, character: DATA.characters, skill: DATA.skills, occupation: DATA.occupations, spell: DATA.spells, tome: DATA.tomes, weapon: DATA.weapons };
 const ALL = [...DATA.creatures, ...DATA.characters, ...DATA.skills, ...DATA.occupations, ...DATA.spells, ...DATA.tomes, ...DATA.weapons];
 const TOME_TYPE = { mythos_tome: 'книга Мифов', occult_book: 'оккультная книга' };
@@ -111,8 +111,7 @@ function matches(c, q, f) {
   if (tab === 'weapon') {
     const e = document.getElementById('era').value;
     if (e && !(c.axes?.era||[]).some(x => x === e || x === 'any')) return false;
-    const catalog = c.sources?.[0]?.book_id === 'weapons-catalog-1920s';
-    return !f || (f === 'table' ? !catalog : f === 'model' ? catalog : c.group === f);
+    return !f || c.group === f;
   }
   if (!f) return true;
   if (tab === 'creature') return c.category === f;

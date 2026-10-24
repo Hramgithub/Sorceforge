@@ -20,6 +20,7 @@ main { display:grid; grid-template-columns: 300px 1fr; min-height: calc(100vh - 
 #list button { display:block; width:100%; text-align:left; padding:8px 16px; border:0; border-bottom:1px solid var(--line); background:none; color:inherit; font:inherit; cursor:pointer; }
 #list button:hover, #list button.active { background:var(--panel); }
 #list small { color:var(--muted); display:block; }
+#list h4 { margin:0; padding:10px 16px 4px; font-size:12px; color:var(--accent); text-transform:uppercase; letter-spacing:.04em; border-bottom:1px solid var(--line); }
 #card { padding:16px 24px; max-width: 900px; min-width:0; }
 h2 { margin:0 0 4px; font-size:24px; }
 .sub { color:var(--muted); margin-bottom:12px; }
@@ -100,8 +101,9 @@ const link = (id, text) => `<a href="#" data-go="${esc(id)}">${esc(text)}</a>`;
 let tab = 'creature', current = null;
 
 const occOf = c => c.occupation_ref ? c.occupation_ref : (c.occupation?.ru || '').trim().toLowerCase();
+const nameHit = (c, q) => [c.name.ru, c.name.en, ...(c.aliases||[]), c.occupation?.ru].some(n => (n||'').toLowerCase().includes(q));
 function matches(c, q, f) {
-  if (q && ![c.name.ru, c.name.en, ...(c.aliases||[]), c.occupation?.ru].some(n => (n||'').toLowerCase().includes(q))) return false;
+  if (q && !nameHit(c, q)) return false;
   const o = document.getElementById('occ').value;
   if (tab === 'character' && o && occOf(c) !== o) return false;
   if (!f) return true;
@@ -124,15 +126,27 @@ function subtitle(c) {
   return `${esc(c.name.en||'')} · ${c.base.raw === '—' ? esc(c.category) : 'база ' + esc(c.base.raw)}`;
 }
 
+const TAB_RU = Object.fromEntries([...document.querySelectorAll('.tabs button')].map(b => [b.dataset.tab, b.textContent]));
+const item = c => `<button data-id="${esc(c.id)}" class="${c.id===current?'active':''}">${esc(c.name.ru)}
+    ${(c.quality?.flags||[]).filter(x => x !== 'translated').length ? '<span class="tag warn">!</span>' : ''}<small>${subtitle(c)}</small></button>`;
 function renderList() {
   const q = document.getElementById('q').value.trim().toLowerCase();
   const f = document.getElementById('cat').value;
-  const set = SET[tab];
-  const items = set.filter(c => matches(c, q, f));
-  document.getElementById('count').textContent = items.length + ' из ' + set.length;
   const list = document.getElementById('list');
-  list.innerHTML = items.map(c => `<button data-id="${esc(c.id)}" class="${c.id===current?'active':''}">${esc(c.name.ru)}
-    ${(c.quality?.flags||[]).filter(x => x !== 'translated').length ? '<span class="tag warn">!</span>' : ''}<small>${subtitle(c)}</small></button>`).join('');
+  // a query searches every tab: results grouped by tab, current tab first; tab filters do not apply
+  document.getElementById('cat').disabled = document.getElementById('occ').disabled = !!q;
+  if (q) {
+    const kinds = [tab, ...Object.keys(SET).filter(k => k !== tab)];
+    const groups = kinds.map(k => [k, SET[k].filter(c => nameHit(c, q))]).filter(([, xs]) => xs.length);
+    const n = groups.reduce((s, [, xs]) => s + xs.length, 0);
+    document.getElementById('count').textContent = n + ' во всех вкладках';
+    list.innerHTML = groups.map(([k, xs]) => `<h4>${esc(TAB_RU[k])} (${xs.length})</h4>${xs.map(item).join('')}`).join('') || '<p class="muted" style="padding:8px 16px">Ничего не найдено.</p>';
+  } else {
+    const set = SET[tab];
+    const items = set.filter(c => matches(c, q, f));
+    document.getElementById('count').textContent = items.length + ' из ' + set.length;
+    list.innerHTML = items.map(item).join('');
+  }
   list.querySelectorAll('button').forEach(b => b.onclick = () => show(b.dataset.id));
 }
 

@@ -438,7 +438,8 @@ function occupationCard(c) {
     ${corrections(c)}`;
 }
 
-function show(id) {
+// how: 'push' — new history entry (clicks, tab switch), 'replace' — first load, 'none' — back/forward
+function show(id, how = 'push') {
   const c = id && byId(id);
   if (!c) { document.getElementById('card').innerHTML = '<p class="muted">Нет записей.</p>'; renderList(); return; }
   if (c.kind !== tab) setTab(c.kind, true);
@@ -446,7 +447,9 @@ function show(id) {
   const card = document.getElementById('card');
   card.innerHTML = c.kind === 'creature' ? creatureCard(c) : c.kind === 'character' ? characterCard(c) : c.kind === 'occupation' ? occupationCard(c) : c.kind === 'spell' ? spellCard(c) : c.kind === 'tome' ? tomeCard(c) : c.kind === 'weapon' ? weaponCard(c) : skillCard(c);
   card.querySelectorAll('[data-go]').forEach(a => a.onclick = e => { e.preventDefault(); show(a.dataset.go); });
-  history.replaceState(null, '', '#' + encodeURIComponent(c.kind + '/' + id.split(/[:/]/).pop()));
+  const hash = '#' + encodeURIComponent(c.kind + '/' + id.split(/[:/]/).pop());
+  if (how === 'replace') history.replaceState(null, '', hash);
+  else if (how === 'push' && location.hash !== hash) history.pushState(null, '', hash);
   window.scrollTo(0, 0);
 }
 
@@ -463,8 +466,11 @@ function fromHash() {
 }
 const start = fromHash();
 setTab(start ? start.kind : 'creature', true);
-show(start ? start.id : SET[tab][0]?.id);
-window.addEventListener('hashchange', () => { const c = fromHash(); if (c && c.id !== current) show(c.id); });
+show(start ? start.id : SET[tab][0]?.id, 'replace');
+// back/forward between pushed entries fires popstate; a hand-edited hash fires hashchange
+const fromHistory = () => { const c = fromHash(); if (c && c.id !== current) show(c.id, 'none'); };
+window.addEventListener('popstate', fromHistory);
+window.addEventListener('hashchange', fromHistory);
 </script>
 </body>
 </html>

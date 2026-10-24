@@ -41,6 +41,19 @@
     "same_as": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/id" } },
     "relations": { "$ref": "common.schema.json#/$defs/relations" },
     "statblock": { "$ref": "common.schema.json#/$defs/statblock" },
+    "variants": {
+      "type": "array",
+      "description": "Групповой профиль (Р-74): несколько вариантов одного типажа из таблицы книги (1–8, A1–A5); основной statblock — первый вариант или общий профиль.",
+      "items": {
+        "type": "object",
+        "required": ["label", "statblock"],
+        "additionalProperties": false,
+        "properties": {
+          "label": { "type": "string" },
+          "statblock": { "$ref": "common.schema.json#/$defs/statblock" }
+        }
+      }
+    },
     "abilities": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/ability" } },
     "background": {
       "type": "object",

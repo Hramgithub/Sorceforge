@@ -22,9 +22,15 @@ def r69(r):
         return "ритуал", "связь — обряд и ожидание ответа (Р-69)"
 
 
-RULES = [r69]
+def r70(r):
+    # Р-70: effect held by concentration or playing, with no further payment, is instant
+    if r["slug"] in ("temporal-rip", "dampen-light", "soul-singing"):
+        return "мгновенное", "плата разом; эффект держится сосредоточением без трат (Р-70)"
+
+
+RULES = [r69, r70]
 # numbered items of the «Спорные» section that the answers above settle
-SETTLED = ["Семейства «Связь с божеством»"]
+SETTLED = ["Семейства «Связь с божеством»", "Поддержание сосредоточением без трат"]
 
 
 def main():

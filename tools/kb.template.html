@@ -212,7 +212,8 @@ function renderLocList(list) {
         return `<h4 class="dist${d.id === current ? ' active' : ''}" data-dist="${esc(d.id)}">${open ? '▾' : '▸'} ${esc(d.name.ru)} <span class="muted">(${inner.length})</span></h4>`
           + (open ? inner.map(h => `<button data-id="${esc(h.id)}" class="house ${h.id === current ? 'active' : ''}">${esc((h.number ? h.number + ' ' : '') + h.name.ru)}<small>${esc(h.keeper_hint || '')}</small></button>`).join('') : '');
       }).join('');
-    list.querySelectorAll('h4.dist').forEach(h => h.onclick = () => { const id = h.dataset.dist; openDist.has(id) && current === id ? openDist.delete(id) : openDist.add(id); show(id); });
+    // a click toggles the district open/closed and shows its table
+    list.querySelectorAll('h4.dist').forEach(h => h.onclick = () => { const id = h.dataset.dist; openDist.has(id) ? openDist.delete(id) : openDist.add(id); show(id); });
   }
   list.querySelectorAll('button').forEach(b => b.onclick = () => show(b.dataset.id));
 }
@@ -632,7 +633,8 @@ function show(id, how = 'push') {
     const cc = cityOf(c);
     if (cc && cc.id !== city) { city = cc.id; }
     let p = c; while (p && p.part_of && p.part_of !== city) p = byId(p.part_of);
-    if (p && p.id !== city && childrenOf(p.id).length) openDist.add(p.id);
+    // opening a place expands its district; opening the district itself leaves the toggle alone
+    if (p && p.id !== city && p.id !== c.id && childrenOf(p.id).length) openDist.add(p.id);
     if (locMode !== 'houses' && c.location_type !== 'город') locMode = 'houses';
   }
   if (c.kind !== tab && !stay) setTab(c.kind, true);

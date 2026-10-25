@@ -365,7 +365,7 @@ function locationCard(c) {
     ${c.description?.ru ? `<section><h3>Описание</h3>${c.description.ru.split('\n').filter(Boolean).map(p => `<p>${esc(p)}</p>`).join('')}</section>` : ''}
     ${c.history?.ru ? `<section><h3>История</h3>${c.history.ru.split('\n').filter(Boolean).map(p => `<p>${esc(p)}</p>`).join('')}</section>` : ''}
     ${(c.residents||[]).length ? `<section><h3>Жители</h3><p>${residentList(c.residents)}</p></section>` : ''}
-    ${kids.length ? `<section><h3>${c.location_type === 'город' ? 'Районы' : 'Места'} (${kids.length})</h3><ul>${kids.map(k => `<li>${k.number ? esc(k.number) + ' ' : ''}${link(k.id, k.name.ru)}${k.keeper_hint ? ` <span class="muted">— ${esc(k.keeper_hint)}</span>` : ''}</li>`).join('')}</ul></section>` : ''}
+    ${kids.length ? `<section><h3>${c.location_type === 'город' ? 'Районы и места' : 'Места'} (${kids.length})</h3><ul>${kids.map(k => `<li>${k.number ? esc(k.number) + ' ' : ''}${link(k.id, k.name.ru)}${k.keeper_hint ? ` <span class="muted">— ${esc(k.keeper_hint)}</span>` : ''}</li>`).join('')}</ul></section>` : ''}
     ${inside.length && c.location_type !== 'здание' ? `<section><h3>Кто где живёт</h3><ul>${inside.map(x => `<li>${link(x.id, (x.number ? x.number + ' ' : '') + x.name.ru)}: ${residentList(x.residents)}</li>`).join('')}</ul></section>` : ''}
     ${(c.refs||[]).length ? `<section><h3>Существа и связанное</h3><p>${refLinks(c.refs)}</p></section>` : ''}
     ${tables.map(locTable).join('')}

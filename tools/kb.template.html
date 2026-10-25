@@ -209,7 +209,7 @@ function renderLocList(list) {
         const inner = childrenOf(d.id);
         if (!inner.length) return item(d);
         const open = openDist.has(d.id);
-        return `<h4 class="dist${d.id === current ? ' active' : ''}" data-dist="${esc(d.id)}">${open ? '▾' : '▸'} ${esc(d.name.ru)} <span class="muted">(${inner.length})</span></h4>`
+        return `<h4 class="dist${d.id === current ? ' active' : ''}" data-dist="${esc(d.id)}">${open ? '▾' : '▸'} ${d.number ? esc(d.number) + ' ' : ''}${esc(d.name.ru)} <span class="muted">(${inner.length})</span></h4>`
           + (open ? inner.map(h => `<button data-id="${esc(h.id)}" class="house ${h.id === current ? 'active' : ''}">${esc((h.number ? h.number + ' ' : '') + h.name.ru)}<small>${esc(h.keeper_hint || '')}</small></button>`).join('') : '');
       }).join('');
     // a click toggles the district open/closed and shows its table

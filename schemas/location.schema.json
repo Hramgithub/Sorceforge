@@ -1,0 +1,202 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sourcefold.local/schemas/location.schema.json",
+  "title": "Локация",
+  "description": "Место: город, район, здание, участок местности (Р-78). Иерархия через part_of; жители — residents; таблицы слухов и встреч — tables.",
+  "type": "object",
+  "required": [
+    "schema",
+    "id",
+    "kind",
+    "name",
+    "location_type",
+    "axes",
+    "sources"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "sourcefold.location.v0"
+    },
+    "id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "kind": {
+      "const": "location"
+    },
+    "name": {
+      "$ref": "common.schema.json#/$defs/text"
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "location_type": {
+      "enum": [
+        "город",
+        "район",
+        "здание",
+        "место",
+        "область"
+      ],
+      "description": "город; район; здание (дом, магазин, церковь); место (улица, риф, кладбище, пещера); область (окрестности, болота)"
+    },
+    "part_of": {
+      "anyOf": [
+        {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Где находится: здание → район → город."
+    },
+    "number": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Номер по путеводителю книги (101, 503…)."
+    },
+    "address": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "description": {
+      "$ref": "common.schema.json#/$defs/text"
+    },
+    "history": {
+      "$ref": "common.schema.json#/$defs/text"
+    },
+    "keeper_hint": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Короткая подсказка ведущему (что здесь)."
+    },
+    "residents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "$ref": "common.schema.json#/$defs/id"
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "description": "Жители и те, кто здесь бывает (персонажи и существа)."
+    },
+    "tables": {
+      "type": "array",
+      "description": "Таблицы-вводные места (Р-78): слухи, случайные встречи, события.",
+      "items": {
+        "type": "object",
+        "required": [
+          "title",
+          "rows"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "слухи",
+              "встречи",
+              "события",
+              "зацепки",
+              "прочее"
+            ]
+          },
+          "dice": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "intro": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "rows": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "text"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "roll": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "text": {
+                  "type": "string"
+                },
+                "refs": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "common.schema.json#/$defs/id"
+                  }
+                }
+              }
+            }
+          },
+          "source": {
+            "$ref": "common.schema.json#/$defs/source_ref"
+          }
+        }
+      }
+    },
+    "refs": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/id"
+      }
+    },
+    "axes": {
+      "$ref": "common.schema.json#/$defs/axes"
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "common.schema.json#/$defs/source_ref"
+      }
+    },
+    "errata": {
+      "$ref": "common.schema.json#/$defs/errata"
+    },
+    "corrections": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/correction"
+      }
+    },
+    "quality": {
+      "$ref": "common.schema.json#/$defs/quality"
+    }
+  }
+}

@@ -59,6 +59,7 @@ a { color:var(--accent); }
     <button data-tab="spell">Заклинания</button>
     <button data-tab="tome">Книги</button>
     <button data-tab="weapon">Оружие</button>
+    <button data-tab="location">Локации</button>
   </div>
   <input id="q" type="search" placeholder="Поиск по имени" aria-label="Поиск">
   <select id="cat" aria-label="Фильтр"></select>
@@ -77,7 +78,7 @@ const DATA = JSON.parse(document.getElementById('data').textContent);
 const CAT = { animal:'Зверь', mythos_monster:'Тварь Мифов', mythos_deity:'Божество Мифов', avatar:'Воплощение', supernatural:'Сверхъестественное' };
 const ROLE = { npc:'NPC', pregen:'преген' };
 const CH = [['STR','СИЛ'],['CON','ВЫН'],['SIZ','ТЕЛ'],['DEX','ЛВК'],['APP','НАР'],['INT','ИНТ'],['POW','МОЩ'],['EDU','ОБР']];
-const BOOKS = { 'investigator-handbook-ru': 'Книга сыщика', 'curious-characters-deck-en': 'Curious Characters Deck', 'keeper-rulebook-ru': 'Книга хранителя', 'keeper-rulebook-en': 'Keeper Rulebook (англ.)', 'grand-grimoire-en': 'Grand Grimoire of Cthulhu Mythos Magic', 'masks-of-nyarlathotep-en': 'Masks of Nyarlathotep (7e)', 'web-helper-coc': 'веб-помощник', 'weapons-catalog-1920s': 'каталог оружия 1920-х (пользовательский, не книга)', 'lightless-beacon-ru': 'Погасший маяк', 'malleus-keeper-deck-en': 'Malleus Keeper Deck', 'malleus-monstrorum-1-en': 'Malleus Monstrorum, т. I', 'malleus-monstrorum-2-en': 'Malleus Monstrorum, т. II', 'digital-nightmares-pregens-ru': 'Кошмары цифровой эпохи: готовые персонажи', 'dveri-vo-tmu-pregens-ru': 'Двери во тьму: готовые персонажи', 'koshmarnyy-priliv-pregens-ru': 'Кошмарный прилив: готовые персонажи', 'naedine-s-tmoy-pregens-ru': 'Наедине с тьмой: готовые персонажи', 'startovyy-nabor-pregens-ru': 'Стартовый набор: готовые персонажи', 'mertvennyy-svet-pregens-ru': 'Мертвенный свет: готовые персонажи', 'kholodnyy-urozhay-pregens-ru': 'Холодный урожай: готовые персонажи', 'nabor-khranitelya-pregens-ru': 'Набор хранителя: готовые персонажи', 'les-vendigo-pregens-ru': 'Лес Вендиго: готовые персонажи', 'za-zakrytymi-dveryami-pregens-ru': 'За закрытыми дверьми: готовые персонажи' };
+const BOOKS = { 'investigator-handbook-ru': 'Книга сыщика', 'curious-characters-deck-en': 'Curious Characters Deck', 'keeper-rulebook-ru': 'Книга хранителя', 'keeper-rulebook-en': 'Keeper Rulebook (англ.)', 'grand-grimoire-en': 'Grand Grimoire of Cthulhu Mythos Magic', 'masks-of-nyarlathotep-en': 'Masks of Nyarlathotep (7e)', 'web-helper-coc': 'веб-помощник', 'pobeg-iz-innsmuta-ru': 'Побег из Иннсмута', 'pulp-cthulhu-en': 'Pulp Cthulhu', 'weapons-catalog-1920s': 'каталог оружия 1920-х (пользовательский, не книга)', 'lightless-beacon-ru': 'Погасший маяк', 'malleus-keeper-deck-en': 'Malleus Keeper Deck', 'malleus-monstrorum-1-en': 'Malleus Monstrorum, т. I', 'malleus-monstrorum-2-en': 'Malleus Monstrorum, т. II', 'digital-nightmares-pregens-ru': 'Кошмары цифровой эпохи: готовые персонажи', 'dveri-vo-tmu-pregens-ru': 'Двери во тьму: готовые персонажи', 'koshmarnyy-priliv-pregens-ru': 'Кошмарный прилив: готовые персонажи', 'naedine-s-tmoy-pregens-ru': 'Наедине с тьмой: готовые персонажи', 'startovyy-nabor-pregens-ru': 'Стартовый набор: готовые персонажи', 'mertvennyy-svet-pregens-ru': 'Мертвенный свет: готовые персонажи', 'kholodnyy-urozhay-pregens-ru': 'Холодный урожай: готовые персонажи', 'nabor-khranitelya-pregens-ru': 'Набор хранителя: готовые персонажи', 'les-vendigo-pregens-ru': 'Лес Вендиго: готовые персонажи', 'za-zakrytymi-dveryami-pregens-ru': 'За закрытыми дверьми: готовые персонажи' };
 const METHOD = { book_text: 'сверено с книгой', helper_migration: 'перенесено из веб-помощника', mineru: 'извлечено MinerU', manual: 'введено вручную' };
 const CHOOSES = { name:'имя', sex:'пол', age:'возраст', luck:'Удача', skills:'навыки', background:'предыстория' };
 const BG = [['description','Описание'],['ideology','Убеждения'],['significant_people','Значимые люди'],['meaningful_locations','Значимые места'],
@@ -95,8 +96,9 @@ FILTERS.tome = [['', 'Все книги'], ['mythos_tome', 'Книги Мифо�
 const WGROUP = { melee: 'Ближний бой', handgun: 'Пистолеты и револьверы', rifle: 'Винтовки', shotgun: 'Дробовики', automatic: 'Автоматическое оружие', heavy: 'Тяжёлое оружие и взрывчатка', other: 'Прочее' };
 // weapon filters: type here, era in its own select (#era)
 FILTERS.weapon = [['', 'Все типы'], ...Object.entries(WGROUP)];
-const SET = { creature: DATA.creatures, character: DATA.characters, skill: DATA.skills, occupation: DATA.occupations, spell: DATA.spells, tome: DATA.tomes, weapon: DATA.weapons };
-const ALL = [...DATA.creatures, ...DATA.characters, ...DATA.skills, ...DATA.occupations, ...DATA.spells, ...DATA.tomes, ...DATA.weapons];
+FILTERS.location = [['', 'Все места'], ...['город','район','здание','место','область'].map(x => [x, x[0].toUpperCase() + x.slice(1)])];
+const SET = { creature: DATA.creatures, character: DATA.characters, skill: DATA.skills, occupation: DATA.occupations, spell: DATA.spells, tome: DATA.tomes, weapon: DATA.weapons, location: DATA.locations };
+const ALL = [...DATA.creatures, ...DATA.characters, ...DATA.skills, ...DATA.occupations, ...DATA.spells, ...DATA.tomes, ...DATA.weapons, ...DATA.locations];
 const TOME_TYPE = { mythos_tome: 'книга Мифов', occult_book: 'оккультная книга' };
 const byId = id => ALL.find(x => x.id === id);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -123,6 +125,7 @@ function matches(c, q, f) {
   if (tab === 'character') { const [k, v] = f.split(':'); return k === 'role' ? (c.roles||[]).includes(v) : k === 'era' ? (c.axes?.era||[]).includes(v) : bookOf(c) === v; }
   if (tab === 'occupation') return f === 'lovecraftian' ? c.lovecraftian : (c.axes?.era||[]).includes(f.split(':')[1]);
   if (tab === 'spell' && f === 'family') return DATA.spells.some(s => s.variant_of === c.id);
+  if (tab === 'location') return c.location_type === f;
   if (tab === 'tome') return f === 'general' ? DATA.tomes.some(t => t.edition_of === c.id) : f.startsWith('lang:') ? c.language === f.slice(5) : c.tome_type === f;
   return c.category === f;
 }
@@ -134,6 +137,7 @@ function subtitle(c) {
   if (c.kind === 'character') return [c.occupation?.ru, ...(c.roles||[]).map(r => ROLE[r])].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'spell') return [c.category, c.mechanic].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'weapon') return [caliberOf(c), WGROUP[c.group]].filter(Boolean).map(esc).join(' · ');
+  if (c.kind === 'location') return [c.number ? '№ ' + c.number : '', c.location_type, c.part_of && byId(c.part_of) ? byId(c.part_of).name.ru : ''].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'tome') return [c.name.en, c.language].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'occupation') return `Средства ${esc(c.credit_rating.raw)}${c.lovecraftian ? ' · лавкрафтовская' : ''}${c.group ? ' · ' + esc(c.group) : ''}`;
   return `${esc(c.name.en||'')} · ${c.base.raw === '—' ? esc(c.category) : 'база ' + esc(c.base.raw)}`;
@@ -334,6 +338,46 @@ function variants(c) {
   const vs = c.variants || [];
   return vs.length ? `<section><h3>Варианты (${vs.length})</h3>${vs.map(v => `<details><summary>${esc(v.label)}</summary>${statblock({ statblock: v.statblock })}</details>`).join('')}</section>` : '';
 }
+// locations (Р-78): breadcrumb, children, residents (own and of places inside), intro tables
+const childrenOf = id => DATA.locations.filter(x => x.part_of === id).sort((a, b) => (a.number || '').localeCompare(b.number || '', 'ru', { numeric: true }) || a.name.ru.localeCompare(b.name.ru, 'ru'));
+const descendants = id => childrenOf(id).flatMap(x => [x, ...descendants(x.id)]);
+function crumbs(c) {
+  const out = []; let p = c.part_of && byId(c.part_of);
+  while (p) { out.unshift(link(p.id, p.name.ru)); p = p.part_of && byId(p.part_of); }
+  return out.join(' › ');
+}
+function residentList(rs) {
+  return rs.map(r => (byId(r.id) ? link(r.id, byId(r.id).name.ru) : esc(r.id)) + (r.note ? ` <span class="muted">(${esc(r.note)})</span>` : '')).join(', ');
+}
+function locTable(tb) {
+  return `<section><h3>${esc(tb.title)}${tb.dice ? ` <span class="muted">(${esc(tb.dice)})</span>` : ''}</h3>
+    ${tb.intro ? `<p>${esc(tb.intro)}</p>` : ''}
+    <table>${(tb.rows||[]).map(r => `<tr>${r.roll != null ? `<td class="num">${esc(r.roll)}</td>` : ''}<td>${esc(r.text)}${(r.refs||[]).filter(byId).length ? ` <span class="muted">→ ${refLinks((r.refs||[]).filter(byId))}</span>` : ''}</td></tr>`).join('')}</table></section>`;
+}
+function locationCard(c) {
+  const kids = childrenOf(c.id);
+  const inside = descendants(c.id).filter(x => (x.residents||[]).length);
+  const tables = c.tables || [];
+  return `<h2>${esc(c.name.ru)}</h2>
+    <div class="sub">${c.part_of ? crumbs(c) + ' · ' : ''}${esc(c.location_type)}${c.number ? ' · № ' + esc(c.number) : ''}${(c.aliases||[]).length ? ' · также: ' + c.aliases.map(esc).join(', ') : ''}</div>
+    ${flags(c)}
+    ${c.address || c.keeper_hint ? `<dl>${c.address ? `<dt>Адрес</dt><dd>${esc(c.address)}</dd>` : ''}${c.keeper_hint ? `<dt>Подсказка</dt><dd>${esc(c.keeper_hint)}</dd>` : ''}</dl>` : ''}
+    ${c.description?.ru ? `<section><h3>Описание</h3>${c.description.ru.split('\n').filter(Boolean).map(p => `<p>${esc(p)}</p>`).join('')}</section>` : ''}
+    ${c.history?.ru ? `<section><h3>История</h3>${c.history.ru.split('\n').filter(Boolean).map(p => `<p>${esc(p)}</p>`).join('')}</section>` : ''}
+    ${(c.residents||[]).length ? `<section><h3>Жители</h3><p>${residentList(c.residents)}</p></section>` : ''}
+    ${kids.length ? `<section><h3>${c.location_type === 'город' ? 'Районы' : 'Места'} (${kids.length})</h3><ul>${kids.map(k => `<li>${k.number ? esc(k.number) + ' ' : ''}${link(k.id, k.name.ru)}${k.keeper_hint ? ` <span class="muted">— ${esc(k.keeper_hint)}</span>` : ''}</li>`).join('')}</ul></section>` : ''}
+    ${inside.length && c.location_type !== 'здание' ? `<section><h3>Кто где живёт</h3><ul>${inside.map(x => `<li>${link(x.id, (x.number ? x.number + ' ' : '') + x.name.ru)}: ${residentList(x.residents)}</li>`).join('')}</ul></section>` : ''}
+    ${(c.refs||[]).length ? `<section><h3>Существа и связанное</h3><p>${refLinks(c.refs)}</p></section>` : ''}
+    ${tables.map(locTable).join('')}
+    ${errata(c)}
+    <section><h3>Источник</h3><div>${sources(c)}</div></section>
+    ${corrections(c)}`;
+}
+// where a character lives or appears (reverse of location.residents)
+function homes(c) {
+  const ls = DATA.locations.filter(x => (x.residents||[]).some(r => r.id === c.id));
+  return ls.length ? `<section><h3>Где живёт / бывает</h3><ul>${ls.map(x => `<li>${link(x.id, (x.number ? x.number + ' ' : '') + x.name.ru)}${x.part_of ? ` <span class="muted">— ${crumbs(x)}</span>` : ''}</li>`).join('')}</ul></section>` : '';
+}
 function refLinks(ids) {
   return (ids||[]).map(i => byId(i) ? link(i, byId(i).name.ru) : esc(i)).join(', ');
 }
@@ -381,6 +425,7 @@ function creatureCard(c) {
     ${flags(c)}
     ${c.description?.ru ? `<p>${esc(c.description.ru)}</p>` : ''}
     ${relations(c)}
+    ${homes(c)}
     ${c.aura?.ru ? `<section><h3>Аура</h3><p>${esc(c.aura.ru)}</p></section>` : ''}
     ${statblock(c)}
     ${variants(c)}
@@ -410,6 +455,7 @@ function characterCard(c) {
     ${facts ? `<dl>${facts}</dl>` : ''}
     ${c.description?.ru ? `<p>${esc(c.description.ru)}</p>` : ''}
     ${relations(c)}
+    ${homes(c)}
     ${statblock(c)}
     ${variants(c)}
     ${abilities(c)}
@@ -487,7 +533,7 @@ function show(id, how = 'push') {
   if (c.kind !== tab) setTab(c.kind, true);
   current = id; renderList();
   const card = document.getElementById('card');
-  card.innerHTML = c.kind === 'creature' ? creatureCard(c) : c.kind === 'character' ? characterCard(c) : c.kind === 'occupation' ? occupationCard(c) : c.kind === 'spell' ? spellCard(c) : c.kind === 'tome' ? tomeCard(c) : c.kind === 'weapon' ? weaponCard(c) : skillCard(c);
+  card.innerHTML = c.kind === 'creature' ? creatureCard(c) : c.kind === 'character' ? characterCard(c) : c.kind === 'occupation' ? occupationCard(c) : c.kind === 'spell' ? spellCard(c) : c.kind === 'tome' ? tomeCard(c) : c.kind === 'weapon' ? weaponCard(c) : c.kind === 'location' ? locationCard(c) : skillCard(c);
   card.querySelectorAll('[data-go]').forEach(a => a.onclick = e => { e.preventDefault(); show(a.dataset.go); });
   const hash = '#' + encodeURIComponent(c.kind + '/' + id.split(/[:/]/).pop());
   if (how === 'replace') history.replaceState(null, '', hash);

@@ -20,6 +20,13 @@ main { display:grid; grid-template-columns: 300px 1fr; min-height: calc(100vh - 
 #list button { display:block; width:100%; text-align:left; padding:8px 16px; border:0; border-bottom:1px solid var(--line); background:none; color:inherit; font:inherit; cursor:pointer; }
 #list button:hover, #list button.active { background:var(--panel); }
 #list small { color:var(--muted); display:block; }
+#subbar { padding:8px 16px; border-bottom:1px solid var(--line); display:flex; gap:6px; flex-wrap:wrap; align-items:center; }
+#subbar button { font:inherit; padding:4px 10px; border:1px solid var(--line); border-radius:6px; background:none; color:inherit; cursor:pointer; }
+#subbar button.active { background:var(--panel); border-color:var(--accent); color:var(--accent); font-weight:600; }
+#subbar .sep { width:1px; align-self:stretch; background:var(--line); margin:0 6px; }
+#list h4.dist { cursor:pointer; text-transform:none; letter-spacing:0; font-size:14px; color:var(--ink); }
+#list h4.dist.active { background:var(--panel); }
+#list button.house { padding-left:32px; }
 details { border:1px solid var(--line); border-radius:6px; padding:4px 10px; margin:6px 0; }
 summary { cursor:pointer; font-weight:600; }
 #list h4 { margin:0; padding:10px 16px 4px; font-size:12px; color:var(--accent); text-transform:uppercase; letter-spacing:.04em; border-bottom:1px solid var(--line); }
@@ -68,6 +75,7 @@ a { color:var(--accent); }
   <select id="era" aria-label="Эпоха" hidden><option value="">Все эпохи</option><option value="1920s">1920-е</option><option value="modern">Современность</option></select>
   <span id="count" class="muted"></span>
 </header>
+<nav id="subbar" hidden></nav>
 <main>
   <nav id="list"></nav>
   <article id="card"></article>
@@ -97,6 +105,19 @@ const WGROUP = { melee: 'Ближний бой', handgun: 'Пистолеты и
 // weapon filters: type here, era in its own select (#era)
 FILTERS.weapon = [['', 'Все типы'], ...Object.entries(WGROUP)];
 FILTERS.location = [['', 'Все места'], ...['город','район','здание','место','область'].map(x => [x, x[0].toUpperCase() + x.slice(1)])];
+// city helpers (Р-78): which city a place belongs to, who lives in a city
+// top-level city of a place (an underwater city like Y'ha-nthlei inside Innsmouth's outskirts is not a separate city)
+const cityOf = l => { let x = l; while (x && x.part_of && byId(x.part_of)) x = byId(x.part_of); return x && x.location_type === 'город' ? x : null; };
+const placesIn = id => DATA.locations.filter(x => x.part_of === id).flatMap(x => [x, ...placesIn(x.id)]);
+function cityResidents(cityId) {
+  const seen = new Set();
+  [byId(cityId), ...placesIn(cityId)].filter(Boolean).forEach(l => (l.residents||[]).forEach(r => seen.add(r.id)));
+  return [...seen].map(byId).filter(Boolean).sort((a, b) => a.name.ru.localeCompare(b.name.ru, 'ru'));
+}
+const CITIES = DATA.locations.filter(x => x.location_type === 'город' && !x.part_of).sort((a, b) => a.name.ru.localeCompare(b.name.ru, 'ru'));
+FILTERS.character.splice(1, 0, ...CITIES.map(c => ['city:' + c.id, 'Жители: ' + c.name.ru]));
+let city = CITIES[0]?.id || null, locMode = 'houses';
+const openDist = new Set();
 const SET = { creature: DATA.creatures, character: DATA.characters, skill: DATA.skills, occupation: DATA.occupations, spell: DATA.spells, tome: DATA.tomes, weapon: DATA.weapons, location: DATA.locations };
 const ALL = [...DATA.creatures, ...DATA.characters, ...DATA.skills, ...DATA.occupations, ...DATA.spells, ...DATA.tomes, ...DATA.weapons, ...DATA.locations];
 const TOME_TYPE = { mythos_tome: 'книга Мифов', occult_book: 'оккультная книга' };
@@ -122,6 +143,7 @@ function matches(c, q, f) {
   }
   if (!f) return true;
   if (tab === 'creature') return c.category === f;
+  if (tab === 'character' && f.startsWith('city:')) return cityResidents(f.slice(5)).some(x => x.id === c.id);
   if (tab === 'character') { const [k, v] = f.split(':'); return k === 'role' ? (c.roles||[]).includes(v) : k === 'era' ? (c.axes?.era||[]).includes(v) : bookOf(c) === v; }
   if (tab === 'occupation') return f === 'lovecraftian' ? c.lovecraftian : (c.axes?.era||[]).includes(f.split(':')[1]);
   if (tab === 'spell' && f === 'family') return DATA.spells.some(s => s.variant_of === c.id);
@@ -158,6 +180,9 @@ function renderList() {
     const n = groups.reduce((s, [, xs]) => s + xs.length, 0);
     document.getElementById('count').textContent = n + ' во всех вкладках';
     list.innerHTML = groups.map(([k, xs]) => `<h4>${esc(TAB_RU[k])} (${xs.length})</h4>${xs.map(item).join('')}`).join('') || '<p class="muted" style="padding:8px 16px">Ничего не найдено.</p>';
+  } else if (tab === 'location' && city) {
+    renderLocList(list);
+    return;
   } else {
     const set = SET[tab];
     const items = set.filter(c => matches(c, q, f));
@@ -167,6 +192,38 @@ function renderList() {
   list.querySelectorAll('button').forEach(b => b.onclick = () => show(b.dataset.id));
 }
 
+// locations tab: districts with nested places, or the city's residents
+function renderLocList(list) {
+  const cityRec = byId(city);
+  if (locMode === 'residents') {
+    const rs = cityResidents(city);
+    document.getElementById('count').textContent = rs.length + ' жителей';
+    list.innerHTML = rs.map(item).join('');
+  } else {
+    const kids = childrenOf(city);
+    document.getElementById('count').textContent = placesIn(city).length + ' мест';
+    list.innerHTML = `<button data-id="${esc(city)}" class="${city === current ? 'active' : ''}">${esc(cityRec.name.ru)}<small>справочник города</small></button>`
+      + kids.map(d => {
+        const inner = childrenOf(d.id);
+        if (!inner.length) return item(d);
+        const open = openDist.has(d.id);
+        return `<h4 class="dist${d.id === current ? ' active' : ''}" data-dist="${esc(d.id)}">${open ? '▾' : '▸'} ${esc(d.name.ru)} <span class="muted">(${inner.length})</span></h4>`
+          + (open ? inner.map(h => `<button data-id="${esc(h.id)}" class="house ${h.id === current ? 'active' : ''}">${esc((h.number ? h.number + ' ' : '') + h.name.ru)}<small>${esc(h.keeper_hint || '')}</small></button>`).join('') : '');
+      }).join('');
+    list.querySelectorAll('h4.dist').forEach(h => h.onclick = () => { const id = h.dataset.dist; openDist.has(id) && current === id ? openDist.delete(id) : openDist.add(id); show(id); });
+  }
+  list.querySelectorAll('button').forEach(b => b.onclick = () => show(b.dataset.id));
+}
+function renderSubbar() {
+  const bar = document.getElementById('subbar');
+  bar.hidden = tab !== 'location' || !CITIES.length;
+  if (bar.hidden) return;
+  bar.innerHTML = CITIES.map(c => `<button data-city="${esc(c.id)}" class="${c.id === city ? 'active' : ''}">${esc(c.name.ru)}</button>`).join('')
+    + '<span class="sep"></span>'
+    + [['houses', 'Дома'], ['residents', 'Жители']].map(([m, l]) => `<button data-mode="${m}" class="${m === locMode ? 'active' : ''}">${l}</button>`).join('');
+  bar.querySelectorAll('[data-city]').forEach(b => b.onclick = () => { city = b.dataset.city; renderSubbar(); show(city); });
+  bar.querySelectorAll('[data-mode]').forEach(b => b.onclick = () => { locMode = b.dataset.mode; renderSubbar(); renderList(); });
+}
 function setTab(t, keep) {
   tab = t;
   document.querySelectorAll('.tabs button').forEach(b => b.classList.toggle('active', b.dataset.tab === t));
@@ -174,6 +231,8 @@ function setTab(t, keep) {
   const occ = document.getElementById('occ'); occ.hidden = t !== 'character';
   document.getElementById('era').hidden = t !== 'weapon';
   document.getElementById('mech').hidden = t !== 'spell';
+  document.getElementById('cat').hidden = t === 'location' && CITIES.length > 0;
+  renderSubbar();
   if (t === 'character') {
     const counts = {};
     const label = {};
@@ -181,7 +240,7 @@ function setTab(t, keep) {
     occ.innerHTML = '<option value="">Все профессии</option>' + Object.keys(counts).sort((a, b) => a.localeCompare(b, 'ru'))
       .map(o => `<option value="${esc(o)}">${esc(label[o].charAt(0).toUpperCase() + label[o].slice(1))} (${counts[o]})</option>`).join('');
   }
-  if (!keep) { document.getElementById('q').value = ''; show(SET[t][0]?.id); } else renderList();
+  if (!keep) { document.getElementById('q').value = ''; show(t === 'location' && city ? city : SET[t][0]?.id); } else renderList();
 }
 
 function sources(c) {
@@ -365,13 +424,25 @@ function locationCard(c) {
     ${c.description?.ru ? `<section><h3>Описание</h3>${c.description.ru.split('\n').filter(Boolean).map(p => `<p>${esc(p)}</p>`).join('')}</section>` : ''}
     ${c.history?.ru ? `<section><h3>История</h3>${c.history.ru.split('\n').filter(Boolean).map(p => `<p>${esc(p)}</p>`).join('')}</section>` : ''}
     ${(c.residents||[]).length ? `<section><h3>Жители</h3><p>${residentList(c.residents)}</p></section>` : ''}
-    ${kids.length ? `<section><h3>${c.location_type === 'город' ? 'Районы и места' : 'Места'} (${kids.length})</h3><ul>${kids.map(k => `<li>${k.number ? esc(k.number) + ' ' : ''}${link(k.id, k.name.ru)}${k.keeper_hint ? ` <span class="muted">— ${esc(k.keeper_hint)}</span>` : ''}</li>`).join('')}</ul></section>` : ''}
+    ${kids.length && c.location_type !== 'город' ? placesTable(kids) : ''}
+    ${kids.length && c.location_type === 'город' ? `<section><h3>Районы и места (${kids.length})</h3><ul>${kids.map(k => `<li>${k.number ? esc(k.number) + ' ' : ''}${link(k.id, k.name.ru)}${k.keeper_hint ? ` <span class="muted">— ${esc(k.keeper_hint)}</span>` : ''}</li>`).join('')}</ul></section>` : ''}
     ${inside.length && c.location_type !== 'здание' ? `<section><h3>Кто где живёт</h3><ul>${inside.map(x => `<li>${link(x.id, (x.number ? x.number + ' ' : '') + x.name.ru)}: ${residentList(x.residents)}</li>`).join('')}</ul></section>` : ''}
     ${(c.refs||[]).length ? `<section><h3>Существа и связанное</h3><p>${refLinks(c.refs)}</p></section>` : ''}
     ${tables.map(locTable).join('')}
     ${errata(c)}
     <section><h3>Источник</h3><div>${sources(c)}</div></section>
     ${corrections(c)}`;
+}
+function placesTable(kids) {
+  const short = x => x.keeper_hint || (x.description?.ru || '').split(/(?<=[.!?])\s/)[0];
+  return `<section><h3>Места (${kids.length})</h3><table><tr><th>№</th><th>Место</th><th>Жители</th><th>Кратко</th></tr>${kids.map(k => `<tr><td class="num">${esc(k.number || '')}</td><td>${link(k.id, k.name.ru)}</td><td>${residentList(k.residents || [])}</td><td>${esc(short(k))}</td></tr>`).join('')}</table></section>`;
+}
+// where a character is mentioned: intro tables and place references
+function mentions(c) {
+  const rows = [];
+  DATA.locations.forEach(l => (l.tables||[]).forEach(tb => (tb.rows||[]).forEach(r => { if ((r.refs||[]).includes(c.id)) rows.push(`${link(l.id, l.name.ru)}: ${esc(tb.title)}${r.roll ? ' — ' + esc(r.roll) : ''}`); })));
+  DATA.locations.filter(l => (l.refs||[]).includes(c.id)).forEach(l => rows.push(link(l.id, l.name.ru)));
+  return rows.length ? `<section><h3>Упоминается</h3><ul>${rows.map(r => `<li>${r}</li>`).join('')}</ul></section>` : '';
 }
 // where a character lives or appears (reverse of location.residents)
 function homes(c) {
@@ -456,6 +527,7 @@ function characterCard(c) {
     ${c.description?.ru ? `<p>${esc(c.description.ru)}</p>` : ''}
     ${relations(c)}
     ${homes(c)}
+    ${mentions(c)}
     ${statblock(c)}
     ${variants(c)}
     ${abilities(c)}
@@ -530,7 +602,16 @@ function occupationCard(c) {
 function show(id, how = 'push') {
   const c = id && byId(id);
   if (!c) { document.getElementById('card').innerHTML = '<p class="muted">Нет записей.</p>'; renderList(); return; }
-  if (c.kind !== tab) setTab(c.kind, true);
+  const stay = tab === 'location' && locMode === 'residents' && city && (c.kind === 'character' || c.kind === 'creature');
+  if (c.kind === 'location') {
+    const cc = cityOf(c);
+    if (cc && cc.id !== city) { city = cc.id; }
+    let p = c; while (p && p.part_of && p.part_of !== city) p = byId(p.part_of);
+    if (p && p.id !== city && childrenOf(p.id).length) openDist.add(p.id);
+    if (locMode !== 'houses' && c.location_type !== 'город') locMode = 'houses';
+  }
+  if (c.kind !== tab && !stay) setTab(c.kind, true);
+  if (tab === 'location') renderSubbar();
   current = id; renderList();
   const card = document.getElementById('card');
   card.innerHTML = c.kind === 'creature' ? creatureCard(c) : c.kind === 'character' ? characterCard(c) : c.kind === 'occupation' ? occupationCard(c) : c.kind === 'spell' ? spellCard(c) : c.kind === 'tome' ? tomeCard(c) : c.kind === 'weapon' ? weaponCard(c) : c.kind === 'location' ? locationCard(c) : skillCard(c);

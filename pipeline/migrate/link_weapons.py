@@ -3,7 +3,9 @@
 Reads the attack map (jsonl: id, index, name, weapon) made when the weapon
 reference was built (`checks/20261024-weapons/attack_weapons.jsonl`) and sets
 `statblock.attacks[index].weapon` = `coc:weapon:<slug>` when the printed attack
-name matches and the weapon record exists. Names and numbers are not changed.
+name matches and the weapon record exists. A line with `"variant": <n>` targets
+`variants[n].statblock.attacks[index]` (group profiles, R-74). Names and numbers
+are not changed.
 
     python pipeline/migrate/link_weapons.py [--write] [map.jsonl]
 """
@@ -23,28 +25,31 @@ def main():
         if line.strip():
             m = json.loads(line)
             if m.get("weapon"):
-                amap[(m["id"], m["index"])] = (m["name"], "coc:weapon:" + m["weapon"])
+                amap[(m["id"], m.get("variant"), m["index"])] = (m["name"], "coc:weapon:" + m["weapon"])
     weapons = {json.load(open(f, encoding="utf-8"))["id"] for f in glob.glob("kb/weapons/*.json")}
     files = glob.glob("kb/creatures/*.json") + glob.glob("kb/characters/*.json") + glob.glob("kb/books/*/*/*.json")
     linked = skipped = changed = 0
     for f in sorted(files):
         d = json.load(open(f, encoding="utf-8"))
-        attacks = (d.get("statblock") or {}).get("attacks") or []
+        blocks = [(None, d.get("statblock") or {})]
+        blocks += [(n, v.get("statblock") or {}) for n, v in enumerate(d.get("variants") or [])]
         dirty = False
-        for i, a in enumerate(attacks):
-            hit = amap.get((d["id"], i))
-            if not hit:
-                continue
-            name, wid = hit
-            if a["name"]["ru"] != name or wid not in weapons:
-                skipped += 1
-                print("skip:", d["id"], i, a["name"]["ru"], "->", wid)
-                continue
-            linked += 1
-            if a.get("weapon") != wid:
-                # keep key order: weapon goes after damage
-                attacks[i] = {k: v for k, v in a.items() if k != "notes"} | {"weapon": wid} | ({"notes": a["notes"]} if "notes" in a else {})
-                dirty = True
+        for vi, sb in blocks:
+            attacks = sb.get("attacks") or []
+            for i, a in enumerate(attacks):
+                hit = amap.get((d["id"], vi, i))
+                if not hit:
+                    continue
+                name, wid = hit
+                if a["name"]["ru"] != name or wid not in weapons:
+                    skipped += 1
+                    print("skip:", d["id"], vi, i, a["name"]["ru"], "->", wid)
+                    continue
+                linked += 1
+                if a.get("weapon") != wid:
+                    # keep key order: weapon goes after damage
+                    attacks[i] = {k: v for k, v in a.items() if k != "notes"} | {"weapon": wid} | ({"notes": a["notes"]} if "notes" in a else {})
+                    dirty = True
         if dirty:
             changed += 1
             if write:

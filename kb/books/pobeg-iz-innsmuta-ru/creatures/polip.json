@@ -1,0 +1,162 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "pobeg-iz-innsmuta-ru/creature/polip",
+  "kind": "creature",
+  "name": {
+    "ru": "Полип",
+    "en": null
+  },
+  "aliases": [],
+  "category": "mythos_monster",
+  "subcategory": "полипообразное существо",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "85",
+        "value": 85
+      },
+      "SIZ": {
+        "raw": "50",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "30",
+        "value": 30
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "INT": {
+        "raw": "—",
+        "value": null
+      },
+      "POW": {
+        "raw": "—",
+        "value": null
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "mp": {
+      "raw": "—",
+      "value": null
+    },
+    "damage_bonus": {
+      "raw": "+0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "0",
+      "value": 0,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 0
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Щупальца (1d6) (манёвр)",
+          "en": null
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "1d6",
+          "dice": "1d6",
+          "adds_db": false
+        },
+        "notes": "Чтобы вырваться, требуется встречная проверка СИЛ. Каждое щупальце выделяет слабый яд, который вызывает полный паралич."
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d4",
+        "trigger": "при виде полипа"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Крупное полипообразное существо в гроте D заполненных воздухом камер Й’ха-нтлеи: притаилось у большой колонны, замаскировавшись под окружающий камень. Бочкообразное туловище высотой около метра увенчано десятками двухметровых щупалец вокруг зияющей беззубой пасти. Тварь атакует любого, кто подойдёт слишком близко.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "pobeg-iz-innsmuta-ru",
+      "physical_page": 60,
+      "printed_page": 60,
+      "method": "book_text",
+      "verified": true,
+      "entry_page": 59
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.hp",
+      "printed": "63",
+      "expected": "13",
+      "note": "ПЗ = (ВЫН 85 + ТЕЛ 50) / 10 = 13; напечатанные 63 совпадают с ПЗ шоггота на стр. 54. Исправлено (Р-36).",
+      "fixed": true
+    },
+    {
+      "field": "statblock.build",
+      "printed": "9",
+      "expected": "0",
+      "note": "СИЛ 60 + ТЕЛ 50 = 110 даёт комплекцию 0 и БкУ +0 (напечатан верно); комплекция 9 совпадает с шогготом на стр. 54. Исправлено (Р-36).",
+      "fixed": true
+    }
+  ],
+  "corrections": [
+    {
+      "field": "statblock.hp",
+      "from": "63",
+      "to": "13",
+      "reason": "ПЗ расходятся с ВЫН и ТЕЛ (Р-36)",
+      "ref": "Р-36"
+    },
+    {
+      "field": "statblock.build",
+      "from": "9",
+      "to": "0",
+      "reason": "комплекция расходится с СИЛ+ТЕЛ и БкУ +0 (Р-36)",
+      "ref": "Р-36"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Своё существо книги: летучий полип справочника — другое существо. «(1D6)» в названии атаки напечатано без пояснения."
+  }
+}

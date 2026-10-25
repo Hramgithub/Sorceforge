@@ -26,6 +26,7 @@ main { display:grid; grid-template-columns: 300px 1fr; min-height: calc(100vh - 
 #subbar .sep { width:1px; align-self:stretch; background:var(--line); margin:0 6px; }
 #list h4.dist { cursor:pointer; text-transform:none; letter-spacing:0; font-size:14px; color:var(--ink); }
 #list h4.dist.active { background:var(--panel); }
+#list h4.dist.sub { padding-left:28px; font-weight:500; }
 #list button.house { padding-left:32px; }
 details { border:1px solid var(--line); border-radius:6px; padding:4px 10px; margin:6px 0; }
 summary { cursor:pointer; font-weight:600; }
@@ -66,7 +67,7 @@ a { color:var(--accent); }
     <button data-tab="spell">Заклинания</button>
     <button data-tab="tome">Книги</button>
     <button data-tab="weapon">Оружие</button>
-    <button data-tab="location">Локации</button>
+    <button data-tab="location">Гайды</button>
   </div>
   <input id="q" type="search" placeholder="Поиск по имени" aria-label="Поиск">
   <select id="cat" aria-label="Фильтр"></select>
@@ -194,26 +195,38 @@ function renderList() {
   list.querySelectorAll('button').forEach(b => b.onclick = () => show(b.dataset.id));
 }
 
-// locations tab: districts with nested places, or the city's residents
+// guides (Р-80): a guide is a book that describes places; a city is one record that several guides add to
+const bookIds = l => (l.sources || []).map(s => s.book_id);
+const GUIDES = [...new Set(DATA.locations.flatMap(bookIds))].sort((a, b) => (BOOKS[a] || a).localeCompare(BOOKS[b] || b, 'ru'));
+let guide = 'all';
+const inGuide = l => guide === 'all' || bookIds(l).includes(guide);
+const guideCities = () => CITIES.filter(c => inGuide(c) || placesIn(c.id).some(inGuide));
+const openCity = new Set(city ? [city] : []);
+// left panel: cities → districts → places (three collapsible levels), or the residents of the open city
 function renderLocList(list) {
-  const cityRec = byId(city);
+  const cities = guideCities();
   if (locMode === 'residents') {
-    const rs = cityResidents(city);
-    document.getElementById('count').textContent = rs.length + ' жителей';
+    const rs = city ? cityResidents(city) : [];
+    document.getElementById('count').textContent = rs.length + ' жителей' + (city ? ' — ' + byId(city).name.ru : '');
     list.innerHTML = rs.map(item).join('');
   } else {
-    const kids = childrenOf(city);
-    document.getElementById('count').textContent = placesIn(city).length + ' мест';
-    list.innerHTML = `<button data-id="${esc(city)}" class="${city === current ? 'active' : ''}">${esc(cityRec.name.ru)}<small>справочник города</small></button>`
-      + kids.map(d => {
-        const inner = childrenOf(d.id);
-        if (!inner.length) return item(d);
-        const open = openDist.has(d.id);
-        return `<h4 class="dist${d.id === current ? ' active' : ''}" data-dist="${esc(d.id)}">${open ? '▾' : '▸'} ${d.number ? esc(d.number) + ' ' : ''}${esc(d.name.ru)}</h4>`
-          + (open ? inner.map(h => `<button data-id="${esc(h.id)}" class="house ${h.id === current ? 'active' : ''}">${esc((h.number ? h.number + ' ' : '') + h.name.ru)}<small>${esc(h.keeper_hint || '')}</small></button>`).join('') : '');
-      }).join('');
-    // a click toggles the district open/closed and shows its table
-    list.querySelectorAll('h4.dist').forEach(h => h.onclick = () => { const id = h.dataset.dist; openDist.has(id) ? openDist.delete(id) : openDist.add(id); show(id); });
+    document.getElementById('count').textContent = cities.length + ' городов';
+    const place = h => `<button data-id="${esc(h.id)}" class="house ${h.id === current ? 'active' : ''}">${esc((h.number ? h.number + ' ' : '') + h.name.ru)}<small>${esc(h.keeper_hint || '')}</small></button>`;
+    list.innerHTML = cities.map(c => {
+      const openC = openCity.has(c.id);
+      const kids = childrenOf(c.id).filter(k => inGuide(k) || placesIn(k.id).some(inGuide));
+      return `<h4 class="dist city${c.id === current ? ' active' : ''}" data-city="${esc(c.id)}">${openC ? '▾' : '▸'} ${esc(c.name.ru)}</h4>`
+        + (openC ? kids.map(d => {
+          const inner = childrenOf(d.id).filter(inGuide);
+          if (!inner.length) return place(d);
+          const open = openDist.has(d.id);
+          return `<h4 class="dist sub${d.id === current ? ' active' : ''}" data-dist="${esc(d.id)}">${open ? '▾' : '▸'} ${d.number ? esc(d.number) + ' ' : ''}${esc(d.name.ru)}</h4>`
+            + (open ? inner.map(place).join('') : '');
+        }).join('') : '');
+    }).join('') || '<p class="muted" style="padding:8px 16px">В этом гайде мест нет.</p>';
+    // a click on a city or district toggles it and shows its page
+    list.querySelectorAll('h4[data-city]').forEach(h => h.onclick = () => { const id = h.dataset.city; openCity.has(id) ? openCity.delete(id) : openCity.add(id); city = id; show(id); });
+    list.querySelectorAll('h4[data-dist]').forEach(h => h.onclick = () => { const id = h.dataset.dist; openDist.has(id) ? openDist.delete(id) : openDist.add(id); show(id); });
   }
   list.querySelectorAll('button').forEach(b => b.onclick = () => show(b.dataset.id));
 }
@@ -221,12 +234,11 @@ function renderSubbar() {
   const bar = document.getElementById('subbar');
   bar.hidden = tab !== 'location' || !CITIES.length;
   if (bar.hidden) return;
-  bar.innerHTML = CITIES.map(c => `<button data-city="${esc(c.id)}" class="${c.id === city ? 'active' : ''}">${esc(c.name.ru)}</button>`).join('')
+  bar.innerHTML = [['all', 'Все гайды'], ...GUIDES.map(g => [g, BOOKS[g] || g])].map(([g, l]) => `<button data-guide="${esc(g)}" class="${g === guide ? 'active' : ''}">${esc(l)}</button>`).join('')
     + '<span class="sep"></span>'
     + [['houses', 'Дома'], ['residents', 'Жители']].map(([m, l]) => `<button data-mode="${m}" class="${m === locMode ? 'active' : ''}">${l}</button>`).join('')
-    + '<span class="sep"></span>'
-    + CITY_SECTIONS.map(([s, l]) => `<button data-sec="${s}" class="${current === city && s === citySection ? 'active' : ''}">${l}</button>`).join('');
-  bar.querySelectorAll('[data-city]').forEach(b => b.onclick = () => { city = b.dataset.city; renderSubbar(); show(city); });
+    + (city ? '<span class="sep"></span>' + CITY_SECTIONS.map(([s, l]) => `<button data-sec="${s}" class="${current === city && s === citySection ? 'active' : ''}">${l}</button>`).join('') : '');
+  bar.querySelectorAll('[data-guide]').forEach(b => b.onclick = () => { guide = b.dataset.guide; const cs = guideCities(); if (cs.length && !cs.some(c => c.id === city)) city = cs[0].id; renderSubbar(); city ? show(city) : renderList(); });
   bar.querySelectorAll('[data-mode]').forEach(b => b.onclick = () => { locMode = b.dataset.mode; renderSubbar(); renderList(); });
   bar.querySelectorAll('[data-sec]').forEach(b => b.onclick = () => { citySection = b.dataset.sec; show(city); });
 }
@@ -416,6 +428,7 @@ function residentList(rs) {
 }
 function locTable(tb) {
   return `<section><h3>${esc(tb.title)}${tb.dice ? ` <span class="muted">(${esc(tb.dice)})</span>` : ''}</h3>
+    ${tb.source ? `<p class="muted">Из: ${esc(BOOKS[tb.source.book_id] || tb.source.book_id)}${tb.source.printed_page ? ', с. ' + esc(tb.source.printed_page) : ''}</p>` : ''}
     ${tb.intro ? `<p>${esc(tb.intro)}</p>` : ''}
     <table>${(tb.rows||[]).map(r => `<tr>${r.roll != null ? `<td class="num">${esc(r.roll)}</td>` : ''}<td>${esc(r.text)}${(r.refs||[]).filter(byId).length ? ` <span class="muted">→ ${refLinks((r.refs||[]).filter(byId))}</span>` : ''}</td></tr>`).join('')}</table></section>`;
 }
@@ -632,7 +645,8 @@ function show(id, how = 'push') {
   const stay = tab === 'location' && locMode === 'residents' && city && (c.kind === 'character' || c.kind === 'creature');
   if (c.kind === 'location') {
     const cc = cityOf(c);
-    if (cc && cc.id !== city) { city = cc.id; }
+    // opening a place expands its city; opening the city itself leaves the toggle alone
+    if (cc) { city = cc.id; if (cc.id !== c.id) openCity.add(cc.id); }
     let p = c; while (p && p.part_of && p.part_of !== city) p = byId(p.part_of);
     // opening a place expands its district; opening the district itself leaves the toggle alone
     if (p && p.id !== city && p.id !== c.id && childrenOf(p.id).length) openDist.add(p.id);

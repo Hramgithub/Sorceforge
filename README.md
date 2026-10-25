@@ -46,6 +46,22 @@ python tools/validate.py schemas/creature.schema.json kb/creatures/wolf.json
 
 Проверяет записи по схеме (`creature`, `character`, `skill`, `occupation`).
 
+## Публикация
+
+Просмотрщик опубликован на `https://kb.kamaztelevizorov.ru` (под паролем) — тот же
+VPS, что и Foundry VTT, но отдельный пользователь `kb` без sudo и без доступа к
+данным Foundry; nginx-сайт `/etc/nginx/sites-available/kb`, файлы в `/srv/kb`.
+
+```powershell
+.\tools\deploy_kb.ps1 -Build            # пересобрать app/kb.html и выложить
+.\tools\deploy_kb.ps1 -Rollback list    # релизы на сервере
+.\tools\deploy_kb.ps1 -Rollback <id>    # вернуть предыдущий релиз
+```
+
+SSH-ключ пользователя `kb` ищется в `-ServerKey`, `KB_SERVER_KEY_PATH`,
+`..\NRI\.ssh\kb_deploy`, `~\.ssh\kb_deploy`; в репозиторий не коммитится.
+Пароли сайта — `htpasswd /etc/nginx/kb.htpasswd <имя>` под root.
+
 ## Что где
 
 | Каталог | Содержимое |

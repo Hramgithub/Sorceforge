@@ -14,6 +14,9 @@ header h1 { font-size:18px; margin:0 8px 0 0; }
 .tabs { display:flex; gap:4px; }
 .tabs button { font:inherit; padding:6px 12px; border:1px solid var(--line); border-radius:6px; background:none; color:inherit; cursor:pointer; }
 .tabs button.active { background:var(--panel); border-color:var(--accent); color:var(--accent); font-weight:600; }
+.who { margin-left:auto; display:flex; gap:8px; align-items:center; white-space:nowrap; }
+.who[hidden] { display:none; }
+.who button { font:inherit; padding:6px 12px; border:1px solid var(--accent); border-radius:6px; background:none; color:var(--accent); cursor:pointer; }
 input, select { font:inherit; padding:6px 8px; border:1px solid var(--line); border-radius:6px; background:var(--panel); color:var(--ink); }
 main { display:grid; grid-template-columns: 300px 1fr; min-height: calc(100vh - 58px); }
 #list { border-right:1px solid var(--line); overflow:auto; max-height: calc(100vh - 58px); }
@@ -75,6 +78,7 @@ a { color:var(--accent); }
   <select id="mech" aria-label="Механика" hidden><option value="">Все механики</option><option value="мгновенное">Мгновенные</option><option value="поддерживаемое">Поддерживаемые</option><option value="ритуал">Ритуалы</option></select>
   <select id="era" aria-label="Эпоха" hidden><option value="">Все эпохи</option><option value="1920s">1920-е</option><option value="modern">Современность</option></select>
   <span id="count" class="muted"></span>
+  <div id="who" class="who" hidden><span class="muted">Вы вошли как</span> <b id="who-name"></b> <button id="logout" type="button">Выйти</button></div>
 </header>
 <nav id="subbar" hidden></nav>
 <main>
@@ -686,6 +690,20 @@ show(start ? start.id : SET[tab][0]?.id, 'replace');
 const fromHistory = () => { const c = fromHash(); if (c && c.id !== current) show(c.id, 'none'); };
 window.addEventListener('popstate', fromHistory);
 window.addEventListener('hashchange', fromHistory);
+// Basic-auth session on the site: whoami.html is an SSI echo of $remote_user (raw SSI text when opened locally)
+fetch('whoami.html', { cache: 'no-store' }).then(r => r.ok ? r.text() : '').then(name => {
+  name = name.trim();
+  if (!name || name.includes('<!--')) return;
+  document.getElementById('who-name').textContent = name;
+  document.getElementById('who').hidden = false;
+}).catch(() => {});
+// Basic auth has no logout: a request with bogus credentials makes the browser drop the saved ones
+document.getElementById('logout').onclick = () => {
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', 'whoami.html', true, 'logout', 'logout');
+  xhr.onloadend = () => location.replace('./');
+  xhr.send();
+};
 </script>
 </body>
 </html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<title>Вход в базу знаний</title>
+<!-- Served by nginx as the body of 401 responses (error_page 401, SSI on). The browser shows it
+     only after the login dialog is cancelled. A request that carried credentials means a wrong
+     login or password; one without them means the dialog was cancelled. -->
+<!--# if expr="$http_authorization" -->
+<meta http-equiv="refresh" content="0; url=/?auth=wrong">
+<script>location.replace('/?auth=wrong');</script>
+<!--# else -->
+<meta http-equiv="refresh" content="0; url=/">
+<script>location.replace('/');</script>
+<!--# endif -->
+</head>
+<body>
+<p><a href="/">Вернуться на главную</a></p>
+</body>
+</html>

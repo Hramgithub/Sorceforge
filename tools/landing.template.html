@@ -54,6 +54,14 @@ h2 { font:500 28px/1.2 var(--serif); margin:0 0 6px; }
 .cols p { margin:0; color:var(--muted); font-size:15px; }
 ul.sources { list-style:none; padding:0; margin:0; display:flex; flex-wrap:wrap; gap:8px; }
 ul.sources li { padding:6px 12px; border:1px solid var(--line); border-radius:999px; font-size:14px; background:var(--paper); }
+.access.hint { display:inline-block; padding:8px 14px; border:1px dashed var(--accent); border-radius:8px; color:var(--ink); }
+.access.hint b { color:var(--accent); font-family: ui-monospace, Consolas, monospace; }
+dialog { border:1px solid var(--line); border-radius:12px; padding:24px; max-width:min(420px, calc(100vw - 32px));
+  background:var(--paper); color:var(--ink); box-shadow:0 20px 60px rgba(0,0,0,.35); }
+dialog::backdrop { background:rgba(10,8,5,.55); }
+dialog h3 { font:500 22px/1.25 var(--serif); margin:0 0 8px; }
+dialog p { margin:0 0 20px; color:var(--muted); }
+dialog .cta { justify-content:flex-end; }
 footer { padding:32px 0 48px; border-top:1px solid var(--line); color:var(--muted); font-size:13px; }
 @media (max-width: 760px) {
   .hero { grid-template-columns: 1fr; padding:28px 0 24px; gap:24px; }
@@ -84,7 +92,7 @@ footer { padding:32px 0 48px; border-top:1px solid var(--line); color:var(--mute
         <a class="btn primary" href="kb.html">Открыть базу</a>
         <a class="btn ghost" href="#sections">Что внутри</a>
       </div>
-      <p class="access">Доступ по логину и паролю. Гостевой доступ — у хранителя.</p>
+      <p class="access hint">Для входа используйте логин <b>guest</b> и пароль <b>guest</b>.</p>
     </div>
     <svg class="sigil" viewBox="0 0 200 200" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
       <circle cx="100" cy="100" r="92" stroke-width="1.5" opacity=".5"/>
@@ -135,5 +143,24 @@ footer { padding:32px 0 48px; border-top:1px solid var(--line); color:var(--mute
     Неофициальный справочник для домашних игр, обновлён __UPDATED__. «Зов Ктулху» (Call of Cthulhu) — товарный знак Chaosium Inc.; тексты книг принадлежат правообладателям.
   </footer>
 </div>
+
+<dialog id="auth-wrong" aria-labelledby="auth-wrong-title">
+  <h3 id="auth-wrong-title">Неверный логин или пароль</h3>
+  <p>Введите правильный пароль. Для входа используйте логин <b>guest</b> и пароль <b>guest</b>.</p>
+  <form method="dialog" class="cta">
+    <button class="btn ghost" value="close">Закрыть</button>
+    <a class="btn primary" href="kb.html">Попробовать снова</a>
+  </form>
+</dialog>
+<script>
+// 401.html sends a failed login back here with ?auth=wrong; a cancelled login comes back without it.
+(function () {
+  var params = new URLSearchParams(location.search);
+  if (params.get('auth') !== 'wrong') return;
+  history.replaceState(null, '', location.pathname + location.hash);
+  var dialog = document.getElementById('auth-wrong');
+  if (dialog.showModal) dialog.showModal(); else alert('Неверный логин или пароль. Введите правильный пароль.');
+})();
+</script>
 </body>
 </html>

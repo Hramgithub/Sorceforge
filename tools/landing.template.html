@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>База знаний «Зова Ктулху»</title>
+<meta name="description" content="Справочник хранителя по «Зову Ктулху» 7-й редакции: существа, персонажи, заклинания, книги Мифов, оружие, профессии и гайды по городам.">
+<style>
+:root {
+  --bg:#f4f0e6; --paper:#fbf8f1; --ink:#1e1d1a; --muted:#6b675e; --line:#ddd6c6;
+  --accent:#6d3b2a; --accent-ink:#fbf8f1; --glow:rgba(109,59,42,.08);
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#14130e; --paper:#1d1c16; --ink:#ece8dd; --muted:#a39e91; --line:#353329;
+          --accent:#d59a7e; --accent-ink:#14130e; --glow:rgba(213,154,126,.07); }
+}
+* { box-sizing:border-box; }
+html { -webkit-text-size-adjust:100%; }
+body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.55 var(--sans);
+  background-image: radial-gradient(1200px 600px at 80% -10%, var(--glow), transparent 60%),
+                    radial-gradient(900px 500px at -10% 110%, var(--glow), transparent 60%); }
+a { color:var(--accent); }
+.wrap { max-width:1040px; margin:0 auto; padding:0 20px; }
+header.top { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:18px 0; }
+.brand { display:flex; align-items:center; gap:10px; font:600 15px/1 var(--sans); letter-spacing:.02em; color:var(--ink); text-decoration:none; }
+.brand svg { width:28px; height:28px; color:var(--accent); flex:none; }
+.hero { padding:56px 0 40px; display:grid; grid-template-columns: 1.3fr .7fr; gap:40px; align-items:center; }
+.eyebrow { font:600 12px/1 var(--sans); letter-spacing:.14em; text-transform:uppercase; color:var(--accent); margin:0 0 16px; }
+h1 { font:500 clamp(34px, 6vw, 58px)/1.05 var(--serif); margin:0 0 18px; letter-spacing:-.01em; }
+.lead { font-size:18px; color:var(--muted); margin:0 0 28px; max-width:34em; }
+.cta { display:flex; flex-wrap:wrap; gap:12px; align-items:center; }
+.btn { display:inline-flex; align-items:center; gap:8px; padding:12px 22px; border-radius:8px; font:600 16px/1 var(--sans);
+  text-decoration:none; border:1px solid var(--accent); }
+.btn.primary { background:var(--accent); color:var(--accent-ink); }
+.btn.primary:hover { filter:brightness(1.08); }
+.btn.ghost { color:var(--accent); background:transparent; }
+.access { font-size:14px; color:var(--muted); margin:16px 0 0; }
+.sigil { justify-self:center; width:min(260px, 60vw); color:var(--accent); opacity:.9; }
+h2 { font:500 28px/1.2 var(--serif); margin:0 0 6px; }
+.section { padding:40px 0; border-top:1px solid var(--line); }
+.section > p.muted { color:var(--muted); margin:0 0 24px; }
+.grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap:14px; }
+.card { display:block; padding:18px 18px 16px; background:var(--paper); border:1px solid var(--line); border-radius:10px;
+  color:inherit; text-decoration:none; transition: border-color .15s, transform .15s; }
+.card:hover { border-color:var(--accent); transform: translateY(-2px); }
+.card .n { font:500 34px/1 var(--serif); color:var(--accent); font-variant-numeric: tabular-nums; }
+.card h3 { font:600 16px/1.3 var(--sans); margin:10px 0 4px; }
+.card p { margin:0; font-size:14px; color:var(--muted); }
+.cols { display:grid; grid-template-columns: repeat(3, 1fr); gap:24px; }
+.cols h3 { font:600 16px/1.3 var(--sans); margin:0 0 6px; }
+.cols p { margin:0; color:var(--muted); font-size:15px; }
+ul.sources { list-style:none; padding:0; margin:0; display:flex; flex-wrap:wrap; gap:8px; }
+ul.sources li { padding:6px 12px; border:1px solid var(--line); border-radius:999px; font-size:14px; background:var(--paper); }
+footer { padding:32px 0 48px; border-top:1px solid var(--line); color:var(--muted); font-size:13px; }
+@media (max-width: 760px) {
+  .hero { grid-template-columns: 1fr; padding:28px 0 24px; gap:24px; }
+  .sigil { grid-row:1; width:120px; justify-self:start; }
+  .cols { grid-template-columns: 1fr; }
+  .cta .btn { flex:1 1 auto; justify-content:center; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="./">
+      <svg viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+        <circle cx="32" cy="32" r="27"/><path d="M32 9v46M32 30 18 16M32 30l14-14M32 40 20 50M32 40l12 10"/>
+      </svg>
+      Sourcefold
+    </a>
+    <a class="btn ghost" href="kb.html">Войти</a>
+  </header>
+
+  <section class="hero">
+    <div>
+      <p class="eyebrow">«Зов Ктулху» · 7-я редакция</p>
+      <h1>База знаний хранителя</h1>
+      <p class="lead">Существа и божества Мифов, персонажи сценариев, заклинания, книги Мифов, оружие и профессии — с цифрами из первоисточников, связями между записями и описаниями на русском.</p>
+      <div class="cta">
+        <a class="btn primary" href="kb.html">Открыть базу</a>
+        <a class="btn ghost" href="#sections">Что внутри</a>
+      </div>
+      <p class="access">Доступ по логину и паролю. Гостевой доступ — у хранителя.</p>
+    </div>
+    <svg class="sigil" viewBox="0 0 200 200" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="100" cy="100" r="92" stroke-width="1.5" opacity=".5"/>
+      <circle cx="100" cy="100" r="78" stroke-width="1" opacity=".35" stroke-dasharray="2 6"/>
+      <path d="M100 22 168 140H32Z" stroke-width="2" opacity=".55"/>
+      <path d="M100 178 32 60h136Z" stroke-width="2" opacity=".55"/>
+      <path d="M100 52v96M100 92 72 64M100 92l28-28M100 118l-22 22M100 118l22 22" stroke-width="5"/>
+      <circle cx="100" cy="100" r="6" fill="currentColor" stroke="none"/>
+    </svg>
+  </section>
+
+  <section class="section" id="sections">
+    <h2>Что внутри</h2>
+    <p class="muted">Каждая карточка открывает свою вкладку базы.</p>
+    <div class="grid">
+      <a class="card" href="kb.html#creature"><div class="n">__COUNT_creatures__</div><h3>Существа</h3><p>Твари Мифов, божества, воплощения, звери и сверхъестественное.</p></a>
+      <a class="card" href="kb.html#character"><div class="n">__COUNT_characters__</div><h3>Персонажи</h3><p>NPC и готовые сыщики из сценариев, колод и книг.</p></a>
+      <a class="card" href="kb.html#spell"><div class="n">__COUNT_spells__</div><h3>Заклинания</h3><p>Стоимость, время, семейства и глубинная магия.</p></a>
+      <a class="card" href="kb.html#tome"><div class="n">__COUNT_tomes__</div><h3>Книги Мифов</h3><p>Издания, изучение, потеря рассудка и списки заклинаний.</p></a>
+      <a class="card" href="kb.html#weapon"><div class="n">__COUNT_weapons__</div><h3>Оружие</h3><p>Таблица «Книги хранителя» и модели 1920-х.</p></a>
+      <a class="card" href="kb.html#skill"><div class="n">__COUNT_skills__</div><h3>Навыки</h3><p>Навыки сыщиков, специализации и навыки существ.</p></a>
+      <a class="card" href="kb.html#occupation"><div class="n">__COUNT_occupations__</div><h3>Профессии</h3><p>Профессии из «Книги сыщика» с навыками и кредитным рейтингом.</p></a>
+      <a class="card" href="kb.html#location"><div class="n">__COUNT_locations__</div><h3>Гайды</h3><p>Города, районы и места для игры.</p></a>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Как собрана база</h2>
+    <p class="muted">Справочник для своих игр, а не пересказ по памяти.</p>
+    <div class="cols">
+      <div><h3>Цифры из первоисточника</h3><p>Характеристики берутся из основной книги для каждой записи; расхождения других источников показаны отдельно как поправки.</p></div>
+      <div><h3>Опечатки не прячем</h3><p>Ошибки книг сохранены как напечатано и помечены, рядом — разбор и исправленное значение.</p></div>
+      <div><h3>Всё связано</h3><p>Формы, аватары, служители, порождения, оружие в атаках и заклинания в книгах ведут друг к другу.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Источники</h2>
+    <p class="muted">Основные книги и колоды, из которых собраны записи.</p>
+    <ul class="sources">
+      <li>«Книга хранителя»</li><li>«Книга сыщика»</li><li>Malleus Monstrorum 7e, тома I–II</li>
+      <li>Malleus Monstrorum Keeper Deck</li><li>Grand Grimoire of Cthulhu Mythos Magic</li>
+      <li>«Маски Ньярлатхотепа» 7e</li><li>Curious Characters</li><li>«Погасший маяк»</li>
+    </ul>
+  </section>
+
+  <footer>
+    Неофициальный справочник для домашних игр, обновлён __UPDATED__. «Зов Ктулху» (Call of Cthulhu) — товарный знак Chaosium Inc.; тексты книг принадлежат правообладателям.
+  </footer>
+</div>
+</body>
+</html>

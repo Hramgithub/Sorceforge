@@ -678,7 +678,9 @@ function fromHash() {
   return hs && SET[hk] ? SET[hk].find(c => c.id.split(/[:/]/).pop() === hs) : null;
 }
 const start = fromHash();
-setTab(start ? start.kind : 'creature', true);
+// a bare #<kind> (links from the landing page) opens that tab
+const hashKind = decodeURIComponent(location.hash.slice(1)).split('/')[0];
+setTab(start ? start.kind : SET[hashKind] ? hashKind : 'creature', true);
 show(start ? start.id : SET[tab][0]?.id, 'replace');
 // back/forward between pushed entries fires popstate; a hand-edited hash fires hashchange
 const fromHistory = () => { const c = fromHash(); if (c && c.id !== current) show(c.id, 'none'); };

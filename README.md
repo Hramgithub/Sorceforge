@@ -48,7 +48,9 @@ python tools/validate.py schemas/creature.schema.json kb/creatures/wolf.json
 
 ## Публикация
 
-Просмотрщик опубликован на `https://kb.kamaztelevizorov.ru` (под паролем) — тот же
+Просмотрщик опубликован на `https://kb.kamaztelevizorov.ru`: лендинг `app/index.html` открыт
+всем, сама база `kb.html` — под паролем (basic auth). Лендинг собирается тем же
+`tools/build_viewer.py` из `tools/landing.template.html`, счётчики подставляются из `kb/`. Тот же
 VPS, что и Foundry VTT, но отдельный пользователь `kb` без sudo и без доступа к
 данным Foundry; nginx-сайт `/etc/nginx/sites-available/kb`, файлы в `/srv/kb`.
 

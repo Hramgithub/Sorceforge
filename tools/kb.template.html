@@ -691,7 +691,9 @@ const fromHistory = () => { const c = fromHash(); if (c && c.id !== current) sho
 window.addEventListener('popstate', fromHistory);
 window.addEventListener('hashchange', fromHistory);
 // Basic-auth session on the site: whoami.html is an SSI echo of $remote_user (raw SSI text when opened locally)
-fetch('whoami.html', { cache: 'no-store' }).then(r => r.ok ? r.text() : '').then(name => {
+// built from location.origin: a page opened as https://user:pass@host/ cannot fetch relative URLs
+const whoamiUrl = new URL('whoami.html', location.origin + location.pathname).href;
+fetch(whoamiUrl, { cache: 'no-store' }).then(r => r.ok ? r.text() : '').then(name => {
   name = name.trim();
   if (!name || name.includes('<!--')) return;
   document.getElementById('who-name').textContent = name;
@@ -700,8 +702,8 @@ fetch('whoami.html', { cache: 'no-store' }).then(r => r.ok ? r.text() : '').then
 // Basic auth has no logout: a request with bogus credentials makes the browser drop the saved ones
 document.getElementById('logout').onclick = () => {
   const xhr = new XMLHttpRequest();
-  xhr.open('GET', 'whoami.html', true, 'logout', 'logout');
-  xhr.onloadend = () => location.replace('./');
+  xhr.open('GET', whoamiUrl, true, 'logout', 'logout');
+  xhr.onloadend = () => location.replace(new URL('./', location.origin + location.pathname).href);
   xhr.send();
 };
 </script>

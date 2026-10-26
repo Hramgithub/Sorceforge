@@ -209,12 +209,11 @@ const openCity = new Set(city ? [city] : []);
 // left panel: cities → districts → places (three collapsible levels), or the residents of the open city
 function renderLocList(list) {
   const cities = guideCities();
+  document.getElementById('count').textContent = '';
   if (locMode === 'residents') {
     const rs = city ? cityResidents(city) : [];
-    document.getElementById('count').textContent = rs.length + ' жителей' + (city ? ' — ' + byId(city).name.ru : '');
     list.innerHTML = rs.map(item).join('');
   } else {
-    document.getElementById('count').textContent = cities.length + ' городов';
     const place = h => `<button data-id="${esc(h.id)}" class="house ${h.id === current ? 'active' : ''}">${esc((h.number ? h.number + ' ' : '') + h.name.ru)}<small>${esc(h.keeper_hint || '')}</small></button>`;
     list.innerHTML = cities.map(c => {
       const openC = openCity.has(c.id);

@@ -137,6 +137,20 @@ let tab = 'creature', current = null;
 
 const occOf = c => c.occupation_ref ? c.occupation_ref : (c.occupation?.ru || '').trim().toLowerCase();
 const nameHit = (c, q) => [c.name.ru, c.name.en, ...(c.aliases||[]), c.occupation?.ru].some(n => (n||'').toLowerCase().includes(q));
+const reEsc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+// search relevance: 0 the name starts with the query … 7 only the occupation matches; the alias that matched is returned to show it
+function hitRank(c, q) {
+  const low = s => (s || '').toLowerCase(), word = new RegExp('(^|[\\s«"(\'-])' + reEsc(q));
+  const ru = low(c.name.ru), en = low(c.name.en);
+  if (ru.startsWith(q)) return [0];
+  if (word.test(ru)) return [1];
+  if (ru.includes(q)) return [2];
+  if (word.test(en)) return [3];
+  if (en.includes(q)) return [4];
+  const a = (c.aliases||[]).find(x => low(x).includes(q));
+  if (a) return [word.test(low(a)) ? 5 : 6, a];
+  return [7];
+}
 function matches(c, q, f) {
   if (q && !nameHit(c, q)) return false;
   const o = document.getElementById('occ').value;
@@ -173,8 +187,8 @@ function subtitle(c) {
 }
 
 const TAB_RU = Object.fromEntries([...document.querySelectorAll('.tabs button')].map(b => [b.dataset.tab, b.textContent]));
-const item = c => `<button data-id="${esc(c.id)}" class="${c.id===current?'active':''}">${esc(c.name.ru)}
-    ${(c.quality?.flags||[]).filter(x => x !== 'translated').length ? '<span class="tag warn">!</span>' : ''}<small>${subtitle(c)}</small></button>`;
+const item = (c, alias) => `<button data-id="${esc(c.id)}" class="${c.id===current?'active':''}">${esc(c.name.ru)}
+    ${(c.quality?.flags||[]).filter(x => x !== 'translated').length ? '<span class="tag warn">!</span>' : ''}<small>${[subtitle(c), alias ? 'также: ' + esc(alias) : ''].filter(Boolean).join(' · ')}</small></button>`;
 function renderList() {
   const q = document.getElementById('q').value.trim().toLowerCase();
   const f = document.getElementById('cat').value;
@@ -183,10 +197,12 @@ function renderList() {
   document.getElementById('cat').disabled = document.getElementById('occ').disabled = document.getElementById('era').disabled = document.getElementById('mech').disabled = !!q;
   if (q) {
     const kinds = [tab, ...Object.keys(SET).filter(k => k !== tab)];
-    const groups = kinds.map(k => [k, SET[k].filter(c => nameHit(c, q))]).filter(([, xs]) => xs.length);
+    // within a tab the closest matches come first; the list order stays among equals
+    const ranked = k => SET[k].filter(c => nameHit(c, q)).map(c => [c, ...hitRank(c, q)]).sort((a, b) => a[1] - b[1]);
+    const groups = kinds.map(k => [k, ranked(k)]).filter(([, xs]) => xs.length);
     const n = groups.reduce((s, [, xs]) => s + xs.length, 0);
     document.getElementById('count').textContent = n + ' во всех вкладках';
-    list.innerHTML = groups.map(([k, xs]) => `<h4>${esc(TAB_RU[k])} (${xs.length})</h4>${xs.map(item).join('')}`).join('') || '<p class="muted" style="padding:8px 16px">Ничего не найдено.</p>';
+    list.innerHTML = groups.map(([k, xs]) => `<h4>${esc(TAB_RU[k])} (${xs.length})</h4>${xs.map(([c, , alias]) => item(c, alias)).join('')}`).join('') || '<p class="muted" style="padding:8px 16px">Ничего не найдено.</p>';
   } else if (tab === 'location' && city) {
     renderLocList(list);
     return;
@@ -194,7 +210,7 @@ function renderList() {
     const set = SET[tab];
     const items = set.filter(c => matches(c, q, f));
     document.getElementById('count').textContent = items.length + ' из ' + set.length;
-    list.innerHTML = items.map(item).join('');
+    list.innerHTML = items.map(c => item(c)).join('');
   }
   list.querySelectorAll('button').forEach(b => b.onclick = () => show(b.dataset.id));
 }
@@ -212,7 +228,7 @@ function renderLocList(list) {
   document.getElementById('count').textContent = '';
   if (locMode === 'residents') {
     const rs = city ? cityResidents(city) : [];
-    list.innerHTML = rs.map(item).join('');
+    list.innerHTML = rs.map(c => item(c)).join('');
   } else {
     const place = h => `<button data-id="${esc(h.id)}" class="house ${h.id === current ? 'active' : ''}">${esc((h.number ? h.number + ' ' : '') + h.name.ru)}<small>${esc(h.keeper_hint || '')}</small></button>`;
     list.innerHTML = cities.map(c => {

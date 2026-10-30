@@ -1,7 +1,7 @@
 {
-  "schema": "sourcefold.creature.v0",
-  "id": "masks-of-nyarlathotep-en/creature/zombified-miners",
-  "kind": "creature",
+  "schema": "sourcefold.character.v0",
+  "id": "masks-of-nyarlathotep-en/character/zombified-miners",
+  "kind": "character",
   "name": {
     "ru": "Зомбированные шахтёры",
     "en": "Zombified Miners"
@@ -9,8 +9,10 @@
   "aliases": [
     "Зомби-шахтёры"
   ],
-  "category": "supernatural",
-  "subcategory": "жертвы машины контроля разума",
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "шахтёры и пленники под машиной контроля разума",
   "axes": {
     "era": [
       "1920s"
@@ -19,9 +21,10 @@
   },
   "relations": [
     {
-      "type": "instance_of",
-      "target": "coc:creature:zombie",
-      "note": "особь вида"
+      "type": "works_for",
+      "target": "masks-of-nyarlathotep-en/character/robert-huston",
+      "note": "подчинены машиной контроля разума",
+      "note_back": "зомбированные рабочие"
     }
   ],
   "statblock": {
@@ -857,6 +860,6 @@
     "flags": [
       "translated"
     ],
-    "notes": "Связь с записью «Зомби» условна: по книге это живые люди, превращённые в зомби машиной контроля разума, а не оживлённые мертвецы."
+    "notes": "Живые люди со стёртой памятью, а не оживлённые мертвецы: групповой профиль персонажей (аудит логики 1.5), связь с «Зомби» снята."
   }
 }

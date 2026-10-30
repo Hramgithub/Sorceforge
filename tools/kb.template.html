@@ -526,6 +526,7 @@ const REL = {
   rival_of: ['Недруги', null],
   works_for: ['Работает на', 'На него работают'],
   variant_of: ['Вариант прегена', 'Другие варианты'],
+  related_to: ['Связан с', 'Связаны с ним'],
 };
 function relLinks(items) {
   return items.map(([id, note]) => (byId(id) ? link(id, byId(id).name.ru) : esc(id)) + (note ? ` <span class="muted">(${esc(note)})</span>` : '')).join(', ');

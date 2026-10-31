@@ -136,11 +136,13 @@ const link = (id, text) => `<a href="#" data-go="${esc(id)}">${esc(text)}</a>`;
 let tab = 'creature', current = null;
 
 const occOf = c => c.occupation_ref ? c.occupation_ref : (c.occupation?.ru || '').trim().toLowerCase();
-const nameHit = (c, q) => [c.name.ru, c.name.en, ...(c.aliases||[]), c.occupation?.ru].some(n => (n||'').toLowerCase().includes(q));
+// quotes are ignored in search: «кольт m1911» finds «Кольт» M1911
+const norm = s => (s || '').toLowerCase().replace(/[«»"„“”']/g, '');
+const nameHit = (c, q) => [c.name.ru, c.name.en, ...(c.aliases||[]), c.occupation?.ru].some(n => norm(n).includes(q));
 const reEsc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 // search relevance: 0 the name starts with the query … 7 only the occupation matches; the alias that matched is returned to show it
 function hitRank(c, q) {
-  const low = s => (s || '').toLowerCase(), word = new RegExp('(^|[\\s«"(\'-])' + reEsc(q));
+  const low = norm, word = new RegExp('(^|[\\s(-])' + reEsc(q));
   const ru = low(c.name.ru), en = low(c.name.en);
   if (ru.startsWith(q)) return [0];
   if (word.test(ru)) return [1];
@@ -190,7 +192,7 @@ const TAB_RU = Object.fromEntries([...document.querySelectorAll('.tabs button')]
 const item = (c, alias) => `<button data-id="${esc(c.id)}" class="${c.id===current?'active':''}">${esc(c.name.ru)}
     ${(c.quality?.flags||[]).filter(x => x !== 'translated').length ? '<span class="tag warn">!</span>' : ''}<small>${[subtitle(c), alias ? 'также: ' + esc(alias) : ''].filter(Boolean).join(' · ')}</small></button>`;
 function renderList() {
-  const q = document.getElementById('q').value.trim().toLowerCase();
+  const q = norm(document.getElementById('q').value.trim());
   const f = document.getElementById('cat').value;
   const list = document.getElementById('list');
   // a query searches every tab: results grouped by tab, current tab first; tab filters do not apply

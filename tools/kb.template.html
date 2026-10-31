@@ -68,7 +68,6 @@ a { color:var(--accent); }
     <button data-tab="skill">Навыки</button>
     <button data-tab="occupation">Профессии</button>
     <button data-tab="spell">Заклинания</button>
-    <button data-tab="tome">Книги</button>
     <button data-tab="weapon">Оружие</button>
     <button data-tab="location">Гайды</button>
   </div>
@@ -188,7 +187,10 @@ function subtitle(c) {
   return `${esc(c.name.en||'')} · ${c.base.raw === '—' ? esc(c.category) : 'база ' + esc(c.base.raw)}`;
 }
 
-const TAB_RU = Object.fromEntries([...document.querySelectorAll('.tabs button')].map(b => [b.dataset.tab, b.textContent]));
+const TAB_RU = { ...Object.fromEntries([...document.querySelectorAll('.tabs button')].map(b => [b.dataset.tab, b.textContent])), tome: 'Книги' };
+// books live inside the Spells tab (Р-111): the sub-bar switches between the two lists; every book stays, with or without spells
+const MAGIC = [['spell', 'Все заклинания'], ['tome', 'Книги']];
+const topTab = t => t === 'tome' ? 'spell' : t;
 const item = (c, alias) => `<button data-id="${esc(c.id)}" class="${c.id===current?'active':''}">${esc(c.name.ru)}
     ${(c.quality?.flags||[]).filter(x => x !== 'translated').length ? '<span class="tag warn">!</span>' : ''}<small>${[subtitle(c), alias ? 'также: ' + esc(alias) : ''].filter(Boolean).join(' · ')}</small></button>`;
 function renderList() {
@@ -253,6 +255,12 @@ function renderLocList(list) {
 }
 function renderSubbar() {
   const bar = document.getElementById('subbar');
+  if (topTab(tab) === 'spell') {
+    bar.hidden = false;
+    bar.innerHTML = MAGIC.map(([t, l]) => `<button data-magic="${t}" class="${t === tab ? 'active' : ''}">${l} (${SET[t].length})</button>`).join('');
+    bar.querySelectorAll('[data-magic]').forEach(b => b.onclick = () => { if (b.dataset.magic !== tab) setTab(b.dataset.magic); });
+    return;
+  }
   bar.hidden = tab !== 'location' || !CITIES.length;
   if (bar.hidden) return;
   bar.innerHTML = [['all', 'Все гайды'], ...GUIDES.map(g => [g, BOOKS[g] || g])].map(([g, l]) => `<button data-guide="${esc(g)}" class="${g === guide ? 'active' : ''}">${esc(l)}</button>`).join('')
@@ -265,7 +273,7 @@ function renderSubbar() {
 }
 function setTab(t, keep) {
   tab = t;
-  document.querySelectorAll('.tabs button').forEach(b => b.classList.toggle('active', b.dataset.tab === t));
+  document.querySelectorAll('.tabs button').forEach(b => b.classList.toggle('active', b.dataset.tab === topTab(t)));
   document.getElementById('cat').innerHTML = FILTERS[t].map(([v, l]) => `<option value="${esc(v)}">${esc(l)}</option>`).join('');
   const occ = document.getElementById('occ'); occ.hidden = t !== 'character';
   document.getElementById('era').hidden = t !== 'weapon';

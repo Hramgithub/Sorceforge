@@ -19,14 +19,16 @@
   },
   "relations": [
     {
-      "type": "spawn_of",
+      "type": "related_to",
       "target": "coc:creature:nug-and-yeb",
-      "note": "по «Некрономикону» — родословная от Йеба и Нуга"
+      "note": "по «Некрономикону» — родословная от Йеба и Нуга",
+      "note_back": "по «Некрономикону» — родословная от Йеба и Нуга"
     },
     {
-      "type": "spawn_of",
+      "type": "related_to",
       "target": "coc:creature:ghizguth",
-      "note": "по «Пергаментам Пнома» Гизгут — создатель Цатхоггуа"
+      "note": "по «Пергаментам Пнома» Гизгут — создатель Цатхоггуа",
+      "note_back": "по «Пергаментам Пнома» Гизгут — создатель Цатхоггуа"
     }
   ],
   "statblock": {
@@ -359,6 +361,20 @@
       "to": "150",
       "reason": "в Malleus Monstrorum ИНТ не указан — оставлено значение «Книги хранителя»",
       "ref": "keeper-rulebook-ru p.327"
+    },
+    {
+      "field": "relations",
+      "from": "spawn_of coc:creature:nug-and-yeb",
+      "to": "related_to coc:creature:nug-and-yeb",
+      "reason": "решение владельца Р-117: две разные родословные из разных источников, ни одна не главная — правило Р-89",
+      "ref": "Р-117"
+    },
+    {
+      "field": "relations",
+      "from": "spawn_of coc:creature:ghizguth",
+      "to": "related_to coc:creature:ghizguth",
+      "reason": "решение владельца Р-117: две разные родословные из разных источников, ни одна не главная — правило Р-89",
+      "ref": "Р-117"
     }
   ],
   "quality": {

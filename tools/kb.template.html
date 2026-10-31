@@ -72,6 +72,7 @@ a { color:var(--accent); }
 .spot.doubt { border:2px dashed rgba(161,92,0,.75); }
 .spot.hit { border:3px solid #1f6feb; background:rgba(31,111,235,.2); }
 .spot.lit { border:3px solid #e67e22; background:rgba(230,126,34,.35); box-shadow:0 0 0 4px rgba(230,126,34,.35); }
+.spot.litd { border:3px solid #1f6feb; background:rgba(31,111,235,.35); box-shadow:0 0 0 4px rgba(31,111,235,.3); }
 .spot.focus { border:3px solid #c0392b; background:rgba(192,57,43,.15); animation:spotpulse 1.4s ease-in-out 5; }
 @keyframes spotpulse { 50% { box-shadow:0 0 0 12px rgba(192,57,43,.35); } }
 .mapinner.edit .spot { border:2px solid rgba(31,111,235,.7); cursor:move; }
@@ -274,7 +275,8 @@ function renderLocList(list) {
     }).join('') || '<p class="muted" style="padding:8px 16px">В этом гайде мест нет.</p>';
     // a click on a city or district toggles it and shows its page
     list.querySelectorAll('h4[data-city]').forEach(h => h.onclick = () => { const id = h.dataset.city; openCity.has(id) ? openCity.delete(id) : openCity.add(id); city = id; show(id); });
-    list.querySelectorAll('h4[data-dist]').forEach(h => h.onclick = () => { const id = h.dataset.dist; openDist.has(id) ? openDist.delete(id) : openDist.add(id); show(id); });
+    // with the city map on screen a district click only folds the list, so the map stays open
+    list.querySelectorAll('h4[data-dist]').forEach(h => h.onclick = () => { const id = h.dataset.dist; openDist.has(id) ? openDist.delete(id) : openDist.add(id); document.getElementById('mapinner') ? renderList() : show(id); });
   }
   list.querySelectorAll('button').forEach(b => b.onclick = () => show(b.dataset.id));
 }
@@ -718,10 +720,15 @@ function lightSpots(id) {
   const inner = document.getElementById('mapinner');
   if (!inner || !mapCur) return;
   const c = id && byId(id);
-  const ids = !c ? [] : c.kind === 'location' ? [c.id] : DATA.locations.filter(l => (l.residents||[]).some(r => r.id === c.id)).map(l => l.id);
-  inner.querySelectorAll('.spot[data-i]').forEach(b => b.classList.toggle('lit', ids.includes(mapCur.spots[b.dataset.i].target)));
+  // a district lights all its places in its own colour (the book draws no district borders, Р-120)
+  const dist = c?.kind === 'location' && descendants(c.id).length > 0;
+  const ids = !c ? [] : c.kind === 'location' ? mapIds(c) : DATA.locations.filter(l => (l.residents||[]).some(r => r.id === c.id)).map(l => l.id);
+  inner.querySelectorAll('.spot[data-i]').forEach(b => {
+    const on = ids.includes(mapCur.spots[b.dataset.i].target);
+    b.classList.toggle('lit', on && !dist); b.classList.toggle('litd', on && dist);
+  });
 }
-document.getElementById('list').addEventListener('pointerover', e => lightSpots(e.target.closest('#list [data-id]')?.dataset.id));
+document.getElementById('list').addEventListener('pointerover', e => { const el = e.target.closest('#list [data-id], #list [data-dist]'); lightSpots(el?.dataset.id || el?.dataset.dist); });
 document.getElementById('list').addEventListener('pointerleave', () => lightSpots(null));
 // edit mode: moved and new spots, copied out by the owner and applied to kb/maps
 const mapLog = [];

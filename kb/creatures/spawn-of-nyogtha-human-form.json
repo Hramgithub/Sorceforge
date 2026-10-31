@@ -22,10 +22,6 @@
   },
   "relations": [
     {
-      "type": "form_of",
-      "target": "coc:creature:spawn-of-nyogtha-monster-form"
-    },
-    {
       "type": "spawn_of",
       "target": "coc:creature:nyogtha"
     },
@@ -198,7 +194,15 @@
       "note": "столбец «Human Form» блока Spawn of Nyogtha"
     }
   ],
-  "corrections": [],
+  "corrections": [
+    {
+      "field": "relations",
+      "from": "form_of coc:creature:spawn-of-nyogtha-monster-form",
+      "to": null,
+      "reason": "решение владельца Р-115: ранняя стадия связана с поздней одной связью transforms_into (с пояснением, когда и как)",
+      "ref": "Р-115"
+    }
+  ],
   "quality": {
     "needs_review": false,
     "flags": [

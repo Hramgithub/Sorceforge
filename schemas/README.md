@@ -17,6 +17,7 @@
 | `tome.schema.json` | книга Мифов, оккультная книга | `kb/tomes/` |
 | `weapon.schema.json` | оружие | `kb/weapons/` |
 | `location.schema.json` | локация: город, район, здание, место, область | `kb/locations/` |
+| `map.schema.json` | карта из книги с метками мест (Р-120); картинка — в `app/maps/` | `kb/maps/` |
 | `examples/` | по примеру на каждый вид записи | — |
 
 Проверка (без внешних библиотек):

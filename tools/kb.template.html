@@ -56,6 +56,28 @@ a { color:var(--accent); }
 .tag.warn { color:var(--warn); border-color:var(--warn); }
 .tag.ok { color:var(--ok); border-color:var(--ok); }
 .muted { color:var(--muted); }
+/* maps (Р-120): the book image keeps its own colours, so spot colours are fixed */
+#card.wide { max-width:none; }
+.maptools { display:flex; gap:6px; flex-wrap:wrap; align-items:center; margin:8px 0; }
+.maptools button { font:inherit; padding:4px 10px; border:1px solid var(--line); border-radius:6px; background:none; color:inherit; cursor:pointer; }
+.maptools button.active { background:var(--panel); border-color:var(--accent); color:var(--accent); font-weight:600; }
+.maptools .sep { width:1px; align-self:stretch; background:var(--line); margin:0 4px; }
+.mapbox { overflow:auto; max-height:calc(100vh - 200px); border:1px solid var(--line); border-radius:6px; background:#f6efcf; cursor:grab; }
+.mapbox.drag { cursor:grabbing; }
+.mapinner { position:relative; }
+.mapinner img { display:block; width:100%; height:100%; user-select:none; -webkit-user-drag:none; }
+.spot { position:absolute; transform:translate(-50%,-50%); padding:0; border:2px solid transparent; border-radius:50%; background:transparent; cursor:pointer; }
+.spot.label { border-radius:4px; }
+.spot:hover, .spot:focus-visible { border-color:#6d3b2a; background:rgba(109,59,42,.2); outline:none; }
+.spot.doubt { border:2px dashed rgba(161,92,0,.75); }
+.spot.hit { border:3px solid #1f6feb; background:rgba(31,111,235,.2); }
+.spot.focus { border:3px solid #c0392b; background:rgba(192,57,43,.15); animation:spotpulse 1.4s ease-in-out 5; }
+@keyframes spotpulse { 50% { box-shadow:0 0 0 12px rgba(192,57,43,.35); } }
+.mapinner.edit .spot { border:2px solid rgba(31,111,235,.7); cursor:move; }
+.spot.new { border:2px solid #1f6feb; background:rgba(31,111,235,.4); width:12px; height:12px; pointer-events:none; }
+.maptip { position:fixed; z-index:10; max-width:340px; background:var(--panel); color:var(--ink); border:1px solid var(--line); border-radius:6px; padding:6px 10px; font-size:13px; box-shadow:0 4px 14px rgba(0,0,0,.25); pointer-events:none; }
+.maptip .warnt { color:var(--warn); }
+#mapedit-panel textarea { width:100%; min-height:90px; font:12px/1.4 ui-monospace, monospace; background:var(--panel); color:var(--ink); border:1px solid var(--line); border-radius:6px; }
 @media (max-width: 760px) { main { grid-template-columns: 1fr; } #list { max-height: 40vh; border-right:0; border-bottom:1px solid var(--line); } #card { padding:16px; } }
 </style>
 </head>
@@ -122,7 +144,7 @@ const CITIES = DATA.locations.filter(x => x.location_type === 'город' && !x
 FILTERS.character.splice(1, 0, ...CITIES.map(c => ['city:' + c.id, 'Жители: ' + c.name.ru]));
 let city = CITIES[0]?.id || null, locMode = 'houses', citySection = 'overview';
 // sections of the city reference page shown from the sub-bar
-const CITY_SECTIONS = [['overview', 'Обзор'], ['history', 'История'], ['tables', 'Таблицы'], ['leads', 'Зацепки'], ['who', 'Кто где живёт']];
+const CITY_SECTIONS = [['overview', 'Обзор'], ['map', 'Карта'], ['history', 'История'], ['tables', 'Таблицы'], ['leads', 'Зацепки'], ['who', 'Кто где живёт']];
 const openDist = new Set();
 const SET = { creature: DATA.creatures, character: DATA.characters, skill: DATA.skills, occupation: DATA.occupations, spell: DATA.spells, tome: DATA.tomes, weapon: DATA.weapons, location: DATA.locations };
 const ALL = [...DATA.creatures, ...DATA.characters, ...DATA.skills, ...DATA.occupations, ...DATA.spells, ...DATA.tomes, ...DATA.weapons, ...DATA.locations];
@@ -266,7 +288,7 @@ function renderSubbar() {
   bar.innerHTML = [['all', 'Все гайды'], ...GUIDES.map(g => [g, BOOKS[g] || g])].map(([g, l]) => `<button data-guide="${esc(g)}" class="${g === guide ? 'active' : ''}">${esc(l)}</button>`).join('')
     + '<span class="sep"></span>'
     + [['houses', 'Дома'], ['residents', 'Жители']].map(([m, l]) => `<button data-mode="${m}" class="${m === locMode ? 'active' : ''}">${l}</button>`).join('')
-    + (city ? '<span class="sep"></span>' + CITY_SECTIONS.map(([s, l]) => `<button data-sec="${s}" class="${current === city && s === citySection ? 'active' : ''}">${l}</button>`).join('') : '');
+    + (city ? '<span class="sep"></span>' + CITY_SECTIONS.filter(([s]) => s !== 'map' || mapsOf(city).length).map(([s, l]) => `<button data-sec="${s}" class="${current === city && s === citySection ? 'active' : ''}">${l}</button>`).join('') : '');
   bar.querySelectorAll('[data-guide]').forEach(b => b.onclick = () => { guide = b.dataset.guide; const cs = guideCities(); if (cs.length && !cs.some(c => c.id === city)) city = cs[0].id; renderSubbar(); city ? show(city) : renderList(); });
   bar.querySelectorAll('[data-mode]').forEach(b => b.onclick = () => { locMode = b.dataset.mode; renderSubbar(); renderList(); });
   bar.querySelectorAll('[data-sec]').forEach(b => b.onclick = () => { citySection = b.dataset.sec; show(city); });
@@ -477,6 +499,7 @@ function cityCard(c) {
       ${kids.length ? `<section><h3>Районы и места (${kids.length})</h3><ul>${kids.map(k => `<li>${k.number ? esc(k.number) + ' ' : ''}${link(k.id, k.name.ru)}${k.keeper_hint ? ` <span class="muted">— ${esc(k.keeper_hint)}</span>` : ''}</li>`).join('')}</ul></section>` : ''}
       ${(c.refs||[]).length ? `<section><h3>Существа и связанное</h3><p>${refLinks(c.refs)}</p></section>` : ''}
       <section><h3>Источник</h3><div>${sources(c)}</div></section>${errata(c)}${corrections(c)}`,
+    map: '<div id="mapwrap"></div>',
     history: `${c.history?.ru ? `<section><h3>История</h3>${paras(c.history.ru)}</section>` : ''}${ofKind(['события']).map(locTable).join('')}`,
     tables: ofKind(['слухи', 'встречи', 'прочее']).map(locTable).join('') || '<p class="muted">Таблиц нет.</p>',
     leads: ofKind(['зацепки']).map(locTable).join('') || '<p class="muted">Зацепок нет.</p>',
@@ -492,6 +515,7 @@ function locationCard(c) {
   return `<h2>${esc(c.name.ru)}</h2>
     <div class="sub">${c.part_of ? crumbs(c) + ' · ' : ''}${esc(c.location_type)}${c.number ? ' · № ' + esc(c.number) : ''}${(c.aliases||[]).length ? ' · также: ' + c.aliases.map(esc).join(', ') : ''}</div>
     ${flags(c)}
+    ${onMap(c)}
     ${c.address || c.keeper_hint ? `<dl>${c.address ? `<dt>Адрес</dt><dd>${esc(c.address)}</dd>` : ''}${c.keeper_hint ? `<dt>Подсказка</dt><dd>${esc(c.keeper_hint)}</dd>` : ''}</dl>` : ''}
     ${c.description?.ru ? `<section><h3>Описание</h3>${c.description.ru.split('\n').filter(Boolean).map(p => `<p>${esc(p)}</p>`).join('')}</section>` : ''}
     ${c.history?.ru ? `<section><h3>История</h3>${c.history.ru.split('\n').filter(Boolean).map(p => `<p>${esc(p)}</p>`).join('')}</section>` : ''}
@@ -675,6 +699,139 @@ function occupationCard(c) {
     ${corrections(c)}`;
 }
 
+// maps (Р-120): a book map with spots over the printed numbers; a spot opens a place or another map of the same city
+const MAPS = (DATA.maps || []).slice().sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
+const mapsOf = cityId => MAPS.filter(m => m.location === cityId);
+const mapById = id => MAPS.find(m => m.id === id);
+const spotsAt = ids => MAPS.flatMap(m => m.spots.filter(s => ids.includes(s.target)).map(s => [m, s]));
+// mapFocus: ids to highlight on the next map render (set by «Показать на карте»)
+let mapId = null, mapFocus = null, mapZoom = 1, mapEdit = false;
+// edit mode: moved and new spots, copied out by the owner and applied to kb/maps
+const mapLog = [];
+// a place or a district: its own spots and the spots of the places inside it
+const mapIds = c => [c.id, ...descendants(c.id).map(x => x.id)];
+function onMap(c) {
+  const sp = spotsAt(mapIds(c));
+  if (!sp.length) return '';
+  const names = [...new Set(sp.map(([m]) => m.name.ru))];
+  return `<p><a href="#" data-onmap="${esc(c.id)}">Показать на карте</a> <span class="muted">— ${esc(names.join(', '))}, меток: ${sp.length}</span></p>`;
+}
+function openOnMap(id) {
+  const ids = mapIds(byId(id));
+  const [m] = spotsAt(ids)[0];
+  mapId = m.id; mapFocus = ids; citySection = 'map';
+  show(m.location);
+}
+function spotTip(s) {
+  const m = mapById(s.target);
+  if (m) return `<b>${esc(m.name.ru)}</b><div class="muted">открыть карту</div>`;
+  const t = byId(s.target);
+  if (!t) return esc(s.label);
+  const rs = (t.residents||[]).map(r => byId(r.id)?.name.ru).filter(Boolean);
+  return `<b>${esc((t.number ? t.number + ' ' : '') + t.name.ru)}</b>${t.keeper_hint ? `<div class="muted">${esc(t.keeper_hint)}</div>` : ''}`
+    + (rs.length ? `<div>Жители: ${esc(rs.slice(0, 6).join(', '))}${rs.length > 6 ? ` и ещё ${rs.length - 6}` : ''}</div>` : '')
+    + (s.note ? `<div class="warnt">${esc(s.note)}</div>` : '');
+}
+function initMap(cityId) {
+  const wrap = document.getElementById('mapwrap');
+  if (!wrap) return;
+  const ms = mapsOf(cityId);
+  if (!ms.length) { wrap.innerHTML = '<p class="muted">Карты нет.</p>'; return; }
+  if (!ms.some(m => m.id === mapId)) { mapId = ms[0].id; mapZoom = 1; }
+  const m = mapById(mapId), sh = m.spot_shape;
+  const focus = mapFocus || [];
+  mapFocus = null;
+  if (focus.length) mapZoom = Math.max(mapZoom, 2.5);
+  const spot = (s, i) => `<button type="button" class="spot ${sh.kind}${s.note ? ' doubt' : ''}${focus.includes(s.target) ? ' focus' : ''}" data-i="${i}" style="left:${s.x}%;top:${s.y}%;width:${sh.w}%;height:${sh.h}%" aria-label="${esc(s.label)}"></button>`;
+  wrap.innerHTML = `<div class="maptools">${ms.map(x => `<button type="button" data-map="${esc(x.id)}" class="${x.id === m.id ? 'active' : ''}">${esc(x.name.ru)}</button>`).join('')}
+      <span class="sep"></span><button type="button" data-zoom="out" title="Уменьшить">−</button><button type="button" data-zoom="fit">По ширине</button><button type="button" data-zoom="in" title="Увеличить">+</button>
+      <span class="sep"></span><input id="mapq" type="search" placeholder="Номер или название" aria-label="Найти на карте"> <span id="mapcount" class="muted"></span>
+      <span class="sep"></span><label><input type="checkbox" id="mapedit"${mapEdit ? ' checked' : ''}> Правка меток</label></div>
+    <div class="mapbox" id="mapbox"><div class="mapinner${mapEdit ? ' edit' : ''}" id="mapinner" style="width:${mapZoom * 100}%;aspect-ratio:${m.width}/${m.height}"><img src="${esc(m.image)}" alt="${esc(m.name.ru)}" draggable="false">${m.spots.map(spot).join('')}</div></div>
+    <div class="maptip" id="maptip" hidden></div>
+    <section id="mapedit-panel"${mapEdit ? '' : ' hidden'}><h3>Правка меток</h3>
+      <p class="muted">Метку можно перетащить; щелчок по пустому месту ставит новую точку. Изменения живут до перезагрузки страницы — скопируйте их и пришлите, чтобы перенести в базу.</p>
+      <textarea id="maplog" readonly></textarea><p><button type="button" id="mapcopy">Скопировать</button> <button type="button" id="mapclear">Очистить</button></p></section>
+    <p class="muted">Колёсико мыши — масштаб, перетаскивание — сдвиг карты. Пунктир — сомнительная метка (подробности в подсказке).</p>
+    <section><h3>Источник</h3><div>${sources(m)}</div>${m.quality?.notes ? `<p class="muted">${esc(m.quality.notes)}</p>` : ''}</section>`;
+  const box = document.getElementById('mapbox'), inner = document.getElementById('mapinner'), tip = document.getElementById('maptip');
+  const showLog = () => { document.getElementById('maplog').value = mapLog.length ? JSON.stringify(mapLog, null, 1) : ''; };
+  showLog();
+  // zoom keeps the point under (cx, cy) of the visible box in place
+  const setZoom = (z, cx = box.clientWidth / 2, cy = box.clientHeight / 2) => {
+    z = Math.min(8, Math.max(1, z));
+    const px = (box.scrollLeft + cx) / inner.offsetWidth, py = (box.scrollTop + cy) / inner.offsetHeight;
+    mapZoom = z; inner.style.width = z * 100 + '%';
+    box.scrollLeft = px * inner.offsetWidth - cx; box.scrollTop = py * inner.offsetHeight - cy;
+  };
+  wrap.querySelectorAll('[data-map]').forEach(b => b.onclick = () => { if (b.dataset.map !== mapId) { mapId = b.dataset.map; mapZoom = 1; initMap(cityId); } });
+  wrap.querySelectorAll('[data-zoom]').forEach(b => b.onclick = () => b.dataset.zoom === 'fit' ? setZoom(1) : setZoom(mapZoom * (b.dataset.zoom === 'in' ? 1.4 : 1 / 1.4)));
+  box.addEventListener('wheel', e => { e.preventDefault(); const r = box.getBoundingClientRect(); setZoom(mapZoom * (e.deltaY < 0 ? 1.2 : 1 / 1.2), e.clientX - r.left, e.clientY - r.top); }, { passive: false });
+  // search: highlight spots by printed number or place name
+  document.getElementById('mapq').oninput = e => {
+    const q = norm(e.target.value.trim());
+    let n = 0;
+    inner.querySelectorAll('.spot[data-i]').forEach(b => {
+      const s = m.spots[b.dataset.i], t = byId(s.target) || mapById(s.target);
+      const hit = !!q && (norm(s.label).startsWith(q) || norm(t?.name.ru).includes(q));
+      b.classList.toggle('hit', hit); n += hit;
+    });
+    document.getElementById('mapcount').textContent = q ? `найдено: ${n}` : '';
+  };
+  document.getElementById('mapedit').onchange = e => { mapEdit = e.target.checked; inner.classList.toggle('edit', mapEdit); document.getElementById('mapedit-panel').hidden = !mapEdit; };
+  document.getElementById('mapcopy').onclick = () => navigator.clipboard?.writeText(document.getElementById('maplog').value);
+  document.getElementById('mapclear').onclick = () => { mapLog.length = 0; inner.querySelectorAll('.spot.new').forEach(x => x.remove()); showLog(); };
+  // pointer: drag pans the map (or moves a spot in edit mode); a click without movement opens the spot
+  const pct = e => { const r = inner.getBoundingClientRect(); return [+((e.clientX - r.left) / r.width * 100).toFixed(2), +((e.clientY - r.top) / r.height * 100).toFixed(2)]; };
+  let drag = null;
+  box.onpointerdown = e => {
+    if (e.button !== 0) return;
+    const b = e.target.closest('.spot[data-i]');
+    // with pointer capture later events target the box, so the spot under the press is kept here
+    drag = { x: e.clientX, y: e.clientY, sl: box.scrollLeft, st: box.scrollTop, hit: b, spot: mapEdit ? b : null, moved: false, pan: e.pointerType === 'mouse' || mapEdit };
+    if (drag.pan) box.setPointerCapture(e.pointerId);
+  };
+  box.onpointermove = e => {
+    const b = e.target.closest('.spot[data-i]');
+    if (b && !drag) { tip.innerHTML = spotTip(m.spots[b.dataset.i]); tip.hidden = false; tip.style.left = Math.min(e.clientX + 14, innerWidth - 350) + 'px'; tip.style.top = e.clientY + 14 + 'px'; }
+    else if (!b) tip.hidden = true;
+    if (!drag || !drag.pan) return;
+    if (Math.abs(e.clientX - drag.x) + Math.abs(e.clientY - drag.y) > 4) drag.moved = true;
+    if (!drag.moved) return;
+    tip.hidden = true;
+    if (drag.spot) { const [x, y] = pct(e); drag.spot.style.left = x + '%'; drag.spot.style.top = y + '%'; drag.xy = [x, y]; }
+    else { box.classList.add('drag'); box.scrollLeft = drag.sl - (e.clientX - drag.x); box.scrollTop = drag.st - (e.clientY - drag.y); }
+  };
+  box.onpointerleave = () => { tip.hidden = true; };
+  box.onpointerup = e => {
+    const d = drag; drag = null; box.classList.remove('drag');
+    if (!d) return;
+    const b = d.hit;
+    if (mapEdit) {
+      if (d.spot && d.xy) {
+        const i = +d.spot.dataset.i, s = m.spots[i];
+        [s.x, s.y] = d.xy;
+        const old = mapLog.find(x => x.map === m.id && x.i === i);
+        old ? Object.assign(old, { x: s.x, y: s.y }) : mapLog.push({ map: m.id, i, label: s.label, target: s.target, x: s.x, y: s.y });
+      } else if (!d.moved && !b) {
+        const [x, y] = pct(e);
+        mapLog.push({ map: m.id, new: true, x, y });
+        inner.insertAdjacentHTML('beforeend', `<span class="spot new" style="left:${x}%;top:${y}%"></span>`);
+      }
+      showLog();
+      return;
+    }
+    if (d.moved || !b) return;
+    const s = m.spots[b.dataset.i];
+    if (mapById(s.target)) { mapId = s.target; mapZoom = 1; initMap(cityId); } else show(s.target);
+  };
+  // keyboard: Enter on a focused spot opens it
+  inner.querySelectorAll('.spot[data-i]').forEach(b => b.onkeydown = e => { if (e.key === 'Enter') { e.preventDefault(); const s = m.spots[b.dataset.i]; mapById(s.target) ? (mapId = s.target, mapZoom = 1, initMap(cityId)) : show(s.target); } });
+  // bring the first highlighted spot to the middle of the box
+  const f = inner.querySelector('.spot.focus');
+  if (f) requestAnimationFrame(() => { const s = m.spots[f.dataset.i]; box.scrollLeft = s.x / 100 * inner.offsetWidth - box.clientWidth / 2; box.scrollTop = s.y / 100 * inner.offsetHeight - box.clientHeight / 2; });
+}
+
 // how: 'push' — new history entry (clicks, tab switch), 'replace' — first load, 'none' — back/forward
 function show(id, how = 'push') {
   const c = id && byId(id);
@@ -695,6 +852,10 @@ function show(id, how = 'push') {
   const card = document.getElementById('card');
   card.innerHTML = c.kind === 'creature' ? creatureCard(c) : c.kind === 'character' ? characterCard(c) : c.kind === 'occupation' ? occupationCard(c) : c.kind === 'spell' ? spellCard(c) : c.kind === 'tome' ? tomeCard(c) : c.kind === 'weapon' ? weaponCard(c) : c.kind === 'location' ? locationCard(c) : skillCard(c);
   card.querySelectorAll('[data-go]').forEach(a => a.onclick = e => { e.preventDefault(); show(a.dataset.go); });
+  card.querySelectorAll('[data-onmap]').forEach(a => a.onclick = e => { e.preventDefault(); openOnMap(a.dataset.onmap); });
+  const onMapPage = c.kind === 'location' && c.location_type === 'город' && !c.part_of && citySection === 'map';
+  card.classList.toggle('wide', onMapPage);
+  if (onMapPage) initMap(c.id);
   const hash = '#' + encodeURIComponent(c.kind + '/' + id.split(/[:/]/).pop());
   if (how === 'replace') history.replaceState(null, '', hash);
   else if (how === 'push' && location.hash !== hash) history.pushState(null, '', hash);

@@ -1,0 +1,139 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sourcefold.local/schemas/map.schema.json",
+  "title": "Карта",
+  "description": "Карта из книги с метками мест (Р-120). Картинка лежит в app/maps/; метки — точки в процентах от ширины и высоты картинки, каждая ведёт на запись места или на другую карту.",
+  "type": "object",
+  "required": [
+    "schema",
+    "id",
+    "kind",
+    "name",
+    "location",
+    "image",
+    "width",
+    "height",
+    "spot_shape",
+    "spots",
+    "sources"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "sourcefold.map.v0"
+    },
+    "id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "kind": {
+      "const": "map"
+    },
+    "name": {
+      "$ref": "common.schema.json#/$defs/text"
+    },
+    "location": {
+      "$ref": "common.schema.json#/$defs/id",
+      "description": "Город, к которому относится карта; карта показывается в разделе «Карта» этого города."
+    },
+    "order": {
+      "type": "integer",
+      "description": "Порядок карт одного города в переключателе."
+    },
+    "image": {
+      "type": "string",
+      "pattern": "^maps/[a-z0-9-]+\\.(jpg|png|webp)$",
+      "description": "Путь к картинке относительно app/."
+    },
+    "width": {
+      "type": "integer",
+      "description": "Ширина картинки в пикселях."
+    },
+    "height": {
+      "type": "integer",
+      "description": "Высота картинки в пикселях."
+    },
+    "spot_shape": {
+      "type": "object",
+      "required": [
+        "kind",
+        "w",
+        "h"
+      ],
+      "additionalProperties": false,
+      "description": "Размер и вид меток: circle — кружок с номером, label — подпись номера.",
+      "properties": {
+        "kind": {
+          "enum": [
+            "circle",
+            "label"
+          ]
+        },
+        "w": {
+          "type": "number",
+          "description": "Ширина метки в процентах от ширины картинки."
+        },
+        "h": {
+          "type": "number",
+          "description": "Высота метки в процентах от высоты картинки."
+        }
+      }
+    },
+    "spots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "x",
+          "y",
+          "target"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "label": {
+            "type": "string",
+            "description": "Что напечатано на карте (номер раздела)."
+          },
+          "x": {
+            "type": "number",
+            "description": "Центр метки, процент ширины картинки."
+          },
+          "y": {
+            "type": "number",
+            "description": "Центр метки, процент высоты картинки."
+          },
+          "target": {
+            "$ref": "common.schema.json#/$defs/id",
+            "description": "Запись места (coc:location:…) или другая карта (coc:map:…)."
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Сомнение по метке: опечатка карты, расхождение с текстом."
+          }
+        }
+      }
+    },
+    "axes": {
+      "$ref": "common.schema.json#/$defs/axes"
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "common.schema.json#/$defs/source_ref"
+      }
+    },
+    "corrections": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/correction"
+      }
+    },
+    "quality": {
+      "$ref": "common.schema.json#/$defs/quality"
+    }
+  }
+}

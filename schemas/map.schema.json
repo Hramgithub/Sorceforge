@@ -106,6 +106,17 @@
             "$ref": "common.schema.json#/$defs/id",
             "description": "Запись места (coc:location:…) или другая карта (coc:map:…)."
           },
+          "text": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Кратко, что это за метка, когда она — часть одной записи (буквы пещер и комнат). Показывается в подсказке."
+          },
+          "printed": {
+            "type": "boolean",
+            "description": "false — метки на карте нет, место вычислено (по адресу); просмотрщик рисует её сам. По умолчанию true."
+          },
           "note": {
             "type": [
               "string",

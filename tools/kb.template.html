@@ -71,6 +71,8 @@ a { color:var(--accent); }
 .spot:hover, .spot:focus-visible { border-color:#6d3b2a; background:rgba(109,59,42,.2); outline:none; }
 .spot.doubt { border:2px dashed rgba(161,92,0,.75); }
 .spot.hit { border:3px solid #1f6feb; background:rgba(31,111,235,.2); }
+/* a place the map does not mark (position worked out from the address): drawn by the viewer */
+.spot.computed { border:3px dashed #c0392b; background:rgba(192,57,43,.25); }
 .spot.lit { border:3px solid #e67e22; background:rgba(230,126,34,.35); box-shadow:0 0 0 4px rgba(230,126,34,.35); }
 .spot.litd { border:3px solid #1f6feb; background:rgba(31,111,235,.35); box-shadow:0 0 0 4px rgba(31,111,235,.3); }
 .spot.focus { border:3px solid #c0392b; background:rgba(192,57,43,.15); animation:spotpulse 1.4s ease-in-out 5; }
@@ -742,7 +744,9 @@ function onMap(c) {
 }
 function openOnMap(id) {
   const ids = mapIds(byId(id));
-  const [m] = spotsAt(ids)[0];
+  // the map that shows the place in most detail: the reef opens its own map, not the outskirts with a single label
+  const count = mm => spotsAt(ids).filter(([x]) => x === mm).length;
+  const m = MAPS.filter(count).sort((a, b) => count(b) - count(a))[0];
   mapId = m.id; mapFocus = ids; citySection = 'map';
   show(m.location);
 }
@@ -751,6 +755,8 @@ function spotTip(s) {
   if (m) return `<b>${esc(m.name.ru)}</b><div class="muted">открыть карту</div>`;
   const t = byId(s.target);
   if (!t) return esc(s.label);
+  // a letter of one record (reef caves, chambers): the letter and its own line instead of the residents
+  if (s.text) return `<b>${esc(s.label)} — ${esc(t.name.ru)}</b><div>${esc(s.text)}</div>${s.note ? `<div class="warnt">${esc(s.note)}</div>` : ''}`;
   const rs = (t.residents||[]).map(r => byId(r.id)?.name.ru).filter(Boolean);
   return `<b>${esc((t.number ? t.number + ' ' : '') + t.name.ru)}</b>${t.keeper_hint ? `<div class="muted">${esc(t.keeper_hint)}</div>` : ''}`
     + (rs.length ? `<div>Жители: ${esc(rs.slice(0, 6).join(', '))}${rs.length > 6 ? ` и ещё ${rs.length - 6}` : ''}</div>` : '')
@@ -769,7 +775,7 @@ function initMap(cityId) {
   const view = !focus.length && mapView[m.id];
   if (view) mapZoom = view.z;
   if (focus.length) mapZoom = Math.max(mapZoom ?? 1, 2.5);
-  const spot = (s, i) => `<button type="button" class="spot ${sh.kind}${s.note ? ' doubt' : ''}${focus.includes(s.target) ? ' focus' : ''}" data-i="${i}" style="left:${s.x}%;top:${s.y}%;width:${sh.w}%;height:${sh.h}%" aria-label="${esc(s.label)}"></button>`;
+  const spot = (s, i) => `<button type="button" class="spot ${sh.kind}${s.printed === false ? ' computed' : s.note ? ' doubt' : ''}${focus.includes(s.target) ? ' focus' : ''}" data-i="${i}" style="left:${s.x}%;top:${s.y}%;width:${sh.w}%;height:${sh.h}%" aria-label="${esc(s.label)}"></button>`;
   wrap.innerHTML = `<div class="maptools">${ms.map(x => `<button type="button" data-map="${esc(x.id)}" class="${x.id === m.id ? 'active' : ''}">${esc(x.name.ru)}</button>`).join('')}
       <span class="sep"></span><button type="button" data-zoom="out" title="Уменьшить">−</button><button type="button" data-zoom="all">Целиком</button><button type="button" data-zoom="width">По ширине</button><button type="button" data-zoom="in" title="Увеличить">+</button>
       <span class="sep"></span><input id="mapq" type="search" placeholder="Номер или название" aria-label="Найти на карте"> <span id="mapcount" class="muted"></span>
@@ -779,9 +785,16 @@ function initMap(cityId) {
     <section id="mapedit-panel"${mapEdit ? '' : ' hidden'}><h3>Правка меток</h3>
       <p class="muted">Метку можно перетащить; щелчок по пустому месту ставит новую точку. Изменения живут до перезагрузки страницы — скопируйте их и пришлите, чтобы перенести в базу.</p>
       <textarea id="maplog" readonly></textarea><p><button type="button" id="mapcopy">Скопировать</button> <button type="button" id="mapclear">Очистить</button></p></section>
-    <p class="muted">Колёсико мыши — масштаб, перетаскивание — сдвиг карты. Пунктир — сомнительная метка (подробности в подсказке).</p>
+    <p class="muted">Колёсико мыши — масштаб, перетаскивание — сдвиг карты. Жёлтый пунктир — сомнительная метка, красный — места нет на карте, точка вычислена (подробности в подсказке).</p>
     <section><h3>Источник</h3><div>${sources(m)}</div>${m.quality?.notes ? `<p class="muted">${esc(m.quality.notes)}</p>` : ''}</section>`;
   const box = document.getElementById('mapbox'), inner = document.getElementById('mapinner'), tip = document.getElementById('maptip');
+  // a spot opens a place card or another map; a map of another city (Y'ha-nthlei ↔ the reef) opens that city's map section
+  const openSpot = s => {
+    const t = mapById(s.target);
+    if (!t) return show(s.target);
+    mapId = t.id; mapZoom = null;
+    if (t.location === cityId) initMap(cityId); else { citySection = 'map'; show(t.location); }
+  };
   const showLog = () => { document.getElementById('maplog').value = mapLog.length ? JSON.stringify(mapLog, null, 1) : ''; };
   showLog();
   // zoom keeps the point under (cx, cy) of the visible box in place
@@ -856,10 +869,10 @@ function initMap(cityId) {
     }
     if (d.moved || !b) return;
     const s = m.spots[b.dataset.i];
-    if (mapById(s.target)) { mapId = s.target; mapZoom = null; initMap(cityId); } else show(s.target);
+    openSpot(s);
   };
   // keyboard: Enter on a focused spot opens it
-  inner.querySelectorAll('.spot[data-i]').forEach(b => b.onkeydown = e => { if (e.key === 'Enter') { e.preventDefault(); const s = m.spots[b.dataset.i]; mapById(s.target) ? (mapId = s.target, mapZoom = null, initMap(cityId)) : show(s.target); } });
+  inner.querySelectorAll('.spot[data-i]').forEach(b => b.onkeydown = e => { if (e.key === 'Enter') { e.preventDefault(); openSpot(m.spots[b.dataset.i]); } });
   // bring the first highlighted spot to the middle of the box (reading offsetWidth forces layout, so no frame wait)
   if (mapZoom == null) setZoom(0);
   const f = inner.querySelector('.spot.focus');

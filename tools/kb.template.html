@@ -109,6 +109,8 @@ a { color:var(--accent); }
 <script id="data" type="application/json">__DATA__</script>
 <script>
 const DATA = JSON.parse(document.getElementById('data').textContent);
+// the page sets its own scroll on every card (top, or the map view); the browser must not restore an old one on «Назад»
+history.scrollRestoration = 'manual';
 const CAT = { animal:'Зверь', mythos_monster:'Тварь Мифов', mythos_deity:'Божество Мифов', avatar:'Воплощение', supernatural:'Сверхъестественное' };
 const ROLE = { npc:'NPC', pregen:'преген' };
 const CH = [['STR','СИЛ'],['CON','ВЫН'],['SIZ','ТЕЛ'],['DEX','ЛВК'],['APP','НАР'],['INT','ИНТ'],['POW','МОЩ'],['EDU','ОБР']];
@@ -706,6 +708,8 @@ const mapById = id => MAPS.find(m => m.id === id);
 const spotsAt = ids => MAPS.flatMap(m => m.spots.filter(s => ids.includes(s.target)).map(s => [m, s]));
 // mapFocus: ids to highlight on the next map render (set by «Показать на карте»)
 let mapId = null, mapFocus = null, mapZoom = 1, mapEdit = false;
+// last view of each map ({z, cx, cy}: zoom and the visible centre as a share of the image), restored on «Назад» and on map switch
+const mapView = {};
 // edit mode: moved and new spots, copied out by the owner and applied to kb/maps
 const mapLog = [];
 // a place or a district: its own spots and the spots of the places inside it
@@ -741,6 +745,8 @@ function initMap(cityId) {
   const m = mapById(mapId), sh = m.spot_shape;
   const focus = mapFocus || [];
   mapFocus = null;
+  const view = !focus.length && mapView[m.id];
+  if (view) mapZoom = view.z;
   if (focus.length) mapZoom = Math.max(mapZoom, 2.5);
   const spot = (s, i) => `<button type="button" class="spot ${sh.kind}${s.note ? ' doubt' : ''}${focus.includes(s.target) ? ' focus' : ''}" data-i="${i}" style="left:${s.x}%;top:${s.y}%;width:${sh.w}%;height:${sh.h}%" aria-label="${esc(s.label)}"></button>`;
   wrap.innerHTML = `<div class="maptools">${ms.map(x => `<button type="button" data-map="${esc(x.id)}" class="${x.id === m.id ? 'active' : ''}">${esc(x.name.ru)}</button>`).join('')}
@@ -763,7 +769,10 @@ function initMap(cityId) {
     const px = (box.scrollLeft + cx) / inner.offsetWidth, py = (box.scrollTop + cy) / inner.offsetHeight;
     mapZoom = z; inner.style.width = z * 100 + '%';
     box.scrollLeft = px * inner.offsetWidth - cx; box.scrollTop = py * inner.offsetHeight - cy;
+    remember();
   };
+  const remember = () => { mapView[m.id] = { z: mapZoom, cx: (box.scrollLeft + box.clientWidth / 2) / inner.offsetWidth, cy: (box.scrollTop + box.clientHeight / 2) / inner.offsetHeight }; };
+  box.addEventListener('scroll', remember);
   wrap.querySelectorAll('[data-map]').forEach(b => b.onclick = () => { if (b.dataset.map !== mapId) { mapId = b.dataset.map; mapZoom = 1; initMap(cityId); } });
   wrap.querySelectorAll('[data-zoom]').forEach(b => b.onclick = () => b.dataset.zoom === 'fit' ? setZoom(1) : setZoom(mapZoom * (b.dataset.zoom === 'in' ? 1.4 : 1 / 1.4)));
   box.addEventListener('wheel', e => { e.preventDefault(); const r = box.getBoundingClientRect(); setZoom(mapZoom * (e.deltaY < 0 ? 1.2 : 1 / 1.2), e.clientX - r.left, e.clientY - r.top); }, { passive: false });
@@ -830,6 +839,9 @@ function initMap(cityId) {
   // bring the first highlighted spot to the middle of the box (reading offsetWidth forces layout, so no frame wait)
   const f = inner.querySelector('.spot.focus');
   if (f) { const s = m.spots[f.dataset.i]; box.scrollLeft = s.x / 100 * inner.offsetWidth - box.clientWidth / 2; box.scrollTop = s.y / 100 * inner.offsetHeight - box.clientHeight / 2; }
+  else if (view) { box.scrollLeft = view.cx * inner.offsetWidth - box.clientWidth / 2; box.scrollTop = view.cy * inner.offsetHeight - box.clientHeight / 2; }
+  remember();
+  return !!(f || view);
 }
 
 // how: 'push' — new history entry (clicks, tab switch), 'replace' — first load, 'none' — back/forward
@@ -855,11 +867,12 @@ function show(id, how = 'push') {
   card.querySelectorAll('[data-onmap]').forEach(a => a.onclick = e => { e.preventDefault(); openOnMap(a.dataset.onmap); });
   const onMapPage = c.kind === 'location' && c.location_type === 'город' && !c.part_of && citySection === 'map';
   card.classList.toggle('wide', onMapPage);
-  if (onMapPage) initMap(c.id);
+  const atMap = onMapPage && initMap(c.id);
   const hash = '#' + encodeURIComponent(c.kind + '/' + id.split(/[:/]/).pop());
   if (how === 'replace') history.replaceState(null, '', hash);
   else if (how === 'push' && location.hash !== hash) history.pushState(null, '', hash);
-  window.scrollTo(0, 0);
+  // a map that returns to a highlighted or remembered view is scrolled into sight; everything else starts at the top
+  atMap ? document.getElementById('mapwrap').scrollIntoView() : window.scrollTo(0, 0);
 }
 
 document.getElementById('q').oninput = renderList;

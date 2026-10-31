@@ -879,7 +879,7 @@ function initMap(cityId) {
   if (f) { const s = m.spots[f.dataset.i]; box.scrollLeft = s.x / 100 * inner.offsetWidth - box.clientWidth / 2; box.scrollTop = s.y / 100 * inner.offsetHeight - box.clientHeight / 2; }
   else if (view) { box.scrollLeft = view.cx * inner.offsetWidth - box.clientWidth / 2; box.scrollTop = view.cy * inner.offsetHeight - box.clientHeight / 2; }
   remember();
-  return !!(f || view);
+  return f ? 'focus' : view ? 'view' : '';
 }
 
 // how: 'push' — new history entry (clicks, tab switch), 'replace' — first load, 'none' — back/forward
@@ -909,8 +909,8 @@ function show(id, how = 'push') {
   const hash = '#' + encodeURIComponent(c.kind + '/' + id.split(/[:/]/).pop());
   if (how === 'replace') history.replaceState(null, '', hash);
   else if (how === 'push' && location.hash !== hash) history.pushState(null, '', hash);
-  // a map that returns to a highlighted or remembered view is scrolled into sight; everything else starts at the top
-  atMap ? document.getElementById('mapwrap').scrollIntoView() : window.scrollTo(0, 0);
+  // the page scrolls to the map only for «Показать на карте» and for «Назад» back to a remembered view; any other click starts at the top
+  atMap === 'focus' || (atMap === 'view' && how === 'none') ? document.getElementById('mapwrap').scrollIntoView() : window.scrollTo(0, 0);
 }
 
 document.getElementById('q').oninput = renderList;

@@ -71,6 +71,7 @@ a { color:var(--accent); }
 .spot:hover, .spot:focus-visible { border-color:#6d3b2a; background:rgba(109,59,42,.2); outline:none; }
 .spot.doubt { border:2px dashed rgba(161,92,0,.75); }
 .spot.hit { border:3px solid #1f6feb; background:rgba(31,111,235,.2); }
+.spot.lit { border:3px solid #e67e22; background:rgba(230,126,34,.35); box-shadow:0 0 0 4px rgba(230,126,34,.35); }
 .spot.focus { border:3px solid #c0392b; background:rgba(192,57,43,.15); animation:spotpulse 1.4s ease-in-out 5; }
 @keyframes spotpulse { 50% { box-shadow:0 0 0 12px rgba(192,57,43,.35); } }
 .mapinner.edit .spot { border:2px solid rgba(31,111,235,.7); cursor:move; }
@@ -711,6 +712,17 @@ const spotsAt = ids => MAPS.flatMap(m => m.spots.filter(s => ids.includes(s.targ
 let mapId = null, mapFocus = null, mapZoom = null, mapEdit = false;
 // last view of each map ({z, cx, cy}: zoom and the visible centre as a share of the image), restored on «Назад» and on map switch
 const mapView = {};
+// the map on screen; hovering a place in the left list lights its spots (a character lights the places where it lives)
+let mapCur = null;
+function lightSpots(id) {
+  const inner = document.getElementById('mapinner');
+  if (!inner || !mapCur) return;
+  const c = id && byId(id);
+  const ids = !c ? [] : c.kind === 'location' ? [c.id] : DATA.locations.filter(l => (l.residents||[]).some(r => r.id === c.id)).map(l => l.id);
+  inner.querySelectorAll('.spot[data-i]').forEach(b => b.classList.toggle('lit', ids.includes(mapCur.spots[b.dataset.i].target)));
+}
+document.getElementById('list').addEventListener('pointerover', e => lightSpots(e.target.closest('#list [data-id]')?.dataset.id));
+document.getElementById('list').addEventListener('pointerleave', () => lightSpots(null));
 // edit mode: moved and new spots, copied out by the owner and applied to kb/maps
 const mapLog = [];
 // a place or a district: its own spots and the spots of the places inside it
@@ -744,6 +756,7 @@ function initMap(cityId) {
   if (!ms.length) { wrap.innerHTML = '<p class="muted">Карты нет.</p>'; return; }
   if (!ms.some(m => m.id === mapId)) { mapId = ms[0].id; mapZoom = null; }
   const m = mapById(mapId), sh = m.spot_shape;
+  mapCur = m;
   const focus = mapFocus || [];
   mapFocus = null;
   const view = !focus.length && mapView[m.id];

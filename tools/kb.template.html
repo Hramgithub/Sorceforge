@@ -412,6 +412,9 @@ function spellCard(c) {
   const fam = c.variant_of && byId(c.variant_of);
   const variants = DATA.spells.filter(x => x.variant_of === c.id);
   const where = DATA.tomes.filter(t => [...(t.spells||[]), ...(t.copies||[]).flatMap(x => x.spells||[])].some(s => s.spell === c.id));
+  // who knows it: reverse of statblock spell lists, group-profile columns included (Р-109)
+  const knows = sb => (sb?.spells?.items||[]).some(s => s.spell === c.id);
+  const casters = [...DATA.creatures, ...DATA.characters].filter(x => knows(x.statblock) || (x.variants||[]).some(v => knows(v.statblock)));
   const cost = c.cost || {};
   return `<h2>${esc(c.name.ru)}</h2>
     <div class="sub">${esc(c.name.en||'')}${c.category ? ' · ' + esc(c.category) : ''}${(c.aliases||[]).length ? ' · также: ' + c.aliases.map(esc).join(', ') : ''}</div>
@@ -427,6 +430,7 @@ function spellCard(c) {
     ${c.description?.ru ? `<section><h3>Описание</h3>${c.description.ru.split('\n').filter(Boolean).map(p => `<p>${esc(p)}</p>`).join('')}</section>` : ''}
     ${c.deeper_magic?.ru ? `<section><h3>Глубинная магия</h3><p>${esc(c.deeper_magic.ru)}</p></section>` : ''}
     ${where.length ? `<section><h3>Где изучить</h3><p>${where.map(x => link(x.id, x.name.ru)).join(', ')}</p></section>` : ''}
+    ${casters.length ? `<section><h3>Кто знает (${casters.length})</h3><p>${casters.map(x => link(x.id, x.name.ru)).join(', ')}</p></section>` : ''}
     ${errata(c)}
     <section><h3>Источник</h3><div>${sources(c)}</div></section>
     ${corrections(c)}`;

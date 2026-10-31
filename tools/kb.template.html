@@ -827,9 +827,9 @@ function initMap(cityId) {
   };
   // keyboard: Enter on a focused spot opens it
   inner.querySelectorAll('.spot[data-i]').forEach(b => b.onkeydown = e => { if (e.key === 'Enter') { e.preventDefault(); const s = m.spots[b.dataset.i]; mapById(s.target) ? (mapId = s.target, mapZoom = 1, initMap(cityId)) : show(s.target); } });
-  // bring the first highlighted spot to the middle of the box
+  // bring the first highlighted spot to the middle of the box (reading offsetWidth forces layout, so no frame wait)
   const f = inner.querySelector('.spot.focus');
-  if (f) requestAnimationFrame(() => { const s = m.spots[f.dataset.i]; box.scrollLeft = s.x / 100 * inner.offsetWidth - box.clientWidth / 2; box.scrollTop = s.y / 100 * inner.offsetHeight - box.clientHeight / 2; });
+  if (f) { const s = m.spots[f.dataset.i]; box.scrollLeft = s.x / 100 * inner.offsetWidth - box.clientWidth / 2; box.scrollTop = s.y / 100 * inner.offsetHeight - box.clientHeight / 2; }
 }
 
 // how: 'push' — new history entry (clicks, tab switch), 'replace' — first load, 'none' — back/forward

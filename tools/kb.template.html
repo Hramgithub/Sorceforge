@@ -896,9 +896,11 @@ function show(id, how = 'push') {
     if (p && p.id !== city && p.id !== c.id && childrenOf(p.id).length) openDist.add(p.id);
     if (locMode !== 'houses' && c.location_type !== 'город') locMode = 'houses';
   }
+  // current first: the sub-bar marks «Обзор / Карта / …» only while the city page itself is open
+  current = id;
   if (c.kind !== tab && !stay) setTab(c.kind, true);
   if (tab === 'location') renderSubbar();
-  current = id; renderList();
+  renderList();
   const card = document.getElementById('card');
   card.innerHTML = c.kind === 'creature' ? creatureCard(c) : c.kind === 'character' ? characterCard(c) : c.kind === 'occupation' ? occupationCard(c) : c.kind === 'spell' ? spellCard(c) : c.kind === 'tome' ? tomeCard(c) : c.kind === 'weapon' ? weaponCard(c) : c.kind === 'location' ? locationCard(c) : skillCard(c);
   card.querySelectorAll('[data-go]').forEach(a => a.onclick = e => { e.preventDefault(); show(a.dataset.go); });

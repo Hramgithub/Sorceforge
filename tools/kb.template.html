@@ -514,6 +514,8 @@ function mentions(c) {
   const rows = [];
   DATA.locations.forEach(l => (l.tables||[]).forEach(tb => (tb.rows||[]).forEach(r => { if ((r.refs||[]).includes(c.id)) rows.push(`${link(l.id, l.name.ru)}: ${esc(tb.title)}${r.roll ? ' — ' + esc(r.roll) : ''}`); })));
   DATA.locations.filter(l => (l.refs||[]).includes(c.id)).forEach(l => rows.push(link(l.id, l.name.ru)));
+  // books whose story involves this person or being (Р-112)
+  DATA.tomes.filter(t => (t.refs||[]).includes(c.id)).forEach(t => rows.push(`${link(t.id, t.name.ru)} <span class="muted">— книга</span>`));
   return rows.length ? `<section><h3>Упоминается</h3><ul>${rows.map(r => `<li>${r}</li>`).join('')}</ul></section>` : '';
 }
 // where a character lives or appears (reverse of location.residents)
@@ -571,6 +573,7 @@ function creatureCard(c) {
     ${c.description?.ru ? `<p>${esc(c.description.ru)}</p>` : ''}
     ${relations(c)}
     ${homes(c)}
+    ${mentions(c)}
     ${c.aura?.ru ? `<section><h3>Аура</h3><p>${esc(c.aura.ru)}</p></section>` : ''}
     ${statblock(c)}
     ${variants(c)}

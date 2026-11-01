@@ -46,14 +46,19 @@ blockquote.handout { margin:0; padding:10px 16px; border-left:3px solid var(--ac
 #list button.house { padding-left:32px; }
 #list button.househ { padding:6px 16px 4px 32px; color:var(--accent); font-size:13px; font-weight:600; }
 #list button.person { padding-left:44px; }
-#list h4.dist.sub.deep { padding-left:44px; }
-#list button.house.deep { padding-left:56px; }
-#list .part { padding:8px 16px 2px 32px; font-size:12px; color:var(--muted); border-bottom:1px solid var(--line); }
-#list .part.deep { padding-left:56px; }
-#list h4.dist.sub.tochead { padding-left:32px; font-size:13px; color:var(--muted); }
-#list h4.dist.sub.tochead.deep { padding-left:52px; }
-#list .toc button { padding:5px 16px 5px 44px; font-size:13px; color:var(--muted); }
-#list .toc.deep button { padding-left:60px; }
+/* guide section outline: each level is indented past its parent's name and is no larger than it */
+#list h4.dist.sub.deep { padding-left:48px; }
+#list button.rec { padding:6px 16px 6px 32px; font-size:14px; }
+#list button.rec.l1 { padding-left:56px; }
+#list button.rec.l2 { padding-left:76px; }
+#list .part { padding:8px 16px 2px 16px; font-size:12px; color:var(--muted); border-bottom:1px solid var(--line); }
+#list .part.l1 { padding-left:48px; }
+#list .part.l2 { padding-left:68px; }
+#list h4.dist.sub.tochead { padding-left:48px; font-size:13px; color:var(--muted); }
+#list h4.dist.sub.tochead.deep { padding-left:68px; }
+#list .toc button { padding:5px 16px 5px 32px; font-size:13px; color:var(--muted); }
+#list .toc.l1 button { padding-left:72px; }
+#list .toc.l2 button { padding-left:92px; }
 #list .toc button:hover { color:var(--ink); }
 #list h4[data-back] small { display:block; font-weight:400; }
 #list .fold { display:inline-block; width:1.4em; margin-left:-.3em; text-align:center; cursor:pointer; }
@@ -331,15 +336,16 @@ function listSection() {
 function renderOutline(list, sec) {
   const c = byId(city);
   document.getElementById('count').textContent = '';
-  const rec = (x, deep) => `<button data-id="${esc(x.id)}" class="house${deep ? ' deep' : ''} ${x.id === current ? 'active' : ''}">${esc(x.name.ru)}</button>`;
-  const toc = deep => `<div class="toc${deep ? ' deep' : ''}"></div>`;
+  // levels: 0 — directly under the city row, 1 — under a scenario, 2 — under a stage
+  const rec = (x, lvl = 0) => `<button data-id="${esc(x.id)}" class="rec l${lvl} ${x.id === current ? 'active' : ''}">${esc(x.name.ru)}</button>`;
+  const toc = (lvl = 0) => `<div class="toc l${lvl}"></div>`;
   let body;
   if (sec === 'scenario') {
     const xs = storyIn(city, 'scenario');
-    const scenes = (id, deep) => { const ss = scenesOf(id); return [...new Set(ss.map(x => x.arc.part || ''))].map(p => (p ? `<div class="part${deep ? ' deep' : ''}">${esc(p)}</div>` : '') + ss.filter(x => (x.arc.part || '') === p).map(x => rec(x, deep)).join('')).join(''); };
+    const scenes = (id, deep) => { const lvl = deep ? 2 : 1, ss = scenesOf(id); return [...new Set(ss.map(x => x.arc.part || ''))].map(p => (p ? `<div class="part l${lvl}">${esc(p)}</div>` : '') + ss.filter(x => (x.arc.part || '') === p).map(x => rec(x, lvl)).join('')).join(''); };
     // a scenario row: scenes under the book's part headings, then its stages; the open scenario first has
     // its page's headings, folded under «Хранителю»
-    const keeper = (s, deep) => `<h4 class="dist sub tochead${deep ? ' deep' : ''}" data-toc="${esc(s.id)}">${fold(openToc.has(s.id))}Хранителю</h4>` + (openToc.has(s.id) ? toc(deep) : '');
+    const keeper = (s, deep) => `<h4 class="dist sub tochead${deep ? ' deep' : ''}" data-toc="${esc(s.id)}">${fold(openToc.has(s.id))}Хранителю</h4>` + (openToc.has(s.id) ? toc(deep ? 2 : 1) : '');
     const node = (s, deep) => {
       const open = openScen.has(s.id);
       return `<h4 class="dist sub${deep ? ' deep' : ''}${s.id === current ? ' active' : ''}" data-scen="${esc(s.id)}">${fold(open)}${esc(s.name.ru)}</h4>`

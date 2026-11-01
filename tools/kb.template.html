@@ -533,7 +533,8 @@ function cityCard(c) {
   const tabs = c.tables || [];
   const ofKind = ks => tabs.filter(tb => ks.includes(tb.kind || 'прочее'));
   // data remarks (quality) belong to the record, not to every section: shown once, at the end of «Обзор»
-  const head = `<h2>${esc(c.name.ru)}</h2><div class="sub">город${(c.aliases||[]).length ? ' · также: ' + c.aliases.map(esc).join(', ') : ''}</div>`;
+  // the «город · также: …» line only on «Обзор»; other sections keep just the name
+  const head = `<h2>${esc(c.name.ru)}</h2>${citySection === 'overview' || !CITY_SECTIONS.some(([s]) => s === citySection) ? `<div class="sub">город${(c.aliases||[]).length ? ' · также: ' + c.aliases.map(esc).join(', ') : ''}</div>` : ''}`;
   const remarks = flags(c) ? `<section><h3>Заметки о данных</h3>${flags(c)}</section>` : '';
   const paras = x => x.split('\n').filter(Boolean).map(p => `<p>${esc(p)}</p>`).join('');
   const kids = childrenOf(c.id);

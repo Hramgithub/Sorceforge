@@ -22,17 +22,21 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kblib import KB, ROOT, SCHEMAS, book_ids, dump, is_ref, pick, records  # noqa: E402
 from validate import Validator  # noqa: E402
 
+MEASURES = "меры — метрические: ярд = метр, фут ÷ 3, миля × 1,6 км, дюйм → см, галлон → л (Р-64)"
 # writing rules a script can see (docs/conventions.md); each: (pattern, message, error or warning)
 RULES = [
     (re.compile(r"\d\s*D\s*\d|\d\s*[кК]\s*(?:100|20|12|10|[2-468])(?!\d)"), "кубы пишутся строчной латинской d: 1d6 (Р-27)", True),
     (re.compile(r"(?<![А-ЯЁа-яё])(?:РАЗ|ВЕЛ)(?![А-ЯЁа-яё])"), "размер — «ТЕЛ»", True),
     (re.compile(r"(?<![А-ЯЁа-яё])ОЗ(?![А-ЯЁа-яё])"), "пункты здоровья — «ПЗ»", True),
     (re.compile(r"(?<![А-ЯЁа-яё])ЛОВ(?![А-ЯЁа-яё])"), "ловкость — «ЛВК»", True),
-    (re.compile(r"d\d+\)?\s*[xхX]\s*\d"), "умножение — знак ×: (2d6+6)×5 (Р-27)", False),
+    (re.compile(r"d\d+\)?\s*[xхX]\s*\d"), "умножение — знак ×: (2d6+6)×5 (Р-27)", True),
     (re.compile(r"\d\s*ярд|(?<![А-ЯЁа-яё])(?:фут(?:а|ов)?|дюйм(?:а|ов)?|мил[яюиье]|миль|галлон(?:а|ов)?|унци[йяю])(?![А-ЯЁа-яё])"),
-     "меры — метрические: ярд = метр, фут ÷ 3, миля × 1,6 км, дюйм → см, галлон → л (Р-64)", False),
+     MEASURES, True),
 ]
 DECISION = re.compile(r"^Р-\d+$")
+# where the old measures may stay (Р-64, Р-124): our remarks about the data, reasons of corrections and misprints,
+# names of calibres, and a scenario's numbers quoted as printed
+KEEP_MEASURES = {"notes", "note", "reason", "caliber"}
 # characteristics are named by id but are not records (schemas/skill.schema.json, opposed_by)
 VIRTUAL = re.compile(r"^coc:characteristic:[a-z]+$")
 # fields that quote other data as it was: a correction's «from» and a misprint's «printed» keep the old writing
@@ -102,6 +106,8 @@ def main() -> int:
             if path.rsplit(".", 1)[-1] in QUOTED:
                 continue
             for pat, msg, is_error in RULES:
+                if msg == MEASURES and (re.split(r"[.\[]", path)[-1].rstrip("]") in KEEP_MEASURES or "source_variants" in path):
+                    continue
                 m = pat.search(s)
                 if m:
                     (errors if is_error else warnings)[msg].append(f"{rel(p)}: {path}: «…{s[max(0, m.start() - 15):m.end() + 15]}…»")

@@ -634,8 +634,19 @@ function crumbs(c) {
 function residentList(rs) {
   return rs.map(r => (byId(r.id) ? link(r.id, byId(r.id).name.ru) : esc(r.id)) + (r.note ? ` <span class="muted">(${esc(r.note)})</span>` : '')).join(', ');
 }
-function locTable(tb) {
-  return `<section><h3>${esc(tb.title)}${tb.dice ? ` <span class="muted">(${esc(tb.dice)})</span>` : ''}</h3>
+// a scenario's table kept with a city or a place (Р-136): shown in full where the scenario uses it, marked with its home
+function sharedTable(r) {
+  const home = byId(r.from), tb = (home?.tables||[]).find(t => t.title === r.title);
+  if (!tb) return `<section><h3>${esc(r.title)}</h3><p class="muted">Таблица не найдена: ${esc(r.from)}.</p></section>`;
+  // a city's table opens the city on «Таблицы»
+  const city = home.location_type === 'город' && !home.part_of;
+  const a = city ? link(home.id, 'из таблиц ' + home.name.ru).replace('<a ', '<a data-sec="tables" ') : link(home.id, 'из записи «' + home.name.ru + '»');
+  return tableHtml(tb, ` <span class="muted">· ${a}</span>`);
+}
+// one argument only: callers pass it straight to Array.map
+const locTable = tb => tb.from ? sharedTable(tb) : tableHtml(tb, '');
+function tableHtml(tb, from) {
+  return `<section><h3>${esc(tb.title)}${tb.dice ? ` <span class="muted">(${esc(tb.dice)})</span>` : ''}${from}</h3>
     ${tb.source ? `<p class="muted">Из: ${esc(BOOKS[tb.source.book_id] || tb.source.book_id)}${tb.source.printed_page ? ', с. ' + esc(tb.source.printed_page) : ''}</p>` : ''}
     ${tb.intro ? `<p>${esc(tb.intro)}</p>` : ''}
     <table>${(tb.rows||[]).map(r => `<tr>${r.roll != null ? `<td class="num">${esc(r.roll)}</td>` : ''}<td>${esc(r.text)}${(r.refs||[]).filter(byId).length ? ` <span class="muted">→ ${refLinks((r.refs||[]).filter(byId))}</span>` : ''}</td></tr>`).join('')}</table></section>`;
@@ -1288,7 +1299,7 @@ function show(id, how = 'push') {
   const card = document.getElementById('card');
   card.innerHTML = c.kind === 'scenario' ? scenarioCard(c) : STORY.some(([k]) => k === c.kind) ? storyCard(c) : c.kind === 'creature' ? creatureCard(c) : c.kind === 'character' ? characterCard(c) : c.kind === 'occupation' ? occupationCard(c) : c.kind === 'spell' ? spellCard(c) : c.kind === 'tome' ? tomeCard(c) : c.kind === 'weapon' ? weaponCard(c) : c.kind === 'location' ? locationCard(c) : skillCard(c);
   // Ctrl/Shift/⌘-click and the middle button are left to the browser (new tab or window at the link's address)
-  card.querySelectorAll('[data-go]').forEach(a => a.onclick = e => { if (e.ctrlKey || e.metaKey || e.shiftKey || e.button) return; e.preventDefault(); show(a.dataset.go); });
+  card.querySelectorAll('[data-go]').forEach(a => a.onclick = e => { if (e.ctrlKey || e.metaKey || e.shiftKey || e.button) return; e.preventDefault(); if (a.dataset.sec) citySection = a.dataset.sec; show(a.dataset.go); });
   card.querySelectorAll('[data-onmap]').forEach(a => a.onclick = e => { e.preventDefault(); openOnMap(a.dataset.onmap); });
   fillToc();
   const onMapPage = c.kind === 'location' && c.location_type === 'город' && !c.part_of && citySection === 'map';

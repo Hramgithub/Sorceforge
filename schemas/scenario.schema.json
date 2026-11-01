@@ -102,7 +102,31 @@
       "description": "Итог: исходы, награды и потери Рассудка."
     },
     "tables": {
-      "$ref": "location.schema.json#/properties/tables"
+      "type": "array",
+      "description": "Таблицы сценария по ходу игры. Таблица, которая нужна и вне сценария, хранится у города или места, а здесь на её месте — ссылка `from` + `title` (Р-136).",
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "location.schema.json#/properties/tables/items"
+          },
+          {
+            "type": "object",
+            "required": [
+              "from",
+              "title"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "from": {
+                "$ref": "common.schema.json#/$defs/id"
+              },
+              "title": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      }
     },
     "refs": {
       "type": "array",

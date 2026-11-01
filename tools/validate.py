@@ -1,7 +1,7 @@
 """Minimal JSON Schema validator for the subset used in schemas/ (stdlib only).
 
 Supports: type (incl. lists), required, properties, additionalProperties: false,
-items, enum, const, minItems, pattern, and $ref to "#/$defs/..." or
+items, enum, const, minItems, pattern, anyOf, and $ref to "#/$defs/..." or
 "<file>.json#/$defs/..." relative to the schema directory. Temporary until a
 locked jsonschema dependency is added (decision T2).
 
@@ -49,6 +49,16 @@ class Validator:
             target, target_doc = self.resolve(schema["$ref"], doc)
             self.check(target, value, path, target_doc, errors)
             return
+        if "anyOf" in schema:
+            tries = []
+            for sub in schema["anyOf"]:
+                errs: list[str] = []
+                self.check(sub, value, path, doc, errs)
+                if not errs:
+                    break
+                tries.append(errs)
+            else:
+                errors.append(f"{path}: matches none of anyOf ({'; '.join(e[0] for e in tries)})")
         if "const" in schema and value != schema["const"]:
             errors.append(f"{path}: expected const {schema['const']!r}, got {value!r}")
         if "enum" in schema and value not in schema["enum"]:

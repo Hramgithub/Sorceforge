@@ -2,16 +2,19 @@
 
 - Characteristic abbreviations as in the Russian Keeper Rulebook: «РАЗ» and «ВЕЛ» (SIZ) → «ТЕЛ», «ОЗ» (HP) → «ПЗ», «ЛОВ» (DEX) → «ЛВК»
   (whole uppercase words only, so «раз», «озеро» and the like are untouched).
-- Every kb JSON file is written as UTF-8, 2-space indent, LF line endings.
+- Every given kb JSON file is written in the kb format: UTF-8, 2-space indent, LF line endings (tools/kblib.py).
 
-Usage: python pipeline/fix/normalize_terms.py [--kb kb] [--dry-run]
+Usage: python pipeline/fix/normalize_terms.py (<files|dirs> | --changed | --all) [--dry-run]
 """
 from __future__ import annotations
 
 import argparse
-import json
 import re
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "tools"))
+from kblib import dump, read, scope, scope_args  # noqa: E402
 
 TERMS = [(re.compile(r"(?<![А-ЯЁа-яё])(?:РАЗ|ВЕЛ)(?![А-ЯЁа-яё])"), "ТЕЛ"),
          (re.compile(r"(?<![А-ЯЁа-яё])ОЗ(?![А-ЯЁа-яё])"), "ПЗ"),
@@ -35,15 +38,14 @@ def fix(value, counter: list[int]):
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--kb", type=Path, default=Path(__file__).resolve().parents[2] / "kb")
+    scope_args(ap)
     ap.add_argument("--dry-run", action="store_true")
     a = ap.parse_args()
     strings = rewritten = 0
-    for p in sorted(a.kb.rglob("*.json")):
+    for p in scope(ap, a):
         counter = [0]
         before = p.read_bytes()
-        rec = fix(json.loads(before.decode("utf-8")), counter)
-        after = (json.dumps(rec, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
+        after = dump(fix(read(p), counter)).encode("utf-8")
         strings += counter[0]
         if after != before:
             rewritten += 1

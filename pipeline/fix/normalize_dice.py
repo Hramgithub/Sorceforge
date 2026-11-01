@@ -1,17 +1,20 @@
 """Write dice the same way everywhere in kb: 6d6, 1d100, (2d6+6)×5 (owner decision R-27).
 
 Replaces the Russian «к» and the capital «D» between digits («6к6», «6 к 6», «6D6») with a lowercase «d»
-in every string of every kb JSON file. Text without digits on both sides is left alone, and «к» counts only before
-a die size, so ratios like «1 к 1» stay as written. Files are written as UTF-8 with LF line endings.
+in every string of the given kb files. Text without digits on both sides is left alone, and «к» counts only before
+a die size, so ratios like «1 к 1» stay as written. Files are written in the kb format (tools/kblib.py).
 
-Usage: python pipeline/fix/normalize_dice.py [--kb kb] [--dry-run]
+Usage: python pipeline/fix/normalize_dice.py (<files|dirs> | --changed | --all) [--dry-run]
 """
 from __future__ import annotations
 
 import argparse
-import json
 import re
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "tools"))
+from kblib import read, scope, scope_args, write  # noqa: E402
 
 DICE = re.compile(r"(?<=\d)\s*(?:D|[кК](?=\s*(?:100|20|12|10|[2-468])(?!\d)))\s*(?=\d)")
 
@@ -31,18 +34,18 @@ def fix(value, counter: list[int]):
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--kb", type=Path, default=Path(__file__).resolve().parents[2] / "kb")
+    scope_args(ap)
     ap.add_argument("--dry-run", action="store_true")
     a = ap.parse_args()
     files = strings = 0
-    for p in sorted(a.kb.rglob("*.json")):
+    for p in scope(ap, a):
         counter = [0]
-        rec = fix(json.loads(p.read_text(encoding="utf-8")), counter)
+        rec = fix(read(p), counter)
         if counter[0]:
             files += 1
             strings += counter[0]
             if not a.dry_run:
-                p.write_text(json.dumps(rec, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
+                write(p, rec)
     print(f"{strings} strings in {files} files" + (" (dry run)" if a.dry_run else ""))
 
 

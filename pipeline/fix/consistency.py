@@ -5,7 +5,7 @@
 - Skill names: a skill whose `name` is a known alias or a near variant of a kb/skills name gets the kb/skills Russian name.
 - Reports strings that still contain English words (outside names, aliases, spell lists, ids and sources).
 
-Usage: python pipeline/fix/consistency.py [--kb kb] [--dry-run]
+Usage: python pipeline/fix/consistency.py (<files|dirs> | --changed | --all) [--dry-run]   (only creature records are touched)
 """
 from __future__ import annotations
 
@@ -14,6 +14,9 @@ import json
 import re
 import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "tools"))
+from kblib import scope, scope_args  # noqa: E402
 
 MOVE = [(re.compile(r"\bлетая\b"), "полёт"), (re.compile(r"\bплавая\b"), "плавание"), (re.compile(r"\bпаря\b"), "парение")]
 SKILL_FIX = {"Внимательность": "Внимание", "Слесарное дело": "Взлом"}
@@ -37,11 +40,11 @@ def english(v, path, out):
 def main() -> None:
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     ap = argparse.ArgumentParser()
-    ap.add_argument("--kb", type=Path, default=Path(__file__).resolve().parents[2] / "kb")
+    scope_args(ap)
     ap.add_argument("--dry-run", action="store_true")
     a = ap.parse_args()
     changed, moves, flags, skills, eng = 0, 0, 0, 0, []
-    for p in sorted(list(a.kb.glob("creatures/*.json")) + list(a.kb.glob("books/*/creatures/*.json"))):
+    for p in [p for p in scope(ap, a) if p.parent.name == "creatures"]:
         before = p.read_bytes()
         r = json.loads(before.decode("utf-8"))
         sb = r.get("statblock") or {}

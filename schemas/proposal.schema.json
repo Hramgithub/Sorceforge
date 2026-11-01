@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "proposal.schema.json",
+  "title": "Предложения правок общих записей (Р-139)",
+  "description": "Файл предложений помощника: правки записей, которыми он не владеет. Применяет pipeline/integrate/apply.py; каждое изменение значения само попадает в `corrections` записи.",
+  "type": "object",
+  "required": [
+    "schema",
+    "proposals"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "sourcefold.proposals.v0"
+    },
+    "by": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Кто предлагает: часть работы, помощник."
+    },
+    "proposals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "target",
+          "op",
+          "path",
+          "reason"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "target": {
+            "$ref": "common.schema.json#/$defs/id"
+          },
+          "op": {
+            "enum": [
+              "set",
+              "append",
+              "remove",
+              "replace"
+            ],
+            "description": "set — поставить значение поля; append — добавить элемент в список; remove — убрать элементы списка, совпавшие с `match`; replace — заменить в тексте поля `old` на `new`."
+          },
+          "path": {
+            "type": "string",
+            "description": "Поле через точку, номер элемента списка — числом: `description.ru`, `residents`, `tables.2.title`."
+          },
+          "value": {
+            "description": "Для set и append."
+          },
+          "match": {
+            "type": "object",
+            "description": "Для remove: элемент списка, у которого эти поля равны, удаляется."
+          },
+          "old": {
+            "type": "string",
+            "description": "Для replace: точный кусок текста, встречается в поле ровно один раз."
+          },
+          "new": {
+            "type": "string"
+          },
+          "after": {
+            "type": "string",
+            "description": "Для set нового поля верхнего уровня: поставить его после этого поля."
+          },
+          "reason": {
+            "type": "string",
+            "description": "Почему; идёт в `corrections.reason`."
+          },
+          "ref": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Номер решения (Р-NN); идёт в `corrections.ref`."
+          },
+          "correction": {
+            "type": "boolean",
+            "description": "false — не записывать в `corrections` (например, связь, добавленная для навигации). По умолчанию true."
+          }
+        }
+      }
+    }
+  }
+}

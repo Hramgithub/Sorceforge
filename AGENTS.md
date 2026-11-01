@@ -12,8 +12,13 @@
 
 ## Data rules
 
-- Validate every changed record: `python tools/validate.py schemas/<kind>.schema.json <files>`;
-  rebuild the viewer with `python tools/build_viewer.py` and commit `app/kb.html` with the data.
+- Rules of writing records: `docs/conventions.md` (one source; briefs include it verbatim). The import
+  pipeline and its tools: `pipeline/README.md`.
+- Check every change: `python tools/check.py --changed` (schemas, references across the whole base,
+  writing rules, file format); rebuild the viewer with `python tools/build_viewer.py` and commit
+  `app/kb.html` with the data.
+- Bulk fixes in `pipeline/fix/` take an explicit scope (files, `--changed` or `--all`); changes to
+  records an agent does not own go through proposals (`pipeline/integrate/README.md`).
 - Numbers come from the primary source named in the decisions (Malleus Monstrorum
   over the Keeper Rulebook and the Keeper Deck); every changed value goes to
   `corrections`; book misprints are kept as printed and flagged.

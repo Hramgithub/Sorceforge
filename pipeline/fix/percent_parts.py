@@ -6,7 +6,7 @@ or fifth is wrong, the numbers and the "(half/fifth)" part of raw are set to the
 the record gets an `errata` item with `fixed: true` keeping what the book printed. Existing errata
 items about the same percent are marked fixed instead of adding a duplicate.
 
-Usage: python pipeline/fix/percent_parts.py [--kb kb] [--dry-run]
+Usage: python pipeline/fix/percent_parts.py (<files|dirs> | --changed | --all) [--dry-run]
 """
 from __future__ import annotations
 
@@ -15,6 +15,9 @@ import json
 import re
 import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "tools"))
+from kblib import scope, scope_args  # noqa: E402
 
 PARTS = re.compile(r"\(\s*\d+\s*[/,]\s*\d+\s*\)")
 
@@ -33,13 +36,13 @@ def percents(sb: dict):
 def main() -> None:
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     ap = argparse.ArgumentParser()
-    ap.add_argument("--kb", type=Path, default=Path(__file__).resolve().parents[2] / "kb")
+    scope_args(ap)
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--fix-percent", action="store_true", help="also fix the percent when half and fifth both fit another one")
     a = ap.parse_args()
     fixed = files = 0
     ambiguous: list[str] = []
-    for p in sorted(a.kb.rglob("*.json")):
+    for p in scope(ap, a):
         r = json.loads(p.read_text(encoding="utf-8"))
         if r.get("kind") not in ("creature", "character") or not r.get("statblock"):
             continue

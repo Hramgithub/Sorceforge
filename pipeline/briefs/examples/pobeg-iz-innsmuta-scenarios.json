@@ -1,0 +1,23 @@
+{
+  "book_id": "pobeg-iz-innsmuta-ru",
+  "goal": "run every scenario of the book from the knowledge base alone, without opening the book (Р-134).",
+  "decision": "Р-133, Р-134",
+  "check_dir": "checks/20261101-pobeg-playable",
+  "models": [
+    "kb/books/pobeg-iz-innsmuta-ru/scenarios/nasledstvo-kroufordov.json",
+    "kb/books/pobeg-iz-innsmuta-ru/scenes/osmotr-doma-kroufordov.json",
+    "kb/locations/innsmouth-dom-kroufordov.json",
+    "checks/20261101-crawford-playable/README.md"
+  ],
+  "extra": "## The unit's records\n\n- Your scenario record exists as a stub with the flag `incomplete`: fill `summary`, `keeper_info`, `hook`, `advice`, `steps` (run of play with `refs`), `conclusion`, `tables`, `refs`, `sources`; remove `incomplete`; keep `id`, `part_of`, `order`.\n- Scenes: every scene whose `arc.scenario` is your scenario is yours; retell them fully for play and create the missing ones; `arc` = {scenario, part (the book's part heading or null), order}.\n- Places where play happens and that the section describes get a location record (`coc:location:innsmouth-<slug>`, `part_of` the existing place); never the main site of another unit.\n- Tables the city or a place needs outside your scenario stay there; your scenario refers to them with `{\"from\": <id>, \"title\": <title>}` (Р-136).",
+  "units": [
+    {"name": "escape", "pages": "76-97", "target": "scenario `pobeg-iz-innsmuta-ru/scenario/pobeg-iz-innsmuta`", "sites": "jail 202, Billingham house 306, the roads out",
+     "owns": ["kb/books/pobeg-iz-innsmuta-ru/scenarios/pobeg-iz-innsmuta.json", "kb/books/pobeg-iz-innsmuta-ru/scenes/ (scenes with arc.scenario = this scenario, and new ones)", "new files in kb/locations/"]},
+    {"name": "raid", "pages": "98-105 170-175", "target": "scenario `pobeg-iz-innsmuta-ru/scenario/reyd-na-innsmut`", "sites": "—",
+     "owns": ["kb/books/pobeg-iz-innsmuta-ru/scenarios/reyd-na-innsmut.json", "its scenes and new ones"]},
+    {"name": "tsel-1", "pages": "106-116", "target": "scenario `pobeg-iz-innsmuta-ru/scenario/reyd-tsel-1`", "sites": "Esoteric Order of Dagon 207, New Church Green 206",
+     "owns": ["kb/books/pobeg-iz-innsmuta-ru/scenarios/reyd-tsel-1.json", "its scenes and new ones", "new files in kb/locations/"]},
+    {"name": "tsel-2", "pages": "117-129", "target": "scenario `pobeg-iz-innsmuta-ru/scenario/reyd-tsel-2`", "sites": "Marsh estate 302",
+     "owns": ["kb/books/pobeg-iz-innsmuta-ru/scenarios/reyd-tsel-2.json", "its scenes and new ones", "new files in kb/locations/"]}
+  ]
+}

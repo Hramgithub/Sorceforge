@@ -1,7 +1,8 @@
 """Write dice the same way everywhere in kb: 6d6, 1d100, (2d6+6)×5 (owner decision R-27).
 
 Replaces the Russian «к» and the capital «D» between digits («6к6», «6 к 6», «6D6») with a lowercase «d»
-in every string of every kb JSON file. Text without digits on both sides is left alone.
+in every string of every kb JSON file. Text without digits on both sides is left alone, and «к» counts only before
+a die size, so ratios like «1 к 1» stay as written. Files are written as UTF-8 with LF line endings.
 
 Usage: python pipeline/fix/normalize_dice.py [--kb kb] [--dry-run]
 """
@@ -12,7 +13,7 @@ import json
 import re
 from pathlib import Path
 
-DICE = re.compile(r"(?<=\d)\s*[кКD]\s*(?=\d)")
+DICE = re.compile(r"(?<=\d)\s*(?:D|[кК](?=\s*(?:100|20|12|10|[2-468])(?!\d)))\s*(?=\d)")
 
 
 def fix(value, counter: list[int]):
@@ -41,7 +42,7 @@ def main() -> None:
             files += 1
             strings += counter[0]
             if not a.dry_run:
-                p.write_text(json.dumps(rec, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+                p.write_text(json.dumps(rec, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     print(f"{strings} strings in {files} files" + (" (dry run)" if a.dry_run else ""))
 
 

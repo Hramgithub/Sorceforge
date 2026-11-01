@@ -31,6 +31,10 @@ main { display:grid; grid-template-columns: 300px 1fr; min-height: calc(100vh - 
 #list h4.dist.active { background:var(--panel); }
 #list h4.dist.sub { padding-left:28px; font-weight:500; }
 #list button.house { padding-left:32px; }
+#list .fold { display:inline-block; width:1.4em; margin-left:-.3em; text-align:center; cursor:pointer; }
+#list .fold:hover { color:var(--accent); }
+#list .mapicon { float:right; display:inline-flex; padding:3px 5px; margin:-3px -6px 0 6px; border-radius:4px; color:var(--muted); cursor:pointer; }
+#list .mapicon:hover { color:var(--accent); background:var(--bg); outline:1px solid var(--accent); }
 details { border:1px solid var(--line); border-radius:6px; padding:4px 10px; margin:6px 0; }
 summary { cursor:pointer; font-weight:600; }
 #list h4 { margin:0; padding:10px 16px 4px; font-size:12px; color:var(--accent); text-transform:uppercase; letter-spacing:.04em; border-bottom:1px solid var(--line); }
@@ -262,23 +266,30 @@ function renderLocList(list) {
     const rs = city ? cityResidents(city) : [];
     list.innerHTML = rs.map(c => item(c)).join('');
   } else {
-    const place = h => `<button data-id="${esc(h.id)}" class="house ${h.id === current ? 'active' : ''}">${esc((h.number ? h.number + ' ' : '') + h.name.ru)}<small>${esc(h.keeper_hint || '')}</small></button>`;
+    const place = h => `<button data-id="${esc(h.id)}" class="house ${h.id === current ? 'active' : ''}">${mapIcon(h)}${esc((h.number ? h.number + ' ' : '') + h.name.ru)}<small>${esc(h.keeper_hint || '')}</small></button>`;
+    const fold = open => `<span class="fold" title="${open ? 'Свернуть' : 'Раскрыть'}">${open ? '▾' : '▸'}</span>`;
     list.innerHTML = cities.map(c => {
       const openC = openCity.has(c.id);
       const kids = childrenOf(c.id).filter(k => inGuide(k) || placesIn(k.id).some(inGuide));
-      return `<h4 class="dist city${c.id === current ? ' active' : ''}" data-city="${esc(c.id)}">${openC ? '▾' : '▸'} ${esc(c.name.ru)}</h4>`
+      return `<h4 class="dist city${c.id === current ? ' active' : ''}" data-city="${esc(c.id)}">${mapIcon(c)}${fold(openC)}${esc(c.name.ru)}</h4>`
         + (openC ? kids.map(d => {
           const inner = childrenOf(d.id).filter(inGuide);
           if (!inner.length) return place(d);
           const open = openDist.has(d.id);
-          return `<h4 class="dist sub${d.id === current ? ' active' : ''}" data-dist="${esc(d.id)}">${open ? '▾' : '▸'} ${d.number ? esc(d.number) + ' ' : ''}${esc(d.name.ru)}</h4>`
+          return `<h4 class="dist sub${d.id === current ? ' active' : ''}" data-dist="${esc(d.id)}">${mapIcon(d)}${fold(open)}${d.number ? esc(d.number) + ' ' : ''}${esc(d.name.ru)}</h4>`
             + (open ? inner.map(place).join('') : '');
         }).join('') : '');
     }).join('') || '<p class="muted" style="padding:8px 16px">В этом гайде мест нет.</p>';
-    // a click on a city or district toggles it and shows its page
-    list.querySelectorAll('h4[data-city]').forEach(h => h.onclick = () => { const id = h.dataset.city; openCity.has(id) ? openCity.delete(id) : openCity.add(id); city = id; show(id); });
-    // with the city map on screen a district click only folds the list, so the map stays open
-    list.querySelectorAll('h4[data-dist]').forEach(h => h.onclick = () => { const id = h.dataset.dist; openDist.has(id) ? openDist.delete(id) : openDist.add(id); document.getElementById('mapinner') ? renderList() : show(id); });
+    // a row: the arrow only folds or unfolds; the name opens the page (a city opens on «Обзор»); the map icon opens the map
+    list.querySelectorAll('h4 .fold').forEach(f => f.onclick = e => {
+      e.stopPropagation();
+      const h = f.closest('h4'), id = h.dataset.city || h.dataset.dist, set = h.dataset.city ? openCity : openDist;
+      set.has(id) ? set.delete(id) : set.add(id);
+      renderList();
+    });
+    list.querySelectorAll('[data-mapfor]').forEach(i => i.onclick = e => { e.stopPropagation(); openOnMap(i.dataset.mapfor); });
+    list.querySelectorAll('h4[data-city]').forEach(h => h.onclick = () => { const id = h.dataset.city; openCity.add(id); city = id; citySection = 'overview'; show(id); });
+    list.querySelectorAll('h4[data-dist]').forEach(h => h.onclick = () => { openDist.add(h.dataset.dist); show(h.dataset.dist); });
   }
   list.querySelectorAll('button').forEach(b => b.onclick = () => show(b.dataset.id));
 }
@@ -714,6 +725,8 @@ const spotsAt = ids => MAPS.flatMap(m => m.spots.filter(s => ids.includes(s.targ
 // mapFocus: ids to highlight on the next map render (set by «Показать на карте»)
 // mapZoom: 1 = «По ширине»; null = not chosen yet, the map opens «Целиком»
 let mapId = null, mapFocus = null, mapZoom = null, mapEdit = false;
+// mapFocusZoom: the focused spots are one place (zoom in on it) rather than a district (show the whole map)
+let mapFocusZoom = false;
 // last view of each map ({z, cx, cy}: zoom and the visible centre as a share of the image), restored on «Назад» and on map switch
 const mapView = {};
 // the map on screen; hovering a place in the left list lights its spots (a character lights the places where it lives)
@@ -742,14 +755,21 @@ function onMap(c) {
   const names = [...new Set(sp.map(([m]) => m.name.ru))];
   return `<p><a href="#" data-onmap="${esc(c.id)}">Показать на карте</a> <span class="muted">— ${esc(names.join(', '))}, меток: ${sp.length}</span></p>`;
 }
+// a city opens its «Карта» section as it is; a district opens the whole map with all its spots lit; a place is zoomed in on
 function openOnMap(id) {
-  const ids = mapIds(byId(id));
+  const c = byId(id);
+  if (c.location_type === 'город' && !c.part_of && mapsOf(id).length) { citySection = 'map'; city = id; show(id); return; }
+  const ids = mapIds(c);
   // the map that shows the place in most detail: the reef opens its own map, not the outskirts with a single label
   const count = mm => spotsAt(ids).filter(([x]) => x === mm).length;
   const m = MAPS.filter(count).sort((a, b) => count(b) - count(a))[0];
-  mapId = m.id; mapFocus = ids; citySection = 'map';
+  mapId = m.id; mapFocus = ids; mapFocusZoom = !descendants(id).length; citySection = 'map';
   show(m.location);
 }
+// a small folded-map icon in the left list for every row that has spots (or, for a city, a map)
+const MAP_ICON = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg>';
+const mapIcon = l => (l.location_type === 'город' && !l.part_of ? mapsOf(l.id).length : spotsAt(mapIds(l)).length)
+  ? `<span class="mapicon" data-mapfor="${esc(l.id)}" role="button" title="Открыть на карте" aria-label="Открыть на карте">${MAP_ICON}</span>` : '';
 function spotTip(s) {
   const m = mapById(s.target);
   if (m) return `<b>${esc(m.name.ru)}</b><div class="muted">открыть карту</div>`;
@@ -770,11 +790,11 @@ function initMap(cityId) {
   if (!ms.some(m => m.id === mapId)) { mapId = ms[0].id; mapZoom = null; }
   const m = mapById(mapId), sh = m.spot_shape;
   mapCur = m;
-  const focus = mapFocus || [];
-  mapFocus = null;
+  const focus = mapFocus || [], zoomIn = mapFocusZoom;
+  mapFocus = null; mapFocusZoom = false;
   const view = !focus.length && mapView[m.id];
   if (view) mapZoom = view.z;
-  if (focus.length) mapZoom = Math.max(mapZoom ?? 1, 2.5);
+  if (focus.length) mapZoom = zoomIn ? Math.max(mapZoom ?? 1, 2.5) : null;
   const spot = (s, i) => `<button type="button" class="spot ${sh.kind}${s.printed === false ? ' computed' : s.note ? ' doubt' : ''}${focus.includes(s.target) ? ' focus' : ''}" data-i="${i}" style="left:${s.x}%;top:${s.y}%;width:${sh.w}%;height:${sh.h}%" aria-label="${esc(s.label)}"></button>`;
   wrap.innerHTML = `<div class="maptools">${ms.map(x => `<button type="button" data-map="${esc(x.id)}" class="${x.id === m.id ? 'active' : ''}">${esc(x.name.ru)}</button>`).join('')}
       <span class="sep"></span><button type="button" data-zoom="out" title="Уменьшить">−</button><button type="button" data-zoom="all">Целиком</button><button type="button" data-zoom="width">По ширине</button><button type="button" data-zoom="in" title="Увеличить">+</button>
@@ -876,7 +896,7 @@ function initMap(cityId) {
   // bring the first highlighted spot to the middle of the box (reading offsetWidth forces layout, so no frame wait)
   if (mapZoom == null) setZoom(0);
   const f = inner.querySelector('.spot.focus');
-  if (f) { const s = m.spots[f.dataset.i]; box.scrollLeft = s.x / 100 * inner.offsetWidth - box.clientWidth / 2; box.scrollTop = s.y / 100 * inner.offsetHeight - box.clientHeight / 2; }
+  if (f && zoomIn) { const s = m.spots[f.dataset.i]; box.scrollLeft = s.x / 100 * inner.offsetWidth - box.clientWidth / 2; box.scrollTop = s.y / 100 * inner.offsetHeight - box.clientHeight / 2; }
   else if (view) { box.scrollLeft = view.cx * inner.offsetWidth - box.clientWidth / 2; box.scrollTop = view.cy * inner.offsetHeight - box.clientHeight / 2; }
   remember();
   return f ? 'focus' : view ? 'view' : '';

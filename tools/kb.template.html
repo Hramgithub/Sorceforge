@@ -14,7 +14,8 @@ header h1 { font-size:18px; margin:0 8px 0 0; }
 .tabs { display:flex; gap:4px; flex-wrap:wrap; min-width:0; }
 .tabs button { font:inherit; padding:6px 12px; border:1px solid var(--line); border-radius:6px; background:none; color:inherit; cursor:pointer; }
 .tabs button.active { background:var(--panel); border-color:var(--accent); color:var(--accent); font-weight:600; }
-.who { margin-left:auto; display:flex; gap:8px; align-items:center; white-space:nowrap; }
+header #q { margin-left:auto; width:220px; max-width:100%; }
+.who { display:flex; gap:8px; align-items:center; white-space:nowrap; }
 .who[hidden] { display:none; }
 .who button { font:inherit; padding:6px 12px; border:1px solid var(--accent); border-radius:6px; background:none; color:var(--accent); cursor:pointer; }
 input, select { font:inherit; padding:6px 8px; border:1px solid var(--line); border-radius:6px; background:var(--panel); color:var(--ink); }
@@ -29,6 +30,11 @@ main { display:grid; grid-template-columns: 300px 1fr; min-height: calc(100vh - 
 /* a line between the tab's buttons and the filters, only when there are buttons */
 #subbtns:not(:empty) + #filters { border-left:1px solid var(--line); padding-left:12px; margin-left:6px; }
 #filters [hidden] { display:none; }
+/* no visible filter and no count (the guides): no empty block and no dividing line */
+#filters:not(:has(> select:not([hidden]), > #count:not(:empty))) { display:none; }
+.gcity { margin:10px 0 14px; }
+.gcity h4 { margin:0 0 4px; font-size:16px; }
+.gcity p { margin:2px 0; }
 #filters select { max-width:260px; }
 blockquote.handout { margin:0; padding:10px 16px; border-left:3px solid var(--accent); background:var(--panel); font-family:Georgia, "Times New Roman", serif; }
 #subbar button { font:inherit; padding:4px 10px; border:1px solid var(--line); border-radius:6px; background:none; color:inherit; cursor:pointer; }
@@ -119,11 +125,12 @@ a { color:var(--accent); }
     <button data-tab="weapon">Оружие</button>
     <button data-tab="location">Гайды</button>
   </div>
+  <!-- search is the same on every tab, so it lives in the top row; the second row keeps the tab's own buttons and filters -->
+  <input id="q" type="search" placeholder="Поиск по имени" aria-label="Поиск">
   <div id="who" class="who" hidden><span class="muted">Вы вошли как</span> <b id="who-name"></b> <button id="logout" type="button">Выйти</button></div>
 </header>
-<!-- second row on every tab: the tab's own buttons (spells/books, guides/sections), then search, filters and the count -->
+<!-- second row on every tab: the tab's own buttons (spells/books, guides/sections), then filters and the count -->
 <nav id="subbar"><span id="subbtns"></span><span id="filters">
-  <input id="q" type="search" placeholder="Поиск по имени" aria-label="Поиск">
   <select id="cat" aria-label="Фильтр"></select>
   <select id="occ" aria-label="Профессия" hidden></select>
   <select id="mech" aria-label="Механика" hidden><option value="">Все механики</option><option value="мгновенное">Мгновенные</option><option value="поддерживаемое">Поддерживаемые</option><option value="ритуал">Ритуалы</option></select>
@@ -355,9 +362,9 @@ function renderSubbar() {
     + [['houses', 'Дома'], ['residents', 'Жители']].map(([m, l]) => `<button data-mode="${m}" class="${m === locMode ? 'active' : ''}">${l}</button>`).join('')
     // a section is marked while the city page or one of its scenario records is open
     // «Сценарии» counts the book's scenarios, not their stages
-    + (city ? '<span class="sep"></span>' + CITY_SECTIONS.filter(([s]) => s === 'map' ? mapsOf(city).length : !SET[s] || storyIn(city, s).length)
+    + (city && current ? '<span class="sep"></span>' + CITY_SECTIONS.filter(([s]) => s === 'map' ? mapsOf(city).length : !SET[s] || storyIn(city, s).length)
       .map(([s, l]) => `<button data-sec="${s}" class="${(current === city || SET[s] && sectionOf(byId(current)?.kind) === s) && s === citySection ? 'active' : ''}">${l}${SET[s] ? ` (${storyIn(city, s).filter(x => !x.part_of).length})` : ''}</button>`).join('') : '');
-  bar.querySelectorAll('[data-guide]').forEach(b => b.onclick = () => { guide = b.dataset.guide; const cs = guideCities(); if (cs.length && !cs.some(c => c.id === city)) city = cs[0].id; renderSubbar(); city ? show(city) : renderList(); });
+  bar.querySelectorAll('[data-guide]').forEach(b => b.onclick = () => { guide = b.dataset.guide; if (guide === 'all') { showGuides(); return; } const cs = guideCities(); if (cs.length && !cs.some(c => c.id === city)) city = cs[0].id; renderSubbar(); city ? show(city) : renderList(); });
   // the map on screen redraws too: «Жители» puts resident dots around the houses
   bar.querySelectorAll('[data-mode]').forEach(b => b.onclick = () => { locMode = b.dataset.mode; renderSubbar(); renderList(); if (document.getElementById('mapinner')) initMap(current); });
   bar.querySelectorAll('[data-sec]').forEach(b => b.onclick = () => { citySection = b.dataset.sec; show(city); });
@@ -378,7 +385,7 @@ function setTab(t, keep) {
     occ.innerHTML = '<option value="">Все профессии</option>' + Object.keys(counts).sort((a, b) => a.localeCompare(b, 'ru'))
       .map(o => `<option value="${esc(o)}">${esc(label[o].charAt(0).toUpperCase() + label[o].slice(1))} (${counts[o]})</option>`).join('');
   }
-  if (!keep) { document.getElementById('q').value = ''; show(t === 'location' && city ? city : SET[t][0]?.id); } else renderList();
+  if (!keep) { document.getElementById('q').value = ''; t === 'location' && city && guide === 'all' ? showGuides() : show(t === 'location' && city ? city : SET[t][0]?.id); } else renderList();
 }
 
 function sources(c) {
@@ -1136,6 +1143,35 @@ function storyLinks(c) {
   return rows.length ? `<section><h3>Сюжет</h3><dl>${rows.join('')}</dl></section>` : '';
 }
 
+// «Все гайды» opens on a page about the guides: each guide book, its scenarios and its cities in short;
+// the list on the left starts folded
+function guidesHome() {
+  const short = t => { const p = (t || '').split('\n')[0]; return p.length > 360 ? p.slice(0, p.lastIndexOf(' ', 360)) + '…' : p; };
+  return '<h2>Гайды</h2><div class="sub">книги, которые описывают города, и сами города</div>' + GUIDES.map(g => {
+    const cs = CITIES.filter(c => bookIds(c).includes(g) || placesIn(c.id).some(l => bookIds(l).includes(g)));
+    const scen = DATA.scenarios.filter(s => bookOf(s) === g && !s.part_of).sort(byOrder);
+    return `<section><h3>${esc(BOOKS[g] || g)}</h3>
+      ${scen.length ? `<p><span class="muted">Сценарии:</span> ${scen.map(s => link(s.id, s.name.ru)).join(', ')}</p>` : ''}
+      ${cs.map(c => `<div class="gcity"><h4>${link(c.id, c.name.ru)}</h4>${c.description?.ru ? `<p>${esc(short(c.description.ru))}</p>` : ''}
+        <p class="muted">${[`мест: ${placesIn(c.id).length}`, `жителей: ${cityResidents(c.id).length}`, mapsOf(c.id).length ? `карт: ${mapsOf(c.id).length}` : ''].filter(Boolean).join(' · ')}</p></div>`).join('')}
+    </section>`;
+  }).join('');
+}
+function showGuides(how = 'push') {
+  current = null; citySection = 'overview';
+  openCity.clear(); openDist.clear();
+  if (tab !== 'location') setTab('location', true);
+  renderSubbar();
+  renderList();
+  const card = document.getElementById('card');
+  card.classList.remove('wide');
+  card.innerHTML = guidesHome();
+  // a city opened from here unfolds in the list
+  card.querySelectorAll('[data-go]').forEach(a => a.onclick = e => { if (e.ctrlKey || e.metaKey || e.shiftKey || e.button) return; e.preventDefault(); const x = byId(a.dataset.go); if (x?.kind === 'location') openCity.add(x.id); show(a.dataset.go); });
+  if (how === 'replace') history.replaceState(null, '', '#location');
+  else if (how === 'push' && location.hash !== '#location') history.pushState(null, '', '#location');
+  window.scrollTo(0, 0);
+}
 // how: 'push' — new history entry (clicks, tab switch), 'replace' — first load, 'none' — back/forward
 function show(id, how = 'push') {
   const c = id && byId(id);
@@ -1195,9 +1231,9 @@ const start = fromHash();
 // a bare #<kind> (links from the landing page) opens that tab
 const hashKind = decodeURIComponent(location.hash.slice(1)).split('/')[0];
 setTab(tabFor(start ? start.kind : SET[hashKind] ? hashKind : 'creature'), true);
-show(start ? start.id : SET[tab][0]?.id, 'replace');
-// back/forward between pushed entries fires popstate; a hand-edited hash fires hashchange
-const fromHistory = () => { const c = fromHash(); if (c && c.id !== current) show(c.id, 'none'); };
+start ? show(start.id, 'replace') : tab === 'location' && guide === 'all' ? showGuides('replace') : show(SET[tab][0]?.id, 'replace');
+// back/forward between pushed entries fires popstate; a hand-edited hash fires hashchange; a bare #location is the guides page
+const fromHistory = () => { const c = fromHash(); if (c && c.id !== current) show(c.id, 'none'); else if (!c && location.hash === '#location' && current !== null) showGuides('none'); };
 window.addEventListener('popstate', fromHistory);
 window.addEventListener('hashchange', fromHistory);
 // Basic-auth session on the site: whoami.html is an SSI echo of $remote_user (raw SSI text when opened locally)

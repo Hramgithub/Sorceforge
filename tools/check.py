@@ -96,7 +96,7 @@ def main() -> int:
                 errors["в corrections.ref — только номер решения «Р-NN» или null; книга и страница — в reason (Р-140)"].append(f"{rel(p)}: corrections[{i}].ref = {c['ref']!r}")
         q = rec.get("quality") or {}
         if bool(rec.get("errata")) != ("parse_uncertain" in (q.get("flags") or [])):
-            warnings["флаг «опечатка книги» (parse_uncertain) стоит ровно у записей с errata"].append(
+            errors["флаг «опечатка книги» (parse_uncertain) стоит ровно у записей с errata (Р-141): `python pipeline/fix/errata_flag.py <файл>`"].append(
                 f"{rel(p)}: errata {len(rec.get('errata') or [])}, флаг {'есть' if 'parse_uncertain' in (q.get('flags') or []) else 'нет'}")
         for path, s in strings(rec):
             if path.rsplit(".", 1)[-1] in QUOTED:

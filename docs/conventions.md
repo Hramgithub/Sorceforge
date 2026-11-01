@@ -69,7 +69,7 @@
 | Флаг `quality.flags` | Значение |
 |---|---|
 | `translated` | «перевод»: русский текст — наш перевод с английского (Р-21) |
-| `parse_uncertain` | «опечатка книги»: стоит ровно у записей с непустым `errata` (schemas/README, `pipeline/fix/consistency.py`) |
+| `parse_uncertain` | «опечатка книги»: стоит ровно у записей с непустым `errata`, в любом виде записей (Р-141; ставит `pipeline/fix/errata_flag.py`, проверяет `tools/check.py`) |
 | `incomplete` | «неполно»: в книге нет части данных (schemas/README) |
 | `editorial_text` | текст от редакции, не из книги: придуманное имя (Р-67), каталог 1920-х (Р-58), фраза об аналоге навыка (Р-123) |
 | `ocr_suspect` | распознавание сомнительно (схема; сейчас не используется) |
@@ -205,12 +205,11 @@
 
 Данные не исправлялись; список — на 2026-11-01.
 
-1. Флаг `parse_uncertain` отсутствует у 159 записей с непустым `errata` (персонажи 108, существа 16, сцены 12, заклинания 7, сценарии 5, места 3, раздаточные материалы 3, оружие 2, предметы 2, организации 1); `pipeline/fix/consistency.py` ставит флаг только существам.
-2. Р-27: латинская `x` вместо `×` в «СИЛ льда 1d10x10+15» — `kb/locations/innsmouth-reka-manukset.json`, `kb/books/pobeg-iz-innsmuta-ru/scenarios/reyd-tsel-1.json`, `kb/books/pobeg-iz-innsmuta-ru/scenes/zamerzshie-porogi.json`.
-3. Р-64: в текстах остались неметрические меры — «масштабная линейка — 75 футов» (`innsmouth-kvartal-severnykh-trushchob`), «несколько дюймов» (`innsmouth-pomestye-marshey-vtoroy-etazh`), «два на четыре дюйма… четверть дюйма» (предмет `tablichka-dagon`), «в миле к северу» (`erik-dud`), «в нескольких милях» (`residence` у `kirkpatrik-dyuteronomi-kreyn`, `uilyam-fletcher`), «19 л (5 галлонов)» (таблица `reyd-tsel-3`).
-4. Р-82: места-здания названы не «Дом …» — «Квартирант» (601), «Семья Бернарда Слокама» (602), «Доктор Блум» (608), «Семья Бэбсонов» (907); в псевдонимах домов — «Семья Квентина Эверилла» (402), «Семья Гортонов» (406), «Семья Гаррисон» (606), «Семейство Динов» (612).
-5. Р-33: 56 строк `abilities[].raw` на английском (в основном персонажи и существа «Масок», напр. `animated-mummy`, `carl-stanford`, `edward-gavigan`), хотя цитаты способностей переводятся.
-6. Р-63: у холодного оружия, взрывчатки и прочего `caliber` — `null` (melee 26, heavy 13, other 13), а не «—».
+1. Р-27: латинская `x` вместо `×` в «СИЛ льда 1d10x10+15» — `kb/locations/innsmouth-reka-manukset.json`, `kb/books/pobeg-iz-innsmuta-ru/scenarios/reyd-tsel-1.json`, `kb/books/pobeg-iz-innsmuta-ru/scenes/zamerzshie-porogi.json`.
+2. Р-64: в текстах остались неметрические меры — «масштабная линейка — 75 футов» (`innsmouth-kvartal-severnykh-trushchob`), «несколько дюймов» (`innsmouth-pomestye-marshey-vtoroy-etazh`), «два на четыре дюйма… четверть дюйма» (предмет `tablichka-dagon`), «в миле к северу» (`erik-dud`), «в нескольких милях» (`residence` у `kirkpatrik-dyuteronomi-kreyn`, `uilyam-fletcher`), «19 л (5 галлонов)» (таблица `reyd-tsel-3`).
+3. Р-82: места-здания названы не «Дом …» — «Квартирант» (601), «Семья Бернарда Слокама» (602), «Доктор Блум» (608), «Семья Бэбсонов» (907); в псевдонимах домов — «Семья Квентина Эверилла» (402), «Семья Гортонов» (406), «Семья Гаррисон» (606), «Семейство Динов» (612).
+4. Р-33: 56 строк `abilities[].raw` на английском (в основном персонажи и существа «Масок», напр. `animated-mummy`, `carl-stanford`, `edward-gavigan`), хотя цитаты способностей переводятся.
+5. Р-63: у холодного оружия, взрывчатки и прочего `caliber` — `null` (melee 26, heavy 13, other 13), а не «—».
 
 ## Открытые вопросы
 

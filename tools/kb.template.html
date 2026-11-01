@@ -24,6 +24,8 @@ main { display:grid; grid-template-columns: 300px 1fr; min-height: calc(100vh - 
 #list button:hover, #list button.active { background:var(--panel); }
 #list small { color:var(--muted); display:block; }
 #subbar { padding:8px 16px; border-bottom:1px solid var(--line); display:flex; gap:6px; flex-wrap:wrap; align-items:center; }
+/* display:flex above would otherwise override the hidden attribute: the sub-bar of the previous tab stayed on screen */
+#subbar[hidden] { display:none; }
 #subbar button { font:inherit; padding:4px 10px; border:1px solid var(--line); border-radius:6px; background:none; color:inherit; cursor:pointer; }
 #subbar button.active { background:var(--panel); border-color:var(--accent); color:var(--accent); font-weight:600; }
 #subbar .sep { width:1px; align-self:stretch; background:var(--line); margin:0 6px; }

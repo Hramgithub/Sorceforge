@@ -64,7 +64,7 @@ a { color:var(--accent); }
 #card.wide { max-width:none; }
 .maptools { display:flex; gap:6px; flex-wrap:wrap; align-items:center; margin:8px 0; }
 .maptools button { font:inherit; padding:4px 10px; border:1px solid var(--line); border-radius:6px; background:none; color:inherit; cursor:pointer; }
-.maptools .mapname { padding:4px 8px; border:1px solid var(--accent); color:var(--accent); font-weight:600; cursor:pointer; max-width:100%; }
+.maptools .mapname { color:var(--accent); font-size:16px; margin-right:4px; }
 .maptools #mapq { width:180px; }
 .maptools label { white-space:nowrap; }
 .maptools .sep { width:1px; align-self:stretch; background:var(--line); margin:0 4px; }
@@ -805,10 +805,8 @@ function initMap(cityId) {
   if (view) mapZoom = view.z;
   if (focus.length) mapZoom = zoomIn ? Math.max(mapZoom ?? 1, 2.5) : null;
   const spot = (s, i) => `<button type="button" class="spot ${sh.kind}${s.printed === false ? ' computed' : s.note ? ' doubt' : ''}${focus.includes(s.target) ? ' focus' : ''}" data-i="${i}" style="left:${s.x}%;top:${s.y}%;width:${sh.w}%;height:${sh.h}%" aria-label="${esc(s.label)}"></button>`;
-  // one drop-down with the open map's name: maps of this city and maps linked to them by spots (Y'ha-nthlei ↔ the reef);
-  // it also works in «Жители» mode, where the left list has no map icons
-  const linked = MAPS.filter(x => x.location !== cityId && (x.spots.some(s => ms.some(y => y.id === s.target)) || ms.some(y => y.spots.some(s => s.target === x.id))));
-  wrap.innerHTML = `<div class="maptools"><select id="mapsel" class="mapname" aria-label="Карта">${[...ms, ...linked].map(x => `<option value="${esc(x.id)}"${x.id === m.id ? ' selected' : ''}>${esc(x.name.ru)}</option>`).join('')}</select>
+  // maps are switched from the left list (map icons, Р-120); here only the name of the open one
+  wrap.innerHTML = `<div class="maptools"><b class="mapname">${esc(m.name.ru)}</b>
       <span class="sep"></span><button type="button" data-zoom="out" title="Уменьшить">−</button><button type="button" data-zoom="all">Целиком</button><button type="button" data-zoom="width">По ширине</button><button type="button" data-zoom="in" title="Увеличить">+</button>
       <span class="sep"></span><input id="mapq" type="search" placeholder="Номер или название" aria-label="Найти на карте"> <span id="mapcount" class="muted"></span>
       <span class="sep"></span><label><input type="checkbox" id="mapedit"${mapEdit ? ' checked' : ''}> Правка меток</label></div>
@@ -841,7 +839,6 @@ function initMap(cityId) {
   };
   const remember = () => { mapView[m.id] = { z: mapZoom, cx: (box.scrollLeft + box.clientWidth / 2) / inner.offsetWidth, cy: (box.scrollTop + box.clientHeight / 2) / inner.offsetHeight }; };
   box.addEventListener('scroll', remember);
-  document.getElementById('mapsel').onchange = e => openMap(e.target.value);
   const ZOOM = { all: () => 0, width: () => 1, in: () => mapZoom * 1.4, out: () => mapZoom / 1.4 };
   wrap.querySelectorAll('[data-zoom]').forEach(b => b.onclick = () => setZoom(ZOOM[b.dataset.zoom]()));
   box.addEventListener('wheel', e => { e.preventDefault(); const r = box.getBoundingClientRect(); setZoom(mapZoom * (e.deltaY < 0 ? 1.2 : 1 / 1.2), e.clientX - r.left, e.clientY - r.top); }, { passive: false });

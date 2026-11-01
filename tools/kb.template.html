@@ -30,6 +30,7 @@ main { display:grid; grid-template-columns: 300px 1fr; min-height: calc(100vh - 
 #subbtns:not(:empty) + #filters { border-left:1px solid var(--line); padding-left:12px; margin-left:6px; }
 #filters [hidden] { display:none; }
 #filters select { max-width:260px; }
+blockquote.handout { margin:0; padding:10px 16px; border-left:3px solid var(--accent); background:var(--panel); font-family:Georgia, "Times New Roman", serif; }
 #subbar button { font:inherit; padding:4px 10px; border:1px solid var(--line); border-radius:6px; background:none; color:inherit; cursor:pointer; }
 #subbar button.active { background:var(--panel); border-color:var(--accent); color:var(--accent); font-weight:600; }
 #subbar .sep { width:1px; align-self:stretch; background:var(--line); margin:0 6px; }
@@ -117,6 +118,7 @@ a { color:var(--accent); }
     <button data-tab="spell">Заклинания</button>
     <button data-tab="weapon">Оружие</button>
     <button data-tab="location">Гайды</button>
+    <button data-tab="item">Сюжет</button>
   </div>
   <div id="who" class="who" hidden><span class="muted">Вы вошли как</span> <b id="who-name"></b> <button id="logout" type="button">Выйти</button></div>
 </header>
@@ -159,6 +161,9 @@ FILTERS.tome = [['', 'Все книги'], ['mythos_tome', 'Книги Мифо�
 const WGROUP = { melee: 'Ближний бой', handgun: 'Пистолеты и револьверы', rifle: 'Винтовки', shotgun: 'Дробовики', automatic: 'Автоматическое оружие', heavy: 'Тяжёлое оружие и взрывчатка', other: 'Прочее' };
 // weapon filters: type here, era in its own select (#era)
 FILTERS.weapon = [['', 'Все типы'], ...Object.entries(WGROUP)];
+// «Сюжет»: by type, then by scenario book
+const STORY = [['item', 'Предметы'], ['handout', 'Раздаточные материалы'], ['organization', 'Организации'], ['scene', 'Сцены']];
+const STORY_TYPE = { item: 'item_type', handout: 'handout_type', organization: 'org_type' };
 FILTERS.location = [['', 'Все места'], ...['город','район','здание','место','область'].map(x => [x, x[0].toUpperCase() + x.slice(1)])];
 // city helpers (Р-78): which city a place belongs to, who lives in a city
 // top-level city of a place (an underwater city like Y'ha-nthlei inside Innsmouth's outskirts is not a separate city)
@@ -175,12 +180,18 @@ let city = CITIES[0]?.id || null, locMode = 'houses', citySection = 'overview';
 // sections of the city reference page shown from the sub-bar («Кто где живёт» gave way to the «Жители» tree, Р-121)
 const CITY_SECTIONS = [['overview', 'Обзор'], ['map', 'Карта'], ['history', 'История'], ['tables', 'Таблицы'], ['leads', 'Зацепки']];
 const openDist = new Set();
-const SET = { creature: DATA.creatures, character: DATA.characters, skill: DATA.skills, occupation: DATA.occupations, spell: DATA.spells, tome: DATA.tomes, weapon: DATA.weapons, location: DATA.locations };
-const ALL = [...DATA.creatures, ...DATA.characters, ...DATA.skills, ...DATA.occupations, ...DATA.spells, ...DATA.tomes, ...DATA.weapons, ...DATA.locations];
+// scenario material (Р-128): items, handouts, organizations, scenes live in the «Сюжет» tab (Р-129)
+['items', 'handouts', 'organizations', 'scenes'].forEach(k => DATA[k] = DATA[k] || []);
+const SET = { creature: DATA.creatures, character: DATA.characters, skill: DATA.skills, occupation: DATA.occupations, spell: DATA.spells, tome: DATA.tomes, weapon: DATA.weapons, location: DATA.locations,
+  item: DATA.items, handout: DATA.handouts, organization: DATA.organizations, scene: DATA.scenes };
+const ALL = Object.values(SET).flat();
 const TOME_TYPE = { mythos_tome: 'книга Мифов', occult_book: 'оккультная книга' };
 const byId = id => ALL.find(x => x.id === id);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const bookOf = c => c.sources?.[0]?.book_id;
+STORY.forEach(([k, l]) => FILTERS[k] = [['', 'Все: ' + l.toLowerCase()],
+  ...[...new Set(SET[k].map(x => x[STORY_TYPE[k]]).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'ru')).map(t => [t, t[0].toUpperCase() + t.slice(1)]),
+  ...[...new Set(SET[k].map(bookOf).filter(Boolean))].sort().map(b => ['book:' + b, 'Книга: ' + (BOOKS[b] || b)])]);
 const kindOf = c => c.kind;
 // a link carries the record's real address, so «open in new tab» works; a plain click is handled in place (show)
 const hashOf = c => '#' + encodeURIComponent(c.kind + '/' + c.id.split(/[:/]/).pop());
@@ -223,6 +234,7 @@ function matches(c, q, f) {
   if (tab === 'occupation') return f === 'lovecraftian' ? c.lovecraftian : (c.axes?.era||[]).includes(f.split(':')[1]);
   if (tab === 'spell' && f === 'family') return DATA.spells.some(s => s.variant_of === c.id);
   if (tab === 'location') return c.location_type === f;
+  if (STORY_TYPE[tab] !== undefined || tab === 'scene') return f.startsWith('book:') ? bookOf(c) === f.slice(5) : c[STORY_TYPE[tab]] === f;
   if (tab === 'tome') return f === 'general' ? DATA.tomes.some(t => t.edition_of === c.id) : f.startsWith('lang:') ? c.language === f.slice(5) : c.tome_type === f;
   return c.category === f;
 }
@@ -236,14 +248,15 @@ function subtitle(c) {
   if (c.kind === 'weapon') return [caliberOf(c), WGROUP[c.group]].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'location') return [c.number ? '№ ' + c.number : '', c.location_type, c.part_of && byId(c.part_of) ? byId(c.part_of).name.ru : ''].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'tome') return [c.name.en, c.language].filter(Boolean).map(esc).join(' · ');
+  if (STORY_TYPE[c.kind] !== undefined || c.kind === 'scene') return [c[STORY_TYPE[c.kind]], c.kind === 'scene' ? c.when : '', (BOOKS[bookOf(c)] || '')].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'occupation') return `Средства ${esc(c.credit_rating.raw)}${c.lovecraftian ? ' · лавкрафтовская' : ''}${c.group ? ' · ' + esc(c.group) : ''}`;
   return `${esc(c.name.en||'')} · ${c.base.raw === '—' ? esc(c.category) : 'база ' + esc(c.base.raw)}`;
 }
 
-const TAB_RU = { ...Object.fromEntries([...document.querySelectorAll('.tabs button')].map(b => [b.dataset.tab, b.textContent])), tome: 'Книги' };
+const TAB_RU = { ...Object.fromEntries([...document.querySelectorAll('.tabs button')].map(b => [b.dataset.tab, b.textContent])), tome: 'Книги', ...Object.fromEntries(STORY) };
 // books live inside the Spells tab (Р-111): the sub-bar switches between the two lists; every book stays, with or without spells
 const MAGIC = [['spell', 'Все заклинания'], ['tome', 'Книги']];
-const topTab = t => t === 'tome' ? 'spell' : t;
+const topTab = t => t === 'tome' ? 'spell' : STORY.some(([k]) => k === t) ? 'item' : t;
 const item = (c, alias) => `<button data-id="${esc(c.id)}" class="${c.id===current?'active':''}">${esc(c.name.ru)}
     ${(c.quality?.flags||[]).filter(x => x !== 'translated').length ? '<span class="tag warn">!</span>' : ''}<small>${[subtitle(c), alias ? 'также: ' + esc(alias) : ''].filter(Boolean).join(' · ')}</small></button>`;
 function renderList() {
@@ -329,6 +342,11 @@ function renderLocList(list) {
 function renderSubbar() {
   // the row itself is always there; only the tab's own buttons are redrawn (filters live next to them)
   const bar = document.getElementById('subbtns');
+  if (topTab(tab) === 'item') {
+    bar.innerHTML = STORY.map(([t, l]) => `<button data-story="${t}" class="${t === tab ? 'active' : ''}">${l} (${SET[t].length})</button>`).join('');
+    bar.querySelectorAll('[data-story]').forEach(b => b.onclick = () => { if (b.dataset.story !== tab) setTab(b.dataset.story); });
+    return;
+  }
   if (topTab(tab) === 'spell') {
     bar.innerHTML = MAGIC.map(([t, l]) => `<button data-magic="${t}" class="${t === tab ? 'active' : ''}">${l} (${SET[t].length})</button>`).join('');
     bar.querySelectorAll('[data-magic]').forEach(b => b.onclick = () => { if (b.dataset.magic !== tab) setTab(b.dataset.magic); });
@@ -486,6 +504,7 @@ function tomeCard(c) {
     ${c.description?.ru ? `<section><h3>Описание</h3>${c.description.ru.split('\n').filter(Boolean).map(p => `<p>${esc(p)}</p>`).join('')}</section>` : ''}
     ${spells ? `<section><h3>Заклинания</h3><p>${spells}</p></section>` : ''}
     ${copies}
+    ${storyLinks(c)}
     ${errata(c)}
     <section><h3>Источник</h3><div>${sources(c)}</div></section>
     ${corrections(c)}`;
@@ -513,6 +532,7 @@ function spellCard(c) {
     ${c.deeper_magic?.ru ? `<section><h3>Глубинная магия</h3><p>${esc(c.deeper_magic.ru)}</p></section>` : ''}
     ${where.length ? `<section><h3>Где изучить</h3><p>${where.map(x => link(x.id, x.name.ru)).join(', ')}</p></section>` : ''}
     ${casters.length ? `<section><h3>Кто знает (${casters.length})</h3><p>${casters.map(x => link(x.id, x.name.ru)).join(', ')}</p></section>` : ''}
+    ${storyLinks(c)}
     ${errata(c)}
     <section><h3>Источник</h3><div>${sources(c)}</div></section>
     ${corrections(c)}`;
@@ -552,6 +572,7 @@ function cityCard(c) {
     overview: `${c.description?.ru ? `<section><h3>Описание</h3>${paras(c.description.ru)}</section>` : ''}
       ${kids.length ? `<section><h3>Районы и места (${kids.length})</h3><ul>${kids.map(k => `<li>${k.number ? esc(k.number) + ' ' : ''}${link(k.id, k.name.ru)}${k.keeper_hint ? ` <span class="muted">— ${esc(k.keeper_hint)}</span>` : ''}</li>`).join('')}</ul></section>` : ''}
       ${(c.refs||[]).length ? `<section><h3>Существа и связанное</h3><p>${refLinks(c.refs)}</p></section>` : ''}
+      ${storyLinks(c)}
       <section><h3>Источник</h3><div>${sources(c)}</div></section>${errata(c)}${corrections(c)}${remarks}`,
     map: '<div id="mapwrap"></div>',
     history: `${c.history?.ru ? `<section><h3>История</h3>${paras(c.history.ru)}</section>` : ''}${ofKind(['события']).map(locTable).join('')}`,
@@ -578,6 +599,7 @@ function locationCard(c) {
     ${kids.length && c.location_type === 'город' ? `<section><h3>Районы и места (${kids.length})</h3><ul>${kids.map(k => `<li>${k.number ? esc(k.number) + ' ' : ''}${link(k.id, k.name.ru)}${k.keeper_hint ? ` <span class="muted">— ${esc(k.keeper_hint)}</span>` : ''}</li>`).join('')}</ul></section>` : ''}
     ${inside.length && c.location_type !== 'здание' ? `<section><h3>Кто где живёт</h3><ul>${inside.map(x => `<li>${link(x.id, (x.number ? x.number + ' ' : '') + x.name.ru)}: ${residentList(x.residents)}</li>`).join('')}</ul></section>` : ''}
     ${(c.refs||[]).length ? `<section><h3>Существа и связанное</h3><p>${refLinks(c.refs)}</p></section>` : ''}
+    ${storyLinks(c)}
     ${tables.map(locTable).join('')}
     ${errata(c)}
     <section><h3>Источник</h3><div>${sources(c)}</div></section>
@@ -594,7 +616,7 @@ function mentions(c) {
   DATA.locations.filter(l => (l.refs||[]).includes(c.id)).forEach(l => rows.push(link(l.id, l.name.ru)));
   // books whose story involves this person or being (Р-112)
   DATA.tomes.filter(t => (t.refs||[]).includes(c.id)).forEach(t => rows.push(`${link(t.id, t.name.ru)} <span class="muted">— книга</span>`));
-  return rows.length ? `<section><h3>Упоминается</h3><ul>${rows.map(r => `<li>${r}</li>`).join('')}</ul></section>` : '';
+  return (rows.length ? `<section><h3>Упоминается</h3><ul>${rows.map(r => `<li>${r}</li>`).join('')}</ul></section>` : '') + storyLinks(c);
 }
 // where a character lives or appears (reverse of location.residents)
 function homes(c) {
@@ -988,6 +1010,54 @@ function initMap(cityId) {
   return f ? 'focus' : view ? 'view' : '';
 }
 
+// scenario material cards (Р-128, Р-129)
+const STORY_KIND = { item: 'предмет', handout: 'раздаточный материал', organization: 'организация', scene: 'сцена' };
+const paraBlock = x => (x || '').split('\n').filter(Boolean).map(p => `<p>${esc(p)}</p>`).join('');
+const placeLinks = xs => xs.map(x => { const l = byId(x.location); return (l ? link(l.id, (l.number ? l.number + ' ' : '') + l.name.ru) : esc(x.location)) + (x.note ? ` <span class="muted">(${esc(x.note)})</span>` : ''); }).join(', ');
+const peopleLinks = xs => xs.map(x => (byId(x.id) ? link(x.id, byId(x.id).name.ru) : esc(x.id)) + (x.role ? ` <span class="muted">(${esc(x.role)})</span>` : '')).join(', ');
+const storyAll = () => STORY.flatMap(([k]) => SET[k]);
+function storyCard(c) {
+  const sec = (t, body) => body ? `<section><h3>${t}</h3>${body}</section>` : '';
+  const type = c[STORY_TYPE[c.kind]];
+  const back = storyAll().filter(x => x.id !== c.id && ((x.refs||[]).includes(c.id) || (x.leads_to||[]).includes(c.id)));
+  return `<h2>${esc(c.name.ru)}</h2>
+    <div class="sub">${STORY_KIND[c.kind]}${type ? ' · ' + esc(type) : ''}${c.name.en ? ' · ' + esc(c.name.en) : ''}${(c.aliases||[]).length ? ' · также: ' + c.aliases.map(esc).join(', ') : ''}</div>
+    ${flags(c)}
+    ${c.when ? `<dl><dt>Когда</dt><dd>${esc(c.when)}</dd></dl>` : ''}
+    ${sec('Описание', paraBlock(c.description?.ru))}
+    ${c.text ? sec('Текст для игроков', `<blockquote class="handout">${paraBlock(c.text.ru)}</blockquote>`) : ''}
+    ${c.goals ? sec('Цели', paraBlock(c.goals.ru)) : ''}
+    ${(c.found_at||[]).length ? sec('Где найти', `<p>${placeLinks(c.found_at)}</p>`) : ''}
+    ${(c.based_at||[]).length ? sec('Где базируется', `<p>${placeLinks(c.based_at)}</p>`) : ''}
+    ${(c.where||[]).length ? sec('Где', `<p>${placeLinks(c.where)}</p>`) : ''}
+    ${(c.held_by||[]).length ? sec('У кого', `<p>${peopleLinks(c.held_by)}</p>`) : ''}
+    ${(c.members||[]).length ? sec(`Члены (${c.members.length})`, `<p>${peopleLinks(c.members)}</p>`) : ''}
+    ${(c.participants||[]).length ? sec('Участники', `<p>${peopleLinks(c.participants)}</p>`) : ''}
+    ${c.mechanics ? sec('Механика', paraBlock(c.mechanics.ru)) : ''}
+    ${c.outcome ? sec('Исход', paraBlock(c.outcome.ru)) : ''}
+    ${(c.leads_to||[]).length ? sec('Ведёт к', `<p>${refLinks(c.leads_to)}</p>`) : ''}
+    ${(c.refs||[]).length ? sec('Связано', `<p>${refLinks(c.refs)}</p>`) : ''}
+    ${back.length ? sec('Упоминается в', `<p>${back.map(x => link(x.id, x.name.ru)).join(', ')}</p>`) : ''}
+    ${errata(c)}
+    <section><h3>Источник</h3><div>${sources(c)}</div></section>
+    ${corrections(c)}`;
+}
+// the reverse side on people, creatures, places, books and spells: memberships, things held, scenes, what is found here
+function storyLinks(c) {
+  const rows = [];
+  const add = (label, xs) => { if (xs.length) rows.push(`<dt>${label}</dt><dd>${xs.join(', ')}</dd>`); };
+  const role = (x, r) => link(x.id, x.name.ru) + (r ? ` <span class="muted">(${esc(r)})</span>` : '');
+  const here = xs => (xs||[]).some(x => x.location === c.id);
+  add('Состоит в', DATA.organizations.flatMap(o => (o.members||[]).filter(m => m.id === c.id).map(m => role(o, m.role))));
+  add('Владеет', DATA.items.flatMap(i => (i.held_by||[]).filter(m => m.id === c.id).map(m => role(i, m.role))));
+  add('Участвует в сценах', DATA.scenes.flatMap(s => (s.participants||[]).filter(m => m.id === c.id).map(m => role(s, m.role))));
+  add('Здесь находятся', [...DATA.items, ...DATA.handouts].filter(x => here(x.found_at)).map(x => link(x.id, x.name.ru)));
+  add('Здесь базируются', DATA.organizations.filter(o => here(o.based_at)).map(o => link(o.id, o.name.ru)));
+  add('Сцены здесь', DATA.scenes.filter(s => here(s.where)).map(s => link(s.id, s.name.ru)));
+  add('Упоминается в сюжете', storyAll().filter(x => (x.refs||[]).includes(c.id) || (x.leads_to||[]).includes(c.id)).map(x => link(x.id, x.name.ru)));
+  return rows.length ? `<section><h3>Сюжет</h3><dl>${rows.join('')}</dl></section>` : '';
+}
+
 // how: 'push' — new history entry (clicks, tab switch), 'replace' — first load, 'none' — back/forward
 function show(id, how = 'push') {
   const c = id && byId(id);
@@ -1009,7 +1079,7 @@ function show(id, how = 'push') {
   if (tab === 'location') renderSubbar();
   renderList();
   const card = document.getElementById('card');
-  card.innerHTML = c.kind === 'creature' ? creatureCard(c) : c.kind === 'character' ? characterCard(c) : c.kind === 'occupation' ? occupationCard(c) : c.kind === 'spell' ? spellCard(c) : c.kind === 'tome' ? tomeCard(c) : c.kind === 'weapon' ? weaponCard(c) : c.kind === 'location' ? locationCard(c) : skillCard(c);
+  card.innerHTML = STORY.some(([k]) => k === c.kind) ? storyCard(c) : c.kind === 'creature' ? creatureCard(c) : c.kind === 'character' ? characterCard(c) : c.kind === 'occupation' ? occupationCard(c) : c.kind === 'spell' ? spellCard(c) : c.kind === 'tome' ? tomeCard(c) : c.kind === 'weapon' ? weaponCard(c) : c.kind === 'location' ? locationCard(c) : skillCard(c);
   // Ctrl/Shift/⌘-click and the middle button are left to the browser (new tab or window at the link's address)
   card.querySelectorAll('[data-go]').forEach(a => a.onclick = e => { if (e.ctrlKey || e.metaKey || e.shiftKey || e.button) return; e.preventDefault(); show(a.dataset.go); });
   card.querySelectorAll('[data-onmap]').forEach(a => a.onclick = e => { e.preventDefault(); openOnMap(a.dataset.onmap); });

@@ -18,6 +18,10 @@
 | `weapon.schema.json` | оружие | `kb/weapons/` |
 | `location.schema.json` | локация: город, район, здание, место, область | `kb/locations/` |
 | `map.schema.json` | карта из книги с метками мест (Р-120); картинка — в `app/maps/` | `kb/maps/` |
+| `item.schema.json` | предмет: артефакт, улика, сюжетная вещь (Р-128) | `kb/books/<книга>/items/` |
+| `handout.schema.json` | раздаточный материал: текст для игроков (Р-128) | `kb/books/<книга>/handouts/` |
+| `organization.schema.json` | организация: культ, агентство, общество, клан (Р-128) | `kb/books/<книга>/organizations/` |
+| `scene.schema.json` | сцена сценария (Р-128) | `kb/books/<книга>/scenes/` |
 | `examples/` | по примеру на каждый вид записи | — |
 
 Проверка (без внешних библиотек):

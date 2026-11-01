@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sourcefold.local/schemas/organization.schema.json",
+  "title": "Организация",
+  "description": "Культ, агентство, общество, клан (Р-128).",
+  "type": "object",
+  "required": [
+    "schema",
+    "id",
+    "kind",
+    "name",
+    "description",
+    "axes",
+    "sources",
+    "org_type"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "sourcefold.organization.v0"
+    },
+    "id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "kind": {
+      "const": "organization"
+    },
+    "name": {
+      "$ref": "common.schema.json#/$defs/text"
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "description": {
+      "$ref": "common.schema.json#/$defs/text"
+    },
+    "org_type": {
+      "enum": [
+        "культ",
+        "агентство",
+        "общество",
+        "клан",
+        "прочее"
+      ]
+    },
+    "goals": {
+      "$ref": "common.schema.json#/$defs/text",
+      "description": "Цели и методы."
+    },
+    "based_at": {
+      "type": "array",
+      "description": "Где базируется.",
+      "items": {
+        "type": "object",
+        "required": [
+          "location"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "location": {
+            "$ref": "common.schema.json#/$defs/id"
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "members": {
+      "type": "array",
+      "description": "Члены; role — глава, жрец, агент и т. п.",
+      "items": {
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "$ref": "common.schema.json#/$defs/id"
+          },
+          "role": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "refs": {
+      "type": "array",
+      "description": "Связанные записи (персонажи, существа, места, книги, заклинания, другие сюжетные записи); просмотрщик показывает связь в обе стороны.",
+      "items": {
+        "$ref": "common.schema.json#/$defs/id"
+      }
+    },
+    "axes": {
+      "$ref": "common.schema.json#/$defs/axes"
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "common.schema.json#/$defs/source_ref"
+      }
+    },
+    "errata": {
+      "$ref": "common.schema.json#/$defs/errata"
+    },
+    "corrections": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/correction"
+      }
+    },
+    "quality": {
+      "$ref": "common.schema.json#/$defs/quality"
+    }
+  }
+}

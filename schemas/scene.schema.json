@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sourcefold.local/schemas/scene.schema.json",
+  "title": "Сцена",
+  "description": "Эпизод сценария: когда случается, где, кто участвует, чем грозит (Р-128).",
+  "type": "object",
+  "required": [
+    "schema",
+    "id",
+    "kind",
+    "name",
+    "description",
+    "axes",
+    "sources"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "sourcefold.scene.v0"
+    },
+    "id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "kind": {
+      "const": "scene"
+    },
+    "name": {
+      "$ref": "common.schema.json#/$defs/text"
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "description": {
+      "$ref": "common.schema.json#/$defs/text"
+    },
+    "when": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Когда случается (часть сценария, условие)."
+    },
+    "where": {
+      "type": "array",
+      "description": "Где происходит.",
+      "items": {
+        "type": "object",
+        "required": [
+          "location"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "location": {
+            "$ref": "common.schema.json#/$defs/id"
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "participants": {
+      "type": "array",
+      "description": "Участники; role — кто они в сцене.",
+      "items": {
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "$ref": "common.schema.json#/$defs/id"
+          },
+          "role": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "mechanics": {
+      "$ref": "common.schema.json#/$defs/text",
+      "description": "Проверки, потеря Рассудка, бой."
+    },
+    "outcome": {
+      "$ref": "common.schema.json#/$defs/text",
+      "description": "Чем кончается или к чему ведёт."
+    },
+    "refs": {
+      "type": "array",
+      "description": "Связанные записи (персонажи, существа, места, книги, заклинания, другие сюжетные записи); просмотрщик показывает связь в обе стороны.",
+      "items": {
+        "$ref": "common.schema.json#/$defs/id"
+      }
+    },
+    "axes": {
+      "$ref": "common.schema.json#/$defs/axes"
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "common.schema.json#/$defs/source_ref"
+      }
+    },
+    "errata": {
+      "$ref": "common.schema.json#/$defs/errata"
+    },
+    "corrections": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/correction"
+      }
+    },
+    "quality": {
+      "$ref": "common.schema.json#/$defs/quality"
+    }
+  }
+}

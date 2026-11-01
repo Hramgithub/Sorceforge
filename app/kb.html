@@ -885,9 +885,10 @@ function lightSpots(id) {
   const inner = document.getElementById('mapinner');
   if (!inner || !mapCur) return;
   const c = id && byId(id);
-  // a district lights all its places in its own colour (the book draws no district borders, Р-120)
-  const dist = c?.kind === 'location' && descendants(c.id).length > 0;
+  // a district lights all its places in its own colour (the book draws no district borders, Р-120);
+  // a house with rooms or floors of its own (Р-134) has no spots for them on this map and stays a house
   const ids = !c ? [] : c.kind === 'location' ? mapIds(c) : DATA.locations.filter(l => (l.residents||[]).some(r => r.id === c.id)).map(l => l.id);
+  const dist = c?.kind === 'location' && mapCur.spots.some(s => s.target !== c.id && ids.includes(s.target));
   inner.querySelectorAll('.spot[data-i]').forEach(b => {
     const on = ids.includes(mapCur.spots[b.dataset.i].target);
     b.classList.toggle('lit', on && !dist); b.classList.toggle('litd', on && dist);

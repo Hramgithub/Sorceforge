@@ -24,8 +24,12 @@ main { display:grid; grid-template-columns: 300px 1fr; min-height: calc(100vh - 
 #list button:hover, #list button.active { background:var(--panel); }
 #list small { color:var(--muted); display:block; }
 #subbar { padding:8px 16px; border-bottom:1px solid var(--line); display:flex; gap:6px; flex-wrap:wrap; align-items:center; }
-/* display:flex above would otherwise override the hidden attribute: the sub-bar of the previous tab stayed on screen */
-#subbar[hidden] { display:none; }
+#subbtns, #filters { display:flex; gap:6px; flex-wrap:wrap; align-items:center; }
+#subbtns:empty { display:none; }
+/* a line between the tab's buttons and the filters, only when there are buttons */
+#subbtns:not(:empty) + #filters { border-left:1px solid var(--line); padding-left:12px; margin-left:6px; }
+#filters [hidden] { display:none; }
+#filters select { max-width:260px; }
 #subbar button { font:inherit; padding:4px 10px; border:1px solid var(--line); border-radius:6px; background:none; color:inherit; cursor:pointer; }
 #subbar button.active { background:var(--panel); border-color:var(--accent); color:var(--accent); font-weight:600; }
 #subbar .sep { width:1px; align-self:stretch; background:var(--line); margin:0 6px; }
@@ -114,15 +118,17 @@ a { color:var(--accent); }
     <button data-tab="weapon">Оружие</button>
     <button data-tab="location">Гайды</button>
   </div>
+  <div id="who" class="who" hidden><span class="muted">Вы вошли как</span> <b id="who-name"></b> <button id="logout" type="button">Выйти</button></div>
+</header>
+<!-- second row on every tab: the tab's own buttons (spells/books, guides/sections), then search, filters and the count -->
+<nav id="subbar"><span id="subbtns"></span><span id="filters">
   <input id="q" type="search" placeholder="Поиск по имени" aria-label="Поиск">
   <select id="cat" aria-label="Фильтр"></select>
   <select id="occ" aria-label="Профессия" hidden></select>
   <select id="mech" aria-label="Механика" hidden><option value="">Все механики</option><option value="мгновенное">Мгновенные</option><option value="поддерживаемое">Поддерживаемые</option><option value="ритуал">Ритуалы</option></select>
   <select id="era" aria-label="Эпоха" hidden><option value="">Все эпохи</option><option value="1920s">1920-е</option><option value="modern">Современность</option></select>
   <span id="count" class="muted"></span>
-  <div id="who" class="who" hidden><span class="muted">Вы вошли как</span> <b id="who-name"></b> <button id="logout" type="button">Выйти</button></div>
-</header>
-<nav id="subbar" hidden></nav>
+</span></nav>
 <main>
   <nav id="list"></nav>
   <article id="card"></article>
@@ -319,15 +325,14 @@ function renderLocList(list) {
   list.querySelectorAll('button').forEach(b => b.onclick = () => show(b.dataset.id));
 }
 function renderSubbar() {
-  const bar = document.getElementById('subbar');
+  // the row itself is always there; only the tab's own buttons are redrawn (filters live next to them)
+  const bar = document.getElementById('subbtns');
   if (topTab(tab) === 'spell') {
-    bar.hidden = false;
     bar.innerHTML = MAGIC.map(([t, l]) => `<button data-magic="${t}" class="${t === tab ? 'active' : ''}">${l} (${SET[t].length})</button>`).join('');
     bar.querySelectorAll('[data-magic]').forEach(b => b.onclick = () => { if (b.dataset.magic !== tab) setTab(b.dataset.magic); });
     return;
   }
-  bar.hidden = tab !== 'location' || !CITIES.length;
-  if (bar.hidden) return;
+  if (tab !== 'location' || !CITIES.length) { bar.innerHTML = ''; return; }
   bar.innerHTML = [['all', 'Все гайды'], ...GUIDES.map(g => [g, BOOKS[g] || g])].map(([g, l]) => `<button data-guide="${esc(g)}" class="${g === guide ? 'active' : ''}">${esc(l)}</button>`).join('')
     + '<span class="sep"></span>'
     + [['houses', 'Дома'], ['residents', 'Жители']].map(([m, l]) => `<button data-mode="${m}" class="${m === locMode ? 'active' : ''}">${l}</button>`).join('')

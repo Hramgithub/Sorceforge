@@ -549,7 +549,8 @@ function cityCard(c) {
     leads: ofKind(['зацепки']).map(locTable).join('') || '<p class="muted">Зацепок нет.</p>',
     who: inside.length ? `<section><h3>Кто где живёт</h3><ul>${inside.map(x => `<li>${link(x.id, (x.number ? x.number + ' ' : '') + x.name.ru)}: ${residentList(x.residents)}</li>`).join('')}</ul></section>` : '<p class="muted">Жители не указаны.</p>',
   };
-  return head + (body[citySection] || body.overview);
+  // on «Карта» the city heading is left out: the map's name in the tool row says where you are
+  return (citySection === 'map' ? '' : head) + (body[citySection] || body.overview);
 }
 function locationCard(c) {
   if (c.location_type === 'город' && !c.part_of) return cityCard(c);
@@ -851,7 +852,7 @@ function initMap(cityId) {
   }).join('');
   const veiled = s => resMode && !s.text && byId(s.target)?.kind === 'location' && !hasRes(byId(s.target));
   const spot = (s, i) => `<button type="button" class="spot ${sh.kind}${s.printed === false ? ' computed' : s.note ? ' doubt' : ''}${veiled(s) ? ' nores' : ''}${focus.includes(s.target) ? ' focus' : ''}" data-i="${i}" style="left:${s.x}%;top:${s.y}%;width:${sh.w}%;height:${sh.h}%" aria-label="${esc(s.label)}"></button>`;
-  // maps are switched from the left list (map icons, Р-120); here only the name of the open one
+  // maps are switched from the left list (map icons, Р-120); the open map's name heads the section instead of the city name
   wrap.innerHTML = `<div class="maptools"><b class="mapname">${esc(m.name.ru)}</b>
       <span class="sep"></span><button type="button" data-zoom="out" title="Уменьшить">−</button><button type="button" data-zoom="all">Целиком</button><button type="button" data-zoom="width">По ширине</button><button type="button" data-zoom="in" title="Увеличить">+</button>
       <span class="sep"></span><input id="mapq" type="search" placeholder="Номер или название" aria-label="Найти на карте"> <span id="mapcount" class="muted"></span>

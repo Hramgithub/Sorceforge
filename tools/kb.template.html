@@ -287,7 +287,7 @@ function renderLocList(list) {
       set.has(id) ? set.delete(id) : set.add(id);
       renderList();
     });
-    list.querySelectorAll('[data-mapfor]').forEach(i => i.onclick = e => { e.stopPropagation(); openOnMap(i.dataset.mapfor); });
+    list.querySelectorAll('[data-mapfor]').forEach(i => i.onclick = e => { e.stopPropagation(); openMap(i.dataset.mapfor); });
     list.querySelectorAll('h4[data-city]').forEach(h => h.onclick = () => { const id = h.dataset.city; openCity.add(id); city = id; citySection = 'overview'; show(id); });
     list.querySelectorAll('h4[data-dist]').forEach(h => h.onclick = () => { openDist.add(h.dataset.dist); show(h.dataset.dist); });
   }
@@ -766,10 +766,15 @@ function openOnMap(id) {
   mapId = m.id; mapFocus = ids; mapFocusZoom = !descendants(id).length; citySection = 'map';
   show(m.location);
 }
-// a small folded-map icon in the left list for every row that has spots (or, for a city, a map)
+// a folded-map icon in the left list only on rows that have a map of their own (map.shows): the city, the outskirts, the reef
 const MAP_ICON = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg>';
-const mapIcon = l => (l.location_type === 'город' && !l.part_of ? mapsOf(l.id).length : spotsAt(mapIds(l)).length)
-  ? `<span class="mapicon" data-mapfor="${esc(l.id)}" role="button" title="Открыть на карте" aria-label="Открыть на карте">${MAP_ICON}</span>` : '';
+const mapIcon = l => { const m = MAPS.find(x => x.shows === l.id); return m ? `<span class="mapicon" data-mapfor="${esc(m.id)}" role="button" title="${esc(m.name.ru)}" aria-label="Открыть карту: ${esc(m.name.ru)}">${MAP_ICON}</span>` : ''; };
+// the icon opens that map whole, forgetting the remembered view
+function openMap(id) {
+  const m = mapById(id);
+  mapId = m.id; mapZoom = null; delete mapView[m.id]; citySection = 'map';
+  show(m.location);
+}
 function spotTip(s) {
   const m = mapById(s.target);
   if (m) return `<b>${esc(m.name.ru)}</b><div class="muted">открыть карту</div>`;

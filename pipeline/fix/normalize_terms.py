@@ -1,6 +1,6 @@
 """Bring kb text to the Keeper Rulebook terms and one file format.
 
-- Characteristic abbreviations as in the Russian Keeper Rulebook: «РАЗ» and «ВЕЛ» (SIZ) → «ТЕЛ», «ОЗ» (HP) → «ПЗ»
+- Characteristic abbreviations as in the Russian Keeper Rulebook: «РАЗ» and «ВЕЛ» (SIZ) → «ТЕЛ», «ОЗ» (HP) → «ПЗ», «ЛОВ» (DEX) → «ЛВК»
   (whole uppercase words only, so «раз», «озеро» and the like are untouched).
 - Every kb JSON file is written as UTF-8, 2-space indent, LF line endings.
 
@@ -14,7 +14,8 @@ import re
 from pathlib import Path
 
 TERMS = [(re.compile(r"(?<![А-ЯЁа-яё])(?:РАЗ|ВЕЛ)(?![А-ЯЁа-яё])"), "ТЕЛ"),
-         (re.compile(r"(?<![А-ЯЁа-яё])ОЗ(?![А-ЯЁа-яё])"), "ПЗ")]
+         (re.compile(r"(?<![А-ЯЁа-яё])ОЗ(?![А-ЯЁа-яё])"), "ПЗ"),
+         (re.compile(r"(?<![А-ЯЁа-яё])ЛОВ(?![А-ЯЁа-яё])"), "ЛВК")]
 
 
 def fix(value, counter: list[int]):

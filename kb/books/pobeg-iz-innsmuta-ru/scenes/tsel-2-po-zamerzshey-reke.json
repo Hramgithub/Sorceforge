@@ -1,0 +1,108 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "pobeg-iz-innsmuta-ru/scene/tsel-2-po-zamerzshey-reke",
+  "kind": "scene",
+  "name": {
+    "ru": "По замёрзшей реке"
+  },
+  "description": {
+    "ru": "Миссия начинается к западу от города. В сопровождении двух отрядов, назначенных для захвата зала Эзотерического ордена Дагона, морские пехотинцы в белых маскировочных костюмах идут по замёрзшей реке Мануксет в самое сердце Иннсмута, двигаясь под покровом темноты и высоких стен глубокого речного ущелья.\nУ моста на Вашингтон-стрит группа, направляющаяся к особняку Маршей, отделяется от рейдеров Эзотерического ордена и поднимается по крутому скалистому склону ущелья на уровень улицы. Оказавшись на улице, морские пехотинцы направляются на север к особняку, используя живые изгороди и деревья в качестве укрытия."
+  },
+  "when": "Цель 2, часть первая («Чрево кита»): начало миссии в ночь рейда, сразу после сбора на западной окраине Иннсмута.",
+  "arc": {
+    "scenario": "pobeg-iz-innsmuta-ru/scenario/reyd-tsel-2",
+    "part": "Часть первая: Чрево кита",
+    "order": 1
+  },
+  "where": [
+    {
+      "location": "coc:location:innsmouth-reka-manukset",
+      "note": "замёрзшая река Мануксет; ущелье у моста на Вашингтон-стрит"
+    },
+    {
+      "location": "coc:location:innsmouth-respektabelnyy-staryy-zhiloy-rayon",
+      "note": "путь на север к поместью вдоль изгородей и деревьев"
+    }
+  ],
+  "participants": [
+    {
+      "id": "pobeg-iz-innsmuta-ru/character/dzhozef-meyns",
+      "role": "командир отряда (персонаж Хранителя)"
+    },
+    {
+      "id": "pobeg-iz-innsmuta-ru/character/albert-rayan",
+      "role": "агент Министерства финансов (персонаж Хранителя)"
+    },
+    {
+      "id": "pobeg-iz-innsmuta-ru/character/ravana-nadzhar",
+      "role": "парапсихолог; на деле аватар Ньярлатхотепа (персонаж Хранителя)"
+    },
+    {
+      "id": "pobeg-iz-innsmuta-ru/character/entoni-ditullio",
+      "role": "капрал (вспомогательный персонаж)"
+    },
+    {
+      "id": "pobeg-iz-innsmuta-ru/character/uilyam-logan",
+      "role": "младший капрал (вспомогательный персонаж)"
+    },
+    {
+      "id": "pobeg-iz-innsmuta-ru/character/patrik-obrayen",
+      "role": "рядовой (вспомогательный персонаж)"
+    },
+    {
+      "id": "pobeg-iz-innsmuta-ru/character/dzhordzh-uilyams",
+      "role": "рядовой, снайпер (вспомогательный персонаж)"
+    },
+    {
+      "id": "pobeg-iz-innsmuta-ru/character/entoni-korso",
+      "role": "ведёт отряды, идущие на Эзотерический орден Дагона (цель 1), до моста"
+    },
+    {
+      "id": "pobeg-iz-innsmuta-ru/character/emil-grabatovski",
+      "role": "сержант одного из отрядов цели 1"
+    }
+  ],
+  "mechanics": {
+    "ru": "Чтобы выбраться из ущелья, не поскользнувшись на обледенелых камнях, сыщику требуется проверка Лазания. При провале он получает 1d2 пункта урона, а при провале последующей проверки ЛВК — растяжение плеча, которое может повлиять на его способность стрелять из оружия.\nРека замёрзла, но местами лёд ещё тонкий; общие правила холодной погоды, снаряжения и Рассудка во время рейда — таблица «Рейд: правила» в сценарии «Рейд на Иннсмут»."
+  },
+  "outcome": {
+    "ru": "Отряд незаметно выходит к поместью Маршей на Вашингтон-стрит, 404 — см. «Дозорные на крыше»."
+  },
+  "refs": [
+    "coc:skill:climb",
+    "coc:location:innsmouth-207-ezotericheskiy-orden-dagona",
+    "coc:location:innsmouth-302-barnabas-starik-marsh",
+    "pobeg-iz-innsmuta-ru/scenario/reyd-tsel-1",
+    "pobeg-iz-innsmuta-ru/scenario/reyd-na-innsmut"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "pobeg-iz-innsmuta-ru",
+      "physical_page": 119,
+      "printed_page": 119,
+      "method": "book_text",
+      "verified": true,
+      "note": "начало «Части первой: Чрево кита»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Река Мануксет и мост на Вашингтон-стрит отдельных записей мест не имеют — привязка к городу и району. Командиры отрядов цели 1 названы по таблице «Рейд: цели и отряды»; в самом разделе они не упомянуты."
+  },
+  "corrections": [
+    {
+      "field": "where",
+      "from": "coc:location:innsmouth",
+      "to": "coc:location:innsmouth-reka-manukset",
+      "reason": "Р-134: заведена запись реки Мануксет.",
+      "ref": "Р-134"
+    }
+  ]
+}

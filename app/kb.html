@@ -52,6 +52,8 @@ blockquote.handout { margin:0; padding:10px 16px; border-left:3px solid var(--ac
 #list button.rec.l1 { padding-left:56px; }
 #list button.rec.l2 { padding-left:76px; }
 #list .part { padding:8px 16px 2px 16px; font-size:12px; color:var(--muted); border-bottom:1px solid var(--line); }
+#list .part[data-part] { cursor:pointer; }
+#list .part[data-part]:hover { color:var(--ink); }
 #list .part.l1 { padding-left:48px; }
 #list .part.l2 { padding-left:68px; }
 #list h4.dist.sub.tochead { padding-left:48px; font-size:13px; color:var(--muted); }
@@ -327,6 +329,9 @@ const fold = open => `<span class="fold" title="${open ? 'Свернуть' : '�
 // the city row on top goes back to the places
 const OUTLINE = ['history', 'tables', 'leads', 'scenario', 'item', 'handout', 'organization'];
 const openScen = new Set(), openToc = new Set();
+// groups in the outline (parts of a scenario, types of records): folded or not, once the reader has chosen
+const partState = new Map();
+const partOpen = (key, byDefault) => partState.has(key) ? partState.get(key) : byDefault;
 function listSection() {
   const c = byId(current);
   if (!city || !c || !OUTLINE.includes(citySection)) return null;
@@ -339,23 +344,33 @@ function renderOutline(list, sec) {
   // levels: 0 — directly under the city row, 1 — under a scenario, 2 — under a stage
   const rec = (x, lvl = 0) => `<button data-id="${esc(x.id)}" class="rec l${lvl} ${x.id === current ? 'active' : ''}">${esc(x.name.ru)}</button>`;
   const toc = (lvl = 0) => `<div class="toc l${lvl}"></div>`;
+  const group = (key, open, label, lvl = 0) => `<div class="part l${lvl}" data-part="${esc(key)}">${fold(open)}${esc(label)}</div>`;
   let body;
   if (sec === 'scenario') {
     const xs = storyIn(city, 'scenario');
-    const scenes = (id, deep) => { const lvl = deep ? 2 : 1, ss = scenesOf(id); return [...new Set(ss.map(x => x.arc.part || ''))].map(p => (p ? `<div class="part l${lvl}">${esc(p)}</div>` : '') + ss.filter(x => (x.arc.part || '') === p).map(x => rec(x, lvl)).join('')).join(''); };
-    // a scenario row: scenes under the book's part headings, then its stages; the open scenario first has
-    // its page's headings, folded under «Хранителю»
-    const keeper = (s, deep) => `<h4 class="dist sub tochead${deep ? ' deep' : ''}" data-toc="${esc(s.id)}">${fold(openToc.has(s.id))}Хранителю</h4>` + (openToc.has(s.id) ? toc(deep ? 2 : 1) : '');
+    // a part of the book folds; it starts unfolded only when it holds the open scene
+    const scenes = (id, deep) => {
+      const lvl = deep ? 2 : 1, ss = scenesOf(id);
+      return [...new Set(ss.map(x => x.arc.part || ''))].map(p => {
+        const xs = ss.filter(x => (x.arc.part || '') === p), key = id + '|' + p;
+        const open = !p || partOpen(key, xs.some(x => x.id === current));
+        return (p ? group(key, open, p, lvl) : '') + (open ? xs.map(x => rec(x, lvl)).join('') : '');
+      }).join('');
+    };
+    // a scenario row: scenes under the book's part headings, then its stages; every unfolded scenario first has
+    // its page's headings, folded under «Хранителю» (read from the scenario page, whichever page is open)
+    const keeper = (s, deep) => `<h4 class="dist sub tochead${deep ? ' deep' : ''}" data-toc="${esc(s.id)}">${fold(openToc.has(s.id))}Хранителю</h4>`
+      + (openToc.has(s.id) ? `<div class="toc l${deep ? 2 : 1}">${headsOf(scenarioCard(s)).map((h, i) => `<button data-sid="${esc(s.id)}" data-h="${i}">${esc(h)}</button>`).join('')}</div>` : '');
     const node = (s, deep) => {
       const open = openScen.has(s.id);
       return `<h4 class="dist sub${deep ? ' deep' : ''}${s.id === current ? ' active' : ''}" data-scen="${esc(s.id)}">${fold(open)}${esc(s.name.ru)}</h4>`
-        + (open ? (s.id === current ? keeper(s, deep) : '') + scenes(s.id, deep) + (deep ? '' : xs.filter(x => x.part_of === s.id).sort(byOrder).map(t => node(t, true)).join('')) : '');
+        + (open ? keeper(s, deep) + scenes(s.id, deep) + (deep ? '' : xs.filter(x => x.part_of === s.id).sort(byOrder).map(t => node(t, true)).join('')) : '');
     };
     const loose = storyIn(city, 'scene').filter(x => !byId(x.arc?.scenario));
     body = xs.filter(x => !x.part_of || !byId(x.part_of)).sort(byOrder).map(s => node(s)).join('')
       + (loose.length ? `<div class="part">Сцены вне сценариев</div>${loose.map(x => rec(x)).join('')}` : '');
   } else if (SET[sec]) {
-    body = storyGroups(city, sec).map(g => `<div class="part">${esc(g.label)} (${g.xs.length})</div>${g.xs.map(x => rec(x)).join('')}`).join('');
+    body = storyGroups(city, sec).map(g => { const key = sec + '|' + g.label, open = partOpen(key, true); return group(key, open, `${g.label} (${g.xs.length})`) + (open ? g.xs.map(x => rec(x)).join('') : ''); }).join('');
   } else body = toc();
   const label = CITY_SECTIONS.find(([s]) => s === sec)[1];
   list.innerHTML = `<h4 class="dist city" data-back>${mapIcon(c)}${esc(c.name.ru)}<small>${esc(label)} · к местам города</small></h4>` + body;
@@ -368,18 +383,29 @@ function renderOutline(list, sec) {
     renderList();
   });
   list.querySelectorAll('h4[data-toc]').forEach(h => h.onclick = () => h.querySelector('.fold').click());
+  list.querySelectorAll('[data-part]').forEach(g => g.onclick = () => { const k = g.dataset.part; partState.set(k, !g.querySelector('.fold').textContent.includes('▾')); renderList(); });
   list.querySelectorAll('h4[data-scen]').forEach(h => h.onclick = () => { openScen.add(h.dataset.scen); show(h.dataset.scen); });
   list.querySelectorAll('button[data-id]').forEach(b => b.onclick = () => show(b.dataset.id));
+  // a scenario heading: open the scenario if another page is on screen, then go to the heading
+  list.querySelectorAll('button[data-sid]').forEach(b => b.onclick = () => { if (current !== b.dataset.sid) show(b.dataset.sid); cardHeads()[b.dataset.h]?.scrollIntoView({ block: 'start' }); });
   fillToc();
 }
-// the open page's headings under its row in the list; a click scrolls the page to the heading
-// a scenario's scenes are listed under it already
+// page headings for the list; a scenario's scenes are listed under it already
 const TOC_SKIP = ['Источник', 'Исправления', 'Сцены'];
+const headText = h => [...h.childNodes].filter(n => !n.classList?.contains('muted')).map(n => n.textContent).join('').trim();
+const keepHead = h => !TOC_SKIP.includes(headText(h));
+const cardHeads = () => [...document.querySelectorAll('#card h3')].filter(keepHead);
+function headsOf(html) {
+  const t = document.createElement('template');
+  t.innerHTML = html;
+  return [...t.content.querySelectorAll('h3')].filter(keepHead).map(headText);
+}
+// the open city page's headings under the city row; a click scrolls the page to the heading
 function fillToc() {
-  const box = document.querySelector('#list .toc');
+  const box = document.querySelector('#list .toc.l0');
   if (!box) return;
-  const text = h => [...h.childNodes].filter(n => !n.classList?.contains('muted')).map(n => n.textContent).join('').trim();
-  const hs = [...document.querySelectorAll('#card h3')].filter(h => !TOC_SKIP.includes(text(h)));
+  const text = headText;
+  const hs = cardHeads();
   box.innerHTML = hs.map((h, i) => `<button data-h="${i}">${esc(text(h))}</button>`).join('');
   box.querySelectorAll('[data-h]').forEach(b => b.onclick = () => hs[b.dataset.h].scrollIntoView({ block: 'start' }));
 }
@@ -1296,6 +1322,7 @@ function show(id, how = 'push') {
     // the list unfolds the scenario and stage the record belongs to
     const up = c.kind === 'scene' ? byId(c.arc?.scenario) : c.kind === 'scenario' ? c : null;
     if (up) { openScen.add(up.id); if (up.part_of) openScen.add(up.part_of); }
+    if (c.kind === 'scene' && c.arc?.part) partState.set(c.arc.scenario + '|' + c.arc.part, true);
   }
   // current first: the sub-bar marks «Обзор / Карта / …» only while the city page itself is open
   current = id;

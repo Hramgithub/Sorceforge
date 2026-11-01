@@ -32,6 +32,7 @@ RULES = [
     (re.compile(r"\d\s*ярд|(?<![А-ЯЁа-яё])(?:фут(?:а|ов)?|дюйм(?:а|ов)?|мил[яюиье]|миль|галлон(?:а|ов)?|унци[йяю])(?![А-ЯЁа-яё])"),
      "меры — метрические: ярд = метр, фут ÷ 3, миля × 1,6 км, дюйм → см, галлон → л (Р-64)", False),
 ]
+DECISION = re.compile(r"^Р-\d+$")
 # characteristics are named by id but are not records (schemas/skill.schema.json, opposed_by)
 VIRTUAL = re.compile(r"^coc:characteristic:[a-z]+$")
 # fields that quote other data as it was: a correction's «from» and a misprint's «printed» keep the old writing
@@ -90,6 +91,9 @@ def main() -> int:
                 errors["схема"].append(f"{rel(p)}: {e}")
         if p.read_bytes() != dump(rec).encode("utf-8"):
             errors["формат файла"].append(f"{rel(p)}: не UTF-8 / отступ 2 / LF / перевод строки в конце — `python pipeline/fix/normalize_terms.py {rel(p)}`")
+        for i, c in enumerate(rec.get("corrections") or []):
+            if isinstance(c, dict) and c.get("ref") is not None and not DECISION.match(str(c["ref"])):
+                errors["в corrections.ref — только номер решения «Р-NN» или null; книга и страница — в reason (Р-140)"].append(f"{rel(p)}: corrections[{i}].ref = {c['ref']!r}")
         q = rec.get("quality") or {}
         if bool(rec.get("errata")) != ("parse_uncertain" in (q.get("flags") or [])):
             warnings["флаг «опечатка книги» (parse_uncertain) стоит ровно у записей с errata"].append(

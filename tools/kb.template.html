@@ -716,6 +716,13 @@ function opposed(c) {
   return (out ? `<section><h3>Контрнавыки</h3><p class="muted">Чем противник отвечает во встречной проверке.</p><ul>${out}</ul></section>` : '')
     + (inc ? `<section><h3>Сам служит контрнавыком для</h3><p>${inc}</p></section>` : '');
 }
+// close skills (Р-123): own see_also and, reversed, skills that point here
+function seeAlso(c) {
+  const own = (c.see_also||[]).filter(x => byId(x.skill)).map(x => `<li>${link(x.skill, byId(x.skill).name.ru)}${x.specialization ? ` (${esc(x.specialization)})` : ''}${x.note ? ` <span class="muted">— ${esc(x.note)}</span>` : ''}</li>`);
+  const back = DATA.skills.filter(s => (s.see_also||[]).some(x => x.skill === c.id)).map(s => { const x = s.see_also.find(y => y.skill === c.id); return `<li>${link(s.id, s.name.ru)}${x.specialization ? ` <span class="muted">— к специализации «${esc(x.specialization)}»</span>` : ''}</li>`; });
+  const all = [...own, ...back];
+  return all.length ? `<section><h3>Близкие навыки</h3><ul>${all.join('')}</ul></section>` : '';
+}
 function skillCard(c) {
   const specs = (c.specializations||[]).map(s => `<tr><td>${esc(s.name.ru)}${s.name.en ? ` <span class="muted">${esc(s.name.en)}</span>` : ''}</td><td class="num">${s.base ? esc(s.base.raw) : '—'}</td></tr>`).join('');
   const era = (c.axes?.era||[]).filter(e => e !== 'any');
@@ -725,6 +732,7 @@ function skillCard(c) {
     ${c.base.value == null && c.base.raw === '—' ? '' : `<div class="chars"><div><b>База</b><span>${esc(c.base.raw)}</span></div></div>`}
     ${c.description?.ru ? `<p>${esc(c.description.ru)}</p>` : ''}
     ${opposed(c)}
+    ${seeAlso(c)}
     ${specs ? `<section><h3>Специализации</h3><table><tr><th>Название</th><th>База</th></tr>${specs}</table></section>` : ''}
     ${(c.examples||[]).length ? `<section><h3>Примеры</h3><ul>${c.examples.map(e => `<li>${esc(e)}</li>`).join('')}</ul></section>` : ''}
     ${errata(c)}

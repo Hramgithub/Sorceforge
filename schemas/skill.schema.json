@@ -141,6 +141,34 @@
           }
         }
       }
+    },
+    "see_also": {
+      "type": "array",
+      "description": "Близкие навыки (Р-123): например, навык сценария и его аналог из «Книги хранителя». Просмотрщик показывает связь в обе стороны.",
+      "items": {
+        "type": "object",
+        "required": [
+          "skill"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "skill": {
+            "$ref": "common.schema.json#/$defs/id"
+          },
+          "specialization": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
     }
   },
   "$defs": {

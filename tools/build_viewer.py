@@ -29,7 +29,8 @@ def main() -> None:
     a = ap.parse_args()
     data = {"maps": load(a.kb, "maps"), "creatures": load(a.kb, "creatures"), "characters": load(a.kb, "characters"), "skills": load(a.kb, "skills"),
             "occupations": load(a.kb, "occupations"), "spells": load(a.kb, "spells"), "tomes": load(a.kb, "tomes"), "weapons": load(a.kb, "weapons"), "locations": load(a.kb, "locations"),
-            "items": load(a.kb, "items"), "handouts": load(a.kb, "handouts"), "organizations": load(a.kb, "organizations"), "scenes": load(a.kb, "scenes")}
+            "items": load(a.kb, "items"), "handouts": load(a.kb, "handouts"), "organizations": load(a.kb, "organizations"), "scenes": load(a.kb, "scenes"),
+            "scenarios": load(a.kb, "scenarios")}
     payload = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
     html = a.template.read_text(encoding="utf-8").replace("__DATA__", payload)
     a.out.write_text(html, encoding="utf-8")

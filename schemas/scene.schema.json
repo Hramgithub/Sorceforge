@@ -43,6 +43,32 @@
       ],
       "description": "Когда случается (часть сценария, условие)."
     },
+    "arc": {
+      "type": "object",
+      "description": "Место сцены в структуре книги (Р-133): сценарий или этап, часть этапа, порядок внутри.",
+      "required": [
+        "scenario"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "scenario": {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        "part": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Часть этапа, как в книге: «Часть вторая: Адские каналы»."
+        },
+        "order": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      }
+    },
     "where": {
       "type": "array",
       "description": "Где происходит.",

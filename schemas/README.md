@@ -21,7 +21,8 @@
 | `item.schema.json` | предмет: артефакт, улика, сюжетная вещь (Р-128) | `kb/books/<книга>/items/` |
 | `handout.schema.json` | раздаточный материал: текст для игроков (Р-128) | `kb/books/<книга>/handouts/` |
 | `organization.schema.json` | организация: культ, агентство, общество, клан (Р-128) | `kb/books/<книга>/organizations/` |
-| `scene.schema.json` | сцена сценария (Р-128) | `kb/books/<книга>/scenes/` |
+| `scene.schema.json` | сцена сценария (Р-128); место в сценарии — `arc` (Р-133) | `kb/books/<книга>/scenes/` |
+| `scenario.schema.json` | сценарий или его этап: фон, завязка, ход по шагам, итог (Р-134) | `kb/books/<книга>/scenarios/` |
 | `examples/` | по примеру на каждый вид записи | — |
 
 Проверка (без внешних библиотек):

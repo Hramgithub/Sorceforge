@@ -161,7 +161,9 @@ const WGROUP = { melee: 'Ближний бой', handgun: 'Пистолеты и
 // weapon filters: type here, era in its own select (#era)
 FILTERS.weapon = [['', 'Все типы'], ...Object.entries(WGROUP)];
 // scenario material: sections of the city guide (Р-132), grouped by type
-const STORY = [['item', 'Предметы'], ['handout', 'Раздаточные материалы'], ['organization', 'Организации'], ['scene', 'Сцены']];
+const STORY = [['scenario', 'Сценарии'], ['item', 'Предметы'], ['handout', 'Раздаточные материалы'], ['organization', 'Организации'], ['scene', 'Сцены']];
+// a scene lives in the «Сценарии» section, under its scenario (Р-133)
+const sectionOf = k => k === 'scene' ? 'scenario' : k;
 const STORY_TYPE = { item: 'item_type', handout: 'handout_type', organization: 'org_type' };
 FILTERS.location = [['', 'Все места'], ...['город','район','здание','место','область'].map(x => [x, x[0].toUpperCase() + x.slice(1)])];
 // city helpers (Р-78): which city a place belongs to, who lives in a city
@@ -179,12 +181,12 @@ let city = CITIES[0]?.id || null, locMode = 'houses', citySection = 'overview';
 // sections of the city reference page shown from the sub-bar («Кто где живёт» gave way to the «Жители» tree, Р-121);
 // the scenario's scenes, items, handouts and organizations are sections of the same guide (Р-132)
 const CITY_SECTIONS = [['overview', 'Обзор'], ['map', 'Карта'], ['history', 'История'], ['tables', 'Таблицы'], ['leads', 'Зацепки'],
-  ['scene', 'Сцены'], ['item', 'Предметы'], ['handout', 'Документы'], ['organization', 'Организации']];
+  ['scenario', 'Сценарии'], ['item', 'Предметы'], ['handout', 'Документы'], ['organization', 'Организации']];
 const openDist = new Set();
 // scenario material (Р-128): items, handouts, organizations, scenes live in the city guide (Р-132)
-['items', 'handouts', 'organizations', 'scenes'].forEach(k => DATA[k] = DATA[k] || []);
+['items', 'handouts', 'organizations', 'scenes', 'scenarios'].forEach(k => DATA[k] = DATA[k] || []);
 const SET = { creature: DATA.creatures, character: DATA.characters, skill: DATA.skills, occupation: DATA.occupations, spell: DATA.spells, tome: DATA.tomes, weapon: DATA.weapons, location: DATA.locations,
-  item: DATA.items, handout: DATA.handouts, organization: DATA.organizations, scene: DATA.scenes };
+  item: DATA.items, handout: DATA.handouts, organization: DATA.organizations, scene: DATA.scenes, scenario: DATA.scenarios };
 const ALL = Object.values(SET).flat();
 const TOME_TYPE = { mythos_tome: 'книга Мифов', occult_book: 'оккультная книга' };
 const byId = id => ALL.find(x => x.id === id);
@@ -245,6 +247,7 @@ function subtitle(c) {
   if (c.kind === 'weapon') return [caliberOf(c), WGROUP[c.group]].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'location') return [c.number ? '№ ' + c.number : '', c.location_type, c.part_of && byId(c.part_of) ? byId(c.part_of).name.ru : ''].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'tome') return [c.name.en, c.language].filter(Boolean).map(esc).join(' · ');
+  if (c.kind === 'scenario') return [c.part_of && byId(c.part_of) ? byId(c.part_of).name.ru : 'сценарий', BOOKS[bookOf(c)] || ''].filter(Boolean).map(esc).join(' · ');
   if (STORY_TYPE[c.kind] !== undefined || c.kind === 'scene') return [c[STORY_TYPE[c.kind]], c.kind === 'scene' ? c.when : '', (BOOKS[bookOf(c)] || '')].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'occupation') return `Средства ${esc(c.credit_rating.raw)}${c.lovecraftian ? ' · лавкрафтовская' : ''}${c.group ? ' · ' + esc(c.group) : ''}`;
   return `${esc(c.name.en||'')} · ${c.base.raw === '—' ? esc(c.category) : 'база ' + esc(c.base.raw)}`;
@@ -351,8 +354,9 @@ function renderSubbar() {
     + '<span class="sep"></span>'
     + [['houses', 'Дома'], ['residents', 'Жители']].map(([m, l]) => `<button data-mode="${m}" class="${m === locMode ? 'active' : ''}">${l}</button>`).join('')
     // a section is marked while the city page or one of its scenario records is open
+    // «Сценарии» counts the book's scenarios, not their stages
     + (city ? '<span class="sep"></span>' + CITY_SECTIONS.filter(([s]) => s === 'map' ? mapsOf(city).length : !SET[s] || storyIn(city, s).length)
-      .map(([s, l]) => `<button data-sec="${s}" class="${(current === city || SET[s] && byId(current)?.kind === s) && s === citySection ? 'active' : ''}">${l}${SET[s] ? ` (${storyIn(city, s).length})` : ''}</button>`).join('') : '');
+      .map(([s, l]) => `<button data-sec="${s}" class="${(current === city || SET[s] && sectionOf(byId(current)?.kind) === s) && s === citySection ? 'active' : ''}">${l}${SET[s] ? ` (${storyIn(city, s).filter(x => !x.part_of).length})` : ''}</button>`).join('') : '');
   bar.querySelectorAll('[data-guide]').forEach(b => b.onclick = () => { guide = b.dataset.guide; const cs = guideCities(); if (cs.length && !cs.some(c => c.id === city)) city = cs[0].id; renderSubbar(); city ? show(city) : renderList(); });
   // the map on screen redraws too: «Жители» puts resident dots around the houses
   bar.querySelectorAll('[data-mode]').forEach(b => b.onclick = () => { locMode = b.dataset.mode; renderSubbar(); renderList(); if (document.getElementById('mapinner')) initMap(current); });
@@ -1008,7 +1012,16 @@ function initMap(cityId) {
 }
 
 // scenario material cards (Р-128, Р-129)
-const STORY_KIND = { item: 'предмет', handout: 'раздаточный материал', organization: 'организация', scene: 'сцена' };
+const STORY_KIND = { item: 'предмет', handout: 'раздаточный материал', organization: 'организация', scene: 'сцена', scenario: 'сценарий' };
+// what a story record points at: its links, its leads and the records named in its scenario steps
+const pointsAt = x => [...(x.refs||[]), ...(x.leads_to||[]), ...(x.steps||[]).flatMap(s => s.refs||[])];
+const byOrder = (a, b) => (a.order ?? 99) - (b.order ?? 99);
+const scenesOf = id => DATA.scenes.filter(x => x.arc?.scenario === id).sort((a, b) => (a.arc.order ?? 99) - (b.arc.order ?? 99));
+// a scenario's scenes, under the book's part headings
+function sceneList(id) {
+  const ss = scenesOf(id);
+  return [...new Set(ss.map(x => x.arc.part || ''))].map(p => `${p ? `<p class="muted" style="margin:8px 0 2px">${esc(p)}</p>` : ''}<ul>${ss.filter(x => (x.arc.part || '') === p).map(x => `<li>${link(x.id, x.name.ru)}</li>`).join('')}</ul>`).join('');
+}
 const paraBlock = x => (x || '').split('\n').filter(Boolean).map(p => `<p>${esc(p)}</p>`).join('');
 const placeLinks = xs => xs.map(x => { const l = byId(x.location); return (l ? link(l.id, (l.number ? l.number + ' ' : '') + l.name.ru) : esc(x.location)) + (x.note ? ` <span class="muted">(${esc(x.note)})</span>` : ''); }).join(', ');
 const peopleLinks = xs => xs.map(x => (byId(x.id) ? link(x.id, byId(x.id).name.ru) : esc(x.id)) + (x.role ? ` <span class="muted">(${esc(x.role)})</span>` : '')).join(', ');
@@ -1018,6 +1031,9 @@ const storyPlaces = x => [...(x.found_at||[]), ...(x.based_at||[]), ...(x.where|
 const storyCityCache = new Map();
 function storyCities(x) {
   if (storyCityCache.has(x.id)) return storyCityCache.get(x.id);
+  // a scene goes with its scenario, a stage with its scenario
+  const up = x.kind === 'scene' ? byId(x.arc?.scenario) : x.kind === 'scenario' ? byId(x.part_of) : null;
+  if (up) { const cs = storyCities(up); storyCityCache.set(x.id, cs); return cs; }
   let cs = [...new Set(storyPlaces(x).map(l => cityOf(l)?.id).filter(Boolean))];
   if (!cs.length) {
     const n = {};
@@ -1031,6 +1047,7 @@ const storyIn = (cityId, kind) => SET[kind].filter(x => storyCities(x).includes(
 // a guide section: records in book order, grouped by type (scenes by the part of the scenario in «Когда»)
 const pageOf = x => parseInt(x.sources?.[0]?.printed_page) || 0;
 function storySection(cityId, kind) {
+  if (kind === 'scenario') return scenarioTree(cityId);
   const xs = storyIn(cityId, kind).sort((a, b) => pageOf(a) - pageOf(b));
   const key = x => kind === 'scene' ? (x.when || '').split(/[:,(]/)[0].trim() || 'Прочее' : x[STORY_TYPE[kind]] || 'прочее';
   const hint = x => kind === 'scene' ? (x.when || '').slice(key(x).length).replace(/^[\s:,]+/, '') : '';
@@ -1039,14 +1056,52 @@ function storySection(cityId, kind) {
     return `<section><h3>${esc(g[0].toUpperCase() + g.slice(1))} (${ys.length})</h3><ul>${ys.map(x => `<li>${link(x.id, x.name.ru)}${hint(x) ? ` <span class="muted">— ${esc(hint(x))}</span>` : ''}${pageOf(x) ? ` <span class="muted">· с. ${pageOf(x)}</span>` : ''}</li>`).join('')}</ul></section>`;
   }).join('') || '<p class="muted">Записей нет.</p>';
 }
+// «Сценарии» in the guide: scenario → stage → part → scenes, in the book's order (Р-133)
+function scenarioTree(cityId) {
+  const xs = storyIn(cityId, 'scenario');
+  const head = x => `${link(x.id, x.name.ru)}${(x.quality?.flags||[]).includes('incomplete') ? ' <span class="tag warn" title="Пока только структура">набросок</span>' : ''}`;
+  const tree = xs.filter(x => !x.part_of || !byId(x.part_of)).sort(byOrder).map(s => {
+    const stages = xs.filter(x => x.part_of === s.id).sort(byOrder);
+    return `<section><h3>${head(s)}</h3>${s.summary ? `<p class="muted">${esc(s.summary.ru)}</p>` : ''}${sceneList(s.id)}`
+      + stages.map(t => `<h4 style="margin:12px 0 2px">${head(t)}</h4>${sceneList(t.id)}`).join('') + '</section>';
+  }).join('');
+  const loose = storyIn(cityId, 'scene').filter(x => !byId(x.arc?.scenario));
+  return (tree + (loose.length ? `<section><h3>Сцены вне сценариев (${loose.length})</h3><ul>${loose.map(x => `<li>${link(x.id, x.name.ru)}</li>`).join('')}</ul></section>` : '')) || '<p class="muted">Сценариев нет.</p>';
+}
+function scenarioCard(c) {
+  const sec = (t, body) => body ? `<section><h3>${t}</h3>${body}</section>` : '';
+  const parent = c.part_of && byId(c.part_of);
+  const stages = DATA.scenarios.filter(x => x.part_of === c.id).sort(byOrder);
+  const steps = (c.steps||[]).map(s => `<li style="margin-bottom:8px"><b>${esc(s.title)}</b>${s.optional ? ' <span class="tag">по условию</span>' : ''}<br>${esc(s.text)}${(s.refs||[]).filter(byId).length ? `<br><span class="muted">→ ${refLinks(s.refs.filter(byId))}</span>` : ''}</li>`).join('');
+  return `<h2>${esc(c.name.ru)}</h2>
+    <div class="sub">${parent ? 'этап сценария «' + link(parent.id, parent.name.ru) + '»' : 'сценарий'}${BOOKS[bookOf(c)] ? ' · ' + esc(BOOKS[bookOf(c)]) : ''}</div>
+    ${flags(c)}
+    ${sec('Коротко', paraBlock(c.summary?.ru))}
+    ${stages.length ? sec('Этапы', `<ul>${stages.map(t => `<li>${link(t.id, t.name.ru)}${t.summary ? ` <span class="muted">— ${esc(t.summary.ru)}</span>` : ''}</li>`).join('')}</ul>`) : ''}
+    ${sec('Для Хранителя', paraBlock(c.keeper_info?.ru))}
+    ${sec('Завязка', paraBlock(c.hook?.ru))}
+    ${sec('Советы Хранителю', paraBlock(c.advice?.ru))}
+    ${steps ? sec('Ход сценария', `<ol style="padding-left:22px">${steps}</ol>`) : ''}
+    ${sec('Сцены', sceneList(c.id))}
+    ${(c.tables||[]).map(locTable).join('')}
+    ${sec('Итог', paraBlock(c.conclusion?.ru))}
+    ${(c.refs||[]).length ? sec('Связано', `<p>${refLinks(c.refs)}</p>`) : ''}
+    ${errata(c)}
+    <section><h3>Источник</h3><div>${sources(c)}</div></section>
+    ${corrections(c)}`;
+}
 function storyCard(c) {
   const sec = (t, body) => body ? `<section><h3>${t}</h3>${body}</section>` : '';
   const type = c[STORY_TYPE[c.kind]];
-  const back = storyAll().filter(x => x.id !== c.id && ((x.refs||[]).includes(c.id) || (x.leads_to||[]).includes(c.id)));
+  const back = storyAll().filter(x => x.id !== c.id && x.id !== c.arc?.scenario && pointsAt(x).includes(c.id));
+  // a scene shows its place in the scenario and steps to the previous and next scene
+  const arc = c.arc && byId(c.arc.scenario);
+  const sib = arc ? scenesOf(arc.id) : [], at = sib.findIndex(x => x.id === c.id);
+  const nav = arc ? [sib[at - 1] ? '← ' + link(sib[at - 1].id, sib[at - 1].name.ru) : '', sib[at + 1] ? link(sib[at + 1].id, sib[at + 1].name.ru) + ' →' : ''].filter(Boolean).join(' · ') : '';
   return `<h2>${esc(c.name.ru)}</h2>
     <div class="sub">${STORY_KIND[c.kind]}${type ? ' · ' + esc(type) : ''}${c.name.en ? ' · ' + esc(c.name.en) : ''}${(c.aliases||[]).length ? ' · также: ' + c.aliases.map(esc).join(', ') : ''}</div>
     ${flags(c)}
-    ${c.when ? `<dl><dt>Когда</dt><dd>${esc(c.when)}</dd></dl>` : ''}
+    ${arc || c.when ? `<dl>${arc ? `<dt>Сценарий</dt><dd>${arc.part_of && byId(arc.part_of) ? link(arc.part_of, byId(arc.part_of).name.ru) + ' · ' : ''}${link(arc.id, arc.name.ru)}${c.arc.part ? ' · ' + esc(c.arc.part) : ''}${nav ? `<br><span class="muted">${nav}</span>` : ''}</dd>` : ''}${c.when ? `<dt>Когда</dt><dd>${esc(c.when)}</dd>` : ''}</dl>` : ''}
     ${sec('Описание', paraBlock(c.description?.ru))}
     ${c.text ? sec('Текст для игроков', `<blockquote class="handout">${paraBlock(c.text.ru)}</blockquote>`) : ''}
     ${c.goals ? sec('Цели', paraBlock(c.goals.ru)) : ''}
@@ -1077,7 +1132,7 @@ function storyLinks(c) {
   add('Здесь находятся', [...DATA.items, ...DATA.handouts].filter(x => here(x.found_at)).map(x => link(x.id, x.name.ru)));
   add('Здесь базируются', DATA.organizations.filter(o => here(o.based_at)).map(o => link(o.id, o.name.ru)));
   add('Сцены здесь', DATA.scenes.filter(s => here(s.where)).map(s => link(s.id, s.name.ru)));
-  add('Упоминается в сюжете', storyAll().filter(x => (x.refs||[]).includes(c.id) || (x.leads_to||[]).includes(c.id)).map(x => link(x.id, x.name.ru)));
+  add('Упоминается в сюжете', storyAll().filter(x => pointsAt(x).includes(c.id)).map(x => link(x.id, x.name.ru)));
   return rows.length ? `<section><h3>Сюжет</h3><dl>${rows.join('')}</dl></section>` : '';
 }
 
@@ -1101,7 +1156,7 @@ function show(id, how = 'push') {
     const cs = storyCities(c);
     if (cs.length && !cs.includes(city)) city = cs[0];
     if (city) openCity.add(city);
-    citySection = c.kind;
+    citySection = sectionOf(c.kind);
   }
   // current first: the sub-bar marks «Обзор / Карта / …» only while the city page itself is open
   current = id;
@@ -1109,7 +1164,7 @@ function show(id, how = 'push') {
   if (tab === 'location') renderSubbar();
   renderList();
   const card = document.getElementById('card');
-  card.innerHTML = STORY.some(([k]) => k === c.kind) ? storyCard(c) : c.kind === 'creature' ? creatureCard(c) : c.kind === 'character' ? characterCard(c) : c.kind === 'occupation' ? occupationCard(c) : c.kind === 'spell' ? spellCard(c) : c.kind === 'tome' ? tomeCard(c) : c.kind === 'weapon' ? weaponCard(c) : c.kind === 'location' ? locationCard(c) : skillCard(c);
+  card.innerHTML = c.kind === 'scenario' ? scenarioCard(c) : STORY.some(([k]) => k === c.kind) ? storyCard(c) : c.kind === 'creature' ? creatureCard(c) : c.kind === 'character' ? characterCard(c) : c.kind === 'occupation' ? occupationCard(c) : c.kind === 'spell' ? spellCard(c) : c.kind === 'tome' ? tomeCard(c) : c.kind === 'weapon' ? weaponCard(c) : c.kind === 'location' ? locationCard(c) : skillCard(c);
   // Ctrl/Shift/⌘-click and the middle button are left to the browser (new tab or window at the link's address)
   card.querySelectorAll('[data-go]').forEach(a => a.onclick = e => { if (e.ctrlKey || e.metaKey || e.shiftKey || e.button) return; e.preventDefault(); show(a.dataset.go); });
   card.querySelectorAll('[data-onmap]').forEach(a => a.onclick = e => { e.preventDefault(); openOnMap(a.dataset.onmap); });

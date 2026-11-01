@@ -98,6 +98,10 @@ def main() -> int:
         for i, c in enumerate(rec.get("corrections") or []):
             if isinstance(c, dict) and c.get("ref") is not None and not DECISION.match(str(c["ref"])):
                 errors["в corrections.ref — только номер решения «Р-NN» или null; книга и страница — в reason (Р-140)"].append(f"{rel(p)}: corrections[{i}].ref = {c['ref']!r}")
+        if rec.get("kind") == "location" and rec.get("location_type") == "здание":
+            for al in rec.get("aliases") or []:
+                if re.match(r"(Семья|Семейство)\b", al):
+                    errors["у здания в псевдонимах нет имён людей: «Семья …» (Р-82)"].append(f"{rel(p)}: aliases: {al}")
         q = rec.get("quality") or {}
         if bool(rec.get("errata")) != ("parse_uncertain" in (q.get("flags") or [])):
             errors["флаг «опечатка книги» (parse_uncertain) стоит ровно у записей с errata (Р-141): `python pipeline/fix/errata_flag.py <файл>`"].append(

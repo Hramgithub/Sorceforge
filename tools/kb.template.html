@@ -454,6 +454,7 @@ function weaponCard(c) {
     ${parent ? `<p>Позиция таблицы: ${link(parent.id, parent.name.ru)}</p>` : ''}
     ${c.description?.ru ? `<section><h3>Описание</h3>${c.description.ru.split('\n').filter(Boolean).map(p => `<p>${esc(p)}</p>`).join('')}</section>` : ''}
     ${models.length ? `<section><h3>Модели</h3><p>${models.map(x => link(x.id, x.name.ru)).join(', ')}</p></section>` : ''}
+    ${(c.source_variants||[]).length ? `<section><h3>Иначе в других книгах</h3><ul>${c.source_variants.map(v => `<li><b>${esc(BOOKS[v.book_id] || v.book_id)}${v.printed_page ? ', с. ' + esc(v.printed_page) : ''}.</b> ${esc(v.text)}</li>`).join('')}</ul></section>` : ''}
     ${errata(c)}
     <section><h3>Источник</h3><div>${sources(c)}</div></section>
     ${corrections(c)}`;

@@ -188,6 +188,32 @@
     "errata": {
       "$ref": "common.schema.json#/$defs/errata"
     },
+    "source_variants": {
+      "type": "array",
+      "description": "Иначе в других книгах (Р-124): числа, которые сценарий или другая книга печатает для этого оружия иначе. Запись справочника остаётся по основным книгам; здесь — для Хранителя, как напечатано.",
+      "items": {
+        "type": "object",
+        "required": [
+          "book_id",
+          "text"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "book_id": {
+            "type": "string"
+          },
+          "printed_page": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "text": {
+            "type": "string"
+          }
+        }
+      }
+    },
     "corrections": {
       "type": "array",
       "items": {

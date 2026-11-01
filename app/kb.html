@@ -64,7 +64,7 @@ a { color:var(--accent); }
 #card.wide { max-width:none; }
 .maptools { display:flex; gap:6px; flex-wrap:wrap; align-items:center; margin:8px 0; }
 .maptools button { font:inherit; padding:4px 10px; border:1px solid var(--line); border-radius:6px; background:none; color:inherit; cursor:pointer; }
-.maptools button.active { background:var(--panel); border-color:var(--accent); color:var(--accent); font-weight:600; }
+.maptools .mapname { color:var(--accent); font-size:16px; margin-right:4px; }
 .maptools .sep { width:1px; align-self:stretch; background:var(--line); margin:0 4px; }
 .mapbox { position:relative; overflow:auto; max-height:calc(100vh - 200px); border:1px solid var(--line); border-radius:6px; background:#f6efcf; cursor:grab; }
 .mapbox.drag { cursor:grabbing; }
@@ -803,7 +803,8 @@ function initMap(cityId) {
   if (view) mapZoom = view.z;
   if (focus.length) mapZoom = zoomIn ? Math.max(mapZoom ?? 1, 2.5) : null;
   const spot = (s, i) => `<button type="button" class="spot ${sh.kind}${s.printed === false ? ' computed' : s.note ? ' doubt' : ''}${focus.includes(s.target) ? ' focus' : ''}" data-i="${i}" style="left:${s.x}%;top:${s.y}%;width:${sh.w}%;height:${sh.h}%" aria-label="${esc(s.label)}"></button>`;
-  wrap.innerHTML = `<div class="maptools">${ms.map(x => `<button type="button" data-map="${esc(x.id)}" class="${x.id === m.id ? 'active' : ''}">${esc(x.name.ru)}</button>`).join('')}
+  // maps are switched from the left list (map icons, Р-120); here only the name of the open one
+  wrap.innerHTML = `<div class="maptools"><b class="mapname">${esc(m.name.ru)}</b>
       <span class="sep"></span><button type="button" data-zoom="out" title="Уменьшить">−</button><button type="button" data-zoom="all">Целиком</button><button type="button" data-zoom="width">По ширине</button><button type="button" data-zoom="in" title="Увеличить">+</button>
       <span class="sep"></span><input id="mapq" type="search" placeholder="Номер или название" aria-label="Найти на карте"> <span id="mapcount" class="muted"></span>
       <span class="sep"></span><label><input type="checkbox" id="mapedit"${mapEdit ? ' checked' : ''}> Правка меток</label></div>
@@ -836,7 +837,6 @@ function initMap(cityId) {
   };
   const remember = () => { mapView[m.id] = { z: mapZoom, cx: (box.scrollLeft + box.clientWidth / 2) / inner.offsetWidth, cy: (box.scrollTop + box.clientHeight / 2) / inner.offsetHeight }; };
   box.addEventListener('scroll', remember);
-  wrap.querySelectorAll('[data-map]').forEach(b => b.onclick = () => { if (b.dataset.map !== mapId) { mapId = b.dataset.map; mapZoom = null; initMap(cityId); } });
   const ZOOM = { all: () => 0, width: () => 1, in: () => mapZoom * 1.4, out: () => mapZoom / 1.4 };
   wrap.querySelectorAll('[data-zoom]').forEach(b => b.onclick = () => setZoom(ZOOM[b.dataset.zoom]()));
   box.addEventListener('wheel', e => { e.preventDefault(); const r = box.getBoundingClientRect(); setZoom(mapZoom * (e.deltaY < 0 ? 1.2 : 1 / 1.2), e.clientX - r.left, e.clientY - r.top); }, { passive: false });

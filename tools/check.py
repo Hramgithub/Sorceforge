@@ -13,6 +13,7 @@ Exit code 1 when there are errors; warnings do not fail.
 from __future__ import annotations
 
 import argparse
+import json
 import re
 import sys
 from collections import Counter, defaultdict
@@ -68,6 +69,7 @@ def main() -> int:
     errors: dict[str, list[str]] = defaultdict(list)
     warnings: dict[str, list[str]] = defaultdict(list)
     books = book_ids()
+    registry = set(json.loads((ROOT / "pipeline/source/books.json").read_text(encoding="utf-8")))
     ids: dict[str, list[Path]] = defaultdict(list)
     kinds = Counter()
     validators: dict[str, Validator] = {}
@@ -107,6 +109,9 @@ def main() -> int:
         for i, ab in enumerate(rec.get("abilities") or []):
             if isinstance(ab, dict) and not re.search(r"[А-ЯЁа-яё]", ab.get("summary") or ""):
                 errors["у способности русский текст в summary; raw — как напечатано (Р-33, Р-144)"].append(f"{rel(p)}: abilities[{i}] «{ab.get('name')}»")
+        for path, s in strings(rec):
+            if path.rsplit(".", 1)[-1] == "book_id" and s not in registry:
+                errors["книга не записана в pipeline/source/books.json (Р-148)"].append(f"{rel(p)}: {path} = {s}")
         q = rec.get("quality") or {}
         if bool(rec.get("errata")) != ("parse_uncertain" in (q.get("flags") or [])):
             errors["флаг «опечатка книги» (parse_uncertain) стоит ровно у записей с errata (Р-141): `python pipeline/fix/errata_flag.py <файл>`"].append(

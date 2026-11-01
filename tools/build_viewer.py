@@ -2,7 +2,7 @@
 
 Sources: kb/<kind>/*.json and kb/books/*/<kind>/*.json for creatures, characters, skills,
 occupations, spells, tomes, weapons, locations and maps (images in app/maps/); template tools/kb.template.html (placeholder
-__DATA__). Also renders the public landing page app/index.html from tools/landing.template.html
+__DATA__); book titles from pipeline/source/books.json. Also renders the public landing page app/index.html from tools/landing.template.html
 (placeholders __COUNT_<kind>__ and __UPDATED__).
 
 Usage: python tools/build_viewer.py [--kb kb] [--template tools/kb.template.html] [--out app/kb.html]
@@ -31,6 +31,9 @@ def main() -> None:
             "occupations": load(a.kb, "occupations"), "spells": load(a.kb, "spells"), "tomes": load(a.kb, "tomes"), "weapons": load(a.kb, "weapons"), "locations": load(a.kb, "locations"),
             "items": load(a.kb, "items"), "handouts": load(a.kb, "handouts"), "organizations": load(a.kb, "organizations"), "scenes": load(a.kb, "scenes"),
             "scenarios": load(a.kb, "scenarios")}
+    # book titles for display come from the one list of books (Р-148); only titles go to the page, never local paths
+    books = json.loads((root / "pipeline" / "source" / "books.json").read_text(encoding="utf-8"))
+    data["books"] = {k: v["title"] for k, v in books.items()}
     payload = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
     html = a.template.read_text(encoding="utf-8").replace("__DATA__", payload)
     a.out.write_text(html, encoding="utf-8")

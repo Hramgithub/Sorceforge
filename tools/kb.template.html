@@ -182,7 +182,9 @@ const byId = id => ALL.find(x => x.id === id);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const bookOf = c => c.sources?.[0]?.book_id;
 const kindOf = c => c.kind;
-const link = (id, text) => `<a href="#" data-go="${esc(id)}">${esc(text)}</a>`;
+// a link carries the record's real address, so «open in new tab» works; a plain click is handled in place (show)
+const hashOf = c => '#' + encodeURIComponent(c.kind + '/' + c.id.split(/[:/]/).pop());
+const link = (id, text) => `<a href="${byId(id) ? esc(hashOf(byId(id))) : '#'}" data-go="${esc(id)}">${esc(text)}</a>`;
 let tab = 'creature', current = null;
 
 const occOf = c => c.occupation_ref ? c.occupation_ref : (c.occupation?.ru || '').trim().toLowerCase();
@@ -990,12 +992,13 @@ function show(id, how = 'push') {
   renderList();
   const card = document.getElementById('card');
   card.innerHTML = c.kind === 'creature' ? creatureCard(c) : c.kind === 'character' ? characterCard(c) : c.kind === 'occupation' ? occupationCard(c) : c.kind === 'spell' ? spellCard(c) : c.kind === 'tome' ? tomeCard(c) : c.kind === 'weapon' ? weaponCard(c) : c.kind === 'location' ? locationCard(c) : skillCard(c);
-  card.querySelectorAll('[data-go]').forEach(a => a.onclick = e => { e.preventDefault(); show(a.dataset.go); });
+  // Ctrl/Shift/⌘-click and the middle button are left to the browser (new tab or window at the link's address)
+  card.querySelectorAll('[data-go]').forEach(a => a.onclick = e => { if (e.ctrlKey || e.metaKey || e.shiftKey || e.button) return; e.preventDefault(); show(a.dataset.go); });
   card.querySelectorAll('[data-onmap]').forEach(a => a.onclick = e => { e.preventDefault(); openOnMap(a.dataset.onmap); });
   const onMapPage = c.kind === 'location' && c.location_type === 'город' && !c.part_of && citySection === 'map';
   card.classList.toggle('wide', onMapPage);
   const atMap = onMapPage && initMap(c.id);
-  const hash = '#' + encodeURIComponent(c.kind + '/' + id.split(/[:/]/).pop());
+  const hash = hashOf(c);
   if (how === 'replace') history.replaceState(null, '', hash);
   else if (how === 'push' && location.hash !== hash) history.pushState(null, '', hash);
   // the page scrolls to the map only for «Показать на карте» and for «Назад» back to a remembered view; any other click starts at the top

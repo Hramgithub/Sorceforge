@@ -1,7 +1,9 @@
 """Read a source book by its pages (Р-139): text, search, page images and crops.
 
 Books are registered in pipeline/source/books.json: book_id → pdf path, offset (printed page − offset = physical
-page in the PDF), language, notes. The text layer is taken once with Poppler `pdftotext -layout` into the local cache
+page in the PDF), language, edition, notes. Edition (Р-147): `original` — the publisher's original; `official` —
+an official translation; `trusted` — a translation the owner marked as reliable; `machine` — a machine translation,
+never a source (the tool refuses to read it). The text layer is taken once with Poppler `pdftotext -layout` into the local cache
 `.cache/sources/<book_id>/` (not in git); page images go there too. Pages are printed pages unless --physical.
 
 Usage:
@@ -38,7 +40,10 @@ def book(book_id: str) -> dict:
     books = json.loads(BOOKS.read_text(encoding="utf-8"))
     if book_id not in books:
         sys.exit(f"книга {book_id} не записана в {BOOKS.relative_to(ROOT)}; известны: {', '.join(books)}")
-    return books[book_id]
+    b = books[book_id]
+    if b.get("edition") not in ("original", "official", "trusted"):
+        sys.exit(f"{book_id}: издание «{b.get('edition')}» не источник (Р-147): нужен оригинал, официальный перевод или перевод, отмеченный владельцем")
+    return b
 
 
 def pages_arg(items: list[str]) -> list[int]:

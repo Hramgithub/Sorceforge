@@ -586,7 +586,7 @@ function weaponCard(c) {
     ${flags(c)}
     <table>${rows.map(([k, v]) => `<tr><th>${k}</th><td>${v}</td></tr>`).join('')}</table>
     ${parent ? `<p>Позиция таблицы: ${link(parent.id, parent.name.ru)}</p>` : ''}
-    ${c.description?.ru ? `<section><h3>Описание</h3>${c.description.ru.split('\n').filter(Boolean).map(p => `<p>${esc(p)}</p>`).join('')}</section>` : ''}
+    ${c.description?.ru ? `<section><h3>Описание</h3>${richText(c.description.ru)}</section>` : ''}
     ${models.length ? `<section><h3>Модели</h3><p>${models.map(x => link(x.id, x.name.ru)).join(', ')}</p></section>` : ''}
     ${(c.source_variants||[]).length ? `<section><h3>Иначе в других книгах</h3><ul>${c.source_variants.map(v => `<li><b>${esc(BOOKS[v.book_id] || v.book_id)}${v.printed_page ? ', с. ' + esc(v.printed_page) : ''}.</b> ${esc(v.text)}</li>`).join('')}</ul></section>` : ''}
     ${errata(c)}
@@ -617,7 +617,7 @@ function tomeCard(c) {
       ${(c.refs||[]).length ? `<dt>Связанные</dt><dd>${refLinks(c.refs)}</dd>` : ''}
     </dl>
     ${read.length ? `<section><h3>Чтение</h3><table>${read.map(([k, v]) => `<tr><th>${k}</th><td>${esc(v)}</td></tr>`).join('')}</table></section>` : ''}
-    ${c.description?.ru ? `<section><h3>Описание</h3>${c.description.ru.split('\n').filter(Boolean).map(p => `<p>${esc(p)}</p>`).join('')}</section>` : ''}
+    ${c.description?.ru ? `<section><h3>Описание</h3>${richText(c.description.ru)}</section>` : ''}
     ${spells ? `<section><h3>Заклинания</h3><p>${spells}</p></section>` : ''}
     ${copies}
     ${storyLinks(c)}
@@ -644,7 +644,7 @@ function spellCard(c) {
       ${variants.length ? `<dt>Варианты</dt><dd>${variants.map(x => link(x.id, x.name.ru)).join(', ')}</dd>` : ''}
       ${(c.refs||[]).length ? `<dt>Связанные</dt><dd>${refLinks(c.refs)}</dd>` : ''}
     </dl>
-    ${c.description?.ru ? `<section><h3>Описание</h3>${c.description.ru.split('\n').filter(Boolean).map(p => `<p>${esc(p)}</p>`).join('')}</section>` : ''}
+    ${c.description?.ru ? `<section><h3>Описание</h3>${richText(c.description.ru)}</section>` : ''}
     ${c.deeper_magic?.ru ? `<section><h3>Глубинная магия</h3><p>${esc(c.deeper_magic.ru)}</p></section>` : ''}
     ${where.length ? `<section><h3>Где изучить</h3><p>${where.map(x => link(x.id, x.name.ru)).join(', ')}</p></section>` : ''}
     ${casters.length ? `<section><h3>Кто знает (${casters.length})</h3><p>${casters.map(x => link(x.id, x.name.ru)).join(', ')}</p></section>` : ''}
@@ -693,7 +693,7 @@ function cityCard(c) {
   // the «город · также: …» line only on «Обзор»; other sections keep just the name
   const head = `<h2>${esc(c.name.ru)}</h2>${citySection === 'overview' || !CITY_SECTIONS.some(([s]) => s === citySection) ? `<div class="sub">город${(c.aliases||[]).length ? ' · также: ' + c.aliases.map(esc).join(', ') : ''}</div>` : ''}`;
   const remarks = flags(c) ? `<section><h3>Заметки о данных</h3>${flags(c)}</section>` : '';
-  const paras = x => x.split('\n').filter(Boolean).map(p => `<p>${esc(p)}</p>`).join('');
+  const paras = richText;
   const kids = childrenOf(c.id);
   const body = {
     overview: `${c.description?.ru ? `<section><h3>Описание</h3>${paras(c.description.ru)}</section>` : ''}
@@ -722,8 +722,8 @@ function locationCard(c) {
     ${flags(c)}
     ${onMap(c)}
     ${c.address || c.keeper_hint || zones.length ? `<dl>${c.address ? `<dt>Адрес</dt><dd>${esc(c.address)}</dd>` : ''}${zones.length ? `<dt>Вдоль</dt><dd>${zones.join(', ')}</dd>` : ''}${c.keeper_hint ? `<dt>Подсказка</dt><dd>${esc(c.keeper_hint)}</dd>` : ''}</dl>` : ''}
-    ${c.description?.ru ? `<section><h3>Описание</h3>${c.description.ru.split('\n').filter(Boolean).map(p => `<p>${esc(p)}</p>`).join('')}</section>` : ''}
-    ${c.history?.ru ? `<section><h3>История</h3>${c.history.ru.split('\n').filter(Boolean).map(p => `<p>${esc(p)}</p>`).join('')}</section>` : ''}
+    ${c.description?.ru ? `<section><h3>Описание</h3>${richText(c.description.ru)}</section>` : ''}
+    ${c.history?.ru ? `<section><h3>История</h3>${richText(c.history.ru)}</section>` : ''}
     ${(c.residents||[]).length ? `<section><h3>Жители</h3><p>${residentList(c.residents)}</p></section>` : ''}
     ${(c.along||[]).length ? `<section><h3>Места вдоль (${c.along.length})</h3><ul>${c.along.map(a => { const l = byId(a.location); return `<li>${l ? (l.number ? esc(l.number) + ' ' : '') + link(l.id, l.name.ru) : esc(a.location)}${a.note ? ` <span class="muted">— ${esc(a.note)}</span>` : ''}</li>`; }).join('')}</ul></section>` : ''}
     ${kids.length && c.location_type !== 'город' ? placesTable(kids) : ''}
@@ -756,6 +756,48 @@ function homes(c) {
 }
 function refLinks(ids) {
   return (ids||[]).map(i => byId(i) ? link(i, byId(i).name.ru) : esc(i)).join(', ');
+}
+// several links go one per line; a single one stays a line of text
+const linkList = xs => xs.length > 1 ? `<ul>${xs.map(x => `<li>${x}</li>`).join('')}</ul>` : `<p>${xs[0] || ''}</p>`;
+const refItems = ids => (ids||[]).map(i => byId(i) ? link(i, byId(i).name.ru) : esc(i));
+// «;» and «:» outside brackets and quotes: [positions of «;», position of the first «:»]
+function topMarks(s) {
+  const semi = [];
+  let depth = 0, colon = -1;
+  for (let i = 0; i < s.length; i++) {
+    const ch = s[i];
+    if ('(«['.includes(ch)) depth++;
+    else if (')»]'.includes(ch)) depth = Math.max(0, depth - 1);
+    else if (!depth && ch === ';') semi.push(i);
+    else if (!depth && ch === ':' && colon < 0) colon = i;
+  }
+  return [semi, colon];
+}
+// descriptions with lists: a sentence that enumerates through «;» (two or more) becomes a list, the words up to a
+// colon before the first «;» being its lead; paragraphs starting with «•» are list items; the rest stays as written
+function richText(t) {
+  const out = [];
+  let bullets = [];
+  const flush = () => { if (bullets.length) out.push(`<ul>${bullets.map(b => `<li>${esc(b)}</li>`).join('')}</ul>`); bullets = []; };
+  for (const para of (t || '').split('\n').filter(x => x.trim())) {
+    if (/^\s*•/.test(para)) { bullets.push(para.replace(/^\s*•\s*/, '')); continue; }
+    flush();
+    let run = [];
+    const end = () => { if (run.length) out.push(`<p>${esc(run.join(' '))}</p>`); run = []; };
+    for (const s of para.split(/(?<=[.!?…])\s+(?=[А-ЯЁA-Z«(])/)) {
+      const [semi, colon] = topMarks(s);
+      if (semi.length < 2) { run.push(s); continue; }
+      const cut = colon >= 0 && colon < semi[0] ? colon + 1 : 0;
+      if (cut) run.push(s.slice(0, cut));
+      end();
+      const items = [], at = [cut, ...semi.map(i => i + 1)];
+      at.forEach((from, k) => items.push(s.slice(from, k + 1 < at.length ? at[k + 1] - 1 : s.length).trim()));
+      out.push(`<ul>${items.filter(Boolean).map(x => `<li>${esc(x)}</li>`).join('')}</ul>`);
+    }
+    end();
+  }
+  flush();
+  return out.join('');
 }
 function abilities(c) {
   return (c.abilities||[]).length ? `<section><h3>Способности</h3>${c.abilities.map(a => `<p><b>${esc(a.name)}.</b> ${esc(a.summary)}${(a.refs||[]).length ? ` <span class="muted">→ ${refLinks(a.refs)}</span>` : ''}</p>`).join('')}</section>` : '';
@@ -917,7 +959,7 @@ function occupationCard(c) {
       ${c.contacts ? `<dt>Вероятные связи</dt><dd>${esc(c.contacts)}</dd>` : ''}
       ${variants ? `<dt>Варианты</dt><dd>${variants}</dd>` : ''}
     </dl>
-    ${c.description?.ru ? `<section><h3>Описание</h3>${c.description.ru.split('\n').filter(Boolean).map(p => `<p>${esc(p)}</p>`).join('')}</section>` : ''}
+    ${c.description?.ru ? `<section><h3>Описание</h3>${richText(c.description.ru)}</section>` : ''}
     <section><h3>Навыки профессии</h3><ul>${skills}</ul></section>
     <section><h3>Источник</h3><div>${sources(c)}</div></section>
     ${corrections(c)}`;
@@ -1155,9 +1197,11 @@ function sceneList(id) {
   const ss = scenesOf(id);
   return [...new Set(ss.map(x => x.arc.part || ''))].map(p => `${p ? `<p class="muted" style="margin:8px 0 2px">${esc(p)}</p>` : ''}<ul>${ss.filter(x => (x.arc.part || '') === p).map(x => `<li>${link(x.id, x.name.ru)}</li>`).join('')}</ul>`).join('');
 }
-const paraBlock = x => (x || '').split('\n').filter(Boolean).map(p => `<p>${esc(p)}</p>`).join('');
-const placeLinks = xs => xs.map(x => { const l = byId(x.location); return (l ? link(l.id, (l.number ? l.number + ' ' : '') + l.name.ru) : esc(x.location)) + (x.note ? ` <span class="muted">(${esc(x.note)})</span>` : ''); }).join(', ');
-const peopleLinks = xs => xs.map(x => (byId(x.id) ? link(x.id, byId(x.id).name.ru) : esc(x.id)) + (x.role ? ` <span class="muted">(${esc(x.role)})</span>` : '')).join(', ');
+const paraBlock = richText;
+// a handout is shown as printed: paragraphs only
+const asPrinted = x => (x || '').split('\n').filter(Boolean).map(p => `<p>${esc(p)}</p>`).join('');
+const placeLinks = xs => linkList(xs.map(x => { const l = byId(x.location); return (l ? link(l.id, (l.number ? l.number + ' ' : '') + l.name.ru) : esc(x.location)) + (x.note ? ` <span class="muted">(${esc(x.note)})</span>` : ''); }));
+const peopleLinks = xs => linkList(xs.map(x => (byId(x.id) ? link(x.id, byId(x.id).name.ru) : esc(x.id)) + (x.role ? ` <span class="muted">(${esc(x.role)})</span>` : '')));
 const storyAll = () => STORY.flatMap(([k]) => SET[k]);
 // a record sits in the guide of the cities of its places; one without a place, in the city its book describes most
 const storyPlaces = x => [...(x.found_at||[]), ...(x.based_at||[]), ...(x.where||[])].map(p => byId(p.location)).filter(Boolean);
@@ -1221,7 +1265,7 @@ function scenarioCard(c) {
     ${sec('Сцены', sceneList(c.id))}
     ${(c.tables||[]).map(locTable).join('')}
     ${sec('Итог', paraBlock(c.conclusion?.ru))}
-    ${(c.refs||[]).length ? sec('Связано', `<p>${refLinks(c.refs)}</p>`) : ''}
+    ${(c.refs||[]).length ? sec('Связано', linkList(refItems(c.refs))) : ''}
     ${errata(c)}
     <section><h3>Источник</h3><div>${sources(c)}</div></section>
     ${corrections(c)}`;
@@ -1239,19 +1283,19 @@ function storyCard(c) {
     ${flags(c)}
     ${arc || c.when ? `<dl>${arc ? `<dt>Сценарий</dt><dd>${arc.part_of && byId(arc.part_of) ? link(arc.part_of, byId(arc.part_of).name.ru) + ' · ' : ''}${link(arc.id, arc.name.ru)}${c.arc.part ? ' · ' + esc(c.arc.part) : ''}${nav ? `<br><span class="muted">${nav}</span>` : ''}</dd>` : ''}${c.when ? `<dt>Когда</dt><dd>${esc(c.when)}</dd>` : ''}</dl>` : ''}
     ${sec('Описание', paraBlock(c.description?.ru))}
-    ${c.text ? sec('Текст для игроков', `<blockquote class="handout">${paraBlock(c.text.ru)}</blockquote>`) : ''}
+    ${c.text ? sec('Текст для игроков', `<blockquote class="handout">${asPrinted(c.text.ru)}</blockquote>`) : ''}
     ${c.goals ? sec('Цели', paraBlock(c.goals.ru)) : ''}
-    ${(c.found_at||[]).length ? sec('Где найти', `<p>${placeLinks(c.found_at)}</p>`) : ''}
-    ${(c.based_at||[]).length ? sec('Где базируется', `<p>${placeLinks(c.based_at)}</p>`) : ''}
-    ${(c.where||[]).length ? sec('Где', `<p>${placeLinks(c.where)}</p>`) : ''}
-    ${(c.held_by||[]).length ? sec('У кого', `<p>${peopleLinks(c.held_by)}</p>`) : ''}
-    ${(c.members||[]).length ? sec(`Члены (${c.members.length})`, `<p>${peopleLinks(c.members)}</p>`) : ''}
-    ${(c.participants||[]).length ? sec('Участники', `<p>${peopleLinks(c.participants)}</p>`) : ''}
+    ${(c.found_at||[]).length ? sec('Где найти', placeLinks(c.found_at)) : ''}
+    ${(c.based_at||[]).length ? sec('Где базируется', placeLinks(c.based_at)) : ''}
+    ${(c.where||[]).length ? sec('Где', placeLinks(c.where)) : ''}
+    ${(c.held_by||[]).length ? sec('У кого', peopleLinks(c.held_by)) : ''}
+    ${(c.members||[]).length ? sec(`Члены (${c.members.length})`, peopleLinks(c.members)) : ''}
+    ${(c.participants||[]).length ? sec('Участники', peopleLinks(c.participants)) : ''}
     ${c.mechanics ? sec('Механика', paraBlock(c.mechanics.ru)) : ''}
     ${c.outcome ? sec('Исход', paraBlock(c.outcome.ru)) : ''}
-    ${(c.leads_to||[]).length ? sec('Ведёт к', `<p>${refLinks(c.leads_to)}</p>`) : ''}
-    ${(c.refs||[]).length ? sec('Связано', `<p>${refLinks(c.refs)}</p>`) : ''}
-    ${back.length ? sec('Упоминается в', `<p>${back.map(x => link(x.id, x.name.ru)).join(', ')}</p>`) : ''}
+    ${(c.leads_to||[]).length ? sec('Ведёт к', linkList(refItems(c.leads_to))) : ''}
+    ${(c.refs||[]).length ? sec('Связано', linkList(refItems(c.refs))) : ''}
+    ${back.length ? sec('Упоминается в', linkList(back.map(x => link(x.id, x.name.ru)))) : ''}
     ${errata(c)}
     <section><h3>Источник</h3><div>${sources(c)}</div></section>
     ${corrections(c)}`;

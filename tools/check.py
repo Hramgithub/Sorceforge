@@ -28,7 +28,9 @@ RULES = [
     (re.compile(r"(?<![А-ЯЁа-яё])(?:РАЗ|ВЕЛ)(?![А-ЯЁа-яё])"), "размер — «ТЕЛ»", True),
     (re.compile(r"(?<![А-ЯЁа-яё])ОЗ(?![А-ЯЁа-яё])"), "пункты здоровья — «ПЗ»", True),
     (re.compile(r"(?<![А-ЯЁа-яё])ЛОВ(?![А-ЯЁа-яё])"), "ловкость — «ЛВК»", True),
-    (re.compile(r"\d\s*ярд"), "расстояния в метрах, ярд = метр (Р-64)", False),
+    (re.compile(r"d\d+\)?\s*[xхX]\s*\d"), "умножение — знак ×: (2d6+6)×5 (Р-27)", False),
+    (re.compile(r"\d\s*ярд|(?<![А-ЯЁа-яё])(?:фут(?:а|ов)?|дюйм(?:а|ов)?|мил[яюиье]|миль|галлон(?:а|ов)?|унци[йяю])(?![А-ЯЁа-яё])"),
+     "меры — метрические: ярд = метр, фут ÷ 3, миля × 1,6 км, дюйм → см, галлон → л (Р-64)", False),
 ]
 # characteristics are named by id but are not records (schemas/skill.schema.json, opposed_by)
 VIRTUAL = re.compile(r"^coc:characteristic:[a-z]+$")
@@ -88,6 +90,10 @@ def main() -> int:
                 errors["схема"].append(f"{rel(p)}: {e}")
         if p.read_bytes() != dump(rec).encode("utf-8"):
             errors["формат файла"].append(f"{rel(p)}: не UTF-8 / отступ 2 / LF / перевод строки в конце — `python pipeline/fix/normalize_terms.py {rel(p)}`")
+        q = rec.get("quality") or {}
+        if bool(rec.get("errata")) != ("parse_uncertain" in (q.get("flags") or [])):
+            warnings["флаг «опечатка книги» (parse_uncertain) стоит ровно у записей с errata"].append(
+                f"{rel(p)}: errata {len(rec.get('errata') or [])}, флаг {'есть' if 'parse_uncertain' in (q.get('flags') or []) else 'нет'}")
         for path, s in strings(rec):
             if path.rsplit(".", 1)[-1] in QUOTED:
                 continue

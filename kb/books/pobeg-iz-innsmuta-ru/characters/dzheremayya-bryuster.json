@@ -300,7 +300,7 @@
     ]
   },
   "description": {
-    "ru": "Почти полноценный глубоководный; при дневном свете вне зала его не видят — он скрывается до темноты. Всегда в церковных одеждах, скрывающих чешуйчатое тело с перепончатыми лапами; голос — хлюпающий квакающий лай.",
+    "ru": "Почти полноценный глубоководный; при дневном свете вне зала его не видят — он скрывается до темноты. Всегда в церковных одеждах, скрывающих чешуйчатое тело с перепончатыми лапами; голос — хлюпающий квакающий лай.\n\nВ рейде: вместе с Робертом Маршем ведёт в подвале храма Ордена обряд призыва Дагона, а когда начинается стрельба, бежит с ним и глубоководными через гроты к тоннелям контрабандистов. Позже может встретиться среди глубоководных, уходящих из храма по тоннелям.",
     "en": null
   },
   "legend": {
@@ -314,6 +314,15 @@
       "printed_page": 28,
       "method": "book_text",
       "verified": true
+    },
+    {
+      "book_id": "pobeg-iz-innsmuta-ru",
+      "physical_page": 114,
+      "printed_page": 114,
+      "method": "book_text",
+      "verified": true,
+      "entry_page": 113,
+      "note": "Блок во время рейда (вариант) и роль в рейде; роль — также с. 115, 139."
     }
   ],
   "errata": [
@@ -322,11 +331,292 @@
       "printed": "Скрытность 25%, …, Скрытность 35%",
       "expected": null,
       "note": "Скрытность напечатана дважды с разными значениями (вероятно, Hide и Sneak прежних изданий); в записи — первое значение, 25%."
+    },
+    {
+      "field": "variants[Во время рейда (с. 114)].mp",
+      "printed": "22",
+      "expected": "20",
+      "note": "ПМ = МОЩ / 5 = 100 / 5 = 20; на с. 114 напечатано 22. Оставлено как напечатано."
+    },
+    {
+      "field": "statblock.spells",
+      "printed": "с. 28: Breath of the Deeps, Contact Deep Ones, Contact Cthulhu, Contact Father Dagon, Contact Mother Hydra, Curse of the Stone, Enchant Stone Tablet, Grasp of Cthulhu, Power Drain, Shrivelling",
+      "expected": null,
+      "note": "Списки заклинаний Роберта Марша и Джеремайи Брюстера на с. 28 и с. 114 не сходятся. На с. 114 у Роберта девять заклинаний (Breath of the Depths, Contact Cthulhu, Contact Deep Ones, Contact Father Dagon, Contact Mother Hydra, Curse of the Stone, Enchant Stone Tablet, Grasp of Cthulhu, Power Drain), у Брюстера пять (Breath of the Depths, Contact Deep Ones, Contact Father Dagon, Contact Mother Hydra, Shrivelling). Список Брюстера на с. 28 — это список Роберта со с. 114 плюс Shrivelling, а у Роберта на с. 28 всего пять заклинаний, одно из них (Contact Cthulhu) повторено. Похоже, на с. 28 списки перепутаны при вёрстке или переводе. В основном блоке оставлено как напечатано на с. 28, вариант «Во время рейда (с. 114)» — как напечатано на с. 114."
     }
   ],
   "quality": {
     "needs_review": false,
     "flags": [],
     "notes": "Путеводитель владельца пропускает атаку «Когти ×2» и навыки; взяты по книге."
-  }
+  },
+  "variants": [
+    {
+      "label": "Во время рейда (с. 114)",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "80",
+            "value": 80
+          },
+          "CON": {
+            "raw": "90",
+            "value": 90
+          },
+          "SIZ": {
+            "raw": "80",
+            "value": 80
+          },
+          "DEX": {
+            "raw": "60",
+            "value": 60
+          },
+          "APP": {
+            "raw": "20",
+            "value": 20
+          },
+          "INT": {
+            "raw": "75",
+            "value": 75
+          },
+          "POW": {
+            "raw": "100",
+            "value": 100
+          },
+          "EDU": {
+            "raw": "50",
+            "value": 50
+          }
+        },
+        "hp": {
+          "raw": "17",
+          "value": 17
+        },
+        "mp": {
+          "raw": "22",
+          "value": 22
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "8",
+          "value": 8,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 8
+            }
+          ]
+        },
+        "sanity": {
+          "raw": "00",
+          "value": 0,
+          "max": null
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Жертвенный кинжал",
+              "en": null
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "60% (30/12)",
+              "value": 60,
+              "half": 30,
+              "fifth": 12
+            },
+            "damage": {
+              "raw": "1d4+2+1d4",
+              "dice": "1d4+2",
+              "adds_db": true
+            },
+            "weapon": "coc:weapon:knife-medium"
+          },
+          {
+            "name": {
+              "ru": "Когти ×2",
+              "en": null
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "75% (37/15)",
+              "value": 75,
+              "half": 37,
+              "fifth": 15
+            },
+            "damage": {
+              "raw": "1d6+1d4",
+              "dice": "1d6",
+              "adds_db": true
+            }
+          }
+        ],
+        "dodge": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "skills": [
+          {
+            "name": "Астрономия",
+            "skill": "coc:skill:science",
+            "specialization": "Астрономия",
+            "value": {
+              "raw": "35%",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            }
+          },
+          {
+            "name": "Наука (Биология)",
+            "skill": "coc:skill:science",
+            "specialization": "Биология",
+            "value": {
+              "raw": "45%",
+              "value": 45,
+              "half": 22,
+              "fifth": 9
+            }
+          },
+          {
+            "name": "Плавание",
+            "skill": "coc:skill:swim",
+            "value": {
+              "raw": "95%",
+              "value": 95,
+              "half": 47,
+              "fifth": 19
+            }
+          },
+          {
+            "name": "Мифы Ктулху",
+            "skill": "coc:skill:cthulhu-mythos",
+            "value": {
+              "raw": "60%",
+              "value": 60,
+              "half": 30,
+              "fifth": 12
+            }
+          },
+          {
+            "name": "Скрытность",
+            "skill": "coc:skill:stealth",
+            "value": {
+              "raw": "35%",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            }
+          },
+          {
+            "name": "Прыжки",
+            "skill": "coc:skill:jump",
+            "value": {
+              "raw": "65%",
+              "value": 65,
+              "half": 32,
+              "fifth": 13
+            }
+          },
+          {
+            "name": "Слух",
+            "skill": "coc:skill:listen",
+            "value": {
+              "raw": "30%",
+              "value": 30,
+              "half": 15,
+              "fifth": 6
+            }
+          },
+          {
+            "name": "Оккультизм",
+            "skill": "coc:skill:occult",
+            "value": {
+              "raw": "55%",
+              "value": 55,
+              "half": 27,
+              "fifth": 11
+            }
+          },
+          {
+            "name": "Внимание",
+            "skill": "coc:skill:spot-hidden",
+            "value": {
+              "raw": "55%",
+              "value": 55,
+              "half": 27,
+              "fifth": 11
+            }
+          }
+        ],
+        "spells": {
+          "raw": "Breath of the Depths, Contact Deep Ones, Contact Father Dagon, Contact Mother Hydra, Shrivelling.",
+          "items": [
+            {
+              "name": "Breath of the Depths",
+              "spell": "coc:spell:breath-of-the-deep"
+            },
+            {
+              "name": "Contact Deep Ones",
+              "spell": "coc:spell:contact-deep-one"
+            },
+            {
+              "name": "Contact Father Dagon",
+              "spell": "coc:spell:contact-father-dagon"
+            },
+            {
+              "name": "Contact Mother Hydra",
+              "spell": "coc:spell:contact-mother-hydra"
+            },
+            {
+              "name": "Shrivelling",
+              "spell": "coc:spell:shrivelling"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "corrections": [
+    {
+      "field": "variants",
+      "from": null,
+      "to": "Во время рейда (с. 114)",
+      "reason": "Р-125: блок из части «Рейд на Иннсмут» не заменяет блок путеводителя, а добавлен вариантом; отличия: ПМ 22 (было 20); Скрытность 35% один раз (было 25% и 35%); заклинаний пять — нет Contact Cthulhu, Curse of the Stone, Enchant Stone Tablet, Grasp of Cthulhu, Power Drain; строки потери Рассудка в блоке нет (с. 114)",
+      "ref": "Р-125"
+    },
+    {
+      "field": "description.ru",
+      "from": null,
+      "to": "В рейде: вместе с Робертом Маршем ведёт в подвале храма Ордена обряд призыва Дагона, а когда начинается стрельба, бежит с ним и глубоководными через гроты к тоннелям контрабандистов. Позже может встретиться среди глубоководных, уходящих из храма по тоннелям.",
+      "reason": "Р-125: добавлен абзац о роли в рейде (с. 114–115, 139)",
+      "ref": "Р-125"
+    },
+    {
+      "field": "errata",
+      "from": null,
+      "to": "variants[Во время рейда (с. 114)].mp; statblock.spells",
+      "reason": "Р-125: добавлены сведения о расхождениях книги (с. 28, 114)",
+      "ref": "Р-125"
+    },
+    {
+      "field": "sources",
+      "from": null,
+      "to": "pobeg-iz-innsmuta-ru, с. 114",
+      "reason": "Р-125: добавлен источник — блок во время рейда (вариант) и роль в рейде; роль — также с. 115, 139 (с. 114)",
+      "ref": "Р-125"
+    }
+  ]
 }

@@ -102,6 +102,28 @@
       },
       "description": "Жители и те, кто здесь бывает (персонажи и существа)."
     },
+    "along": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "location"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "location": {
+            "$ref": "common.schema.json#/$defs/id"
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "description": "Зона (Р-135): места на ней и вдоль неё, например мосты и берега реки. Места остаются в своих районах; на карте зона подсвечивает их своим цветом."
+    },
     "tables": {
       "type": "array",
       "description": "Таблицы-вводные места (Р-78): слухи, случайные встречи, события.",

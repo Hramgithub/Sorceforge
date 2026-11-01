@@ -164,8 +164,8 @@ function cityResidents(cityId) {
 const CITIES = DATA.locations.filter(x => x.location_type === 'город' && !x.part_of).sort((a, b) => a.name.ru.localeCompare(b.name.ru, 'ru'));
 FILTERS.character.splice(1, 0, ...CITIES.map(c => ['city:' + c.id, 'Жители: ' + c.name.ru]));
 let city = CITIES[0]?.id || null, locMode = 'houses', citySection = 'overview';
-// sections of the city reference page shown from the sub-bar
-const CITY_SECTIONS = [['overview', 'Обзор'], ['map', 'Карта'], ['history', 'История'], ['tables', 'Таблицы'], ['leads', 'Зацепки'], ['who', 'Кто где живёт']];
+// sections of the city reference page shown from the sub-bar («Кто где живёт» gave way to the «Жители» tree, Р-121)
+const CITY_SECTIONS = [['overview', 'Обзор'], ['map', 'Карта'], ['history', 'История'], ['tables', 'Таблицы'], ['leads', 'Зацепки']];
 const openDist = new Set();
 const SET = { creature: DATA.creatures, character: DATA.characters, skill: DATA.skills, occupation: DATA.occupations, spell: DATA.spells, tome: DATA.tomes, weapon: DATA.weapons, location: DATA.locations };
 const ALL = [...DATA.creatures, ...DATA.characters, ...DATA.skills, ...DATA.occupations, ...DATA.spells, ...DATA.tomes, ...DATA.weapons, ...DATA.locations];
@@ -537,7 +537,6 @@ function cityCard(c) {
   const remarks = flags(c) ? `<section><h3>Заметки о данных</h3>${flags(c)}</section>` : '';
   const paras = x => x.split('\n').filter(Boolean).map(p => `<p>${esc(p)}</p>`).join('');
   const kids = childrenOf(c.id);
-  const inside = placesIn(c.id).filter(x => (x.residents||[]).length);
   const body = {
     overview: `${c.description?.ru ? `<section><h3>Описание</h3>${paras(c.description.ru)}</section>` : ''}
       ${kids.length ? `<section><h3>Районы и места (${kids.length})</h3><ul>${kids.map(k => `<li>${k.number ? esc(k.number) + ' ' : ''}${link(k.id, k.name.ru)}${k.keeper_hint ? ` <span class="muted">— ${esc(k.keeper_hint)}</span>` : ''}</li>`).join('')}</ul></section>` : ''}
@@ -547,7 +546,6 @@ function cityCard(c) {
     history: `${c.history?.ru ? `<section><h3>История</h3>${paras(c.history.ru)}</section>` : ''}${ofKind(['события']).map(locTable).join('')}`,
     tables: ofKind(['слухи', 'встречи', 'прочее']).map(locTable).join('') || '<p class="muted">Таблиц нет.</p>',
     leads: ofKind(['зацепки']).map(locTable).join('') || '<p class="muted">Зацепок нет.</p>',
-    who: inside.length ? `<section><h3>Кто где живёт</h3><ul>${inside.map(x => `<li>${link(x.id, (x.number ? x.number + ' ' : '') + x.name.ru)}: ${residentList(x.residents)}</li>`).join('')}</ul></section>` : '<p class="muted">Жители не указаны.</p>',
   };
   // on «Карта» the city heading is left out: the map's name in the tool row says where you are
   return (citySection === 'map' ? '' : head) + (body[citySection] || body.overview);

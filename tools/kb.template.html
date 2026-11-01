@@ -31,6 +31,8 @@ main { display:grid; grid-template-columns: 300px 1fr; min-height: calc(100vh - 
 #list h4.dist.active { background:var(--panel); }
 #list h4.dist.sub { padding-left:28px; font-weight:500; }
 #list button.house { padding-left:32px; }
+#list button.househ { padding:6px 16px 4px 32px; color:var(--accent); font-size:13px; font-weight:600; }
+#list button.person { padding-left:44px; }
 #list .fold { display:inline-block; width:1.4em; margin-left:-.3em; text-align:center; cursor:pointer; }
 #list .fold:hover { color:var(--accent); }
 #list .mapicon { float:right; display:inline-flex; padding:3px 5px; margin:-3px -6px 0 6px; border-radius:4px; color:var(--muted); cursor:pointer; }
@@ -84,6 +86,13 @@ a { color:var(--accent); }
 .spot.focus { border:3px solid #c0392b; background:rgba(192,57,43,.15); animation:spotpulse 1.4s ease-in-out 5; }
 @keyframes spotpulse { 50% { box-shadow:0 0 0 12px rgba(192,57,43,.35); } }
 .mapinner.edit .spot { border:2px solid rgba(31,111,235,.7); cursor:move; }
+/* «Жители»: places without residents are veiled; a dot per resident (people teal, creatures purple) */
+.mapinner.res .spot.nores { background:rgba(246,239,207,.75); }
+.rdot { position:absolute; transform:translate(-50%,-50%); aspect-ratio:1; min-width:9px; padding:0; border:2px solid #fff; border-radius:50%; background:#1f8a7a; box-shadow:0 0 0 1px rgba(0,0,0,.45); cursor:pointer; }
+.rdot.creature { background:#8e44ad; }
+.rdot:hover, .rdot.lit { background:#e67e22; transform:translate(-50%,-50%) scale(1.35); z-index:2; }
+.rdot.hit { background:#1f6feb; transform:translate(-50%,-50%) scale(1.35); }
+.mapinner.edit .rdot { pointer-events:none; opacity:.4; }
 .spot.new { border:2px solid #1f6feb; background:rgba(31,111,235,.4); width:12px; height:12px; pointer-events:none; }
 .maptip { position:fixed; z-index:10; max-width:340px; background:var(--panel); color:var(--ink); border:1px solid var(--line); border-radius:6px; padding:6px 10px; font-size:13px; box-shadow:0 4px 14px rgba(0,0,0,.25); pointer-events:none; }
 .maptip .warnt { color:var(--warn); }
@@ -260,28 +269,40 @@ let guide = 'all';
 const inGuide = l => guide === 'all' || bookIds(l).includes(guide);
 const guideCities = () => CITIES.filter(c => inGuide(c) || placesIn(c.id).some(inGuide));
 const openCity = new Set(city ? [city] : []);
-// left panel: cities → districts → places (three collapsible levels), or the residents of the open city
+// left panel: cities → districts → places (three collapsible levels); in «Жители» the same tree keeps only places
+// with residents and lists the residents under each place (a person living in two places is shown in both)
+const hasRes = l => (l.residents||[]).some(r => byId(r.id));
+const resIn = l => hasRes(l) || descendants(l.id).some(hasRes);
 function renderLocList(list) {
   const cities = guideCities();
   document.getElementById('count').textContent = '';
-  if (locMode === 'residents') {
-    const rs = city ? cityResidents(city) : [];
-    list.innerHTML = rs.map(c => item(c)).join('');
-  } else {
-    const place = h => `<button data-id="${esc(h.id)}" class="house ${h.id === current ? 'active' : ''}">${mapIcon(h)}${esc((h.number ? h.number + ' ' : '') + h.name.ru)}<small>${esc(h.keeper_hint || '')}</small></button>`;
+  {
+    const res = locMode === 'residents';
+    // under a place: occupation (or creature category) and the resident's note when it adds something
+    const person = r => {
+      const p = byId(r.id);
+      if (!p) return '';
+      const sub = p.kind === 'character' ? (p.occupation?.ru || '') : (CAT[p.category] || '');
+      const note = r.note && !norm(sub).includes(norm(r.note)) ? r.note : '';
+      return `<button data-id="${esc(p.id)}" class="person ${p.id === current ? 'active' : ''}">${esc(p.name.ru)}<small>${esc([sub, note].filter(Boolean).join(' · '))}</small></button>`;
+    };
+    // in «Жители» a place is a small heading followed by its residents; the city's own residents go under «Без адреса»
+    const place = (h, label) => res
+      ? `<button data-id="${esc(h.id)}" class="house househ ${h.id === current ? 'active' : ''}">${esc(label || (h.number ? h.number + ' ' : '') + h.name.ru)}</button>${h.residents.map(person).join('')}`
+      : `<button data-id="${esc(h.id)}" class="house ${h.id === current ? 'active' : ''}">${mapIcon(h)}${esc((h.number ? h.number + ' ' : '') + h.name.ru)}<small>${esc(h.keeper_hint || '')}</small></button>`;
     const fold = open => `<span class="fold" title="${open ? 'Свернуть' : 'Раскрыть'}">${open ? '▾' : '▸'}</span>`;
-    list.innerHTML = cities.map(c => {
+    list.innerHTML = cities.filter(c => !res || resIn(c)).map(c => {
       const openC = openCity.has(c.id);
-      const kids = childrenOf(c.id).filter(k => inGuide(k) || placesIn(k.id).some(inGuide));
+      const kids = childrenOf(c.id).filter(k => (inGuide(k) || placesIn(k.id).some(inGuide)) && (!res || resIn(k)));
       return `<h4 class="dist city${c.id === current ? ' active' : ''}" data-city="${esc(c.id)}">${mapIcon(c)}${fold(openC)}${esc(c.name.ru)}</h4>`
-        + (openC ? kids.map(d => {
-          const inner = childrenOf(d.id).filter(inGuide);
+        + (openC ? (res && hasRes(c) ? place(c, 'Без адреса') : '') + kids.map(d => {
+          const inner = res ? descendants(d.id).filter(x => hasRes(x) && inGuide(x)) : childrenOf(d.id).filter(inGuide);
           if (!inner.length) return place(d);
           const open = openDist.has(d.id);
           return `<h4 class="dist sub${d.id === current ? ' active' : ''}" data-dist="${esc(d.id)}">${mapIcon(d)}${fold(open)}${d.number ? esc(d.number) + ' ' : ''}${esc(d.name.ru)}</h4>`
-            + (open ? inner.map(place).join('') : '');
+            + (open ? (res && hasRes(d) ? place(d) : '') + inner.map(h => place(h)).join('') : '');
         }).join('') : '');
-    }).join('') || '<p class="muted" style="padding:8px 16px">В этом гайде мест нет.</p>';
+    }).join('') || `<p class="muted" style="padding:8px 16px">${res ? 'Жители не указаны.' : 'В этом гайде мест нет.'}</p>`;
     // a row: the arrow only folds or unfolds; the name opens the page (a city opens on «Обзор»); the map icon opens the map
     list.querySelectorAll('h4 .fold').forEach(f => f.onclick = e => {
       e.stopPropagation();
@@ -310,7 +331,8 @@ function renderSubbar() {
     + [['houses', 'Дома'], ['residents', 'Жители']].map(([m, l]) => `<button data-mode="${m}" class="${m === locMode ? 'active' : ''}">${l}</button>`).join('')
     + (city ? '<span class="sep"></span>' + CITY_SECTIONS.filter(([s]) => s !== 'map' || mapsOf(city).length).map(([s, l]) => `<button data-sec="${s}" class="${current === city && s === citySection ? 'active' : ''}">${l}</button>`).join('') : '');
   bar.querySelectorAll('[data-guide]').forEach(b => b.onclick = () => { guide = b.dataset.guide; const cs = guideCities(); if (cs.length && !cs.some(c => c.id === city)) city = cs[0].id; renderSubbar(); city ? show(city) : renderList(); });
-  bar.querySelectorAll('[data-mode]').forEach(b => b.onclick = () => { locMode = b.dataset.mode; renderSubbar(); renderList(); });
+  // the map on screen redraws too: «Жители» puts resident dots around the houses
+  bar.querySelectorAll('[data-mode]').forEach(b => b.onclick = () => { locMode = b.dataset.mode; renderSubbar(); renderList(); if (document.getElementById('mapinner')) initMap(current); });
   bar.querySelectorAll('[data-sec]').forEach(b => b.onclick = () => { citySection = b.dataset.sec; show(city); });
 }
 function setTab(t, keep) {
@@ -746,6 +768,8 @@ function lightSpots(id) {
     const on = ids.includes(mapCur.spots[b.dataset.i].target);
     b.classList.toggle('lit', on && !dist); b.classList.toggle('litd', on && dist);
   });
+  // «Жители»: a person lights their own dots; a place or district lights the dots of everyone living there
+  inner.querySelectorAll('.rdot').forEach(b => b.classList.toggle('lit', !!c && (c.kind === 'location' ? ids.includes(b.dataset.loc) : b.dataset.r === c.id)));
 }
 document.getElementById('list').addEventListener('pointerover', e => { const el = e.target.closest('#list [data-id], #list [data-dist]'); lightSpots(el?.dataset.id || el?.dataset.dist); });
 document.getElementById('list').addEventListener('pointerleave', () => lightSpots(null));
@@ -779,6 +803,11 @@ function openMap(id) {
   mapId = m.id; mapZoom = null; delete mapView[m.id]; citySection = 'map';
   show(m.location);
 }
+// a resident dot: who, what, where (with the resident's note for this place)
+function dotTip(el) {
+  const p = byId(el.dataset.r), l = byId(el.dataset.loc), note = (l.residents||[]).find(r => r.id === p.id)?.note;
+  return `<b>${esc(p.name.ru)}</b>${subtitle(p) ? `<div class="muted">${subtitle(p)}</div>` : ''}<div>${esc((l.number ? l.number + ' ' : '') + l.name.ru)}${note ? ` — ${esc(note)}` : ''}</div>`;
+}
 function spotTip(s) {
   const m = mapById(s.target);
   if (m) return `<b>${esc(m.name.ru)}</b><div class="muted">открыть карту</div>`;
@@ -804,13 +833,30 @@ function initMap(cityId) {
   const view = !focus.length && mapView[m.id];
   if (view) mapZoom = view.z;
   if (focus.length) mapZoom = zoomIn ? Math.max(mapZoom ?? 1, 2.5) : null;
-  const spot = (s, i) => `<button type="button" class="spot ${sh.kind}${s.printed === false ? ' computed' : s.note ? ' doubt' : ''}${focus.includes(s.target) ? ' focus' : ''}" data-i="${i}" style="left:${s.x}%;top:${s.y}%;width:${sh.w}%;height:${sh.h}%" aria-label="${esc(s.label)}"></button>`;
+  // «Жители»: a dot per resident on a ring around the place's first spot (letter spots of one record get none);
+  // places without residents are veiled. Sizes are shares of the image width, so dots grow with the zoom
+  const resMode = locMode === 'residents';
+  const dw = Math.min(sh.w, sh.h * m.height / m.width), dot = dw * 0.42;
+  const placed = new Set();
+  const dots = !resMode ? '' : m.spots.map(s => {
+    const t = byId(s.target);
+    if (!t || s.text || placed.has(t.id) || !hasRes(t)) return '';
+    placed.add(t.id);
+    const rs = t.residents.filter(r => byId(r.id)), n = rs.length;
+    const rx = sh.w / 2 + dot * 0.6, ry = (sh.h / 2) * m.height / m.width + dot * 0.6;
+    return rs.map((r, k) => {
+      const a = (n === 1 ? -45 : -90 + 360 * k / n) * Math.PI / 180, p = byId(r.id);
+      return `<button type="button" class="rdot ${p.kind}" data-r="${esc(p.id)}" data-loc="${esc(t.id)}" style="left:${(s.x + Math.cos(a) * rx).toFixed(2)}%;top:${(s.y + Math.sin(a) * ry * m.width / m.height).toFixed(2)}%;width:${dot.toFixed(2)}%" aria-label="${esc(p.name.ru)}"></button>`;
+    }).join('');
+  }).join('');
+  const veiled = s => resMode && !s.text && byId(s.target)?.kind === 'location' && !hasRes(byId(s.target));
+  const spot = (s, i) => `<button type="button" class="spot ${sh.kind}${s.printed === false ? ' computed' : s.note ? ' doubt' : ''}${veiled(s) ? ' nores' : ''}${focus.includes(s.target) ? ' focus' : ''}" data-i="${i}" style="left:${s.x}%;top:${s.y}%;width:${sh.w}%;height:${sh.h}%" aria-label="${esc(s.label)}"></button>`;
   // maps are switched from the left list (map icons, Р-120); here only the name of the open one
   wrap.innerHTML = `<div class="maptools"><b class="mapname">${esc(m.name.ru)}</b>
       <span class="sep"></span><button type="button" data-zoom="out" title="Уменьшить">−</button><button type="button" data-zoom="all">Целиком</button><button type="button" data-zoom="width">По ширине</button><button type="button" data-zoom="in" title="Увеличить">+</button>
       <span class="sep"></span><input id="mapq" type="search" placeholder="Номер или название" aria-label="Найти на карте"> <span id="mapcount" class="muted"></span>
       <span class="sep"></span><label><input type="checkbox" id="mapedit"${mapEdit ? ' checked' : ''}> Правка меток</label></div>
-    <div class="mapbox" id="mapbox"><div class="mapinner${mapEdit ? ' edit' : ''}" id="mapinner" style="width:${(mapZoom ?? 1) * 100}%;aspect-ratio:${m.width}/${m.height}"><img src="${esc(m.image)}" alt="${esc(m.name.ru)}" draggable="false">${m.spots.map(spot).join('')}</div></div>
+    <div class="mapbox" id="mapbox"><div class="mapinner${mapEdit ? ' edit' : ''}${resMode ? ' res' : ''}" id="mapinner" style="width:${(mapZoom ?? 1) * 100}%;aspect-ratio:${m.width}/${m.height}"><img src="${esc(m.image)}" alt="${esc(m.name.ru)}" draggable="false">${m.spots.map(spot).join('')}${dots}</div></div>
     <div class="maptip" id="maptip" hidden></div>
     <section id="mapedit-panel"${mapEdit ? '' : ' hidden'}><h3>Правка меток</h3>
       <p class="muted">Метку можно перетащить; щелчок по пустому месту ставит новую точку. Изменения живут до перезагрузки страницы — скопируйте их и пришлите, чтобы перенести в базу.</p>
@@ -851,6 +897,8 @@ function initMap(cityId) {
       const hit = !!q && (norm(s.label).startsWith(q) || norm(t?.name.ru).includes(q));
       b.classList.toggle('hit', hit); n += hit;
     });
+    // resident dots are found by the person's name
+    inner.querySelectorAll('.rdot').forEach(b => { const hit = !!q && norm(byId(b.dataset.r).name.ru).includes(q); b.classList.toggle('hit', hit); n += hit; });
     document.getElementById('mapcount').textContent = q ? `найдено: ${n}` : '';
   };
   document.getElementById('mapedit').onchange = e => { mapEdit = e.target.checked; inner.classList.toggle('edit', mapEdit); document.getElementById('mapedit-panel').hidden = !mapEdit; };
@@ -863,13 +911,14 @@ function initMap(cityId) {
     if (e.button !== 0) return;
     const b = e.target.closest('.spot[data-i]');
     // with pointer capture later events target the box, so the spot under the press is kept here
-    drag = { x: e.clientX, y: e.clientY, sl: box.scrollLeft, st: box.scrollTop, hit: b, spot: mapEdit ? b : null, moved: false, pan: e.pointerType === 'mouse' || mapEdit };
+    drag = { x: e.clientX, y: e.clientY, sl: box.scrollLeft, st: box.scrollTop, hit: b, dot: e.target.closest('.rdot'), spot: mapEdit ? b : null, moved: false, pan: e.pointerType === 'mouse' || mapEdit };
     if (drag.pan) box.setPointerCapture(e.pointerId);
   };
   box.onpointermove = e => {
-    const b = e.target.closest('.spot[data-i]');
-    if (b && !drag) { tip.innerHTML = spotTip(m.spots[b.dataset.i]); tip.hidden = false; tip.style.left = Math.min(e.clientX + 14, innerWidth - 350) + 'px'; tip.style.top = e.clientY + 14 + 'px'; }
-    else if (!b) tip.hidden = true;
+    const b = e.target.closest('.spot[data-i]'), dt = e.target.closest('.rdot');
+    const html = drag ? '' : dt ? dotTip(dt) : b ? spotTip(m.spots[b.dataset.i]) : '';
+    if (html) { tip.innerHTML = html; tip.hidden = false; tip.style.left = Math.min(e.clientX + 14, innerWidth - 350) + 'px'; tip.style.top = e.clientY + 14 + 'px'; }
+    else if (!b && !dt) tip.hidden = true;
     if (!drag || !drag.pan) return;
     if (Math.abs(e.clientX - drag.x) + Math.abs(e.clientY - drag.y) > 4) drag.moved = true;
     if (!drag.moved) return;
@@ -896,12 +945,13 @@ function initMap(cityId) {
       showLog();
       return;
     }
-    if (d.moved || !b) return;
-    const s = m.spots[b.dataset.i];
-    openSpot(s);
+    if (d.moved) return;
+    if (d.dot) return show(d.dot.dataset.r);
+    if (b) openSpot(m.spots[b.dataset.i]);
   };
-  // keyboard: Enter on a focused spot opens it
+  // keyboard: Enter on a focused spot or resident dot opens it
   inner.querySelectorAll('.spot[data-i]').forEach(b => b.onkeydown = e => { if (e.key === 'Enter') { e.preventDefault(); openSpot(m.spots[b.dataset.i]); } });
+  inner.querySelectorAll('.rdot').forEach(b => b.onkeydown = e => { if (e.key === 'Enter') { e.preventDefault(); show(b.dataset.r); } });
   // bring the first highlighted spot to the middle of the box (reading offsetWidth forces layout, so no frame wait)
   if (mapZoom == null) setZoom(0);
   const f = inner.querySelector('.spot.focus');
@@ -923,7 +973,8 @@ function show(id, how = 'push') {
     let p = c; while (p && p.part_of && p.part_of !== city) p = byId(p.part_of);
     // opening a place expands its district; opening the district itself leaves the toggle alone
     if (p && p.id !== city && p.id !== c.id && childrenOf(p.id).length) openDist.add(p.id);
-    if (locMode !== 'houses' && c.location_type !== 'город') locMode = 'houses';
+    // «Жители» lists only places with residents: a place without them switches the list back to «Дома»
+    if (locMode === 'residents' && c.location_type !== 'город' && !resIn(c)) locMode = 'houses';
   }
   // current first: the sub-bar marks «Обзор / Карта / …» only while the city page itself is open
   current = id;

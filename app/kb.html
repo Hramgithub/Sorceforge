@@ -350,13 +350,14 @@ function renderOutline(list, sec) {
   let body;
   if (sec === 'scenario') {
     const xs = storyIn(city, 'scenario');
-    // a part of the book folds; it starts unfolded only when it holds the open scene
+    // scenes always sit in a folding group next to «Хранителю»: a part of the book, or «Сцены» for scenes
+    // outside the parts; a group starts unfolded when it holds the open scene or is the only one
     const scenes = (id, deep) => {
-      const lvl = deep ? 2 : 1, ss = scenesOf(id);
-      return [...new Set(ss.map(x => x.arc.part || ''))].map(p => {
+      const lvl = deep ? 2 : 1, ss = scenesOf(id), parts = [...new Set(ss.map(x => x.arc.part || ''))];
+      return parts.map(p => {
         const xs = ss.filter(x => (x.arc.part || '') === p), key = id + '|' + p;
-        const open = !p || partOpen(key, xs.some(x => x.id === current));
-        return (p ? group(key, open, p, lvl) : '') + (open ? xs.map(x => rec(x, lvl)).join('') : '');
+        const open = partOpen(key, parts.length === 1 || xs.some(x => x.id === current));
+        return group(key, open, p || 'Сцены', lvl) + (open ? xs.map(x => rec(x, lvl)).join('') : '');
       }).join('');
     };
     // a scenario row: scenes under the book's part headings, then its stages; every unfolded scenario first has
@@ -1324,7 +1325,7 @@ function show(id, how = 'push') {
     // the list unfolds the scenario and stage the record belongs to
     const up = c.kind === 'scene' ? byId(c.arc?.scenario) : c.kind === 'scenario' ? c : null;
     if (up) { openScen.add(up.id); if (up.part_of) openScen.add(up.part_of); }
-    if (c.kind === 'scene' && c.arc?.part) partState.set(c.arc.scenario + '|' + c.arc.part, true);
+    if (c.kind === 'scene' && c.arc) partState.set(c.arc.scenario + '|' + (c.arc.part || ''), true);
   }
   // current first: the sub-bar marks «Обзор / Карта / …» only while the city page itself is open
   current = id;

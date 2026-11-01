@@ -102,6 +102,9 @@ def main() -> int:
             for al in rec.get("aliases") or []:
                 if re.match(r"(Семья|Семейство)\b", al):
                     errors["у здания в псевдонимах нет имён людей: «Семья …» (Р-82)"].append(f"{rel(p)}: aliases: {al}")
+        for i, ab in enumerate(rec.get("abilities") or []):
+            if isinstance(ab, dict) and not re.search(r"[А-ЯЁа-яё]", ab.get("summary") or ""):
+                errors["у способности русский текст в summary; raw — как напечатано (Р-33, Р-144)"].append(f"{rel(p)}: abilities[{i}] «{ab.get('name')}»")
         q = rec.get("quality") or {}
         if bool(rec.get("errata")) != ("parse_uncertain" in (q.get("flags") or [])):
             errors["флаг «опечатка книги» (parse_uncertain) стоит ровно у записей с errata (Р-141): `python pipeline/fix/errata_flag.py <файл>`"].append(

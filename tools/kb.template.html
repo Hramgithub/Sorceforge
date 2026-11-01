@@ -875,7 +875,7 @@ function creatureCard(c) {
 function characterCard(c) {
   const occRef = c.occupation_ref && byId(c.occupation_ref);
   const facts = [['Профессия', c.occupation?.ru], ['Возраст', c.age?.raw], ['Пол', c.sex], ['Место жительства', c.residence], ['Место рождения', c.birthplace],
-    ['Типаж', c.stock_type], ['Игрок выбирает', (c.player_chooses||[]).map(x => CHOOSES[x] || x).join(', ')]]
+    ['Типаж', c.stock_type], ['Готовые имена', (c.names||[]).join(', ')], ['Игрок выбирает', (c.player_chooses||[]).map(x => CHOOSES[x] || x).join(', ')]]
     .filter(([, v]) => v).map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}${k === 'Профессия' && occRef ? ` <span class="muted">→ ${link(occRef.id, occRef.name.ru)}</span>` : ''}</dd>`).join('');
   const bg = BG.filter(([k]) => c.background?.[k]).map(([k, t]) => `<dt>${t}</dt><dd>${esc(c.background[k])}</dd>`).join('');
   const w = c.wealth || {};
@@ -884,7 +884,7 @@ function characterCard(c) {
     <div class="sub">${esc(c.name.en||'')}${(c.roles||[]).map(r => ` <span class="tag">${ROLE[r]}</span>`).join('')}${(c.aliases||[]).length ? ' · также: ' + c.aliases.map(esc).join(', ') : ''}</div>
     ${flags(c)}
     ${facts ? `<dl>${facts}</dl>` : ''}
-    ${c.description?.ru ? `<p>${esc(c.description.ru)}</p>` : ''}
+    ${c.description?.ru ? richText(c.description.ru) : ''}
     ${relations(c)}
     ${homes(c)}
     ${mentions(c)}

@@ -6,7 +6,11 @@ an official translation; `trusted` — a translation the owner marked as reliabl
 never a source (the tool refuses to read it). The text layer is taken once with Poppler `pdftotext -layout` into the local cache
 `.cache/sources/<book_id>/` (not in git); page images go there too. Pages are printed pages unless --physical.
 
+A new book is registered with `register`: its edition comes from the owner's folder it lies in
+(pipeline/source/library.json, Р-149); a file with «машинн» in its name is a machine translation and is refused.
+
 Usage:
+  python pipeline/source/pages.py register <book_id> <pdf> --title "…" [--offset N] [--edition E]
   python pipeline/source/pages.py text  <book_id> [--force]          take the text layer into the cache
   python pipeline/source/pages.py show  <book_id> 76 80-82 [--physical]
   python pipeline/source/pages.py grep  <book_id> <regex> [--pages 76-97]
@@ -46,6 +50,28 @@ def book(book_id: str) -> dict:
     return b
 
 
+def register(a) -> None:
+    """Add a book to books.json; the edition is the one of the owner's folder the PDF lies in (Р-149)."""
+    pdf = Path(a.pdf).resolve()
+    if not pdf.exists():
+        sys.exit(f"нет файла {pdf}")
+    if re.search("машинн", pdf.name, re.I):
+        sys.exit(f"{pdf.name}: машинный перевод — не источник (Р-147)")
+    lib = json.loads(BOOKS.with_name("library.json").read_text(encoding="utf-8"))["folders"]
+    home = next((f for f in lib if str(pdf).lower().startswith(f["path"].lower() + "\\")), None)
+    edition = a.edition or (home or {}).get("edition")
+    if not edition:
+        sys.exit(f"{pdf} лежит вне папок pipeline/source/library.json: укажи --edition (original, official, trusted), если владелец подтвердил издание")
+    books = json.loads(BOOKS.read_text(encoding="utf-8"))
+    if a.book in books:
+        sys.exit(f"{a.book} уже записана")
+    books[a.book] = {"title": a.title, "edition": edition, "pdf": str(pdf), "lang": (home or {}).get("lang", "ru" if a.book.endswith("-ru") else "en")}
+    if a.offset is not None:
+        books[a.book]["offset"] = a.offset
+    BOOKS.write_text(json.dumps(books, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
+    print(f"{a.book}: {a.title}, издание {edition}")
+
+
 def pages_arg(items: list[str]) -> list[int]:
     out = []
     for a in items:
@@ -66,6 +92,8 @@ def main() -> None:
     sys.stdout.reconfigure(encoding="utf-8")
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     sub = ap.add_subparsers(dest="cmd", required=True)
+    s = sub.add_parser("register"); s.add_argument("book"); s.add_argument("pdf"); s.add_argument("--title", required=True)
+    s.add_argument("--offset", type=int); s.add_argument("--edition", choices=["original", "official", "trusted"])
     s = sub.add_parser("text"); s.add_argument("book"); s.add_argument("--force", action="store_true")
     s = sub.add_parser("show"); s.add_argument("book"); s.add_argument("pages", nargs="+"); s.add_argument("--physical", action="store_true")
     s = sub.add_parser("grep"); s.add_argument("book"); s.add_argument("pattern"); s.add_argument("--pages", nargs="*")
@@ -87,6 +115,9 @@ def main() -> None:
         print(out, c.size)
         return
 
+    if a.cmd == "register":
+        register(a)
+        return
     b = book(a.book)
     off = 0 if getattr(a, "physical", False) else b.get("offset", 0)
     folder = CACHE / a.book

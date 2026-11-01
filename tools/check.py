@@ -22,6 +22,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kblib import KB, ROOT, SCHEMAS, book_ids, dump, is_ref, pick, records  # noqa: E402
 from validate import Validator  # noqa: E402
 
+ATTR_WORDS = "Рассудок и Скорость — словами, «РАС», «СКО», «SAN», «MOV» — только в raw как напечатано (Р-146)"
 MEASURES = "меры — метрические: ярд = метр, фут ÷ 3, миля × 1,6 км, дюйм → см, галлон → л (Р-64)"
 # writing rules a script can see (docs/conventions.md); each: (pattern, message, error or warning)
 RULES = [
@@ -29,6 +30,7 @@ RULES = [
     (re.compile(r"(?<![А-ЯЁа-яё])(?:РАЗ|ВЕЛ)(?![А-ЯЁа-яё])"), "размер — «ТЕЛ»", True),
     (re.compile(r"(?<![А-ЯЁа-яё])ОЗ(?![А-ЯЁа-яё])"), "пункты здоровья — «ПЗ»", True),
     (re.compile(r"(?<![А-ЯЁа-яё])ЛОВ(?![А-ЯЁа-яё])"), "ловкость — «ЛВК»", True),
+    (re.compile(r"(?<![А-ЯЁа-яё])(?:РАС|СКО)(?![А-ЯЁа-яё])|\b(?:SAN|MOV)\b"), ATTR_WORDS, True),
     (re.compile(r"d\d+\)?\s*[xхX]\s*\d"), "умножение — знак ×: (2d6+6)×5 (Р-27)", True),
     (re.compile(r"\d\s*ярд|(?<![А-ЯЁа-яё])(?:фут(?:а|ов)?|дюйм(?:а|ов)?|мил[яюиье]|миль|галлон(?:а|ов)?|унци[йяю])(?![А-ЯЁа-яё])"),
      MEASURES, True),
@@ -113,6 +115,8 @@ def main() -> int:
             if path.rsplit(".", 1)[-1] in QUOTED:
                 continue
             for pat, msg, is_error in RULES:
+                if msg == ATTR_WORDS and (re.split(r"[.\[]", path)[-1].rstrip("]") in {"raw", "to", "reason"} or "source_variants" in path or path.startswith("corrections")):
+                    continue
                 if msg == MEASURES and (re.split(r"[.\[]", path)[-1].rstrip("]") in KEEP_MEASURES or "source_variants" in path):
                     continue
                 m = pat.search(s)

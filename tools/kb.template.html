@@ -450,7 +450,7 @@ function renderLocList(list) {
       const groups = items.filter(isGroup), loose = items.filter(d => !isGroup(d));
       if (!loose.length || groups.length <= loose.length) return items.map(d => node(d, lvl)).join('');
       const k = key + '|other', open = openDist.has(k) || loose.some(d => d.id === current);
-      return groups.map(d => node(d, lvl)).join('') + `<h4 class="dist sub" data-dist="${esc(k)}" data-other>${fold(open)}Прочие</h4>`
+      return groups.map(d => node(d, lvl)).join('') + `<h4 class="dist sub" data-dist="${esc(k)}" data-other data-ids="${esc(loose.map(d => d.id).join(' '))}">${fold(open)}Прочие</h4>`
         + (open ? loose.map(d => res && hasRes(d) ? place(d) : place(d, null, 2)).join('') : '');
     };
     list.innerHTML = cities.filter(c => !res || resIn(c)).map(c => {
@@ -1000,6 +1000,13 @@ let mapCur = null;
 function lightSpots(id) {
   const inner = document.getElementById('mapinner');
   if (!inner || !mapCur) return;
+  // a group without a record of its own («Прочие», Р-159) lights all its places as a district does
+  if (Array.isArray(id)) {
+    const all = id.map(byId).filter(Boolean).flatMap(mapIds);
+    inner.querySelectorAll('.spot[data-i]').forEach(b => { const on = all.includes(mapCur.spots[b.dataset.i].target); b.classList.remove('lit', 'litz'); b.classList.toggle('litd', on); });
+    inner.querySelectorAll('.rdot').forEach(b => b.classList.toggle('lit', all.includes(b.dataset.loc)));
+    return;
+  }
   const c = id && byId(id);
   // a district lights all its places in its own colour (the book draws no district borders, Р-120);
   // a house with rooms or floors of its own (Р-134) has no spots for them on this map and stays a house;
@@ -1014,7 +1021,7 @@ function lightSpots(id) {
   // «Жители»: a person lights their own dots; a place or district lights the dots of everyone living there
   inner.querySelectorAll('.rdot').forEach(b => b.classList.toggle('lit', !!c && (c.kind === 'location' ? ids.includes(b.dataset.loc) : b.dataset.r === c.id)));
 }
-document.getElementById('list').addEventListener('pointerover', e => { const el = e.target.closest('#list [data-id], #list [data-dist]'); lightSpots(el?.dataset.id || el?.dataset.dist); });
+document.getElementById('list').addEventListener('pointerover', e => { const el = e.target.closest('#list [data-id], #list [data-dist]'); lightSpots(el?.dataset.ids ? el.dataset.ids.split(' ') : el?.dataset.id || el?.dataset.dist); });
 document.getElementById('list').addEventListener('pointerleave', () => lightSpots(null));
 // edit mode: moved and new spots, copied out by the owner and applied to kb/maps
 const mapLog = [];
@@ -1148,7 +1155,9 @@ function initMap(cityId) {
   document.getElementById('mapcopy').onclick = () => navigator.clipboard?.writeText(document.getElementById('maplog').value);
   document.getElementById('mapclear').onclick = () => { mapLog.length = 0; inner.querySelectorAll('.spot.new').forEach(x => x.remove()); showLog(); };
   // pointer: drag pans the map (or moves a spot in edit mode); a click without movement opens the spot
-  const pct = e => { const r = inner.getBoundingClientRect(); return [+((e.clientX - r.left) / r.width * 100).toFixed(2), +((e.clientY - r.top) / r.height * 100).toFixed(2)]; };
+  // a spot stays on the map: a drag or a click past the edge stops at the edge
+  const edge = v => Math.min(100, Math.max(0, v));
+  const pct = e => { const r = inner.getBoundingClientRect(); return [+edge((e.clientX - r.left) / r.width * 100).toFixed(2), +edge((e.clientY - r.top) / r.height * 100).toFixed(2)]; };
   let drag = null;
   box.onpointerdown = e => {
     if (e.button !== 0) return;

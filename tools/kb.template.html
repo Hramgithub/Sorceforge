@@ -1100,6 +1100,10 @@ function initMap(cityId) {
     }).join('');
   }).join('');
   const veiled = s => resMode && !s.text && byId(s.target)?.kind === 'location' && !hasRes(byId(s.target));
+  // places of the area this map shows that have no spot on it yet: the edit mode can give them one
+  const area = byId(m.shows || m.location);
+  const unmapped = area ? [area, ...descendants(area.id)].filter(l => l.kind === 'location' && !m.spots.some(s => s.target === l.id))
+    .sort((a, b) => (!a.number - !b.number) || (a.number || '').localeCompare(b.number || '', 'ru', { numeric: true }) || a.name.ru.localeCompare(b.name.ru, 'ru')) : [];
   const spot = (s, i) => `<button type="button" class="spot ${sh.kind}${s.printed === false ? ' computed' : s.note ? ' doubt' : ''}${veiled(s) ? ' nores' : ''}${focus.includes(s.target) ? ' focus' : ''}" data-i="${i}" style="left:${s.x}%;top:${s.y}%;width:${sh.w}%;height:${sh.h}%" aria-label="${esc(s.label)}"></button>`;
   // maps are switched from the left list (map icons, Р-120); the open map's name heads the section instead of the city name
   wrap.innerHTML = `<div class="maptools"><b class="mapname">${esc(m.name.ru)}</b>
@@ -1109,7 +1113,8 @@ function initMap(cityId) {
     <div class="mapbox" id="mapbox"><div class="mapinner${mapEdit ? ' edit' : ''}${resMode ? ' res' : ''}" id="mapinner" style="width:${(mapZoom ?? 1) * 100}%;aspect-ratio:${m.width}/${m.height}"><img src="${esc(m.image)}" alt="${esc(m.name.ru)}" draggable="false">${m.spots.map(spot).join('')}${dots}</div></div>
     <div class="maptip" id="maptip" hidden></div>
     <section id="mapedit-panel"${mapEdit ? '' : ' hidden'}><h3>Правка меток</h3>
-      <p class="muted">Метку можно перетащить; щелчок по пустому месту ставит новую точку. Изменения живут до перезагрузки страницы — скопируйте их и пришлите, чтобы перенести в базу.</p>
+      <p class="muted">Метку можно перетащить; щелчок по пустому месту ставит новую точку. Чтобы поставить метку месту, которого на карте нет, выберите его в списке и щёлкните по карте. Изменения живут до перезагрузки страницы — скопируйте их и пришлите, чтобы перенести в базу.</p>
+      <p><label>Новая метка для: <select id="mapnew"><option value="">— просто точка —</option>${unmapped.map(l => `<option value="${esc(l.id)}">${esc((l.number ? l.number + ' ' : '') + l.name.ru)}</option>`).join('')}</select></label></p>
       <textarea id="maplog" readonly></textarea><p><button type="button" id="mapcopy">Скопировать</button> <button type="button" id="mapclear">Очистить</button></p></section>
     <p class="muted">Колёсико мыши — масштаб, перетаскивание — сдвиг карты. Жёлтый пунктир — сомнительная метка, красный — места нет на карте, точка вычислена (подробности в подсказке).</p>
     <section><h3>Источник</h3><div>${sources(m)}</div>${m.quality?.notes ? `<p class="muted">${esc(m.quality.notes)}</p>` : ''}</section>`;
@@ -1190,9 +1195,18 @@ function initMap(cityId) {
         const old = mapLog.find(x => x.map === m.id && x.i === i);
         old ? Object.assign(old, { x: s.x, y: s.y }) : mapLog.push({ map: m.id, i, label: s.label, target: s.target, x: s.x, y: s.y });
       } else if (!d.moved && !b) {
-        const [x, y] = pct(e);
-        mapLog.push({ map: m.id, new: true, x, y });
-        inner.insertAdjacentHTML('beforeend', `<span class="spot new" style="left:${x}%;top:${y}%"></span>`);
+        const [x, y] = pct(e), sel = document.getElementById('mapnew'), t = sel.value && byId(sel.value);
+        if (t) {
+          // a spot for a chosen place: it works like any spot at once and leaves the list
+          const s = { label: t.number || t.name.ru, x, y, target: t.id };
+          m.spots.push(s);
+          mapLog.push({ map: m.id, new: true, ...s });
+          inner.insertAdjacentHTML('beforeend', spot(s, m.spots.length - 1));
+          sel.querySelector(`option[value="${CSS.escape(t.id)}"]`).remove(); sel.value = '';
+        } else {
+          mapLog.push({ map: m.id, new: true, x, y });
+          inner.insertAdjacentHTML('beforeend', `<span class="spot new" style="left:${x}%;top:${y}%"></span>`);
+        }
       }
       showLog();
       return;

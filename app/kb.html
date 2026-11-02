@@ -39,6 +39,7 @@ main { display:grid; grid-template-columns: 300px 1fr; min-height: calc(100vh - 
 blockquote.handout { margin:0; padding:10px 16px; border-left:3px solid var(--accent); background:var(--panel); font-family:Georgia, "Times New Roman", serif; }
 #subbar button { font:inherit; padding:4px 10px; border:1px solid var(--line); border-radius:6px; background:none; color:inherit; cursor:pointer; }
 #subbar button.active { background:var(--panel); border-color:var(--accent); color:var(--accent); font-weight:600; }
+#subbar select { padding:4px 8px; border-color:var(--accent); color:var(--accent); font-weight:600; cursor:pointer; }
 #subbar .sep { width:1px; align-self:stretch; background:var(--line); margin:0 6px; }
 /* left panel trees (Р-137): each level is indented past its parent's name, and the type gets smaller with
    depth — 16px for the city, then 15, 14, 13, 12; headings of groups differ by colour, not by size */
@@ -471,14 +472,15 @@ function renderSubbar() {
     return;
   }
   if (tab !== 'location' || !CITIES.length) { bar.innerHTML = ''; return; }
-  bar.innerHTML = [['all', 'Все гайды'], ...GUIDES.map(g => [g, BOOKS[g] || g])].map(([g, l]) => `<button data-guide="${esc(g)}" class="${g === guide ? 'active' : ''}">${esc(l)}</button>`).join('')
+  // one drop-down for the guides: «Все гайды» (the default) or one guide book
+  bar.innerHTML = `<select id="guidesel" title="Гайд">${[['all', 'Все гайды'], ...GUIDES.map(g => [g, BOOKS[g] || g])].map(([g, l]) => `<option value="${esc(g)}"${g === guide ? ' selected' : ''}>${esc(l)}</option>`).join('')}</select>`
     + '<span class="sep"></span>'
     + [['houses', 'Дома'], ['residents', 'Жители']].map(([m, l]) => `<button data-mode="${m}" class="${m === locMode ? 'active' : ''}">${l}</button>`).join('')
     // a section is marked while the city page or one of its scenario records is open
     // «Сценарии» counts the book's scenarios, not their stages
     + (city && current ? '<span class="sep"></span>' + CITY_SECTIONS.filter(([s]) => s === 'map' ? mapsOf(city).length : !SET[s] || storyIn(city, s).length)
       .map(([s, l]) => `<button data-sec="${s}" class="${(current === city || SET[s] && sectionOf(byId(current)?.kind) === s) && s === citySection ? 'active' : ''}">${l}${SET[s] ? ` (${storyIn(city, s).filter(x => !x.part_of).length})` : ''}</button>`).join('') : '');
-  bar.querySelectorAll('[data-guide]').forEach(b => b.onclick = () => { guide = b.dataset.guide; if (guide === 'all') { showGuides(); return; } const cs = guideCities(); if (cs.length && !cs.some(c => c.id === city)) city = cs[0].id; renderSubbar(); city ? show(city) : renderList(); });
+  bar.querySelector('#guidesel').onchange = e => { guide = e.target.value; if (guide === 'all') { showGuides(); return; } const cs = guideCities(); if (cs.length && !cs.some(c => c.id === city)) city = cs[0].id; renderSubbar(); city ? show(city) : renderList(); };
   // the map on screen redraws too: «Жители» puts resident dots around the houses
   // in a section that lists its contents, «Дома» and «Жители» go back to the city's places
   bar.querySelectorAll('[data-mode]').forEach(b => b.onclick = () => { locMode = b.dataset.mode; if (listSection()) { citySection = 'overview'; show(city); return; } renderSubbar(); renderList(); if (document.getElementById('mapinner')) initMap(current); });

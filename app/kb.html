@@ -48,6 +48,7 @@ blockquote.handout { margin:0; padding:10px 16px; border-left:3px solid var(--ac
 #list button.house { padding-left:32px; font-size:14px; }
 #list button.househ { padding:6px 16px 4px 32px; color:var(--accent); font-size:14px; font-weight:600; }
 #list button.person { padding-left:44px; font-size:13px; }
+#list button.house.room { padding-left:72px; font-size:13px; }
 #list h4.dist.sub.deep { padding-left:48px; font-size:14px; }
 #list button.rec { padding:6px 16px 6px 32px; font-size:14px; }
 #list button.rec.l1 { padding-left:72px; font-size:13px; }
@@ -429,20 +430,24 @@ function renderLocList(list) {
       return `<button data-id="${esc(p.id)}" class="person ${p.id === current ? 'active' : ''}">${esc(p.name.ru)}<small>${esc([sub, note].filter(Boolean).join(' · '))}</small></button>`;
     };
     // in «Жители» a place is a small heading followed by its residents; the city's own residents go under «Без адреса»
-    const place = (h, label) => res
+    const place = (h, label, lvl = 1) => res
       ? `<button data-id="${esc(h.id)}" class="house househ ${h.id === current ? 'active' : ''}">${esc(label || (h.number ? h.number + ' ' : '') + h.name.ru)}</button>${h.residents.map(person).join('')}`
-      : `<button data-id="${esc(h.id)}" class="house ${h.id === current ? 'active' : ''}">${mapIcon(h)}${esc((h.number ? h.number + ' ' : '') + h.name.ru)}<small>${esc(h.keeper_hint || '')}</small></button>`;
+      : `<button data-id="${esc(h.id)}" class="house${lvl > 2 ? ' room' : ''} ${h.id === current ? 'active' : ''}">${mapIcon(h)}${esc((h.number ? h.number + ' ' : '') + h.name.ru)}<small>${esc(h.keeper_hint || '')}</small></button>`;
+    // a place with places inside folds like a district, down to rooms of a building (Р-155): a district or a place
+    // under the city is level 1, a building with rooms inside a district — level 2; deeper places list flat under it.
+    // In «Жители» a district lists every place with residents inside it, at any depth
+    const node = (d, lvl) => {
+      const inner = res ? descendants(d.id).filter(x => hasRes(x) && inGuide(x)) : lvl > 1 ? descendants(d.id).filter(inGuide) : childrenOf(d.id).filter(inGuide);
+      if (!inner.length) return place(d, null, lvl);
+      const open = openDist.has(d.id);
+      return `<h4 class="dist sub${lvl > 1 ? ' deep' : ''}${d.id === current ? ' active' : ''}" data-dist="${esc(d.id)}">${mapIcon(d)}${fold(open)}${d.number ? esc(d.number) + ' ' : ''}${esc(d.name.ru)}</h4>`
+        + (open ? (res && hasRes(d) ? place(d) : '') + inner.map(h => res || lvl > 1 ? place(h, null, lvl + 1) : node(h, lvl + 1)).join('') : '');
+    };
     list.innerHTML = cities.filter(c => !res || resIn(c)).map(c => {
       const openC = openCity.has(c.id);
       const kids = childrenOf(c.id).filter(k => (inGuide(k) || placesIn(k.id).some(inGuide)) && (!res || resIn(k)));
       return `<h4 class="dist city${c.id === current ? ' active' : ''}" data-city="${esc(c.id)}">${mapIcon(c)}${fold(openC)}${esc(c.name.ru)}</h4>`
-        + (openC ? (res && hasRes(c) ? place(c, 'Без адреса') : '') + kids.map(d => {
-          const inner = res ? descendants(d.id).filter(x => hasRes(x) && inGuide(x)) : childrenOf(d.id).filter(inGuide);
-          if (!inner.length) return place(d);
-          const open = openDist.has(d.id);
-          return `<h4 class="dist sub${d.id === current ? ' active' : ''}" data-dist="${esc(d.id)}">${mapIcon(d)}${fold(open)}${d.number ? esc(d.number) + ' ' : ''}${esc(d.name.ru)}</h4>`
-            + (open ? (res && hasRes(d) ? place(d) : '') + inner.map(h => place(h)).join('') : '');
-        }).join('') : '');
+        + (openC ? (res && hasRes(c) ? place(c, 'Без адреса') : '') + kids.map(d => node(d, 1)).join('') : '');
     }).join('') || `<p class="muted" style="padding:8px 16px">${res ? 'Жители не указаны.' : 'В этом гайде мест нет.'}</p>`;
     // a row: the arrow only folds or unfolds; the name opens the page (a city opens on «Обзор»); the map icon opens the map
     list.querySelectorAll('h4 .fold').forEach(f => f.onclick = e => {
@@ -1355,9 +1360,8 @@ function show(id, how = 'push') {
     const cc = cityOf(c);
     // opening a place expands its city; opening the city itself leaves the toggle alone
     if (cc) { city = cc.id; if (cc.id !== c.id) openCity.add(cc.id); }
-    let p = c; while (p && p.part_of && p.part_of !== city) p = byId(p.part_of);
-    // opening a place expands its district; opening the district itself leaves the toggle alone
-    if (p && p.id !== city && p.id !== c.id && childrenOf(p.id).length) openDist.add(p.id);
+    // opening a place expands its district and the building it is in; opening the district itself leaves the toggle alone
+    for (let q = byId(c.part_of); q && q.id !== city; q = byId(q.part_of)) openDist.add(q.id);
     // «Жители» lists only places with residents: a place without them switches the list back to «Дома»
     if (locMode === 'residents' && c.location_type !== 'город' && !resIn(c)) locMode = 'houses';
   }

@@ -444,11 +444,20 @@ function renderLocList(list) {
       return `<h4 class="dist sub${lvl > 1 ? ' deep' : ''}${d.id === current ? ' active' : ''}" data-dist="${esc(d.id)}">${mapIcon(d)}${fold(open)}${d.number ? esc(d.number) + ' ' : ''}${esc(d.name.ru)}</h4>`
         + (open ? (res && hasRes(d) ? place(d) : '') + inner.map(h => res || lvl > 1 ? place(h, null, lvl + 1) : node(h, lvl + 1)).join('') : '');
     };
+    // Р-159: when most entries of a level are groups, its loose places fold together under «Прочие» at its end
+    const isGroup = d => res ? descendants(d.id).some(x => hasRes(x) && inGuide(x)) : childrenOf(d.id).some(inGuide);
+    const levelHtml = (items, lvl, key) => {
+      const groups = items.filter(isGroup), loose = items.filter(d => !isGroup(d));
+      if (!loose.length || groups.length <= loose.length) return items.map(d => node(d, lvl)).join('');
+      const k = key + '|other', open = openDist.has(k) || loose.some(d => d.id === current);
+      return groups.map(d => node(d, lvl)).join('') + `<h4 class="dist sub" data-dist="${esc(k)}" data-other>${fold(open)}Прочие</h4>`
+        + (open ? loose.map(d => res && hasRes(d) ? place(d) : place(d, null, 2)).join('') : '');
+    };
     list.innerHTML = cities.filter(c => !res || resIn(c)).map(c => {
       const openC = openCity.has(c.id);
       const kids = childrenOf(c.id).filter(k => (inGuide(k) || placesIn(k.id).some(inGuide)) && (!res || resIn(k)));
       return `<h4 class="dist city${c.id === current ? ' active' : ''}" data-city="${esc(c.id)}">${mapIcon(c)}${fold(openC)}${esc(c.name.ru)}</h4>`
-        + (openC ? (res && hasRes(c) ? place(c, 'Без адреса') : '') + kids.map(d => node(d, 1)).join('') : '');
+        + (openC ? (res && hasRes(c) ? place(c, 'Без адреса') : '') + levelHtml(kids, 1, c.id) : '');
     }).join('') || `<p class="muted" style="padding:8px 16px">${res ? 'Жители не указаны.' : 'В этом гайде мест нет.'}</p>`;
     // a row: the arrow only folds or unfolds; the name opens the page (a city opens on «Обзор»); the map icon opens the map
     list.querySelectorAll('h4 .fold').forEach(f => f.onclick = e => {
@@ -459,7 +468,8 @@ function renderLocList(list) {
     });
     list.querySelectorAll('[data-mapfor]').forEach(i => i.onclick = e => { e.stopPropagation(); openMap(i.dataset.mapfor); });
     list.querySelectorAll('h4[data-city]').forEach(h => h.onclick = () => { const id = h.dataset.city; openCity.add(id); city = id; citySection = 'overview'; show(id); });
-    list.querySelectorAll('h4[data-dist]').forEach(h => h.onclick = () => { openDist.add(h.dataset.dist); show(h.dataset.dist); });
+    list.querySelectorAll('h4[data-dist]:not([data-other])').forEach(h => h.onclick = () => { openDist.add(h.dataset.dist); show(h.dataset.dist); });
+    list.querySelectorAll('h4[data-other]').forEach(h => h.onclick = () => h.querySelector('.fold').click());
   }
   list.querySelectorAll('button').forEach(b => b.onclick = () => show(b.dataset.id));
 }

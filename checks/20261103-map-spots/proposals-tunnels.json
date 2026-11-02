@@ -1,0 +1,147 @@
+{
+  "schema": "sourcefold.proposals.v0",
+  "by": "Р-155, часть tunnels (тоннели контрабандистов)",
+  "proposals": [
+    {
+      "target": "coc:location:innsmouth-dom-v-trushchobakh",
+      "op": "set",
+      "path": "number",
+      "value": "X",
+      "reason": "значок «X» карты тоннелей (с. 133) отмечает выходы тоннелей в эти дома (врезка «Тайники контрабандистов», с. 135); 14 меток карты ведут на эту запись",
+      "ref": "Р-155"
+    },
+    {
+      "target": "coc:location:innsmouth-dom-v-trushchobakh",
+      "op": "replace",
+      "path": "description.ru",
+      "old": "Внутри строений — лишь ветхая мебель, ещё больше мусора, пыль и грязь.",
+      "new": "Внутри строений — лишь ветхая мебель, ещё больше мусора, пыль и грязь. На карте тоннелей (с. 133) места, где тоннели выходят в такие дома, отмечены «X» (14 значков); легенда карты называет значок «Вход в дом/руины».",
+      "reason": "метки «X» карты тоннелей ведут на эту запись (с. 133, 135)",
+      "ref": "Р-155"
+    },
+    {
+      "target": "coc:location:innsmouth-dom-v-trushchobakh",
+      "op": "append",
+      "path": "sources",
+      "value": {
+        "book_id": "pobeg-iz-innsmuta-ru",
+        "physical_page": 133,
+        "printed_page": 133,
+        "method": "book_text",
+        "verified": true,
+        "note": "карта тоннелей: значки «X» — «Вход в дом/руины»"
+      },
+      "reason": "источник меток «X»",
+      "ref": "Р-155",
+      "correction": false
+    },
+    {
+      "target": "pobeg-iz-innsmuta-ru/scene/yama-dlya-razvedeniya-shoggotov",
+      "op": "set",
+      "path": "where.0.location",
+      "value": "coc:location:innsmouth-1013-yama-dlya-razvedeniya-shoggotov",
+      "reason": "заведено место «Яма для разведения шогготов» (с. 138)",
+      "ref": "Р-155"
+    },
+    {
+      "target": "pobeg-iz-innsmuta-ru/scene/chernaya-laguna",
+      "op": "set",
+      "path": "where.0.location",
+      "value": "coc:location:innsmouth-1013-chernaya-laguna",
+      "reason": "заведено место «Чёрная лагуна» (с. 139)",
+      "ref": "Р-155"
+    },
+    {
+      "target": "pobeg-iz-innsmuta-ru/scene/zasady-v-tonnelyakh",
+      "op": "set",
+      "path": "where.0.location",
+      "value": "coc:location:innsmouth-1013-d1-d2-zasada",
+      "reason": "заведено место «Завалы с засадой» — точки D1 и D2 (с. 134)",
+      "ref": "Р-155"
+    },
+    {
+      "target": "pobeg-iz-innsmuta-ru/scene/zasady-v-tonnelyakh",
+      "op": "set",
+      "path": "where.0.note",
+      "value": "пробки из обломков в точках D1 и D2 («Засада»)",
+      "reason": "надводные камеры вынесены во второй элемент «where»",
+      "ref": "Р-155"
+    },
+    {
+      "target": "pobeg-iz-innsmuta-ru/scene/zasady-v-tonnelyakh",
+      "op": "append",
+      "path": "where",
+      "value": {
+        "location": "coc:location:innsmouth-1013-tonneli-kontrabandistov",
+        "note": "нападения из тьмы — у надводных камер, до конца сценария"
+      },
+      "reason": "«Нападения из тьмы» идут по всем тоннелям, не только у D1 и D2 (с. 134–135)",
+      "ref": "Р-155"
+    },
+    {
+      "target": "pobeg-iz-innsmuta-ru/scene/v-pogone-za-zolotom",
+      "op": "append",
+      "path": "where",
+      "value": {
+        "location": "coc:location:innsmouth-1013-yama-dlya-razvedeniya-shoggotov",
+        "note": "здесь отряд сыщика, по совету книги, догоняет Анзака"
+      },
+      "reason": "книга рекомендует, чтобы отряд догнал Анзака в яме для разведения шогготов (с. 137)",
+      "ref": "Р-155"
+    },
+    {
+      "target": "pobeg-iz-innsmuta-ru/scene/ogon-po-svoim",
+      "op": "set",
+      "path": "where.0.location",
+      "value": "coc:location:innsmouth-dom-v-trushchobakh",
+      "reason": "сцена идёт в домах над тоннелями (с. 137) — это запись «Дом в трущобах над тоннелями», на неё ведут метки «X»",
+      "ref": "Р-155"
+    },
+    {
+      "target": "pobeg-iz-innsmuta-ru/scene/tsel-6-begstvo-tonnelyami",
+      "op": "append",
+      "path": "where",
+      "value": {
+        "location": "coc:location:innsmouth-1013-yama-dlya-razvedeniya-shoggotov",
+        "note": "куда Марш постарается направить группу"
+      },
+      "reason": "Марш старается направить группу в яму для разведения шогготов (с. 167)",
+      "ref": "Р-155"
+    },
+    {
+      "target": "pobeg-iz-innsmuta-ru/item/zoloto-glubokovodnykh",
+      "op": "set",
+      "path": "found_at.2.location",
+      "value": "coc:location:innsmouth-1013-yama-dlya-razvedeniya-shoggotov",
+      "reason": "золото лежит на дне ямы для разведения шогготов (с. 138); заведено место",
+      "ref": "Р-155"
+    },
+    {
+      "target": "pobeg-iz-innsmuta-ru/scenario/reyd-tsel-3",
+      "op": "append",
+      "path": "steps.3.refs",
+      "value": "coc:location:innsmouth-1013-d1-d2-zasada",
+      "reason": "ссылка на место D1–D2",
+      "ref": "Р-155",
+      "correction": false
+    },
+    {
+      "target": "pobeg-iz-innsmuta-ru/scenario/reyd-tsel-3",
+      "op": "append",
+      "path": "steps.10.refs",
+      "value": "coc:location:innsmouth-1013-yama-dlya-razvedeniya-shoggotov",
+      "reason": "ссылка на место «Яма для разведения шогготов»",
+      "ref": "Р-155",
+      "correction": false
+    },
+    {
+      "target": "pobeg-iz-innsmuta-ru/scenario/reyd-tsel-3",
+      "op": "append",
+      "path": "steps.11.refs",
+      "value": "coc:location:innsmouth-1013-chernaya-laguna",
+      "reason": "ссылка на место «Чёрная лагуна»",
+      "ref": "Р-155",
+      "correction": false
+    }
+  ]
+}

@@ -22,15 +22,13 @@
       "label": "A",
       "x": 21.87,
       "y": 49.5,
-      "target": "coc:location:innsmouth-1011-rif-dyavola",
-      "text": "Серия пещер с норвежскими рунами: Торвальд зимовал здесь в 1004 году."
+      "target": "coc:location:innsmouth-1011-a-peshchery-s-runami"
     },
     {
       "label": "C",
       "x": 23.46,
       "y": 31.61,
-      "target": "coc:location:innsmouth-1011-rif-dyavola",
-      "text": "Две пещеры с барельефами рыбоподобных гуманоидов; следы глубоководных."
+      "target": "coc:location:innsmouth-1011-c-peshchery-s-barelefami"
     },
     {
       "label": "X",
@@ -43,8 +41,7 @@
       "label": "B",
       "x": 54.58,
       "y": 25.37,
-      "target": "coc:location:innsmouth-1011-rif-dyavola",
-      "text": "Пещеры с глифами Р’льеха; расщелина и спуск к залам Й’ха-нтлеи (около двух часов пути)."
+      "target": "coc:location:innsmouth-1011-b-peshchery-s-glifami"
     },
     {
       "label": "X",
@@ -64,8 +61,7 @@
       "label": "B",
       "x": 42.37,
       "y": 41.6,
-      "target": "coc:location:innsmouth-1011-rif-dyavola",
-      "text": "Пещеры с глифами Р’льеха; расщелина и спуск к залам Й’ха-нтлеи (около двух часов пути)."
+      "target": "coc:location:innsmouth-1011-b-peshchery-s-glifami"
     },
     {
       "label": "F",
@@ -78,15 +74,13 @@
       "label": "D",
       "x": 50.21,
       "y": 42.6,
-      "target": "coc:location:innsmouth-1011-rif-dyavola",
-      "text": "Тоннели глубоководных и пещера для жертв с железными кольцами в стенах."
+      "target": "coc:location:innsmouth-1011-d-tonneli-glubokovodnykh"
     },
     {
       "label": "E",
       "x": 53.67,
       "y": 41.43,
-      "target": "coc:location:innsmouth-1011-rif-dyavola",
-      "text": "Хранилище утвари Ордена Дагона; затопленный бассейн ведёт вниз, в Й’ха-нтлеи."
+      "target": "coc:location:innsmouth-1011-e-khranilishche-utvari"
     },
     {
       "label": "X",
@@ -99,8 +93,7 @@
       "label": "C",
       "x": 65.38,
       "y": 40.6,
-      "target": "coc:location:innsmouth-1011-rif-dyavola",
-      "text": "Две пещеры с барельефами рыбоподобных гуманоидов; следы глубоководных."
+      "target": "coc:location:innsmouth-1011-c-peshchery-s-barelefami"
     },
     {
       "label": "X",
@@ -129,6 +122,15 @@
   "quality": {
     "needs_review": false,
     "flags": [],
-    "notes": "Метки — буквы пещер из раздела 1011; все ведут на запись рифа, пояснение буквы — в подсказке. B и C на карте по два раза, X — пять раз; F и X в тексте не описаны."
-  }
+    "notes": "Метки — буквы пещер из раздела 1011. A–E ведут каждая на свою запись пещеры (Р-155), описание — в записи, подсказка — её keeper_hint; B и C на карте по два раза и ведут на одну запись. F и пять X в тексте не описаны и ведут на запись рифа. Подпись карты «Область, недоступная во время прилива» тремя стрелками указывает на участки с западной стороны гряды; меткой не стала."
+  },
+  "corrections": [
+    {
+      "field": "spots[A–E].target",
+      "from": "coc:location:innsmouth-1011-rif-dyavola",
+      "to": "записи пещер innsmouth-1011-a…e; поле text у этих меток убрано (описание — в записи)",
+      "reason": "каждая буква карты — своё место (с. 57–58, 183)",
+      "ref": "Р-155"
+    }
+  ]
 }

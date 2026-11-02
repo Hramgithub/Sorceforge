@@ -42,7 +42,8 @@ other books), `tools/`, `app/`, `schemas/`, `docs/`. A change they need goes to 
    «Заголовок книги | Страница | Где в базе», plus «Не взято» with the reason for anything not moved
    (nothing is dropped silently).
 2. `python tools/check.py <your files>` — 0 errors. Ids you reference exist (the check looks across the whole base).
-3. No git commands, no viewer rebuild — the lead integrates, checks and commits.
+3. No git commands at all, not even `git status` (`python tools/check.py --changed` lists what changed); no viewer
+   rebuild — the lead integrates, checks and commits.
 
 ## Units (who owns what)
 

@@ -1,0 +1,21 @@
+{
+  "book_id": "pobeg-iz-innsmuta-ru",
+  "goal": "every lettered spot of the book's maps becomes its own place with the full description from the book, so the map list has one row per spot and the Keeper reads the room's contents, encounters and mechanics in its card (Р-155).",
+  "decision": "Р-155",
+  "check_dir": "checks/20261103-map-spots",
+  "models": [
+    "kb/locations/innsmouth-pomestye-marshey-vtoroy-etazh.json",
+    "kb/locations/innsmouth-orden-dagona-vnutri.json",
+    "kb/locations/innsmouth-affinazhnyy-zavod-pereplavka.json",
+    "kb/maps/y-kha-ntlei-chambers.json"
+  ],
+  "extra": "## This work\n\nYour map's spots now all point at one complex record (see your unit). Make each distinct lettered or named place its own location record and point its spots at it.\n\n- **One record per distinct place** the book describes. Several spots of the same place share a record (the book groups K–N as one hotel spire; the fourteen «X» exits of the tunnels are one kind of place). A letter the book never explains stays on the complex record, with its `note` kept.\n- **Id**: `coc:location:innsmouth-<complex-prefix>-<label in lower case, latin>-<slug>` — prefixes in the unit table; e.g. `coc:location:innsmouth-kamery-b-sad`, `coc:location:innsmouth-1013-d-zasady`.\n- **Fields**: `name.ru` — «<label>. <name>» is NOT used; put the label into `number` («B», «K–N», «X», «D1–D2») and a plain name into `name.ru` («Комната-сад»); `location_type` `место` (or `здание` for a building such as the domed building); `part_of` — the complex record; `keeper_hint` — one line; `description.ru` — full retelling for play: what is there, who, encounters, checks with exact numbers, Sanity, hazards, exits; `refs` — creatures, characters, items, tomes found or met there; `residents` only for those who live there (Р-101); `sources` with pages; `quality`.\n- **Map**: in your map file set each spot's `target` to its new record; keep `label`, `x`, `y`, `printed`, `note`; shorten `text` to one line or drop it when the record carries the description (the map tooltip shows the record's `keeper_hint`).\n- **Scenes** that happen in one of your places: propose `set` of `where.<i>.location` from the complex to the place (or `append` a second `where` item if the scene spans several places). The complex record: propose a `replace` in its description if it retells a room you now describe in full — keep a one-line pointer instead. Never edit scenes or the complex record yourself.\n- Read the whole description of your complex in the book before writing; take every room's text, sidebars and boxed text. The map page images are in `app/maps/` (file named in your map record).",
+  "units": [
+    {"name": "yha", "pages": "58-60 150-159 184", "target": "map `kb/maps/y-kha-ntlei-chambers.json`; complex `coc:location:innsmouth-zapolnennye-vozdukhom-kamery`; id prefix `kamery`", "sites": "rooms A–N of the air-filled chambers",
+     "owns": ["kb/maps/y-kha-ntlei-chambers.json", "new files kb/locations/innsmouth-kamery-*.json", "checks/20261103-map-spots/yha.md", "checks/20261103-map-spots/proposals-yha.json"]},
+    {"name": "tunnels", "pages": "61 130-140 133", "target": "map `kb/maps/innsmouth-smugglers-tunnels.json`; complex `coc:location:innsmouth-1013-tonneli-kontrabandistov`; id prefix `1013`", "sites": "X exits, D1–D2, A, Black Lagoon, shoggoth pit",
+     "owns": ["kb/maps/innsmouth-smugglers-tunnels.json", "new files kb/locations/innsmouth-1013-*.json", "checks/20261103-map-spots/tunnels.md", "checks/20261103-map-spots/proposals-tunnels.json"]},
+    {"name": "reef", "pages": "57-58 141-149 183", "target": "map `kb/maps/innsmouth-reef.json`; complex `coc:location:innsmouth-1011-rif-dyavola`; id prefix `1011`", "sites": "caves A–F and X of Devil Reef",
+     "owns": ["kb/maps/innsmouth-reef.json", "new files kb/locations/innsmouth-1011-*.json", "checks/20261103-map-spots/reef.md", "checks/20261103-map-spots/proposals-reef.json"]}
+  ]
+}

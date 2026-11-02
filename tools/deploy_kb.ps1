@@ -119,9 +119,14 @@ mkdir '$releaseId'
 tar -xzf '$releaseId.tgz' -C '$releaseId'
 rm -f '$releaseId.tgz'
 chmod -R a+rX '$releaseId'
+touch '$releaseId'
 cd '$RemoteRoot'
 ln -sfn 'releases/$releaseId' current.tmp && mv -T current.tmp current
-ls -1dt releases/*/ | tail -n +$($Keep + 1) | xargs -r rm -rf
+# Prune by name, not mtime: release ids start with the deploy time, while tar gives every
+# release folder the mtime of the local app/ folder. Never remove the release current points to.
+keep_current=`$(readlink current)
+ls -1d releases/*/ | sed 's#/`$##' | sort -r | tail -n +$($Keep + 1) | grep -vxF "`$keep_current" | xargs -r rm -rf
+test -f current/index.html
 echo current: `$(readlink current)
 ls -1 releases
 "@

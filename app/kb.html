@@ -1115,7 +1115,10 @@ function initMap(cityId) {
     <section id="mapedit-panel"${mapEdit ? '' : ' hidden'}><h3>Правка меток</h3>
       <p class="muted">Метку можно перетащить; щелчок по пустому месту ставит новую точку. Чтобы поставить метку месту, которого на карте нет, выберите его в списке и щёлкните по карте. Изменения живут до перезагрузки страницы — скопируйте их и пришлите, чтобы перенести в базу.</p>
       <p><label>Новая метка для: <select id="mapnew"><option value="">— просто точка —</option>${unmapped.map(l => `<option value="${esc(l.id)}">${esc((l.number ? l.number + ' ' : '') + l.name.ru)}</option>`).join('')}</select></label></p>
-      <textarea id="maplog" readonly></textarea><p><button type="button" id="mapcopy">Скопировать</button> <button type="button" id="mapclear">Очистить</button></p></section>
+      <textarea id="maplog" readonly></textarea><p><button type="button" id="mapcopy">Скопировать</button> <button type="button" id="mapclear">Очистить</button>
+        <button type="button" id="mapexport">Экспорт JSON</button>
+        <span id="mapsaving" hidden><button type="button" id="mapsave">Сохранить в базу</button> <button type="button" id="mapundo">Откатить последнее сохранение</button></span>
+        <span id="mapsaved" class="muted"></span></p></section>
     <p class="muted">Колёсико мыши — масштаб, перетаскивание — сдвиг карты. Жёлтый пунктир — сомнительная метка, красный — места нет на карте, точка вычислена (подробности в подсказке).</p>
     <section><h3>Источник</h3><div>${sources(m)}</div>${m.quality?.notes ? `<p class="muted">${esc(m.quality.notes)}</p>` : ''}</section>`;
   const box = document.getElementById('mapbox'), inner = document.getElementById('mapinner'), tip = document.getElementById('maptip');
@@ -1158,6 +1161,26 @@ function initMap(cityId) {
   };
   document.getElementById('mapedit').onchange = e => { mapEdit = e.target.checked; inner.classList.toggle('edit', mapEdit); document.getElementById('mapedit-panel').hidden = !mapEdit; };
   document.getElementById('mapcopy').onclick = () => navigator.clipboard?.writeText(document.getElementById('maplog').value);
+  // «Экспорт JSON»: the corrected map as a kb file (spots without a place are left out); works anywhere
+  document.getElementById('mapexport').onclick = () => {
+    const rec = { ...m, spots: m.spots.filter(s => s.target) };
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([JSON.stringify(rec, null, 2) + '\n'], { type: 'application/json' }));
+    a.download = (m.image || m.id).split('/').pop().replace(/\.\w+$/, '') + '.json';
+    a.click(); URL.revokeObjectURL(a.href);
+  };
+  // «Сохранить в базу» and «Откатить»: only when the page is served by tools/kb_server.py on this machine (Р-160)
+  const said = t => { document.getElementById('mapsaved').textContent = t; };
+  const api = (path, body) => fetch(path, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) }).then(r => r.json()).catch(() => ({ ok: false, message: 'сервер не ответил' }));
+  if (location.protocol.startsWith('http') && /^(localhost|127\.0\.0\.1)$/.test(location.hostname))
+    fetch('/api/ping').then(r => r.ok && r.json()).then(j => { if (j?.ok) document.getElementById('mapsaving').hidden = false; }).catch(() => {});
+  document.getElementById('mapsave').onclick = async () => {
+    said('сохраняю…');
+    const r = await api('/api/map-save', { id: m.id, spots: m.spots });
+    said(r.message + (r.check ? '\n' + r.check : ''));
+    if (r.ok) { mapLog.length = 0; showLog(); }
+  };
+  document.getElementById('mapundo').onclick = async () => { said('откатываю…'); said((await api('/api/map-undo', { id: m.id })).message); };
   document.getElementById('mapclear').onclick = () => { mapLog.length = 0; inner.querySelectorAll('.spot.new').forEach(x => x.remove()); showLog(); };
   // pointer: drag pans the map (or moves a spot in edit mode); a click without movement opens the spot
   // a spot stays on the map: a drag or a click past the edge stops at the edge

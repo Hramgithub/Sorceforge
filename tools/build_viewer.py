@@ -12,6 +12,8 @@ from __future__ import annotations
 import argparse
 import datetime
 import json
+import os
+import time
 from pathlib import Path
 
 
@@ -36,7 +38,17 @@ def main() -> None:
     data["books"] = {k: v["title"] for k, v in books.items()}
     payload = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
     html = a.template.read_text(encoding="utf-8").replace("__DATA__", payload)
-    a.out.write_text(html, encoding="utf-8")
+    # written beside and swapped in: on Windows the page may be open in tools/kb_server.py at this moment
+    tmp = a.out.with_suffix(".html.tmp")
+    tmp.write_text(html, encoding="utf-8")
+    for attempt in range(20):
+        try:
+            os.replace(tmp, a.out)
+            break
+        except OSError:
+            if attempt == 19:
+                raise
+            time.sleep(0.25)
     landing = (root / "tools" / "landing.template.html").read_text(encoding="utf-8")
     for kind, records in data.items():
         landing = landing.replace(f"__COUNT_{kind}__", str(len(records)))

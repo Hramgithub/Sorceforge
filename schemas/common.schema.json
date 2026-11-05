@@ -4,6 +4,21 @@
   "title": "Общие типы базы знаний",
   "description": "Типы, которые используют все сущности: значение с исходной записью, текст, источник, оси, флаги качества, общий шаблон статблока (Р-01).",
   "$defs": {
+    "images": {
+      "description": "Картинки записи (Р-165): ужатые копии в app/art/, оригиналы — у владельца или в веб-помощнике.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["file", "kind"],
+        "additionalProperties": false,
+        "properties": {
+          "file": { "type": "string", "pattern": "^art/[a-z0-9/_.-]+\\.(webp|png|jpg)$", "description": "Путь от app/: art/<вид>/<имя>.webp" },
+          "kind": { "enum": ["art", "portrait", "card", "handout", "plan", "illustration", "photo"], "description": "art — арт существа; portrait — портрет; card — игровая карточка; handout — раздатка; plan — план или схема; illustration — иллюстрация; photo — фото предмета" },
+          "caption": { "type": ["string", "null"] },
+          "source": { "type": ["string", "null"], "description": "Откуда картинка: книга и страница, веб-помощник, папка владельца" }
+        }
+      }
+    },
     "id": {
       "description": "Стабильный идентификатор сущности: coc:<тип>:<slug>. Для вариантов из сценариев: <book_id>/<тип>/<slug>.",
       "type": "string",

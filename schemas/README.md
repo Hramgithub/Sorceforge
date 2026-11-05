@@ -198,3 +198,6 @@ automatic | heavy | other`), `skill` (как в таблице + ссылка и
 вариантов), `lovecraftian`, `description`, `skill_points` (формула как в книге и разбор,
 варианты «ИЛИ»), `credit_rating` (Средства), `contacts`, `skills` (навык из
 справочника, `count` для нескольких специализаций или `choice` — сколько и из чего).
+
+Правила записи данных (как заполнять поля, 
+ames, long, source_variants, метки карт spots/printed, ссылки таблиц rom+	itle и др.) — docs/conventions.md; здесь — назначение схем.

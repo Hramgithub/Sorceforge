@@ -225,7 +225,11 @@ const byId = id => BY_ID.get(id);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const bookOf = c => c.sources?.[0]?.book_id;
 // a link carries the record's real address, so «open in new tab» works; a plain click is handled in place (show)
-const hashOf = c => '#' + encodeURIComponent(c.kind + '/' + c.id.split(/[:/]/).pop());
+// a page address is #<kind>/<last part of the id>; when two records of a kind share that part (two Wentworths of
+// different books), the book goes in front: #character/startovyy-nabor-ru.wentworth-avebury
+const slugOf = c => c.id.split(/[:/]/).pop();
+const SLUG_N = ALL.reduce((n, c) => (n[c.kind + '/' + slugOf(c)] = (n[c.kind + '/' + slugOf(c)] || 0) + 1, n), {});
+const hashOf = c => '#' + encodeURIComponent(c.kind + '/' + (SLUG_N[c.kind + '/' + slugOf(c)] > 1 ? c.id.split(/[:/]/)[0] + '.' : '') + slugOf(c));
 const link = (id, text) => `<a href="${byId(id) ? esc(hashOf(byId(id))) : '#'}" data-go="${esc(id)}">${esc(text)}</a>`;
 let tab = 'creature', current = null;
 
@@ -325,6 +329,7 @@ let guide = 'all';
 const inGuide = l => guide === 'all' || bookIds(l).includes(guide);
 const guideCities = () => CITIES.filter(c => inGuide(c) || placesIn(c.id).some(inGuide));
 const openCity = new Set(city ? [city] : []);
+const closedOther = new Set();
 // left panel: cities → districts → places (three collapsible levels); in «Жители» the same tree keeps only places
 // with residents and lists the residents under each place (a person living in two places is shown in both)
 const hasRes = l => (l.residents||[]).some(r => byId(r.id));
@@ -450,7 +455,8 @@ function renderLocList(list) {
     const levelHtml = (items, lvl, key) => {
       const groups = items.filter(isGroup), loose = items.filter(d => !isGroup(d));
       if (!loose.length || groups.length <= loose.length) return items.map(d => node(d, lvl)).join('');
-      const k = key + '|other', open = openDist.has(k) || loose.some(d => d.id === current);
+      // open while one of its places is open, unless the reader folded it
+      const k = key + '|other', open = openDist.has(k) || (loose.some(d => d.id === current) && !closedOther.has(k));
       return groups.map(d => node(d, lvl)).join('') + `<h4 class="dist sub" data-dist="${esc(k)}" data-other data-ids="${esc(loose.map(d => d.id).join(' '))}">${fold(open)}Прочие</h4>`
         + (open ? loose.map(d => res && hasRes(d) ? place(d) : place(d, null, 2)).join('') : '');
     };
@@ -461,7 +467,7 @@ function renderLocList(list) {
         + (openC ? (res && hasRes(c) ? place(c, 'Без адреса') : '') + levelHtml(kids, 1, c.id) : '');
     }).join('') || `<p class="muted" style="padding:8px 16px">${res ? 'Жители не указаны.' : 'В этом гайде мест нет.'}</p>`;
     // a row: the arrow only folds or unfolds; the name opens the page (a city opens on «Обзор»); the map icon opens the map
-    list.querySelectorAll('h4 .fold').forEach(f => f.onclick = e => {
+    list.querySelectorAll('h4:not([data-other]) .fold').forEach(f => f.onclick = e => {
       e.stopPropagation();
       const h = f.closest('h4'), id = h.dataset.city || h.dataset.dist, set = h.dataset.city ? openCity : openDist;
       set.has(id) ? set.delete(id) : set.add(id);
@@ -470,7 +476,12 @@ function renderLocList(list) {
     list.querySelectorAll('[data-mapfor]').forEach(i => i.onclick = e => { e.stopPropagation(); openMap(i.dataset.mapfor); });
     list.querySelectorAll('h4[data-city]').forEach(h => h.onclick = () => { const id = h.dataset.city; openCity.add(id); city = id; citySection = 'overview'; show(id); });
     list.querySelectorAll('h4[data-dist]:not([data-other])').forEach(h => h.onclick = () => { openDist.add(h.dataset.dist); show(h.dataset.dist); });
-    list.querySelectorAll('h4[data-other]').forEach(h => h.onclick = () => h.querySelector('.fold').click());
+    list.querySelectorAll('h4[data-other]').forEach(h => h.onclick = e => {
+      e.stopPropagation();
+      const k = h.dataset.dist, open = h.querySelector('.fold').textContent.includes('▾');
+      if (open) { openDist.delete(k); closedOther.add(k); } else { openDist.add(k); closedOther.delete(k); }
+      renderList();
+    });
   }
   list.querySelectorAll('button').forEach(b => b.onclick = () => show(b.dataset.id));
 }
@@ -1480,7 +1491,9 @@ const sortName = c => c.name.ru.replace(/^[«"„.\s]+/, '');
 Object.values(SET).forEach(s => s.sort((a, b) => sortName(a).localeCompare(sortName(b), 'ru')));
 function fromHash() {
   const [hk, hs] = decodeURIComponent(location.hash.slice(1)).split('/');
-  return hs && SET[hk] ? SET[hk].find(c => c.id.split(/[:/]/).pop() === hs) : null;
+  if (!hs || !SET[hk]) return null;
+  const [pre, slug] = hs.includes('.') ? hs.split('.') : [null, hs];
+  return SET[hk].find(c => slugOf(c) === slug && (!pre || c.id.split(/[:/]/)[0] === pre)) || null;
 }
 const start = fromHash();
 // a bare #<kind> (links from the landing page) opens that tab

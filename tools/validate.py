@@ -1,9 +1,8 @@
 """Minimal JSON Schema validator for the subset used in schemas/ (stdlib only).
 
 Supports: type (incl. lists), required, properties, additionalProperties: false,
-items, enum, const, minItems, pattern, anyOf, and $ref to "#/$defs/..." or
-"<file>.json#/$defs/..." relative to the schema directory. Temporary until a
-locked jsonschema dependency is added (decision T2).
+items, prefixItems, enum, const, minItems, maxItems, uniqueItems, pattern, anyOf, and $ref to "#/$defs/..." or
+"<file>.json#/$defs/..." relative to the schema directory (stdlib only, so the tools run without installing anything).
 
 Usage: python tools/validate.py <schema.json> <instance.json> [...]
 """
@@ -83,8 +82,17 @@ class Validator:
         if isinstance(value, list):
             if len(value) < schema.get("minItems", 0):
                 errors.append(f"{path}: fewer than {schema['minItems']} items")
-            if "items" in schema:
-                for i, item in enumerate(value):
+            if "maxItems" in schema and len(value) > schema["maxItems"]:
+                errors.append(f"{path}: more than {schema['maxItems']} items")
+            if schema.get("uniqueItems"):
+                seen = [json.dumps(v, sort_keys=True, ensure_ascii=False) for v in value]
+                if len(seen) != len(set(seen)):
+                    errors.append(f"{path}: items repeat")
+            prefix = schema.get("prefixItems", [])
+            for i, (sub, item) in enumerate(zip(prefix, value)):
+                self.check(sub, item, f"{path}[{i}]", doc, errors)
+            if "items" in schema and schema["items"] is not False:
+                for i, item in enumerate(value[len(prefix):], len(prefix)):
                     self.check(schema["items"], item, f"{path}[{i}]", doc, errors)
 
     def validate(self, instance) -> list[str]:

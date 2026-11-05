@@ -34,13 +34,14 @@ RULES = [
     (re.compile(r"(?<![А-ЯЁа-яё])(?:РАС|СКО)(?![А-ЯЁа-яё])|\b(?:SAN|MOV)\b"), ATTR_WORDS, True),
     (re.compile(r"(?m)^[ \t]*[*\-–][ \t]"), "разметки списков в данных нет: перечисление — через «;», напечатанный по пунктам список — абзацами с «•» (Р-152)", True),
     (re.compile(r"d\d+\)?\s*[xхX]\s*\d"), "умножение — знак ×: (2d6+6)×5 (Р-27)", True),
-    (re.compile(r"\d\s*ярд|(?<![А-ЯЁа-яё])(?:фут(?:а|ов)?|дюйм(?:а|ов)?|мил[яюиье]|миль|галлон(?:а|ов)?|унци[йяю])(?![А-ЯЁа-яё])"),
+    (re.compile(r"(?<![А-ЯЁа-яё])(?:фут(?:а|ов|ах|ам|ами|е|ом|ы)?|дюйм(?:а|ов|ах|ам|ы)?|мил(?:я|и|ю|е|ь|ях|ям|ями|ей)|"
+                r"ярд(?:а|ов|ах|ам|ы)?|галлон(?:а|ов|ах|ы)?|унци(?:я|и|й|ю|ях))(?![А-ЯЁа-яё])"),
      MEASURES, True),
 ]
 DECISION = re.compile(r"^Р-\d+$")
-# where the old measures may stay (Р-64, Р-124): our remarks about the data, reasons of corrections and misprints,
+# where the old measures may stay (Р-64, Р-124, Р-142): our remarks about the data, reasons of corrections and misprints,
 # names of calibres, and a scenario's numbers quoted as printed
-KEEP_MEASURES = {"notes", "note", "reason", "caliber"}
+KEEP_MEASURES = re.compile(r"^(quality\.notes|errata\[\d+\]\.(note|expected)|corrections\[\d+\]\.reason|caliber|source_variants\[\d+\]\..*)$")
 # characteristics are named by id but are not records (schemas/skill.schema.json, opposed_by)
 VIRTUAL = re.compile(r"^coc:characteristic:[a-z]+$")
 # fields that quote other data as it was: a correction's «from» and a misprint's «printed» keep the old writing
@@ -76,13 +77,18 @@ def main() -> int:
     validators: dict[str, Validator] = {}
     refs: list[tuple[Path, str, str]] = []
     rel = lambda p: p.relative_to(ROOT).as_posix()
+    checked = 0
 
     for p, rec in records():
         if rec is None:
             errors["JSON"].append(f"{rel(p)}: не читается как JSON")
             continue
         if not isinstance(rec, dict) or "id" not in rec:
+            if p in scope:
+                errors["запись без id"].append(f"{rel(p)}: не объект JSON или нет поля id")
             continue
+        if p in scope:
+            checked += 1
         ids[rec["id"]].append(p)
         kinds[rec.get("kind")] += 1
         for path, s in strings(rec):
@@ -123,7 +129,7 @@ def main() -> int:
             for pat, msg, is_error in RULES:
                 if msg == ATTR_WORDS and (re.split(r"[.\[]", path)[-1].rstrip("]") in {"raw", "to", "reason"} or "source_variants" in path or path.startswith("corrections")):
                     continue
-                if msg == MEASURES and (re.split(r"[.\[]", path)[-1].rstrip("]") in KEEP_MEASURES or "source_variants" in path):
+                if msg == MEASURES and KEEP_MEASURES.match(path):
                     continue
                 m = pat.search(s)
                 if m:
@@ -137,7 +143,7 @@ def main() -> int:
             errors["ссылка на несуществующую запись"].append(f"{rel(p)}: {path} → {r}")
 
     print(f"Записей: {sum(kinds.values())} ({', '.join(f'{k} {n}' for k, n in sorted(kinds.items(), key=lambda x: str(x[0])))}); "
-          f"проверено файлов: {len(scope)}; ссылок: {len(refs)}")
+          f"проверено записей: {checked}; ссылок: {len(refs)}")
     for title, box in (("Ошибки", errors), ("Предупреждения", warnings)):
         for check, items in box.items():
             print(f"\n{title} — {check}: {len(items)}")

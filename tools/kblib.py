@@ -5,9 +5,11 @@ A kb record is UTF-8 JSON, 2-space indent, LF, one trailing newline (docs/conven
 """
 from __future__ import annotations
 
+import glob
 import json
 import re
 import subprocess
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -82,10 +84,23 @@ def pick(paths: list[str], use_changed: bool, use_all: bool) -> list[Path]:
     """The files a tool works on: named files and folders, the changed ones, or all of kb. Nothing by default:
     a tool that rewrites files must be told what to touch."""
     out: list[Path] = []
+    bad: list[str] = []
     for a in paths:
         p = Path(a)
         p = p if p.is_absolute() else ROOT / p
-        out += sorted(p.rglob("*.json")) if p.is_dir() else [p]
+        # a pattern the shell did not expand (PowerShell passes «*.json» as text) is expanded here
+        hits = [Path(x) for x in glob.glob(str(p), recursive=True)] if glob.has_magic(str(p)) else [p]
+        if not hits:
+            bad.append(a)
+        for h in hits:
+            h = h.resolve()
+            if not h.is_relative_to(KB.resolve()) or not h.exists() or h.is_file() and h.suffix != ".json":
+                bad.append(str(h))
+            else:
+                out += sorted(h.rglob("*.json")) if h.is_dir() else [h]
+    # a path that is not a kb record is an error, not a silent skip: «проверено, ошибок 0» must mean it
+    if bad:
+        sys.exit("не записи kb/ (нет файла, не JSON или вне kb/): " + ", ".join(bad))
     if use_changed:
         out += changed()
     if use_all:

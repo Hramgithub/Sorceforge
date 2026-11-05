@@ -1025,6 +1025,7 @@ document.getElementById('list').addEventListener('pointerover', e => { const el 
 document.getElementById('list').addEventListener('pointerleave', () => lightSpots(null));
 // edit mode: moved and new spots, copied out by the owner and applied to kb/maps
 const mapLog = [];
+const mapSaved = {};
 // a place or a district: its own spots and the spots of the places inside it; a zone: also the places along it
 const mapIds = c => [c.id, ...descendants(c.id).map(x => x.id), ...(c.along||[]).map(a => a.location)];
 function onMap(c) {
@@ -1104,6 +1105,8 @@ function initMap(cityId) {
   const area = byId(m.shows || m.location);
   const unmapped = area ? [area, ...descendants(area.id)].filter(l => l.kind === 'location' && !m.spots.some(s => s.target === l.id))
     .sort((a, b) => (!a.number - !b.number) || (a.number || '').localeCompare(b.number || '', 'ru', { numeric: true }) || a.name.ru.localeCompare(b.name.ru, 'ru')) : [];
+  // the spots as loaded, for «Очистить»
+  mapSaved[m.id] ??= m.spots.map(s => ({ ...s }));
   const spot = (s, i) => `<button type="button" class="spot ${sh.kind}${s.printed === false ? ' computed' : s.note ? ' doubt' : ''}${veiled(s) ? ' nores' : ''}${focus.includes(s.target) ? ' focus' : ''}" data-i="${i}" style="left:${s.x}%;top:${s.y}%;width:${sh.w}%;height:${sh.h}%" aria-label="${esc(s.label)}"></button>`;
   // maps are switched from the left list (map icons, Р-120); the open map's name heads the section instead of the city name
   wrap.innerHTML = `<div class="maptools"><b class="mapname">${esc(m.name.ru)}</b>
@@ -1113,7 +1116,7 @@ function initMap(cityId) {
     <div class="mapbox" id="mapbox"><div class="mapinner${mapEdit ? ' edit' : ''}${resMode ? ' res' : ''}" id="mapinner" style="width:${(mapZoom ?? 1) * 100}%;aspect-ratio:${m.width}/${m.height}"><img src="${esc(m.image)}" alt="${esc(m.name.ru)}" draggable="false">${m.spots.map(spot).join('')}${dots}</div></div>
     <div class="maptip" id="maptip" hidden></div>
     <section id="mapedit-panel"${mapEdit ? '' : ' hidden'}><h3>Правка меток</h3>
-      <p class="muted">Метку можно перетащить; щелчок по пустому месту ставит новую точку. Чтобы поставить метку месту, которого на карте нет, выберите его в списке и щёлкните по карте. Изменения живут до перезагрузки страницы — скопируйте их и пришлите, чтобы перенести в базу.</p>
+      <p class="muted">Метку можно перетащить; щелчок по пустому месту ставит новую точку. Чтобы поставить метку месту, которого на карте нет, выберите его в списке и щёлкните по карте. «Экспорт JSON» скачивает исправленную карту; при запуске через <code>python tools/kb_server.py</code> — «Сохранить в базу» с резервной копией. Несохранённые изменения живут до перезагрузки страницы, «Очистить» их отменяет.</p>
       <p><label>Новая метка для: <select id="mapnew"><option value="">— просто точка —</option>${unmapped.map(l => `<option value="${esc(l.id)}">${esc((l.number ? l.number + ' ' : '') + l.name.ru)}</option>`).join('')}</select></label></p>
       <textarea id="maplog" readonly></textarea><p><button type="button" id="mapcopy">Скопировать</button> <button type="button" id="mapclear">Очистить</button>
         <button type="button" id="mapexport">Экспорт JSON</button>
@@ -1178,10 +1181,21 @@ function initMap(cityId) {
     said('сохраняю…');
     const r = await api('/api/map-save', { id: m.id, spots: m.spots });
     said(r.message + (r.check ? '\n' + r.check : ''));
-    if (r.ok) { mapLog.length = 0; showLog(); }
+    if (r.ok) { mapLog.length = 0; showLog(); mapSaved[m.id] = m.spots.map(s => ({ ...s })); }
   };
-  document.getElementById('mapundo').onclick = async () => { said('откатываю…'); said((await api('/api/map-undo', { id: m.id })).message); };
-  document.getElementById('mapclear').onclick = () => { mapLog.length = 0; inner.querySelectorAll('.spot.new').forEach(x => x.remove()); showLog(); };
+  // after an undo the page still holds the undone spots: saving again would bring them back, so it waits for a reload
+  document.getElementById('mapundo').onclick = async () => {
+    said('откатываю…');
+    const r = await api('/api/map-undo', { id: m.id });
+    said(r.message);
+    if (r.ok) document.getElementById('mapsave').disabled = true;
+  };
+  // «Очистить» undoes the unsaved edits: the spots come back as they were when the map was opened
+  document.getElementById('mapclear').onclick = () => {
+    mapLog.length = 0;
+    m.spots.splice(0, m.spots.length, ...mapSaved[m.id].map(s => ({ ...s })));
+    initMap(cityId);
+  };
   // pointer: drag pans the map (or moves a spot in edit mode); a click without movement opens the spot
   // a spot stays on the map: a drag or a click past the edge stops at the edge
   const edge = v => Math.min(100, Math.max(0, v));

@@ -38,7 +38,8 @@ def map_file(map_id: str) -> Path:
 
 def backup(p: Path) -> Path:
     BACKUPS.mkdir(parents=True, exist_ok=True)
-    b = BACKUPS / f"{p.stem}-{datetime.datetime.now():%Y%m%d-%H%M%S}.json"
+    # microseconds keep two saves within one second apart; the names sort in time order
+    b = BACKUPS / f"{p.stem}-{datetime.datetime.now():%Y%m%d-%H%M%S-%f}.json"
     shutil.copyfile(p, b)
     return b
 
@@ -51,23 +52,29 @@ def save(body: dict) -> dict:
     p = map_file(body["id"])
     rec = read(p)
     spots = [{k: s[k] for k in ("label", "x", "y", "target", "text", "printed", "note") if k in s} for s in body["spots"] if s.get("target")]
-    # the viewer keeps the order of the spots and adds new ones at the end
+    # the viewer keeps the order of the spots and adds new ones at the end; one correction per changed spot
     old = rec["spots"]
-    moved = sum(1 for a, b in zip(old, spots) if (a["x"], a["y"]) != (b["x"], b["y"]))
-    added = len(spots) - len(old)
-    if not moved and not added:
+    if len(spots) < len(old):
+        return {"ok": False, "message": "метки пропали — сохранение отменено; обновите страницу"}
+    where = lambda s: f"{s['label']}: {s['x']}, {s['y']}"
+    fixes = [{"field": f"spots.{i}", "from": where(a), "to": where(b), "reason": "метка передвинута или изменена владельцем в просмотрщике", "ref": "Р-160"}
+             for i, (a, b) in enumerate(zip(old, spots)) if a != b]
+    fixes += [{"field": f"spots.{i}", "from": None, "to": f"{where(s)} → {s['target']}", "reason": "метка добавлена владельцем в просмотрщике", "ref": "Р-160"}
+              for i, s in enumerate(spots[len(old):], len(old))]
+    if not fixes:
         return {"ok": True, "message": "изменений нет"}
+    moved, added = len(fixes) - (len(spots) - len(old)), len(spots) - len(old)
     b = backup(p)
     rec["spots"] = spots
-    rec.setdefault("corrections", []).append({"field": "spots", "from": None, "to": f"сдвинуто {moved}, добавлено {added}",
-                                              "reason": "правка меток владельцем в просмотрщике", "ref": "Р-160"})
+    rec.setdefault("corrections", []).extend(fixes)
     write(p, rec)
     check = run("tools/check.py", str(p))
     if check.returncode:
         shutil.copyfile(b, p)
         return {"ok": False, "message": "проверка не прошла, прежняя карта возвращена", "check": check.stdout[-2000:]}
-    run("tools/build_viewer.py")
-    return {"ok": True, "message": f"сохранено: сдвинуто {moved}, добавлено {added}; копия прежней — {b.relative_to(ROOT).as_posix()}"}
+    build = run("tools/build_viewer.py")
+    note = "" if build.returncode == 0 else "; просмотрщик не пересобрался: " + build.stderr[-300:]
+    return {"ok": True, "message": f"сохранено: изменено {moved}, добавлено {added}; копия прежней — {b.relative_to(ROOT).as_posix()}{note}"}
 
 
 def undo(body: dict) -> dict:
@@ -75,12 +82,13 @@ def undo(body: dict) -> dict:
     copies = sorted(BACKUPS.glob(f"{p.stem}-*.json"))
     if not copies:
         return {"ok": False, "message": "резервных копий этой карты нет"}
+    # each undo takes the newest copy away, so the next one goes one more step back
     last = copies[-1]
-    backup(p)
     shutil.copyfile(last, p)
     last.unlink()
-    run("tools/build_viewer.py")
-    return {"ok": True, "message": f"возвращена версия {last.name}; обновите страницу"}
+    build = run("tools/build_viewer.py")
+    note = "" if build.returncode == 0 else "; просмотрщик не пересобрался: " + build.stderr[-300:]
+    return {"ok": True, "message": f"возвращена версия {last.name}; обновите страницу{note}"}
 
 
 class Handler(SimpleHTTPRequestHandler):
@@ -100,10 +108,20 @@ class Handler(SimpleHTTPRequestHandler):
             return self.reply({"ok": True})
         return super().do_GET()
 
+    def local(self) -> bool:
+        """Only the viewer on this machine may write: JSON body, and Origin (when sent) and Host of localhost."""
+        port = self.server.server_address[1]
+        ours = {f"http://localhost:{port}", f"http://127.0.0.1:{port}"}
+        origin, host = self.headers.get("Origin"), self.headers.get("Host", "")
+        return (self.headers.get("Content-Type", "").startswith("application/json")
+                and (origin is None or origin in ours) and host in {f"localhost:{port}", f"127.0.0.1:{port}"})
+
     def do_POST(self):
         routes = {"/api/map-save": save, "/api/map-undo": undo}
         if self.path not in routes:
             return self.reply({"ok": False, "message": "нет такого адреса"}, 404)
+        if not self.local():
+            return self.reply({"ok": False, "message": "запрос не от просмотрщика на этом компьютере"}, 403)
         try:
             body = json.loads(self.rfile.read(int(self.headers.get("Content-Length", 0))).decode("utf-8"))
             self.reply(routes[self.path](body))

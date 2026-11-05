@@ -21,6 +21,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kblib import KB, ROOT, SCHEMAS, book_ids, dump, is_ref, pick, records  # noqa: E402
+from derived import mismatches  # noqa: E402
 from validate import Validator  # noqa: E402
 
 ATTR_WORDS = "Рассудок и Скорость — словами, «РАС», «СКО», «SAN», «MOV» — только в raw как напечатано (Р-146)"
@@ -119,6 +120,9 @@ def main() -> int:
         for path, s in strings(rec):
             if path.rsplit(".", 1)[-1] == "book_id" and s not in registry:
                 errors["книга не записана в pipeline/source/books.json (Р-148)"].append(f"{rel(p)}: {path} = {s}")
+        if rec.get("kind") == "character":
+            for f, pr, ex in mismatches(rec):
+                warnings["производное значение не по правилам 7-й редакции и не в errata (Р-35, Р-36, Р-161)"].append(f"{rel(p)}: {f}: напечатано {pr}, по правилам {ex}")
         q = rec.get("quality") or {}
         if bool(rec.get("errata")) != ("parse_uncertain" in (q.get("flags") or [])):
             errors["флаг «опечатка книги» (parse_uncertain) стоит ровно у записей с errata (Р-141): `python pipeline/fix/errata_flag.py <файл>`"].append(

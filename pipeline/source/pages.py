@@ -55,11 +55,15 @@ def register(a) -> None:
     pdf = Path(a.pdf).resolve()
     if not pdf.exists():
         sys.exit(f"нет файла {pdf}")
-    if re.search("машинн", pdf.name, re.I):
+    lib_doc = json.loads(BOOKS.with_name("library.json").read_text(encoding="utf-8"))
+    # the owner's files carry the edition in front of the name: «[RU 7e] …», «[RU-ИИ 7e] …», «[EN 6e] …» (Р-164)
+    tag = re.match(r"^\[([A-Za-zА-Яа-я-]+)", pdf.name)
+    by_tag = lib_doc.get("tags", {}).get(tag.group(1)) if tag else None
+    if by_tag == "machine" or re.search("машинн", pdf.name, re.I):
         sys.exit(f"{pdf.name}: машинный перевод — не источник (Р-147)")
-    lib = json.loads(BOOKS.with_name("library.json").read_text(encoding="utf-8"))["folders"]
+    lib = lib_doc["folders"]
     home = next((f for f in lib if str(pdf).lower().startswith(f["path"].lower() + "\\")), None)
-    edition = a.edition or (home or {}).get("edition")
+    edition = a.edition or by_tag or (home or {}).get("edition")
     if not edition:
         sys.exit(f"{pdf} лежит вне папок pipeline/source/library.json: укажи --edition (original, official, trusted), если владелец подтвердил издание")
     books = json.loads(BOOKS.read_text(encoding="utf-8"))

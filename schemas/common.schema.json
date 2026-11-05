@@ -15,7 +15,9 @@
           "file": { "type": "string", "pattern": "^art/[a-z0-9/_.-]+\\.(webp|png|jpg)$", "description": "Путь от app/: art/<вид>/<имя>.webp" },
           "kind": { "enum": ["art", "portrait", "card", "handout", "plan", "illustration", "photo"], "description": "art — арт существа; portrait — портрет; card — игровая карточка; handout — раздатка; plan — план или схема; illustration — иллюстрация; photo — фото предмета" },
           "caption": { "type": ["string", "null"] },
-          "source": { "type": ["string", "null"], "description": "Откуда картинка: книга и страница, веб-помощник, папка владельца" }
+          "source": { "type": ["string", "null"], "description": "Откуда картинка: книга и страница, веб-помощник, папка владельца" },
+          "section": { "enum": ["history", "tables", "leads"], "description": "Раздел карточки города, где показывать картинку (Р-166); без него — под подзаголовком" },
+          "table": { "type": "string", "description": "Название таблицы записи, рядом с которой показывать картинку (Р-166)" }
         }
       }
     },

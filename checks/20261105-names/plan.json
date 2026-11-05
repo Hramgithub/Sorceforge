@@ -1,0 +1,26 @@
+{
+  "book_id": "pobeg-iz-innsmuta-ru",
+  "goal": "unnamed characters of «Побег из Иннсмута» get invented names so the Keeper does not have to invent them at the table (Р-150), group profiles and stock types get a list of ready names (Р-151). «Маски Ньярлатхотепа» are not touched now.",
+  "decision": "Р-150, Р-151",
+  "check_dir": "checks/20261105-names",
+  "models": [
+    "kb/characters/cult-enforcer.json",
+    "kb/books/lightless-beacon-ru/characters/"
+  ],
+  "extra": "## This work\n\n- **One person without a name** (`pobeg-iz-innsmuta-ru/character/chakhlyy-gibrid`): give an invented name: `name.ru` (and `name.en` in Latin letters), the book's designation («Чахлый гибрид») goes to `aliases`, flag `editorial_text`, `quality.notes` gets «имя придумано (Р-150), в книге — «Чахлый гибрид»». The id never changes.\n- **Group profiles and stock types** (the other files of your unit): do not rename them; add `names` — 4–6 invented names (Russian spelling, as the book spells English names) right after `stock_type`, flag `editorial_text`, and a `quality.notes` sentence «готовые имена придуманы (Р-151)». For a profile of several kinds (officer and sailor), the names fit all of them.\n- **Names fit the people**: 1928, Massachusetts. Innsmouth townsfolk and hybrids — old New England Yankee names, typical of a decaying port (Obed, Zadok, Ezra, Asa, Hiram…, surnames like Pickett, Coffin, Hale, Trask, Lovering…), never the families the book already names (Marsh, Waite, Gilman, Eliot, Orne, Billingham, Sargent, Martin…; grep `kb/books/pobeg-iz-innsmuta-ru/characters/` for every surname you use). Falcon Point fishermen — old New England fishermen. US Navy, Coast Guard and Marine Corps of 1928 — ordinary American names of the time, mixed origins (Irish, Italian, Polish, Scandinavian…), no names of existing records. Use each invented name only once across all files.\n- Each change of an existing record goes to its `corrections` (field, from, to, reason «Р-150» / «Р-151», ref «Р-150» / «Р-151»).\n- Read the book pages where each profile appears (grep its name) only to know who they are; the names themselves are not from the book.",
+  "units": [
+    {"name": "names", "pages": "1-188", "target": "9 character records of «Побег из Иннсмута»", "sites": "—",
+     "owns": [
+       "kb/books/pobeg-iz-innsmuta-ru/characters/chakhlyy-gibrid.json",
+       "kb/books/pobeg-iz-innsmuta-ru/characters/eskort-gibridov.json",
+       "kb/books/pobeg-iz-innsmuta-ru/characters/obychnye-gorozhane.json",
+       "kb/books/pobeg-iz-innsmuta-ru/characters/morskie-volki-falkon-poynta.json",
+       "kb/books/pobeg-iz-innsmuta-ru/characters/tipichnyy-matros-beregovoy-okhrany.json",
+       "kb/books/pobeg-iz-innsmuta-ru/characters/tipichnyy-matros-s-19.json",
+       "kb/books/pobeg-iz-innsmuta-ru/characters/tipichnyy-novobranets-morskoy-pekhoty.json",
+       "kb/books/pobeg-iz-innsmuta-ru/characters/tipichnyy-ofitser-s-19.json",
+       "kb/books/pobeg-iz-innsmuta-ru/characters/tipichnyy-veteran-morskoy-pekhoty.json",
+       "checks/20261105-names/names.md"
+     ]}
+  ]
+}

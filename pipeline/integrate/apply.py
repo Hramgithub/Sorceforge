@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -19,6 +20,9 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "tools"))
 from kblib import ROOT, SCHEMAS, index, read, write  # noqa: E402
 from validate import Validator  # noqa: E402
+
+
+DECISION = re.compile(r"^Р-\d+$")
 
 
 class Misfit(Exception):
@@ -48,10 +52,24 @@ def walk(rec, path: str):
     return node, steps[-1]
 
 
+# what each operation must carry; a proposal without it is refused, not guessed
+NEEDS = {"set": ("value",), "append": ("value",), "remove": ("match",), "replace": ("old", "new")}
+
+
 def apply_one(rec, p) -> tuple | None:
     """Change the record; return (field, from, to) for `corrections`."""
-    node, last = walk(rec, p["path"])
     op = p["op"]
+    missing = [k for k in NEEDS.get(op, ()) if k not in p]
+    if missing:
+        raise Misfit(f"операции {op} нужно поле {', '.join(missing)}")
+    if op == "remove" and not p["match"]:
+        raise Misfit("пустой match удалил бы весь список")
+    try:
+        node, last = walk(rec, p["path"])
+        if isinstance(node, list) and not (isinstance(last, int) and -len(node) <= last < len(node)):
+            raise IndexError
+    except (IndexError, TypeError):
+        raise Misfit(f"нет поля {p['path']}")
     if op == "set":
         old = node.get(last) if isinstance(node, dict) else node[last]
         if isinstance(node, dict) and last not in node and p.get("after") and node is rec:
@@ -75,8 +93,9 @@ def apply_one(rec, p) -> tuple | None:
         return p["path"], None, short(p["value"])
     if op == "remove":
         lst = node.get(last) if isinstance(node, dict) else node[last]
-        m = p.get("match") or {}
-        gone = [x for x in lst or [] if isinstance(x, dict) and all(x.get(k) == v for k, v in m.items()) or x == m.get("value", object())]
+        # an object item matches when all fields of `match` are equal; a plain item (a string alias) — `match.value`
+        m = p["match"]
+        gone = [x for x in lst or [] if (isinstance(x, dict) and all(x.get(k) == v for k, v in m.items())) or ("value" in m and x == m["value"])]
         if not gone:
             raise Misfit(f"в {p['path']} нет элемента {json.dumps(m, ensure_ascii=False)}")
         node[last] = [x for x in lst if x not in gone]
@@ -102,6 +121,7 @@ def main() -> int:
     where = index()
     shape = Validator(SCHEMAS / "proposal.schema.json")
     touched: dict[str, dict] = {}
+    validators: dict[str, Validator] = {}
     done = skipped = 0
     for f in a.files:
         doc = read(f)
@@ -126,6 +146,17 @@ def main() -> int:
             if p.get("correction", True):
                 field, frm, to = change
                 rec.setdefault("corrections", []).append({"field": field, "from": frm, "to": to, "reason": p["reason"], "ref": p.get("ref")})
+    # the changed records are checked before anything is written, in a dry run too
+    bad = []
+    for i, rec in touched.items():
+        kind = rec.get("kind")
+        v = validators.setdefault(kind, Validator(SCHEMAS / f"{kind}.schema.json"))
+        bad += [f"{i}: {e}" for e in v.validate(rec)]
+        bad += [f"{i}: corrections ref {c.get('ref')!r} — не «Р-NN»" for c in rec.get("corrections") or []
+                if isinstance(c, dict) and c.get("ref") is not None and not DECISION.match(str(c["ref"]))]
+    if bad:
+        print("после правок записи не проходят схему — ничего не записано:\n  " + "\n  ".join(bad))
+        return 1
     print(f"правок: {done}, уже было: {skipped}, записей: {len(touched)}" + (" (пробный прогон, ничего не записано)" if a.dry_run else ""))
     if a.dry_run or not touched:
         return 0

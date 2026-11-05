@@ -1,7 +1,6 @@
 """Consistency pass over kb creatures after translation (owner decisions R-32, R-33).
 
 - Move wording in statblock.move.raw: «летая» → «полёт», «плавая» → «плавание», «паря» → «парение».
-- Flag `parse_uncertain` («опечатка книги») is set exactly on records that have `errata`.
 - Skill names: a skill whose `name` is a known alias or a near variant of a kb/skills name gets the kb/skills Russian name.
 - Reports strings that still contain English words (outside names, aliases, spell lists, ids and sources).
 
@@ -56,13 +55,6 @@ def main() -> None:
             if new != mv["raw"]:
                 mv["raw"] = new
                 moves += 1
-        q = r.setdefault("quality", {"needs_review": False, "flags": [], "notes": None})
-        fl = q.setdefault("flags", [])
-        has = bool(r.get("errata"))
-        if has and "parse_uncertain" not in fl:
-            fl.append("parse_uncertain"); flags += 1
-        if not has and "parse_uncertain" in fl:
-            fl.remove("parse_uncertain"); flags += 1
         for s in sb.get("skills", []):
             for wrong, right in SKILL_FIX.items():
                 if s["name"].startswith(wrong):
@@ -74,7 +66,7 @@ def main() -> None:
             changed += 1
             if not a.dry_run:
                 p.write_bytes(after)
-    print(f"files changed {changed}; move wording {moves}; parse_uncertain flags fixed {flags}; skill names {skills}")
+    print(f"files changed {changed}; move wording {moves}; skill names {skills} (the errata flag: pipeline/fix/errata_flag.py)")
     print(f"strings with English left: {len(eng)}")
     for path, text in eng[:60]:
         print(f"  {path}: {text}")

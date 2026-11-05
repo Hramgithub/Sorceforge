@@ -44,10 +44,12 @@ def main() -> None:
     ambiguous: list[str] = []
     for p in scope(ap, a):
         r = json.loads(p.read_text(encoding="utf-8"))
-        if r.get("kind") not in ("creature", "character") or not r.get("statblock"):
+        if r.get("kind") not in ("creature", "character"):
             continue
+        # the record's own stat block and the stat blocks of its variants (group profiles)
+        blocks = [b for b in [r.get("statblock"), *((x or {}).get("statblock") for x in r.get("variants") or [])] if b]
         changed = False
-        for field, v in percents(r["statblock"]):
+        for field, v in (fv for b in blocks for fv in percents(b)):
             val, half, fifth = v.get("value"), v.get("half"), v.get("fifth")
             if not isinstance(val, int) or half is None or fifth is None:
                 continue

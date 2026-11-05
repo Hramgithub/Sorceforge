@@ -219,10 +219,11 @@ const SET = { creature: DATA.creatures, character: DATA.characters, skill: DATA.
   item: DATA.items, handout: DATA.handouts, organization: DATA.organizations, scene: DATA.scenes, scenario: DATA.scenarios };
 const ALL = Object.values(SET).flat();
 const TOME_TYPE = { mythos_tome: 'книга Мифов', occult_book: 'оккультная книга' };
-const byId = id => ALL.find(x => x.id === id);
+// one index instead of a scan of ~2000 records on every lookup
+const BY_ID = new Map(ALL.map(x => [x.id, x]));
+const byId = id => BY_ID.get(id);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const bookOf = c => c.sources?.[0]?.book_id;
-const kindOf = c => c.kind;
 // a link carries the record's real address, so «open in new tab» works; a plain click is handled in place (show)
 const hashOf = c => '#' + encodeURIComponent(c.kind + '/' + c.id.split(/[:/]/).pop());
 const link = (id, text) => `<a href="${byId(id) ? esc(hashOf(byId(id))) : '#'}" data-go="${esc(id)}">${esc(text)}</a>`;
@@ -954,7 +955,6 @@ function skillCard(c) {
     ${corrections(c)}`;
 }
 
-const CHN = { STR: 'СИЛ', CON: 'ВЫН', SIZ: 'ТЕЛ', DEX: 'ЛВК', APP: 'НАР', INT: 'ИНТ', POW: 'МОЩ', EDU: 'ОБР' };
 function skillRef(x) {
   if (typeof x === 'string') return byId(x) ? link(x, byId(x).name.ru) : esc(x);
   const base = x.skill && byId(x.skill) ? link(x.skill, byId(x.skill).name.ru) : esc(x.raw || '');

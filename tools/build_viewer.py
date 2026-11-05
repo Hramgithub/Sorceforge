@@ -40,7 +40,7 @@ def main() -> None:
     html = a.template.read_text(encoding="utf-8").replace("__DATA__", payload)
     # written beside and swapped in: on Windows the page may be open in tools/kb_server.py at this moment
     tmp = a.out.with_suffix(".html.tmp")
-    tmp.write_text(html, encoding="utf-8")
+    tmp.write_text(html, encoding="utf-8", newline="\n")
     for attempt in range(20):
         try:
             os.replace(tmp, a.out)
@@ -55,7 +55,7 @@ def main() -> None:
     months = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"]
     today = datetime.date.today()
     landing = landing.replace("__UPDATED__", f"{today.day} {months[today.month - 1]} {today.year}")
-    (a.out.parent / "index.html").write_text(landing, encoding="utf-8")
+    (a.out.parent / "index.html").write_text(landing, encoding="utf-8", newline="\n")
     print(f"{len(data['creatures'])} creatures, {len(data['characters'])} characters, "
           f"{len(data['skills'])} skills, {len(data['occupations'])} occupations, {len(data['spells'])} spells, {len(data['tomes'])} tomes, {len(data['weapons'])} weapons, {len(data['locations'])} locations -> {a.out}")
 

@@ -32,7 +32,8 @@ def fix(value, counter: list[int]):
     if isinstance(value, list):
         return [fix(v, counter) for v in value]
     if isinstance(value, dict):
-        return {k: fix(v, counter) for k, v in value.items()}
+        # quoted as it was: a correction's «from» and a misprint's «printed» keep the old writing
+        return {k: v if k in ("from", "printed") else fix(v, counter) for k, v in value.items()}
     return value
 
 

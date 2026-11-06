@@ -57,6 +57,18 @@ blockquote.handout { margin:0; padding:10px 16px; border-left:3px solid var(--ac
 .gallery figcaption { font-size:13px; color:var(--muted); margin-top:4px; max-width:320px; }
 .gallery figure.small img { max-width:150px; max-height:200px; }
 /* the record's own pictures stand to the right of its text (Р-167); on a narrow screen they go back above it */
+#lightbox { position:fixed; inset:0; z-index:1000; background:rgba(0,0,0,.88); display:flex; align-items:center; justify-content:center; cursor:zoom-out; }
+#lightbox[hidden] { display:none; }
+#lightbox figure { margin:0; display:flex; flex-direction:column; align-items:center; max-width:94vw; max-height:94vh; }
+#lightbox img { max-width:94vw; max-height:calc(94vh - 40px); object-fit:contain; border-radius:4px; }
+#lightbox figure.photo img { background:#ece8df; padding:8px; }
+#lightbox figcaption { color:#ddd; font-size:14px; margin-top:8px; text-align:center; max-width:80vw; }
+#lightbox button { position:absolute; background:rgba(255,255,255,.08); color:#eee; border:0; border-radius:6px; font-size:32px; line-height:1; padding:10px 16px; cursor:pointer; }
+#lightbox button:hover { background:rgba(255,255,255,.2); }
+#lightbox .lb-prev { left:16px; top:50%; transform:translateY(-50%); }
+#lightbox .lb-next { right:16px; top:50%; transform:translateY(-50%); }
+#lightbox .lb-close { right:16px; top:16px; font-size:26px; }
+#lightbox button[hidden] { display:none; }
 /* inside the card's own width: tables beside the column are narrowed, text flows round it and below it (Р-167) */
 #card { --side:260px; }
 .gallery.side { float:right; width:var(--side); flex-direction:column; align-items:flex-end; margin:4px 0 12px 24px; }
@@ -1565,6 +1577,49 @@ document.getElementById('logout').onclick = () => {
   xhr.onloadend = () => location.replace(new URL('./', location.origin + location.pathname).href);
   xhr.send();
 };
+// a picture opens over the page at full size (Р-168): click or Esc closes it, arrows go through its gallery;
+// Ctrl/Shift/⌘-click and the middle button still open the file in a new tab
+const lightbox = document.createElement('div');
+lightbox.id = 'lightbox';
+lightbox.hidden = true;
+lightbox.innerHTML = '<button class="lb-prev" aria-label="Назад">‹</button><figure><img alt=""><figcaption></figcaption></figure><button class="lb-next" aria-label="Дальше">›</button><button class="lb-close" aria-label="Закрыть">×</button>';
+document.body.appendChild(lightbox);
+let lbList = [], lbAt = 0;
+function lbShow(i) {
+  lbAt = (i + lbList.length) % lbList.length;
+  const a = lbList[lbAt], img = a.querySelector('img'), cap = a.closest('figure')?.querySelector('figcaption')?.textContent || '';
+  lightbox.querySelector('figure').className = a.closest('figure')?.classList.contains('photo') ? 'photo' : '';
+  const big = lightbox.querySelector('img');
+  big.style.width = '';
+  // small photos (catalogue cut-outs of about 250 px) are shown twice their size, the rest as they are
+  big.onload = () => { if (big.naturalWidth < 500) big.style.width = big.naturalWidth * 2 + 'px'; };
+  big.src = a.getAttribute('href');
+  lightbox.querySelector('img').alt = img?.alt || '';
+  lightbox.querySelector('figcaption').textContent = [cap, img?.title].filter(Boolean).join(' · ');
+  lightbox.querySelectorAll('.lb-prev, .lb-next').forEach(b => b.hidden = lbList.length < 2);
+}
+const lbClose = () => { lightbox.hidden = true; lightbox.querySelector('img').removeAttribute('src'); };
+document.addEventListener('click', e => {
+  const a = e.target.closest('.gallery a');
+  if (!a || e.ctrlKey || e.metaKey || e.shiftKey || e.button) return;
+  e.preventDefault();
+  lbList = [...a.closest('.gallery').querySelectorAll('a')];
+  lbShow(lbList.indexOf(a));
+  lightbox.hidden = false;
+});
+lightbox.onclick = e => {
+  if (e.target.closest('.lb-prev')) lbShow(lbAt - 1);
+  else if (e.target.closest('.lb-next')) lbShow(lbAt + 1);
+  else lbClose();
+};
+document.addEventListener('keydown', e => {
+  if (lightbox.hidden) return;
+  if (e.key === 'Escape') lbClose();
+  else if (e.key === 'ArrowLeft' && lbList.length > 1) lbShow(lbAt - 1);
+  else if (e.key === 'ArrowRight' && lbList.length > 1) lbShow(lbAt + 1);
+  else return;
+  e.preventDefault();
+});
 </script>
 </body>
 </html>

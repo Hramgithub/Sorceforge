@@ -56,6 +56,8 @@ blockquote.handout { margin:0; padding:10px 16px; border-left:3px solid var(--ac
 .gallery img { display:block; max-width:min(320px, 100%); max-height:360px; border:1px solid var(--line); border-radius:6px; cursor:zoom-in; background:var(--panel); }
 .gallery figcaption { font-size:13px; color:var(--muted); margin-top:4px; max-width:320px; }
 .gallery figure.small img { max-width:150px; max-height:200px; }
+/* photos of objects are often cut out on transparency, dark metal on the dark page: a light backing */
+.gallery figure.photo img { background:#ece8df; padding:6px; }
 .gallery figure.small figcaption { max-width:150px; font-size:12px; }
 #list h4.dist.sub.deep { padding-left:48px; font-size:14px; }
 #list button.rec { padding:6px 16px 6px 32px; font-size:14px; }
@@ -718,7 +720,7 @@ function sharedTable(r) {
 // one argument only: callers pass it straight to Array.map
 const locTable = tb => tb.from ? sharedTable(tb) : tableHtml(tb, '');
 // pictures: art, portraits and illustrations large; handouts, plans and cards as thumbnails (Р-165, Р-166)
-const gallery = (ims, name = '') => ims.length ? `<div class="gallery">${ims.map(im => `<figure class="${['handout', 'plan', 'card'].includes(im.kind) ? 'small' : ''}"><a href="${esc(im.file)}" target="_blank" rel="noopener"><img src="${esc(im.file)}" alt="${esc(im.caption || name)}" loading="lazy"></a>${im.caption && im.caption !== name ? `<figcaption>${esc(im.caption)}</figcaption>` : ''}</figure>`).join('')}</div>` : '';
+const gallery = (ims, name = '') => ims.length ? `<div class="gallery">${ims.map(im => `<figure class="${['handout', 'plan', 'card'].includes(im.kind) ? 'small' : ''} ${esc(im.kind || '')}"><a href="${esc(im.file)}" target="_blank" rel="noopener"><img src="${esc(im.file)}" alt="${esc(im.caption || name)}"${im.source ? ` title="${esc(im.source)}"` : ''} loading="lazy"></a>${im.caption && im.caption !== name ? `<figcaption>${esc(im.caption)}</figcaption>` : ''}</figure>`).join('')}</div>` : '';
 // handout pictures of a table, by its title, from every place that has them
 const TABLE_IMAGES = DATA.locations.flatMap(l => (l.images||[]).filter(im => im.table)).reduce((m, im) => ((m[im.table] ||= []).push(im), m), {});
 function tableHtml(tb, from) {

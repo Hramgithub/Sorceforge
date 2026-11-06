@@ -57,13 +57,14 @@ blockquote.handout { margin:0; padding:10px 16px; border-left:3px solid var(--ac
 .gallery figcaption { font-size:13px; color:var(--muted); margin-top:4px; max-width:320px; }
 .gallery figure.small img { max-width:150px; max-height:200px; }
 /* the record's own pictures stand to the right of its text (Р-167); on a narrow screen they go back above it */
-#card { --side:280px; }
-#card.withside { position:relative; padding-right:calc(48px + var(--side)); max-width:calc(924px + var(--side)); }
-.gallery.side { position:absolute; right:24px; width:var(--side); flex-direction:column; align-items:flex-end; margin:4px 0 0; }
+/* inside the card's own width: tables beside the column are narrowed, text flows round it and below it (Р-167) */
+#card { --side:260px; }
+.gallery.side { float:right; width:var(--side); flex-direction:column; align-items:flex-end; margin:4px 0 12px 24px; }
 .gallery.side figure, .gallery.side img, .gallery.side figcaption { max-width:100%; }
 .gallery.side figcaption { text-align:right; }
+#card::after { content:""; display:block; clear:both; }
 @media (max-width: 1100px) { #card { --side:200px; } }
-@media (max-width: 760px) { #card.withside { padding-right:16px; } .gallery.side { position:static; width:auto; align-items:flex-start; margin:10px 0 14px; } .gallery.side figcaption { text-align:left; } }
+@media (max-width: 760px) { .gallery.side { float:none; width:auto; align-items:flex-start; margin:10px 0 14px; } .gallery.side figcaption { text-align:left; } }
 /* photos of objects are often cut out on transparency, dark metal on the dark page: a light backing */
 .gallery figure.photo img { background:#ece8df; padding:6px; }
 .gallery figure.small figcaption { max-width:150px; font-size:12px; }
@@ -1496,15 +1497,21 @@ function show(id, how = 'push') {
   // or a table show there (Р-166); a city shows its own on «Обзор» only
   const loose = (c.images||[]).filter(im => !im.section && !im.table);
   const side = loose.length && !(c.kind === 'location' && c.id === city && citySection !== 'overview');
-  card.classList.toggle('withside', !!side);
-  card.style.minHeight = '';
   if (side) {
     (card.querySelector('.sub') || card.querySelector('h2'))?.insertAdjacentHTML('afterend', gallery(loose, c.name.ru, 'side'));
-    // the column stands out of the flow: the card is at least as tall as it, once the pictures have their size
+    // a table does not flow round the column: the tables that start beside it are made narrower, once the
+    // pictures have their size
     const g = card.querySelector('.gallery.side'), fit = () => {
-      if (getComputedStyle(g).position === 'absolute') card.style.minHeight = (g.offsetTop + g.offsetHeight + 16) + 'px';
+      const tables = [...card.querySelectorAll('table')];
+      tables.forEach(t => t.style.width = '');
+      if (getComputedStyle(g).float !== 'right') return;
+      // a full-width table drops below the column, so each is narrowed first and kept narrow if it then starts beside it
+      for (const t of tables) {
+        t.style.width = 'calc(100% - var(--side) - 24px)';
+        if (t.getBoundingClientRect().top >= g.getBoundingClientRect().bottom) { t.style.width = ''; break; }
+      }
     };
-    g?.querySelectorAll('img').forEach(i => i.addEventListener('load', fit));
+    g?.querySelectorAll('img').forEach(i => { if (!i.complete) i.addEventListener('load', fit); });
     if (g) fit();
   }
   fillToc();

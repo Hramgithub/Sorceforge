@@ -1,7 +1,7 @@
 """Build the read-only knowledge base viewer: embed all records into one HTML file.
 
 Sources: kb/<kind>/*.json and kb/books/*/<kind>/*.json for creatures, characters, skills,
-occupations, spells, tomes, weapons, locations and maps (images in app/maps/); template tools/kb.template.html (placeholder
+occupations, spells, tomes, weapons, rule tables, locations and maps (images in app/maps/); template tools/kb.template.html (placeholder
 __DATA__); book titles from pipeline/source/books.json. Also renders the public landing page app/index.html from tools/landing.template.html
 (placeholders __COUNT_<kind>__ and __UPDATED__).
 
@@ -32,7 +32,7 @@ def main() -> None:
     data = {"maps": load(a.kb, "maps"), "creatures": load(a.kb, "creatures"), "characters": load(a.kb, "characters"), "skills": load(a.kb, "skills"),
             "occupations": load(a.kb, "occupations"), "spells": load(a.kb, "spells"), "tomes": load(a.kb, "tomes"), "weapons": load(a.kb, "weapons"), "locations": load(a.kb, "locations"),
             "items": load(a.kb, "items"), "handouts": load(a.kb, "handouts"), "organizations": load(a.kb, "organizations"), "scenes": load(a.kb, "scenes"),
-            "scenarios": load(a.kb, "scenarios")}
+            "scenarios": load(a.kb, "scenarios"), "tables": load(a.kb, "tables")}
     # book titles for display come from the one list of books (Р-148); only titles go to the page, never local paths
     books = json.loads((root / "pipeline" / "source" / "books.json").read_text(encoding="utf-8"))
     data["books"] = {k: v["title"] for k, v in books.items()}
@@ -57,7 +57,7 @@ def main() -> None:
     landing = landing.replace("__UPDATED__", f"{today.day} {months[today.month - 1]} {today.year}")
     (a.out.parent / "index.html").write_text(landing, encoding="utf-8", newline="\n")
     print(f"{len(data['creatures'])} creatures, {len(data['characters'])} characters, "
-          f"{len(data['skills'])} skills, {len(data['occupations'])} occupations, {len(data['spells'])} spells, {len(data['tomes'])} tomes, {len(data['weapons'])} weapons, {len(data['locations'])} locations -> {a.out}")
+          f"{len(data['skills'])} skills, {len(data['occupations'])} occupations, {len(data['spells'])} spells, {len(data['tomes'])} tomes, {len(data['weapons'])} weapons, {len(data['tables'])} tables, {len(data['locations'])} locations -> {a.out}")
 
 
 if __name__ == "__main__":

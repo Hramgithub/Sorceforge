@@ -57,6 +57,7 @@ blockquote.handout { margin:0; padding:10px 16px; border-left:3px solid var(--ac
 .gallery figcaption { font-size:13px; color:var(--muted); margin-top:4px; max-width:320px; }
 .gallery figure.small img { max-width:150px; max-height:200px; }
 /* the record's own pictures stand to the right of its text (Р-167); on a narrow screen they go back above it */
+table.rules tr.hit td { background:color-mix(in srgb, var(--accent) 18%, transparent); }
 #lightbox { position:fixed; inset:0; z-index:1000; background:rgba(0,0,0,.88); display:flex; align-items:center; justify-content:center; cursor:zoom-out; }
 #lightbox[hidden] { display:none; }
 #lightbox figure { margin:0; display:flex; flex-direction:column; align-items:center; max-width:94vw; max-height:94vh; }
@@ -177,6 +178,7 @@ a { color:var(--accent); }
     <button data-tab="occupation">Профессии</button>
     <button data-tab="spell">Заклинания</button>
     <button data-tab="weapon">Оружие</button>
+    <button data-tab="table">Таблицы</button>
     <button data-tab="location">Гайды</button>
   </div>
   <!-- search is the same on every tab, so it lives in the top row; the second row keeps the tab's own buttons and filters -->
@@ -217,6 +219,8 @@ const FILTERS = {
   skill: [['', 'Все категории'], ...[...new Set(DATA.skills.map(s => s.category))].sort().map(c => [c, c])],
   spell: [['', 'Все типы'], ['family', 'Только общие (семейства)'], ...[...new Set(DATA.spells.map(s => s.category).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'ru')).map(c => [c, c])],
 };
+DATA.tables = DATA.tables || [];
+FILTERS.table = [['', 'Все разделы'], ...[...new Set(DATA.tables.map(t => t.category))].sort((a, b) => a.localeCompare(b, 'ru')).map(c => [c, c[0].toUpperCase() + c.slice(1)])];
 FILTERS.tome = [['', 'Все книги'], ['mythos_tome', 'Книги Мифов'], ['occult_book', 'Оккультные книги'], ['general', 'Только общие записи'],
   ...[...new Set(DATA.tomes.map(t => t.language).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'ru')).map(l => ['lang:' + l, 'Язык: ' + l])];
 const WGROUP = { melee: 'Ближний бой', handgun: 'Пистолеты и револьверы', rifle: 'Винтовки', shotgun: 'Дробовики', automatic: 'Автоматическое оружие', heavy: 'Тяжёлое оружие и взрывчатка', other: 'Прочее' };
@@ -247,7 +251,7 @@ const CITY_SECTIONS = [['overview', 'Обзор'], ['map', 'Карта'], ['hist
 const openDist = new Set();
 // scenario material (Р-128): items, handouts, organizations, scenes live in the city guide (Р-132)
 ['items', 'handouts', 'organizations', 'scenes', 'scenarios'].forEach(k => DATA[k] = DATA[k] || []);
-const SET = { creature: DATA.creatures, character: DATA.characters, skill: DATA.skills, occupation: DATA.occupations, spell: DATA.spells, tome: DATA.tomes, weapon: DATA.weapons, location: DATA.locations,
+const SET = { creature: DATA.creatures, character: DATA.characters, skill: DATA.skills, occupation: DATA.occupations, spell: DATA.spells, tome: DATA.tomes, weapon: DATA.weapons, table: DATA.tables, location: DATA.locations,
   item: DATA.items, handout: DATA.handouts, organization: DATA.organizations, scene: DATA.scenes, scenario: DATA.scenarios };
 const ALL = Object.values(SET).flat();
 const TOME_TYPE = { mythos_tome: 'книга Мифов', occult_book: 'оккультная книга' };
@@ -268,7 +272,9 @@ let tab = 'creature', current = null;
 const occOf = c => c.occupation_ref ? c.occupation_ref : (c.occupation?.ru || '').trim().toLowerCase();
 // quotes are ignored in search: «кольт m1911» finds «Кольт» M1911
 const norm = s => (s || '').toLowerCase().replace(/[«»"„“”']/g, '');
-const nameHit = (c, q) => [c.name.ru, c.name.en, ...(c.aliases||[]), c.occupation?.ru].some(n => norm(n).includes(q));
+// a table is found by the names of its rows too: «арахнофобия» finds «Примеры фобий» (Р-171)
+const rowHit = (c, q) => (c.rows||[]).find(r => norm(r.title).includes(q));
+const nameHit = (c, q) => [c.name.ru, c.name.en, ...(c.aliases||[]), c.occupation?.ru].some(n => norm(n).includes(q)) || !!rowHit(c, q);
 const reEsc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 // search relevance: 0 the name starts with the query … 7 only the occupation matches; the alias that matched is returned to show it
 function hitRank(c, q) {
@@ -281,6 +287,8 @@ function hitRank(c, q) {
   if (en.includes(q)) return [4];
   const a = (c.aliases||[]).find(x => low(x).includes(q));
   if (a) return [word.test(low(a)) ? 5 : 6, a];
+  const r = rowHit(c, q);
+  if (r) return [6, `строка ${r.roll ?? ''}: ${r.title}`];
   return [7];
 }
 function matches(c, q, f) {
@@ -314,6 +322,7 @@ function subtitle(c) {
   if (c.kind === 'weapon') return [caliberOf(c), WGROUP[c.group]].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'location') return [c.number ? '№ ' + c.number : '', c.location_type, c.part_of && byId(c.part_of) ? byId(c.part_of).name.ru : ''].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'tome') return [c.name.en, c.language].filter(Boolean).map(esc).join(' · ');
+  if (c.kind === 'table') return [c.dice ? 'бросок ' + c.dice : 'выбор', (c.rows||[]).length + ' строк', c.category].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'scenario') return [c.part_of && byId(c.part_of) ? byId(c.part_of).name.ru : 'сценарий', BOOKS[bookOf(c)] || ''].filter(Boolean).map(esc).join(' · ');
   if (STORY_TYPE[c.kind] !== undefined || c.kind === 'scene') return [c[STORY_TYPE[c.kind]], c.kind === 'scene' ? c.when : '', (BOOKS[bookOf(c)] || '')].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'occupation') return `Средства ${esc(c.credit_rating.raw)}${c.lovecraftian ? ' · лавкрафтовская' : ''}${c.group ? ' · ' + esc(c.group) : ''}`;
@@ -329,7 +338,7 @@ const topTab = t => t === 'tome' ? 'spell' : tabFor(t);
 // a small picture sign after the name in the lists: the record has pictures (Р-169)
 const ART = c => (c.images||[]).length ? '<span class="hasart" title="Есть картинка" aria-label="есть картинка"><svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="11" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="5.5" cy="6.3" r="1.4" fill="currentColor"/><path d="M2.5 12.5l4-4.2 2.6 2.6 1.7-1.6 3 3.2z" fill="currentColor"/></svg></span>' : '';
 const item = (c, alias) => `<button data-id="${esc(c.id)}" class="${c.id===current?'active':''}">${esc(c.name.ru)}${ART(c)}
-    ${(c.quality?.flags||[]).includes('parse_uncertain') ? '<span class="tag warn" title="Опечатка или противоречие в книге — см. карточку">!</span>' : ''}<small>${[subtitle(c), alias ? 'также: ' + esc(alias) : ''].filter(Boolean).join(' · ')}</small></button>`;
+    ${(c.quality?.flags||[]).includes('parse_uncertain') ? '<span class="tag warn" title="Опечатка или противоречие в книге — см. карточку">!</span>' : ''}<small>${[subtitle(c), alias ? (alias.startsWith('строка ') ? '' : 'также: ') + esc(alias) : ''].filter(Boolean).join(' · ')}</small></button>`;
 function renderList() {
   const q = norm(document.getElementById('q').value.trim());
   const f = document.getElementById('cat').value;
@@ -653,6 +662,22 @@ function weaponCard(c) {
     ${c.description?.ru ? `<section><h3>Описание</h3>${richText(c.description.ru)}</section>` : ''}
     ${models.length ? `<section><h3>Модели</h3><p>${models.map(x => link(x.id, x.name.ru)).join(', ')}</p></section>` : ''}
     ${(c.source_variants||[]).length ? `<section><h3>Иначе в других книгах</h3><ul>${c.source_variants.map(v => `<li><b>${esc(BOOKS[v.book_id] || v.book_id)}${v.printed_page ? ', с. ' + esc(v.printed_page) : ''}.</b> ${esc(v.text)}</li>`).join('')}</ul></section>` : ''}
+    ${errata(c)}
+    <section><h3>Источник</h3><div>${sources(c)}</div></section>
+    ${corrections(c)}`;
+}
+// a rule table (Р-171): the book's intro, the rows as printed, the text after it; a row found by the search is marked
+function tableCard(c) {
+  const q = norm(document.getElementById('q').value.trim());
+  const back = ALL.filter(x => x !== c && (x.refs||[]).includes(c.id));
+  const refs = [...(c.refs||[]).filter(byId), ...back.map(x => x.id)];
+  return `<h2>${esc(c.name.ru)}</h2>
+    <div class="sub">${[c.name.en, c.dice ? 'бросок ' + c.dice : 'выбор по таблице', c.category].filter(Boolean).map(esc).join(' · ')}${(c.aliases||[]).length ? ' · также: ' + c.aliases.map(esc).join(', ') : ''}</div>
+    ${flags(c)}
+    ${c.description?.ru ? richText(c.description.ru) : ''}
+    <table class="rules">${(c.rows||[]).map(r => `<tr class="${q && norm(r.title).includes(q) ? 'hit' : ''}"><td class="num">${esc(r.roll ?? '')}</td><td>${r.title ? `<b>${esc(r.title)}</b>${r.text ? ' — ' : ''}` : ''}${esc(r.text)}${(r.refs||[]).filter(byId).length ? ` <span class="muted">→ ${refLinks((r.refs||[]).filter(byId))}</span>` : ''}</td></tr>`).join('')}</table>
+    ${c.notes?.ru ? `<section>${richText(c.notes.ru)}</section>` : ''}
+    ${refs.length ? `<section><h3>Связано</h3><p>${[...new Set(refs)].map(id => link(id, byId(id).name.ru)).join(', ')}</p></section>` : ''}
     ${errata(c)}
     <section><h3>Источник</h3><div>${sources(c)}</div></section>
     ${corrections(c)}`;
@@ -1505,7 +1530,7 @@ function show(id, how = 'push') {
   if (tab === 'location') renderSubbar();
   renderList();
   const card = document.getElementById('card');
-  card.innerHTML = c.kind === 'scenario' ? scenarioCard(c) : STORY.some(([k]) => k === c.kind) ? storyCard(c) : c.kind === 'creature' ? creatureCard(c) : c.kind === 'character' ? characterCard(c) : c.kind === 'occupation' ? occupationCard(c) : c.kind === 'spell' ? spellCard(c) : c.kind === 'tome' ? tomeCard(c) : c.kind === 'weapon' ? weaponCard(c) : c.kind === 'location' ? locationCard(c) : skillCard(c);
+  card.innerHTML = c.kind === 'scenario' ? scenarioCard(c) : STORY.some(([k]) => k === c.kind) ? storyCard(c) : c.kind === 'creature' ? creatureCard(c) : c.kind === 'character' ? characterCard(c) : c.kind === 'occupation' ? occupationCard(c) : c.kind === 'spell' ? spellCard(c) : c.kind === 'tome' ? tomeCard(c) : c.kind === 'weapon' ? weaponCard(c) : c.kind === 'table' ? tableCard(c) : c.kind === 'location' ? locationCard(c) : skillCard(c);
   // Ctrl/Shift/⌘-click and the middle button are left to the browser (new tab or window at the link's address)
   card.querySelectorAll('[data-go]').forEach(a => a.onclick = e => { if (e.ctrlKey || e.metaKey || e.shiftKey || e.button) return; e.preventDefault(); if (a.dataset.sec) citySection = a.dataset.sec; show(a.dataset.go); });
   card.querySelectorAll('[data-onmap]').forEach(a => a.onclick = e => { e.preventDefault(); openOnMap(a.dataset.onmap); });
@@ -1539,6 +1564,8 @@ function show(id, how = 'push') {
   else if (how === 'push' && location.hash !== hash) history.pushState(null, '', hash);
   // the page scrolls to the map only for «Показать на карте» and for «Назад» back to a remembered view; any other click starts at the top
   atMap === 'focus' || (atMap === 'view' && how === 'none') ? document.getElementById('mapwrap').scrollIntoView() : window.scrollTo(0, 0);
+  // a table opened from the search shows the row found (Р-171)
+  card.querySelector('tr.hit')?.scrollIntoView({ block: 'center' });
 }
 
 document.getElementById('q').oninput = renderList;

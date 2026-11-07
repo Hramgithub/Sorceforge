@@ -226,6 +226,9 @@ const FILTERS = {
 };
 DATA.tables = DATA.tables || [];
 DATA.rules = DATA.rules || [];
+// rules in the order of the book (Р-177): by the first page of the Keeper Rulebook, the house rules at the end
+const rulePage = r => (r.sources||[]).find(x => x.book_id === 'keeper-rulebook-ru')?.printed_page ?? 9999;
+DATA.rules.sort((a, b) => rulePage(a) - rulePage(b) || a.name.ru.localeCompare(b.name.ru, 'ru'));
 FILTERS.rule = [['', 'Все разделы'], ...[...new Set(DATA.rules.map(r => r.category))].sort((a, b) => a.localeCompare(b, 'ru')).map(c => [c, c[0].toUpperCase() + c.slice(1)])];
 FILTERS.table = [['', 'Все разделы'], ...[...new Set(DATA.tables.map(t => t.category))].sort((a, b) => a.localeCompare(b, 'ru')).map(c => [c, c[0].toUpperCase() + c.slice(1)])];
 FILTERS.tome = [['', 'Все книги'], ['mythos_tome', 'Книги Мифов'], ['occult_book', 'Оккультные книги'], ['general', 'Только общие записи'],
@@ -329,7 +332,7 @@ function subtitle(c) {
   if (c.kind === 'weapon') return [caliberOf(c), WGROUP[c.group]].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'location') return [c.number ? '№ ' + c.number : '', c.location_type, c.part_of && byId(c.part_of) ? byId(c.part_of).name.ru : ''].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'tome') return [c.name.en, c.language].filter(Boolean).map(esc).join(' · ');
-  if (c.kind === 'rule') return [c.name.en, c.category].filter(Boolean).map(esc).join(' · ');
+  if (c.kind === 'rule') return [c.category, c.optional ? 'необязательное' : '', rulePage(c) < 9999 ? 'с. ' + rulePage(c) : ''].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'table') return [c.dice ? 'бросок ' + c.dice : 'выбор', (c.rows||[]).length + ' строк', c.category].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'scenario') return [c.part_of && byId(c.part_of) ? byId(c.part_of).name.ru : 'сценарий', BOOKS[bookOf(c)] || ''].filter(Boolean).map(esc).join(' · ');
   if (STORY_TYPE[c.kind] !== undefined || c.kind === 'scene') return [c[STORY_TYPE[c.kind]], c.kind === 'scene' ? c.when : '', (BOOKS[bookOf(c)] || '')].filter(Boolean).map(esc).join(' · ');
@@ -681,7 +684,7 @@ function ruleCard(c) {
   const refs = [...new Set([...(c.refs||[]).filter(byId), ...back.map(x => x.id)])];
   return `<h2>${esc(c.name.ru)}</h2>
     <div class="sub">${[c.name.en, c.category].filter(Boolean).map(esc).join(' · ')}${(c.aliases||[]).length ? ' · также: ' + c.aliases.map(esc).join(', ') : ''}</div>
-    ${flags(c)}
+    ${c.optional ? '<span class="tag" title="В книге помечено как необязательное правило">необязательное правило</span>' : ''}${flags(c)}
     ${c.summary?.ru ? `<p><b>${esc(c.summary.ru)}</b></p>` : ''}
     ${(c.steps||[]).length ? `<section><h3>Порядок</h3><ol>${c.steps.map(x => `<li>${esc(x)}</li>`).join('')}</ol></section>` : ''}
     ${(c.tables||[]).map(t => `<section>${t.title ? `<h3>${esc(t.title)}</h3>` : ''}<table class="rules"><tr>${t.columns.map(h => `<th>${esc(h)}</th>`).join('')}</tr>${t.rows.map(r => `<tr>${r.map(x => `<td>${esc(x)}</td>`).join('')}</tr>`).join('')}</table>${t.note ? `<p class="muted">${esc(t.note)}</p>` : ''}</section>`).join('')}
@@ -1602,7 +1605,8 @@ document.getElementById('mech').onchange = renderList;
 document.querySelectorAll('.tabs button').forEach(b => b.onclick = () => setTab(b.dataset.tab));
 // sort by name without leading quotes («Браунинг» M1918 goes under Б)
 const sortName = c => c.name.ru.replace(/^[«"„.\s]+/, '');
-Object.values(SET).forEach(s => s.sort((a, b) => sortName(a).localeCompare(sortName(b), 'ru')));
+// the rules keep the order of the book (Р-177)
+Object.entries(SET).forEach(([k, s]) => k !== 'rule' && s.sort((a, b) => sortName(a).localeCompare(sortName(b), 'ru')));
 function fromHash() {
   const [hk, hs] = decodeURIComponent(location.hash.slice(1)).split('/');
   if (!hs || !SET[hk]) return null;

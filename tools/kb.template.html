@@ -183,6 +183,7 @@ a { color:var(--accent); }
     <button data-tab="spell">Заклинания</button>
     <button data-tab="weapon">Оружие</button>
     <button data-tab="table">Таблицы</button>
+    <button data-tab="rule">Правила</button>
     <button data-tab="location">Гайды</button>
   </div>
   <!-- search is the same on every tab, so it lives in the top row; the second row keeps the tab's own buttons and filters -->
@@ -224,6 +225,8 @@ const FILTERS = {
   spell: [['', 'Все типы'], ['family', 'Только общие (семейства)'], ...[...new Set(DATA.spells.map(s => s.category).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'ru')).map(c => [c, c])],
 };
 DATA.tables = DATA.tables || [];
+DATA.rules = DATA.rules || [];
+FILTERS.rule = [['', 'Все разделы'], ...[...new Set(DATA.rules.map(r => r.category))].sort((a, b) => a.localeCompare(b, 'ru')).map(c => [c, c[0].toUpperCase() + c.slice(1)])];
 FILTERS.table = [['', 'Все разделы'], ...[...new Set(DATA.tables.map(t => t.category))].sort((a, b) => a.localeCompare(b, 'ru')).map(c => [c, c[0].toUpperCase() + c.slice(1)])];
 FILTERS.tome = [['', 'Все книги'], ['mythos_tome', 'Книги Мифов'], ['occult_book', 'Оккультные книги'], ['general', 'Только общие записи'],
   ...[...new Set(DATA.tomes.map(t => t.language).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'ru')).map(l => ['lang:' + l, 'Язык: ' + l])];
@@ -255,7 +258,7 @@ const CITY_SECTIONS = [['overview', 'Обзор'], ['map', 'Карта'], ['hist
 const openDist = new Set();
 // scenario material (Р-128): items, handouts, organizations, scenes live in the city guide (Р-132)
 ['items', 'handouts', 'organizations', 'scenes', 'scenarios'].forEach(k => DATA[k] = DATA[k] || []);
-const SET = { creature: DATA.creatures, character: DATA.characters, skill: DATA.skills, occupation: DATA.occupations, spell: DATA.spells, tome: DATA.tomes, weapon: DATA.weapons, table: DATA.tables, location: DATA.locations,
+const SET = { creature: DATA.creatures, character: DATA.characters, skill: DATA.skills, occupation: DATA.occupations, spell: DATA.spells, tome: DATA.tomes, weapon: DATA.weapons, table: DATA.tables, rule: DATA.rules, location: DATA.locations,
   item: DATA.items, handout: DATA.handouts, organization: DATA.organizations, scene: DATA.scenes, scenario: DATA.scenarios };
 const ALL = Object.values(SET).flat();
 const TOME_TYPE = { mythos_tome: 'книга Мифов', occult_book: 'оккультная книга' };
@@ -326,6 +329,7 @@ function subtitle(c) {
   if (c.kind === 'weapon') return [caliberOf(c), WGROUP[c.group]].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'location') return [c.number ? '№ ' + c.number : '', c.location_type, c.part_of && byId(c.part_of) ? byId(c.part_of).name.ru : ''].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'tome') return [c.name.en, c.language].filter(Boolean).map(esc).join(' · ');
+  if (c.kind === 'rule') return [c.name.en, c.category].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'table') return [c.dice ? 'бросок ' + c.dice : 'выбор', (c.rows||[]).length + ' строк', c.category].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'scenario') return [c.part_of && byId(c.part_of) ? byId(c.part_of).name.ru : 'сценарий', BOOKS[bookOf(c)] || ''].filter(Boolean).map(esc).join(' · ');
   if (STORY_TYPE[c.kind] !== undefined || c.kind === 'scene') return [c[STORY_TYPE[c.kind]], c.kind === 'scene' ? c.when : '', (BOOKS[bookOf(c)] || '')].filter(Boolean).map(esc).join(' · ');
@@ -671,6 +675,23 @@ function weaponCard(c) {
     ${corrections(c)}`;
 }
 // a rule table (Р-171): the book's intro, the rows as printed, the text after it; a row found by the search is marked
+// a rule of the rules reference (Р-175): the gist, the order of play, the rule as printed, its tables and examples
+function ruleCard(c) {
+  const back = ALL.filter(x => x !== c && (x.refs||[]).includes(c.id));
+  const refs = [...new Set([...(c.refs||[]).filter(byId), ...back.map(x => x.id)])];
+  return `<h2>${esc(c.name.ru)}</h2>
+    <div class="sub">${[c.name.en, c.category].filter(Boolean).map(esc).join(' · ')}${(c.aliases||[]).length ? ' · также: ' + c.aliases.map(esc).join(', ') : ''}</div>
+    ${flags(c)}
+    ${c.summary?.ru ? `<p><b>${esc(c.summary.ru)}</b></p>` : ''}
+    ${(c.steps||[]).length ? `<section><h3>Порядок</h3><ol>${c.steps.map(x => `<li>${esc(x)}</li>`).join('')}</ol></section>` : ''}
+    ${(c.tables||[]).map(t => `<section>${t.title ? `<h3>${esc(t.title)}</h3>` : ''}<table class="rules"><tr>${t.columns.map(h => `<th>${esc(h)}</th>`).join('')}</tr>${t.rows.map(r => `<tr>${r.map(x => `<td>${esc(x)}</td>`).join('')}</tr>`).join('')}</table>${t.note ? `<p class="muted">${esc(t.note)}</p>` : ''}</section>`).join('')}
+    ${c.text?.ru ? `<section><h3>Правило</h3>${richText(c.text.ru)}</section>` : ''}
+    ${(c.examples||[]).length ? `<section><h3>Пример</h3>${c.examples.map(x => `<blockquote>${richText(x)}</blockquote>`).join('')}</section>` : ''}
+    ${refs.length ? `<section><h3>Связано</h3><p>${refs.map(id => link(id, byId(id).name.ru)).join(', ')}</p></section>` : ''}
+    ${errata(c)}
+    <section><h3>Источник</h3><div>${sources(c)}</div></section>
+    ${corrections(c)}`;
+}
 let galleryFit = null;
 window.addEventListener('resize', () => galleryFit?.());
 function tableCard(c) {
@@ -1536,7 +1557,7 @@ function show(id, how = 'push') {
   if (tab === 'location') renderSubbar();
   renderList();
   const card = document.getElementById('card');
-  card.innerHTML = c.kind === 'scenario' ? scenarioCard(c) : STORY.some(([k]) => k === c.kind) ? storyCard(c) : c.kind === 'creature' ? creatureCard(c) : c.kind === 'character' ? characterCard(c) : c.kind === 'occupation' ? occupationCard(c) : c.kind === 'spell' ? spellCard(c) : c.kind === 'tome' ? tomeCard(c) : c.kind === 'weapon' ? weaponCard(c) : c.kind === 'table' ? tableCard(c) : c.kind === 'location' ? locationCard(c) : skillCard(c);
+  card.innerHTML = c.kind === 'scenario' ? scenarioCard(c) : STORY.some(([k]) => k === c.kind) ? storyCard(c) : c.kind === 'creature' ? creatureCard(c) : c.kind === 'character' ? characterCard(c) : c.kind === 'occupation' ? occupationCard(c) : c.kind === 'spell' ? spellCard(c) : c.kind === 'tome' ? tomeCard(c) : c.kind === 'weapon' ? weaponCard(c) : c.kind === 'table' ? tableCard(c) : c.kind === 'rule' ? ruleCard(c) : c.kind === 'location' ? locationCard(c) : skillCard(c);
   // Ctrl/Shift/⌘-click and the middle button are left to the browser (new tab or window at the link's address)
   card.querySelectorAll('[data-go]').forEach(a => a.onclick = e => { if (e.ctrlKey || e.metaKey || e.shiftKey || e.button) return; e.preventDefault(); if (a.dataset.sec) citySection = a.dataset.sec; show(a.dataset.go); });
   card.querySelectorAll('[data-onmap]').forEach(a => a.onclick = e => { e.preventDefault(); openOnMap(a.dataset.onmap); });

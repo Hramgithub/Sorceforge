@@ -15,7 +15,7 @@ from kblib import ROOT, records
 
 KIND_RU = {
     "creature": "Существа", "character": "Персонажи", "skill": "Навыки", "occupation": "Профессии",
-    "spell": "Заклинания", "tome": "Книги Мифов", "weapon": "Оружие", "location": "Места", "map": "Карты",
+    "spell": "Заклинания", "tome": "Книги Мифов", "weapon": "Оружие", "table": "Таблицы", "location": "Места", "map": "Карты",
     "scenario": "Сценарии", "scene": "Сцены", "item": "Предметы", "handout": "Документы для игроков",
     "organization": "Организации",
 }

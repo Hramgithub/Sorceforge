@@ -5,7 +5,7 @@
 
 | Этап | Что на выходе | Чем |
 |---|---|---|
-| 0. Приём | книга записана в `pipeline/source/books.json`, текстовый слой в кэше, опись заголовков | `pipeline/source/pages.py text / show / grep / image` |
+| 0. Приём | книга записана в `pipeline/source/books.json`, текстовый слой в кэше, соответствие печатных и физических страниц (`offset` или, если в скане пропущены страницы, `page_map`), опись заголовков | `pipeline/source/pages.py text / pagemap / show / grep / image` |
 | 1. План | части работы: страницы, цель, чьи файлы; файл плана в папке проверки | примеры — `checks/20261103-map-spots/plan.json`, `checks/20261105-names/plan.json`, `pipeline/briefs/examples/` |
 | 2. Извлечение | записи частей и файлы предложений правок общих записей | задание — `pipeline/briefs/make_brief.py <план> <часть>`; помощник — `.claude/agents/kb-extractor.md`; навыки — `.claude/skills/` |
 | 3. Нормализация | кубы, термины, Рассудок и Скорость словами, флаг опечаток, формат — только в новых и изменённых файлах | `pipeline/fix/normalize_dice.py`, `normalize_terms.py`, `attribute_words.py`, `errata_flag.py` — все с `--changed` |

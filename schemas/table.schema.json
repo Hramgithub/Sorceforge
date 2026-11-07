@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sourcefold.local/schemas/table.schema.json",
+  "title": "Таблица",
+  "description": "Таблица правил с броском: приступы безумия, фобии, мании и т. п. (Р-171). Строка таблицы — не отдельная запись.",
+  "type": "object",
+  "required": [
+    "schema",
+    "id",
+    "kind",
+    "name",
+    "category",
+    "rows",
+    "axes",
+    "sources"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "images": {
+      "$ref": "common.schema.json#/$defs/images"
+    },
+    "schema": {
+      "const": "sourcefold.table.v0"
+    },
+    "id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "kind": {
+      "const": "table"
+    },
+    "name": {
+      "$ref": "common.schema.json#/$defs/text"
+    },
+    "aliases": {
+      "type": "array",
+      "description": "Другие названия: номер таблицы в книге, название в других изданиях и программах («Безумие в прошедшем времени» в Foundry).",
+      "items": {
+        "type": "string"
+      }
+    },
+    "category": {
+      "enum": [
+        "рассудок",
+        "бой",
+        "погоня",
+        "магия",
+        "прочее"
+      ]
+    },
+    "dice": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Бросок по таблице: 1d10, 1d100; null — таблица для выбора."
+    },
+    "description": {
+      "$ref": "common.schema.json#/$defs/text",
+      "description": "Вступление к таблице и когда ею пользоваться."
+    },
+    "rows": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "text"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "roll": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Результат броска или диапазон, как в книге: «1», «01–05»."
+          },
+          "title": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Название строки: «Амнезия», «Арахнофобия»."
+          },
+          "text": {
+            "type": "string",
+            "description": "Текст строки, как в книге (без названия, если оно вынесено в title)."
+          },
+          "refs": {
+            "type": "array",
+            "items": {
+              "$ref": "common.schema.json#/$defs/id"
+            }
+          }
+        }
+      }
+    },
+    "notes": {
+      "$ref": "common.schema.json#/$defs/text",
+      "description": "Текст книги после таблицы."
+    },
+    "refs": {
+      "type": "array",
+      "description": "Связанные записи (навыки, правила, другие таблицы); просмотрщик показывает связь в обе стороны.",
+      "items": {
+        "$ref": "common.schema.json#/$defs/id"
+      }
+    },
+    "axes": {
+      "$ref": "common.schema.json#/$defs/axes"
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "common.schema.json#/$defs/source_ref"
+      }
+    },
+    "errata": {
+      "$ref": "common.schema.json#/$defs/errata"
+    },
+    "corrections": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/correction"
+      }
+    },
+    "quality": {
+      "$ref": "common.schema.json#/$defs/quality"
+    }
+  }
+}

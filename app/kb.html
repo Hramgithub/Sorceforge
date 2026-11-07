@@ -1563,8 +1563,10 @@ window.addEventListener('popstate', fromHistory);
 window.addEventListener('hashchange', fromHistory);
 // Basic-auth session on the site: whoami.html is an SSI echo of $remote_user (raw SSI text when opened locally)
 // built from location.origin: a page opened as https://user:pass@host/ cannot fetch relative URLs
-const whoamiUrl = new URL('whoami.html', location.origin + location.pathname).href;
-fetch(whoamiUrl, { cache: 'no-store' }).then(r => r.ok ? r.text() : '').then(name => {
+// (only over http: a page opened as a file has the origin "null" in Firefox, and new URL() on it throws)
+const pageBase = location.protocol.startsWith('http') ? location.origin + location.pathname : null;
+const whoamiUrl = pageBase && new URL('whoami.html', pageBase).href;
+if (whoamiUrl) fetch(whoamiUrl, { cache: 'no-store' }).then(r => r.ok ? r.text() : '').then(name => {
   name = name.trim();
   if (!name || name.includes('<!--')) return;
   document.getElementById('who-name').textContent = name;
@@ -1572,9 +1574,10 @@ fetch(whoamiUrl, { cache: 'no-store' }).then(r => r.ok ? r.text() : '').then(nam
 }).catch(() => {});
 // Basic auth has no logout: a request with bogus credentials makes the browser drop the saved ones
 document.getElementById('logout').onclick = () => {
+  if (!pageBase) return;
   const xhr = new XMLHttpRequest();
   xhr.open('GET', whoamiUrl, true, 'logout', 'logout');
-  xhr.onloadend = () => location.replace(new URL('./', location.origin + location.pathname).href);
+  xhr.onloadend = () => location.replace(new URL('./', pageBase).href);
   xhr.send();
 };
 // a picture opens over the page at full size (Р-168): click or Esc closes it, arrows go through its gallery;

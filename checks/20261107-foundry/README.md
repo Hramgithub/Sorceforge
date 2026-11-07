@@ -103,4 +103,6 @@
    владелец принимает, записи проходят `tools/check.py`. Числа сверяются с книгой, отличия идут в
    `corrections`.
 
-Вопросы к владельцу — по одному, ответы записываются строкой Р-NN в `docs/project-goal.md` §6.
+Принято решением Р-172 (`docs/project-goal.md` §6). Скрипт выгрузки и сборка — ветка
+`foundry-sync/20261107` репозитория FoundryVTT, описание — раздел «World Sync» в
+`modules/nri-coc-library/README.md`.

@@ -124,6 +124,8 @@ dd { margin:0; }
 a { color:var(--accent); }
 .tag { display:inline-block; font-size:12px; padding:1px 8px; border-radius:10px; border:1px solid var(--line); margin-right:4px; }
 .tag.warn { color:var(--warn); border-color:var(--warn); }
+.hasart { display:inline-block; margin-left:6px; color:var(--muted); vertical-align:-1px; line-height:0; }
+.active .hasart, button:hover .hasart { color:var(--accent); }
 .tag.ok { color:var(--ok); border-color:var(--ok); }
 .muted { color:var(--muted); }
 /* maps (Р-120): the book image keeps its own colours, so spot colours are fixed */
@@ -324,7 +326,9 @@ const MAGIC = [['spell', 'Все заклинания'], ['tome', 'Книги']]
 // the tab a record opens in: scenario material belongs to the guide (Р-132)
 const tabFor = t => STORY.some(([k]) => k === t) ? 'location' : t;
 const topTab = t => t === 'tome' ? 'spell' : tabFor(t);
-const item = (c, alias) => `<button data-id="${esc(c.id)}" class="${c.id===current?'active':''}">${esc(c.name.ru)}
+// a small picture sign after the name in the lists: the record has pictures (Р-169)
+const ART = c => (c.images||[]).length ? '<span class="hasart" title="Есть картинка" aria-label="есть картинка"><svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="11" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="5.5" cy="6.3" r="1.4" fill="currentColor"/><path d="M2.5 12.5l4-4.2 2.6 2.6 1.7-1.6 3 3.2z" fill="currentColor"/></svg></span>' : '';
+const item = (c, alias) => `<button data-id="${esc(c.id)}" class="${c.id===current?'active':''}">${esc(c.name.ru)}${ART(c)}
     ${(c.quality?.flags||[]).filter(x => x !== 'translated').length ? '<span class="tag warn">!</span>' : ''}<small>${[subtitle(c), alias ? 'также: ' + esc(alias) : ''].filter(Boolean).join(' · ')}</small></button>`;
 function renderList() {
   const q = norm(document.getElementById('q').value.trim());
@@ -383,7 +387,7 @@ function renderOutline(list, sec) {
   const c = byId(city);
   document.getElementById('count').textContent = '';
   // levels: 0 — directly under the city row, 1 — under a scenario, 2 — under a stage
-  const rec = (x, lvl = 0) => `<button data-id="${esc(x.id)}" class="rec l${lvl} ${x.id === current ? 'active' : ''}">${esc(x.name.ru)}</button>`;
+  const rec = (x, lvl = 0) => `<button data-id="${esc(x.id)}" class="rec l${lvl} ${x.id === current ? 'active' : ''}">${esc(x.name.ru)}${ART(x)}</button>`;
   const toc = (lvl = 0) => `<div class="toc l${lvl}"></div>`;
   const group = (key, open, label, lvl = 0) => `<div class="part l${lvl}" data-part="${esc(key)}">${fold(open)}${esc(label)}</div>`;
   let body;

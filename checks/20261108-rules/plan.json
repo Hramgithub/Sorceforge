@@ -1,0 +1,98 @@
+{
+  "book_id": "keeper-rulebook-ru",
+  "goal": "the whole rules part of the Keeper Rulebook in the rules reference (kind `rule`), so that the game can be run from the knowledge base (Р-175, Р-177).",
+  "decision": "Р-175, Р-177",
+  "check_dir": "checks/20261108-rules",
+  "models": [
+    "kb/rules/poisons.json",
+    "kb/rules/other-forms-of-damage.json",
+    "kb/tables/hit-locations.json",
+    "schemas/rule.schema.json"
+  ],
+  "extra": "## This work (Р-175, Р-177)\n\n- One `rule` record per section of the book: a heading of a section inside the chapter («Боевой раунд», «Броня», «Фаза развития сыщиков»); its small subsections go inside the same record (`text`, `steps`, `tables`, `examples`). A section that is only a lead-in of one line joins the next section.\n- `id` — `coc:rule:<slug>`, slug from the English name of the section in Keeper Rulebook (`keeper-rulebook-en`), lower case with hyphens; file `kb/rules/<slug>.json`. Before creating a file, check that `kb/rules/<slug>.json` does not exist; if another unit could own the same subject, prefer the more specific slug (`chase-movement`, not `movement`).\n- `category` — one of the schema's; `optional: true` only where the book says «необязательное правило».\n- A table with a die roll (1d10, 1d20, 1d100…) is a `table` record (`kb/tables/<slug>.json`, Р-171) referenced from the rule's `refs`; a table without a roll stays in the rule's `tables`.\n- `refs` — existing records only (skills `coc:skill:*`, characteristics `coc:characteristic:*`, tables, other rules, spells, tomes); check every id exists in `kb/`. Links to rules that other units are writing now: use the slug you expect only if you are sure of it, otherwise leave it out and list it in the report.\n- Text and every number from the page image of the Russian Keeper Rulebook (`python pipeline/source/pages.py image keeper-rulebook-ru <printed page>`); the text layer is noisy. Printed page = «с. N» of pages.py, physical = «физ. M»; check that the number on the page image is N.\n- `name.en` and a second source from `keeper-rulebook-en` (printed page = physical − 1; pages.py does it).\n- Examples of play in the book — `examples`, in full. Keeper advice without mechanics belongs in records of the chapter «Ход игры» only; elsewhere keep it inside the rule's `text`.\n- The owner's Foundry journals `checks/20261107-foundry/journals/*.md` are hints only: never take their additions that are not in the book.\n- Records already done and yours to keep consistent with: `kb/rules/poisons.json`, `kb/rules/suffocation-and-drowning.json`, `kb/rules/other-forms-of-damage.json` (combat unit owns them and may improve them), `kb/tables/*.json` (bouts of madness, phobias, manias, hit locations) — do not duplicate them.\n- Coverage: in `checks/20261108-rules/<your unit name>.md` list every section heading of your pages → the record that holds it (or «не взято» with the reason).",
+  "units": [
+    {
+      "name": "creation",
+      "pages": "26-53",
+      "target": "ch. 3 «Создание сыщиков» and the opening rules of ch. 4 «Навыки» (pp. 50-53; the skill list itself is in kb/skills)",
+      "owns": [
+        "new files in kb/rules/ for these pages",
+        "new files in kb/tables/ for these pages"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "system",
+      "pages": "78-97",
+      "target": "ch. 5 «Игровая система»: checks, difficulty, pushing, opposed rolls, bonus/penalty dice, luck, development phase, credit rating",
+      "owns": [
+        "new files in kb/rules/ for these pages",
+        "new files in kb/tables/ for these pages"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "combat",
+      "pages": "98-127",
+      "target": "ch. 6 «Бой»: combat round, melee, manoeuvres, ranged and firearms, armour, wounds and healing, optional rules",
+      "owns": [
+        "kb/rules/poisons.json",
+        "kb/rules/suffocation-and-drowning.json",
+        "kb/rules/other-forms-of-damage.json",
+        "new files in kb/rules/ for these pages",
+        "new files in kb/tables/ for these pages"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "chase",
+      "pages": "128-149",
+      "target": "ch. 7 «Погоня»",
+      "owns": [
+        "new files in kb/rules/ for these pages",
+        "new files in kb/tables/ for these pages"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "sanity",
+      "pages": "150-167",
+      "target": "ch. 8 «Рассудок» (the four madness tables already exist in kb/tables)",
+      "owns": [
+        "new files in kb/rules/ for these pages",
+        "new files in kb/tables/ for these pages"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "magic",
+      "pages": "168-179 220-226 238-243",
+      "target": "ch. 9 «Магия», the rules of using Mythos tomes (ch. 11, pp. 220-226) and of spells (ch. 12, pp. 238-243); tomes and spells themselves are in kb/tomes, kb/spells",
+      "owns": [
+        "new files in kb/rules/ for these pages",
+        "new files in kb/tables/ for these pages"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "play",
+      "pages": "180-219",
+      "target": "ch. 10 «Ход игры»: idea and perception rolls, dice rolls in play, applying the rules, house rules, keeper advice, conveying horror, writing scenarios",
+      "owns": [
+        "new files in kb/rules/ for these pages",
+        "new files in kb/tables/ for these pages"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "artifacts",
+      "pages": "264-273 388-393",
+      "target": "ch. 13 «Артефакты и инопланетные устройства» (rules part) and the appendix «Переход на седьмую редакцию»",
+      "owns": [
+        "new files in kb/rules/ for these pages",
+        "new files in kb/tables/ for these pages"
+      ],
+      "sites": "—"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "schema": "sourcefold.rule.v0",
+  "id": "coc:rule:sights",
+  "kind": "rule",
+  "name": {
+    "ru": "Прицел",
+    "en": "Sights"
+  },
+  "category": "бой",
+  "optional": true,
+  "summary": {
+    "ru": "Телескопический прицел удваивает базовую дальность стрельбы; при стрельбе в упор преимуществ не даёт."
+  },
+  "text": {
+    "ru": "Телескопический прицел удваивает базовую дальность стрельбы. К примеру, если стрелять из винтовки Ли-Энфилд 303-го калибра (базовая дальность стрельбы 100 метров) с прицелом, то сложность повысится до трудной, только когда дальность превысит 200 метров, до чрезвычайной — при дальности от 400 до 800 метров. При стрельбе в упор прицел не даёт преимуществ."
+  },
+  "refs": [
+    "coc:rule:firearms",
+    "coc:rule:optional-rules-for-combat",
+    "coc:weapon:303-lee-enfield"
+  ],
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 118,
+      "printed_page": 125,
+      "method": "book_text",
+      "verified": true,
+      "note": "Глава 6 «Бой», «Прицел»"
+    },
+    {
+      "book_id": "keeper-rulebook-en",
+      "physical_page": 128,
+      "printed_page": 127,
+      "method": "book_text",
+      "verified": true,
+      "note": "Sights — название (name.en), сверка чисел"
+    }
+  ],
+  "errata": [
+    {
+      "field": "text.ru",
+      "printed": "базовая дальность стрельбы 100 метров … превысит 200 метров … от 400 до 800 метров",
+      "expected": "базовая дальность стрельбы 110 метров … превысит 220 метров … от 440 до 880 метров",
+      "note": "По таблице XVII русского издания базовая дальность винтовки «Ли-Энфилд» .303 — 110 метров (так и в справочнике оружия базы); в английском примере (с. 127): «base range of 110 yards… until the range exceeded 220 yards with Extreme range being from 440 to 880 yards». Механика (удвоение) не меняется; пример оставлен как напечатан.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": "Необязательное правило главы 6 (раздел «Необязательные правила боя», с. 121)."
+  }
+}

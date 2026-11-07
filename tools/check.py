@@ -133,7 +133,8 @@ def main() -> int:
             if path.rsplit(".", 1)[-1] in QUOTED:
                 continue
             for pat, msg, is_error in RULES:
-                if msg == ATTR_WORDS and (re.split(r"[.\[]", path)[-1].rstrip("]") in {"raw", "to", "reason"} or "source_variants" in path or path.startswith("corrections")):
+                # the English text of a record (name.en and the like) keeps the book's English words: «MOV Rates»
+                if msg == ATTR_WORDS and (re.split(r"[.\[]", path)[-1].rstrip("]") in {"raw", "to", "reason", "en"} or "source_variants" in path or path.startswith("corrections")):
                     continue
                 if msg == MEASURES and KEEP_MEASURES.match(path):
                     continue

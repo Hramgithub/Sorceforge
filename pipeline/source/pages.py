@@ -1,7 +1,8 @@
 """Read a source book by its pages (Р-139): text, search, page images and crops.
 
 Books are registered in pipeline/source/books.json: book_id → pdf path, offset (printed page − offset = physical
-page in the PDF), language, edition, notes. Edition (Р-147): `original` — the publisher's original; `official` —
+page in the PDF) or, for a scan with dropped pages, page_map ([first_physical, last_physical, offset] ranges read off
+the printed numbers by `pagemap`), language, edition, notes. Edition (Р-147): `original` — the publisher's original; `official` —
 an official translation; `trusted` — a translation the owner marked as reliable; `machine` — a machine translation,
 never a source (the tool refuses to read it). The text layer is taken once with Poppler `pdftotext -layout` into the local cache
 `.cache/sources/<book_id>/` (not in git); page images go there too. Pages are printed pages unless --physical.
@@ -12,6 +13,7 @@ A new book is registered with `register`: its edition comes from the owner's fol
 Usage:
   python pipeline/source/pages.py register <book_id> <pdf> --title "…" [--offset N] [--edition E]
   python pipeline/source/pages.py text  <book_id> [--force]          take the text layer into the cache
+  python pipeline/source/pages.py pagemap <book_id> [--write]        printed page numbers → page_map in books.json
   python pipeline/source/pages.py show  <book_id> 76 80-82 [--physical]
   python pipeline/source/pages.py grep  <book_id> <regex> [--pages 76-97]
   python pipeline/source/pages.py image <book_id> <page> [--dpi 150] [--physical]
@@ -76,6 +78,68 @@ def register(a) -> None:
     print(f"{a.book}: {a.title}, издание {edition}")
 
 
+def offset_at(b: dict, physical: int) -> int | None:
+    """Printed minus physical page at a physical page. A scan with dropped pages has `page_map`:
+    [[first_physical, last_physical, offset], …] read off the printed numbers; a page between two ranges with
+    different offsets is not known (None)."""
+    pm = b.get("page_map")
+    if not pm:
+        return b.get("offset", 0)
+    for first, last, off in pm:
+        if first <= physical <= last:
+            return off
+    before = [r for r in pm if r[1] < physical]
+    after = [r for r in pm if r[0] > physical]
+    if before and after and before[-1][2] == after[0][2]:
+        return before[-1][2]
+    return None
+
+
+def physical_of(b: dict, printed: int) -> tuple[int, bool]:
+    """Physical page of a printed page; False when the page map does not settle it (a guess from the nearest range)."""
+    pm = b.get("page_map")
+    if not pm:
+        return printed - b.get("offset", 0), True
+    for first, last, off in pm:
+        if first <= printed - off <= last:
+            return printed - off, True
+    for first, last, off in pm:
+        if offset_at(b, printed - off) == off:
+            return printed - off, True
+    near = min(pm, key=lambda r: min(abs(printed - r[2] - r[0]), abs(printed - r[2] - r[1])))
+    return printed - near[2], False
+
+
+def page_map(book_id: str) -> list[list[int]]:
+    """Ranges [first_physical, last_physical, offset] from the printed numbers in the text layer: a bare number in
+    the first or last three lines of a page; numbers that break a never-decreasing offset are dropped."""
+    seen = []
+    for i, p in enumerate(text_pages(book_id), 1):
+        lines = [l.strip() for l in p.split("\n") if l.strip()]
+        for l in lines[:3] + lines[-3:]:
+            m = re.fullmatch(r"(\d{1,3})", l) or re.match(r"^(\d{1,3})\s{3,}", l) or re.search(r"\s{3,}(\d{1,3})$", l)
+            if m and 0 <= int(m.group(1)) - i <= 60:
+                seen.append((i, int(m.group(1)) - i))
+                break
+    # the longest run of pages whose offset never decreases (a scan only drops pages, it does not add them)
+    best, prev = [1] * len(seen), [-1] * len(seen)
+    for x in range(len(seen)):
+        for y in range(x):
+            if seen[y][1] <= seen[x][1] and best[y] + 1 > best[x]:
+                best[x], prev[x] = best[y] + 1, y
+    k, keep = (max(range(len(seen)), key=best.__getitem__) if seen else -1), []
+    while k != -1:
+        keep.append(seen[k]); k = prev[k]
+    out: list[list[int]] = []
+    for i, d in reversed(keep):
+        if out and out[-1][2] == d:
+            out[-1][1] = i
+        else:
+            out.append([i, i, d])
+    print(f"номера найдены на {len(seen)} страницах, отброшено {len(seen) - len(keep)}", file=sys.stderr)
+    return out
+
+
 def pages_arg(items: list[str]) -> list[int]:
     out = []
     for a in items:
@@ -99,6 +163,7 @@ def main() -> None:
     s = sub.add_parser("register"); s.add_argument("book"); s.add_argument("pdf"); s.add_argument("--title", required=True)
     s.add_argument("--offset", type=int); s.add_argument("--edition", choices=["original", "official", "trusted"])
     s = sub.add_parser("text"); s.add_argument("book"); s.add_argument("--force", action="store_true")
+    s = sub.add_parser("pagemap"); s.add_argument("book"); s.add_argument("--write", action="store_true")
     s = sub.add_parser("show"); s.add_argument("book"); s.add_argument("pages", nargs="+"); s.add_argument("--physical", action="store_true")
     s = sub.add_parser("grep"); s.add_argument("book"); s.add_argument("pattern"); s.add_argument("--pages", nargs="*")
     s = sub.add_parser("image"); s.add_argument("book"); s.add_argument("page", type=int); s.add_argument("--dpi", type=int, default=150); s.add_argument("--physical", action="store_true")
@@ -122,8 +187,33 @@ def main() -> None:
     if a.cmd == "register":
         register(a)
         return
+    if a.cmd == "pagemap":
+        book(a.book)
+        pm = page_map(a.book)
+        for first, last, off in pm:
+            print(f"физ. {first}–{last}: печ. = физ. + {off}")
+        if a.write:
+            books = json.loads(BOOKS.read_text(encoding="utf-8"))
+            books[a.book]["page_map"] = pm
+            books[a.book].pop("offset", None)
+            BOOKS.write_text(json.dumps(books, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
+            print(f"записано в {BOOKS.relative_to(ROOT)}")
+        return
     b = book(a.book)
-    off = 0 if getattr(a, "physical", False) else b.get("offset", 0)
+    phys = getattr(a, "physical", False)
+
+    def to_physical(n: int) -> int:
+        if phys:
+            return n
+        i, sure = physical_of(b, n)
+        if not sure:
+            print(f"! с. {n}: по карте страниц не определена, взята физ. {i} — сверь номер на изображении", file=sys.stderr)
+        return i
+
+    def label(i: int) -> str:
+        off = offset_at(b, i)
+        return f"с. {i + off}" if off is not None else "с. ?"
+
     folder = CACHE / a.book
     folder.mkdir(parents=True, exist_ok=True)
     if a.cmd == "text":
@@ -136,22 +226,23 @@ def main() -> None:
     elif a.cmd == "show":
         pages = text_pages(a.book)
         for n in pages_arg(a.pages):
-            i = n - off
-            print(f"===== с. {n} (физ. {i}) =====")
+            i = to_physical(n)
+            print(f"===== {label(i)} (физ. {i}) =====")
             print(pages[i - 1] if 0 < i <= len(pages) else "<нет такой страницы>")
     elif a.cmd == "grep":
         pages = text_pages(a.book)
         want = set(pages_arg(a.pages)) if a.pages else None
         pat = re.compile(a.pattern)
         for i, page in enumerate(pages, 1):
-            n = i + b.get("offset", 0)
+            off = offset_at(b, i)
+            n = i + off if off is not None else None
             if want and n not in want:
                 continue
             for line in page.split("\n"):
                 if pat.search(line):
-                    print(f"с. {n}: {line.strip()[:300]}")
+                    print(f"{label(i)} (физ. {i}): {line.strip()[:300]}")
     elif a.cmd == "image":
-        i = a.page - off
+        i = to_physical(a.page)
         prefix = folder / f"p{a.page:03d}{'-phys' if a.physical else ''}"
         subprocess.run([tool("pdftoppm"), "-f", str(i), "-l", str(i), "-r", str(a.dpi), "-png", "-singlefile", b["pdf"], str(prefix)], check=True)
         print(f"{prefix}.png")

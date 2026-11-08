@@ -23,6 +23,11 @@
 | `organization.schema.json` | организация: культ, агентство, общество, клан (Р-128) | `kb/books/<книга>/organizations/` |
 | `scene.schema.json` | сцена сценария (Р-128); место в сценарии — `arc` (Р-133) | `kb/books/<книга>/scenes/` |
 | `scenario.schema.json` | сценарий или его этап: фон, завязка, ход по шагам, итог (Р-134) | `kb/books/<книга>/scenarios/` |
+| `rule.schema.json` | правило: раздел книги правил — суть, правило, порядок, таблицы, примеры; `optional` — необязательное, `parent` — раздел, в который входит (Р-175, Р-177, Р-187) | `kb/rules/` |
+| `table.schema.json` | таблица с броском: приступы, фобии, мании, зоны поражения… (Р-171) | `kb/tables/` |
+| `archetype.schema.json` | архетип героя Pulp Cthulhu (Р-183) | `kb/archetypes/` |
+| `talent.schema.json` | пульп-талант, в том числе безумный и для персонажей Хранителя (Р-183) | `kb/talents/` |
+| `term.schema.json` | термин глоссария: английский и принятый русский по приоритету официальной локализации, варианты, формы, определение (Р-184) | `kb/terms/` |
 | `proposal.schema.json` | предложения правок общих записей от помощника; применяет `pipeline/integrate/apply.py` (Р-139) | папка проверки переноса |
 | `examples/` | по примеру на каждый вид записи | — |
 
@@ -56,6 +61,36 @@ python tools\validate.py schemas\<вид>.schema.json <файлы>
   («опечатка книги» — стоит ровно у записей с `errata`), `incomplete` («неполно» —
   в книге нет данных), `needs_review`; короткое примечание для ведущего.
 - **Формат файла** — UTF-8, отступ 2, LF (`pipeline/fix/normalize_terms.py`).
+- **Оси** — `axes.era`: `any`, `1920s`, `1930s` (Р-188), `gaslight`, `wild-west`, `dark-ages`, `modern`, `other`;
+  `axes.ruleset`: `core` (классика), `pulp` (Pulp Cthulhu, Р-183), `other` (домашние правила и прочее, Р-176).
+- **Записи книги** — `<book_id>/<вид>/<slug>` в `kb/books/<book_id>/<виды>/`: персонажи, существа, сюжет, а у книг,
+  чьи города ещё не сведены с общими (Pulp Cthulhu), — и места и карты (`pulp-cthulhu-en/location/…`, Р-183).
+
+## Справочник правил (`rule`, `table`, Р-171, Р-175, Р-177, Р-180…Р-187)
+
+- Одна запись `rule` — один раздел книги: `summary` (суть), `text` (правило полностью), `steps` (порядок за столом),
+  `tables[{title, columns, rows, note}]` (без броска), `examples` (примеры игры), `refs`, `optional`, `parent`.
+- Таблица с броском — запись `table`: `dice`, `rows[{roll, title, text, refs}]`, `description`, `notes`.
+- Каркас показа — главы «Книги хранителя» (`chapters` книги в `pipeline/source/books.json`: [первая печатная
+  страница, название, глава «Книги хранителя» для расширений]); правило расширения стоит в главе правила ядра, которое
+  меняет (первая ссылка `refs` на правило «Книги хранителя»); внутри главы — «Классика» и «Pulp».
+- Домашние правила владельца — книга `house-rules`, флаг `editorial_text`, свод `other` (Р-176, Р-179).
+
+## Pulp Cthulhu (`archetype`, `talent`, Р-183)
+
+- Архетип: `core_characteristic {raw, options[coc:characteristic:*]}`, `bonus_points`, `bonus_skills[{raw, id,
+  specialization}]`, `talents {raw, required[coc:talent:*], choose}`, `suggested_occupations[{raw, id}]`,
+  `suggested_traits`, `notes`.
+- Талант: `category` — физический, ментальный, боевой, прочий, безумный, для персонажей Хранителя; `description`,
+  `cost` (чем платят).
+- Пульп-профессия — `coc:occupation:pulp-<slug>`, психические навыки — `coc:skill:pulp-<slug>`.
+
+## Глоссарий (`term`, Р-184)
+
+- `name.en` — английский термин, `name.ru` — принятый русский; `chosen_by` — official (официальная локализация) >
+  owner (реестр терминов владельца) > trusted > ours (наш перевод); `variants[{ru, by, book_id, page, note}]`,
+  `aliases` (формы), `avoid` (как не писать), `domain`, `scope` (книга/сценарий или везде), `status` (accepted / review),
+  `definition`, `refs`. Строится `pipeline/migrate/terms_build.py`, поиск и выгрузка — `tools/terms.py`.
 
 ## Связи (`relations`)
 

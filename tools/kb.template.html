@@ -442,9 +442,17 @@ function ruleGroups(items) {
       + sub(pulpKey + '|arch', 'Архетипы', arch.filter(() => extra.length), 2)
       + (extra.length ? sub(pulpKey + '|tal', 'Таланты', tal, 2, () => [...new Set(tal.map(t => t.category))].map(cat =>
           sub(pulpKey + '|tal|' + cat, cat[0].toUpperCase() + cat.slice(1), tal.filter(t => t.category === cat), 3)).join('')) : '');
-    return head(key, open, `${ch} (${all.length})`, 0) + (open ? core.map(c => row(c, 1)).join('')
-      + sub(key + '|opt', 'Необязательные правила', opt, 1)
-      + sub(pulpKey, 'Pulp', pulpAll, 1, pulpInner) : '');
+    // with «Все: классика и Pulp» the chapter holds two folding groups, «Классика» and «Pulp» (Р-186); with one of
+    // the two chosen in the filter its records stand right in the chapter
+    const both = !document.getElementById('rset').value && ch !== 'Домашние правила';
+    const classicInner = lvl => core.map(c => row(c, lvl)).join('') + sub(key + '|opt', 'Необязательные правила', opt, lvl);
+    const pulpFlat = () => pulp.map(c => row(c, 1)).join('') + sub(pulpKey + '|arch', 'Архетипы', arch.filter(() => extra.length), 1)
+      + (extra.length ? sub(pulpKey + '|tal', 'Таланты', tal, 1, () => [...new Set(tal.map(t => t.category))].map(cat =>
+          sub(pulpKey + '|tal|' + cat, cat[0].toUpperCase() + cat.slice(1), tal.filter(t => t.category === cat), 2)).join('')) : '');
+    const body = both
+      ? sub(key + '|classic', 'Классика', classic, 1, () => classicInner(2)) + sub(pulpKey, 'Pulp', pulpAll, 1, pulpInner)
+      : classicInner(1) + (pulpAll.length ? pulpFlat() : '');
+    return head(key, open, `${ch} (${all.length})`, 0) + (open ? body : '');
   }).join('');
 }
 

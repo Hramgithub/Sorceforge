@@ -10,7 +10,9 @@
 * { box-sizing: border-box; }
 body { margin:0; font:15px/1.45 system-ui, "Segoe UI", sans-serif; background:var(--bg); color:var(--ink); }
 header { padding:12px 16px; border-bottom:1px solid var(--line); display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
-header h1 { font-size:18px; margin:0 8px 0 0; }
+header h1 { font-size:18px; margin:0 8px 0 0; white-space:nowrap; }
+header h1 select { font:inherit; font-weight:700; padding:0 14px 0 0; border:0; border-radius:0; color:var(--accent); cursor:pointer; appearance:none; -webkit-appearance:none; background:none; background-image:linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%); background-size:5px 5px; background-position:right 5px top 55%, right 0 top 55%; background-repeat:no-repeat; }
+header h1 select option { color:var(--ink); background:var(--panel); font-weight:400; }
 .tabs { display:flex; gap:4px; flex-wrap:wrap; min-width:0; }
 .tabs button { font:inherit; padding:6px 12px; border:1px solid var(--line); border-radius:6px; background:none; color:inherit; cursor:pointer; }
 .tabs button.active { background:var(--panel); border-color:var(--accent); color:var(--accent); font-weight:600; }
@@ -185,11 +187,11 @@ a { color:var(--accent); }
 </head>
 <body>
 <header>
-  <h1>База знаний</h1>
+  <!-- the ruleset of the whole base (Р-194): «База Classic / Pulp / Mix», the word is the switch -->
+  <h1>База <select id="rset" aria-label="Свод правил" title="Свод правил: Classic — без Pulp, Pulp — только Pulp, Mix — всё"><option value="core">Classic</option><option value="pulp">Pulp</option><option value="">Mix</option></select></h1>
   <div class="tabs" role="tablist">
     <button data-tab="creature">Существа</button>
     <button data-tab="character">Персонажи</button>
-    <button data-tab="skill">Навыки</button>
     <button data-tab="occupation">Профессии</button>
     <button data-tab="spell">Заклинания</button>
     <button data-tab="weapon">Оружие</button>
@@ -208,8 +210,7 @@ a { color:var(--accent); }
   <select id="cat" aria-label="Фильтр"></select>
   <select id="occ" aria-label="Профессия" hidden></select>
   <select id="mech" aria-label="Механика" hidden><option value="">Все механики</option><option value="мгновенное">Мгновенные</option><option value="поддерживаемое">Поддерживаемые</option><option value="ритуал">Ритуалы</option></select>
-  <select id="rset" aria-label="Свод правил" title="Свод правил: классика, Pulp или всё" hidden><option value="">Все: классика и Pulp</option><option value="core">Классика</option><option value="pulp">Pulp</option></select>
-  <select id="era" aria-label="Эпоха" hidden><option value="">Все эпохи</option><option value="1920s">1920-е</option><option value="1930s">1930-е</option><option value="modern">Современность</option></select>
+ <select id="era" aria-label="Эпоха" hidden><option value="">Все эпохи</option><option value="1920s">1920-е</option><option value="1930s">1930-е</option><option value="modern">Современность</option></select>
   <span id="count" class="muted"></span>
 </span></nav>
 <main>
@@ -373,11 +374,12 @@ function subtitle(c) {
   return `${esc(c.name.en||'')} · ${c.base.raw === '—' ? esc(c.category) : 'база ' + esc(c.base.raw)}`;
 }
 
-const TAB_RU = { ...Object.fromEntries([...document.querySelectorAll('.tabs button')].map(b => [b.dataset.tab, b.textContent])), tome: 'Книги', archetype: 'Архетипы', talent: 'Таланты', ...Object.fromEntries(STORY) };
+const TAB_RU = { ...Object.fromEntries([...document.querySelectorAll('.tabs button')].map(b => [b.dataset.tab, b.textContent])), skill: 'Навыки', tome: 'Книги', archetype: 'Архетипы', talent: 'Таланты', ...Object.fromEntries(STORY) };
 // books live inside the Spells tab (Р-111): the sub-bar switches between the two lists; every book stays, with or without spells
 const MAGIC = [['spell', 'Все заклинания'], ['tome', 'Книги']];
 // the tab a record opens in: scenario material belongs to the guide (Р-132)
-const tabFor = t => STORY.some(([k]) => k === t) ? 'location' : t === 'archetype' || t === 'talent' ? 'rule' : t;
+// skills live in the «Профессии» tab (Р-193)
+const tabFor = t => STORY.some(([k]) => k === t) ? 'location' : t === 'archetype' || t === 'talent' ? 'rule' : t === 'skill' ? 'occupation' : t;
 const topTab = t => t === 'tome' ? 'spell' : tabFor(t);
 // a small picture sign after the name in the lists: the record has pictures (Р-169)
 const ART = c => (c.images||[]).length ? '<span class="hasart" title="Есть картинка" aria-label="есть картинка"><svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="11" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="5.5" cy="6.3" r="1.4" fill="currentColor"/><path d="M2.5 12.5l4-4.2 2.6 2.6 1.7-1.6 3 3.2z" fill="currentColor"/></svg></span>' : '';
@@ -404,7 +406,7 @@ function renderList() {
     const set = SET[tab];
     const items = set.filter(c => matches(c, q, f));
     document.getElementById('count').textContent = items.length + ' из ' + set.length;
-    list.innerHTML = tab === 'rule' ? ruleGroups(items) : items.map(c => item(c)).join('');
+    list.innerHTML = tab === 'rule' ? ruleGroups(items) : tab === 'occupation' ? occGroups(items) : items.map(c => item(c)).join('');
   }
   list.querySelectorAll('button').forEach(b => b.onclick = () => show(b.dataset.id));
   list.querySelectorAll('[data-rnode]').forEach(f => f.onclick = e => { e.stopPropagation(); const k = f.dataset.rnode; partState.set(k, f.textContent !== '▾'); renderList(); });
@@ -427,6 +429,26 @@ const ruleChapter = r => {
   if (core) return krChapter(rulePage(core));
   return own ? own[2] || `${BOOKS[b] || b}: ${own[1]}` : 'Прочее';
 };
+// «Профессии» with the skills (Р-193): a profession unfolds into its skills (choices as «на выбор N»); after the
+// professions — «Все навыки» by category
+const occSkillLabel = x => (x.skill && byId(x.skill) ? byId(x.skill).name.ru : x.raw || '') + (x.specialization ? ` (${x.specialization})` : '');
+function occGroups(items) {
+  const cur = byId(current);
+  const head = (key, open, label, lvl) => `<div class="part${lvl ? ' l' + lvl : ''}" data-rgroup="${esc(key)}">${fold(open)}${esc(label)}</div>`;
+  const skillBtn = (id, label, lvl) => byId(id) ? `<button data-id="${esc(id)}" class="rin${lvl} ${id === current ? 'active' : ''}">${esc(label)}</button>` : `<div class="part l${lvl} muted">${esc(label)}</div>`;
+  const occ = c => {
+    const k = 'occ|' + c.id, o = partOpen(k, c.id === current);
+    const skills = (c.skills||[]).map(s => s.choice
+      ? `<div class="part l3 muted">${Array.isArray(s.choice.of) ? `на выбор ${s.choice.count}:` : esc(s.raw)}</div>` + (Array.isArray(s.choice.of) ? s.choice.of.map(x => typeof x === 'string' ? skillBtn(x, byId(x)?.name.ru || x, 4) : skillBtn(x.skill, occSkillLabel(x), 4)).join('') : '')
+      : skillBtn(s.skill, occSkillLabel(s) + (s.count ? ` ×${s.count}` : ''), 3)).join('');
+    return item(c).replace('class="', 'class="rin1 ').replace(/^(<button[^>]*>)/, `$1<span class="rfold" data-rnode="${esc(k)}" title="Навыки профессии">${o ? '▾' : '▸'}</span>`)
+      + (o ? `<div class="part l2">Навыки профессии</div>` + skills : '');
+  };
+  const sk = DATA.skills.filter(rsetOk), cats = [...new Set(sk.map(s => s.category))].sort((a, b) => a.localeCompare(b, 'ru'));
+  const ko = partOpen('occ|skills', cur?.kind === 'skill');
+  return items.map(occ).join('') + head('occ|skills', ko, `Все навыки (${sk.length})`, 0)
+    + (ko ? cats.map(cat => { const xs = sk.filter(s => s.category === cat), k = 'occ|skills|' + cat, o = partOpen(k, xs.includes(cur)); return head(k, o, `${cat[0].toUpperCase() + cat.slice(1)} (${xs.length})`, 1) + (o ? xs.map(s => skillBtn(s.id, s.name.ru, 2)).join('') : ''); }).join('') : '');
+}
 function ruleGroups(items) {
   const cur = byId(current);
   const head = (key, open, label, lvl) => `<div class="part l${lvl}" data-rgroup="${esc(key)}">${fold(open)}${esc(label)}</div>`;
@@ -683,6 +705,8 @@ function renderLocList(list) {
 function renderSubbar() {
   // the row itself is always there; only the tab's own buttons are redrawn (filters live next to them)
   const bar = document.getElementById('subbtns');
+  // the guide drop-down next to «Гайды» is there on that tab only, whatever tab comes next
+  document.getElementById('guidesel').hidden = tab !== 'location' || !CITIES.length;
   if (topTab(tab) === 'spell') {
     bar.innerHTML = MAGIC.map(([t, l]) => `<button data-magic="${t}" class="${t === tab ? 'active' : ''}">${l} (${SET[t].length})</button>`).join('');
     bar.querySelectorAll('[data-magic]').forEach(b => b.onclick = () => { if (b.dataset.magic !== tab) setTab(b.dataset.magic); });
@@ -695,7 +719,6 @@ function renderSubbar() {
     return;
   }
   const gs = document.getElementById('guidesel');
-  gs.hidden = tab !== 'location' || !CITIES.length;
   if (gs.hidden) { bar.innerHTML = ''; return; }
   // one drop-down for the guides next to the «Гайды» tab: «Все гайды» (the default) or one guide book
   gs.innerHTML = [['all', 'Все гайды'], ...GUIDES.map(g => [g, BOOKS[g] || g])].map(([g, l]) => `<option value="${esc(g)}"${g === guide ? ' selected' : ''}>${esc(l)}</option>`).join('');
@@ -716,7 +739,6 @@ function setTab(t, keep) {
   document.getElementById('cat').innerHTML = FILTERS[t].map(([v, l]) => `<option value="${esc(v)}">${esc(l)}</option>`).join('');
   const occ = document.getElementById('occ'); occ.hidden = t !== 'character';
   document.getElementById('era').hidden = t !== 'weapon';
-  document.getElementById('rset').hidden = !hasPulp(t);
   document.getElementById('mech').hidden = t !== 'spell';
   document.getElementById('cat').hidden = t === 'location' && CITIES.length > 0;
   renderSubbar();
@@ -1226,6 +1248,8 @@ function seeAlso(c) {
   const all = [...own, ...back];
   return all.length ? `<section><h3>Близкие навыки</h3><ul>${all.join('')}</ul></section>` : '';
 }
+// professions that have the skill among their skills, as one of a choice too (Р-193)
+const occsOf = id => DATA.occupations.filter(o => (o.skills||[]).some(s => s.skill === id || (Array.isArray(s.choice?.of) && s.choice.of.some(x => (typeof x === 'string' ? x : x.skill) === id))));
 function skillCard(c) {
   const specs = (c.specializations||[]).map(s => `<tr><td>${esc(s.name.ru)}${s.name.en ? ` <span class="muted">${esc(s.name.en)}</span>` : ''}</td><td class="num">${s.base ? esc(s.base.raw) : '—'}</td></tr>`).join('');
   const era = (c.axes?.era||[]).filter(e => e !== 'any');
@@ -1237,6 +1261,7 @@ function skillCard(c) {
     ${opposed(c)}
     ${seeAlso(c)}
     ${specs ? `<section><h3>Специализации</h3><table><tr><th>Название</th><th>База</th></tr>${specs}</table></section>` : ''}
+    ${occsOf(c.id).length ? `<section><h3>В профессиях (${occsOf(c.id).length})</h3><p>${occsOf(c.id).map(o => link(o.id, o.name.ru)).join(', ')}</p></section>` : ''}
     ${(c.examples||[]).length ? `<section><h3>Примеры</h3><ul>${c.examples.map(e => `<li>${esc(e)}</li>`).join('')}</ul></section>` : ''}
     ${errata(c)}
     <section><h3>Источник</h3><div>${sources(c)}</div></section>
@@ -1754,6 +1779,8 @@ function show(id, how = 'push') {
     if (up) { openScen.add(up.id); if (up.part_of) openScen.add(up.part_of); }
     if (c.kind === 'scene' && c.arc) partState.set(c.arc.scenario + '|' + (c.arc.part || ''), true);
   }
+  // an opened profession stays unfolded while its skills are opened from it (Р-193)
+  if (c.kind === 'occupation') partState.set('occ|' + c.id, true);
   // current first: the sub-bar marks «Обзор / Карта / …» only while the city page itself is open
   current = id;
   if (tabFor(c.kind) !== tab && !stay) setTab(tabFor(c.kind), true);
@@ -1801,7 +1828,9 @@ document.getElementById('q').oninput = renderList;
 document.getElementById('cat').onchange = renderList;
 document.getElementById('occ').onchange = renderList;
 document.getElementById('era').onchange = renderList;
-document.getElementById('rset').onchange = () => { if (tab === 'rule') renderSubbar(); renderList(); };
+// the choice is kept for the reader (Р-194); Classic by default
+try { const v = localStorage.getItem('kb.rset'); if (v !== null && [...document.getElementById('rset').options].some(o => o.value === v)) document.getElementById('rset').value = v; } catch (e) {}
+document.getElementById('rset').onchange = e => { try { localStorage.setItem('kb.rset', e.target.value); } catch (er) {} if (tab === 'rule') renderSubbar(); renderList(); };
 document.getElementById('mech').onchange = renderList;
 document.querySelectorAll('.tabs button').forEach(b => b.onclick = () => setTab(b.dataset.tab));
 // sort by name without leading quotes («Браунинг» M1918 goes under Б)

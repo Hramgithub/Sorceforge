@@ -714,7 +714,10 @@ function renderSubbar() {
   }
   if (tab === 'rule') {
     // the rules of one book or of all (Р-182)
-    bar.innerHTML = `<select id="rulebooksel" title="Книга">${[['all', 'Все книги'], ...RULE_BOOKS.map(b => [b, BOOKS[b] || b])].map(([b, l]) => `<option value="${esc(b)}"${b === ruleBookSel ? ' selected' : ''}>${esc(l)} (${b === 'all' ? DATA.rules.length : DATA.rules.filter(r => ruleBook(r) === b).length})</option>`).join('')}</select>`;
+    // books and counts follow the ruleset of the base (Р-195): with Classic the Pulp book is not offered
+    const rs = DATA.rules.filter(rsetOk), books = RULE_BOOKS.filter(b => rs.some(r => ruleBook(r) === b));
+    if (ruleBookSel !== 'all' && !books.includes(ruleBookSel)) ruleBookSel = 'all';
+    bar.innerHTML = `<select id="rulebooksel" title="Книга">${[['all', 'Все книги'], ...books.map(b => [b, BOOKS[b] || b])].map(([b, l]) => `<option value="${esc(b)}"${b === ruleBookSel ? ' selected' : ''}>${esc(l)} (${b === 'all' ? rs.length : rs.filter(r => ruleBook(r) === b).length})</option>`).join('')}</select>`;
     bar.querySelector('#rulebooksel').onchange = e => { ruleBookSel = e.target.value; renderList(); };
     return;
   }
@@ -733,10 +736,18 @@ function renderSubbar() {
   bar.querySelectorAll('[data-mode]').forEach(b => b.onclick = () => { locMode = b.dataset.mode; if (listSection()) { citySection = 'overview'; show(city); return; } renderSubbar(); renderList(); if (document.getElementById('mapinner')) initMap(current); });
   bar.querySelectorAll('[data-sec]').forEach(b => b.onclick = () => { citySection = b.dataset.sec; show(city); });
 }
+// the tab's filter offers only what the ruleset of the base leaves (Р-195): with Classic no «Pulp Cthulhu» book,
+// no «1930-е» if nothing is left there; the choice stays when it still has records
+function fillCat(keep) {
+  const sel = document.getElementById('cat'), was = keep ? sel.value : '';
+  const opts = FILTERS[tab].filter(([v]) => !v || tab === 'location' || SET[tab].some(c => matches(c, '', v)));
+  sel.innerHTML = opts.map(([v, l]) => `<option value="${esc(v)}">${esc(l)}</option>`).join('');
+  sel.value = opts.some(([v]) => v === was) ? was : '';
+}
 function setTab(t, keep) {
   tab = t;
   document.querySelectorAll('.tabs button').forEach(b => b.classList.toggle('active', b.dataset.tab === topTab(t)));
-  document.getElementById('cat').innerHTML = FILTERS[t].map(([v, l]) => `<option value="${esc(v)}">${esc(l)}</option>`).join('');
+  fillCat(false);
   const occ = document.getElementById('occ'); occ.hidden = t !== 'character';
   document.getElementById('era').hidden = t !== 'weapon';
   document.getElementById('mech').hidden = t !== 'spell';
@@ -1830,7 +1841,7 @@ document.getElementById('occ').onchange = renderList;
 document.getElementById('era').onchange = renderList;
 // the choice is kept for the reader (Р-194); Classic by default
 try { const v = localStorage.getItem('kb.rset'); if (v !== null && [...document.getElementById('rset').options].some(o => o.value === v)) document.getElementById('rset').value = v; } catch (e) {}
-document.getElementById('rset').onchange = e => { try { localStorage.setItem('kb.rset', e.target.value); } catch (er) {} if (tab === 'rule') renderSubbar(); renderList(); };
+document.getElementById('rset').onchange = e => { try { localStorage.setItem('kb.rset', e.target.value); } catch (er) {} fillCat(true); if (tab === 'rule') renderSubbar(); renderList(); };
 document.getElementById('mech').onchange = renderList;
 document.querySelectorAll('.tabs button').forEach(b => b.onclick = () => setTab(b.dataset.tab));
 // sort by name without leading quotes («Браунинг» M1918 goes under Б)

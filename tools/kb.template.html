@@ -578,7 +578,7 @@ function renderOutline(list, sec) {
         + (open ? keeper(s, deep) + scenes(s.id, deep) + (deep ? '' : xs.filter(x => x.part_of === s.id).sort(byOrder).map(t => node(t, true)).join('')) : '');
     };
     const loose = storyIn(city, 'scene').filter(x => !byId(x.arc?.scenario));
-    body = xs.filter(x => !x.part_of || !byId(x.part_of)).sort(byOrder).map(s => node(s)).join('')
+    body = xs.filter(x => !xs.some(y => y.id === x.part_of)).sort(byOrder).map(s => node(s)).join('')
       + (loose.length ? `<div class="part">Сцены вне сценариев</div>${loose.map(x => rec(x)).join('')}` : '');
   } else if (SET[sec]) {
     body = storyGroups(city, sec).map(g => { const key = sec + '|' + g.label, open = partOpen(key, true); return group(key, open, `${g.label} (${g.xs.length})`) + (open ? g.xs.map(x => rec(x)).join('') : ''); }).join('');
@@ -626,7 +626,10 @@ const OUTER_TOPS = DATA.locations.filter(x => isTop(x) && !x.part_of && x.locati
 const outerOf = s => storyCities(s).filter(id => OUTER_TOPS.some(t => t.id === id)).map(byId);
 function outerScenarios(levelHtml) {
   const xs = DATA.scenarios.filter(s => !s.part_of && outerOf(s).length && (guide === 'all' || bookOf(s) === guide)).sort(byOrder);
-  if (!xs.length) return '';
+  // ships that no scenario is played on (liners between the chapters of «Маски», Р-203) stand there on their own
+  const lone = OUTER_TOPS.filter(t => !xs.some(s => outerOf(s).includes(t)) && (guide === 'all' || bookIds(t).includes(guide))).sort((a, b) => a.name.ru.localeCompare(b.name.ru, 'ru'));
+  if (!xs.length && !lone.length) return '';
+  const top = t => { const o = openCity.has(t.id); return `<h4 class="dist city${t.id === current ? ' active' : ''}" data-city="${esc(t.id)}">${mapIcon(t)}${childrenOf(t.id).length ? fold(o) : ''}${esc(t.name.ru)}</h4>` + (o ? levelHtml(childrenOf(t.id), 1, t.id) : ''); };
   const rec = x => `<button data-id="${esc(x.id)}" class="rec l1 ${x.id === current ? 'active' : ''}">${esc(x.name.ru)}${ART(x)}</button>`;
   const group = (key, open, label) => `<div class="part l1" data-part="${esc(key)}">${fold(open)}${esc(label)}</div>`;
   return `<div class="part outer">Другие места</div>` + xs.map(s => {
@@ -644,7 +647,7 @@ function outerScenarios(levelHtml) {
     }).join('');
     return `<h4 class="dist city${s.id === current ? ' active' : ''}" data-scen="${esc(s.id)}">${fold(open)}${esc(s.name.ru)}</h4>`
       + (open ? scenes + `<div class="part l1">Места</div>` + places : '');
-  }).join('');
+  }).join('') + lone.map(top).join('');
 }
 function renderLocList(list) {
   const sec = listSection();
@@ -750,7 +753,7 @@ function renderSubbar() {
     // a section is marked while the city page or one of its scenario records is open
     // «Сценарии» counts the book's scenarios, not their stages
     + (city && current ? '<span class="sep"></span>' + CITY_SECTIONS.filter(([s]) => s === 'map' ? mapsOf(city).length : !SET[s] || storyIn(city, s).length)
-      .map(([s, l]) => `<button data-sec="${s}" class="${(current === city || SET[s] && sectionOf(byId(current)?.kind) === s) && s === citySection ? 'active' : ''}">${l}${SET[s] ? ` (${storyIn(city, s).filter(x => !x.part_of).length})` : ''}</button>`).join('') : '');
+      .map(([s, l]) => `<button data-sec="${s}" class="${(current === city || SET[s] && sectionOf(byId(current)?.kind) === s) && s === citySection ? 'active' : ''}">${l}${SET[s] ? ` (${(xs => xs.filter(x => !xs.some(y => y.id === x.part_of)).length)(storyIn(city, s))})` : ''}</button>`).join('') : '');
   gs.onchange = e => { guide = e.target.value; if (guide === 'all') { showGuides(); return; } const cs = guideCities(); if (cs.length && !cs.some(c => c.id === city)) city = cs[0].id; renderSubbar(); city ? show(city) : renderList(); };
   // the map on screen redraws too: «Жители» puts resident dots around the houses
   // in a section that lists its contents, «Дома» and «Жители» go back to the city's places
@@ -1632,15 +1635,20 @@ const storyPlaces = x => [...(x.found_at||[]), ...(x.based_at||[]), ...(x.where|
 const storyCityCache = new Map();
 function storyCities(x) {
   if (storyCityCache.has(x.id)) return storyCityCache.get(x.id);
-  // a scene goes with its scenario, a stage with its scenario
-  const up = x.kind === 'scene' ? byId(x.arc?.scenario) : x.kind === 'scenario' ? byId(x.part_of) : null;
-  if (up) { const cs = storyCities(up); storyCityCache.set(x.id, cs); return cs; }
+  // a scene goes with its scenario
+  if (x.kind === 'scene' && byId(x.arc?.scenario)) { const cs = storyCities(byId(x.arc.scenario)); storyCityCache.set(x.id, cs); return cs; }
   let cs = [...new Set(storyPlaces(x).map(l => cityOf(l)?.id).filter(Boolean))];
-  // a scenario without places of its own lies where most of its scenes (and the scenes of its stages) are played
+  // a scenario without places of its own lies where most of its own scenes are played; a campaign of stages in many
+  // cities (Р-203, «Маски»: each chapter in its city) lies in every city of its stages; a stage without scenes goes
+  // with its scenario
   if (!cs.length && x.kind === 'scenario') {
-    const ids = [x.id, ...DATA.scenarios.filter(s => s.part_of === x.id).map(s => s.id)], n = {};
-    DATA.scenes.filter(s => ids.includes(s.arc?.scenario)).flatMap(storyPlaces).forEach(l => { const k = cityOf(l)?.id; if (k) n[k] = (n[k] || 0) + 1; });
+    storyCityCache.set(x.id, []);
+    const n = {};
+    DATA.scenes.filter(s => s.arc?.scenario === x.id).flatMap(storyPlaces).forEach(l => { const k = cityOf(l)?.id; if (k) n[k] = (n[k] || 0) + 1; });
     cs = Object.entries(n).sort((a, b) => b[1] - a[1]).slice(0, 1).map(([k]) => k);
+    const stages = DATA.scenarios.filter(s => s.part_of === x.id);
+    if (!cs.length && stages.length) cs = [...new Set(stages.flatMap(storyCities))];
+    if (!cs.length && byId(x.part_of)) cs = storyCities(byId(x.part_of));
   }
   // a record without places (a handout, an item) lies where the scenes and scenarios that point at it are played
   if (!cs.length && x.kind !== 'scenario' && x.kind !== 'scene') {
@@ -1675,7 +1683,7 @@ function storySection(cityId, kind) {
 function scenarioTree(cityId) {
   const xs = storyIn(cityId, 'scenario');
   const head = x => `${link(x.id, x.name.ru)}${(x.quality?.flags||[]).includes('incomplete') ? ' <span class="tag warn" title="Пока только структура">набросок</span>' : ''}`;
-  const tree = xs.filter(x => !x.part_of || !byId(x.part_of)).sort(byOrder).map(s => {
+  const tree = xs.filter(x => !xs.some(y => y.id === x.part_of)).sort(byOrder).map(s => {
     const stages = xs.filter(x => x.part_of === s.id).sort(byOrder);
     return `<section><h3>${head(s)}</h3>${s.summary ? `<p class="muted">${esc(s.summary.ru)}</p>` : ''}${sceneList(s.id)}`
       + stages.map(t => `<h4 style="margin:12px 0 2px">${head(t)}</h4>${sceneList(t.id)}`).join('') + '</section>';

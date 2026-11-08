@@ -19,7 +19,7 @@
   `app/kb.html` with the data.
 - Summary of the base (records by kind, pictures, source books): `python tools/status.py [--md]`; what is
   done and what is not — `docs/handoff/20261021-kb-state.md`. Workflows for Claude — `.claude/skills/`
-  (kb-import, kb-integrate, kb-check, kb-art, kb-release, kb-decision, viewer-change).
+  (kb-import, kb-rules-book, kb-integrate, kb-check, kb-art, kb-release, kb-decision, viewer-change).
 - Bulk fixes in `pipeline/fix/` take an explicit scope (files, `--changed` or `--all`); changes to
   records an agent does not own go through proposals (`pipeline/integrate/README.md`).
 - Numbers come from the primary source named in the decisions (Malleus Monstrorum

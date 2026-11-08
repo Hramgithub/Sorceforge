@@ -36,6 +36,8 @@ def main() -> None:
     # book titles for display come from the one list of books (Р-148); only titles go to the page, never local paths
     books = json.loads((root / "pipeline" / "source" / "books.json").read_text(encoding="utf-8"))
     data["books"] = {k: v["title"] for k, v in books.items()}
+    # chapters of rules books (first printed page, title): the rules list groups by them (Р-180, Р-182)
+    data["chapters"] = {k: v["chapters"] for k, v in books.items() if v.get("chapters")}
     payload = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
     html = a.template.read_text(encoding="utf-8").replace("__DATA__", payload)
     # written beside and swapped in: on Windows the page may be open in tools/kb_server.py at this moment

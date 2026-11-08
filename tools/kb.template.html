@@ -229,9 +229,15 @@ const FILTERS = {
 };
 DATA.tables = DATA.tables || [];
 DATA.rules = DATA.rules || [];
-// rules in the order of the book (Р-177): by the first page of the Keeper Rulebook, the house rules at the end
-const rulePage = r => (r.sources||[]).find(x => x.book_id === 'keeper-rulebook-ru')?.printed_page ?? 9999;
-DATA.rules.sort((a, b) => rulePage(a) - rulePage(b) || a.name.ru.localeCompare(b.name.ru, 'ru'));
+// rules by book (Р-182): the book of a rule is its first source that is a rules book (has chapters) or the house
+// rules; inside a book — the book's order (Р-177); the Keeper Rulebook first, the house rules last
+DATA.chapters = DATA.chapters || {};
+const ruleBook = r => (r.sources||[]).map(x => x.book_id).find(b => DATA.chapters[b] || b === 'house-rules') || r.sources?.[0]?.book_id || '';
+const rulePage = r => (r.sources||[]).find(x => x.book_id === ruleBook(r))?.printed_page ?? 9999;
+const RULE_BOOKS = [...new Set(DATA.rules.map(ruleBook))].sort((a, b) => (a === 'keeper-rulebook-ru' ? -1 : b === 'keeper-rulebook-ru' ? 1 : 0)
+  || (a === 'house-rules') - (b === 'house-rules') || (BOOKS[a] || a).localeCompare(BOOKS[b] || b, 'ru'));
+DATA.rules.sort((a, b) => RULE_BOOKS.indexOf(ruleBook(a)) - RULE_BOOKS.indexOf(ruleBook(b)) || rulePage(a) - rulePage(b) || a.name.ru.localeCompare(b.name.ru, 'ru'));
+let ruleBookSel = 'all';
 FILTERS.rule = [['', 'Все разделы'], ...[...new Set(DATA.rules.map(r => r.category))].sort((a, b) => a.localeCompare(b, 'ru')).map(c => [c, c[0].toUpperCase() + c.slice(1)])];
 FILTERS.table = [['', 'Все разделы'], ...[...new Set(DATA.tables.map(t => t.category))].sort((a, b) => a.localeCompare(b, 'ru')).map(c => [c, c[0].toUpperCase() + c.slice(1)])];
 FILTERS.tome = [['', 'Все книги'], ['mythos_tome', 'Книги Мифов'], ['occult_book', 'Оккультные книги'], ['general', 'Только общие записи'],
@@ -315,6 +321,7 @@ function matches(c, q, f) {
     if (e && !(c.axes?.era||[]).some(x => x === e || x === 'any')) return false;
     return !f || c.group === f;
   }
+  if (tab === 'rule' && ruleBookSel !== 'all' && ruleBook(c) !== ruleBookSel) return false;
   if (!f) return true;
   if (tab === 'creature') return c.category === f;
   if (tab === 'character' && f.startsWith('city:')) return cityResidents(f.slice(5)).some(x => x.id === c.id);
@@ -381,11 +388,13 @@ function renderList() {
 }
 // the rules reference in groups (Р-180): the chapters of the Keeper Rulebook in its order, inside a chapter its
 // optional rules in their own group, the owner's house rules last; a group is open while it holds the open rule
-const RULE_CHAPTERS = [[26, 'Гл. 3. Создание сыщиков'], [50, 'Гл. 4. Навыки'], [78, 'Гл. 5. Игровая система'], [98, 'Гл. 6. Бой'],
-  [128, 'Гл. 7. Погоня'], [150, 'Гл. 8. Рассудок'], [168, 'Гл. 9. Магия'], [180, 'Гл. 10. Ход игры'], [220, 'Гл. 11. Книги мистических знаний'],
-  [238, 'Гл. 12. Гримуар'], [264, 'Гл. 13. Артефакты и инопланетные устройства'], [274, 'Гл. 14–15'], [382, 'Гл. 16. Приложения']];
-const ruleChapter = r => r.sources?.some(x => x.book_id === 'house-rules') ? 'Домашние правила'
-  : (RULE_CHAPTERS.filter(([p]) => p <= rulePage(r)).pop() || [0, 'Прочее'])[1];
+// a chapter of the rule's book; with «Все книги» the group says the book too
+const ruleChapter = r => {
+  const b = ruleBook(r);
+  if (b === 'house-rules') return 'Домашние правила';
+  const ch = ((DATA.chapters[b] || []).filter(([p]) => p <= rulePage(r)).pop() || [0, 'Прочее'])[1];
+  return ruleBookSel === 'all' && b !== 'keeper-rulebook-ru' ? `${BOOKS[b] || b}: ${ch}` : ch;
+};
 function ruleGroups(items) {
   const cur = byId(current);
   const head = (key, open, label, lvl) => `<div class="part l${lvl}" data-rgroup="${esc(key)}">${fold(open)}${esc(label)}</div>`;
@@ -569,6 +578,12 @@ function renderSubbar() {
   if (topTab(tab) === 'spell') {
     bar.innerHTML = MAGIC.map(([t, l]) => `<button data-magic="${t}" class="${t === tab ? 'active' : ''}">${l} (${SET[t].length})</button>`).join('');
     bar.querySelectorAll('[data-magic]').forEach(b => b.onclick = () => { if (b.dataset.magic !== tab) setTab(b.dataset.magic); });
+    return;
+  }
+  if (tab === 'rule') {
+    // the rules of one book or of all (Р-182)
+    bar.innerHTML = `<select id="rulebooksel" title="Книга">${[['all', 'Все книги'], ...RULE_BOOKS.map(b => [b, BOOKS[b] || b])].map(([b, l]) => `<option value="${esc(b)}"${b === ruleBookSel ? ' selected' : ''}>${esc(l)} (${b === 'all' ? DATA.rules.length : DATA.rules.filter(r => ruleBook(r) === b).length})</option>`).join('')}</select>`;
+    bar.querySelector('#rulebooksel').onchange = e => { ruleBookSel = e.target.value; renderList(); };
     return;
   }
   if (tab !== 'location' || !CITIES.length) { bar.innerHTML = ''; return; }

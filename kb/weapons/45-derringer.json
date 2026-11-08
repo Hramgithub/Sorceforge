@@ -1,0 +1,78 @@
+{
+  "schema": "sourcefold.weapon.v0",
+  "id": "coc:weapon:45-derringer",
+  "kind": "weapon",
+  "name": {
+    "ru": "Дерринджер .45",
+    "en": ".45 Derringer"
+  },
+  "aliases": [],
+  "group": "handgun",
+  "skill": {
+    "raw": "Стрельба (пистолет)",
+    "skill": "coc:skill:firearms",
+    "specialization": "Пистолет"
+  },
+  "damage": {
+    "raw": "1d10+2",
+    "dice": "1d10+2",
+    "db": "none",
+    "impaling": true
+  },
+  "range": null,
+  "attacks": null,
+  "ammo": null,
+  "malfunction": null,
+  "cost": {
+    "1920s": null,
+    "modern": null
+  },
+  "description": {
+    "ru": "Дерринджер калибра .45 Пьетро Морасини, финансиста из сценария «Дезинтегратор»: Стрельба 48%, урон 1d10+2. Книга даёт только название и урон в профиле.",
+    "en": null
+  },
+  "model_of": "coc:weapon:25-derringer",
+  "caliber": ".45",
+  "reload": null,
+  "availability": null,
+  "axes": {
+    "era": [
+      "1930s"
+    ],
+    "ruleset": "pulp"
+  },
+  "sources": [
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 156,
+      "printed_page": 155,
+      "method": "book_text",
+      "verified": true,
+      "note": "сценарий «The Disintegrator», приложение A, профиль Пьетро Морасини: «.45 Derringer 48% (24/9), damage 1d10+2»"
+    }
+  ],
+  "corrections": [
+    {
+      "field": "skill",
+      "from": null,
+      "to": "Стрельба (пистолет)",
+      "reason": "в профиле навык не назван; дерринджер — пистолет — вывод из текста (Р-41)",
+      "ref": "Р-41"
+    },
+    {
+      "field": "damage.impaling",
+      "from": null,
+      "to": "true",
+      "reason": "все пистолеты таблиц оружия (KR XVII; «Пульп-Ктулху», с. 258, «Handguns (i)») пронзающие — вывод из текста (Р-41)",
+      "ref": "Р-41"
+    }
+  ],
+  "errata": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Наш перевод (Р-21). Калибр — из названия в книге. Позиции в таблицах оружия («Книга хранителя», XVII; «Пульп-Ктулху», гл. 15) нет; ближайшая — «Дерринджер одноствольный» .25 (1d6), отсюда model_of (Р-105), числа — по профилю; урон 1d10+2 — как у револьвера и автоматического пистолета .45 таблиц. Дальность, атаки за раунд, боезапас и осечка в книге не указаны."
+  }
+}

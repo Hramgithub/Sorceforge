@@ -1,0 +1,78 @@
+{
+  "schema": "sourcefold.weapon.v0",
+  "id": "coc:weapon:dagger",
+  "kind": "weapon",
+  "name": {
+    "ru": "Кинжал",
+    "en": "Dagger"
+  },
+  "aliases": [],
+  "group": "melee",
+  "skill": {
+    "raw": "Ближний бой (драка)",
+    "skill": "coc:skill:fighting",
+    "specialization": "Драка"
+  },
+  "damage": {
+    "raw": "1d4+1",
+    "dice": "1d4+1",
+    "db": "full",
+    "impaling": null
+  },
+  "range": "Касание",
+  "attacks": null,
+  "ammo": null,
+  "malfunction": null,
+  "cost": {
+    "1920s": null,
+    "modern": null
+  },
+  "description": {
+    "ru": "Кинжал Нефритового императора: атака навыком Ближний бой (драка) 40%, урон 1d4+1 (при его БкУ 0). Книга даёт только название и урон в профиле.",
+    "en": null
+  },
+  "model_of": null,
+  "caliber": null,
+  "reload": null,
+  "availability": null,
+  "axes": {
+    "era": [
+      "1930s"
+    ],
+    "ruleset": "pulp"
+  },
+  "sources": [
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 124,
+      "printed_page": 123,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 9, профиль Нефритового императора: «Brawl 40% (20/8), damage 1d3, or dagger, 1d4+1»"
+    }
+  ],
+  "corrections": [
+    {
+      "field": "damage.db",
+      "from": null,
+      "to": "full",
+      "reason": "у Нефритового императора БкУ 0, по профилю не видно, прибавляется ли БкУ; ножи таблиц оружия прибавляют БкУ полностью — вывод из текста (Р-41)",
+      "ref": "Р-41"
+    },
+    {
+      "field": "range",
+      "from": null,
+      "to": "Касание",
+      "reason": "оружие ближнего боя; дальность в книге не напечатана — вывод из текста (Р-41)",
+      "ref": "Р-41"
+    }
+  ],
+  "errata": [],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Наш перевод (Р-21). Числа — из единственного профиля (с. 123). Позиции «кинжал» в таблицах оружия нет; по урону он между «Нож маленький» (1d4) и «Нож средний» (1d4+2), model_of не ставится. В других книгах кинжалы напечатаны с другим уроном (в «Масках Ньярлатхотепа» — 1d4, 1d4+2, 1d6; к этой записи не привязаны) — при привязке их числа идут в source_variants (Р-124)."
+  }
+}

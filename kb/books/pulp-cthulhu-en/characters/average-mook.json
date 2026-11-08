@@ -1,0 +1,248 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "pulp-cthulhu-en/character/average-mook",
+  "kind": "character",
+  "name": {
+    "ru": "Средний прихвостень",
+    "en": "Average Mook"
+  },
+  "aliases": [
+    "Mook"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "прихвостень — рядовой исполнитель культа или злодейской организации",
+  "names": [
+    "Тони Риццо",
+    "Майк Доннелли",
+    "Эдди Кравиц",
+    "Бадди Шоу",
+    "Сэл Ферраро"
+  ],
+  "axes": {
+    "era": [
+      "1930s"
+    ],
+    "ruleset": "pulp"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "40",
+        "value": 40
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "50",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "45",
+        "value": 45
+      },
+      "APP": {
+        "raw": "30",
+        "value": 30
+      },
+      "INT": {
+        "raw": "30",
+        "value": 30
+      },
+      "POW": {
+        "raw": "30",
+        "value": 30
+      },
+      "EDU": {
+        "raw": "40",
+        "value": 40
+      }
+    },
+    "hp": {
+      "raw": "10",
+      "value": 10
+    },
+    "mp": {
+      "raw": "6",
+      "value": 6
+    },
+    "sanity": {
+      "raw": "30",
+      "value": 30
+    },
+    "luck": {
+      "raw": "N/A",
+      "value": null
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Дробовик 12-го калибра",
+          "en": "Shotgun 12-gauge"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "4d6/2d6/1d6",
+          "dice": "4d6/2d6/1d6",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:shotgun-12-gauge-2b"
+      },
+      {
+        "name": {
+          "ru": "Пистолет-пулемёт «Томпсон»",
+          "en": "Thompson SMG"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет-пулемёт)",
+        "chance": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "1d10+2",
+          "dice": "1d10+2",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:thompson-smg"
+      },
+      {
+        "name": {
+          "ru": "Пистолет .32",
+          "en": ".32 auto"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d8",
+          "dice": "1d8",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:32-automatic"
+      }
+    ],
+    "dodge": {
+      "raw": "25% (12/5)",
+      "value": 25,
+      "half": 12,
+      "fifth": 5
+    },
+    "skills": []
+  },
+  "abilities": [
+    {
+      "name": "Прихвостень",
+      "raw": "Allow mooks to be automatically incapacitated when reduced to half their hit points.",
+      "summary": "Прихвостень (mook): собственной Удачи нет; по правилу о прихвостнях он автоматически выбывает из строя, когда его ПЗ снижаются до половины.",
+      "refs": [
+        "coc:rule:pulp-mooks"
+      ]
+    }
+  ],
+  "description": {
+    "ru": "Средний прихвостень — профиль персонажа Хранителя со средними характеристиками и навыками для рядовых исполнителей культа или злодейской организации, которые делают рутинную работу и первыми нападают или обороняются. Атак за раунд: 1; броня: нет; навыков нет; Удачи нет. Персонажей с характеристиками выше среднего книга советует прихвостнями не считать: скорее всего, они важны для сюжета.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 64,
+      "printed_page": 63,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 4 «Game System», «Mooks»: врезка «Average Mook»; числа сверены по изображению страницы"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.attacks[Пистолет-пулемёт «Томпсон»]",
+      "printed": "30% (16/6)",
+      "expected": "30% (15/6)",
+      "note": "доли 16/6 подходят к 32–33%; верным считается напечатанный процент 30% (Р-77), возможно, опечатка в самом проценте",
+      "fixed": true
+    }
+  ],
+  "corrections": [
+    {
+      "field": "statblock.attacks[Пистолет-пулемёт «Томпсон»].chance",
+      "from": "30% (16/6)",
+      "to": "30% (15/6)",
+      "reason": "половина 30 — 15 («Пульп-Ктулху», с. 63; Р-35, Р-77)",
+      "ref": "Р-35"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "editorial_text",
+      "parse_uncertain"
+    ],
+    "notes": "Имена придуманы (Р-151), в книге — только обозначение «Average Mook». Тот же профиль хранится таблицами в правиле coc:rule:pulp-mooks. «Shotgun 12-gauge» — двуствольный дробовик 12-го калибра справочника (вывод по урону 4d6/2d6/1d6, Р-41). Лишняя скобка «40% (20/8))» у .32 убрана молча (Р-39)."
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "book_id": "pulp-cthulhu-en",
+  "goal": "candidate records named in the Pulp Cthulhu coverage reports become records (owner: «добавляй», 2026-11-08).",
+  "decision": "Р-191, Р-183",
+  "check_dir": "checks/20261108-pulp",
+  "models": [
+    "kb/spells/wrack.json",
+    "kb/spells/cloud-memory.json",
+    "kb/books/pobeg-iz-innsmuta-ru/tomes/istoriya-semi-marsh.json",
+    "kb/talents/alert.json",
+    "kb/weapons/25-derringer.json",
+    "kb/books/pulp-cthulhu-en/characters/caleb-lusk.json"
+  ],
+  "extra": "## This work (Р-191)\n\nThe Pulp Cthulhu import (Р-183) left candidates: things the book names, with numbers or text, that have no record. Make them records, then link the records that mention them. Source of the list: the sections «Кандидаты…» of `checks/20261108-pulp/villains.md`, `disintegrator.md`, `magic-running.md`, `organizations.md`, `slowboat.md`, `hurricane.md`, `system-sanity.md` — read them first, and read the book pages for every candidate (`python pipeline/source/pages.py grep pulp-cthulhu-en \"<English name>\"`, then `show`).\n\n- Before creating, search the base (`Grep` in `kb/`, `python tools/terms.py <word>`): if a record already exists under another name (a Grand Grimoire spell with an alias, a weapon position with another calibre name), do not duplicate — link it and say so in the coverage. `coc:spell:gate-boxes` has the alias «Vanish» from the Grand Grimoire, but the Pulp Cthulhu spell «Vanish» is another spell: make it a new record and note the difference in both (proposal for gate-boxes).\n- Global kinds (spell, weapon, talent) are `coc:<kind>:<slug>` in `kb/<kinds>/<slug>.json`, slug from the English name; `axes.ruleset: \"pulp\"`, `axes.era: [\"1930s\"]` unless the book says otherwise; sources — pages of `pulp-cthulhu-en`. A book's own unique thing (a tome that exists only in this book) is book-scoped: `pulp-cthulhu-en/tome/<slug>` in `kb/books/pulp-cthulhu-en/tomes/`.\n- A spell the book only names, without any text (Summon/Bind Star Spawn of Cthulhu, Summon/Bind Flying Polyp), is not made: link the family `coc:spell:summon-bind` (exists) — say so in the coverage.\n- A unique weapon of one villain (a named dagger, a death ray) is still a `weapon` position if it has weapon numbers (skill, damage, range, attacks, ammo, malfunction); its owner is linked from the weapon (`refs`) and the owner's `statblock.attacks[].weapon` points to it. Missing columns stay null as printed (`—` is shown by the viewer).\n- Edits of records that exist (characters, organizations, items, rules, other spells) go only through proposals `checks/20261108-pulp/proposals-candidates-<unit>.json` (format: `pipeline/integrate/README.md`), e.g. a character's attack gets `weapon`, a rule's text mention gets `refs`, a talent gets `refs` to a new spell. Do not edit files you do not own.\n- English book: Russian text is our translation (`translated`); look every term up first (`python tools/terms.py <word>`, accepted terms as is), the English name goes to `name.en`.\n- Coverage: `checks/20261108-pulp/candidates-<unit>.md` — each candidate → record made / linked to an existing one / not made with the reason.",
+  "units": [
+    {
+      "name": "magic",
+      "pages": "79-90 116-134 150-157 194-234",
+      "target": "spells Cloak of Fire, Vanish (Pulp), Pipes of Madness, Identify Spirit, Contact Servitor of the Outer Gods, Stop Heart (if the book gives their text; otherwise as the rule above); the tome «The Inheritance of the Kingdom» (book-scoped); «Psychic Attack» as a talent record if the book treats it as a talent choice (p. 86) — otherwise say why not; links from the villains, items and rules that mention them (proposals)",
+      "owns": [
+        "kb/spells/<new slug>.json (new files only)",
+        "kb/talents/<new slug>.json (new files only)",
+        "kb/books/pulp-cthulhu-en/tomes/<new slug>.json (new files only)",
+        "checks/20261108-pulp/candidates-magic.md",
+        "checks/20261108-pulp/proposals-candidates-magic.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "weapons",
+      "pages": "60-75 116-234",
+      "target": "weapons with numbers that have no position: dadao, «Dragon's Fist», the Jade Emperor's dagger, Professor Cobalt's death ray (villains, ch. 9; the death ray also ch. 5 «Death Ray»), .45 derringer and .25 automatic (Disintegrator), blowpipe (Slow Boat, Wang Ma), harpoon (Hurricane); the group profile «Average Mook» as `pulp-cthulhu-en/character/average-mook` (Р-74, Р-151; data now in `coc:rule:pulp-mooks`); links from the characters, scenes and rules that use them (proposals)",
+      "owns": [
+        "kb/weapons/<new slug>.json (new files only)",
+        "kb/books/pulp-cthulhu-en/characters/average-mook.json",
+        "checks/20261108-pulp/candidates-weapons.md",
+        "checks/20261108-pulp/proposals-candidates-weapons.json"
+      ],
+      "sites": "—"
+    }
+  ]
+}

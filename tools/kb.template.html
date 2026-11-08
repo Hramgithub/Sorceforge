@@ -266,11 +266,11 @@ const STORY = [['scenario', 'Сценарии'], ['item', 'Предметы'], [
 // a scene lives in the «Сценарии» section, under its scenario (Р-133)
 const sectionOf = k => k === 'scene' ? 'scenario' : k;
 const STORY_TYPE = { item: 'item_type', handout: 'handout_type', organization: 'org_type' };
-FILTERS.location = [['', 'Все места'], ...['город','корабль','район','здание','место','область'].map(x => [x, x[0].toUpperCase() + x.slice(1)])];
+FILTERS.location = [['', 'Все места'], ...['город','корабль','город сценария','район','здание','место','область'].map(x => [x, x[0].toUpperCase() + x.slice(1)])];
 // city helpers (Р-78): which city a place belongs to, who lives in a city
 // top-level city of a place (an underwater city like Y'ha-nthlei inside Innsmouth's outskirts is not a separate city)
 // a city or a ship (Р-189) heads a guide tree
-const isTop = x => !!x && (x.location_type === 'город' || x.location_type === 'корабль');
+const isTop = x => !!x && ['город', 'корабль', 'город сценария'].includes(x.location_type);
 const cityOf = l => { let x = l; while (x && x.part_of && byId(x.part_of)) x = byId(x.part_of); return x && isTop(x) ? x : null; };
 const placesIn = id => DATA.locations.filter(x => x.part_of === id).flatMap(x => [x, ...placesIn(x.id)]);
 function cityResidents(cityId) {
@@ -541,7 +541,7 @@ const partOpen = (key, byDefault) => partState.has(key) ? partState.get(key) : b
 function listSection() {
   const c = byId(current);
   if (!city || !c || !OUTLINE.includes(citySection)) return null;
-  // a ship is not a city of the guide: its scenario and places stay in the tree under «Сценарии вне городов» (Р-192)
+  // a ship is not a city of the guide: its scenario and places stay in the tree under «Другие места» (Р-192)
   if (byId(city)?.location_type !== 'город') return null;
   if (current === city) return citySection;
   return STORY.some(([k]) => k === c.kind) && sectionOf(c.kind) === citySection ? citySection : null;
@@ -627,7 +627,7 @@ function outerScenarios(levelHtml) {
   if (!xs.length) return '';
   const rec = x => `<button data-id="${esc(x.id)}" class="rec l1 ${x.id === current ? 'active' : ''}">${esc(x.name.ru)}${ART(x)}</button>`;
   const group = (key, open, label) => `<div class="part l1" data-part="${esc(key)}">${fold(open)}${esc(label)}</div>`;
-  return `<div class="part outer">Сценарии вне городов</div>` + xs.map(s => {
+  return `<div class="part outer">Другие места</div>` + xs.map(s => {
     const open = openScen.has(s.id);
     const ss = scenesOf(s.id), parts = [...new Set(ss.map(x => x.arc.part || ''))];
     const scenes = parts.map(p => {
@@ -1038,7 +1038,7 @@ function cityCard(c) {
   const ofKind = ks => tabs.filter(tb => ks.includes(tb.kind || 'прочее'));
   // data remarks (quality) belong to the record, not to every section: shown once, at the end of «Обзор»
   // the «город · также: …» line only on «Обзор»; other sections keep just the name
-  const head = `<h2>${esc(c.name.ru)}</h2>${citySection === 'overview' || !CITY_SECTIONS.some(([s]) => s === citySection) ? `<div class="sub">${esc(c.location_type)}${c.location_type === 'корабль' ? DATA.scenarios.filter(s => !s.part_of && outerOf(s).includes(c)).map(s => ' · сценарий «' + link(s.id, s.name.ru) + '»').join('') : ''}${(c.aliases||[]).length ? ' · также: ' + c.aliases.map(esc).join(', ') : ''}</div>` : ''}`;
+  const head = `<h2>${esc(c.name.ru)}</h2>${citySection === 'overview' || !CITY_SECTIONS.some(([s]) => s === citySection) ? `<div class="sub">${esc(c.location_type)}${c.location_type !== 'город' ? DATA.scenarios.filter(s => !s.part_of && outerOf(s).includes(c)).map(s => ' · сценарий «' + link(s.id, s.name.ru) + '»').join('') : ''}${(c.aliases||[]).length ? ' · также: ' + c.aliases.map(esc).join(', ') : ''}</div>` : ''}`;
   const remarks = flags(c) ? `<section><h3>Заметки о данных</h3>${flags(c)}</section>` : '';
   const paras = richText;
   const kids = childrenOf(c.id);
@@ -1779,7 +1779,7 @@ function show(id, how = 'push') {
     const cc = cityOf(c);
     // opening a place expands its city; opening the city itself leaves the toggle alone
     if (cc) { city = cc.id; if (cc.id !== c.id) openCity.add(cc.id); }
-    // a ship and its places unfold their scenario in «Сценарии вне городов» (Р-192)
+    // a ship and its places unfold their scenario in «Другие места» (Р-192)
     if (cc && cc.location_type !== 'город') openCity.add(cc.id);
     if (cc && cc.location_type !== 'город') DATA.scenarios.filter(s => !s.part_of && outerOf(s).includes(cc)).forEach(s => openScen.add(s.id));
     // opening a place expands its district and the building it is in; opening the district itself leaves the toggle alone

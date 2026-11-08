@@ -110,8 +110,8 @@ def main() -> int:
         for i, c in enumerate(rec.get("corrections") or []):
             if isinstance(c, dict) and c.get("ref") is not None and not DECISION.match(str(c["ref"])):
                 errors["в corrections.ref — только номер решения «Р-NN» или null; книга и страница — в reason (Р-140)"].append(f"{rel(p)}: corrections[{i}].ref = {c['ref']!r}")
-        if rec.get("kind") == "location" and not rec.get("part_of") and rec.get("location_type") not in ("город", "корабль"):
-            errors["место без part_of бывает только у города и корабля (Р-189): иначе его нет в дереве гайда (Р-163)"].append(f"{rel(p)}: {rec.get('location_type')}")
+        if rec.get("kind") == "location" and not rec.get("part_of") and rec.get("location_type") not in ("город", "корабль", "город сценария"):
+            errors["место без part_of бывает только у города, корабля и города сценария (Р-189, Р-197): иначе его нет в дереве гайда (Р-163)"].append(f"{rel(p)}: {rec.get('location_type')}")
         if rec.get("kind") == "location" and rec.get("location_type") == "здание":
             for al in rec.get("aliases") or []:
                 if re.match(r"(Семья|Семейство)\b", al):

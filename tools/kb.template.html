@@ -195,7 +195,6 @@ a { color:var(--accent); }
     <button data-tab="occupation">Профессии</button>
     <button data-tab="spell">Заклинания</button>
     <button data-tab="weapon">Оружие</button>
-    <button data-tab="table">Таблицы</button>
     <button data-tab="rule">Правила</button>
     <button data-tab="location">Гайды</button>
     <!-- the guide book: next to «Гайды», only on that tab -->
@@ -376,13 +375,15 @@ function subtitle(c) {
   return `${esc(c.name.en||'')} · ${c.base.raw === '—' ? esc(c.category) : 'база ' + esc(c.base.raw)}`;
 }
 
-const TAB_RU = { ...Object.fromEntries([...document.querySelectorAll('.tabs button')].map(b => [b.dataset.tab, b.textContent])), skill: 'Навыки', tome: 'Книги', archetype: 'Архетипы', talent: 'Таланты', ...Object.fromEntries(STORY) };
+const TAB_RU = { ...Object.fromEntries([...document.querySelectorAll('.tabs button')].map(b => [b.dataset.tab, b.textContent])), skill: 'Навыки', table: 'Таблицы', tome: 'Книги', archetype: 'Архетипы', talent: 'Таланты', ...Object.fromEntries(STORY) };
 // books live inside the Spells tab (Р-111): the sub-bar switches between the two lists; every book stays, with or without spells
 const MAGIC = [['spell', 'Все заклинания'], ['tome', 'Книги']];
+// the tables live in the «Правила» tab (Р-198)
+const RULES_SUB = [['rule', 'Правила'], ['table', 'Таблицы']];
 // the tab a record opens in: scenario material belongs to the guide (Р-132)
 // skills live in the «Профессии» tab (Р-193)
 const tabFor = t => STORY.some(([k]) => k === t) ? 'location' : t === 'archetype' || t === 'talent' ? 'rule' : t === 'skill' ? 'occupation' : t;
-const topTab = t => t === 'tome' ? 'spell' : tabFor(t);
+const topTab = t => t === 'tome' ? 'spell' : t === 'table' ? 'rule' : tabFor(t);
 // a small picture sign after the name in the lists: the record has pictures (Р-169)
 const ART = c => (c.images||[]).length ? '<span class="hasart" title="Есть картинка" aria-label="есть картинка"><svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="11" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="5.5" cy="6.3" r="1.4" fill="currentColor"/><path d="M2.5 12.5l4-4.2 2.6 2.6 1.7-1.6 3 3.2z" fill="currentColor"/></svg></span>' : '';
 const item = (c, alias) => `<button data-id="${esc(c.id)}" class="${c.id===current?'active':''}">${esc(c.name.ru)}${ART(c)}
@@ -720,12 +721,18 @@ function renderSubbar() {
     bar.querySelectorAll('[data-magic]').forEach(b => b.onclick = () => { if (b.dataset.magic !== tab) setTab(b.dataset.magic); });
     return;
   }
-  if (tab === 'rule') {
+  if (topTab(tab) === 'rule') {
+    // «Правила / Таблицы» as «Все заклинания / Книги» (Р-198)
+    const rs = DATA.rules.filter(rsetOk);
+    bar.innerHTML = RULES_SUB.map(([t, l]) => `<button data-rsub="${t}" class="${t === tab ? 'active' : ''}">${l} (${t === 'rule' ? rs.length : SET[t].filter(rsetOk).length})</button>`).join('');
+    bar.querySelectorAll('[data-rsub]').forEach(b => b.onclick = () => { if (b.dataset.rsub !== tab) setTab(b.dataset.rsub); });
+    if (tab !== 'rule') return;
     // the rules of one book or of all (Р-182)
     // books and counts follow the ruleset of the base (Р-195): with Classic the Pulp book is not offered
-    const rs = DATA.rules.filter(rsetOk), books = RULE_BOOKS.filter(b => rs.some(r => ruleBook(r) === b));
+    const books = RULE_BOOKS.filter(b => rs.some(r => ruleBook(r) === b));
     if (ruleBookSel !== 'all' && !books.includes(ruleBookSel)) ruleBookSel = 'all';
-    bar.innerHTML = `<select id="rulebooksel" title="Книга">${[['all', 'Все книги'], ...books.map(b => [b, BOOKS[b] || b])].map(([b, l]) => `<option value="${esc(b)}"${b === ruleBookSel ? ' selected' : ''}>${esc(l)} (${b === 'all' ? rs.length : rs.filter(r => ruleBook(r) === b).length})</option>`).join('')}</select>`;
+    bar.innerHTML += `<span class="sep"></span><select id="rulebooksel" title="Книга">${[['all', 'Все книги'], ...books.map(b => [b, BOOKS[b] || b])].map(([b, l]) => `<option value="${esc(b)}"${b === ruleBookSel ? ' selected' : ''}>${esc(l)} (${b === 'all' ? rs.length : rs.filter(r => ruleBook(r) === b).length})</option>`).join('')}</select>`;
+    bar.querySelectorAll('[data-rsub]').forEach(b => b.onclick = () => { if (b.dataset.rsub !== tab) setTab(b.dataset.rsub); });
     bar.querySelector('#rulebooksel').onchange = e => { ruleBookSel = e.target.value; renderList(); };
     return;
   }
@@ -768,7 +775,7 @@ function setTab(t, keep) {
     occ.innerHTML = '<option value="">Все профессии</option>' + Object.keys(counts).sort((a, b) => a.localeCompare(b, 'ru'))
       .map(o => `<option value="${esc(o)}">${esc(label[o].charAt(0).toUpperCase() + label[o].slice(1))} (${counts[o]})</option>`).join('');
   }
-  if (!keep) { document.getElementById('q').value = ''; t === 'location' && city && guide === 'all' ? showGuides() : show(t === 'location' && city ? city : SET[t][0]?.id); } else renderList();
+  if (!keep) { document.getElementById('q').value = ''; t === 'location' && city && guide === 'all' ? showGuides() : show(t === 'location' && city ? city : (SET[t].find(rsetOk) || SET[t][0])?.id); } else renderList();
 }
 
 function sources(c) {

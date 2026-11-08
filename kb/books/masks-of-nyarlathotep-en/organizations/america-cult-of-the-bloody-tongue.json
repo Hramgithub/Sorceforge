@@ -17,6 +17,16 @@
   "goals": {
     "ru": "Служить Ньярлатхотепу в облике Кровавого языка; в Нью-Йорке — поддерживать М’Веру. Методы, известные по главе «Америка»: ежемесячные жертвоприношения в подвале Джу-Джу Хаус; ритуальные убийства пангами со знаком культа на лбу жертвы (по подозрению лейтенанта Пула — тех, кто узнал слишком много); подкуп полиции. Если сыщики задают вопросы или следят за культистами, М’Дари просит капитана Робсона отвадить их, а если это не помогло или Робсона обезвредили — охотно разбирается с ними сам."
   },
+  "based_at": [
+    {
+      "location": "masks-of-nyarlathotep-en/location/america-ju-ju-house",
+      "note": "штаб-квартира: лавка африканского искусства, Рэнсом-корт, 1"
+    },
+    {
+      "location": "masks-of-nyarlathotep-en/location/america-ju-ju-house-basement",
+      "note": "жертвенный зал: ежемесячные обряды в безлунную ночь"
+    }
+  ],
   "members": [
     {
       "id": "masks-of-nyarlathotep-en/character/mukunga-mdari",
@@ -61,7 +71,11 @@
     "masks-of-nyarlathotep-en/item/america-bloody-tongue-headpiece",
     "masks-of-nyarlathotep-en/handout/america-carlyle-papers-8",
     "coc:location:new-york",
-    "masks-of-nyarlathotep-en/scene/america-room-410"
+    "masks-of-nyarlathotep-en/scene/america-room-410",
+    "masks-of-nyarlathotep-en/location/america-harlem",
+    "masks-of-nyarlathotep-en/creature/ciimba",
+    "masks-of-nyarlathotep-en/scene/america-rites-of-the-bloody-tongue",
+    "masks-of-nyarlathotep-en/scene/america-dealing-with-the-cult"
   ],
   "axes": {
     "era": [
@@ -125,6 +139,14 @@
       "method": "book_text",
       "verified": true,
       "note": "девять убийств за два года"
+    },
+    {
+      "book_id": "masks-of-nyarlathotep-en",
+      "physical_page": 162,
+      "printed_page": 159,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Rites of the Bloody Tongue at Ju-Ju House»"
     }
   ],
   "quality": {
@@ -132,6 +154,22 @@
     "flags": [
       "translated"
     ],
-    "notes": "Культ всей кампании (Р-202): запись заводит глава «Америка», где книга впервые даёт «Cult in Residence»; кенийскую часть культа (М’Веру, Вершина Чёрного Ветра) дополнит глава «Кения». Места базирования (Джу-Джу Хаус, Гарлем) описаны во второй половине главы (с. 154) — `based_at` пока пуст. Панга дана ссылкой на «Нож большой (мачете и т. п.)»."
-  }
+    "notes": "Культ всей кампании (Р-202): запись заводит глава «Америка», где книга впервые даёт «Cult in Residence»; кенийскую часть культа (М’Веру, Вершина Чёрного Ветра) дополнит глава «Кения». Места базирования — Дом джу-джу и его подвал (с. 154–159, часть america-2). Панга дана ссылкой на «Нож большой (мачете и т. п.)»."
+  },
+  "corrections": [
+    {
+      "field": "based_at",
+      "from": null,
+      "to": "[{\"location\": \"masks-of-nyarlathotep-en/location/america-ju-ju-house\", \"note\": \"штаб-квартира: лавка африканского искусства, Рэнсом-корт, 1\"}, {\"location\": \"masks-of-nyarlathotep-en/location/america-ju-ju-house-basement\", \"note\": \"жертвенный зал: ежемесячные обряды в безлунную ночь\"}]",
+      "reason": "с. 154: штаб-квартира культа — лавка Дом джу-джу (Рэнсом-корт, 1), обряды — в её подвале; записи мест заведены частью america-2",
+      "ref": "Р-202"
+    },
+    {
+      "field": "quality.notes",
+      "from": "Места базирования (Джу-Джу Хаус, Гарлем) описаны во второй половине главы (с. 154) — `based_at` пока пуст.",
+      "to": "Места базирования — Дом джу-джу и его подвал (с. 154–159, часть america-2).",
+      "reason": "место базирования заведено (america-2)",
+      "ref": "Р-202"
+    }
+  ]
 }

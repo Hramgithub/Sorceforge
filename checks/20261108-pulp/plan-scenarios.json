@@ -1,0 +1,51 @@
+{
+  "book_id": "pulp-cthulhu-en",
+  "goal": "the four scenarios of Pulp Cthulhu playable from the base (Р-183, stage 2).",
+  "decision": "Р-183, Р-133, Р-134",
+  "check_dir": "checks/20261108-pulp",
+  "models": [
+    "kb/books/pobeg-iz-innsmuta-ru/scenarios/nasledstvo-kroufordov.json",
+    "kb/books/pobeg-iz-innsmuta-ru/scenes/angel-khranitel.json",
+    "kb/books/pobeg-iz-innsmuta-ru/handouts/arkham-advertiser-spetsvypusk.json",
+    "kb/books/pulp-cthulhu-en/characters/caleb-lusk.json"
+  ],
+  "extra": "## This work (Р-183, stage 2; Р-128, Р-133, Р-134)\n\n- Your scenario is one part of Pulp Cthulhu. Make it runnable from the knowledge base alone, as the scenarios of «Побег из Иннсмута» are (models below): scenario record (`summary`, `keeper_info`, `hook`, `advice`, `steps` with `refs`, `conclusion`, `tables`), every scene retold fully for play (`arc` = {scenario, part, order}), items, handouts (the player text as printed, in translation), organizations if the scenario has its own.\n- Ids and folders: everything is book-scoped — `pulp-cthulhu-en/<kind>/<slug>` in `kb/books/pulp-cthulhu-en/<kinds>/<slug>.json`: scenarios, scenes, items, handouts, characters, creatures, organizations, and also **locations** (`kb/books/pulp-cthulhu-en/locations/`, id `pulp-cthulhu-en/location/<slug>`, `location_type` as in the schema, `part_of` another location of yours or null) — places of other cities are not merged into shared city records now; the owner decides that later (Р-183).\n- Maps: if the scenario has a map or plan, make a `map` record `pulp-cthulhu-en/map/<slug>` without spots and without an image file (the image is added later by the lead); describe in `quality.notes` what the map shows and on which page.\n- Handouts of chapter 14 (pp. 235–253): take only those of your scenario (their captions name it: «Handout: Disintegrator 1», «Pandora’s Box 5»…), one `handout` record each, with `text` as printed (translated) and `refs` to where it is found.\n- Characters: full statblocks as printed (Р-25), pulp talents as `refs` to `coc:talent:*` (they exist in kb/talents), `axes.ruleset: \"pulp\"`. Known Mythos creatures — refs/instance_of to existing `coc:creature:*`; a villain of ch. 9 that appears in your scenario — link to `pulp-cthulhu-en/character/<slug>` (they exist), do not duplicate.\n- Rules the scenario uses — link `coc:rule:*` / `coc:rule:pulp-*` (exist). Spells, tomes, weapons — link existing records; new ones you need — create in the book folder (`pulp-cthulhu-en/spell/…` is not allowed: spells are global — put a new spell's full text into the scenario or character and list it in the report).\n- English book: Russian text is our translation (`translated`); terms — as in the base (skills, talents, archetypes, rules) and the owner's terminology registry `C:\\_Hobby\\_work\\CoC-terminology-20261011\\terminology\\CoC_Terminology_Decisions.csv` (accepted rows first).\n- Coverage: `checks/20261108-pulp/<your unit name>.md` — every heading → record, «не взято» with the reason.",
+  "units": [
+    {
+      "name": "disintegrator",
+      "pages": "135-157 235-253",
+      "target": "ch. 10 scenario «The Disintegrator» and its handouts of ch. 14",
+      "owns": [
+        "kb/books/pulp-cthulhu-en/*/ records of this scenario (new files)"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "hurricane",
+      "pages": "158-175 235-253",
+      "target": "ch. 11 scenario «Waiting for the Hurricane» and its handouts of ch. 14",
+      "owns": [
+        "kb/books/pulp-cthulhu-en/*/ records of this scenario (new files)"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "pandora",
+      "pages": "176-204 235-253",
+      "target": "ch. 12 scenario «Pandora’s Box» and its handouts of ch. 14",
+      "owns": [
+        "kb/books/pulp-cthulhu-en/*/ records of this scenario (new files)"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "slowboat",
+      "pages": "205-234 235-253",
+      "target": "ch. 13 scenario «Slow Boat to China» and its handouts of ch. 14",
+      "owns": [
+        "kb/books/pulp-cthulhu-en/*/ records of this scenario (new files)"
+      ],
+      "sites": "—"
+    }
+  ]
+}

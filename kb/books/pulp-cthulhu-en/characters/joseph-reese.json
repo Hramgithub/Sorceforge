@@ -1,0 +1,275 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "pulp-cthulhu-en/character/joseph-reese",
+  "kind": "character",
+  "name": {
+    "ru": "Джозеф Риз",
+    "en": "Joseph Reese"
+  },
+  "aliases": [
+    "Риз"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "застройщик, заместитель главы культа",
+    "en": "second in command"
+  },
+  "age": {
+    "raw": "39",
+    "value": 39
+  },
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "pulp"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "pulp-cthulhu-en/character/douglas-whiting",
+      "note": "глава культа",
+      "note_back": "заместитель, совершает жертвоприношение"
+    },
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:great-cthulhu",
+      "note": "обезумел от снов Великого Ктулху",
+      "note_back": null
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "40",
+        "value": 40
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "55",
+        "value": 55
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65
+      },
+      "APP": {
+        "raw": "60",
+        "value": 60
+      },
+      "INT": {
+        "raw": "90",
+        "value": 90
+      },
+      "POW": {
+        "raw": "80",
+        "value": 80
+      },
+      "EDU": {
+        "raw": "90",
+        "value": 90
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "16",
+      "value": 16
+    },
+    "sanity": {
+      "raw": "00",
+      "value": 0
+    },
+    "luck": {
+      "raw": "80",
+      "value": 80
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "1d3+БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Пистолет автоматический .38",
+          "en": ".38 auto"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d10",
+          "dice": "1d10",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:38-automatic"
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "skills": [
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "20%",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Breath Of The Deep (see box), Contact Cthulhu.",
+      "items": [
+        {
+          "name": "Breath Of The Deep",
+          "spell": "coc:spell:breath-of-the-deep"
+        },
+        {
+          "name": "Contact Cthulhu",
+          "spell": "coc:spell:contact-cthulhu"
+        }
+      ]
+    }
+  },
+  "abilities": [
+    {
+      "name": "Траты Удачи злодея",
+      "summary": "У Риза 80 Удачи (он главный злодей): книга советует тратить её, чтобы улучшать броски защиты и/или получать дополнительные атаки против героев; это делает встречу с ним очень опасной. Если обрушить крышу храма, может потратить оставшуюся Удачу, чтобы избежать смерти (если Хранитель хочет вернуть его).",
+      "raw": "The Keeper should note that Reese has 80 Luck available to use (as he is a major villain) making this a very dangerous encounter. … It is recommended that both NPCs should use their Luck points to modify their defense rolls and/or gain extra attacks against the heroes.",
+      "refs": [
+        "coc:rule:pulp-npc-luck-spends"
+      ]
+    }
+  ],
+  "background": {
+    "description": "безупречно опрятен; дорогой деловой костюм в тонкую полоску, пронзительные голубые глаза, злобная улыбка, зачёсанные назад иссиня-чёрные волосы",
+    "ideology": "богатство и золото",
+    "traits": "расчётливый делец, одержим жадностью, безумен; никому не позволит встать у себя на пути",
+    "secret": "Верит, что будет вечно жить глубоководным в Ра’тилле, окружённый таким количеством золота, о каком и не мечтал."
+  },
+  "description": {
+    "ru": "Заместитель Дугласа Уайтинга в культе Эзотерического ордена Дагона. Законченный делец, движимый жаждой богатства, ослеплённый блеском золота; теперь обезумел от снов Великого Ктулху. Безупречно опрятен: дорогой деловой костюм в тонкую полоску, пронзительные голубые глаза, злобная улыбка, зачёсанные назад иссиня-чёрные волосы.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Застройщик с немалым влиянием в Ки-Уэсте. Заплатил округу Монро небольшое состояние за участок на необитаемом острове Вистерия и построил там храм, скрытый от чужих глаз австралийскими соснами. Привёл в культ убийцу Леона Дойла.\nВ сценарии «В ожидании урагана» во время обряда ритуально убивает жертв на двух алтарях храма — по алтарю за раунд; чтобы спасти жертв, его нужно остановить.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 174,
+      "printed_page": 173,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 11, приложение A: «Joseph Reese, age 39, second in command» — статблок, описание"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 170,
+      "printed_page": 169,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Wisteria Island», «The Ritual»: застройщик, храм, жертвоприношение"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 171,
+      "printed_page": 170,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Stopping the Cult»: 80 Удачи"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Статблок — как напечатан (с. 173). Эпоха книги — 1930-е (оси «1930s» нет, взято 1920s); действие — 2 сентября 1935 года."
+  }
+}

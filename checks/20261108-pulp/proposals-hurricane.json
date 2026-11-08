@@ -1,0 +1,53 @@
+{
+  "schema": "sourcefold.proposals.v0",
+  "by": "Pulp Cthulhu, часть hurricane (гл. 11 «Waiting for the Hurricane»)",
+  "proposals": [
+    {
+      "target": "coc:spell:breath-of-the-deep",
+      "op": "append",
+      "path": "sources",
+      "value": {
+        "book_id": "pulp-cthulhu-en",
+        "physical_page": 174,
+        "printed_page": 173,
+        "method": "book_text",
+        "verified": true,
+        "note": "Pulp Cthulhu, гл. 11, врезка «Spell: Breath Of The Deep» (текст совпадает)"
+      },
+      "reason": "заклинание напечатано врезкой в сценарии «Waiting for the Hurricane» (с. 173); стоимость, время и механика совпадают с записью",
+      "ref": "Р-183",
+      "correction": false
+    },
+    {
+      "target": "coc:spell:wave-of-oblivion",
+      "op": "append",
+      "path": "sources",
+      "value": {
+        "book_id": "pulp-cthulhu-en",
+        "physical_page": 174,
+        "printed_page": 173,
+        "method": "book_text",
+        "verified": true,
+        "note": "Pulp Cthulhu, гл. 11, врезка «Spell: Wave Of Oblivion» (как в английской «Книге хранителя»: фут длины и ширины за каждый ПМ сверх 30; без фразы о 1d8 Рассудка для вкладывающих ПМ)"
+      },
+      "reason": "заклинание напечатано врезкой в сценарии «Waiting for the Hurricane» (с. 173)",
+      "ref": "Р-183",
+      "correction": false
+    },
+    {
+      "target": "coc:weapon:dynamite-stick",
+      "op": "set",
+      "path": "source_variants",
+      "after": "sources",
+      "value": [
+        {
+          "book_id": "pulp-cthulhu-en",
+          "printed_page": 166,
+          "text": "Врезка «Dynamite!» сценария «Waiting for the Hurricane»: метание шашек — навык Метания; дальность — СИЛ ÷ 5 в ярдах; урон 3d10 в пределах 3 ярдов, 2d10 в пределах 6 ярдов, 1d10 в пределах 9 ярдов; установка зарядов — навык Взрывчатки, при необходимости вместо него трудная проверка Знаний (ОБР)."
+        }
+      ],
+      "reason": "иные числа динамита в сценарии Pulp Cthulhu (с. 166) — в source_variants, справочник не переписывается (Р-124)",
+      "ref": "Р-124"
+    }
+  ]
+}

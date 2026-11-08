@@ -1,0 +1,166 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "pulp-cthulhu-en/creature/deep-ones-hurricane",
+  "kind": "creature",
+  "name": {
+    "ru": "Глубоководные («В ожидании урагана»)",
+    "en": "Deep Ones"
+  },
+  "aliases": [
+    "Deep Ones, monstrous servants of Great Cthulhu"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "глубоководный",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "pulp"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:deep-one",
+      "note_back": "глубоководные Ра’тиллы в «В ожидании урагана» (Pulp Cthulhu)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "80",
+        "value": 80
+      },
+      "DEX": {
+        "raw": "55",
+        "value": 55
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      }
+    },
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "1 пункт (кожа и чешуя)",
+      "value": 1
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d6+1d4 или оружием (напр. копьё, 1d8+1d4)",
+          "dice": "1d6",
+          "adds_db": true,
+          "extra": "копьё: 1d8+БкУ"
+        },
+        "notes": "в тексте сценария стражи вооружены трезубцами"
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "spells": {
+      "raw": "нет",
+      "items": []
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "увидеть глубоководного"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Дыхание под водой",
+      "summary": "Дышит под водой без посторонней помощи и так же свободно дышит на суше.",
+      "raw": "Breathe underwater: requires no exterior help to breathe underwater, and is equally capable of breathing on land."
+    }
+  ],
+  "description": {
+    "ru": "Чудовищные слуги Великого Ктулху из Ра’тиллы, города глубоководных в желобе Пуэрто-Рико. Профиль сценария «В ожидании урагана»: два стража с трезубцами у входа в храм на острове Вистерия (выскакивают по тоннелю, если поднята тревога, иначе ждут внизу пандуса) и два стража старейшины глубоководных, которые нападают только на тех, кто угрожает старейшине.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 176,
+      "printed_page": 175,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 11, приложение A: «Deep Ones, monstrous servants of Great Cthulhu» — статблок"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 170,
+      "printed_page": 169,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Wisteria Island», «The Ritual»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Свой профиль сценария (Р-75): ЛВК 55 и Ближний бой 60% отличаются от справочника, остальное совпадает; связь `instance_of` на вид. Эпоха книги — 1930-е (оси «1930s» нет, взято 1920s); действие — 2 сентября 1935 года."
+  }
+}

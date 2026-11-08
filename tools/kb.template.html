@@ -738,8 +738,8 @@ function renderSubbar() {
   }
   const gs = document.getElementById('guidesel');
   if (gs.hidden) { bar.innerHTML = ''; return; }
-  // one drop-down for the guides next to the «Гайды» tab: «Все гайды» (the default) or one guide book
-  gs.innerHTML = [['all', 'Все гайды'], ...GUIDES.map(g => [g, BOOKS[g] || g])].map(([g, l]) => `<option value="${esc(g)}"${g === guide ? ' selected' : ''}>${esc(l)}</option>`).join('');
+  // one drop-down for the guides next to the «Гайды» tab: «Все книги» (the default, Р-199) or one guide book
+  gs.innerHTML = [['all', 'Все книги'], ...GUIDES.map(g => [g, BOOKS[g] || g])].map(([g, l]) => `<option value="${esc(g)}"${g === guide ? ' selected' : ''}>${esc(l)}</option>`).join('');
   bar.innerHTML = [['houses', 'Дома'], ['residents', 'Жители']].map(([m, l]) => `<button data-mode="${m}" class="${m === locMode ? 'active' : ''}">${l}</button>`).join('')
     // a section is marked while the city page or one of its scenario records is open
     // «Сценарии» counts the book's scenarios, not their stages
@@ -1748,7 +1748,7 @@ function storyLinks(c) {
   return rows.length ? `<section><h3>Сюжет</h3><dl>${rows.join('')}</dl></section>` : '';
 }
 
-// «Все гайды» opens on a page about the guides: each guide book, its scenarios and its cities in short;
+// «Все книги» opens on a page about the guides: each guide book, its scenarios and its cities in short;
 // the list on the left starts folded
 function guidesHome() {
   const short = t => { const p = (t || '').split('\n')[0]; return p.length > 360 ? p.slice(0, p.lastIndexOf(' ', 360)) + '…' : p; };

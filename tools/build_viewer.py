@@ -32,7 +32,7 @@ def main() -> None:
     data = {"maps": load(a.kb, "maps"), "creatures": load(a.kb, "creatures"), "characters": load(a.kb, "characters"), "skills": load(a.kb, "skills"),
             "occupations": load(a.kb, "occupations"), "spells": load(a.kb, "spells"), "tomes": load(a.kb, "tomes"), "weapons": load(a.kb, "weapons"), "locations": load(a.kb, "locations"),
             "items": load(a.kb, "items"), "handouts": load(a.kb, "handouts"), "organizations": load(a.kb, "organizations"), "scenes": load(a.kb, "scenes"),
-            "scenarios": load(a.kb, "scenarios"), "tables": load(a.kb, "tables"), "rules": load(a.kb, "rules")}
+            "scenarios": load(a.kb, "scenarios"), "tables": load(a.kb, "tables"), "rules": load(a.kb, "rules"), "archetypes": load(a.kb, "archetypes"), "talents": load(a.kb, "talents")}
     # book titles for display come from the one list of books (Р-148); only titles go to the page, never local paths
     books = json.loads((root / "pipeline" / "source" / "books.json").read_text(encoding="utf-8"))
     data["books"] = {k: v["title"] for k, v in books.items()}

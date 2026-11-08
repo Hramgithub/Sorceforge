@@ -1,0 +1,279 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "pulp-cthulhu-en/creature/mi-go-observers",
+  "kind": "creature",
+  "name": {
+    "ru": "Ми-го-наблюдатели",
+    "en": "Mi-Go Observers"
+  },
+  "category": "mythos_monster",
+  "subcategory": "независимая раса",
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:mi-go",
+      "note_back": "три особи с телами, приспособленными для наблюдения и разведки («Дезинтегратор»)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "INT": {
+        "raw": "85",
+        "value": 85
+      },
+      "POW": {
+        "raw": "65",
+        "value": 65
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "13",
+      "value": 13
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "7/13* (*полёт)",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        },
+        {
+          "mode": "fly",
+          "value": 13
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет; резонирующее внеземное тело — всё проникающее оружие (включая пули) наносит минимальный урон",
+      "value": 0,
+      "note": "проникающее оружие наносит минимальный урон"
+    },
+    "attacks_per_round": {
+      "raw": "2 (2 удара клешнями, или 1 захват, или 1 выстрел из метателя шипов)",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d6",
+          "dice": "1d6",
+          "adds_db": false
+        }
+      },
+      {
+        "name": {
+          "ru": "Захват (манёвр)",
+          "en": "Seize (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "(манёвр)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "может унести существо своей Комплекции или меньше",
+          "dice": null,
+          "adds_db": false
+        },
+        "notes": "бонусная кость за биомеханические улучшения; шанс — по Ближнему бою 45% (вывод из текста)"
+      },
+      {
+        "name": {
+          "ru": "Метатель шипов",
+          "en": "Barb caster"
+        },
+        "kind": "attack",
+        "skill": null,
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d8 + особое (см. способность «Метатель шипов»)",
+          "dice": "1d8",
+          "adds_db": false
+        },
+        "notes": "бесшумно выпускает стеклянный зазубренный шип; 20 шипов внутри, базовая дальность 30 м"
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "skills": [
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      }
+    ],
+    "spells": {
+      "raw": "нет",
+      "items": []
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "увидеть ми-го"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Метатель шипов",
+      "summary": "Странное устройство вроде ракообразного — на деле метательное оружие: бесшумно выпускает стеклянный зазубренный шип. Попавший шип наносит 1d8 урона; если урон 3 или больше, шип застревает в плоти. Извлечь его — проверка ЛВК; застрявший шип наносит ещё 1d3 урона (независимо от успеха проверки), а через 1d4+1 раунд стеклянное вещество шипа распадается на едкую жидкость, которая наносит ещё 1d10 урона в раунд три раунда подряд. Внутри 20 шипов, базовая дальность 30 м.",
+      "raw": "Barb Caster: this strange crustacean-like device is actually a ballistic weapon, which when fired soundlessly releases a glass-like barbed dart. If a dart strikes a victim they suffer 1d8 damage, and if 3 or more points of damage are inflicted, the barb remains caught in the victim’s flesh. If not removed (requiring a DEX roll), the embedded barb inflicts an additional 1d3 damage regardless of whether or not the test is successful), then 1d4+1 rounds later, the glass-like substance of the dart breaks down into a highly corrosive liquid, inflicting at additional 1d10 damage each round for three rounds. The weapon carries 20 darts internally and has a base range of 30 yards."
+    },
+    {
+      "name": "Гипноз",
+      "summary": "Жужжание ми-го погружает слушающих людей в транс: все в пределах 13 м должны выиграть встречную проверку МОЩ, иначе не способны действовать. Ми-го может говорить с людьми телепатически — 1 ПМ за 5 раундов; человек может сопротивляться встречной проверкой МОЩ.",
+      "raw": "Hypnosis: the mi-go’s buzzing can put humans listening to it into a trance state. Those within forty feet must succeed in an opposed POW roll or become incapable of action. Mi-go can speak telepathically to humans, which costs 1 magic point per 5 rounds. The human can resist the communication with an opposed POW roll.",
+      "refs": [
+        "coc:rule:opposed-pow-rolls"
+      ]
+    },
+    {
+      "name": "Пустотный свет",
+      "summary": "Создаёт область, из которой не выходят фотоны: 1 ПМ за каждый кубический метр тьмы. Свет не покидает область; тьма может быть пеленой или сферой.",
+      "raw": "Void Light: creates a sink from which photons will not emerge. The mi-go must spend 1 magic point for every cubic yard of blackness desired. No light can escape the affected area. The darkness may be like a sheet or a spherical volume."
+    },
+    {
+      "name": "Биомеханические улучшения",
+      "summary": "Тела приспособлены к задаче: странные органы чувств и похожие на лозы цепкие конечности. Бонусная кость к любой проверке навыка, чтобы почуять, выследить, и к манёвру «Захват». «Видит» тепло, излучение, радиоволны и электрические поля на 33 м (если не заслонено хотя бы 1 м кирпича, камня или другого плотного материала) — например, людей в зданиях. За 1 ПМ дальность учетверяется, но вокруг ми-го при «сканировании» мерцают бледные огни.",
+      "raw": "Bio-mechanical Augmentation: their bodies customized for their tasks with strange sensory apparatus and vine-like prehensile limbs to clutch and grasp, the mi-go observer gains a Bonus die to any skill roll to sense, track, or use its Seize maneuver. It can also “see” heat, radiation, radio waves, and electrical fields up to 100’ away (unless blocked by at least 1 yard of brick, stone, or other suitable dense material), allowing it to perceive humans inside buildings and so on. The mi-go can boost this passive ability by expending 1 magic point, quadrupling the range but at the cost of a display of flickering pale lights in its vicinity as its “scan” takes effect.",
+      "refs": [
+        "coc:rule:bonus-and-penalty-dice"
+      ]
+    },
+    {
+      "name": "Внеземное тело",
+      "summary": "Брони нет, но резонирующее внеземное тело заставляет всё проникающее оружие (включая пули) наносить минимальный урон.",
+      "raw": "Armor: none, however, their resonating extra-terrene body causes all piercing weapons (bullets included) to do the minimum damage."
+    }
+  ],
+  "description": {
+    "ru": "Экспедиционная группа ми-го — пришельцев из-за пределов Земли, — чьи тела приспособлены для наблюдения и разведки. Обычно у отеля «Уайт-Пойнт» их трое; если герои — особенно большая или боеспособная группа, Хранитель может увеличить число наблюдателей или их марионеток из плоти. Они кружат над отелем и следят за происходящим; временная база — в заброшенном сеннике над конюшней отеля (см. сцену «Вещи в тумане»).",
+    "en": null
+  },
+  "legend": {
+    "ru": "Аванпосты ми-го на Земле с растущей тревогой улавливали непостижимую энергию, выпускаемую при каждом включении дезинтегратора, и срочно передали сведения в колонию на Юготе. Ми-го прислали троих наблюдателей, но действуют крайне осторожно: само явление, прибор и его происхождение им совершенно неизвестны и означают силу, превосходящую даже их собственную. Это они преследовали Пелфри и его семью с тех пор, как прибор попал к нему (пропавшие животные, огни над кварталом, ночные звонки). В отеле они почуяли вмешательство и присутствие ещё одной нечеловеческой формы жизни (мистера Слипа), но не могут понять, что это и где, что делает их ещё осторожнее.",
+    "en": null
+  },
+  "habitat": "Юггот; на время сценария — окрестности отеля «Уайт-Пойнт» и сенник над конюшней",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "pulp"
+  },
+  "sources": [
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 158,
+      "printed_page": 157,
+      "method": "book_text",
+      "verified": true,
+      "note": "сценарий «The Disintegrator» (гл. 10): «Appendix A» — «Mi-Go Observers, inhuman scientists on a mission»"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 152,
+      "printed_page": 151,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Things in the Mist»: цель и база ми-го"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Профиль сценария для особей вида «Ми-го» (Р-75): числа и способности отличаются от общей записи вида. Ближний бой напечатан без БкУ (БкУ 0). Эпоха книги — 1930-е (оси «1930s» нет, взято 1920s)."
+  }
+}

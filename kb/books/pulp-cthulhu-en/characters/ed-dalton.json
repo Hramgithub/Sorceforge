@@ -1,0 +1,401 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "pulp-cthulhu-en/character/ed-dalton",
+  "kind": "character",
+  "name": {
+    "ru": "Эд Далтон",
+    "en": "Ed Dalton"
+  },
+  "aliases": [
+    "Dalton"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "телохранитель, шофёр и убийца Кеплера",
+    "en": "Kepler’s man"
+  },
+  "occupation_ref": "coc:occupation:pulp-hired-muscle",
+  "age": {
+    "raw": "30",
+    "value": 30
+  },
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "pulp"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "pulp-cthulhu-en/character/ernest-kepler",
+      "note": "хозяин; верен ему до смерти",
+      "note_back": "телохранитель, шофёр и убийца"
+    },
+    {
+      "type": "rival_of",
+      "target": "pulp-cthulhu-en/character/oscar-brown",
+      "note": "коллега, которого Далтон презирает",
+      "note_back": "коллега, который его презирает"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "85",
+        "value": 85
+      },
+      "CON": {
+        "raw": "75",
+        "value": 75
+      },
+      "SIZ": {
+        "raw": "85",
+        "value": 85
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "60",
+        "value": 60
+      },
+      "POW": {
+        "raw": "60",
+        "value": 60
+      },
+      "EDU": {
+        "raw": "70",
+        "value": 70
+      }
+    },
+    "hp": {
+      "raw": "16",
+      "value": 16
+    },
+    "mp": {
+      "raw": "12",
+      "value": 12
+    },
+    "sanity": {
+      "raw": "60",
+      "value": 60
+    },
+    "luck": {
+      "raw": "30",
+      "value": 30
+    },
+    "damage_bonus": {
+      "raw": "+1d6",
+      "value": "+1d6"
+    },
+    "build": {
+      "raw": "2",
+      "value": 2
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "1 пункт (скрытый пуленепробиваемый жилет)",
+      "value": 1
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "76% (38/15)",
+          "value": 76,
+          "half": 38,
+          "fifth": 15
+        },
+        "damage": {
+          "raw": "1d3+1d6",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Пистолет «Маузер» (особый)",
+          "en": "Custom Mauser"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "1d10",
+          "dice": "1d10",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:mauser-c96-m1930-m1932",
+        "notes": "стреляет очередями по 3 (как пистолет-пулемёт), магазин на 12 патронов"
+      }
+    ],
+    "dodge": {
+      "raw": "50% (25/10)",
+      "value": 50,
+      "half": 25,
+      "fifth": 10
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Вождение автомобиля",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "68%",
+          "value": 68,
+          "half": 34,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Взрывчатка",
+        "skill": "coc:skill:explosives",
+        "value": {
+          "raw": "38%",
+          "value": 38,
+          "half": 19,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "53%",
+          "value": 53,
+          "half": 26,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Юриспруденция",
+        "skill": "coc:skill:law",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "68%",
+          "value": 68,
+          "half": 34,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Механика",
+        "skill": "coc:skill:mechanical-repair",
+        "value": {
+          "raw": "42%",
+          "value": 42,
+          "half": 21,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Ориентирование (на суше)",
+        "skill": "coc:skill:navigate",
+        "specialization": "на суше",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "36%",
+          "value": 36,
+          "half": 18,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "68%",
+          "value": 68,
+          "half": 34,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "74%",
+          "value": 74,
+          "half": 37,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "42%",
+          "value": 42,
+          "half": 21,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Пульп-талант: Крепкий орешек",
+      "summary": "Может потратить 10 Удачи, чтобы не заметить до 5 ПЗ урона, полученного за один боевой раунд.",
+      "raw": "Tough Guy: spend 10 Luck to shrug off up to 5 hit points worth of damage taken in one combat round.",
+      "refs": [
+        "coc:talent:tough-guy"
+      ]
+    },
+    {
+      "name": "Пульп-талант: Быстрые ноги",
+      "summary": "Может потратить 10 Удачи, чтобы на одну боевую встречу не оказаться в численном меньшинстве в ближнем бою.",
+      "raw": "Fleet Footed: spend 10 Luck to avoid being outnumbered in melee combat for one combat encounter.",
+      "refs": [
+        "coc:talent:fleet-footed",
+        "coc:rule:outnumbered"
+      ]
+    }
+  ],
+  "background": {
+    "description": "мощно сложённый, гладко выбритый, каменное лицо, военная выправка; безупречный тёмно-синий костюм",
+    "traits": "убийца без совести; верен Кеплеру до смерти"
+  },
+  "possessions": [
+    "особый «Маузер» (очереди по 3, магазин на 12)",
+    "скрытый пуленепробиваемый жилет"
+  ],
+  "description": {
+    "ru": "Внушительный гладко выбритый 30-летний мужчина в безупречно сшитом тёмно-синем костюме, с военной выправкой. Почти всё время молчит и почти ничего не выражает лицом; говорит, только когда к нему обращается хозяин или когда иначе нельзя. Невозмутим, как камень, — разве что изредка бросает за спиной коллеги Брауна презрительный взгляд. Телохранитель, шофёр и, если хозяин потребует, убийца: человек насилия, держащий убийственный нрав в железной узде до поры, но, спущенный с цепи, с большим удовольствием причиняющий боль. Когда дела пойдут плохо, Кеплер прикажет ему застрелить любого, кто встанет на пути.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 148,
+      "printed_page": 147,
+      "method": "book_text",
+      "verified": true,
+      "note": "сценарий «The Disintegrator» (гл. 10): «Dramatis Personae» — «Dalton and Brown, Kepler’s men»"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 156,
+      "printed_page": 155,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Appendix A: Characters» — статблок «Ed Dalton, Kepler’s man» (с. 155–156: навыки, таланты, броня)"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.dodge",
+      "printed": "50% (20/8)",
+      "expected": "50% (25/10)",
+      "note": "доли 20/8 подходят к 40%; верным считается напечатанный процент 50% (Р-77), возможно, опечатка в самом проценте",
+      "fixed": true
+    }
+  ],
+  "corrections": [
+    {
+      "field": "statblock.dodge",
+      "from": "50% (20/8)",
+      "to": "50% (25/10)",
+      "reason": "половина и пятая процента с округлением вниз; доли подходят к 40% (pulp-cthulhu-en, с. 155)",
+      "ref": "Р-77"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Особый «Маузер» связан с позицией справочника «Маузер» C96 M1930/M1932; урон 1d10 и магазин на 12 — по сценарию (у позиции 1d8). Навык атаки книга не называет: «Стрельба (пистолет)» — по позиции справочника (вывод, Р-41). Эпоха книги — 1930-е (оси «1930s» нет, взято 1920s)."
+  }
+}

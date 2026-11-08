@@ -1,0 +1,216 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "pulp-cthulhu-en/creature/mi-go-flesh-puppets",
+  "kind": "creature",
+  "name": {
+    "ru": "Марионетки ми-го",
+    "en": "Mi-Go Flesh-Puppets"
+  },
+  "aliases": [
+    "Марионетки из плоти",
+    "Flesh-puppets"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "искалеченные люди-рабы ми-го",
+  "relations": [
+    {
+      "type": "spawn_of",
+      "target": "coc:creature:mi-go",
+      "note": "трупы людей, которым ми-го удалили мозг и которых оживляют биомеханические паразиты-трилобиты",
+      "note_back": "оживлённые паразитами трупы людей («Дезинтегратор»)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "90",
+        "value": 90
+      },
+      "CON": {
+        "raw": "100",
+        "value": 100
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "30",
+        "value": 30
+      },
+      "INT": {
+        "raw": "20",
+        "value": 20
+      },
+      "POW": {
+        "raw": "10",
+        "value": 10
+      }
+    },
+    "hp": {
+      "raw": "16 (3*)",
+      "value": 16,
+      "note": "3 — ПЗ управляющего паразита"
+    },
+    "mp": {
+      "raw": "2",
+      "value": 2
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "5",
+      "value": 5,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 5
+        }
+      ]
+    },
+    "armor": {
+      "raw": "4 пункта (не чувствует боли, движим паразитом), кроме атак прямо по паразиту",
+      "value": 4
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "1d4+1d4",
+          "dice": "1d4",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "15% (7/3)",
+      "value": 15,
+      "half": 7,
+      "fifth": 3
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Неумолимость (Relentless)",
+        "skill": "coc:skill:relentlessly-advance",
+        "value": {
+          "raw": "90%",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        }
+      }
+    ],
+    "spells": {
+      "raw": "нет",
+      "items": []
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "увидеть марионетку из плоти — только когда видны пустой череп и паразит или когда существо ранено и не кровоточит"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Мозговой паразит",
+      "summary": "Эти несчастные — лишь полуживые «машины», которыми управляют похожие на трилобитов биомеханические устройства, прикреплённые к вскрытому стволу мозга. Не чувствуют боли, нечувствительны к ранам и необычайно сильны, но неуклюжи и не способны к сложной координации (бегать или плавать). Паразита можно атаковать только сзади (штрафная кость из-за малого размера); 3 и более урона по паразиту уничтожают его — марионетка падает, корчится и вскоре умирает. Пока паразит цел, плоть остаётся под его управлением.",
+      "raw": "Brain parasite: these unfortunates are now little more than half-alive “vehicles” piloted by trilobite-like bio-mechanical devices attached to their opened brainstems. Incapable of pain, they are inured to injury and capable of prodigious of strength, but are also clumsy and cannot perform sophisticated acts of co-ordination, like running or swimming. The parasite itself may be attacked, but only from behind (attacks targeting the parasite suffer a penalty die due to its small size). Inflicting 3 or more points of damage in this fashion destroys the unwholesome thing, causing the flesh-puppet to collapse, reeling and flailing until expiring a few moments later. Unless the parasite is destroyed, the animated flesh continues to be controlled and directed.",
+      "refs": [
+        "coc:rule:bonus-and-penalty-dice"
+      ]
+    },
+    {
+      "name": "Броня",
+      "summary": "Не чувствуя боли и подгоняемая чуждой волей паразита, марионетка считается имеющей 4 пункта брони — кроме атак прямо по паразиту.",
+      "raw": "Armor: incapable of pain and driven on by the brain parasite’s alien influence, the flesh-puppet counts as having 4 points of armor, except against attacks which target the parasite directly (see Brain parasite)."
+    }
+  ],
+  "description": {
+    "ru": "Искалеченные люди-рабы ми-го: тела похищенного гостя аукциона и двоих работников отеля, посланных искать его. Ми-го трепанировали их, удалили мозг, выпотрошили память, подключив к устройству вроде цилиндра, и оживили биомеханическими машинами, похожими на прокажённых трилобитов с бахромой щупалец. В атаке ми-го марионетки штурмуют отель через задние двери, отвлекая защитников.",
+    "en": null
+  },
+  "habitat": "сенник над конюшней отеля «Уайт-Пойнт»",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "pulp"
+  },
+  "sources": [
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 158,
+      "printed_page": 157,
+      "method": "book_text",
+      "verified": true,
+      "note": "сценарий «The Disintegrator» (гл. 10): «Appendix A» — «Mi-Go Flesh-Puppets, mutilated human slave creatures»"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 152,
+      "printed_page": 151,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Things in the Mist»: откуда берутся марионетки"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 154,
+      "printed_page": 153,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Mi-Go Attack»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Навык «Relentless» связан с записью навыка существ «Неустанно продвигаться» (Relentlessly Advance) — тот же навык под другим английским названием (вывод; предложен псевдоним). Число марионеток книга не даёт: в сеннике три тела — похищенный гость и двое искавших его работников; Гейб Дайер — четвёртое тело, но о его оживлении книга не говорит. Эпоха книги — 1930-е (оси «1930s» нет, взято 1920s)."
+  }
+}

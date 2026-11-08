@@ -147,6 +147,9 @@ def main() -> int:
         if len(ps) > 1:
             errors["повтор id"].append(f"{i}: {', '.join(rel(p) for p in ps)}")
     for p, path, r in refs:
+        # a correction's «from» quotes the old value: the old id of a record that moved to a shared one (Р-154)
+        if re.match(r"^corrections\[\d+\]\.from$", path):
+            continue
         if r not in ids and not VIRTUAL.match(r):
             errors["ссылка на несуществующую запись"].append(f"{rel(p)}: {path} → {r}")
 

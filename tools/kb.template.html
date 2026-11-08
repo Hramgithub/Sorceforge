@@ -772,7 +772,8 @@ function setTab(t, keep) {
   const occ = document.getElementById('occ'); occ.hidden = t !== 'character';
   document.getElementById('era').hidden = t !== 'weapon';
   document.getElementById('mech').hidden = t !== 'spell';
-  document.getElementById('cat').hidden = t === 'location' && CITIES.length > 0;
+  // the rules have the chapter tree on the left, a topic filter would repeat it (Р-201)
+  document.getElementById('cat').hidden = t === 'location' && CITIES.length > 0 || t === 'rule';
   renderSubbar();
   if (t === 'character') {
     const counts = {};

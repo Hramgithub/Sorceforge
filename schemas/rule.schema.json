@@ -58,6 +58,17 @@
       "type": "boolean",
       "description": "Необязательное правило книги (в книге помечено «необязательное правило»)."
     },
+    "parent": {
+      "anyOf": [
+        {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Раздел книги, в который входит этот раздел (запись `rule` той же книги и главы); null — раздел верхнего уровня главы (Р-187)."
+    },
     "summary": {
       "$ref": "common.schema.json#/$defs/text",
       "description": "Суть правила в одном-двух предложениях."

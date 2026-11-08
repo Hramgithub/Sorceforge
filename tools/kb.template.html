@@ -98,7 +98,12 @@ table.rules tr.hit td { background:color-mix(in srgb, var(--accent) 18%, transpa
 /* rules in groups (Р-180): each level starts past its parent's name, the font goes down by one step a level */
 #list button.rin1 { padding-left:32px; font-size:14px; }
 #list button.rin2 { padding-left:68px; font-size:13px; }
-#list button.rin3, #list button.rin4 { padding-left:88px; font-size:13px; }
+#list button.rin3 { padding-left:88px; font-size:13px; }
+#list button.rin4 { padding-left:108px; font-size:13px; }
+#list button.rin5 { padding-left:128px; font-size:13px; }
+/* the fold arrow of a section with subsections (Р-187) sits before its name, in the indent */
+#list .rfold { display:inline-block; width:16px; margin-left:-18px; color:var(--muted); cursor:pointer; }
+#list .rfold:hover { color:var(--accent); }
 #list .part.l2 { padding-left:68px; font-size:13px; }
 #list .part.l3 { padding-left:88px; font-size:13px; }
 #list .part.l2 { padding-left:68px; font-size:13px; }
@@ -397,6 +402,7 @@ function renderList() {
     list.innerHTML = tab === 'rule' ? ruleGroups(items) : items.map(c => item(c)).join('');
   }
   list.querySelectorAll('button').forEach(b => b.onclick = () => show(b.dataset.id));
+  list.querySelectorAll('[data-rnode]').forEach(f => f.onclick = e => { e.stopPropagation(); const k = f.dataset.rnode; partState.set(k, f.textContent !== '▾'); renderList(); });
   list.querySelectorAll('[data-rgroup]').forEach(g => g.onclick = () => { const k = g.dataset.rgroup; partState.set(k, !g.querySelector('.fold').textContent.includes('▾')); renderList(); });
 }
 // the rules reference in groups (Р-180, Р-185): the chapters of the Keeper Rulebook are the frame; a rule of another
@@ -409,26 +415,46 @@ const ruleChapter = r => {
   const b = ruleBook(r);
   if (b === 'house-rules') return 'Домашние правила';
   if (b === KR) return krChapter(rulePage(r));
+  const own = (DATA.chapters[b] || []).filter(([p]) => p <= rulePage(r)).pop();
+  // a chapter of the book that is a chapter of its own in the frame («Гл. 8. 1930-е») keeps all its rules
+  if (own?.[2] && !(DATA.chapters[KR] || []).some(([, t]) => t === own[2])) return own[2];
   const core = (r.refs||[]).map(byId).find(x => x && x.kind === 'rule' && ruleBook(x) === KR);
   if (core) return krChapter(rulePage(core));
-  const own = (DATA.chapters[b] || []).filter(([p]) => p <= rulePage(r)).pop();
   return own ? own[2] || `${BOOKS[b] || b}: ${own[1]}` : 'Прочее';
 };
 function ruleGroups(items) {
   const cur = byId(current);
   const head = (key, open, label, lvl) => `<div class="part l${lvl}" data-rgroup="${esc(key)}">${fold(open)}${esc(label)}</div>`;
   const row = (c, lvl) => item(c).replace('class="', `class="rin${lvl} `);
+  // sections inside sections (Р-187): a rule whose `parent` is in the same list goes under it; a section with
+  // subsections folds (its arrow), open while it holds the open rule
+  const tree = (xs, lvl) => {
+    const kids = id => xs.filter(x => x.parent === id);
+    const below = c => kids(c.id).flatMap(k => [k, ...below(k)]);
+    const node = (c, l) => {
+      const ch = kids(c.id);
+      if (!ch.length) return row(c, l);
+      const k = 'rnode|' + c.id, o = partOpen(k, below(c).includes(cur));
+      return row(c, l).replace(/^(<button[^>]*>)/, `$1<span class="rfold" data-rnode="${esc(k)}" title="Подразделы">${o ? '▾' : '▸'}</span>`)
+        + (o ? ch.map(x => node(x, Math.min(l + 1, 5))).join('') : '');
+    };
+    return xs.filter(x => !x.parent || !xs.some(y => y.id === x.parent)).map(c => node(c, lvl)).join('');
+  };
   const sub = (key, label, xs, lvl, inner) => {
     if (!xs.length) return '';
     const o = partOpen(key, !!cur && xs.includes(cur));
-    return head(key, o, `${label} (${xs.length})`, lvl) + (o ? (inner ? inner() : xs.map(c => row(c, lvl + 1)).join('')) : '');
+    return head(key, o, `${label} (${xs.length})`, lvl) + (o ? (inner ? inner() : tree(xs, lvl + 1)) : '');
   };
   // archetypes and talents of Pulp: in «Создание сыщиков», with the book's other rules of the chapter
   const pulpOn = ruleBookSel === 'all' || ruleBookSel === 'pulp-cthulhu-en';
   const q = norm(document.getElementById('q').value.trim()), f = document.getElementById('cat').value;
   const arch = pulpOn && !f ? DATA.archetypes.filter(c => matches(c, q, '')) : [], tal = pulpOn && !f ? DATA.talents.filter(c => matches(c, q, '')) : [];
   const CREATION = 'Гл. 3. Создание сыщиков';
+  // chapters in the order of their numbers: a chapter of another book («Гл. 8. 1930-е») stands next to the chapter
+  // of the Keeper Rulebook with the same number; the house rules last
+  const chNum = t => t === 'Домашние правила' ? 999 : +(t.match(/^Гл\. (\d+)/) || [0, 500])[1];
   const chapters = [...new Set([...(DATA.chapters[KR] || []).map(([, t]) => t), ...items.map(ruleChapter)])]
+    .sort((a, b) => chNum(a) - chNum(b))
     .filter(ch => items.some(r => ruleChapter(r) === ch) || (ch === CREATION && (arch.length || tal.length)));
   return chapters.map(ch => {
     const xs = items.filter(r => ruleChapter(r) === ch);
@@ -438,15 +464,15 @@ function ruleGroups(items) {
     const all = [...xs, ...extra], key = 'rule|' + ch;
     const open = partOpen(key, !!cur && all.includes(cur) || chapters.length === 1);
     const pulpKey = key + '|pulp', pulpAll = [...pulp, ...extra];
-    const pulpInner = () => pulp.map(c => row(c, 2)).join('')
+    const pulpInner = () => tree(pulp, 2)
       + sub(pulpKey + '|arch', 'Архетипы', arch.filter(() => extra.length), 2)
       + (extra.length ? sub(pulpKey + '|tal', 'Таланты', tal, 2, () => [...new Set(tal.map(t => t.category))].map(cat =>
           sub(pulpKey + '|tal|' + cat, cat[0].toUpperCase() + cat.slice(1), tal.filter(t => t.category === cat), 3)).join('')) : '');
     // with «Все: классика и Pulp» the chapter holds two folding groups, «Классика» and «Pulp» (Р-186); with one of
     // the two chosen in the filter its records stand right in the chapter
     const both = !document.getElementById('rset').value && ch !== 'Домашние правила';
-    const classicInner = lvl => core.map(c => row(c, lvl)).join('') + sub(key + '|opt', 'Необязательные правила', opt, lvl);
-    const pulpFlat = () => pulp.map(c => row(c, 1)).join('') + sub(pulpKey + '|arch', 'Архетипы', arch.filter(() => extra.length), 1)
+    const classicInner = lvl => tree(core, lvl) + sub(key + '|opt', 'Необязательные правила', opt, lvl);
+    const pulpFlat = () => tree(pulp, 1) + sub(pulpKey + '|arch', 'Архетипы', arch.filter(() => extra.length), 1)
       + (extra.length ? sub(pulpKey + '|tal', 'Таланты', tal, 1, () => [...new Set(tal.map(t => t.category))].map(cat =>
           sub(pulpKey + '|tal|' + cat, cat[0].toUpperCase() + cat.slice(1), tal.filter(t => t.category === cat), 2)).join('')) : '');
     const body = both

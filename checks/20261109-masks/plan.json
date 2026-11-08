@@ -1,0 +1,111 @@
+{
+  "book_id": "masks-of-nyarlathotep-en",
+  "goal": "the campaign «Masks of Nyarlathotep» playable from the base: campaign, chapters as stages, scenes, places, items, handouts, organizations, maps, tables (Р-202).",
+  "decision": "Р-202, Р-190, Р-133, Р-134, Р-154",
+  "check_dir": "checks/20261109-masks",
+  "models": [
+    "kb/books/pobeg-iz-innsmuta-ru/scenarios/reyd-na-innsmut.json",
+    "kb/books/pobeg-iz-innsmuta-ru/scenarios/reyd-tsel-6.json",
+    "kb/books/pobeg-iz-innsmuta-ru/scenes/angel-khranitel.json",
+    "kb/books/pobeg-iz-innsmuta-ru/handouts/arkham-advertiser-spetsvypusk.json",
+    "kb/books/pobeg-iz-innsmuta-ru/items/diadema-iz-nyuberiporta.json",
+    "kb/books/pobeg-iz-innsmuta-ru/organizations/ezotericheskiy-orden-dagona.json",
+    "kb/locations/kingsport.json",
+    "kb/locations/innsmouth-101-dom-grinov.json",
+    "kb/books/pulp-cthulhu-en/maps/wisteria-island.json",
+    "kb/tables/bout-of-madness-real-time.json",
+    "kb/books/masks-of-nyarlathotep-en/characters/abdul-nawisha.json"
+  ],
+  "extra": "## This work (Р-202)\n\nThe campaign «Masks of Nyarlathotep» (EN 7e, Chaosium 2018) goes into the base whole, as «Побег из Иннсмута» did (models). Your unit is one part of it. Printed page = physical − 3 (`pages.py` shows both). Characters (169) and creatures (48) of the book already exist in `kb/books/masks-of-nyarlathotep-en/` (also all tomes, Appendix B spells, weapons, skills in the shared folders): link them, never duplicate; a change to an existing record (a resident's place, a `chase` block, a note) goes into your proposals file. The audit of what is missing — `checks/20261025-masks/not_in_kb.md` (378 positions by kind and page): read the rows of your pages and say in the coverage which record took each.\n\n### Fixed ids (all units use them; a reference to a record another unit is still writing is expected to fail `check.py` until that unit lands — list such refs in the report, do not drop them)\n\n- Campaign: `masks-of-nyarlathotep-en/scenario/masks-of-nyarlathotep` (unit intro-final).\n- Stages (scenario records with `part_of` = the campaign, `order` 1–8): `…/scenario/peru` (1), `…/scenario/campaign-beginning` (2, intro-final), `…/scenario/america` (3), `…/scenario/england` (4), `…/scenario/egypt` (5), `…/scenario/kenya` (6), `…/scenario/australia` (7), `…/scenario/china` (8), `…/scenario/grand-conclusion` (9, intro-final). The stage record is made by the first unit of the chapter (america-1, england-1, egypt-1, china-1; peru, kenya, australia own theirs); the second unit adds its scenes with `arc.scenario` = the stage and proposes its `steps` for the stage record.\n- Shared cities (`kb/locations/<slug>.json`, id `coc:location:<slug>`, `location_type: город`, `part_of: null`, model `kb/locations/kingsport.json`): `lima`, `puno` (peru); `new-york` (america-1); `london` (england-1); `cairo` (egypt-1); `mombasa`, `nairobi` (kenya); `port-hedland`, `darwin`, `perth`, `broome`, `cuncudgerie` — whichever the Australia chapter really describes, slugs from the English names (australia); `shanghai` (china-1). Districts and places of the chapter go to `kb/books/masks-of-nyarlathotep-en/locations/<chapter>-<slug>.json`, id `masks-of-nyarlathotep-en/location/<chapter>-<slug>`, `part_of` the shared city (or a district/building of yours). A place outside any city (ruins in the Andes, the Mountain of the Black Wind, Gray Dragon Island, the City beneath the Sands) is a top place of the chapter: `location_type: область` or `место` with `part_of` the nearest shared city it is reached from, or, if none fits, ask in the report. Ocean liners and ships — `location_type: корабль`, `part_of: null` (Р-189), made by the unit whose pages describe them.\n- Every other book-scoped record of yours (scene, item, handout, organization, map, location) has a slug starting with your chapter: `peru-…`, `america-…`, `england-…`, `egypt-…`, `kenya-…`, `australia-…`, `china-…`; intro-final uses `campaign-…` / `conclusion-…` / `travel-…`.\n- Organizations and cults of the whole campaign that act in several chapters (the Brotherhood of the Black Pharaoh, the Cult of the Bloody Tongue, the Order of the Bloated Woman, the Cult of the Sand Bat, the Carlyle Expedition itself, the Penhew Foundation…) are made once by the unit of the chapter where the book introduces them in «Cult in Residence»; other chapters link them.\n\n### What to make\n\n- Stage record: `summary`, `keeper_info` (what really happens here), `hook` (how the investigators arrive), `advice` (running this chapter, pulp options as text), `steps` with `refs`, `conclusion` (incl. Sanity rewards), `tables`.\n- Scenes: every location visit and event retold fully for play (`arc` = {scenario: stage, part: the book's section heading, order}); `where`, `participants`, `mechanics`, `outcome`.\n- Items and artifacts (incl. Appendix D artifacts for intro-final), handouts (the player text as printed, in translation — **if the Russian official «Материалы для игроков» has it, take its text**: `C:\\_Hobby\\Yandex.Disk\\НРИ\\1_Зов Ктулху\\1_Библиотека\\Кампании\\Маски Ньярлатхотепа (Masks of Nyarlathotep)\\Раздатка\\[RU 7e] Maski_Nyarlatkhotepa_-_Materialy_dlya_igrokov.pdf` — `pdftotext -layout -f N -l N`, some pages come out in cp1251 mojibake: re-decode), organizations, places with `residents` (existing characters), maps (`map` record with the image: render the map page `pdftoppm -r 150 -f <phys> -l <phys> -png`, crop to the map with PIL, save `app/maps/masks-<slug>.jpg` (quality 85, ≤ 2000 px wide), `width`/`height` of the image, `spots: []`, `location` = the shared city, `shows` = the place it shows), roll tables (`table` in `kb/tables/masks-<slug>.json`).\n- Russian names: official localization first (Р-184). For chapters 5–8 and the appendices the official Russian volume II exists only as photographed pages — `…\\[RU 7e] Masks of Nyarlathotep т2 скан.pdf` (235 pages, physical page 6 shows printed p. 387; not every printed page is there): for the names of places, organizations, artifacts and section headings of your chapter render the few pages you need at 100 dpi and read them. Otherwise the glossary (`python tools/terms.py <word>`) and the names already in the base (characters of this book have Russian names), then our translation (`translated`).\n- Coverage: `checks/20261109-masks/<your unit>.md` — every heading of your pages → record(s), «не взято» with the reason, and the audit rows of your pages.\n- English book: `axes.era` [\"1920s\"], `axes.ruleset` \"core\" (pulp sidebars stay text in `advice`/`mechanics`).",
+  "units": [
+    {
+      "name": "intro-final",
+      "pages": "7-46 91-98 619-654",
+      "target": "Introduction (campaign record: backstory, Jackson Elias, Nyarlathotep, timeline 1916–1926 as a table, running the campaign, preparing for play; key NPCs and pre-generated characters exist — link), Chapter One «Campaign Beginning» (stage `campaign-beginning`: the message from Jackson Elias, press information on the Carlyle Expedition — handouts), Chapter Eight «Grand Conclusion» (stage `grand-conclusion`), Appendix A Travel (tables of travel times and costs; ocean liners as `корабль` places), Appendix D Artifacts (items; Appendix B spells and C tomes exist — link)",
+      "owns": [
+        "kb/books/masks-of-nyarlathotep-en/scenarios/masks-of-nyarlathotep.json, campaign-beginning.json, grand-conclusion.json",
+        "kb/books/masks-of-nyarlathotep-en/{scenes,items,handouts,organizations,locations,maps}/campaign-*, conclusion-*, travel-* (new files)",
+        "kb/tables/masks-campaign-*, masks-travel-* (new files)",
+        "checks/20261109-masks/intro-final.md, proposals-intro-final.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "peru",
+      "pages": "47-90",
+      "target": "Prologue: Peru — stage `peru`, Lima and Puno (shared cities), the ruins, the local cult, scenes, items, handouts, maps",
+      "owns": ["kb/books/masks-of-nyarlathotep-en/scenarios/peru.json", "kb/books/masks-of-nyarlathotep-en/*/peru-* (new files)", "kb/locations/lima.json, puno.json", "kb/tables/masks-peru-*", "checks/20261109-masks/peru.md, proposals-peru.json"],
+      "sites": "—"
+    },
+    {
+      "name": "america-1",
+      "pages": "99-138",
+      "target": "Chapter Two: America, first half — stage `america`, New York (shared city), arriving, cult in residence, the Big Apple, preliminary investigations, Erica Carlyle, other inquiries",
+      "owns": ["kb/books/masks-of-nyarlathotep-en/scenarios/america.json", "kb/books/masks-of-nyarlathotep-en/*/america-* (new files)", "kb/locations/new-york.json", "kb/tables/masks-america-*", "checks/20261109-masks/america-1.md, proposals-america-1.json"],
+      "sites": "—"
+    },
+    {
+      "name": "america-2",
+      "pages": "139-176",
+      "target": "Chapter Two: America, second half — the Carlyle Expedition principals, Harlem, «An Innocent Man», «Horror at Ju Ju House», conclusion, characters and monsters of America (link)",
+      "owns": ["kb/books/masks-of-nyarlathotep-en/*/america-* (new files, not the stage record)", "kb/tables/masks-america-*", "checks/20261109-masks/america-2.md, proposals-america-2.json"],
+      "sites": "—"
+    },
+    {
+      "name": "england-1",
+      "pages": "177-226",
+      "target": "Chapter Three: England, first half — stage `england`, London (shared city), arriving, cult in residence, «The Scoop», the Penhew Foundation, next steps, «The Chelsea Serpent»",
+      "owns": ["kb/books/masks-of-nyarlathotep-en/scenarios/england.json", "kb/books/masks-of-nyarlathotep-en/*/england-* (new files)", "kb/locations/london.json", "kb/tables/masks-england-*", "checks/20261109-masks/england-1.md, proposals-england-1.json"],
+      "sites": "—"
+    },
+    {
+      "name": "england-2",
+      "pages": "227-294",
+      "target": "Chapter Three: England, second half — «The Derbyshire Horror», «Slaughter in Soho», the Blue Pyramid Club, Empire Spices, Henson Manufacturing, Misr House, rites of the Brotherhood, conclusion",
+      "owns": ["kb/books/masks-of-nyarlathotep-en/*/england-* (new files, not the stage record)", "kb/tables/masks-england-*", "checks/20261109-masks/england-2.md, proposals-england-2.json"],
+      "sites": "—"
+    },
+    {
+      "name": "egypt-1",
+      "pages": "295-339",
+      "target": "Chapter Four: Egypt, first half — stage `egypt`, Cairo (shared city), arriving, cult in residence, the Mother of Cities, Faraz Najjar's shops, the fallen agent, the Cairo Bulletin, the Egyptian Museum, the Black Cat, the Clive Expedition",
+      "owns": ["kb/books/masks-of-nyarlathotep-en/scenarios/egypt.json", "kb/books/masks-of-nyarlathotep-en/*/egypt-* (new files)", "kb/locations/cairo.json", "kb/tables/masks-egypt-*", "checks/20261109-masks/egypt-1.md, proposals-egypt-1.json"],
+      "sites": "—"
+    },
+    {
+      "name": "egypt-2",
+      "pages": "340-384",
+      "target": "Chapter Four: Egypt, second half — «An Audacious Theft», «A Dangerous Man», «The Horrors Below», the Great Chamber of Nyarlathotep, into the sanctum, conclusion",
+      "owns": ["kb/books/masks-of-nyarlathotep-en/*/egypt-* (new files, not the stage record)", "kb/tables/masks-egypt-*", "checks/20261109-masks/egypt-2.md, proposals-egypt-2.json"],
+      "sites": "—"
+    },
+    {
+      "name": "kenya",
+      "pages": "385-448",
+      "target": "Chapter Five: Kenya — stage `kenya`, Mombasa and Nairobi (shared cities), the Nairobi Star, Taan Kaur's shop, the game lodge, Old Bundari, the Mountain of the Black Wind, the rites and the ritual of the birth, conclusion",
+      "owns": ["kb/books/masks-of-nyarlathotep-en/scenarios/kenya.json", "kb/books/masks-of-nyarlathotep-en/*/kenya-* (new files)", "kb/locations/mombasa.json, nairobi.json", "kb/tables/masks-kenya-*", "checks/20261109-masks/kenya.md, proposals-kenya.json"],
+      "sites": "—"
+    },
+    {
+      "name": "australia",
+      "pages": "449-518",
+      "target": "Chapter Six: Australia — stage `australia`, the cities the chapter visits (shared), Buckley's ghost, the Great Sandy Desert, the City beneath the Sands and its encounters, conclusion",
+      "owns": ["kb/books/masks-of-nyarlathotep-en/scenarios/australia.json", "kb/books/masks-of-nyarlathotep-en/*/australia-* (new files)", "kb/locations/<australian cities>.json", "kb/tables/masks-australia-*", "checks/20261109-masks/australia.md, proposals-australia.json"],
+      "sites": "—"
+    },
+    {
+      "name": "china-1",
+      "pages": "519-567",
+      "target": "Chapter Seven: China, first half — stage `china`, Shanghai (shared city), arriving, cult in residence, the Stumbling Tiger Bar, the Shanghai Courier, the Demon Cabinet of Mister Lung, «A Gentleman of Business», the Dark Mistress, the Shanghai Museum",
+      "owns": ["kb/books/masks-of-nyarlathotep-en/scenarios/china.json", "kb/books/masks-of-nyarlathotep-en/*/china-* (new files)", "kb/locations/shanghai.json", "kb/tables/masks-china-*", "checks/20261109-masks/china-1.md, proposals-china-1.json"],
+      "sites": "—"
+    },
+    {
+      "name": "china-2",
+      "pages": "568-618",
+      "target": "Chapter Seven: China, second half — Madam Swallow, Mr. Mu, New China, meeting Jack Brady, Gray Dragon Island, rituals of the Order, conclusion",
+      "owns": ["kb/books/masks-of-nyarlathotep-en/*/china-* (new files, not the stage record)", "kb/tables/masks-china-*", "checks/20261109-masks/china-2.md, proposals-china-2.json"],
+      "sites": "—"
+    }
+  ]
+}

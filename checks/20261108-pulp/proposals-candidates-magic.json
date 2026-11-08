@@ -1,0 +1,280 @@
+{
+  "schema": "sourcefold.proposals.v0",
+  "by": "candidates-magic (Pulp Cthulhu, Р-191)",
+  "proposals": [
+    {
+      "target": "pulp-cthulhu-en/character/the-jade-emperor",
+      "op": "set",
+      "path": "statblock.spells.items.0.spell",
+      "value": "coc:spell:cloak-of-fire",
+      "reason": "заведена запись заклинания «Огненный плащ» (Cloak of Fire, Pulp Cthulhu с. 128; Grand Grimoire с. 66)",
+      "ref": "Р-191",
+      "correction": false
+    },
+    {
+      "target": "pulp-cthulhu-en/character/the-jade-emperor",
+      "op": "append",
+      "path": "abilities.1.refs",
+      "value": "coc:spell:cloak-of-fire",
+      "reason": "усиленная версия — заклинания «Огненный плащ», теперь записи справочника",
+      "ref": "Р-191",
+      "correction": false
+    },
+    {
+      "target": "pulp-cthulhu-en/character/the-jade-emperor",
+      "op": "replace",
+      "path": "quality.notes",
+      "old": "Заклинания Cloak of Fire в справочнике нет — текст в правиле «Злодейские заклинания».",
+      "new": "Заклинание Cloak of Fire — запись «Огненный плащ» (coc:spell:cloak-of-fire, по Grand Grimoire); текст Pulp Cthulhu и усиленная версия императора — в правиле «Злодейские заклинания».",
+      "reason": "запись заклинания появилась, пометка устарела",
+      "ref": "Р-191",
+      "correction": false
+    },
+    {
+      "target": "pulp-cthulhu-en/character/scarlet-arachnis",
+      "op": "set",
+      "path": "statblock.spells.items.2.spell",
+      "value": "coc:spell:vanish",
+      "reason": "заведена запись заклинания «Исчезновение» (Vanish, Pulp Cthulhu с. 129; Grand Grimoire с. 183)",
+      "ref": "Р-191",
+      "correction": false
+    },
+    {
+      "target": "pulp-cthulhu-en/character/scarlet-arachnis",
+      "op": "replace",
+      "path": "quality.notes",
+      "old": "Заклинания Vanish в справочнике нет — текст в правиле «Злодейские заклинания».",
+      "new": "Заклинание Vanish — запись «Исчезновение» (coc:spell:vanish, по Grand Grimoire); текст Pulp Cthulhu — в правиле «Злодейские заклинания».",
+      "reason": "запись заклинания появилась, пометка устарела",
+      "ref": "Р-191",
+      "correction": false
+    },
+    {
+      "target": "coc:rule:pulp-villainous-spells",
+      "op": "append",
+      "path": "refs",
+      "value": "coc:spell:cloak-of-fire",
+      "reason": "врезка даёт полный текст заклинания; запись справочника заведена (Р-191)",
+      "ref": "Р-191",
+      "correction": false
+    },
+    {
+      "target": "coc:rule:pulp-villainous-spells",
+      "op": "append",
+      "path": "refs",
+      "value": "coc:spell:vanish",
+      "reason": "врезка даёт полный текст заклинания; запись справочника заведена (Р-191)",
+      "ref": "Р-191",
+      "correction": false
+    },
+    {
+      "target": "coc:rule:pulp-villainous-spells",
+      "op": "replace",
+      "path": "summary.ru",
+      "old": "Огненного плаща и Исчезновения в справочнике нет, их полный текст — здесь.",
+      "new": "Огненный плащ и Исчезновение тоже есть в справочнике (по Grand Grimoire; Исчезновение там — вариант «Шкатулок врат»), их текст по Pulp Cthulhu — здесь.",
+      "reason": "записи Огненного плаща и Исчезновения появились в справочнике",
+      "ref": "Р-191",
+      "correction": false
+    },
+    {
+      "target": "coc:rule:pulp-villainous-spells",
+      "op": "set",
+      "path": "tables.0.rows.4.2",
+      "value": "запись «Огненный плащ»: при касании урон оружия не прибавляется, есть проверка Удачи на возгорание; усиленная версия — 6 ПМ за раунд, 1d8 (у императора — 4 ПМ, 1d10+2)",
+      "reason": "заведена запись coc:spell:cloak-of-fire; сравнение с Grand Grimoire, с. 66",
+      "ref": "Р-191",
+      "correction": false
+    },
+    {
+      "target": "coc:rule:pulp-villainous-spells",
+      "op": "set",
+      "path": "tables.0.rows.5.2",
+      "value": "запись «Исчезновение» — вариант «Шкатулок врат»: одна шкатулка врат, перенос внутрь неё; о нескольких шкатулках и осквернении не сказано; название Vanish — ещё и псевдоним «Шкатулок врат»",
+      "reason": "заведена запись coc:spell:vanish; сравнение с Grand Grimoire, с. 183",
+      "ref": "Р-191",
+      "correction": false
+    },
+    {
+      "target": "coc:rule:pulp-villainous-spells",
+      "op": "replace",
+      "path": "quality.notes",
+      "old": "Заклинания Cloak of Fire и Vanish — кандидаты в записи справочника заклинаний (kb/spells), пока текст только здесь.",
+      "new": "Заклинания Cloak of Fire и Vanish — записи справочника coc:spell:cloak-of-fire и coc:spell:vanish (по Grand Grimoire); расхождения — в таблице и в пометках записей.",
+      "reason": "записи заклинаний появились, пометка устарела",
+      "ref": "Р-191",
+      "correction": false
+    },
+    {
+      "target": "coc:rule:pulp-psychic-attacks-and-possession",
+      "op": "append",
+      "path": "refs",
+      "value": "coc:spell:identify-spirit",
+      "reason": "заклинание Identify Spirit (с. 86) заведено по Grand Grimoire (с. 128)",
+      "ref": "Р-191",
+      "correction": false
+    },
+    {
+      "target": "coc:rule:pulp-psychic-attacks-and-possession",
+      "op": "append",
+      "path": "refs",
+      "value": "coc:talent:psychic-attack",
+      "reason": "«Психическая атака» в графе талантов (с. 86) заведена записью таланта",
+      "ref": "Р-191",
+      "correction": false
+    },
+    {
+      "target": "coc:rule:pulp-psychic-attacks-and-possession",
+      "op": "replace",
+      "path": "quality.notes",
+      "old": "Заклинания «Identify Spirit» в базе нет — оставлено текстом (кандидат в запись);",
+      "new": "Заклинание «Identify Spirit» — запись «Опознать духа» (coc:spell:identify-spirit, по Grand Grimoire);",
+      "reason": "запись заклинания появилась, пометка устарела",
+      "ref": "Р-191",
+      "correction": false
+    },
+    {
+      "target": "coc:rule:pulp-psychic-attacks-and-possession",
+      "op": "replace",
+      "path": "quality.notes",
+      "old": "«Психическая атака» в графе талантов — не талант из таблиц главы 2; отдельной записи таланта нет.",
+      "new": "«Психическая атака» в графе талантов — не талант из таблиц главы 2; запись таланта — coc:talent:psychic-attack.",
+      "reason": "запись таланта появилась, пометка устарела",
+      "ref": "Р-191",
+      "correction": false
+    },
+    {
+      "target": "pulp-cthulhu-en/organization/inheritors",
+      "op": "append",
+      "path": "refs",
+      "value": "pulp-cthulhu-en/tome/inheritance-of-the-kingdom",
+      "reason": "книга Мифов культа и её рекомендуемые заклинания (с. 58) заведены записями (Р-191)",
+      "ref": "Р-191",
+      "correction": false
+    },
+    {
+      "target": "pulp-cthulhu-en/organization/inheritors",
+      "op": "append",
+      "path": "refs",
+      "value": "coc:spell:contact-servitor-of-the-outer-gods",
+      "reason": "книга Мифов культа и её рекомендуемые заклинания (с. 58) заведены записями (Р-191)",
+      "ref": "Р-191",
+      "correction": false
+    },
+    {
+      "target": "pulp-cthulhu-en/organization/inheritors",
+      "op": "append",
+      "path": "refs",
+      "value": "coc:spell:stop-heart",
+      "reason": "книга Мифов культа и её рекомендуемые заклинания (с. 58) заведены записями (Р-191)",
+      "ref": "Р-191",
+      "correction": false
+    },
+    {
+      "target": "pulp-cthulhu-en/organization/inheritors",
+      "op": "replace",
+      "path": "description.ru",
+      "old": "запрещённого грузинского оккультного трактата «Наследование Царства»",
+      "new": "запрещённого оккультного трактата георгианской эпохи «Наследование Царства»",
+      "reason": "ошибка перевода: «a suppressed Georgian occult treatise» (Pulp Cthulhu, с. 57) — трактат георгианской эпохи Англии; врезка (с. 58) называет книгу английской, около XVIII века, а не грузинской",
+      "ref": null,
+      "correction": true
+    },
+    {
+      "target": "pulp-cthulhu-en/organization/inheritors",
+      "op": "replace",
+      "path": "quality.notes",
+      "old": "Книга «Наследование Царства» — только текстом в описании культа: записи книги Мифов эта часть импорта не заводит (кандидат в `kb/books/pulp-cthulhu-en/tomes/`). Заклинаний «Связь со служителем Внешних богов» (Contact Servitor of the Outer Gods) и «Остановка сердца» (Stop Heart) в справочнике нет — оставлены текстом, названия переведены нами.",
+      "new": "Книга «Наследование Царства» — запись pulp-cthulhu-en/tome/inheritance-of-the-kingdom (в описании культа — пересказ врезки). Заклинания «Связь со служителем Внешних богов» (Contact Servitor of the Outer Gods, по КХ) и «Остановка сердца» (Stop Heart, по Grand Grimoire) — записи справочника, ссылки в `refs`.",
+      "reason": "записи книги Мифов и заклинаний появились, пометка устарела",
+      "ref": "Р-191",
+      "correction": false
+    },
+    {
+      "target": "pulp-cthulhu-en/item/slow-boat-pipes-of-leng",
+      "op": "append",
+      "path": "refs",
+      "value": "coc:spell:pipes-of-madness",
+      "reason": "Трубы действуют как заклинание «Трубы безумия» (с. 227, 234); запись справочника заведена",
+      "ref": "Р-191",
+      "correction": false
+    },
+    {
+      "target": "pulp-cthulhu-en/item/slow-boat-pipes-of-leng",
+      "op": "replace",
+      "path": "quality.notes",
+      "old": "Заклинания «Трубы безумия» (Pipes of Madness) в справочнике `kb/spells` нет — полный текст здесь (кандидат в справочник).",
+      "new": "Заклинание «Трубы безумия» (Pipes of Madness) — запись справочника coc:spell:pipes-of-madness (по Grand Grimoire); текст врезки Pulp Cthulhu — здесь.",
+      "reason": "запись заклинания появилась, пометка устарела",
+      "ref": "Р-191",
+      "correction": false
+    },
+    {
+      "target": "pulp-cthulhu-en/scene/slow-boat-the-final-test",
+      "op": "append",
+      "path": "refs",
+      "value": "coc:spell:pipes-of-madness",
+      "reason": "музыка Труб действует как заклинание «Трубы безумия» (с. 227); запись справочника заведена",
+      "ref": "Р-191",
+      "correction": false
+    },
+    {
+      "target": "pulp-cthulhu-en/tome/book-of-red-jade",
+      "op": "set",
+      "path": "spells.5.spell",
+      "value": "coc:spell:summon-bind",
+      "reason": "книга не даёт текста Summon/Bind Flying Polyp — ссылка на семейство (Р-191)",
+      "ref": "Р-191",
+      "correction": false
+    },
+    {
+      "target": "pulp-cthulhu-en/tome/book-of-red-jade",
+      "op": "replace",
+      "path": "quality.notes",
+      "old": "в справочнике нет — без ссылки, семейство — «Заклинания призыва»;",
+      "new": "в справочнике нет (книга не даёт его текста) — в списке ссылка на семейство «Заклинания призыва»;",
+      "reason": "ссылка на семейство поставлена в списке заклинаний",
+      "ref": "Р-191",
+      "correction": false
+    },
+    {
+      "target": "pulp-cthulhu-en/creature/deep-one-elder-rhathylla",
+      "op": "set",
+      "path": "statblock.spells.items.2.spell",
+      "value": "coc:spell:summon-bind",
+      "reason": "книга не даёт текста Summon/Bind Star Spawn of Cthulhu — ссылка на семейство (Р-191)",
+      "ref": "Р-191",
+      "correction": false
+    },
+    {
+      "target": "pulp-cthulhu-en/creature/deep-one-elder-rhathylla",
+      "op": "replace",
+      "path": "quality.notes",
+      "old": "Заклинания «Summon/Bind Star Spawn of Cthulhu» в справочнике нет — ссылки нет.",
+      "new": "Заклинания «Summon/Bind Star Spawn of Cthulhu» в справочнике нет (книга не даёт его текста) — ссылка на семейство «Заклинания призыва» (coc:spell:summon-bind).",
+      "reason": "ссылка на семейство поставлена",
+      "ref": "Р-191",
+      "correction": false
+    },
+    {
+      "target": "coc:spell:gate-boxes",
+      "op": "replace",
+      "path": "deeper_magic.ru",
+      "old": "Вариант применения шкатулок врат описан в заклинании Vanish (Grand Grimoire).",
+      "new": "Вариант применения шкатулок врат — заклинание «Исчезновение» (Vanish; Grand Grimoire, с. 183), отдельная запись.",
+      "reason": "заведена запись варианта «Исчезновение» (coc:spell:vanish)",
+      "ref": "Р-191",
+      "correction": false
+    },
+    {
+      "target": "coc:spell:gate-boxes",
+      "op": "replace",
+      "path": "quality.notes",
+      "old": "Варианты названия в русской КХ даны общим списком для заклинаний врат (см. «Создание врат»).",
+      "new": "Варианты названия в русской КХ даны общим списком для заклинаний врат (см. «Создание врат»). Псевдоним «Vanish» — из списка других названий в Grand Grimoire (с. 120); заклинание «Исчезновение» (Vanish) — отдельная запись-вариант (coc:spell:vanish): мгновенный перенос заклинателя к одной подготовленной шкатулке (Grand Grimoire, с. 183), а в Pulp Cthulhu (с. 129) — к шкатулке-талисману без врат.",
+      "reason": "различие одноимённых заклинаний (задание Р-191)",
+      "ref": "Р-191",
+      "correction": false
+    }
+  ]
+}

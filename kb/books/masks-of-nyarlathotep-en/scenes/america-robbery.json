@@ -1,0 +1,81 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "masks-of-nyarlathotep-en/scene/america-robbery",
+  "kind": "scene",
+  "name": {
+    "ru": "Ограбление!",
+    "en": "Robbery!"
+  },
+  "description": {
+    "ru": "Если сыщики пытаются добыть книги Роджера Карлайла незаконно, не зная, где записана комбинация, им придётся справиться с охраной поместья, проникнуть в библиотеку, найти тайник стенного сейфа и открыть его.\nУмные сыщики наймут профессионального медвежатника. Хранителю стоит держать таких людей наготове, но пусть сыщики сами додумаются; подходящие профили — в разделе «Наёмники» этой главы (с. 174). Если сыщики выберут этот путь, Хранитель может дать игрокам сыграть самих этих мелких преступников и провести кражу со взломом; кто-то из наёмников может стать и постоянным сыщиком, если игрокам срочно нужна замена.\nЕсли сыщики решат обокрасть библиотеку сами, можно сообщить им, что в особняке будет большой приём, который устраивает Эрика. По желанию они могут сыграть этот приём (с приглашением или без), найти способ удалить гостей из библиотеки, запереть двери и приступить к делу — такие подвиги бывают чудесно весёлыми."
+  },
+  "when": "когда Эрика не показывает книги",
+  "arc": {
+    "scenario": "masks-of-nyarlathotep-en/scenario/america",
+    "part": "Встреча с Эрикой Карлайл",
+    "order": 13
+  },
+  "where": [
+    {
+      "location": "masks-of-nyarlathotep-en/location/america-carlyle-mansion-library"
+    },
+    {
+      "location": "masks-of-nyarlathotep-en/location/america-carlyle-estate",
+      "note": "охрана, ограда, собаки"
+    }
+  ],
+  "participants": [
+    {
+      "id": "masks-of-nyarlathotep-en/character/carlyle-estate-guard",
+      "role": "вооружённая охрана поместья"
+    },
+    {
+      "id": "masks-of-nyarlathotep-en/creature/carlyle-estate-guard-dogs",
+      "role": "сторожевые собаки"
+    }
+  ],
+  "mechanics": {
+    "ru": "Проникнуть в дом — комбинированная проверка Взлома и трудной Скрытности. Поиск в библиотеке: игроки делают групповую проверку Удачи каждые 20 игровых минут; при успехе сыщик натыкается на нужный том По с комбинацией (R15, L14, R13, L12). Открыть сейф без комбинации — проверка Взлома или лом с чрезвычайной проверкой СИЛ (трудной, если у сыщиков есть подходящие инструменты медвежатника). Эрика непременно подаст в суд на взломщиков, но успешная проверка Красноречия может её удержать."
+  },
+  "outcome": {
+    "ru": "Книги из сейфа — у сыщиков (или провал, полиция и суд)."
+  },
+  "refs": [
+    "masks-of-nyarlathotep-en/item/america-roger-carlyle-safe",
+    "masks-of-nyarlathotep-en/character/erica-carlyle",
+    "masks-of-nyarlathotep-en/location/america-carlyle-estate",
+    "coc:skill:locksmith",
+    "coc:skill:stealth",
+    "coc:skill:fast-talk"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "masks-of-nyarlathotep-en",
+      "physical_page": 137,
+      "printed_page": 134,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «Robbery!»"
+    },
+    {
+      "book_id": "masks-of-nyarlathotep-en",
+      "physical_page": 135,
+      "printed_page": 132,
+      "method": "book_text",
+      "verified": true,
+      "note": "охрана поместья, проникновение в дом"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ]
+  }
+}

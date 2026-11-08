@@ -39,7 +39,7 @@ main { display:grid; grid-template-columns: 300px 1fr; min-height: calc(100vh - 
 blockquote.handout { margin:0; padding:10px 16px; border-left:3px solid var(--accent); background:var(--panel); font-family:Georgia, "Times New Roman", serif; }
 #subbar button { font:inherit; padding:4px 10px; border:1px solid var(--line); border-radius:6px; background:none; color:inherit; cursor:pointer; }
 #subbar button.active { background:var(--panel); border-color:var(--accent); color:var(--accent); font-weight:600; }
-#subbar select { padding:4px 8px; border-color:var(--accent); color:var(--accent); font-weight:600; cursor:pointer; }
+#subbar select, .tabs select { padding:4px 8px; border-color:var(--accent); color:var(--accent); font-weight:600; cursor:pointer; }
 #subbar .sep { width:1px; align-self:stretch; background:var(--line); margin:0 6px; }
 /* left panel trees (Р-137): each level is indented past its parent's name, and the type gets smaller with
    depth — 16px for the city, then 15, 14, 13, 12; headings of groups differ by colour, not by size */
@@ -196,6 +196,8 @@ a { color:var(--accent); }
     <button data-tab="table">Таблицы</button>
     <button data-tab="rule">Правила</button>
     <button data-tab="location">Гайды</button>
+    <!-- the guide book: next to «Гайды», only on that tab -->
+    <select id="guidesel" title="Гайд" aria-label="Гайд" hidden></select>
   </div>
   <!-- search is the same on every tab, so it lives in the top row; the second row keeps the tab's own buttons and filters -->
   <input id="q" type="search" placeholder="Поиск по имени" aria-label="Поиск">
@@ -274,7 +276,8 @@ function cityResidents(cityId) {
   [byId(cityId), ...placesIn(cityId)].filter(Boolean).forEach(l => (l.residents||[]).forEach(r => seen.add(r.id)));
   return [...seen].map(byId).filter(Boolean).sort((a, b) => a.name.ru.localeCompare(b.name.ru, 'ru'));
 }
-const CITIES = DATA.locations.filter(x => isTop(x) && !x.part_of).sort((a, b) => a.name.ru.localeCompare(b.name.ru, 'ru'));
+// the guide lists cities; a ship is opened from its scenario (Р-192)
+const CITIES = DATA.locations.filter(x => x.location_type === 'город' && !x.part_of).sort((a, b) => a.name.ru.localeCompare(b.name.ru, 'ru'));
 FILTERS.character.splice(1, 0, ...CITIES.map(c => ['city:' + c.id, 'Жители: ' + c.name.ru]));
 let city = CITIES[0]?.id || null, locMode = 'houses', citySection = 'overview';
 // sections of the city reference page shown from the sub-bar («Кто где живёт» gave way to the «Жители» tree, Р-121);
@@ -508,6 +511,8 @@ const partOpen = (key, byDefault) => partState.has(key) ? partState.get(key) : b
 function listSection() {
   const c = byId(current);
   if (!city || !c || !OUTLINE.includes(citySection)) return null;
+  // a ship is not a city of the guide: its scenario and places stay in the tree under «Сценарии вне городов» (Р-192)
+  if (byId(city)?.location_type !== 'город') return null;
   if (current === city) return citySection;
   return STORY.some(([k]) => k === c.kind) && sectionOf(c.kind) === citySection ? citySection : null;
 }
@@ -583,6 +588,32 @@ function fillToc() {
   box.innerHTML = hs.map((h, i) => `<button data-h="${i}">${esc(text(h))}</button>`).join('');
   box.querySelectorAll('[data-h]').forEach(b => b.onclick = () => hs[b.dataset.h].scrollIntoView({ block: 'start' }));
 }
+// scenarios played outside cities (Р-192): a ship is the place of its scenario, not a city of the guide. At the end of
+// the list: scenario → its scenes by the book's parts → «Места» → the ship → its decks and rooms
+const OUTER_TOPS = DATA.locations.filter(x => isTop(x) && !x.part_of && x.location_type !== 'город');
+const outerOf = s => storyCities(s).filter(id => OUTER_TOPS.some(t => t.id === id)).map(byId);
+function outerScenarios(levelHtml) {
+  const xs = DATA.scenarios.filter(s => !s.part_of && outerOf(s).length && (guide === 'all' || bookOf(s) === guide)).sort(byOrder);
+  if (!xs.length) return '';
+  const rec = x => `<button data-id="${esc(x.id)}" class="rec l1 ${x.id === current ? 'active' : ''}">${esc(x.name.ru)}${ART(x)}</button>`;
+  const group = (key, open, label) => `<div class="part l1" data-part="${esc(key)}">${fold(open)}${esc(label)}</div>`;
+  return `<div class="part outer">Сценарии вне городов</div>` + xs.map(s => {
+    const open = openScen.has(s.id);
+    const ss = scenesOf(s.id), parts = [...new Set(ss.map(x => x.arc.part || ''))];
+    const scenes = parts.map(p => {
+      const ps = ss.filter(x => (x.arc.part || '') === p), key = s.id + '|' + p;
+      const o = partOpen(key, ps.some(x => x.id === current));
+      return group(key, o, p || 'Сцены') + (o ? ps.map(rec).join('') : '');
+    }).join('');
+    const places = outerOf(s).map(t => {
+      const o = openCity.has(t.id);
+      return `<h4 class="dist sub${t.id === current ? ' active' : ''}" data-city="${esc(t.id)}">${mapIcon(t)}${fold(o)}${esc(t.name.ru)}</h4>`
+        + (o ? levelHtml(childrenOf(t.id), 2, t.id) : '');
+    }).join('');
+    return `<h4 class="dist city${s.id === current ? ' active' : ''}" data-scen="${esc(s.id)}">${fold(open)}${esc(s.name.ru)}</h4>`
+      + (open ? scenes + `<div class="part l1">Места</div>` + places : '');
+  }).join('');
+}
 function renderLocList(list) {
   const sec = listSection();
   if (sec) { renderOutline(list, sec); return; }
@@ -627,14 +658,16 @@ function renderLocList(list) {
       const kids = childrenOf(c.id).filter(k => (inGuide(k) || placesIn(k.id).some(inGuide)) && (!res || resIn(k)));
       return `<h4 class="dist city${c.id === current ? ' active' : ''}" data-city="${esc(c.id)}">${mapIcon(c)}${fold(openC)}${esc(c.name.ru)}</h4>`
         + (openC ? (res && hasRes(c) ? place(c, 'Без адреса') : '') + levelHtml(kids, 1, c.id) : '');
-    }).join('') || `<p class="muted" style="padding:8px 16px">${res ? 'Жители не указаны.' : 'В этом гайде мест нет.'}</p>`;
+    }).join('') + (res ? '' : outerScenarios(levelHtml)) || `<p class="muted" style="padding:8px 16px">${res ? 'Жители не указаны.' : 'В этом гайде мест нет.'}</p>`;
     // a row: the arrow only folds or unfolds; the name opens the page (a city opens on «Обзор»); the map icon opens the map
     list.querySelectorAll('h4:not([data-other]) .fold').forEach(f => f.onclick = e => {
       e.stopPropagation();
-      const h = f.closest('h4'), id = h.dataset.city || h.dataset.dist, set = h.dataset.city ? openCity : openDist;
+      const h = f.closest('h4'), id = h.dataset.city || h.dataset.dist || h.dataset.scen, set = h.dataset.city ? openCity : h.dataset.scen ? openScen : openDist;
       set.has(id) ? set.delete(id) : set.add(id);
       renderList();
     });
+    list.querySelectorAll('h4[data-scen]').forEach(h => h.onclick = () => { openScen.add(h.dataset.scen); show(h.dataset.scen); });
+    list.querySelectorAll('[data-part]').forEach(g => g.onclick = () => { const k = g.dataset.part; partState.set(k, !g.querySelector('.fold').textContent.includes('▾')); renderList(); });
     list.querySelectorAll('[data-mapfor]').forEach(i => i.onclick = e => { e.stopPropagation(); openMap(i.dataset.mapfor); });
     list.querySelectorAll('h4[data-city]').forEach(h => h.onclick = () => { const id = h.dataset.city; openCity.add(id); city = id; citySection = 'overview'; show(id); });
     list.querySelectorAll('h4[data-dist]:not([data-other])').forEach(h => h.onclick = () => { openDist.add(h.dataset.dist); show(h.dataset.dist); });
@@ -661,16 +694,17 @@ function renderSubbar() {
     bar.querySelector('#rulebooksel').onchange = e => { ruleBookSel = e.target.value; renderList(); };
     return;
   }
-  if (tab !== 'location' || !CITIES.length) { bar.innerHTML = ''; return; }
-  // one drop-down for the guides: «Все гайды» (the default) or one guide book
-  bar.innerHTML = `<select id="guidesel" title="Гайд">${[['all', 'Все гайды'], ...GUIDES.map(g => [g, BOOKS[g] || g])].map(([g, l]) => `<option value="${esc(g)}"${g === guide ? ' selected' : ''}>${esc(l)}</option>`).join('')}</select>`
-    + '<span class="sep"></span>'
-    + [['houses', 'Дома'], ['residents', 'Жители']].map(([m, l]) => `<button data-mode="${m}" class="${m === locMode ? 'active' : ''}">${l}</button>`).join('')
+  const gs = document.getElementById('guidesel');
+  gs.hidden = tab !== 'location' || !CITIES.length;
+  if (gs.hidden) { bar.innerHTML = ''; return; }
+  // one drop-down for the guides next to the «Гайды» tab: «Все гайды» (the default) or one guide book
+  gs.innerHTML = [['all', 'Все гайды'], ...GUIDES.map(g => [g, BOOKS[g] || g])].map(([g, l]) => `<option value="${esc(g)}"${g === guide ? ' selected' : ''}>${esc(l)}</option>`).join('');
+  bar.innerHTML = [['houses', 'Дома'], ['residents', 'Жители']].map(([m, l]) => `<button data-mode="${m}" class="${m === locMode ? 'active' : ''}">${l}</button>`).join('')
     // a section is marked while the city page or one of its scenario records is open
     // «Сценарии» counts the book's scenarios, not their stages
     + (city && current ? '<span class="sep"></span>' + CITY_SECTIONS.filter(([s]) => s === 'map' ? mapsOf(city).length : !SET[s] || storyIn(city, s).length)
       .map(([s, l]) => `<button data-sec="${s}" class="${(current === city || SET[s] && sectionOf(byId(current)?.kind) === s) && s === citySection ? 'active' : ''}">${l}${SET[s] ? ` (${storyIn(city, s).filter(x => !x.part_of).length})` : ''}</button>`).join('') : '');
-  bar.querySelector('#guidesel').onchange = e => { guide = e.target.value; if (guide === 'all') { showGuides(); return; } const cs = guideCities(); if (cs.length && !cs.some(c => c.id === city)) city = cs[0].id; renderSubbar(); city ? show(city) : renderList(); };
+  gs.onchange = e => { guide = e.target.value; if (guide === 'all') { showGuides(); return; } const cs = guideCities(); if (cs.length && !cs.some(c => c.id === city)) city = cs[0].id; renderSubbar(); city ? show(city) : renderList(); };
   // the map on screen redraws too: «Жители» puts resident dots around the houses
   // in a section that lists its contents, «Дома» and «Жители» go back to the city's places
   bar.querySelectorAll('[data-mode]').forEach(b => b.onclick = () => { locMode = b.dataset.mode; if (listSection()) { citySection = 'overview'; show(city); return; } renderSubbar(); renderList(); if (document.getElementById('mapinner')) initMap(current); });
@@ -963,7 +997,7 @@ function cityCard(c) {
   const ofKind = ks => tabs.filter(tb => ks.includes(tb.kind || 'прочее'));
   // data remarks (quality) belong to the record, not to every section: shown once, at the end of «Обзор»
   // the «город · также: …» line only on «Обзор»; other sections keep just the name
-  const head = `<h2>${esc(c.name.ru)}</h2>${citySection === 'overview' || !CITY_SECTIONS.some(([s]) => s === citySection) ? `<div class="sub">${esc(c.location_type)}${(c.aliases||[]).length ? ' · также: ' + c.aliases.map(esc).join(', ') : ''}</div>` : ''}`;
+  const head = `<h2>${esc(c.name.ru)}</h2>${citySection === 'overview' || !CITY_SECTIONS.some(([s]) => s === citySection) ? `<div class="sub">${esc(c.location_type)}${c.location_type === 'корабль' ? DATA.scenarios.filter(s => !s.part_of && outerOf(s).includes(c)).map(s => ' · сценарий «' + link(s.id, s.name.ru) + '»').join('') : ''}${(c.aliases||[]).length ? ' · также: ' + c.aliases.map(esc).join(', ') : ''}</div>` : ''}`;
   const remarks = flags(c) ? `<section><h3>Заметки о данных</h3>${flags(c)}</section>` : '';
   const paras = richText;
   const kids = childrenOf(c.id);
@@ -1544,9 +1578,23 @@ function storyCities(x) {
   const up = x.kind === 'scene' ? byId(x.arc?.scenario) : x.kind === 'scenario' ? byId(x.part_of) : null;
   if (up) { const cs = storyCities(up); storyCityCache.set(x.id, cs); return cs; }
   let cs = [...new Set(storyPlaces(x).map(l => cityOf(l)?.id).filter(Boolean))];
+  // a scenario without places of its own lies where most of its scenes (and the scenes of its stages) are played
+  if (!cs.length && x.kind === 'scenario') {
+    const ids = [x.id, ...DATA.scenarios.filter(s => s.part_of === x.id).map(s => s.id)], n = {};
+    DATA.scenes.filter(s => ids.includes(s.arc?.scenario)).flatMap(storyPlaces).forEach(l => { const k = cityOf(l)?.id; if (k) n[k] = (n[k] || 0) + 1; });
+    cs = Object.entries(n).sort((a, b) => b[1] - a[1]).slice(0, 1).map(([k]) => k);
+  }
+  // a record without places (a handout, an item) lies where the scenes and scenarios that point at it are played
+  if (!cs.length && x.kind !== 'scenario' && x.kind !== 'scene') {
+    storyCityCache.set(x.id, []);
+    const n = {};
+    storyAll().filter(y => (y.kind === 'scene' || y.kind === 'scenario') && pointsAt(y).includes(x.id)).forEach(y => storyCities(y).forEach(k => n[k] = (n[k] || 0) + 1));
+    cs = Object.entries(n).sort((a, b) => b[1] - a[1]).slice(0, 1).map(([k]) => k);
+  }
   if (!cs.length) {
     const n = {};
-    storyAll().filter(y => bookOf(y) === bookOf(x)).forEach(y => storyPlaces(y).forEach(l => { const k = cityOf(l)?.id; if (k) n[k] = (n[k] || 0) + 1; }));
+    // only a city of the guide: a ship keeps just what is played on board (Р-192)
+    storyAll().filter(y => bookOf(y) === bookOf(x)).forEach(y => storyPlaces(y).forEach(l => { const t = cityOf(l), k = t?.location_type === 'город' && t.id; if (k) n[k] = (n[k] || 0) + 1; }));
     cs = Object.entries(n).sort((a, b) => b[1] - a[1]).slice(0, 1).map(([k]) => k);
   }
   storyCityCache.set(x.id, cs);
@@ -1590,6 +1638,7 @@ function scenarioCard(c) {
     <div class="sub">${parent ? 'этап сценария «' + link(parent.id, parent.name.ru) + '»' : 'сценарий'}${BOOKS[bookOf(c)] ? ' · ' + esc(BOOKS[bookOf(c)]) : ''}</div>
     ${flags(c)}
     ${sec('Коротко', paraBlock(c.summary?.ru))}
+    ${!parent && outerOf(c).length ? sec('Место действия', outerOf(c).map(t => link(t.id, t.name.ru) + ` <span class="muted">— ${esc(t.location_type)}, помещений: ${descendants(t.id).length}</span>`).join('<br>')) : ''}
     ${stages.length ? sec('Этапы', `<ul>${stages.map(t => `<li>${link(t.id, t.name.ru)}${t.summary ? ` <span class="muted">— ${esc(t.summary.ru)}</span>` : ''}</li>`).join('')}</ul>`) : ''}
     ${sec('Для Хранителя', paraBlock(c.keeper_info?.ru))}
     ${sec('Советы Хранителю', paraBlock(c.advice?.ru))}
@@ -1686,6 +1735,9 @@ function show(id, how = 'push') {
     const cc = cityOf(c);
     // opening a place expands its city; opening the city itself leaves the toggle alone
     if (cc) { city = cc.id; if (cc.id !== c.id) openCity.add(cc.id); }
+    // a ship and its places unfold their scenario in «Сценарии вне городов» (Р-192)
+    if (cc && cc.location_type !== 'город') openCity.add(cc.id);
+    if (cc && cc.location_type !== 'город') DATA.scenarios.filter(s => !s.part_of && outerOf(s).includes(cc)).forEach(s => openScen.add(s.id));
     // opening a place expands its district and the building it is in; opening the district itself leaves the toggle alone
     for (let q = byId(c.part_of); q && q.id !== city; q = byId(q.part_of)) openDist.add(q.id);
     // «Жители» lists only places with residents: a place without them switches the list back to «Дома»

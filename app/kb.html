@@ -234,8 +234,7 @@ const FILTERS = {
   creature: [['', 'Все категории'], ...Object.entries(CAT)],
   character: [['', 'Все персонажи'], ['role:npc', 'NPC'], ['era:1920s', 'Эпоха: 1920-е'], ['era:1930s', 'Эпоха: 1930-е'], ['era:modern', 'Эпоха: современность'],
     ...[...new Set(DATA.characters.map(c => c.sources?.[0]?.book_id))].filter(Boolean).sort().map(b => ['book:' + b, (BOOKS[b] || b).replace(': готовые персонажи', '')])],
-  occupation: [['', 'Все профессии'], ['lovecraftian', 'Лавкрафтовские'], ['era:1920s', 'Эпоха: 1920-е'], ['era:1930s', 'Эпоха: 1930-е'], ['era:modern', 'Эпоха: современность'],
-    ['skills', 'Навыки'], ...[...new Set(DATA.skills.map(s => s.category))].sort((a, b) => a.localeCompare(b, 'ru')).map(c => ['skills:' + c, 'Навыки: ' + c])],
+  occupation: [['', 'Все профессии'], ['lovecraftian', 'Лавкрафтовские'], ['era:1920s', 'Эпоха: 1920-е'], ['era:1930s', 'Эпоха: 1930-е'], ['era:modern', 'Эпоха: современность']],
   skill: [['', 'Все категории'], ...[...new Set(DATA.skills.map(s => s.category))].sort().map(c => [c, c])],
   spell: [['', 'Все типы'], ['family', 'Только общие (семейства)'], ...[...new Set(DATA.spells.map(s => s.category).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'ru')).map(c => [c, c])],
 };
@@ -348,7 +347,6 @@ function matches(c, q, f) {
   if (tab === 'creature') return c.category === f;
   if (tab === 'character' && f.startsWith('city:')) return cityResidents(f.slice(5)).some(x => x.id === c.id);
   if (tab === 'character') { const [k, v] = f.split(':'); return k === 'role' ? (c.roles||[]).includes(v) : k === 'era' ? (c.axes?.era||[]).includes(v) : bookOf(c) === v; }
-  if (tab === 'occupation' && f.startsWith('skills')) return false;
   if (tab === 'occupation') return f === 'lovecraftian' ? c.lovecraftian : (c.axes?.era||[]).includes(f.split(':')[1]);
   if (tab === 'spell' && f === 'family') return DATA.spells.some(s => s.variant_of === c.id);
   if (tab === 'location') return c.location_type === f;
@@ -380,10 +378,12 @@ const TAB_RU = { ...Object.fromEntries([...document.querySelectorAll('.tabs butt
 const MAGIC = [['spell', 'Все заклинания'], ['tome', 'Книги']];
 // the tables live in the «Правила» tab (Р-198)
 const RULES_SUB = [['rule', 'Правила'], ['table', 'Таблицы']];
+// the skills live in the «Профессии» tab (Р-200)
+const OCC_SUB = [['occupation', 'Профессии'], ['skill', 'Навыки']];
 // the tab a record opens in: scenario material belongs to the guide (Р-132)
 // skills live in the «Профессии» tab (Р-193)
-const tabFor = t => STORY.some(([k]) => k === t) ? 'location' : t === 'archetype' || t === 'talent' ? 'rule' : t === 'skill' ? 'occupation' : t;
-const topTab = t => t === 'tome' ? 'spell' : t === 'table' ? 'rule' : tabFor(t);
+const tabFor = t => STORY.some(([k]) => k === t) ? 'location' : t === 'archetype' || t === 'talent' ? 'rule' : t;
+const topTab = t => t === 'tome' ? 'spell' : t === 'table' ? 'rule' : t === 'skill' ? 'occupation' : tabFor(t);
 // a small picture sign after the name in the lists: the record has pictures (Р-169)
 const ART = c => (c.images||[]).length ? '<span class="hasart" title="Есть картинка" aria-label="есть картинка"><svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="11" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="5.5" cy="6.3" r="1.4" fill="currentColor"/><path d="M2.5 12.5l4-4.2 2.6 2.6 1.7-1.6 3 3.2z" fill="currentColor"/></svg></span>' : '';
 const item = (c, alias) => `<button data-id="${esc(c.id)}" class="${c.id===current?'active':''}">${esc(c.name.ru)}${ART(c)}
@@ -409,7 +409,7 @@ function renderList() {
     const set = SET[tab];
     const items = set.filter(c => matches(c, q, f));
     document.getElementById('count').textContent = items.length + ' из ' + set.length;
-    list.innerHTML = tab === 'rule' ? ruleGroups(items) : tab === 'occupation' ? occGroups(items) : items.map(c => item(c)).join('');
+    list.innerHTML = tab === 'rule' ? ruleGroups(items) : tab === 'occupation' ? occGroups(items) : tab === 'skill' ? skillGroups(items) : items.map(c => item(c)).join('');
   }
   list.querySelectorAll('button').forEach(b => b.onclick = () => show(b.dataset.id));
   list.querySelectorAll('[data-rnode]').forEach(f => f.onclick = e => { e.stopPropagation(); const k = f.dataset.rnode; partState.set(k, f.textContent !== '▾'); renderList(); });
@@ -432,8 +432,7 @@ const ruleChapter = r => {
   if (core) return krChapter(rulePage(core));
   return own ? own[2] || `${BOOKS[b] || b}: ${own[1]}` : 'Прочее';
 };
-// «Профессии» with the skills (Р-193): a profession unfolds into its skills (choices as «на выбор N»); after the
-// professions — «Все навыки» by category
+// «Профессии» (Р-193, Р-200): a profession unfolds into its skills (choices as «на выбор N»)
 const occSkillLabel = x => (x.skill && byId(x.skill) ? byId(x.skill).name.ru : x.raw || '') + (x.specialization ? ` (${x.specialization})` : '');
 function occGroups(items) {
   const cur = byId(current);
@@ -448,15 +447,17 @@ function occGroups(items) {
     return item(c).replace('class="', 'class="rin1 ').replace(/^(<button[^>]*>)/, `$1<span class="rfold" data-rnode="${esc(k)}" title="Навыки профессии">${o ? '▾' : '▸'}</span>`)
       + (o ? `<div class="part l2">Навыки профессии</div>` + skills : '');
   };
-  // «Все навыки» first (Р-196); the filter «Навыки» / «Навыки: <категория>» leaves only the skills, unfolded
-  const f = document.getElementById('cat').value, only = f.startsWith('skills');
-  const sk = DATA.skills.filter(rsetOk).filter(s => !f.startsWith('skills:') || s.category === f.slice(7));
-  const cats = [...new Set(sk.map(s => s.category))].sort((a, b) => a.localeCompare(b, 'ru'));
-  const ko = only || partOpen('occ|skills', cur?.kind === 'skill');
-  if (only) document.getElementById('count').textContent = sk.length + ' из ' + DATA.skills.length;
-  return head('occ|skills', ko, `Все навыки (${sk.length})`, 0)
-    + (ko ? cats.map(cat => { const xs = sk.filter(s => s.category === cat), k = 'occ|skills|' + cat, o = cats.length === 1 || partOpen(k, xs.includes(cur)); return head(k, o, `${cat[0].toUpperCase() + cat.slice(1)} (${xs.length})`, 1) + (o ? xs.map(s => skillBtn(s.id, s.name.ru, 2)).join('') : ''); }).join('') : '')
-    + items.map(occ).join('');
+  return items.map(occ).join('');
+}
+// «Навыки» next to «Профессии» (Р-200): the skills by category, a category folds; one category chosen in the
+// filter, or the one with the open skill, is unfolded
+function skillGroups(items) {
+  const cur = byId(current);
+  const cats = [...new Set(items.map(s => s.category))].sort((a, b) => a.localeCompare(b, 'ru'));
+  return cats.map(cat => {
+    const xs = items.filter(s => s.category === cat), k = 'skills|' + cat, o = cats.length === 1 || partOpen(k, xs.includes(cur));
+    return `<div class="part" data-rgroup="${esc(k)}">${fold(o)}${esc(cat[0].toUpperCase() + cat.slice(1))} (${xs.length})</div>` + (o ? xs.map(s => item(s).replace('class="', 'class="rin1 ')).join('') : '');
+  }).join('');
 }
 function ruleGroups(items) {
   const cur = byId(current);
@@ -721,6 +722,11 @@ function renderSubbar() {
     bar.querySelectorAll('[data-magic]').forEach(b => b.onclick = () => { if (b.dataset.magic !== tab) setTab(b.dataset.magic); });
     return;
   }
+  if (topTab(tab) === 'occupation') {
+    bar.innerHTML = OCC_SUB.map(([t, l]) => `<button data-osub="${t}" class="${t === tab ? 'active' : ''}">${l} (${SET[t].filter(rsetOk).length})</button>`).join('');
+    bar.querySelectorAll('[data-osub]').forEach(b => b.onclick = () => { if (b.dataset.osub !== tab) setTab(b.dataset.osub); });
+    return;
+  }
   if (topTab(tab) === 'rule') {
     // «Правила / Таблицы» as «Все заклинания / Книги» (Р-198)
     const rs = DATA.rules.filter(rsetOk);
@@ -755,7 +761,7 @@ function renderSubbar() {
 // no «1930-е» if nothing is left there; the choice stays when it still has records
 function fillCat(keep) {
   const sel = document.getElementById('cat'), was = keep ? sel.value : '';
-  const opts = FILTERS[tab].filter(([v]) => !v || tab === 'location' || (v.startsWith('skills') ? DATA.skills.some(s => rsetOk(s) && (v === 'skills' || s.category === v.slice(7))) : SET[tab].some(c => matches(c, '', v))));
+  const opts = FILTERS[tab].filter(([v]) => !v || tab === 'location' || SET[tab].some(c => matches(c, '', v)));
   sel.innerHTML = opts.map(([v, l]) => `<option value="${esc(v)}">${esc(l)}</option>`).join('');
   sel.value = opts.some(([v]) => v === was) ? was : '';
 }
@@ -1807,7 +1813,9 @@ function show(id, how = 'push') {
   }
   // current first: the sub-bar marks «Обзор / Карта / …» only while the city page itself is open
   current = id;
-  if (tabFor(c.kind) !== tab && !stay) setTab(tabFor(c.kind), true);
+  // a skill opened from «Профессии» keeps the professions list (Р-200)
+  const stayOcc = tab === 'occupation' && c.kind === 'skill';
+  if (tabFor(c.kind) !== tab && !stay && !stayOcc) setTab(tabFor(c.kind), true);
   if (tab === 'location') renderSubbar();
   renderList();
   const card = document.getElementById('card');

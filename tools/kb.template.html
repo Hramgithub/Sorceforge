@@ -439,7 +439,8 @@ function occGroups(items) {
   const head = (key, open, label, lvl) => `<div class="part${lvl ? ' l' + lvl : ''}" data-rgroup="${esc(key)}">${fold(open)}${esc(label)}</div>`;
   const skillBtn = (id, label, lvl) => byId(id) ? `<button data-id="${esc(id)}" class="rin${lvl} ${id === current ? 'active' : ''}">${esc(label)}</button>` : `<div class="part l${lvl} muted">${esc(label)}</div>`;
   const occ = c => {
-    const k = 'occ|' + c.id, o = partOpen(k, c.id === current);
+    // folded until its arrow is clicked (Р-196): opening the profession's page does not unfold the list
+    const k = 'occ|' + c.id, o = partOpen(k, false);
     const skills = (c.skills||[]).map(s => s.choice
       ? `<div class="part l3 muted">${Array.isArray(s.choice.of) ? `на выбор ${s.choice.count}:` : esc(s.raw)}</div>` + (Array.isArray(s.choice.of) ? s.choice.of.map(x => typeof x === 'string' ? skillBtn(x, byId(x)?.name.ru || x, 4) : skillBtn(x.skill, occSkillLabel(x), 4)).join('') : '')
       : skillBtn(s.skill, occSkillLabel(s) + (s.count ? ` ×${s.count}` : ''), 3)).join('');
@@ -1797,8 +1798,6 @@ function show(id, how = 'push') {
     if (up) { openScen.add(up.id); if (up.part_of) openScen.add(up.part_of); }
     if (c.kind === 'scene' && c.arc) partState.set(c.arc.scenario + '|' + (c.arc.part || ''), true);
   }
-  // an opened profession stays unfolded while its skills are opened from it (Р-193)
-  if (c.kind === 'occupation') partState.set('occ|' + c.id, true);
   // current first: the sub-bar marks «Обзор / Карта / …» only while the city page itself is open
   current = id;
   if (tabFor(c.kind) !== tab && !stay) setTab(tabFor(c.kind), true);

@@ -207,7 +207,7 @@ a { color:var(--accent); }
   <select id="occ" aria-label="Профессия" hidden></select>
   <select id="mech" aria-label="Механика" hidden><option value="">Все механики</option><option value="мгновенное">Мгновенные</option><option value="поддерживаемое">Поддерживаемые</option><option value="ритуал">Ритуалы</option></select>
   <select id="rset" aria-label="Свод правил" title="Свод правил: классика, Pulp или всё" hidden><option value="">Все: классика и Pulp</option><option value="core">Классика</option><option value="pulp">Pulp</option></select>
-  <select id="era" aria-label="Эпоха" hidden><option value="">Все эпохи</option><option value="1920s">1920-е</option><option value="modern">Современность</option></select>
+  <select id="era" aria-label="Эпоха" hidden><option value="">Все эпохи</option><option value="1920s">1920-е</option><option value="1930s">1930-е</option><option value="modern">Современность</option></select>
   <span id="count" class="muted"></span>
 </span></nav>
 <main>
@@ -230,9 +230,9 @@ const BG = [['description','Описание'],['ideology','Убеждения']
   ['treasured_possessions','Ценности'],['traits','Черты'],['injuries','Травмы и шрамы'],['phobias_manias','Фобии и мании'],['arcane_tomes','Тайные знания'],['encounters','Встречи со странными сущностями'],['secret','Тайна']];
 const FILTERS = {
   creature: [['', 'Все категории'], ...Object.entries(CAT)],
-  character: [['', 'Все персонажи'], ['role:npc', 'NPC'], ['era:1920s', 'Эпоха: 1920-е'], ['era:modern', 'Эпоха: современность'],
+  character: [['', 'Все персонажи'], ['role:npc', 'NPC'], ['era:1920s', 'Эпоха: 1920-е'], ['era:1930s', 'Эпоха: 1930-е'], ['era:modern', 'Эпоха: современность'],
     ...[...new Set(DATA.characters.map(c => c.sources?.[0]?.book_id))].filter(Boolean).sort().map(b => ['book:' + b, (BOOKS[b] || b).replace(': готовые персонажи', '')])],
-  occupation: [['', 'Все профессии'], ['lovecraftian', 'Лавкрафтовские'], ['era:1920s', 'Эпоха: 1920-е'], ['era:modern', 'Эпоха: современность']],
+  occupation: [['', 'Все профессии'], ['lovecraftian', 'Лавкрафтовские'], ['era:1920s', 'Эпоха: 1920-е'], ['era:1930s', 'Эпоха: 1930-е'], ['era:modern', 'Эпоха: современность']],
   skill: [['', 'Все категории'], ...[...new Set(DATA.skills.map(s => s.category))].sort().map(c => [c, c])],
   spell: [['', 'Все типы'], ['family', 'Только общие (семейства)'], ...[...new Set(DATA.spells.map(s => s.category).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'ru')).map(c => [c, c])],
 };

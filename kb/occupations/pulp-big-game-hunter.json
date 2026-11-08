@@ -1,0 +1,131 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:pulp-big-game-hunter",
+  "kind": "occupation",
+  "name": {
+    "ru": "Охотник на крупную дичь",
+    "en": "Big Game Hunter"
+  },
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Пульп-профессия из главы 2 «Создание пульп-героев» (с. 27); книга даёт только числа и навыки, без описания. Та же профессия в правилах ядра — «Охотник на крупную дичь».",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + (ЛВК × 2 или СИЛ × 2)",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "DEX",
+          2
+        ]
+      ],
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "STR",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "20–50",
+    "min": 20,
+    "max": 50
+  },
+  "contacts": "иностранные чиновники, егеря, бывшие (обычно богатые) клиенты, банды и торговцы чёрного рынка, владельцы зоопарков",
+  "skills": [
+    {
+      "raw": "Стрельба",
+      "skill": "coc:skill:firearms"
+    },
+    {
+      "raw": "Слух или Внимание",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:listen",
+          "coc:skill:spot-hidden"
+        ]
+      }
+    },
+    {
+      "raw": "Естествознание",
+      "skill": "coc:skill:natural-world"
+    },
+    {
+      "raw": "Ориентирование",
+      "skill": "coc:skill:navigate"
+    },
+    {
+      "raw": "Иностранный язык или Выживание (любое)",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:language-other",
+          {
+            "skill": "coc:skill:survival",
+            "specialization": "Любое"
+          }
+        ]
+      }
+    },
+    {
+      "raw": "Наука (биология или ботаника)",
+      "choice": {
+        "count": 1,
+        "of": [
+          {
+            "skill": "coc:skill:science",
+            "specialization": "Биология"
+          },
+          {
+            "skill": "coc:skill:science",
+            "specialization": "Ботаника"
+          }
+        ]
+      }
+    },
+    {
+      "raw": "Скрытность",
+      "skill": "coc:skill:stealth"
+    },
+    {
+      "raw": "Чтение следов",
+      "skill": "coc:skill:track"
+    }
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "pulp"
+  },
+  "sources": [
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 28,
+      "printed_page": 27,
+      "method": "book_text",
+      "verified": true,
+      "note": "Глава 2, шаг 4 «Выбор профессии»: Big Game Hunter"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "editorial_text"
+    ],
+    "notes": "Фраза о профессии ядра в описании — наша (Р-183)."
+  }
+}

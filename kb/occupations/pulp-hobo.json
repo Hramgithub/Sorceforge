@@ -1,0 +1,114 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:pulp-hobo",
+  "kind": "occupation",
+  "name": {
+    "ru": "Бездомный",
+    "en": "Hobo"
+  },
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Пульп-профессия из главы 2 «Создание пульп-героев» (с. 30); книга даёт только числа и навыки, без описания. Та же профессия в правилах ядра — «Бездомный».",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + (НАР × 2 или ЛВК × 2)",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "APP",
+          2
+        ]
+      ],
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "DEX",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "0–5",
+    "min": 0,
+    "max": 5
+  },
+  "contacts": "другие бродяги, несколько дружелюбных железнодорожных охранников, сердобольные люди во многих городах",
+  "skills": [
+    {
+      "raw": "Искусство/ремесло (любое)",
+      "skill": "coc:skill:art-craft",
+      "specialization": "Любое"
+    },
+    {
+      "raw": "Лазание",
+      "skill": "coc:skill:climb"
+    },
+    {
+      "raw": "Прыжки",
+      "skill": "coc:skill:jump"
+    },
+    {
+      "raw": "Слух",
+      "skill": "coc:skill:listen"
+    },
+    {
+      "raw": "Взлом или Ловкость рук",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:locksmith",
+          "coc:skill:sleight-of-hand"
+        ]
+      }
+    },
+    {
+      "raw": "Ориентирование",
+      "skill": "coc:skill:navigate"
+    },
+    {
+      "raw": "Скрытность",
+      "skill": "coc:skill:stealth"
+    },
+    {
+      "raw": "один любой другой навык в зависимости от специальности и эпохи",
+      "choice": {
+        "count": 1,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "pulp"
+  },
+  "sources": [
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 31,
+      "printed_page": 30,
+      "method": "book_text",
+      "verified": true,
+      "note": "Глава 2, шаг 4 «Выбор профессии»: Hobo"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "editorial_text"
+    ],
+    "notes": "Фраза о профессии ядра в описании — наша (Р-183)."
+  }
+}

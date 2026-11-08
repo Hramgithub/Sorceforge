@@ -1,0 +1,56 @@
+{
+  "schema": "sourcefold.rule.v0",
+  "id": "coc:rule:pulp-optional-hit-points",
+  "kind": "rule",
+  "name": {
+    "ru": "Пульп-о-метр: пункты здоровья",
+    "en": "Optional Hit Points"
+  },
+  "aliases": [
+    "Pulp-O-Meter: Optional Rules",
+    "Optional Hit Points",
+    "Необязательные правила (пульп-о-метр)"
+  ],
+  "category": "урон и здоровье",
+  "optional": true,
+  "summary": {
+    "ru": "Необязательное правило: пульп-герои выдерживают вдвое больше урона, чем персонажи обычного «Зова Ктулху» (ПЗ = (ВЫН + ТЕЛ) / 5); для менее живучих героев и «слабого» пульпа ПЗ считают как в ядре — (ВЫН + ТЕЛ) / 10 с округлением вниз."
+  },
+  "text": {
+    "ru": "Пульп-герои выдерживают вдвое больше урона, чем персонаж обычного «Зова Ктулху». Если вы предпочитаете менее живучих героев и хотите «слабый» пульп, сложите ВЫН и ТЕЛ и разделите сумму на 10, округляя дроби вниз."
+  },
+  "steps": [
+    "Обычный пульп: ПЗ = (ВЫН + ТЕЛ) / 5, округление вниз.",
+    "«Слабый» пульп: ПЗ = (ВЫН + ТЕЛ) / 10, округление вниз (как в ядре)."
+  ],
+  "refs": [
+    "coc:rule:pulp-o-meter",
+    "coc:rule:pulp-generate-characteristics",
+    "coc:rule:other-attributes",
+    "coc:rule:pulp-wounds-and-healing",
+    "coc:rule:pulp-optional-talents"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "pulp"
+  },
+  "sources": [
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 43,
+      "printed_page": 42,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Pulp-O-Meter: Optional Rules» — «Optional Hit Points»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "«Pulp-O-Meter» (пульп-о-метр) — шкала «насколько пульпа» в книге; перевод — наш. Обычная формула ПЗ пульпа — шаг 2 (с. 23)."
+  }
+}

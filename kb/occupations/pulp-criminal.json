@@ -1,0 +1,132 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:pulp-criminal",
+  "kind": "occupation",
+  "name": {
+    "ru": "Преступник",
+    "en": "Criminal"
+  },
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Пульп-профессия из главы 2 «Создание пульп-героев» (с. 28); книга даёт только числа и навыки, без описания. Та же профессия в правилах ядра — «Преступник (одиночка/наёмник)».",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + (ЛВК × 2 или НАР × 2)",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "DEX",
+          2
+        ]
+      ],
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "APP",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "5–65",
+    "min": 5,
+    "max": 65
+  },
+  "contacts": "другие преступники, организованная преступность, полиция, уличные громилы, частные сыщики",
+  "skills": [
+    {
+      "raw": "Искусство/ремесло (любое) или Маскировка",
+      "choice": {
+        "count": 1,
+        "of": [
+          {
+            "skill": "coc:skill:art-craft",
+            "specialization": "Любое"
+          },
+          "coc:skill:disguise"
+        ]
+      }
+    },
+    {
+      "raw": "Оценка",
+      "skill": "coc:skill:appraise"
+    },
+    {
+      "raw": "один социальный навык (Обаяние, Красноречие или Запугивание)",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:charm",
+          "coc:skill:fast-talk",
+          "coc:skill:intimidate"
+        ]
+      }
+    },
+    {
+      "raw": "Ближний бой или Стрельба",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:fighting",
+          "coc:skill:firearms"
+        ]
+      }
+    },
+    {
+      "raw": "Взлом или Механика",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:locksmith",
+          "coc:skill:mechanical-repair"
+        ]
+      }
+    },
+    {
+      "raw": "Скрытность",
+      "skill": "coc:skill:stealth"
+    },
+    {
+      "raw": "Психология",
+      "skill": "coc:skill:psychology"
+    },
+    {
+      "raw": "Внимание",
+      "skill": "coc:skill:spot-hidden"
+    }
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "pulp"
+  },
+  "sources": [
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 29,
+      "printed_page": 28,
+      "method": "book_text",
+      "verified": true,
+      "note": "Глава 2, шаг 4 «Выбор профессии»: Criminal"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "editorial_text"
+    ],
+    "notes": "Фраза о профессии ядра в описании — наша (Р-183)."
+  }
+}

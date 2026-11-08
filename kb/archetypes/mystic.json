@@ -1,0 +1,175 @@
+{
+  "schema": "sourcefold.archetype.v0",
+  "id": "coc:archetype:mystic",
+  "kind": "archetype",
+  "name": {
+    "ru": "Мистик",
+    "en": "Mystic"
+  },
+  "description": {
+    "ru": "Искатель скрытого, исследователь незримого мира: мистик ищет тайны и глубинную истину бытия. Это могут быть кабинетные учёные, шаманы-целители, цирковые прорицатели или визионеры, но все они стремятся к знанию и опыту сил, лежащих вне естественного порядка, — ради личной выгоды или блага человечества."
+  },
+  "core_characteristic": {
+    "raw": "МОЩ",
+    "options": [
+      "coc:characteristic:pow"
+    ]
+  },
+  "bonus_points": 100,
+  "bonus_skills": [
+    {
+      "raw": "Искусство/ремесло (любое)",
+      "id": "coc:skill:art-craft",
+      "specialization": "любое"
+    },
+    {
+      "raw": "Наука (астрономия)",
+      "id": "coc:skill:science",
+      "specialization": "астрономия"
+    },
+    {
+      "raw": "Маскировка",
+      "id": "coc:skill:disguise",
+      "specialization": null
+    },
+    {
+      "raw": "История",
+      "id": "coc:skill:history",
+      "specialization": null
+    },
+    {
+      "raw": "Гипноз",
+      "id": "coc:skill:hypnosis",
+      "specialization": null
+    },
+    {
+      "raw": "Иностранный язык (любой)",
+      "id": "coc:skill:language-other",
+      "specialization": "любой"
+    },
+    {
+      "raw": "Естествознание",
+      "id": "coc:skill:natural-world",
+      "specialization": null
+    },
+    {
+      "raw": "Оккультизм",
+      "id": "coc:skill:occult",
+      "specialization": null
+    },
+    {
+      "raw": "Психология",
+      "id": "coc:skill:psychology",
+      "specialization": null
+    },
+    {
+      "raw": "Ловкость рук",
+      "id": "coc:skill:sleight-of-hand",
+      "specialization": null
+    },
+    {
+      "raw": "Скрытность",
+      "id": "coc:skill:stealth",
+      "specialization": null
+    },
+    {
+      "raw": "выбранные психические навыки (если взят талант «Психическая сила»)",
+      "id": null,
+      "specialization": null
+    }
+  ],
+  "talents": {
+    "raw": "любые два (рекомендуется талант «Психическая сила» — Psychic)",
+    "required": [],
+    "choose": 2
+  },
+  "suggested_occupations": [
+    {
+      "raw": "Художник",
+      "id": "coc:occupation:pulp-artist"
+    },
+    {
+      "raw": "Лидер культа",
+      "id": "coc:occupation:pulp-cult-leader"
+    },
+    {
+      "raw": "Дилетант",
+      "id": "coc:occupation:pulp-dilettante"
+    },
+    {
+      "raw": "Экзорцист",
+      "id": "coc:occupation:pulp-exorcist"
+    },
+    {
+      "raw": "Артист",
+      "id": "coc:occupation:pulp-entertainer"
+    },
+    {
+      "raw": "Оккультист",
+      "id": "coc:occupation:pulp-occultist"
+    },
+    {
+      "raw": "Парапсихолог",
+      "id": "coc:occupation:pulp-parapsychologist"
+    },
+    {
+      "raw": "Член племени",
+      "id": "coc:occupation:pulp-tribe-member"
+    }
+  ],
+  "suggested_traits": [
+    "расчётливый",
+    "хитрый",
+    "двуличный",
+    "манипулятор",
+    "хаотичный",
+    "необузданный",
+    "эффектный"
+  ],
+  "notes": {
+    "ru": "С разрешения Хранителя мистик может черпать сверхъестественные силы, недоступные обычным людям. Часто таких людей преследовали и травили, и они прятали свои «дары» от тех, кто назвал бы их «ведьмами»; других считают шарлатанами и чуть ли не уродцами из балагана. Такие герои должны взять пульп-талант «Психическая сила» (в тексте архетипа — Psychic talent), который позволяет вкладывать пункты навыков в один или несколько психических навыков (см. «Психические силы» — Psychic Powers, с. 83). Если талант взят, бонусные пункты архетипа можно вложить и в выбранные психические навыки."
+  },
+  "refs": [
+    "coc:talent:psychic-power"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "pulp"
+  },
+  "sources": [
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 21,
+      "printed_page": 20,
+      "method": "book_text",
+      "verified": true,
+      "note": "Глава 2 «Создание пульп-героев», шаг 1 «Выбор пульп-архетипа»: Mystic"
+    }
+  ],
+  "errata": [
+    {
+      "field": "talents",
+      "printed": "Such heroes must take the Psychic talent … Talents: any two (Psychic talent recommended).",
+      "expected": null,
+      "note": "Противоречие на одной странице (с. 20): в описании талант «должен быть взят», в «Поправках» — только «рекомендуется»; в записи — как в «Поправках» (любые два), обязательность — в notes. Талант в таблице талантов называется Psychic Power (с. 25), а не Psychic.",
+      "fixed": false
+    },
+    {
+      "field": "suggested_traits",
+      "printed": "calculating, cunning, two-faced, manipulative, chaotic, wild, flamboyant",
+      "expected": null,
+      "note": "Черты слово в слово повторяют черты «Арлекина» (Harlequin, с. 19) — вероятно, перенесены по ошибке вёрстки; других книга не даёт. В записи — как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского (Р-21); русские названия архетипа, профессий, черт и талантов переведены нами, английское название — в name.en. Рекомендуемые профессии связаны с пульп-профессиями книги (coc:occupation:pulp-*, с. 26–34)."
+  }
+}

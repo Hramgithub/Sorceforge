@@ -1,0 +1,486 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "pulp-cthulhu-en/character/diego-guiterrez-de-almacan",
+  "kind": "character",
+  "name": {
+    "ru": "Ползучая тварь (сеньор Диего Гитеррес де Альмакан)",
+    "en": "The Crawling One (AKA Señor Diego Guiterrez de Almacan)"
+  },
+  "aliases": [
+    "Сеньор Диего Гитеррес де Альмакан",
+    "Señor Diego Guiterrez de Almacan",
+    "Senor Diego Guiterrez de Almacan",
+    "Альмакан",
+    "Луис Фернандо де ла Монтойо",
+    "Luis Fernando de la Montoyo"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "ползучая тварь, колдун; под личиной — замкнутый испанский дворянин",
+    "en": null
+  },
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "pulp"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:crawling-one",
+      "note_back": "бывший глава культа Азатота Луис Фернандо де ла Монтойо; хозяин Труб Ленга"
+    },
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:azathoth",
+      "note": "божество культа, который он возглавлял при жизни",
+      "note_back": "при жизни — глава посвящённого ему культа (Луис Фернандо де ла Монтойо)"
+    },
+    {
+      "type": "knows",
+      "target": "pulp-cthulhu-en/organization/eight-fortunes-mutual-aid-society",
+      "note": "давние связи; собирается вступить и бежать к ним через Врата",
+      "note_back": "колдун, с которым общество давно связано; собирается вступить"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "90",
+        "value": 90
+      },
+      "SIZ": {
+        "raw": "85",
+        "value": 85
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "INT": {
+        "raw": "90",
+        "value": 90
+      },
+      "POW": {
+        "raw": "90",
+        "value": 90
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "17",
+      "value": 17
+    },
+    "mp": {
+      "raw": "18",
+      "value": 18
+    },
+    "sanity": {
+      "raw": "—",
+      "value": null
+    },
+    "luck": {
+      "raw": "90",
+      "value": 90
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет; обычное оружие наносит минимальный урон, пули — 1 пункт (дробь — минимальный урон)",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1 (оружием или заклинанием)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Большой нож",
+          "en": "Large knife"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "1d8+1d4",
+          "dice": "1d8",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:knife-large"
+      },
+      {
+        "name": {
+          "ru": "Пистолет .45",
+          "en": ".45 auto"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d10+2",
+          "dice": "1d10+2",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:45-automatic"
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Наука (математика)",
+        "skill": "coc:skill:science",
+        "specialization": "математика",
+        "value": {
+          "raw": "90%",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        }
+      },
+      {
+        "name": "Наука (физика)",
+        "skill": "coc:skill:science",
+        "specialization": "физика",
+        "value": {
+          "raw": "90%",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Consume Likeness, Create Gate, Create Mist of R’lyeh, Dominate (alternate version, allows the crawling one to dominate one person over a distance of up to 1 mile and for 1 day per magic point spent), Enchant Pipes, Fist of Yog-Sothoth, Graveyard Kiss (variant), Mental Suggestion, Mindblast, Summon/Bind Hunting Horror (alternate version, allows the horror to be summoned wherever the crawling one wishes).",
+      "items": [
+        {
+          "name": "Consume Likeness",
+          "spell": "coc:spell:consume-likeness"
+        },
+        {
+          "name": "Create Gate",
+          "spell": "coc:spell:create-gate"
+        },
+        {
+          "name": "Create Mist of R’lyeh",
+          "spell": "coc:spell:create-mist-of-rlyeh"
+        },
+        {
+          "name": "Dominate (alternate version)",
+          "spell": "coc:spell:dominate"
+        },
+        {
+          "name": "Enchant Pipes",
+          "spell": "coc:spell:enchant-pipes"
+        },
+        {
+          "name": "Fist of Yog-Sothoth",
+          "spell": "coc:spell:fist-of-yog-sothoth"
+        },
+        {
+          "name": "Graveyard Kiss (variant)",
+          "spell": "coc:spell:graveyard-kiss"
+        },
+        {
+          "name": "Mental Suggestion",
+          "spell": "coc:spell:mental-suggestion"
+        },
+        {
+          "name": "Mindblast",
+          "spell": "coc:spell:mindblast"
+        },
+        {
+          "name": "Summon/Bind Hunting Horror (alternate version)",
+          "spell": "coc:spell:summon-bind-hunting-horror"
+        }
+      ]
+    },
+    "sanity_loss": [
+      {
+        "success": "1d3",
+        "fail": "2d6",
+        "trigger": "увидеть ползучую тварь"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Пульп-талант: Странная наука",
+      "summary": "Владеет пульп-талантом «Странная наука».",
+      "raw": "Weird Science.",
+      "refs": [
+        "coc:talent:weird-science"
+      ]
+    },
+    {
+      "name": "Пульп-талант: Бдительность",
+      "summary": "Никогда не бывает застигнут врасплох в бою.",
+      "raw": "Alert: never surprised in combat.",
+      "refs": [
+        "coc:talent:alert"
+      ]
+    },
+    {
+      "name": "Тело из червей",
+      "summary": "Брони нет, но мягкая и упругая масса тела такова, что обычное оружие наносит минимальный урон, а пули — лишь 1 пункт (дробь — минимальный урон). Раны убивают лишь отдельных тараканов и пауков; со временем паразиты выводят замену.",
+      "raw": "Armor: none, however due to the soft and resilient quality of its body mass, normal weapons do minimal damage and bullets only cause a single point of damage (although shotgun pellets do minimum damage).",
+      "refs": [
+        "coc:creature:crawling-one"
+      ]
+    },
+    {
+      "name": "Поглощение образа",
+      "summary": "Может принять облик любого человека, которого убил и съел (заклинание «Поглощение образа»); говорит в любом из этих обликов, но в новом облике голос появляется лишь через 48 часов. Меняет облик по желанию за один боевой раунд. В истинном облике не может говорить и вообще издавать звуков — общается записками (обычно телеграммами).",
+      "refs": [
+        "coc:spell:consume-likeness"
+      ]
+    },
+    {
+      "name": "Распад",
+      "summary": "При серьёзной угрозе может по желанию рассыпаться грудой отдельных насекомых, которые быстро расползаются через щели в полу и т. п. Свидетели превращения теряют 1d3/2d6 Рассудка; волна тараканов и прочих ползучих гадов, разбегаясь по героям, наносит 1d4 урона."
+    },
+    {
+      "name": "«Покорение» (иная версия)",
+      "summary": "Позволяет поработить одного человека на расстоянии до 1,6 км, на 1 день за каждый потраченный пункт магии. Чтобы удерживать Бейтса, тварь каждую ночь заново сотворяет заклинание (встречная проверка МОЩ).",
+      "raw": "Dominate (alternate version, allows the crawling one to dominate one person over a distance of up to 1 mile and for 1 day per magic point spent)",
+      "refs": [
+        "coc:spell:dominate"
+      ]
+    },
+    {
+      "name": "Призыв/укрощение охотящегося ужаса (иная версия)",
+      "summary": "Позволяет призвать охотящегося ужаса туда, куда пожелает тварь.",
+      "raw": "Summon/Bind Hunting Horror (alternate version, allows the horror to be summoned wherever the crawling one wishes)",
+      "refs": [
+        "coc:spell:summon-bind-hunting-horror",
+        "pulp-cthulhu-en/creature/hunting-horror-slow-boat"
+      ]
+    },
+    {
+      "name": "Могильный поцелуй (вариант)",
+      "summary": "Чтобы поднять труп, тварь кладёт ему в рот часть своей массы насекомых; поднятые зомби создают новых, когда насекомые перепрыгивают из их ртов в рты убитых ими пассажиров. Тела встают под управлением твари (см. сцену «Больше хаоса и ужаса»).",
+      "refs": [
+        "coc:spell:graveyard-kiss",
+        "pulp-cthulhu-en/creature/zombie-slow-boat"
+      ]
+    },
+    {
+      "name": "Взрыв мозга",
+      "summary": "Встречная проверка МОЩ (МОЩ твари 100 — так в тексте сцены; в статблоке 90): если тварь побеждает, цель на миг видит её полой безглазой тварью, в которой бурлит тёмная энергия, теряет 5 Рассудка и впадает в приступ безумия. Если побеждает цель — эффекта нет.",
+      "refs": [
+        "coc:spell:mindblast"
+      ]
+    }
+  ],
+  "background": {
+    "description": "под личиной — замкнутый испанский дворянин, держится своей каюты, вечерами иногда прогуливается по палубе",
+    "secret": "это ползучая тварь — колдун из червей и насекомых, бывший глава культа Азатота; строит Трубы Ленга, чтобы призывать и пленять существ Мифов"
+  },
+  "description": {
+    "ru": "Ползучая тварь: тело из живых червей, тараканов, скорпионов, мух и могильных паразитов. Несмотря на жуткий вид, это не нежить: черви, из которых она состоит, — живые существа. Многолика, за века научилась осторожности и, когда приходится ходить среди людей, часто маскируется. Языки: навахо, старинный придворный испанский, мандаринский китайский, современный у (шанхайский) и современный американский английский. Слаба в рукопашной, полагается на заклинания и поручает обыденные дела приспешникам. Понимает, что может избавиться от одного назойливого моряка, но не от всего экипажа.",
+    "en": null
+  },
+  "legend": {
+    "ru": "При жизни звался Луис Фернандо де ла Монтойо и возглавлял культ Азатота. Магически продлив жизнь, дожил до испанского завоевания; его гнусные дела раскрылись, и испанский губернатор Соноры сеньор Гитеррес де Альмакан приговорил его к повешению. Приговор исполнили, тело похоронили, но сознание перешло в тараканов, скорпионов, мух и могильных паразитов, сожравших труп, и тварь продолжила своё злое дело за пределами «смертного» срока.\nЗа свою противоестественную жизнь она поглотила (пока что): испанского губернатора Соноры сеньора Гитерреса де Альмакана; девочку-подростка из племени навахо Хасейе Адикай; покрытую шрамами пожилую китаянку Ду Цзэмин; старшего казначея Мартина Дангасса; Чеда Питерсона (богатого жениха Вирджинии Ридли); в плавании может принять облик любого, кого убьёт и съест.\nДва года назад, соединив науку и древние тайны, тварь взялась за великую работу оккультной инженерии — эфирное энергетическое устройство, Трубы Ленга. За годы установила связи с другими колдунами и культами по всему миру, прежде всего с Обществом взаимопомощи «Восемь удач» — культом Мифов, раскинувшим щупальца по всему Китаю; собирается вступить в него и после полного испытания устройства перенестись вместе с Трубами через магические Врата прямо с корабля.\nНа борт поднимается в Сан-Франциско в облике паразитов, спрятавшись внутри устройства в грузовом трюме 7; затем превращается в сеньора Гитерреса де Альмакана и занимает свободную каюту, не значащуюся в списке пассажиров. Убивает и поглощает пришедшего разобраться казначея Дангасса, затем Чеда Питерсона; облик Питерсона бросает, чтобы не выдать себя невесте, и снова надевает 7 декабря, чтобы поработить Бейтса и украсть «Книгу Красного нефрита» у доктора Суна. Чаще всего держится личины Альмакана. Найти тварь — игра в кошки-мышки. Если герои уничтожат Трубы, тварь будет жаждать мести; если ей удастся уйти Вратами в Шанхай, она примкнёт к «Восьми удачам» и станет постоянным злодеем кампании.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 206,
+      "printed_page": 205,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Background»"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 209,
+      "printed_page": 208,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Crawling One»"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 213,
+      "printed_page": 212,
+      "method": "book_text",
+      "verified": true,
+      "note": "облик Альмакана, план твари"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 234,
+      "printed_page": 233,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 13 «A Slow Boat to China», приложение A: статблок «The Crawling One (AKA Señor Diego Guiterrez de Almacan)»"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 222,
+      "printed_page": 221,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Mindblast» (POW 100)"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 227,
+      "printed_page": 226,
+      "method": "book_text",
+      "verified": true,
+      "note": "распад в бою, потеря Рассудка"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 228,
+      "printed_page": 227,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Optional: Additional Mayhem and Horror»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.characteristics.POW",
+      "printed": "90 (статблок, с. 233); POW 100 (с. 221)",
+      "expected": null,
+      "note": "МОЩ твари расходится: в статблоке 90, в сцене «Украденная книга» для «Взрыва мозга» — 100. В статблоке — 90 как напечатано.",
+      "fixed": false
+    },
+    {
+      "field": "statblock.move",
+      "printed": "8",
+      "expected": "7",
+      "note": "СИЛ 60 и ЛВК 60 меньше ТЕЛ 85 — по правилам для людей Скорость 7; у вида «ползучая тварь» Скорость 8. Как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "ПЗ не удвоены (правило ПЗ злодеев гл. 9 книга к твари не применяет). Литературное имя губернатора напечатано «Guiterrez» (не Gutierrez) — передано как напечатано. Хасейе Адикай и Ду Цзэмин — только упомянуты, без записей. Эпоха сценария — 1931 год (оси «1930s» нет, взято 1920s)."
+  }
+}

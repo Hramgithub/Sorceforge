@@ -1,0 +1,357 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "pulp-cthulhu-en/character/wang-ma",
+  "kind": "character",
+  "name": {
+    "ru": "Ван Ма",
+    "en": "Wang Ma"
+  },
+  "aliases": [
+    "Wang Ma/Lo Mai"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "чо-чо, слуга доктора Суна",
+    "en": "tcho-tcho servant to Dr. Soong"
+  },
+  "age": {
+    "raw": "34",
+    "value": 34
+  },
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "pulp"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:cho-cho",
+      "note_back": "слуга доктора Суна; его статблок — для Ло Мая, Шэн Цина и других чо-чо свиты"
+    },
+    {
+      "type": "works_for",
+      "target": "pulp-cthulhu-en/character/yung-yao-soong",
+      "note": "хозяин; клан отрабатывает перед ним долг",
+      "note_back": "слуга и телохранитель, вожак маленького клана чо-чо"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "45",
+        "value": 45
+      },
+      "DEX": {
+        "raw": "75",
+        "value": 75
+      },
+      "APP": {
+        "raw": "30",
+        "value": 30
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      },
+      "EDU": {
+        "raw": "95",
+        "value": 95
+      }
+    },
+    "hp": {
+      "raw": "11",
+      "value": 11
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "sanity": {
+      "raw": "—",
+      "value": null
+    },
+    "luck": {
+      "raw": "0",
+      "value": 0
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Охотничий нож",
+          "en": "Hunting knife"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d8",
+          "dice": "1d8",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:knife-large"
+      },
+      {
+        "name": {
+          "ru": "Духовая трубка",
+          "en": "Blowgun"
+        },
+        "kind": "attack",
+        "skill": "Метание",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d2 + яд (проверка ВЫН, иначе паралич на 1d4 раунда)",
+          "dice": "1d2",
+          "adds_db": false,
+          "extra": "яд: проверка ВЫН, иначе паралич на 1d4 раунда"
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "32% (16/6)",
+      "value": 32,
+      "half": 16,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Искусство/ремесло (кулинария)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "кулинария",
+        "value": {
+          "raw": "10%",
+          "value": 10,
+          "half": 5,
+          "fifth": 2
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "20%",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Плавание",
+        "skill": "coc:skill:swim",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "0",
+        "trigger": "Ван Ма, Ло Май, Шэн Цин"
+      },
+      {
+        "success": "0",
+        "fail": "1d3",
+        "trigger": "другие чо-чо"
+      }
+    ]
+  },
+  "background": {
+    "description": "широкая грудь, бледная кожа, злобная ухмылка; низкорослый некрасивый человек",
+    "traits": "невозмутимый, храбрый, подозрительный"
+  },
+  "description": {
+    "ru": "Довольно неприятный слуга, всегда сопровождает доктора Суна: следит за его одеждой, сундучком с травяными снадобьями, охраной и личной безопасностью. Вожак маленькой группы чо-чо (едут трюмным классом) из свиты доктора. Он и его маленький клан служат доктору, отрабатывая долг; подробности Хранитель решает сам (например, доктор когда-то спас жизни нескольким чо-чо). Его характеристики книга советует брать для Ло Мая, Шэн Цина и других чо-чо.\nФразы: «Хозяин Сун говорит — нет»; «Хозяин Сун не говорит».",
+    "en": null
+  },
+  "legend": {
+    "ru": "Если к нему обращаются, бурчит что-то невнятное. Утром 7 декабря ползучая тварь подслушивает его разговор с доктором о «Книге Красного нефрита»; после полуночи тварь в облике Чеда Питерсона в одежде стюарда крадёт книгу из каюты доктора и убивает Ван Ма. 8 декабря в 15:00 отец Альварес хоронит его в короткой церемонии на корме. Бейтс позже признаётся в его убийстве на исповеди. Место Ван Ма занимает Ло Май, а если погибнет и он — следующие чо-чо по очереди.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 216,
+      "printed_page": 215,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Dr. Soong’s Manservant»"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 213,
+      "printed_page": 212,
+      "method": "book_text",
+      "verified": true,
+      "note": "хронология: 7 и 8 декабря"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 221,
+      "printed_page": 220,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Stolen Book»"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 232,
+      "printed_page": 231,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 13 «A Slow Boat to China», приложение A: статблок «Wang Ma/Lo Mai», потеря Рассудка"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.attacks[Духовая трубка].chance",
+      "printed": "45% (22/0)",
+      "expected": "45% (22/9)",
+      "note": "Пятая доля напечатана как 0; исправлено (Р-35).",
+      "fixed": true
+    },
+    {
+      "field": "statblock.dodge",
+      "printed": "32% (16/6)",
+      "expected": "37% (18/7)",
+      "note": "Уклонение ниже половины ЛВК 75 (37%); как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Удача 0 напечатана у всех персонажей приложения, кроме доктора Сунга и Бейтса, — как в книге (персонажи Хранителя обычно не тратят Удачу; см. «Удача для персонажей Хранителя»). Духовой трубки в таблице оружия нет — атака без ссылки на позицию; навык — Метание, вывод из текста (Р-41). ОБР 95 у слуги — как напечатано. Эпоха сценария — 1931 год (оси «1930s» нет, взято 1920s)."
+  }
+}

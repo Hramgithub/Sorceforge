@@ -1,0 +1,290 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "pulp-cthulhu-en/character/herman-bukowsky",
+  "kind": "character",
+  "name": {
+    "ru": "Герман «Жаба» Буковски",
+    "en": "Herman “The Toad” Bukowsky"
+  },
+  "aliases": [
+    "Жаба Буковски",
+    "Toad Bukowsky"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "независимый грабитель банков и убийца",
+    "en": "independent bank robber and assassin"
+  },
+  "occupation_ref": "coc:occupation:pulp-bank-robber",
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "pulp"
+  },
+  "relations": [
+    {
+      "type": "knows",
+      "target": "pulp-cthulhu-en/character/vern-bailey",
+      "note": "бывший подельник по грабежам банков",
+      "note_back": "бывший подельник по грабежам банков"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "80",
+        "value": 80
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "50",
+        "value": 50
+      },
+      "POW": {
+        "raw": "60",
+        "value": 60
+      },
+      "EDU": {
+        "raw": "60",
+        "value": 60
+      }
+    },
+    "hp": {
+      "raw": "14",
+      "value": 14
+    },
+    "mp": {
+      "raw": "12",
+      "value": 12
+    },
+    "sanity": {
+      "raw": "60",
+      "value": 60
+    },
+    "luck": {
+      "raw": "—",
+      "value": "—"
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "75% (37/15)",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Большой нож",
+          "en": "large knife"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "75% (37/15)",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        },
+        "damage": {
+          "raw": "1d8+1d4",
+          "dice": "1d8",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:knife-large"
+      },
+      {
+        "name": {
+          "ru": "Револьвер .44",
+          "en": ".44 revolver"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d10+2",
+          "dice": "1d10+2",
+          "adds_db": false
+        },
+        "notes": "в таблице оружия нет револьвера .44 с уроном 1d10+2"
+      },
+      {
+        "name": {
+          "ru": "Помповый дробовик",
+          "en": "Pump-action shotgun"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "4d6/2d6/1d6",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:shotgun-12-gauge-pump"
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "skills": [
+      {
+        "name": "Вождение автомобиля",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      }
+    ]
+  },
+  "background": {
+    "description": "одутловатое лицо, толстые щёки, толстый",
+    "traits": "мрачный, угрожающий, властный"
+  },
+  "description": {
+    "ru": "Из Старой банды; его роль при Ламмасе — быть мрачным и грозным.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Если Ламмас и Буковски узнают или решат, что кто-то виноват в гибели Бейли, они, скорее всего, попытаются его убить, лучше заманив сначала в безлюдное место. Если узнают, что за исчезновением Бейли может стоять Карпози, непременно откроют на него охоту.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 200,
+      "printed_page": 199,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 12, «Pandora’s Box», Appendix A: «Herman “The Toad” Bukowsky, independent bank robber and assassin» — статблок"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 186,
+      "printed_page": 185,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Old Gang», «Herman “The Toad” Bukowsky»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.attacks[Револьвер .44]",
+      "printed": "45% (23/9)",
+      "expected": "45% (22/9)",
+      "note": "книга округлила половину вверх; исправлено по правилу 7-й редакции — с округлением вниз (Р-35)",
+      "fixed": true
+    },
+    {
+      "field": "statblock.attacks[Помповый дробовик]",
+      "printed": "65% (33/13)",
+      "expected": "65% (32/13)",
+      "note": "книга округлила половину вверх; исправлено по правилу 7-й редакции — с округлением вниз (Р-35)",
+      "fixed": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Револьвер .44 с уроном 1d10+2 — без ссылки на справочник: в таблице оружия есть только .44 Магнум (1d10+1d4+2). Эпоха книги — 1930-е (оси «1930s» нет, взято 1920s)."
+  }
+}

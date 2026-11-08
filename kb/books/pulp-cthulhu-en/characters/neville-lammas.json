@@ -1,0 +1,299 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "pulp-cthulhu-en/character/neville-lammas",
+  "kind": "character",
+  "name": {
+    "ru": "Невилл «Старина Ник» Ламмас",
+    "en": "Neville “Old Nick” Lammas"
+  },
+  "aliases": [
+    "Старина Ник Ламмас",
+    "Old Nick Lammas"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "независимый грабитель банков",
+    "en": "independent bank robber"
+  },
+  "occupation_ref": "coc:occupation:pulp-bank-robber",
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "pulp"
+  },
+  "relations": [
+    {
+      "type": "knows",
+      "target": "pulp-cthulhu-en/character/vern-bailey",
+      "note": "бывший подельник по грабежам банков",
+      "note_back": "бывший подельник по грабежам банков"
+    },
+    {
+      "type": "knows",
+      "target": "pulp-cthulhu-en/character/herman-bukowsky",
+      "note": "напарник",
+      "note_back": "напарник"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "45",
+        "value": 45
+      },
+      "SIZ": {
+        "raw": "70",
+        "value": 70
+      },
+      "DEX": {
+        "raw": "80",
+        "value": 80
+      },
+      "APP": {
+        "raw": "65",
+        "value": 65
+      },
+      "INT": {
+        "raw": "70",
+        "value": 70
+      },
+      "POW": {
+        "raw": "70",
+        "value": 70
+      },
+      "EDU": {
+        "raw": "40",
+        "value": 40
+      }
+    },
+    "hp": {
+      "raw": "11",
+      "value": 11
+    },
+    "mp": {
+      "raw": "14",
+      "value": 14
+    },
+    "sanity": {
+      "raw": "70",
+      "value": 70
+    },
+    "luck": {
+      "raw": "—",
+      "value": "—"
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Приклад (как дубинка)",
+          "en": "Gun butt (club)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d6+1d4",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:club-small"
+      },
+      {
+        "name": {
+          "ru": "Пистолет .45",
+          "en": ".45 auto"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "1d10+2",
+          "dice": "1d10+2",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:45-automatic"
+      },
+      {
+        "name": {
+          "ru": "Автоматическая винтовка «Браунинг»",
+          "en": "Browning auto rifle"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пулемёт)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "2d6+4",
+          "dice": "2d6+4",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:browning-m1918-bar"
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Вождение автомобиля",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Освобождение от наручников",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "56%",
+          "value": 56,
+          "half": 28,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Взлом",
+        "skill": "coc:skill:locksmith",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "20%",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      }
+    ]
+  },
+  "background": {
+    "description": "стареющий, лысеющий, узкие глаза",
+    "traits": "компанейский, корыстный, осторожный"
+  },
+  "description": {
+    "ru": "Из Старой банды — бывших подельников Бейли по грабежам банков. Изображает компанейского старожила.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Бейли недавно устроил им выплату за украденные облигации. Теперь, когда Бейли явно в беде, Ламмас и Буковски хотят ему помочь: присматривают за домом Конни, даже спрашивают новости у Пандоры и могут начать следить за героями, если не поймут, кто они. Карпози помнят как вора, специализирующегося на драгоценностях. Ездят на мощном «Форде V8», тяжёлое оружие — под одеялом на заднем сиденье.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 200,
+      "printed_page": 199,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 12, «Pandora’s Box», Appendix A: «Neville “Old Nick” Lammas, independent bank robber» — статблок"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 186,
+      "printed_page": 185,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Old Gang», «Neville “Old Nick” Lammas»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Навык «Escape Handcuffs» — без ссылки на справочник (Р-126). Эпоха книги — 1930-е (оси «1930s» нет, взято 1920s)."
+  }
+}

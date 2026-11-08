@@ -1,0 +1,283 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "pulp-cthulhu-en/character/mattix-and-lonergan",
+  "kind": "character",
+  "name": {
+    "ru": "«Тощий» Мэттикс и Эдвин «Дёрганый» Лонерган",
+    "en": "“Slim” Mattix & Edwin “Jitters” Lonergan"
+  },
+  "aliases": [
+    "Тощий Мэттикс",
+    "Slim Mattix",
+    "Эдвин Лонерган",
+    "Edwin “Jitters” Lonergan"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "подручные банды Уитлока (прихвостни)",
+  "occupation": {
+    "ru": "банда Уитлока (прихвостни)",
+    "en": "Whitlock gang (mooks)"
+  },
+  "occupation_ref": "coc:occupation:pulp-criminal",
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "pulp"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "pulp-cthulhu-en/character/lawrence-whitlock",
+      "note": "главарь",
+      "note_back": "подручные"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "55",
+        "value": 55
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "APP": {
+        "raw": "55",
+        "value": 55
+      },
+      "INT": {
+        "raw": "40",
+        "value": 40
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      },
+      "EDU": {
+        "raw": "40",
+        "value": 40
+      }
+    },
+    "hp": {
+      "raw": "11",
+      "value": 11
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "sanity": {
+      "raw": "50",
+      "value": 50
+    },
+    "luck": {
+      "raw": "—",
+      "value": "—"
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Дубинка",
+          "en": "club"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d8",
+          "dice": "1d8",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:club-large"
+      },
+      {
+        "name": {
+          "ru": "Револьвер .38",
+          "en": ".38 revolver"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "1d10",
+          "dice": "1d10",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:38-revolver"
+      },
+      {
+        "name": {
+          "ru": "Винтовка .30-06",
+          "en": ".30-06 rifle"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "2d6+4",
+          "dice": "2d6+4",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:30-06-bolt-action-rifle"
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Вождение автомобиля",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Прихвостни",
+      "summary": "Прихвостни по правилам Pulp Cthulhu.",
+      "raw": "Whitlock gang (mooks)",
+      "refs": [
+        "coc:rule:pulp-mooks"
+      ]
+    }
+  ],
+  "background": {
+    "description": "неотёсанные, неопрятные, угрожающие",
+    "traits": "жестокие, злобные"
+  },
+  "description": {
+    "ru": "Двое подручных Лоуренса Уитлока с общим статблоком книги: «Тощий» Мэттикс и Эдвин «Дёрганый» Лонерган.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 200,
+      "printed_page": 199,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 12, «Pandora’s Box», Appendix A: «“Slim” Mattix & Edwin “Jitters” Lonergan, Whitlock gang (mooks)» — статблок"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 187,
+      "printed_page": 186,
+      "method": "book_text",
+      "verified": true,
+      "note": "«“Slim” Mattix and Edwin “Jitters” Lonergan»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Один статблок на двоих, как в книге. Эпоха книги — 1930-е (оси «1930s» нет, взято 1920s)."
+  }
+}

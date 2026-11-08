@@ -1,0 +1,244 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "pulp-cthulhu-en/character/hugo-wittering",
+  "kind": "character",
+  "name": {
+    "ru": "Хьюго Уиттеринг",
+    "en": "Hugo Wittering"
+  },
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "бухгалтер и преданный член ковена",
+    "en": "accountant and devoted coven member"
+  },
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "pulp"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "50",
+        "value": 50
+      },
+      "CON": {
+        "raw": "40",
+        "value": 40
+      },
+      "SIZ": {
+        "raw": "45",
+        "value": 45
+      },
+      "DEX": {
+        "raw": "55",
+        "value": 55
+      },
+      "APP": {
+        "raw": "35",
+        "value": 35
+      },
+      "INT": {
+        "raw": "60",
+        "value": 60
+      },
+      "POW": {
+        "raw": "45",
+        "value": 45
+      },
+      "EDU": {
+        "raw": "70",
+        "value": 70
+      }
+    },
+    "hp": {
+      "raw": "8",
+      "value": 8
+    },
+    "mp": {
+      "raw": "9",
+      "value": 9
+    },
+    "sanity": {
+      "raw": "39",
+      "value": 39
+    },
+    "luck": {
+      "raw": "—",
+      "value": "—"
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Маленький нож",
+          "en": "small knife"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d4",
+          "dice": "1d4",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:knife-small"
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Бухгалтерское дело",
+        "skill": "coc:skill:accounting",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "5%",
+          "value": 5,
+          "half": 2,
+          "fifth": 1
+        }
+      },
+      {
+        "name": "Оккультизм",
+        "skill": "coc:skill:occult",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      }
+    ]
+  },
+  "background": {
+    "description": "маленькие руки, толстые очки, глаза поблёскивают злобой",
+    "traits": "предан Зауэрфельду и Чалмерс, пытается строить из себя крутого"
+  },
+  "description": {
+    "ru": "Бухгалтер, преданный последователь Зауэрфельда и Чалмерс. Герои могут увидеть нелепое зрелище: он изображает крутого парня — большой пистолет в маленькой руке, глаза за толстыми стёклами очков блестят злобой.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 201,
+      "printed_page": 200,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 12, «Pandora’s Box», Appendix A: «Hugo Wittering, accountant and devoted coven member» — статблок"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 194,
+      "printed_page": 193,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Hugo Wittering»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.attacks[Драка]",
+      "printed": "45% (23/9)",
+      "expected": "45% (22/9)",
+      "note": "книга округлила половину вверх; исправлено по правилу 7-й редакции — с округлением вниз (Р-35)",
+      "fixed": true
+    },
+    {
+      "field": "statblock.attacks[Маленький нож]",
+      "printed": "45% (23/9)",
+      "expected": "45% (22/9)",
+      "note": "книга округлила половину вверх; исправлено по правилу 7-й редакции — с округлением вниз (Р-35)",
+      "fixed": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Эпоха книги — 1930-е (оси «1930s» нет, взято 1920s)."
+  }
+}

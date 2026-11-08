@@ -1,0 +1,282 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "pulp-cthulhu-en/character/vern-bailey",
+  "kind": "character",
+  "name": {
+    "ru": "Верн Бейли",
+    "en": "Vern Bailey"
+  },
+  "aliases": [
+    "Эдди «Убийца» Бартлетт",
+    "Eddie “The Killer” Bartlett",
+    "Эдди Бартлетт"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "пропавший устроитель ночного клуба",
+    "en": "missing nightclub promoter"
+  },
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "pulp"
+  },
+  "relations": [
+    {
+      "type": "knows",
+      "target": "pulp-cthulhu-en/character/pandora-moulin",
+      "note": "компаньон по ночному клубу",
+      "note_back": "компаньон по ночному клубу"
+    },
+    {
+      "type": "knows",
+      "target": "pulp-cthulhu-en/character/lilith-chalmers",
+      "note": "недавняя любовница; пыталась завербовать его в Искатели",
+      "note_back": "недавний любовник; пыталась завербовать его"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "65",
+        "value": 65
+      },
+      "CON": {
+        "raw": "55",
+        "value": 55
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "APP": {
+        "raw": "45",
+        "value": 45
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "80",
+        "value": 80
+      },
+      "EDU": {
+        "raw": "55",
+        "value": 55
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "16",
+      "value": 16
+    },
+    "sanity": {
+      "raw": "80",
+      "value": 80
+    },
+    "luck": {
+      "raw": "—",
+      "value": "—"
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Пистолет .38",
+          "en": ".38 auto"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d10",
+          "dice": "1d10",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:38-automatic"
+      },
+      {
+        "name": {
+          "ru": "Пистолет-пулемёт «Томпсон»",
+          "en": "Thompson SMG"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет-пулемёт)",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1d10+2",
+          "dice": "1d10+2",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:thompson-smg"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Вождение автомобиля",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Оккультизм",
+        "skill": "coc:skill:occult",
+        "value": {
+          "raw": "20%",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      }
+    ]
+  },
+  "background": {
+    "description": "высокий, в очках, щеголеватый, с проседью; очки — простые стёкла, на лице и кончиках пальцев мелкие шрамы от грубой пластической операции",
+    "traits": "крепкий, расчётливый, честный по-своему"
+  },
+  "description": {
+    "ru": "Совладелец ночного клуба «Дворец Пандоры», бывший гангстер. Пропал в ночь после открытия выставки вместе с ящиком Пандоры и больше не появится: его унёс бродяга между измерениями. Статблок нужен, только если Хранитель начинает сценарий раньше исчезновения.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Под именем Эдди «Убийца» Бартлетт грабил банки в Канзас-Сити; по недоказанным слухам, участвовал в бандитских убийствах. Двадцать лет назад женился на Конни; сидел в тюрьме, бывал в бегах, сделал грубую пластическую операцию, чтобы изменить внешность. При «Спагетти» Майке Петрозини Синдикат принял его за его умения; теперь ему, не итальянцу, не доверяют, Синдикат требует свою долю и приставил к нему Боба Куинна.\nПод влиянием Конни хотел стать честным и уйти от банд: у него доли в пивоварне, транспортной компании и типографии, где прежде печатали поддельные этикетки на спиртное. Помогал старым подельникам (Ламмасу и Буковски) — недавно устроил им выплату за украденные облигации. Недолго встречался с Лилит Чалмерс, которая водила его на вечера в Ложу Искателей, чтобы завербовать; его подпись есть в гостевой книге Ложи.\nПоследний раз персонал видел его около 4:30 утра после открытия выставки. В 5:00 он застал Карпози у вскрытого сейфа с открытым ящиком, выстрелил в появившегося бродягу между измерениями и был унесён им в иное измерение. Его пальто так и висит на двери кабинета; со временем о нём будут сообщать всё более далёкие и всё более вздорные «свидетели».",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 197,
+      "printed_page": 196,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 12, «Pandora’s Box», Appendix A: «Vern Bailey, missing nightclub promoter» — статблок"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 182,
+      "printed_page": 181,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Vern Bailey, nightclub promoter (A.K.A. Eddie “The Killer” Bartlett)»"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 188,
+      "printed_page": 187,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Visiting Connie Bailey»: Синдикат, Старая банда"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Уклонение в статблоке не напечатано. Эпоха книги — 1930-е (оси «1930s» нет, взято 1920s)."
+  }
+}

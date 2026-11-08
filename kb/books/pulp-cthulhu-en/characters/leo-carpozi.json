@@ -1,0 +1,392 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "pulp-cthulhu-en/character/leo-carpozi",
+  "kind": "character",
+  "name": {
+    "ru": "Лео Карпози",
+    "en": "Leo Carpozi"
+  },
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "форточник и авантюрист",
+    "en": "second-story burglar and opportunist"
+  },
+  "occupation_ref": "coc:occupation:pulp-cat-burglar",
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "pulp"
+  },
+  "relations": [
+    {
+      "type": "rival_of",
+      "target": "pulp-cthulhu-en/character/vern-bailey",
+      "note": "старый знакомый, велел вышвырнуть его из клуба; Карпози отомстил кражей",
+      "note_back": "старый знакомый из преступного прошлого; украл ящик Пандоры"
+    },
+    {
+      "type": "works_for",
+      "target": "pulp-cthulhu-en/character/himes-private-eye",
+      "note": "нанимал его в 1923 году выкрасть книгу из Ложи",
+      "note_back": "вор, которого он нанял в 1923 году"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "80",
+        "value": 80
+      },
+      "APP": {
+        "raw": "55",
+        "value": 55
+      },
+      "INT": {
+        "raw": "50",
+        "value": 50
+      },
+      "POW": {
+        "raw": "65",
+        "value": 65
+      },
+      "EDU": {
+        "raw": "45",
+        "value": 45
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "13",
+      "value": 13
+    },
+    "sanity": {
+      "raw": "50*",
+      "value": 50
+    },
+    "luck": {
+      "raw": "65",
+      "value": 65
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Дубинка скрытого ношения",
+          "en": "blackjack"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "1d8+1d4",
+          "dice": "1d8",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:blackjack"
+      },
+      {
+        "name": {
+          "ru": "Револьвер .32",
+          "en": ".32 revolver"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "1d8",
+          "dice": "1d8",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:32-revolver"
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Оценка (ювелирные изделия)",
+        "skill": "coc:skill:appraise",
+        "specialization": "ювелирные изделия",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Взлом",
+        "skill": "coc:skill:locksmith",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Механика",
+        "skill": "coc:skill:mechanical-repair",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Пульп-талант: Быстрые ноги",
+      "summary": "Может потратить 10 Удачи, чтобы на одну боевую стычку избежать численного превосходства противников в ближнем бою.",
+      "raw": "Fleet Footed: may spend 10 Luck to avoid being outnumbered in melee combat for one combat encounter.",
+      "refs": [
+        "coc:talent:fleet-footed"
+      ]
+    },
+    {
+      "name": "Пульп-талант: Крепкий орешек",
+      "summary": "Держит удар: может потратить 10 пунктов Удачи, чтобы не заметить до 5 пунктов урона, полученного за один раунд боя.",
+      "raw": "Tough Guy: soaks up damage, may spend 10 Luck points to shrug off up to 5 hit points worth of damage taken in one combat round.",
+      "refs": [
+        "coc:talent:tough-guy"
+      ]
+    },
+    {
+      "name": "Рассудок тает",
+      "summary": "Рассудок 50 снижается на 5 за каждое увиденное им появление чудовища из ящика.",
+      "raw": "SAN 50* — *lowers by 5 for every manifestation from the box witnessed."
+    },
+    {
+      "name": "Ящик защищает меня",
+      "summary": "Рассудок Карпози пошатнулся: он уверен, что ящик Пандоры его защищает. Если ему угрожают, он откроет ящик.",
+      "raw": "Clearly Carpozi’s sanity has been affected and he’s under the delusion that Pandora’s Box actually protects him. If threatened, he will open the box.",
+      "refs": [
+        "pulp-cthulhu-en/item/pandoras-box"
+      ]
+    }
+  ],
+  "background": {
+    "description": "поджарый, жилистый, светловолосый, с вечной ухмылкой",
+    "traits": "безжалостный, мстительный, расчётливый",
+    "secret": "Сам украл ящик Пандоры из сейфа Бейли; на его глазах бродяга между измерениями унёс Бейли. Он же стоит за гибелью Конклина, Гаскелла и Ричардса."
+  },
+  "description": {
+    "ru": "Главный злодей сценария «Ящик Пандоры»: вор-форточник, специалист по драгоценностям, случайный, а затем и намеренный убийца, готовый за хорошие деньги отдать опаснейший артефакт Мифов именно тем, кто захочет пустить его в ход.",
+    "en": null
+  },
+  "legend": {
+    "ru": "В прошлом знал Верна Бейли (тогда — Эдди Бартлетта). В 1923 году работал на частного сыщика Хаймса: по заказу Эллиота Гаскелла выкрал из Ложи Искателей вечной мудрости книгу; в том же году его арестовал лейтенант Добрингхаус, и Карпози получил десять лет, не выдав Хаймса.\nТолько что вышел из тюрьмы (по мнению Бейли — подозрительно рано) и собирался поживиться за счёт успеха старых знакомых. Бейли в те дни донимала полиция старыми делами, которых он не совершал, и он решил, что источник этих наездов — Карпози. Он ошибался: Карпози пришёл в клуб лишь присмотреть, кого ограбить. Утром в день открытия выставки Бейли сунул ему десятку у дверей клуба и велел держаться подальше; вечером, увидев Карпози в зале во взятом напрокат смокинге, велел вышвырнуть его.\nОбиженный Карпози той же ночью пробрался в клуб через крышу, вскрыл сейф Бейли и, думая, что внутри ящика что-то ценное, открыл его. В 5:00 утра его застал Бейли; появился бродяга между измерениями, Бейли выстрелил в него, и чудовище унесло его в иное измерение. Карпози закрыл ящик и ушёл с ним в портфеле.\nДальше события сценария движет его попытка продать ящик: скупщик Конклин (гибнет), Гаскелл (гибнет вместе с дворецким), наконец Искатели вечной мудрости. Синдикат, Старая банда, Мекленбург и полиция ищут его.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 197,
+      "printed_page": 196,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 12, «Pandora’s Box», Appendix A: «Leo Carpozi, opportunist» — статблок"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 178,
+      "printed_page": 177,
+      "method": "book_text",
+      "verified": true,
+      "note": "«What Really Happened», «What Happens Next»"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 185,
+      "printed_page": 184,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Leo Carpozi, second-story burglar and opportunist»"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 186,
+      "printed_page": 185,
+      "method": "book_text",
+      "verified": true,
+      "note": "продолжение описания: ночь кражи, черты"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.attacks[Драка]",
+      "printed": "70% (35/15)",
+      "expected": "70% (35/14)",
+      "note": "половина и пятая не следуют из процента; исправлено по правилу 7-й редакции (Р-35)",
+      "fixed": true
+    },
+    {
+      "field": "statblock.attacks[Дубинка скрытого ношения]",
+      "printed": "70% (35/15)",
+      "expected": "70% (35/14)",
+      "note": "половина и пятая не следуют из процента; исправлено по правилу 7-й редакции (Р-35)",
+      "fixed": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Профессия по каталогу — «Форточник» (second-story burglar). Эпоха книги — 1930-е (оси «1930s» нет, взято 1920s)."
+  }
+}

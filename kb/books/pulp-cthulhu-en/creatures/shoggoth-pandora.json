@@ -1,0 +1,171 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "pulp-cthulhu-en/creature/shoggoth-pandora",
+  "kind": "creature",
+  "name": {
+    "ru": "Шоггот («Ящик Пандоры»)",
+    "en": "Shoggoth (Pandora’s Box)"
+  },
+  "category": "mythos_monster",
+  "subcategory": "служитель",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "pulp"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:shoggoth",
+      "note_back": "профиль сценария «Ящик Пандоры»"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "315",
+        "value": 315
+      },
+      "CON": {
+        "raw": "210",
+        "value": 210
+      },
+      "SIZ": {
+        "raw": "420",
+        "value": 420
+      },
+      "DEX": {
+        "raw": "15",
+        "value": 15
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "INT": {
+        "raw": "35",
+        "value": 35
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "63",
+      "value": 63
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "damage_bonus": {
+      "raw": "+8d6",
+      "value": "+8d6"
+    },
+    "build": {
+      "raw": "9",
+      "value": 9
+    },
+    "move": {
+      "raw": "10",
+      "value": 10,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 10
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет; огонь и электричество наносят минимальный урон; оружие (в том числе пули) — 1 пункт урона за попадание; восстанавливает 2 ПЗ за раунд",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "2",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d6+5d6",
+          "dice": "1d6",
+          "adds_db": false
+        },
+        "notes": "как напечатано: 1d6+5d6, хотя БкУ шоггота +8d6"
+      }
+    ],
+    "dodge": {
+      "raw": "25% (12/5)",
+      "value": 25,
+      "half": 12,
+      "fifth": 5
+    },
+    "spells": {
+      "raw": "нет."
+    },
+    "sanity_loss": [
+      {
+        "success": "1d6",
+        "fail": "1d20",
+        "trigger": "при виде шоггота"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Поглощение",
+      "summary": "Задетые им могут быть поглощены: встречная проверка СИЛ, иначе жертву разрывает на части. Если поглощено несколько целей, СИЛ шоггота делится между ними. Удержанные могут бить в ответ только в раунды, когда прошли проверку СИЛ. Каждый раунд удержания жертва получает 8d6 урона.",
+      "raw": "Special: those hit may be engulfed, make opposed STR roll or be sucked apart; if multiple targets engulfed, divide shoggoth’s STR amongst all engulfed. Those held may attack back only on rounds where they make a STR roll. Each round held, victim loses 8d6 damage)."
+    }
+  ],
+  "description": {
+    "ru": "Быстрый профиль из Приложения А сценария «Ящик Пандоры» (Monster Selection) — одно из чудовищ, которые выходят из ящика Пандоры (таблица в записи предмета «Ящик Пандоры»). Появляется, если ящик открыт 90 секунд.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 204,
+      "printed_page": 203,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 12, «Pandora’s Box», Appendix A, «Monster Selection»: «Shoggoth (Pandora’s Box)»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.attacks[Ближний бой].damage",
+      "printed": "1D6+5D6",
+      "expected": "1d6+8d6",
+      "note": "напечатанный БкУ шоггота +8d6, а к урону прибавлено 5d6 (как у гуга, с. 202); оставлено как напечатано",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Отличия от профиля вида в справочнике: Ближний бой 60% (у вида 70%, урон равен БкУ), Уклонение 25% (у вида 8%), огонь и электричество наносят минимальный урон (у вида — вдвое меньший). Ссылка книги: «page 306». Эпоха книги — 1930-е (оси «1930s» нет, взято 1920s)."
+  }
+}

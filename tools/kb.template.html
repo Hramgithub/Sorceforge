@@ -235,7 +235,8 @@ const FILTERS = {
   creature: [['', 'Все категории'], ...Object.entries(CAT)],
   character: [['', 'Все персонажи'], ['role:npc', 'NPC'], ['era:1920s', 'Эпоха: 1920-е'], ['era:1930s', 'Эпоха: 1930-е'], ['era:modern', 'Эпоха: современность'],
     ...[...new Set(DATA.characters.map(c => c.sources?.[0]?.book_id))].filter(Boolean).sort().map(b => ['book:' + b, (BOOKS[b] || b).replace(': готовые персонажи', '')])],
-  occupation: [['', 'Все профессии'], ['lovecraftian', 'Лавкрафтовские'], ['era:1920s', 'Эпоха: 1920-е'], ['era:1930s', 'Эпоха: 1930-е'], ['era:modern', 'Эпоха: современность']],
+  occupation: [['', 'Все профессии'], ['lovecraftian', 'Лавкрафтовские'], ['era:1920s', 'Эпоха: 1920-е'], ['era:1930s', 'Эпоха: 1930-е'], ['era:modern', 'Эпоха: современность'],
+    ['skills', 'Навыки'], ...[...new Set(DATA.skills.map(s => s.category))].sort((a, b) => a.localeCompare(b, 'ru')).map(c => ['skills:' + c, 'Навыки: ' + c])],
   skill: [['', 'Все категории'], ...[...new Set(DATA.skills.map(s => s.category))].sort().map(c => [c, c])],
   spell: [['', 'Все типы'], ['family', 'Только общие (семейства)'], ...[...new Set(DATA.spells.map(s => s.category).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'ru')).map(c => [c, c])],
 };
@@ -348,6 +349,7 @@ function matches(c, q, f) {
   if (tab === 'creature') return c.category === f;
   if (tab === 'character' && f.startsWith('city:')) return cityResidents(f.slice(5)).some(x => x.id === c.id);
   if (tab === 'character') { const [k, v] = f.split(':'); return k === 'role' ? (c.roles||[]).includes(v) : k === 'era' ? (c.axes?.era||[]).includes(v) : bookOf(c) === v; }
+  if (tab === 'occupation' && f.startsWith('skills')) return false;
   if (tab === 'occupation') return f === 'lovecraftian' ? c.lovecraftian : (c.axes?.era||[]).includes(f.split(':')[1]);
   if (tab === 'spell' && f === 'family') return DATA.spells.some(s => s.variant_of === c.id);
   if (tab === 'location') return c.location_type === f;
@@ -444,10 +446,15 @@ function occGroups(items) {
     return item(c).replace('class="', 'class="rin1 ').replace(/^(<button[^>]*>)/, `$1<span class="rfold" data-rnode="${esc(k)}" title="Навыки профессии">${o ? '▾' : '▸'}</span>`)
       + (o ? `<div class="part l2">Навыки профессии</div>` + skills : '');
   };
-  const sk = DATA.skills.filter(rsetOk), cats = [...new Set(sk.map(s => s.category))].sort((a, b) => a.localeCompare(b, 'ru'));
-  const ko = partOpen('occ|skills', cur?.kind === 'skill');
-  return items.map(occ).join('') + head('occ|skills', ko, `Все навыки (${sk.length})`, 0)
-    + (ko ? cats.map(cat => { const xs = sk.filter(s => s.category === cat), k = 'occ|skills|' + cat, o = partOpen(k, xs.includes(cur)); return head(k, o, `${cat[0].toUpperCase() + cat.slice(1)} (${xs.length})`, 1) + (o ? xs.map(s => skillBtn(s.id, s.name.ru, 2)).join('') : ''); }).join('') : '');
+  // «Все навыки» first (Р-196); the filter «Навыки» / «Навыки: <категория>» leaves only the skills, unfolded
+  const f = document.getElementById('cat').value, only = f.startsWith('skills');
+  const sk = DATA.skills.filter(rsetOk).filter(s => !f.startsWith('skills:') || s.category === f.slice(7));
+  const cats = [...new Set(sk.map(s => s.category))].sort((a, b) => a.localeCompare(b, 'ru'));
+  const ko = only || partOpen('occ|skills', cur?.kind === 'skill');
+  if (only) document.getElementById('count').textContent = sk.length + ' из ' + DATA.skills.length;
+  return head('occ|skills', ko, `Все навыки (${sk.length})`, 0)
+    + (ko ? cats.map(cat => { const xs = sk.filter(s => s.category === cat), k = 'occ|skills|' + cat, o = cats.length === 1 || partOpen(k, xs.includes(cur)); return head(k, o, `${cat[0].toUpperCase() + cat.slice(1)} (${xs.length})`, 1) + (o ? xs.map(s => skillBtn(s.id, s.name.ru, 2)).join('') : ''); }).join('') : '')
+    + items.map(occ).join('');
 }
 function ruleGroups(items) {
   const cur = byId(current);
@@ -740,7 +747,7 @@ function renderSubbar() {
 // no «1930-е» if nothing is left there; the choice stays when it still has records
 function fillCat(keep) {
   const sel = document.getElementById('cat'), was = keep ? sel.value : '';
-  const opts = FILTERS[tab].filter(([v]) => !v || tab === 'location' || SET[tab].some(c => matches(c, '', v)));
+  const opts = FILTERS[tab].filter(([v]) => !v || tab === 'location' || (v.startsWith('skills') ? DATA.skills.some(s => rsetOk(s) && (v === 'skills' || s.category === v.slice(7))) : SET[tab].some(c => matches(c, '', v))));
   sel.innerHTML = opts.map(([v, l]) => `<option value="${esc(v)}">${esc(l)}</option>`).join('');
   sel.value = opts.some(([v]) => v === was) ? was : '';
 }

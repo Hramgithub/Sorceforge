@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sourcefold.local/schemas/term.schema.json",
+  "title": "Термин",
+  "description": "Термин глоссария: английский термин и принятый русский — по приоритету официальной локализации (Р-184); варианты, формы, нежелательные переводы, определение.",
+  "type": "object",
+  "required": [
+    "schema",
+    "id",
+    "kind",
+    "name",
+    "status",
+    "chosen_by",
+    "sources"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "sourcefold.term.v0"
+    },
+    "id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "kind": {
+      "const": "term"
+    },
+    "name": {
+      "$ref": "common.schema.json#/$defs/text",
+      "description": "ru — принятый русский термин, en — английский термин."
+    },
+    "aliases": {
+      "type": "array",
+      "description": "Формы и допустимые варианты русского термина (склонения, сокращения).",
+      "items": {
+        "type": "string"
+      }
+    },
+    "avoid": {
+      "type": "array",
+      "description": "Переводы, которых не пишем.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "domain": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Область: характеристика, навык, механика, бой, рассудок, мифы, роль, сценарий…"
+    },
+    "scope": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Где действует: null — везде; иначе книга или сценарий, для которого принят термин."
+    },
+    "status": {
+      "enum": [
+        "accepted",
+        "review"
+      ],
+      "description": "accepted — можно применять автоматически; review — предложение, ждёт проверки владельцем."
+    },
+    "chosen_by": {
+      "enum": [
+        "official",
+        "owner",
+        "trusted",
+        "ours"
+      ],
+      "description": "Чем выбран русский термин (Р-184): official — официальная локализация (русское издание Chaosium/лицензиата); owner — решение владельца в реестре терминов; trusted — доверенный фанатский перевод; ours — наш перевод, пока нет лучшего."
+    },
+    "variants": {
+      "type": "array",
+      "description": "Все известные переводы с их происхождением; принятый — в name.ru.",
+      "items": {
+        "type": "object",
+        "required": [
+          "ru",
+          "by"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "ru": {
+            "type": "string"
+          },
+          "by": {
+            "enum": [
+              "official",
+              "owner",
+              "trusted",
+              "ours",
+              "rejected"
+            ]
+          },
+          "book_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "page": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "definition": {
+      "$ref": "common.schema.json#/$defs/text"
+    },
+    "refs": {
+      "type": "array",
+      "description": "Записи базы с этим термином (навык, правило, талант…).",
+      "items": {
+        "$ref": "common.schema.json#/$defs/id"
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "common.schema.json#/$defs/source_ref"
+      }
+    },
+    "quality": {
+      "$ref": "common.schema.json#/$defs/quality"
+    }
+  }
+}

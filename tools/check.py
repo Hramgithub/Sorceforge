@@ -130,7 +130,8 @@ def main() -> int:
             errors["флаг «опечатка книги» (parse_uncertain) стоит ровно у записей с errata (Р-141): `python pipeline/fix/errata_flag.py <файл>`"].append(
                 f"{rel(p)}: errata {len(rec.get('errata') or [])}, флаг {'есть' if 'parse_uncertain' in (q.get('flags') or []) else 'нет'}")
         for path, s in strings(rec):
-            if path.rsplit(".", 1)[-1] in QUOTED:
+            # a glossary entry quotes words as they are used and as they must not be (Р-184): no writing rules for it
+            if rec.get("kind") == "term" or path.rsplit(".", 1)[-1] in QUOTED:
                 continue
             for pat, msg, is_error in RULES:
                 # the English text of a record (name.en and the like) keeps the book's English words: «MOV Rates»

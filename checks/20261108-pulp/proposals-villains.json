@@ -1,0 +1,142 @@
+{
+  "schema": "sourcefold.proposals.v0",
+  "by": "Pulp Cthulhu, часть villains (гл. 9)",
+  "proposals": [
+    {
+      "target": "pulp-cthulhu-en/organization/gray-tigers",
+      "op": "set",
+      "path": "members",
+      "after": "goals",
+      "value": [
+        {
+          "id": "pulp-cthulhu-en/character/caleb-lusk",
+          "role": "основатель и бесспорный хозяин"
+        }
+      ],
+      "reason": "глава «Серых тигров» — «капитан» Калеб Ласк (гл. 3, с. 55–57; статблок — гл. 9, с. 131); запись персонажа заведена частью villains",
+      "ref": "Р-128"
+    },
+    {
+      "target": "pulp-cthulhu-en/organization/gray-tigers",
+      "op": "replace",
+      "path": "quality.notes",
+      "old": "Глава «Серых тигров» «капитан» Калеб Ласк (статблок в гл. 9, с. 131) — запись другой части импорта; в `members` его пока нет.",
+      "new": "Глава «Серых тигров» «капитан» Калеб Ласк — запись `character/caleb-lusk` (статблок в гл. 9, с. 131).",
+      "reason": "пометка о недостающей записи устарела: запись Ласка заведена",
+      "ref": "Р-183",
+      "correction": false
+    },
+    {
+      "target": "pulp-cthulhu-en/organization/ambrosia-foundation",
+      "op": "set",
+      "path": "members",
+      "after": "goals",
+      "value": [
+        {
+          "id": "pulp-cthulhu-en/character/the-shard",
+          "role": "тайный хозяин, создатель фонда"
+        }
+      ],
+      "reason": "весь фонд создан и управляется Осколком (гл. 3, с. 53–54; статблок — гл. 9, с. 130); запись персонажа заведена частью villains",
+      "ref": "Р-128"
+    },
+    {
+      "target": "pulp-cthulhu-en/organization/ambrosia-foundation",
+      "op": "replace",
+      "path": "quality.notes",
+      "old": "Осколок (the Shard) со статблоком — в гл. 9 (с. 130), его пишет другая часть импорта; ссылки на запись Осколка пока нет.",
+      "new": "Осколок (the Shard) со статблоком (гл. 9, с. 130) — запись `character/the-shard`.",
+      "reason": "пометка о недостающей записи устарела: запись Осколка заведена",
+      "ref": "Р-183",
+      "correction": false
+    },
+    {
+      "target": "coc:spell:bind-enemy",
+      "op": "append",
+      "path": "sources",
+      "value": {
+        "book_id": "pulp-cthulhu-en",
+        "physical_page": 129,
+        "printed_page": 128,
+        "method": "book_text",
+        "verified": true,
+        "note": "Pulp Cthulhu, гл. 9, врезка «Villainous Spells»: Bind Enemy (вариант текста)"
+      },
+      "reason": "заклинание напечатано и в Pulp Cthulhu (с. 128)",
+      "ref": "Р-183",
+      "correction": false
+    },
+    {
+      "target": "coc:spell:bind-enemy",
+      "op": "set",
+      "path": "quality.notes",
+      "value": "В Pulp Cthulhu (с. 128) стоимость — «variable magic points», без потери Рассудка; остальное совпадает. Значения записи — по Grand Grimoire.",
+      "reason": "расхождение книг — в пометке (schemas/README)",
+      "ref": "Р-183"
+    },
+    {
+      "target": "coc:spell:circle-of-nausea",
+      "op": "append",
+      "path": "sources",
+      "value": {
+        "book_id": "pulp-cthulhu-en",
+        "physical_page": 129,
+        "printed_page": 128,
+        "method": "book_text",
+        "verified": true,
+        "note": "Pulp Cthulhu, гл. 9, врезка «Villainous Spells»: Circle of Nausea (вариант текста)"
+      },
+      "reason": "заклинание напечатано и в Pulp Cthulhu (с. 128)",
+      "ref": "Р-183",
+      "correction": false
+    },
+    {
+      "target": "coc:spell:circle-of-nausea",
+      "op": "set",
+      "path": "quality.notes",
+      "value": "В Pulp Cthulhu (с. 128) на зачарование каждого опала нужно заранее пожертвовать 4 ПМ (а не 2), стоимость сотворения та же — 4 ПМ и 2 Рассудка. Значения записи — по Grand Grimoire.",
+      "reason": "расхождение книг — в пометке (schemas/README)",
+      "ref": "Р-183"
+    },
+    {
+      "target": "coc:spell:deflect-harm",
+      "op": "append",
+      "path": "sources",
+      "value": {
+        "book_id": "pulp-cthulhu-en",
+        "physical_page": 130,
+        "printed_page": 129,
+        "method": "book_text",
+        "verified": true,
+        "note": "Pulp Cthulhu, гл. 9, врезка «Villainous Spells»: Deflect Harm (текст совпадает)"
+      },
+      "reason": "заклинание напечатано и в Pulp Cthulhu (с. 129)",
+      "ref": "Р-183",
+      "correction": false
+    },
+    {
+      "target": "coc:spell:sirens-song",
+      "op": "append",
+      "path": "sources",
+      "value": {
+        "book_id": "pulp-cthulhu-en",
+        "physical_page": 130,
+        "printed_page": 129,
+        "method": "book_text",
+        "verified": true,
+        "note": "Pulp Cthulhu, гл. 9, врезка «Villainous Spells»: Siren’s Song (вариант текста)"
+      },
+      "reason": "заклинание напечатано и в Pulp Cthulhu (с. 129)",
+      "ref": "Р-183",
+      "correction": false
+    },
+    {
+      "target": "coc:spell:sirens-song",
+      "op": "set",
+      "path": "quality.notes",
+      "value": "В Pulp Cthulhu (с. 129) стоимость — 1 ПМ и 5 Рассудка (а не 6 ПМ), действие длится 4d10 часов (а не 1d10); повторная проверка МОЩ — если вред грозит тому, кого любит цель. Значения записи — по Grand Grimoire.",
+      "reason": "расхождение книг — в пометке (schemas/README)",
+      "ref": "Р-183"
+    }
+  ]
+}

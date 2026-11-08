@@ -1,0 +1,464 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "pulp-cthulhu-en/character/the-jade-emperor",
+  "kind": "character",
+  "name": {
+    "ru": "Нефритовый император",
+    "en": "The Jade Emperor"
+  },
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "мистик преступного мира",
+    "en": "underworld mystic"
+  },
+  "age": {
+    "raw": "около двухсот лет",
+    "value": 200,
+    "note": "«родился около двухсот лет назад» (с. 123)"
+  },
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "pulp"
+  },
+  "relations": [
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:nyarlathotep",
+      "note": "тёмный господин, которому он служит",
+      "note_back": "преданный последователь, продливший себе жизнь магией"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "40",
+        "value": 40
+      },
+      "DEX": {
+        "raw": "80",
+        "value": 80
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "70",
+        "value": 70
+      },
+      "POW": {
+        "raw": "120",
+        "value": 120
+      },
+      "EDU": {
+        "raw": "70",
+        "value": 70
+      }
+    },
+    "hp": {
+      "raw": "9",
+      "value": 9
+    },
+    "mp": {
+      "raw": "24",
+      "value": 24
+    },
+    "sanity": {
+      "raw": "00",
+      "value": 0
+    },
+    "luck": {
+      "raw": "80",
+      "value": 80
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Кинжал",
+          "en": "dagger"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d4+1",
+          "dice": "1d4+1",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Дротики",
+          "en": "Darts"
+        },
+        "kind": "attack",
+        "skill": "Метание",
+        "chance": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "1d4 + яд",
+          "dice": "1d4",
+          "adds_db": false,
+          "extra": "яд: 2d6 урона и судороги"
+        },
+        "weapon": "coc:weapon:dart-thrown",
+        "notes": "Яд: каждый дротик смазан ядом, который начинает действовать через 1 раунд и причиняет 2d6 урона и мышечные судороги (цель выведена из строя на 1d10+5 раундов). Чрезвычайная проверка ВЫН вдвое уменьшает все последствия (критический успех снимает судороги и вдвое уменьшает урон)."
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Искусство/ремесло (каллиграфия)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "каллиграфия",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "История",
+        "skill": "coc:skill:history",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Естествознание",
+        "skill": "coc:skill:natural-world",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Оккультизм",
+        "skill": "coc:skill:occult",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Телекинез",
+        "skill": "coc:skill:pulp-telekinesis",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Иностранный язык (арабский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "арабский",
+        "value": {
+          "raw": "20%",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Родной язык (китайский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "китайский",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Иностранный язык (английский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "английский",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Иностранный язык (греческий)",
+        "skill": "coc:skill:language-other",
+        "specialization": "греческий",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Иностранный язык (р’льехский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "р’льехский",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Иностранный язык (латынь)",
+        "skill": "coc:skill:language-other",
+        "specialization": "латынь",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Cloak of Fire**, Cloud Memory, Death Spell, Contact Nyarlathotep, Summon and Bind Hunting Horror, другие — на усмотрение Хранителя. **См. «Злодейские заклинания», с. 128.",
+      "items": [
+        {
+          "name": "Cloak of Fire",
+          "spell": null
+        },
+        {
+          "name": "Cloud Memory",
+          "spell": "coc:spell:cloud-memory"
+        },
+        {
+          "name": "Death Spell",
+          "spell": "coc:spell:death-spell"
+        },
+        {
+          "name": "Contact Nyarlathotep",
+          "spell": "coc:spell:contact-nyarlathotep"
+        },
+        {
+          "name": "Summon and Bind Hunting Horror",
+          "spell": "coc:spell:summon-bind-hunting-horror"
+        }
+      ]
+    }
+  },
+  "abilities": [
+    {
+      "name": "Пульп-талант: Психическая сила (телекинез)",
+      "summary": "Владеет психической силой — телекинезом (навык 80%).",
+      "raw": "Psychic Power: Telekinesis.",
+      "refs": [
+        "coc:talent:psychic-power",
+        "coc:skill:pulp-telekinesis"
+      ]
+    },
+    {
+      "name": "Огненный плащ: усиленная версия",
+      "summary": "Нефритовый император владеет усиленной версией заклинания «Огненный плащ» (Cloak of Fire): тратя ещё 4 ПМ за раунд, он выпускает в назначенную жертву пылающее щупальце — атака ближнего боя с одной бонусной костью; жертва может уклониться или контратаковать; урон 1d10+2. Текст заклинания — в правиле «Злодейские заклинания».",
+      "refs": [
+        "coc:rule:pulp-villainous-spells"
+      ]
+    }
+  ],
+  "background": {
+    "description": "традиционный китайский костюм, длинные усы и жидкая бородка, ярко-зелёные глаза",
+    "ideology": "почитатель Ньярлатхотепа",
+    "traits": "тихий и неприметный"
+  },
+  "description": {
+    "ru": "Глава преступной организации, чьи щупальца дотягиваются до многих общин по всему миру. Последователи фанатично преданы ему и по его прихоти охотно жертвуют жизнью; большинство относится к нему с обожанием: каждый год он устраивает пышные уличные праздники для многих бедных общин и одаривает деньгами особенно трудолюбивые семьи.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Возраст его неизвестен; ходят слухи, что он очень стар. Некие записи, будто бы хранящиеся в Китае, упоминают человека, называвшего себя Нефритовым императором, ещё в XVIII веке; принято считать, что это почётное имя, передаваемое по тайной линии.\n\nНа самом деле Нефритовый император — безумный и злой человек, родившийся около двухсот лет назад, преданный последователь Ньярлатхотепа, который магией продлил себе жизнь, чтобы лучше служить тёмному господину. К каким мерзким целям он стремится, неизвестно, но его всепоглощающая страсть, по-видимому, — собирать р’льехские артефакты и тексты о «Великом Спящем». Части ли это некоего хитроумного замысла — неясно. В его планы посвящён лишь ближний круг, и даже из них не все точно знают, какова его конечная цель; не раз он устраивал чистки ближнего круга за сомнения в его замыслах.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 123,
+      "printed_page": 122,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 9: «The Jade Emperor» — начало описания"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 124,
+      "printed_page": 123,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Jade Emperor» — описание, статблок, пульп-талант, предыстория, заклинания"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Навык «Psychic (Telekinesis)» книги — запись «Телекинез» (coc:skill:pulp-telekinesis). Родной язык — китайский по происхождению (вывод из текста, Р-41). У кинжала (1d4+1) нет позиции в справочнике оружия. Заклинания Cloak of Fire в справочнике нет — текст в правиле «Злодейские заклинания». Эпоха книги — 1930-е (оси «1930s» нет, взято 1920s)."
+  }
+}

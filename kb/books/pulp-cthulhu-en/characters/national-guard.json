@@ -1,0 +1,259 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "pulp-cthulhu-en/character/national-guard",
+  "kind": "character",
+  "name": {
+    "ru": "Национальный гвардеец",
+    "en": "National Guard"
+  },
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "национальный гвардеец",
+  "names": [
+    "Уолтер Дженкинс",
+    "Карл Петерсон",
+    "Дуглас Рид",
+    "Эрл Хэнсон",
+    "Лестер Морроу"
+  ],
+  "occupation": {
+    "ru": "национальный гвардеец",
+    "en": "National Guard"
+  },
+  "occupation_ref": "coc:occupation:pulp-soldier",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "pulp"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "60",
+        "value": 60
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      },
+      "EDU": {
+        "raw": "50",
+        "value": 50
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "sanity": {
+      "raw": "50",
+      "value": 50
+    },
+    "luck": {
+      "raw": "—",
+      "value": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Карабин .30",
+          "en": ".30 carbine rifle"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "2d6",
+          "dice": "2d6",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:30-lever-action-carbine"
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Ориентирование",
+        "skill": "coc:skill:navigate",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Типовой персонаж Хранителя из раздела «Типовые персонажи» (Generic Characters) гл. 9: национальный гвардеец 1930-х.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 133,
+      "printed_page": 132,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 9, «Generic Characters»: «National Guard»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.damage_bonus",
+      "printed": "+1D4",
+      "expected": "0",
+      "note": "СИЛ 60 + ТЕЛ 60 = 120 → БкУ 0 и Комплекция 0; напечатанный +1d4 входит и в урон Драки",
+      "fixed": false
+    },
+    {
+      "field": "statblock.build",
+      "printed": "1",
+      "expected": "0",
+      "note": "СИЛ 60 + ТЕЛ 60 = 120 → Комплекция 0",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "editorial_text",
+      "parse_uncertain"
+    ],
+    "notes": "Имена придуманы (Р-151), в книге — только обозначение «National Guard». Карабин .30 связан с рычажным карабином справочника (тот же урон 2d6). Эпоха книги — 1930-е (оси «1930s» нет, взято 1920s)."
+  }
+}

@@ -1,0 +1,394 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "pulp-cthulhu-en/character/yssiss",
+  "kind": "character",
+  "name": {
+    "ru": "Йиссис",
+    "en": "Y’ssiss"
+  },
+  "aliases": [
+    "Сьюзан Пуласки",
+    "Susan Pulaski",
+    "Y'ssiss"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "змеечеловек; в облике Сьюзан Пуласки — богатая дилетантка",
+    "en": "serpent man"
+  },
+  "occupation_ref": "coc:occupation:pulp-dilettante",
+  "age": {
+    "raw": "32 года (облик Сьюзан Пуласки)",
+    "value": 32
+  },
+  "sex": "мужской (в облике Сьюзан Пуласки — женщина)",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "pulp"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:serpent-person",
+      "note_back": "Йиссис — змеечеловек, пробуждённый после векового сна, под личиной Сьюзан Пуласки"
+    },
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:yig",
+      "note": "бог, чьим знаком он счёл своё пробуждение",
+      "note_back": "считает себя избранником Йига"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "80",
+        "value": 80
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "50",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "APP": {
+        "raw": "70*",
+        "value": 70
+      },
+      "INT": {
+        "raw": "80",
+        "value": 80
+      },
+      "POW": {
+        "raw": "60",
+        "value": 60
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "12",
+      "value": 12
+    },
+    "sanity": {
+      "raw": "—",
+      "value": null
+    },
+    "luck": {
+      "raw": "60",
+      "value": 60
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "1 пункт (чешуя)",
+      "value": 1
+    },
+    "attacks_per_round": {
+      "raw": "1 (коготь, укус или оружие)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d3+1d4 или по оружию",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Укус",
+          "en": "Bite"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d8+1d4 + яд",
+          "dice": "1d8",
+          "adds_db": true,
+          "extra": "яд"
+        },
+        "notes": "яд: жертва должна пройти Чрезвычайную проверку ВЫН, иначе получает 1d8 урона"
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "skills": [
+      {
+        "name": "Работа с компьютером",
+        "skill": "coc:skill:computer-use",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "89%",
+          "value": 89,
+          "half": 44,
+          "fifth": 17
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Психология (люди)",
+        "skill": "coc:skill:psychology",
+        "specialization": "люди",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Наука (биология)",
+        "skill": "coc:skill:science",
+        "specialization": "биология",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Наука (химия)",
+        "skill": "coc:skill:science",
+        "specialization": "химия",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Наука (физика)",
+        "skill": "coc:skill:science",
+        "specialization": "физика",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Bind Enemy*, Consume Likeness, Contact Yig, Deflect Harm*, The Red Sign, Summon/Bind Star Vampire, Wither Limb, Wrack. *См. «Злодейские заклинания», выше.",
+      "items": [
+        {
+          "name": "Bind Enemy",
+          "spell": "coc:spell:bind-enemy"
+        },
+        {
+          "name": "Consume Likeness",
+          "spell": "coc:spell:consume-likeness"
+        },
+        {
+          "name": "Contact Yig",
+          "spell": "coc:spell:contact-yig"
+        },
+        {
+          "name": "Deflect Harm",
+          "spell": "coc:spell:deflect-harm"
+        },
+        {
+          "name": "The Red Sign",
+          "spell": "coc:spell:red-sign-of-shudde-mell"
+        },
+        {
+          "name": "Summon/Bind Star Vampire",
+          "spell": "coc:spell:summon-bind-star-vampire"
+        },
+        {
+          "name": "Wither Limb",
+          "spell": "coc:spell:wither-limb"
+        },
+        {
+          "name": "Wrack",
+          "spell": "coc:spell:wrack"
+        }
+      ]
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "увидеть истинный облик Сьюзан Пуласки"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Яд",
+      "summary": "Жертва укуса должна пройти Чрезвычайную проверку ВЫН, иначе получает 1d8 урона.",
+      "raw": "Poison: victim must succeed with Extreme CON roll or suffer 1d8 damage."
+    },
+    {
+      "name": "Сыворотка подчинения",
+      "summary": "Десять капель этой бесцветной сыворотки делают цель (если она провалит Трудную проверку ВЫН) очень внушаемой для змеелюдей: жертва сделает для них почти всё, кроме того, что угрожает её жизни или жизни её близких. Сыворотка выводится медленно: жертва освобождается от её действия через 1d10+10 дней, если за это время не примет ещё.",
+      "raw": "Domination Serum: ten drops of this colorless serum makes a target (if they fail to make a Hard Con roll) very suggestible to serpent people. The victim will do almost anything for serpent people, short of endangering his or her own life or the lives of loved ones. The serum metabolizes slowly, taking 1d10+10 days for a victim to be free of its effects, provided no more is imbibed in the meantime."
+    }
+  ],
+  "background": {
+    "description": "в облике Сьюзан Пуласки: 32 года, тёмные волосы, очки, хорошо одета в дорогую одежду",
+    "ideology": "Слава Йигу!",
+    "traits": "изображает несколько самовлюблённую богатую старую деву"
+  },
+  "description": {
+    "ru": "Змеечеловек, который принял облик и личность богатой светской дамы Сьюзан Пуласки и намерен обрушить на человечество волну ужаса. НАР 70 — в облике Сьюзан Пуласки.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Пробудившись после векового сна, Йиссис обнаружил, что остался один: великая цивилизация змеелюдей исчезла, а мир кишел обезьянолюдьми. Йиссис понял, что его разбудили слишком рано, но не позволил себе вновь погрузиться в оцепенение, а увидел в случившемся знак Йига — знак того, что именно ему суждено породить третью великую цивилизацию змеелюдей. Он верит, что Йиг поручил ему подготовить путь для братьев и отнять мир у обезьянолюдей.\n\nС того дня Йиссис носит облик богатой и влиятельной дилетантки Сьюзан Пуласки. Пока Йиссис не забрал её жизнь, Пуласки была всего лишь очередной богатой светской дамой, которую не интересовало ничего, кроме неё самой; теперь же она (Йиссис) тайно спонсирует экспедиции и археологические раскопки по всему миру. С помощью облика и богатства Пуласки Йиссис отправляет отряды исследователей и археологов откапывать остатки утраченного мира змеелюдей — технику и стазисные камеры змеелюдей — и свозить всё в огромное частное поместье в Аризоне. Отрядам хорошо платят, чтобы не задавали вопросов и чтобы всё найденное в целости доставлялось в поместье Пуласки. В последнее время в отряды всё чаще входят змеелюди (разбуженные Йиссисом), выдающие себя за людей: оказалось, что любопытные археологи задают слишком много вопросов и хотят (слишком пристально) рассмотреть реликвии, которые они откапывают для Пуласки. Иногда переодетым змеелюдям приходилось избавляться от товарищей по отряду, выдавая их смерть за несчастный случай.\n\nЙиссис решил, что открытая война с обезьянолюдьми была бы глупым шагом. Он считает, что обезьянолюдей можно подтолкнуть к войне между собой — войне, которая опустошит человечество и сделает его слабым и лёгким для завоевания. Для этого Йиссис ставит змеелюдей под личиной людей на влиятельные посты, чтобы сеять недоверие и паранойю и создать нужную обстановку, чтобы толкнуть человечество к войне с самим собой. Змеи уже ходят по коридорам Сената и Палаты представителей, и если всё пойдёт по плану, скоро змеечеловек будет править Белым домом.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 128,
+      "printed_page": 127,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 9: «Y’ssiss (A.K.A. Susan Pulaski)» — описание, статблок, особые способности"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 129,
+      "printed_page": 128,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Y’ssiss» — сыворотка подчинения, предыстория, броня, заклинания, потеря Рассудка"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "«The Red Sign» связано с заклинанием «Красный знак Шудде-Мьелла» (его псевдоним в справочнике). Эпоха книги — 1930-е (оси «1930s» нет, взято 1920s)."
+  }
+}

@@ -1,0 +1,364 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "pulp-cthulhu-en/character/the-raven",
+  "kind": "character",
+  "name": {
+    "ru": "Ворон",
+    "en": "The Raven"
+  },
+  "aliases": [
+    "Уолтер Шорт",
+    "Walter Short"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "мститель в маске; днём — продавец газет",
+    "en": "masked vigilante"
+  },
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "pulp"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "90",
+        "value": 90
+      },
+      "APP": {
+        "raw": "60",
+        "value": 60
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "80",
+        "value": 80
+      },
+      "EDU": {
+        "raw": "40",
+        "value": 40
+      }
+    },
+    "hp": {
+      "raw": "26",
+      "value": 26,
+      "note": "удвоены (с. 121): (ВЫН + ТЕЛ) ÷ 10 × 2"
+    },
+    "mp": {
+      "raw": "16",
+      "value": 16
+    },
+    "sanity": {
+      "raw": "80",
+      "value": 80
+    },
+    "luck": {
+      "raw": "80",
+      "value": 80
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "4 пункта (доспех из жёсткой кожи и металлических пластин)",
+      "value": 4
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "1d3+1d4 (+1 с кастетом)",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed",
+        "notes": "+1 к урону с кастетом"
+      },
+      {
+        "name": {
+          "ru": "Дубинка (блэкджек)",
+          "en": "Cosh"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "1d8+1d4",
+          "dice": "1d8",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:blackjack"
+      },
+      {
+        "name": {
+          "ru": "Револьвер .32",
+          "en": ".32 revolver"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d8",
+          "dice": "1d8",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:32-revolver"
+      },
+      {
+        "name": {
+          "ru": "Пистолет-пулемёт «Томпсон»",
+          "en": "Thompson SMG"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет-пулемёт)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d10+2",
+          "dice": "1d10+2",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:thompson-smg"
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Плавание",
+        "skill": "coc:skill:swim",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Пульп-талант: Крепкий орешек",
+      "summary": "Может потратить 10 пунктов Удачи, чтобы не заметить до 5 пунктов урона, полученного за один раунд боя.",
+      "raw": "Tough Guy: may spend 10 Luck points to shrug off up to 5 hit points worth of damage taken in one combat round.",
+      "refs": [
+        "coc:talent:tough-guy"
+      ]
+    },
+    {
+      "name": "Пульп-талант: Тяжёлая рука",
+      "summary": "Может потратить 10 пунктов Удачи, чтобы добавить ещё одну кость урона в ближнем бою.",
+      "raw": "Heavy Hitter: may spend 10 Luck points to add an additional damage die when dealing out melee combat.",
+      "refs": [
+        "coc:talent:heavy-hitter"
+      ]
+    }
+  ],
+  "background": {
+    "description": "чёрная маска ворона, чёрная фетровая шляпа, чёрный плащ-тренч",
+    "ideology": "справедливость для всех",
+    "traits": "немного эгоцентричен, экстраверт, не может не дать отпор задирам"
+  },
+  "description": {
+    "ru": "Днём — продавец газет Уолтер Шорт, по ночам — Ворон, «гроза преступного мира» в маске ворона и чёрном плаще. Ворон может быть помехой, возможным союзником или просто необычным побочным сюжетом.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Что заставило Уолтера Шорта надеть маску Ворона и чёрный плащ, неясно. Быть может, ему надоело, что гангстеры творят что хотят безнаказанно, или опостылели растущая преступность и насилие на родных улицах. А может, он просто решил, что справится лучше полиции и что честному человеку пора встать на защиту.\n\nКаждую ночь Уолтер Шорт откладывает дневную жизнь продавца газет и становится Вороном, борцом с преступностью, грозой преступного мира. Так, во всяком случае, думает сам Уолтер. К сожалению, для преступного братства Ворон скорее посмешище, чем угроза: его попытки бороться с организованной преступностью вялы, хотя кое-каких уличных громил и карманников ему удалось поймать и сдать в местный полицейский участок.\n\nНесмотря на первые неудачи, Ворон учится. Вместо того чтобы идти на преступников в лоб, он следит за ними: прячась на крышах, шпионит за преступниками, записывает их дела и собирает улики, которые собирается передать полиции или газетам.\n\nПримечание для Хранителя. Ворон, скорее всего, будет наблюдать, когда герои решат вломиться в здание, похитить культиста или пуститься в другую подобную авантюру. Быть может, он решит пристально следить за этой шайкой бездельников, записывая их похождения, чтобы разоблачить их «преступные» выходки. Поначалу они могут его и не заметить, но со временем его тёмная тень может начать преследовать их, ходить за ними по пятам и всегда быть свидетелем их дел — вынуждая героев отвечать за последствия своих поступков.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 130,
+      "printed_page": 129,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 9: «The Raven (A.K.A. Walter Short)» — описание"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 131,
+      "printed_page": 130,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Raven» — окончание описания, статблок, пульп-таланты, предыстория, броня"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.dodge",
+      "printed": "40% (20/8)",
+      "expected": "не ниже 45% (половина ЛВК 90)",
+      "note": "базовое Уклонение равно половине ЛВК; напечатанное значение ниже базового",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "ПЗ удвоены по книге (с. 121) — это не опечатка; проверка производных значений показывает их как расхождение. Эпоха книги — 1930-е (оси «1930s» нет, взято 1920s)."
+  }
+}

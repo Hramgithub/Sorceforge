@@ -1,0 +1,360 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "pulp-cthulhu-en/character/professor-cobalt",
+  "kind": "character",
+  "name": {
+    "ru": "Профессор Кобальт",
+    "en": "Professor Cobalt"
+  },
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "учёный-ми-го",
+    "en": "mi-go scientist"
+  },
+  "occupation_ref": "coc:occupation:pulp-scientist",
+  "age": {
+    "raw": "около 55 лет",
+    "value": null,
+    "note": "«mid-50s»"
+  },
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "pulp"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:mi-go",
+      "note_back": "мозг-конструкт с разумом ми-го в теле профессора Кобальта"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "50",
+        "value": 50
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "APP": {
+        "raw": "70",
+        "value": 70
+      },
+      "INT": {
+        "raw": "80",
+        "value": 80
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "sanity": {
+      "raw": "—",
+      "value": null
+    },
+    "luck": {
+      "raw": "50",
+      "value": 50
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет; тело человеческое, но мозг — конструкт ми-го, и любое колющее оружие (в том числе пули) наносит мозгу минимальный урон",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1d3 или по оружию",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Луч смерти",
+          "en": "Death ray"
+        },
+        "kind": "attack",
+        "skill": null,
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d10+5",
+          "dice": "1d10+5",
+          "adds_db": false,
+          "extra": "не учитывает броню"
+        },
+        "notes": "не учитывает броню"
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "skills": [
+      {
+        "name": "Работа с компьютером",
+        "skill": "coc:skill:computer-use",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Гипноз",
+        "skill": "coc:skill:hypnosis",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Медицина",
+        "skill": "coc:skill:medicine",
+        "value": {
+          "raw": "90%",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Наука (любая)",
+        "skill": "coc:skill:science",
+        "specialization": "любая",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Dominate, Fist of Yog-Sothoth, Shrivelling.",
+      "items": [
+        {
+          "name": "Dominate",
+          "spell": "coc:spell:dominate"
+        },
+        {
+          "name": "Fist of Yog-Sothoth",
+          "spell": "coc:spell:fist-of-yog-sothoth"
+        },
+        {
+          "name": "Shrivelling",
+          "spell": "coc:spell:shrivelling"
+        }
+      ]
+    },
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d4",
+        "trigger": "если мозг ми-го профессора Кобальта каким-то образом раскрыт"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Гипноз",
+      "summary": "Гипноз 70% (встречная проверка против МОЩ цели): при успехе цель на 1d6 часов под контролем профессора Кобальта.",
+      "raw": "Hypnosis 70% (opposed roll versus target’s POW); success means the target is under the control of Professor Cobalt for a period of 1d6 hours.",
+      "refs": [
+        "coc:skill:hypnosis"
+      ]
+    },
+    {
+      "name": "Телепатия",
+      "summary": "Может телепатически говорить с людьми за 1 ПМ на 5 раундов; человек может воспротивиться общению, выиграв встречную проверку МОЩ.",
+      "raw": "the professor can speak telepathically to humans, costing 1 magic point per 5 rounds. A human can resist the communication with a successful opposed POW roll."
+    },
+    {
+      "name": "Мозг-конструкт",
+      "summary": "Мозг — конструкт ми-го: колющее оружие (в том числе пули) наносит ему минимальный урон; теоретически мозг можно переместить в новое тело.",
+      "raw": "the brain is a mi-go construct and all piercing weapons (inc. bullets) do minimum damage to the brain (in theory the brain could be moved to a new host)."
+    }
+  ],
+  "background": {
+    "description": "около 55 лет, длинноватые белые волосы, лабораторный халат",
+    "injuries": "под волосами — шрам вокруг макушки (там, где извлекли мозг)"
+  },
+  "description": {
+    "ru": "Некогда кроткий учёный, чей мозг ми-го заменили органическим конструктом с разумом одного из ми-го. Тело человеческое, разум — инопланетный; гибрид ми-го и Кобальта свободно ставит опыты посреди человеческого общества.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Жизнь профессора Кобальта навсегда изменилась в тот день, когда ми-го забрали его мозг! Ми-го давно наблюдали за ним: их интересовали его опыты по созданию машин с органическими интерфейсами. Профессор полагал, что однажды органические компоненты (мозг, нервная система и т. п.) можно будет встраивать в машины, давая им своего рода разум; такие машины могли бы «чувствовать» и действовать по-человечески, выполняя будничную и однообразную работу и освобождая людей для высших занятий и досуга. Агенты ми-го пришли к профессору, и он охотно согласился на сделку, которая позволит ему увидеть вселенную и узнать сокрытые истины космоса: его мозг извлекли и заменили органическим конструктом с разумом одного из ми-го.\n\nПока мозг профессора путешествует среди звёзд (надёжно помещённый в новый цилиндр для мозга), «мозг» ми-го распоряжается телом Кобальта и может ставить собственные опыты прямо посреди человеческого общества. Опыты эти, мягко говоря, необычны: по-видимому, мозг ми-го проводит серию испытаний на людях (добровольцах или нет — неясно). Одни испытания, похоже, касаются смешения человеческой, звериной и инопланетной анатомии, другие сосредоточены на причудливых опытах с человеческим разумом: один из них, по-видимому, — разновидность гипноза, превращающая подопытных в одержимых убийц, другой будто бы пробуждает скрытые психические способности человечества. Вряд ли мозг профессора Кобальта когда-нибудь воссоединится с телом, так что пока гибрид ми-го и Кобальта, похоже, волен вести любые исследования, какие пожелает.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 125,
+      "printed_page": 124,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 9: «Professor Cobalt» — описание, статблок, особые способности, предыстория"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "«Луч смерти» — оружие странной науки без позиции в справочнике и без указанного навыка. Эпоха книги — 1930-е (оси «1930s» нет, взято 1920s)."
+  }
+}

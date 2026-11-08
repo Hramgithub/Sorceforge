@@ -1,0 +1,422 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "pulp-cthulhu-en/character/feng-wang",
+  "kind": "character",
+  "name": {
+    "ru": "Фэн Ван",
+    "en": "Feng Wāng"
+  },
+  "aliases": [
+    "Feng Wang"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "доверенный посланник",
+    "en": "trusted emissary"
+  },
+  "age": {
+    "raw": "около 35 лет",
+    "value": null,
+    "note": "«mid-30s»"
+  },
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "pulp"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "pulp-cthulhu-en/character/the-jade-emperor",
+      "note": "господин",
+      "note_back": "самый доверенный сообщник и посланник"
+    },
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:nyarlathotep",
+      "note": "почитаемое божество",
+      "note_back": "почитатель"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "80",
+        "value": 80
+      },
+      "CON": {
+        "raw": "90",
+        "value": 90
+      },
+      "SIZ": {
+        "raw": "45",
+        "value": 45
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "APP": {
+        "raw": "40",
+        "value": 40
+      },
+      "INT": {
+        "raw": "60",
+        "value": 60
+      },
+      "POW": {
+        "raw": "40",
+        "value": 40
+      },
+      "EDU": {
+        "raw": "40",
+        "value": 40
+      }
+    },
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "mp": {
+      "raw": "8",
+      "value": 8
+    },
+    "sanity": {
+      "raw": "00",
+      "value": 0
+    },
+    "luck": {
+      "raw": "40",
+      "value": 40
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1 (Ван тратит Удачу, чтобы купить вторую атаку)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Нож",
+          "en": "knife"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "1d4+2+1d4",
+          "dice": "1d4+2",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:knife-medium"
+      },
+      {
+        "name": {
+          "ru": "Дадао",
+          "en": "Dadao"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (меч)",
+        "chance": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "1d8+2+1d4",
+          "dice": "1d8+2",
+          "adds_db": true
+        },
+        "notes": "дадао — китайский широкий меч; позиции в справочнике оружия нет"
+      },
+      {
+        "name": {
+          "ru": "Кулак дракона",
+          "en": "Dragon Fist"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "1d8+2+1d4",
+          "dice": "1d8+2",
+          "adds_db": true
+        },
+        "notes": "Кулак дракона — цепь с тяжёлыми грузами на обоих концах. Можно наносить дробящий урон или успешным боевым манёвром опутать цель (цель тратит раунд, чтобы распутаться проверкой ЛВК) или обезоружить её."
+      },
+      {
+        "name": {
+          "ru": "Кулак дракона: опутать",
+          "en": "Dragon Fist: entangle maneuver"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "цель опутана или обезоружена",
+          "dice": null,
+          "adds_db": false
+        },
+        "notes": "опутанная цель тратит раунд, чтобы распутаться проверкой ЛВК"
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "10%",
+          "value": 10,
+          "half": 5,
+          "fifth": 2
+        }
+      },
+      {
+        "name": "История",
+        "skill": "coc:skill:history",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Оккультизм",
+        "skill": "coc:skill:occult",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Родной язык (китайский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "китайский",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Иностранный язык (английский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "английский",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Иностранный язык (р’льехский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "р’льехский",
+        "value": {
+          "raw": "5%",
+          "value": 5,
+          "half": 2,
+          "fifth": 1
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Cloud Memory.",
+      "items": [
+        {
+          "name": "Cloud Memory",
+          "spell": "coc:spell:cloud-memory"
+        }
+      ]
+    }
+  },
+  "abilities": [
+    {
+      "name": "Пульп-талант: Быстрые ноги",
+      "summary": "Может потратить 10 Удачи, чтобы на одну боевую стычку избежать «численного превосходства» противников в ближнем бою.",
+      "raw": "Fleet Footed: may spend 10 Luck to avoid being “outnumbered” in melee combat for one combat encounter.",
+      "refs": [
+        "coc:talent:fleet-footed"
+      ]
+    }
+  ],
+  "background": {
+    "description": "около 35 лет, элегантно одет в костюм-тройку",
+    "ideology": "почитатель Ньярлатхотепа",
+    "significant_people": "Нефритовый император",
+    "traits": "самоуверенный и жестокий",
+    "injuries": "длинный шрам по левой стороне лица"
+  },
+  "description": {
+    "ru": "Пожалуй, самый доверенный сообщник Нефритового императора; почти всегда рядом с ним. Ван часто представляет Нефритового императора в деловых сделках или вершит наказание над теми, кто по глупости пытался обмануть его господина или перейти ему дорогу.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 124,
+      "printed_page": 123,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 9: «Feng Wāng» — описание, статблок, пульп-талант, предыстория"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 125,
+      "printed_page": 124,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Feng Wāng» — окончание предыстории, броня, заклинания"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Родной язык — китайский по происхождению (вывод из текста, Р-41). Дадао и «Кулак дракона» — оружие без позиции в справочнике. Эпоха книги — 1930-е (оси «1930s» нет, взято 1920s)."
+  }
+}

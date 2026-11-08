@@ -1,0 +1,479 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "pulp-cthulhu-en/character/the-shard",
+  "kind": "character",
+  "name": {
+    "ru": "Осколок",
+    "en": "The Shard"
+  },
+  "aliases": [
+    "Дэн Херберт",
+    "Dan Herbert"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "извращённый йит",
+    "en": "twisted Yithian"
+  },
+  "age": {
+    "raw": "38 лет (нынешнее тело)",
+    "value": 38
+  },
+  "sex": "мужской (нынешнее тело)",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "pulp"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:great-race-of-yith-cone-body-form",
+      "note_back": "изгнанный безумный йит, кочующий по человеческим телам"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70*",
+        "value": 70
+      },
+      "CON": {
+        "raw": "65*",
+        "value": 65
+      },
+      "SIZ": {
+        "raw": "70*",
+        "value": 70
+      },
+      "DEX": {
+        "raw": "70*",
+        "value": 70
+      },
+      "APP": {
+        "raw": "70*",
+        "value": 70
+      },
+      "INT": {
+        "raw": "120",
+        "value": 120
+      },
+      "POW": {
+        "raw": "80",
+        "value": 80
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "26",
+      "value": 26,
+      "note": "удвоены (с. 121): (ВЫН + ТЕЛ) ÷ 10 × 2"
+    },
+    "mp": {
+      "raw": "14",
+      "value": 14
+    },
+    "sanity": {
+      "raw": "—",
+      "value": null
+    },
+    "luck": {
+      "raw": "80",
+      "value": 80
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "2 (молниемёт стреляет не чаще раза в раунд)",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Пистолет .45",
+          "en": ".45 auto"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "1d10+2",
+          "dice": "1d10+2",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:45-automatic"
+      },
+      {
+        "name": {
+          "ru": "Молниемёт",
+          "en": "Lightning gun"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (молниемёт)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d10 за заряд (суммируется)",
+          "dice": "1d10",
+          "adds_db": false,
+          "extra": "за каждый заряд"
+        },
+        "weapon": "coc:weapon:lightning-gun-model-a",
+        "notes": "Молниемёт: Осколок построил свой вариант молниемёта на 25 зарядов; перезарядка занимает 1 раунд. Одним выстрелом можно выпустить сколько угодно зарядов, но каждый заряд сверх 5, выпущенный разом, даёт накопительный шанс 5% сжечь оружие (бросок на выгорание — отдельно). Базовая дальность — 100 метров; за каждые следующие 100 метров — одна штрафная кость к проверке попадания. Стреляет не чаще раза в раунд."
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "skills": [
+      {
+        "name": "Работа с компьютером",
+        "skill": "coc:skill:computer-use",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Электрика",
+        "skill": "coc:skill:electrical-repair",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "История",
+        "skill": "coc:skill:history",
+        "value": {
+          "raw": "100%",
+          "value": 100,
+          "half": 50,
+          "fifth": 20
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Иностранные языки (любые)",
+        "skill": "coc:skill:language-other",
+        "specialization": "любые",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Механика",
+        "skill": "coc:skill:mechanical-repair",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Медицина",
+        "skill": "coc:skill:medicine",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Естествознание",
+        "skill": "coc:skill:natural-world",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Оккультизм",
+        "skill": "coc:skill:occult",
+        "value": {
+          "raw": "90%",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Наука (любая)",
+        "skill": "coc:skill:science",
+        "specialization": "любая",
+        "value": {
+          "raw": "90%",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Circle of Nausea*, Dominate, Shrivelling. *См. «Злодейские заклинания», с. 128.",
+      "items": [
+        {
+          "name": "Circle of Nausea",
+          "spell": "coc:spell:circle-of-nausea"
+        },
+        {
+          "name": "Dominate",
+          "spell": "coc:spell:dominate"
+        },
+        {
+          "name": "Shrivelling",
+          "spell": "coc:spell:shrivelling"
+        }
+      ]
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "осознать, что Осколок — из Великой Расы"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Нынешнее тело",
+      "summary": "Характеристики со звёздочкой (СИЛ, ВЫН, ТЕЛ, ЛВК, НАР) — нынешнего тела Осколка.",
+      "raw": "*The statistics here are for the Shard’s current body."
+    },
+    {
+      "name": "Прыжок разума",
+      "summary": "Может перенести своё сознание из одного тела в другое (обычно человеческое), выиграв встречную проверку МОЩ с телом-целью. Сознание захваченного тела при этом уничтожается.",
+      "raw": "Mind Jump; able to move its consciousness from one body to another (usually human) by winning an opposed POW roll with the target body. The consciousness of the body possessed is destroyed in the process."
+    },
+    {
+      "name": "Молниемёт",
+      "summary": "Молниемёт: Осколок построил свой вариант молниемёта на 25 зарядов; перезарядка занимает 1 раунд. Одним выстрелом можно выпустить сколько угодно зарядов, но каждый заряд сверх 5, выпущенный разом, даёт накопительный шанс 5% сжечь оружие (бросок на выгорание — отдельно). Базовая дальность — 100 метров; за каждые следующие 100 метров — одна штрафная кость к проверке попадания. Стреляет не чаще раза в раунд.",
+      "refs": [
+        "coc:weapon:lightning-gun-model-a"
+      ]
+    },
+    {
+      "name": "Пульп-талант: Изобретение",
+      "summary": "Одно изобретение странной науки — выбрать готовое или придумать.",
+      "raw": "Gadget: choose or create one weird science gadget.",
+      "refs": [
+        "coc:talent:gadget"
+      ]
+    },
+    {
+      "name": "Пульп-талант: Бдительность",
+      "summary": "В бою его никогда не застают врасплох.",
+      "raw": "Alert: never surprised in combat.",
+      "refs": [
+        "coc:talent:alert"
+      ]
+    }
+  ],
+  "background": {
+    "description": "сейчас выглядит как 38-летний мужчина по имени Дэн Херберт",
+    "ideology": "поднять человечество до такого уровня техники, которого хватит для побега из земной тюрьмы",
+    "traits": "хитрый, склонный к манипуляциям, видит в людях лишь животных, которых надо выдрессировать"
+  },
+  "description": {
+    "ru": "Безумный и извращённый член Великой Расы Йит, изгнанный сородичами в XX век; тайный хозяин фонда «Амброзия». Бестелесный разум, кочующий по человеческим телам; характеристики со звёздочкой — его нынешнего тела.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Подробности об Осколке и фонде «Амброзия» — в гл. 3 «Пульп-организации» (запись фонда «Амброзия»).",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 131,
+      "printed_page": 130,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 9: «The Shard, twisted Yithian» — статблок, бой, навыки, особые способности"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 132,
+      "printed_page": 131,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Shard» — пульп-таланты, предыстория, броня, заклинания, потеря Рассудка"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.mp",
+      "printed": "14",
+      "expected": "16",
+      "note": "МОЩ 80 ÷ 5 = 16",
+      "fixed": false
+    },
+    {
+      "field": "statblock.attacks[Пистолет .45]",
+      "printed": "70% (34/14)",
+      "expected": "70% (35/14)",
+      "note": "половина 70 — 35 (Р-35)",
+      "fixed": true
+    },
+    {
+      "field": "statblock.attacks[Молниемёт]",
+      "printed": "50% (25/19)",
+      "expected": "50% (25/10)",
+      "note": "пятая часть 50 — 10 (Р-35)",
+      "fixed": true
+    }
+  ],
+  "corrections": [
+    {
+      "field": "statblock.attacks[Пистолет .45].chance",
+      "from": "70% (34/14)",
+      "to": "70% (35/14)",
+      "reason": "половина процента с округлением вниз (pulp-cthulhu-en, с. 130)",
+      "ref": "Р-35"
+    },
+    {
+      "field": "statblock.attacks[Молниемёт].chance",
+      "from": "50% (25/19)",
+      "to": "50% (25/10)",
+      "reason": "пятая часть процента с округлением вниз (pulp-cthulhu-en, с. 130)",
+      "ref": "Р-35"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "ПЗ удвоены по книге (с. 121). Молниемёт Осколка — его собственный вариант; ссылка — на молниемёт «модель A» (тот же урон 1d10 за заряд). Эпоха книги — 1930-е (оси «1930s» нет, взято 1920s)."
+  }
+}

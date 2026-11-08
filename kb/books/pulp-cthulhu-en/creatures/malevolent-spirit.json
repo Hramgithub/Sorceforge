@@ -1,0 +1,170 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "pulp-cthulhu-en/creature/malevolent-spirit",
+  "kind": "creature",
+  "name": {
+    "ru": "Злобный дух",
+    "en": "Malevolent Spirit"
+  },
+  "category": "supernatural",
+  "subcategory": "дух (пульп-чудовище)",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "pulp"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "по телу-носителю, +20",
+        "value": null
+      },
+      "CON": {
+        "raw": "по телу-носителю",
+        "value": null
+      },
+      "SIZ": {
+        "raw": "по телу-носителю",
+        "value": null
+      },
+      "DEX": {
+        "raw": "по телу-носителю",
+        "value": null
+      },
+      "INT": {
+        "raw": "85",
+        "value": 85,
+        "roll": "(4d6+3)×5"
+      },
+      "POW": {
+        "raw": "80",
+        "value": 80,
+        "roll": "(3d6+6)×5"
+      }
+    },
+    "hp": {
+      "raw": "по телу-носителю",
+      "value": null,
+      "note": "при одержимости — ПЗ тела-носителя; у самого духа ПМ считаются его ПЗ"
+    },
+    "mp": {
+      "raw": "16",
+      "value": 16,
+      "note": "ПМ духа считаются его ПЗ"
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1 (психическая атака или физическая, если дух вселился в тело)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Психическая атака",
+          "en": "Psychic Attack"
+        },
+        "kind": "special",
+        "skill": "МОЩ",
+        "chance": {
+          "raw": "встречная проверка МОЩ с целью",
+          "value": null,
+          "half": null,
+          "fifth": null
+        },
+        "damage": {
+          "raw": "1d10 ПМ",
+          "dice": "1d10",
+          "adds_db": false,
+          "extra": "урон по пунктам магии"
+        }
+      },
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d6+БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "notes": "только если дух вселился в тело"
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Почувствовать жизнь",
+        "skill": "coc:skill:sense-life",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      }
+    ],
+    "spells": {
+      "raw": "нет или 1d6 на усмотрение Хранителя",
+      "items": []
+    },
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d6",
+        "trigger": "увидеть духа"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Одержимость",
+      "summary": "Вселяясь в физическое тело, дух получает характеристики этого тела (отмечены звёздочкой); его присутствие увеличивает СИЛ носителя на 20 — бонус к урону пересчитывается. Если ПЗ тела падают до нуля, дух должен покинуть его и найти новое тело.",
+      "raw": "When possessing a physical body, characteristics are determined by the body that the spirit possesses. The spirit presence increases its host’s strength (+20); adjust damage bonus accordingly. If the possessed body is reduced to zero hit points, the spirit must depart and find a new body."
+    },
+    {
+      "name": "ПМ вместо ПЗ",
+      "summary": "Пункты магии духа считаются его пунктами здоровья.",
+      "raw": "Treat magic points as hit points for a spirit."
+    }
+  ],
+  "description": {
+    "ru": "Пришелец из межзвёздных пространств или неупокоенный дух умершего человека — злобная сущность, снедаемая ненавистью и неутолимым желанием взаимодействовать с физическим миром. Возможно, дух завидует живым и хочет вселиться в тело, чтобы сеять вред и хаос; или же он чужд Земле, и само его присутствие губительно для человеческой жизни. Пульп-чудовище гл. 9.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 134,
+      "printed_page": 133,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 9, «Pulp Monsters»: «Malevolent Spirit»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Близкий вид в справочнике — привидение (coc:creature:ghost), но книга духа так не называет; связь не ставилась. Эпоха книги — 1930-е (оси «1930s» нет, взято 1920s)."
+  }
+}

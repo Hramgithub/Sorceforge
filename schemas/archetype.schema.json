@@ -1,0 +1,200 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sourcefold.local/schemas/archetype.schema.json",
+  "title": "Архетип",
+  "description": "Архетип героя Pulp Cthulhu (Р-183): ключевая характеристика, бонусные навыки, таланты, профессии, черты.",
+  "type": "object",
+  "required": [
+    "schema",
+    "id",
+    "kind",
+    "name",
+    "description",
+    "core_characteristic",
+    "axes",
+    "sources"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "images": {
+      "$ref": "common.schema.json#/$defs/images"
+    },
+    "schema": {
+      "const": "sourcefold.archetype.v0"
+    },
+    "id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "kind": {
+      "const": "archetype"
+    },
+    "name": {
+      "$ref": "common.schema.json#/$defs/text"
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "description": {
+      "$ref": "common.schema.json#/$defs/text",
+      "description": "Кто это — описание архетипа."
+    },
+    "core_characteristic": {
+      "type": "object",
+      "required": [
+        "raw",
+        "options"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "raw": {
+          "type": "string"
+        },
+        "options": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "common.schema.json#/$defs/id"
+          },
+          "description": "coc:characteristic:* — одна из них на выбор."
+        }
+      }
+    },
+    "bonus_points": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Бонусные пункты навыков архетипа (обычно 100)."
+    },
+    "bonus_skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "raw"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "raw": {
+            "type": "string",
+            "description": "Как напечатано (в переводе)."
+          },
+          "id": {
+            "anyOf": [
+              {
+                "$ref": "common.schema.json#/$defs/id"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Запись базы, если есть."
+          },
+          "specialization": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "talents": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "raw": {
+          "type": "string"
+        },
+        "required": {
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/id"
+          }
+        },
+        "choose": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "Сколько талантов выбрать сверх обязательных."
+        }
+      }
+    },
+    "suggested_occupations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "raw"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "raw": {
+            "type": "string",
+            "description": "Как напечатано (в переводе)."
+          },
+          "id": {
+            "anyOf": [
+              {
+                "$ref": "common.schema.json#/$defs/id"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Запись базы, если есть."
+          },
+          "specialization": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "suggested_traits": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "$ref": "common.schema.json#/$defs/text",
+      "description": "Особые правила архетипа (например, у Помощника)."
+    },
+    "refs": {
+      "type": "array",
+      "description": "Связанные записи; просмотрщик показывает связь в обе стороны.",
+      "items": {
+        "$ref": "common.schema.json#/$defs/id"
+      }
+    },
+    "axes": {
+      "$ref": "common.schema.json#/$defs/axes"
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "common.schema.json#/$defs/source_ref"
+      }
+    },
+    "errata": {
+      "$ref": "common.schema.json#/$defs/errata"
+    },
+    "corrections": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/correction"
+      }
+    },
+    "quality": {
+      "$ref": "common.schema.json#/$defs/quality"
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "book_id": "pulp-cthulhu-en",
+  "goal": "the rules part of Pulp Cthulhu in the base (rules, archetypes, talents, occupations, skills, organizations, villains, monsters), linked to the core rules it changes (Р-183).",
+  "decision": "Р-183",
+  "check_dir": "checks/20261108-pulp",
+  "models": [
+    "kb/rules/spending-luck.json",
+    "kb/rules/fighting-maneuvers.json",
+    "schemas/archetype.schema.json",
+    "schemas/talent.schema.json",
+    "kb/occupations/akrobat.json"
+  ],
+  "extra": "## This work (Р-183, Р-175, Р-177)\n\n- The book is English: Russian text is our translation, flag `translated` (Р-21); the English name goes to `name.en`. Russian terms: use the base's existing records (skills `kb/skills`, characteristics, occupations `kb/occupations`, rules `kb/rules`) and the Russian Keeper Rulebook terms; new terms — translate plainly and keep the English in `aliases` or `name.en`. «Pulp» stays «пульп» (пульп-герой, пульп-талант).\n- Every record of this book: `axes.ruleset: \"pulp\"`, `axes.era` — the book's era (1930s → use the axis values in common.schema.json; if no «1930s» value, use [\"1920s\"] and say «1930-е» in the text).\n- Rules (`rule`, `kb/rules/pulp-<slug>.json`, id `coc:rule:pulp-<slug>`): one record per section, as in the Keeper Rulebook import (docs/conventions.md, Р-177): summary, text, steps, tables, examples, `optional: true` for «Pulp-O-Meter: Optional Rules» and other optional rules. A pulp rule that changes a core rule refers to it (`refs` → `coc:rule:<core slug>`, e.g. `coc:rule:spending-luck`, `coc:rule:wounds-and-healing`, `coc:rule:fighting-maneuvers`) and its `summary`/`text` says what it changes.\n- Archetypes: `kind: archetype`, `kb/archetypes/<slug>.json`, id `coc:archetype:<slug>` — schema `schemas/archetype.schema.json`. Talents: `kind: talent`, `kb/talents/<slug>.json`, id `coc:talent:<slug>` — schema `schemas/talent.schema.json`.\n- Pulp occupations: `coc:occupation:pulp-<slug>` (`kb/occupations/pulp-<slug>.json`), schema `schemas/occupation.schema.json`; if the base has the same occupation of the core (`kb/occupations/<slug>.json`), mention it in `description` (occupations have no `refs`).\n- New skills (psychic skills etc.): `coc:skill:pulp-<slug>` (`kb/skills/pulp-<slug>.json`).\n- Characters, creatures, organizations of the book: `kb/books/pulp-cthulhu-en/{characters,creatures,organizations}/<slug>.json`, ids `pulp-cthulhu-en/<kind>/<slug>` — models: `kb/books/masks-of-nyarlathotep-en/characters/*.json`, `kb/books/pobeg-iz-innsmuta-ru/organizations/*.json`. Statblocks as in the base (Р-25, Р-74). A villain's pulp talents — refs to `coc:talent:*` (list them in the report if another unit writes those talents).\n- Table with a roll → `table` record `coc:table:pulp-<slug>` (Р-171).\n- Links: only to records that exist in `kb/` or that your own unit creates; a talent or archetype another unit is writing at the same time — use the slug you are sure of (English name in lower case with hyphens, e.g. `coc:talent:hardened`) only if the brief of that unit is certain to create it; otherwise list it in the report.\n- Text and every number from the page (the PDF has a text layer; check tables and numbers on the page image when the layout is complex).\n- Coverage: `checks/20261108-pulp/<your unit name>.md` — every heading of your pages → the record that holds it, or «не взято» with the reason.",
+  "units": [
+    {
+      "name": "heroes-1",
+      "pages": "7-8 15-23",
+      "target": "the Introduction (Pulp-O-Meter, using Pulp with Call of Cthulhu) and ch. 2 steps 1-2: creating pulp heroes, ALL pulp archetypes (one archetype record each), generating characteristics for heroes",
+      "owns": [
+        "new files kb/rules/pulp-*.json for these pages",
+        "kb/archetypes/*.json (all archetypes)"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "heroes-2",
+      "pages": "23-43",
+      "target": "ch. 2 steps 3-7: ALL pulp talents of ch. 2 (one talent record each), pulp occupations (one occupation record each), skills and skill points, backstory, rounding out, quick-fire creation, Pulp-O-Meter optional rules, quick reference chart",
+      "owns": [
+        "new files kb/rules/pulp-*.json for these pages",
+        "kb/talents/*.json (talents of ch. 2)",
+        "new files kb/occupations/pulp-*.json",
+        "new files kb/skills/pulp-*.json for these pages",
+        "new files kb/tables/pulp-*.json for these pages"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "organizations",
+      "pages": "44-59",
+      "target": "ch. 3 Pulp Organizations: Vanguard Club, Department 29, Caduceus, Ambrosia Foundation, Gray Tigers, Inheritors — organization records with their goals, members, bases; their named characters; places only as text (no location records)",
+      "owns": [
+        "kb/books/pulp-cthulhu-en/organizations/*.json",
+        "kb/books/pulp-cthulhu-en/characters/ (characters of ch. 3)"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "system-sanity",
+      "pages": "60-80",
+      "target": "ch. 4 Game System (luck, dirty tricks, mooks, combat, wounds and healing, hero development, optional rules) and ch. 5 Pulp Sanity (effects of insanity, ALL insane talents as talent records with category «безумный», insane augmented skills)",
+      "owns": [
+        "new files kb/rules/pulp-*.json for these pages",
+        "kb/talents/*.json (insane talents of ch. 5)",
+        "new files kb/tables/pulp-*.json for these pages"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "magic-running",
+      "pages": "81-98",
+      "target": "ch. 6 Pulp Magic, Psychic Powers and Weird Science (rules; psychic skills as skill records; sample gadgets as rule records with category «артефакты») and ch. 7 Running Pulp Games (plots, themes, hooks, action, recurring villains, cliffhangers, rewards)",
+      "owns": [
+        "new files kb/rules/pulp-*.json for these pages",
+        "new files kb/skills/pulp-*.json for these pages",
+        "new files kb/tables/pulp-*.json for these pages"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "villains",
+      "pages": "121-134",
+      "target": "ch. 9 Pulp Villains and Characters: villain hit points and NPC pulp talents (rules; NPC-only talents as talent records with category «для персонажей Хранителя»), sample villains and other characters (character records), generic characters, pulp monsters (creature records; a pulp version of a known creature links to it with `instance_of`/`form_of` as in the base)",
+      "owns": [
+        "new files kb/rules/pulp-*.json for these pages",
+        "kb/talents/*.json (NPC talents of ch. 9)",
+        "kb/books/pulp-cthulhu-en/characters/ (characters of ch. 9)",
+        "kb/books/pulp-cthulhu-en/creatures/*.json"
+      ],
+      "sites": "—"
+    }
+  ]
+}

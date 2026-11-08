@@ -98,6 +98,9 @@ table.rules tr.hit td { background:color-mix(in srgb, var(--accent) 18%, transpa
 /* rules in groups (Р-180): each level starts past its parent's name, the font goes down by one step a level */
 #list button.rin1 { padding-left:32px; font-size:14px; }
 #list button.rin2 { padding-left:68px; font-size:13px; }
+#list button.rin3, #list button.rin4 { padding-left:88px; font-size:13px; }
+#list .part.l2 { padding-left:68px; font-size:13px; }
+#list .part.l3 { padding-left:88px; font-size:13px; }
 #list .part.l2 { padding-left:68px; font-size:13px; }
 #list h4.dist.sub.tochead { padding-left:48px; font-size:14px; }
 #list h4.dist.sub.tochead.deep { padding-left:68px; font-size:13px; }
@@ -396,42 +399,53 @@ function renderList() {
   list.querySelectorAll('button').forEach(b => b.onclick = () => show(b.dataset.id));
   list.querySelectorAll('[data-rgroup]').forEach(g => g.onclick = () => { const k = g.dataset.rgroup; partState.set(k, !g.querySelector('.fold').textContent.includes('▾')); renderList(); });
 }
-// the rules reference in groups (Р-180): the chapters of the Keeper Rulebook in its order, inside a chapter its
-// optional rules in their own group, the owner's house rules last; a group is open while it holds the open rule
-// a chapter of the rule's book; with «Все книги» the group says the book too
+// the rules reference in groups (Р-180, Р-185): the chapters of the Keeper Rulebook are the frame; a rule of another
+// book (Pulp) stands in the chapter of the core rule it changes (its first core ref), or in the chapter its own
+// chapter is mapped to (third field of `chapters` in the book registry); inside a chapter: the classic rules, the
+// classic optional rules, then the book's rules (with archetypes and talents in «Создание сыщиков»); house rules last
+const KR = 'keeper-rulebook-ru';
+const krChapter = page => ((DATA.chapters[KR] || []).filter(([p]) => p <= page).pop() || [0, 'Прочее'])[1];
 const ruleChapter = r => {
   const b = ruleBook(r);
   if (b === 'house-rules') return 'Домашние правила';
-  const ch = ((DATA.chapters[b] || []).filter(([p]) => p <= rulePage(r)).pop() || [0, 'Прочее'])[1];
-  return ruleBookSel === 'all' && b !== 'keeper-rulebook-ru' ? `${BOOKS[b] || b}: ${ch}` : ch;
+  if (b === KR) return krChapter(rulePage(r));
+  const core = (r.refs||[]).map(byId).find(x => x && x.kind === 'rule' && ruleBook(x) === KR);
+  if (core) return krChapter(rulePage(core));
+  const own = (DATA.chapters[b] || []).filter(([p]) => p <= rulePage(r)).pop();
+  return own ? own[2] || `${BOOKS[b] || b}: ${own[1]}` : 'Прочее';
 };
 function ruleGroups(items) {
   const cur = byId(current);
   const head = (key, open, label, lvl) => `<div class="part l${lvl}" data-rgroup="${esc(key)}">${fold(open)}${esc(label)}</div>`;
   const row = (c, lvl) => item(c).replace('class="', `class="rin${lvl} `);
-  const chapters = [...new Set(items.map(ruleChapter))];
-  // archetypes and talents of Pulp Cthulhu after the chapters, talents in groups by their section
+  const sub = (key, label, xs, lvl, inner) => {
+    if (!xs.length) return '';
+    const o = partOpen(key, !!cur && xs.includes(cur));
+    return head(key, o, `${label} (${xs.length})`, lvl) + (o ? (inner ? inner() : xs.map(c => row(c, lvl + 1)).join('')) : '');
+  };
+  // archetypes and talents of Pulp: in «Создание сыщиков», with the book's other rules of the chapter
   const pulpOn = ruleBookSel === 'all' || ruleBookSel === 'pulp-cthulhu-en';
   const q = norm(document.getElementById('q').value.trim()), f = document.getElementById('cat').value;
   const arch = pulpOn && !f ? DATA.archetypes.filter(c => matches(c, q, '')) : [], tal = pulpOn && !f ? DATA.talents.filter(c => matches(c, q, '')) : [];
-  const extra = () => {
-    let out = '';
-    if (arch.length) { const k = 'rule|archetypes', o = partOpen(k, !!cur && arch.includes(cur)); out += head(k, o, `Архетипы (${arch.length})`, 0) + (o ? arch.map(c => row(c, 1)).join('') : ''); }
-    if (tal.length) {
-      const k = 'rule|talents', o = partOpen(k, !!cur && tal.includes(cur));
-      out += head(k, o, `Таланты (${tal.length})`, 0);
-      if (o) out += [...new Set(tal.map(t => t.category))].map(cat => { const xs = tal.filter(t => t.category === cat), kk = k + '|' + cat, oo = partOpen(kk, !!cur && xs.includes(cur));
-        return head(kk, oo, `${cat[0].toUpperCase() + cat.slice(1)} (${xs.length})`, 1) + (oo ? xs.map(c => row(c, 2)).join('') : ''); }).join('');
-    }
-    return out;
-  };
+  const CREATION = 'Гл. 3. Создание сыщиков';
+  const chapters = [...new Set([...(DATA.chapters[KR] || []).map(([, t]) => t), ...items.map(ruleChapter)])]
+    .filter(ch => items.some(r => ruleChapter(r) === ch) || (ch === CREATION && (arch.length || tal.length)));
   return chapters.map(ch => {
-    const xs = items.filter(r => ruleChapter(r) === ch), core = xs.filter(r => !r.optional), opt = xs.filter(r => r.optional);
-    const open = partOpen('rule|' + ch, !!cur && xs.includes(cur) || chapters.length === 1);
-    const optKey = 'rule|' + ch + '|opt', optOpen = partOpen(optKey, !!cur && opt.includes(cur));
-    return head('rule|' + ch, open, `${ch} (${xs.length})`, 0) + (open ? core.map(c => row(c, 1)).join('')
-      + (opt.length ? head(optKey, optOpen, `Необязательные правила (${opt.length})`, 1) + (optOpen ? opt.map(c => row(c, 2)).join('') : '') : '') : '');
-  }).join('') + extra();
+    const xs = items.filter(r => ruleChapter(r) === ch);
+    const classic = xs.filter(r => r.axes?.ruleset !== 'pulp'), pulp = xs.filter(r => r.axes?.ruleset === 'pulp');
+    const core = classic.filter(r => !r.optional), opt = classic.filter(r => r.optional);
+    const extra = ch === CREATION ? [...arch, ...tal] : [];
+    const all = [...xs, ...extra], key = 'rule|' + ch;
+    const open = partOpen(key, !!cur && all.includes(cur) || chapters.length === 1);
+    const pulpKey = key + '|pulp', pulpAll = [...pulp, ...extra];
+    const pulpInner = () => pulp.map(c => row(c, 2)).join('')
+      + sub(pulpKey + '|arch', 'Архетипы', arch.filter(() => extra.length), 2)
+      + (extra.length ? sub(pulpKey + '|tal', 'Таланты', tal, 2, () => [...new Set(tal.map(t => t.category))].map(cat =>
+          sub(pulpKey + '|tal|' + cat, cat[0].toUpperCase() + cat.slice(1), tal.filter(t => t.category === cat), 3)).join('')) : '');
+    return head(key, open, `${ch} (${all.length})`, 0) + (open ? core.map(c => row(c, 1)).join('')
+      + sub(key + '|opt', 'Необязательные правила', opt, 1)
+      + sub(pulpKey, 'Pulp', pulpAll, 1, pulpInner) : '');
+  }).join('');
 }
 
 // guides (Р-80): a guide is a book that describes places; a city is one record that several guides add to

@@ -34,6 +34,13 @@ CHARACTERISTICS = [  # the Russian Keeper Rulebook, p. 26-31 (official)
 RESERVED = {"con", "prn", "aux", "nul", *(f"com{i}" for i in range(10)), *(f"lpt{i}" for i in range(10))}
 
 
+TR = dict(zip("абвгдеёжзийклмнопрстуфхцчшщъыьэюя", ["a","b","v","g","d","e","e","zh","z","i","y","k","l","m","n","o","p","r","s","t","u","f","kh","ts","ch","sh","shch","","y","","e","yu","ya"]))
+
+
+def translit(ru: str) -> str:
+    return "".join(TR.get(c, c) for c in ru.lower())
+
+
 def slug(en: str) -> str:
     s = re.sub(r"[^a-z0-9]+", "-", en.lower().replace("’", "").replace("'", "")).strip("-")
     return s + "-term" if s in RESERVED else s
@@ -78,9 +85,14 @@ def main() -> int:
     gl = ROOT / "checks/20261108-terms/kr-glossary.json"
     if gl.exists():
         for g in json.loads(gl.read_text(encoding="utf-8")):
-            if not g.get("en"):
-                continue
-            t = term(g["en"])
+            # a Russian entry without an English one (МКН, «Трудный успех») is keyed by its Russian name
+            if g.get("en"):
+                t = term(g["en"])
+            else:
+                # a Russian entry without an English one joins the term that already has this Russian name
+                t = next((x for x in terms.values() if any(v["ru"].lower() == g["ru"].lower() for v in x["variants"])), None) or term(g["ru"])
+                if t["en"] and t["en"].lower() == g["ru"].lower():
+                    t["en"] = None
             t["variants"].append({"ru": g["ru"], "by": "official", "book_id": "keeper-rulebook-ru", "page": g.get("page"), "note": "глоссарий «Книги хранителя»"})
             t["definition"] = g.get("definition") or t["definition"]
             t["domain"] = t["domain"] or "glossary"
@@ -133,16 +145,23 @@ def main() -> int:
     rank = {"official": 0, "owner": 1, "trusted": 2, "ours": 3}
     out, conflicts, used = [], [], set()
     for k, t in sorted(terms.items()):
+        t["en"] = t["en"] if t["en"] is not None else None
         seen, vs = set(), []
         for v in sorted(t["variants"], key=lambda v: rank.get(v["by"], 9)):
             key = (v["ru"].lower(), v["by"])
             if key not in seen:
                 seen.add(key); vs.append(v)
         best = vs[0]
+        # the glossary inverts headwords for the alphabet («Удачи проверка»): the same words in the order of the
+        # owner's registry are the term itself, still official
+        natural = next((v for v in vs if v["by"] == "owner" and sorted(v["ru"].lower().split()) == sorted(best["ru"].lower().split())
+                        and v["ru"].lower() != best["ru"].lower()), None)
+        if best["by"] == "official" and natural:
+            best = {**best, "ru": natural["ru"], "note": (best.get("note") or "") + "; в глоссарии — «" + vs[0]["ru"] + "» (порядок слов для алфавита)"}
         others = {v["ru"].lower() for v in vs if v["by"] != best["by"]} - {best["ru"].lower()}
         if best["by"] == "official" and any(v["by"] == "owner" and v["ru"].lower() != best["ru"].lower() for v in vs):
             conflicts.append((t["en"], best["ru"], [v["ru"] for v in vs if v["by"] == "owner"]))
-        s = slug(t["en"]) or "term"
+        s = slug(t["en"] or translit(k)) or "term"
         while s in used:
             s += "-2"
         used.add(s)

@@ -34,8 +34,8 @@ def main() -> int:
         with open(a.export, "w", encoding="utf-8", newline="") as f:
             w = csv.writer(f)
             w.writerow(["source_term", "accepted_ru", "aliases", "bad_ru", "domain", "status", "source_scope", "decision_rule", "notes"])
-            for t in sorted(terms, key=lambda t: t["name"]["en"].lower()):
-                w.writerow([t["name"]["en"], t["name"]["ru"], ";".join(t.get("aliases") or []), ";".join(t.get("avoid") or []),
+            for t in sorted(terms, key=lambda t: (t["name"]["en"] or t["name"]["ru"]).lower()):
+                w.writerow([t["name"]["en"] or "", t["name"]["ru"], ";".join(t.get("aliases") or []), ";".join(t.get("avoid") or []),
                             t.get("domain") or "", "accepted" if t["status"] == "accepted" else "review_required", t.get("scope") or "",
                             f"sourcefold_{t['chosen_by']}", ((t.get("definition") or {}).get("ru") or "")])
         print(f"{len(terms)} терминов → {a.export}")
@@ -52,7 +52,7 @@ def main() -> int:
         names = [t["name"]["en"], t["name"]["ru"], *(t.get("aliases") or []), *(v["ru"] for v in t.get("variants") or [])]
         if any(q in (n or "").lower() for n in names):
             vs = "; ".join(f"{v['ru']} ({BY.get(v['by'], v['by'])})" for v in t.get("variants") or [])
-            print(f"[термин] {t['name']['en']} → {t['name']['ru']}  ({BY[t['chosen_by']]}, {t['status']}{', ' + t['scope'] if t.get('scope') else ''})")
+            print(f"[термин] {t['name']['en'] or '—'} → {t['name']['ru']}  ({BY[t['chosen_by']]}, {t['status']}{', ' + t['scope'] if t.get('scope') else ''})")
             if vs:
                 print(f"         варианты: {vs}")
             if t.get("avoid"):

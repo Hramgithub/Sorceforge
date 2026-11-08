@@ -95,6 +95,9 @@ table.rules tr.hit td { background:color-mix(in srgb, var(--accent) 18%, transpa
 #list .part[data-part] { cursor:pointer; }
 #list .part[data-part]:hover { background:var(--panel); }
 #list .part.l1 { padding-left:48px; font-size:14px; }
+/* rules in groups (Р-180): each level starts past its parent's name, the font goes down by one step a level */
+#list button.rin1 { padding-left:32px; font-size:14px; }
+#list button.rin2 { padding-left:68px; font-size:13px; }
 #list .part.l2 { padding-left:68px; font-size:13px; }
 #list h4.dist.sub.tochead { padding-left:48px; font-size:14px; }
 #list h4.dist.sub.tochead.deep { padding-left:68px; font-size:13px; }
@@ -371,9 +374,30 @@ function renderList() {
     const set = SET[tab];
     const items = set.filter(c => matches(c, q, f));
     document.getElementById('count').textContent = items.length + ' из ' + set.length;
-    list.innerHTML = items.map(c => item(c)).join('');
+    list.innerHTML = tab === 'rule' ? ruleGroups(items) : items.map(c => item(c)).join('');
   }
   list.querySelectorAll('button').forEach(b => b.onclick = () => show(b.dataset.id));
+  list.querySelectorAll('[data-rgroup]').forEach(g => g.onclick = () => { const k = g.dataset.rgroup; partState.set(k, !g.querySelector('.fold').textContent.includes('▾')); renderList(); });
+}
+// the rules reference in groups (Р-180): the chapters of the Keeper Rulebook in its order, inside a chapter its
+// optional rules in their own group, the owner's house rules last; a group is open while it holds the open rule
+const RULE_CHAPTERS = [[26, 'Гл. 3. Создание сыщиков'], [50, 'Гл. 4. Навыки'], [78, 'Гл. 5. Игровая система'], [98, 'Гл. 6. Бой'],
+  [128, 'Гл. 7. Погоня'], [150, 'Гл. 8. Рассудок'], [168, 'Гл. 9. Магия'], [180, 'Гл. 10. Ход игры'], [220, 'Гл. 11. Книги мистических знаний'],
+  [238, 'Гл. 12. Гримуар'], [264, 'Гл. 13. Артефакты и инопланетные устройства'], [274, 'Гл. 14–15'], [382, 'Гл. 16. Приложения']];
+const ruleChapter = r => r.sources?.some(x => x.book_id === 'house-rules') ? 'Домашние правила'
+  : (RULE_CHAPTERS.filter(([p]) => p <= rulePage(r)).pop() || [0, 'Прочее'])[1];
+function ruleGroups(items) {
+  const cur = byId(current);
+  const head = (key, open, label, lvl) => `<div class="part l${lvl}" data-rgroup="${esc(key)}">${fold(open)}${esc(label)}</div>`;
+  const row = (c, lvl) => item(c).replace('class="', `class="rin${lvl} `);
+  const chapters = [...new Set(items.map(ruleChapter))];
+  return chapters.map(ch => {
+    const xs = items.filter(r => ruleChapter(r) === ch), core = xs.filter(r => !r.optional), opt = xs.filter(r => r.optional);
+    const open = partOpen('rule|' + ch, !!cur && xs.includes(cur) || chapters.length === 1);
+    const optKey = 'rule|' + ch + '|opt', optOpen = partOpen(optKey, !!cur && opt.includes(cur));
+    return head('rule|' + ch, open, `${ch} (${xs.length})`, 0) + (open ? core.map(c => row(c, 1)).join('')
+      + (opt.length ? head(optKey, optOpen, `Необязательные правила (${opt.length})`, 1) + (optOpen ? opt.map(c => row(c, 2)).join('') : '') : '') : '');
+  }).join('');
 }
 
 // guides (Р-80): a guide is a book that describes places; a city is one record that several guides add to

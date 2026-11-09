@@ -14,10 +14,111 @@
   "height": 648,
   "spot_shape": {
     "kind": "circle",
-    "w": 3.0,
-    "h": 3.0
+    "w": 2.3,
+    "h": 3.6
   },
-  "spots": [],
+  "spots": [
+    {
+      "label": "1",
+      "x": 6.65,
+      "y": 36.42,
+      "target": "masks-of-nyarlathotep-en/location/peru-ruins-surrounding-cliff"
+    },
+    {
+      "label": "2",
+      "x": 20.26,
+      "y": 39.66,
+      "target": "masks-of-nyarlathotep-en/location/peru-ruins-chimneys",
+      "text": "2 — закрытая шахта (под целой плитой)"
+    },
+    {
+      "label": "2",
+      "x": 9.93,
+      "y": 54.17,
+      "target": "masks-of-nyarlathotep-en/location/peru-ruins-chimneys",
+      "text": "2 — закрытая шахта (под целой плитой)"
+    },
+    {
+      "label": "2",
+      "x": 31.48,
+      "y": 61.11,
+      "target": "masks-of-nyarlathotep-en/location/peru-ruins-chimneys",
+      "text": "2 — закрытые шахты (под целыми плитами): одна метка со стрелками к трём шахтам"
+    },
+    {
+      "label": "3",
+      "x": 32.87,
+      "y": 39.66,
+      "target": "masks-of-nyarlathotep-en/location/peru-ruins-chimneys",
+      "text": "3 — открытая шахта (под разбитой плитой)"
+    },
+    {
+      "label": "4",
+      "x": 52.83,
+      "y": 47.69,
+      "target": "masks-of-nyarlathotep-en/location/peru-ruins-path"
+    },
+    {
+      "label": "5",
+      "x": 17.58,
+      "y": 52.31,
+      "target": "masks-of-nyarlathotep-en/location/peru-ruins-pyramid"
+    },
+    {
+      "label": "6",
+      "x": 21.75,
+      "y": 59.57,
+      "target": "masks-of-nyarlathotep-en/location/peru-ruins-crack"
+    },
+    {
+      "label": "7",
+      "x": 43.1,
+      "y": 70.06,
+      "target": "masks-of-nyarlathotep-en/location/peru-ruins-main-gate"
+    },
+    {
+      "label": "8",
+      "x": 38.03,
+      "y": 86.42,
+      "target": "masks-of-nyarlathotep-en/location/peru-ruins-charnel-pit"
+    },
+    {
+      "label": "9",
+      "x": 74.28,
+      "y": 39.66,
+      "target": "masks-of-nyarlathotep-en/location/peru-ruins-pile-of-rags"
+    },
+    {
+      "label": "10",
+      "x": 91.06,
+      "y": 47.99,
+      "target": "masks-of-nyarlathotep-en/location/peru-ruins-chamber"
+    },
+    {
+      "label": "11",
+      "x": 71.0,
+      "y": 54.17,
+      "target": "masks-of-nyarlathotep-en/location/peru-ruins-prison"
+    },
+    {
+      "label": "12",
+      "x": 67.03,
+      "y": 71.76,
+      "target": "masks-of-nyarlathotep-en/location/peru-ruins-pool-of-filth"
+    },
+    {
+      "label": "8",
+      "x": 87.19,
+      "y": 85.96,
+      "target": "masks-of-nyarlathotep-en/location/peru-ruins-charnel-pit"
+    },
+    {
+      "label": "THE TUNNELS BENEATH",
+      "x": 72.99,
+      "y": 93.83,
+      "target": "masks-of-nyarlathotep-en/location/peru-ruins-tunnels"
+    }
+  ],
   "axes": {
     "era": [
       "1920s"
@@ -39,6 +140,22 @@
     "flags": [
       "translated"
     ],
-    "notes": "Картинка — вырезка карты со страницы английской книги (150 dpi); меток нет (Р-202). Название — по официальным русским «Материалам для игроков» (карты локаций, с. 47–49)."
-  }
+    "notes": "Картинка — вырезка карты со страницы английской книги (150 dpi). Название — по официальным русским «Материалам для игроков» (карты локаций, с. 47–49). Метки (Р-206): пояснения 1–12 ведут на свои места; «2» напечатана трижды (правая — со стрелками к трём закрытым шахтам), «3» — открытая шахта, обе на записи «Шахты» с пояснением; «8» — дважды (вид сверху и план туннелей). Подпись «The Tunnels Beneath» ведёт на «Туннели под пирамидой». Значки шахт на плане туннелей (⊠ под закрытой, ⊡ под открытой) и подпись «Wall Detail» метками не стали."
+  },
+  "corrections": [
+    {
+      "field": "spots",
+      "from": "меток нет",
+      "to": "16 меток",
+      "reason": "метки по напечатанным номерам и подписям карты: распознавание tesseract и проверка по вырезкам",
+      "ref": "Р-206"
+    },
+    {
+      "field": "spot_shape",
+      "from": "circle 3.0×3.0",
+      "to": "circle 2.3×3.6",
+      "reason": "размер напечатанной метки на картинке карты",
+      "ref": "Р-206"
+    }
+  ]
 }

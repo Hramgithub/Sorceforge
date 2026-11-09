@@ -2,7 +2,7 @@
 
 HP = (CON + SIZ) / 10, MP = POW / 5, damage bonus and build by STR + SIZ, MOV by STR, DEX and SIZ with −1 per decade
 from 40, dodge not below DEX / 2, half and fifth of every percentage. Book conventions are not mismatches (Р-161):
-HP rounded up as well as down, MOV with or without the age penalty. Stat blocks on another scale (a body on a 1–18
+HP rounded up as well as down (doubled for Pulp Cthulhu heroes and villains), MOV with or without the age penalty. Stat blocks on another scale (a body on a 1–18
 scale, an inhuman being with characteristics over 100) are not checked. A field already listed in `errata` is known.
 """
 from __future__ import annotations
@@ -43,7 +43,11 @@ def mismatches(r: dict) -> list[tuple[str, str, str]]:
         return []
     S, C, Z, D, P = (ch.get(k) for k in ("STR", "CON", "SIZ", "DEX", "POW"))
     out = []
-    if C and Z and sb.get("hp") and num(sb["hp"].get("value")) not in ((C + Z) // 10, -(-(C + Z) // 10)):
+    # Pulp Cthulhu: heroes have (CON + SIZ) / 5, villains may have their hit points doubled (p. 121)
+    hps = {(C + Z) // 10, -(-(C + Z) // 10)} if C and Z else set()
+    if (r.get("axes") or {}).get("ruleset") == "pulp":
+        hps |= {h * 2 for h in hps} | {(C + Z) // 5}
+    if C and Z and sb.get("hp") and num(sb["hp"].get("value")) not in hps:
         out.append(("ПЗ", sb["hp"].get("raw"), str((C + Z) // 10)))
     if P and sb.get("mp") and num(sb["mp"].get("value")) not in (P // 5, -(-P // 5)):
         out.append(("ПМ", sb["mp"].get("raw"), str(P // 5)))

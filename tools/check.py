@@ -111,9 +111,9 @@ def main() -> int:
             if isinstance(c, dict) and c.get("ref") is not None and not DECISION.match(str(c["ref"])):
                 errors["в corrections.ref — только номер решения «Р-NN» или null; книга и страница — в reason (Р-140)"].append(f"{rel(p)}: corrections[{i}].ref = {c['ref']!r}")
         nm = rec.get("name") if isinstance(rec.get("name"), dict) else {}
-        for a in rec.get("aliases") or []:
-            if a in (nm.get("ru"), nm.get("en")):
-                errors["в «также» (aliases) — своё же название: оно уже в name"].append(f"{rel(p)}: {a}")
+        for alias in rec.get("aliases") or []:
+            if alias in (nm.get("ru"), nm.get("en")):
+                errors["в «также» (aliases) — своё же название: оно уже в name"].append(f"{rel(p)}: {alias}")
         if rec.get("kind") == "location" and not rec.get("part_of") and rec.get("location_type") not in ("город", "корабль", "город сценария"):
             errors["место без part_of бывает только у города, корабля и города сценария (Р-189, Р-197): иначе его нет в дереве гайда (Р-163)"].append(f"{rel(p)}: {rec.get('location_type')}")
         if rec.get("kind") == "location" and rec.get("location_type") == "здание":

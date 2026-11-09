@@ -14,10 +14,74 @@
   "height": 1500,
   "spot_shape": {
     "kind": "circle",
-    "w": 3.0,
-    "h": 3.0
+    "w": 3.3,
+    "h": 2.4
   },
-  "spots": [],
+  "spots": [
+    {
+      "label": "1",
+      "x": 57.44,
+      "y": 33.27,
+      "target": "masks-of-nyarlathotep-en/location/china-mu-hsien-study"
+    },
+    {
+      "label": "2",
+      "x": 24.86,
+      "y": 41.6,
+      "target": "masks-of-nyarlathotep-en/location/china-mu-hsien-living-room"
+    },
+    {
+      "label": "3",
+      "x": 57.53,
+      "y": 59.93,
+      "target": "masks-of-nyarlathotep-en/location/china-mu-hsien-courtyard"
+    },
+    {
+      "label": "4",
+      "x": 25.05,
+      "y": 71.4,
+      "target": "masks-of-nyarlathotep-en/location/china-mu-hsien-bedroom"
+    },
+    {
+      "label": "5",
+      "x": 48.28,
+      "y": 86.07,
+      "target": "masks-of-nyarlathotep-en/location/china-mu-hsien-kitchen"
+    },
+    {
+      "label": "6",
+      "x": 67.97,
+      "y": 86.53,
+      "target": "masks-of-nyarlathotep-en/location/china-mu-hsien-servant-room"
+    },
+    {
+      "label": "7",
+      "x": 25.05,
+      "y": 89.07,
+      "target": "masks-of-nyarlathotep-en/location/china-jack-brady-room"
+    },
+    {
+      "label": "Secret Door",
+      "x": 5.63,
+      "y": 86.33,
+      "target": "masks-of-nyarlathotep-en/location/china-jack-brady-room",
+      "text": "Подпись «Secret Door» (в т. II — «Потайная дверь»): потайная дверь из спальни Му (4) в комнату Джека Брейди."
+    },
+    {
+      "label": "12-foot Wall",
+      "x": 85.12,
+      "y": 47.87,
+      "target": "masks-of-nyarlathotep-en/location/china-mu-hsien-house",
+      "text": "Подпись «12-foot Wall» (в т. II — «Стена высотой 3,6 м»): участок обнесён стеной, единственный вход — крепкие деревянные ворота (с. 574)."
+    },
+    {
+      "label": "Pool",
+      "x": 59.44,
+      "y": 53.53,
+      "target": "masks-of-nyarlathotep-en/location/china-mu-hsien-courtyard",
+      "text": "Подпись «Pool» (в т. II — «Бассейн»): бассейн посреди двора."
+    }
+  ],
   "axes": {
     "era": [
       "1920s"
@@ -39,6 +103,22 @@
     "flags": [
       "translated"
     ],
-    "notes": "Картинка — вырезка карты со страницы английской книги (150 dpi); меток нет (Р-202). Название и легенда — по официальному русскому т. II (скан, физ. с. 189: «Дом Му Сяня»; в тексте — «Китай: карта 5»). Легенда — в описании `china-mu-hsien-house`."
-  }
+    "notes": "Картинка — вырезка карты со страницы английской книги (150 dpi). Название и легенда — по официальному русскому т. II (скан, физ. с. 189: «Дом Му Сяня»; в тексте — «Китай: карта 5»). У каждого номера легенды 1–7 — метка и запись комнаты с `part_of` на дом (Р-206); подписи «Secret Door», «12-foot Wall» и «Pool» — метки с пояснением. Без метки: «Neighboring Building» — ориентир без записи."
+  },
+  "corrections": [
+    {
+      "field": "spots",
+      "from": "[]",
+      "to": "10 меток: номера легенды 1–7 и подписи «Secret Door», «12-foot Wall», «Pool»",
+      "reason": "метки по Р-206: кружки найдены поиском по картинке (сопоставление с шаблоном кружка), каждая проверена глазами по вырезке; номера сверены с легендой карты",
+      "ref": "Р-206"
+    },
+    {
+      "field": "spot_shape",
+      "from": "{\"kind\": \"circle\", \"w\": 3.0, \"h\": 3.0}",
+      "to": "{\"kind\": \"circle\", \"w\": 3.3, \"h\": 2.4}",
+      "reason": "размер кружка номера на этой картинке (диаметр в пикселях / ширина и высота картинки)",
+      "ref": "Р-206"
+    }
+  ]
 }

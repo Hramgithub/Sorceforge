@@ -15,9 +15,58 @@
   "spot_shape": {
     "kind": "circle",
     "w": 3.0,
-    "h": 3.0
+    "h": 4.5
   },
-  "spots": [],
+  "spots": [
+    {
+      "label": "1",
+      "x": 39.8,
+      "y": 40.28,
+      "target": "masks-of-nyarlathotep-en/location/china-lung-kitchen"
+    },
+    {
+      "label": "2",
+      "x": 60.39,
+      "y": 40.42,
+      "target": "masks-of-nyarlathotep-en/location/china-lung-bedroom"
+    },
+    {
+      "label": "3",
+      "x": 74.88,
+      "y": 40.28,
+      "target": "masks-of-nyarlathotep-en/location/china-lung-wc"
+    },
+    {
+      "label": "4",
+      "x": 87.07,
+      "y": 40.42,
+      "target": "masks-of-nyarlathotep-en/location/china-lung-back-room"
+    },
+    {
+      "label": "5",
+      "x": 59.28,
+      "y": 53.94,
+      "target": "masks-of-nyarlathotep-en/location/china-lung-brazier"
+    },
+    {
+      "label": "6",
+      "x": 34.9,
+      "y": 59.72,
+      "target": "masks-of-nyarlathotep-en/location/china-lung-office"
+    },
+    {
+      "label": "7",
+      "x": 66.67,
+      "y": 69.15,
+      "target": "masks-of-nyarlathotep-en/location/china-lung-living-area"
+    },
+    {
+      "label": "8",
+      "x": 34.9,
+      "y": 79.58,
+      "target": "masks-of-nyarlathotep-en/location/china-lung-entrance-hall"
+    }
+  ],
   "axes": {
     "era": [
       "1920s"
@@ -39,6 +88,22 @@
     "flags": [
       "translated"
     ],
-    "notes": "Картинка — вырезка карты со страницы английской книги (150 dpi); меток нет (Р-202). Название и легенда — по официальному русскому т. II (скан). Легенда (1 — кухня, 2 — спальня, 3 — ванная, 4 — подсобка, 5 — жаровня, 6 — кабинет, 7 — гостиная, 8 — прихожая) — в описании `china-mr-lung-house`."
-  }
+    "notes": "Картинка — вырезка карты со страницы английской книги (150 dpi). Название и легенда — по официальному русскому т. II (скан, физ. с. 163). У каждого номера легенды 1–8 — метка и запись комнаты с `part_of` на дом господина Луна (Р-206). Без меток: подписи «Neighboring Building», «Stairwell to other apartments», «Arrows point up Stairs» — ориентиры без записей."
+  },
+  "corrections": [
+    {
+      "field": "spots",
+      "from": "[]",
+      "to": "8 меток: номера легенды 1–8",
+      "reason": "метки по Р-206: кружки найдены поиском по картинке (сопоставление с шаблоном кружка), каждая проверена глазами по вырезке; номера сверены с легендой карты",
+      "ref": "Р-206"
+    },
+    {
+      "field": "spot_shape",
+      "from": "{\"kind\": \"circle\", \"w\": 3.0, \"h\": 3.0}",
+      "to": "{\"kind\": \"circle\", \"w\": 3.0, \"h\": 4.5}",
+      "reason": "размер кружка номера на этой картинке (диаметр в пикселях / ширина и высота картинки)",
+      "ref": "Р-206"
+    }
+  ]
 }

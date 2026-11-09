@@ -15,9 +15,96 @@
   "spot_shape": {
     "kind": "circle",
     "w": 3.0,
-    "h": 3.0
+    "h": 4.7
   },
-  "spots": [],
+  "spots": [
+    {
+      "label": "2",
+      "x": 11.54,
+      "y": 42.88,
+      "target": "masks-of-nyarlathotep-en/location/china-ho-fang-office"
+    },
+    {
+      "label": "3",
+      "x": 11.54,
+      "y": 54.8,
+      "target": "masks-of-nyarlathotep-en/location/china-ho-fang-secretary-office"
+    },
+    {
+      "label": "4",
+      "x": 17.08,
+      "y": 54.94,
+      "target": "masks-of-nyarlathotep-en/location/china-ho-fang-warehouse-bathroom"
+    },
+    {
+      "label": "6",
+      "x": 13.48,
+      "y": 62.06,
+      "target": "masks-of-nyarlathotep-en/location/china-ho-fang-assistant-office"
+    },
+    {
+      "label": "7",
+      "x": 13.39,
+      "y": 74.13,
+      "target": "masks-of-nyarlathotep-en/location/china-ho-fang-reception"
+    },
+    {
+      "label": "A",
+      "x": 12.0,
+      "y": 82.99,
+      "target": "masks-of-nyarlathotep-en/location/china-ho-fang-special-storeroom",
+      "text": "Точка A на лестнице верхнего этажа: расшатанная часть ступеней (заметить — проверка Внимания; наступив — групповая проверка Удачи, не услышали ли охрана или Хо). Сдвинув дорожку и тихо сняв ступени, можно спрыгнуть в особое хранилище (с. 554–555)."
+    },
+    {
+      "label": "1",
+      "x": 31.39,
+      "y": 38.81,
+      "target": "masks-of-nyarlathotep-en/location/china-ho-fang-warehouse-offices"
+    },
+    {
+      "label": "1",
+      "x": 37.21,
+      "y": 38.81,
+      "target": "masks-of-nyarlathotep-en/location/china-ho-fang-warehouse-offices"
+    },
+    {
+      "label": "1",
+      "x": 31.39,
+      "y": 49.13,
+      "target": "masks-of-nyarlathotep-en/location/china-ho-fang-warehouse-offices"
+    },
+    {
+      "label": "1",
+      "x": 37.21,
+      "y": 49.13,
+      "target": "masks-of-nyarlathotep-en/location/china-ho-fang-warehouse-offices"
+    },
+    {
+      "label": "4",
+      "x": 36.29,
+      "y": 59.59,
+      "target": "masks-of-nyarlathotep-en/location/china-ho-fang-warehouse-bathroom"
+    },
+    {
+      "label": "B",
+      "x": 31.95,
+      "y": 69.77,
+      "target": "masks-of-nyarlathotep-en/location/china-ho-fang-special-storeroom",
+      "text": "Точка B: железный люк в полу хранилища — две створки 1 × 2 м к воде и сваям под пирсом; изнутри открывается легко, снизу нужны инструменты (с. 555)."
+    },
+    {
+      "label": "8",
+      "x": 34.63,
+      "y": 74.85,
+      "target": "masks-of-nyarlathotep-en/location/china-ho-fang-special-storeroom"
+    },
+    {
+      "label": "5",
+      "x": 68.88,
+      "y": 55.96,
+      "target": "masks-of-nyarlathotep-en/location/china-ho-fang-main-warehouse"
+    }
+  ],
   "axes": {
     "era": [
       "1920s"
@@ -39,6 +126,22 @@
     "flags": [
       "translated"
     ],
-    "notes": "Картинка — вырезка карты со страницы английской книги (150 dpi); меток нет (Р-202). Название и легенда — по официальному русскому т. II (скан). Легенда — в описании `china-ho-fang-warehouse`."
-  }
+    "notes": "Картинка — вырезка карты со страницы английской книги (150 dpi). Название и легенда — по официальному русскому т. II (скан, физ. с. 169). У каждого номера легенды 1–8 — метки и записи комнат с `part_of` на склад (Р-206); «1» напечатан четыре раза (кабинеты нижнего этажа), «4» — дважды (туалет на каждом этаже). Точки A и B — метки особого хранилища с пояснением (в т. II — «А» и «Б»). Без меток: подписи «Top Floor», «Ground Floor», «Dock» и пояснения к точкам — ориентиры без записей."
+  },
+  "corrections": [
+    {
+      "field": "spots",
+      "from": "[]",
+      "to": "14 меток: номера легенды 1–8 (1 — четыре раза, 4 — дважды) и точки A, B",
+      "reason": "метки по Р-206: кружки найдены поиском по картинке (сопоставление с шаблоном кружка), каждая проверена глазами по вырезке; номера сверены с легендой карты",
+      "ref": "Р-206"
+    },
+    {
+      "field": "spot_shape",
+      "from": "{\"kind\": \"circle\", \"w\": 3.0, \"h\": 3.0}",
+      "to": "{\"kind\": \"circle\", \"w\": 3.0, \"h\": 4.7}",
+      "reason": "размер кружка номера на этой картинке (диаметр в пикселях / ширина и высота картинки)",
+      "ref": "Р-206"
+    }
+  ]
 }

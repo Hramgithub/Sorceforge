@@ -60,9 +60,74 @@ def main() -> None:
     months = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"]
     today = datetime.date.today()
     landing = landing.replace("__UPDATED__", f"{today.day} {months[today.month - 1]} {today.year}")
+    landing = landing.replace("__PROGRESS__", progress_html(root, books))
     (a.out.parent / "index.html").write_text(landing, encoding="utf-8", newline="\n")
     print(f"{len(data['creatures'])} creatures, {len(data['characters'])} characters, "
           f"{len(data['skills'])} skills, {len(data['occupations'])} occupations, {len(data['spells'])} spells, {len(data['tomes'])} tomes, {len(data['weapons'])} weapons, {len(data['tables'])} tables, {len(data['rules'])} rules, {len(data['locations'])} locations -> {a.out}")
+
+
+KIND_RU = {"creature": "существа", "character": "персонажи", "location": "места", "scene": "сцены", "scenario": "сценарии",
+           "item": "предметы", "handout": "раздатки", "organization": "организации", "map": "карты", "rule": "правила",
+           "table": "таблицы", "spell": "заклинания", "tome": "книги Мифов", "weapon": "оружие", "skill": "навыки",
+           "occupation": "профессии", "archetype": "архетипы", "talent": "таланты", "term": "термины"}
+
+
+def progress_html(root: Path, books: dict) -> str:
+    """The progress of the base (Р-210): every work of the owner's library catalogue (pipeline/source/catalog.json) —
+    «добавлено в базу» when a registered book lies in its folder and has records, otherwise «известно»."""
+    import html as h
+    cat_path = root / "pipeline" / "source" / "catalog.json"
+    if not cat_path.exists():
+        return ""
+    works = json.loads(cat_path.read_text(encoding="utf-8"))
+    # records by book and kind
+    by_book: dict = {}
+    for p in (root / "kb").rglob("*.json"):
+        try:
+            r = json.loads(p.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        for b in {s.get("book_id") for s in r.get("sources") or []}:
+            by_book.setdefault(b, {}).setdefault(r.get("kind"), 0)
+            by_book[b][r.get("kind")] += 1
+    # a book belongs to the work whose folder holds its file (the longest such folder)
+    folder_of = {}
+    for bid, b in books.items():
+        pdf = (b.get("pdf") or "").replace("/", "\\")
+        if "1_Библиотека\\" in pdf:
+            folder_of[bid] = pdf.split("1_Библиотека\\", 1)[1].rsplit("\\", 1)[0]
+    counts: dict = {}
+    for bid, folder in folder_of.items():
+        owners = [w for w in works if folder == w["folder"] or folder.startswith(w["folder"] + "\\")]
+        if not owners:
+            continue
+        w = max(owners, key=lambda w: len(w["folder"]))
+        for k, n in by_book.get(bid, {}).items():
+            counts.setdefault(w["folder"], {}).setdefault(k, 0)
+            counts[w["folder"]][k] += n
+    order = ["Правила", "Кампании", "Сборники", "Сценарии", "Сеттинги", "Монографии", "Журналы", "Путеводители",
+             "Атмосфера", "Карты", "Прочее", "_Другие системы"]
+    types = sorted({w["type"] for w in works}, key=lambda t: (order.index(t) if t in order else 99, t))
+    added_total = sum(1 for w in works if counts.get(w["folder"]))
+    parts = [f'<p class="muted">Каталог библиотеки: {len(works)} книг и сценариев, добавлено в базу — {added_total}. '
+             'Статус «добавлено» — когда у книги есть записи в базе; число рядом — сколько и каких.</p>']
+    for t in types:
+        ws = [w for w in works if w["type"] == t]
+        ws.sort(key=lambda w: (not counts.get(w["folder"]), w["work"].lower()))
+        added = sum(1 for w in ws if counts.get(w["folder"]))
+        rows = []
+        for w in ws:
+            c = counts.get(w["folder"])
+            what = ", ".join(f"{KIND_RU.get(k, k)} {n}" for k, n in sorted(c.items(), key=lambda x: -x[1])) if c else ""
+            status = '<span class="st added">добавлено в базу</span>' if c else '<span class="st known">известно</span>'
+            era = h.escape((w.get("era") or "")[:60])
+            ed = h.escape(", ".join(w.get("editions") or []))
+            rows.append(f"<tr><td>{h.escape(w['work'])}</td><td>{ed}</td><td>{era}</td><td>{status}</td><td class=\"what\">{h.escape(what)}</td></tr>")
+        label = t.lstrip("_")
+        parts.append(f'<details{" open" if added else ""}><summary>{h.escape(label)} <span class="muted">— {added} из {len(ws)}</span></summary>'
+                     '<table class="progress"><tr><th>Книга</th><th>Издания</th><th>Эпоха</th><th>Статус</th><th>В базе</th></tr>'
+                     + "".join(rows) + "</table></details>")
+    return "\n".join(parts)
 
 
 if __name__ == "__main__":

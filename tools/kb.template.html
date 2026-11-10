@@ -1022,7 +1022,8 @@ function variants(c) {
   return vs.length ? `<section><h3>Варианты (${vs.length})</h3>${vs.map(v => `<details><summary>${esc(v.label)}</summary>${statblock({ statblock: v.statblock })}</details>`).join('')}</section>` : '';
 }
 // locations (Р-78): breadcrumb, children, residents (own and of places inside), intro tables
-const childrenOf = id => DATA.locations.filter(x => x.part_of === id).sort((a, b) => (a.number || '').localeCompare(b.number || '', 'ru', { numeric: true }) || a.name.ru.localeCompare(b.name.ru, 'ru'));
+// places by their map number; places without a number after the numbered ones, by name (Р-209)
+const childrenOf = id => DATA.locations.filter(x => x.part_of === id).sort((a, b) => (!a.number) - (!b.number) || (a.number || '').localeCompare(b.number || '', 'ru', { numeric: true }) || a.name.ru.localeCompare(b.name.ru, 'ru'));
 const descendants = id => childrenOf(id).flatMap(x => [x, ...descendants(x.id)]);
 function crumbs(c) {
   const out = []; let p = c.part_of && byId(c.part_of);

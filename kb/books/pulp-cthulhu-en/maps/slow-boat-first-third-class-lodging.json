@@ -13,11 +13,40 @@
   "width": 1008,
   "height": 602,
   "spot_shape": {
-    "kind": "circle",
-    "w": 2.0,
-    "h": 2.0
+    "kind": "label",
+    "w": 3.0,
+    "h": 20.0
   },
-  "spots": [],
+  "spots": [
+    {
+      "label": "PROMENADE",
+      "x": 19.15,
+      "y": 59.3,
+      "target": "pulp-cthulhu-en/location/slow-boat-first-class",
+      "text": "Прогулочная дорожка вдоль типовой каюты первого класса."
+    },
+    {
+      "label": "FIRST CLASS",
+      "x": 48.02,
+      "y": 59.3,
+      "target": "pulp-cthulhu-en/location/slow-boat-first-class",
+      "text": "Типовая каюта первого класса: ванная, гостиная, спальня (план «для наглядности», с. 219)."
+    },
+    {
+      "label": "THIRD CLASS",
+      "x": 58.33,
+      "y": 59.3,
+      "target": "pulp-cthulhu-en/location/slow-boat-third-class",
+      "text": "Каюты третьего класса: неподвижные койки, туалет и умывальник; ванные общие (с. 206)."
+    },
+    {
+      "label": "SHARED BATHROOMS",
+      "x": 89.88,
+      "y": 61.13,
+      "target": "pulp-cthulhu-en/location/slow-boat-third-class",
+      "text": "Общие ванные третьего класса."
+    }
+  ],
   "axes": {
     "era": [
       "1930s"
@@ -39,6 +68,15 @@
     "flags": [
       "translated"
     ],
-    "notes": "План «S.S. Coolidge — First & Third Class, placed side by side for illustrative purposes» (с. 219): типовая каюта первого класса у прогулочной палубы (спальня, гостиная, ванная) и каюты третьего класса с койками и общими ванными рядом — для наглядности. Автор — Стефани Макэлеа. Меток и картинки пока нет (Р-183: картинку добавит ведущий); width и height — заглушка, заменить по картинке."
-  }
+    "notes": "Картинка — верхняя часть плана «S.S. Coolidge — First & Third Class, placed side by side for illustrative purposes» со с. 219 (автор — Stephanie McAlea). Номеров нет; метки (Р-206) — вертикальные подписи «Promenade», «First Class» (на первый класс), «Third Class», «Shared Bathrooms» (на третий класс), с пояснением в `text`. Без меток: заголовок плана."
+  },
+  "corrections": [
+    {
+      "field": "spots",
+      "from": "[]",
+      "to": "4 меток",
+      "reason": "метки по Р-206: номера и подписи найдены распознаванием (tesseract) и по вырезкам, кружки уточнены поиском по картинке; каждая метка проверена глазами по увеличенной вырезке с нанесёнными метками",
+      "ref": "Р-206"
+    }
+  ]
 }

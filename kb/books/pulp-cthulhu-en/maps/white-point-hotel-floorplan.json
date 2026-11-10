@@ -14,10 +14,112 @@
   "height": 1315,
   "spot_shape": {
     "kind": "circle",
-    "w": 3.0,
-    "h": 2.3
+    "w": 2.4,
+    "h": 1.8
   },
-  "spots": [],
+  "spots": [
+    {
+      "label": "1",
+      "x": 28.67,
+      "y": 31.41,
+      "target": "pulp-cthulhu-en/location/white-point-hotel-kitchen"
+    },
+    {
+      "label": "2",
+      "x": 15.48,
+      "y": 45.1,
+      "target": "pulp-cthulhu-en/location/white-point-hotel-conservatory"
+    },
+    {
+      "label": "3",
+      "x": 71.23,
+      "y": 21.9,
+      "target": "pulp-cthulhu-en/location/white-point-hotel-store"
+    },
+    {
+      "label": "4",
+      "x": 38.49,
+      "y": 36.88,
+      "target": "pulp-cthulhu-en/location/white-point-hotel-mud-room"
+    },
+    {
+      "label": "5",
+      "x": 35.91,
+      "y": 35.36,
+      "target": "pulp-cthulhu-en/location/white-point-hotel-basement-stairs"
+    },
+    {
+      "label": "6",
+      "x": 29.17,
+      "y": 17.11,
+      "target": "pulp-cthulhu-en/location/white-point-hotel-lobby"
+    },
+    {
+      "label": "7",
+      "x": 40.97,
+      "y": 27.68,
+      "target": "pulp-cthulhu-en/location/white-point-hotel-lounge"
+    },
+    {
+      "label": "8",
+      "x": 28.97,
+      "y": 25.78,
+      "target": "pulp-cthulhu-en/location/white-point-hotel-check-in"
+    },
+    {
+      "label": "9",
+      "x": 26.39,
+      "y": 36.05,
+      "target": "pulp-cthulhu-en/location/white-point-hotel-office"
+    },
+    {
+      "label": "10",
+      "x": 43.45,
+      "y": 34.9,
+      "target": "pulp-cthulhu-en/location/white-point-hotel-reception-room"
+    },
+    {
+      "label": "11",
+      "x": 16.57,
+      "y": 24.33,
+      "target": "pulp-cthulhu-en/location/white-point-hotel-dining-room"
+    },
+    {
+      "label": "TO THE BARN",
+      "x": 54.66,
+      "y": 42.13,
+      "target": "pulp-cthulhu-en/location/white-point-barn",
+      "text": "Стрелка «To the Barn» — к конюшне."
+    },
+    {
+      "label": "STONE ANGEL",
+      "x": 30.65,
+      "y": 63.57,
+      "target": "pulp-cthulhu-en/location/white-point-hotel-gardens",
+      "text": "Каменный ангел на гравийном круге сада — мишень демонстрации дезинтегратора (с. 149)."
+    },
+    {
+      "label": "OPEN TO BELOW",
+      "x": 78.17,
+      "y": 16.81,
+      "target": "pulp-cthulhu-en/location/white-point-hotel-lobby",
+      "text": "Пометка на плане второго этажа: под ней — вестибюль (6), открытый на два этажа."
+    },
+    {
+      "label": "STORES",
+      "x": 84.13,
+      "y": 78.63,
+      "target": "pulp-cthulhu-en/location/white-point-hotel",
+      "text": "Кладовые в подвале (подвал на плане — не в масштабе)."
+    },
+    {
+      "label": "STORES",
+      "x": 72.72,
+      "y": 82.13,
+      "target": "pulp-cthulhu-en/location/white-point-hotel",
+      "text": "Кладовые в подвале (подвал на плане — не в масштабе)."
+    }
+  ],
   "axes": {
     "era": [
       "1930s"
@@ -47,6 +149,15 @@
     "flags": [
       "translated"
     ],
-    "notes": "План отеля на всю с. 143 (автор — Stephanie McAlea; та же карта для игроков — с. 237): первый этаж с номерами 1–11 (кухня, оранжерея, кладовая, прихожая, лестница в подвал, вестибюль, гостиная, стойка регистрации, контора, приёмная, столовая/бальный зал), сад с каменным ангелом, стрелка «To the Barn»; второй и третий этажи и подвал (кладовые) — не в масштабе. Легенда: лестницы, кладовые и служебные помещения, ванные, общие залы, люксы, двухместные и одноместные номера. Картинки пока нет (её добавит ведущий), метки не расставлены; image, width и height — заготовка: размер страницы при 150 dpi, уточняется по картинке."
-  }
+    "notes": "Картинка — копия плана для игроков (с. 237; в сценарии — с. 143, автор — Stephanie McAlea). Метки (Р-206): номера легенды 1–11 — у каждого запись комнаты с `part_of` на отель (1, 2, 11 были, 3–10 заведены); подписи «To the Barn» (на конюшню), «Stone Angel» (на сад), «Open to Below» (на вестибюль), «Stores» в подвале (дважды, на отель). Без меток: заголовки «First Floor», «Second Floor», «Third Floor», «Basement», пояснения «2nd, 3rd, & Basement areas not to scale», «Area of the Hotel Above», легенда цветов и значков."
+  },
+  "corrections": [
+    {
+      "field": "spots",
+      "from": "[]",
+      "to": "16 меток",
+      "reason": "метки по Р-206: номера и подписи найдены распознаванием (tesseract) и по вырезкам, кружки уточнены поиском по картинке; каждая метка проверена глазами по увеличенной вырезке с нанесёнными метками",
+      "ref": "Р-206"
+    }
+  ]
 }

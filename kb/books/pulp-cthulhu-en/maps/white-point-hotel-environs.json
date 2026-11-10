@@ -13,11 +13,52 @@
   "width": 1008,
   "height": 546,
   "spot_shape": {
-    "kind": "circle",
-    "w": 3.0,
-    "h": 2.3
+    "kind": "label",
+    "w": 7.0,
+    "h": 4.0
   },
-  "spots": [],
+  "spots": [
+    {
+      "label": "HOTEL",
+      "x": 42.76,
+      "y": 35.53,
+      "target": "pulp-cthulhu-en/location/white-point-hotel"
+    },
+    {
+      "label": "BARN",
+      "x": 47.22,
+      "y": 45.42,
+      "target": "pulp-cthulhu-en/location/white-point-barn"
+    },
+    {
+      "label": "WALLED GARDENS",
+      "x": 32.74,
+      "y": 43.59,
+      "target": "pulp-cthulhu-en/location/white-point-hotel-gardens",
+      "text": "Сады за оградой (Walled Gardens)",
+      "note": "Что сады за оградой на карте окрестностей — это задний сад с каменным ангелом на плане отеля (с. 143), книга прямо не говорит; метка ведёт на сад отеля по сопоставлению карт (вывод, Р-41)."
+    },
+    {
+      "label": "BOAT HOUSE",
+      "x": 65.58,
+      "y": 39.56,
+      "target": "pulp-cthulhu-en/location/white-point-boathouse"
+    },
+    {
+      "label": "WHITE POINT COVE",
+      "x": 84.72,
+      "y": 14.47,
+      "target": "pulp-cthulhu-en/location/white-point",
+      "text": "Бухта Уайт-Пойнт, давшая имя отелю; вечером аукциона с неё к отелю ползёт туман (с. 142, 149)."
+    },
+    {
+      "label": "TO KINGSPORT",
+      "x": 20.04,
+      "y": 82.05,
+      "target": "coc:location:kingsport",
+      "text": "Дорога на Кингспорт (около 8 км к северу)."
+    }
+  ],
   "axes": {
     "era": [
       "1930s"
@@ -39,6 +80,15 @@
     "flags": [
       "translated"
     ],
-    "notes": "Карта окрестностей отеля, нижняя половина с. 142 (автор — Stephanie McAlea): глушь (The Hinterland), сады за оградой (Walled Gardens), отель (Hotel), конюшня (Barn), поле для гольфа (Golf Course), скалистые мысы (Rocky Headlands), слип (Slipway), лодочный сарай (Boat House), бухта Уайт-Пойнт (White Point Cove), пляж (Beach), дорога «To Kingsport»; роза ветров. Меток с номерами нет. Картинки пока нет (её добавит ведущий), метки не расставлены; image, width и height — заготовка: размер страницы при 150 dpi, уточняется по картинке."
-  }
+    "notes": "Картинка — нижняя половина с. 142 (карта Stephanie McAlea). Метки (Р-206) — на подписях мест, у которых есть записи: «Hotel», «Barn», «Boat House», «Walled Gardens» (на сад отеля, с пометкой), «White Point Cove» (на Уайт-Пойнт), «To Kingsport» (на Кингспорт). Номеров на карте нет. Без меток: «The Hinterland», «Rocky Headlands», «Slipway», «Golf Course», «Beach» — подписи без записей (описаны в записи «Уайт-Пойнт»); роза ветров."
+  },
+  "corrections": [
+    {
+      "field": "spots",
+      "from": "[]",
+      "to": "6 меток",
+      "reason": "метки по Р-206: номера и подписи найдены распознаванием (tesseract) и по вырезкам, кружки уточнены поиском по картинке; каждая метка проверена глазами по увеличенной вырезке с нанесёнными метками",
+      "ref": "Р-206"
+    }
+  ]
 }

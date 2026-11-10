@@ -226,6 +226,10 @@ const ROLE = { npc:'NPC', pregen:'преген' };
 const CH = [['STR','СИЛ'],['CON','ВЫН'],['SIZ','ТЕЛ'],['DEX','ЛВК'],['APP','НАР'],['INT','ИНТ'],['POW','МОЩ'],['EDU','ОБР']];
 // book titles: pipeline/source/books.json, the one list of books (Р-148)
 const BOOKS = DATA.books;
+// editions of one work are one book in filters and guides (Р-208): «Маски» — англ. т. I–II, рус. т. II, материалы для игроков
+const WORKS = DATA.works || {}, WORK_TITLES = DATA.workTitles || {};
+const workOf = b => WORKS[b] || b;
+const workTitle = b => WORK_TITLES[workOf(b)] || BOOKS[workOf(b)] || b;
 const METHOD = { book_text: 'сверено с книгой', helper_migration: 'перенесено из веб-помощника', mineru: 'извлечено MinerU', manual: 'введено вручную' };
 const CHOOSES = { name:'имя', sex:'пол', age:'возраст', luck:'Удача', skills:'навыки', background:'предыстория' };
 const BG = [['description','Описание'],['ideology','Убеждения'],['significant_people','Значимые люди'],['meaningful_locations','Значимые места'],
@@ -233,7 +237,7 @@ const BG = [['description','Описание'],['ideology','Убеждения']
 const FILTERS = {
   creature: [['', 'Все категории'], ...Object.entries(CAT)],
   character: [['', 'Все персонажи'], ['role:npc', 'NPC'], ['era:1920s', 'Эпоха: 1920-е'], ['era:1930s', 'Эпоха: 1930-е'], ['era:modern', 'Эпоха: современность'],
-    ...[...new Set(DATA.characters.map(c => c.sources?.[0]?.book_id))].filter(Boolean).sort().map(b => ['book:' + b, (BOOKS[b] || b).replace(': готовые персонажи', '')])],
+    ...[...new Set(DATA.characters.map(c => workOf(c.sources?.[0]?.book_id)))].filter(Boolean).sort().map(b => ['book:' + b, workTitle(b).replace(': готовые персонажи', '')])],
   occupation: [['', 'Все профессии'], ['lovecraftian', 'Лавкрафтовские'], ['era:1920s', 'Эпоха: 1920-е'], ['era:1930s', 'Эпоха: 1930-е'], ['era:modern', 'Эпоха: современность']],
   skill: [['', 'Все категории'], ...[...new Set(DATA.skills.map(s => s.category))].sort().map(c => [c, c])],
   spell: [['', 'Все типы'], ['family', 'Только общие (семейства)'], ...[...new Set(DATA.spells.map(s => s.category).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'ru')).map(c => [c, c])],
@@ -295,7 +299,7 @@ const TOME_TYPE = { mythos_tome: 'книга Мифов', occult_book: 'окку
 const BY_ID = new Map(ALL.map(x => [x.id, x]));
 const byId = id => BY_ID.get(id);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const bookOf = c => c.sources?.[0]?.book_id;
+const bookOf = c => workOf(c.sources?.[0]?.book_id);
 // a link carries the record's real address, so «open in new tab» works; a plain click is handled in place (show)
 // a page address is #<kind>/<last part of the id>; when two records of a kind share that part (two Wentworths of
 // different books), the book goes in front: #character/startovyy-nabor-ru.wentworth-avebury
@@ -367,8 +371,8 @@ function subtitle(c) {
   if (c.kind === 'talent') return ['талант', c.category].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'rule') return [c.category, c.optional ? 'необязательное' : '', rulePage(c) < 9999 ? 'с. ' + rulePage(c) : ''].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'table') return [c.dice ? 'бросок ' + c.dice : 'выбор', (c.rows||[]).length + ' строк', c.category].filter(Boolean).map(esc).join(' · ');
-  if (c.kind === 'scenario') return [c.part_of && byId(c.part_of) ? byId(c.part_of).name.ru : 'сценарий', BOOKS[bookOf(c)] || ''].filter(Boolean).map(esc).join(' · ');
-  if (STORY_TYPE[c.kind] !== undefined || c.kind === 'scene') return [c[STORY_TYPE[c.kind]], c.kind === 'scene' ? c.when : '', (BOOKS[bookOf(c)] || '')].filter(Boolean).map(esc).join(' · ');
+  if (c.kind === 'scenario') return [c.part_of && byId(c.part_of) ? byId(c.part_of).name.ru : 'сценарий', workTitle(bookOf(c)) || ''].filter(Boolean).map(esc).join(' · ');
+  if (STORY_TYPE[c.kind] !== undefined || c.kind === 'scene') return [c[STORY_TYPE[c.kind]], c.kind === 'scene' ? c.when : '', (bookOf(c) ? workTitle(bookOf(c)) : '')].filter(Boolean).map(esc).join(' · ');
   if (c.kind === 'occupation') return `Средства ${esc(c.credit_rating.raw)}${c.lovecraftian ? ' · лавкрафтовская' : ''}${c.group ? ' · ' + esc(c.group) : ''}`;
   return `${esc(c.name.en||'')} · ${c.base.raw === '—' ? esc(c.category) : 'база ' + esc(c.base.raw)}`;
 }
@@ -520,8 +524,8 @@ function ruleGroups(items) {
 }
 
 // guides (Р-80): a guide is a book that describes places; a city is one record that several guides add to
-const bookIds = l => (l.sources || []).map(s => s.book_id);
-const GUIDES = [...new Set(DATA.locations.flatMap(bookIds))].sort((a, b) => (BOOKS[a] || a).localeCompare(BOOKS[b] || b, 'ru'));
+const bookIds = l => [...new Set((l.sources || []).map(s => workOf(s.book_id)))];
+const GUIDES = [...new Set(DATA.locations.flatMap(bookIds))].sort((a, b) => workTitle(a).localeCompare(workTitle(b), 'ru'));
 let guide = 'all';
 const inGuide = l => guide === 'all' || bookIds(l).includes(guide);
 const guideCities = () => CITIES.filter(c => inGuide(c) || placesIn(c.id).some(inGuide));
@@ -748,7 +752,7 @@ function renderSubbar() {
   const gs = document.getElementById('guidesel');
   if (gs.hidden) { bar.innerHTML = ''; return; }
   // one drop-down for the guides next to the «Гайды» tab: «Все книги» (the default, Р-199) or one guide book
-  gs.innerHTML = [['all', 'Все книги'], ...GUIDES.map(g => [g, BOOKS[g] || g])].map(([g, l]) => `<option value="${esc(g)}"${g === guide ? ' selected' : ''}>${esc(l)}</option>`).join('');
+  gs.innerHTML = [['all', 'Все книги'], ...GUIDES.map(g => [g, workTitle(g)])].map(([g, l]) => `<option value="${esc(g)}"${g === guide ? ' selected' : ''}>${esc(l)}</option>`).join('');
   bar.innerHTML = [['houses', 'Дома'], ['residents', 'Жители']].map(([m, l]) => `<button data-mode="${m}" class="${m === locMode ? 'active' : ''}">${l}</button>`).join('')
     // a section is marked while the city page or one of its scenario records is open
     // «Сценарии» counts the book's scenarios, not their stages
@@ -1701,7 +1705,7 @@ function scenarioCard(c) {
   const step = (s, lead) => `<li style="margin-bottom:8px"><b>${esc(s.title)}</b>${s.optional ? ' <span class="tag">по условию</span>' : ''}${lead || ''}${s.text ? (lead ? `<p>${esc(s.text)}</p>` : `<br>${esc(s.text)}`) : ''}${(s.refs||[]).filter(byId).length ? `${lead ? '' : '<br>'}<span class="muted">→ ${refLinks(s.refs.filter(byId))}</span>` : ''}</li>`;
   const steps = (hook && !hookStep ? step({ title: 'Завязка' }, hook) : '') + (c.steps||[]).map((s, i) => step(s, i === 0 && hookStep ? hook : '')).join('');
   return `<h2>${esc(c.name.ru)}</h2>
-    <div class="sub">${parent ? 'этап сценария «' + link(parent.id, parent.name.ru) + '»' : 'сценарий'}${BOOKS[bookOf(c)] ? ' · ' + esc(BOOKS[bookOf(c)]) : ''}</div>
+    <div class="sub">${parent ? 'этап сценария «' + link(parent.id, parent.name.ru) + '»' : 'сценарий'}${bookOf(c) ? ' · ' + esc(workTitle(bookOf(c))) : ''}</div>
     ${flags(c)}
     ${sec('Коротко', paraBlock(c.summary?.ru))}
     ${!parent && outerOf(c).length ? sec('Место действия', outerOf(c).map(t => link(t.id, t.name.ru) + ` <span class="muted">— ${esc(t.location_type)}, помещений: ${descendants(t.id).length}</span>`).join('<br>')) : ''}
@@ -1770,7 +1774,7 @@ function guidesHome() {
   return '<h2>Гайды</h2><div class="sub">книги, которые описывают города, и сами города</div>' + GUIDES.map(g => {
     const cs = CITIES.filter(c => bookIds(c).includes(g) || placesIn(c.id).some(l => bookIds(l).includes(g)));
     const scen = DATA.scenarios.filter(s => bookOf(s) === g && !s.part_of).sort(byOrder);
-    return `<section><h3>${esc(BOOKS[g] || g)}</h3>
+    return `<section><h3>${esc(workTitle(g))}</h3>
       ${scen.length ? `<p><span class="muted">Сценарии:</span> ${scen.map(s => link(s.id, s.name.ru)).join(', ')}</p>` : ''}
       ${cs.map(c => `<div class="gcity"><h4>${link(c.id, c.name.ru)}</h4>${c.description?.ru ? `<p>${esc(short(c.description.ru))}</p>` : ''}
         <p class="muted">${[`мест: ${placesIn(c.id).length}`, `жителей: ${cityResidents(c.id).length}`, mapsOf(c.id).length ? `карт: ${mapsOf(c.id).length}` : ''].filter(Boolean).join(' · ')}</p></div>`).join('')}

@@ -36,6 +36,9 @@ def main() -> None:
     # book titles for display come from the one list of books (Р-148); only titles go to the page, never local paths
     books = json.loads((root / "pipeline" / "source" / "books.json").read_text(encoding="utf-8"))
     data["books"] = {k: v["title"] for k, v in books.items()}
+    # editions of one work (the Russian volume II and player materials of «Masks») are one book in filters and guides
+    data["works"] = {k: v["work"] for k, v in books.items() if v.get("work")}
+    data["workTitles"] = {k: v["work_title"] for k, v in books.items() if v.get("work_title")}
     # chapters of rules books (first printed page, title): the rules list groups by them (Р-180, Р-182)
     data["chapters"] = {k: v["chapters"] for k, v in books.items() if v.get("chapters")}
     payload = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")

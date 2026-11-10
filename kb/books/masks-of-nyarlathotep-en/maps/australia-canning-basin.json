@@ -13,11 +13,77 @@
   "width": 1145,
   "height": 725,
   "spot_shape": {
-    "kind": "circle",
-    "w": 3.0,
-    "h": 3.0
+    "kind": "label",
+    "w": 7.0,
+    "h": 2.4
   },
-  "spots": [],
+  "spots": [
+    {
+      "label": "Port Headland",
+      "x": 9.35,
+      "y": 36.9,
+      "target": "coc:location:port-hedland",
+      "note": "На карте напечатано «Port Headland»; в тексте главы — Port Hedland."
+    },
+    {
+      "label": "DINGO FALLS",
+      "x": 36.1,
+      "y": 51.4,
+      "target": "masks-of-nyarlathotep-en/location/australia-dingo-falls"
+    },
+    {
+      "label": "Cuncudgerie",
+      "x": 35.75,
+      "y": 55.5,
+      "target": "coc:location:cuncudgerie"
+    },
+    {
+      "label": "DEATH CAMP",
+      "x": 58.9,
+      "y": 51.0,
+      "target": "masks-of-nyarlathotep-en/location/australia-death-camp"
+    },
+    {
+      "label": "CITY OF THE GREAT RACE",
+      "x": 71.2,
+      "y": 48.7,
+      "target": "masks-of-nyarlathotep-en/location/australia-city-of-the-great-race"
+    },
+    {
+      "label": "Bungabinni Well",
+      "x": 67.32,
+      "y": 53.6,
+      "target": "masks-of-nyarlathotep-en/location/australia-canning-stock-route",
+      "text": "Колодец Бунгабинни (Bungabinni Well): за ним можно свернуть с тропы на север и проложить свой путь (с. 480)."
+    },
+    {
+      "label": "Nibil Well",
+      "x": 66.9,
+      "y": 55.9,
+      "target": "masks-of-nyarlathotep-en/location/australia-well-34"
+    },
+    {
+      "label": "Mallowa Well",
+      "x": 63.43,
+      "y": 58.1,
+      "target": "masks-of-nyarlathotep-en/location/australia-canning-stock-route",
+      "text": "Колодец Маллова (Mallowa Well): между колодцами Маллова и Нибил на север уходят следы машин к Мёртвому лагерю (с. 480)."
+    },
+    {
+      "label": "Separation Well",
+      "x": 67.97,
+      "y": 66.8,
+      "target": "masks-of-nyarlathotep-en/location/australia-canning-stock-route",
+      "text": "Колодец Сепарейшн-Уэлл (Separation Well)."
+    },
+    {
+      "label": "Nimberra Well",
+      "x": 61.3,
+      "y": 72.9,
+      "target": "masks-of-nyarlathotep-en/location/australia-canning-stock-route",
+      "text": "Нимберра-Уэлл (Nimberra Well) — солоноватый пруд в кайме зелёной тины; к нему Додж ведёт сыщиков на ночлег (с. 480)."
+    }
+  ],
   "axes": {
     "era": [
       "1920s"
@@ -39,6 +105,22 @@
     "flags": [
       "translated"
     ],
-    "notes": "Картинка — вырезка карты со страницы английской книги (150 dpi); меток нет (Р-202). Порт-Хедленд, Кункуджери, тропа Каннинга, Город Великой Расы."
-  }
+    "notes": "Картинка — вырезка карты со страницы английской книги (150 dpi). Порт-Хедленд, Кункуджери, тропа Каннинга, Город Великой Расы. Метки (Р-206): Порт-Хедленд (на карте «Port Headland»), Кункуджери, водопады Динго, Мёртвый лагерь, Город Великой Расы и колодцы, о которых говорит глава: Нибил — на «Колодец 34 (Нибил)», Маллова, Бунгабинни, Сепарейшн, Нимберра — на «Тропу Каннинга» с пояснением. Подпись «Great Sandy Desert» — сама пустыня, которую показывает карта; другие колодцы, горы, озёра, городки (Пилбарра, Марбл-Бар) и пустыни меток не получили: записей нет."
+  },
+  "corrections": [
+    {
+      "field": "spots",
+      "from": "меток нет",
+      "to": "10 меток",
+      "reason": "метки по напечатанным номерам и подписям карты: поиск колец, распознавание tesseract и проверка по увеличенным вырезкам",
+      "ref": "Р-206"
+    },
+    {
+      "field": "spot_shape",
+      "from": "circle 3.0×3.0",
+      "to": "label 7.0×2.4",
+      "reason": "размер напечатанной метки на картинке карты",
+      "ref": "Р-206"
+    }
+  ]
 }

@@ -13,11 +13,101 @@
   "width": 1101,
   "height": 725,
   "spot_shape": {
-    "kind": "circle",
-    "w": 3.0,
-    "h": 3.0
+    "kind": "label",
+    "w": 8.0,
+    "h": 5.8
   },
-  "spots": [],
+  "spots": [
+    {
+      "label": "Current Excavations",
+      "x": 30.4,
+      "y": 18.55,
+      "target": "masks-of-nyarlathotep-en/location/australia-current-excavations"
+    },
+    {
+      "label": "Huston’s Headquarters",
+      "x": 36.9,
+      "y": 33.2,
+      "target": "masks-of-nyarlathotep-en/location/australia-hustons-headquarters"
+    },
+    {
+      "label": "Kakakatak’s Chamber",
+      "x": 24.5,
+      "y": 45.8,
+      "target": "masks-of-nyarlathotep-en/location/australia-kakakatak-chamber"
+    },
+    {
+      "label": "The Purple Dome Temple",
+      "x": 46.6,
+      "y": 53.9,
+      "target": "masks-of-nyarlathotep-en/location/australia-purple-dome-temple"
+    },
+    {
+      "label": "Unexplored Lower Levels",
+      "x": 69.9,
+      "y": 18.2,
+      "target": "masks-of-nyarlathotep-en/location/australia-city-of-the-great-race",
+      "note": "Неисследованные нижние уровни города: своей записи нет, метка ведёт на сам город (нижние уровни уцелели, с. 490)."
+    },
+    {
+      "label": "Beyond the Bottomless Shaft",
+      "x": 84.6,
+      "y": 41.7,
+      "target": "masks-of-nyarlathotep-en/location/australia-shaft-into-darkness",
+      "text": "За бездонной шахтой: за провалом путь почти 1,6 км идёт вниз к одинокой лампочке и генератору цепочки огней (с. 493)."
+    },
+    {
+      "label": "The Shaft Into Darkness",
+      "x": 77.25,
+      "y": 55.7,
+      "target": "masks-of-nyarlathotep-en/location/australia-shaft-into-darkness",
+      "text": "Провал во тьму: квадратная шахта поперёк пути от Второго входа (с. 492)."
+    },
+    {
+      "label": "Second Entrance",
+      "x": 79.0,
+      "y": 67.9,
+      "target": "masks-of-nyarlathotep-en/location/australia-second-entrance"
+    },
+    {
+      "label": "Blue Great Plaza",
+      "x": 63.7,
+      "y": 68.0,
+      "target": "masks-of-nyarlathotep-en/location/australia-great-plazas",
+      "text": "Большая синяя площадь: пол светится голубым (с. 494)."
+    },
+    {
+      "label": "The Nursery",
+      "x": 42.7,
+      "y": 68.2,
+      "target": "masks-of-nyarlathotep-en/location/australia-nursery"
+    },
+    {
+      "label": "Titan Horror",
+      "x": 28.7,
+      "y": 72.3,
+      "target": "masks-of-nyarlathotep-en/location/australia-titan-horror"
+    },
+    {
+      "label": "Red Great Plaza",
+      "x": 11.1,
+      "y": 78.6,
+      "target": "masks-of-nyarlathotep-en/location/australia-great-plazas",
+      "text": "Большая красная площадь: пол светится красным (с. 494)."
+    },
+    {
+      "label": "Huston’s Entrance",
+      "x": 42.5,
+      "y": 86.0,
+      "target": "masks-of-nyarlathotep-en/location/australia-hustons-main-entrance"
+    },
+    {
+      "label": "The Bunkhouse",
+      "x": 52.4,
+      "y": 84.1,
+      "target": "masks-of-nyarlathotep-en/location/australia-bunkhouse"
+    }
+  ],
   "axes": {
     "era": [
       "1920s"
@@ -39,6 +129,22 @@
     "flags": [
       "translated"
     ],
-    "notes": "Картинка — вырезка карты со страницы английской книги (150 dpi); меток нет (Р-202). Схема: генераторы, линии ламп, силовой кабель, завалы; все ключевые места «Событий в городе»."
-  }
+    "notes": "Картинка — вырезка карты со страницы английской книги (150 dpi). Схема: генераторы, линии ламп, силовой кабель, завалы; все ключевые места «Событий в городе». Метки (Р-206): каждая подпись в рамке — метка на своё место; Большие красная и синяя площади — на «Большие площади», «Провал во тьму» и «За бездонной шахтой» — на «Провал во тьму» с пояснением; «Unexplored Lower Levels» — на сам город. Значки генераторов и завалов, ключ и масштаб меток не получили."
+  },
+  "corrections": [
+    {
+      "field": "spots",
+      "from": "меток нет",
+      "to": "14 меток",
+      "reason": "метки по напечатанным номерам и подписям карты: поиск колец, распознавание tesseract и проверка по увеличенным вырезкам",
+      "ref": "Р-206"
+    },
+    {
+      "field": "spot_shape",
+      "from": "circle 3.0×3.0",
+      "to": "label 8.0×5.8",
+      "reason": "размер напечатанной метки на картинке карты",
+      "ref": "Р-206"
+    }
+  ]
 }

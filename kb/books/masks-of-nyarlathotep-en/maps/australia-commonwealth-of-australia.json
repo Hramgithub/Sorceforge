@@ -13,11 +13,77 @@
   "width": 1176,
   "height": 1153,
   "spot_shape": {
-    "kind": "circle",
-    "w": 3.0,
-    "h": 3.0
+    "kind": "label",
+    "w": 6.0,
+    "h": 1.8
   },
-  "spots": [],
+  "spots": [
+    {
+      "label": "DARWIN",
+      "x": 47.17,
+      "y": 17.58,
+      "target": "coc:location:darwin"
+    },
+    {
+      "label": "Port Hedland",
+      "x": 26.35,
+      "y": 37.5,
+      "target": "coc:location:port-hedland"
+    },
+    {
+      "label": "Concudgerie",
+      "x": 27.3,
+      "y": 39.1,
+      "target": "coc:location:cuncudgerie",
+      "note": "На карте напечатано «Concudgerie»; в тексте главы и на карте бассейна Каннинг — Cuncudgerie."
+    },
+    {
+      "label": "City of the Great Race",
+      "x": 40.8,
+      "y": 37.2,
+      "target": "masks-of-nyarlathotep-en/location/australia-city-of-the-great-race"
+    },
+    {
+      "label": "PERTH",
+      "x": 25.0,
+      "y": 61.69,
+      "target": "coc:location:perth"
+    },
+    {
+      "label": "Fremantle",
+      "x": 25.66,
+      "y": 63.51,
+      "target": "coc:location:perth",
+      "note": "Фримантл — порт Перта (своей записи нет; название — в псевдонимах записи «Перт»)."
+    },
+    {
+      "label": "SYDNEY",
+      "x": 80.3,
+      "y": 60.82,
+      "target": "coc:location:sydney"
+    },
+    {
+      "label": "To London and Colombo",
+      "x": 9.3,
+      "y": 60.2,
+      "target": "coc:location:london",
+      "note": "Стрелка пароходного пути в Лондон и Коломбо; у Коломбо записи нет."
+    },
+    {
+      "label": "To Hong Kong and Shanghai",
+      "x": 42.3,
+      "y": 7.0,
+      "target": "coc:location:hong-kong",
+      "note": "Стрелка пароходного пути в Гонконг и Шанхай; метка ведёт на первый из городов (Шанхай — `coc:location:shanghai`)."
+    },
+    {
+      "label": "To Hong Kong",
+      "x": 55.3,
+      "y": 6.0,
+      "target": "coc:location:hong-kong",
+      "note": "Стрелка пароходного пути в Гонконг."
+    }
+  ],
   "axes": {
     "era": [
       "1920s"
@@ -39,6 +105,22 @@
     "flags": [
       "translated"
     ],
-    "notes": "Картинка — вырезка карты со страницы английской книги (150 dpi); меток нет (Р-202). Карта страны: штаты и главные города."
-  }
+    "notes": "Картинка — вырезка карты со страницы английской книги (150 dpi). Карта страны: штаты и главные города. Метки (Р-206): подписи городов, у которых есть записи (Дарвин, Порт-Хедленд, Кункуджери — на карте «Concudgerie», Город Великой Расы, Перт, Фримантл — на Перт, Сидней), и стрелки пароходных путей в Лондон и Гонконг. Подписи других городов, штатов, морей и островов меток не получили: записей нет."
+  },
+  "corrections": [
+    {
+      "field": "spots",
+      "from": "меток нет",
+      "to": "10 меток",
+      "reason": "метки по напечатанным номерам и подписям карты: поиск колец, распознавание tesseract и проверка по увеличенным вырезкам",
+      "ref": "Р-206"
+    },
+    {
+      "field": "spot_shape",
+      "from": "circle 3.0×3.0",
+      "to": "label 6.0×1.8",
+      "reason": "размер напечатанной метки на картинке карты",
+      "ref": "Р-206"
+    }
+  ]
 }

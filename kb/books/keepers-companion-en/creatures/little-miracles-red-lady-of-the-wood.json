@@ -1,0 +1,233 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "keepers-companion-en/creature/little-miracles-red-lady-of-the-wood",
+  "kind": "creature",
+  "name": {
+    "ru": "Красная госпожа леса",
+    "en": "Red Lady of the Wood"
+  },
+  "aliases": [
+    "Красная госпожа",
+    "The Red Lady",
+    "госпожа леса",
+    "женщина в красном"
+  ],
+  "category": "avatar",
+  "subcategory": "аватар Шуб-Ниггурат",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "avatar_of",
+      "target": "coc:creature:shub-niggurath",
+      "note_back": "новый аватар, созданный для сценария «Маленькие чудеса»"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "100",
+        "value": 100
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "80",
+        "value": 80
+      },
+      "APP": {
+        "raw": "80",
+        "value": 80
+      },
+      "INT": {
+        "raw": "80",
+        "value": 80
+      },
+      "POW": {
+        "raw": "100",
+        "value": 100
+      }
+    },
+    "hp": {
+      "raw": "16",
+      "value": 16
+    },
+    "mp": {
+      "raw": "20",
+      "value": 20
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет, но невосприимчива к физическим атакам",
+      "value": 0,
+      "note": "физические атаки проходят сквозь неё"
+    },
+    "attacks_per_round": {
+      "raw": "нет: бесплотна и не может атаковать",
+      "value": 0
+    },
+    "attacks": [],
+    "skills": [
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      }
+    ],
+    "spells": {
+      "raw": "нет",
+      "items": []
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "0",
+        "trigger": "встретить Красную госпожу (потери нет)"
+      },
+      {
+        "success": "0",
+        "fail": "1d3",
+        "trigger": "увидеть, как она исчезает у всех на виду"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Бесплотность",
+      "summary": "Бесплотна, не может атаковать и невосприимчива к физическим атакам: пули, кулаки, ножи и т. п. проходят сквозь неё. Если на неё нападают, лицо её каменеет, она поднимается в воздух, а свирепые пикси выходят вперёд и атакуют.",
+      "raw": "The Red Lady of the Wood is incorporeal and can make no attacks. She is immune to physical attacks. … Should this occur, her face hardens, and she rises into air, whereupon the savage pixies come forward and attack."
+    },
+    {
+      "name": "Явление",
+      "summary": "Её облик зависит от ритуала Уотсона. Её приход возвещает потусторонняя музыка; когда она приближается, воздух полон сладких и приятных запахов — свежего печенья, сирени, свежескошенной травы. Там, где она идёт по лесу, вырастают цветы и быстро вянут, едва она пройдёт. Облик её призрачен: её можно видеть и говорить с ней, но нельзя коснуться.",
+      "raw": "The Red Lady’s manifestation is affected by Watson’s ritual. The sound of otherworldly music marks her arrival. As she approaches, there are overwhelming sweet and pleasant smells in the air, such as fresh-baked cookies, lilacs, and freshly cut grass. As the Red Lady walks through the woods, flowers spring up in her path, only to quickly wither and die after she passes. Manifesting an ephemeral form, they can see her and speak with her, but not touch her."
+    },
+    {
+      "name": "Повелительница пикси",
+      "summary": "Пикси — её слуги и подчиняются ей; если хитрость не удаётся, она велит пикси схватить сыщика и заставить его завершить ритуал.",
+      "raw": "Her servants, the pixies, are under her command. … If such tactics fail, she commands her pixies to seize an investigator and make them finish the ritual.",
+      "refs": [
+        "keepers-companion-en/creature/little-miracles-pixie-horde"
+      ]
+    },
+    {
+      "name": "Принуждение и состязание в луче",
+      "summary": "Не желающего смотреть на пруд она заставляет посмотреть, если тот проиграет встречную проверку МОЩ против её МОЩ 100. С вошедшим в лунный луч она состязается во встречных проверках МОЩ (сцена «Завершение ритуала»).",
+      "raw": "If no, ask for an opposed POW roll versus the Lady’s POW 100: if failed, she compels them to look at the pond.",
+      "refs": [
+        "coc:rule:opposed-pow-rolls"
+      ]
+    }
+  ],
+  "description": {
+    "ru": "Привлекательная женщина с длинными рыжими волосами, в красивом, довольно открытом красном платье; бледная кожа безупречна, у неё добрая улыбка и изумрудно-зелёные глаза. Она кажется призрачной, полупрозрачной. Уходит от прямых вопросов; намекает и обещает исполнить желания, но не дарит утешения, и её обещания обычно оборачиваются лишь болью и пеплом.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Новый аватар Шуб-Ниггурат, созданный для сценария «Маленькие чудеса». Её вызвала первая часть ритуала Джеймса Уотсона — символы на трёх деревьях в лесу Орднэма. Её цель — чтобы Уотсон завершил ритуал; если для этого можно использовать сыщиков или соблазнить их самих, тем лучше. Вошедший в лунный луч, проиграв ей три встречные проверки МОЩ, превращается в новорождённую тёмную молодь Шуб-Ниггурат; если он побеждает, она тает, как свеча в жару. Испорченный символ заставляет её с воплем исчезнуть.",
+    "en": null
+  },
+  "habitat": "лес Орднэма близ Аркхэма, пока длится ритуал",
+  "sources": [
+    {
+      "book_id": "keepers-companion-en",
+      "physical_page": 140,
+      "printed_page": 139,
+      "method": "book_text",
+      "verified": true,
+      "note": "сценарий «Little Miracles» (гл. 6): «Red Lady of the Wood, avatar of Shub-Niggurath» — статблок"
+    },
+    {
+      "book_id": "keepers-companion-en",
+      "physical_page": 127,
+      "printed_page": 126,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Dramatis Personae»: явление, описание"
+    },
+    {
+      "book_id": "keepers-companion-en",
+      "physical_page": 128,
+      "printed_page": 127,
+      "method": "book_text",
+      "verified": true,
+      "note": "черты, зацепки; сноска о новом аватаре"
+    },
+    {
+      "book_id": "keepers-companion-en",
+      "physical_page": 133,
+      "printed_page": 132,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Talk with the Red Lady»"
+    },
+    {
+      "book_id": "keepers-companion-en",
+      "physical_page": 134,
+      "printed_page": 133,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Attacking the Red Lady»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Профиль сценария (Р-75). Книга называет её новым аватаром (с. 127); с аватаром «Шуб-Ниггурат: Лесная госпожа» (Malleus Monstrorum) книга её не связывает. Бонус к урону, Комплекция и ПЗ напечатаны, хотя атаковать она не может."
+  }
+}

@@ -1,0 +1,1611 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "starter-dead-mans-stomp-ru/character/gangsters",
+  "kind": "character",
+  "name": {
+    "ru": "Гангстеры банды Бонато",
+    "en": null
+  },
+  "aliases": [
+    "Шестеро гангстеров"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "гангстер банды Бонато",
+  "occupation": {
+    "ru": "гангстер",
+    "en": null
+  },
+  "occupation_ref": "coc:occupation:gangster-podruchnyy",
+  "residence": "Нью-Йорк",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "starter-dead-mans-stomp-ru/character/archie-bonato",
+      "note": "босс",
+      "note_back": "гангстеры банды"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "45",
+        "value": 45
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "55",
+        "value": 55
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      },
+      "EDU": {
+        "raw": "50",
+        "value": 50
+      }
+    },
+    "hp": {
+      "raw": "11",
+      "value": 11
+    },
+    "sanity": {
+      "raw": "00",
+      "value": 0,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1 (удар кулаком или выстрел)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d3 + БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Револьвер 38-го калибра",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолеты)",
+        "chance": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "1d10",
+          "dice": "1d10",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:38-revolver"
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "skills": [
+      {
+        "name": "Взлом",
+        "skill": "coc:skill:locksmith",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Вождение",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Ориентирование",
+        "skill": "coc:skill:navigate",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      }
+    ]
+  },
+  "variants": [
+    {
+      "label": "Мэтт",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "45",
+            "value": 45
+          },
+          "CON": {
+            "raw": "50",
+            "value": 50
+          },
+          "SIZ": {
+            "raw": "60",
+            "value": 60
+          },
+          "DEX": {
+            "raw": "70",
+            "value": 70
+          },
+          "APP": {
+            "raw": "50",
+            "value": 50
+          },
+          "INT": {
+            "raw": "55",
+            "value": 55
+          },
+          "POW": {
+            "raw": "50",
+            "value": 50
+          },
+          "EDU": {
+            "raw": "50",
+            "value": 50
+          }
+        },
+        "hp": {
+          "raw": "11",
+          "value": 11
+        },
+        "sanity": {
+          "raw": "00",
+          "value": 0,
+          "max": null
+        },
+        "damage_bonus": {
+          "raw": "0",
+          "value": 0
+        },
+        "build": {
+          "raw": "0",
+          "value": 0
+        },
+        "move": {
+          "raw": "8",
+          "value": 8,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 8
+            }
+          ]
+        },
+        "attacks_per_round": {
+          "raw": "1 (удар кулаком или выстрел)",
+          "value": 1
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Драка",
+              "en": null
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "40% (20/8)",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            },
+            "damage": {
+              "raw": "1d3 + БкУ",
+              "dice": "1d3",
+              "adds_db": true
+            },
+            "weapon": "coc:weapon:unarmed"
+          },
+          {
+            "name": {
+              "ru": "Револьвер 38-го калибра",
+              "en": null
+            },
+            "kind": "attack",
+            "skill": "Стрельба (пистолеты)",
+            "chance": {
+              "raw": "35% (17/7)",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            },
+            "damage": {
+              "raw": "1d10",
+              "dice": "1d10",
+              "adds_db": false
+            },
+            "weapon": "coc:weapon:38-revolver"
+          }
+        ],
+        "dodge": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "skills": [
+          {
+            "name": "Взлом",
+            "skill": "coc:skill:locksmith",
+            "value": {
+              "raw": "35%",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            }
+          },
+          {
+            "name": "Внимание",
+            "skill": "coc:skill:spot-hidden",
+            "value": {
+              "raw": "30%",
+              "value": 30,
+              "half": 15,
+              "fifth": 6
+            }
+          },
+          {
+            "name": "Вождение",
+            "skill": "coc:skill:drive-auto",
+            "value": {
+              "raw": "35%",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            }
+          },
+          {
+            "name": "Запугивание",
+            "skill": "coc:skill:intimidate",
+            "value": {
+              "raw": "45%",
+              "value": 45,
+              "half": 22,
+              "fifth": 9
+            }
+          },
+          {
+            "name": "Лазание",
+            "skill": "coc:skill:climb",
+            "value": {
+              "raw": "35%",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            }
+          },
+          {
+            "name": "Метание",
+            "skill": "coc:skill:throw",
+            "value": {
+              "raw": "40%",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            }
+          },
+          {
+            "name": "Ориентирование",
+            "skill": "coc:skill:navigate",
+            "value": {
+              "raw": "40%",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            }
+          },
+          {
+            "name": "Прыжки",
+            "skill": "coc:skill:jump",
+            "value": {
+              "raw": "30%",
+              "value": 30,
+              "half": 15,
+              "fifth": 6
+            }
+          },
+          {
+            "name": "Психология",
+            "skill": "coc:skill:psychology",
+            "value": {
+              "raw": "30%",
+              "value": 30,
+              "half": 15,
+              "fifth": 6
+            }
+          },
+          {
+            "name": "Скрытность",
+            "skill": "coc:skill:stealth",
+            "value": {
+              "raw": "35%",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Фрэггл",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "50",
+            "value": 50
+          },
+          "CON": {
+            "raw": "50",
+            "value": 50
+          },
+          "SIZ": {
+            "raw": "50",
+            "value": 50
+          },
+          "DEX": {
+            "raw": "70",
+            "value": 70
+          },
+          "APP": {
+            "raw": "60",
+            "value": 60
+          },
+          "INT": {
+            "raw": "60",
+            "value": 60
+          },
+          "POW": {
+            "raw": "60",
+            "value": 60
+          },
+          "EDU": {
+            "raw": "60",
+            "value": 60
+          }
+        },
+        "hp": {
+          "raw": "10",
+          "value": 10
+        },
+        "sanity": {
+          "raw": "00",
+          "value": 0,
+          "max": null
+        },
+        "damage_bonus": {
+          "raw": "0",
+          "value": 0
+        },
+        "build": {
+          "raw": "0",
+          "value": 0
+        },
+        "move": {
+          "raw": "8",
+          "value": 8,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 8
+            }
+          ]
+        },
+        "attacks_per_round": {
+          "raw": "1 (удар кулаком или выстрел)",
+          "value": 1
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Драка",
+              "en": null
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "40% (20/8)",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            },
+            "damage": {
+              "raw": "1d3 + БкУ",
+              "dice": "1d3",
+              "adds_db": true
+            },
+            "weapon": "coc:weapon:unarmed"
+          },
+          {
+            "name": {
+              "ru": "Револьвер 38-го калибра",
+              "en": null
+            },
+            "kind": "attack",
+            "skill": "Стрельба (пистолеты)",
+            "chance": {
+              "raw": "35% (17/7)",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            },
+            "damage": {
+              "raw": "1d10",
+              "dice": "1d10",
+              "adds_db": false
+            },
+            "weapon": "coc:weapon:38-revolver"
+          }
+        ],
+        "dodge": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "skills": [
+          {
+            "name": "Взлом",
+            "skill": "coc:skill:locksmith",
+            "value": {
+              "raw": "35%",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            }
+          },
+          {
+            "name": "Внимание",
+            "skill": "coc:skill:spot-hidden",
+            "value": {
+              "raw": "30%",
+              "value": 30,
+              "half": 15,
+              "fifth": 6
+            }
+          },
+          {
+            "name": "Вождение",
+            "skill": "coc:skill:drive-auto",
+            "value": {
+              "raw": "35%",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            }
+          },
+          {
+            "name": "Запугивание",
+            "skill": "coc:skill:intimidate",
+            "value": {
+              "raw": "45%",
+              "value": 45,
+              "half": 22,
+              "fifth": 9
+            }
+          },
+          {
+            "name": "Лазание",
+            "skill": "coc:skill:climb",
+            "value": {
+              "raw": "35%",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            }
+          },
+          {
+            "name": "Метание",
+            "skill": "coc:skill:throw",
+            "value": {
+              "raw": "40%",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            }
+          },
+          {
+            "name": "Ориентирование",
+            "skill": "coc:skill:navigate",
+            "value": {
+              "raw": "40%",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            }
+          },
+          {
+            "name": "Прыжки",
+            "skill": "coc:skill:jump",
+            "value": {
+              "raw": "30%",
+              "value": 30,
+              "half": 15,
+              "fifth": 6
+            }
+          },
+          {
+            "name": "Психология",
+            "skill": "coc:skill:psychology",
+            "value": {
+              "raw": "30%",
+              "value": 30,
+              "half": 15,
+              "fifth": 6
+            }
+          },
+          {
+            "name": "Скрытность",
+            "skill": "coc:skill:stealth",
+            "value": {
+              "raw": "35%",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Дженнифер",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "55",
+            "value": 55
+          },
+          "CON": {
+            "raw": "75",
+            "value": 75
+          },
+          "SIZ": {
+            "raw": "50",
+            "value": 50
+          },
+          "DEX": {
+            "raw": "80",
+            "value": 80
+          },
+          "APP": {
+            "raw": "45",
+            "value": 45
+          },
+          "INT": {
+            "raw": "70",
+            "value": 70
+          },
+          "POW": {
+            "raw": "45",
+            "value": 45
+          },
+          "EDU": {
+            "raw": "65",
+            "value": 65
+          }
+        },
+        "hp": {
+          "raw": "12",
+          "value": 12
+        },
+        "sanity": {
+          "raw": "00",
+          "value": 0,
+          "max": null
+        },
+        "damage_bonus": {
+          "raw": "0",
+          "value": 0
+        },
+        "build": {
+          "raw": "0",
+          "value": 0
+        },
+        "move": {
+          "raw": "9",
+          "value": 9,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 9
+            }
+          ]
+        },
+        "attacks_per_round": {
+          "raw": "1 (удар кулаком или выстрел)",
+          "value": 1
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Драка",
+              "en": null
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "40% (20/8)",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            },
+            "damage": {
+              "raw": "1d3 + БкУ",
+              "dice": "1d3",
+              "adds_db": true
+            },
+            "weapon": "coc:weapon:unarmed"
+          },
+          {
+            "name": {
+              "ru": "Револьвер 38-го калибра",
+              "en": null
+            },
+            "kind": "attack",
+            "skill": "Стрельба (пистолеты)",
+            "chance": {
+              "raw": "35% (17/7)",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            },
+            "damage": {
+              "raw": "1d10",
+              "dice": "1d10",
+              "adds_db": false
+            },
+            "weapon": "coc:weapon:38-revolver"
+          }
+        ],
+        "dodge": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "skills": [
+          {
+            "name": "Взлом",
+            "skill": "coc:skill:locksmith",
+            "value": {
+              "raw": "35%",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            }
+          },
+          {
+            "name": "Внимание",
+            "skill": "coc:skill:spot-hidden",
+            "value": {
+              "raw": "30%",
+              "value": 30,
+              "half": 15,
+              "fifth": 6
+            }
+          },
+          {
+            "name": "Вождение",
+            "skill": "coc:skill:drive-auto",
+            "value": {
+              "raw": "35%",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            }
+          },
+          {
+            "name": "Запугивание",
+            "skill": "coc:skill:intimidate",
+            "value": {
+              "raw": "45%",
+              "value": 45,
+              "half": 22,
+              "fifth": 9
+            }
+          },
+          {
+            "name": "Лазание",
+            "skill": "coc:skill:climb",
+            "value": {
+              "raw": "35%",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            }
+          },
+          {
+            "name": "Метание",
+            "skill": "coc:skill:throw",
+            "value": {
+              "raw": "40%",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            }
+          },
+          {
+            "name": "Ориентирование",
+            "skill": "coc:skill:navigate",
+            "value": {
+              "raw": "40%",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            }
+          },
+          {
+            "name": "Прыжки",
+            "skill": "coc:skill:jump",
+            "value": {
+              "raw": "30%",
+              "value": 30,
+              "half": 15,
+              "fifth": 6
+            }
+          },
+          {
+            "name": "Психология",
+            "skill": "coc:skill:psychology",
+            "value": {
+              "raw": "30%",
+              "value": 30,
+              "half": 15,
+              "fifth": 6
+            }
+          },
+          {
+            "name": "Скрытность",
+            "skill": "coc:skill:stealth",
+            "value": {
+              "raw": "35%",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Ферги",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "60",
+            "value": 60
+          },
+          "CON": {
+            "raw": "60",
+            "value": 60
+          },
+          "SIZ": {
+            "raw": "70",
+            "value": 70
+          },
+          "DEX": {
+            "raw": "65",
+            "value": 65
+          },
+          "APP": {
+            "raw": "65",
+            "value": 65
+          },
+          "INT": {
+            "raw": "65",
+            "value": 65
+          },
+          "POW": {
+            "raw": "50",
+            "value": 50
+          },
+          "EDU": {
+            "raw": "75",
+            "value": 75
+          }
+        },
+        "hp": {
+          "raw": "13",
+          "value": 13
+        },
+        "sanity": {
+          "raw": "00",
+          "value": 0,
+          "max": null
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "7",
+          "value": 7,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 7
+            }
+          ]
+        },
+        "attacks_per_round": {
+          "raw": "1 (удар кулаком или выстрел)",
+          "value": 1
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Драка",
+              "en": null
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "40% (20/8)",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            },
+            "damage": {
+              "raw": "1d3 + БкУ",
+              "dice": "1d3",
+              "adds_db": true
+            },
+            "weapon": "coc:weapon:unarmed"
+          },
+          {
+            "name": {
+              "ru": "Револьвер 38-го калибра",
+              "en": null
+            },
+            "kind": "attack",
+            "skill": "Стрельба (пистолеты)",
+            "chance": {
+              "raw": "35% (17/7)",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            },
+            "damage": {
+              "raw": "1d10",
+              "dice": "1d10",
+              "adds_db": false
+            },
+            "weapon": "coc:weapon:38-revolver"
+          }
+        ],
+        "dodge": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "skills": [
+          {
+            "name": "Взлом",
+            "skill": "coc:skill:locksmith",
+            "value": {
+              "raw": "35%",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            }
+          },
+          {
+            "name": "Внимание",
+            "skill": "coc:skill:spot-hidden",
+            "value": {
+              "raw": "30%",
+              "value": 30,
+              "half": 15,
+              "fifth": 6
+            }
+          },
+          {
+            "name": "Вождение",
+            "skill": "coc:skill:drive-auto",
+            "value": {
+              "raw": "35%",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            }
+          },
+          {
+            "name": "Запугивание",
+            "skill": "coc:skill:intimidate",
+            "value": {
+              "raw": "45%",
+              "value": 45,
+              "half": 22,
+              "fifth": 9
+            }
+          },
+          {
+            "name": "Лазание",
+            "skill": "coc:skill:climb",
+            "value": {
+              "raw": "35%",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            }
+          },
+          {
+            "name": "Метание",
+            "skill": "coc:skill:throw",
+            "value": {
+              "raw": "40%",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            }
+          },
+          {
+            "name": "Ориентирование",
+            "skill": "coc:skill:navigate",
+            "value": {
+              "raw": "40%",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            }
+          },
+          {
+            "name": "Прыжки",
+            "skill": "coc:skill:jump",
+            "value": {
+              "raw": "30%",
+              "value": 30,
+              "half": 15,
+              "fifth": 6
+            }
+          },
+          {
+            "name": "Психология",
+            "skill": "coc:skill:psychology",
+            "value": {
+              "raw": "30%",
+              "value": 30,
+              "half": 15,
+              "fifth": 6
+            }
+          },
+          {
+            "name": "Скрытность",
+            "skill": "coc:skill:stealth",
+            "value": {
+              "raw": "35%",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Джон",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "65",
+            "value": 65
+          },
+          "CON": {
+            "raw": "70",
+            "value": 70
+          },
+          "SIZ": {
+            "raw": "75",
+            "value": 75
+          },
+          "DEX": {
+            "raw": "60",
+            "value": 60
+          },
+          "APP": {
+            "raw": "55",
+            "value": 55
+          },
+          "INT": {
+            "raw": "55",
+            "value": 55
+          },
+          "POW": {
+            "raw": "55",
+            "value": 55
+          },
+          "EDU": {
+            "raw": "55",
+            "value": 55
+          }
+        },
+        "hp": {
+          "raw": "14",
+          "value": 14
+        },
+        "sanity": {
+          "raw": "00",
+          "value": 0,
+          "max": null
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "7",
+          "value": 7,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 7
+            }
+          ]
+        },
+        "attacks_per_round": {
+          "raw": "1 (удар кулаком или выстрел)",
+          "value": 1
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Драка",
+              "en": null
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "40% (20/8)",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            },
+            "damage": {
+              "raw": "1d3 + БкУ",
+              "dice": "1d3",
+              "adds_db": true
+            },
+            "weapon": "coc:weapon:unarmed"
+          },
+          {
+            "name": {
+              "ru": "Револьвер 38-го калибра",
+              "en": null
+            },
+            "kind": "attack",
+            "skill": "Стрельба (пистолеты)",
+            "chance": {
+              "raw": "35% (17/7)",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            },
+            "damage": {
+              "raw": "1d10",
+              "dice": "1d10",
+              "adds_db": false
+            },
+            "weapon": "coc:weapon:38-revolver"
+          }
+        ],
+        "dodge": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "skills": [
+          {
+            "name": "Взлом",
+            "skill": "coc:skill:locksmith",
+            "value": {
+              "raw": "35%",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            }
+          },
+          {
+            "name": "Внимание",
+            "skill": "coc:skill:spot-hidden",
+            "value": {
+              "raw": "30%",
+              "value": 30,
+              "half": 15,
+              "fifth": 6
+            }
+          },
+          {
+            "name": "Вождение",
+            "skill": "coc:skill:drive-auto",
+            "value": {
+              "raw": "35%",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            }
+          },
+          {
+            "name": "Запугивание",
+            "skill": "coc:skill:intimidate",
+            "value": {
+              "raw": "45%",
+              "value": 45,
+              "half": 22,
+              "fifth": 9
+            }
+          },
+          {
+            "name": "Лазание",
+            "skill": "coc:skill:climb",
+            "value": {
+              "raw": "35%",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            }
+          },
+          {
+            "name": "Метание",
+            "skill": "coc:skill:throw",
+            "value": {
+              "raw": "40%",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            }
+          },
+          {
+            "name": "Ориентирование",
+            "skill": "coc:skill:navigate",
+            "value": {
+              "raw": "40%",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            }
+          },
+          {
+            "name": "Прыжки",
+            "skill": "coc:skill:jump",
+            "value": {
+              "raw": "30%",
+              "value": 30,
+              "half": 15,
+              "fifth": 6
+            }
+          },
+          {
+            "name": "Психология",
+            "skill": "coc:skill:psychology",
+            "value": {
+              "raw": "30%",
+              "value": 30,
+              "half": 15,
+              "fifth": 6
+            }
+          },
+          {
+            "name": "Скрытность",
+            "skill": "coc:skill:stealth",
+            "value": {
+              "raw": "35%",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Реджи",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "70",
+            "value": 70
+          },
+          "CON": {
+            "raw": "70",
+            "value": 70
+          },
+          "SIZ": {
+            "raw": "60",
+            "value": 60
+          },
+          "DEX": {
+            "raw": "70",
+            "value": 70
+          },
+          "APP": {
+            "raw": "65",
+            "value": 65
+          },
+          "INT": {
+            "raw": "70",
+            "value": 70
+          },
+          "POW": {
+            "raw": "70",
+            "value": 70
+          },
+          "EDU": {
+            "raw": "60",
+            "value": 60
+          }
+        },
+        "hp": {
+          "raw": "13",
+          "value": 13
+        },
+        "sanity": {
+          "raw": "00",
+          "value": 0,
+          "max": null
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "9",
+          "value": 9,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 9
+            }
+          ]
+        },
+        "attacks_per_round": {
+          "raw": "1 (удар кулаком или выстрел)",
+          "value": 1
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Драка",
+              "en": null
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "40% (20/8)",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            },
+            "damage": {
+              "raw": "1d3 + БкУ",
+              "dice": "1d3",
+              "adds_db": true
+            },
+            "weapon": "coc:weapon:unarmed"
+          },
+          {
+            "name": {
+              "ru": "Револьвер 38-го калибра",
+              "en": null
+            },
+            "kind": "attack",
+            "skill": "Стрельба (пистолеты)",
+            "chance": {
+              "raw": "35% (17/7)",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            },
+            "damage": {
+              "raw": "1d10",
+              "dice": "1d10",
+              "adds_db": false
+            },
+            "weapon": "coc:weapon:38-revolver"
+          }
+        ],
+        "dodge": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "skills": [
+          {
+            "name": "Взлом",
+            "skill": "coc:skill:locksmith",
+            "value": {
+              "raw": "35%",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            }
+          },
+          {
+            "name": "Внимание",
+            "skill": "coc:skill:spot-hidden",
+            "value": {
+              "raw": "30%",
+              "value": 30,
+              "half": 15,
+              "fifth": 6
+            }
+          },
+          {
+            "name": "Вождение",
+            "skill": "coc:skill:drive-auto",
+            "value": {
+              "raw": "35%",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            }
+          },
+          {
+            "name": "Запугивание",
+            "skill": "coc:skill:intimidate",
+            "value": {
+              "raw": "45%",
+              "value": 45,
+              "half": 22,
+              "fifth": 9
+            }
+          },
+          {
+            "name": "Лазание",
+            "skill": "coc:skill:climb",
+            "value": {
+              "raw": "35%",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            }
+          },
+          {
+            "name": "Метание",
+            "skill": "coc:skill:throw",
+            "value": {
+              "raw": "40%",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            }
+          },
+          {
+            "name": "Ориентирование",
+            "skill": "coc:skill:navigate",
+            "value": {
+              "raw": "40%",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            }
+          },
+          {
+            "name": "Прыжки",
+            "skill": "coc:skill:jump",
+            "value": {
+              "raw": "30%",
+              "value": 30,
+              "half": 15,
+              "fifth": 6
+            }
+          },
+          {
+            "name": "Психология",
+            "skill": "coc:skill:psychology",
+            "value": {
+              "raw": "30%",
+              "value": 30,
+              "half": 15,
+              "fifth": 6
+            }
+          },
+          {
+            "name": "Скрытность",
+            "skill": "coc:skill:stealth",
+            "value": {
+              "raw": "35%",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "description": {
+    "ru": "Таблица «Шестеро гангстеров, гостей на похоронах или жителей» (с. 75) с боем и навыками гангстеров: подручные Бонато — двое белых бандитов, которые заталкивают Тёрнера в «паккард», гангстеры по бокам от Джоуи Ларсона в кабинете гаража, стрелок с «томми-ганом» на заднем сиденье «паккарда». Те же шесть профилей с другим боем — запись «Гости на похоронах и жители Гарлема».",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "starter-dead-mans-stomp-ru",
+      "physical_page": 26,
+      "printed_page": 75,
+      "method": "book_text",
+      "verified": true,
+      "note": "таблица «Шестеро гангстеров, гостей на похоронах или жителей»: «Гангстеры»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "variants[*].statblock.sanity",
+      "printed": "00",
+      "expected": null,
+      "note": "Рассудок «00» у всех шести профилей таблицы — вероятная опечатка книги (персонаж с Рассудком 0 безумен); оставлено как напечатано (Р-35, Р-161)."
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": "Имена профилей (Мэтт, Фрэггл, Дженнифер, Ферги, Джон, Реджи) — из книги; основной статблок — профиль «Мэтт»."
+  }
+}

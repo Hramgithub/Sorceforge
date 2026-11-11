@@ -1,0 +1,274 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "keepers-companion-en/creature/puzzler-pale-man",
+  "kind": "creature",
+  "name": {
+    "ru": "Бледный человек",
+    "en": "The Pale Man"
+  },
+  "aliases": [
+    "Pale Man",
+    "бледнолицый человек в чёрном"
+  ],
+  "category": "supernatural",
+  "subcategory": "сущность разума",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "related_to",
+      "target": "coc:creature:king-in-yellow",
+      "note": "книга не знает, часть ли он замысла Короля в жёлтом или проявление общепринятой реальности, которая борется с нереальностью Каркозы",
+      "note_back": "Бледный человек («Вот так головоломка!»): может быть, часть его замысла"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "80",
+        "value": 80
+      },
+      "CON": {
+        "raw": "80",
+        "value": 80
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "45",
+        "value": 45
+      },
+      "INT": {
+        "raw": "35",
+        "value": 35
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      }
+    },
+    "hp": {
+      "raw": "14",
+      "value": 14
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "1 пункт — неживая плоть; не чувствует боли; урон 2+ отламывает палец, кисть или даже конечность. Убитый, позже в тот же день находит другой труп, чтобы вселиться",
+      "value": 1,
+      "note": "неживая плоть"
+    },
+    "attacks_per_round": {
+      "raw": "1 (когти, укус, удар кулаком, чудовищная сила)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "notes": "когти, укус, удар кулаком"
+      }
+    ],
+    "dodge": {
+      "raw": "25% (12/5)",
+      "value": 25,
+      "half": 12,
+      "fifth": 5
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      }
+    ],
+    "spells": {
+      "raw": "нет",
+      "items": []
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d8",
+        "trigger": "когда смотрящий понимает, что Бледный человек — ходячий труп"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Вселение (чудовищная сила)",
+      "summary": "Вселяется в труп за 1d6 раундов. Стоимость: 1 пункт магии; время сотворения: 1d6 раундов; дальность: любой труп на любом расстоянии; эффект: труп одержим Бледным человеком. Своя версия чудовищной силы «Вселение» (с. 119): цель — труп, а не живой.",
+      "raw": "Possession: the Pale Man can possess a corpse in 1d6 rounds. • Cost: 1 magic point. • Casting time: 1d6 rounds. • Range: can possess any corpse at any distance. • Effect: corpse is possessed by the Pale Man.",
+      "refs": [
+        "coc:rule:kc-monstrous-power-possession",
+        "coc:rule:kc-monstrous-powers"
+      ]
+    },
+    {
+      "name": "Сердечный приступ (чудовищная сила)",
+      "summary": "Всякому, у кого есть хотя бы 1 пункт Мифов Ктулху и кто встречает Бледного человека, он показывает ужасы, что таятся за маской реальности. Стоимость: 5 пунктов магии; время сотворения: 1 раунд; дальность: 10 м; эффект: цель проходит проверку ВЫН. Провал — сердечный приступ: 1d6 урона, цель не может действовать и в следующем раунде проходит ещё одну проверку ВЫН. Успех — урона нет, цель действует как обычно.",
+      "raw": "Heart Attack: anyone with 1+ point of Cthulhu Mythos and who encounters the Pale Man is shown the horrors that lurk behind the mask of reality. • Cost: 5 magic points. • Casting time: 1 round. • Range: 10 yards/meters. • Effect: target must make a CON roll: ○ Failure: suffers a heart attack with 1d6 damage, is unable to act, and must make another CON roll next round. ○ Success: no damage and may act normally.",
+      "refs": [
+        "coc:rule:kc-monstrous-powers",
+        "coc:skill:cthulhu-mythos"
+      ]
+    },
+    {
+      "name": "Поглощение искусства (чудовищная сила)",
+      "summary": "Если рядом изображение, вдохновлённое Каркозой (собранная головоломка «Бланко» или картина Бетти Прайс), Бледный человек заставляет его расплавиться и растечься по окружающему — картина оживает вокруг сыщиков (врезка «Потерянные в картине», с. 183). Стоимость: 5 пунктов магии; время сотворения: 1 раунд; дальность: все в пределах 3 м от изображения; эффект: проверка Рассудка (1/1d10), пока картина оживает. Сыщик, у которого это вызвало шок или Изменение, заперт в картине на столько раундов, сколько пунктов Рассудка потерял; пока он в картине, Бледный человек не может на него напасть. Кто не заперт, должен встретиться с Бледным человеком. Длительность: один раз на картину; после применения изображение исчезает с головоломки или холста — остаются выбеленные кусочки или холст.",
+      "raw": "Consume Art: if a Carcosa-inspired image (e.g., a completed Blanco puzzle or one of Betty Pryce’s artworks) is present, the Pale Man causes the image to melt and flow into the surrounding environment (see Lost in Art, page 183): • Cost: 5 magic points. • Casting time: 1 round. • Range: those within 3 yards/meters of the image. • Effect: make a Sanity roll (1/1d10 loss) as the painting comes to life (see Lost in Art, page 183). ○ If this causes an investigator to be Shocked or Changed, they are trapped in the painting for a number of rounds equal to the Sanity points they lost. While in the painting, the Pale Man cannot attack them. ○ Those not trapped in the painting must confront the Pale Man. • Duration: once per painting; after use, the artwork disappears from the puzzle or painting.",
+      "refs": [
+        "coc:rule:kc-monstrous-powers",
+        "coc:rule:kc-shock",
+        "coc:rule:kc-changed",
+        "keepers-companion-en/scene/puzzler-lost-in-art"
+      ]
+    },
+    {
+      "name": "Наездник трупов",
+      "summary": "Сущность находит труп, оживляет его и ездит в мёртвой плоти, пока тело не уничтожат; бледная, одутловатая, гниющая плоть отходит от малейшего нажима и оставляет за ним ошмётки гнилого мяса, которые со временем становятся прозрачными, бесплотными и исчезают. Когда тело уничтожено, сущность находит другое — не обязательно мужское, сгодится любой труп. Убитый, позже в тот же день находит другой труп; поэтому он может возвращаться снова и снова, пока кто-нибудь не покончит с заражением.",
+      "raw": "The entity finds a corpse to animate and then rides its dead flesh around until it is destroyed—its pale, puffed and corrupting flesh comes off easily with the slightest pressure. … When the current corpse is destroyed, the entity finds another. Despite the name, it does not have to be a man—any corpse will do. … When killed, it finds another corpse to inhabit later that day."
+    },
+    {
+      "name": "Неживая плоть",
+      "summary": "Броня 1 — неживая плоть; не чувствует боли; урон 2 и больше отламывает палец, кисть или даже конечность. Физической силы у него немного, но он неутомим.",
+      "raw": "Armor: 1-point unliving flesh; does not feel pain; 2+ damage causes a finger, a hand, or even a limb to break off. … The Pale Man lacks physical prowess, but he is relentless"
+    },
+    {
+      "name": "Чутьё на заражение Каркозой",
+      "summary": "Чувства и словарь у него скудные, но на медленных шаркающих ногах он безошибочно находит любое заражение Каркозой и идёт за ним, не останавливаясь, пока заражение не кончится. Бетти Прайс, корень зла, он уже пытался достать, но всякий раз ему мешала Крокодилья тварь; если тварь убита или прогнана, он это чует и идёт прямо к Бетти.",
+      "raw": "The Pale Man has limited senses and vocabulary, but can unerringly find and follow any Carcosan infection, on its slow, shambling feet. It does not stop until the Carcosa infection ends. … Well, it has, but every time, the Crocodilian Thing (page 187) has thwarted it.",
+      "refs": [
+        "keepers-companion-en/creature/puzzler-crocodilian-thing",
+        "keepers-companion-en/character/puzzler-betty-pryce"
+      ]
+    }
+  ],
+  "description": {
+    "ru": "Труп, возвращённый к жизни искрой, которую разожгла Каркоза: бледный, одутловатый, с восковым лицом и злыми или горящими глазами, одетый в чёрное; ходит медленно, шаркая. Сущность разума: она не могла бы проявиться, если бы не сотни аркхэмцев, которые видят её во снах благодаря головоломкам «Бланко»; появиться в Аркхэме ей позволяют картины Бетти Прайс.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Цель Бледного человека — покончить с заражением Каркозой. Учёные Мифов не уверены, часть ли он замысла Короля в жёлтом (если такой замысел есть) или проявление общепринятой реальности — того, что за неё сходит, — которая борется с нереальностью Каркозы. В вечер начала сценария он в чужом трупе напал на жильцов Дома Дули, растворил изображение на их головоломке, а тело, проломленное скалкой Фиби Дули, лежит на кухне. Работницам фабрики «Бланко», сотрудникам агентства Макгуайра и сыщикам, собиравшим головоломку, снится бледнолицый человек в чёрном, который гонится за ними.",
+    "en": null
+  },
+  "encounters": {
+    "ru": "Хранитель выводит Бледного человека по мере надобности, особенно после значимых событий: когда сыщик собирает головоломку «Бланко», видит Жёлтый знак или оказывается заперт в картине. С каждым сыщиком он проходит три шага: выслеживает (Внимание: вдалеке бледная шаркающая фигура, Рассудок 0/1d3), преследует (Скрытность, чтобы уйти, или погоня; потерянный, он снова берёт след через 1d6 часов), настигает (три чудовищные силы). Сыщик, которому снится картина из «Четырёхлистного клевера», получает бонусную кость в любом бою или состязании с ним. См. сцену «Бледный человек».",
+    "en": null
+  },
+  "habitat": "Аркхэм — везде, где есть заражение Каркозой",
+  "sources": [
+    {
+      "book_id": "keepers-companion-en",
+      "physical_page": 191,
+      "printed_page": 190,
+      "method": "book_text",
+      "verified": true,
+      "note": "сценарий «What a Puzzler!» (гл. 8): «Monsters» — «The Pale Man»: статблок и чудовищные силы"
+    },
+    {
+      "book_id": "keepers-companion-en",
+      "physical_page": 192,
+      "printed_page": 191,
+      "method": "book_text",
+      "verified": true,
+      "note": "окончание силы «Consume Art»"
+    },
+    {
+      "book_id": "keepers-companion-en",
+      "physical_page": 183,
+      "printed_page": 182,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Pale Man», «Introducing the Pale Man»"
+    },
+    {
+      "book_id": "keepers-companion-en",
+      "physical_page": 184,
+      "printed_page": 183,
+      "method": "book_text",
+      "verified": true,
+      "note": "три шага, «Step 3: Facing the Pale Man»"
+    },
+    {
+      "book_id": "keepers-companion-en",
+      "physical_page": 168,
+      "printed_page": 167,
+      "method": "book_text",
+      "verified": true,
+      "note": "нападение в Доме Дули"
+    },
+    {
+      "book_id": "keepers-companion-en",
+      "physical_page": 167,
+      "printed_page": 166,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Dramatis Personae: Anna Donovan»: внешность"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Профиль сценария (Р-75); три чудовищные силы — из «Чудовищных сил» (с. 119), «Вселение» — своя версия силы книги. Категория «сверхъестественное» (оживлённый труп) и подкатегория «сущность разума» (An entity of the mind, с. 182) — наш выбор: книга не называет вид. Внешность (восковое лицо, злые или горящие глаза, чёрная одежда) — из описаний снов и видений (с. 166, 172, 173, 181)."
+  }
+}

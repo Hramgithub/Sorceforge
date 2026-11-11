@@ -1,0 +1,224 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "innsmouth-terror-en/creature/deep-one",
+  "kind": "creature",
+  "name": {
+    "ru": "Глубоководный («Ужас в Иннсмуте»)",
+    "en": "Deep One"
+  },
+  "category": "mythos_monster",
+  "subcategory": "глубоководный",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:deep-one",
+      "note_back": "профиль сценария «Ужас в Иннсмуте»: глубоководный в затопленной пещере и в толпе финала"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "80",
+        "value": 80
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "INT": {
+        "raw": "70",
+        "value": 70
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "15",
+      "value": 15
+    },
+    "mp": {
+      "raw": "20",
+      "value": 20
+    },
+    "damage_bonus": {
+      "raw": "1d4",
+      "value": "1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "1 пункт (кожа и чешуя)",
+      "value": 1
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Копьё",
+          "en": "Spear"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d8+1d4",
+          "dice": "1d8",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "27% (13/5)",
+      "value": 27,
+      "half": 13,
+      "fifth": 5
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "при виде глубоководного"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Глубоководный из сценария «Ужас в Иннсмуте»: лениво плавает в затопленной пещере под Иннсмутом (встреча 96–100 таблицы «Встречи в пещерах») и, если группа проваливает проверку Скрытности, выходит из воды и пытается съесть сыщиков; в эпическом финале вместе с гибридами и людьми стоит в толпе на улицах, а из воды бухты смотрят сотни жёлтых глаз. Глубоководные пользуются пещерами под городом, чтобы входить в храм Эзотерического ордена Дагона и выходить из него незамеченными.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "innsmouth-terror-en",
+      "physical_page": 35,
+      "printed_page": 31,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Monsters»: статблок «Deep One»"
+    },
+    {
+      "book_id": "innsmouth-terror-en",
+      "physical_page": 23,
+      "printed_page": 19,
+      "method": "book_text",
+      "verified": true,
+      "note": "таблица 2, строка 96–100"
+    },
+    {
+      "book_id": "innsmouth-terror-en",
+      "physical_page": 28,
+      "printed_page": 24,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Entering through the Caves»"
+    },
+    {
+      "book_id": "innsmouth-terror-en",
+      "physical_page": 29,
+      "printed_page": 25,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Epic Finale»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.attacks[Драка].chance",
+      "printed": "45% (12/9)",
+      "expected": "45% (22/9)",
+      "note": "половина 45 — 22 (Р-35); исправлено в записи.",
+      "fixed": true
+    },
+    {
+      "field": "statblock.attacks[Копьё].chance",
+      "printed": "45% (12/9)",
+      "expected": "45% (22/9)",
+      "note": "половина 45 — 22 (Р-35); исправлено в записи.",
+      "fixed": true
+    },
+    {
+      "field": "statblock.hp",
+      "printed": "15",
+      "expected": "14",
+      "note": "ПЗ = (ВЫН + ТЕЛ) / 10 = (60 + 80) / 10 = 14; напечатано 15 (с. 31). Оставлено как напечатано.",
+      "fixed": false
+    },
+    {
+      "field": "statblock.mp",
+      "printed": "20",
+      "expected": "10",
+      "note": "ПМ = МОЩ / 5 = 50 / 5 = 10; напечатано 20 (с. 31). Оставлено как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Свой профиль сценария (Р-75): ВЫН 60, ИНТ 70, ПЗ 15, ПМ 20, Драка 1d3+БкУ, Уклонение 27% отличаются от справочника; связь `instance_of` на вид. Шоггот (с. 31) и звёздное отродье Ктулху (с. 31) совпадают со справочными записями по числам и отдельных записей не получают (Р-79). Перевод наш, с английского оригинала; русские имена и названия — по переводу владельца («2_Обработка\\1923 Ужас в Иннсмуте») и официальным формам базы (Р-219); имена персонажей — транслитерация (Р-45)."
+  }
+}

@@ -1,0 +1,256 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "innsmouth-terror-en/character/film-crew-member",
+  "kind": "character",
+  "name": {
+    "ru": "Член съёмочной группы",
+    "en": "Average Crew Member"
+  },
+  "aliases": [
+    "Съёмочная группа",
+    "The Crew",
+    "Страшный рыболюд номер 2"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "крепкий член съёмочной группы (мужчина или женщина)",
+  "names": [
+    "Билл «Бык» Каллахан",
+    "Мардж Ковальски",
+    "Джо Пелегрино",
+    "Эд Мёрфи",
+    "Бетти Свенсон",
+    "Гас Хорват"
+  ],
+  "occupation": {
+    "ru": "рабочий съёмочной группы",
+    "en": "crew"
+  },
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "innsmouth-terror-en/character/pa-bazzledon",
+      "note": "режиссёр",
+      "note_back": "съёмочная группа"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "70",
+        "value": 70
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "50",
+        "value": 50
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      },
+      "EDU": {
+        "raw": "30",
+        "value": 30
+      }
+    },
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "mp": {
+      "raw": "8",
+      "value": 8
+    },
+    "sanity": {
+      "raw": "50",
+      "value": 50,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "1d4",
+      "value": "1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      }
+    ],
+    "dodge": {
+      "raw": "45% (22/9)",
+      "value": 45,
+      "half": 22,
+      "fifth": 9
+    },
+    "skills": [
+      {
+        "name": "Переноска вещей",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Игра в кости",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Угрожающий вид",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Языки: разные",
+        "skill": "coc:skill:language-other",
+        "specialization": "разные",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Непокорная толпа грузных мужчин и женщин: таскают, организуют и иногда играют второстепенные роли вроде «Страшного рыболюда номер 2». Бесконечно взаимозаменяемы, число не определено.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Обычно у съёмочного поезда или за делами на площадке; по вечерам напиваются у костра. Между группой и жителями Иннсмута тлеет напряжение, уже вспыхивали драки; пару дней назад они избили и прогнали Сэмми Брюстера. На площадке двое из них в костюмах лягушачьих созданий играют в кости «Двадцать шесть». Если сыщики не отдают драгоценность Баззлдону или обвиняют Джинни, группа встаёт против них и уводит — добровольно или силой. В финале несколько человек гибнут на утёсе, пытаясь спасти Джинни; трое уцелевших с Анной Диас грузят вещи в поезд.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "innsmouth-terror-en",
+      "physical_page": 10,
+      "printed_page": 6,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Dramatis Personae»: «The Crew»"
+    },
+    {
+      "book_id": "innsmouth-terror-en",
+      "physical_page": 34,
+      "printed_page": 30,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Average Crew Member, burly men and women»"
+    },
+    {
+      "book_id": "innsmouth-terror-en",
+      "physical_page": 21,
+      "printed_page": 17,
+      "method": "book_text",
+      "verified": true,
+      "note": "«On Set»"
+    },
+    {
+      "book_id": "innsmouth-terror-en",
+      "physical_page": 25,
+      "printed_page": 21,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Stumbling onto Set»"
+    },
+    {
+      "book_id": "innsmouth-terror-en",
+      "physical_page": 29,
+      "printed_page": 25,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Last Train out of Innsmouth»"
+    },
+    {
+      "book_id": "innsmouth-terror-en",
+      "physical_page": 31,
+      "printed_page": 27,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Playing the Hero»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.mp",
+      "printed": "8",
+      "expected": "10",
+      "note": "ПМ = МОЩ / 5 = 50 / 5 = 10; напечатано 8 (с. 30). Оставлено как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "editorial_text",
+      "parse_uncertain"
+    ],
+    "notes": "Групповой профиль (Р-151): имена в `names` придуманы, в книге группа безымянна. «Carry Things», «Dice», «Look Vaguely Threatening» — шуточные навыки без механики (Р-126); «Languages: Various 30%» — Иностранный язык (разные). Перевод наш, с английского оригинала; русские имена и названия — по переводу владельца («2_Обработка\\1923 Ужас в Иннсмуте») и официальным формам базы (Р-219); имена персонажей — транслитерация (Р-45)."
+  }
+}

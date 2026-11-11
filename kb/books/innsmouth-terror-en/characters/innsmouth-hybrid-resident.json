@@ -1,0 +1,187 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "innsmouth-terror-en/character/innsmouth-hybrid-resident",
+  "kind": "character",
+  "name": {
+    "ru": "Обычный житель Иннсмута (гибрид)",
+    "en": "Average Hybrid Resident"
+  },
+  "aliases": [
+    "Average Hybrid Resident, Innsmouth locals",
+    "Гибриды у храма"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "житель Иннсмута — гибрид глубоководного",
+  "names": [
+    "Обадайя Гилман",
+    "Исайя Уэйт",
+    "Мерси Марш",
+    "Иезекииль Сарджент",
+    "Пейшенс Элиот"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:deep-one-hybrid",
+      "note_back": "обычный житель-гибрид Иннсмута («Ужас в Иннсмуте»)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "65",
+        "value": 65
+      },
+      "CON": {
+        "raw": "65",
+        "value": 65
+      },
+      "SIZ": {
+        "raw": "50",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65
+      },
+      "APP": {
+        "raw": "20",
+        "value": 20
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      },
+      "EDU": {
+        "raw": "60",
+        "value": 60
+      }
+    },
+    "hp": {
+      "raw": "11",
+      "value": 11
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "sanity": {
+      "raw": "—",
+      "value": null,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      }
+    ],
+    "dodge": {
+      "raw": "32% (16/6)",
+      "value": 32,
+      "half": 16,
+      "fifth": 6
+    }
+  },
+  "description": {
+    "ru": "Житель Иннсмута с ярким иннсмутским обликом. Четверо массивных гибридов бездельничают у входа в Эзотерический орден Дагона и пощёчиной или ударом в живот прогоняют слишком любопытных; любой шум в храме привлекает десятки гибридов.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "innsmouth-terror-en",
+      "physical_page": 35,
+      "printed_page": 31,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Average Hybrid Resident, Innsmouth locals»"
+    },
+    {
+      "book_id": "innsmouth-terror-en",
+      "physical_page": 28,
+      "printed_page": 24,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Esoteric Order of Dagon»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.damage_bonus",
+      "printed": "0 (урон Драки 1d3+1d4)",
+      "expected": null,
+      "note": "БкУ напечатан 0 (СИЛ 65 + ТЕЛ 50 = 115 → 0), а урон Драки — с прибавкой 1d4 (с. 31). Оставлено как напечатано.",
+      "fixed": false
+    },
+    {
+      "field": "statblock.dodge",
+      "printed": "32% (17/6)",
+      "expected": "32% (16/6)",
+      "note": "половина 32 — 16 (Р-35); исправлено в записи.",
+      "fixed": true
+    },
+    {
+      "field": "statblock.move",
+      "printed": "8",
+      "expected": "9",
+      "note": "СИЛ 65 и ЛВК 65 больше ТЕЛ 50 — Скорость 9; напечатано 8 (с. 31). Оставлено как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "editorial_text",
+      "parse_uncertain"
+    ],
+    "notes": "Групповой профиль (Р-151): имена в `names` придуманы. Рассудок «—» — как напечатано. Перевод наш, с английского оригинала; русские имена и названия — по переводу владельца («2_Обработка\\1923 Ужас в Иннсмуте») и официальным формам базы (Р-219); имена персонажей — транслитерация (Р-45)."
+  }
+}

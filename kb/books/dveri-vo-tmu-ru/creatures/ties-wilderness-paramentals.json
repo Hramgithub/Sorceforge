@@ -1,0 +1,227 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "dveri-vo-tmu-ru/creature/ties-wilderness-paramentals",
+  "kind": "creature",
+  "name": {
+    "ru": "Лесные параментали",
+    "en": "Wilderness paramentals"
+  },
+  "aliases": [
+    "лесной параменталь",
+    "волшебные охранники колдуна"
+  ],
+  "category": "supernatural",
+  "subcategory": null,
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "dveri-vo-tmu-ru/character/ties-thaddeus-waters",
+      "note": "покойный колдун, чьи формулы их вызывают",
+      "note_back": "шесть волшебных стражей острова"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "35",
+        "value": 35
+      },
+      "CON": {
+        "raw": "35",
+        "value": 35
+      },
+      "SIZ": {
+        "raw": "35",
+        "value": 35
+      },
+      "DEX": {
+        "raw": "55",
+        "value": 55
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "INT": {
+        "raw": "50",
+        "value": 50
+      },
+      "POW": {
+        "raw": "35",
+        "value": 35
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "7",
+      "value": 7
+    },
+    "mp": {
+      "raw": "7",
+      "value": 7
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1 (когти или укус)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "1d6",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "27% (13/5)",
+      "value": 27,
+      "half": 13,
+      "fifth": 5
+    },
+    "skills": [
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d8",
+        "trigger": "при виде лесного параменталя"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Шесть человекоподобных тварей невысокого роста из глины, камней и мха — волшебные охранники Болотного колдуна. Лесная версия параменталей связана с хаотичной энергией природы. Как и городские, они создаются сложным заклинанием, связанным с местом; его формулу вырезают на дереве или камне — на острове это шесть деревьев с мистическими символами. Пробуждаются, когда сыщики выходят на центральную поляну острова, и медленно вылезают из болота. Обычным оружием им можно нанести урон, но через 10 минут после того, как здоровье параменталя дошло до нуля, он снова формируется; окончательно победить его можно, только найдя и уничтожив его формулу — тогда тварь падает и рассыпается грязью.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "dveri-vo-tmu-ru",
+      "physical_page": 94,
+      "printed_page": 95,
+      "method": "book_text",
+      "verified": true,
+      "note": "приложение А: «Лесные параментали»"
+    },
+    {
+      "book_id": "dveri-vo-tmu-ru",
+      "physical_page": 87,
+      "printed_page": 88,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Поход на соляные болота»: шесть тварей, потеря Рассудка 1/1d6"
+    },
+    {
+      "book_id": "dveri-vo-tmu-ru",
+      "physical_page": 88,
+      "printed_page": 89,
+      "method": "book_text",
+      "verified": true,
+      "note": "лесные параментали, формулы на деревьях"
+    },
+    {
+      "book_id": "dveri-vo-tmu-ru",
+      "physical_page": 89,
+      "printed_page": 90,
+      "method": "book_text",
+      "verified": true,
+      "note": "параментали возрождаются через 10 минут"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.sanity_loss",
+      "printed": "0/1d8 (приложение А, с. 95)",
+      "expected": "одно значение",
+      "note": "В тексте сцены (с. 88) вид шести тварей требует проверки Рассудка с потерей 1/1d6, в статблоке (с. 95) — 0/1d8 при виде лесного параменталя; так и в английском оригинале (1/1d6 на с. 89, 0/1d8 на с. 95). В записи — статблок; в сцене — значение текста.",
+      "fixed": false
+    },
+    {
+      "field": "statblock.damage_bonus",
+      "printed": "БкУ 0, Компл. 0",
+      "expected": "БкУ −1, Комплекция −1",
+      "note": "СИЛ 35 + ТЕЛ 35 = 70 — по таблице «Книги хранителя» БкУ −1 и Комплекция −1; напечатано 0 и 0 (так и в оригинале, с. 95). Оставлено как напечатано (Р-36: без большинства — как напечатано).",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": "Статблок — приложение А (с. 95). В английском оригинале (с. 89) сказано, что они похожи на параменталей из «Secrets of San Francisco»; в русском издании этой отсылки нет. Общей записи вида в базе нет."
+  }
+}

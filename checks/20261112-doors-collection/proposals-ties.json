@@ -1,0 +1,110 @@
+{
+  "schema": "sourcefold.proposals.v0",
+  "by": "Двери во тьму: «Кровные узы» (ties)",
+  "proposals": [
+    {
+      "target": "coc:location:arkham",
+      "op": "replace",
+      "path": "description.ru",
+      "old": "меблированные комнаты Дом Макгуайр на Саут-Пибоди-авеню.",
+      "new": "меблированные комнаты Дом Макгуайр на Саут-Пибоди-авеню.\n«Кровные узы» («Двери во тьму», гл. 5, 1920-е) начинаются в соседнем Ипсвиче, но многое происходит в Аркхэме: дешёвый отель «Борден-Армс» в северном Аркхэме (Вест-Хай-лейн, 488), где снимает номер рабочий Альфред Хаккет; Аркхэмская психбольница, куда после бойни кладут Мэри Кэррингтон; Мискатоникский университет с общежитием имени Дороти Апмен и библиотекой Орна. К месту убийства вызывают полицию Аркхэма; в окрестностях — ипсвичские соляные болота с островом Болотного колдуна (область «Окрестности Ипсвича»).",
+      "reason": "сценарий «Кровные узы» («Двери во тьму», с. 77, 81–82, 84, 86): места в Аркхэме заведены книжными записями с part_of на город (Р-190, Р-209)",
+      "ref": "Р-190"
+    },
+    {
+      "target": "coc:location:arkham",
+      "op": "append",
+      "path": "refs",
+      "value": "dveri-vo-tmu-ru/scenario/ties-that-bind",
+      "reason": "сценарий «Кровные узы» идёт в Аркхэме и соседнем Ипсвиче («Двери во тьму», с. 76)",
+      "ref": "Р-190",
+      "correction": false
+    },
+    {
+      "target": "coc:location:arkham",
+      "op": "append",
+      "path": "refs",
+      "value": "coc:location:ipswich",
+      "reason": "«Кровные узы»: Ипсвич — «городок возле Аркхэма» («Двери во тьму», с. 76); новый общий город заведён частью ties (Р-190)",
+      "ref": "Р-190",
+      "correction": false
+    },
+    {
+      "target": "coc:location:arkham",
+      "op": "append",
+      "path": "sources",
+      "value": {
+        "book_id": "dveri-vo-tmu-ru",
+        "physical_page": 81,
+        "printed_page": 82,
+        "method": "book_text",
+        "verified": true,
+        "note": "гл. 5 «Кровные узы»: отель «Борден-Армс» в северном Аркхэме (с. 82), психбольница (с. 84), Мискатоникский университет и библиотека Орна (с. 76, 81, 86)"
+      },
+      "reason": "источник нового абзаца описания города",
+      "ref": "Р-190",
+      "correction": false
+    },
+    {
+      "target": "coc:location:kingsport",
+      "op": "replace",
+      "path": "description.ru",
+      "old": "семья Проктор.",
+      "new": "семья Проктор.\nВ «Кровных узах» («Двери во тьму», гл. 5, 1920-е) в обшарпанном доходном доме в непопулярном районе Кингспорта живёт затворник Эндрю Леман, в 1906 году видевший Болотного колдуна над соляными болотами (место «Доходный дом в Кингспорте»).",
+      "reason": "сценарий «Кровные узы» («Двери во тьму», с. 86): Леман переехал на побережье и живёт в Кингспорте",
+      "ref": "Р-190"
+    },
+    {
+      "target": "coc:location:kingsport",
+      "op": "append",
+      "path": "refs",
+      "value": "dveri-vo-tmu-ru/location/ties-kingsport-tenement",
+      "reason": "место «Кровных уз» в Кингспорте («Двери во тьму», с. 86)",
+      "ref": "Р-190",
+      "correction": false
+    },
+    {
+      "target": "coc:location:kingsport",
+      "op": "append",
+      "path": "refs",
+      "value": "dveri-vo-tmu-ru/scenario/ties-that-bind",
+      "reason": "сценарий «Кровные узы» заходит в Кингспорт («Двери во тьму», с. 86)",
+      "ref": "Р-190",
+      "correction": false
+    },
+    {
+      "target": "coc:location:kingsport",
+      "op": "append",
+      "path": "axes.era",
+      "value": "1920s",
+      "reason": "«Кровные узы» («Двери во тьму») — 1920-е; запись города была только с эпохой 1930-х (Pulp Cthulhu)",
+      "ref": "Р-04",
+      "correction": false
+    },
+    {
+      "target": "coc:location:kingsport",
+      "op": "append",
+      "path": "sources",
+      "value": {
+        "book_id": "dveri-vo-tmu-ru",
+        "physical_page": 85,
+        "printed_page": 86,
+        "method": "book_text",
+        "verified": true,
+        "note": "гл. 5 «Кровные узы»: «Эндрю Леман» — доходный дом в Кингспорте"
+      },
+      "reason": "источник нового абзаца описания города",
+      "ref": "Р-190",
+      "correction": false
+    },
+    {
+      "target": "coc:location:innsmouth-doroga-v-ipsvich",
+      "op": "append",
+      "path": "refs",
+      "value": "coc:location:ipswich",
+      "reason": "заведена общая запись города Ипсвич (Р-190), куда ведёт дорога",
+      "ref": "Р-190",
+      "correction": false
+    }
+  ]
+}

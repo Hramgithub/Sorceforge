@@ -90,7 +90,7 @@
       "note": "огнестрел — со штрафной костью"
     },
     "attacks_per_round": {
-      "raw": "по ПЗ орды: 26–50 ПЗ — 3 атаки в раунд (укус, царапина); 11–25 ПЗ — 2 (укус, царапина), штрафная кость к Загону и Захвату; 10 ПЗ и меньше — 1 (укус, царапина), Загон и Захват недоступны",
+      "raw": "по ПЗ орды: 26–50 ПЗ — 3 атаки в раунд (укус, царапина); 11–25 ПЗ — 2 (укус, царапина), штрафная кость к манёврам «Загнать» и «Схватить»; 10 ПЗ и меньше — 1 (укус, царапина), манёвры «Загнать» и «Схватить» недоступны",
       "value": 3,
       "note": "число атак падает с ПЗ орды; с пленником — на 1 меньше"
     },
@@ -117,7 +117,7 @@
       },
       {
         "name": {
-          "ru": "Загон (манёвр)",
+          "ru": "Загнать (манёвр)",
           "en": "Herd (mnvr)"
         },
         "kind": "maneuver",
@@ -129,14 +129,14 @@
           "fifth": 10
         },
         "damage": {
-          "raw": "см. способность «Загон»",
+          "raw": "см. способность «Загнать»",
           "dice": null,
           "adds_db": false
         }
       },
       {
         "name": {
-          "ru": "Захват (манёвр)",
+          "ru": "Схватить (манёвр)",
           "en": "Seize (mnvr)"
         },
         "kind": "maneuver",
@@ -148,7 +148,7 @@
           "fifth": 10
         },
         "damage": {
-          "raw": "см. способность «Захват»",
+          "raw": "см. способность «Схватить»",
           "dice": null,
           "adds_db": false
         }
@@ -226,24 +226,29 @@
   "abilities": [
     {
       "name": "Орда",
-      "summary": "Пикси двенадцать, и Хранитель ведёт их как одно существо — орду («Бой с ордой», с. 69). При желании орду можно разделить на две стаи по шесть, у каждой — половина ВЫН, ТЕЛ и ПЗ исходной орды: одна стая несёт пленника к лунному лучу, другая преграждает путь остальным сыщикам Загоном. Атаки и встречные действия пикси используют, чтобы схватить сыщика.",
-      "raw": "There are 12 pixies, and the Keeper plays these as a single entity—a horde (see Fighting a Horde, page 69). If wished, you can split the horde into two packs of six, each pack with half the CON, SIZ, and hit points of the original horde. The pixies use their attacks and fight back actions to attempt to seize an investigator. Splitting the horde into two means that one pack can carry a captive investigator toward the moonbeam, while the other blocks and harries the remaining investigators—a horde can block an investigator’s movement using their herd maneuver (see Herd, page 70)."
-    },
-    {
-      "name": "Загон (манёвр)",
-      "summary": "Сдвигает или преграждает путь нескольким противникам сразу; каждая цель выбирает — подчиниться или сопротивляться. Сопротивляющиеся проходят встречную боевую проверку (Уклонение или ответный удар) против Ближнего боя пикси; подчинившимся проверка не нужна. Победа пикси: цель заблокирована или сдвинута к лунному лучу; чтобы пройти мимо пикси, ей нужен успешный боевой манёвр в свой следующий ход в раунде боя. Победа сыщика: он может двигаться (или нет) как хочет; при ответном ударе — наносит урон пикси.",
-      "raw": "Herd (mnvr): move or block multiple foes at once; all targets must choose to comply or resist. Those resisting must make an opposed combat roll (either to dodge or fight back) against the pixies (fighting); no roll is required by those that choose to comply. Pixies win: the target is blocked or moved toward the moonbeam. To move past the pixies, a target must succeed in a fighting maneuver on their next turn in the combat round. Investigator wins: the investigator may move (or not) as they wish; if fighting back, inflict damage on the pixies.",
+      "summary": "Пикси двенадцать, и Хранитель ведёт их как одно существо — орду («Бой с ордой», с. 69). При желании орду можно разделить на две стаи по шесть, у каждой — половина ВЫН, ТЕЛ и ПЗ исходной орды: одна стая несёт пленника к лунному лучу, другая преграждает путь остальным сыщикам манёвром «Загнать». Атаки и встречные действия пикси используют, чтобы схватить сыщика.",
+      "raw": "There are 12 pixies, and the Keeper plays these as a single entity—a horde (see Fighting a Horde, page 69). If wished, you can split the horde into two packs of six, each pack with half the CON, SIZ, and hit points of the original horde. The pixies use their attacks and fight back actions to attempt to seize an investigator. Splitting the horde into two means that one pack can carry a captive investigator toward the moonbeam, while the other blocks and harries the remaining investigators—a horde can block an investigator’s movement using their herd maneuver (see Herd, page 70).",
       "refs": [
-        "coc:rule:fighting-maneuvers"
+        "coc:rule:kc-fighting-a-horde"
       ]
     },
     {
-      "name": "Захват (манёвр)",
+      "name": "Загнать (манёвр)",
+      "summary": "Сдвигает или преграждает путь нескольким противникам сразу; каждая цель выбирает — подчиниться или сопротивляться. Сопротивляющиеся проходят встречную боевую проверку (Уклонение или ответный удар) против Ближнего боя пикси; подчинившимся проверка не нужна. Победа пикси: цель заблокирована или сдвинута к лунному лучу; чтобы пройти мимо пикси, ей нужен успешный боевой манёвр в свой следующий ход в раунде боя. Победа сыщика: он может двигаться (или нет) как хочет; при ответном ударе — наносит урон пикси.",
+      "raw": "Herd (mnvr): move or block multiple foes at once; all targets must choose to comply or resist. Those resisting must make an opposed combat roll (either to dodge or fight back) against the pixies (fighting); no roll is required by those that choose to comply. Pixies win: the target is blocked or moved toward the moonbeam. To move past the pixies, a target must succeed in a fighting maneuver on their next turn in the combat round. Investigator wins: the investigator may move (or not) as they wish; if fighting back, inflict damage on the pixies.",
+      "refs": [
+        "coc:rule:fighting-maneuvers",
+        "coc:rule:kc-fighting-a-horde"
+      ]
+    },
+    {
+      "name": "Схватить (манёвр)",
       "summary": "Пикси хватают цель и несут к месту ритуала. Пока цель удерживают, у неё штрафная кость на все действия. Пока орда несёт пленника, число её атак в раунд уменьшается на 1. Освободить цель — успешный боевой манёвр самого пленника или союзников. Орда может разделиться: половина несёт пленника, половина отбивается от остальных сыщиков.",
       "raw": "Seize (mnvr): the pixies seize the target and carry them toward the ritual site. While held, the target suffers one penalty die on all actions. While bearing a captive, reduce the number of attacks the horde can deliver each round by 1. Freeing the target requires a successful fighting maneuver either by the held investigator or by allies. The horde may divide into two: half to bear the captive, half to fend off the remaining investigators.",
       "refs": [
         "coc:rule:fighting-maneuvers",
-        "coc:rule:bonus-and-penalty-dice"
+        "coc:rule:bonus-and-penalty-dice",
+        "coc:rule:kc-fighting-a-horde"
       ]
     },
     {
@@ -341,6 +346,50 @@
       "translated",
       "parse_uncertain"
     ],
-    "notes": "Профиль сценария (Р-75); новый вид, общей записи нет. Навык «Злобно ухмыляться» (Sneer Maliciously) без механики — текстом (Р-126). Урон Ближнего боя 1d4–2 — кубы с напечатанным БкУ −2. Названия манёвров «Загон» (Herd) и «Захват» (Seize) и «Бой с ордой» — наш перевод до записи правила орды (с. 69–70)."
-  }
+    "notes": "Профиль сценария (Р-75); новый вид, общей записи нет. Навык «Злобно ухмыляться» (Sneer Maliciously) без механики — текстом (Р-126). Урон Ближнего боя 1d4–2 — кубы с напечатанным БкУ −2. Названия манёвров «Загнать» (Herd) и «Схватить» (Seize) — как в правиле «Бой с ордой» (`coc:rule:kc-fighting-a-horde`, с. 69–70)."
+  },
+  "corrections": [
+    {
+      "field": "abilities[1].name, statblock.attacks[1].name.ru",
+      "from": "Загон (манёвр)",
+      "to": "Загнать (манёвр)",
+      "reason": "сведение «Компаньона хранителя»: один термин для всей книги — манёвры орды «Загнать» (Herd) и «Схватить» (Seize), как в правиле kc-fighting-a-horde",
+      "ref": "Р-212"
+    },
+    {
+      "field": "abilities[2].name, statblock.attacks[2].name.ru",
+      "from": "Захват (манёвр)",
+      "to": "Схватить (манёвр)",
+      "reason": "сведение «Компаньона хранителя»: один термин для всей книги — манёвры орды «Загнать» (Herd) и «Схватить» (Seize), как в правиле kc-fighting-a-horde",
+      "ref": "Р-212"
+    },
+    {
+      "field": "statblock.attacks[1].damage.raw",
+      "from": "см. способность «Загон»",
+      "to": "см. способность «Загнать»",
+      "reason": "сведение «Компаньона хранителя»: один термин для всей книги — манёвры орды «Загнать» (Herd) и «Схватить» (Seize), как в правиле kc-fighting-a-horde",
+      "ref": "Р-212"
+    },
+    {
+      "field": "statblock.attacks[2].damage.raw",
+      "from": "см. способность «Захват»",
+      "to": "см. способность «Схватить»",
+      "reason": "сведение «Компаньона хранителя»: один термин для всей книги — манёвры орды «Загнать» (Herd) и «Схватить» (Seize), как в правиле kc-fighting-a-horde",
+      "ref": "Р-212"
+    },
+    {
+      "field": "abilities[0].summary",
+      "from": "остальным сыщикам Загоном",
+      "to": "остальным сыщикам манёвром «Загнать»",
+      "reason": "сведение «Компаньона хранителя»: один термин для всей книги — манёвры орды «Загнать» (Herd) и «Схватить» (Seize), как в правиле kc-fighting-a-horde",
+      "ref": "Р-212"
+    },
+    {
+      "field": "statblock.attacks_per_round.raw",
+      "from": "штрафная кость к Загону и Захвату; Загон и Захват недоступны",
+      "to": "штрафная кость к манёврам «Загнать» и «Схватить»; манёвры «Загнать» и «Схватить» недоступны",
+      "reason": "сведение «Компаньона хранителя»: один термин для всей книги — манёвры орды «Загнать» (Herd) и «Схватить» (Seize), как в правиле kc-fighting-a-horde",
+      "ref": "Р-212"
+    }
+  ]
 }

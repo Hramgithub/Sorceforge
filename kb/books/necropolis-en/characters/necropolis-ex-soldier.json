@@ -1,0 +1,443 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "necropolis-en/character/necropolis-ex-soldier",
+  "kind": "character",
+  "name": {
+    "ru": "Альберт Бриггс",
+    "en": null
+  },
+  "aliases": [
+    "Бывший солдат",
+    "Ex-Soldier"
+  ],
+  "roles": [
+    "pregen"
+  ],
+  "player_chooses": [
+    "name",
+    "luck"
+  ],
+  "occupation": {
+    "ru": "Бывший солдат",
+    "en": "Ex-Soldier"
+  },
+  "occupation_ref": "coc:occupation:soldat",
+  "age": {
+    "raw": "29",
+    "value": 29
+  },
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "80",
+        "value": 80
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "70",
+        "value": 70
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65
+      },
+      "APP": {
+        "raw": "40",
+        "value": 40
+      },
+      "INT": {
+        "raw": "55",
+        "value": 55
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      },
+      "EDU": {
+        "raw": "50",
+        "value": 50
+      }
+    },
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "sanity": {
+      "raw": "50",
+      "value": 50,
+      "max": null
+    },
+    "luck": {
+      "raw": "3d6×5",
+      "value": null,
+      "note": "игрок бросает 3d6 и умножает на 5 (Luck: roll 3d6 and multiply result by five)"
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Fighting (Brawl)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Нож",
+          "en": "knife"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "1d8+1d4",
+          "dice": "1d8",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:knife-large",
+        "notes": "боевой нож из имущества; в книге — в строке драки: «or knife 1d8+1d4»"
+      },
+      {
+        "name": {
+          "ru": "Револьвер .32",
+          "en": ".32 revolver"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d8",
+          "dice": "1d8",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:32-revolver",
+        "notes": "заряжен 6 патронами, ещё 4 запасных"
+      }
+    ],
+    "dodge": {
+      "raw": "50% (25/10)",
+      "value": 50,
+      "half": 25,
+      "fifth": 10
+    },
+    "skills": [
+      {
+        "name": "Ближний бой (драка)",
+        "skill": "coc:skill:fighting",
+        "specialization": "Драка",
+        "value": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "20% (10/4)",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Стрельба (винтовка/дробовик)",
+        "skill": "coc:skill:firearms",
+        "specialization": "Винтовка/дробовик",
+        "value": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "20% (10/4)",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Родной язык (английский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "английский",
+        "value": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "20% (10/4)",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Механика",
+        "skill": "coc:skill:mechanical-repair",
+        "value": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Естествознание",
+        "skill": "coc:skill:natural-world",
+        "value": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Ориентирование",
+        "skill": "coc:skill:navigate",
+        "value": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "10% (5/2)",
+          "value": 10,
+          "half": 5,
+          "fifth": 2
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Выживание (пустыня)",
+        "skill": "coc:skill:survival",
+        "specialization": "Пустыня",
+        "value": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "20% (10/4)",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Безумие (врезка «Безумные сыщики»)",
+      "summary": "Начальный Рассудок 50; бессрочное безумие — при потере 10+ пунктов. Непроизвольное действие: швыряет всё, что держит в руках, в ближайшую цель (друг это или враг). Приступ безумия (длится 1d10 раундов): взрыв неконтролируемого насилия. «Живым вы меня не возьмёте!»",
+      "raw": "Ex-Soldier • SAN: 50 • Indefinite insanity: at 10+ points. • Involuntary action: throws whatever they are holding at the nearest target (be they friend or foe). • Bout of madness: explodes in a spree of uncontrolled violence. “You’ll never take me alive!”",
+      "refs": [
+        "coc:rule:kc-involuntary-action",
+        "coc:rule:bout-of-madness",
+        "coc:rule:indefinite-insanity"
+      ]
+    }
+  ],
+  "background": {
+    "traits": "Вас гложет пятно на послужном списке, и вам осточертело торчать в пустыне.",
+    "ideology": "В конечном счёте полагаться можно только на себя.",
+    "significant_people": "Бывшие армейские товарищи, хотя вы не виделись с ними очень давно."
+  },
+  "possessions": [
+    "Револьвер .32, заряженный 6 патронами",
+    "4 запасных патрона",
+    "Боевой нож"
+  ],
+  "description": {
+    "ru": "Уволен из армии с позором за то, что ударил офицера, и с тех пор берётся за любую работу. Теперь он снова в Египте (служил здесь в Великую войну) и охраняет очередную археологическую экспедицию. Черты: злится из-за пятна на послужном списке, устал торчать в пустыне. Зацепка для отыгрыша: должен произвести впечатление на начальника (Дилетанта), чтобы остаться на жалованье. Единственный из готовых сыщиков, чей пол задан книгой.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Предыстория (как на листе сыщика). Вы воевали в Египте во время Великой войны. Вас уволили из армии с позором после стычки с офицером, кончившейся дракой. Но драться — всё, что вы умеете, и теперь у вас единственная работа, какую удалось найти, — и она снова привела вас в Египет: вы обеспечиваете охрану на археологических раскопках в Долине царей. Несмотря на жару и мух, платят хорошо.\nДо вас дошла весть, что Археолог нашёл гробницу, а ваш последний наниматель, Дилетант, прибыл на место к торжественному вскрытию. Надо быть начеку и пойти посмотреть, что происходит.\nЗацепка для отыгрыша: нужно произвести впечатление на начальника, чтобы вас оставили на жалованье.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "necropolis-en",
+      "physical_page": 19,
+      "printed_page": 30,
+      "method": "book_text",
+      "verified": true,
+      "note": "сценарий «The Necropolis»: лист «Ex-Soldier, age 29»"
+    },
+    {
+      "book_id": "necropolis-en",
+      "physical_page": 4,
+      "printed_page": 15,
+      "method": "book_text",
+      "verified": true,
+      "note": "сценарий «The Necropolis»: «About the Investigators»: The Ex-Soldier"
+    },
+    {
+      "book_id": "necropolis-en",
+      "physical_page": 12,
+      "printed_page": 23,
+      "method": "book_text",
+      "verified": true,
+      "note": "сценарий «The Necropolis»: врезка «Insane Investigators»"
+    }
+  ],
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "necropolis-en/character/necropolis-dilettante",
+      "note": "последний наниматель, «босс»",
+      "note_back": "охранник раскопок"
+    },
+    {
+      "type": "knows",
+      "target": "necropolis-en/character/necropolis-archaeologist",
+      "note": "археолог экспедиции, нашедший гробницу",
+      "note_back": "охранник экспедиции"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "editorial_text"
+    ],
+    "notes": "Готовый сыщик сценария «Некрополис». Имя придумано (Р-150), в книге — «Ex-Soldier», строка «Name:» пустая: игроки сами выбирают имена. Удачу игрок бросает сам (3d6×5). Навыка «Стрельба (пистолет)» в списке нет — шанс 60% дан строкой «.32 revolver» в бою."
+  }
+}

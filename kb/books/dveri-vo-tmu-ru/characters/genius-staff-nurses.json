@@ -1,0 +1,289 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "dveri-vo-tmu-ru/character/genius-staff-nurses",
+  "kind": "character",
+  "name": {
+    "ru": "Медсёстры Данверской психбольницы",
+    "en": "Staff nurse"
+  },
+  "aliases": [
+    "Медсестра больницы",
+    "рабыня ллойгора",
+    "дежурная сестра"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "медсестра",
+  "names": [
+    "сестра Агнес Мёрфи",
+    "сестра Эдна Кларк",
+    "сестра Мэри Салливан",
+    "сестра Хелен Уорд",
+    "сестра Рут Палмер"
+  ],
+  "occupation": {
+    "ru": "медсестра",
+    "en": "staff nurse"
+  },
+  "occupation_ref": "coc:occupation:medsestra-medbrat",
+  "sex": "женский",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "dveri-vo-tmu-ru/character/genius-james-berger",
+      "note": "главврач",
+      "note_back": "медсёстры его больницы"
+    },
+    {
+      "type": "servitor_of",
+      "target": "dveri-vo-tmu-ru/creature/genius-lloigor",
+      "note": "ллойгор, которому подвластен персонал",
+      "note_back": "медсёстры больницы, его рабыни"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "45",
+        "value": 45
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "50",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65
+      },
+      "APP": {
+        "raw": "70",
+        "value": 70
+      },
+      "INT": {
+        "raw": "70",
+        "value": 70
+      },
+      "POW": {
+        "raw": "45",
+        "value": 45
+      },
+      "EDU": {
+        "raw": "70",
+        "value": 70
+      }
+    },
+    "hp": {
+      "raw": "11",
+      "value": 11
+    },
+    "mp": {
+      "raw": "9",
+      "value": 9
+    },
+    "sanity": {
+      "raw": "10",
+      "value": 10,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      }
+    ],
+    "dodge": {
+      "raw": "32% (16/6)",
+      "value": 32,
+      "half": 16,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Ближний бой (драка)",
+        "skill": "coc:skill:fighting",
+        "specialization": "Драка",
+        "value": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Медицина",
+        "skill": "coc:skill:medicine",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Наука (биология)",
+        "skill": "coc:skill:science",
+        "specialization": "Биология",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Наука (фармакология)",
+        "skill": "coc:skill:science",
+        "specialization": "Фармакология",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Обаяние",
+        "skill": "coc:skill:charm",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Психоанализ",
+        "skill": "coc:skill:psychoanalysis",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "20%",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Стандартные параметры медсестры Данверской психбольницы, рабыни ллойгора. Суровая дежурная сестра в здании администрации направляет гостей к главврачу (у неё нет половины левого уха — будто откусили или оторвали; успешная проверка Внимания). Некоторые медсёстры носят связки ключей на поясах или в карманах. В ночь новолуния медсёстры участвуют в обряде.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "dveri-vo-tmu-ru",
+      "physical_page": 52,
+      "printed_page": 53,
+      "method": "book_text",
+      "verified": true,
+      "note": "приложение А: «Медсестра больницы, рабыня ллойгора»"
+    },
+    {
+      "book_id": "dveri-vo-tmu-ru",
+      "physical_page": 38,
+      "printed_page": 39,
+      "method": "book_text",
+      "verified": true,
+      "note": "дежурная сестра"
+    },
+    {
+      "book_id": "dveri-vo-tmu-ru",
+      "physical_page": 48,
+      "printed_page": 49,
+      "method": "book_text",
+      "verified": true,
+      "note": "ключи; все празднующие — из больницы"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "editorial_text"
+    ],
+    "notes": "Групповой профиль (Р-74); имена придуманы (Р-151), в книге — «медсестра больницы»."
+  }
+}

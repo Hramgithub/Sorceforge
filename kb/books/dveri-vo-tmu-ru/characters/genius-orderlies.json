@@ -1,0 +1,322 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "dveri-vo-tmu-ru/character/genius-orderlies",
+  "kind": "character",
+  "name": {
+    "ru": "Санитары Данверской психбольницы",
+    "en": "Asylum orderlies"
+  },
+  "aliases": [
+    "Санитар больницы",
+    "раб ллойгора",
+    "санитары"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "санитар",
+  "names": [
+    "Гас Кеннеди",
+    "Майк Доэрти",
+    "Уолтер Брэнниган",
+    "Джо Ковальски",
+    "Фрэнк Ласситер",
+    "Эд Маллой"
+  ],
+  "occupation": {
+    "ru": "санитар психбольницы",
+    "en": "asylum orderly"
+  },
+  "occupation_ref": "coc:occupation:sanitar-psikhbolnitsy",
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "dveri-vo-tmu-ru/character/genius-james-berger",
+      "note": "главврач, которого они боятся подвести",
+      "note_back": "санитары его больницы"
+    },
+    {
+      "type": "servitor_of",
+      "target": "dveri-vo-tmu-ru/creature/genius-lloigor",
+      "note": "ллойгор, которому подвластен персонал",
+      "note_back": "санитары больницы, его рабы"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "80",
+        "value": 80
+      },
+      "CON": {
+        "raw": "65",
+        "value": 65
+      },
+      "SIZ": {
+        "raw": "75",
+        "value": 75
+      },
+      "DEX": {
+        "raw": "55",
+        "value": 55
+      },
+      "APP": {
+        "raw": "40",
+        "value": 40
+      },
+      "INT": {
+        "raw": "40",
+        "value": 40
+      },
+      "POW": {
+        "raw": "35",
+        "value": 35
+      },
+      "EDU": {
+        "raw": "35",
+        "value": 35
+      }
+    },
+    "hp": {
+      "raw": "14",
+      "value": 14
+    },
+    "mp": {
+      "raw": "9",
+      "value": 9
+    },
+    "sanity": {
+      "raw": "15",
+      "value": 15,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d3 + 1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Ближний бой (дубинка)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d4 + 1d4",
+          "dice": "1d4",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "27% (13/5)",
+      "value": 27,
+      "half": 13,
+      "fifth": 5
+    },
+    "skills": [
+      {
+        "name": "Ближний бой (драка)",
+        "skill": "coc:skill:fighting",
+        "specialization": "Драка",
+        "value": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Зловещая улыбка",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "15%",
+          "value": 15,
+          "half": 7,
+          "fifth": 3
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Стандартные параметры санитара Данверской психбольницы, раба ллойгора. Их нанимают скорее за размеры, чем за ум или силу воли; пациенты явно их боятся (успешная проверка Психологии). Пары крепких санитаров патрулируют территорию за трёхметровым забором; некоторые из этих мелочных ничтожеств могут поддаться на взятки, шантаж или ложные посулы, у некоторых на поясах связки ключей. У одного свежий красный шрам на запястье уходит под рукав (успешная проверка Внимания). Пойманных сыщиков они избивают для острастки и ведут к Бергеру. Переодетые в простую одежду сотрудники больницы следят за сыщиками в городе. Санитары убили Эндрю Макбрайда. В ночь новолуния патрули отзывают, чтобы санитары участвовали в обряде.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "dveri-vo-tmu-ru",
+      "physical_page": 52,
+      "printed_page": 53,
+      "method": "book_text",
+      "verified": true,
+      "note": "приложение А: «Санитар больницы, раб ллойгора»"
+    },
+    {
+      "book_id": "dveri-vo-tmu-ru",
+      "physical_page": 39,
+      "printed_page": 40,
+      "method": "book_text",
+      "verified": true,
+      "note": "двое хмурых санитаров, шрам"
+    },
+    {
+      "book_id": "dveri-vo-tmu-ru",
+      "physical_page": 44,
+      "printed_page": 45,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Нежелательное внимание»: шпионы — сотрудники больницы"
+    },
+    {
+      "book_id": "dveri-vo-tmu-ru",
+      "physical_page": 47,
+      "printed_page": 48,
+      "method": "book_text",
+      "verified": true,
+      "note": "Макбрайда убили санитары; забор и патрули"
+    },
+    {
+      "book_id": "dveri-vo-tmu-ru",
+      "physical_page": 48,
+      "printed_page": 49,
+      "method": "book_text",
+      "verified": true,
+      "note": "ключи, поимка; отзыв патрулей"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.mp",
+      "printed": "9",
+      "expected": "7 (МОЩ 35 / 5)",
+      "note": "ПМ не сходятся с МОЩ; так и в оригинале (MP: 9). Оставлено как напечатано (Р-161).",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "editorial_text",
+      "parse_uncertain"
+    ],
+    "notes": "Групповой профиль (Р-74); имена придуманы (Р-151), в книге — «санитар больницы». Атака дубинкой (1d4 + 1d4) не связана с записью оружия: у «Дубинки полицейской» таблицы урон 1d6. «Зловещая улыбка» — навык без механики, записи не имеет (Р-126)."
+  }
+}

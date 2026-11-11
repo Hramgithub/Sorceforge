@@ -1,0 +1,303 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "dveri-vo-tmu-ru/character/lake-william-brophy",
+  "kind": "character",
+  "name": {
+    "ru": "Уильям Брофи",
+    "en": "William Brophy"
+  },
+  "aliases": [],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "хозяин мотеля «Сквоттерс-Лейк»",
+    "en": "motel owner"
+  },
+  "age": {
+    "raw": "83",
+    "value": 83
+  },
+  "sex": "мужской",
+  "birthplace": "Англия",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:servant-of-glaaki",
+      "note_back": "Уильям Брофи, хозяин мотеля у озера Сквоттерс"
+    },
+    {
+      "type": "servitor_of",
+      "target": "dveri-vo-tmu-ru/creature/lake-avatar-of-glaaki",
+      "note": "господин, которому он полностью подчинён",
+      "note_back": "служитель"
+    },
+    {
+      "type": "relative_of",
+      "target": "dveri-vo-tmu-ru/character/lake-elizabeth-brophy",
+      "note": "мать",
+      "note_back": "сын"
+    },
+    {
+      "type": "relative_of",
+      "target": "dveri-vo-tmu-ru/character/lake-gemma-brophy",
+      "note": "сестра",
+      "note_back": "брат"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "35",
+        "value": 35
+      },
+      "CON": {
+        "raw": "110",
+        "value": 110
+      },
+      "SIZ": {
+        "raw": "80",
+        "value": 80
+      },
+      "DEX": {
+        "raw": "25",
+        "value": 25
+      },
+      "APP": {
+        "raw": "45",
+        "value": 45
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "60",
+        "value": 60
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "19",
+      "value": 19
+    },
+    "mp": {
+      "raw": "12",
+      "value": 12
+    },
+    "sanity": {
+      "raw": "—",
+      "value": null,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "5",
+      "value": 5,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 5
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1 (драка или оружие)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Стрельба (ружьё 20-го калибра) (2 ствола)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Стрельба",
+        "chance": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "2d6/1d6/1d3 (10/20/50 метров)",
+          "dice": "2d6/1d6/1d3",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:shotgun-20-gauge-2b",
+        "notes": "дальность 10/20/50 метров"
+      }
+    ],
+    "dodge": {
+      "raw": "12% (6/2)",
+      "value": 12,
+      "half": 6,
+      "fifth": 2
+    },
+    "skills": [
+      {
+        "name": "Ближний бой (драка)",
+        "skill": "coc:skill:fighting",
+        "specialization": "Драка",
+        "value": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      }
+    ],
+    "spells": {
+      "raw": "«Связь с божеством: Гла’аки».",
+      "items": [
+        {
+          "name": "«Связь с божеством: Гла’аки»",
+          "spell": "coc:spell:contact-glaaki"
+        }
+      ]
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "0",
+        "trigger": "нет, если служитель Гла’аки похож на человека"
+      },
+      {
+        "success": "1",
+        "fail": "1d10",
+        "trigger": "если он умер от «Зелёного гниения»"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Старик в синем комбинезоне и кепке, с добрым морщинистым лицом со впалыми щеками и копной седых волос; говорит с британским акцентом. Похож на отца, так что ему нетрудно притворяться младшим братом Роберта. Выглядит слабым, но посильнее Роберта; двигается скованно.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Сын Роберта Брофи. Через пять лет после гибели семьи приехал в долину реки Северн после долгого отсутствия и тоже покорился воле Гла’аки. Уильям умер в 25 лет — Гла’аки забрал его 58 лет назад, так что этому телу 83 года. Вполне дееспособен как человек, но полностью подчинён аватару. После эмиграции в США привёз отца из Кингспорта на север, к озеру Сквоттерс, где они открыли мотель; вскоре после прибытия воткнул в грудь захваченного несчастного множество шипов Гла’аки, создав аватар.\nВедёт дела мотеля: принимает гостей, отвечает на вопросы всеми силами стараясь угодить (см. сцену «„Братья“ Брофи»), заправляет лампы, держит при себе ключи от мастерской и от спальни Роберта. Брофи продолжали хобби прежнего владельца — собирали номера машин, только номера своих жертв; Уильям решил, что это рискованно, и спрятал подозрительные номера за стойкой. Вырвал из учётной книги последнюю страницу («пролил чай»). В день приезда сыщиков скандалит с Джейкобом Трентом.\nЕсли сыщики обвинят Брофи, Уильям скажет: «Зря вы в это сунулись. Сами виноваты», — схватит ружьё и попытается взять сыщиков в плен. В ночь развязки угрожает сыщикам двустволкой 20-го калибра и ведёт пленников к озеру; стреляет только в крайнем случае — например, если сыщики сами откроют огонь: он помнит, что трупы для его божества бесполезны. У озера целится из ружья в нападающих сыщиков.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "dveri-vo-tmu-ru",
+      "physical_page": 73,
+      "printed_page": 74,
+      "method": "book_text",
+      "verified": true,
+      "note": "приложение А: «Уильям Брофи, служитель Гла’аки»"
+    },
+    {
+      "book_id": "dveri-vo-tmu-ru",
+      "physical_page": 56,
+      "printed_page": 57,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Информация для Хранителя»"
+    },
+    {
+      "book_id": "dveri-vo-tmu-ru",
+      "physical_page": 59,
+      "printed_page": 60,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Приёмная»: номера машин"
+    },
+    {
+      "book_id": "dveri-vo-tmu-ru",
+      "physical_page": 60,
+      "printed_page": 61,
+      "method": "book_text",
+      "verified": true,
+      "note": "«„Братья“ Брофи»"
+    },
+    {
+      "book_id": "dveri-vo-tmu-ru",
+      "physical_page": 61,
+      "printed_page": 62,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Неприятный инцидент»"
+    },
+    {
+      "book_id": "dveri-vo-tmu-ru",
+      "physical_page": 66,
+      "printed_page": 67,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Связь с властями»"
+    },
+    {
+      "book_id": "dveri-vo-tmu-ru",
+      "physical_page": 68,
+      "printed_page": 69,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Финальная схватка»"
+    },
+    {
+      "book_id": "dveri-vo-tmu-ru",
+      "physical_page": 69,
+      "printed_page": 70,
+      "method": "book_text",
+      "verified": true,
+      "note": "«У озера в лунном свете»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "Скорость",
+      "printed": "5",
+      "expected": "7",
+      "note": "СИЛ 35 и ЛВК 25 меньше ТЕЛ 80 — базовая скорость 7 (с поправкой на 83 года — 2); напечатано 5 (так и в английском оригинале). Значение оставлено как напечатано (Р-161).",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": "Статблок — приложение А (с. 74). Потеря Рассудка 1/1d10 «если он умер от „Зелёного гниения“» напечатана и у Уильяма, хотя он нежить 58 лет (гниение — после шестидесяти)."
+  }
+}

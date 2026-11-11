@@ -1,0 +1,52 @@
+{
+  "book_id": "starter-edge-of-darkness-ru",
+  "goal": "the three scenarios of the Russian Starter Set (Стартовый набор) playable from the base (Р-211, item 5 of the queue): «Бумажный след», «Грань тьмы», «Мертвецкий стомп».",
+  "decision": "Р-217, Р-213, Р-190, Р-206, Р-209",
+  "check_dir": "checks/20261112-starter-set",
+  "models": [
+    "kb/books/dveri-vo-tmu-ru/scenarios/darkness-beneath-the-hill.json",
+    "kb/books/keepers-companion-en/scenes/little-miracles-start.json",
+    "kb/books/pulp-cthulhu-en/handouts/disintegrator-1-finch-telegram.json",
+    "kb/locations/arkham.json",
+    "kb/books/masks-of-nyarlathotep-en/maps/america-harlem.json"
+  ],
+  "extra": "## This work (Р-217)\n\nThe Russian Starter Set (official edition, Hobby World) — each scenario is its own registered PDF **without a text layer** (scans): «Бумажный след» `starter-paper-chase-ru` (12 pages), «Грань тьмы» `starter-edge-of-darkness-ru` (31), «Мертвецкий стомп» `starter-dead-mans-stomp-ru` (28). Read pages by OCR — `pdftoppm -r 200 -f N -l N -png <pdf> <out>` then `tesseract <png> - -l rus` — and check every number on the page image; find the printed/physical page relation of your PDF and report it. Official Russian handouts — `…\\Стартовый набор (Starter Set)\\Раздатка\\` and the jpg folders `Бумажный след\\`, `Грань Тьмы\\`, `Мертвецкий Стомп\\` (images; OCR). The pre-generated investigators already exist in `kb/books/startovyy-nabor-pregens-ru/` — link them, never duplicate. Model of a scanned official Russian scenario: `kb/books/dveri-vo-tmu-ru/scenarios/darkness-beneath-the-hill.json` and its report `checks/20261112-doors-darkness-hill/darkness.md`. Run tools as `python -B …`.\n\n- Russian text: as printed (official; no `translated`); English names in `name.en` only if certain (Paper Chase, The Edge of Darkness, Dead Man Stomp).\n- Records — book-scoped `<book_id>/<kind>/<slug>` in `kb/books/<book_id>/<kinds>/` of your scenario's book: scenario record (summary, keeper_info, hook, advice, steps with refs, conclusion with Sanity rewards, tables), every scene retold for play (`arc`), items, handouts, organizations, characters (statblocks as printed, Р-25), creatures (known Mythos creatures → `instance_of` the shared `coc:creature:*`), places. Cities — shared records (Arkham, New York with Harlem, Boston… exist or create, Р-190), the scenario's places as book records `part_of` them, places outside a city under «Окрестности <города>» (Р-209). Maps — `map` with the image (`app/maps/starter-<slug>.jpg`) and spots on every printed number/label (Р-206; check each by eye on a crop); every key number gets a place record. List captions — neutral, no spoilers (Р-209).\n- `axes.era` [\"1920s\"], `ruleset` \"core\". Book misprints — `errata` as printed (Р-35).\n- Coverage: `checks/20261112-starter-set/<unit>.md` — every heading → record(s), «не взято» with the reason.",
+  "units": [
+    {
+      "name": "paper",
+      "pages": "all 12 pages of starter-paper-chase-ru",
+      "target": "the scenario «Бумажный след» whole",
+      "owns": [
+        "kb/books/starter-paper-chase-ru/** (new)",
+        "kb/locations/<city>.json if new",
+        "app/maps/starter-paper-*",
+        "checks/20261112-starter-set/paper.md, proposals-paper.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "edge",
+      "pages": "all 31 pages of starter-edge-of-darkness-ru",
+      "target": "the scenario «Грань тьмы» whole",
+      "owns": [
+        "kb/books/starter-edge-of-darkness-ru/** (new)",
+        "kb/locations/<city>.json if new",
+        "app/maps/starter-edge-*",
+        "checks/20261112-starter-set/edge.md, proposals-edge.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "stomp",
+      "pages": "all 28 pages of starter-dead-mans-stomp-ru",
+      "target": "the scenario «Мертвецкий стомп» whole",
+      "owns": [
+        "kb/books/starter-dead-mans-stomp-ru/** (new)",
+        "kb/locations/<city>.json if new",
+        "app/maps/starter-stomp-*",
+        "checks/20261112-starter-set/stomp.md, proposals-stomp.json"
+      ],
+      "sites": "—"
+    }
+  ]
+}

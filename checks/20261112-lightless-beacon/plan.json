@@ -1,0 +1,17 @@
+{
+  "book_id": "lightless-beacon-ru",
+  "goal": "the story of «Погасший маяк» (The Lightless Beacon) playable from the base — the pregens and creatures exist, the scenario does not (Р-211, item 4 of the queue).",
+  "decision": "Р-215, Р-190, Р-206, Р-209",
+  "check_dir": "checks/20261112-lightless-beacon",
+  "models": [
+    "kb/books/keepers-companion-en/scenarios/little-miracles.json",
+    "kb/books/keepers-companion-en/scenes/little-miracles-start.json",
+    "kb/books/pulp-cthulhu-en/handouts/disintegrator-1-finch-telegram.json",
+    "kb/locations/kingsport.json",
+    "kb/books/masks-of-nyarlathotep-en/maps/america-harlem.json"
+  ],
+  "extra": "## This work (Р-215)\n\nThe official Russian edition «Погасший маяк» (`lightless-beacon-ru`, 44 pages, text layer; printed/physical relation — find and report). Its pre-generated investigators and two creatures are already in `kb/books/lightless-beacon-ru/` — link them, never duplicate; edits of them go through your proposals file. The English original `[EN 7e] The Lightless Beacon` lies in the same library folder (register it as `lightless-beacon-en` with `python -B pipeline/source/pages.py register …` if you need it to check numbers). Russian text — as printed in the official edition (no `translated`). Handouts — the official Russian handouts `…\\Погасший маяк (The Lightless Beacon)\\Раздатка\\[RU 7e] раздатка.pdf`. Run tools as `python -B …`.\n\n- Records — book-scoped `lightless-beacon-ru/<kind>/<slug>` in `kb/books/lightless-beacon-ru/<kinds>/`, slugs with the prefix `beacon-`: scenario `lightless-beacon` (summary, keeper_info, hook, advice, steps with refs, conclusion with Sanity rewards, tables), every scene retold for play (`arc`), items, handouts, organizations, characters (NPCs with statblocks as printed, Р-25), creatures (link the existing two; known Mythos creatures → `instance_of` the shared `coc:creature:*`), places. The lighthouse island off the Massachusetts coast (1926): the nearest town as a shared city (`coc:location:<slug>`, create if missing, Р-190; if the book names none — an «окрестности» area under the nearest shared city mentioned, e.g. Kingsport/Innsmouth/Arkham if the text says so), the island and the lighthouse with its rooms as book places (Р-209). Maps — `map` with the image (`app/maps/beacon-<slug>.jpg`) and spots on every printed number/label (Р-206; check each by eye on a crop); every key number gets a place record. List captions — neutral, no spoilers (Р-209).\n- `axes.era` [\"1920s\"], `ruleset` \"core\". Book misprints — `errata` as printed (Р-35).\n- Coverage: `checks/20261112-lightless-beacon/beacon.md` — every heading → record(s), «не взято» with the reason.",
+  "units": [
+    {"name": "beacon", "pages": "1-44", "target": "the whole scenario «Погасший маяк» with handouts and maps", "owns": ["kb/books/lightless-beacon-ru/*/beacon-* and scenario `lightless-beacon` (new files)", "kb/locations/<city>.json if new", "app/maps/beacon-*", "checks/20261112-lightless-beacon/beacon.md, proposals-beacon.json"], "sites": "—"}
+  ]
+}

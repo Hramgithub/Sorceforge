@@ -1,0 +1,226 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "dveri-vo-tmu-ru/creature/darkness-degenerates",
+  "kind": "creature",
+  "name": {
+    "ru": "Выродки",
+    "en": "Degenerates, devolved humans"
+  },
+  "aliases": [],
+  "category": "mythos_monster",
+  "subcategory": "выродившиеся люди",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "servitor_of",
+      "target": "dveri-vo-tmu-ru/creature/darkness-ssyaa-hrisss",
+      "note": "хозяин",
+      "note_back": "рабы, помощники и пища"
+    }
+  ],
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "50",
+        "value": 50,
+        "roll": "3d6×5"
+      },
+      "CON": {
+        "raw": "35",
+        "value": 35,
+        "roll": "2d6×5"
+      },
+      "SIZ": {
+        "raw": "20",
+        "value": 20,
+        "roll": "(1d6+1)×5"
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70,
+        "roll": "4d6×5"
+      },
+      "INT": {
+        "raw": "20",
+        "value": 20,
+        "roll": "1d6×5"
+      },
+      "POW": {
+        "raw": "45",
+        "value": 45,
+        "roll": "(2d6+2)×5"
+      }
+    },
+    "hp": {
+      "raw": "5",
+      "value": 5
+    },
+    "damage_bonus": {
+      "raw": "-1",
+      "value": -1
+    },
+    "build": {
+      "raw": "-1",
+      "value": -1
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1 (когти, кулаки или дубина)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d3-1",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Ближний бой (дубина)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d6-1",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:club-small"
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Кража",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d4",
+        "trigger": "при виде выродка"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Жалкие создания — потомки рабынь и надсмотрщиков, захваченных в плен более столетия назад, выродившиеся от череды инцестов в ужасных и неестественных условиях. Мелкорослы и волосаты, похожи на неизвестных науке бледных обезьян, скачут и ковыляют по тоннелям; череп с покатым лбом, крупные глаза, вытянутые, похожие на рыла челюсти, руки длиннее человеческих. Кто осмотрит пленного или убитого выродка и пройдёт проверку Науки (биология) или трудную проверку Знания, с ужасом поймёт, что существо — человек (проверка Рассудка, потеря 1/1d3).\nЖестоки и готовы сожрать почти всё, в том числе друг друга, но трусливы: нападают только на беспомощных или при численном превосходстве, из засады; спасаются в тоннелях, слишком узких для человека. Поначалу следят за сыщиками незаметно и могут стащить вещи, высунувшись из нор и трещин. Точное число не указано: хотя бы по выродку на сыщика + 1d4. Ухаживают за Теплицей (не менее двух), живут в Пристанищах, трое поумнее прислуживают С’сья-Х’рисссу, а детей-выродков он ест.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "dveri-vo-tmu-ru",
+      "physical_page": 33,
+      "printed_page": 34,
+      "method": "book_text",
+      "verified": true,
+      "entry_page": 33,
+      "note": "приложение А: «Выродки, выродившиеся люди»"
+    },
+    {
+      "book_id": "dveri-vo-tmu-ru",
+      "physical_page": 20,
+      "printed_page": 21,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Гнусные обитатели пещер»: «Выродки»"
+    },
+    {
+      "book_id": "dveri-vo-tmu-ru",
+      "physical_page": 25,
+      "printed_page": 26,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Пристанища выродков», «Теплица»"
+    },
+    {
+      "book_id": "dveri-vo-tmu-ru",
+      "physical_page": 30,
+      "printed_page": 31,
+      "method": "book_text",
+      "verified": true,
+      "note": "трое помощников, дети-выродки в клетке"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Существо, а не персонаж: безымянные выродившиеся люди-чудовища с потерей Рассудка при виде (Р-94). Навык «Кража» (в оригинале Steal Things) механики в книге не имеет и записи навыка не получает (Р-126). ПМ в книге не даны. Дубина: урон 1d6 как у полицейской дубинки справочника; урон 1d3-1 и 1d6-1 — с учётом БкУ −1."
+  }
+}

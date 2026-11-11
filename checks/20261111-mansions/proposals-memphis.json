@@ -1,0 +1,100 @@
+{
+  "schema": "sourcefold.proposals.v0",
+  "by": "часть memphis («Дом Мемфиса», «Особняки безумия. За закрытыми дверями»)",
+  "proposals": [
+    {
+      "target": "coc:location:boston",
+      "op": "append",
+      "path": "refs",
+      "value": "osobnyaki-bezumiya-ru/scenario/memphis-house-of-memphis",
+      "reason": "сценарий «Дом Мемфиса» происходит в Бостоне в 1927 году (с. 103); места сценария — записи книги с part_of на Бостон",
+      "ref": "Р-218",
+      "correction": false
+    },
+    {
+      "target": "coc:location:boston",
+      "op": "append",
+      "path": "refs",
+      "value": "osobnyaki-bezumiya-ru/location/memphis-house",
+      "reason": "Дом Мемфиса — особняк в богатом пригороде Бостона (с. 121), центр сценария",
+      "ref": "Р-218",
+      "correction": false
+    },
+    {
+      "target": "coc:tome:thaumaturgical-prodigies-in-the-new-england-canaan",
+      "op": "set",
+      "path": "copies",
+      "after": "spells",
+      "value": [
+        {
+          "book_id": "osobnyaki-bezumiya-ru",
+          "physical_page": 116,
+          "printed_page": 115,
+          "where": "Бостон, 1927: экземпляр второго тиража (Бостон, 1801) из библиотеки Великого Мемфиса (экслибрис с монограммой на титульном листе), с пометками на полях неизвестной рукой; украден Харольдом Хокинсом, который носит его с собой и держит в запирающемся шкафчике гримёрки в Театре Уилбера («Дом Мемфиса», с. 114–115; предмет `osobnyaki-bezumiya-ru/item/memphis-hawkins-thaumaturgical-prodigies`)",
+          "spells": [
+            {
+              "name": "Связь с Нарлато (Ньярлатхотепом)",
+              "spell": "coc:spell:contact-nyarlathotep"
+            },
+            {
+              "name": "Вызов Йогг Сототха (Йог-Сотота)",
+              "spell": "coc:spell:call-dismiss-yog-sothoth"
+            }
+          ]
+        }
+      ],
+      "reason": "экземпляр из сценария «Дом Мемфиса» (Р-65): числа совпадают с «Книгой Хранителя» (1d6, +1/+3%, 12, 8 недель), список заклинаний — свой (с. 115)",
+      "ref": "Р-65"
+    },
+    {
+      "target": "coc:tome:book-of-eibon-english",
+      "op": "set",
+      "path": "copies",
+      "after": "spells",
+      "value": [
+        {
+          "book_id": "osobnyaki-bezumiya-ru",
+          "physical_page": 133,
+          "printed_page": 132,
+          "where": "Бостон, 1927: библиотека Великого Мемфиса на чердаке его дома, самый дальний оккультный раздел; корешок надломлен — книга распахивается на вызове Йок-Зотота и на заклинании «Призыв из-за грани» («Дом Мемфиса», с. 131–132; предмет `osobnyaki-bezumiya-ru/item/memphis-book-of-eibon`)",
+          "spells": [
+            {
+              "name": "Дыхание тёмного моря («Сотворить туман Р’льеха»)",
+              "spell": "coc:spell:create-mist-of-rlyeh"
+            },
+            {
+              "name": "Призыв из-за грани",
+              "spell": null
+            },
+            {
+              "name": "Связь с бесформенным отродьем Жотаккуа («Связь с бесформенным отродьем»)",
+              "spell": "coc:spell:contact-formless-spawn"
+            },
+            {
+              "name": "Связь с Йок-Зототом (Йог-Сототом)",
+              "spell": "coc:spell:contact-yog-sothoth"
+            },
+            {
+              "name": "Создание врат",
+              "spell": "coc:spell:create-gate"
+            },
+            {
+              "name": "Усыхание конечности",
+              "spell": "coc:spell:wither-limb"
+            }
+          ]
+        }
+      ],
+      "reason": "экземпляр из сценария «Дом Мемфиса» (Р-65): числа совпадают с «Книгой Хранителя» (2d4, +3/+8%, 33, 32 недели), список заклинаний — свой, с новым заклинанием «Призыв из-за грани» (с. 132)",
+      "ref": "Р-65"
+    },
+    {
+      "target": "coc:spell:call-dismiss-yog-sothoth",
+      "op": "append",
+      "path": "aliases",
+      "value": "Вызов Йогг Сототха",
+      "reason": "так заклинание названо в экземпляре «Чудес тавматургии» в «Особняках безумия» (с. 115: «Вызов Йогг Сототха (Йог-Сотота)»)",
+      "ref": "Р-96"
+    }
+  ]
+}

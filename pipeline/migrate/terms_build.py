@@ -99,6 +99,24 @@ def main() -> int:
             t["sources"].append({"book_id": "keeper-rulebook-ru", "physical_page": g.get("physical_page"), "printed_page": g.get("page"),
                                  "method": "book_text", "verified": True, "note": "глоссарий"})
 
+    # 1c. terms chosen while translating an English book (checks/*/new-terms.json: {en, ru, aliases, avoid, domain, ref, note});
+    #     our translation — page and book come from the record in `ref`
+    by_id = {r.get("id"): r for _, r in records()}
+    for nt in sorted(ROOT.glob("checks/*/new-terms.json")):
+        for g in json.loads(nt.read_text(encoding="utf-8")):
+            t = term(g["en"])
+            src = ((by_id.get(g.get("ref")) or {}).get("sources") or [{}])[0]
+            t["variants"].append({"ru": g["ru"], "by": "ours", "book_id": src.get("book_id"), "page": src.get("printed_page"),
+                                  "note": g.get("note") or f"выбрано при переносе ({nt.parent.name})"})
+            t["aliases"] += g.get("aliases") or []
+            t["avoid"] += g.get("avoid") or []
+            t["domain"] = t["domain"] or g.get("domain")
+            if g.get("ref"):
+                t["refs"].append(g["ref"])
+            if src.get("book_id"):
+                t["sources"].append({"book_id": src["book_id"], "physical_page": src.get("physical_page"), "printed_page": src.get("printed_page"),
+                                     "method": "book_text", "verified": bool(src.get("verified")), "note": f"{nt.parent.name}/new-terms.json"})
+
     # 2. official characteristics
     for en, ru, abbr, cid in CHARACTERISTICS:
         t = term(en)

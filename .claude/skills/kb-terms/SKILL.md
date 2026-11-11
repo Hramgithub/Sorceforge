@@ -33,6 +33,10 @@ Hramgithub/CoC) > доверенный фанатский перевод > на�
 Официальный глоссарий или указатель другой книги (русское издание) — переписать в JSON по образцу
 `kr-glossary.json` ({ru, en, definition, page, physical_page}) и добавить шаг в `terms_build.py`.
 
+Термины, выбранные при переводе английской книги (наш перевод), — `checks/<работа>/new-terms.json`
+({en, ru, aliases, avoid, domain, ref, note}; страница и книга берутся из записи `ref`); пересборка подхватывает все такие
+файлы сама (образец — `checks/20261111-keepers-companion/new-terms.json`).
+
 ## Выгрузка
 
 `python tools/terms.py --export <файл.csv>` — CSV в столбцах реестра владельца (для синхронизации с NRI, Foundry и

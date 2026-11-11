@@ -1,0 +1,187 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "starter-edge-of-darkness-ru/creature/zombie-raccoon",
+  "kind": "creature",
+  "name": {
+    "ru": "Зомби-енот",
+    "en": null
+  },
+  "aliases": [
+    "Оживший труп енота"
+  ],
+  "category": "supernatural",
+  "subcategory": "труп, поднятый Таящимся",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:zombie"
+    },
+    {
+      "type": "spawn_of",
+      "target": "starter-edge-of-darkness-ru/creature/lurker-in-the-attic",
+      "note": "поднимает труп убитого им существа, тратя пункты магии",
+      "note_back": "оживлённый им труп"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "25",
+        "value": 25
+      },
+      "CON": {
+        "raw": "20",
+        "value": 20
+      },
+      "SIZ": {
+        "raw": "20",
+        "value": 20
+      },
+      "DEX": {
+        "raw": "40",
+        "value": 40
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "INT": {
+        "raw": "—",
+        "value": null
+      },
+      "POW": {
+        "raw": "05",
+        "value": 5
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "4",
+      "value": 4
+    },
+    "sanity": {
+      "raw": "—",
+      "value": null,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "−2",
+      "value": -2
+    },
+    "build": {
+      "raw": "−2",
+      "value": -2
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1 (укус или удар когтями)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "1d3−2",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "зомби не уклоняются",
+      "value": null,
+      "half": null,
+      "fifth": null
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "85%",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d6",
+        "trigger": "увидеть оживший труп енота"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Труп енота, поднятый Таящимся за 1 пункт магии. Таящийся может отправить мёртвых зверей атаковать дом или вышедшего наружу сыщика, а в жестоком варианте — сбрасывать скопившиеся на чердаке трупы животных через люк в комнату и оживлять их уже внутри защищённого периметра (только против команды из четырёх-пяти хорошо вооружённых сыщиков).\nОжившие мертвецы: избавиться от них можно только так — взорвать, разрубить на части или затащить в дом, под защиту оберегов. Таящийся теряет власть над своими марионетками, как только они пересекают порог защищённого дома, и те безжизненно падают; поднятые мертвецы «живут» до 3 часов или пока не уничтожены. Мертвецы страшны на вид, но их не очень сложно уничтожить; главная опасность при встрече с ними — потеря рассудка.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "starter-edge-of-darkness-ru",
+      "physical_page": 31,
+      "printed_page": 49,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Зомби-енот, труп, поднятый Таящимся»"
+    },
+    {
+      "book_id": "starter-edge-of-darkness-ru",
+      "physical_page": 28,
+      "printed_page": 46,
+      "method": "book_text",
+      "verified": true,
+      "note": "звери атакуют дом; жестокий приём с люком"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Статблок — с. 49."
+  }
+}

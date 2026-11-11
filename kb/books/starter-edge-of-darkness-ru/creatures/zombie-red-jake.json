@@ -1,0 +1,201 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "starter-edge-of-darkness-ru/creature/zombie-red-jake",
+  "kind": "creature",
+  "name": {
+    "ru": "Зомби Рыжий Джейк",
+    "en": null
+  },
+  "aliases": [
+    "Оживший труп Рыжего Джейка"
+  ],
+  "category": "supernatural",
+  "subcategory": "труп, поднятый Таящимся",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:zombie"
+    },
+    {
+      "type": "spawn_of",
+      "target": "starter-edge-of-darkness-ru/creature/lurker-in-the-attic",
+      "note": "поднимает труп убитого им существа, тратя пункты магии",
+      "note_back": "оживлённый им труп"
+    },
+    {
+      "type": "related_to",
+      "target": "starter-edge-of-darkness-ru/character/red-jake",
+      "note": "кем был при жизни",
+      "note_back": null
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "75",
+        "value": 75
+      },
+      "CON": {
+        "raw": "20",
+        "value": 20
+      },
+      "SIZ": {
+        "raw": "75",
+        "value": 75
+      },
+      "DEX": {
+        "raw": "25",
+        "value": 25
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "INT": {
+        "raw": "00",
+        "value": 0
+      },
+      "POW": {
+        "raw": "05",
+        "value": 5
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "9",
+      "value": 9
+    },
+    "sanity": {
+      "raw": "—",
+      "value": null,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "6",
+      "value": 6,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 6
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1 (удар кулаком или лопатой)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d4 + 1d4",
+          "dice": "1d4",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "зомби не уклоняются",
+      "value": null,
+      "half": null,
+      "fifth": null
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d6",
+        "trigger": "увидеть оживший труп Рыжего Джейка"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Труп Рыжего Джейка, если Таящийся убил его (около десяти вечера в ночь ритуала) и поднял: нападает на сыщиков, когда они пытаются помочь «раненой женщине», или штурмует дом вместе с другими мертвецами.\nОжившие мертвецы: избавиться от них можно только так — взорвать, разрубить на части или затащить в дом, под защиту оберегов. Таящийся теряет власть над своими марионетками, как только они пересекают порог защищённого дома, и те безжизненно падают; поднятые мертвецы «живут» до 3 часов или пока не уничтожены. Мертвецы страшны на вид, но их не очень сложно уничтожить; главная опасность при встрече с ними — потеря рассудка.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "starter-edge-of-darkness-ru",
+      "physical_page": 31,
+      "printed_page": 49,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Зомби Рыжий Джейк, труп, поднятый Таящимся»"
+    },
+    {
+      "book_id": "starter-edge-of-darkness-ru",
+      "physical_page": 27,
+      "printed_page": 45,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Проведение ритуала»"
+    },
+    {
+      "book_id": "starter-edge-of-darkness-ru",
+      "physical_page": 28,
+      "printed_page": 46,
+      "method": "book_text",
+      "verified": true,
+      "note": "мертвецы штурмуют дом"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Статблок — с. 49. ИНТ «00» и МОЩ «05» — как напечатано; ТЕЛ и СИЛ ожившего трупа (75) выше, чем у живого Джейка (с. 48), — как напечатано."
+  }
+}

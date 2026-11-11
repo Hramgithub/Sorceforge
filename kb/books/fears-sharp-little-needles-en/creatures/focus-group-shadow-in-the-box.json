@@ -1,0 +1,199 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "fears-sharp-little-needles-en/creature/focus-group-shadow-in-the-box",
+  "kind": "creature",
+  "name": {
+    "ru": "Тень в шкатулке",
+    "en": "The Shadow in the Box"
+  },
+  "aliases": [
+    "Тень",
+    "Теневой аспект",
+    "Shadow Aspect"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "тень из Страны грёз",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "120",
+        "value": 120
+      },
+      "CON": {
+        "raw": "100",
+        "value": 100
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "30",
+        "value": 30
+      },
+      "INT": {
+        "raw": "60",
+        "value": 60
+      },
+      "POW": {
+        "raw": "70",
+        "value": 70
+      }
+    },
+    "hp": {
+      "raw": "100*",
+      "value": 100,
+      "note": "звёздочка напечатана без сноски"
+    },
+    "damage_bonus": {
+      "raw": "+1d6",
+      "value": "+1d6"
+    },
+    "build": {
+      "raw": "2",
+      "value": 2
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Когти",
+          "en": "Claws"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (когти)",
+        "chance": {
+          "raw": "66% (33/13)",
+          "value": 66,
+          "half": 33,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "1d6+БкУ (режущий урон)",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "notes": "рвёт жертву, пока та не потеряет сознание"
+      },
+      {
+        "name": {
+          "ru": "Атака отверстием",
+          "en": "Orifice Attack"
+        },
+        "kind": "special",
+        "skill": null,
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d6 МОЩ навсегда за атаку",
+          "dice": null,
+          "adds_db": false,
+          "extra": "необратимая потеря 1d6 МОЩ за каждую атаку"
+        },
+        "notes": "высасывает сущность из жертвы без сознания"
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d8",
+        "trigger": "увидеть Тень в шкатулке"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Полуосязаемость",
+      "summary": "Полуосязаемое существование вдвое уменьшает урон от любых физических атак.",
+      "raw": "Defenses: Semi-corporeal existence halves damage from all physical attacks."
+    },
+    {
+      "name": "Привязана к шкатулке",
+      "summary": "Освобождается, когда шкатулку открывают. Если уничтожить её телесную оболочку или снова закрыть шкатулку (чему Тень отчаянно сопротивляется), она возвращается в шкатулку, пока какой-нибудь безрассудный или невнимательный человек снова её не откроет.",
+      "raw": "Semi-corporeal, the creature is released from the box by opening it. If the corporeal aspect of it is destroyed, or the box is closed again (something the creature will strive mightily to prevent), the creature will return back to the box, until some foolhardy or unwary individual opens it again.",
+      "refs": [
+        "fears-sharp-little-needles-en/item/focus-group-shadow-box"
+      ]
+    },
+    {
+      "name": "Высасывание сущности",
+      "summary": "Когтями Тень рвёт тело жертвы, пока та не потеряет сознание, затем отверстием-головой высасывает из неё сущность. Если Тень высосет вчетверо больше своей МОЩ, она открывает Врата и возвращается в Страну грёз, чтобы развиться в своё древнее первобытное состояние.",
+      "raw": "Its claws rend the body of an intended victim, until the person is rendered unconscious. It then uses it orifice to drain the essence out of that unconscious victim. If the creature is able to siphon four times its own POW, it will open a Gate and return back to the Dreamlands, to evolve into its ancient primal state.",
+      "refs": [
+        "coc:spell:create-gate"
+      ]
+    },
+    {
+      "name": "Зов через «Клетку Морфея»",
+      "summary": "Тень воздействует на тех, кто слушает субчастотный тон игры: говорит голосом куклы-обезьяны, показывает кровавые надписи, которые ощущаются настоящими, и уговаривает открыть шкатулку.",
+      "raw": "The Shadow within wishes to escape its confinement, by influencing those listening to the sub-frequency, and return back to the Dreamlands.",
+      "refs": [
+        "fears-sharp-little-needles-en/item/focus-group-tcom-app"
+      ]
+    }
+  ],
+  "description": {
+    "ru": "Чудовищное существо смутно человеческой формы. Голова — адское отверстие, из которого, как жестокие щупальца, сочится светящийся пар. Руки — обугленные когти; в них студенистая табличка с древним хайборийским именем Тени и словами заклинания Врат в Страну грёз («Создание врат онейрологии»). Из тела, как отвратительная россыпь нарывов, вздуваются глазные яблоки и обезображенные лица.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Юнгианские психоаналитики называют это «Теневым аспектом»: он представляет коллективное бессознательное и хранит древние архетипы, запечатлённые в ДНК; первобытные и отвратительные сознательному «я», эти стороны лежат в глубочайшей тьме бессознательного. Некоторые вещи тревожить не следует — шкатулка хранит тени, поглотившие своих носителей.\nВ шкатулке заключена Тень человека с сильной генетической примесью Великих Древних — например, того, кто не знал, что он гибрид глубоководного, или принадлежал к наследственной линии тчо-тчо. Грубой магии шкатулки юнгианских алиенистов научили гули, проводившие их в Страну грёз.",
+    "en": null
+  },
+  "habitat": "Теневая шкатулка; стремится вернуться в Страну грёз",
+  "sources": [
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 112,
+      "printed_page": 111,
+      "method": "book_text",
+      "verified": true,
+      "note": "сценарий «The Focus Group»: «The Shadow Box», «The Shadow in the Box» — описание и статблок"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 110,
+      "printed_page": 109,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Introduction»: Тень хочет вырваться и вернуться в Страну грёз"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.hp",
+      "printed": "HP 100*",
+      "expected": "16",
+      "note": "По ВЫН 100 и ТЕЛ 65 ПЗ = (100 + 65) / 10 = 16. Напечатано «100*», сноски к звёздочке нет; возможно, задумано большое число ПЗ или опечатка. Оставлено как напечатано, вопрос владельцу (Р-36).",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Существо сценария, общего вида нет (Р-75). Пунктов магии в статблоке нет. «Создание врат онейрологии» (Create Gate of Oneirology) в справочнике нет — черновик заклинания в отчёте u7. Русский текст — по рабочему переводу владельца, сверен с оригиналом."
+  }
+}

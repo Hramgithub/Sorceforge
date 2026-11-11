@@ -1,0 +1,66 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "lightless-beacon-ru/scene/beacon-bedroom",
+  "kind": "scene",
+  "name": {
+    "ru": "Спальня",
+    "en": "Bunkroom"
+  },
+  "aliases": [],
+  "description": {
+    "ru": "В спальне три аккуратно застеленные кровати, в углу — большая стопка книг. Три больших шкафа: в каждом мыло, полотенца, свежее постельное бельё и дополнительные одеяла. В шкафах Тёрнера и Кэссиди — разная одежда и несколько мелких личных вещей; в шкафу Смита — только постельное бельё и полотенца.\nВ матрасе Тёрнера спрятаны одна золотая монета, шесть пуль и карманная записная книжка (Материал: Маяк 3). Тёрнер был направлен на остров Бикон агентом под прикрытием, чтобы отслеживать незаконные перевозки по популярным торговым маршрутам, после того как обнаружил в близлежащих водах часть корпуса лодки без опознавательных знаков.",
+    "en": null
+  },
+  "when": "В доме смотрителя",
+  "arc": {
+    "scenario": "lightless-beacon-ru/scenario/lightless-beacon",
+    "part": "Мёртвый остров",
+    "order": 10
+  },
+  "where": [
+    {
+      "location": "lightless-beacon-ru/location/beacon-bedroom"
+    }
+  ],
+  "participants": [
+    {
+      "id": "lightless-beacon-ru/character/bureau-agent",
+      "role": "знает, где коллега мог что-то спрятать"
+    }
+  ],
+  "mechanics": {
+    "ru": "Внимание — тайник в матрасе Тёрнера; Агент Бюро, если он рядом, получает бонусную кость: он представляет, где искать то, что мог спрятать его коллега.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Записная книжка раскрывает подозрения Тёрнера о Кэссиди и о ночных гостях острова.",
+    "en": null
+  },
+  "refs": [
+    "lightless-beacon-ru/handout/beacon-3-turner-notebook",
+    "lightless-beacon-ru/item/beacon-innsmouth-gold-coins",
+    "lightless-beacon-ru/character/beacon-michael-turner",
+    "coc:rule:bonus-and-penalty-dice"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "lightless-beacon-ru",
+      "physical_page": 15,
+      "printed_page": 14,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Спальня»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

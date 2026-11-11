@@ -1,0 +1,194 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "fears-sharp-little-needles-en/creature/pulvis-quachil-uttaus",
+  "kind": "creature",
+  "name": {
+    "ru": "Квачил Уттаус («Pulvis et Umbra Sumus»)",
+    "en": "Quachil Uttaus, Treader of the Dust"
+  },
+  "aliases": [
+    "Квачил Уттаус, Ступающий по праху",
+    "Квахиль Уттаус",
+    "Куачил Уттаус"
+  ],
+  "category": "mythos_deity",
+  "subcategory": "Великий Древний",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:quachil-uttaus",
+      "note_back": "профиль сценария «Pulvis et Umbra Sumus»: связан с «Заветом Карнамагоса»"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "100",
+        "value": 100
+      },
+      "SIZ": {
+        "raw": "30",
+        "value": 30
+      },
+      "DEX": {
+        "raw": "15",
+        "value": 15
+      },
+      "INT": {
+        "raw": "95",
+        "value": 95
+      },
+      "POW": {
+        "raw": "175",
+        "value": 175
+      }
+    },
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "damage_bonus": {
+      "raw": "N/A",
+      "value": null,
+      "note": "не применяется"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "Special (instant teleportation, or floats at any speed)",
+      "value": null,
+      "modes": [
+        {
+          "mode": "other",
+          "value": null,
+          "note": "мгновенная телепортация или парение с любой скоростью"
+        }
+      ]
+    },
+    "armor": {
+      "raw": "None",
+      "value": 0
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Касание",
+          "en": "Fighting (Brawl)"
+        },
+        "kind": "special",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "100% (50/20)",
+          "value": 100,
+          "half": 50,
+          "fifth": 20
+        },
+        "damage": {
+          "raw": "instantaneous death (aging to dust)",
+          "dice": null,
+          "adds_db": false,
+          "extra": "мгновенная смерть: жертва стареет и рассыпается в прах"
+        },
+        "notes": "в лимбо — встречная проверка против ЛВК сыщика"
+      }
+    ],
+    "spells": {
+      "raw": "Any desired by the Keeper (especially any related to life, death, time and aging).",
+      "items": []
+    },
+    "sanity_loss": [
+      {
+        "success": "1d6",
+        "fail": "1d20",
+        "trigger": "при виде Квачила Уттауса (в зеркале или в столбе света)"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Неуязвимость",
+      "summary": "Невосприимчив ко всем физическим и магическим атакам. Оружие, которым его атакуют, мгновенно стареет и рассыпается в пыль.",
+      "raw": "Defenses: Immune to all physical and magical attacks. Weapons used to attack Quachil Uttaus age instantly to dust."
+    },
+    {
+      "name": "Связь с книгой и проводники",
+      "summary": "Офелия связала бога с «Заветом Карнамагоса»: каждый, кто подошёл к книге ближе чем на 1,6 км, становится проводником его силы. Проводники: всё в радиусе 1,6 км от проводника (сыщиков, Денниса и Джозефа) стремительно стареет. Каждое живое существо, которое не проводник, теряет по 1 СИЛ, ВЫН, ЛВК и НАР за каждую минуту в области действия; пострадавших всё сильнее тошнит. Когда любая характеристика снизилась на 5, окружающие автоматически замечают внешние изменения; когда любая характеристика так падает до 0, жертва умирает, рассыпаясь в пыль. Неживые предметы в области ветшают с любой скоростью по выбору Хранителя. Проводники получают часть защиты Квачила Уттауса: прямые физические атаки им не вредят, а оружие, применённое против них, обращается в пыль. Реально навредить проводнику может только другой проводник и только непрямым способом (удушение, утопление — «Книга хранителя», с. 124): весь обычный урон от ударов игнорируется.",
+      "raw": "Anyone coming within a mile of the book would now become a conduit for the god’s power. … Everything within a mile of a conduit (including the investigators, Dennis, and Joseph) starts to age at an accelerated rate. Every living creature that is not a conduit loses 1 STR, 1 CON, 1 DEX, and 1 APP per minute that they remain within the area of effect. … Conduits also receive some of the defense Quachil Uttaus has—they cannot be harmed by direct physical attacks and weapons used against them turn to dust.",
+      "refs": [
+        "fears-sharp-little-needles-en/tome/pulvis-testament-of-carnamagos",
+        "coc:rule:suffocation-and-drowning"
+      ]
+    },
+    {
+      "name": "За отражением",
+      "summary": "Прячется за отражением сыщика в зеркале (не физически у него за спиной); проверка ЛВК заставляет его на раунд показаться в отражении. Если в одном зеркале несколько сыщиков, видно несколько копий бога. Может мелькнуть в зеркале заднего вида, сидя на пустом заднем сиденье. Насколько он готов общаться, решает Хранитель.",
+      "raw": "Success reveals that something is hiding just behind their reflection, but not physically behind them. A DEX roll tricks Quachil Uttaus into revealing itself in the reflection for one round, before hiding again (SAN loss is 1d6/1d20)."
+    },
+    {
+      "name": "Вызов и лимбо",
+      "summary": "Слова «Exklopios Quachil Uttaus» вызывают его (1d10 Рассудка и 1d10 ПМ говорящему): столб серовато-голубого света, пол рассыпается, все падают в тёмное лимбо, где бог спускается по столбу и по одному касается присутствующих, пока не уничтожит всех. Вошедший в столб света — трудная проверка МОЩ и 1d10 ПМ — поднимается обратно; бог за ним не следует. Вызов разрывает связь бога с проводниками.",
+      "raw": "Saying “Exklopios Quachil Uttaus” aloud calls Quachil Uttaus (costing the speaker 1d10 Sanity points and 1d10 magic points). A pillar of grayish-blue light descends upon the investigators … The floor turns to dust and the investigators fall into a dark limbo of illimitable, unsphered time and space below.",
+      "refs": [
+        "fears-sharp-little-needles-en/scene/pulvis-calling-quachil-uttaus"
+      ]
+    }
+  ],
+  "description": {
+    "ru": "Квачил Уттаус, Ступающий по праху, призванный Офелией Этвуд и связанный с «Заветом Карнамагоса». Спустился со звёзд по лучу света к её дому; через сыщиков-проводников должен обратить мир в прах. Сыщики видят его маленькой фигуркой.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 40,
+      "printed_page": 39,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «QUACHIL UTTAUS, Treader of the Dust»; «Calling Quachil Uttaus»"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 36,
+      "printed_page": 35,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Introduction», «Arrival at the House»"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 38,
+      "printed_page": 37,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Departure»"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 39,
+      "printed_page": 38,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Hotels and Mirrors», врезка «Conduits of Quachil Uttaus»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Отличия от профиля в справочнике (Malleus Monstrorum): ИНТ 95 (в справочнике нет), касание 100% — мгновенная смерть вместо 1d10 за раунд, Скорость особая вместо 1, потеря Рассудка 1d6/1d20 вместо 1d6/2d10, бонус к урону «N/A», ПМ не даны. Русский текст — по рабочему переводу владельца (fears-sharp-little-needles/document.html), сверен с английским оригиналом; числа — по английской странице. Имя бога — по записи базы «Квачил Уттаус» (у владельца «Квахиль Уттаус», «Куачил Уттаус»), книга — «Завет Карнамагоса», как в «Книге хранителя» (у владельца «Завещание Карнамагоса»)."
+  }
+}

@@ -58,7 +58,7 @@
 | «Элитный бутик волшебства» (с «Хранителю на заметку») | 117–118 | сцена `…/scene/memphis-magic-boutique`; место `…/location/memphis-magic-boutique`; `memphis-reuben-levi` |
 | Ресторан «У Нельсона»; Разговоры; Хранителю на заметку | 118–121 | сцена `…/scene/memphis-nelsons`; место `…/location/memphis-nelsons`; `memphis-nelson`, `memphis-max-marvello` |
 | Обучение фокусам (врезка): навык Искусство/ремесло (фокусы) (05%); Итого; Приобретение навыка по ходу игры | 119 | сценарий: advice (полностью); `coc:skill:art-craft` в ссылках |
-| Игра за фокусника (врезка); Род занятий: фокусник | 120 | сценарий: advice (полностью); род занятий — черновик записи `kb/occupations` в отчёте части |
+| Игра за фокусника (врезка); Род занятий: фокусник | 120 | сценарий: advice (полностью); род занятий `coc:occupation:fokusnik` |
 | Дом Мемфиса; Наружнее наблюдение | 121 | сцена `…/scene/memphis-outside-observation`; место `…/location/memphis-house` |
 | Первый этаж: Гостиная (1), Столовая (2), Винтовая лестница (3) | 121, 124 | места `…/location/memphis-house-1-living-room`, `-2-dining-room`, `-3-spiral-stair` |
 | Карта «Дом Мемфиса. План резиденции Шварцев» (ключ 1–21) | 122 | карта `…/map/memphis-map-house` (`app/maps/mansions-memphis-house.jpg`, 41 метка); места `memphis-house-1-…` … `memphis-house-21-library` |
@@ -80,7 +80,7 @@
 | Подвал (20) | 131–132 | место `memphis-house-20-basement` |
 | Скримеры и ужасы, сводящие с ума (во всех комнатах) | 121–132 | в местах комнат; таблица сценария «Скримеры и ужасы, сводящие с ума» |
 | Пора делать выводы | 132–133 | сцена `…/scene/memphis-conclusions` |
-| Книга Эйбона (врезка); Заклинание «Призыв из-за грани» | 132 | предмет `…/item/memphis-book-of-eibon` (полный текст, заклинание целиком); общая книга `coc:tome:book-of-eibon-english` — предложение `copies`; новое заклинание — черновик в отчёте |
+| Книга Эйбона (врезка); Заклинание «Призыв из-за грани» | 132 | предмет `…/item/memphis-book-of-eibon` (полный текст, заклинание целиком); общая книга `coc:tome:book-of-eibon-english` — предложение `copies`; заклинание `coc:spell:summon-from-beyond` |
 | Как не сбиться со следа | 133 | сцена `…/scene/memphis-staying-on-track` |
 | Завершение | 133 | сцена `…/scene/memphis-fighting-ghost` (вступление); сценарий: conclusion |
 | Борьба с призраком | 134 | сцена `memphis-fighting-ghost` |
@@ -89,7 +89,7 @@
 | Если заклинание сработало; Если заклинание сорвалось | 135–136 | сцена `memphis-fighting-ghost` |
 | Финальная схватка (с «Хранителю на заметку») | 136 | сцена `…/scene/memphis-final-showdown` |
 | Выход факира (с «Хранителю на заметку») | 136–137 | сцена `memphis-final-showdown` |
-| Новые заклинания и их вариации (врезка): Когти пустоты; Сотворить барьер Наах-Тита (вариация) | 137 | способности `memphis-harold-hawkins` (полный текст); `coc:spell:create-barrier-of-naach-tith` в ссылках; «Когти пустоты» — черновик в отчёте |
+| Новые заклинания и их вариации (врезка): Когти пустоты; Сотворить барьер Наах-Тита (вариация) | 137 | способности `memphis-harold-hawkins` (полный текст); `coc:spell:claws-of-the-void`, `coc:spell:create-barrier-of-naach-tith-room` |
 | Хранителю на заметку I, II | 138 | сцена `memphis-final-showdown` |
 | Окончание дуэли | 138 | сцена `…/scene/memphis-duel-end` |
 | Сыщик как жертва (с «Хранителю на заметку»), вариант с Линч | 138–139 | сцена `memphis-duel-end` |
@@ -138,16 +138,20 @@
 - Сторожевые псы театра и крысы в подвале — без статблоков в книге: ссылки на `coc:creature:dog` и `coc:creature:rat-swarm`, особей не заводил.
 - Подписи «Масштаб в метрах», «Обозначения» на плане — не места, меток нет (подписи этажей метки получили).
 
-## Кандидаты в новые общие записи (черновики — в отчёте части)
+## Новые общие записи (второй заход, по поручению ведущего)
 
-- `coc:spell:call-forth-from-beyond`? «Призыв из-за грани» (с. 132; полный текст в `memphis-book-of-eibon`).
-- `coc:spell:claws-of-the-void`? «Когти пустоты» (с. 137; полный текст в способностях Хокинса).
-- Вариация «Сотворить барьер Наах-Тита» (с. 137) — к `coc:spell:create-barrier-of-naach-tith` как вариант (`variant_of`) или пометка.
-- Род занятий «Фокусник» (с. 120) — `kb/occupations`.
+- `coc:spell:summon-from-beyond` — «Призыв из-за грани» (с. 132), `kb/spells/summon-from-beyond.json`.
+- `coc:spell:claws-of-the-void` — «Когти пустоты» (с. 137), `kb/spells/claws-of-the-void.json`.
+- `coc:spell:create-barrier-of-naach-tith-room` — «Сотворить барьер Наах-Тита (вариация)» (с. 137), `variant_of` основного заклинания.
+- `coc:occupation:fokusnik` — род занятий «Фокусник» (с. 120), `kb/occupations/fokusnik.json` (фокусника/иллюзиониста в справочнике не было).
+
+Ссылки проставлены в `memphis-harold-hawkins` (заклинания и способности), `memphis-book-of-eibon`, сценарии, сценах
+`memphis-fighting-ghost`, `memphis-final-showdown`, `memphis-conclusions`.
 
 ## Предложения
 
 `proposals-memphis.json` — 5 предложений: `coc:location:boston` — ссылки на сценарий и дом (2);
 `coc:tome:thaumaturgical-prodigies-in-the-new-england-canaan` и `coc:tome:book-of-eibon-english` — экземпляры (`copies`, Р-65);
-`coc:spell:call-dismiss-yog-sothoth` — псевдоним «Вызов Йогг Сототха». Пробный прогон `pipeline/integrate/apply.py --dry-run`:
-5 правок ложатся.
+`coc:spell:call-dismiss-yog-sothoth` — псевдоним «Вызов Йогг Сототха» — применены в 99dc9c07. Сейчас в файле одно
+предложение второго захода: в экземпляре `coc:tome:book-of-eibon-english` (`copies.0.spells.1.spell`) поставить ссылку
+на `coc:spell:summon-from-beyond`; пробный прогон — правка ложится.

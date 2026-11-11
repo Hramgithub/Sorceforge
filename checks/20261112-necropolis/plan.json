@@ -1,0 +1,16 @@
+{
+  "book_id": "necropolis-en",
+  "goal": "the one-shot «Necropolis» (Valley of the Kings, 26 November 1924) playable from the base — material for the owner's own Egyptian campaign (Р-211, item 3 of the queue).",
+  "decision": "Р-214, Р-190, Р-206, Р-209",
+  "check_dir": "checks/20261112-necropolis",
+  "models": [
+    "kb/books/keepers-companion-en/scenarios/little-miracles.json",
+    "kb/books/keepers-companion-en/scenes/little-miracles-start.json",
+    "kb/locations/cairo.json",
+    "kb/books/masks-of-nyarlathotep-en/maps/egypt-tunnels-below.json"
+  ],
+  "extra": "## This work (Р-214)\n\nThe scenario «Necropolis» (EN, 23 pages, text layer; find the printed/physical page relation yourself with `python -B pipeline/source/pages.py show necropolis-en <p>` and tell the lead). The Russian file in the folder is a machine translation `[RU-ИИ]` — **not a source, do not read it**. Russian text is our translation (`translated`, Р-21); terms — `python -B tools/terms.py <word>` and the base's records first. Run tools as `python -B …`.\n\n- Records — book-scoped `necropolis-en/<kind>/<slug>` in `kb/books/necropolis-en/<kinds>/`: scenario `necropolis` (summary, keeper_info, hook, advice, steps with refs, conclusion with Sanity rewards, tables), every scene retold for play (`arc`), items, handouts (player text as printed, in translation), characters (the pre-generated investigators as `roles: [\"pregen\"]` like other pregens in the base; NPCs with statblocks as printed, Р-25), creatures (known Mythos creatures → `instance_of` the shared `coc:creature:*`; the book's own monster — a book creature), places. Egypt: the tomb lies in the Valley of the Kings — a shared city record for the nearest town (Luxor — `coc:location:luxor`, create it if missing, Р-190) with «Окрестности Луксора» (`necropolis-luxor-environs`, область) holding the Valley of the Kings and the tomb with its rooms (Р-209). The shared Cairo (`coc:location:cairo`) exists — link it if the hook passes through Cairo. Maps — `map` with the image (`app/maps/necropolis-<slug>.jpg`) and spots on every printed number/label (Р-206; check each by eye on a crop); every key number gets a place record. List captions — neutral, no spoilers (Р-209).\n- `axes.era` [\"1920s\"], `ruleset` \"core\". Book misprints — `errata` as printed (Р-35).\n- Coverage: `checks/20261112-necropolis/necropolis.md` — every heading → record(s), «не взято» with the reason.",
+  "units": [
+    {"name": "necropolis", "pages": "1-23", "target": "the whole scenario «Necropolis» with its pre-generated investigators and handouts", "owns": ["kb/books/necropolis-en/** (new files)", "kb/locations/luxor.json (new)", "app/maps/necropolis-*", "checks/20261112-necropolis/necropolis.md, proposals-necropolis.json"], "sites": "—"}
+  ]
+}

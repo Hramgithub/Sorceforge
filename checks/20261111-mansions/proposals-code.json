@@ -1,0 +1,56 @@
+{
+  "schema": "sourcefold.proposals.v0",
+  "by": "часть code («Секретный код», «Особняки безумия. За закрытыми дверями»)",
+  "proposals": [
+    {
+      "target": "coc:spell:deflect-harm",
+      "op": "append",
+      "path": "aliases",
+      "value": "Отражение урона",
+      "reason": "так заклинание названо в русском издании «Особняков безумия» (с. 95, врезка «Книга заклинаний Евы»; с. 98, заклинания Евы Пирс): стоимость 1 ПМ и 1 пункт рассудка, мгновенно, отражение атак за ПМ по выпавшему урону — то же заклинание",
+      "ref": "Р-96"
+    },
+    {
+      "target": "coc:spell:deflect-harm",
+      "op": "append",
+      "path": "sources",
+      "value": {
+        "book_id": "osobnyaki-bezumiya-ru",
+        "physical_page": 96,
+        "printed_page": 95,
+        "method": "book_text",
+        "verified": true,
+        "note": "гл. 3 «Секретный код», врезка «Книга заклинаний Евы»: «Отражение урона» (полный текст; русское название — «Отражение урона»)"
+      },
+      "reason": "русский текст заклинания в официальном издании «Особняков безумия» (с. 95)",
+      "ref": "Р-218"
+    },
+    {
+      "target": "coc:spell:contact-yog-sothoth",
+      "op": "set",
+      "path": "aliases",
+      "after": "name",
+      "value": ["Связь с Повелителем Времени", "Связь с Йог-Сототом"],
+      "reason": "«Связь с Повелителем Времени («Связь с Йог-Сототом»)» — заклинание Евы Пирс и её книги заклинаний в «Особняках безумия» (с. 95, 98)",
+      "ref": "Р-96"
+    },
+    {
+      "target": "coc:location:miskatonic-university",
+      "op": "append",
+      "path": "refs",
+      "value": "osobnyaki-bezumiya-ru/scenario/code-secret-code",
+      "reason": "Кеннет Коннолли преподавал в Мискатонике и завещал университету поместье Веллингтон и свои заметки («Секретный код», с. 70, 73, 97)",
+      "ref": "Р-218",
+      "correction": false
+    },
+    {
+      "target": "coc:location:arkham",
+      "op": "append",
+      "path": "refs",
+      "value": "osobnyaki-bezumiya-ru/scenario/code-secret-code",
+      "reason": "сыщики «Секретного кода» — бывшие студенты и коллеги Коннолли по знаменитому аркхэмскому учебному заведению (с. 70)",
+      "ref": "Р-218",
+      "correction": false
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "osobnyaki-bezumiya-ru/creature/code-wolves",
+  "kind": "creature",
+  "name": {
+    "ru": "Волки («Секретный код»)",
+    "en": null
+  },
+  "aliases": [
+    "Стая волков"
+  ],
+  "category": "animal",
+  "subcategory": "наземный хищник",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:wolf",
+      "note_back": "стая волков из хроноаномалии «Стая волков» («Секретный код»)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "65",
+        "value": 65
+      },
+      "SIZ": {
+        "raw": "50",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "INT": {
+        "raw": "—",
+        "value": null
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "11",
+      "value": 11
+    },
+    "mp": {
+      "raw": "—",
+      "value": null
+    },
+    "sanity": {
+      "raw": "—",
+      "value": null,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "12",
+      "value": 12,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 12
+        }
+      ]
+    },
+    "armor": {
+      "raw": "1 пункт (шерсть)",
+      "value": 1,
+      "note": "шерсть"
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d8",
+          "dice": "1d8",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Чтение следов (по запаху)",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "90%",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        }
+      }
+    ],
+    "sanity_loss": []
+  },
+  "description": {
+    "ru": "Стая из хроноаномалии «Стая волков»: в похолодавшем коридоре, где по углам лежат снег и опавшие листья, стоит рычащий волк; если сыщики погонятся за ним, их встретит целая стая — по одному волку на сыщика. Волки не умеют открывать двери. Вскоре очередной хроноимпульс вернёт всё в норму, но полученные раны останутся (потеря рассудка за сцену — 0/1d6). Хранителю на заметку: пусть стычка будет не смертельной, но из неё можно устроить хорошую погоню (гл. 7 «Книги Хранителя»).",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "osobnyaki-bezumiya-ru",
+      "physical_page": 100,
+      "printed_page": 99,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Существа и чудовища»: «Волки»"
+    },
+    {
+      "book_id": "osobnyaki-bezumiya-ru",
+      "physical_page": 82,
+      "printed_page": 81,
+      "method": "book_text",
+      "verified": true,
+      "note": "хроноаномалия «Стая волков»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Профиль сценария для вида «Волк»: СИЛ 70, ВЫН 65, ТЕЛ 50, ЛВК 70, МОЩ 50, ПЗ 11, Ближний бой 40%, Уклонение 40%, Прыжки 40%, Скрытность 40% (у вида — СИЛ 65, ВЫН 50, ТЕЛ 40, ПЗ 9, атака 50%, Уклонение 32%, без Прыжков и Скрытности)."
+  }
+}

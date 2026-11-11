@@ -1,0 +1,316 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "keeper-rulebook-ru/character/crimson-hector-and-carla-fademan",
+  "kind": "character",
+  "name": {
+    "ru": "Гектор и Карла Фейдмены",
+    "en": "Hector and Carla Fademan"
+  },
+  "aliases": [
+    "Гектор Фейдмен",
+    "Карла Фейдмен",
+    "Фейдмены"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "брат и сестра с общим статблоком",
+  "occupation": {
+    "ru": "помощники Уика",
+    "en": "Wick’s Assistants"
+  },
+  "residence": "Аркхэм, лавка «Мелкие безделицы» (спальня на втором этаже)",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "keeper-rulebook-ru/character/crimson-abner-wick",
+      "note": "хозяин, связанный с ними порченой кровью",
+      "note_back": "подручные: подсобные рабочие, похитители, воры и убийцы"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "75",
+        "value": 75
+      },
+      "CON": {
+        "raw": "80",
+        "value": 80
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "55",
+        "value": 55
+      },
+      "APP": {
+        "raw": "30",
+        "value": 30
+      },
+      "INT": {
+        "raw": "45",
+        "value": 45
+      },
+      "POW": {
+        "raw": "40",
+        "value": 40
+      },
+      "EDU": {
+        "raw": "40",
+        "value": 40
+      }
+    },
+    "hp": {
+      "raw": "14",
+      "value": 14
+    },
+    "sanity": {
+      "raw": "0",
+      "value": 0,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "1 пункт (плотная кожа)",
+      "value": 1
+    },
+    "attacks_per_round": {
+      "raw": "2",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d3 + БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Ближний бой (охотничий нож)",
+          "en": "Hunting Knife"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d6 + БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:knife-medium",
+        "notes": "Урон охотничьего ножа по сценарию — 1d6 + БкУ (в справочнике средний нож — 1d4 + 2 + БкУ)."
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Ориентирование (под землёй)",
+        "skill": "coc:skill:navigate",
+        "specialization": "под землёй",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Родной язык (упырей)",
+        "skill": "coc:skill:language-own",
+        "specialization": "упырей",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d4",
+        "trigger": "при виде Гектора и Карлы вблизи"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Местные жители, брат и сестра, чья порча прогрессирует несколько быстрее, чем у Абнера Уика (а ещё им явно недостаёт ума и обаяния хозяина). Отыгрывайте их как разных персонажей, но используйте одинаковые характеристики и навыки.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Приспешники Абнера Уика, связанные с ним порченой кровью трупоедов; служат ему подсобными рабочими, похитителями, ворами и убийцами. Если Уик решит, что сыщики достойны его внимания, он пошлёт Гектора и Карлу проследить за ними и выяснить, в каком направлении они копают; если заподозрит, что сыщики добыли бумаги, — украсть их. Если Уик — виновник, именно они могли среди ночи забрать бумаги у Сесила Хантера; позже они могут сбивать сыщиков со следа, подставлять другого подозреваемого или нападать на особо назойливых. Подпол под лавкой — смертельно опасная ловушка: там обитает как минимум один, а то и несколько слуг Уика.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 357,
+      "printed_page": 380,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Персонажи Хранителя»: «Гектор и Клара Фейдмены, помощники Уика» (характеристики)"
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 358,
+      "printed_page": 381,
+      "method": "book_text",
+      "verified": true,
+      "entry_page": 357,
+      "note": "окончание статблока: Комплекция, Скорость, атаки, навыки, потеря рассудка"
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 349,
+      "printed_page": 372,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Абнер Уик»: «Гектор и Карла», «В роли виновника»"
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 353,
+      "printed_page": 376,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Мелкие безделицы»: слуги Уика в подполе"
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 355,
+      "printed_page": 378,
+      "method": "book_text",
+      "verified": true,
+      "note": "план «Мелкие безделицы»: «Спальня Гектора и Карлы»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "name.ru",
+      "printed": "Гектор и Клара Фейдмены",
+      "expected": "Гектор и Карла Фейдмены",
+      "note": "Заголовок статблока (с. 380) — «Клара»; в тексте (с. 372, 381), на плане лавки (с. 378) и в оригинале (Carla, keeper-rulebook-en, с. 383) — Карла.",
+      "fixed": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": "Один статблок на двоих, как в книге (с. 380–381): запись группового профиля (Р-74); имена даны книгой. Статблок — раздел «Персонажи Хранителя» (с. 380–381): книга даёт только ключевые навыки, остальное Хранитель дополняет сам. Числа сверены с изображением страницы и с английским изданием (keeper-rulebook-en, с. 382–383)."
+  }
+}

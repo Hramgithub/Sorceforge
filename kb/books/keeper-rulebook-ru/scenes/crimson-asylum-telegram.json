@@ -1,0 +1,61 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "keeper-rulebook-ru/scene/crimson-asylum-telegram",
+  "kind": "scene",
+  "name": {
+    "ru": "Телеграмма из лечебницы",
+    "en": "A Telegram from the Asylum"
+  },
+  "description": {
+    "ru": "Удобная дополнительная подсказка на случай, если сыщики зайдут в тупик (или для нагнетания атмосферы): в университет пришла телеграмма из психиатрической лечебницы, адресованная профессору Чарльзу Лейтеру, о лечении некоего Сесила Хантера. Декан Фэллон, конечно, немедленно перехватил её и передал сыщикам, чтобы они разобрались.",
+    "en": null
+  },
+  "when": "Если сыщики зашли в тупик",
+  "arc": {
+    "scenario": "keeper-rulebook-ru/scenario/crimson-letters",
+    "part": "Другие зацепки",
+    "order": 10
+  },
+  "where": [
+    {
+      "location": "coc:location:miskatonic-university",
+      "note": "телеграмма приходит в университет"
+    }
+  ],
+  "participants": [
+    {
+      "id": "keeper-rulebook-ru/character/crimson-bryce-fallon",
+      "role": "передаёт телеграмму"
+    }
+  ],
+  "outcome": {
+    "ru": "Сыщики выходят на Сесила Хантера (сцена «Сесил Хантер в лечебнице»).",
+    "en": null
+  },
+  "refs": [
+    "keeper-rulebook-ru/handout/crimson-asylum-telegram",
+    "keeper-rulebook-ru/character/crimson-cecil-hunter",
+    "dveri-vo-tmu-ru/location/ties-arkham-sanitarium"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 353,
+      "printed_page": 376,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Другие зацепки»: «Телеграмма из лечебницы»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

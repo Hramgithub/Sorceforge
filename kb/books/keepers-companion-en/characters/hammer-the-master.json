@@ -1,0 +1,331 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "keepers-companion-en/character/hammer-the-master",
+  "kind": "character",
+  "name": {
+    "ru": "Хозяин",
+    "en": "The Master"
+  },
+  "aliases": [
+    "Иммануил Стёрджис",
+    "Immanuel Sturgis",
+    "вселяющаяся сущность",
+    "the possessing entity"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "вселяющаяся сущность — дух колдуна",
+    "en": "the possessing entity"
+  },
+  "sex": "мужской",
+  "birthplace": "близ Салема, Массачусетс (XVII век)",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "—*",
+        "value": null
+      },
+      "CON": {
+        "raw": "—*",
+        "value": null
+      },
+      "SIZ": {
+        "raw": "—*",
+        "value": null
+      },
+      "DEX": {
+        "raw": "—*",
+        "value": null
+      },
+      "APP": {
+        "raw": "—*",
+        "value": null
+      },
+      "INT": {
+        "raw": "90",
+        "value": 90
+      },
+      "POW": {
+        "raw": "100",
+        "value": 100
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "—*",
+      "value": null,
+      "note": "берётся у носителя"
+    },
+    "mp": {
+      "raw": "20",
+      "value": 20
+    },
+    "sanity": {
+      "raw": "—",
+      "value": null
+    },
+    "luck": {
+      "raw": "—",
+      "value": null
+    },
+    "damage_bonus": {
+      "raw": "—*",
+      "value": null,
+      "note": "берётся у носителя"
+    },
+    "build": {
+      "raw": "—*",
+      "value": null,
+      "note": "берётся у носителя"
+    },
+    "move": {
+      "raw": "10",
+      "value": 10,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 10
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1 (использует способы атаки тела носителя)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "как у носителя",
+          "dice": null,
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed",
+        "notes": "Урон и бонус к урону — по телу носителя."
+      }
+    ],
+    "dodge": {
+      "raw": "50% (25/10)",
+      "value": 50,
+      "half": 25,
+      "fifth": 10
+    },
+    "skills": [
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "История",
+        "skill": "coc:skill:history",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Оккультизм",
+        "skill": "coc:skill:occult",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Cloud Memory, Contact Deity: Nyarlathotep, Dominate, Fist of Yog-Sothoth, Wrack.",
+      "items": [
+        {
+          "name": "Cloud Memory",
+          "spell": "coc:spell:cloud-memory"
+        },
+        {
+          "name": "Contact Deity: Nyarlathotep",
+          "spell": "coc:spell:contact-nyarlathotep"
+        },
+        {
+          "name": "Dominate",
+          "spell": "coc:spell:dominate"
+        },
+        {
+          "name": "Fist of Yog-Sothoth",
+          "spell": "coc:spell:fist-of-yog-sothoth"
+        },
+        {
+          "name": "Wrack",
+          "spell": "coc:spell:wrack"
+        }
+      ]
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "увидеть летящий шар эктоплазмы, который покидает тело носителя, когда Хозяин переходит в другого"
+      },
+      {
+        "success": "1",
+        "fail": "1d10",
+        "trigger": "носителю — за каждый приступ одержимости (всего не больше 10 пунктов)"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Значения носителя",
+      "summary": "СИЛ, ВЫН, ТЕЛ, ЛВК, НАР, ПЗ, бонус к урону и Комплекцию Хозяин берёт у носителя; атакует теми способами, что доступны телу носителя (1 атака за раунд).",
+      "raw": "*Uses the host’s values. … Attacks per Round: 1 (uses the host body’s forms of attack)"
+    },
+    {
+      "name": "Вселение",
+      "summary": "Хозяин может вселиться в человека (может ли он вселяться в животных, решает Хранитель). В персонажа Хранителя он вселяется автоматически. В сыщика — победив во встречной проверке МОЩ; тогда носитель проходит проверку ВЫН: при успехе он остаётся в сознании, но под властью Хозяина, при провале теряет сознание на 1d10 раундов. Хозяин тратит 3 пункта магии, чтобы взять власть над носителем; каждый раунд сыщик может сопротивляться встречной проверкой МОЩ: успех Хозяина — он диктует действия сыщика в этом раунде; успех сыщика — Хозяин немедленно впадает в спячку и, чтобы снова взять власть, должен на следующем раунде (или позже) потратить ещё 3 пункта магии; от этой борьбы умов у сыщика болит голова. Каждый приступ одержимости — проверка Рассудка (потеря 1/1d10), всего за несколько приступов не больше 10 пунктов. Если сыщик сам принимает вселение, встречной проверки МОЩ нет и Хозяин вселяется автоматически.",
+      "raw": "Possession: the Master can possess a human host (whether it can possess animals is determined by the Keeper). If an NPC, the possession is automatic. If an investigator, the Master takes possession by winning an opposed POW roll—if successful, the host then makes a CON roll: with success, they remain conscious, but are controlled by the Master; if failed, they fall unconscious for 1d10 rounds. The Master spends 3 magic points to take control of a host. Each round, the investigator can choose to resist the Master’s control with an opposed POW roll: Master Success: he dictates the investigator’s actions that round. Investigator Success: the Master falls immediately dormant and must spend another 3 magic points next round (or later) if he wishes to reestablish control—this mind-struggle leaves the investigator’s head aching. Each episode of possession provokes a Sanity roll (1/1d10 loss). The maximum cumulative Sanity loss for multiple episodes is 10 points; thus, once 10 points have been lost, that investigator cannot lose any more from possession. If an investigator chooses to welcome the possession, there is no opposed POW roll and the Master automatically possesses them.",
+      "refs": [
+        "coc:rule:kc-monstrous-power-possession",
+        "coc:rule:opposed-pow-rolls",
+        "keepers-companion-en/scene/hammer-possession"
+      ]
+    },
+    {
+      "name": "Пузырь эктоплазмы",
+      "summary": "Освобождённый (заклинанием Фрэнки или смертью носителя) Хозяин выходит изо рта носителя полупрозрачным пузырём, который взлетает и бросается на ближайшую цель (или на ту, у кого меньше всего Удачи; первой целью становится тот, кто оказывает носителю первую помощь), обволакивает её лицо и проникает в рот или нос — никакие попытки отбиться не помогают. Свидетели — проверка Рассудка (0/1d6). Если носителя убить, всё начинается снова: пузырь образуется у рта трупа.",
+      "raw": "A translucent bubble forms over her mouth. It detaches and suddenly flies to the nearest target—or the one with the lowest Luck score … No amount of flailing about prevents the bubble from entering their mouth or nose. … If the host is killed, the process starts over again, with a bubble forming at the corpse’s mouth.",
+      "refs": [
+        "keepers-companion-en/scene/hammer-possession",
+        "keepers-companion-en/scene/hammer-frankie-acts"
+      ]
+    },
+    {
+      "name": "Спячка",
+      "summary": "Когда Хозяин не управляет носителем, он дремлет внутри и не знает, что происходит вокруг; носитель же ощущает злобное присутствие — слышит смутный шёпот или чувствует, что за ним наблюдают. Вселившись в кого-то, Хозяин сперва тратит миг, чтобы осмотреться, как человек, очнувшийся от глубокого сна. Первая власть над новым носителем (если сыщик проиграл встречную проверку МОЩ) длится три раунда.",
+      "raw": "When not actively possessing Frankie, the Master is dormant within her and unaware of anything that happens around her … When the Master possesses someone, he takes a moment to orientate himself to his surroundings, like someone waking from a deep sleep. … The Master’s initial control lasts three rounds. … the Master lies dormant within the host most of the time—but, the host is aware of a malign presence, hearing vague whispers or having a feeling that someone is watching them."
+    }
+  ],
+  "background": {
+    "description": "бесплотен; если Хранитель пожелает, глаза носителя светятся, пока им владеет Хозяин",
+    "traits": "уверенный, звучный голос; говорит со слушателями снисходительно",
+    "secret": "не Ньярлатхотеп и не его проводник, как думает Агню, а всё ещё живая сущность колдуна Иммануила Стёрджиса"
+  },
+  "description": {
+    "ru": "Вселяющаяся сущность, которую культ Синтии Агню почитает как «Хозяина». Стремится расширить своё влияние, делясь знаниями о Мифах Ктулху; узнав, что сыщики знакомы с Мифами, старается их допросить.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Хозяин — Иммануил Стёрджис, родившийся близ Салема (Массачусетс) в XVII веке. У него была дурная слава и тяга к гнусному колдовству. Когда он умер, его сущность магическим образом перенеслась в пространства между звёздами, и с тех пор он ищет способ вернуться на Землю. Каким-то образом сущность Стёрджиса связана с Фрэнки Мерл природным сродством и потому смогла поселиться в её голове: с ранней юности он пытался вселиться в неё, а метод Синтии Агню позволил ему полностью ею овладеть. Теперь он может вселяться во Фрэнки и полностью управлять её телом недолго. Агню беседовала с ним, и он открывал ей космические тайны; она зовёт его «Хозяином» и считает проводником Ньярлатхотепа, но это не так. По его желанию Агню собрала культ; во время его вселений культ внимает его учению и ждёт дня, когда он овладеет Фрэнки полностью.\nЛюбое из заклинаний Фрэнки — «Квадрат скорби» или «Выбить дьявола» — выпускает его на свободу, и он ищет нового носителя; полицейские и другие персонажи Хранителя — лёгкая добыча. Хозяину было бы особенно приятно вселиться в того, кто расследует Мифы, — тем более если это даст ему доступ к книгам магии. Сыщик, оставшийся его носителем, живёт как под проклятием оборотня, борясь за власть над зверем внутри себя.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "keepers-companion-en",
+      "physical_page": 160,
+      "printed_page": 159,
+      "method": "book_text",
+      "verified": true,
+      "note": "сценарий «If I Had a Hammer» (гл. 7): «Characters & Monsters» — «The Master, the possessing entity»: статблок, «Possession», навыки, заклинания, потеря Рассудка"
+    },
+    {
+      "book_id": "keepers-companion-en",
+      "physical_page": 142,
+      "printed_page": 141,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Keeper Information»: Хозяин — Иммануил Стёрджис, не Ньярлатхотеп"
+    },
+    {
+      "book_id": "keepers-companion-en",
+      "physical_page": 146,
+      "printed_page": 145,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Dramatis Personae»: «The Master, the possessing entity» — история, описание, черты, зацепки"
+    },
+    {
+      "book_id": "keepers-companion-en",
+      "physical_page": 155,
+      "printed_page": 154,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Possession»: пузырь, встречная проверка МОЩ против МОЩ 100"
+    },
+    {
+      "book_id": "keepers-companion-en",
+      "physical_page": 156,
+      "printed_page": 155,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Possessed by the Master»"
+    },
+    {
+      "book_id": "keepers-companion-en",
+      "physical_page": 158,
+      "printed_page": 157,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Left Possessed»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Персонаж, а не существо: дух человека-колдуна со своей историей (Р-94). Статблок — как напечатан (Р-25): «—*» — значения носителя, «—» — нет значения. Вторая строка потери Рассудка (1/1d10 за приступ одержимости) — из «Possessed by the Master» (с. 155) и способности «Possession» (с. 159). Вселение Хозяина — своя механика сценария, не общая чудовищная сила «Вселение» гл. 5 (15 пунктов магии, 4 раунда)."
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "auktsion-ru/character/pyanyy-zadira",
+  "kind": "character",
+  "name": {
+    "ru": "Пьяный задира",
+    "en": null
+  },
+  "aliases": [
+    "задира",
+    "посетитель «Кружки»"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "пьяный задира",
+  "names": [
+    "Зепп Хольцер",
+    "Ханс Эггер",
+    "Тони Гшайдер",
+    "Мартин Штайнер",
+    "Ферди Мозер"
+  ],
+  "sex": "мужской",
+  "residence": "Вена",
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "45",
+        "value": 45
+      },
+      "SIZ": {
+        "raw": "55",
+        "value": 55
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "25",
+        "value": 25
+      },
+      "APP": {
+        "raw": "40",
+        "value": 40
+      },
+      "POW": {
+        "raw": "45",
+        "value": 45
+      },
+      "EDU": {
+        "raw": "25",
+        "value": 25
+      }
+    },
+    "hp": {
+      "raw": "10",
+      "value": 10
+    },
+    "mp": {
+      "raw": "19",
+      "value": 19
+    },
+    "sanity": {
+      "raw": "45",
+      "value": 45,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Сломанный стул, ножка стола",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "1d6+1d4",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:club-small",
+        "notes": "Урон совпадает с полицейской дубинкой таблицы оружия (вывод из текста, Р-41)."
+      },
+      {
+        "name": {
+          "ru": "Кастет",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "1d3+1d4+2",
+          "dice": "1d3+2",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:brass-knuckles",
+        "notes": "В таблице оружия кастет — 1d3+1+БкУ; урон сценария — как напечатан."
+      }
+    ],
+    "dodge": {
+      "raw": "25% (12/5)",
+      "value": 25,
+      "half": 12,
+      "fifth": 5
+    }
+  },
+  "description": {
+    "ru": "Типаж: завсегдатай «Фольтассебара», который затевает драку с сыщиком, показавшимся посетителям снобом и «умником» (первой мишенью — самый слабый с виду мужчина).",
+    "en": null
+  },
+  "legend": {
+    "ru": "Если сыщики прошли проверку ОБР в «Кружке», они покажутся публике снобами и нарвутся на драку. Полицию вызовут, только если кто-то серьёзно пострадает или будет крупный ущерб; после честной драки, если «Кружка» не разгромлена, публика даже проявит дружелюбие, а вот ножи и пистолеты испортят отношение.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "auktsion-ru",
+      "physical_page": 26,
+      "printed_page": 26,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Фольтассебар»: статблок «Пьяный задира»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.move",
+      "printed": "СКО 9",
+      "expected": "8",
+      "note": "СИЛ 70 > ТЕЛ 55, но ЛВК 50 < ТЕЛ 55 — по правилам Скорость 8.",
+      "fixed": false
+    },
+    {
+      "field": "statblock.mp",
+      "printed": "ПМ 19",
+      "expected": "9",
+      "note": "МОЩ 45 / 5 = 9; 19 — видимо, перенесено из статблока Хундерпреста.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "editorial_text",
+      "parse_uncertain"
+    ],
+    "notes": "Групповой типаж: имена придуманы (Р-151)."
+  }
+}

@@ -1,0 +1,294 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "dead-light-en/character/deadlight-billy-esterhouse",
+  "kind": "character",
+  "name": {
+    "ru": "Билли Эстерхаус",
+    "en": "Billy Esterhouse"
+  },
+  "aliases": [
+    "Билли"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "Подёнщик и громила",
+    "en": "terrified thug"
+  },
+  "occupation_ref": "coc:occupation:ulichnaya-shpana",
+  "age": {
+    "raw": "20",
+    "value": 20
+  },
+  "sex": "мужской",
+  "residence": "окрестности Болтона",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "knows",
+      "target": "dead-light-en/character/deadlight-clem-tailor",
+      "note": "лучший друг и сообщник",
+      "note_back": "лучший друг и сообщник"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "85",
+        "value": 85
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50
+      },
+      "APP": {
+        "raw": "60",
+        "value": 60
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "40",
+        "value": 40
+      },
+      "EDU": {
+        "raw": "60",
+        "value": 60
+      }
+    },
+    "hp": {
+      "raw": "15",
+      "value": 15
+    },
+    "mp": {
+      "raw": "8",
+      "value": 8
+    },
+    "sanity": {
+      "raw": "32*",
+      "value": 32,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      }
+    ],
+    "dodge": {
+      "raw": "25% (12/5)",
+      "value": 25,
+      "half": 12,
+      "fifth": 5
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "05%",
+          "value": 5,
+          "half": 2,
+          "fifth": 1
+        }
+      },
+      {
+        "name": "Вождение",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Механика",
+        "skill": "coc:skill:mechanical-repair",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Ориентирование",
+        "skill": "coc:skill:navigate",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "15%",
+          "value": 15,
+          "half": 7,
+          "fifth": 3
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Бессрочное безумие",
+      "summary": "Рассудок 32 — бессрочно безумен, фаза затаённого безумия: любая дальнейшая потеря Рассудка сразу вызывает приступ безумия на 1d10 раундов; склонен к бреду.",
+      "raw": "*(indefinitely insane: underlying insanity—loss of any further Sanity points results in an immediate bout of madness for 1d10 rounds, prone to delusions).",
+      "refs": [
+        "coc:rule:underlying-insanity",
+        "coc:rule:bout-of-madness"
+      ]
+    }
+  ],
+  "background": {
+    "description": "Широкий, коренастый, сложён как бык; густые тёмные волосы и кустистые брови.",
+    "traits": "Сейчас — паникует, ведёт себя как ребёнок, напуган.",
+    "ideology": "Сейчас — надвигается что-то ПЛОХОЕ, и оно всех сожрёт!",
+    "significant_people": "Клем Тейлор, лучший друг."
+  },
+  "description": {
+    "ru": "Молодой местный громила, едва вышедший из подросткового возраста: то честно работает подёнщиком, то служит тупой силой для того, что в Болтоне сходит за преступный мир, то промышляет мелким воровством с другом Клемом. Не злой сознательно, но ленивый, недалёкий, задира по натуре и легко идёт за тем, на кого смотрит снизу вверх, — как за Клемом.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Сообщник Клема в ограблении Уэббов (лом был у него). Увидев, как Мертвенный свет вырвался из ларца и выпил жизнь из Клема, Билли сломался: в слепой панике бежал и впал в детский ужас. В начале сценария прячется в лесу, пытаясь укрыться от дождя под деревьями, шарахается от каждой молнии и раската грома; заблудился и с самого нападения ходит кругами. Он знает, что Мертвенный свет где-то рядом: дважды видел его и бежал. Найдёт ли его существо раньше сыщиков, решает Хранитель: если сыщикам и так хватает дел, Билли может так и не появиться, сожранный за кадром; если нужно оживить игру — он появляется в кафе или в лесу, перепуганный, с бредом о «свете, который убивает» (и, быть может, Мертвенный свет идёт за ним по пятам). Помнит всё, но не может справиться с увиденным иначе как почти младенческим ужасом; на вопросы выболтает правду по-детски, не боясь последствий.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "dead-light-en",
+      "physical_page": 12,
+      "printed_page": 11,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Dramatis Personae»: Billy Esterhouse"
+    },
+    {
+      "book_id": "dead-light-en",
+      "physical_page": 8,
+      "printed_page": 7,
+      "method": "book_text",
+      "verified": true,
+      "note": "ограбление"
+    },
+    {
+      "book_id": "dead-light-en",
+      "physical_page": 17,
+      "printed_page": 16,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Orchard Wood»"
+    },
+    {
+      "book_id": "dead-light-en",
+      "physical_page": 27,
+      "printed_page": 26,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Characters & Monsters»: Billy Esterhouse"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "В фанатском переводе НАР 50 — по оригиналу 60. Русский текст — наш перевод с английского оригинала (сборник «Dead Light and Other Dark Turns», 2019); имена и названия «Мертвенного света» — по фанатскому переводу «Мёртвый Свет» (Егор, проект «Дело Аркхэм», 2021), числа — по оригиналу."
+  }
+}

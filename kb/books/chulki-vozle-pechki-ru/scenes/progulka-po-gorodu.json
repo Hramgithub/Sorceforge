@@ -1,0 +1,69 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "chulki-vozle-pechki-ru/scene/progulka-po-gorodu",
+  "kind": "scene",
+  "name": {
+    "ru": "Прогулка по городу",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Кто-нибудь из сыщиков может погулять по городу, посещая магазины и конторы и слушая разговоры. За два часа сыщики выяснят:\n• Жители (особенно дети) грустят, что в этом году Санта не придёт. Взрослые упоминают, что пропал некий Эдмунд, но никого это особенно не тревожит и не удивляет; некоторые называют его «бедный мистер Льюис» и упоминают, что он вернулся с войны «другим».\n• У пропавшего Льюиса есть взрослая дочь Пэйсли, которая не оставляет попыток найти отца: часто ходит по главной улице, расклеивает объявления и расспрашивает, не видел ли кто её папу.\n• Один из жителей доставлял что-то в магазин «Реликвии былого» и наткнулся там на пару странных незнакомцев, явно не местных, разговаривающих с владельцем.\n• Раздражённый владелец магазина жалуется, что его адвокат в последнее время «прячется в собственном доме» и не является в контору.\n• Горожане вполголоса обсуждают убийства и исчезновения; все поражены и испуганы, у каждого наготове своя теория.\n• Особенно тревожит всех исчезновение шерифа Хупера: он пропал уже две недели назад.\n• Некоторые жалуются, что газета печатает слишком много статей об убийствах, да ещё с отвратительными подробностями; особенно их раздражает некая «Уин» — слишком любопытная и бесцеремонная журналистка.",
+    "en": null
+  },
+  "when": "Сочельник, два часа прогулки",
+  "arc": {
+    "scenario": "chulki-vozle-pechki-ru/scenario/chulki-vozle-pechki",
+    "part": "Прогулка по городу",
+    "order": 8
+  },
+  "where": [
+    {
+      "location": "chulki-vozle-pechki-ru/location/glavnaya-ulitsa",
+      "note": "магазины и конторы"
+    },
+    {
+      "location": "chulki-vozle-pechki-ru/location/gorod-stsenariya",
+      "note": "по всему городу"
+    }
+  ],
+  "participants": [
+    {
+      "id": "chulki-vozle-pechki-ru/character/peysli-lyuis",
+      "role": "ищет отца на главной улице"
+    }
+  ],
+  "outcome": {
+    "ru": "Слухи выводят на Льюиса и Пэйсли, на чужаков в «Реликвиях былого» и на прячущегося адвоката (Хэглунд).",
+    "en": null
+  },
+  "refs": [
+    "chulki-vozle-pechki-ru/character/edmund-lyuis",
+    "chulki-vozle-pechki-ru/location/relikvii-bylogo",
+    "chulki-vozle-pechki-ru/character/bandity-speysa",
+    "chulki-vozle-pechki-ru/character/dzhordzh-kheglund",
+    "chulki-vozle-pechki-ru/character/klayd-khuper",
+    "chulki-vozle-pechki-ru/character/uinifred-obri"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "chulki-vozle-pechki-ru",
+      "physical_page": 7,
+      "printed_page": 7,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Прогулка по городу»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Русский текст — фанатский перевод Hort (vk.com/call_of_cthulhu_rpg) сценария Марка Харта «Hung by the Chimney with Care» (Petersen Games, по лицензии Chaosium), издание trusted (Р-227); английского оригинала в библиотеке нет — числа по переводу. Что адвокат из жалобы — Хэглунд, книга прямо не говорит (вывод из текста, Р-41)."
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "chulki-vozle-pechki-ru/scene/relikvii-bylogo",
+  "kind": "scene",
+  "name": {
+    "ru": "«Реликвии былого»",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "«Реликвии» расположены в большом кирпичном доме через дорогу от церкви Св. Марка. В витрине — мебель в деревенском стиле и предметы конца XIX века. Внутри всё пропахло пылью и плесенью; кроме окон, свет даёт только тусклая электрическая лампочка; всё уставлено старинной мебелью и диковинами. Мужчина средних лет за стойкой перелистывает книгу; покупателей он приветствует радушной улыбкой и стаканчиком белого вина.\nВ магазине нет ничего необычного. В задней части — крепкая дверь с навесным замком. На заднем дворе — грузовик и наклонные двери на уровне земли, ведущие в подвал: заперты и закрыты на засов изнутри. Есть и дверь со двора в заднюю часть магазина — в рабочие часы она отперта. Установив наблюдение, сыщики могут увидеть, как бандиты Спэйса подъезжают на своей машине и паркуются на заднем дворе.",
+    "en": null
+  },
+  "when": "Когда сыщики узнают об «Обществе Торо» и антикварном магазине",
+  "arc": {
+    "scenario": "chulki-vozle-pechki-ru/scenario/chulki-vozle-pechki",
+    "part": "«Реликвии былого»",
+    "order": 10
+  },
+  "where": [
+    {
+      "location": "chulki-vozle-pechki-ru/location/relikvii-bylogo",
+      "note": "торговый зал, задний двор"
+    }
+  ],
+  "participants": [
+    {
+      "id": "chulki-vozle-pechki-ru/character/uinston-speys",
+      "role": "хозяин, радушный антиквар"
+    },
+    {
+      "id": "chulki-vozle-pechki-ru/character/bandity-speysa",
+      "role": "приезжают на машине (при наблюдении)"
+    }
+  ],
+  "mechanics": {
+    "ru": "Внимание (если Спэйс присутствует при осмотре) — он пытается выглядеть беззаботным, но внимательно наблюдает за сыщиками.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Сыщики узнают входы в подвал — пригодится в «Кульминации».",
+    "en": null
+  },
+  "refs": [
+    "chulki-vozle-pechki-ru/location/podval-relikviy-bylogo",
+    "chulki-vozle-pechki-ru/location/tserkov-svyatogo-marka",
+    "chulki-vozle-pechki-ru/scene/kulminatsiya",
+    "coc:skill:spot-hidden"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "chulki-vozle-pechki-ru",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Реликвии былого»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Русский текст — фанатский перевод Hort (vk.com/call_of_cthulhu_rpg) сценария Марка Харта «Hung by the Chimney with Care» (Petersen Games, по лицензии Chaosium), издание trusted (Р-227); английского оригинала в библиотеке нет — числа по переводу."
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "chulki-vozle-pechki-ru/scene/khmuryy-sochelnik",
+  "kind": "scene",
+  "name": {
+    "ru": "Хмурый сочельник",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Сыщики прибывают в город утром накануне Рождества. На главной улице — рождественские украшения, яркие витрины и венки из остролиста; табличка на окне универмага обещает детям встречу с Санта-Клаусом, но кто-то написал поверх неё по диагонали «Отменено». Жители подавлены, на улицах почти нет людей и машин, в магазинах ни следа предпраздничной суматохи. Редкий, но непрекращающийся снег постепенно укрывает улицы.\nПолицейский автомобиль начинает следовать за сыщиками, как только они прибывают в город. Когда они доберутся до отеля «Данхэм», машина медленно проедет мимо, и полицейский за рулём окинет сыщиков взглядом.",
+    "en": null
+  },
+  "when": "Утро накануне Рождества",
+  "arc": {
+    "scenario": "chulki-vozle-pechki-ru/scenario/chulki-vozle-pechki",
+    "part": "Хмурый сочельник",
+    "order": 1
+  },
+  "where": [
+    {
+      "location": "chulki-vozle-pechki-ru/location/glavnaya-ulitsa",
+      "note": "по пути к отелю"
+    },
+    {
+      "location": "chulki-vozle-pechki-ru/location/univermag",
+      "note": "табличка «Отменено»"
+    }
+  ],
+  "participants": [
+    {
+      "id": "chulki-vozle-pechki-ru/character/khenk-erikson",
+      "role": "полиция следит за приезжими (полицейский за рулём)"
+    }
+  ],
+  "outcome": {
+    "ru": "Сыщики доходят до отеля «Данхэм» — сцена «Встреча в отеле»; полиция уже знает о них.",
+    "en": null
+  },
+  "refs": [
+    "chulki-vozle-pechki-ru/scene/vstrecha-v-otele",
+    "chulki-vozle-pechki-ru/location/otel-dankhem",
+    "chulki-vozle-pechki-ru/location/politseyskiy-uchastok"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "chulki-vozle-pechki-ru",
+      "physical_page": 3,
+      "printed_page": 3,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Хмурый сочельник»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Русский текст — фанатский перевод Hort (vk.com/call_of_cthulhu_rpg) сценария Марка Харта «Hung by the Chimney with Care» (Petersen Games, по лицензии Chaosium), издание trusted (Р-227); английского оригинала в библиотеке нет — числа по переводу. Полицейский за рулём не назван — связь с Эриксоном как с главой полиции."
+  }
+}

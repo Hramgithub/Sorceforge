@@ -1,0 +1,79 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "chulki-vozle-pechki-ru/scene/slezhka-za-domom-kheglunda",
+  "kind": "scene",
+  "name": {
+    "ru": "Слежка за домом Хэглунда",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Наблюдая за домом Хэглунда, до 10 часов вечера сыщики не увидят ничего необычного. Затем — крупный силуэт скачет по крыше к каминной трубе и спустя пару мгновений протискивается в трубу (очевидно, слишком тесную для него).\nЕсли сыщики не позаботятся о скрытности (например, припаркуют машину прямо у дома), кто-нибудь из соседей заметит незнакомый автомобиль и вызовет полицию.\nСыщики могут расположиться в самом доме или вломиться туда, увидев, как кто-то или что-то проскользнуло в трубу. Столкнувшись с существом, они увидят И’голонака в обличье Эдмунда Льюиса, одетого в самый настоящий костюм Санта-Клауса. Если сыщики нападут, И’голонак придаст телу Льюиса истинный облик: безголовое, распухшее, с открытыми пастями на ладонях.",
+    "en": null
+  },
+  "when": "Сочельник, вечер; около 10 часов вечера",
+  "arc": {
+    "scenario": "chulki-vozle-pechki-ru/scenario/chulki-vozle-pechki",
+    "part": "Слежка за домом Хэглунда",
+    "order": 12
+  },
+  "where": [
+    {
+      "location": "chulki-vozle-pechki-ru/location/dom-kheglunda",
+      "note": "крыша, каминная труба, гостиная"
+    }
+  ],
+  "participants": [
+    {
+      "id": "chulki-vozle-pechki-ru/creature/igolonak-v-tele-edmunda-lyuisa",
+      "role": "приходит за Хэглундом"
+    },
+    {
+      "id": "chulki-vozle-pechki-ru/character/dzhordzh-kheglund",
+      "role": "жертва"
+    }
+  ],
+  "mechanics": {
+    "ru": "Внимание — заметить силуэт на крыше.\nПотеря Рассудка: 1/1d10+1 при виде И’голонака; 1/1d20 при виде того, как носитель принимает его истинный облик.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Хэглунда можно спасти (+1d4 Рассудка) или он погибнет (−1d4 Рассудка); И’голонак уходит через кладбище к «Реликвиям былого» («Посещение Санты»).",
+    "en": null
+  },
+  "refs": [
+    "chulki-vozle-pechki-ru/scene/poseshchenie-santy",
+    "chulki-vozle-pechki-ru/character/edmund-lyuis",
+    "chulki-vozle-pechki-ru/location/politseyskiy-uchastok",
+    "coc:skill:spot-hidden"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "chulki-vozle-pechki-ru",
+      "physical_page": 10,
+      "printed_page": 10,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Слежка за домом Хэглунда»"
+    },
+    {
+      "book_id": "chulki-vozle-pechki-ru",
+      "physical_page": 15,
+      "printed_page": 15,
+      "method": "book_text",
+      "verified": true,
+      "note": "потеря Рассудка"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Русский текст — фанатский перевод Hort (vk.com/call_of_cthulhu_rpg) сценария Марка Харта «Hung by the Chimney with Care» (Petersen Games, по лицензии Chaosium), издание trusted (Р-227); английского оригинала в библиотеке нет — числа по переводу."
+  }
+}

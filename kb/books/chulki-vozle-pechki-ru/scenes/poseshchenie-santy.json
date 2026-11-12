@@ -1,0 +1,79 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "chulki-vozle-pechki-ru/scene/poseshchenie-santy",
+  "kind": "scene",
+  "name": {
+    "ru": "Посещение Санты",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Наблюдая за домом Хэглунда или просто оказавшись на улице поздним вечером Сочельника, сыщики заметят крупного толстого человека в грязном костюме Санта-Клауса, вприпрыжку передвигающегося в темноте. Возможно, они ещё не знают этого, но это И’голонак. Можно проследить за ним или броситься в погоню — путь его лежит через городское кладбище.\nНастигнутый, И’голонак бросается на сыщиков, чтобы ранить или убить кого-нибудь и отбить охоту к погоне; если это не остановит их — использует всю свою мощь, чтобы уничтожить сыщиков.\nНаиболее безопасно — проследить за ним, не ввязываясь в драку, и отыскать укрытие: тогда сыщики доберутся до заднего двора антикварного магазина, где он нырнёт в открытые двери подвала и скроется из виду.",
+    "en": null
+  },
+  "when": "Поздний вечер Сочельника",
+  "arc": {
+    "scenario": "chulki-vozle-pechki-ru/scenario/chulki-vozle-pechki",
+    "part": "Посещение Санты",
+    "order": 13
+  },
+  "where": [
+    {
+      "location": "chulki-vozle-pechki-ru/location/gorodskoe-kladbishche",
+      "note": "путь И’голонака"
+    },
+    {
+      "location": "chulki-vozle-pechki-ru/location/relikvii-bylogo",
+      "note": "задний двор, двери в подвал"
+    }
+  ],
+  "participants": [
+    {
+      "id": "chulki-vozle-pechki-ru/creature/igolonak-v-tele-edmunda-lyuisa",
+      "role": "в обличье Санта-Клауса"
+    }
+  ],
+  "mechanics": {
+    "ru": "Погоня на машине — сложная проверка Вождения (не врезаться в могильный камень и не потерять цель). Пешком за ним не угнаться (Скорость И’голонака — 10), но можно идти по следу обычной проверкой Выслеживания.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Сыщики находят логово И’голонака в подвале «Реликвий былого» — «Кульминация».",
+    "en": null
+  },
+  "refs": [
+    "chulki-vozle-pechki-ru/scene/kulminatsiya",
+    "chulki-vozle-pechki-ru/location/podval-relikviy-bylogo",
+    "coc:skill:drive-auto",
+    "coc:skill:track"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "chulki-vozle-pechki-ru",
+      "physical_page": 10,
+      "printed_page": 10,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Посещение Санты»"
+    },
+    {
+      "book_id": "chulki-vozle-pechki-ru",
+      "physical_page": 11,
+      "printed_page": 11,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Посещение Санты» (продолжение)"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Русский текст — фанатский перевод Hort (vk.com/call_of_cthulhu_rpg) сценария Марка Харта «Hung by the Chimney with Care» (Petersen Games, по лицензии Chaosium), издание trusted (Р-227); английского оригинала в библиотеке нет — числа по переводу."
+  }
+}

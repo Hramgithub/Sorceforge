@@ -1,0 +1,84 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "chulki-vozle-pechki-ru/scene/zasada",
+  "kind": "scene",
+  "name": {
+    "ru": "Засада",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Уинстон Спэйс не знает, кто такие сыщики и что им нужно, но решает устранить возможную угрозу и поручает трём наёмным бандитам (один из них участвовал в похищении Пьемонта) избавиться от сыщиков.\nНападение может произойти где угодно, хотя бандиты предпочтут не слишком людное место: поджидать в гостиничном номере, подстеречь на дороге неподалёку от дома Латэмов или напасть при посещении редакции. Они вооружены пистолетами и при необходимости откроют огонь, но предпочли бы ножи и дубинки, чтобы не шуметь. Не сумев убить или запугать сыщиков, бандиты всеми силами стараются скрыться; они отчитываются перед Спэйсом, но достаточно разумны, чтобы не бежать к нему в магазин сразу после неудачи.\nЗадержанные бандиты отказываются говорить. О связи Спэйса с томом «Откровений», о И’голонаке и Мифах не знает никто из них, но они знают, что члены «Общества Торо» каждую неделю собираются в подвале антикварного магазина, и подозревают, что Спэйс или Хэглунд причастны к убийствам. Запуганный бандит признается и в том, что они похитили Пьемонта из гостиницы, одурманив хлороформом, и отвезли в подвал антикварного магазина: насколько им известно, он всё ещё там — связанный и с кляпом во рту.",
+    "en": null
+  },
+  "when": "Рано или поздно, когда расследование привлечёт внимание Спэйса",
+  "arc": {
+    "scenario": "chulki-vozle-pechki-ru/scenario/chulki-vozle-pechki",
+    "part": "Засада",
+    "order": 9
+  },
+  "where": [
+    {
+      "location": "chulki-vozle-pechki-ru/location/otel-dankhem",
+      "note": "номер сыщиков"
+    },
+    {
+      "location": "chulki-vozle-pechki-ru/location/dom-latemov",
+      "note": "дорога неподалёку"
+    },
+    {
+      "location": "chulki-vozle-pechki-ru/location/redaktsiya-gazety",
+      "note": "при посещении редакции"
+    }
+  ],
+  "participants": [
+    {
+      "id": "chulki-vozle-pechki-ru/character/bandity-speysa",
+      "role": "нападающие, трое"
+    },
+    {
+      "id": "chulki-vozle-pechki-ru/character/uinston-speys",
+      "role": "заказчик"
+    }
+  ],
+  "mechanics": {
+    "ru": "Трудная проверка Запугивания — один из задержанных признаётся, что около месяца работает на Уинстона Спэйса; если при допросе кто-то из сыщиков пройдёт проверку Психологии, Запугивание обычной сложности.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Сыщики узнают о собраниях в подвале магазина и о том, что Пьемонт там.",
+    "en": null
+  },
+  "refs": [
+    "chulki-vozle-pechki-ru/organization/obshchestvo-toro",
+    "chulki-vozle-pechki-ru/location/podval-relikviy-bylogo",
+    "chulki-vozle-pechki-ru/character/nataniel-pemont",
+    "chulki-vozle-pechki-ru/character/dzhordzh-kheglund",
+    "coc:weapon:38-revolver",
+    "coc:weapon:knife-small",
+    "coc:weapon:club-large",
+    "coc:skill:intimidate",
+    "coc:skill:psychology"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "chulki-vozle-pechki-ru",
+      "physical_page": 8,
+      "printed_page": 8,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Засада»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Русский текст — фанатский перевод Hort (vk.com/call_of_cthulhu_rpg) сценария Марка Харта «Hung by the Chimney with Care» (Petersen Games, по лицензии Chaosium), издание trusted (Р-227); английского оригинала в библиотеке нет — числа по переводу."
+  }
+}

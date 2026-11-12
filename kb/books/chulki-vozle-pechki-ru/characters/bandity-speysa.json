@@ -1,0 +1,356 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "chulki-vozle-pechki-ru/character/bandity-speysa",
+  "kind": "character",
+  "name": {
+    "ru": "Бандиты Спэйса",
+    "en": null
+  },
+  "aliases": [
+    "Бандиты",
+    "громилы Спэйса",
+    "наёмные бандиты",
+    "человек со шрамом на лбу"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "наёмный громила",
+  "names": [
+    "Фрэнк «Шрам» Моран",
+    "Эдди Келлер",
+    "Лу Брэддок",
+    "Джо Финнеган",
+    "Майк Ласло"
+  ],
+  "sex": "мужской",
+  "residence": "не местные; машина на заднем дворе «Реликвий былого»",
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "chulki-vozle-pechki-ru/character/uinston-speys",
+      "note": "наниматель (около месяца)",
+      "note_back": "трое наёмных громил"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "80",
+        "value": 80
+      },
+      "CON": {
+        "raw": "65",
+        "value": 65
+      },
+      "SIZ": {
+        "raw": "75",
+        "value": 75
+      },
+      "DEX": {
+        "raw": "55",
+        "value": 55
+      },
+      "APP": {
+        "raw": "40",
+        "value": 40
+      },
+      "INT": {
+        "raw": "40",
+        "value": 40
+      },
+      "POW": {
+        "raw": "35",
+        "value": 35
+      },
+      "EDU": {
+        "raw": "35",
+        "value": 35
+      }
+    },
+    "hp": {
+      "raw": "14",
+      "value": 14
+    },
+    "mp": {
+      "raw": "9",
+      "value": 9
+    },
+    "sanity": {
+      "raw": "15",
+      "value": 15,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d3 + 1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Ближний бой (дубинка)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d8 + 1d4",
+          "dice": "1d8",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:club-large"
+      },
+      {
+        "name": {
+          "ru": "Нож",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d4 + 1d4",
+          "dice": "1d4",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:knife-small"
+      },
+      {
+        "name": {
+          "ru": "Револьвер .38 калибра",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d10",
+          "dice": "1d10",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:38-revolver"
+      }
+    ],
+    "dodge": {
+      "raw": "27% (13/5)",
+      "value": 27,
+      "half": 13,
+      "fifth": 5
+    },
+    "skills": [
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "specialization": null,
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "specialization": null,
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Язык (английский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "Английский",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "specialization": null,
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "specialization": null,
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "specialization": null,
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "specialization": null,
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Трое громил, нанятых Уинстоном Спэйсом; один профиль на каждого. Не местные. Один из них — человек с тонким, но заметным шрамом на лбу; другой при похищении Пьемонта размахивал чем-то вроде удостоверения или значка. Человек со шрамом работает в антикварном магазине Спэйса; полиция его допрашивала, но у него твёрдое алиби на время каждого из четырёх убийств.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Около месяца работают на Спэйса и отчитываются перед ним. Примерно за час до прибытия сыщиков двое из них пришли в отель «Данхэм», спросили номер Пьемонта, через десять минут спустились с ним на лифте — с разбитым носом, порезом на щеке и кровью на лбу, — одурманили хлороформом и увезли в подвал антикварного магазина. За день до последнего собрания «Общества Торо» двое громил Спэйса схватили на улице Эдмунда Льюиса.\nСпэйс поручает им избавиться от сыщиков (сцена «Засада»): вооружены пистолетами, но предпочитают ножи и дубинки, чтобы не шуметь; не сумев убить или запугать — скрываются и не бегут к Спэйсу сразу. О книге, И’голонаке и Мифах ничего не знают, но знают, что члены «Общества Торо» каждую неделю собираются в подвале магазина, и подозревают, что Спэйс или Хэглунд причастны к убийствам.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "chulki-vozle-pechki-ru",
+      "physical_page": 14,
+      "printed_page": 14,
+      "method": "book_text",
+      "verified": true,
+      "note": "характеристики «Бандиты. Трое громил, нанятых Уинстоном Спэйсом»"
+    },
+    {
+      "book_id": "chulki-vozle-pechki-ru",
+      "physical_page": 3,
+      "printed_page": 3,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Встреча в отеле»: двое мужчин, шрам на лбу"
+    },
+    {
+      "book_id": "chulki-vozle-pechki-ru",
+      "physical_page": 7,
+      "printed_page": 7,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Полиция»: человек со шрамом"
+    },
+    {
+      "book_id": "chulki-vozle-pechki-ru",
+      "physical_page": 8,
+      "printed_page": 8,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Засада», «Сохраняем темп расследования»"
+    },
+    {
+      "book_id": "chulki-vozle-pechki-ru",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "наблюдение за магазином"
+    },
+    {
+      "book_id": "chulki-vozle-pechki-ru",
+      "physical_page": 10,
+      "printed_page": 10,
+      "method": "book_text",
+      "verified": true,
+      "note": "Хэглунд: Льюиса схватили двое громил"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.mp",
+      "printed": "9",
+      "expected": "7",
+      "note": "ПМ 9 при МОЩ 35 (МОЩ / 5 = 7); как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "editorial_text",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — фанатский перевод Hort (vk.com/call_of_cthulhu_rpg) сценария Марка Харта «Hung by the Chimney with Care» (Petersen Games, по лицензии Chaosium), издание trusted (Р-227); английского оригинала в библиотеке нет — числа по переводу. Имена в `names` придуманы (Р-151): в книге громилы безымянны."
+  }
+}

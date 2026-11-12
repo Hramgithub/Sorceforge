@@ -1,0 +1,76 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "chulki-vozle-pechki-ru/scene/pochta",
+  "kind": "scene",
+  "name": {
+    "ru": "Почта",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Ключом из номера Пьемонта открывается ячейка №6. В ней — свёрнутые в рулон бумаги в картонном тубусе, почерк Пьемонта: описание ритуала «Изгнание Совратителя». Поняв, что за ним следят, Пьемонт спрятал ритуал в почтовой ячейке.\nНа стене почтового отделения — пять плакатов «Пропал человек»: доктор Энтони Кларк, его жена Мира и шериф Клайд Хупер (недавние); дородный мужчина средних лет с густой седой бородой — Эдмунд Льюис, пропавший три недели назад; самый старый — отец Байрон Хармон, священник церкви Св. Марка, пропавший ещё год назад.\nЕсли сыщики не нашли ключ, работница почты Мэйбл вспомнит Пьемонта («такой милый, скромный, тихий») и то, что он арендовал на месяц ящик №6. Сыщики могут и проникнуть на почту после закрытия, чтобы взломать ящик.",
+    "en": null
+  },
+  "when": "Сочельник, в часы работы почты (или после закрытия)",
+  "arc": {
+    "scenario": "chulki-vozle-pechki-ru/scenario/chulki-vozle-pechki",
+    "part": "Почта",
+    "order": 3
+  },
+  "where": [
+    {
+      "location": "chulki-vozle-pechki-ru/location/pochta",
+      "note": "абонентский ящик №6, стена с плакатами"
+    }
+  ],
+  "participants": [
+    {
+      "id": "chulki-vozle-pechki-ru/character/meybl",
+      "role": "работница почты"
+    }
+  ],
+  "mechanics": {
+    "ru": "Мифы Ктулху — текст выписан из двенадцатого тома «Откровений Гла’аки», а титул «Совратитель» может относиться к И’голонаку.\nБез ключа: трудная проверка Красноречия или Запугивания — уговорить Мэйбл открыть ячейку. Если сыщики угрожали Мэйбл, она сообщит в полицию, как только они уйдут.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Сыщики получают ритуал изгнания — главное оружие против И’голонака в «Кульминации».",
+    "en": null
+  },
+  "refs": [
+    "chulki-vozle-pechki-ru/item/vypiski-pemonta",
+    "chulki-vozle-pechki-ru/item/klyuch-ot-abonentskogo-yashchika",
+    "chulki-vozle-pechki-ru/item/plakaty-propal-chelovek",
+    "chulki-vozle-pechki-ru/tome/otkroveniya-glaaki-tom-12",
+    "chulki-vozle-pechki-ru/creature/igolonak-v-tele-edmunda-lyuisa",
+    "chulki-vozle-pechki-ru/character/edmund-lyuis",
+    "chulki-vozle-pechki-ru/character/klayd-khuper",
+    "chulki-vozle-pechki-ru/character/entoni-klark",
+    "chulki-vozle-pechki-ru/character/mira-klark",
+    "chulki-vozle-pechki-ru/character/bayron-kharmon",
+    "coc:skill:cthulhu-mythos",
+    "coc:skill:fast-talk",
+    "coc:skill:intimidate"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "chulki-vozle-pechki-ru",
+      "physical_page": 4,
+      "printed_page": 4,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Почта»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Русский текст — фанатский перевод Hort (vk.com/call_of_cthulhu_rpg) сценария Марка Харта «Hung by the Chimney with Care» (Petersen Games, по лицензии Chaosium), издание trusted (Р-227); английского оригинала в библиотеке нет — числа по переводу."
+  }
+}

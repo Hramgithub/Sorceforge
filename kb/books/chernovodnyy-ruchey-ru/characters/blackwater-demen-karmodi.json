@@ -1,0 +1,286 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "chernovodnyy-ruchey-ru/character/blackwater-demen-karmodi",
+  "kind": "character",
+  "name": {
+    "ru": "Демьен Кармоди",
+    "en": null
+  },
+  "aliases": [
+    "Демьен"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "бутлегер",
+    "en": null
+  },
+  "occupation_ref": "coc:occupation:butleger-golovorez",
+  "age": {
+    "raw": "34",
+    "value": 34
+  },
+  "sex": "мужской",
+  "residence": "ферма Кармоди",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "relative_of",
+      "target": "chernovodnyy-ruchey-ru/character/blackwater-brendan-karmodi",
+      "note": "брат",
+      "note_back": "брат"
+    },
+    {
+      "type": "relative_of",
+      "target": "chernovodnyy-ruchey-ru/character/blackwater-dzheyms-karmodi",
+      "note": "отец",
+      "note_back": "сын"
+    },
+    {
+      "type": "works_for",
+      "target": "chernovodnyy-ruchey-ru/character/blackwater-maykl-uelan",
+      "note": "гонит виски для баров Уэлана; раньше — его наёмный боец",
+      "note_back": "поставщик виски, бывший боец"
+    },
+    {
+      "type": "rival_of",
+      "target": "nabor-khranitelya-ru/character/mickey-valentine",
+      "note": "пару лет назад подстрелил Микки, когда работал на Уэлана",
+      "note_back": "подстрелил его — Микки с тех пор хромает и хочет вернуть пулю"
+    },
+    {
+      "type": "servitor_of",
+      "target": "chernovodnyy-ruchey-ru/creature/blackwater-utroba-zemli",
+      "note": "хочет разнести Дар Матери с виски по всему Массачусетсу",
+      "note_back": "брат по вере Брендана"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "65",
+        "value": 65
+      },
+      "SIZ": {
+        "raw": "85",
+        "value": 85
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "APP": {
+        "raw": "40",
+        "value": 40
+      },
+      "INT": {
+        "raw": "55",
+        "value": 55
+      },
+      "POW": {
+        "raw": "80",
+        "value": 80
+      },
+      "EDU": {
+        "raw": "60",
+        "value": 60
+      }
+    },
+    "hp": {
+      "raw": "15",
+      "value": 15
+    },
+    "sanity": {
+      "raw": "30",
+      "value": 30,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d3 + 1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Стрельба (дробовик 12-го калибра)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "4d6/2d6/1d6 (10/20/50 метров)",
+          "dice": "4d6/2d6/1d6",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:shotgun-12-gauge-2b"
+      }
+    ],
+    "dodge": {
+      "raw": "55% (27/11)",
+      "value": 55,
+      "half": 27,
+      "fifth": 11
+    },
+    "skills": [
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Ещё в молодости уехал из Блэкуотер-Крик в Бостон попытать счастья; благодаря честолюбию, мощному телосложению и крепким кулакам сделал карьеру сперва уличного громилы (вывод по смыслу; начало строки в скане срезано), потом наёмного бойца на службе у ирландского бутлегера Майкла Уэлана.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Вскоре после введения сухого закона решил порвать с уголовной жизнью (к тому времени его уже дважды подстрелили) и вернулся на семейную ферму: вместе с братом Бренданом растит кукурузу и гонит из неё виски для баров Уэлана. Весь день работает на винокурне с двумя подручными; иногда возит на грузовике ящики виски и мешки кукурузы Бакстеру. Сыщиков Макбрайда наверняка узнает, решит, что их подослали убить его и брата: нужна успешная проверка Обаяния или Убеждения, чтобы он начал доверять; когда страхи рассеются, его легко убедить, что Макбрайд занял место Уэлана, — в принципе, ему плевать, на кого работать, он стремится разнести виски как можно шире, чтобы распространить Дар Матери. Если сыщики прибегнут к насилию или не убедят его, что пришли с миром, сразу перейдёт к драке и с двумя подручными займёт оборону за постройками.\nЗацепки для отыгрыша: хочет расширить поставки самогона на весь Массачусетс, чтобы распространить Дар Матери, и готов обсудить любые предложения сыщиков на этот счёт; хочет защитить ферму и убедиться, что чужаки для него неопасны.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "chernovodnyy-ruchey-ru",
+      "physical_page": 5,
+      "printed_page": 6,
+      "method": "book_text",
+      "verified": true,
+      "note": "мотивы: Демьен подстрелил кого-то из сыщиков"
+    },
+    {
+      "book_id": "chernovodnyy-ruchey-ru",
+      "physical_page": 22,
+      "printed_page": 23,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Хозяйственные постройки»: Демьен на винокурне"
+    },
+    {
+      "book_id": "chernovodnyy-ruchey-ru",
+      "physical_page": 24,
+      "printed_page": 25,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Демьен Кармоди»"
+    },
+    {
+      "book_id": "chernovodnyy-ruchey-ru",
+      "physical_page": 34,
+      "printed_page": 35,
+      "method": "book_text",
+      "verified": true,
+      "entry_page": 34,
+      "note": "«Демьен Кармоди, 34 года, бутлегер»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Начало абзаца биографии на с. 35 срезано сгибом скана («…он сделал карьеру сперва… потом наёмного бойца»); пересказано по смыслу. Страницы «с. N» — печатные страницы русского издания (печатная = физическая + 1). Книга — скан без текстового слоя: распознавание tesseract, числа сверены по изображениям страниц."
+  }
+}

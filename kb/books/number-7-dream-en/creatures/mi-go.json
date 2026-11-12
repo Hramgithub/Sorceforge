@@ -1,0 +1,208 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "number-7-dream-en/creature/mi-go",
+  "kind": "creature",
+  "name": {
+    "ru": "Ми-го («Сон № 7»)",
+    "en": "Migo (Number 7 Dream)"
+  },
+  "aliases": [
+    "Migo",
+    "грибы с Юггота"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "независимая раса",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:mi-go",
+      "note_back": "профиль сценария «Сон № 7»"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "55",
+        "value": 55
+      },
+      "CON": {
+        "raw": "45",
+        "value": 45
+      },
+      "SIZ": {
+        "raw": "35",
+        "value": 35
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "APP": {
+        "raw": "0",
+        "value": 0
+      },
+      "INT": {
+        "raw": "75",
+        "value": 75
+      },
+      "POW": {
+        "raw": "40",
+        "value": 40
+      },
+      "EDU": {
+        "raw": "0",
+        "value": 0
+      }
+    },
+    "hp": {
+      "raw": "8",
+      "value": 8
+    },
+    "mp": {
+      "raw": "6",
+      "value": 6
+    },
+    "sanity": {
+      "raw": "0",
+      "value": 0,
+      "max": null
+    },
+    "luck": {
+      "raw": "N/A",
+      "value": null
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "7/13 в полёте",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        },
+        {
+          "mode": "fly",
+          "value": 13
+        }
+      ]
+    },
+    "armor": {
+      "raw": "0",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "2",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d6",
+          "dice": "1d6",
+          "adds_db": false
+        }
+      },
+      {
+        "name": {
+          "ru": "Захват (манёвр)",
+          "en": "Seize (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "notes": "уносит жертву и сбрасывает с большой высоты или душит из-за недостатка кислорода (will fly victim and drop from great height or suffocate from lack of oxygen)"
+      }
+    ],
+    "dodge": {
+      "raw": "35%",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": null
+      }
+    ]
+  },
+  "description": {
+    "ru": "Ми-го — грибы с Юггота — десятилетиями собирают человеческие разумы и держат «Просветлённых» как прикрытие. Сыщики могут встретить ми-го в Институте; во вратах Зала Врат с вероятностью 30% виден ми-го на поверхности Юггота. Внутри Конструкта их представляет человек-ми-го.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "number-7-dream-en",
+      "physical_page": 18,
+      "printed_page": 18,
+      "method": "book_text",
+      "verified": true,
+      "note": "Appendix A: Migo"
+    },
+    {
+      "book_id": "number-7-dream-en",
+      "physical_page": 4,
+      "printed_page": 4,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Background»"
+    },
+    {
+      "book_id": "number-7-dream-en",
+      "physical_page": 16,
+      "printed_page": 16,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Gateway Room»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.mp",
+      "printed": "6",
+      "expected": "8",
+      "note": "МОЩ 40 / 5 = 8.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Числа отличаются от общей записи «Ми-го» — отдельный профиль (Р-75). НАР 0, ОБР 0, Рассудок 0, Удача N/A — как напечатано. Русский текст — по переводу владельца (2_Обработка/2021 Number 7 Dream/Number_7_Dream_RU.html), сверен с английским оригиналом; числа — по оригиналу."
+  }
+}

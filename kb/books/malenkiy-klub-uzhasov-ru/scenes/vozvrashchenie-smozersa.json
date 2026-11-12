@@ -1,0 +1,92 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "malenkiy-klub-uzhasov-ru/scene/vozvrashchenie-smozersa",
+  "kind": "scene",
+  "name": {
+    "ru": "Возвращение Смозерса",
+    "en": null
+  },
+  "description": {
+    "ru": "Смозерс вернётся на Землю в виде гниющего почерневшего трупа. Он спрячется в лесу, а поздно ночью отправится в Линкольн убивать спящих жителей, чтобы поддержать свою жизнь на Земле. Он поглощает горожан, мягко кладя руки на жертву: его вены извиваются через предплечья и врываются в неё, быстро поглощая жизнь; жертва остаётся трупом в глубокой стадии разложения. Начнёт он со школьных хулиганов из записной книжки под матрасом в Клубе, а затем нападёт на оставшихся сыщиков, пока они спят.\nЕсли его найдут и поймают, Смозерс попытается сбежать или будет сражаться насмерть. У него характеристики Лайнхэма; победить его легко: на Земле у него нет психологических способностей, и его тело растворится в гнилой жидкой субстанции.",
+    "en": null
+  },
+  "when": "Если Смозерс убил шесть человек и собрал себя воедино",
+  "arc": {
+    "scenario": "malenkiy-klub-uzhasov-ru/scenario/malenkiy-klub-uzhasov",
+    "part": "Финал",
+    "order": 18
+  },
+  "where": [
+    {
+      "location": "coc:location:lincoln",
+      "note": "ночные убийства"
+    },
+    {
+      "location": "malenkiy-klub-uzhasov-ru/location/okrestnosti-linkolna",
+      "note": "прячется в лесу"
+    }
+  ],
+  "participants": [
+    {
+      "id": "malenkiy-klub-uzhasov-ru/character/stiven-smozers",
+      "role": "вернувшийся монстр"
+    },
+    {
+      "id": "malenkiy-klub-uzhasov-ru/character/devid-laynkhem",
+      "role": "его характеристики"
+    }
+  ],
+  "mechanics": {
+    "ru": "Поняв, что что-то из Клуба преследовало их, сыщики теряют 1/1d4 Рассудка. Видеть Смозерса в течение вечера — 2/1d6+1 Рассудка. Победа над Смозерсом — 1d10 Рассудка (см. опечатку).",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Смозерс побеждён или продолжает убивать горожан.",
+    "en": null
+  },
+  "refs": [
+    "malenkiy-klub-uzhasov-ru/scenario/malenkiy-klub-uzhasov",
+    "malenkiy-klub-uzhasov-ru/item/zapisnaya-knizhka-smozersa"
+  ],
+  "axes": {
+    "era": [
+      "modern",
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "malenkiy-klub-uzhasov-ru",
+      "physical_page": 12,
+      "printed_page": 12,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Возвращение Смозерса»"
+    },
+    {
+      "book_id": "malenkiy-klub-uzhasov-ru",
+      "physical_page": 13,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Возвращение Смозерса» (окончание)"
+    }
+  ],
+  "errata": [
+    {
+      "field": "mechanics.ru",
+      "printed": "«Победа над Смозерсом вознаградит сыщиков потерей 1D10 Рассудка»",
+      "expected": "награда +1d10 Рассудка",
+      "note": "«Вознаградит … потерей» противоречит само себе; за убийство Смозерса в Чреве книга даёт награду 1d10 Рассудка (с. 12) — вероятно, здесь тоже награда. В записи — как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": null
+  }
+}

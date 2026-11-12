@@ -1,0 +1,161 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "malenkiy-klub-uzhasov-ru/creature/krasnye-belki",
+  "kind": "creature",
+  "name": {
+    "ru": "Красные белки",
+    "en": null
+  },
+  "aliases": [
+    "Стая красных белок"
+  ],
+  "category": "animal",
+  "subcategory": null,
+  "axes": {
+    "era": [
+      "modern",
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "25",
+        "value": 25
+      },
+      "CON": {
+        "raw": "30",
+        "value": 30
+      },
+      "SIZ": {
+        "raw": "25",
+        "value": 25
+      },
+      "DEX": {
+        "raw": "85",
+        "value": 85
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      }
+    },
+    "hp": {
+      "raw": "5",
+      "value": 5
+    },
+    "build": {
+      "raw": "-2",
+      "value": -2
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "2",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Укус",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "35% (12/5)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "1d2",
+          "dice": "1d2",
+          "adds_db": false
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "47% (23/9)",
+      "value": 47,
+      "half": 23,
+      "fifth": 9
+    },
+    "skills": [
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "85%",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        }
+      },
+      {
+        "name": "Выпрашивание еды",
+        "value": {
+          "raw": "90%",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d2",
+        "trigger": "быть атакованным красными белками"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Стая из 10 красных белок, которыми управляет Смозерс (физическая атака «Атака стаи красных белок», 10 ПМ): они пытаются растерзать зубами выбранного сыщика, к их атакам применяется бонусный кубик; товарищи могут сбивать белок с жертвы со штрафным кубиком, рискуя ударить её саму. Белки слепо атакуют 3+1d4 боевых раундов, затем поспешно отступают.",
+    "en": null
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "malenkiy-klub-uzhasov-ru/character/stiven-smozers",
+      "note": "управляет ими психически",
+      "note_back": "одержимые красные белки (10 ПМ)"
+    }
+  ],
+  "sources": [
+    {
+      "book_id": "malenkiy-klub-uzhasov-ru",
+      "physical_page": 8,
+      "printed_page": 8,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Атака стаи красных белок»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.attacks[Укус].chance",
+      "printed": "35% (12/5)",
+      "expected": "35% (17/7)",
+      "note": "Половина и пятая от 35% — 17 и 7 (Р-35). Напечатанные доли точно подходят к 25%: возможна опечатка в проценте (Р-77); процент оставлен как напечатан.",
+      "fixed": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": "Книга не уточняет, профиль ли это одной белки или всей стаи. БкУ не напечатан. «Выпрашивание еды» — навык без механики, текстом (Р-126)."
+  }
+}

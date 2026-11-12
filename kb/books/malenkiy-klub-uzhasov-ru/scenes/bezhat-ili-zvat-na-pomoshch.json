@@ -1,0 +1,93 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "malenkiy-klub-uzhasov-ru/scene/bezhat-ili-zvat-na-pomoshch",
+  "kind": "scene",
+  "name": {
+    "ru": "Бежать или звать на помощь",
+    "en": null
+  },
+  "description": {
+    "ru": "Сыщики могут послать в город за помощью Лайнхэма (трудная межличностная проверка: Обаяние, Запугивание, Убеждение или Красноречие) или добровольца. Чтобы без Лайнхэма вернуться через лес в Линкольн, нужна успешная проверка Ориентирования; в стрессовых обстоятельствах или ночью добавляется штрафной кубик.\nПсихологические атаки Смозерса могут нарушать телефонную связь, когда сыщики зовут на помощь или пытаются по телефону найти дорогу в город: если сыщик решит воспользоваться мобильным, может понадобиться групповая проверка Удачи. Сообщить своё местоположение вызванным на помощь будет трудно, а отслеживание по мобильному может занять несколько часов. В 1920-х мобильных телефонов нет.\nПомощь увеличивает число жертв, которых Смозерс сможет использовать для возвращения. Скорее всего, сыщики обратятся к шерифу Мартину: он посмеётся над рассказом, но всё же поможет и приведёт ещё двух офицеров, которых раздавят деревья на поляне; если Мартин жив, он вызовет подкрепление.\nКогда Хранитель решит помочь сыщикам, шум на поляне услышат три охотника; Смозерс легко избавится от них любой физической угрозой, находящейся в игре, или деревьями вокруг поляны.",
+    "en": null
+  },
+  "when": "Во время осады поляны",
+  "arc": {
+    "scenario": "malenkiy-klub-uzhasov-ru/scenario/malenkiy-klub-uzhasov",
+    "part": "Бежать или звать на помощь",
+    "order": 8
+  },
+  "where": [
+    {
+      "location": "malenkiy-klub-uzhasov-ru/location/polyana-kluba",
+      "note": null
+    },
+    {
+      "location": "malenkiy-klub-uzhasov-ru/location/okrestnosti-linkolna",
+      "note": "дорога через лес"
+    },
+    {
+      "location": "coc:location:lincoln",
+      "note": "помощь"
+    }
+  ],
+  "participants": [
+    {
+      "id": "malenkiy-klub-uzhasov-ru/character/devid-laynkhem",
+      "role": "может пойти за помощью"
+    },
+    {
+      "id": "malenkiy-klub-uzhasov-ru/character/uolter-martin",
+      "role": "приходит на помощь"
+    },
+    {
+      "id": "malenkiy-klub-uzhasov-ru/character/ofitsery-sherifa",
+      "role": "гибнут под деревьями"
+    },
+    {
+      "id": "malenkiy-klub-uzhasov-ru/character/okhotniki",
+      "role": "приходят на шум"
+    }
+  ],
+  "mechanics": {
+    "ru": "Трудная межличностная проверка (Обаяние, Запугивание, Убеждение, Красноречие) — послать Лайнхэма. Ориентирование (штрафной кубик в стрессе или ночью) — дорога в город. Групповая Удача — мобильная связь.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Пришедшие на помощь становятся новыми жертвами и телами для возвращения Смозерса.",
+    "en": null
+  },
+  "refs": [
+    "malenkiy-klub-uzhasov-ru/scenario/malenkiy-klub-uzhasov",
+    "malenkiy-klub-uzhasov-ru/scene/puteshestvie-domoy"
+  ],
+  "axes": {
+    "era": [
+      "modern",
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "malenkiy-klub-uzhasov-ru",
+      "physical_page": 10,
+      "printed_page": 10,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Бежать или звать на помощь»"
+    },
+    {
+      "book_id": "malenkiy-klub-uzhasov-ru",
+      "physical_page": 13,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Мобильные телефоны / смартфоны» (1920-е)"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

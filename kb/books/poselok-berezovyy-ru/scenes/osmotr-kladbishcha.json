@@ -1,0 +1,75 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "poselok-berezovyy-ru/scene/osmotr-kladbishcha",
+  "kind": "scene",
+  "name": {
+    "ru": "Осмотр кладбища",
+    "en": null
+  },
+  "description": {
+    "ru": "Эта сцена займёт весь день. Сыщики легко найдут провалившуюся могилу, но на ней нет памятника или креста, нет даже таблички с именем. Сыщики могут запомнить окружающие могилы и поспрашивать у кого-нибудь о том, кто похоронен в провалившейся могиле. Антонида, фельдшер или третий по счёту сельчанин скажут, что, вроде бы, это могила жены Волынского. Если же сыщики решат раскопать могилу, то увидят, что гроб пуст.\nХотя по субъективному ощущению сыщиков на осмотр кладбища они потратят не более двух часов, вернутся с него они уже глубокой ночью, причём не со стороны кладбища.\nЧерез пару дней расследования Берёзовый наполнится слухами о пропавшем грибнике, который ушёл в сторону ГЭС. Исчезновения будут происходить каждые два-три дня.",
+    "en": null
+  },
+  "when": "С 8 июля; займёт весь день",
+  "arc": {
+    "scenario": "poselok-berezovyy-ru/scenario/poselok-berezovyy",
+    "part": "8 июля. Время начинать своё расследование",
+    "order": 11
+  },
+  "where": [
+    {
+      "location": "poselok-berezovyy-ru/location/kladbishche",
+      "note": null
+    }
+  ],
+  "participants": [
+    {
+      "id": "poselok-berezovyy-ru/character/antonida-klyueva",
+      "role": "может назвать могилу"
+    },
+    {
+      "id": "poselok-berezovyy-ru/character/nadezhda-srebrolyubova",
+      "role": "может назвать могилу"
+    },
+    {
+      "id": "poselok-berezovyy-ru/character/zhiteli-poselka",
+      "role": "третий по счёту сельчанин назовёт могилу"
+    }
+  ],
+  "mechanics": {
+    "ru": "Возвращение глубокой ночью не с той стороны — проверка самообладания с риском потери 2 пунктов в случае провала. Каждое исчезновение грибника приближает ритуал на 1 день.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Пустой гроб ведёт к сараю Волынского; пропажи грибников — к ГЭС.",
+    "en": null
+  },
+  "refs": [
+    "poselok-berezovyy-ru/character/zinaida-volynskaya",
+    "poselok-berezovyy-ru/item/stolb-s-mogily",
+    "poselok-berezovyy-ru/scene/proniknovenie-v-saray-volynskogo",
+    "poselok-berezovyy-ru/scene/osmotr-ges",
+    "poselok-berezovyy-ru/location/nedostroennaya-ges"
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "other"
+  },
+  "sources": [
+    {
+      "book_id": "poselok-berezovyy-ru",
+      "physical_page": 8,
+      "printed_page": 7,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Осмотр кладбища»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Сценарий написан для игры «Ктулху» (Trail of Cthulhu Кеннета Хайта на системе СЫЩИК Робина Д. Лоуза; «Студия 101», 2015), а не для «Зова Ктулху»: сведения добываются тратой пунктов способностей, ужас бьёт по «самообладанию», знание Мифов — по «рассудку» этой системы; числа и проверки даны как напечатаны, статблоков 7-й редакции нет (Р-221). Страницы «с. N» — печатные (печатная = физическая − 1)."
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "novaya-zhizn-ru/creature/medved",
+  "kind": "creature",
+  "name": {
+    "ru": "Медведь («Новая жизнь»)",
+    "en": null
+  },
+  "aliases": [
+    "Медведь Миша",
+    "Миша"
+  ],
+  "category": "animal",
+  "subcategory": "наземный хищник",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:bear",
+      "note_back": "медведь из «Новой жизни» (Миша, питомец лесничего Владимира)"
+    },
+    {
+      "type": "works_for",
+      "target": "novaya-zhizn-ru/character/vladimir-kuznetsov",
+      "note": "хозяин («друг»)",
+      "note_back": "медведь Миша — питомец"
+    }
+  ],
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "100",
+        "value": 100,
+        "roll": "(3d6+10)×5"
+      },
+      "CON": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      },
+      "SIZ": {
+        "raw": "100",
+        "value": 100,
+        "roll": "(3d6+10)×5"
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50,
+        "roll": "3d6×5"
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50,
+        "roll": "3d6×5"
+      }
+    },
+    "hp": {
+      "raw": "16",
+      "value": 16
+    },
+    "damage_bonus": {
+      "raw": "+2d6",
+      "value": "2d6"
+    },
+    "build": {
+      "raw": "3",
+      "value": 3
+    },
+    "move": {
+      "raw": "12",
+      "value": 12,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 12
+        }
+      ]
+    },
+    "armor": {
+      "raw": "3 пункта (шерсть и хрящи)",
+      "value": 3,
+      "note": "шерсть и хрящи"
+    },
+    "attacks_per_round": {
+      "raw": "3",
+      "value": 3
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d6+БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "notes": "Это крупные сильные животные с большими лапами, когтями и зубами."
+      }
+    ],
+    "dodge": {
+      "raw": "25% (12/5)",
+      "value": 25,
+      "half": 12,
+      "fifth": 5
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "30%",
+          "value": 30
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "75%",
+          "value": 75
+        }
+      },
+      {
+        "name": "Нюх",
+        "skill": "coc:skill:scent",
+        "value": {
+          "raw": "70%",
+          "value": 70
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Медведь по кличке Миша — «друг» лесничего Владимира: вот уже несколько лет Владимир «подкармливает» его зеваками и приезжими. Встреча с медведем и вооружённым лесничим в логове — неожиданный поворот «Альтернативного варианта». Тот же профиль годится и для медведя, которого Хранитель может добавить к волкам в схватке у озера; в ночном дозоре медведи водят хоровод вместе с оленями и волками.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "novaya-zhizn-ru",
+      "physical_page": 12,
+      "printed_page": 12,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Приложение»: «Медведь»"
+    },
+    {
+      "book_id": "novaya-zhizn-ru",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Альтернативный вариант»: медведь Миша; схватка у озера: можно добавить медведя"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Профиль сценария для вида «Медведь»: те же числа, что у вида «Книги хранителя», но атак за раунд 3 (у вида — 2) и добавлена МОЩ 50 (3d6×5)."
+  }
+}

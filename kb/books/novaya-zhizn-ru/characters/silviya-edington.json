@@ -1,0 +1,431 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "novaya-zhizn-ru/character/silviya-edington",
+  "kind": "character",
+  "name": {
+    "ru": "Сильвия Эдингтон",
+    "en": null
+  },
+  "aliases": [
+    "Сильвия"
+  ],
+  "roles": [
+    "pregen",
+    "npc"
+  ],
+  "occupation": {
+    "ru": "Студент",
+    "en": null
+  },
+  "occupation_ref": "coc:occupation:student-stazher",
+  "age": {
+    "raw": "23",
+    "value": 23
+  },
+  "sex": "женский",
+  "residence": "Аркхэм, Массачусетс",
+  "birthplace": "Бостон, Массачусетс",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "relative_of",
+      "target": "novaya-zhizn-ru/character/bernard-edington",
+      "note": "брат",
+      "note_back": "старшая сестра"
+    },
+    {
+      "type": "relative_of",
+      "target": "novaya-zhizn-ru/character/sharlotta-edington",
+      "note": "младшая сестра",
+      "note_back": "старшая сестра"
+    },
+    {
+      "type": "relative_of",
+      "target": "novaya-zhizn-ru/character/elizabet-edington",
+      "note": "мать (погибла)",
+      "note_back": "старшая дочь"
+    },
+    {
+      "type": "knows",
+      "target": "novaya-zhizn-ru/character/erik-diggori",
+      "note": "бойфренд",
+      "note_back": "возлюбленная"
+    },
+    {
+      "type": "variant_of",
+      "target": "les-vendigo-ru/character/sylvia-davidson",
+      "note": "тот же лист сыщика в «Лесе Вендиго» («Сильвия Дэвидсон»)",
+      "note_back": "тот же лист в «Новой жизни» — Сильвия Эдингтон"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "50 (25/10)",
+        "value": 50
+      },
+      "CON": {
+        "raw": "60 (30/12)",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "50 (25/10)",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "65 (32/13)",
+        "value": 65
+      },
+      "APP": {
+        "raw": "55 (27/11)",
+        "value": 55
+      },
+      "INT": {
+        "raw": "60 (30/12)",
+        "value": 60
+      },
+      "POW": {
+        "raw": "70 (35/14)",
+        "value": 70
+      },
+      "EDU": {
+        "raw": "84 (42/16)",
+        "value": 84
+      }
+    },
+    "hp": {
+      "raw": "11",
+      "value": 11
+    },
+    "mp": {
+      "raw": "14",
+      "value": 14
+    },
+    "sanity": {
+      "raw": "70",
+      "value": 70,
+      "max": null
+    },
+    "luck": {
+      "raw": "65",
+      "value": 65
+    },
+    "damage_bonus": {
+      "raw": "НЕТ",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Без оружия",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "25/12/5",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        },
+        "damage": {
+          "raw": "1d3 + БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed",
+        "notes": "Дальн. —; атаки 1; патроны —; неиспр. —"
+      },
+      {
+        "name": {
+          "ru": "Нож (средний)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "25/12/5",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        },
+        "damage": {
+          "raw": "1d4 + 2 + БкУ",
+          "dice": "1d4+2",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:knife-medium",
+        "notes": null
+      },
+      {
+        "name": {
+          "ru": "Рычажная винтовка калибра .30-06",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винт./дроб.)",
+        "chance": {
+          "raw": "40/20/8",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "2d6 + 4",
+          "dice": "2d6+4",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:30-06-bolt-action-rifle",
+        "notes": "Дальн. 110 м; атаки 1; патроны 5; неиспр. 100"
+      }
+    ],
+    "dodge": {
+      "raw": "32 (16/6)",
+      "value": 32,
+      "half": 16,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Антропология",
+        "skill": "coc:skill:anthropology",
+        "value": {
+          "raw": "40 (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Ближний бой (драка)",
+        "skill": "coc:skill:fighting",
+        "specialization": "Драка",
+        "value": {
+          "raw": "25 (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Выживание (лес)",
+        "skill": "coc:skill:survival",
+        "specialization": "Лес",
+        "value": {
+          "raw": "10 (5/2)",
+          "value": 10,
+          "half": 5,
+          "fifth": 2
+        }
+      },
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "40 (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Ловкость рук",
+        "skill": "coc:skill:sleight-of-hand",
+        "value": {
+          "raw": "25 (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "10 (5/2)",
+          "value": 10,
+          "half": 5,
+          "fifth": 2
+        }
+      },
+      {
+        "name": "Наука (геология)",
+        "skill": "coc:skill:science",
+        "specialization": "Геология",
+        "value": {
+          "raw": "15 (7/3)",
+          "value": 15,
+          "half": 7,
+          "fifth": 3
+        }
+      },
+      {
+        "name": "Ориентирование",
+        "skill": "coc:skill:navigate",
+        "value": {
+          "raw": "10 (5/2)",
+          "value": 10,
+          "half": 5,
+          "fifth": 2
+        }
+      },
+      {
+        "name": "Перв. помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "35 (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Плавание",
+        "skill": "coc:skill:swim",
+        "value": {
+          "raw": "40 (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Психоанализ",
+        "skill": "coc:skill:psychoanalysis",
+        "value": {
+          "raw": "1 (0/0)",
+          "value": 1,
+          "half": 0,
+          "fifth": 0
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "10 (5/2)",
+          "value": 10,
+          "half": 5,
+          "fifth": 2
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "40 (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "50 (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Стрельба (винт./дроб.)",
+        "skill": "coc:skill:firearms",
+        "specialization": "Винтовка/дробовик",
+        "value": {
+          "raw": "40 (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Язык, родной (Английский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "Английский",
+        "value": {
+          "raw": "84 (42/16)",
+          "value": 84,
+          "half": 42,
+          "fifth": 16
+        }
+      }
+    ]
+  },
+  "background": {
+    "traits": "Очень обижена на отца за его отсутствие и отдалённость от семьи, хотя в глубине души хочет вернуть в жизнь полноценный семейный очаг и уют.",
+    "significant_people": "Бойфренд Эрик, который помогал ей с братом и сестрой."
+  },
+  "legend": {
+    "ru": "Старший ребёнок Нормана и Элизабет Эдингтон. Отец, Норман Эдингтон, всю взрослую сознательную жизнь провёл в поисках себя: рано женился на своей первой любви Элизабет, у них родилась старшая дочь Сильвия. Заработать в Аркхэме всегда было сложно, и Норман часто ездил на заработки на вахту на далёкий север, где участвовал в экспедициях и других работах. Вскоре родились ещё двое детей — Бернард и Шарлотта. Мать, Элизабет, погибла в автокатастрофе; понимая, что нужно прокармливать троих детей, Норман надолго вернулся на север — в Альберту, Канада. За это время Сильвия взвалила на себя присмотр за братом и сестрой, благо в отсутствие отца ей помогал её бойфренд Эрик — хороший, добрый парень, всегда готовый помочь, хоть он и карлик.\nВ сценарии: Сильвия может попросить отца помочь Эрику с работой в резиденции Санта Клауса; утром она может тайком от отца уйти в резиденцию поговорить с работниками, чтобы устроить Эрика, — тогда тонуть на озере будет она.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "novaya-zhizn-ru",
+      "physical_page": 3,
+      "printed_page": 3,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «Хранителю на заметку: парень Сильвии»"
+    },
+    {
+      "book_id": "novaya-zhizn-ru",
+      "physical_page": 7,
+      "printed_page": 7,
+      "method": "book_text",
+      "verified": true,
+      "note": "утром кто-то из семьи уходит в резиденцию — например, Сильвия"
+    },
+    {
+      "book_id": "novaya-zhizn-ru",
+      "physical_page": 18,
+      "printed_page": 18,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Квенты персонажей»"
+    },
+    {
+      "book_id": "novaya-zhizn-ru",
+      "physical_page": 22,
+      "printed_page": 22,
+      "method": "book_text",
+      "verified": true,
+      "note": "лист сыщика «Сильвия»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Готовый персонаж (с. 22). Лист персонажа взят из одиночного приключения «Лес Вендиго» (с. 11 «Новой жизни»: «некоторые листы персонажей взяты из одиночного приключения «Лес Вендиго»»): числа совпадают с «Сильвией Дэвидсон», но без навыков Пилотирование (лодка) и Топорик."
+  },
+  "images": [
+    {
+      "file": "art/characters/sylvia-davidson.webp",
+      "kind": "portrait",
+      "caption": null,
+      "source": "«Новая жизнь», лист сыщика (с. 22); тот же портрет, что у «Сильвии Дэвидсон» («Лес Вендиго»)"
+    }
+  ]
+}

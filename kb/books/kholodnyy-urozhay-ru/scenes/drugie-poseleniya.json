@@ -1,0 +1,124 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "kholodnyy-urozhay-ru/scene/drugie-poseleniya",
+  "kind": "scene",
+  "name": {
+    "ru": "Взаимодействие с другими совхозами",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Чтобы выяснить, почему нет связи с двумя другими посёлками, сыщикам нужен грузовик (если ллойгор его уже сломал, сначала его надо починить). Гапон объясняет, что «Красивый Октябрь-1» и «Красивый Октябрь-3» соединяет телеграфная линия, кончающаяся в доме Гапона; успешная проверка Электрики подтверждает, что линия не работает. По линии можно пройти вдоль неровной грязной дороги к «Красивому Октябрю-1»: в восьми километрах от села линия повреждена; успешная проверка Электрики или Механики показывает, что её перерезали. Починка — трудная проверка Электрики или Механики (с набором инструментов — обычная).\nЕсли связь восстановлена, сыщики узнают, что ни у одного другого посёлка нет проблем с квотой. На другом конце линии — Виктор Демидов, куратор всего «Красивого Октября»: узнав, что «Красивый Октябрь-3» не выполняет норму, приходит в ярость — последний отчёт Гапона две недели назад говорил, что всё идёт по графику; посёлок в прошлом году выполнил норму, хотя работал первый год, и это удивило его не меньше, чем внезапное замедление. Поддержки он не предлагает. Те же сведения можно получить, поехав в любой из других посёлков: оба в хорошем состоянии, урожай убран, люди трудолюбивы — резкий контраст с «Красивым Октябрём-3». Там агенты могут своими полномочиями реквизировать транспорт, припасы и даже рабочую силу. Если линия починена, можно вызвать подкрепление из Куйбышева или связаться с Москвой.",
+    "en": null
+  },
+  "when": "Днём",
+  "arc": {
+    "scenario": "kholodnyy-urozhay-ru/scenario/kholodnyy-urozhay",
+    "part": "Пути расследования",
+    "order": 10
+  },
+  "where": [
+    {
+      "location": "kholodnyy-urozhay-ru/location/ko3-19-dom-gapona",
+      "note": "телеграф"
+    },
+    {
+      "location": "kholodnyy-urozhay-ru/location/krasivyy-oktyabr-1",
+      "note": "18 км"
+    },
+    {
+      "location": "kholodnyy-urozhay-ru/location/krasivyy-oktyabr-2",
+      "note": "15 км"
+    }
+  ],
+  "participants": [
+    {
+      "id": "kholodnyy-urozhay-ru/character/boris-gapon",
+      "role": "объясняет про линию"
+    },
+    {
+      "id": "kholodnyy-urozhay-ru/character/viktor-demidov",
+      "role": "на другом конце линии"
+    },
+    {
+      "id": "kholodnyy-urozhay-ru/character/timur-yarov",
+      "role": "сыщик"
+    },
+    {
+      "id": "kholodnyy-urozhay-ru/character/leonid-matsenko",
+      "role": "сыщик"
+    },
+    {
+      "id": "kholodnyy-urozhay-ru/character/ekaterina-shemkova",
+      "role": "сыщик"
+    },
+    {
+      "id": "kholodnyy-urozhay-ru/character/aleksandr-bure",
+      "role": "сыщик"
+    },
+    {
+      "id": "kholodnyy-urozhay-ru/character/georgiy-zamyatin",
+      "role": "сыщик"
+    },
+    {
+      "id": "kholodnyy-urozhay-ru/character/mikhail-akhmerov",
+      "role": "сыщик"
+    },
+    {
+      "id": "kholodnyy-urozhay-ru/character/nikita-gurov",
+      "role": "сыщик"
+    },
+    {
+      "id": "kholodnyy-urozhay-ru/character/maksim-kravchuk",
+      "role": "сыщик"
+    }
+  ],
+  "mechanics": {
+    "ru": "Проверка Электрики — линия не работает; Электрики или Механики — перерезана (в 8 км); починка — трудная Электрика или Механика (с инструментами — обычная).",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Связь с внешним миром; сведения о норме; возможность реквизиций и вызова подкрепления.",
+    "en": null
+  },
+  "refs": [
+    "kholodnyy-urozhay-ru/item/gruzovik-gaz-aa"
+  ],
+  "axes": {
+    "era": [
+      "1930s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "kholodnyy-urozhay-ru",
+      "physical_page": 27,
+      "printed_page": 27,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Взаимодействие с другими совхозами»"
+    },
+    {
+      "book_id": "kholodnyy-urozhay-ru",
+      "physical_page": 28,
+      "printed_page": 28,
+      "method": "book_text",
+      "verified": true,
+      "note": "окончание"
+    },
+    {
+      "book_id": "kholodnyy-urozhay-ru",
+      "physical_page": 43,
+      "printed_page": 43,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Вызов подкрепления»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

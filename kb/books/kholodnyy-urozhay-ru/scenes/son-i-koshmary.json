@@ -1,0 +1,112 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "kholodnyy-urozhay-ru/scene/son-i-koshmary",
+  "kind": "scene",
+  "name": {
+    "ru": "Сон и кошмары",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Сценарий длится три дня, и сон важен: сыщики всего лишь люди. В ГАЗ АА есть место для сна одного сыщика, но вероятнее, что агенты займут место в одном из домов — никто им не откажет. Ллойгор питается ПМ всех спящих в посёлке: заснувший агент попадает под действие его чар. Проснувшись после кошмара, агент слаб и страдает от сильной головной боли.\nКошмары (необязательно): истинно коварный Хранитель может насылать кошмары, кажущиеся реальными, — выберите подходящего сыщика или потребуйте проверки Удачи. Сыщик просыпается там, где был во сне, а не там, где заснул (кошмар о сарае — просыпается в сарае). Примеры — таблица «Кошмары» сценария.",
+    "en": null
+  },
+  "when": "Каждую ночь",
+  "arc": {
+    "scenario": "kholodnyy-urozhay-ru/scenario/kholodnyy-urozhay",
+    "part": "В расследовании на Красивом Октябре-3",
+    "order": 7
+  },
+  "where": [
+    {
+      "location": "kholodnyy-urozhay-ru/location/krasivyy-oktyabr-3",
+      "note": null
+    }
+  ],
+  "participants": [
+    {
+      "id": "kholodnyy-urozhay-ru/character/timur-yarov",
+      "role": "сыщик"
+    },
+    {
+      "id": "kholodnyy-urozhay-ru/character/leonid-matsenko",
+      "role": "сыщик"
+    },
+    {
+      "id": "kholodnyy-urozhay-ru/character/ekaterina-shemkova",
+      "role": "сыщик"
+    },
+    {
+      "id": "kholodnyy-urozhay-ru/character/aleksandr-bure",
+      "role": "сыщик"
+    },
+    {
+      "id": "kholodnyy-urozhay-ru/character/georgiy-zamyatin",
+      "role": "сыщик"
+    },
+    {
+      "id": "kholodnyy-urozhay-ru/character/mikhail-akhmerov",
+      "role": "сыщик"
+    },
+    {
+      "id": "kholodnyy-urozhay-ru/character/nikita-gurov",
+      "role": "сыщик"
+    },
+    {
+      "id": "kholodnyy-urozhay-ru/character/maksim-kravchuk",
+      "role": "сыщик"
+    }
+  ],
+  "mechanics": {
+    "ru": "Если сыщик пытается не спать всю миссию, Хранитель требует проверки ТЕЛ в первую ночь и трудной проверки ТЕЛ во вторую ночь подряд. Успех — сыщик не спит, но все броски навыков и характеристик — со штрафной костью, пока он не отдохнёт. Провал — сыщик засыпает: находит, где прилечь, или (по решению Хранителя) засыпает там, где стоит или сидит. Когда ллойгор вступает в мысленный контакт со спящим, тот теряет 0/1d4 (в книге — «МАГИИ»). Если проверка Рассудка за кошмар провалена, Хранитель может дать штрафную кость к проверкам умственных навыков и тонких манипуляций; при бодрствовании штрафы складываются, максимум до двух.",
+    "en": null
+  },
+  "refs": [
+    "kholodnyy-urozhay-ru/creature/lloigor"
+  ],
+  "axes": {
+    "era": [
+      "1930s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "kholodnyy-urozhay-ru",
+      "physical_page": 24,
+      "printed_page": 24,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Сон»"
+    },
+    {
+      "book_id": "kholodnyy-urozhay-ru",
+      "physical_page": 25,
+      "printed_page": 25,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «Кошмары»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "mechanics.ru",
+      "printed": "проверки ТЕЛ (с. 24)",
+      "expected": "проверки ВЫН",
+      "note": "Бодрствование проверяется по «ТЕЛ» — вероятно, имелась в виду ВЫН. Оставлено как напечатано."
+    },
+    {
+      "field": "mechanics.ru",
+      "printed": "теряет 0/1D4 МАГИИ (с. 24)",
+      "expected": null,
+      "note": "Формат как у потери Рассудка; профиль ллойгора (с. 50): контакт с сознанием — 1/1d4 Рассудка."
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": null
+  }
+}

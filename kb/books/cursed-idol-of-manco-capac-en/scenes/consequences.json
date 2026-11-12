@@ -1,0 +1,81 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "cursed-idol-of-manco-capac-en/scene/consequences",
+  "kind": "scene",
+  "name": {
+    "ru": "Последствия",
+    "en": "Scene 2: Consequences"
+  },
+  "description": {
+    "ru": "Если сыщики успевают в музей до 18:00, этой сцены нет. После 18:00 ритуал Пылающей Руки позволяет Демону Пакаритамбо вселяться во множество людей на улицах. Одержимые лишены инстинкта самосохранения; отступят, только если их убедить, что они под влиянием Демона (профиль «Прохожие»).\nУлики:\n• Группа одержимых (3 + число сыщиков) перегораживает сыщикам дорогу: объехать — Вождение автомобиля; обмануть — Убеждение или Красноречие. При провале одержимые нападают или бросаются под машину.\n• Толпа одержимых тащит к главному входу музея горожан, сумевших сопротивляться.\n• На улице брошены три патрульные машины полиции Нью-Йорка: двери распахнуты, лобовые стёкла разбиты, полицейских нигде нет, но внутри остались револьверы и дробовики.\n• Злые одержимые (3 + число сыщиков) штурмуют лавку, где прячутся двое неодержимых. Спасти их — обмануть толпу (социальный навык), победить в бою или вывести людей. Спасённые рассказывают, что толпа звала их в музей «взглянуть в глаза Демону», и вспоминают жуткое внутреннее побуждение, которому сумели воспротивиться.",
+    "en": null
+  },
+  "when": "Только если сыщики приезжают после 18:00",
+  "arc": {
+    "scenario": "cursed-idol-of-manco-capac-en/scenario/cursed-idol-of-manco-capac",
+    "part": "Акт 3. Гонка к музею",
+    "order": 24
+  },
+  "where": [
+    {
+      "location": "masks-of-nyarlathotep-en/location/america-lower-manhattan",
+      "note": "улицы у музея"
+    }
+  ],
+  "participants": [
+    {
+      "id": "cursed-idol-of-manco-capac-en/character/bystanders",
+      "role": "одержимые и двое неодержимых"
+    },
+    {
+      "id": "cursed-idol-of-manco-capac-en/creature/demon-of-pacaritambo",
+      "role": "вселяется в людей"
+    }
+  ],
+  "mechanics": {
+    "ru": "Вождение автомобиля; Убеждение или Красноречие; социальный навык; бой.",
+    "en": null
+  },
+  "refs": [],
+  "axes": {
+    "era": [
+      "1930s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "cursed-idol-of-manco-capac-en",
+      "physical_page": 29,
+      "printed_page": 29,
+      "method": "book_text",
+      "verified": true,
+      "note": "сценарий «The Cursed Idol of Manco Capác»: «Scene 2: Consequences»"
+    },
+    {
+      "book_id": "cursed-idol-of-manco-capac-en",
+      "physical_page": 30,
+      "printed_page": 30,
+      "method": "book_text",
+      "verified": true,
+      "note": "улики сцены"
+    }
+  ],
+  "errata": [
+    {
+      "field": "description.ru",
+      "printed": "use Residents NPC stats",
+      "expected": "Bystanders",
+      "note": "Профиля «Residents» нет; имеются в виду «Bystanders» (с. 46).",
+      "fixed": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — по рабочему переводу владельца (2_Обработка/идол манко/document.html), сверен с английским оригиналом; числа — по английской странице."
+  }
+}

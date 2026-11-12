@@ -1,0 +1,289 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "cursed-idol-of-manco-capac-en/character/beat-cops",
+  "kind": "character",
+  "name": {
+    "ru": "Патрульные полицейские",
+    "en": "Beat Cops"
+  },
+  "aliases": [
+    "патрульные",
+    "beat cops",
+    "полицейские Бриджпорта",
+    "Bridgeport Police Officers"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "патрульный полицейский",
+  "names": [
+    "Патрик О’Мэлли",
+    "Джон Ковальски",
+    "Майкл Флэнаган",
+    "Уолтер Брэдшоу",
+    "Эдвард Дуган"
+  ],
+  "occupation": {
+    "ru": "патрульный полицейский",
+    "en": "beat cop"
+  },
+  "occupation_ref": "coc:occupation:patrulnyy-politseyskiy",
+  "axes": {
+    "era": [
+      "1930s"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "65",
+        "value": 65
+      },
+      "CON": {
+        "raw": "55",
+        "value": 55
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "55",
+        "value": 55
+      },
+      "APP": {
+        "raw": "55",
+        "value": 55
+      },
+      "INT": {
+        "raw": "55",
+        "value": 55
+      },
+      "POW": {
+        "raw": "55",
+        "value": 55
+      },
+      "EDU": {
+        "raw": "55",
+        "value": 55
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12,
+      "note": "в книге — клетки ПЗ"
+    },
+    "mp": {
+      "raw": "11",
+      "value": 11
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "+1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "1d3+БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Полицейская дубинка",
+          "en": "Nightstick"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "1d6+БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:club-small"
+      },
+      {
+        "name": {
+          "ru": "Револьвер .38",
+          "en": ".38 Revolver"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d10",
+          "dice": "1d10",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:38-revolver"
+      }
+    ],
+    "dodge": {
+      "raw": "45% (22/9)",
+      "value": 45,
+      "half": 22,
+      "fifth": 9
+    },
+    "skills": [
+      {
+        "name": "Вождение автомобиля",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Юриспруденция",
+        "skill": "coc:skill:law",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      }
+    ],
+    "sanity": {
+      "raw": "55",
+      "value": 55
+    },
+    "spells": {
+      "raw": "нет",
+      "items": []
+    }
+  },
+  "description": {
+    "ru": "Стражи закона, предпочитающие не высовываться там, где за каждым углом таятся тени. Несколько патрульных ходят у «Древностей Кёртиса» и поглядывают на лавку (Внимание или Психология — похоже, охраняют её); если сыщики устроят там неприятности, трое прибегут, попытаются их избить и задержать. Если сыщики уходят из лавки без сведений, патрульный окликает их и протягивает спичечный коробок «Старой таверны»: «Кажется, вы кое-что уронили. Это ваше?»",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "cursed-idol-of-manco-capac-en",
+      "physical_page": 45,
+      "printed_page": 45,
+      "method": "book_text",
+      "verified": true,
+      "note": "сценарий «The Cursed Idol of Manco Capác»: «NPCs» — статблок «Beat Cops»"
+    },
+    {
+      "book_id": "cursed-idol-of-manco-capac-en",
+      "physical_page": 26,
+      "printed_page": 26,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Curtis’ Antiquities», «Heading Outside»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "editorial_text"
+    ],
+    "notes": "Имена придуманы (Р-151): в книге — групповой профиль «Beat Cops». Русский текст — по рабочему переводу владельца (2_Обработка/идол манко/document.html), сверен с английским оригиналом; числа — по английской странице."
+  }
+}

@@ -1,0 +1,369 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "cursed-idol-of-manco-capac-en/character/thomas-cross",
+  "kind": "character",
+  "name": {
+    "ru": "Томас Кросс",
+    "en": "Thomas Cross"
+  },
+  "aliases": [
+    "помощник Ирен Купер",
+    "культист"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "помощник куратора; культист Пылающей Руки",
+    "en": "assistant to Irene Cooper; cultist for The Burning Hand"
+  },
+  "sex": "мужской",
+  "residence": "Бруклин, Нью-Йорк",
+  "axes": {
+    "era": [
+      "1930s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "cursed-idol-of-manco-capac-en/character/irene-cooper",
+      "note": "начальница",
+      "note_back": "помощник"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "65",
+        "value": 65
+      },
+      "CON": {
+        "raw": "75",
+        "value": 75
+      },
+      "SIZ": {
+        "raw": "70",
+        "value": 70
+      },
+      "DEX": {
+        "raw": "55",
+        "value": 55
+      },
+      "APP": {
+        "raw": "45",
+        "value": 45
+      },
+      "INT": {
+        "raw": "50",
+        "value": 50
+      },
+      "POW": {
+        "raw": "60",
+        "value": 60
+      },
+      "EDU": {
+        "raw": "65",
+        "value": 65
+      }
+    },
+    "hp": {
+      "raw": "14",
+      "value": 14,
+      "note": "в книге — клетки ПЗ"
+    },
+    "mp": {
+      "raw": "12",
+      "value": 12
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "+1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Кинжал",
+          "en": "Dagger"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d4+2+БкУ",
+          "dice": "1d4+2",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:dagger"
+      },
+      {
+        "name": {
+          "ru": "Пистолет .32",
+          "en": ".32 Pistol"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d8",
+          "dice": "1d8",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:32-automatic"
+      },
+      {
+        "name": {
+          "ru": "Ракетница",
+          "en": "Flare Gun"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d10+3+горение",
+          "dice": "1d10+3",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:flare-gun",
+        "notes": "Этой ракетницей Кросс у Заброшенной церкви подаёт сигнал союзникам."
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Антропология",
+        "skill": "coc:skill:anthropology",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Археология",
+        "skill": "coc:skill:archaeology",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "10%",
+          "value": 10,
+          "half": 5,
+          "fifth": 2
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "15%",
+          "value": 15,
+          "half": 7,
+          "fifth": 3
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "История",
+        "skill": "coc:skill:history",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Оккультизм",
+        "skill": "coc:skill:occult",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      }
+    ],
+    "sanity": {
+      "raw": "0",
+      "value": 0
+    },
+    "spells": {
+      "raw": "нет",
+      "items": []
+    }
+  },
+  "description": {
+    "ru": "Помощник Ирен Купер в музее и культист Пылающей Руки — холодный, исполнительный человек, которого манят власть и запретные знания. Купер говорит, что он два дня не появлялся на работе, и даёт его адрес в Бруклине. Капуто ищет его, потому что Кросс заключает сделки с врагами семьи Романо. Кросс — один из двух культистов в доме за Заброшенной церковью: если культистов вспугнуть, он стреляет в воздух из ракетницы, вызывая подмогу; участвует и в нападении культа (2 машины по 3 головореза).",
+    "en": null
+  },
+  "legend": {
+    "ru": "После посвящения в Пылающую Руку столкнулся с откровениями, разрушившими его разум, и стал безжалостным в погоне за целью, даже если ради неё придётся стать мучеником (Рассудок 0).",
+    "en": null
+  },
+  "background": {
+    "secret": "Культист Пылающей Руки; скрывается в доме за Заброшенной церковью в Куинсе."
+  },
+  "sources": [
+    {
+      "book_id": "cursed-idol-of-manco-capac-en",
+      "physical_page": 45,
+      "printed_page": 45,
+      "method": "book_text",
+      "verified": true,
+      "note": "сценарий «The Cursed Idol of Manco Capác»: «NPCs» — статблок «Thomas Cross»"
+    },
+    {
+      "book_id": "cursed-idol-of-manco-capac-en",
+      "physical_page": 17,
+      "printed_page": 17,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Museum Curator»"
+    },
+    {
+      "book_id": "cursed-idol-of-manco-capac-en",
+      "physical_page": 19,
+      "printed_page": 19,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «Characters»"
+    },
+    {
+      "book_id": "cursed-idol-of-manco-capac-en",
+      "physical_page": 20,
+      "printed_page": 20,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Encounter: The Burning Hand»"
+    },
+    {
+      "book_id": "cursed-idol-of-manco-capac-en",
+      "physical_page": 21,
+      "printed_page": 21,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Abandoned Church»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.move",
+      "printed": "Move: 8",
+      "expected": "7",
+      "note": "СИЛ 65 и ЛВК 55 меньше ТЕЛ 70 — по правилам Скорость 7; напечатано 8. Оставлено как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Кинжал 1d4+2 — урон по книге (в таблице оружия у кинжала 1d4+1), ракетница 1d10+3+горение (в таблице 1d10+1d3) — числа сценария; варианты — в предложениях к справочнику оружия (Р-124). Русский текст — по рабочему переводу владельца (2_Обработка/идол манко/document.html), сверен с английским оригиналом; числа — по английской странице."
+  }
+}

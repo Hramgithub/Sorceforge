@@ -1,0 +1,228 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "cursed-idol-of-manco-capac-en/character/bystanders",
+  "kind": "character",
+  "name": {
+    "ru": "Прохожие",
+    "en": "Bystanders"
+  },
+  "aliases": [
+    "жители",
+    "Residents",
+    "одержимые"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "горожанин, прохожий; одержимый Демоном",
+  "names": [
+    "Роза Кальдерон",
+    "Сэмюэл Гринберг",
+    "Мэри Доннелли",
+    "Луис Эрнандес",
+    "Элси Мартин"
+  ],
+  "axes": {
+    "era": [
+      "1930s"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "55",
+        "value": 55
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "50",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "55",
+        "value": 55
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "50",
+        "value": 50
+      },
+      "POW": {
+        "raw": "45",
+        "value": 45
+      },
+      "EDU": {
+        "raw": "50",
+        "value": 50
+      }
+    },
+    "hp": {
+      "raw": "10",
+      "value": 10,
+      "note": "в книге — клетки ПЗ"
+    },
+    "mp": {
+      "raw": "9",
+      "value": 9
+    },
+    "damage_bonus": {
+      "raw": "-",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:unarmed"
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Вождение автомобиля",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "История",
+        "skill": "coc:skill:history",
+        "value": {
+          "raw": "15%",
+          "value": 15,
+          "half": 7,
+          "fifth": 3
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "20%",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      }
+    ],
+    "sanity": {
+      "raw": "45",
+      "value": 45
+    },
+    "spells": {
+      "raw": "нет",
+      "items": []
+    }
+  },
+  "description": {
+    "ru": "Жители Нью-Йорка и других мест: люди, встреченные на улице, и те, кто стал пешкой Демона Пакаритамбо. По этому профилю играют одержимых на улицах после 18:00 (группы из 3 + числа сыщиков; заграждение, толпа, штурмующая лавку), двух неодержимых в лавке и тридцать одержимых гостей торжества в главном выставочном зале. Одержимые лишены инстинкта самосохранения; отступят, только если их убедить, что они под влиянием Демона.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "cursed-idol-of-manco-capac-en",
+      "physical_page": 46,
+      "printed_page": 46,
+      "method": "book_text",
+      "verified": true,
+      "note": "сценарий «The Cursed Idol of Manco Capác»: «NPCs» — статблок «Bystanders»"
+    },
+    {
+      "book_id": "cursed-idol-of-manco-capac-en",
+      "physical_page": 29,
+      "printed_page": 29,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Scene 2: Consequences»"
+    },
+    {
+      "book_id": "cursed-idol-of-manco-capac-en",
+      "physical_page": 30,
+      "printed_page": 30,
+      "method": "book_text",
+      "verified": true,
+      "note": "улики сцены, «Scene 3», «After 6pm»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.move",
+      "printed": "Move: 8",
+      "expected": "9",
+      "note": "СИЛ 55 и ЛВК 55 больше ТЕЛ 50 — по правилам Скорость 9; напечатано 8. Оставлено как напечатано.",
+      "fixed": false
+    },
+    {
+      "field": "description.ru",
+      "printed": "use Residents NPC stats",
+      "expected": "Bystanders",
+      "note": "Сцена «Consequences» (с. 29) отсылает к профилю «Residents», которого нет; в главе NPC — «Bystanders».",
+      "fixed": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "editorial_text",
+      "parse_uncertain"
+    ],
+    "notes": "Имена придуманы (Р-151): в книге — групповой профиль «Bystanders». Русский текст — по рабочему переводу владельца (2_Обработка/идол манко/document.html), сверен с английским оригиналом; числа — по английской странице."
+  }
+}

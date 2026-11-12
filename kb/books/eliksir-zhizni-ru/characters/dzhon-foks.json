@@ -1,0 +1,298 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "eliksir-zhizni-ru/character/dzhon-foks",
+  "kind": "character",
+  "name": {
+    "ru": "Джон Фокс",
+    "en": null
+  },
+  "aliases": [
+    "Джон",
+    "Маньяк",
+    "Высокий мужчина в сером плаще"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "стажёр-анестезиолог",
+    "en": null
+  },
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "1930s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "relative_of",
+      "target": "eliksir-zhizni-ru/character/nil-foks",
+      "note": "старший брат, погибший от гончей",
+      "note_back": "младший брат"
+    },
+    {
+      "type": "knows",
+      "target": "eliksir-zhizni-ru/character/odri-rayt",
+      "note": "коллега по больнице, его пленница",
+      "note_back": "коллега, похититель"
+    },
+    {
+      "type": "rival_of",
+      "target": "eliksir-zhizni-ru/character/sivilia",
+      "note": "ведьма, на которую он охотится",
+      "note_back": "охотник на ведьм, убивающий её клиенток"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "55",
+        "value": 55
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "APP": {
+        "raw": "65",
+        "value": 65
+      },
+      "INT": {
+        "raw": "60",
+        "value": 60
+      },
+      "EDU": {
+        "raw": "50",
+        "value": 50
+      }
+    },
+    "hp": {
+      "raw": "11",
+      "value": 11
+    },
+    "sanity": {
+      "raw": "55",
+      "value": 55,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "нет",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed",
+        "notes": "Урон без БкУ (БкУ нет)."
+      },
+      {
+        "name": {
+          "ru": "Длинный охотничий нож",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "—",
+          "value": null,
+          "half": null,
+          "fifth": null
+        },
+        "damage": {
+          "raw": "1d4+2+БкУ",
+          "dice": "1d4+2",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:knife-medium",
+        "notes": "Шанс не напечатан — вывод из текста: по навыку Ближний бой 70% (35/14)."
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Высокий мужчина в сером плаще и шляпе; лицо скрывает высоким воротником, на щеках — глубокие шрамы от перенесённой оспы.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Младший брат Нила Фокса, стажёр-анестезиолог Больницы Салема. Поначалу не верил бреду брата, но когда в очередной раз вытаскивал Нила из притона в лесу, оба столкнулись с гончей Шаб-Ниггурат: она убила Нила, высосав из него кровь. Оправившись от горя и ужаса, Джон с одержимостью продолжил дело брата — поиск ведьм в Салеме. От коллеги-медсестры Одри Райт он узнал, что гадалка Сивилия «сняла с неё порчу», распознал в этом опасный ритуал из книги священника, купленной у грабителя музея, и похитил Одри к себе домой. Под действием ростков Эдема Одри в бреду выдаёт ему других заражённых женщин. Не решаясь напасть на Сивилию, пока не узнает, где она хранит эликсир, Джон несколько недель убивает её «излечившихся» клиенток — душит или травит, посмертно ампутирует молочные железы, матку и яичники, «очищая» тела от скверны; эмбрионы хранит дома в банках с формалином, ища уязвимые места существ. Корделии Хамфри удалось спастись: Джон ранил её телохранителя, но, услышав гончую, бежал; позже он убил телохранителя инъекцией в реанимации. Из книг в местной библиотеке узнал о картине в пабе «Green Heel» и в ночь на 15 октября пытался её украсть. Встретив сыщиков в своём доме впервые, принимает их за союзников Сивилии и нападает с длинным охотничьим ножом; убедившись, что они не работают на неё (Психоанализ или Красноречие), пытается скрыться и может позже помочь в битве с ведьмой или гончей. Если сыщики медлят, через несколько дней приходит с медиками к Корделии и вводит ей смертельную инъекцию под видом обезболивающего.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "eliksir-zhizni-ru",
+      "physical_page": 11,
+      "printed_page": 10,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Персонажи хранителя»: Джон Фокс"
+    },
+    {
+      "book_id": "eliksir-zhizni-ru",
+      "physical_page": 3,
+      "printed_page": 2,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Зловещая истина»"
+    },
+    {
+      "book_id": "eliksir-zhizni-ru",
+      "physical_page": 4,
+      "printed_page": 3,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Зловещая истина», «Хронология»"
+    },
+    {
+      "book_id": "eliksir-zhizni-ru",
+      "physical_page": 5,
+      "printed_page": 4,
+      "method": "book_text",
+      "verified": true,
+      "note": "отдел кадров: стажёр-анестезиолог, живёт на окраине"
+    },
+    {
+      "book_id": "eliksir-zhizni-ru",
+      "physical_page": 8,
+      "printed_page": 7,
+      "method": "book_text",
+      "verified": true,
+      "note": "бордель: шрамы от оспы; «Дом Джона Фокса»: встреча с сыщиками"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.characteristics",
+      "printed": "ВОЛ 55",
+      "expected": null,
+      "note": "В статблоке напечатана характеристика «ВОЛ 55», которой нет в 7-й редакции, а МОЩ и ПМ не напечатаны; «ВОЛ» в запись не взята.",
+      "fixed": false
+    },
+    {
+      "field": "statblock.move",
+      "printed": "8",
+      "expected": "9",
+      "note": "ЛВК 60 и СИЛ 60 больше ТЕЛ 55 — Скорость 9; возраст не указан. Оставлено как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "incomplete",
+      "parse_uncertain"
+    ],
+    "notes": "Статблок — с. 10. МОЩ, ПМ и Удачи книга не даёт. Скорость 8 напечатана; по ЛВК 60 и СИЛ 60 больше ТЕЛ 55 — 9, возраст не указан."
+  }
+}

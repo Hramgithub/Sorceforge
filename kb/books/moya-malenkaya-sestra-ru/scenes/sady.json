@@ -1,0 +1,95 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "moya-malenkaya-sestra-ru/scene/sady",
+  "kind": "scene",
+  "name": {
+    "ru": "Сады",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Две садовые комнаты одинаковы по размеру и планировке, но разительно отличаются. Сад 1 — тёмный и холодный, растения засохли, листья хрустят при касании, изо рта идёт пар. Сад 2 — жара, влажность, яркий резкий свет, капающие трубы орошения, буйные заросли с цветами, помидорами и персиками; среди них — с виду сломанный садовый робот с множеством манипуляторов-инструментов. Робот на самом деле исправен и управляется съёмочной группой: он может пытаться загнать «биологические образцы» обратно в камеру стазиса, объявить, что «пришло время сбора урожая» и у одного из образцов нужно изъять органы («Живо-живо!»), или извиняться за некомпетентность и умолять помочь с уборкой и растениями. Даже если его не чинят, он может внезапно активироваться, вырывать растения и швырять горшки.\nСреди зарослей прячется мутант, выжидающий момента, чтобы с ужасающим воплем напасть на одного из сыщиков. На его теле — странная татуировка: код доступа к двери компьютерной комнаты.\nСоветы по ведению сцены: сыграйте на контрасте — запустение в одной комнате и буйный рост в другой создают ощущение, что с запуска станции прошло много времени. Робота можно подать как комичного помощника или как зловещую непостижимую сущность, которая преследует сыщиков со странными фразами и угрожающе размахивает инструментами; за ним стоит съёмочная группа, которая сделает всё, чтобы удержать внимание аудитории.",
+    "en": null
+  },
+  "when": "Исследование верхнего уровня",
+  "arc": {
+    "scenario": "moya-malenkaya-sestra-ru/scenario/moya-malenkaya-sestra",
+    "part": "Верхний уровень",
+    "order": 2
+  },
+  "where": [
+    {
+      "location": "moya-malenkaya-sestra-ru/location/sad-1",
+      "note": "мёртвый холодный сад"
+    },
+    {
+      "location": "moya-malenkaya-sestra-ru/location/sad-2",
+      "note": "жаркие заросли, робот и мутант"
+    }
+  ],
+  "participants": [
+    {
+      "id": "moya-malenkaya-sestra-ru/character/mutanty",
+      "role": "прячется в зарослях Сада 2 и нападает с ужасающим воплем"
+    }
+  ],
+  "mechanics": {
+    "ru": "Починить робота — успешный бросок Механики и Электрики. Бой с мутантом (статблок — в записи мутантов); если мутанта убьют, из него выходит яйцо-почка с кислотой. Осмотр тела мутанта — проверка Внимания: при успехе сыщик замечает татуировку с кодом.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "После выхода из этой комнаты игроки могут открыть следующий конверт. Код ведёт к компьютерной комнате.",
+    "en": null
+  },
+  "refs": [
+    "moya-malenkaya-sestra-ru/item/sadovyy-robot",
+    "moya-malenkaya-sestra-ru/item/tatuirovka-s-kodom",
+    "moya-malenkaya-sestra-ru/location/kompyuternaya-verkhnego-urovnya",
+    "coc:skill:spot-hidden",
+    "moya-malenkaya-sestra-ru/handout/vospominaniya-sema",
+    "moya-malenkaya-sestra-ru/handout/vospominaniya-serzha",
+    "moya-malenkaya-sestra-ru/handout/vospominaniya-mirandy",
+    "moya-malenkaya-sestra-ru/handout/vospominaniya-maksa",
+    "moya-malenkaya-sestra-ru/handout/vospominaniya-dzhenni",
+    "moya-malenkaya-sestra-ru/handout/vospominaniya-filipa"
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "moya-malenkaya-sestra-ru",
+      "physical_page": 11,
+      "printed_page": 11,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Сады», «Сад 1», «Сад 2»"
+    },
+    {
+      "book_id": "moya-malenkaya-sestra-ru",
+      "physical_page": 12,
+      "printed_page": 12,
+      "method": "book_text",
+      "verified": true,
+      "note": "робот, мутант, «Советы по ведению сцены»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "description.ru",
+      "printed": "(см. Мутанты, стр. 22)",
+      "expected": "с. 21",
+      "note": "Статблок мутантов — в «Приложении A» на с. 21 (описание — на с. 6); на с. 22 — «Листы персонажей и воспоминания» (с. 12)."
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": null
+  }
+}

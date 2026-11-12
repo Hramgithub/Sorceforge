@@ -1,0 +1,348 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "fears-sharp-little-needles-en/character/bone-deep-human-servants",
+  "kind": "character",
+  "name": {
+    "ru": "Человеческие слуги (похоронный дом «Вейл»)",
+    "en": "Human Servants"
+  },
+  "aliases": [
+    "сотрудники похоронного дома"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "сотрудник похоронного дома, слуга упырей",
+  "names": [
+    "Гарольд Пирс",
+    "Дороти Макклейн",
+    "Рональд Беккер",
+    "Ширли Новак",
+    "Юджин Тоттл"
+  ],
+  "occupation": {
+    "ru": "сотрудник похоронного дома",
+    "en": "funeral home employee"
+  },
+  "occupation_ref": "coc:occupation:pokhoronshchik",
+  "age": {
+    "raw": "разный (от неполных 60 до почти 70)",
+    "value": null
+  },
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "fears-sharp-little-needles-en/character/bone-deep-adeline-radford",
+      "note": "владелица похоронного дома, глава клана",
+      "note_back": "сотрудники-слуги"
+    },
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:ghoul",
+      "note": "упыри-Собиратели",
+      "note_back": "человеческие слуги Собирателей"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "50",
+        "value": 50
+      },
+      "CON": {
+        "raw": "55",
+        "value": 55
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "60",
+        "value": 60
+      },
+      "POW": {
+        "raw": "60",
+        "value": 60
+      },
+      "EDU": {
+        "raw": "70",
+        "value": 70
+      }
+    },
+    "hp": {
+      "raw": "11",
+      "value": 11
+    },
+    "sanity": {
+      "raw": "0",
+      "value": 0
+    },
+    "damage_bonus": {
+      "raw": "нет",
+      "value": 0
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "5",
+      "value": 5,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 5
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d4+2+БкУ",
+          "dice": "1d4+2",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Искусство (посмертный грим)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "посмертный грим",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "10%",
+          "value": 10,
+          "half": 5,
+          "fifth": 2
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "10%",
+          "value": 10,
+          "half": 5,
+          "fifth": 2
+        }
+      },
+      {
+        "name": "Вождение автомобиля",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Криминалистика",
+        "skill": "coc:skill:science",
+        "specialization": "криминалистика",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Язык (английский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "английский",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Юриспруденция",
+        "skill": "coc:skill:law",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Медицина",
+        "skill": "coc:skill:medicine",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Естествознание",
+        "skill": "coc:skill:natural-world",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Оккультизм",
+        "skill": "coc:skill:occult",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      }
+    ],
+    "spells": {
+      "raw": "нет",
+      "items": []
+    }
+  },
+  "abilities": [
+    {
+      "name": "Защита",
+      "summary": "Защиты нет.",
+      "raw": "Defenses: none."
+    },
+    {
+      "name": "Долговременное безумие",
+      "summary": "Поклоняющиеся упырям прислужники, надеющиеся обрести бессмертие.",
+      "raw": "Indefinite Insanity: Ghoul-loving sycophants hoping for immortality."
+    }
+  ],
+  "description": {
+    "ru": "Пятеро сотрудников похоронного дома «Вейл» — слуги Собирателей в третьем поколении, от неполных шестидесяти до почти семидесяти лет. Поклоняющиеся упырям прислужники, надеющиеся обрести бессмертие: они либо станут упырями, либо обретут своего рода бессмертие, будучи съеденными упырями. Этот же профиль — у Венди Фолдс.",
+    "en": null
+  },
+  "legend": {
+    "ru": "В склепе пятеро сидят у стен и аккуратно снимают длинные полосы кожи с конечностей Элизы Дафферин. Если сыщиков застали врасплох и напали, люди (кроме Венди Фолдс) сдаются, потеряв не менее половины ПЗ. Если упыри прогонят сыщиков, слуги уходят с ними в туннели, унося кости, а если успеют — и тела Хранилищ.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 62,
+      "printed_page": 61,
+      "method": "book_text",
+      "verified": true,
+      "note": "сценарий «Bone Deep»: «Human Servants» — статблок"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 61,
+      "printed_page": 60,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Sepulcher», «Reaction»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.build",
+      "printed": "Build: 1",
+      "expected": "0",
+      "note": "СИЛ 50 + ТЕЛ 60 = 110: по таблице БкУ нет и Комплекция 0; напечатанное «Damage bonus: none» с этим согласно, Комплекция 1 — нет. Оставлено как напечатано (Р-161).",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "editorial_text",
+      "parse_uncertain"
+    ],
+    "notes": "Скорость 5 — с возрастной поправкой (60–69 лет: 8 − 3), не опечатка. Групповой профиль (Р-74): имена придуманы (Р-151), в книге — «funeral home employees». Национальность — американцы. Урон драки 1d4+2+БкУ — как напечатано. Русский текст — по рабочему переводу владельца (2_Обработка/fears-sharp-little-needles/document.html), сверен с английским оригиналом; числа — по английской странице."
+  }
+}

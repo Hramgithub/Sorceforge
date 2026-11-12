@@ -1,0 +1,395 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "fears-sharp-little-needles-en/character/phlebotomy-frank-phelps",
+  "kind": "character",
+  "name": {
+    "ru": "Фрэнк Фелпс",
+    "en": "Frank Phelps"
+  },
+  "aliases": [
+    "Фрэнсис Малхолланд",
+    "Francis Mulholland",
+    "Wuxie Pharma Enforcer (Frank)",
+    "силовик «Вуся Фарма»"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "«решатель проблем», частный детектив; бывший сотрудник контрразведки DIA",
+    "en": "problem solver; retired counterintelligence agent"
+  },
+  "occupation_ref": "coc:occupation:chastnyy-syshchik",
+  "age": {
+    "raw": "47",
+    "value": 47
+  },
+  "sex": "мужской",
+  "residence": "квартира на втором этаже охраняемой высотки, Лос-Анджелес",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "fears-sharp-little-needles-en/character/phlebotomy-jen-jenkins",
+      "note": "нанят через Джен Дженкинс («Вуся Фарма»)",
+      "note_back": "подрядчик, следит за Лондон"
+    },
+    {
+      "type": "knows",
+      "target": "fears-sharp-little-needles-en/character/phlebotomy-lori-brown",
+      "note": "напарница; связь по шифрованной почте и одноразовым телефонам",
+      "note_back": "напарник; знает его со времён контрразведки"
+    },
+    {
+      "type": "knows",
+      "target": "fears-sharp-little-needles-en/character/phlebotomy-jules-thomas",
+      "note": "купил у него записи за 1 млн долларов",
+      "note_back": "покупатель записей"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "75",
+        "value": 75
+      },
+      "CON": {
+        "raw": "75",
+        "value": 75
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "APP": {
+        "raw": "60",
+        "value": 60
+      },
+      "INT": {
+        "raw": "75",
+        "value": 75
+      },
+      "POW": {
+        "raw": "65",
+        "value": 65
+      },
+      "EDU": {
+        "raw": "65",
+        "value": 65
+      }
+    },
+    "hp": {
+      "raw": "14",
+      "value": 14
+    },
+    "sanity": {
+      "raw": "40",
+      "value": 40,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d3+БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Стрельба (дробовик)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "4d6/2d6/1d6",
+          "dice": "4d6/2d6/1d6",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:shotgun-12-gauge-semi-auto",
+        "notes": "2 выстрела за раунд, дальность 10/20/50 м, осечка 00, ёмкость 5."
+      }
+    ],
+    "dodge": {
+      "raw": "50% (25/10)",
+      "value": 50,
+      "half": 25,
+      "fifth": 10
+    },
+    "skills": [
+      {
+        "name": "Работа с компьютером",
+        "skill": "coc:skill:computer-use",
+        "value": {
+          "raw": "33%",
+          "value": 33,
+          "half": 16,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Вождение автомобиля",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Язык (арабский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "Арабский",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Язык (английский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "Английский",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Работа в библиотеке",
+        "skill": "coc:skill:library-use",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Оккультизм",
+        "skill": "coc:skill:occult",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Выживание (пустыня)",
+        "skill": "coc:skill:survival",
+        "specialization": "Пустыня",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Ремесло (подделка)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "Подделка",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      }
+    ],
+    "spells": {
+      "raw": "нет",
+      "items": []
+    }
+  },
+  "background": {
+    "description": "Белый мужчина около пятидесяти, в джинсах, рубашке-поло и бейсболке. Образование — бакалавр политологии, Университет штата Вашингтон.",
+    "ideology": "Искренне считает своё дело правым: Лондон — нечеловеческое чудовище. Узкое, ортодоксальное представление о «человечности»; ксенофоб, расист и женоненавистник (это проявляется, когда он расслабится).",
+    "traits": "Проныра и наёмник, но не хладнокровный убийца, хотя безжалостен. Проверки Психологии проходит невозмутимо — он говорит правду, только не всю.",
+    "secret": "Настоящее имя — Фрэнсис Малхолланд, бывший агент контрразведки Разведывательного управления Министерства обороны (DIA). Личность «Фрэнка Фелпса» — подделка двухлетней давности (Ремесло (подделка) 40%: проверка Оценки против него показывает пробелы). Работает на «Вуся Фарма» и не говорит об этом."
+  },
+  "description": {
+    "ru": "Подрядчик «Вуся Фарма», годами следящий за Лондон Синклер; утром в субботу заглядывает в зал ожидания «КвикЛаб» («ой, не тот кабинет») и снимает бегство Лондон. Ездит на своей машине, чтобы спровоцировать Лондон. Ищет сыщиков сам, особенно частного детектива с репутацией оккультиста, называет себя бывшим госслужащим и частным детективом, «исследователем странного», и предлагает союз; хочет, чтобы полиция и/или оккультисты травили Лондон, но «ничего незаконного». Против убийства Клека: если в этот момент он с сыщиками, то искренне поражён и тут же жестоко ссорится с Лори. Медлит убивать мешающих сыщиков, пока не уверен в успехе и безнаказанности.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Нанят «Вуся Фарма» через Джен Дженкинс следить за Лондон и копать компромат; купил у Джулза Томаса за 1 000 000 долларов полную секс-запись, запись с проводной камеры и рубашку, на которую плюнула Лондон. Под псевдонимом «Роуз Сент-Клэр» отправил слюну Лондон на сайт FindYourFamily.com и получил письмо от CDC. После бойни в Кливленде вместе с Лори ведёт газлайтинг Лондон, чтобы загнать её в клинику Фергюсона, где её убьют. Если Лори схвачена или убита, проверка её знакомых по контрразведке раскрывает его настоящее имя.",
+    "en": null
+  },
+  "possessions": [
+    "одноразовый телефон",
+    "ноутбук с папкой «Проект “Газлайт”»",
+    "аннотированный экземпляр запрещённого первого черновика «Легенд и фольклора Аппалачей»",
+    "запись с проводной камеры и полная секс-запись",
+    "фото с места преступления",
+    "письмо CDC"
+  ],
+  "sources": [
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 176,
+      "printed_page": 175,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «WUXIE PHARMA ENFORCERS (Frank and Lori)»: Frank"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 150,
+      "printed_page": 149,
+      "method": "book_text",
+      "verified": true,
+      "note": "~7:24am: Фрэнк заглядывает в лабораторию"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 153,
+      "printed_page": 152,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Wuxie Pharmaceuticals and Their Actions»"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 154,
+      "printed_page": 153,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Frank Phelps Reaches Out», «Investigating Frank Phelps», «What Frank Knows»"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 155,
+      "printed_page": 154,
+      "method": "book_text",
+      "verified": true,
+      "note": "его доводы; «The Theme…»"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 168,
+      "printed_page": 167,
+      "method": "book_text",
+      "verified": true,
+      "note": "настоящее имя через Лори"
+    }
+  ],
+  "corrections": [
+    {
+      "field": "statblock.skills[Ремесло (подделка)]",
+      "from": null,
+      "to": "40%",
+      "reason": "вывод из текста (Р-41): «An Appraise check made against his Craft (Forgery) skill of 40%» (с. 153); в статблоке навыка нет",
+      "ref": "Р-41"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — по рабочему переводу владельца (2_Обработка/fears-sharp-little-needles/document.html), сверен с английским оригиналом; числа — по английской странице. В строке дробовика книга не даёт половину и пятую («50%,») — посчитаны (Р-35)."
+  }
+}

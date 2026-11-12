@@ -1,0 +1,364 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "fears-sharp-little-needles-en/character/phlebotomy-adam-ferguson",
+  "kind": "character",
+  "name": {
+    "ru": "Доктор Адам Фергюсон",
+    "en": "Dr. Adam Ferguson, Blackmail Victim and Sadist"
+  },
+  "aliases": [
+    "Фергюсон",
+    "жертва шантажа и садист"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "психиатр, владелец клиники Фергюсона",
+    "en": "M.D. (Psychiatry)"
+  },
+  "occupation_ref": "coc:occupation:psikhiatr",
+  "age": {
+    "raw": "55",
+    "value": 55
+  },
+  "sex": "мужской",
+  "residence": "клиника Фергюсона под Бетти, Техас (спальня при кабинете); загородные дома в нескольких странах",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "fears-sharp-little-needles-en/character/phlebotomy-lori-brown",
+      "note": "шантажом вынужден служить заговору «Вуся Фарма»; разговор с ним вела Лори",
+      "note_back": "шантажом завербованный владелец клиники"
+    },
+    {
+      "type": "knows",
+      "target": "fears-sharp-little-needles-en/character/phlebotomy-frank-phelps",
+      "note": "сообщник по заговору",
+      "note_back": "сообщник по заговору"
+    },
+    {
+      "type": "knows",
+      "target": "fears-sharp-little-needles-en/character/phlebotomy-sven-berglowe",
+      "note": "охранник клиники и полицейский города",
+      "note_back": "работодатель"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "65",
+        "value": 65
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "40",
+        "value": 40
+      },
+      "APP": {
+        "raw": "60",
+        "value": 60
+      },
+      "INT": {
+        "raw": "85",
+        "value": 85
+      },
+      "POW": {
+        "raw": "60",
+        "value": 60
+      },
+      "EDU": {
+        "raw": "85",
+        "value": 85
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "sanity": {
+      "raw": "0",
+      "value": 0,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "6",
+      "value": 6,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 6
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "1d3+БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Стрельба (пистолет)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d10",
+          "dice": "1d10",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:38-automatic",
+        "notes": "Автоматический пистолет .38: 1 или 3 выстрела за раунд, дальность 15 м, осечка 99, ёмкость 8."
+      }
+    ],
+    "dodge": {
+      "raw": "50% (25/10)",
+      "value": 50,
+      "half": 25,
+      "fifth": 10
+    },
+    "skills": [
+      {
+        "name": "Работа с компьютером",
+        "skill": "coc:skill:computer-use",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Вождение автомобиля",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Язык (английский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "Английский",
+        "value": {
+          "raw": "85%",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Психоанализ",
+        "skill": "coc:skill:psychoanalysis",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Наука (фармакология)",
+        "skill": "coc:skill:science",
+        "specialization": "Фармакология",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      }
+    ],
+    "spells": {
+      "raw": "нет",
+      "items": []
+    }
+  },
+  "background": {
+    "description": "Полный белый мужчина, психотерапевт с хорошей репутацией и без судимостей; держится предельно собранно, почти невозмутимо. Не женат, признанных детей нет.",
+    "traits": "Особенно умеет успокаивать людей; трудоголик. Слабый, садистский и развращённый человек; Лондон ему никогда не нравилась.",
+    "phobias_manias": "Длительное безумие: садист.",
+    "secret": "Садист и серийный убийца из международного «кружка пыток ради удовольствия»; в тайной операционной под клиникой устраивает «вечеринки», в сейфе под кроватью — видео и «сувениры». Шантажом вынужден устроить Лондон смертельный «несчастный случай»."
+  },
+  "description": {
+    "ru": "Единственный врач клиники Фергюсона; спальня — при его кабинете на первом этаже. Если не в отпуске (редко) и не у друзей на записываемых на видео садистских сборищах (часто), он в клинике и работает. Благонамеренных сыщиков без ордера не принимает: нарушителей арестуют и/или застрелят; правоохранителей — только в рабочие часы и только в кабинете, без экскурсий и сведений о пациентах; угрозы карантина CDC — «приходите с судебным постановлением», но такая угроза ускоряет его план избавиться от Лондон. Проверка Красноречия может заставить его (или персонал) проговориться. Если сыщики не из полиции найдут его тайник, он попытается их убить (возможно, с Фрэнком и Лори). Если Берглоу встанет на сторону сыщиков, Фергюсон стреляет ему в спину.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Чанги с помощью Фрэнка и Лори взломали его личный ноутбук в поисках махинаций с рецептами или страховкой и нашли улики его участия в «кружке пыток ради удовольствия». Лори предложила сделку: устроит Лондон смертельный несчастный случай — о прошлом забудут (а если захочет, может отдать её друзьям для вивисекции); иначе — «в Техасе людей действительно казнят». Он согласился, не зная, сколько у него противников. Передача Фергюсона правосудию — +1d6 Рассудка.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 176,
+      "printed_page": 175,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «DR. ADAM FERGUSON, Blackmail Victim and Sadist»"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 170,
+      "printed_page": 169,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Dr. Adam Ferguson»"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 166,
+      "printed_page": 165,
+      "method": "book_text",
+      "verified": true,
+      "note": "«London by Gaslight»: шантаж"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 167,
+      "printed_page": 166,
+      "method": "book_text",
+      "verified": true,
+      "note": "окончание: сделка с Лори"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 173,
+      "printed_page": 172,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Ferguson’s Office», «The Secret Operating Theater»"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 175,
+      "printed_page": 174,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Rewards and Repercussions»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "age",
+      "printed": "55 (статблок, с. 175)",
+      "expected": null,
+      "note": "В тексте «Dr. Adam Ferguson» (с. 169) он «sixty-year-old» — шестидесятилетний; в статблоке — 55. Оставлено как в статблоке.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — по рабочему переводу владельца (2_Обработка/fears-sharp-little-needles/document.html), сверен с английским оригиналом; числа — по английской странице."
+  }
+}

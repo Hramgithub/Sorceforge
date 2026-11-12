@@ -1,0 +1,397 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "fears-sharp-little-needles-en/character/phlebotomy-jess-bell",
+  "kind": "character",
+  "name": {
+    "ru": "Джесс Белл",
+    "en": "Jess Bell, Kissin’ Cousin"
+  },
+  "aliases": [
+    "«любимый кузен»",
+    "Kissin’ Cousin"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "телохранитель и помощник Лондон Синклер; культист",
+    "en": "cousin, bodyguard, and factotum"
+  },
+  "age": {
+    "raw": "35",
+    "value": 35
+  },
+  "sex": "мужской",
+  "residence": "рядом с Лондон Синклер",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "relative_of",
+      "target": "fears-sharp-little-needles-en/character/separation-james-farnsworth",
+      "note": "отец (Патриарх)",
+      "note_back": "сын — Джесс Белл, приставлен к Лондон («Флеботомия»)"
+    },
+    {
+      "type": "works_for",
+      "target": "fears-sharp-little-needles-en/character/separation-james-farnsworth",
+      "note": "послан Патриархом опекать Лондон; по его приказу убил Синклеров",
+      "note_back": "исполнитель, «пастух» Лондон"
+    },
+    {
+      "type": "knows",
+      "target": "fears-sharp-little-needles-en/character/phlebotomy-jules-thomas",
+      "note": "знает, что у Джулза есть запись из лимузина",
+      "note_back": "«этот идиот», чей телефон он превратил в зомби-устройство"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "90",
+        "value": 90
+      },
+      "CON": {
+        "raw": "90",
+        "value": 90
+      },
+      "SIZ": {
+        "raw": "90",
+        "value": 90
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "APP": {
+        "raw": "60",
+        "value": 60
+      },
+      "INT": {
+        "raw": "55",
+        "value": 55
+      },
+      "POW": {
+        "raw": "65",
+        "value": 65
+      },
+      "EDU": {
+        "raw": "55",
+        "value": 55
+      }
+    },
+    "hp": {
+      "raw": "18",
+      "value": 18
+    },
+    "sanity": {
+      "raw": "0",
+      "value": 0,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d6",
+      "value": "1d6"
+    },
+    "build": {
+      "raw": "2",
+      "value": 2
+    },
+    "move": {
+      "raw": "9 (немного быстрее обычного человека)",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d3+БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Стрельба (дробовик)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "4d6/2d6/1d6",
+          "dice": "4d6/2d6/1d6",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:shotgun-12-gauge-semi-auto",
+        "notes": "2 выстрела за раунд, дальность 10/20/50 м, осечка 00, ёмкость 5."
+      }
+    ],
+    "dodge": {
+      "raw": "50% (25/10)",
+      "value": 50,
+      "half": 25,
+      "fifth": 10
+    },
+    "skills": [
+      {
+        "name": "Ремесло (сельское хозяйство)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "Сельское хозяйство",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "10%",
+          "value": 10,
+          "half": 5,
+          "fifth": 2
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "05%",
+          "value": 5,
+          "half": 2,
+          "fifth": 1
+        }
+      },
+      {
+        "name": "Вождение автомобиля",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Язык (английский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "Английский",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Механика",
+        "skill": "coc:skill:mechanical-repair",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Оккультизм",
+        "skill": "coc:skill:occult",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Управление тяжёлыми машинами (трактор)",
+        "skill": "coc:skill:heavy-machinery",
+        "specialization": "Трактор",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Естествознание",
+        "skill": "coc:skill:natural-world",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Выживание (лес)",
+        "skill": "coc:skill:survival",
+        "specialization": "Лес",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      }
+    ],
+    "spells": {
+      "raw": "нет",
+      "items": []
+    }
+  },
+  "abilities": [
+    {
+      "name": "Защита",
+      "summary": "Получает минимальный урон от огнестрельного оружия и режущих/колющих атак и, если не убит, отращивает конечности и утраченные части тела — по 1 ПЗ в день; от тупого оружия получает двойной урон. Потери Рассудка при виде его нет.",
+      "raw": "Defenses: Takes minimum damage from firearms and cutting/piercing attacks, and will eventually regenerate limbs and lost body parts at the rate of 1 HP per day unless killed, but takes double damage from blunt instruments. Sanity Loss: none."
+    },
+    {
+      "name": "Неуязвим к допросу",
+      "summary": "Полностью невосприимчив к Запугиванию и пыткам (как «полноценный» член клана, даже получает от них удовольствие).",
+      "raw": "He is utterly immune to Intimidation or torture (which, as a “core” Farnsworth/Bell clan member, he rather enjoys)."
+    }
+  ],
+  "background": {
+    "description": "Огромный внушительный мужик ростом около 198 см и весом около 127 кг, штангист в золотых цепях и кольцах; все признаки синдрома Фарнсуорта—Белл, но совсем не тощий эктоморф. Изображает немолодого пляжного громилу, говорит с аппалачским акцентом.",
+    "traits": "Хорошие социальные навыки; вежлив с теми, у кого есть проекты для Лондон, нетерпим к вопросам о её личной жизни. Безжалостный безумный культист: «свой» или «чужак». Оружия боится меньше обычного — знает, что пули Фарнсуортам почти не вредят.",
+    "phobias_manias": "Длительное безумие: психопатический убийца.",
+    "secret": "Единокровный брат Лондон (оба — дети Патриарха) и её любовник. По приказу Патриарха испортил тормоза Синклеров и на пикапе с номерами Огайо перекрыл дорогу грузовику. Приносил людей в жертву в семейном саду и ел их останки. Это он бормочет песнопение плодородия «Тому, Кто Ходит за Рядами» на секс-записи."
+  },
+  "description": {
+    "ru": "«Двоюродный брат», телохранитель, любовник и привратник Лондон Синклер; 35 лет. Его задача — помогать ей делать всё, что она хочет, и беречь её; о Мифах и культе он ей ни слова не говорит. Все запросы к Лондон проходят через её агентство «Вспышка славы», а затем через Джесса. Намёки на Мифы его не трогают, но вопросы о семье Фарнсуортов—Белл, её истории и медицинских странностях заставляют его вздрогнуть и оборвать разговор; вопрос, спит ли он с Лондон (спит), ведёт как минимум к драке — тогда при успешной проверке Красноречия или Удачи он выпалит про «ублюдка Джулза Томаса». Полицию без ордера вежливо отсылает к адвокатам и ускоряет план отправить Лондон в клинику. Если Лондон «убита», ему важнее собрать тело и все его части.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Патриарх отправил его внедриться в жизнь Лондон, когда она начала становиться знаменитой. Он устроил аварию, в которой погибли её приёмные родители, — чтобы сделать её эмоционально уязвимой и занять место рядом; Лондон этого не подозревает. Появлялся в нескольких сценах шоу «Лондон падает»; отгоняет папарацци (уголовные дела о нападении), угрожал убить Джи-Рекса. В клинике Фергюсона живёт в смежной с Лондон комнате, вооружён вопреки правилам, бегает по её поручениям. Устранение Джесса — +1d3 Рассудка.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 176,
+      "printed_page": 175,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «JESS BELL, Kissin’ Cousin»"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 149,
+      "printed_page": 148,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Who’s in the Waiting Room?»: внешность"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 158,
+      "printed_page": 157,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Interview, Jess Bell»"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 155,
+      "printed_page": 154,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Theme and How to Highlight It»"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 172,
+      "printed_page": 171,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Interview, Jess Bell» в клинике"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 175,
+      "printed_page": 174,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Rewards and Repercussions»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.move",
+      "printed": "9 (slightly faster than normal human)",
+      "expected": "8",
+      "note": "При СИЛ 90 = ТЕЛ 90 и ЛВК 60 < ТЕЛ по правилам Скорость 8; книга нарочно даёт 9 (задумано, Р-76).",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — по рабочему переводу владельца (2_Обработка/fears-sharp-little-needles/document.html), сверен с английским оригиналом; числа — по английской странице. Рост и вес — 6’6” и 280 фунтов (с. 148), переведены в метрические."
+  }
+}

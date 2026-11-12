@@ -1,0 +1,320 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "fears-sharp-little-needles-en/character/phlebotomy-sven-berglowe",
+  "kind": "character",
+  "name": {
+    "ru": "Свен «Док» Берглоу",
+    "en": "Sven Berglowe, Well Intentioned Police Officer"
+  },
+  "aliases": [
+    "Берглоу",
+    "офицер Берглоу",
+    "Sven “Doc” Berglowe",
+    "доброжелательный полицейский"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "единственный полицейский Бетти и охранник клиники Фергюсона",
+    "en": "police officer / security guard"
+  },
+  "occupation_ref": "coc:occupation:patrulnyy-politseyskiy",
+  "age": {
+    "raw": "49",
+    "value": 49
+  },
+  "sex": "мужской",
+  "residence": "рядом с клиникой Фергюсона, Бетти, Техас",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "fears-sharp-little-needles-en/character/phlebotomy-adam-ferguson",
+      "note": "охранник его клиники",
+      "note_back": "охранник клиники"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "65",
+        "value": 65
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "55",
+        "value": 55
+      },
+      "POW": {
+        "raw": "65",
+        "value": 65
+      },
+      "EDU": {
+        "raw": "60",
+        "value": 60
+      }
+    },
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "sanity": {
+      "raw": "65",
+      "value": 65,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d3+БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Стрельба (дробовик)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "4d6/2d6/1d6",
+          "dice": "4d6/2d6/1d6",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:shotgun-12-gauge-semi-auto",
+        "notes": "2 выстрела за раунд, дальность 10/20/50 м, осечка 00, ёмкость 5."
+      }
+    ],
+    "dodge": {
+      "raw": "50% (25/10)",
+      "value": 50,
+      "half": 25,
+      "fifth": 10
+    },
+    "skills": [
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Уклонение",
+        "skill": "coc:skill:dodge",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Вождение автомобиля",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Язык (испанский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "Испанский",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Язык (английский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "Английский",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Юриспруденция",
+        "skill": "coc:skill:law",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Механика",
+        "skill": "coc:skill:mechanical-repair",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Естествознание",
+        "skill": "coc:skill:natural-world",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      }
+    ]
+  },
+  "background": {
+    "description": "Образование — степень младшего специалиста по уголовной юстиции, Северо-Восточный техасский общественный колледж (NTCC).",
+    "traits": "В целом благонамеренный; настоящий полицейский, не боится арестовать или застрелить тех, кто заслужил; к взломщикам клиники нетерпим. Инстинктивно — посредник и миротворец."
+  },
+  "description": {
+    "ru": "Единственный полицейский городка Бетти, одновременно охранник клиники Фергюсона; полицейский участок фактически работает из его кабинета в клинике, туда же идут звонки 911. В смену (8:00–18:00) сидит в будке у ворот; в остальное время живёт рядом и прибывает по вызову или по сигналу тревоги на телефон вооружённым за 10 минут. Подкрепление из соседних городков или техасские рейнджеры — минимум через 30 минут. О садизме и планах Фергюсона ничего не знает; увидев тайную операционную, побледнеет и поможет арестовать. Его легко выманить, устроив где-нибудь в Бетти чрезвычайное происшествие. Правоохранители могут убедить его (проверка Убеждения; остальным — трудная со штрафной костью), что Лондон в опасности, — тогда Фергюсон стреляет ему в спину.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 177,
+      "printed_page": 176,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «SVEN BERGLOWE, Well Intentioned Police Officer»"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 170,
+      "printed_page": 169,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Ferguson Clinic»: Берглоу"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 174,
+      "printed_page": 173,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Involving Berglowe?»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — по рабочему переводу владельца (2_Обработка/fears-sharp-little-needles/document.html), сверен с английским оригиналом; числа — по английской странице. ПЗ напечатаны без подписи (после Рассудка 65 стоит просто «13») — подпись восстановлена молча."
+  }
+}

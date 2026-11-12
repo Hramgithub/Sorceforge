@@ -1,0 +1,110 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "kogda-zlo-pobezhdaet-ru/scene/obysk-osobnyaka",
+  "kind": "scene",
+  "name": {
+    "ru": "Расследование: обыск особняка",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Больше кошмаров обнаруживается во время обыска дома — запрашивайте подходящие проверки Рассудка. Собаку семейства зарезали и оставили лежать на кухне. Милфорд мёртв: он получил несколько ножевых ранений и помещён в боковую комнату. В спальне — кучки одежды вместе с кошельками, сумочками и удостоверениями личности: культисты совершали церемонию призыва «в небесных одеждах» (обнажёнными). На вид они обычные жители близлежащего городка, всего 15 человек.\nПроницательные сыщики замечают, что младшая дочь ценилась семьёй больше, чем старшая: Эрику можно заметить лишь на малом количестве семейных фотографий; её комната мала и скудно обставлена по сравнению с более просторной спальней Мелинды, в которой есть даже отдельная ванная комната.\nВ кабинете Милфорда можно обнаружить бухгалтерскую книгу семейства с долгой историей выплат за лечение Терезы у различных психологов. В мастерской Терезы (она профессиональный фотограф) — самые разные фотографии: на многих запечатлена Мелинда, на нескольких других — лесистый пруд, а на нескольких — группа обнажённых людей, поющих и танцующих на фоне пруда.",
+    "en": null
+  },
+  "when": "После прибытия, пока Мелинда ещё в доме",
+  "arc": {
+    "scenario": "kogda-zlo-pobezhdaet-ru/scenario/kogda-zlo-pobezhdaet",
+    "part": "Расследование",
+    "order": 2
+  },
+  "where": [
+    {
+      "location": "kogda-zlo-pobezhdaet-ru/location/osobnyak-torpa",
+      "note": null
+    },
+    {
+      "location": "kogda-zlo-pobezhdaet-ru/location/kukhnya",
+      "note": "собака"
+    },
+    {
+      "location": "kogda-zlo-pobezhdaet-ru/location/bokovaya-komnata",
+      "note": "Милфорд"
+    },
+    {
+      "location": "kogda-zlo-pobezhdaet-ru/location/spalnya-s-odezhdoy",
+      "note": "одежда"
+    },
+    {
+      "location": "kogda-zlo-pobezhdaet-ru/location/komnata-eriki",
+      "note": null
+    },
+    {
+      "location": "kogda-zlo-pobezhdaet-ru/location/spalnya-melindy",
+      "note": null
+    },
+    {
+      "location": "kogda-zlo-pobezhdaet-ru/location/kabinet-milforda",
+      "note": "бухгалтерская книга"
+    },
+    {
+      "location": "kogda-zlo-pobezhdaet-ru/location/masterskaya-terezy",
+      "note": "фотографии"
+    }
+  ],
+  "participants": [
+    {
+      "id": "kogda-zlo-pobezhdaet-ru/character/milford-torp",
+      "role": "тело"
+    }
+  ],
+  "mechanics": {
+    "ru": "Проверки Рассудка за находки (величины книга не даёт). Внимание или Психология — младшую дочь ценили больше старшей. Работа в библиотеке в кабинете — бухгалтерская книга.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Фотографии пруда пригодятся в лесу; следы культистов — на заднем дворе («Следы и лес»).",
+    "en": null
+  },
+  "refs": [
+    "kogda-zlo-pobezhdaet-ru/item/odezhda-kultistov",
+    "kogda-zlo-pobezhdaet-ru/item/semeynye-fotografii",
+    "kogda-zlo-pobezhdaet-ru/item/bukhgalterskaya-kniga",
+    "kogda-zlo-pobezhdaet-ru/item/fotografii-terezy",
+    "kogda-zlo-pobezhdaet-ru/character/kultisty",
+    "kogda-zlo-pobezhdaet-ru/character/erika-torp",
+    "kogda-zlo-pobezhdaet-ru/character/tereza-torp",
+    "coc:skill:spot-hidden",
+    "coc:skill:psychology",
+    "coc:skill:library-use",
+    "coc:rule:sanity-loss"
+  ],
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "kogda-zlo-pobezhdaet-ru",
+      "physical_page": 1,
+      "printed_page": 1,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Расследование»"
+    },
+    {
+      "book_id": "kogda-zlo-pobezhdaet-ru",
+      "physical_page": 2,
+      "printed_page": 2,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Расследование»: фотографии"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

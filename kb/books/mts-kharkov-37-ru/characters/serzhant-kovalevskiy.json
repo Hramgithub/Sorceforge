@@ -1,0 +1,329 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "mts-kharkov-37-ru/character/serzhant-kovalevskiy",
+  "kind": "character",
+  "name": {
+    "ru": "Сержант Ковалевский",
+    "en": null
+  },
+  "aliases": [],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "сержант Красной Армии, командир отряда Б",
+    "en": null
+  },
+  "occupation_ref": "coc:occupation:soldat",
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "1930s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "mts-kharkov-37-ru/character/grigoriy-fedorov",
+      "note": "командир",
+      "note_back": "сержант отряда Б"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "55",
+        "value": 55
+      },
+      "CON": {
+        "raw": "55",
+        "value": 55
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "45",
+        "value": 45
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "75",
+        "value": 75
+      },
+      "POW": {
+        "raw": "35",
+        "value": 35
+      },
+      "EDU": {
+        "raw": "30",
+        "value": 30
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "sanity": {
+      "raw": "35",
+      "value": 35,
+      "max": null
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Удар",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Драка",
+        "chance": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        },
+        "damage": {
+          "raw": "1d3 + БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Штык",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Драка",
+        "chance": {
+          "raw": "—",
+          "value": null,
+          "half": null,
+          "fifth": null
+        },
+        "damage": {
+          "raw": "1d6+1 + БкУ",
+          "dice": "1d6+1",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:bayonet",
+        "notes": "шанс в книге не указан"
+      },
+      {
+        "name": {
+          "ru": "Пистолет Туламаш-Наган М-1895",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Стрельба из пистолета",
+        "chance": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d10",
+          "dice": "1d10",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:32-revolver"
+      },
+      {
+        "name": {
+          "ru": "Винтовка Мосин-Наган М-1891",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Стрельба из винтовки",
+        "chance": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "2d6+4",
+          "dice": "2d6+4",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:mosin-1891-30"
+      }
+    ],
+    "dodge": {
+      "raw": "½ ЛВК +10% (32%)",
+      "value": 32,
+      "half": 16,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Стрельба из винтовки",
+        "skill": "coc:skill:firearms",
+        "specialization": "Винтовка",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Стрельба из пистолета",
+        "skill": "coc:skill:firearms",
+        "specialization": "Пистолет",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Внимательность",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Механика",
+        "skill": "coc:skill:mechanical-repair",
+        "value": {
+          "raw": "20%",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Электрика",
+        "skill": "coc:skill:electrical-repair",
+        "value": {
+          "raw": "10%",
+          "value": 10,
+          "half": 5,
+          "fifth": 2
+        }
+      },
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Стрельба из пулемета",
+        "skill": "coc:skill:firearms",
+        "specialization": "Пулемёт",
+        "value": {
+          "raw": "20%",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Драка",
+        "skill": "coc:skill:fighting",
+        "specialization": "Драка",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Вождение",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Командир отряда Б. Моложе Блочинцева и несколько амбициознее; склонен притворяться послушным, замышляя интриги против начальства, и из двух сержантов скорее поднимет мятеж — игроки-офицеры Красной Армии знают о его склонности. Федоров считает его умным, но склонным к обману и непослушанию; Любимову нравится подкидывать цели для его «жалких игр».",
+    "en": null
+  },
+  "legend": {
+    "ru": "Хранителю советуют говорить с войсками через двух сержантов. Единственный из сержантов водит машину (Вождение 25%). Навыки сержантов: Стрельба из винтовки 60%, Стрельба из пистолета 40%, Внимательность 35%, Механика 20%, Электрика 10%, Первая помощь 40%, Стрельба из пулемета 20%, Уклонение (½ ЛВК) +10%, Драка 75%, Убеждение 45%, Вождение 25% (только Ковалевский).",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "mts-kharkov-37-ru",
+      "physical_page": 52,
+      "printed_page": 52,
+      "method": "book_text",
+      "verified": true,
+      "note": "таблица «Отряд Б»"
+    },
+    {
+      "book_id": "mts-kharkov-37-ru",
+      "physical_page": 53,
+      "printed_page": 53,
+      "method": "book_text",
+      "verified": true,
+      "note": "навыки сержантов"
+    },
+    {
+      "book_id": "mts-kharkov-37-ru",
+      "physical_page": 40,
+      "printed_page": 40,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Работа с войсками»: сержанты"
+    },
+    {
+      "book_id": "mts-kharkov-37-ru",
+      "physical_page": 78,
+      "printed_page": 78,
+      "method": "book_text",
+      "verified": true,
+      "note": "лист Федорова"
+    },
+    {
+      "book_id": "mts-kharkov-37-ru",
+      "physical_page": 80,
+      "printed_page": 80,
+      "method": "book_text",
+      "verified": true,
+      "note": "лист Любимова"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Уклонение — ½ ЛВК + 10% по тексту навыков (вычислено)."
+  }
+}

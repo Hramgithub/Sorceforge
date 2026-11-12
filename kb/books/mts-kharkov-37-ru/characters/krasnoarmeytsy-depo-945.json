@@ -1,0 +1,1221 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "mts-kharkov-37-ru/character/krasnoarmeytsy-depo-945",
+  "kind": "character",
+  "name": {
+    "ru": "Красноармейцы депо 945",
+    "en": null
+  },
+  "aliases": [
+    "Красноармейцы",
+    "Отряд А",
+    "Отряд Б"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "рядовой Красной Армии",
+  "occupation": {
+    "ru": "рядовые Красной Армии",
+    "en": null
+  },
+  "occupation_ref": "coc:occupation:soldat",
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "1930s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "mts-kharkov-37-ru/character/serzhant-blochintsev",
+      "note": "командир отряда А",
+      "note_back": "отряд А"
+    },
+    {
+      "type": "works_for",
+      "target": "mts-kharkov-37-ru/character/serzhant-kovalevskiy",
+      "note": "командир отряда Б",
+      "note_back": "отряд Б"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {},
+    "hp": {
+      "raw": "см. варианты",
+      "value": null
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Удар",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Драка",
+        "chance": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d3 + БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Штык",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Драка",
+        "chance": {
+          "raw": "—",
+          "value": null,
+          "half": null,
+          "fifth": null
+        },
+        "damage": {
+          "raw": "1d6+1 + БкУ",
+          "dice": "1d6+1",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:bayonet",
+        "notes": "шанс в книге не указан (вероятно, Драка 60%)"
+      },
+      {
+        "name": {
+          "ru": "Винтовка Мосин-Наган М-1891",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Стрельба из винтовки",
+        "chance": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "2d6+4",
+          "dice": "2d6+4",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:mosin-1891-30"
+      },
+      {
+        "name": {
+          "ru": "Пулемёт Туламаш-Максим М-1890",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Стрельба из пулемета",
+        "chance": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "2d6+4",
+          "dice": "2d6+4",
+          "adds_db": false
+        },
+        "notes": "55% у пулемётчика, 35% у помощника; пулемёт на штативе, с водяным охлаждением, обслуживают двое; 250 патронов; неисправность 99"
+      },
+      {
+        "name": {
+          "ru": "Пистолет Туламаш-Наган М-1895",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": null,
+        "chance": {
+          "raw": "—",
+          "value": null,
+          "half": null,
+          "fifth": null
+        },
+        "damage": {
+          "raw": "1d10",
+          "dice": "1d10",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:32-revolver",
+        "notes": "указан в списке атак; навыка стрельбы из пистолета у рядовых нет"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Стрельба из винтовки",
+        "skill": "coc:skill:firearms",
+        "specialization": "Винтовка",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Механика",
+        "skill": "coc:skill:mechanical-repair",
+        "value": {
+          "raw": "15% (водители 50%)",
+          "value": 15,
+          "half": 7,
+          "fifth": 3
+        }
+      },
+      {
+        "name": "Электрика",
+        "skill": "coc:skill:electrical-repair",
+        "value": {
+          "raw": "25% (только водители)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Стрельба из пулемета",
+        "skill": "coc:skill:firearms",
+        "specialization": "Пулемёт",
+        "value": {
+          "raw": "55/35% (только стрелок/помощник)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Драка",
+        "skill": "coc:skill:fighting",
+        "specialization": "Драка",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      }
+    ]
+  },
+  "variants": [
+    {
+      "label": "Отряд А: р. Чаган (пулеметчик)",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "80",
+            "value": 80
+          },
+          "CON": {
+            "raw": "35",
+            "value": 35
+          },
+          "SIZ": {
+            "raw": "60",
+            "value": 60
+          },
+          "DEX": {
+            "raw": "75",
+            "value": 75
+          },
+          "APP": {
+            "raw": "60",
+            "value": 60
+          },
+          "INT": {
+            "raw": "70",
+            "value": 70
+          },
+          "POW": {
+            "raw": "60",
+            "value": 60
+          },
+          "EDU": {
+            "raw": "20",
+            "value": 20
+          }
+        },
+        "hp": {
+          "raw": "10",
+          "value": 10
+        },
+        "sanity": {
+          "raw": "60",
+          "value": 60,
+          "max": null
+        },
+        "dodge": {
+          "raw": "37%",
+          "value": 37,
+          "half": 18,
+          "fifth": 7
+        }
+      }
+    },
+    {
+      "label": "Отряд А: р. Исаков (механик)",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "65",
+            "value": 65
+          },
+          "CON": {
+            "raw": "55",
+            "value": 55
+          },
+          "SIZ": {
+            "raw": "80",
+            "value": 80
+          },
+          "DEX": {
+            "raw": "40",
+            "value": 40
+          },
+          "APP": {
+            "raw": "45",
+            "value": 45
+          },
+          "INT": {
+            "raw": "65",
+            "value": 65
+          },
+          "POW": {
+            "raw": "60",
+            "value": 60
+          },
+          "EDU": {
+            "raw": "15",
+            "value": 15
+          }
+        },
+        "hp": {
+          "raw": "14",
+          "value": 14
+        },
+        "sanity": {
+          "raw": "60",
+          "value": 60,
+          "max": null
+        },
+        "dodge": {
+          "raw": "20%",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      }
+    },
+    {
+      "label": "Отряд А: р. Носилевский",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "45",
+            "value": 45
+          },
+          "CON": {
+            "raw": "30",
+            "value": 30
+          },
+          "SIZ": {
+            "raw": "65",
+            "value": 65
+          },
+          "DEX": {
+            "raw": "35",
+            "value": 35
+          },
+          "APP": {
+            "raw": "80",
+            "value": 80
+          },
+          "INT": {
+            "raw": "45",
+            "value": 45
+          },
+          "POW": {
+            "raw": "60",
+            "value": 60
+          },
+          "EDU": {
+            "raw": "20",
+            "value": 20
+          }
+        },
+        "hp": {
+          "raw": "10",
+          "value": 10
+        },
+        "sanity": {
+          "raw": "60",
+          "value": 60,
+          "max": null
+        },
+        "dodge": {
+          "raw": "17%",
+          "value": 17,
+          "half": 8,
+          "fifth": 3
+        }
+      }
+    },
+    {
+      "label": "Отряд А: р. Дзюбенко",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "50",
+            "value": 50
+          },
+          "CON": {
+            "raw": "65",
+            "value": 65
+          },
+          "SIZ": {
+            "raw": "65",
+            "value": 65
+          },
+          "DEX": {
+            "raw": "60",
+            "value": 60
+          },
+          "APP": {
+            "raw": "55",
+            "value": 55
+          },
+          "INT": {
+            "raw": "55",
+            "value": 55
+          },
+          "POW": {
+            "raw": "60",
+            "value": 60
+          },
+          "EDU": {
+            "raw": "10",
+            "value": 10
+          }
+        },
+        "hp": {
+          "raw": "13",
+          "value": 13
+        },
+        "sanity": {
+          "raw": "47",
+          "value": 47,
+          "max": null
+        },
+        "dodge": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      }
+    },
+    {
+      "label": "Отряд А: р. Южлек",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "60",
+            "value": 60
+          },
+          "CON": {
+            "raw": "40",
+            "value": 40
+          },
+          "SIZ": {
+            "raw": "55",
+            "value": 55
+          },
+          "DEX": {
+            "raw": "40",
+            "value": 40
+          },
+          "APP": {
+            "raw": "55",
+            "value": 55
+          },
+          "INT": {
+            "raw": "65",
+            "value": 65
+          },
+          "POW": {
+            "raw": "70",
+            "value": 70
+          },
+          "EDU": {
+            "raw": "20",
+            "value": 20
+          }
+        },
+        "hp": {
+          "raw": "10",
+          "value": 10
+        },
+        "sanity": {
+          "raw": "68",
+          "value": 68,
+          "max": null
+        },
+        "dodge": {
+          "raw": "20%",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      }
+    },
+    {
+      "label": "Отряд А: р. Анохин",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "50",
+            "value": 50
+          },
+          "CON": {
+            "raw": "50",
+            "value": 50
+          },
+          "SIZ": {
+            "raw": "60",
+            "value": 60
+          },
+          "DEX": {
+            "raw": "25",
+            "value": 25
+          },
+          "APP": {
+            "raw": "75",
+            "value": 75
+          },
+          "INT": {
+            "raw": "55",
+            "value": 55
+          },
+          "POW": {
+            "raw": "75",
+            "value": 75
+          },
+          "EDU": {
+            "raw": "25",
+            "value": 25
+          }
+        },
+        "hp": {
+          "raw": "11",
+          "value": 11
+        },
+        "sanity": {
+          "raw": "75",
+          "value": 75,
+          "max": null
+        },
+        "dodge": {
+          "raw": "12%",
+          "value": 12,
+          "half": 6,
+          "fifth": 2
+        }
+      }
+    },
+    {
+      "label": "Отряд А: р. Пирогов",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "45",
+            "value": 45
+          },
+          "CON": {
+            "raw": "40",
+            "value": 40
+          },
+          "SIZ": {
+            "raw": "45",
+            "value": 45
+          },
+          "DEX": {
+            "raw": "60",
+            "value": 60
+          },
+          "APP": {
+            "raw": "75",
+            "value": 75
+          },
+          "INT": {
+            "raw": "50",
+            "value": 50
+          },
+          "POW": {
+            "raw": "50",
+            "value": 50
+          },
+          "EDU": {
+            "raw": "25",
+            "value": 25
+          }
+        },
+        "hp": {
+          "raw": "9",
+          "value": 9
+        },
+        "sanity": {
+          "raw": "50",
+          "value": 50,
+          "max": null
+        },
+        "dodge": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      }
+    },
+    {
+      "label": "Отряд А: р. Тамовцев",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "55",
+            "value": 55
+          },
+          "CON": {
+            "raw": "30",
+            "value": 30
+          },
+          "SIZ": {
+            "raw": "75",
+            "value": 75
+          },
+          "DEX": {
+            "raw": "50",
+            "value": 50
+          },
+          "APP": {
+            "raw": "65",
+            "value": 65
+          },
+          "INT": {
+            "raw": "45",
+            "value": 45
+          },
+          "POW": {
+            "raw": "55",
+            "value": 55
+          },
+          "EDU": {
+            "raw": "25",
+            "value": 25
+          }
+        },
+        "hp": {
+          "raw": "11",
+          "value": 11
+        },
+        "sanity": {
+          "raw": "55",
+          "value": 55,
+          "max": null
+        },
+        "dodge": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      }
+    },
+    {
+      "label": "Отряд А: р. Никольский (механик)",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "45",
+            "value": 45
+          },
+          "CON": {
+            "raw": "50",
+            "value": 50
+          },
+          "SIZ": {
+            "raw": "60",
+            "value": 60
+          },
+          "DEX": {
+            "raw": "90",
+            "value": 90
+          },
+          "APP": {
+            "raw": "50",
+            "value": 50
+          },
+          "INT": {
+            "raw": "50",
+            "value": 50
+          },
+          "POW": {
+            "raw": "55",
+            "value": 55
+          },
+          "EDU": {
+            "raw": "20",
+            "value": 20
+          }
+        },
+        "hp": {
+          "raw": "11",
+          "value": 11
+        },
+        "sanity": {
+          "raw": "55",
+          "value": 55,
+          "max": null
+        },
+        "dodge": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      }
+    },
+    {
+      "label": "Отряд Б: р. Раджукевич",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "60",
+            "value": 60
+          },
+          "CON": {
+            "raw": "45",
+            "value": 45
+          },
+          "SIZ": {
+            "raw": "55",
+            "value": 55
+          },
+          "DEX": {
+            "raw": "60",
+            "value": 60
+          },
+          "APP": {
+            "raw": "40",
+            "value": 40
+          },
+          "INT": {
+            "raw": "55",
+            "value": 55
+          },
+          "POW": {
+            "raw": "40",
+            "value": 40
+          },
+          "EDU": {
+            "raw": "20",
+            "value": 20
+          }
+        },
+        "hp": {
+          "raw": "10",
+          "value": 10
+        },
+        "sanity": {
+          "raw": "40",
+          "value": 40,
+          "max": null
+        },
+        "dodge": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      }
+    },
+    {
+      "label": "Отряд Б: р. Яленский",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "45",
+            "value": 45
+          },
+          "CON": {
+            "raw": "70",
+            "value": 70
+          },
+          "SIZ": {
+            "raw": "75",
+            "value": 75
+          },
+          "DEX": {
+            "raw": "45",
+            "value": 45
+          },
+          "APP": {
+            "raw": "70",
+            "value": 70
+          },
+          "INT": {
+            "raw": "40",
+            "value": 40
+          },
+          "POW": {
+            "raw": "70",
+            "value": 70
+          },
+          "EDU": {
+            "raw": "15",
+            "value": 15
+          }
+        },
+        "hp": {
+          "raw": "15",
+          "value": 15
+        },
+        "sanity": {
+          "raw": "70",
+          "value": 70,
+          "max": null
+        },
+        "dodge": {
+          "raw": "22%",
+          "value": 22,
+          "half": 11,
+          "fifth": 4
+        }
+      }
+    },
+    {
+      "label": "Отряд Б: р. Богомолов",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "50",
+            "value": 50
+          },
+          "CON": {
+            "raw": "40",
+            "value": 40
+          },
+          "SIZ": {
+            "raw": "80",
+            "value": 80
+          },
+          "DEX": {
+            "raw": "40",
+            "value": 40
+          },
+          "APP": {
+            "raw": "70",
+            "value": 70
+          },
+          "INT": {
+            "raw": "65",
+            "value": 65
+          },
+          "POW": {
+            "raw": "65",
+            "value": 65
+          },
+          "EDU": {
+            "raw": "20",
+            "value": 20
+          }
+        },
+        "hp": {
+          "raw": "12",
+          "value": 12
+        },
+        "sanity": {
+          "raw": "65",
+          "value": 65,
+          "max": null
+        },
+        "dodge": {
+          "raw": "20%",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      }
+    },
+    {
+      "label": "Отряд Б: р. Ершов",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "65",
+            "value": 65
+          },
+          "CON": {
+            "raw": "60",
+            "value": 60
+          },
+          "SIZ": {
+            "raw": "85",
+            "value": 85
+          },
+          "DEX": {
+            "raw": "55",
+            "value": 55
+          },
+          "APP": {
+            "raw": "50",
+            "value": 50
+          },
+          "INT": {
+            "raw": "50",
+            "value": 50
+          },
+          "POW": {
+            "raw": "50",
+            "value": 50
+          },
+          "EDU": {
+            "raw": "20",
+            "value": 20
+          }
+        },
+        "hp": {
+          "raw": "25",
+          "value": 25
+        },
+        "sanity": {
+          "raw": "50",
+          "value": 50,
+          "max": null
+        },
+        "dodge": {
+          "raw": "27%",
+          "value": 27,
+          "half": 13,
+          "fifth": 5
+        }
+      }
+    },
+    {
+      "label": "Отряд Б: р. Руднин",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "60",
+            "value": 60
+          },
+          "CON": {
+            "raw": "50",
+            "value": 50
+          },
+          "SIZ": {
+            "raw": "75",
+            "value": 75
+          },
+          "DEX": {
+            "raw": "35",
+            "value": 35
+          },
+          "APP": {
+            "raw": "55",
+            "value": 55
+          },
+          "INT": {
+            "raw": "45",
+            "value": 45
+          },
+          "POW": {
+            "raw": "45",
+            "value": 45
+          },
+          "EDU": {
+            "raw": "10",
+            "value": 10
+          }
+        },
+        "hp": {
+          "raw": "13",
+          "value": 13
+        },
+        "sanity": {
+          "raw": "45",
+          "value": 45,
+          "max": null
+        },
+        "dodge": {
+          "raw": "17%",
+          "value": 17,
+          "half": 8,
+          "fifth": 3
+        }
+      }
+    },
+    {
+      "label": "Отряд Б: р. Голушкин",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "60",
+            "value": 60
+          },
+          "CON": {
+            "raw": "70",
+            "value": 70
+          },
+          "SIZ": {
+            "raw": "65",
+            "value": 65
+          },
+          "DEX": {
+            "raw": "65",
+            "value": 65
+          },
+          "APP": {
+            "raw": "65",
+            "value": 65
+          },
+          "INT": {
+            "raw": "35",
+            "value": 35
+          },
+          "POW": {
+            "raw": "60",
+            "value": 60
+          },
+          "EDU": {
+            "raw": "15",
+            "value": 15
+          }
+        },
+        "hp": {
+          "raw": "14",
+          "value": 14
+        },
+        "sanity": {
+          "raw": "60",
+          "value": 60,
+          "max": null
+        },
+        "dodge": {
+          "raw": "32%",
+          "value": 32,
+          "half": 16,
+          "fifth": 6
+        }
+      }
+    },
+    {
+      "label": "Отряд Б: р. Ломакин",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "40",
+            "value": 40
+          },
+          "CON": {
+            "raw": "65",
+            "value": 65
+          },
+          "SIZ": {
+            "raw": "55",
+            "value": 55
+          },
+          "DEX": {
+            "raw": "55",
+            "value": 55
+          },
+          "APP": {
+            "raw": "40",
+            "value": 40
+          },
+          "INT": {
+            "raw": "65",
+            "value": 65
+          },
+          "POW": {
+            "raw": "60",
+            "value": 60
+          },
+          "EDU": {
+            "raw": "20",
+            "value": 20
+          }
+        },
+        "hp": {
+          "raw": "12",
+          "value": 12
+        },
+        "sanity": {
+          "raw": "60",
+          "value": 60,
+          "max": null
+        },
+        "dodge": {
+          "raw": "27%",
+          "value": 27,
+          "half": 13,
+          "fifth": 5
+        }
+      }
+    },
+    {
+      "label": "Отряд Б: р. Фоменко (механик)",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "50",
+            "value": 50
+          },
+          "CON": {
+            "raw": "55",
+            "value": 55
+          },
+          "SIZ": {
+            "raw": "60",
+            "value": 60
+          },
+          "DEX": {
+            "raw": "60",
+            "value": 60
+          },
+          "APP": {
+            "raw": "35",
+            "value": 35
+          },
+          "INT": {
+            "raw": "80",
+            "value": 80
+          },
+          "POW": {
+            "raw": "45",
+            "value": 45
+          },
+          "EDU": {
+            "raw": "10",
+            "value": 10
+          }
+        },
+        "hp": {
+          "raw": "12",
+          "value": 12
+        },
+        "sanity": {
+          "raw": "45",
+          "value": 45,
+          "max": null
+        },
+        "dodge": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      }
+    }
+  ],
+  "description": {
+    "ru": "Семнадцать рядовых двух отрядов Красной Армии, приданных группе майором Пресненским: отряд А сержанта Блочинцева (9 рядовых) и отряд Б сержанта Ковалевского (8 рядовых); вместе с сержантами — девятнадцать солдат. Все в той или иной мере больны дизентерией (по выбору Хранителя), плохо снаряжены для зимы и большую часть времени проводят у костров. Многие участвовали в уничтожении Дегматорска.\nНавыки рядовых: Стрельба из винтовки 55%, Механика 15% (водители 50%), Электрика 25% (только водители), Первая помощь 35%, Стрельба из пулемёта 55/35% (только стрелок и помощник), Уклонение — половина ЛВК, Драка 60%. Атаки: удар 1d3 + БкУ; штык 1d6+1 + БкУ; пистолет Туламаш-Наган М-1895, 1d10; винтовка Мосин-Наган М-1891, 2d6+4. Рассудок Южлека и Дзюбенко в таблице уже учитывает потерю в сцене «Кролик» (2 и 3 пункта).",
+    "en": null
+  },
+  "legend": {
+    "ru": "Под присмотром работают без жалоб девять часов в день; дальше — только после успешной проверки Убеждения, и каждый лишний час снижает все навыки на 10% (и усложняет следующие проверки Убеждения); когда навык (или ВЫН на неквалифицированной работе) падает до нуля, солдат должен отдыхать. Потери Рассудка войск считаются суммой; когда сумма у солдата достигает 6 и больше, он «связан» Цветом — чаще всего это желание спрятаться и дождаться спасения на станции; испуганного солдата успокаивает проверка Психологии или Психоанализа. Солдат, потерявший 20% и больше Рассудка, бессрочно безумен, сопротивляется уходу со станции и уводится только силой. При ПМ ниже половины солдат выглядит больным, при 2 ПМ и меньше нужен постельный режим (см. сцену «Работа с войсками»). Хранителю советуют говорить с отрядами через двух сержантов.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "mts-kharkov-37-ru",
+      "physical_page": 52,
+      "printed_page": 52,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Красноармейцы»: отряд А, отряд Б (начало)"
+    },
+    {
+      "book_id": "mts-kharkov-37-ru",
+      "physical_page": 53,
+      "printed_page": 53,
+      "method": "book_text",
+      "verified": true,
+      "note": "отряд Б (окончание), навыки рядовых, атаки"
+    },
+    {
+      "book_id": "mts-kharkov-37-ru",
+      "physical_page": 39,
+      "printed_page": 39,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Работа с войсками»"
+    },
+    {
+      "book_id": "mts-kharkov-37-ru",
+      "physical_page": 8,
+      "printed_page": 8,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Кролик»: Южлек и Дзюбенко"
+    }
+  ],
+  "errata": [
+    {
+      "field": "variants[Отряд Б: р. Ершов].statblock.hp",
+      "printed": "25",
+      "expected": "15",
+      "note": "ПЗ Ершова 25 при ВЫН 60 и ТЕЛ 85: (60+85)/10 = 14,5, с округлением вверх, как у других солдат таблицы, — 15. Вероятно, опечатка; оставлено как напечатано (с. 53)."
+    },
+    {
+      "field": "variants[Отряд А: р. Дзюбенко].statblock.sanity",
+      "printed": "47",
+      "expected": "57",
+      "note": "Рассудок Дзюбенко 47 при МОЩ 60; по тексту «Кролика» (с. 8) он потерял 3 пункта, и таблица «уже отражает эту потерю» — ожидалось 57. Оставлено как напечатано."
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": "Групповой профиль (Р-74): основной статблок — общие навыки и атаки рядовых, варианты — строки таблицы «Красноармейцы» с именами книги (сержанты — отдельные записи). Уклонение вариантов — половина ЛВК по тексту навыков (вычислено). ПЗ таблицы округлены вверх — приём книги. Пулемёт «Максим» в справочнике оружия отсутствует — атака без ссылки на оружие; винтовка М-1891 связана с записью М1891/30."
+  }
+}

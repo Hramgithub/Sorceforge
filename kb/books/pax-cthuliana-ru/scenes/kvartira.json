@@ -1,0 +1,97 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "pax-cthuliana-ru/scene/kvartira",
+  "kind": "scene",
+  "name": {
+    "ru": "Вступительная сцена 3 — Квартира",
+    "en": null
+  },
+  "description": {
+    "ru": "Цель: дать сыщикам кучу улик. Коммершл-стрит, 40: через многолюдную улицу к трёхэтажному дому, через паб «Два голодающих гнолла», по задней лестнице наверх — квартира № 3 (работники паба подскажут номер). Дверь не заперта; внутри — кабинет одержимого безумца.\nНикаких проверок Внимания, Работы в библиотеке или Удачи: просто раздайте все улики разом — Материалы № 2–10 — и кусок головоломки (его сыщики держат при себе всю игру). Больше в комнате ничего не найти. Ничего не объясняйте — игроки «расшифровывают» сами (самое время налить себе и послушать их разговоры). Пояснения для Хранителя — в таблице сценария «Улики из квартиры Джона Доу».\nЧто дальше: куда идти — решают игроки по своей трактовке улик: Британский музей («Ключевая сцена 1»), Лондонский музей науки («Ключевая сцена 2»), Игла Клеопатры («Ключевая сцена 3»), Дж. Р. Р. Толкин («Сцена персонажа 1»); порядок не важен, некоторые места «открывают» другие. В другие места (газета, библиотека, полиция) — импровизируйте, полезного там нет.\nИсключение — собор Святого Павла: нетерпеливые могут пойти проверить «Прелюдию» (даже до лечебницы). До «Сюжетной сцены 1» они узнают не больше туриста (когда построен, архитектор Рен и т. п.; если активно расспрашивать — что Рен похоронен в гробнице под собором). Собор открыт ежедневно с 10 до 16 часов. После «Сюжетной сцены 1» — см. «Сюжетная сцена 2».\nРасширенные сцены: «Трудности с входом» — дверь заперта, паб закрыт, владелец не сотрудничает или Джон Доу переехал; «Улики» — добавить ложных следов (бесполезный адрес на карте, записка «У сосны есть ответ!», реквизит): в мини-кампании это хорошо, в ваншоте может разочаровать.",
+    "en": null
+  },
+  "arc": {
+    "scenario": "pax-cthuliana-ru/scenario/pax-cthuliana",
+    "part": "Вступительные сцены",
+    "order": 4
+  },
+  "where": [
+    {
+      "location": "pax-cthuliana-ru/location/kvartira-dzhona-dou",
+      "note": null
+    },
+    {
+      "location": "pax-cthuliana-ru/location/pab-dva-golodayushchikh-gnolla",
+      "note": "вход через паб"
+    }
+  ],
+  "mechanics": {
+    "ru": "Проверки не нужны: все улики просто раздаются.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Сыщики сами выбирают, куда идти: ключевые сцены 1–3 и сцена персонажа 1 — в любом порядке.",
+    "en": null
+  },
+  "refs": [
+    "pax-cthuliana-ru/handout/material-2-zapiska-o-perevode-di",
+    "pax-cthuliana-ru/handout/material-3-ktulkhu-fkhtagn",
+    "pax-cthuliana-ru/handout/material-4-zametka-pro-muzey-nauki",
+    "pax-cthuliana-ru/handout/material-5-zvezdnaya-karta",
+    "pax-cthuliana-ru/handout/material-6-rukopisnaya-zapiska",
+    "pax-cthuliana-ru/handout/material-7-karta-londona",
+    "pax-cthuliana-ru/handout/material-8-britanskiy-muzey",
+    "pax-cthuliana-ru/handout/material-9-tolkin",
+    "pax-cthuliana-ru/handout/material-10-ren",
+    "pax-cthuliana-ru/item/golovolomka-sigil",
+    "masks-of-nyarlathotep-en/location/england-st-pauls-cathedral"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "pax-cthuliana-ru",
+      "physical_page": 23,
+      "printed_page": 23,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Вступительная сцена 3 — Квартира»"
+    },
+    {
+      "book_id": "pax-cthuliana-ru",
+      "physical_page": 24,
+      "printed_page": 24,
+      "method": "book_text",
+      "verified": true,
+      "note": "улики"
+    },
+    {
+      "book_id": "pax-cthuliana-ru",
+      "physical_page": 25,
+      "printed_page": 25,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Что произойдет дальше?»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "description.ru",
+      "printed": "«Просто раздайте игрокам Материалы № 2-9» (с. 23)",
+      "expected": "Материалы № 2–10 и кусок Сигила",
+      "note": "Список улик на с. 24 включает и Материал № 10 (портрет Рена), и часть Сигила.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": "Источник — русский перевод MADCROWDE (в pipeline/source/books.json издание помечено official по метке файла «[RU 7e]»): русский текст — источник, флага перевода нет. Книга без номеров-смещений: печатная страница = физической."
+  }
+}

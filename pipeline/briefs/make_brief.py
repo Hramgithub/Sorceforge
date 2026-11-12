@@ -36,9 +36,11 @@ def main() -> None:
     books = json.loads((ROOT / "pipeline/source/books.json").read_text(encoding="utf-8"))
     table = "| Unit | Pages | Target | Main sites |\n|---|---|---|---|\n" + "\n".join(
         f"| {x['name']} | {x['pages']} | {x.get('target', '')} | {x.get('sites', '')} |" for x in plan["units"])
+    # a plan may cover several books: a unit's own "book_id" wins over the plan's
+    book_id = u.get("book_id") or plan["book_id"]
     fill = {
-        "book_id": plan["book_id"],
-        "book_title": books.get(plan["book_id"], {}).get("title", plan["book_id"]),
+        "book_id": book_id,
+        "book_title": books.get(book_id, {}).get("title", book_id),
         "goal": plan["goal"],
         "decision": plan.get("decision", ""),
         "unit": u["name"],
@@ -57,7 +59,7 @@ def main() -> None:
     left = [p for p in ("{{",) if p in text]
     if left:
         sys.exit("в шаблоне остались незаполненные места {{…}}")
-    out = a.out or ROOT / ".cache" / "briefs" / f"{plan['book_id']}-{u['name']}.md"
+    out = a.out or ROOT / ".cache" / "briefs" / f"{book_id}-{u['name']}.md"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(text, encoding="utf-8", newline="\n")
     print(out)

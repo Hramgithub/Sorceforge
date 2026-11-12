@@ -1,0 +1,226 @@
+{
+  "book_id": "nichego-krome-vetra-ru",
+  "goal": "Russian 7e one-shots of the owner's catalogue playable from the base (Р-222, item 8 of the queue), batch 1.",
+  "decision": "Р-222, Р-221, Р-213, Р-190, Р-206, Р-209",
+  "check_dir": "checks/20261112-ru-oneshots",
+  "models": [
+    "kb/books/dveri-vo-tmu-ru/scenarios/darkness-beneath-the-hill.json",
+    "kb/books/osobnyaki-bezumiya-ru/scenarios/code-secret-code.json",
+    "kb/books/number-7-dream-en/scenarios/number-7-dream.json",
+    "kb/books/keepers-companion-en/scenes/little-miracles-start.json",
+    "kb/books/pulp-cthulhu-en/handouts/disintegrator-1-finch-telegram.json",
+    "kb/locations/boston.json",
+    "kb/books/masks-of-nyarlathotep-en/maps/america-harlem.json"
+  ],
+  "extra": "## This work (Р-222)\n\nQueue item 8: Russian 7e one-shots from the owner's catalogue (`3_КБ\\_Каталог.csv`). Each unit is one scenario with its own registered book (`book_id` in your brief header) — mostly scenarios written in Russian by Russian authors, published as PDFs (the text is the source: Russian as printed, no `translated` flag; `name.en` only if the book prints it). Read pages with `python -B pipeline/source/pages.py show <book_id> <page>`; check every number and every map on the page image (`pages.py image`). If the PDF has no text layer on some pages, OCR them yourself: `pdftoppm -r 200 -f N -l N -png \"<pdf>\" <out>` then `tesseract <png> - -l rus`. Find the printed/physical page relation on the page images and report it (the lead sets `offset`); if pages carry no numbers, printed = physical. The owner's KB folder for the scenario (`C:\\_Hobby\\Yandex.Disk\\НРИ\\1_Зов Ктулху\\3_КБ\\Ваншоты\\<год> <название>`) may hold his notes, handouts and maps — use them only as a pointer (pictures may be cleaner there), the book is the source. Run tools as `python -B …`; keep scratch files in your own scratchpad subfolder named after your unit.\n\n- Edition: these are 7e scenarios; if a book turns out to be written for another edition or for Pulp, say so at the top of the report (Pulp → `ruleset` \"pulp\").\n- Records — book-scoped `<book_id>/<kind>/<slug>` in `kb/books/<book_id>/<kinds>/`. Scenario record (summary, keeper_info, hook, advice, steps with refs, conclusion with Sanity rewards, tables), every scene retold for play (`arc`), items, handouts, tomes, organizations, characters (statblocks as printed, Р-25; pregenerated investigators are characters of the book), creatures (known Mythos creatures → `instance_of` the shared `coc:creature:*`), places.\n- Cities — shared records (Р-190): Grep `kb/locations/` first (Arkham, Innsmouth, Dunwich?, Providence, Boston, Kingsport, New York, Moscow, Leningrad… exist) and never rewrite an existing one — add through proposals. A missing city where your scenario is set you create in `kb/locations/` (never in the book folder) as a new shared record — unless another unit of this plan (table above) is set in the same city: then propose it in your report instead. Places outside a city — under «Окрестности <города>» (Р-209); a scenario without a named city gets a «город сценария» record inside its book (Р-190).\n- Maps — `map` with the image (`app/maps/<unit>-<slug>.jpg`) and spots on every printed number/label (Р-206; check each by eye on a crop); every key number gets a place record. List captions — neutral, no spoilers (Р-209). New spells — draft them in your report (`kb/spells` is shared).\n- `axes.era` — as printed (1920s, 1930s, modern, other…), `ruleset` \"core\". Book misprints — `errata` as printed (Р-35); metric units as printed (Russian books are usually metric already).\n- Coverage: `checks/20261112-ru-oneshots/<unit>.md` — every heading → record(s), «не взято» with the reason. Proposals: `checks/20261112-ru-oneshots/proposals-<unit>.json`.",
+  "units": [
+    {
+      "name": "wind",
+      "book_id": "nichego-krome-vetra-ru",
+      "pages": "all 17 pages of nichego-krome-vetra-ru (`1_Библиотека\\Сценарии\\Ничего кроме ветра\\[RU 7e] Ничего, кроме ветра.pdf`)",
+      "target": "the scenario «Ничего кроме ветра» whole (1050)",
+      "owns": [
+        "kb/books/nichego-krome-vetra-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/wind-*",
+        "checks/20261112-ru-oneshots/wind.md, proposals-wind.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "five",
+      "book_id": "omerzitelnaya-pyaterka-ru",
+      "pages": "all 11 pages of omerzitelnaya-pyaterka-ru (`1_Библиотека\\Сценарии\\Омерзительная пятёрка\\[RU 7e] Омерзительная 5ятерка.pdf`)",
+      "target": "the scenario «Омерзительная пятёрка» whole (1867)",
+      "owns": [
+        "kb/books/omerzitelnaya-pyaterka-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/five-*",
+        "checks/20261112-ru-oneshots/five.md, proposals-five.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "fogs",
+      "book_id": "tumany-san-kristobal-ru",
+      "pages": "all 24 pages of tumany-san-kristobal-ru (`1_Библиотека\\Сценарии\\Туманы острова Сан-Кристобаль\\[RU 7e] 1912 Туманы острова Сан-Кристобаль.pdf`)",
+      "target": "the scenario «Туманы острова Сан-Кристобаль» whole (1912)",
+      "owns": [
+        "kb/books/tumany-san-kristobal-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/fogs-*",
+        "checks/20261112-ru-oneshots/fogs.md, proposals-fogs.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "newlife",
+      "book_id": "novaya-zhizn-ru",
+      "pages": "all 28 pages of novaya-zhizn-ru (`1_Библиотека\\Сценарии\\Новая жизнь\\[RU 7e] Новая Жизнь (Артём Матлов).pdf`)",
+      "target": "the scenario «Новая жизнь» whole (1920)",
+      "owns": [
+        "kb/books/novaya-zhizn-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/newlife-*",
+        "checks/20261112-ru-oneshots/newlife.md, proposals-newlife.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "affair",
+      "book_id": "odno-nebolshoe-deltse-ru",
+      "pages": "all 12 pages of odno-nebolshoe-deltse-ru (`1_Библиотека\\Сценарии\\Одно небольшое дельце\\[RU 7e] Без фона. Одно небольшое дельце... (Кирилл Семаков).pdf`)",
+      "target": "the scenario «Одно небольшое дельце...» whole (1920)",
+      "owns": [
+        "kb/books/odno-nebolshoe-deltse-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/affair-*",
+        "checks/20261112-ru-oneshots/affair.md, proposals-affair.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "ghost",
+      "book_id": "prizrak-ru",
+      "pages": "all 17 pages of prizrak-ru (`1_Библиотека\\Сценарии\\Призрак\\[RU 7e] Призрак.pdf`)",
+      "target": "the scenario «Призрак» whole (1920)",
+      "owns": [
+        "kb/books/prizrak-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/ghost-*",
+        "checks/20261112-ru-oneshots/ghost.md, proposals-ghost.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "dunwich",
+      "book_id": "hellouin-v-danviche-ru",
+      "pages": "all 18 pages of hellouin-v-danviche-ru (`1_Библиотека\\Сценарии\\Хэллоуин в Данвиче\\[RU 7e] Хэллоуин в Данвиче.pdf`)",
+      "target": "the scenario «Хэллоуин в Данвиче» whole (1920)",
+      "owns": [
+        "kb/books/hellouin-v-danviche-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/dunwich-*",
+        "checks/20261112-ru-oneshots/dunwich.md, proposals-dunwich.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "exhibit",
+      "book_id": "eksponat-novaya-zhizn-ru",
+      "pages": "all 20 pages of eksponat-novaya-zhizn-ru (`1_Библиотека\\Сценарии\\Экспонат новая жизнь\\[RU 7e] Экспонат _Новая Жизнь_ (Николай Засов).pdf`)",
+      "target": "the scenario «Экспонат новая жизнь» whole (1920)",
+      "owns": [
+        "kb/books/eksponat-novaya-zhizn-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/exhibit-*",
+        "checks/20261112-ru-oneshots/exhibit.md, proposals-exhibit.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "park",
+      "book_id": "park-razvlecheniy-ru",
+      "pages": "all 32 pages of park-razvlecheniy-ru (`1_Библиотека\\Сценарии\\Парк развлечений\\[RU 7e] Для печати. Парк развлечений (Кулькин Владимир).pdf`)",
+      "target": "the scenario «Парк развлечений» whole (1921)",
+      "owns": [
+        "kb/books/park-razvlecheniy-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/park-*",
+        "checks/20261112-ru-oneshots/park.md, proposals-park.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "washington",
+      "book_id": "sudba-bratev-vashington-ru",
+      "pages": "all 9 pages of sudba-bratev-vashington-ru (`1_Библиотека\\Сценарии\\Судьба братьев Вашингтон\\[RU 7e] Судьба Братьев Вашингтон.pdf`)",
+      "target": "the scenario «Судьба братьев Вашингтон» whole (1922)",
+      "owns": [
+        "kb/books/sudba-bratev-vashington-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/washington-*",
+        "checks/20261112-ru-oneshots/washington.md, proposals-washington.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "pages",
+      "book_id": "pustye-stranitsy-ru",
+      "pages": "all 15 pages of pustye-stranitsy-ru (`1_Библиотека\\Сценарии\\Пустые страницы\\[RU 7e] Пустые страницы.pdf`)",
+      "target": "the scenario «Пустые страницы» whole (1925)",
+      "owns": [
+        "kb/books/pustye-stranitsy-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/pages-*",
+        "checks/20261112-ru-oneshots/pages.md, proposals-pages.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "holiday",
+      "book_id": "kanikuly-v-innsmute-ru",
+      "pages": "all 8 pages of kanikuly-v-innsmute-ru (`1_Библиотека\\Сценарии\\Каникулы в Иннсмуте\\[RU 7e] Каникулы в Иннсмуте (Артем Яскович).pdf`)",
+      "target": "the scenario «Каникулы в Иннсмуте» whole (1926)",
+      "owns": [
+        "kb/books/kanikuly-v-innsmute-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/holiday-*",
+        "checks/20261112-ru-oneshots/holiday.md, proposals-holiday.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "heist",
+      "book_id": "ograblenie-po-arkhemski-ru",
+      "pages": "all 14 pages of ograblenie-po-arkhemski-ru (`1_Библиотека\\Сценарии\\Ограбление по-Аркхэмски\\[RU 7e] Цветное. Ограбление по-Аркхемски (Александр Миронов).pdf`)",
+      "target": "the scenario «Ограбление по-Аркхэмски» whole (1926)",
+      "owns": [
+        "kb/books/ograblenie-po-arkhemski-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/heist-*",
+        "checks/20261112-ru-oneshots/heist.md, proposals-heist.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "providence",
+      "book_id": "ten-nad-providensom-ru",
+      "pages": "all 38 pages of ten-nad-providensom-ru (`1_Библиотека\\Сценарии\\Тень над Провиденсом\\[RU 7e] Тень над Провиденсом.pdf`)",
+      "target": "the scenario «Тень над Провиденсом» whole (1928)",
+      "owns": [
+        "kb/books/ten-nad-providensom-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/providence-*",
+        "checks/20261112-ru-oneshots/providence.md, proposals-providence.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "johnny",
+      "book_id": "dzhonni-boy-ru",
+      "pages": "all 8 pages of dzhonni-boy-ru (`1_Библиотека\\Сценарии\\Джонни бой\\[RU 7e] Джонни Бой (Андрей Смирнов).pdf`)",
+      "target": "the scenario «Джонни бой» whole (1930)",
+      "owns": [
+        "kb/books/dzhonni-boy-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/johnny-*",
+        "checks/20261112-ru-oneshots/johnny.md, proposals-johnny.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "caught",
+      "book_id": "popalis-ru",
+      "pages": "all 2 pages of popalis-ru (`1_Библиотека\\Сценарии\\Попались\\[RU 7e] Попались! (Мэтт Райан и Ноа Ллойд).pdf`)",
+      "target": "the scenario «Попались» whole (1925)",
+      "owns": [
+        "kb/books/popalis-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/caught-*",
+        "checks/20261112-ru-oneshots/caught.md, proposals-caught.json"
+      ],
+      "sites": "—"
+    }
+  ]
+}

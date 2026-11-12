@@ -1,0 +1,85 @@
+{
+  "schema": "sourcefold.location.v0",
+  "id": "sudba-bratev-vashington-ru/location/doroga-boston-buffalo",
+  "kind": "location",
+  "name": {
+    "ru": "Дорога из Бостона в Буффало",
+    "en": null
+  },
+  "aliases": [],
+  "location_type": "область",
+  "part_of": "coc:location:boston",
+  "number": null,
+  "address": null,
+  "keeper_hint": "ночной рейс братьев Вашингтон: около 700 км, 10 часов",
+  "description": {
+    "ru": "Маршрут ночного рейса: Бостон — Олбани — Сиракузы — Буффало, около 700 км. При максимальной скорости грузовика 70 км/ч — около 10 часов в наилучших условиях. Выезд на закате (около 18:00), Олбани — около 22:30, Сиракузы — 1:30, доки Буффало — 4:30 утра. По карте расстояний (с. 3): Бостон — Олбани около 280 км, Олбани — Сиракузы около 220 км, Сиракузы — Буффало около 240 км.",
+    "en": null
+  },
+  "along": [
+    {
+      "location": "sudba-bratev-vashington-ru/location/sklad-v-bostone",
+      "note": "начало пути, закат"
+    },
+    {
+      "location": "sudba-bratev-vashington-ru/location/zapravka-v-olbani",
+      "note": "около 22:30, заправка"
+    },
+    {
+      "location": "sudba-bratev-vashington-ru/location/nochnaya-zapravka-v-sirakuzakh",
+      "note": "1:30, заправка"
+    },
+    {
+      "location": "sudba-bratev-vashington-ru/location/doki-buffalo",
+      "note": "4:30 утра, конец пути"
+    }
+  ],
+  "refs": [
+    "sudba-bratev-vashington-ru/map/northeast-mileage-chart",
+    "sudba-bratev-vashington-ru/scene/pokidaya-boston",
+    "sudba-bratev-vashington-ru/scene/davayte-zaglyanem-vnutr",
+    "sudba-bratev-vashington-ru/item/gruzovik-mak-ab",
+    "coc:location:albany",
+    "coc:location:syracuse",
+    "coc:location:buffalo"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "sudba-bratev-vashington-ru",
+      "physical_page": 1,
+      "printed_page": 1,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Подготовка», «Недалеко от Олбани»"
+    },
+    {
+      "book_id": "sudba-bratev-vashington-ru",
+      "physical_page": 2,
+      "printed_page": 2,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Рассадник социальных волнений», «Этот город когда-нибудь спит?»"
+    },
+    {
+      "book_id": "sudba-bratev-vashington-ru",
+      "physical_page": 3,
+      "printed_page": 3,
+      "method": "book_text",
+      "verified": true,
+      "note": "карта"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "editorial_text"
+    ],
+    "notes": "Запись-зона (Р-135), чтобы связать места маршрута; part_of — Бостон, откуда начинается путь (Р-209). Километры по карте — пересчёт её миль (175, 137, 151), не из текста книги."
+  }
+}

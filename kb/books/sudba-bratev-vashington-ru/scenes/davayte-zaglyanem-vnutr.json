@@ -1,0 +1,78 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "sudba-bratev-vashington-ru/scene/davayte-zaglyanem-vnutr",
+  "kind": "scene",
+  "name": {
+    "ru": "Давайте заглянем внутрь",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "В какой-то момент кто-то может захотеть заглянуть в ящики.\nВ широком ящике размером с комод лежат пять картин Ричарда Аптона Пикмана, известного бостонского художника, превратившегося в упыря. Картины лежат в древесных опилках и профессионально завёрнуты в марлю. На них изображены: разрушенный город в джунглях (Серый Город в Конго); заросший дюнами разрушенный город в пустыне (Пилларед Ирем); тёмная лестница, ведущая к трём светящимся красным глазам (Призрак); полуразрушенный замок на болотах (Слитмур); поросший водорослями остров, о который разбиваются чёрные волны (Р’льех). Просмотр любой из картин вызывает проверку Рассудка (1/1d3).\nВ более узком и длинном ящике находятся два трупа и упырь. Упырь — страж на случай вскрытия ящиков, а трупы — его корм на эту поездку.\nЕсли персонаж Хранителя откроет ящик в форме гроба, упырь выскочит и убьёт его; если это увидят братья — проверка Рассудка (1/1d8). После убийства упырь утащит новое лакомство в ящик. На братьев он не нападает: «J.S.» предупредил, что они необходимы для путешествия.",
+    "en": null
+  },
+  "when": "в любой момент пути, когда кто-то решит открыть ящики",
+  "arc": {
+    "scenario": "sudba-bratev-vashington-ru/scenario/sudba-bratev-vashington",
+    "part": "Давайте заглянем внутрь",
+    "order": 4
+  },
+  "where": [
+    {
+      "location": "sudba-bratev-vashington-ru/location/doroga-boston-buffalo",
+      "note": "кузов грузовика «Мак АБ», где бы он ни был"
+    }
+  ],
+  "participants": [
+    {
+      "id": "sudba-bratev-vashington-ru/character/roland-vashington",
+      "role": "готовый сыщик"
+    },
+    {
+      "id": "sudba-bratev-vashington-ru/character/sesil-vashington",
+      "role": "готовый сыщик"
+    },
+    {
+      "id": "sudba-bratev-vashington-ru/creature/upyr-strazh",
+      "role": "страж груза"
+    }
+  ],
+  "mechanics": {
+    "ru": "Просмотр любой из картин — проверка Рассудка 1/1d3.\nПерсонаж Хранителя, открывший ящик-гроб, убит упырём; братья, увидевшие упыря, — проверка Рассудка 1/1d8.\nУпырь не нападает на братьев.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Братья узнают, что везут; знание об упыре может спасти их в доках Буффало — его можно спустить на бригадира (сцена «Этот город когда-нибудь спит?»).",
+    "en": null
+  },
+  "refs": [
+    "sudba-bratev-vashington-ru/item/kartiny-pikmana",
+    "sudba-bratev-vashington-ru/item/yashchik-grob",
+    "sudba-bratev-vashington-ru/character/richard-apton-pikman",
+    "sudba-bratev-vashington-ru/character/j-s",
+    "coc:creature:ghoul",
+    "sudba-bratev-vashington-ru/item/gruzovik-mak-ab",
+    "sudba-bratev-vashington-ru/scene/etot-gorod-kogda-nibud-spit"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "sudba-bratev-vashington-ru",
+      "physical_page": 2,
+      "printed_page": 2,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Давайте заглянем внутрь»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Потеря Рассудка при виде упыря в сценарии — 1/1d8 (у вида в справочнике — 0/1d6): значение сценария записано здесь и в записи упыря-стража."
+  }
+}

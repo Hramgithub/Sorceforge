@@ -1,0 +1,412 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "lager-sanni-ru/character/smitkhi",
+  "kind": "character",
+  "name": {
+    "ru": "М. Смитхи",
+    "en": null
+  },
+  "aliases": [
+    "Шериф Смитхи",
+    "Смитхи"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "шериф, местный законник",
+    "en": null
+  },
+  "age": {
+    "raw": "58",
+    "value": 58
+  },
+  "sex": "мужской",
+  "residence": null,
+  "birthplace": null,
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "knows",
+      "target": "lager-sanni-ru/character/dzhenis-fishbern",
+      "note": "околдовавшая его владелица лагеря",
+      "note_back": "шериф под её чарами"
+    },
+    {
+      "type": "knows",
+      "target": "lager-sanni-ru/character/garold-fishbern",
+      "note": "владелец лагеря, с которым он пьёт виски",
+      "note_back": "местный шериф"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "75",
+        "value": 75
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "APP": {
+        "raw": "40",
+        "value": 40
+      },
+      "INT": {
+        "raw": "70",
+        "value": 70
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      },
+      "EDU": {
+        "raw": "60",
+        "value": 60
+      }
+    },
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "mp": {
+      "raw": "9",
+      "value": 9
+    },
+    "sanity": {
+      "raw": "43",
+      "value": 43,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "5",
+      "value": 5,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 5
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Дубинка",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d6",
+          "dice": "1d6",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:club-small",
+        "notes": "«или дубинка 1d6» в строке Ближнего боя"
+      },
+      {
+        "name": {
+          "ru": ".38 полуавт. пистолет",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "60%(30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d10",
+          "dice": "1d10",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:38-automatic"
+      },
+      {
+        "name": {
+          "ru": ".38-06 полуавт. винтовка",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "40%(20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "2d6+4",
+          "dice": "2d6+4",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:30-06-semi-automatic-rifle",
+        "notes": "в книге — «.38-06» (опечатка, .30-06)"
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Вождение",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Юриспруденция",
+        "skill": "coc:skill:law",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Ориентирование",
+        "skill": "coc:skill:navigate",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Под чарами Дженис",
+      "raw": "Если сыщики заметят, что шериф очарован Дженис, они могут попытаться привести его в чувство, причинив ему боль; нужно нанести не менее 4 пунктов урона, чтобы прояснить ему голову. Разумеется, он будет зол на тех, кто его только что атаковал, и, скорее всего, схватится за пистолет, если только не удастся пройти чрезвычайную проверку Убеждения или Красноречия, чтобы объяснить ситуацию. Провал повторной проверки с высокой вероятностью приведёт к стрельбе.",
+      "summary": "Увидев Дженис, немедленно попадает под её чары и делает всё, что она прикажет. Прояснить ему голову можно, нанеся не менее 4 пунктов урона; затем он зол на нападавших и, скорее всего, схватится за пистолет, если не пройти чрезвычайную проверку Убеждения или Красноречия; провал повторной проверки почти наверняка ведёт к стрельбе.",
+      "refs": [
+        "lager-sanni-ru/character/dzhenis-fishbern"
+      ]
+    }
+  ],
+  "background": {
+    "description": "Жёсткий, бескомпромиссный служака, повидавший всё.",
+    "traits": "Кучка студентов и их заботы его мало волнуют; вероятно, будет серьёзно раздражён, считая их пустой тратой времени. Если его прижать, проверяет удостоверения личности (не пьёт ли кто незаконно), а раздражённый — требует осмотреть внедорожник и домики на предмет наркотиков."
+  },
+  "description": {
+    "ru": "Местный шериф; появляется, только если студенты его вызывают или его зовут Фишберны.",
+    "en": null
+  },
+  "legend": {
+    "ru": "По полицейским сводкам из Служебного кабинета, он много лет связан с делами о пропажах в округе: сначала заместитель шерифа, затем сержант, а недавно — шериф. Дневник частного детектива предупреждает, что местная полиция в сговоре с Фишбернами. Прибыв в лагерь, Смитхи сначала идёт на Ресепшн поговорить с владельцами; увидев Дженис, попадает под её чары и верит любой чепухе о студентах. По вызову студентов после стакана виски с владельцами возвращается на участок с сообщением, что это был ложный вызов «студенческой шоблы»; по просьбе Фишбернов «собирает» беглецов под предлогом, что они пытаются уехать, не оплатив проживание, и тащит их обратно.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "lager-sanni-ru",
+      "physical_page": 6,
+      "printed_page": 6,
+      "method": "book_text",
+      "verified": true,
+      "note": "Фишберны могут позвонить шерифу"
+    },
+    {
+      "book_id": "lager-sanni-ru",
+      "physical_page": 7,
+      "printed_page": 7,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Служебный кабинет»: полицейские сводки"
+    },
+    {
+      "book_id": "lager-sanni-ru",
+      "physical_page": 10,
+      "printed_page": 10,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Шериф Смитхи, 58 лет»"
+    },
+    {
+      "book_id": "lager-sanni-ru",
+      "physical_page": 11,
+      "printed_page": 11,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Шериф Смитхи» (окончание)"
+    },
+    {
+      "book_id": "lager-sanni-ru",
+      "physical_page": 12,
+      "printed_page": 12,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Мы вызываем полицию!», «Побег из Лагеря Санни»"
+    },
+    {
+      "book_id": "lager-sanni-ru",
+      "physical_page": 13,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Шериф Смитхи, законник»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.damage_bonus",
+      "printed": "0",
+      "expected": "+1d4",
+      "note": "СИЛ 70 + ТЕЛ 75 = 145 дают БкУ +1d4; урон в драке напечатан «1d3+1d4», то есть с БкУ +1d4. Оставлено как напечатано."
+    },
+    {
+      "field": "statblock.build",
+      "printed": "0",
+      "expected": "1",
+      "note": "СИЛ 70 + ТЕЛ 75 = 145 дают Комплекцию 1. Оставлено как напечатано."
+    },
+    {
+      "field": "statblock.mp",
+      "printed": "9",
+      "expected": "10",
+      "note": "МОЩ 50 / 5 = 10. Оставлено как напечатано."
+    },
+    {
+      "field": "statblock.attacks[.38-06 полуавт. винтовка]",
+      "printed": ".38-06 полуавт. винтовка",
+      "expected": ".30-06 полуавт. винтовка",
+      "note": "Калибра .38-06 нет; урон 2d6+4 — как у полуавтоматической винтовки .30-06, ссылка поставлена на неё."
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": "Имя в книге — только инициал («шериф М. Смитхи», с. 7). Скорость 5 — с возрастной поправкой (58 лет). Профессия «шериф» в справочнике профессий не заведена — ссылки нет."
+  }
+}

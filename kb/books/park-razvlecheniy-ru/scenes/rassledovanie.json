@@ -1,0 +1,123 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "park-razvlecheniy-ru/scene/rassledovanie",
+  "kind": "scene",
+  "name": {
+    "ru": "Расследование",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Приезжает полиция: криминалисты обследуют место преступления, детективы опрашивают свидетелей. Большая часть посетителей с детьми направляется к выходу, оставшиеся, кто приехал на пароходе, разбредаются по парку. 13:00 — сыщики могут осмотреть парк, побеседовать с детективом, криминалистом, свидетелями, нашедшими тело (пара подростков 15 лет), и мужем убитой. Полицейские сыщики присоединяются к расследованию после происшествия.\nПолиция, судмедэксперты. После осмотра тела ясно, что женщина умерла от асфиксии, вызванной удушением тонкой леской. Каких-то следов на теле или вещах не обнаружено. Вокруг места преступления много следов посетителей и рабочих. Смерти девушки не заметили из-за ажиотажа вокруг открытия новых горок. Большинство работников парка плохо относятся к клоуну, но алиби ему обеспечивает Сью. Расследование зашло в тупик.\nСвидетели. Первыми тело обнаружили два подростка, Мэтт Донахью и Роб Дональдс: хотели спрятаться от родителей, чтобы покурить, и как раз когда хозяин открывал аттракцион, увидели уже мёртвую женщину со следами удушения (красная полоса от удавки) — руками она словно тянулась к своей шее. Убийца отволок тело подальше от открытого пространства, в кусты у границы парка. Мальчики сразу закричали и привлекли внимание ближайших посетителей. Муж убитой расскажет, что она отошла покурить за 20 минут до предполагаемого убийства; у неё остались двое маленьких детей.\nЛиззи Уолтер с колеса обозрения видела в момент убийства тёмную фигуру, бегущую в лес к реке (сцена «Призрак на колесе обозрения»).",
+    "en": null
+  },
+  "when": "13:00 и далее, день убийства",
+  "arc": {
+    "scenario": "park-razvlecheniy-ru/scenario/park-razvlecheniy",
+    "part": "2. Парк развлечений",
+    "order": 4
+  },
+  "where": [
+    {
+      "location": "park-razvlecheniy-ru/location/molniya",
+      "note": "место преступления"
+    },
+    {
+      "location": "park-razvlecheniy-ru/location/riverside-park",
+      "note": "осмотр парка"
+    },
+    {
+      "location": "park-razvlecheniy-ru/location/okrestnosti-aguema",
+      "note": "берег реки"
+    }
+  ],
+  "participants": [
+    {
+      "id": "park-razvlecheniy-ru/character/tom-dakker",
+      "role": "полиция (если не сыщик)"
+    },
+    {
+      "id": "park-razvlecheniy-ru/character/tom-kid",
+      "role": "муж убитой"
+    },
+    {
+      "id": "park-razvlecheniy-ru/character/mett-donakhyu",
+      "role": "нашёл тело"
+    },
+    {
+      "id": "park-razvlecheniy-ru/character/rob-donalds",
+      "role": "нашёл тело"
+    },
+    {
+      "id": "park-razvlecheniy-ru/character/lizzi-uolter",
+      "role": "видела бегущую фигуру"
+    },
+    {
+      "id": "park-razvlecheniy-ru/character/syu-grant",
+      "role": "алиби клоуна"
+    },
+    {
+      "id": "park-razvlecheniy-ru/character/dzhonni-finn",
+      "role": "явный подозреваемый"
+    }
+  ],
+  "mechanics": {
+    "ru": "Спуститься к реке и пройти трудную проверку Чтения следов — свежий след ботинка примерно 45 размера: возможный преступник перешёл реку, дальше след обрывается.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Результат осмотра — раздатка «Свидетельство о смерти Софии Кид». Сыщики продолжают расспросы в парке и в городе.",
+    "en": null
+  },
+  "refs": [
+    "park-razvlecheniy-ru/handout/svidetelstvo-o-smerti",
+    "park-razvlecheniy-ru/item/sled-botinka",
+    "park-razvlecheniy-ru/scene/administratsiya",
+    "park-razvlecheniy-ru/scene/gorod-aguem"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "park-razvlecheniy-ru",
+      "physical_page": 5,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "13:00, действия сыщиков"
+    },
+    {
+      "book_id": "park-razvlecheniy-ru",
+      "physical_page": 8,
+      "printed_page": 8,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Расследование»: «Полиция, судмедэксперты»"
+    },
+    {
+      "book_id": "park-razvlecheniy-ru",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Свидетели»"
+    },
+    {
+      "book_id": "park-razvlecheniy-ru",
+      "physical_page": 2,
+      "printed_page": 2,
+      "method": "book_text",
+      "verified": true,
+      "note": "хронология: полиция"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

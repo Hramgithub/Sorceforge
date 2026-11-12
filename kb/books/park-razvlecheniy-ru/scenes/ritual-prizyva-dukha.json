@@ -1,0 +1,96 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "park-razvlecheniy-ru/scene/ritual-prizyva-dukha",
+  "kind": "scene",
+  "name": {
+    "ru": "Ритуал по призыву духа",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Призрака убитой можно вызвать ритуалом с помощью магии гримуара вуду. Про ритуал может рассказать или помочь его провести афроамериканец — специалист по магии вуду, работающий в парке (Руфус Уэмбе); он может провести ритуал сам, а сыщикам надо помогать ему и добыть ингредиенты. Описание призыва духа есть и в библиотеке — в книге «История Африки и её обычаев».\nВ процессе ритуала дух-лоа овладевает человеком, который пьёт кровь жертвенного животного (обезглавленной курицы) и исступлённо танцует под звуки барабана. Во время ритуала коку пляшущие танцоры общаются с добрым духом Ганбада, обсыпая себя мелом или мукой. Дух любой из жертв расскажет, что убийца — высокий худощавый мужчина по фамилии Бигль.",
+    "en": null
+  },
+  "when": "Когда сыщики найдут описание ритуала и ингредиенты",
+  "arc": {
+    "scenario": "park-razvlecheniy-ru/scenario/park-razvlecheniy",
+    "part": "Возможные события",
+    "order": 14
+  },
+  "where": [
+    {
+      "location": "park-razvlecheniy-ru/location/domiki-rabotnikov",
+      "note": "гримуар — в домике колдуна"
+    },
+    {
+      "location": "park-razvlecheniy-ru/location/biblioteka",
+      "note": "альтернатива: книга об обычаях Африки"
+    }
+  ],
+  "participants": [
+    {
+      "id": "park-razvlecheniy-ru/character/rufus-uembe",
+      "role": "может провести ритуал сам"
+    },
+    {
+      "id": "park-razvlecheniy-ru/creature/prizrak-sofii-kid",
+      "role": "дух жертвы"
+    },
+    {
+      "id": "park-razvlecheniy-ru/creature/prizrak-meri-guver",
+      "role": "дух жертвы"
+    }
+  ],
+  "mechanics": {
+    "ru": "Обучиться ритуалу можно за 1d6 дней, если прочитать книгу из домика колдуна (на французском — проверка Языка (французский)); полное прочтение — 10 недель, потеря Рассудка 1d6, Мифы Ктулху +1/+4%, значение Мифов 15; заклинания: дурной глаз, иссушение, вызов духа. Выучить заклинание — проверка ИНТ. Первое сотворение — с проверкой МОЩ; при провале повторная проверка отнимет ещё 1d6 ПМ и даст побочный случайный эффект, но заклинание сработает. Цена — 1 ПМ за каждые 10% шанса на успех (96–100 — провал). Призыв духа — проверка Рассудка 1/1d6.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Духи указывают на убийцу — начинается финал (сцена «Финал: пожар в парке»).",
+    "en": null
+  },
+  "refs": [
+    "park-razvlecheniy-ru/tome/grimuar-vudu",
+    "park-razvlecheniy-ru/tome/istoriya-afriki",
+    "park-razvlecheniy-ru/item/ingredienty-rituala",
+    "park-razvlecheniy-ru/handout/grimuar-vudu-list",
+    "park-razvlecheniy-ru/scene/final-pozhar"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "park-razvlecheniy-ru",
+      "physical_page": 10,
+      "printed_page": 10,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Ритуал по призыву духа»"
+    },
+    {
+      "book_id": "park-razvlecheniy-ru",
+      "physical_page": 3,
+      "printed_page": 3,
+      "method": "book_text",
+      "verified": true,
+      "note": "хронология: ритуал, специалист вуду, библиотека"
+    },
+    {
+      "book_id": "park-razvlecheniy-ru",
+      "physical_page": 24,
+      "printed_page": 24,
+      "method": "book_text",
+      "verified": true,
+      "note": "раздатка: лист гримуара"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "park-razvlecheniy-ru/creature/dukh-abrakhama",
+  "kind": "creature",
+  "name": {
+    "ru": "Дух Абрахама",
+    "en": null
+  },
+  "aliases": [
+    "Призрак Абрахама"
+  ],
+  "category": "supernatural",
+  "subcategory": "призрак мальчика-медиума",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:ghost"
+    },
+    {
+      "type": "form_of",
+      "target": "park-razvlecheniy-ru/character/abrakham-perris",
+      "note": "мальчик при жизни",
+      "note_back": "дух после гибели (если Бигль скроется)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "INT": {
+        "raw": "20",
+        "value": 20
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      }
+    },
+    "hp": {
+      "raw": "—",
+      "value": null
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Атака призрака",
+          "en": null
+        },
+        "kind": "special",
+        "skill": "МОЩ",
+        "chance": {
+          "raw": "встречная проверка МОЩ",
+          "value": null,
+          "half": null,
+          "fifth": null
+        },
+        "damage": {
+          "raw": "проверка Рассудка 1/1d6",
+          "dice": null,
+          "adds_db": false,
+          "extra": null
+        },
+        "notes": "в критической ситуации; при проигрыше — проверка Рассудка 1/1d6"
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d6",
+        "trigger": "проигранная встречная проверка МОЩ"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Одержимость призраками",
+      "summary": "Если Абрахам погибнет, его призрак будет являться знакомому сыщику: тот получает постоянную «одержимость призраками». В критической ситуации дух является и атакует сыщика — встречная проверка МОЩ; при провале проверка Рассудка 1/1d6. Проверки продолжаются, пока сыщик не сойдёт с ума."
+    }
+  ],
+  "description": {
+    "ru": "Призрак мальчика-медиума, являющийся знакомому сыщику, если мальчик погибнет.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Если Бигля арестуют и он сбежит, в течение года в округе будут находить тела; однажды это будут Кэсси Фортье и её сын Абрахам Перрис.",
+    "en": null
+  },
+  "habitat": "Риверсайд-парк, Агуэм (Массачусетс)",
+  "sources": [
+    {
+      "book_id": "park-razvlecheniy-ru",
+      "physical_page": 11,
+      "printed_page": 11,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Призрак Абрахама будет являться знакомому сыщику, если погибнет» (ИНТ 20, МОЩ 50)"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Из характеристик книга даёт только ИНТ и МОЩ; атака — встречная проверка МОЩ, при провале — проверка Рассудка 1/1d6 (потери МОЩ книга здесь не называет)."
+  }
+}

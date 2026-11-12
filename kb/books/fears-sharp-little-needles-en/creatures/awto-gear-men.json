@@ -1,0 +1,268 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "fears-sharp-little-needles-en/creature/awto-gear-men",
+  "kind": "creature",
+  "name": {
+    "ru": "Шестерёнщики",
+    "en": "Gear Men"
+  },
+  "aliases": [
+    "помощники с восковыми лицами",
+    "waxy-faced helpers"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "механические слуги Человека Тик-Так",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "servitor_of",
+      "target": "fears-sharp-little-needles-en/creature/awto-tick-tock-man-automobile",
+      "note": "сделают всё, чтобы аватар выжил",
+      "note_back": "механические слуги"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "75",
+        "value": 75
+      },
+      "CON": {
+        "raw": "90",
+        "value": 90
+      },
+      "SIZ": {
+        "raw": "50",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "30",
+        "value": 30
+      },
+      "APP": {
+        "raw": "1",
+        "value": 1
+      },
+      "INT": {
+        "raw": "90",
+        "value": 90
+      },
+      "POW": {
+        "raw": "20",
+        "value": 20
+      },
+      "EDU": {
+        "raw": "0",
+        "value": 0
+      }
+    },
+    "hp": {
+      "raw": "14",
+      "value": 14
+    },
+    "sanity": {
+      "raw": "0",
+      "value": 0
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "6",
+      "value": 6,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 6
+        }
+      ]
+    },
+    "armor": {
+      "raw": "2 пункта брони; пронзающие попадания невозможны",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Fighting (Brawl)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d3+БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed",
+        "notes": "вооружены по-разному"
+      },
+      {
+        "name": {
+          "ru": "Гаечный ключ",
+          "en": "Wrench"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d8+БкУ",
+          "dice": "1d8",
+          "adds_db": true
+        },
+        "notes": null
+      },
+      {
+        "name": {
+          "ru": "Сварочная горелка",
+          "en": "Welding Torch"
+        },
+        "kind": "attack",
+        "skill": null,
+        "chance": {
+          "raw": "20% (10/4)",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        },
+        "damage": {
+          "raw": "2d6",
+          "dice": "2d6",
+          "adds_db": false
+        },
+        "notes": null
+      }
+    ],
+    "skills": [
+      {
+        "name": "Вождение автомобиля",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Электрика",
+        "skill": "coc:skill:electrical-repair",
+        "value": {
+          "raw": "90%",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        }
+      },
+      {
+        "name": "Механика",
+        "skill": "coc:skill:mechanical-repair",
+        "value": {
+          "raw": "90%",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        }
+      },
+      {
+        "name": "Наука (инженерное дело)",
+        "skill": "coc:skill:science",
+        "specialization": "инженерное дело",
+        "value": {
+          "raw": "90%",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1",
+        "trigger": "увидеть их одетыми, с фальшивыми лицами"
+      },
+      {
+        "success": "1",
+        "fail": "1d4",
+        "trigger": "увидеть их без одежды, во всём механическом ужасе"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Механическое тело",
+      "summary": "2 пункта брони; пронзающих попаданий по ним не бывает. Бить их — всё равно что бить по кузову машины.",
+      "raw": "Defenses: 2-points of armor; cannot be impaled."
+    },
+    {
+      "name": "Неутомимые работники",
+      "summary": "Работают всю ночь почти без отдыха, будто ими движет неведомая сила; строят оболочку Человека Тик-Так и вносят в неё усовершенствования.",
+      "raw": "they work throughout the night with barely any rest, as if they are driven by an unknown force."
+    }
+  ],
+  "description": {
+    "ru": "Одеты как механики — в синие рабочие комбинезоны; лица кажутся восковыми и неестественными: ни изъяна, ни подёргивания мышц. На деле это механические люди из шестерёнок и проводов, с натянутыми на пустые лица пластиковыми безэмоциональными масками. Если сорвать комбинезон, видно иссохшее человеческое сердце в стеклянном футляре и провода от него к шестерёнкам и зубчатым колёсам.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Их трое; Эштон дал их Хармону как помощников. Один из них, вероятно, угнал такси и сбил Хармона (вывод из текста, Р-41: таксист с восковым лицом, угонщик в комбинезоне). Шестерёнщики собрали Паровой двигатель и добавили бункер для человеческих жертв и, по-видимому, работающий реактор холодного синтеза. Создаются заклинанием «Создание Шестерёнщиков» из книги «Адские машины».",
+    "en": null
+  },
+  "habitat": "гараж в старой станции техобслуживания",
+  "sources": [
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 45,
+      "printed_page": 44,
+      "method": "book_text",
+      "verified": true,
+      "note": "сценарий «The Great and Terrible Awto»: «Gear Men» — статблок и описание"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 44,
+      "printed_page": 43,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Garage»: трое Шестерёнщиков"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 42,
+      "printed_page": 41,
+      "method": "book_text",
+      "verified": true,
+      "note": "помощники с восковыми лицами, таксист"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Существо сценария, общего вида нет (Р-75). Русский текст — по рабочему переводу владельца (document.html, «Великий и ужасный Авто»), сверен с английским оригиналом; числа — по оригиналу."
+  }
+}

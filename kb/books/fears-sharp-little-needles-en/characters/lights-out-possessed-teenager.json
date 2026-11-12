@@ -1,0 +1,308 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "fears-sharp-little-needles-en/character/lights-out-possessed-teenager",
+  "kind": "character",
+  "name": {
+    "ru": "Одержимый подросток",
+    "en": "Possessed Teenager"
+  },
+  "aliases": [
+    "одержимые девушки",
+    "possessed teenagers"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "подросток, одержимый духом лидера культа",
+  "names": [
+    "Джош Тейлор",
+    "Мэдисон Кларк",
+    "Тайлер Брукс",
+    "Эшли Морган",
+    "Кайл Беннетт"
+  ],
+  "age": {
+    "raw": "15",
+    "value": 15
+  },
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "125",
+        "value": 125
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "40",
+        "value": 40
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50
+      },
+      "APP": {
+        "raw": "55",
+        "value": 55
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "90",
+        "value": 90
+      },
+      "EDU": {
+        "raw": "50",
+        "value": 50
+      }
+    },
+    "hp": {
+      "raw": "9",
+      "value": 9
+    },
+    "mp": {
+      "raw": "18",
+      "value": 18,
+      "note": "из текста с. 54: у каждого культиста 18 пунктов магии, сегодня уже потрачено 5, осталось 13"
+    },
+    "sanity": {
+      "raw": "0",
+      "value": 0
+    },
+    "damage_bonus": {
+      "raw": "+1d6",
+      "value": "+1d6"
+    },
+    "build": {
+      "raw": "2",
+      "value": 2
+    },
+    "move": {
+      "raw": "9 (немного быстрее обычного человека)",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Fighting (Brawl)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:unarmed",
+        "notes": "БкУ в строке атаки не напечатан"
+      }
+    ],
+    "dodge": {
+      "raw": "50% (25/10)",
+      "value": 50,
+      "half": 25,
+      "fifth": 10
+    },
+    "skills": [
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "17%",
+          "value": 17,
+          "half": 8,
+          "fifth": 3
+        }
+      },
+      {
+        "name": "Вождение автомобиля",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Язык (английский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "английский",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Оккультизм",
+        "skill": "coc:skill:occult",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      }
+    ],
+    "spells": {
+      "raw": "1d4 заклинания; однако будьте осторожны с небольшими группами из-за действенности варианта заклинания «Перенос разума» и этической проблемы нападения на подростков.",
+      "items": [
+        {
+          "name": "variant Mind Transfer",
+          "spell": "coc:spell:mind-transfer"
+        }
+      ]
+    },
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d4",
+        "trigger": "увидеть нечеловеческую силу одержимой девушки (Клэр/Казимир)"
+      },
+      {
+        "success": "1",
+        "fail": "1d10",
+        "trigger": "убить одержимую девушку"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Маска подростка",
+      "summary": "Духи скрыты в телах подростков и притворяются самими подростками, чтобы застать сыщиков врасплох.",
+      "raw": "Defenses: They are hidden within the bodies of teenagers, and will pretend to be the teenager to throw the investigators off guard."
+    },
+    {
+      "name": "Бессрочное безумие: фанатик",
+      "summary": "Сделает что угодно ради призыва своего бога.",
+      "raw": "Indefinite Insanity: Fanatic; will do anything to summon their god.",
+      "refs": [
+        "coc:rule:indefinite-insanity"
+      ]
+    },
+    {
+      "name": "Переселение духа",
+      "summary": "Если тело убить, дух культиста пытается завладеть сыщиком или гостем вечеринки; истратив на эти попытки пункты магии, он больше не может пытаться и рассеивается.",
+      "raw": "Notes: If they are killed, then the cultists' spirits will attempt to possess an investigator or partygoer. However, if they run out of magic points in their efforts to do so, they no longer have the energy to try again and are dispelled."
+    },
+    {
+      "name": "Вариант «Переноса разума»",
+      "summary": "Вариант «Переноса разума» культа: дух лидера культа завладевает целью и управляет её действиями при успехе встречной проверки МОЩ против МОЩ; цель всё осознаёт. Сотворение — 5 раундов; начавшись успешно, заклинание останавливается только смертью заклинателя; жертва успешной атаки теряет 1d20 Рассудка. Стоит всего 5 пунктов магии и длится один день (можно продлить); сопровождается жаром и пламенем, может начаться пожар. У каждого культиста 18 пунктов магии, сегодня уже потрачено 5 — осталось 13, то есть две попытки. Одновременно дух держит только одну жертву: захватив другую, освобождает прежнюю (освобождённая Клэр остаётся бессрочно безумной). Одержимость не постоянна и не лишает цель чувств: цель проходит проверку МОЩ, чтобы вернуть контроль, раз в день или когда дух пытается заставить её сделать что-то в корне противное её природе. Истратив пункты магии на попытки, дух рассеивается.",
+      "raw": "The cult's variant Mind Transfer spell allows Casimir and the other two cult leaders to possess the target and control his actions on a successful opposed POW vs. POW check, although the target remains aware of what is going on. It takes 5 rounds to cast but once it successfully starts, it cannot be stopped except by killing the caster, and the victim of a successful attack loses 1d20 SAN. Unlike the normal Mind Transfer spell, this variant only costs 5 magic points and only lasts one day (although it can be renewed). The spell is accompanied by scorching and flames, which may result in a fire. Each cultist has 18 magic points but has already used 5 today, leaving 13 (or two further possession attempts).",
+      "refs": [
+        "coc:spell:mind-transfer",
+        "coc:rule:opposed-pow-rolls"
+      ]
+    }
+  ],
+  "description": {
+    "ru": "Общий профиль девушек, одержимых духами лидеров культа «Хранители священного пламени»: Элис (Клод Дюмонт), Клэр (Казимир Мартен) и Тэмми (Эстель Понсе); годится и для гостя вечеринки или сыщика, которым завладел дух. Одержимые обладают невероятной силой и наслаждаются убийствами. Нападать на подростков — этическая проблема, которую книга советует учитывать.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 56,
+      "printed_page": 55,
+      "method": "book_text",
+      "verified": true,
+      "note": "сценарий «Lights Out»: «Possessed Teenager» — статблок"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 55,
+      "printed_page": 54,
+      "method": "book_text",
+      "verified": true,
+      "note": "вариант «Переноса разума», 18 пунктов магии"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.attacks[Драка].damage",
+      "printed": "Fighting (Brawl) 50% (25/10), damage 1D3",
+      "expected": "1d3+БкУ (+1d6)",
+      "note": "При БкУ +1d6 урон драки напечатан без бонуса к урону; по правилам драка прибавляет БкУ. Оставлено как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "editorial_text",
+      "parse_uncertain"
+    ],
+    "notes": "Групповой профиль (Р-74, Р-151): книжные носительницы — Элис, Клэр, Тэмми (свои записи со связью instance_of); придуманные имена — для гостей вечеринки, которыми может завладеть дух. Пункты магии (18) — из текста, не из статблока. «Language (English)» — родной язык (вывод из текста, Р-41). Русский текст — по рабочему переводу владельца (document.html, «Свет погас»), сверен с английским оригиналом; числа — по оригиналу."
+  }
+}

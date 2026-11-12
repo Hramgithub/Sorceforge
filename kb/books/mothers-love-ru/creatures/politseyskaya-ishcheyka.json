@@ -1,0 +1,186 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "mothers-love-ru/creature/politseyskaya-ishcheyka",
+  "kind": "creature",
+  "name": {
+    "ru": "Полицейская ищейка («Любовь матери»)",
+    "en": null
+  },
+  "aliases": [
+    "Типичная полицейская ищейка",
+    "Ищейка"
+  ],
+  "category": "animal",
+  "subcategory": "собака",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:dog",
+      "note_back": "полицейская ищейка «Любви матери» (с. 12)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "35",
+        "value": 35
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "35",
+        "value": 35
+      },
+      "POW": {
+        "raw": "35",
+        "value": 35
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "INT": {
+        "raw": "N/A",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "8",
+      "value": 8
+    },
+    "mp": {
+      "raw": "7",
+      "value": 7
+    },
+    "damage_bonus": {
+      "raw": "-1",
+      "value": -1
+    },
+    "build": {
+      "raw": "-1",
+      "value": -1
+    },
+    "move": {
+      "raw": "12",
+      "value": 12,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 12
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Укус",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (укус)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d6 + БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "42% (21/8)",
+      "value": 42,
+      "half": 21,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Обоняние",
+        "skill": "coc:skill:scent",
+        "value": {
+          "raw": "95%",
+          "value": 95,
+          "half": 47,
+          "fifth": 19
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d6",
+        "trigger": null
+      }
+    ]
+  },
+  "description": {
+    "ru": "Ищейка, которую могут привезти для охоты на людей. В пределах 800 м от Иннсмута собаки становятся беспокойными, скулят и воют и отказываются работать, пока не будет сделана проверка Обращения с животными; их проводники замечают странное поведение, но не понимают, что на собак воздействует. В Иннсмуте ищейки не могут идти по запаху; каждые 12 часов нужна трудная проверка Обращения с животными, иначе собаки попытаются сбежать из города. Рыбная вонь у брошенного автомобиля тоже их тревожит.\nЦитата: «Гав».",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "mothers-love-ru",
+      "physical_page": 4,
+      "printed_page": 4,
+      "method": "book_text",
+      "verified": false,
+      "note": "«Создание атмосферы»: собаки у Иннсмута"
+    },
+    {
+      "book_id": "mothers-love-ru",
+      "physical_page": 5,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": false,
+      "note": "брошенный автомобиль"
+    },
+    {
+      "book_id": "mothers-love-ru",
+      "physical_page": 12,
+      "printed_page": 12,
+      "method": "book_text",
+      "verified": false,
+      "note": "статблок «Типичная полицейская ищейка»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.sanity_loss",
+      "printed": "Потеря Рассудка: 1/1D6",
+      "expected": null,
+      "note": "У полицейской собаки напечатана потеря Рассудка 1/1d6 — для обычного животного странно; вероятно, строка перенесена из другого статблока. Оставлено как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Оригинал не найден, числа не сверены (Р-223): все числа — по переводу владельца. Русский текст — перевод владельца (Р-223), пересказ наш."
+  }
+}

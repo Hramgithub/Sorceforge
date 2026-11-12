@@ -1,0 +1,253 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "mothers-love-ru/character/tipichnyy-zhitel-gibrid",
+  "kind": "character",
+  "name": {
+    "ru": "Типичный житель-гибрид",
+    "en": null
+  },
+  "aliases": [
+    "Житель Иннсмута (гибрид)",
+    "Гибрид-жрец",
+    "Младший жрец"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "житель Иннсмута — гибрид глубоководного",
+  "names": [
+    "Обадия Сарджент",
+    "Лемюэль Пратт",
+    "Хепзиба Уэлч",
+    "Зебулон Хейл",
+    "Мерси Ловетт"
+  ],
+  "age": {
+    "raw": "разный.",
+    "value": null
+  },
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:deep-one-hybrid",
+      "note_back": "профиль «Любви матери» (с. 14)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "65",
+        "value": 65
+      },
+      "CON": {
+        "raw": "65",
+        "value": 65
+      },
+      "SIZ": {
+        "raw": "52",
+        "value": 52
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65
+      },
+      "APP": {
+        "raw": "55",
+        "value": 55
+      },
+      "EDU": {
+        "raw": "50",
+        "value": 50
+      }
+    },
+    "hp": {
+      "raw": "11",
+      "value": 11
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "damage_bonus": {
+      "raw": "нет.",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8/8 вплавь",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        },
+        {
+          "mode": "swim",
+          "value": 8
+        }
+      ]
+    },
+    "sanity": {
+      "raw": "N/A",
+      "value": null,
+      "max": null
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d3 + БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed",
+        "notes": "Гибриды могут пользоваться любым оружием, доступным людям."
+      }
+    ],
+    "dodge": {
+      "raw": "32% (16/6)",
+      "value": 32,
+      "half": 16,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "46%",
+          "value": 46,
+          "half": 23,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Плавание",
+        "skill": "coc:skill:swim",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d4",
+        "trigger": "при виде развитого гибрида без маскировки"
+      },
+      {
+        "success": "1",
+        "fail": "1d6+1",
+        "trigger": "при встрече с особенно чудовищным экземпляром (их обычно надёжно держат взаперти)"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Гибриды-жрецы",
+      "summary": "У гибридов-жрецов МОЩ 75, и они знают 1d4 заклинания на выбор: Breath of the Deep, Contact Cthulhu, Contact Deep Ones, Contact Father Dagon, Contact Mother Hydra, Curse of the Putrid Husk, Shriveling. В храме Ордена всегда находятся 1d6 младших жрецов.",
+      "raw": "Гибриды-жрецы имеют МОЩ 75 и знают 1d4 заклинания. Выберите из следующих: Breath of the Deep, Contact Cthulhu, Contact Deep Ones, Contact Father Dagon, Contact Mother Hydra, Curse of the Putrid Husk, Shriveling.",
+      "refs": [
+        "coc:spell:breath-of-the-deep",
+        "coc:spell:contact-cthulhu",
+        "coc:spell:contact-deep-one",
+        "coc:spell:contact-father-dagon",
+        "coc:spell:contact-mother-hydra",
+        "coc:spell:curse-of-the-putrid-husk",
+        "coc:spell:shrivelling"
+      ]
+    }
+  ],
+  "description": {
+    "ru": "Типичный гибрид Иннсмута — большинство жителей, с иннсмутским обликом. Гибриды могут пользоваться любым оружием, доступным людям. Особенно чудовищные экземпляры обычно надёжно держат взаперти.\nЦитата гибридов: «Ничего я не видел». Цитата гибридов-жрецов: «Вам нельзя входить в Дом нашего Господа».",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "mothers-love-ru",
+      "physical_page": 7,
+      "printed_page": 7,
+      "method": "book_text",
+      "verified": false,
+      "note": "«Эзотерический Орден Дагона»: 1d6 младших жрецов"
+    },
+    {
+      "book_id": "mothers-love-ru",
+      "physical_page": 14,
+      "printed_page": 14,
+      "method": "book_text",
+      "verified": false,
+      "note": "статблок «Типичный житель-гибрид»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.move",
+      "printed": "8/8 вплавь",
+      "expected": "9",
+      "note": "СИЛ 65 и ЛВК 65 больше ТЕЛ 52 — по правилам Скорость 9 (у общего «Гибрида глубоководного» — 9). Оставлено как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "editorial_text",
+      "parse_uncertain"
+    ],
+    "notes": "Оригинал не найден, числа не сверены (Р-223): все числа — по переводу владельца. Русский текст — перевод владельца (Р-223), пересказ наш. Имена придуманы (Р-151): в книге — типовой профиль без имён. Числа отличаются от общего «Гибрида глубоководного» (ТЕЛ 52, НАР 55, ОБР 50, Скорость 8/8 вплавь), поэтому профиль — своя запись со связью на вид (Р-75)."
+  }
+}

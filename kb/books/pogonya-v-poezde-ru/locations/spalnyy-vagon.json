@@ -1,0 +1,154 @@
+{
+  "schema": "sourcefold.location.v0",
+  "id": "pogonya-v-poezde-ru/location/spalnyy-vagon",
+  "kind": "location",
+  "name": {
+    "ru": "Спальный вагон",
+    "en": null
+  },
+  "aliases": [],
+  "location_type": "место",
+  "part_of": "pogonya-v-poezde-ru/location/poezd",
+  "number": null,
+  "address": null,
+  "keeper_hint": "Вагон с раскладными двуспальными местами, типы А и Б.",
+  "description": {
+    "ru": "Спальный вагон типа А имеет шестнадцать раскладных двуспальных мест и четыре отдельных купе; между купе есть дверцы, которые позволяют объединить два соседних купе, если их купить вместе. Спальный вагон типа Б имеет 28 двуспальных раскладных мест; в общем вагоне возле каждого отсека есть шторка, позволяющая сделать сон более приватным. По утрам койки складываются в сиденья, между креслами есть раскладные столики. Санузлы есть по обеим сторонам вагона; в спальных вагонах они объединены с мужской курительной и женским салоном — комнатами, где представители соответствующих полов отдыхают, общаются и читают. Проводник и сотрудники вагона-ресторана приносят в вагоны утреннюю корреспонденцию и завтрак по мере необходимости.\nПассажиры. В спальных вагонах ездят на дальние расстояния, попутчики в основном состоятельные люди. Спальные вагоны без купе больше похожи на нынешние плацкартные, поэтому действительно богатые предпочитают купе первого класса. В основном так ездят успешные коммивояжёры, менеджеры среднего звена и их семьи (зачастую раздельно), прислуга и подчинённые обеспеченных людей, работники крупных компаний в дальних командировках. Обычно занято две трети мест — и днём, и ночью. Здесь не так тесно и многолюдно, как в сидячих вагонах, поэтому тише. Нижние места трансформируются в одно двуспальное, верхние тоже раскладываются только в двуспальные и держатся сложенными до вечера: в одном отсеке продаются, по сути, два семейных места, а не четыре одноместных; два места можно занимать даже по одному билету с особой пометкой. Поэтому рядом с сыщиками будет мало людей, а сами сыщики, вероятно, окажутся разрознены. Ручная кладь убирается в нижние сиденья, в купе есть ещё и верхняя полка.",
+    "en": null
+  },
+  "residents": [
+    {
+      "id": "pogonya-v-poezde-ru/character/kommivoyazher",
+      "note": "попутчик (таблица)"
+    },
+    {
+      "id": "pogonya-v-poezde-ru/character/birzhevoy-klerk",
+      "note": "попутчик (таблица)"
+    },
+    {
+      "id": "pogonya-v-poezde-ru/character/molodaya-semeynaya-para",
+      "note": "попутчик (таблица)"
+    },
+    {
+      "id": "pogonya-v-poezde-ru/character/manernaya-pozhilaya-zhenshchina",
+      "note": "попутчик (таблица)"
+    },
+    {
+      "id": "pogonya-v-poezde-ru/character/zhenshchina-s-rebenkom",
+      "note": "попутчик (таблица)"
+    },
+    {
+      "id": "pogonya-v-poezde-ru/character/sekretar",
+      "note": "попутчик (таблица)"
+    }
+  ],
+  "tables": [
+    {
+      "title": "Попутчики в спальном вагоне",
+      "kind": "встречи",
+      "dice": "1d6",
+      "intro": "Выберите (или киньте 1d6), с каким попутчиком повезло вашим сыщикам, и отметьте карандашом справа.",
+      "rows": [
+        {
+          "roll": "1",
+          "text": "Энергичный коммивояжёр",
+          "refs": [
+            "pogonya-v-poezde-ru/character/kommivoyazher"
+          ]
+        },
+        {
+          "roll": "2",
+          "text": "Сосредоточенный биржевой клерк",
+          "refs": [
+            "pogonya-v-poezde-ru/character/birzhevoy-klerk"
+          ]
+        },
+        {
+          "roll": "3",
+          "text": "Молодая семейная пара",
+          "refs": [
+            "pogonya-v-poezde-ru/character/molodaya-semeynaya-para"
+          ]
+        },
+        {
+          "roll": "4",
+          "text": "Манерная пожилая женщина",
+          "refs": [
+            "pogonya-v-poezde-ru/character/manernaya-pozhilaya-zhenshchina"
+          ]
+        },
+        {
+          "roll": "5",
+          "text": "Женщина с маленьким ребёнком",
+          "refs": [
+            "pogonya-v-poezde-ru/character/zhenshchina-s-rebenkom"
+          ]
+        },
+        {
+          "roll": "6",
+          "text": "Секретарь пассажира первого класса",
+          "refs": [
+            "pogonya-v-poezde-ru/character/sekretar"
+          ]
+        }
+      ],
+      "source": {
+        "book_id": "pogonya-v-poezde-ru",
+        "physical_page": 11,
+        "printed_page": 9,
+        "method": "book_text",
+        "verified": true,
+        "note": "«Спальные вагоны»: список попутчиков"
+      }
+    }
+  ],
+  "refs": [
+    "pogonya-v-poezde-ru/map/spalnye-i-sidyachie-vagony",
+    "pogonya-v-poezde-ru/scene/poezdka"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "pogonya-v-poezde-ru",
+      "physical_page": 4,
+      "printed_page": 2,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Спальные вагоны»"
+    },
+    {
+      "book_id": "pogonya-v-poezde-ru",
+      "physical_page": 6,
+      "printed_page": 4,
+      "method": "book_text",
+      "verified": true,
+      "note": "схема «Спальные вагоны», типы А и Б"
+    },
+    {
+      "book_id": "pogonya-v-poezde-ru",
+      "physical_page": 10,
+      "printed_page": 8,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Ручная кладь»"
+    },
+    {
+      "book_id": "pogonya-v-poezde-ru",
+      "physical_page": 11,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Спальные вагоны» (пассажиры), список попутчиков"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

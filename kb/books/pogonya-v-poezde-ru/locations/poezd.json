@@ -1,0 +1,173 @@
+{
+  "schema": "sourcefold.location.v0",
+  "id": "pogonya-v-poezde-ru/location/poezd",
+  "kind": "location",
+  "name": {
+    "ru": "Поезд",
+    "en": null
+  },
+  "aliases": [],
+  "location_type": "место",
+  "part_of": "pogonya-v-poezde-ru/location/zheleznaya-doroga",
+  "number": null,
+  "address": null,
+  "keeper_hint": "Пассажирский поезд, на котором едут сыщики.",
+  "description": {
+    "ru": "Типичный пассажирский поезд 1920-х годов. В состав входит от 5 до 10 вагонов, не считая локомотива. Спальные вагоны, вагоны-купе и вагоны первого класса ставят дальше от локомотива, чтобы пассажиров меньше беспокоил дым. Дневные экспресс-поезда на коротких маршрутах, как правило, не включают спальных вагонов.\nВ каждом вагоне есть откидное сиденье дежурного проводника и запирающийся на ключ шкаф с инвентарём, где хранятся бельё и средства для уборки (в том числе швабры). В поезде нет телефона и телеграфа (они есть на станциях; позже в дорогих поездах появились телеграфисты). Слышимость отличная: громкие звуки проходят через внутренние перегородки и разносятся на весь вагон. Все распашные внешние двери открываются внутрь из соображений безопасности, прочие двери — согласно плану. Санузлы запирают непосредственно перед прибытием на промежуточную станцию и за полчаса до прибытия на узловую; открывают сразу после отбытия и через полчаса соответственно.\nСоединение вагонов. Над сочленением вагонов установлены металлические площадки-переходы; роль стенок выполняют «гармошки», которые крепятся к вагонам с обеих сторон болтами. Под площадками находится сцепка вагонов.\nЭкипаж спит в поезде, кто как может: проводники дремлют в своих креслах для дежурств (у некоторых есть небольшие выкатные поддоны), начальник поезда и другие важные члены экипажа — на крошечных койках в багажном вагоне, младший персонал — в гамаках на кухне и в багажных вагонах.",
+    "en": null
+  },
+  "residents": [
+    {
+      "id": "pogonya-v-poezde-ru/character/nachalnik-poezda",
+      "note": "руководит экипажем"
+    },
+    {
+      "id": "pogonya-v-poezde-ru/character/provodniki",
+      "note": "по одному в каждом вагоне"
+    },
+    {
+      "id": "pogonya-v-poezde-ru/character/nosilshchiki",
+      "note": "в некоторых поездах со спальными вагонами едут вместе с поездом"
+    },
+    {
+      "id": "pogonya-v-poezde-ru/character/uborshchiki-i-gornichnye",
+      "note": null
+    }
+  ],
+  "tables": [
+    {
+      "title": "Возможный состав поезда",
+      "kind": "прочее",
+      "dice": null,
+      "intro": "Вагоны от головы состава к хвосту.",
+      "rows": [
+        {
+          "roll": "•",
+          "text": "Паровоз",
+          "refs": [
+            "pogonya-v-poezde-ru/location/parovoz"
+          ]
+        },
+        {
+          "roll": "•",
+          "text": "Тендерный вагон",
+          "refs": [
+            "pogonya-v-poezde-ru/location/tender"
+          ]
+        },
+        {
+          "roll": "•",
+          "text": "Багажный вагон",
+          "refs": [
+            "pogonya-v-poezde-ru/location/bagazhnyy-vagon"
+          ]
+        },
+        {
+          "roll": "•",
+          "text": "Багажный вагон",
+          "refs": [
+            "pogonya-v-poezde-ru/location/bagazhnyy-vagon"
+          ]
+        },
+        {
+          "roll": "•",
+          "text": "Сидячий или спальный вагон",
+          "refs": [
+            "pogonya-v-poezde-ru/location/sidyachiy-vagon",
+            "pogonya-v-poezde-ru/location/spalnyy-vagon"
+          ]
+        },
+        {
+          "roll": "•",
+          "text": "Сидячий или спальный вагон",
+          "refs": [
+            "pogonya-v-poezde-ru/location/sidyachiy-vagon",
+            "pogonya-v-poezde-ru/location/spalnyy-vagon"
+          ]
+        },
+        {
+          "roll": "•",
+          "text": "Вагон-ресторан (в составах со спальными вагонами)",
+          "refs": [
+            "pogonya-v-poezde-ru/location/vagon-restoran"
+          ]
+        },
+        {
+          "roll": "•",
+          "text": "Спальный вагон 1 класса",
+          "refs": [
+            "pogonya-v-poezde-ru/location/vagon-pervogo-klassa"
+          ]
+        },
+        {
+          "roll": "•",
+          "text": "Спальный вагон 1 класса",
+          "refs": [
+            "pogonya-v-poezde-ru/location/vagon-pervogo-klassa"
+          ]
+        },
+        {
+          "roll": "•",
+          "text": "Тормозной вагон (в поездах до 1869 года выпуска)",
+          "refs": [
+            "pogonya-v-poezde-ru/location/kabuz"
+          ]
+        }
+      ],
+      "source": {
+        "book_id": "pogonya-v-poezde-ru",
+        "physical_page": 4,
+        "printed_page": 2,
+        "method": "book_text",
+        "verified": true,
+        "note": "«Возможный состав поезда»"
+      }
+    }
+  ],
+  "refs": [
+    "pogonya-v-poezde-ru/scenario/pogonya-v-poezde",
+    "pogonya-v-poezde-ru/map/spalnye-i-sidyachie-vagony",
+    "pogonya-v-poezde-ru/map/vagon-1-klassa-restoran-bagazhnyy-kabuz",
+    "pogonya-v-poezde-ru/map/lokomotiv",
+    "pogonya-v-poezde-ru/item/shvabra",
+    "pogonya-v-poezde-ru/scene/presledovanie",
+    "pogonya-v-poezde-ru/scene/otstykovka-vagona"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "pogonya-v-poezde-ru",
+      "physical_page": 4,
+      "printed_page": 2,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Описание поезда»: «Возможный состав поезда», «Краткие факты»"
+    },
+    {
+      "book_id": "pogonya-v-poezde-ru",
+      "physical_page": 5,
+      "printed_page": 3,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Соединение вагонов»"
+    },
+    {
+      "book_id": "pogonya-v-poezde-ru",
+      "physical_page": 8,
+      "printed_page": 6,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Персонал поезда»: где спит экипаж"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

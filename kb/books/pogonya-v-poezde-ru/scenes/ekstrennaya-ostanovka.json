@@ -1,0 +1,77 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "pogonya-v-poezde-ru/scene/ekstrennaya-ostanovka",
+  "kind": "scene",
+  "name": {
+    "ru": "Экстренная остановка поезда",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Хранителю на заметку: можно разместить в каждом вагоне аварийный шнур, сигнализирующий машинисту о необходимости экстренной остановки, хотя в реальности их, вероятнее всего, не было, а стоп-краны на территории США не использовались никогда. Сыщики могут попробовать дёрнуть за шнур, но о существовании, расположении и назначении шнура знают только проводники; по решению Хранителя за шнур может дёрнуть и любой достаточно сильно испуганный проводник. Единственный настоящий стоп-кран на весь поезд — пневматический тормоз в будке машиниста; в старых составах для экстренной остановки мало сбавить обороты локомотива — нужно затормозить ещё и в кабузе.",
+    "en": null
+  },
+  "when": "Во время погони",
+  "arc": {
+    "scenario": "pogonya-v-poezde-ru/scenario/pogonya-v-poezde",
+    "part": "Погоня: Экстренная остановка поезда",
+    "order": 7
+  },
+  "where": [
+    {
+      "location": "pogonya-v-poezde-ru/location/poezd",
+      "note": null
+    },
+    {
+      "location": "pogonya-v-poezde-ru/location/kabuz",
+      "note": "в старых составах"
+    }
+  ],
+  "participants": [
+    {
+      "id": "pogonya-v-poezde-ru/character/provodniki",
+      "role": "знают о шнуре"
+    }
+  ],
+  "mechanics": {
+    "ru": "Знает ли сыщик об аварийном шнуре — трудная проверка Образования.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Поезд останавливается — или нет.",
+    "en": null
+  },
+  "refs": [
+    "pogonya-v-poezde-ru/item/avariynyy-shnur",
+    "pogonya-v-poezde-ru/scene/upravlenie-poezdom"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "pogonya-v-poezde-ru",
+      "physical_page": 17,
+      "printed_page": 15,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Экстренная остановка поезда»"
+    },
+    {
+      "book_id": "pogonya-v-poezde-ru",
+      "physical_page": 5,
+      "printed_page": 3,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Кабуз»: «Хранителю на заметку»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "book_id": "auktsion-ru",
+  "goal": "queue item 8, batch 4 (Р-227): fan translations and the remaining one-shots of the owner's catalogue playable from the base.",
+  "decision": "Р-227, Р-226, Р-222, Р-221, Р-190, Р-206, Р-209",
+  "check_dir": "checks/20261112-ru-oneshots",
+  "models": [
+    "kb/books/dveri-vo-tmu-ru/scenarios/darkness-beneath-the-hill.json",
+    "kb/books/osobnyaki-bezumiya-ru/scenarios/code-secret-code.json",
+    "kb/books/number-7-dream-en/scenarios/number-7-dream.json",
+    "kb/books/keepers-companion-en/scenes/little-miracles-start.json",
+    "kb/books/pulp-cthulhu-en/handouts/disintegrator-1-finch-telegram.json",
+    "kb/locations/boston.json",
+    "kb/books/masks-of-nyarlathotep-en/maps/america-harlem.json"
+  ],
+  "extra": "## This work (Р-222)\n\nQueue item 8: Russian 7e one-shots from the owner's catalogue (`3_КБ\\_Каталог.csv`). Each unit is one scenario with its own registered book (`book_id` in your brief header) — mostly scenarios written in Russian by Russian authors, published as PDFs (the text is the source: Russian as printed, no `translated` flag; `name.en` only if the book prints it). Read pages with `python -B pipeline/source/pages.py show <book_id> <page>`; check every number and every map on the page image (`pages.py image`). If the PDF has no text layer on some pages, OCR them yourself: `pdftoppm -r 200 -f N -l N -png \"<pdf>\" <out>` then `tesseract <png> - -l rus`. Find the printed/physical page relation on the page images and report it (the lead sets `offset`); if pages carry no numbers, printed = physical. The owner's KB folder for the scenario (`C:\\_Hobby\\Yandex.Disk\\НРИ\\1_Зов Ктулху\\3_КБ\\Ваншоты\\<год> <название>`) may hold his notes, handouts and maps — use them only as a pointer (pictures may be cleaner there), the book is the source. Run tools as `python -B …`; keep scratch files in your own scratchpad subfolder named after your unit.\n\n- Batch 4 (Р-227): most books here are trusted fan translations (`[RU-фан 7e]`, edition `trusted`): the Russian text is the source, but names of known Mythos entities, spells and tomes follow the official forms in the base (fan forms go to `aliases` through proposals); flag `translated`. Some are scans: OCR pages yourself (`pdftoppm -r 200`, `tesseract -l rus`) and read every number on the page image.\n- Dice with lowercase d everywhere, even in quotes (Р-27); distances in metres even in quotes (Р-64). If the book is not written for 7e, put the printed stats only as text, no statblock (Р-221).\n- Edition: these are 7e scenarios; if a book turns out to be written for another edition or for Pulp, say so at the top of the report (Pulp → `ruleset` \"pulp\").\n- Records — book-scoped `<book_id>/<kind>/<slug>` in `kb/books/<book_id>/<kinds>/`. Scenario record (summary, keeper_info, hook, advice, steps with refs, conclusion with Sanity rewards, tables), every scene retold for play (`arc`), items, handouts, tomes, organizations, characters (statblocks as printed, Р-25; pregenerated investigators are characters of the book), creatures (known Mythos creatures → `instance_of` the shared `coc:creature:*`), places.\n- Cities — shared records (Р-190): Grep `kb/locations/` first (Arkham, Innsmouth, Dunwich?, Providence, Boston, Kingsport, New York, Moscow, Leningrad… exist) and never rewrite an existing one — add through proposals. A missing city where your scenario is set you create in `kb/locations/` (never in the book folder) as a new shared record — unless another unit of this plan (table above) is set in the same city: then propose it in your report instead. Places outside a city — under «Окрестности <города>» (Р-209); a scenario without a named city gets a «город сценария» record inside its book (Р-190).\n- Maps — `map` with the image (`app/maps/<unit>-<slug>.jpg`) and spots on every printed number/label (Р-206; check each by eye on a crop); every key number gets a place record. List captions — neutral, no spoilers (Р-209). New spells — draft them in your report (`kb/spells` is shared).\n- `axes.era` — as printed (1920s, 1930s, modern, other…), `ruleset` \"core\". Book misprints — `errata` as printed (Р-35); metric units as printed (Russian books are usually metric already).\n- Coverage: `checks/20261112-ru-oneshots/<unit>.md` — every heading → record(s), «не взято» with the reason. Proposals: `checks/20261112-ru-oneshots/proposals-<unit>.json`.",
+  "units": [
+    {
+      "name": "auction",
+      "book_id": "auktsion-ru",
+      "pages": "all 48 pages of auktsion-ru (`Сценарии\\Аукцион\\[RU-фан 7e] Аукцион.pdf`)",
+      "target": "the scenario «Аукцион» whole (1920)",
+      "owns": [
+        "kb/books/auktsion-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/auction-*",
+        "checks/20261112-ru-oneshots/auction.md, proposals-auction.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "autophagy",
+      "book_id": "autofagiya-ru",
+      "pages": "all 36 pages of autofagiya-ru (`Сценарии\\Аутофагия\\[RU-фан 7e] Аутофагия.pdf`)",
+      "target": "the scenario «Аутофагия» whole (1920) — Mostly scan — OCR as needed.",
+      "owns": [
+        "kb/books/autofagiya-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/autophagy-*",
+        "checks/20261112-ru-oneshots/autophagy.md, proposals-autophagy.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "asylum",
+      "book_id": "lechebnitsa-ru",
+      "pages": "all 31 pages of lechebnitsa-ru (`Сценарии\\Лечебница\\[RU-фан 7e] Лечебница.pdf`)",
+      "target": "the scenario «Лечебница» whole (1920)",
+      "owns": [
+        "kb/books/lechebnitsa-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/asylum-*",
+        "checks/20261112-ru-oneshots/asylum.md, proposals-asylum.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "stockings",
+      "book_id": "chulki-vozle-pechki-ru",
+      "pages": "all 17 pages of chulki-vozle-pechki-ru (`Сценарии\\Чулки возле печки\\[RU-фан 7e] chulki_vozle_pechki_for_call_of_cthulhu_rpg.pdf`)",
+      "target": "the scenario «Чулки возле печки» whole (1920)",
+      "owns": [
+        "kb/books/chulki-vozle-pechki-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/stockings-*",
+        "checks/20261112-ru-oneshots/stockings.md, proposals-stockings.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "namelessfog",
+      "book_id": "bezymyannyy-tuman-ru",
+      "pages": "all 7 pages of bezymyannyy-tuman-ru (`Сценарии\\Безымянный туман\\[RU-фан 7e] Безымянный туман.pdf`)",
+      "target": "the scenario «Безымянный туман» whole (1931)",
+      "owns": [
+        "kb/books/bezymyannyy-tuman-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/namelessfog-*",
+        "checks/20261112-ru-oneshots/namelessfog.md, proposals-namelessfog.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "carnival",
+      "book_id": "karnaval-bezumiya-ru",
+      "pages": "all 97 pages of karnaval-bezumiya-ru (`Сценарии\\Карнавал безумия\\[RU-фан 7e] Karnaval_Bezumia.pdf`)",
+      "target": "the scenario «Карнавал безумия» whole (1970) — 97 pages, mostly scan — OCR as needed.",
+      "owns": [
+        "kb/books/karnaval-bezumiya-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/carnival-*",
+        "checks/20261112-ru-oneshots/carnival.md, proposals-carnival.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "forgotten",
+      "book_id": "zabyvayushchiysya-ru",
+      "pages": "all 16 pages of zabyvayushchiysya-ru (`Сценарии\\Забывающийся\\[RU-фан 7e] Забывающийся.pdf`)",
+      "target": "the scenario «Забывающийся» whole (1990)",
+      "owns": [
+        "kb/books/zabyvayushchiysya-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/forgotten-*",
+        "checks/20261112-ru-oneshots/forgotten.md, proposals-forgotten.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "evilwins",
+      "book_id": "kogda-zlo-pobezhdaet-ru",
+      "pages": "all 14 pages of kogda-zlo-pobezhdaet-ru (`Сценарии\\Когда зло побеждает\\[RU-фан 7e] Когда зло побеждает.pdf`)",
+      "target": "the scenario «Когда зло побеждает» whole (2010)",
+      "owns": [
+        "kb/books/kogda-zlo-pobezhdaet-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/evilwins-*",
+        "checks/20261112-ru-oneshots/evilwins.md, proposals-evilwins.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "pax",
+      "book_id": "pax-cthuliana-ru",
+      "pages": "all 72 pages of pax-cthuliana-ru (`Сценарии\\Pax Chultachia\\[RU 7e] Pax Cthuliana.pdf`)",
+      "target": "the scenario «Pax Cthuliana» whole (2020) — Check the edition and the setting first (catalogue: 2020); the PDF has little text — OCR as needed.",
+      "owns": [
+        "kb/books/pax-cthuliana-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/pax-*",
+        "checks/20261112-ru-oneshots/pax.md, proposals-pax.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "viral",
+      "book_id": "viral-en",
+      "pages": "all 124 pages of viral-en (`Сценарии\\Viral\\[EN 7e] Call_of_Cthulhu_Viral.pdf`)",
+      "target": "the scenario «Viral» whole (2020) — English original only (the `[RU-ИИ 7e] Viral_RU.pdf` machine translation is NOT a source, Р-147): translate yourself, flag `translated`.",
+      "owns": [
+        "kb/books/viral-en/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/viral-*",
+        "checks/20261112-ru-oneshots/viral.md, proposals-viral.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "deadlight",
+      "book_id": "dead-light-en",
+      "pages": "all 90 pages of dead-light-en (`Сборники\\Мёртвый свет и другие тёмные повороты (Dead Light and Other Dark Turns)\\[EN 7e] dead-light-and-other-dark-turns.pdf`)",
+      "target": "the scenario «Dead Light» whole (1920) — This PDF is the collection «Dead Light and Other Dark Turns» (EN 7e): import every scenario in it (each its own `scenario` record, file names prefixed by a short scenario slug). For «Dead Light» the owner's library also has the fan Russian translation `Сборники\\Мёртвый свет и другие тёмные повороты (Dead Light and Other Dark Turns)\\[RU-фан 7e] myortvy_svet_for_call_of_cthulhu_rpg.pdf` — use its Russian names (as aliases where official forms exist), numbers from the English. The pregenerated investigators of Dead Light already exist in the base (book `mertvennyy-svet-pregens-ru`, Grep `kb/books/mertvennyy-svet-ru`) — link, never duplicate. Translate the English yourself, flag `translated`.",
+      "owns": [
+        "kb/books/dead-light-en/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/deadlight-*",
+        "checks/20261112-ru-oneshots/deadlight.md, proposals-deadlight.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "coldharvest",
+      "book_id": "kholodnyy-urozhay-ru",
+      "pages": "all 63 pages of kholodnyy-urozhay-ru (`Сценарии\\Холодный урожай (Cold Harvest)\\[RU 7e] 4_Cold Harvest, 1937.pdf`)",
+      "target": "the scenario «Холодный урожай» whole (1937) — Official Russian edition (USSR 1937). The pregenerated investigators already exist in the base (book `kholodnyy-urozhay-pregens-ru`, Grep `kb/books/kholodnyy-urozhay-ru`) — link, never duplicate. Shared cities of the USSR that exist: Moscow, Leningrad, Kharkov; the OGPU is `coc:organization:ogpu`.",
+      "owns": [
+        "kb/books/kholodnyy-urozhay-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/coldharvest-*",
+        "checks/20261112-ru-oneshots/coldharvest.md, proposals-coldharvest.json"
+      ],
+      "sites": "—"
+    }
+  ]
+}

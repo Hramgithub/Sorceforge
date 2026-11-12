@@ -1,0 +1,120 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "tumany-san-kristobal-ru/scene/final",
+  "kind": "scene",
+  "name": {
+    "ru": "Финал: схватка с Нгориеру",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Решающая схватка с Нгориеру может произойти в любое время, а может и не происходить вовсе: всё зависит от действий сыщиков.\nУсловия победы сыщиков: если сыщики расшифровали пророчество; взяли с собой кинжал, заклинание «Молния» и защитные обереги; определили точное место заточения Нгориеру и способ, как до него добраться; инициировали битву днём и заручились поддержкой Адама, — их шансы на победу очень высоки.\nХод боя (по пророчеству и статблоку): выстрел береговой батареи разрушает холм ВариВари и открывает ложе Нгориеру (батарее хватит на один удар). Днём у Нгориеру 25 ПЗ. В первый ход он призывает ливень, в начале каждого следующего хода на его стороне в бой вступают 1d4+1 адаро. Заклинание «Молния» не может его убить, но оглушает на 1d3 раунда и опускает броню до 0; тогда сталь ритуального кинжала должна вспороть ему брюхо.",
+    "en": null
+  },
+  "when": "В любое время — лучше днём",
+  "arc": {
+    "scenario": "tumany-san-kristobal-ru/scenario/tumany-ostrova-san-kristobal",
+    "part": "Финал",
+    "order": 15
+  },
+  "where": [
+    {
+      "location": "tumany-san-kristobal-ru/location/kholm-varivari",
+      "note": null
+    },
+    {
+      "location": "tumany-san-kristobal-ru/location/beregovaya-batareya",
+      "note": "выстрел по холму"
+    }
+  ],
+  "participants": [
+    {
+      "id": "tumany-san-kristobal-ru/creature/ngorieru",
+      "role": "морской бог"
+    },
+    {
+      "id": "tumany-san-kristobal-ru/creature/adaro",
+      "role": "1d4+1 каждый ход"
+    },
+    {
+      "id": "tumany-san-kristobal-ru/character/adam-terner",
+      "role": "согласится участвовать в бою"
+    },
+    {
+      "id": "tumany-san-kristobal-ru/character/khyu-marlou",
+      "role": "смотритель батареи"
+    },
+    {
+      "id": "tumany-san-kristobal-ru/character/mikki-valentayn",
+      "role": "готовый сыщик"
+    },
+    {
+      "id": "tumany-san-kristobal-ru/character/tomas-grin",
+      "role": "готовый сыщик"
+    },
+    {
+      "id": "tumany-san-kristobal-ru/character/meri-stoun",
+      "role": "готовый сыщик"
+    }
+  ],
+  "mechanics": {
+    "ru": "Вид Нгориеру — потеря Рассудка 1/1d10; вид адаро — 1/1d6.\n«Молния»: 6 ПМ и 1d6 Рассудка, 2 раунда сотворения; по Нгориеру — оглушение на 1d3 раунда и броня 0.\nНаграды: если Нгориеру повержен, сыщики получают по 1d10 пунктов Рассудка и сокровище из темницы чудовища; если от рук сыщиков никто не погиб — по 1d3 пунктов Рассудка.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Нгориеру повержен — сыщики получают награды Рассудка и сокровище из темницы; иначе наступает Судная ночь.",
+    "en": null
+  },
+  "refs": [
+    "tumany-san-kristobal-ru/handout/prorochestvo",
+    "tumany-san-kristobal-ru/handout/zaklinanie-molniya",
+    "tumany-san-kristobal-ru/item/ritualnyy-kinzhal",
+    "tumany-san-kristobal-ru/item/oberegi",
+    "tumany-san-kristobal-ru/scene/chetvertaya-noch"
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "tumany-san-kristobal-ru",
+      "physical_page": 13,
+      "printed_page": 12,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Финал», «Условия победы сыщиков», «Награды»"
+    },
+    {
+      "book_id": "tumany-san-kristobal-ru",
+      "physical_page": 12,
+      "printed_page": 11,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Береговая батарея»; «Дом Номоа»"
+    },
+    {
+      "book_id": "tumany-san-kristobal-ru",
+      "physical_page": 14,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Чудовища»: Нгориеру"
+    },
+    {
+      "book_id": "tumany-san-kristobal-ru",
+      "physical_page": 18,
+      "printed_page": null,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Молния»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Порядок боя (выстрел по холму, молния, кинжал) собран из врезки «Пророчество», «Дома Номоа», «Береговой батареи» и статблока; отдельного описания боя книга не даёт."
+  }
+}

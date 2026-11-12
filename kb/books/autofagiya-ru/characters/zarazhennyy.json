@@ -1,0 +1,204 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "autofagiya-ru/character/zarazhennyy",
+  "kind": "character",
+  "name": {
+    "ru": "Заражённый",
+    "en": null
+  },
+  "aliases": [
+    "Зараженный",
+    "инфицированный",
+    "заражённые пассажиры"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "заражённый пассажир",
+  "names": [
+    "Томас Бёрк",
+    "Бриджит Нолан",
+    "Карл Шмидт",
+    "Роза Ферраро",
+    "Ян Новак"
+  ],
+  "occupation": {
+    "ru": "заражённый пассажир или член экипажа",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "transforms_into",
+      "target": "autofagiya-ru/creature/protoplazmennaya-sushchnost",
+      "note": "после ритуала ван Граафа",
+      "note_back": "формируется из заражённого"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "35",
+        "value": 35
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "20",
+        "value": 20
+      },
+      "APP": {
+        "raw": "10",
+        "value": 10
+      },
+      "INT": {
+        "raw": "10",
+        "value": 10
+      },
+      "POW": {
+        "raw": "10",
+        "value": 10
+      },
+      "EDU": {
+        "raw": "10",
+        "value": 10
+      }
+    },
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (Драка)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      }
+    ],
+    "dodge": {
+      "raw": "0%",
+      "value": 0,
+      "half": 0,
+      "fifth": 0
+    },
+    "skills": [
+      {
+        "name": "Корчиться от боли",
+        "value": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      }
+    ],
+    "sanity": {
+      "raw": "10",
+      "value": 10
+    }
+  },
+  "description": {
+    "ru": "Пассажир или член экипажа на поздней стадии «болезни»: едва держится на ногах, грызёт собственные щёки, губы и всё, до чего может дотянуться; кожа покрыта тёмными язвами, сочащимися чёрным гноем, с чёрными фурункулами и наростами.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Части шоггота, которыми ван Грааф заразил людей, пытаются поглотить достаточно биомассы, чтобы снова стать целым шогготом. Большинство заражённых в карантине — на Четвёртой или Пятой стадии; четыре тела в морозильной камере на камбузе — заражённые на Четвёртой стадии, при размораживании они оживают и переходят на Пятую. Когда ван Грааф проводит ритуал, заражённые превращаются в протоплазменные сущности.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "autofagiya-ru",
+      "physical_page": 32,
+      "printed_page": 32,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Персонажи и монстры»: Зараженный"
+    },
+    {
+      "book_id": "autofagiya-ru",
+      "physical_page": 14,
+      "printed_page": 14,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Морозильная камера»"
+    },
+    {
+      "book_id": "autofagiya-ru",
+      "physical_page": 21,
+      "printed_page": 21,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Карантин в третьем классе»"
+    },
+    {
+      "book_id": "autofagiya-ru",
+      "physical_page": 29,
+      "printed_page": 29,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Трансформация шогготов»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.dodge",
+      "printed": "Уклонение 0%",
+      "expected": "не ниже 10%",
+      "note": "Уклонение по правилам не ниже половины ЛВК 20 (10%); вероятно, задумано книгой (заражённые не защищаются, Р-76). Оставлено как напечатано (с. 32).",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "editorial_text",
+      "parse_uncertain"
+    ],
+    "notes": "Групповой профиль: имена придуманы (Р-151), в книге — «Зараженный». «Корчиться от боли» — навык книги без механики (Р-126). Фанатский перевод (bulka) сценария Stygian Fox «Autophagia» (серия Fox Country, книга третья), издание trusted: русский текст книги — источник. Страницы «с. N» — печатные (печатная = физическая)."
+  }
+}

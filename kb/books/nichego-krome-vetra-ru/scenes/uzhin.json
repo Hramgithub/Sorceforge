@@ -1,0 +1,109 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "nichego-krome-vetra-ru/scene/uzhin",
+  "kind": "scene",
+  "name": {
+    "ru": "Ужин",
+    "en": null
+  },
+  "description": {
+    "ru": "Ночью семья ужинает человечиной в своей хижине. Они утверждают, что на всех еды не хватит; если спросят — ответят, что мясо — оленина. Семью можно убедить поделиться успешной проверкой Обаяния. Кто съест это мясо, может заразиться (способность «Инфекция» в профиле Оседлавшего Ветер).\n• Проверка Естествознания показывает, что еда, которую подаёт семья, свежая. Трудный успех показывает, что персонаж съел не оленину или что-то, что он ранее пробовал. Провал повторной проверки или крах заставят персонажа думать, что оленине уже несколько дней и, возможно, она немного подморожена.",
+    "en": null
+  },
+  "when": "День первый, ночь",
+  "arc": {
+    "scenario": "nichego-krome-vetra-ru/scenario/nichego-krome-vetra",
+    "part": "Начало: день первый",
+    "order": 7
+  },
+  "where": [
+    {
+      "location": "nichego-krome-vetra-ru/location/zhiloy-vigvam",
+      "note": null
+    }
+  ],
+  "participants": [
+    {
+      "id": "nichego-krome-vetra-ru/character/tiguaak",
+      "role": "хозяин"
+    },
+    {
+      "id": "nichego-krome-vetra-ru/character/akna",
+      "role": "готовит и подаёт еду"
+    },
+    {
+      "id": "nichego-krome-vetra-ru/character/kumaglak",
+      "role": null
+    },
+    {
+      "id": "nichego-krome-vetra-ru/character/bjorn",
+      "role": "готовый персонаж (викинг)"
+    },
+    {
+      "id": "nichego-krome-vetra-ru/character/hrappur",
+      "role": "готовый персонаж (викинг)"
+    },
+    {
+      "id": "nichego-krome-vetra-ru/character/egill",
+      "role": "готовый персонаж (викинг)"
+    },
+    {
+      "id": "nichego-krome-vetra-ru/character/ulfhildur",
+      "role": "готовый персонаж (викинг)"
+    }
+  ],
+  "mechanics": {
+    "ru": "Обаяние — семья делится мясом; съевший может заразиться (Инфекция: Чрезвычайная проверка ВЫН); Естествознание (Трудный успех — это не оленина; провал повторной проверки или крах — ложное: старая подмороженная оленина).",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Съевшие человечину могут начать обращаться (сцена «День второй»).",
+    "en": null
+  },
+  "refs": [
+    "nichego-krome-vetra-ru/creature/osedlavshiy-veter",
+    "coc:skill:charm",
+    "coc:skill:natural-world",
+    "coc:rule:pushing-the-roll"
+  ],
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "nichego-krome-vetra-ru",
+      "physical_page": 6,
+      "printed_page": 2,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Ужин»"
+    },
+    {
+      "book_id": "nichego-krome-vetra-ru",
+      "physical_page": 9,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Оседлавший Ветер»: «Инфекция»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "description.ru",
+      "printed": "способности «Заражение»",
+      "expected": "способности «Инфекция»",
+      "note": "«Ужин» (с. 2) отсылает к способности «Заражение» в разделе «Противники», но в статблоке Оседлавшего Ветер (с. 5) она называется «Инфекция». В записи — «Инфекция».",
+      "fixed": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": null
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "nichego-krome-vetra-ru/scene/okhota",
+  "kind": "scene",
+  "name": {
+    "ru": "Охота",
+    "en": null
+  },
+  "description": {
+    "ru": "Во время путешествия к Воющей Скале произошёл несчастный случай, и группа потеряла провизию и еду. Единственная альтернатива еде, которую дают жители деревни, — охота на оленя в лесу. Охотник должен преуспеть в Трудной проверке атаки оружием, чтобы завалить оленя после успешного Чтения следов. Без еды, начиная с третьего дня, отряд добавляет штрафную кость ко всем броскам ВЫН и навыков.\n• Один раз в день, на восходе и на закате, можно совершить проверку Удачи, чтобы найти оленьи следы.\n• Чтобы выследить добычу, нужна проверка Чтения следов. Провал повторной проверки или крах приведут охотников к Вендиго.\n• Проверка Скрытности позволяет охотнику подкрасться к добыче, снижая сложность атаки оружием до Обычной. Провал повторной проверки или крах заставят оленя бежать.",
+    "en": null
+  },
+  "when": "На восходе или закате",
+  "arc": {
+    "scenario": "nichego-krome-vetra-ru/scenario/nichego-krome-vetra",
+    "part": "Начало: день первый",
+    "order": 5
+  },
+  "where": [
+    {
+      "location": "nichego-krome-vetra-ru/location/les",
+      "note": null
+    }
+  ],
+  "participants": [
+    {
+      "id": "nichego-krome-vetra-ru/character/bjorn",
+      "role": "готовый персонаж (викинг)"
+    },
+    {
+      "id": "nichego-krome-vetra-ru/character/hrappur",
+      "role": "готовый персонаж (викинг)"
+    },
+    {
+      "id": "nichego-krome-vetra-ru/character/egill",
+      "role": "готовый персонаж (викинг)"
+    },
+    {
+      "id": "nichego-krome-vetra-ru/character/ulfhildur",
+      "role": "готовый персонаж (викинг)"
+    }
+  ],
+  "mechanics": {
+    "ru": "Удача (на восходе и закате — найти оленьи следы); Чтение следов (провал повторной проверки или крах — выводит к Вендиго); Скрытность (атака становится Обычной; провал повторной проверки или крах — олень убегает); Трудная проверка атаки оружием — завалить оленя. Без еды с третьего дня — штрафная кость ко всем броскам ВЫН и навыков.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Отряд добывает оленину — или выходит к Вендиго.",
+    "en": null
+  },
+  "refs": [
+    "nichego-krome-vetra-ru/creature/vendigo",
+    "coc:skill:track",
+    "coc:skill:stealth",
+    "coc:rule:luck-rolls",
+    "coc:rule:bonus-and-penalty-dice",
+    "coc:rule:pushing-the-roll"
+  ],
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "nichego-krome-vetra-ru",
+      "physical_page": 6,
+      "printed_page": 2,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Охота»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

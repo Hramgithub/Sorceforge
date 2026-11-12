@@ -1,0 +1,585 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "nichego-krome-vetra-ru/character/ulfhildur",
+  "kind": "character",
+  "name": {
+    "ru": "Ульфхильдур Храбрая",
+    "en": "Ulfhildur the Brave"
+  },
+  "aliases": [],
+  "roles": [
+    "pregen"
+  ],
+  "occupation": {
+    "ru": "Разведчица",
+    "en": "Scout"
+  },
+  "sex": "женский",
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "50",
+        "value": 50
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "40",
+        "value": 40
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "APP": {
+        "raw": "60",
+        "value": 60
+      },
+      "INT": {
+        "raw": "60",
+        "value": 60
+      },
+      "POW": {
+        "raw": "80",
+        "value": 80
+      },
+      "EDU": {
+        "raw": "50",
+        "value": 50
+      }
+    },
+    "hp": {
+      "raw": "9",
+      "value": 9
+    },
+    "mp": {
+      "raw": "16",
+      "value": 16
+    },
+    "sanity": {
+      "raw": "80",
+      "value": 80,
+      "max": 99
+    },
+    "damage_bonus": {
+      "raw": "нет",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "Кожа 1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Без оружия",
+          "en": "Unarmed"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        },
+        "damage": {
+          "raw": "1d3+БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Длинный лук",
+          "en": "Longbow"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (лук)",
+        "chance": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "1d6+½БкУ",
+          "dice": "1d6",
+          "adds_db": true,
+          "extra": "половина бонуса к урону"
+        },
+        "weapon": "coc:weapon:bow-and-arrows",
+        "notes": "дальность 30 м; атак за раунд 1; боезапас 10 (стрелы); неисправность 97"
+      },
+      {
+        "name": {
+          "ru": "Нож",
+          "en": "Knife"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        },
+        "damage": {
+          "raw": "1d6+½БкУ",
+          "dice": "1d6",
+          "adds_db": true,
+          "extra": "половина бонуса к урону"
+        },
+        "notes": "атак за раунд 1; неисправность 99; охотничий нож"
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "skills": [
+      {
+        "name": "Обращение с животными",
+        "skill": "coc:skill:animal-handling",
+        "value": {
+          "raw": "15% (7/3)",
+          "value": 15,
+          "half": 7,
+          "fifth": 3
+        }
+      },
+      {
+        "name": "Оценка",
+        "skill": "coc:skill:appraise",
+        "value": {
+          "raw": "5% (2/1)",
+          "value": 5,
+          "half": 2,
+          "fifth": 1
+        }
+      },
+      {
+        "name": "Искусство/ремесло",
+        "skill": "coc:skill:art-craft",
+        "value": {
+          "raw": "5% (2/1)",
+          "value": 5,
+          "half": 2,
+          "fifth": 1
+        }
+      },
+      {
+        "name": "Обаяние",
+        "skill": "coc:skill:charm",
+        "value": {
+          "raw": "15% (7/3)",
+          "value": 15,
+          "half": 7,
+          "fifth": 3
+        }
+      },
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "0% (0/0)",
+          "value": 0,
+          "half": 0,
+          "fifth": 0
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Ближний бой (драка)",
+        "skill": "coc:skill:fighting",
+        "specialization": "Драка",
+        "value": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Озарение",
+        "value": {
+          "raw": "5% (2/1)",
+          "value": 5,
+          "half": 2,
+          "fifth": 1
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "15% (7/3)",
+          "value": 15,
+          "half": 7,
+          "fifth": 3
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Юриспруденция",
+        "skill": "coc:skill:law",
+        "value": {
+          "raw": "10% (5/2)",
+          "value": 10,
+          "half": 5,
+          "fifth": 2
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Грамотность",
+        "value": {
+          "raw": "1% (0/0)",
+          "value": 1,
+          "half": 0,
+          "fifth": 0
+        }
+      },
+      {
+        "name": "Медицина",
+        "skill": "coc:skill:medicine",
+        "value": {
+          "raw": "1% (0/0)",
+          "value": 1,
+          "half": 0,
+          "fifth": 0
+        }
+      },
+      {
+        "name": "Естествознание",
+        "skill": "coc:skill:natural-world",
+        "value": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Ориентирование",
+        "skill": "coc:skill:navigate",
+        "value": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Оккультизм",
+        "skill": "coc:skill:occult",
+        "value": {
+          "raw": "5% (2/1)",
+          "value": 5,
+          "half": 2,
+          "fifth": 1
+        }
+      },
+      {
+        "name": "Иностранный язык",
+        "skill": "coc:skill:language-other",
+        "value": {
+          "raw": "1% (0/0)",
+          "value": 1,
+          "half": 0,
+          "fifth": 0
+        }
+      },
+      {
+        "name": "Родной язык",
+        "skill": "coc:skill:language-own",
+        "value": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "15% (7/3)",
+          "value": 15,
+          "half": 7,
+          "fifth": 3
+        }
+      },
+      {
+        "name": "Управление лодкой",
+        "skill": "coc:skill:pilot",
+        "specialization": "Лодка",
+        "value": {
+          "raw": "1% (0/0)",
+          "value": 1,
+          "half": 0,
+          "fifth": 0
+        }
+      },
+      {
+        "name": "Пророчество",
+        "value": {
+          "raw": "0% (0/0)",
+          "value": 0,
+          "half": 0,
+          "fifth": 0
+        }
+      },
+      {
+        "name": "Стрельба (лук)",
+        "skill": "coc:skill:firearms",
+        "specialization": "Лук",
+        "value": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Знания о регионе",
+        "value": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Верховая езда",
+        "skill": "coc:skill:ride",
+        "value": {
+          "raw": "5% (2/1)",
+          "value": 5,
+          "half": 2,
+          "fifth": 1
+        }
+      },
+      {
+        "name": "Второе зрение",
+        "value": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Катание на лыжах",
+        "value": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Ловкость рук",
+        "skill": "coc:skill:sleight-of-hand",
+        "value": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Статус",
+        "value": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Плавание",
+        "skill": "coc:skill:swim",
+        "value": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      }
+    ]
+  },
+  "background": {
+    "description": "Красивая; зелёные глаза; высокая; серьёзная",
+    "traits": "Наблюдательная; яростная; храбрая; мстительная",
+    "ideology": "«Не всё таково, каким кажется»",
+    "significant_people": "Любит Бьёрна как второго отца; дочь Храппура; возлюбленная Эгиля",
+    "meaningful_locations": "Исландия",
+    "treasured_possessions": "Длинный лук",
+    "phobias_manias": "Акрофобия: страх высоты",
+    "arcane_tomes": "Второе зрение: ясновидение или шестое чувство в отношении незримого мира; перед броском нужно потратить 1d6+1 пунктов магии"
+  },
+  "possessions": [
+    "Длинный лук",
+    "Кожаный доспех",
+    "Сапоги на меху",
+    "10 стрел",
+    "Охотничий нож",
+    "Спальная скатка"
+  ],
+  "description": {
+    "ru": "Дочь мудреца Храппура, разведчица: высокая зеленоглазая красавица, наблюдательная, храбрая и мстительная; лучница-следопыт со Вторым зрением.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Жизненные события: родилась под счастливой звездой. Товарищи (по листу): Храппур — отец; Бьёрн — вождь; Эгиль — возлюбленный.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "nichego-krome-vetra-ru",
+      "physical_page": 16,
+      "printed_page": 12,
+      "method": "book_text",
+      "verified": true,
+      "note": "лист готового персонажа «Ulfhildur the Brave»: характеристики, навыки, оружие"
+    },
+    {
+      "book_id": "nichego-krome-vetra-ru",
+      "physical_page": 17,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "оборот листа «Ulfhildur the Brave»: предыстория, снаряжение, товарищи"
+    },
+    {
+      "book_id": "nichego-krome-vetra-ru",
+      "physical_page": 9,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Готовые персонажи»: четыре листа Мифической Исландии"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Готовый персонаж. Листы в русском издании напечатаны по-английски (лист сыщика «Мифической Исландии»), русский текст — наш перевод. Возраст и Удача на листе не заполнены. Навыки Мифической Исландии (Озарение, Пророчество, Второе зрение, Знания о регионе, Катание на лыжах, Статус, Грамотность) записей в справочнике не имеют — названия по русскому тексту книги (с. 1), «Грамотность» — наш перевод. Дальность оружия на листе — в ярдах, в записи — метры 1 к 1 (Р-64). Урон ножа «1d6 + половина БкУ» — как на листе."
+  }
+}

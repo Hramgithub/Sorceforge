@@ -1,0 +1,99 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "nichego-krome-vetra-ru/scene/pribytie",
+  "kind": "scene",
+  "name": {
+    "ru": "Прибытие в Воющую Скалу",
+    "en": null
+  },
+  "description": {
+    "ru": "Прочитайте вслух или перескажите игрокам следующее:\n«Холодный ветер воет над ледяными водами, когда вы вытаскиваете карви на ледяной берег. Ваш клан здесь, чтобы расследовать исчезновение десятков жителей деревни за последние несколько месяцев. Деревни, которые вы посетили, указали вам дальше по побережью, к месту под названием Воющая скала. Путешествие было опасным, но быстрым. Из-за неудачи вы потеряли большую часть своих припасов, включая еду.\nВысокие деревья царапают небо, их вершины скрыты в низких облаках. Впереди, недалеко, кучка куполообразных хижин».\nПредставьте сыщиков и позвольте им начать исследования. Отряд из четырёх викингов прибывает на лодке поздним вечером. Из-за несчастного случая в пути группа потеряла провизию: кроме еды, которую дадут жители деревни, единственная альтернатива — охота на оленя в лесу (сцена «Охота»). Без еды, начиная с третьего дня, отряд добавляет штрафную кость ко всем броскам ВЫН и навыков.",
+    "en": null
+  },
+  "when": "День первый, поздний вечер",
+  "arc": {
+    "scenario": "nichego-krome-vetra-ru/scenario/nichego-krome-vetra",
+    "part": "Начало: день первый",
+    "order": 1
+  },
+  "where": [
+    {
+      "location": "nichego-krome-vetra-ru/location/bereg",
+      "note": "викинги вытаскивают карви на берег"
+    },
+    {
+      "location": "nichego-krome-vetra-ru/location/voyushchaya-skala",
+      "note": "впереди — хижины"
+    }
+  ],
+  "participants": [
+    {
+      "id": "nichego-krome-vetra-ru/character/bjorn",
+      "role": "готовый персонаж (викинг)"
+    },
+    {
+      "id": "nichego-krome-vetra-ru/character/hrappur",
+      "role": "готовый персонаж (викинг)"
+    },
+    {
+      "id": "nichego-krome-vetra-ru/character/egill",
+      "role": "готовый персонаж (викинг)"
+    },
+    {
+      "id": "nichego-krome-vetra-ru/character/ulfhildur",
+      "role": "готовый персонаж (викинг)"
+    }
+  ],
+  "mechanics": {
+    "ru": "Без еды с третьего дня — штрафная кость ко всем броскам ВЫН и навыков.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Отряд входит в деревню (сцены «Деревня Воющей Скалы», «Жители деревни»); местные предания можно вспомнить в любой момент (сцена «Местные предания»).",
+    "en": null
+  },
+  "refs": [
+    "nichego-krome-vetra-ru/scene/mestnye-predaniya",
+    "nichego-krome-vetra-ru/scene/derevnya",
+    "nichego-krome-vetra-ru/scene/zhiteli-derevni",
+    "nichego-krome-vetra-ru/scene/okhota",
+    "coc:rule:bonus-and-penalty-dice"
+  ],
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "nichego-krome-vetra-ru",
+      "physical_page": 6,
+      "printed_page": 2,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Начало: день первый»: текст для чтения вслух"
+    },
+    {
+      "book_id": "nichego-krome-vetra-ru",
+      "physical_page": 5,
+      "printed_page": 1,
+      "method": "book_text",
+      "verified": true,
+      "note": "«История»: отряд прибывает поздним вечером"
+    },
+    {
+      "book_id": "nichego-krome-vetra-ru",
+      "physical_page": 6,
+      "printed_page": 2,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Охота»: потеря провизии, штрафная кость без еды"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

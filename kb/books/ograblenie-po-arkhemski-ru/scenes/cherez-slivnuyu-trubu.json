@@ -1,0 +1,70 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "ograblenie-po-arkhemski-ru/scene/cherez-slivnuyu-trubu",
+  "kind": "scene",
+  "name": {
+    "ru": "Через сливную трубу",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Если сыщики узнали о возможном способе пробраться в дом через сливную трубу, они успешно могут её обнаружить за территорией, внизу по склону (со стороны берега озера). Решётка действительно проржавела и плохо держится: персонаж с СИЛ выше 60 автоматически сможет её сломать. Чтобы комфортно двигаться по трубе, персонажи должны иметь ТЕЛ меньше 70.\nСливная труба упирается в раструб, сужающийся и уходящий наверх; рядом — металлическая лестница наверх. Подняв люк, сыщики обнаружат себя в подвале: в углу куча угля, рядом массивная металлическая печь. Проверка Интеллекта укажет, что её пока не затопили, хотя вечера в этой местности довольно прохладные: возможно, скоро сюда кто-то может спуститься.\nИз подвала дверь ведёт к чёрному входу под второй лестницей на первом этаже.",
+    "en": null
+  },
+  "when": "вечер ограбления",
+  "arc": {
+    "scenario": "ograblenie-po-arkhemski-ru/scenario/ograblenie-po-arkhemski",
+    "part": "Особняк Артура Мартинеса",
+    "order": 6
+  },
+  "where": [
+    {
+      "location": "ograblenie-po-arkhemski-ru/location/slivnaya-truba"
+    },
+    {
+      "location": "ograblenie-po-arkhemski-ru/location/podval"
+    }
+  ],
+  "participants": [],
+  "mechanics": {
+    "ru": "СИЛ выше 60 — решётка ломается автоматически. ТЕЛ меньше 70 — можно комфортно двигаться по трубе. Проверка ИНТ в подвале — печь не затоплена.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Сыщики в подвале особняка, минуя забор и собак.",
+    "en": null
+  },
+  "refs": [
+    "ograblenie-po-arkhemski-ru/character/dzherri",
+    "ograblenie-po-arkhemski-ru/location/chernyy-vkhod"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "ograblenie-po-arkhemski-ru",
+      "physical_page": 6,
+      "printed_page": 6,
+      "method": "book_text",
+      "verified": true,
+      "note": "сливная труба и подвал"
+    },
+    {
+      "book_id": "ograblenie-po-arkhemski-ru",
+      "physical_page": 7,
+      "printed_page": 7,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Черный вход»: дверь в подвал, люк к водостоку"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Что персонаж с ТЕЛ 70 и больше всё же может пролезть «некомфортно», книга не уточняет."
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "ograblenie-po-arkhemski-ru/scene/rassprosy-v-bunville",
+  "kind": "scene",
+  "name": {
+    "ru": "Расспросы в Бунвилле",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Сыщики могут обойти центр Бунвилла.\nОфис шерифа — небольшое одноэтажное строение. Шериф Рэй Тейлор слишком ленив, чтобы пойти выяснять у сыщиков, кто они такие и что им надо в его городе. Но если начнутся проблемы, он со своим помощником прибудет во всеоружии.\nСоседствующие магазины делят одно здание, разделённое стеной; обе части выкрашены в разные цвета. Ассортимент абсолютно одинаков, и если сыщики обратят внимание, то в обоих словно работает один и тот же человек: на самом деле это два брата-близнеца, которые разругались и открыли рядом магазины, чтобы доказать, что второй ничего не смыслит в торговле. Здесь можно найти различные товары с небольшой наценкой.\nЗакусочная «Три ели» — небольшое малолюдное помещение с несколькими столиками и стойкой. Хозяин, пожилой мужчина, брови которого чуть ли не закрывают ему глаза, может поведать примерно то же, что рабочий Джерри, за исключением сведений о ветхой решётке в сточной трубе.\nВ библиотеке бойкая юная девушка к приходу сыщиков расставляет книги на верхние полки. Она может поведать, что Артур Мартинес часто брал различные книги: множество исторических трактатов, медицинские, а из недавнего — книгу о культуре народов Ближнего Востока.",
+    "en": null
+  },
+  "when": "день, до или после встречи с Джерри",
+  "arc": {
+    "scenario": "ograblenie-po-arkhemski-ru/scenario/ograblenie-po-arkhemski",
+    "part": "Город Бунвилл",
+    "order": 3
+  },
+  "where": [
+    {
+      "location": "ograblenie-po-arkhemski-ru/location/ofis-sherifa"
+    },
+    {
+      "location": "ograblenie-po-arkhemski-ru/location/sosedstvuyushchie-magaziny"
+    },
+    {
+      "location": "ograblenie-po-arkhemski-ru/location/zakusochnaya-tri-eli"
+    },
+    {
+      "location": "ograblenie-po-arkhemski-ru/location/biblioteka-bunvilla"
+    }
+  ],
+  "participants": [
+    {
+      "id": "ograblenie-po-arkhemski-ru/character/rey-teylor",
+      "role": "шериф"
+    }
+  ],
+  "mechanics": {
+    "ru": "Проверок книга не даёт. Если сыщики устроят проблемы — шериф и помощник прибывают во всеоружии.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Слухи о Мартинесе (как у Джерри), намёк на интерес Артура к Ближнему Востоку.",
+    "en": null
+  },
+  "refs": [
+    "ograblenie-po-arkhemski-ru/character/artur-martines",
+    "ograblenie-po-arkhemski-ru/character/dzherri",
+    "ograblenie-po-arkhemski-ru/item/legendy-i-skazaniya-blizhnego-vostoka"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "ograblenie-po-arkhemski-ru",
+      "physical_page": 4,
+      "printed_page": 4,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Офис шерифа», «Соседствующие магазины»"
+    },
+    {
+      "book_id": "ograblenie-po-arkhemski-ru",
+      "physical_page": 5,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "окончание «Соседствующих магазинов»; «Закусочная “Три ели”»; «Библиотека»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

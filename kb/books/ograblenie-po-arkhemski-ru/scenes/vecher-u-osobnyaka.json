@@ -1,0 +1,76 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "ograblenie-po-arkhemski-ru/scene/vecher-u-osobnyaka",
+  "kind": "scene",
+  "name": {
+    "ru": "Вечер у особняка",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Если сыщики направятся к особняку в вечернее время, после отъезда Мартинеса, то при успешной проверке Внимания обратят внимание, что в окнах не горит свет. У стен особняка под высокими окнами слышен лай собак; чтобы перелезть высокий каменный забор с острыми пиками, нужна успешная проверка Лазания.\nПодобравшись поближе к зданию, один из сыщиков может заметить в очередной луже вместо своего отражения искривлённое гримасой ужаса лицо пожилого мужчины. Это лицо дворецкого, который в данный момент уже находится в критическом состоянии: Кхархан запирает захваченные души в водной глади и иных отражающих поверхностях.",
+    "en": null
+  },
+  "when": "вечер после отъезда Мартинеса (31 октября)",
+  "arc": {
+    "scenario": "ograblenie-po-arkhemski-ru/scenario/ograblenie-po-arkhemski",
+    "part": "Особняк Артура Мартинеса",
+    "order": 5
+  },
+  "where": [
+    {
+      "location": "ograblenie-po-arkhemski-ru/location/osobnyak-martinesa"
+    }
+  ],
+  "participants": [
+    {
+      "id": "ograblenie-po-arkhemski-ru/creature/sobaki-martinesa",
+      "role": "лают у стен"
+    },
+    {
+      "id": "ograblenie-po-arkhemski-ru/character/prisluga-martinesa",
+      "role": "лицо дворецкого в луже"
+    }
+  ],
+  "mechanics": {
+    "ru": "Внимание — в окнах нет света. Лазание — через забор с пиками. Собаки: Ближний бой 50%, урон 1d8+БкУ (профиль «Собаки мистера Мартинеса»).",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Сыщики проникают на территорию (через забор) или ищут сливную трубу (→ «Через сливную трубу»).",
+    "en": null
+  },
+  "refs": [
+    "ograblenie-po-arkhemski-ru/creature/kharkhan",
+    "ograblenie-po-arkhemski-ru/location/slivnaya-truba"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "ograblenie-po-arkhemski-ru",
+      "physical_page": 5,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "вечер после отъезда Мартинеса"
+    },
+    {
+      "book_id": "ograblenie-po-arkhemski-ru",
+      "physical_page": 6,
+      "printed_page": 6,
+      "method": "book_text",
+      "verified": true,
+      "note": "лицо в луже"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Дата «31 октября» — вывод из текста (Р-41): встреча в спикизи 29 октября, Мартинес уезжает «послезавтра вечером». Как поступают собаки ночью, книга не расписывает."
+  }
+}

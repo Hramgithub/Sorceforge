@@ -1,0 +1,120 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "secrets-of-the-kremlin-en/scene/dungeons",
+  "kind": "scene",
+  "name": {
+    "ru": "Обитатели нижних туннелей",
+    "en": "Inhabitants of the Lower Tunnels"
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Четвёртый уровень: пять помещений по кругу вокруг лестницы туннеля G. У четырёх настоящих темниц металлические двери с одним зарешечённым окошком, все заперты; дверь библиотеки деревянная, заперта, без окна.\n• Темница 1 — самая большая: бывшие пациенты психиатрических лечебниц Москвы и окрестностей, всевозможные душевнобольные мужчины в одной камере. Одни бредят, другие вполне ясны умом; все так или иначе понимают, зачем они здесь. Подчеркните ужас сцены; твёрдых сведений не будет.\n• Темница 2 — Алексей Самсонов: глаза он вырвал себе сам, остались красные глазницы. Мучений в нём нет — он рад, что больше не переводит «Некрономикон». Говорит не словами, может немного напевать; ничего от него не узнать.\n• Темница 3 — уцелевшие участники экспедиции Александрова, большинство безумны. От них можно смутно понять, что держат в туннелях, но дорогой ценой.\n• Темница 4 — Евгений Потапов, почти парализованный страхом, со следами периодических пыток; всё ещё потрясён похищением. Он не доверяет сыщикам (даже с Николаем) и считает их новой психологической пыткой; молчит, пока ему не скажут «Ноденс». Тогда коротко рассказывает всё, что знает, кроме тайны нижней камеры — о ней у него только догадки. Тайну нижней камеры палачам он не выдал.\n• Темница 5 — не темница, а недавно найденная библиотека Ивана Грозного: невероятно затхлый запах, пыль веков на нетронутых книгах, одна из раскрытых — подлинный греческий «Некрономикон». Потапов, если он с сыщиками, ошеломлён (раньше слышал лишь слухи), но знает, куда идти: одна стена без книг, на ней три каменных рельефа — собор Святого Петра, Святая София и собор Василия Блаженного («Третий Рим»). Выступ в центре третьего открывает узкий туннель H вниз.",
+    "en": null
+  },
+  "when": "после спуска по туннелю G",
+  "arc": {
+    "scenario": "secrets-of-the-kremlin-en/scenario/secrets-of-the-kremlin",
+    "part": "Сцена третья: Москва",
+    "order": 9
+  },
+  "where": [
+    {
+      "location": "secrets-of-the-kremlin-en/location/dungeon-1",
+      "note": null
+    },
+    {
+      "location": "secrets-of-the-kremlin-en/location/dungeon-2",
+      "note": null
+    },
+    {
+      "location": "secrets-of-the-kremlin-en/location/dungeon-3",
+      "note": null
+    },
+    {
+      "location": "secrets-of-the-kremlin-en/location/dungeon-4",
+      "note": null
+    },
+    {
+      "location": "secrets-of-the-kremlin-en/location/dungeon-5",
+      "note": null
+    }
+  ],
+  "participants": [
+    {
+      "id": "secrets-of-the-kremlin-en/character/asylum-inmates",
+      "role": null
+    },
+    {
+      "id": "secrets-of-the-kremlin-en/character/alexei-samsonov",
+      "role": null
+    },
+    {
+      "id": "secrets-of-the-kremlin-en/character/expedition-survivors",
+      "role": null
+    },
+    {
+      "id": "secrets-of-the-kremlin-en/character/evgeny-potapov",
+      "role": "узник"
+    },
+    {
+      "id": "secrets-of-the-kremlin-en/character/ivan",
+      "role": "если рядом — нападает на Потапова"
+    }
+  ],
+  "mechanics": {
+    "ru": "Темница 3: за каждые 2 минуты разговора с одним из узников — проверка Рассудка, при провале потеря 1 пункта Рассудка. Темница 4: Потапов заговорит только после слова «Ноденс». Темница 5: если Потапова нет с сыщиками, он уже рассказал им о проходе; если они с ним вовсе не говорили — проверка Внимания, чтобы найти выступ.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Сыщики могут освободить Потапова и спуститься по туннелю H к вершине купола самой нижней комнаты.",
+    "en": null
+  },
+  "refs": [
+    "coc:tome:necronomicon-greek",
+    "secrets-of-the-kremlin-en/item/third-rome-reliefs",
+    "secrets-of-the-kremlin-en/location/tunnel-h",
+    "secrets-of-the-kremlin-en/location/tunnel-g",
+    "coc:skill:spot-hidden",
+    "secrets-of-the-kremlin-en/map/kremlin-level-4",
+    "secrets-of-the-kremlin-en/scene/lowest-room"
+  ],
+  "axes": {
+    "era": [
+      "1930s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "secrets-of-the-kremlin-en",
+      "physical_page": 13,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Inhabitants of the Lower Tunnels»"
+    },
+    {
+      "book_id": "secrets-of-the-kremlin-en",
+      "physical_page": 16,
+      "printed_page": 16,
+      "method": "book_text",
+      "verified": true,
+      "note": "Level Four"
+    },
+    {
+      "book_id": "secrets-of-the-kremlin-en",
+      "physical_page": 20,
+      "printed_page": 20,
+      "method": "book_text",
+      "verified": true,
+      "note": "карта «Niveau Quatre»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — по рабочему переводу владельца (2_Обработка/тайны кремля 1931/document.html), сверен с английским оригиналом; числа — по английской странице; меры переведены в метрические (Р-64)."
+  }
+}

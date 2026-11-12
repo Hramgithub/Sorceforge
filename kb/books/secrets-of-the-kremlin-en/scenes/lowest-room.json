@@ -1,0 +1,109 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "secrets-of-the-kremlin-en/scene/lowest-room",
+  "kind": "scene",
+  "name": {
+    "ru": "Самая нижняя комната",
+    "en": "The Lowest Room"
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Самая странная и самая ужасная из камер: огромная древняя полость, загромождённая новыми постройками. На северной стороне — казарма слепых охранников Тёмной молоди; южная поделена между кабинетом Генриха Ягоды, руководителя проекта, и герметично запечатанной лабораторией химиков. В центре, в яме, недавно вырубленной в полу из строительного раствора, — Тёмная молодь высотой около 10 м, размахивающая ужасными щупальцами с пастями. Сыщикам, скорее всего наблюдающим из туннеля H, обзор закрывает лестница туннеля G; до них доходят лишь запах — как от вскрытых могил — и ужасные звуки. Вокруг ямы всегда пять-шесть слепых с огнемётами: они с перерывами и без порядка пускают в сторону существа струи пламени, и оно не пытается выбраться; щупальца и туловище выделяют много зеленовато-чёрного ихора, яма шипит. В комнате пахнет парами бензина, человеческой вонью и сильнее всего — Тёмной молодью.\nПосле речи Сталин много времени уделяет этому делу: когда сыщики смотрят в комнату, он здесь с вероятностью 15% (смотрит на Тёмную молодь открыто, без потери Рассудка); Ягода, худой человек с жестоким лицом, — с вероятностью 75% (тоже без вреда). Если Потапов не с сыщиками и не описал заранее, что здесь, они могут лишь гадать, что в яме. Сам Потапов выдерживает вид комнаты лишь несколько минут.",
+    "en": null
+  },
+  "when": "в любой день конференции, из туннеля H или через туннель F",
+  "arc": {
+    "scenario": "secrets-of-the-kremlin-en/scenario/secrets-of-the-kremlin",
+    "part": "Сцена третья: Москва",
+    "order": 11
+  },
+  "where": [
+    {
+      "location": "secrets-of-the-kremlin-en/location/lowest-room",
+      "note": null
+    },
+    {
+      "location": "secrets-of-the-kremlin-en/location/tunnel-h",
+      "note": "наблюдательное отверстие у вершины купола"
+    }
+  ],
+  "participants": [
+    {
+      "id": "secrets-of-the-kremlin-en/creature/kremlin-dark-young",
+      "role": null
+    },
+    {
+      "id": "secrets-of-the-kremlin-en/character/blind-guards",
+      "role": null
+    },
+    {
+      "id": "secrets-of-the-kremlin-en/character/josef-stalin",
+      "role": "15%"
+    },
+    {
+      "id": "secrets-of-the-kremlin-en/character/genrikh-yagoda",
+      "role": "75%"
+    },
+    {
+      "id": "secrets-of-the-kremlin-en/character/kremlin-chemists",
+      "role": null
+    }
+  ],
+  "mechanics": {
+    "ru": "Если сыщики увидят Тёмную молодь целиком — проверка Рассудка, при провале потеря 1d20. Пока видны лишь звуки и запах — проверка Рассудка каждые пять минут, 1 пункт Рассудка за каждый провал. Когда Сталин и Ягода говорят, успешная проверка Слуха даёт обрывки русских слов: «синтезировать», «яды», «химический», «выделения», «разъедающий».",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Сыщики уходят с увиденным — или остаются до 17 апреля (сцена «Последняя тайна»).",
+    "en": null
+  },
+  "refs": [
+    "secrets-of-the-kremlin-en/location/blind-barracks",
+    "secrets-of-the-kremlin-en/location/dark-young-pit",
+    "secrets-of-the-kremlin-en/location/yagoda-office",
+    "secrets-of-the-kremlin-en/location/laboratory",
+    "secrets-of-the-kremlin-en/location/tunnel-g",
+    "coc:skill:listen",
+    "secrets-of-the-kremlin-en/map/kremlin-level-5",
+    "secrets-of-the-kremlin-en/scene/final-secret"
+  ],
+  "axes": {
+    "era": [
+      "1930s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "secrets-of-the-kremlin-en",
+      "physical_page": 13,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Lowest Room»"
+    },
+    {
+      "book_id": "secrets-of-the-kremlin-en",
+      "physical_page": 14,
+      "printed_page": 14,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Lowest Room»"
+    },
+    {
+      "book_id": "secrets-of-the-kremlin-en",
+      "physical_page": 16,
+      "printed_page": 16,
+      "method": "book_text",
+      "verified": true,
+      "note": "Level Five"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — по рабочему переводу владельца (2_Обработка/тайны кремля 1931/document.html), сверен с английским оригиналом; числа — по английской странице; меры переведены в метрические (Р-64). Потеря Рассудка «1d20» и проверки каждые пять минут — как напечатано (ранняя редакция)."
+  }
+}

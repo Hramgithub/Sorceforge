@@ -1,0 +1,87 @@
+{
+  "schema": "sourcefold.map.v0",
+  "id": "secrets-of-the-kremlin-en/map/kremlin-level-2",
+  "kind": "map",
+  "name": {
+    "ru": "Подземный Кремль: второй уровень",
+    "en": "Niveau Deux"
+  },
+  "location": "coc:location:moscow",
+  "shows": "secrets-of-the-kremlin-en/location/underground-kremlin",
+  "order": 3,
+  "image": "maps/kremlin-level-2.jpg",
+  "width": 1040,
+  "height": 1220,
+  "spot_shape": {
+    "kind": "circle",
+    "w": 4.0,
+    "h": 3.41
+  },
+  "spots": [
+    {
+      "label": "TUNNEL CONNU VERS LE NORD-EST DE MOSCOU",
+      "x": 74.68,
+      "y": 13.93,
+      "target": "secrets-of-the-kremlin-en/location/level-2-northeast-tunnel"
+    },
+    {
+      "label": "TUNNEL \"A\"",
+      "x": 52.56,
+      "y": 34.43,
+      "target": "secrets-of-the-kremlin-en/location/tunnel-a",
+      "note": "подпись стоит вдоль длинного туннеля на северо-восток; по тексту (с. 15) туннель A — короткий проход от него вниз к туннелю C (подпись «Tunnel conduisant au tunnel C»)"
+    },
+    {
+      "label": "TUNNEL CONDUISANT AU TUNNEL \"C\"",
+      "x": 38.14,
+      "y": 60.55,
+      "target": "secrets-of-the-kremlin-en/location/tunnel-a",
+      "text": "Туннель, ведущий к туннелю C."
+    },
+    {
+      "label": "TUNNEL CONNU VERS L'EST DE MOSCOU",
+      "x": 86.86,
+      "y": 67.76,
+      "target": "secrets-of-the-kremlin-en/location/level-2-east-tunnel"
+    },
+    {
+      "label": "TUNNEL \"B\"",
+      "x": 69.87,
+      "y": 88.25,
+      "target": "secrets-of-the-kremlin-en/location/tunnel-b",
+      "text": "Ведёт на другой берег Москвы-реки."
+    }
+  ],
+  "axes": {
+    "era": [
+      "1930s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "secrets-of-the-kremlin-en",
+      "physical_page": 18,
+      "printed_page": 18,
+      "method": "book_text",
+      "verified": true,
+      "note": "карта «Niveau Deux» на всю страницу (подписи — по-французски)"
+    }
+  ],
+  "corrections": [
+    {
+      "field": "spots",
+      "from": null,
+      "to": "5 меток",
+      "reason": "метки на каждый напечатанный номер и подпись карты (Р-206); положения проверены по наложению на кроп",
+      "ref": "Р-206"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Картинка — карта со с. 18 (200 dpi, ужата до 1040 px, оттенки серого), обрезана по рисунку с подписью уровня. Уровень 2 — известные и неизвестные туннели (с. 15–16). Метки — на каждую французскую подпись карты (Р-206), перевод подписи — в text."
+  }
+}

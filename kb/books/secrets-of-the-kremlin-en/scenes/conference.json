@@ -1,0 +1,95 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "secrets-of-the-kremlin-en/scene/conference",
+  "kind": "scene",
+  "name": {
+    "ru": "Конференция и колокольня",
+    "en": "The Conference"
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Наутро в 7:30 сыщиков вместе с другими журналистами везут автобусом через ворота Спасской башни в Кремль. В 8:00 конференцию открывает программная речь Генерального секретаря Иосифа Сталина «Борьба с реформизмом в области прогрессивной журналистики». Лидер СССР появляется на публике редко; речь синхронно переводят на все языки. Она невероятно скучна: Сталин говорит скованно, без воодушевления, с сильным грузинским акцентом, так что русскоязычным сыщикам порой трудно его понять; многие в зале Большого Кремлёвского дворца засыпают. Почти все речи этой недели — в том же духе. В 11:30 — долгожданный обеденный перерыв; сыщикам нужно сразу идти к колокольне Ивана Великого.\nПо указанию Ивана они собираются за большой колонной в северо-западном углу внутреннего помещения колокольни. В стене утоплена особая защёлка; чтобы до неё добраться, возможно, придётся отвести в сторону деревянный подоконник. Защёлка ослабляет участок стены, и при сильном нажатии он распахивается внутрь. За ним — чёрный туннель, уходящий вниз, в пустоту (туннель C, третий уровень). К концу дня, около 17:00, сыщики должны вернуться к журналистам.",
+    "en": null
+  },
+  "when": "15 апреля 1931 года: 7:30 автобус, 8:00 речь, 11:30 обед, около 17:00 конец дня",
+  "arc": {
+    "scenario": "secrets-of-the-kremlin-en/scenario/secrets-of-the-kremlin",
+    "part": "Сцена третья: Москва",
+    "order": 5
+  },
+  "where": [
+    {
+      "location": "secrets-of-the-kremlin-en/location/kremlin-12-spasskaya-tower",
+      "note": null
+    },
+    {
+      "location": "secrets-of-the-kremlin-en/location/kremlin-37-kremlin-grand-palace",
+      "note": null
+    },
+    {
+      "location": "secrets-of-the-kremlin-en/location/kremlin-29-ivan-the-great-bell-tower",
+      "note": null
+    }
+  ],
+  "participants": [
+    {
+      "id": "secrets-of-the-kremlin-en/character/josef-stalin",
+      "role": "докладчик"
+    }
+  ],
+  "mechanics": {
+    "ru": "Незаметно ускользнуть к колокольне в обеденный перерыв и вернуться к 17:00. Колонна в северо-западном углу, защёлка, сильный нажим на стену.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Открыт вход в туннель C. Вечером, вернувшись в гостиницу, сыщики встречают Николая.",
+    "en": null
+  },
+  "refs": [
+    "secrets-of-the-kremlin-en/location/tunnel-c",
+    "secrets-of-the-kremlin-en/character/ivan",
+    "secrets-of-the-kremlin-en/scene/nikolai",
+    "secrets-of-the-kremlin-en/scene/underground-descent"
+  ],
+  "axes": {
+    "era": [
+      "1930s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "secrets-of-the-kremlin-en",
+      "physical_page": 7,
+      "printed_page": 7,
+      "method": "book_text",
+      "verified": true,
+      "note": "дата и время конференции"
+    },
+    {
+      "book_id": "secrets-of-the-kremlin-en",
+      "physical_page": 11,
+      "printed_page": 11,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Conference»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "when",
+      "printed": "Monday, April 15 … 11:00 AM (с. 7); begin at 8:00 (с. 11); Friday, April 17 (с. 14)",
+      "expected": null,
+      "note": "Книга противоречит себе: на с. 7 конференция открывается в 11:00 в понедельник 15 апреля, на с. 11 автобус в 7:30 и программная речь в 8:00; если 15-е — понедельник, то 17-е — среда, а не пятница (в 1931 году 15 апреля — среда, 17-е — пятница). В записях — как напечатано; Хранитель выбирает сам.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — по рабочему переводу владельца (2_Обработка/тайны кремля 1931/document.html), сверен с английским оригиналом; числа — по английской странице; меры переведены в метрические (Р-64)."
+  }
+}

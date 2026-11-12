@@ -1,0 +1,200 @@
+{
+  "book_id": "terror-ru",
+  "goal": "Russian 7e one-shots of the owner's catalogue playable from the base (Р-222, item 8 of the queue), batch 3.",
+  "decision": "Р-226, Р-225, Р-222, Р-221, Р-213, Р-190, Р-206, Р-209",
+  "check_dir": "checks/20261112-ru-oneshots",
+  "models": [
+    "kb/books/dveri-vo-tmu-ru/scenarios/darkness-beneath-the-hill.json",
+    "kb/books/osobnyaki-bezumiya-ru/scenarios/code-secret-code.json",
+    "kb/books/number-7-dream-en/scenarios/number-7-dream.json",
+    "kb/books/keepers-companion-en/scenes/little-miracles-start.json",
+    "kb/books/pulp-cthulhu-en/handouts/disintegrator-1-finch-telegram.json",
+    "kb/locations/boston.json",
+    "kb/books/masks-of-nyarlathotep-en/maps/america-harlem.json"
+  ],
+  "extra": "## This work (Р-222)\n\nQueue item 8: Russian 7e one-shots from the owner's catalogue (`3_КБ\\_Каталог.csv`). Each unit is one scenario with its own registered book (`book_id` in your brief header) — mostly scenarios written in Russian by Russian authors, published as PDFs (the text is the source: Russian as printed, no `translated` flag; `name.en` only if the book prints it). Read pages with `python -B pipeline/source/pages.py show <book_id> <page>`; check every number and every map on the page image (`pages.py image`). If the PDF has no text layer on some pages, OCR them yourself: `pdftoppm -r 200 -f N -l N -png \"<pdf>\" <out>` then `tesseract <png> - -l rus`. Find the printed/physical page relation on the page images and report it (the lead sets `offset`); if pages carry no numbers, printed = physical. The owner's KB folder for the scenario (`C:\\_Hobby\\Yandex.Disk\\НРИ\\1_Зов Ктулху\\3_КБ\\Ваншоты\\<год> <название>`) may hold his notes, handouts and maps — use them only as a pointer (pictures may be cleaner there), the book is the source. Run tools as `python -B …`; keep scratch files in your own scratchpad subfolder named after your unit.\n\n- Most books of this batch are scans without a text layer (or with a partial one): OCR every page you need yourself (`pdftoppm -r 200 -f N -l N -png \"<pdf>\" <out>`, `tesseract <png> - -l rus`), and read every number on the page image.\n- Dice with lowercase d everywhere, even in quotes (Р-27). If the book is not written for 7e, put the printed stats only as text in the record, no statblock (Р-221).\n- Edition: these are 7e scenarios; if a book turns out to be written for another edition or for Pulp, say so at the top of the report (Pulp → `ruleset` \"pulp\").\n- Records — book-scoped `<book_id>/<kind>/<slug>` in `kb/books/<book_id>/<kinds>/`. Scenario record (summary, keeper_info, hook, advice, steps with refs, conclusion with Sanity rewards, tables), every scene retold for play (`arc`), items, handouts, tomes, organizations, characters (statblocks as printed, Р-25; pregenerated investigators are characters of the book), creatures (known Mythos creatures → `instance_of` the shared `coc:creature:*`), places.\n- Cities — shared records (Р-190): Grep `kb/locations/` first (Arkham, Innsmouth, Dunwich?, Providence, Boston, Kingsport, New York, Moscow, Leningrad… exist) and never rewrite an existing one — add through proposals. A missing city where your scenario is set you create in `kb/locations/` (never in the book folder) as a new shared record — unless another unit of this plan (table above) is set in the same city: then propose it in your report instead. Places outside a city — under «Окрестности <города>» (Р-209); a scenario without a named city gets a «город сценария» record inside its book (Р-190).\n- Maps — `map` with the image (`app/maps/<unit>-<slug>.jpg`) and spots on every printed number/label (Р-206; check each by eye on a crop); every key number gets a place record. List captions — neutral, no spoilers (Р-209). New spells — draft them in your report (`kb/spells` is shared).\n- `axes.era` — as printed (1920s, 1930s, modern, other…), `ruleset` \"core\". Book misprints — `errata` as printed (Р-35); metric units as printed (Russian books are usually metric already).\n- Coverage: `checks/20261112-ru-oneshots/<unit>.md` — every heading → record(s), «не взято» with the reason. Proposals: `checks/20261112-ru-oneshots/proposals-<unit>.json`.",
+  "units": [
+    {
+      "name": "terror",
+      "book_id": "terror-ru",
+      "pages": "all 30 pages of terror-ru (`1_Библиотека\\Сценарии\\Террор (Terror)\\[RU 7e] Террор мадкрауд.pdf`)",
+      "target": "the scenario «Террор» whole (1932)",
+      "owns": [
+        "kb/books/terror-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/terror-*",
+        "checks/20261112-ru-oneshots/terror.md, proposals-terror.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "kharkov",
+      "book_id": "mts-kharkov-37-ru",
+      "pages": "all 93 pages of mts-kharkov-37-ru (`1_Библиотека\\Сценарии\\МТС Харьков-37 (Machine Tractor Station Kharkov-37)\\[RU 7e] 1_Machine Tractor Station Kharkov-37, 1933.pdf`)",
+      "target": "the scenario «МТС Харьков 37» whole (1933)",
+      "owns": [
+        "kb/books/mts-kharkov-37-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/kharkov-*",
+        "checks/20261112-ru-oneshots/kharkov.md, proposals-kharkov.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "vedomo",
+      "book_id": "vedomo-li-lyubvi-ru",
+      "pages": "all 61 pages of vedomo-li-lyubvi-ru (`1_Библиотека\\Сборники\\Ведомо ли любви прощение Ктулху\\[RU 7e] Vedomo_li_lyubvi_proschenie_Zov_Ktulkhu_7-e_izd.pdf`)",
+      "target": "the scenario «Ведомо ли любви прощение Ктулху» whole (1929)",
+      "owns": [
+        "kb/books/vedomo-li-lyubvi-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/vedomo-*",
+        "checks/20261112-ru-oneshots/vedomo.md, proposals-vedomo.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "island",
+      "book_id": "ostrov-luchezarnoy-nadezhdy-ru",
+      "pages": "all 20 pages of ostrov-luchezarnoy-nadezhdy-ru (`1_Библиотека\\Сборники\\Другие миры\\[RU 7e] Остров лучезарной надежды (Другие Миры).pdf`)",
+      "target": "the scenario «Остров лучезарной надежды» whole (1920)",
+      "owns": [
+        "kb/books/ostrov-luchezarnoy-nadezhdy-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/island-*",
+        "checks/20261112-ru-oneshots/island.md, proposals-island.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "train",
+      "book_id": "pogonya-v-poezde-ru",
+      "pages": "all 22 pages of pogonya-v-poezde-ru (`1_Библиотека\\Сценарии\\Погоня в Поезде\\[RU 7e] Погоня в поезде.pdf`)",
+      "target": "the scenario «Погоня в Поезде» whole (1920)",
+      "owns": [
+        "kb/books/pogonya-v-poezde-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/train-*",
+        "checks/20261112-ru-oneshots/train.md, proposals-train.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "elixir",
+      "book_id": "eliksir-zhizni-ru",
+      "pages": "all 12 pages of eliksir-zhizni-ru (`1_Библиотека\\Сценарии\\Эликсир жизни\\[RU 7e] Эликсир жизни.pdf`)",
+      "target": "the scenario «Эликсир жизни» whole (1920)",
+      "owns": [
+        "kb/books/eliksir-zhizni-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/elixir-*",
+        "checks/20261112-ru-oneshots/elixir.md, proposals-elixir.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "christmas",
+      "book_id": "rozhdestvenskaya-vecherinka-ru",
+      "pages": "all 20 pages of rozhdestvenskaya-vecherinka-ru (`1_Библиотека\\Сценарии\\Рождественская вечеринка\\[RU 7e] Рождественская вечеринка (Вадим Первухин).pdf`)",
+      "target": "the scenario «Рождественская вечеринка» whole (1922)",
+      "owns": [
+        "kb/books/rozhdestvenskaya-vecherinka-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/christmas-*",
+        "checks/20261112-ru-oneshots/christmas.md, proposals-christmas.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "thoth",
+      "book_id": "idol-tota-ru",
+      "pages": "all 24 pages of idol-tota-ru (`1_Библиотека\\Сценарии\\Идол Тота\\[RU 7e] 1925 Идол Тота.pdf`)",
+      "target": "the scenario «Идол Тота» whole (1925)",
+      "owns": [
+        "kb/books/idol-tota-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/thoth-*",
+        "checks/20261112-ru-oneshots/thoth.md, proposals-thoth.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "bootleg",
+      "book_id": "taynik-butlegerov-ru",
+      "pages": "all 20 pages of taynik-butlegerov-ru (`1_Библиотека\\Сценарии\\Тайник Бутлегеров\\[RU 7e] Тайник Бутлегеров.pdf`)",
+      "target": "the scenario «Тайник Бутлегеров» whole (1927)",
+      "owns": [
+        "kb/books/taynik-butlegerov-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/bootleg-*",
+        "checks/20261112-ru-oneshots/bootleg.md, proposals-bootleg.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "skyline",
+      "book_id": "otel-skaylayn-ru",
+      "pages": "all 31 pages of otel-skaylayn-ru (`1_Библиотека\\Сценарии\\Отель Скайлайн\\[RU 7e] Отель _Скайлайн_ (Михаил Утенин).pdf`)",
+      "target": "the scenario «Отель Скайлайн» whole (2010)",
+      "owns": [
+        "kb/books/otel-skaylayn-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/skyline-*",
+        "checks/20261112-ru-oneshots/skyline.md, proposals-skyline.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "month",
+      "book_id": "mesyats-nochi-ru",
+      "pages": "all 46 pages of mesyats-nochi-ru (`1_Библиотека\\Сборники\\Монстры Эдны\\[RU 7e] Месяц ночи (Монстры Эдны).pdf`)",
+      "target": "the scenario «Месяц Ночи» whole (1900)",
+      "owns": [
+        "kb/books/mesyats-nochi-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/month-*",
+        "checks/20261112-ru-oneshots/month.md, proposals-month.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "ganesha",
+      "book_id": "proklyatie-ganeshi-ru",
+      "pages": "all 35 pages of proklyatie-ganeshi-ru (`1_Библиотека\\Сборники\\Монстры Эдны\\[RU 7e] Proklyatie_Ganeshi_Monstry_Edny.pdf`)",
+      "target": "the scenario «Проклятие Ганеши» whole (1920)",
+      "owns": [
+        "kb/books/proklyatie-ganeshi-ru/** (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/ganesha-*",
+        "checks/20261112-ru-oneshots/ganesha.md, proposals-ganesha.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "blackwater",
+      "book_id": "chernovodnyy-ruchey-ru",
+      "pages": "all 99 pages of chernovodnyy-ruchey-ru (`1_Библиотека\\Сборники\\Черноводный ручей и Вышел срок (Missed Dues & Blackwater Creek)\\[RU 7e] Черноводный ручей и Вышел срок.pdf`)",
+      "target": "the scenario «Черноводный ручей» (Blackwater Creek) whole — only this scenario of the collection; file names start with `blackwater-`",
+      "owns": [
+        "kb/books/chernovodnyy-ruchey-ru/**/blackwater-* (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/blackwater-*",
+        "checks/20261112-ru-oneshots/blackwater.md, proposals-blackwater.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "dues",
+      "book_id": "chernovodnyy-ruchey-ru",
+      "pages": "the «Вышел срок» (Missed Dues) part of chernovodnyy-ruchey-ru (find its pages in the contents)",
+      "target": "the scenario «Вышел срок» (Missed Dues) whole — only this scenario of the collection; file names start with `dues-`",
+      "owns": [
+        "kb/books/chernovodnyy-ruchey-ru/**/dues-* (new)",
+        "new shared cities where it is set (kb/locations/)",
+        "app/maps/dues-*",
+        "checks/20261112-ru-oneshots/dues.md, proposals-dues.json"
+      ],
+      "sites": "—"
+    }
+  ]
+}

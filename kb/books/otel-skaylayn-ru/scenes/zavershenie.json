@@ -1,0 +1,88 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "otel-skaylayn-ru/scene/zavershenie",
+  "kind": "scene",
+  "name": {
+    "ru": "Завершение",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Подвал серьёзно изменился с первого посещения. От девушки на месте ритуала осталось только большое кровавое пятно, вокруг почти полная темнота. Подняться по лестнице нельзя: шоггот, преследовавший сыщиков, перегородил собой лестницу и лифт и быстро движется к ним.\nВ подвале много труб, в некоторых — проржавевшие решётки, которые можно выдавить чрезвычайной проверкой СИЛ; тогда сыщики спасаются через сливной канал. Какая из труб ведёт к «хорошему» финалу, решает Хранитель. При провале Хранителю стоит намекнуть, что где-то в подвале наверняка спрятан болторез или кувалда — с ними решётки выбиваются без проблем. Сыщики также находят разорванные тела культистов, встреченных в начале сценария.\nВ единственном доступном помещении подвала — резервуар, в котором выращивается шоггот, подпитываясь останками девушки, а на больничных койках — несколько растерзанных привязанных жертв. В подвале ещё несколько шогготов, которые начинают преследовать сыщиков. При должном креативе сыщики могут использовать силу шогготов, чтобы сломать трубы и спастись. Через сливной канал труб сыщики выбираются из отеля.",
+    "en": null
+  },
+  "when": "После падения лифта в подвал",
+  "arc": {
+    "scenario": "otel-skaylayn-ru/scenario/otel-skaylayn",
+    "part": "Сюжет",
+    "order": 12
+  },
+  "where": [
+    {
+      "location": "otel-skaylayn-ru/location/podval",
+      "note": null
+    },
+    {
+      "location": "otel-skaylayn-ru/location/podval-pomeshchenie-s-rezervuarom",
+      "note": "резервуар, койки"
+    },
+    {
+      "location": "otel-skaylayn-ru/location/podval-mesto-rituala",
+      "note": "кровавое пятно"
+    }
+  ],
+  "participants": [
+    {
+      "id": "otel-skaylayn-ru/creature/shoggot-v-forme-kultista",
+      "role": "преследует, перекрыл лестницу и лифт"
+    },
+    {
+      "id": "otel-skaylayn-ru/creature/shoggoty-podvala",
+      "role": "преследуют сыщиков"
+    }
+  ],
+  "mechanics": {
+    "ru": "СИЛ (чрезвычайный успех) — выдавить решётку трубы; болторез или кувалда — без проверки. Рассудок 2/1d8 — разорванные тела культистов; Рассудок 1/1d6 — растерзанные жертвы на больничных койках; шогготы — 1d6/1d20.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Сыщики выбираются из отеля через сливной канал или гибнут — концовки сценария (в записи сценария).",
+    "en": null
+  },
+  "refs": [
+    "otel-skaylayn-ru/item/boltorez-i-kuvalda",
+    "otel-skaylayn-ru/character/devushka-zhertva",
+    "otel-skaylayn-ru/character/kultisty",
+    "otel-skaylayn-ru/map/plan-podvala",
+    "otel-skaylayn-ru/handout/zapiska-kollegi"
+  ],
+  "axes": {
+    "era": [
+      "1930s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "otel-skaylayn-ru",
+      "physical_page": 6,
+      "printed_page": 6,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Завершение»"
+    },
+    {
+      "book_id": "otel-skaylayn-ru",
+      "physical_page": 7,
+      "printed_page": 7,
+      "method": "book_text",
+      "verified": true,
+      "note": "жертвы на койках, шогготы, сливной канал"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

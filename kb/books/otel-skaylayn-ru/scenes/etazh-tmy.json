@@ -1,0 +1,73 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "otel-skaylayn-ru/scene/etazh-tmy",
+  "kind": "scene",
+  "name": {
+    "ru": "Этаж тьмы",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Сыщики оказываются в полной темноте, видимость — не больше 1 метра. Спуститься ниже нельзя: лестница превратилась в бетонную стену, лифт отказывается ехать вниз. Проверки Внимания здесь — как минимум трудные; с источником света при осмотре — обычные. Обойдя комнаты, сыщики должны найти комнату со сломанным генератором («Комната с генератором»), отыскать канистру с топливом (она может быть где угодно) и запустить генератор. Тогда тьма рассеивается, весь этаж становится обычным (как «12 этаж»), а все комнаты на нём — «Обычным номером». Пока сыщики здесь, они могут столкнуться с зомби или загадочными людьми.",
+    "en": null
+  },
+  "when": "Любой этаж спуска",
+  "arc": {
+    "scenario": "otel-skaylayn-ru/scenario/otel-skaylayn",
+    "part": "События и этажи",
+    "order": 10
+  },
+  "where": [
+    {
+      "location": "otel-skaylayn-ru/location/otel-skaylayn",
+      "note": "любой этаж по выбору Хранителя"
+    }
+  ],
+  "participants": [
+    {
+      "id": "otel-skaylayn-ru/creature/zombi-otelya",
+      "role": "возможная встреча"
+    },
+    {
+      "id": "otel-skaylayn-ru/character/zagadochnye-lyudi",
+      "role": "возможная встреча"
+    }
+  ],
+  "mechanics": {
+    "ru": "Внимание — трудная проверка в темноте, обычная с источником света.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Запущенный генератор открывает путь вниз.",
+    "en": null
+  },
+  "refs": [
+    "otel-skaylayn-ru/scene/komnata-s-generatorom",
+    "otel-skaylayn-ru/item/kanistra-s-benzinom",
+    "otel-skaylayn-ru/item/fonarik",
+    "otel-skaylayn-ru/item/zazhigalka",
+    "otel-skaylayn-ru/scene/obychnyy-nomer",
+    "coc:skill:spot-hidden"
+  ],
+  "axes": {
+    "era": [
+      "1930s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "otel-skaylayn-ru",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Этаж тьмы»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "otel-skaylayn-ru/scene/beskonechnyy-koridor",
+  "kind": "scene",
+  "name": {
+    "ru": "Бесконечный коридор",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Этаж — бесконечный коридор. Как только сыщики покидают лифт, он исчезает, тоже повторяя собой бесконечный коридор. В комнатах одна комната повторяется на этаже неограниченное число раз, заменяя любую другую. Выбраться с этажа сыщики могут, если Хранитель добавит на него «Комнату с разломом» или «Комнату с балконом». При успешной «проверке на реальность» иллюзия развеивается, и этаж становится обычным.",
+    "en": null
+  },
+  "when": "Любой этаж спуска",
+  "arc": {
+    "scenario": "otel-skaylayn-ru/scenario/otel-skaylayn",
+    "part": "События и этажи",
+    "order": 5
+  },
+  "where": [
+    {
+      "location": "otel-skaylayn-ru/location/otel-skaylayn",
+      "note": "любой этаж по выбору Хранителя"
+    }
+  ],
+  "mechanics": {
+    "ru": "«Проверка на реальность» — как напечатано; какая характеристика или навык, книга не уточняет.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Выход — через «Комнату с разломом», «Комнату с балконом» или развеянную иллюзию.",
+    "en": null
+  },
+  "refs": [
+    "otel-skaylayn-ru/scene/komnata-s-razlomom",
+    "otel-skaylayn-ru/scene/komnata-s-balkonom"
+  ],
+  "axes": {
+    "era": [
+      "1930s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "otel-skaylayn-ru",
+      "physical_page": 8,
+      "printed_page": 8,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Бесконечный коридор»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

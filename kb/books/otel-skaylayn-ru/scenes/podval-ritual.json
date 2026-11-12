@@ -1,0 +1,71 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "otel-skaylayn-ru/scene/podval-ritual",
+  "kind": "scene",
+  "name": {
+    "ru": "Ритуал в подвале",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "В подвале — приглушённый свет свечей и странная дымка, наполняющая помещение (Хранителю: именно из-за вдыхания этого пара у сыщиков потом начнутся галлюцинации). Пол затоплен примерно по щиколотку. На небольшом земляном выступе — символ Старших богов, на каждом его краю стоят странные фигуры в балахонах (культисты); посреди символа лежит связанная девушка со слезами на глазах.\nФигуры замечают сыщиков, поворачиваются к ним и что-то шепчут. Успешная проверка Слуха позволяет расслышать заклинание: «Tibi, magnum Innominandum, signa stellarum nigrarum et bufoniformis Sadoquae sigillum». Одна из фигур говорит сыщикам не вмешиваться: время людей на этой земле закончилось, а они, культисты, принесут в мир новую жизнь — дитя, что будет править всем.\nЧто бы ни делали сыщики — говорили с фигурами, нападали или пытались скрыться, — они вдруг чувствуют резкую боль в затылке и теряют сознание.",
+    "en": null
+  },
+  "when": "Сразу после «Начала пути»",
+  "arc": {
+    "scenario": "otel-skaylayn-ru/scenario/otel-skaylayn",
+    "part": "Сюжет",
+    "order": 2
+  },
+  "where": [
+    {
+      "location": "otel-skaylayn-ru/location/podval-mesto-rituala",
+      "note": null
+    }
+  ],
+  "participants": [
+    {
+      "id": "otel-skaylayn-ru/character/kultisty",
+      "role": "проводят ритуал"
+    },
+    {
+      "id": "otel-skaylayn-ru/character/devushka-zhertva",
+      "role": "связанная жертва"
+    }
+  ],
+  "mechanics": {
+    "ru": "Слух — расслышать заклинание. Потеря Рассудка при виде культиста — 0/1 (Приложение В). Исход не зависит от действий: сыщики теряют сознание.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Сыщики приходят в себя на 12-м этаже (сцена «Пробуждение»).",
+    "en": null
+  },
+  "refs": [
+    "otel-skaylayn-ru/organization/kult-novoy-zhizni",
+    "otel-skaylayn-ru/scene/probuzhdenie",
+    "otel-skaylayn-ru/map/plan-podvala",
+    "coc:skill:listen"
+  ],
+  "axes": {
+    "era": [
+      "1930s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "otel-skaylayn-ru",
+      "physical_page": 5,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "спуск в подвал, ритуал"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Заклинание на латыни — как напечатано."
+  }
+}

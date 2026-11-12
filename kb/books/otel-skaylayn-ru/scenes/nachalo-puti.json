@@ -1,0 +1,80 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "otel-skaylayn-ru/scene/nachalo-puti",
+  "kind": "scene",
+  "name": {
+    "ru": "Начало пути",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Сыщики прибывают к отелю «Скайлайн» ближе к вечеру. Здание, как и всегда, стоит перед ними в молчаливой злобе.\nНа главном входе — навесной замок на цепи. При наличии инструментов замок можно открыть проверкой Взлома. На этой стороне здания есть и окна, через которые можно забраться проверкой Ловкости; при провале осколки стекла ранят сыщиков. Ищущие более безопасный вход могут обойти отель и найти разрушенную стену в кладовой.\nВойдя, сыщики попадают в одну из двух комнат — центральный холл или кладовую. Осмотрев первый этаж, они замечают слабое мерцание света из подвала. В конце коридора — лифт с лестницей, ведущей вверх и вниз: наверх путь преграждает завал между этажами, а лифт без электричества не работает. Единственный доступный путь — в подвал.",
+    "en": null
+  },
+  "when": "Вечер 3 октября 1937 года или позже — после письма в редакцию",
+  "arc": {
+    "scenario": "otel-skaylayn-ru/scenario/otel-skaylayn",
+    "part": "Сюжет",
+    "order": 1
+  },
+  "where": [
+    {
+      "location": "otel-skaylayn-ru/location/otel-skaylayn",
+      "note": "снаружи, главный вход"
+    },
+    {
+      "location": "otel-skaylayn-ru/location/etazh-1-tsentralnyy-kholl",
+      "note": null
+    },
+    {
+      "location": "otel-skaylayn-ru/location/etazh-1-kladovaya",
+      "note": "вход через разрушенную стену"
+    },
+    {
+      "location": "otel-skaylayn-ru/location/lift-i-lestnitsa",
+      "note": "завал наверх, лифт без электричества"
+    }
+  ],
+  "mechanics": {
+    "ru": "Взлом (с инструментами) — открыть замок на главном входе. Ловкость — пролезть в окно; провал — 1d2 урона от осколков. Обход здания — разрушенная стена кладовой.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Сыщики спускаются в подвал (сцена «Ритуал в подвале»).",
+    "en": null
+  },
+  "refs": [
+    "otel-skaylayn-ru/map/plan-etazh-1",
+    "otel-skaylayn-ru/scene/podval-ritual",
+    "coc:skill:locksmith"
+  ],
+  "axes": {
+    "era": [
+      "1930s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "otel-skaylayn-ru",
+      "physical_page": 4,
+      "printed_page": 4,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Начало пути»"
+    },
+    {
+      "book_id": "otel-skaylayn-ru",
+      "physical_page": 5,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "первый этаж, лифт, завал"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

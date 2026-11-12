@@ -1,0 +1,175 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "otel-skaylayn-ru/creature/zombi-otelya",
+  "kind": "creature",
+  "name": {
+    "ru": "Зомби отеля «Скайлайн»",
+    "en": null
+  },
+  "aliases": [
+    "Зомби"
+  ],
+  "category": "supernatural",
+  "subcategory": "зомби",
+  "axes": {
+    "era": [
+      "1930s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:zombie",
+      "note_back": "зомби, призванные культистами отеля «Скайлайн» (свой профиль)"
+    },
+    {
+      "type": "servitor_of",
+      "target": "otel-skaylayn-ru/character/kultisty",
+      "note": "призваны культистами",
+      "note_back": "призванные ими зомби"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "40",
+        "value": 40
+      },
+      "CON": {
+        "raw": "45",
+        "value": 45
+      },
+      "SIZ": {
+        "raw": "55",
+        "value": 55
+      },
+      "DEX": {
+        "raw": "20",
+        "value": 20
+      },
+      "POW": {
+        "raw": "80",
+        "value": 80
+      }
+    },
+    "hp": {
+      "raw": "10",
+      "value": 10
+    },
+    "mp": {
+      "raw": "1",
+      "value": 1
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "6 (ходьба)",
+      "value": 6,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 6
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "1d3 + БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "6",
+        "trigger": "при виде зомби (напечатано «1/6 пунктов»)"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Призванные культистами, они населяют некоторые этажи отеля (например, «Этаж тьмы»). Могут оказаться и галлюцинацией — на решение Хранителя.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "otel-skaylayn-ru",
+      "physical_page": 24,
+      "printed_page": 24,
+      "method": "book_text",
+      "verified": true,
+      "note": "Приложение В: «Зомби»"
+    },
+    {
+      "book_id": "otel-skaylayn-ru",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Этаж тьмы»: зомби"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.damage_bonus",
+      "printed": "+1d4",
+      "expected": "0",
+      "note": "СИЛ 40 + ТЕЛ 55 = 95 → БкУ 0 и Комплекция 0; напечатано +1d4 и 1. Оставлено как напечатано.",
+      "fixed": false
+    },
+    {
+      "field": "statblock.build",
+      "printed": "1",
+      "expected": "0",
+      "note": "См. БкУ: при СИЛ + ТЕЛ = 95 Комплекция 0.",
+      "fixed": false
+    },
+    {
+      "field": "statblock.mp",
+      "printed": "1",
+      "expected": "16",
+      "note": "ПМ = МОЩ 80 / 5 = 16; напечатано 1 (у зомби «Книги хранителя» МОЩ 5 и ПМ 1 — возможно, МОЩ или ПМ перенесены не оттуда). Оставлено как напечатано.",
+      "fixed": false
+    },
+    {
+      "field": "statblock.sanity_loss",
+      "printed": "1/6",
+      "expected": "1/1d6?",
+      "note": "Потеря Рассудка «1/6 пунктов» — вероятно, пропущен куб (у разлагающегося зомби «Книги хранителя» 1/1d6). Оставлено как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": "Профиль сценария отличается от общей записи «Зомби» (Р-75): своя запись со связью instance_of. ИНТ, Уклонение и броня не даны."
+  }
+}

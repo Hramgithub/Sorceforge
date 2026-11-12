@@ -1,0 +1,80 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "otel-skaylayn-ru/scene/posledniy-etazh",
+  "kind": "scene",
+  "name": {
+    "ru": "Последний этаж",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Обязательное событие (отмечено знаком книги). Здесь сыщики могут перевести дух: здание уже полуразрушено, но противников и сложностей нет, зато есть записки, раскрывающие прошлое постояльцев отеля (материалы Приложения А). Лестницы на этаже нет — только лифт. Сыщики могут спуститься на нём на первый этаж, но на подъезде к нему сверху на лифт падает шоггот, преследовавший их раньше: лифт со свистом пролетает первый этаж и останавливается, разрушенный и сломанный, в подвале. Лестницу вверх преграждает шоггот, который начнёт догонять сыщиков, как только они очнутся от падения.\nПри достижении 2-го этажа Хранителю стоит использовать именно это событие. Если он хочет разыграть свою комнату или событие, сыщики всё равно должны попасть в подвал, минуя 1-й этаж.",
+    "en": null
+  },
+  "when": "При достижении 2-го этажа",
+  "arc": {
+    "scenario": "otel-skaylayn-ru/scenario/otel-skaylayn",
+    "part": "События и этажи",
+    "order": 11
+  },
+  "where": [
+    {
+      "location": "otel-skaylayn-ru/location/etazhi-2-5",
+      "note": "2-й этаж"
+    },
+    {
+      "location": "otel-skaylayn-ru/location/lift-i-lestnitsa",
+      "note": "лифт падает в подвал"
+    }
+  ],
+  "participants": [
+    {
+      "id": "otel-skaylayn-ru/creature/shoggot-v-forme-kultista",
+      "role": "падает на лифт"
+    }
+  ],
+  "outcome": {
+    "ru": "Сыщики оказываются в подвале (сцена «Завершение»).",
+    "en": null
+  },
+  "refs": [
+    "otel-skaylayn-ru/scene/zavershenie",
+    "otel-skaylayn-ru/handout/pismo-sotrudnitsy-otelya",
+    "otel-skaylayn-ru/handout/perepiska-kultistov",
+    "otel-skaylayn-ru/handout/pismo-zhurnalista-18-noyabrya",
+    "otel-skaylayn-ru/handout/pismo-zhurnalista-20-noyabrya",
+    "otel-skaylayn-ru/handout/pismo-zhurnalista-21-noyabrya",
+    "otel-skaylayn-ru/handout/pismo-bratu-1",
+    "otel-skaylayn-ru/handout/pismo-bratu-2",
+    "otel-skaylayn-ru/handout/zapiska-pitera"
+  ],
+  "axes": {
+    "era": [
+      "1930s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "otel-skaylayn-ru",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Последний этаж»"
+    },
+    {
+      "book_id": "otel-skaylayn-ru",
+      "physical_page": 6,
+      "printed_page": 6,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Завершение»: при достижении 2 этажа"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Какие записки лежат на этаже, книга не уточняет; материалы Приложения А — «примеры того, с чем могут столкнуться сыщики» (вывод из текста, Р-41)."
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "otel-skaylayn-ru/scene/prognivshiy-etazh",
+  "kind": "scene",
+  "name": {
+    "ru": "Прогнивший этаж",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Пол этажа — из гнилых досок, двигаться нужно медленно и осторожно. При активных действиях сыщик с ТЕЛ больше 45 проходит проверку ЛВК: при успехе пол выдерживает, при провале сыщик проваливается на следующий этаж.",
+    "en": null
+  },
+  "when": "Любой этаж спуска",
+  "arc": {
+    "scenario": "otel-skaylayn-ru/scenario/otel-skaylayn",
+    "part": "События и этажи",
+    "order": 7
+  },
+  "where": [
+    {
+      "location": "otel-skaylayn-ru/location/otel-skaylayn",
+      "note": "любой этаж по выбору Хранителя"
+    }
+  ],
+  "mechanics": {
+    "ru": "ЛВК (если ТЕЛ больше 45 и сыщик действует активно); провал — падение на этаж ниже и 1d3 урона.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Провалившийся сыщик оказывается этажом ниже.",
+    "en": null
+  },
+  "refs": [],
+  "axes": {
+    "era": [
+      "1930s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "otel-skaylayn-ru",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Прогнивший этаж»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

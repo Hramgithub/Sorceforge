@@ -1,0 +1,251 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "ten-nad-providensom-ru/character/mclaughlin-gangsters",
+  "kind": "character",
+  "name": {
+    "ru": "Гангстеры Рыжего Джима",
+    "en": null
+  },
+  "aliases": [
+    "Гангстеры (8)",
+    "люди Рыжего Джима",
+    "бандиты Маклафлина"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "гангстер",
+  "names": [
+    "Томми Флинн",
+    "Сал Руджеро",
+    "Микки Доэрти",
+    "Джо Карбоне",
+    "Пэдди Квинлан",
+    "Винни Росси"
+  ],
+  "occupation": {
+    "ru": "гангстер",
+    "en": null
+  },
+  "occupation_ref": "coc:occupation:gangster-podruchnyy",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "75",
+        "value": 75
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "55",
+        "value": 55
+      },
+      "POW": {
+        "raw": "35",
+        "value": 35
+      },
+      "EDU": {
+        "raw": "45",
+        "value": 45
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "7",
+      "value": 7
+    },
+    "sanity": {
+      "raw": "35",
+      "value": 35,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d3 + 1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Кастет",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d3 + 1 + 1d4",
+          "dice": "1d3+1",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:brass-knuckles",
+        "notes": "в книге: «Драка 40% (20/8), урон 1d3 + 1d4 или кастетом 1d3 + 1 + 1d4»"
+      },
+      {
+        "name": {
+          "ru": "Пистолет Люгера",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1d10",
+          "dice": "1d10",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:luger-p08"
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "skills": [
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Восемь бандитов Рыжего Джима Маклафлина. Они незаметно рассредоточились по выставке, чтобы помочь Селии Шеперд в ограблении: отрубают электричество, вырубают охранников, стреляют в потолок, а в четвёртом раунде — по охваченной паникой толпе; затем растворяются в толпе и уходят по лестнице.\nЗаметить их можно, только если сыщик прямо скажет Хранителю, что ищет подозрительных лиц, и достигнет трудного успеха в проверке Внимания: успех — 1d4 бандитов, чрезвычайный успех — 1d4 + 4. Если сыщики никого из них не поймали, к приезду полиции все они уже разъехались.",
+    "en": null
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "ten-nad-providensom-ru/character/james-mclaughlin",
+      "note": "главарь",
+      "note_back": "бандиты, посланные украсть канопу"
+    }
+  ],
+  "sources": [
+    {
+      "book_id": "ten-nad-providensom-ru",
+      "physical_page": 17,
+      "printed_page": 16,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Персонажи Хранителя»: «Гангстеры (8)» (характеристики — левая колонка, бой и навыки — правая)"
+    },
+    {
+      "book_id": "ten-nad-providensom-ru",
+      "physical_page": 7,
+      "printed_page": 6,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Выставка «Царство пламени»»: восемь людей Рыжего Джима, как их заметить"
+    },
+    {
+      "book_id": "ten-nad-providensom-ru",
+      "physical_page": 9,
+      "printed_page": 8,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Похищение канопы Ибнхотепа», «Ограбление: шаг за шагом»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "editorial_text"
+    ],
+    "notes": "Групповой профиль (Р-74): имена придуманы (Р-151), в книге — «Гангстеры (8)». Параметры — с. 16. Уклонение 35% выше половины ЛВК (30) — как напечатано."
+  }
+}

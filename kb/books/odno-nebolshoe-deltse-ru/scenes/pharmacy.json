@@ -1,0 +1,68 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "odno-nebolshoe-deltse-ru/scene/pharmacy",
+  "kind": "scene",
+  "name": {
+    "ru": "Аптека",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Если сыщики нашли чертежи и узнали о проходе через подвал, то они без труда найдут необходимое здание. Вход в нужный им подвал находится в аптеке на первом этаже.\nДоговорившись с аптекарем, они могут пройти и осмотреть подвал. Внутри можно обнаружить слегка отличающуюся от остальных стен кирпичную кладку, за которой и скрывается необходимый проход.\nДля того чтобы разрушить стену, понадобится подходящий инструмент и успешная проверка связанного навыка и характеристики (например, кувалда и проверка СИЛ). Однако заниматься этим днём может быть не самой лучшей идеей.",
+    "en": null
+  },
+  "when": "подготовка, днём, после находки чертежей",
+  "arc": {
+    "scenario": "odno-nebolshoe-deltse-ru/scenario/odno-nebolshoe-deltse",
+    "part": "Подготовка",
+    "order": 6
+  },
+  "where": [
+    {
+      "location": "odno-nebolshoe-deltse-ru/location/miller-pharmacy"
+    },
+    {
+      "location": "odno-nebolshoe-deltse-ru/location/museum-basement-tunnel",
+      "note": "кладка в подвале"
+    }
+  ],
+  "participants": [
+    {
+      "id": "odno-nebolshoe-deltse-ru/character/leonard-miller",
+      "role": "аптекарь"
+    }
+  ],
+  "mechanics": {
+    "ru": "Договориться с аптекарем — успех любого социального навыка. Найти кладку — проверка Внимания. Разрушить стену — подходящий инструмент и проверка навыка или характеристики (например, кувалда и СИЛ).",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Сыщики знают, где проход в музей (→ «Вход через подвал»).",
+    "en": null
+  },
+  "refs": [
+    "odno-nebolshoe-deltse-ru/item/museum-blueprints",
+    "coc:skill:spot-hidden"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "odno-nebolshoe-deltse-ru",
+      "physical_page": 5,
+      "printed_page": 4,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Аптека»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Что аптекарь — Леонард Миллер из «Персонажей хранителя» («65 лет, аптекарь»), текст сцены прямо не говорит: вывод из текста (Р-41)."
+  }
+}

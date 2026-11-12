@@ -1,0 +1,212 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "odno-nebolshoe-deltse-ru/character/leonard-miller",
+  "kind": "character",
+  "name": {
+    "ru": "Леонард Миллер",
+    "en": null
+  },
+  "aliases": [
+    "Аптекарь"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "аптекарь",
+    "en": null
+  },
+  "occupation_ref": "coc:occupation:farmatsevt",
+  "age": {
+    "raw": "65 лет",
+    "value": 65
+  },
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "40",
+        "value": 40
+      },
+      "CON": {
+        "raw": "40",
+        "value": 40
+      },
+      "SIZ": {
+        "raw": "50",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "60",
+        "value": 60
+      },
+      "POW": {
+        "raw": "70",
+        "value": 70
+      },
+      "EDU": {
+        "raw": "65",
+        "value": 65
+      }
+    },
+    "hp": {
+      "raw": "7",
+      "value": 7
+    },
+    "sanity": {
+      "raw": "50",
+      "value": 50,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "6",
+      "value": 6,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 6
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        },
+        "damage": {
+          "raw": "1d3 + БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Обаяние",
+        "skill": "coc:skill:charm",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      }
+    ]
+  },
+  "background": {
+    "description": "Пожилой мужчина в медицинском халате, седой, приятные черты лица.",
+    "traits": "Дружелюбен, любит поболтать с заглянувшими в аптеку посетителями."
+  },
+  "legend": {
+    "ru": "Роль в сценарии. Аптекарь в соседнем с музеем здании, через подвал которого идёт тайный тоннель в музей. Днём, если с ним договориться (успех любого социального навыка), пускает осмотреть подвал. Ночью, если его заранее не нейтрализовать, может проснуться от шума в подвале и пойти проверить; заметив сыщиков, попытается убежать и вызвать полицию — его можно остановить, уговорить или запугать (сцены «Аптека», «Вход через подвал»).",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "odno-nebolshoe-deltse-ru",
+      "physical_page": 8,
+      "printed_page": 7,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Персонажи хранителя»: «Леонард Миллер, 65 лет, аптекарь»"
+    },
+    {
+      "book_id": "odno-nebolshoe-deltse-ru",
+      "physical_page": 5,
+      "printed_page": 4,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Аптека», «Вход через подвал»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.hp",
+      "printed": "7",
+      "expected": "9",
+      "note": "ПЗ = (ВЫН 40 + ТЕЛ 50) / 10 = 9; в книге 7. Как напечатано (Р-161).",
+      "fixed": false
+    },
+    {
+      "field": "statblock.move",
+      "printed": "6",
+      "expected": "8 (5 с поправкой на возраст 65 лет)",
+      "note": "СИЛ 40 меньше ТЕЛ 50, ЛВК 50 равна ТЕЛ — Скорость 8, с возрастной поправкой — 5; в книге 6. Как напечатано (Р-161).",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": "Что аптекарь сцен «Аптека» и «Вход через подвал» — это Леонард Миллер, и что он живёт над аптекой, — вывод из текста (Р-41). Навыки «Внимание (60%), Слух (40%)» напечатаны в скобках."
+  }
+}

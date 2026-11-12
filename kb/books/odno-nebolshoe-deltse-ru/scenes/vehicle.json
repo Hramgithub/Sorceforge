@@ -1,0 +1,78 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "odno-nebolshoe-deltse-ru/scene/vehicle",
+  "kind": "scene",
+  "name": {
+    "ru": "Автомобиль",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Для того чтобы покинуть музей с таким крупным грузом, сыщикам необходимо найти для себя какой-нибудь транспорт.\nСамый простой способ — просто арендовать небольшой грузовичок, однако для этого, скорее всего, потребуются документы, и это может вызвать у сыщиков проблемы в дальнейшем.\nБолее сложный способ — угон. Конкретной сцены здесь не приводится: Хранитель отталкивается от решений игроков. Если сыщиков в процессе угона заметит случайный свидетель или даже полицейский, пригодятся Удача и любые социальные навыки.",
+    "en": null
+  },
+  "when": "подготовка, до ночи ограбления",
+  "arc": {
+    "scenario": "odno-nebolshoe-deltse-ru/scenario/odno-nebolshoe-deltse",
+    "part": "Подготовка",
+    "order": 2
+  },
+  "where": [
+    {
+      "location": "coc:location:boston",
+      "note": "улицы города"
+    }
+  ],
+  "participants": [],
+  "mechanics": {
+    "ru": "Проверки при угоне: Взлом, Вождение, Скрытность; также Удача и любые социальные навыки. При необходимости — характеристики грузовика («Книга хранителя», с. 414, таблица V «Транспортные средства»: грузовик — Скорость 13, Комплекция 7, броня для людей 2, пассажиры ≥2).",
+    "en": null
+  },
+  "outcome": {
+    "ru": "У сыщиков есть транспорт для мумии и для бегства; аренда оставляет след в документах.",
+    "en": null
+  },
+  "refs": [
+    "coc:rule:vehicle-reference-charts",
+    "coc:skill:locksmith",
+    "coc:skill:drive-auto",
+    "coc:skill:stealth"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "odno-nebolshoe-deltse-ru",
+      "physical_page": 3,
+      "printed_page": 2,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Подготовка»: «Автомобиль»"
+    },
+    {
+      "book_id": "odno-nebolshoe-deltse-ru",
+      "physical_page": 4,
+      "printed_page": 3,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Автомобиль» (окончание): проверки, «Книга хранителя стр. 414»"
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 390,
+      "printed_page": 414,
+      "method": "book_text",
+      "verified": true,
+      "note": "таблица V «Транспортные средства», строка «Грузовик» (на неё ссылается сценарий)"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

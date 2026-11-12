@@ -1,0 +1,68 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "odno-nebolshoe-deltse-ru/scene/basement-entry",
+  "kind": "scene",
+  "name": {
+    "ru": "Вход через подвал",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Если сыщики решат пойти этим путём, им необходимо взломать дверь аптеки (проверка Взлома), после чего спуститься в подвал и проделать себе проход в стене.\nРядом со спуском в подвал также находится лестница наверх, которая ведёт к жилым помещениям над аптекой. Если сыщики заранее не нейтрализуют аптекаря (любые подходящие проверки), он может проснуться от шума в подвале и пойдёт проверять, что там происходит. Заметив сыщиков, он попытается убежать и вызвать полицию, однако можно попытаться его остановить, уговорить или запугать.\nЧерез проход сыщики попадают в музей — на карте музея это «Выход из подвала».",
+    "en": null
+  },
+  "when": "ночь ограбления",
+  "arc": {
+    "scenario": "odno-nebolshoe-deltse-ru/scenario/odno-nebolshoe-deltse",
+    "part": "Ночь ограбления",
+    "order": 7
+  },
+  "where": [
+    {
+      "location": "odno-nebolshoe-deltse-ru/location/miller-pharmacy"
+    },
+    {
+      "location": "odno-nebolshoe-deltse-ru/location/museum-basement-tunnel"
+    }
+  ],
+  "participants": [
+    {
+      "id": "odno-nebolshoe-deltse-ru/character/leonard-miller",
+      "role": "может проснуться от шума"
+    }
+  ],
+  "mechanics": {
+    "ru": "Взлом — дверь аптеки; пролом стены (инструмент и проверка, см. «Аптека»); нейтрализовать аптекаря заранее — любые подходящие проверки; проснувшегося — остановить, уговорить или запугать.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Сыщики в музее у выхода из подвала (→ «Внутри музея»); сбежавший аптекарь вызывает полицию.",
+    "en": null
+  },
+  "refs": [
+    "odno-nebolshoe-deltse-ru/map/boston-museum",
+    "odno-nebolshoe-deltse-ru/scene/inside-museum",
+    "coc:skill:locksmith"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "odno-nebolshoe-deltse-ru",
+      "physical_page": 5,
+      "printed_page": 4,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Ночь ограбления»: «Вход через подвал»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

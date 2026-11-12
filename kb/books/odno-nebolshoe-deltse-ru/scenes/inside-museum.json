@@ -1,0 +1,91 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "odno-nebolshoe-deltse-ru/scene/inside-museum",
+  "kind": "scene",
+  "name": {
+    "ru": "Внутри музея",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "В зависимости от того, каким путём сыщики проникнут в музей, они начинают в разных точках здания (материал 2: «Выход из подвала», «Задний вход»).\nЕсли охранники не были нейтрализованы, то имеется 10% вероятность встретить кого-то из них в процессе перемещения по музею (проверки на столкновение проводятся в коридорах при поворотах за угол и при входе-выходе в залы и другие помещения).\nСыщики могут захотеть попасть в кабинет управляющего, чтобы уничтожить документы об устройстве одного из них на работу. Необходима проверка Взлома, чтобы открыть дверь, и трудная проверка Внимания либо обычная Работы в библиотеке, чтобы найти среди всех документов в кабинете нужные.\nЕсли сыщики получили информацию о сабле Арайи и решили её забрать, то в тот самый момент, когда кто-либо из них коснётся сабли, в зале оживут два манекена солдат и нападут на сыщиков. Качахо чувствует присутствие сабли и своей магией пытается не дать сыщикам её заполучить.\nЗакончив свои дела в музее, сыщики могут отправляться в выставочный зал.",
+    "en": null
+  },
+  "when": "ночь ограбления, после проникновения",
+  "arc": {
+    "scenario": "odno-nebolshoe-deltse-ru/scenario/odno-nebolshoe-deltse",
+    "part": "Ночь ограбления",
+    "order": 10
+  },
+  "where": [
+    {
+      "location": "odno-nebolshoe-deltse-ru/location/boston-museum"
+    },
+    {
+      "location": "odno-nebolshoe-deltse-ru/location/museum-manager-office",
+      "note": "документы о найме"
+    },
+    {
+      "location": "odno-nebolshoe-deltse-ru/location/museum-war-hall",
+      "note": "сабля и манекены"
+    }
+  ],
+  "participants": [
+    {
+      "id": "odno-nebolshoe-deltse-ru/character/museum-guards",
+      "role": "10% — встреча при перемещении"
+    },
+    {
+      "id": "odno-nebolshoe-deltse-ru/creature/soldier-mannequins",
+      "role": "оживают, когда сыщик касается сабли"
+    }
+  ],
+  "mechanics": {
+    "ru": "10% встретить охранника — на поворотах коридоров и при входе-выходе в залы и помещения. Кабинет управляющего: Взлом — дверь; трудная проверка Внимания или обычная Работа в библиотеке — нужные документы. Сабля Арайи: при касании оживают два манекена солдат (потеря Рассудка 1/1d4) и нападают.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Сыщики идут в выставочный зал (→ «Выставочный зал»).",
+    "en": null
+  },
+  "refs": [
+    "odno-nebolshoe-deltse-ru/map/boston-museum",
+    "odno-nebolshoe-deltse-ru/handout/affair-2-museum-map",
+    "odno-nebolshoe-deltse-ru/item/employment-contract",
+    "odno-nebolshoe-deltse-ru/item/araya-saber",
+    "odno-nebolshoe-deltse-ru/creature/kachaho",
+    "odno-nebolshoe-deltse-ru/scene/exhibition-hall",
+    "coc:skill:locksmith",
+    "coc:skill:spot-hidden",
+    "coc:skill:library-use"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "odno-nebolshoe-deltse-ru",
+      "physical_page": 6,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Внутри музея»"
+    },
+    {
+      "book_id": "odno-nebolshoe-deltse-ru",
+      "physical_page": 12,
+      "printed_page": 11,
+      "method": "book_text",
+      "verified": true,
+      "note": "материал 2 «Карта музея»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "odno-nebolshoe-deltse-ru/character/brian-paterson",
+  "kind": "character",
+  "name": {
+    "ru": "Брайан Патерсон",
+    "en": null
+  },
+  "aliases": [
+    "Управляющий музея",
+    "управляющий Брайан Патерсон"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "управляющий музея",
+    "en": null
+  },
+  "age": {
+    "raw": "54 года",
+    "value": 54
+  },
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "75",
+        "value": 75
+      },
+      "DEX": {
+        "raw": "55",
+        "value": 55
+      },
+      "APP": {
+        "raw": "60",
+        "value": 60
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "65",
+        "value": 65
+      },
+      "EDU": {
+        "raw": "60",
+        "value": 60
+      }
+    },
+    "hp": {
+      "raw": "16",
+      "value": 16
+    },
+    "sanity": {
+      "raw": "30",
+      "value": 30,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "6",
+      "value": 6,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 6
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d3 + БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Юриспруденция",
+        "skill": "coc:skill:law",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      }
+    ]
+  },
+  "background": {
+    "description": "Высокий и сухощавый немолодой мужчина, всегда гладко выбрит, обладает громким, хорошо поставленным голосом.",
+    "traits": "Ведёт себя со всеми подчёркнуто вежливо, однако с теми, кто ниже его по социальному статусу, легко может сорваться на крик, если что-то его не устраивает."
+  },
+  "legend": {
+    "ru": "Роль в сценарии. Управляющий музеем. Сыщика, решившего устроиться охранником, проводят к нему в кабинет: после нескольких социальных проверок Патерсон просит показать документы, заполнить несколько экземпляров договора о приёме на работу и велит приходить вечером к Дугласу (сцена «Устройство на работу»). Документы о найме остаются в его кабинете — сыщики могут захотеть их уничтожить.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "odno-nebolshoe-deltse-ru",
+      "physical_page": 8,
+      "printed_page": 7,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Персонажи хранителя»: «Брайан Патерсон, 54 года, управляющий музея»"
+    },
+    {
+      "book_id": "odno-nebolshoe-deltse-ru",
+      "physical_page": 4,
+      "printed_page": 3,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Устройство на работу»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.hp",
+      "printed": "16",
+      "expected": "13",
+      "note": "ПЗ = (ВЫН 60 + ТЕЛ 75) / 10 = 13.5; в книге 16. Как напечатано (Р-161).",
+      "fixed": false
+    },
+    {
+      "field": "statblock.move",
+      "printed": "6",
+      "expected": "7 (5 с поправкой на возраст 54 года)",
+      "note": "Скорость по ЛВК 55 и СИЛ 70 меньше ТЕЛ 75 — 7, с возрастной поправкой — 5; в книге 6. Как напечатано (Р-161).",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": null
+  }
+}

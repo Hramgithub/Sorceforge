@@ -1,0 +1,168 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "odno-nebolshoe-deltse-ru/creature/soldier-mannequins",
+  "kind": "creature",
+  "name": {
+    "ru": "Манекены солдат",
+    "en": null
+  },
+  "aliases": [
+    "Манекен",
+    "Оживший манекен солдата"
+  ],
+  "category": "supernatural",
+  "subcategory": "оживший манекен солдата",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "servitor_of",
+      "target": "odno-nebolshoe-deltse-ru/creature/kachaho",
+      "note": "колдун, чья магия их оживляет",
+      "note_back": "оживлённые манекены солдат"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "30",
+        "value": 30
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "30",
+        "value": 30
+      },
+      "DEX": {
+        "raw": "55",
+        "value": 55
+      },
+      "POW": {
+        "raw": "40",
+        "value": 40
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "damage_bonus": {
+      "raw": "-2",
+      "value": "-2"
+    },
+    "build": {
+      "raw": "-2",
+      "value": -2
+    },
+    "move": {
+      "raw": "6",
+      "value": 6,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 6
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет. Атаки проникающим оружием наносят только половину урона, огонь и рубящее оружие наносят полный урон.",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Штык на винтовке",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d8 + 1 + БкУ",
+          "dice": "1d8+1",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:bayonet",
+        "notes": "в справочнике у примкнутого штыка урон 1d4 + 2 + БкУ; здесь — как напечатано"
+      }
+    ],
+    "skills": [],
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d4",
+        "trigger": "при виде оживших манекенов"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Защита",
+      "summary": "Брони нет. Проникающее оружие наносит только половину урона, огонь и рубящее оружие — полный урон.",
+      "raw": "Броня: нет. Атаки проникающим оружием наносят только половину урона, огонь и рубящее оружие наносят полный урон."
+    },
+    {
+      "name": "Страж сабли",
+      "summary": "Два манекена солдат в зале Испано-американской войны оживают в тот момент, когда кто-либо из сыщиков касается сабли Арайи, и нападают на сыщиков: так Качахо своей магией пытается не дать им заполучить саблю.",
+      "raw": null,
+      "refs": [
+        "odno-nebolshoe-deltse-ru/item/araya-saber"
+      ]
+    }
+  ],
+  "description": {
+    "ru": "Манекены солдат в зале музея, посвящённом Испано-американской войне; два из них оживают магией Качахо, когда сыщики касаются сабли Арайи.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "odno-nebolshoe-deltse-ru",
+      "physical_page": 9,
+      "printed_page": 8,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Существа»: «Манекен, оживший манекен солдата»"
+    },
+    {
+      "book_id": "odno-nebolshoe-deltse-ru",
+      "physical_page": 6,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Внутри музея»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.hp",
+      "printed": "12",
+      "expected": "10",
+      "note": "ПЗ = (ВЫН 70 + ТЕЛ 30) / 10 = 10; в книге 12. Как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": "Профиль сценария. Скорость 6 — как напечатано (по СИЛ, ЛВК и ТЕЛ человека было бы 8). Потеря Рассудка в книге — «1/1d4» без пояснения, когда она проверяется; повод «при виде» — вывод из текста (Р-41)."
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "fears-sharp-little-needles-en/creature/hatteras-mutated-sea-life",
+  "kind": "creature",
+  "name": {
+    "ru": "Мутировавшая морская жизнь",
+    "en": "Mutated Sea Life"
+  },
+  "aliases": [
+    "мутировавшая морская живность",
+    "мутанты рифа Хаттерас",
+    "mutations of Hatteras Reef"
+  ],
+  "category": "supernatural",
+  "subcategory": "мутанты сапеха",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "75",
+        "value": 75
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "120",
+        "value": 120
+      },
+      "INT": {
+        "raw": "85",
+        "value": 85
+      },
+      "POW": {
+        "raw": "120",
+        "value": 120
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "damage_bonus": {
+      "raw": "none",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "24 (swimming) (it’s really fast!)",
+      "value": 24,
+      "modes": [
+        {
+          "mode": "swim",
+          "value": 24,
+          "note": "очень быстрое"
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Укус",
+          "en": "Fighting (Brawl)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d4+БкУ (укус)",
+          "dice": "1d4",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "80% (40/16)",
+      "value": 80,
+      "half": 40,
+      "fifth": 16
+    },
+    "skills": [
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Плавание",
+        "skill": "coc:skill:swim",
+        "value": {
+          "raw": "100%",
+          "value": 100,
+          "half": 50,
+          "fifth": 20
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d6",
+        "trigger": "увидеть мутировавшую морскую тварь"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Защита",
+      "summary": "См. таблицу мутаций.",
+      "raw": "Defenses: See below."
+    },
+    {
+      "name": "Мутации (1d6)",
+      "summary": "Сапех мутирует каждое существо по-своему; бросьте 1d6:\n1 — бронированная чешуя (4 пункта брони);\n2 — дополнительные рты (3 атаки за раунд);\n3 — бритвенные плавники (дополнительная атака на 1d8 урона);\n4 — амфибия (может выходить на сушу);\n5 — щупальца (атака захватом 75%);\n6 — удвоенные характеристики — по-настоящему грозный противник.",
+      "raw": "Mutations: Each creature is mutated by the sapeh in different ways. Roll 1d6 and consult the following chart: 1: Armored scales (4 points of armor) 2: Extra mouths (3 attacks per round) 3: Razor fins (additional attack for 1d8 damage) 4: Amphibious (can come on land) 5: Tentacles (Grapple attack at 75%) 6: Double stats for a really formidable adversary",
+      "refs": [
+        "coc:rule:fighting-maneuvers",
+        "coc:rule:armor"
+      ]
+    },
+    {
+      "name": "Кто мутирует",
+      "summary": "Не только рыбы, но и крабы, живые кораллы, морская трава, ламинария и любая живая флора и фауна в радиусе вокруг рифа, растущем на 1,6 км в день. Поедание мутировавшей рыбы не вызывает мутаций, но повышен риск, что рыба окажется ядовитой или с кислотной кровью.",
+      "raw": "The mutations include not only fish, but also crab, live corals, sea grass, kelp, and any other living flora or fauna within a radius around the reef that increases by one mile per day. … eating the mutated fish doesn’t cause any ill-effects such as mutation, but there is an increased risk that a fish will have mutated to be poisonous or have acidic blood.",
+      "refs": [
+        "coc:rule:poisons"
+      ]
+    }
+  ],
+  "description": {
+    "ru": "Рыбы, крабы, кораллы и водоросли рифа Хаттерас, изменённые сапехом в плотоядных чудовищ: крупнее обычного, уродливые, с лишними отростками и ртами, без плавников, со щупальцами, у некоторых мех, перья или клювы. Сначала нападают на ныряльщиков и пловцов, потом у некоторых появляются мутации, позволяющие выходить на берег.",
+    "en": null
+  },
+  "habitat": "риф Хаттерас и растущий круг вокруг него",
+  "sources": [
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 78,
+      "printed_page": 77,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «MUTATED SEA LIFE», таблица мутаций; «The Reef»"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 76,
+      "printed_page": 75,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Video of the Attack»"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 77,
+      "printed_page": 76,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Locals», «It Came from the Deep!»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.damage_bonus",
+      "printed": "none",
+      "expected": "+1d4",
+      "note": "СИЛ 75 + ТЕЛ 60 = 135: по таблице БкУ +1d4 и Комплекция 1. Напечатанная Комплекция 1 согласуется с СИЛ и ТЕЛ, «Damage bonus: none» — нет; исправлено по большинству (Р-36).",
+      "fixed": true
+    }
+  ],
+  "corrections": [
+    {
+      "field": "statblock.damage_bonus",
+      "from": "none",
+      "to": "+1d4",
+      "reason": "«Damage bonus: none» расходится с СИЛ 75 + ТЕЛ 60 и Комплекцией 1 (с. 77); исправлено по большинству.",
+      "ref": "Р-36"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Существо сценария (Р-75). Статблок — на одну особь; мутация — броском по таблице. «Move: 24 (swimming)» — скорость плавания. Название — по реестру терминов владельца («мутировавшая морская жизнь»). «one mile per day» переведено в 1,6 км в день (Р-64). Русский текст — по рабочему переводу владельца (2_Обработка/fears-sharp-little-needles/document.html), сверен с английским оригиналом; числа — по английской странице."
+  }
+}

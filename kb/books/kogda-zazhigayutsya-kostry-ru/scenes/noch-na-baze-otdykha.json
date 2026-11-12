@@ -1,0 +1,72 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "kogda-zazhigayutsya-kostry-ru/scene/noch-na-baze-otdykha",
+  "kind": "scene",
+  "name": {
+    "ru": "Ночь на базе отдыха",
+    "en": null
+  },
+  "aliases": [
+    "Возвращение на базу отдыха"
+  ],
+  "description": {
+    "ru": "Сыщики могут решить вернуться на базу отдыха никем не замеченными. Первая ночь пройдёт без происшествий.\nЕсли сыщики продолжат расследование на второй день, вечером они смогут вернуться в свои номера, но Мария подмешает им в чай и в еду большое количество снотворного. Если сыщики будут что-то пить или есть из рук Марии, опишите, что они очень крепко засыпают, а затем переходите к Финалу 2.\nЕсли же ничего есть и пить они не будут, ночью их пытаются схватить селяне.",
+    "en": null
+  },
+  "when": "Если сыщики незамеченными возвращаются на базу отдыха; первая и вторая ночь",
+  "arc": {
+    "scenario": "kogda-zazhigayutsya-kostry-ru/scenario/kogda-zazhigayutsya-kostry",
+    "part": "Сцена 5.2. Если сыщики решили проследить за Лидией",
+    "order": 11
+  },
+  "where": [
+    {
+      "location": "kogda-zazhigayutsya-kostry-ru/location/baza-otdykha-chayka",
+      "note": "номера сыщиков"
+    }
+  ],
+  "participants": [
+    {
+      "id": "kogda-zazhigayutsya-kostry-ru/character/mariya-chumakova",
+      "role": "подмешивает снотворное"
+    },
+    {
+      "id": "kogda-zazhigayutsya-kostry-ru/character/zhitel-poselka",
+      "role": "6 селян"
+    }
+  ],
+  "mechanics": {
+    "ru": "Ночью — проверка Внимания. При провале, пока сыщики спят, их оглушат и свяжут — Финал 2. При успехе они могут дать бой 6 селянам (профиль «Житель посёлка»): если их оглушат — Финал 2; если удастся сбежать — Финал 1.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Финал 1 или Финал 2.",
+    "en": null
+  },
+  "refs": [
+    "kogda-zazhigayutsya-kostry-ru/item/otvar-beleny",
+    "kogda-zazhigayutsya-kostry-ru/scene/perezhivshie",
+    "kogda-zazhigayutsya-kostry-ru/scene/final-kogda-zazhigayutsya-kostry"
+  ],
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "kogda-zazhigayutsya-kostry-ru",
+      "physical_page": 17,
+      "printed_page": 17,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Сцена 5.2»: возвращение на базу отдыха"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Отдельного заголовка в книге нет — конец «Сцены 5.2» (с. 17) вынесен в свою сцену для игры (Р-134). Ссылка «(см. Приложение 3)» на профиль селян — errata сценария."
+  }
+}

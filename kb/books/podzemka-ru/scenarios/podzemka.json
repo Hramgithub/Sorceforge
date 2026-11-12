@@ -1,0 +1,268 @@
+{
+  "schema": "sourcefold.scenario.v0",
+  "id": "podzemka-ru/scenario/podzemka",
+  "kind": "scenario",
+  "name": {
+    "ru": "Подземка",
+    "en": null
+  },
+  "aliases": [],
+  "part_of": null,
+  "order": null,
+  "summary": {
+    "ru": "Ваншот для группы из 3–5 хорошо подготовленных сыщиков: они отправляются в глубины туннелей метро, чтобы проверить слухи о монстре-людоеде и пропавших людях. Место действия — Монреаль, Канада, современность; сценарий легко адаптируется под любое метро и время (блогера-диггера можно заменить преступником, полицейским или служащим метро).\nБлогер-диггер Ляо Хан по прозвищу Крот выбежал из туннеля с воплями и в крови: на законсервированной станции Anneau что-то вырвало из вагона его подругу Жаклин Бодри. Дело забрала КСРБ; сыщики, работающие на спецслужбы, получают видеозаписи Крота и спускаются вниз. На станции сторожит прирученный гаст, а на техническом подуровне под туннелем устроил лабораторию ми-го-изгой, которому служит бездомный Манфред. Жаклин ещё жива.",
+    "en": null
+  },
+  "keeper_info": {
+    "ru": "В глубинах подземки обосновался ми-го-изгой, который устроил себе лабораторию в технических помещениях. На станции-депо он устроил нечто вроде сторожевого поста, поселив там прирученного гаста, с которым удалось договориться и подчинить себе при помощи оружия и телепатического контакта. Теперь ми-го использует гаста как гончую и сторожевого пса, чтобы тот отпугивал людей от его лабораторного комплекса.\nМи-го иногда похищает припозднившихся пассажиров подземки, чтобы проводить с ними опыты, пользуясь тем, что он не отображается на камерах и может напускать тьму. Он извлекает мозг из жертв, чтобы считывать их память, изучает человеческую анатомию и физиологию, после чего останки скармливает гасту, а вещи отдаёт другому добровольному прислужнику — бомжу Манфреду, чтобы иметь дополнительного соглядатая.\nМи-го хорошо разбирается в современной электронике, поэтому ему не составило труда запитать отдельные лампы в нужных местах и частично затопить часть технических помещений.\nНесмотря на убеждение Крота в том, что его девушка мертва, Жаклин просто потеряла сознание от боли и сейчас, раненая, находится в лаборатории ми-го.",
+    "en": null
+  },
+  "hook": {
+    "ru": "Группа сыщиков заинтересована в расследовании: пропавшая и пострадавший — их товарищи или коллеги, либо сыщики отправляются вниз как полицейские или спецагенты для проверки. Они хорошо оснащены для похода по тёмным туннелям, в том числе имеют неплохое вооружение. Если сыщики — друзья пострадавшего, они считают, что Жаклин ещё можно спасти, или намерены поквитаться за её убийство.\nЗавязка: задержанный Крот, записи с его гоу-про и дело, которое забрала себе КСРБ; сыщики работают на спецслужбы, и им предоставляют записи (сцена «Задержание Крота»).",
+    "en": null
+  },
+  "advice": {
+    "ru": "Перенос: сценарий легко адаптируется под любое метро и время; блогера-диггера можно заменить преступником, полицейским или служащим метро.\nОсобенности метро Монреаля — в записи «Монреальский метрополитен»: шинный ход с сохранёнными рельсами, движущиеся тротуары, «подземный город».\nЕсли группе будет тяжело справиться с заданием, дайте ей сопровождающего вооружённого товарища — Лютера Хардена, которым управляет Хранитель; если кто-то из сыщиков убит или выведен из строя, выдайте его на замену. Его можно поместить и на технический уровень или в туннели метро: он незаконно отправился вглубь подземелий, желая разыскать пропавшую жену или сестру.\nЕсли сыщики кажутся плохо вооружёнными, заберите у ми-го биопаутинную броню.\nКарта технического уровня — с. 12 (запись карты).",
+    "en": null
+  },
+  "steps": [
+    {
+      "title": "Задержание Крота",
+      "text": "Ляо Хан задержан в метро; КСРБ забирает дело; сыщикам дают видеозаписи.",
+      "refs": [
+        "podzemka-ru/scene/zaderzhanie-krota",
+        "podzemka-ru/handout/videozapis-krota",
+        "podzemka-ru/character/lyao-khan",
+        "podzemka-ru/character/zhaklin-bodri"
+      ]
+    },
+    {
+      "title": "Что помнит Ляо Хан",
+      "text": "Стрёкот, светящиеся глаза, дверь Т-38; Ляо может пойти проводником.",
+      "optional": true,
+      "refs": [
+        "podzemka-ru/scene/chto-pomnit-lyao-khan",
+        "podzemka-ru/character/lyao-khan"
+      ]
+    },
+    {
+      "title": "Путь до законсервированной станции",
+      "text": "Тёмный отворот, лужи, дверца Т-38, кострище.",
+      "refs": [
+        "podzemka-ru/scene/put-do-stantsii",
+        "podzemka-ru/location/otvorot-k-stantsii",
+        "podzemka-ru/location/metro-monrealya"
+      ]
+    },
+    {
+      "title": "Встреча с Манфредом",
+      "text": "Бездомный просит вывести его наружу — и предупреждает хозяина.",
+      "refs": [
+        "podzemka-ru/scene/vstrecha-s-manfredom",
+        "podzemka-ru/location/kostrishche-u-stantsii",
+        "podzemka-ru/character/manfred"
+      ]
+    },
+    {
+      "title": "Законсервированная станция",
+      "text": "Логово гаста в вагоне; засада с крыши или спящий гаст.",
+      "refs": [
+        "podzemka-ru/scene/logovo-gasta",
+        "podzemka-ru/location/stantsiya-anno",
+        "podzemka-ru/creature/gast-mi-go"
+      ]
+    },
+    {
+      "title": "Обратный путь",
+      "text": "Стрёкот, распахнутая дверца Т-38, крик снизу (уйти — 1/1d4 Рассудка).",
+      "refs": [
+        "podzemka-ru/scene/obratnyy-put",
+        "podzemka-ru/location/otvorot-k-stantsii"
+      ]
+    },
+    {
+      "title": "Технический подуровень",
+      "text": "Лестница, холл (11), затопленные помещения 1–16, карта.",
+      "refs": [
+        "podzemka-ru/scene/spusk-na-podurovne",
+        "podzemka-ru/location/tekhnicheskiy-uroven",
+        "podzemka-ru/map/tekhnicheskiy-uroven",
+        "podzemka-ru/location/t-11-kholl",
+        "podzemka-ru/location/t-01-shchitovaya",
+        "podzemka-ru/location/t-03-ventilyatsionnaya-1",
+        "podzemka-ru/location/t-a-koridor-s-tarakanami",
+        "podzemka-ru/location/t-04-komnata-s-trubami",
+        "podzemka-ru/location/t-05-nasosnaya-2",
+        "podzemka-ru/location/t-06-sklad-zapchastey",
+        "podzemka-ru/location/t-07-sklad-oborudovaniya",
+        "podzemka-ru/location/t-c-zatoplennyy-tupik",
+        "podzemka-ru/location/t-08-pustoe-pomeshchenie",
+        "podzemka-ru/location/t-09-nasosnaya-1"
+      ]
+    },
+    {
+      "title": "Помехи в комнате персонала",
+      "text": "Телевизор с помехами, транс, одержимый техник.",
+      "refs": [
+        "podzemka-ru/scene/pomekhi-v-komnate-personala",
+        "podzemka-ru/location/t-02-komnata-personala",
+        "podzemka-ru/character/mark-ganon",
+        "podzemka-ru/item/televizor-s-pomekhami"
+      ]
+    },
+    {
+      "title": "Засада гаста",
+      "text": "Сбежавший гаст бьётся до смерти в Вентиляционной №2.",
+      "optional": true,
+      "refs": [
+        "podzemka-ru/scene/zasada-gasta",
+        "podzemka-ru/location/t-10-ventilyatsionnaya-2",
+        "podzemka-ru/creature/gast-mi-go"
+      ]
+    },
+    {
+      "title": "Убежище Манфреда",
+      "text": "Каморка за трансформаторной будкой; блокнот с союзом с «Мухой».",
+      "optional": true,
+      "refs": [
+        "podzemka-ru/location/t-15-zapertoe-pomeshchenie",
+        "podzemka-ru/item/bloknot-manfreda",
+        "podzemka-ru/location/t-14-nasosnaya-3"
+      ]
+    },
+    {
+      "title": "Тьма перед лабораторией",
+      "text": "Тьма ми-го в помещении 16, дверь с ловушкой.",
+      "refs": [
+        "podzemka-ru/scene/tma-pered-laboratoriey",
+        "podzemka-ru/location/t-16-preddverie",
+        "podzemka-ru/location/t-14-nasosnaya-3"
+      ]
+    },
+    {
+      "title": "Лаборатория ми-го",
+      "text": "Жаклин на операционном столе, мозговые цилиндры, камера узников.",
+      "refs": [
+        "podzemka-ru/scene/laboratoriya-mi-go",
+        "podzemka-ru/location/t-12-laboratoriya",
+        "podzemka-ru/location/t-13-kamera",
+        "podzemka-ru/character/zhaklin-bodri",
+        "podzemka-ru/creature/mi-go-stalker",
+        "podzemka-ru/item/mozgovye-tsilindry"
+      ]
+    },
+    {
+      "title": "Лоботомит",
+      "text": "Спасённый узник попробует убить спасителей.",
+      "refs": [
+        "podzemka-ru/scene/lobotomit",
+        "podzemka-ru/character/zhil-tramble"
+      ]
+    },
+    {
+      "title": "Тактика ми-го",
+      "text": "Отпугнуть, увести бой из лаборатории, не выпустить свидетелей.",
+      "refs": [
+        "podzemka-ru/scene/taktika-mi-go",
+        "podzemka-ru/creature/mi-go-stalker",
+        "podzemka-ru/item/elektropushka-mi-go"
+      ]
+    },
+    {
+      "title": "Сопровождающий",
+      "text": "Лютер Харден — товарищ под управлением Хранителя или замена погибшему.",
+      "optional": true,
+      "refs": [
+        "podzemka-ru/character/lyuter-harden"
+      ]
+    }
+  ],
+  "conclusion": {
+    "ru": "Награды сценария:\n• Вывели Мэнни на чистую воду (выбили признание или нашли его дневник): +2 Рассудка.\n• Уничтожили гаста: +1d4 Рассудка.\n• Уничтожили ми-го: +1d6 Рассудка.\n• Спасли Жаклин и лоботомита: по +2 Рассудка за каждую жизнь (+1 за техника).",
+    "en": null
+  },
+  "refs": [
+    "coc:location:montreal",
+    "podzemka-ru/location/metro-monrealya",
+    "podzemka-ru/location/stantsiya-anno",
+    "podzemka-ru/location/otvorot-k-stantsii",
+    "podzemka-ru/location/kostrishche-u-stantsii",
+    "podzemka-ru/location/tekhnicheskiy-uroven",
+    "podzemka-ru/map/tekhnicheskiy-uroven",
+    "podzemka-ru/character/lyao-khan",
+    "podzemka-ru/character/zhaklin-bodri",
+    "podzemka-ru/character/manfred",
+    "podzemka-ru/character/mark-ganon",
+    "podzemka-ru/character/zhil-tramble",
+    "podzemka-ru/character/lyuter-harden",
+    "podzemka-ru/creature/mi-go-stalker",
+    "podzemka-ru/creature/gast-mi-go",
+    "coc:creature:mi-go",
+    "coc:creature:gast",
+    "podzemka-ru/handout/videozapis-krota",
+    "podzemka-ru/item/elektropushka-mi-go",
+    "podzemka-ru/item/biopautinnaya-bronya",
+    "podzemka-ru/item/mozgovye-tsilindry",
+    "podzemka-ru/item/khirurgicheskie-instrumenty",
+    "podzemka-ru/item/paryashchiy-svetilnik",
+    "podzemka-ru/item/televizor-s-pomekhami",
+    "podzemka-ru/item/braslet-zhaklin",
+    "podzemka-ru/item/bloknot-manfreda",
+    "podzemka-ru/item/klyuchi-tekhnika",
+    "podzemka-ru/item/zhurnal-neispravnostey",
+    "podzemka-ru/item/instrumenty-obkhodchikov"
+  ],
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "podzemka-ru",
+      "physical_page": 1,
+      "printed_page": 1,
+      "method": "book_text",
+      "verified": true,
+      "note": "титул «Подземка»"
+    },
+    {
+      "book_id": "podzemka-ru",
+      "physical_page": 2,
+      "printed_page": 2,
+      "method": "book_text",
+      "verified": true,
+      "note": "«О сценарии», «Особенности метро Монреаля», «Блогер-диггер»"
+    },
+    {
+      "book_id": "podzemka-ru",
+      "physical_page": 3,
+      "printed_page": 3,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Для Хранителя»"
+    },
+    {
+      "book_id": "podzemka-ru",
+      "physical_page": 4,
+      "printed_page": 4,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Для Хранителя» (окончание)"
+    },
+    {
+      "book_id": "podzemka-ru",
+      "physical_page": 10,
+      "printed_page": 10,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Награды сценария», сопровождающий персонаж, совет о броне"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Сценарий собран для игры без книги (Р-134): каждый заголовок — шаг, сцена, место, персонаж, существо, предмет, раздатка или карта (сверка — checks/20261112-ru-oneshots/subway.md). Автор в PDF не назван. Эпоха — «современность» (по тексту: гоу-про, видеоблог; станция законсервирована в 1992 году). Слова «В оригинале место действия — Монреаль» могут означать, что текст — пересказ чужого сценария; оригинал не найден. Страницы «с. N» — страницы PDF: номеров на страницах нет, печатная = физическая."
+  }
+}

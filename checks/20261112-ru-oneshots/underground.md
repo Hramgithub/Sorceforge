@@ -24,7 +24,7 @@
 | Жители Янкылмы (вступление) | 7 | `coc:location:yankylma` |
 | Николай Степанович Боровецкий | 7 | `character/nikolay-borovetskiy` |
 | Матвей и Глафира Бобылёвы | 7 | `character/matvey-bobylev`, `character/glafira-bobyleva`; `location/dom-bobylevykh` |
-| Бахтияр (заклинания «Паралич страха», «Иссохшая конечность») | 7 | `character/bakhtiyar` (statblock.spells, abilities) |
+| Бахтияр (заклинания «Паралич страха», «Иссохшая конечность») | 7 | `character/bakhtiyar` (statblock.spells, abilities); `coc:spell:paralich-strakha`, `coc:spell:issokhshaya-konechnost` |
 | Клавдия Никифоровна (Баба Клава) | 7 | `character/klavdiya-nikiforovna`; `item/otvar-sily`; `creature/domovoy`; `location/dom-baby-klavy` |
 | Карта местности | 8 | `map/karta-mestnosti` (18 меток), `app/maps/underground-karta-mestnosti.jpg`; `location/okrestnosti-yankylmy`, `location/reka-yanymenkvya` |
 | Лесное озеро; Совет хранителю (Вит-куль) | 8 | `location/lesnoe-ozero`; `creature/vit-kul` |
@@ -64,11 +64,11 @@
 | Охота на студентов | 19 | `scene/okhota-na-studentov` |
 | Мотивы и особенности npc: Деревня (профили «живые», «мертвые») | 20 | `character/zhiteli-yankylmy` (variants); `organization/obshchina-yankylmy` |
 | Менквы (хозяин, хозяйка, мал. хозяин) | 20 | `character/khozyain`, `character/khozyayka`, `character/malenkiy-khozyain`; `creature/menkvy` |
-| Куль-отыр | 20 | `creature/kul-otyr`; `scene/probuzhdenie-kul-otyra` |
+| Куль-отыр | 20 | `creature/kul-otyr`; `scene/probuzhdenie-kul-otyra`; `coc:spell:zaklinanie-slepoty-kul-otyra` |
 | Демоны уччи (волк, лось, медведь, сова; потеря Рассудка) | 20 | `creature/uchchi` (variants, sanity_loss); `scenario/…` (таблица «Потеря Рассудка») |
 | Куль | 20 | `creature/kul` |
 | Жрец | 20 | `character/pam` |
-| Письмена | 21 | `organization/chud-beloglazaya` (язык); `location/skaly` (надпись); `item/tablichka-s-zaklinaniem` (ритуал); `location/zal-demonov-uchchi` (таблица надписей на плитах) |
+| Письмена | 21 | `organization/chud-beloglazaya` (язык); `location/skaly` (надпись); `item/tablichka-s-zaklinaniem` (ритуал), `coc:spell:zaklinanie-vechnogo-sna`; `location/zal-demonov-uchchi` (таблица надписей на плитах) |
 | Финалы и сюжет | 21 | `scenario/…` (keeper_info — «без участия игроков», conclusion — концовки); `scene/okhota-na-studentov`; `creature/kul` |
 | Детали | 22 | `scenario/…` (advice); `handout/karta-mestnosti-razdatka`; `item/zaglushka-motora`, `item/dugi-anomalii`, `item/ittarma` |
 
@@ -110,6 +110,10 @@
 
 - Жрец чуди получил придуманное имя «Пам» (Р-150; «пам» — жрец в преданиях коми о чуди). Менквам имена не придумывались: книга
   прямо говорит, что они зовут друг друга «хозяин» и «хозяйка» и «имена им без надобности», — эти слова и стали именами.
-- Новые заклинания (в справочник не внесены, черновики — в отчёте части): «Паралич страха», «Иссохшая конечность» (похоже на
-  «Усыхание конечности», но 6 ПМ и трудная ВЫН вместо встречной МОЩ), «Заклинание слепоты» Куль-Отыра, заклинание вечного сна
-  (ритуал усыпления/пробуждения с таблички).
+- Новые заклинания заведены в справочнике (тип и механика — вывод из текста, Р-41): `coc:spell:paralich-strakha`
+  («Паралич страха», Контроль и разум, мгновенное), `coc:spell:issokhshaya-konechnost` («Иссохшая конечность», Проклятие,
+  мгновенное, `variant_of` → `coc:spell:wither-limb`: 6 ПМ и трудная ВЫН вместо 8 ПМ и встречной МОЩ),
+  `coc:spell:zaklinanie-slepoty-kul-otyra` («Заклинание слепоты (Куль-Отыр)», Проклятие, мгновенное),
+  `coc:spell:zaklinanie-vechnogo-sna` («Заклинание вечного сна», Призыв и укрощение, ритуал). Ссылки `spell` проставлены в
+  статблоках Бахтияра и Куль-Отыра; заклинание вечного сна — в `refs` таблички, сцен «Каверна» и «Пробуждение Куль-Отыра» и
+  сценария.

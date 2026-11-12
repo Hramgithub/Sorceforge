@@ -1,0 +1,498 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "fears-sharp-little-needles-en/character/waiting-celeste-almunia",
+  "kind": "character",
+  "name": {
+    "ru": "Селеста Альмуния",
+    "en": "Celeste Almunia"
+  },
+  "aliases": [],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "врач, исследователь, основательница клиники",
+    "en": "Doctor of Medicine"
+  },
+  "occupation_ref": "coc:occupation:vrach",
+  "age": {
+    "raw": "55",
+    "value": 55
+  },
+  "sex": "женский",
+  "residence": "клиника «Новая жизнь» (подземные жилые помещения); апартаменты в Сан-Антонио",
+  "birthplace": null,
+  "relations": [
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:yidhra",
+      "note": "культ Йидры, которому исторически служит её клиника",
+      "note_back": "Селеста Альмуния — культистка, мечтающая сама стать богиней («В ожидании рождения»)"
+    },
+    {
+      "type": "rival_of",
+      "target": "fears-sharp-little-needles-en/creature/waiting-regora",
+      "note": "пленница, которую она держит в оцепенении ради её генетического материала",
+      "note_back": "тюремщица, которую Регора хочет наказать"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "90",
+        "value": 90
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50
+      },
+      "APP": {
+        "raw": "60",
+        "value": 60
+      },
+      "INT": {
+        "raw": "90",
+        "value": 90
+      },
+      "POW": {
+        "raw": "80",
+        "value": 80
+      },
+      "EDU": {
+        "raw": "98",
+        "value": 98
+      }
+    },
+    "hp": {
+      "raw": "15",
+      "value": 15
+    },
+    "sanity": {
+      "raw": "0",
+      "value": 0,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d3+БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      }
+    ],
+    "dodge": {
+      "raw": "25% (12/5)",
+      "value": 25,
+      "half": 12,
+      "fifth": 5
+    },
+    "skills": [
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Язык (английский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "Английский",
+        "value": {
+          "raw": "98%",
+          "value": 98,
+          "half": 49,
+          "fifth": 19
+        }
+      },
+      {
+        "name": "Язык (латынь)",
+        "skill": "coc:skill:language-other",
+        "specialization": "Латынь",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Язык (испанский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "Испанский",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Медицина",
+        "skill": "coc:skill:medicine",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Наука (биология)",
+        "skill": "coc:skill:science",
+        "specialization": "Биология",
+        "value": {
+          "raw": "95%",
+          "value": 95,
+          "half": 47,
+          "fifth": 19
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Защита плоти, Усыхание конечности",
+      "items": [
+        {
+          "name": "Flesh Ward",
+          "spell": "coc:spell:flesh-ward"
+        },
+        {
+          "name": "Wither Limb",
+          "spell": "coc:spell:wither-limb"
+        }
+      ]
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "вид её нагого тела с буйством звериных черт; обычно — нет"
+      }
+    ]
+  },
+  "variants": [
+    {
+      "label": "Беременная Альмуния",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "70",
+            "value": 70
+          },
+          "CON": {
+            "raw": "90",
+            "value": 90
+          },
+          "SIZ": {
+            "raw": "60",
+            "value": 60
+          },
+          "DEX": {
+            "raw": "50",
+            "value": 50
+          },
+          "APP": {
+            "raw": "60",
+            "value": 60
+          },
+          "INT": {
+            "raw": "90",
+            "value": 90
+          },
+          "POW": {
+            "raw": "80",
+            "value": 80
+          },
+          "EDU": {
+            "raw": "98",
+            "value": 98
+          }
+        },
+        "hp": {
+          "raw": "15",
+          "value": 15
+        },
+        "sanity": {
+          "raw": "0",
+          "value": 0,
+          "max": null
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "3 (у беременной)",
+          "value": 3,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 3
+            }
+          ]
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Ближний бой (драка)",
+              "en": null
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "50% (25/10)",
+              "value": 50,
+              "half": 25,
+              "fifth": 10
+            },
+            "damage": {
+              "raw": "1d3+БкУ",
+              "dice": "1d3",
+              "adds_db": true
+            },
+            "weapon": "coc:weapon:unarmed"
+          }
+        ],
+        "dodge": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        },
+        "skills": [
+          {
+            "name": "Средства",
+            "skill": "coc:skill:credit-rating",
+            "value": {
+              "raw": "50%",
+              "value": 50,
+              "half": 25,
+              "fifth": 10
+            }
+          },
+          {
+            "name": "Мифы Ктулху",
+            "skill": "coc:skill:cthulhu-mythos",
+            "value": {
+              "raw": "40%",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            }
+          },
+          {
+            "name": "Первая помощь",
+            "skill": "coc:skill:first-aid",
+            "value": {
+              "raw": "50%",
+              "value": 50,
+              "half": 25,
+              "fifth": 10
+            }
+          },
+          {
+            "name": "Язык (английский)",
+            "skill": "coc:skill:language-own",
+            "specialization": "Английский",
+            "value": {
+              "raw": "98%",
+              "value": 98,
+              "half": 49,
+              "fifth": 19
+            }
+          },
+          {
+            "name": "Язык (латынь)",
+            "skill": "coc:skill:language-other",
+            "specialization": "Латынь",
+            "value": {
+              "raw": "50%",
+              "value": 50,
+              "half": 25,
+              "fifth": 10
+            }
+          },
+          {
+            "name": "Язык (испанский)",
+            "skill": "coc:skill:language-other",
+            "specialization": "Испанский",
+            "value": {
+              "raw": "75%",
+              "value": 75,
+              "half": 37,
+              "fifth": 15
+            }
+          },
+          {
+            "name": "Медицина",
+            "skill": "coc:skill:medicine",
+            "value": {
+              "raw": "80%",
+              "value": 80,
+              "half": 40,
+              "fifth": 16
+            }
+          },
+          {
+            "name": "Наука (биология)",
+            "skill": "coc:skill:science",
+            "specialization": "Биология",
+            "value": {
+              "raw": "95%",
+              "value": 95,
+              "half": 47,
+              "fifth": 19
+            }
+          }
+        ],
+        "spells": {
+          "raw": "Защита плоти, Усыхание конечности",
+          "items": [
+            {
+              "name": "Flesh Ward",
+              "spell": "coc:spell:flesh-ward"
+            },
+            {
+              "name": "Wither Limb",
+              "spell": "coc:spell:wither-limb"
+            }
+          ]
+        },
+        "sanity_loss": [
+          {
+            "success": "0",
+            "fail": "1d6",
+            "trigger": "вид её нагого тела с буйством звериных черт; обычно — нет"
+          }
+        ]
+      }
+    }
+  ],
+  "background": {
+    "phobias_manias": "бессрочное безумие: социопатия"
+  },
+  "description": {
+    "ru": "Талантливый врач-исследователь, основательница центра «Новая жизнь»; отказывается от выгодных предложений работы в других местах. Носит скрывающую тело одежду и очки, каштановые волосы собраны в пучок. Нагое тело — буйство звериных черт. Их две — оригинал и клон с одинаковыми характеристиками; беременная скрывается внизу три месяца, пока другая играет на людях роль доктора. Защиты сверх обычной нет. Национальность — американка; образование — доктор медицины.",
+    "en": null
+  },
+  "legend": {
+    "ru": "В 1995 году основала центр репродуктивной медицины «Новая жизнь» в районе Каньон-Лейка — якобы ради «холистической» помощи бесплодным парам, а исторически ради служения Йидре. Альмуния исказила и это предназначение: её не устраивает бессмертие через «приход к Йидре», когда в свой срок богиня поглощает человека, — она хочет сама стать богиней. Соединив тайное и обычное знание, она клонировала себя: клон получил все её воспоминания на момент создания, новыми они обмениваются во время секса. От этой связи они и зачинают — пытаются начать собственный цикл перерождения: когда одна беременеет, она на три месяца скрывается, а другая выходит на люди. Ни одна из дочерей пока не жизнеспособна. В тайном подземном уровне она держит в оцепенении Регору, кормя её генетическим материалом и беря её собственный. Всё чаще ночует в клинике («спит в кабинете», а на деле внизу), а не в своих апартаментах в Сан-Антонио. Почувствовав угрозу, укрывается внизу и вызывает 4–6 охранников подкрепления. Во время бури беременная остаётся в постели, другая — в жилых комнатах или обходит комплекс, может спасать ноутбук или младшую (возможно, жизнеспособную) дочь. Победа над Альмуниями — +1d6 Рассудка сыщикам.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 102,
+      "printed_page": 101,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «CELESTE ALMUNIA»"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 98,
+      "printed_page": 97,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Introduction», «New Life Fertility Center»"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 101,
+      "printed_page": 100,
+      "method": "book_text",
+      "verified": true,
+      "note": "«7. Living Quarters»"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 102,
+      "printed_page": 101,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Regora’s Wrath», «Rewards and Repercussions»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — по рабочему переводу владельца (2_Обработка/fears-sharp-little-needles/document.html), сверен с английским оригиналом; числа — по английской странице; отдельного перевода владельца для этого сценария нет. Имя богини — по записи базы «Йидра» (у владельца «Идра»). Меры переведены в метрические (Р-64). Заклинание Wither Limb — «Усыхание конечности», как в «Книге хранителя» (у владельца «Иссушение конечности»). Скорость 3 у беременной — по пометке статблока (вариант). В тексте книги однажды «Dr. Alumnia» — опечатка имени, в переводе исчезает (Р-39)."
+  }
+}

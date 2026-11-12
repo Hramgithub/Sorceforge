@@ -1,0 +1,726 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "fears-sharp-little-needles-en/character/waiting-followers-of-regora",
+  "kind": "character",
+  "name": {
+    "ru": "Последователи Регоры",
+    "en": "Followers of Regora"
+  },
+  "aliases": [],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "последователь Регоры",
+  "names": [
+    "Рамон Гарса",
+    "Тереза Вильярреал",
+    "Хесус Сальдивар",
+    "Кэрол Энн Мюллер",
+    "Луис Рейна",
+    "Марисоль Кесслер"
+  ],
+  "sex": null,
+  "residence": null,
+  "birthplace": null,
+  "relations": [
+    {
+      "type": "servitor_of",
+      "target": "fears-sharp-little-needles-en/creature/waiting-regora",
+      "note_back": "культисты клиники «Новая жизнь»"
+    },
+    {
+      "type": "works_for",
+      "target": "fears-sharp-little-needles-en/character/waiting-celeste-almunia",
+      "note": "глава клиники",
+      "note_back": "охрана и персонал клиники"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "75",
+        "value": 75
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "55",
+        "value": 55
+      },
+      "APP": {
+        "raw": "55",
+        "value": 55
+      },
+      "INT": {
+        "raw": "50",
+        "value": 50
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      },
+      "EDU": {
+        "raw": "60",
+        "value": 60
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "sanity": {
+      "raw": "0",
+      "value": 0,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d3+БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Ближний бой (драка): подручные медицинские инструменты",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d4+БкУ",
+          "dice": "1d4",
+          "adds_db": true
+        },
+        "notes": "Только доктор Хиггинс и медсёстры."
+      },
+      {
+        "name": {
+          "ru": "Стрельба (пистолет): автоматический пистолет .38",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "1d10",
+          "dice": "1d10",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:38-automatic",
+        "notes": "У охраны: 1 или 3 выстрела за раунд, дальность 15 м, осечка 99, магазин 8."
+      },
+      {
+        "name": {
+          "ru": "Стрельба (винтовка/дробовик)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "notes": "Вооружение подкрепления — на усмотрение Хранителя."
+      }
+    ],
+    "dodge": {
+      "raw": "27% (13/5)",
+      "value": 27,
+      "half": 13,
+      "fifth": 5
+    },
+    "skills": [
+      {
+        "name": "Язык (английский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "Английский",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Язык (испанский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "Испанский",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Естествознание",
+        "skill": "coc:skill:natural-world",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      }
+    ],
+    "spells": {
+      "raw": "нет",
+      "items": []
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "особенно звероподобные последователи; обычно — нет"
+      }
+    ]
+  },
+  "variants": [
+    {
+      "label": "Доктор Хиггинс (ОБР 90, Медицина 70%, Наука (биология) 75%)",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "75",
+            "value": 75
+          },
+          "CON": {
+            "raw": "60",
+            "value": 60
+          },
+          "SIZ": {
+            "raw": "60",
+            "value": 60
+          },
+          "DEX": {
+            "raw": "55",
+            "value": 55
+          },
+          "APP": {
+            "raw": "55",
+            "value": 55
+          },
+          "INT": {
+            "raw": "50",
+            "value": 50
+          },
+          "POW": {
+            "raw": "50",
+            "value": 50
+          },
+          "EDU": {
+            "raw": "90",
+            "value": 90
+          }
+        },
+        "hp": {
+          "raw": "12",
+          "value": 12
+        },
+        "sanity": {
+          "raw": "0",
+          "value": 0,
+          "max": null
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "8",
+          "value": 8,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 8
+            }
+          ]
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Ближний бой (драка)",
+              "en": null
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "40% (20/8)",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            },
+            "damage": {
+              "raw": "1d3+БкУ",
+              "dice": "1d3",
+              "adds_db": true
+            },
+            "weapon": "coc:weapon:unarmed"
+          },
+          {
+            "name": {
+              "ru": "Ближний бой (драка): подручные медицинские инструменты",
+              "en": null
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "40% (20/8)",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            },
+            "damage": {
+              "raw": "1d4+БкУ",
+              "dice": "1d4",
+              "adds_db": true
+            },
+            "notes": "Только доктор Хиггинс и медсёстры."
+          },
+          {
+            "name": {
+              "ru": "Стрельба (пистолет): автоматический пистолет .38",
+              "en": null
+            },
+            "kind": "attack",
+            "skill": "Стрельба (пистолет)",
+            "chance": {
+              "raw": "35% (17/7)",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            },
+            "damage": {
+              "raw": "1d10",
+              "dice": "1d10",
+              "adds_db": false
+            },
+            "weapon": "coc:weapon:38-automatic",
+            "notes": "У охраны: 1 или 3 выстрела за раунд, дальность 15 м, осечка 99, магазин 8."
+          },
+          {
+            "name": {
+              "ru": "Стрельба (винтовка/дробовик)",
+              "en": null
+            },
+            "kind": "attack",
+            "skill": "Стрельба (винтовка/дробовик)",
+            "chance": {
+              "raw": "40% (20/8)",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            },
+            "notes": "Вооружение подкрепления — на усмотрение Хранителя."
+          }
+        ],
+        "dodge": {
+          "raw": "27% (13/5)",
+          "value": 27,
+          "half": 13,
+          "fifth": 5
+        },
+        "skills": [
+          {
+            "name": "Язык (английский)",
+            "skill": "coc:skill:language-own",
+            "specialization": "Английский",
+            "value": {
+              "raw": "60%",
+              "value": 60,
+              "half": 30,
+              "fifth": 12
+            }
+          },
+          {
+            "name": "Язык (испанский)",
+            "skill": "coc:skill:language-other",
+            "specialization": "Испанский",
+            "value": {
+              "raw": "40%",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            }
+          },
+          {
+            "name": "Естествознание",
+            "skill": "coc:skill:natural-world",
+            "value": {
+              "raw": "50%",
+              "value": 50,
+              "half": 25,
+              "fifth": 10
+            }
+          },
+          {
+            "name": "Медицина",
+            "skill": "coc:skill:medicine",
+            "value": {
+              "raw": "70%",
+              "value": 70,
+              "half": 35,
+              "fifth": 14
+            }
+          },
+          {
+            "name": "Наука (биология)",
+            "skill": "coc:skill:science",
+            "specialization": "Биология",
+            "value": {
+              "raw": "75%",
+              "value": 75,
+              "half": 37,
+              "fifth": 15
+            }
+          }
+        ],
+        "spells": {
+          "raw": "нет",
+          "items": []
+        },
+        "sanity_loss": [
+          {
+            "success": "0",
+            "fail": "1d6",
+            "trigger": "особенно звероподобные последователи; обычно — нет"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Медсёстры (ОБР 70, Первая помощь 70%, Наука (фармацевтика) 50%)",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "75",
+            "value": 75
+          },
+          "CON": {
+            "raw": "60",
+            "value": 60
+          },
+          "SIZ": {
+            "raw": "60",
+            "value": 60
+          },
+          "DEX": {
+            "raw": "55",
+            "value": 55
+          },
+          "APP": {
+            "raw": "55",
+            "value": 55
+          },
+          "INT": {
+            "raw": "50",
+            "value": 50
+          },
+          "POW": {
+            "raw": "50",
+            "value": 50
+          },
+          "EDU": {
+            "raw": "70",
+            "value": 70
+          }
+        },
+        "hp": {
+          "raw": "12",
+          "value": 12
+        },
+        "sanity": {
+          "raw": "0",
+          "value": 0,
+          "max": null
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "8",
+          "value": 8,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 8
+            }
+          ]
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Ближний бой (драка)",
+              "en": null
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "40% (20/8)",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            },
+            "damage": {
+              "raw": "1d3+БкУ",
+              "dice": "1d3",
+              "adds_db": true
+            },
+            "weapon": "coc:weapon:unarmed"
+          },
+          {
+            "name": {
+              "ru": "Ближний бой (драка): подручные медицинские инструменты",
+              "en": null
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "40% (20/8)",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            },
+            "damage": {
+              "raw": "1d4+БкУ",
+              "dice": "1d4",
+              "adds_db": true
+            },
+            "notes": "Только доктор Хиггинс и медсёстры."
+          },
+          {
+            "name": {
+              "ru": "Стрельба (пистолет): автоматический пистолет .38",
+              "en": null
+            },
+            "kind": "attack",
+            "skill": "Стрельба (пистолет)",
+            "chance": {
+              "raw": "35% (17/7)",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            },
+            "damage": {
+              "raw": "1d10",
+              "dice": "1d10",
+              "adds_db": false
+            },
+            "weapon": "coc:weapon:38-automatic",
+            "notes": "У охраны: 1 или 3 выстрела за раунд, дальность 15 м, осечка 99, магазин 8."
+          },
+          {
+            "name": {
+              "ru": "Стрельба (винтовка/дробовик)",
+              "en": null
+            },
+            "kind": "attack",
+            "skill": "Стрельба (винтовка/дробовик)",
+            "chance": {
+              "raw": "40% (20/8)",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            },
+            "notes": "Вооружение подкрепления — на усмотрение Хранителя."
+          }
+        ],
+        "dodge": {
+          "raw": "27% (13/5)",
+          "value": 27,
+          "half": 13,
+          "fifth": 5
+        },
+        "skills": [
+          {
+            "name": "Язык (английский)",
+            "skill": "coc:skill:language-own",
+            "specialization": "Английский",
+            "value": {
+              "raw": "60%",
+              "value": 60,
+              "half": 30,
+              "fifth": 12
+            }
+          },
+          {
+            "name": "Язык (испанский)",
+            "skill": "coc:skill:language-other",
+            "specialization": "Испанский",
+            "value": {
+              "raw": "40%",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            }
+          },
+          {
+            "name": "Естествознание",
+            "skill": "coc:skill:natural-world",
+            "value": {
+              "raw": "50%",
+              "value": 50,
+              "half": 25,
+              "fifth": 10
+            }
+          },
+          {
+            "name": "Первая помощь",
+            "skill": "coc:skill:first-aid",
+            "value": {
+              "raw": "70%",
+              "value": 70,
+              "half": 35,
+              "fifth": 14
+            }
+          },
+          {
+            "name": "Наука (фармацевтика)",
+            "skill": "coc:skill:science",
+            "specialization": "Фармацевтика",
+            "value": {
+              "raw": "50%",
+              "value": 50,
+              "half": 25,
+              "fifth": 10
+            }
+          }
+        ],
+        "spells": {
+          "raw": "нет",
+          "items": []
+        },
+        "sanity_loss": [
+          {
+            "success": "0",
+            "fail": "1d6",
+            "trigger": "особенно звероподобные последователи; обычно — нет"
+          }
+        ]
+      }
+    }
+  ],
+  "background": {
+    "phobias_manias": "бессрочное безумие: фанатизм"
+  },
+  "description": {
+    "ru": "Профиль культистов клиники «Новая жизнь»: охранники подземного уровня (в штатском, с автоматическими пистолетами .38), подкрепление из окрестностей (4–6 человек, оружие — на усмотрение Хранителя), доктор Хиггинс и медсёстры. Верны и Альмунии, и Регоре, не сознавая противоречия между ними. Некоторые заметно звероподобны. Защиты сверх обычной нет. Национальность — американцы; возраст разный; образование — от средней школы до медицинского.",
+    "en": null
+  },
+  "legend": {
+    "ru": "В сценарии: охранники приезжают и уезжают на машинах утром и вечером (за сменами можно проследить и проскользнуть внутрь); один всё время сидит на посту охраны. Во время бури последователи сверху спускаются вниз — под землёй, даже по щиколотку в воде, кажется безопаснее, и они хотят защитить Регору.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 102,
+      "printed_page": 101,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «FOLLOWERS OF REGORA»"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 98,
+      "printed_page": 97,
+      "method": "book_text",
+      "verified": true,
+      "note": "«New Life Fertility Center»"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 101,
+      "printed_page": 100,
+      "method": "book_text",
+      "verified": true,
+      "note": "«5. Guard Station»"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 102,
+      "printed_page": 101,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Regora’s Wrath»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "editorial_text"
+    ],
+    "notes": "Русский текст — по рабочему переводу владельца (2_Обработка/fears-sharp-little-needles/document.html), сверен с английским оригиналом; числа — по английской странице; отдельного перевода владельца для этого сценария нет. Имя богини — по записи базы «Йидра» (у владельца «Идра»). Меры переведены в метрические (Р-64). Имена придуманы (Р-151): групповой профиль. Варианты Хиггинса и медсестёр — по пометкам статблока («Increase EDU…, Add…»)."
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "lechebnitsa-ru/scene/kontakt-s-anefis",
+  "kind": "scene",
+  "name": {
+    "ru": "Контакт с царевной Анефис",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Чтобы связаться с царевной, Дарлин нужно загипнотизировать или ввести ей особое сочетание медикаментов: она начнёт «переключаться» с одной личности на другую (таблица «Личности Дарлин»), пока не выйдет Анефис. Если гипнотизёра нет, рецепт можно найти в деле Дарлин — неразборчивые, многократно исправленные записи Брюэра.\nАнефис рада помочь одолеть существо: расскажет о его нраве и слабостях (боится солнца и воды, избегает Знака Старших богов, огонь гонит его) и поможет создать Знак Старших богов. Регрессия длится около четырёх часов — хватает на один Знак.",
+    "en": null
+  },
+  "when": "когда сыщики подберут ключ к Дарлин; не чаще раза в день",
+  "arc": {
+    "scenario": "lechebnitsa-ru/scenario/lechebnitsa",
+    "part": "Контакт с царевной Анефис",
+    "order": 14
+  },
+  "where": [
+    {
+      "location": "lechebnitsa-ru/location/lechebnitsa-nort-aylend",
+      "note": null
+    }
+  ],
+  "participants": [
+    {
+      "id": "lechebnitsa-ru/character/darlin",
+      "role": "носительница"
+    },
+    {
+      "id": "lechebnitsa-ru/character/anefis",
+      "role": "личность"
+    }
+  ],
+  "mechanics": {
+    "ru": "Гипноз — см. врезку «Гипноз» в советах сценария. Расшифровать рецепт — обычная проверка Фармакологии или чрезвычайная проверка ИНТ (медикам — трудная проверка ОБР); проверку проходят уже после того, как состав приготовлен и введён: провал — кома на 2d4 часа, крах — Дарлин умирает от передозировки. Анефис знает «Благословение Баст»: 4 ПМ, восстанавливает 1d6 ПЗ и 1d6 Рассудка; получатель молится Баст (молитве научит Анефис) и проходит проверку МОЩ; провал — гнев богини, потеря 1 ПЗ (следы когтей на лице), тех, кто дурно обращался с кошками, ждёт худшее. Накладывать его может лишь посвящённая жрица, сыщики выучить его не смогут.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Знак Старших богов, созданный с Анефис, и знание слабостей существа.",
+    "en": null
+  },
+  "refs": [
+    "lechebnitsa-ru/item/retsept-dlya-darlin",
+    "coc:spell:elder-sign",
+    "coc:spell:blessing-of-bast",
+    "coc:creature:bast",
+    "coc:skill:hypnosis"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "lechebnitsa-ru",
+      "physical_page": 25,
+      "printed_page": 25,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Контакт с царевной Анефис»"
+    },
+    {
+      "book_id": "lechebnitsa-ru",
+      "physical_page": 26,
+      "printed_page": 26,
+      "method": "book_text",
+      "verified": true,
+      "note": "окончание, врезка «Благословление Баст»"
+    },
+    {
+      "book_id": "lechebnitsa-ru",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "Дарлин"
+    },
+    {
+      "book_id": "lechebnitsa-ru",
+      "physical_page": 10,
+      "printed_page": 10,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «Гипноз»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

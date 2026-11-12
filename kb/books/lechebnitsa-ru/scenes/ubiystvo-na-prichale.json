@@ -1,0 +1,88 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "lechebnitsa-ru/scene/ubiystvo-na-prichale",
+  "kind": "scene",
+  "name": {
+    "ru": "Убийство на причале",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Как только сыщики скроются из вида, Чарльз Джонсон выскальзывает из-за скал и проламывает голову старому Эбенезеру. Тело остаётся лежать на пирсе, истекая кровью; Джонсон отвязывает лодку и пробивает ей днище. Вернувшись на причал, сыщики найдут мёртвого Эбенезера и, возможно, увидят полузатопленную лодку в сотне метров от берега; оставленные в лодке вещи потеряны. Это единственный способ покинуть остров; радио нет.\nЕсли в начале сценария сыщики оставили кого-то на причале с Эбенезером, Джонсон всё равно подкрадётся и ударит по голове сперва сыщика (тот отделается оглушением — Джонсон его не прикончит), а затем переключится на Эбенезера.",
+    "en": null
+  },
+  "when": "вскоре после того, как сыщики поднимутся к лечебнице",
+  "arc": {
+    "scenario": "lechebnitsa-ru/scenario/lechebnitsa",
+    "part": "Территория лечебницы: Причал",
+    "order": 9
+  },
+  "where": [
+    {
+      "location": "lechebnitsa-ru/location/prichal",
+      "note": null
+    }
+  ],
+  "participants": [
+    {
+      "id": "lechebnitsa-ru/character/charlz-dzhonson",
+      "role": "убийца"
+    },
+    {
+      "id": "lechebnitsa-ru/character/ebenezer-ueyt",
+      "role": "жертва"
+    }
+  ],
+  "mechanics": {
+    "ru": "Найти тело — потеря Рассудка 1/1d2.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Сыщики заперты на острове на несколько дней, пока не покажется судно береговой охраны.",
+    "en": null
+  },
+  "refs": [
+    "lechebnitsa-ru/item/medalon-ebenezera",
+    "lechebnitsa-ru/map/nort-aylend"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "lechebnitsa-ru",
+      "physical_page": 20,
+      "printed_page": 20,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Причал»"
+    },
+    {
+      "book_id": "lechebnitsa-ru",
+      "physical_page": 21,
+      "printed_page": 21,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Причал» (окончание)"
+    }
+  ],
+  "errata": [
+    {
+      "field": "description.ru",
+      "printed": "«обнаружат там мёртвого Джонсона (Рассудок 1/1d2)»",
+      "expected": "мёртвого Эбенезера",
+      "note": "С. 20: на причале убит Эбенезер, Джонсон жив; в записи — Эбенезер.",
+      "fixed": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": null
+  }
+}

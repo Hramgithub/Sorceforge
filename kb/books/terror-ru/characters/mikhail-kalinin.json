@@ -1,0 +1,196 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "terror-ru/character/mikhail-kalinin",
+  "kind": "character",
+  "name": {
+    "ru": "Михаил Иванович Калинин",
+    "en": null
+  },
+  "aliases": [
+    "Михаил Калинин",
+    "М.И. Калинин",
+    "нечто-Калинин"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "проводник",
+    "en": null
+  },
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "1930s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "transforms_into",
+      "target": "terror-ru/creature/meteoritnoe-nechto",
+      "note": "заражён метеоритом",
+      "note_back": "проводник Михаил Калинин"
+    },
+    {
+      "type": "knows",
+      "target": "terror-ru/character/nikolay-lakoba",
+      "note": "машинист его бригады",
+      "note_back": "проводник его бригады"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "75",
+        "value": 75
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "INT": {
+        "raw": "40",
+        "value": 40
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "80",
+        "value": 80
+      }
+    },
+    "hp": {
+      "raw": "11",
+      "value": 11
+    },
+    "move": {
+      "raw": "12",
+      "value": 12,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 12
+        }
+      ]
+    },
+    "armor": {
+      "raw": "это нечто получает минимальный урон от любого оружия. Только огонь, кислота и электричество наносят полный урон.",
+      "value": null,
+      "note": "минимальный урон от любого оружия; полный — только от огня, кислоты и электричества"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Щупальце",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Атака щупальцем",
+        "chance": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d4",
+          "dice": "1d4",
+          "adds_db": false
+        },
+        "notes": "Щупалец: 2. Атака с захватом: чтобы вырваться, нужна встречная проверка СИЛ."
+      },
+      {
+        "name": {
+          "ru": "Пасть",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Атака пастью",
+        "chance": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d6",
+          "dice": "1d6",
+          "adds_db": false
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d10",
+        "trigger": "при виде нечто"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Проводник бригады Николая Лакобы, превращённый в метеоритное нечто. В клетке лаборатории Червякова с табличкой «М.И. Калинин» сидит его гротескный двойник: два щупальца на месте рук, голова на конце шеи длиной почти 2,5 м.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Живёт в ветхом жилом комплексе у реки; когда сыщики приходят, квартира обыскана, а Михаила, его пальто и зимних ботинок нет. Его шкафчик на вокзале пуст. Червяков выпускает его первым, когда сыщики спрашивают о Тунгуске.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "terror-ru",
+      "physical_page": 15,
+      "printed_page": 14,
+      "method": "book_text",
+      "verified": true,
+      "note": "состав экипажа"
+    },
+    {
+      "book_id": "terror-ru",
+      "physical_page": 16,
+      "printed_page": 15,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Михаил Иванович Калинин»; шкафчик"
+    },
+    {
+      "book_id": "terror-ru",
+      "physical_page": 19,
+      "printed_page": 18,
+      "method": "book_text",
+      "verified": true,
+      "note": "клетка «М.И. Калинин»"
+    },
+    {
+      "book_id": "terror-ru",
+      "physical_page": 20,
+      "printed_page": 19,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Михаил Калинин (метеоритное нечто)»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.move",
+      "printed": "12",
+      "expected": "9",
+      "note": "По правилам 7-й редакции (СИЛ и ЛВК больше ТЕЛ) Скорость 9; книга печатает 12 у всех трёх профилей нечто — вероятно, задуманная скорость существа (Р-76), оставлено как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": "Статблок — форма нечто, как напечатан (с. 19); БкУ, Комплекция и ПМ в книге не даны. Страницы «с. N» — печатные (печатная = физическая − 1)."
+  }
+}

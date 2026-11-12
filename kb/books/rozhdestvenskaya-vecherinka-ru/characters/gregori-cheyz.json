@@ -1,0 +1,317 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "rozhdestvenskaya-vecherinka-ru/character/gregori-cheyz",
+  "kind": "character",
+  "name": {
+    "ru": "Грегори Чейз",
+    "en": null
+  },
+  "aliases": [
+    "Брат Анны"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "разжалованный военный",
+    "en": null
+  },
+  "sex": "мужской",
+  "residence": "квартира в беднейшем квартале города",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "rival_of",
+      "target": "rozhdestvenskaya-vecherinka-ru/character/artur-stoun",
+      "note": "винит в исчезновении сестры, готовит поджог его дома",
+      "note_back": "брат первой жены, который винит его в её исчезновении"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "45",
+        "value": 45
+      },
+      "APP": {
+        "raw": "40",
+        "value": 40
+      },
+      "INT": {
+        "raw": "55",
+        "value": 55
+      },
+      "POW": {
+        "raw": "40",
+        "value": 40
+      },
+      "EDU": {
+        "raw": "65",
+        "value": 65
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "11",
+      "value": 11
+    },
+    "sanity": {
+      "raw": "30",
+      "value": 30,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "5",
+      "value": 5,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 5
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1d3 + 1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Стрельба (винтовка)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "1d6+1",
+          "dice": "1d6+1",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:22-bolt-action-rifle",
+        "notes": "Урон совпадает с винтовкой .22 таблицы оружия (вывод из текста, Р-41)."
+      }
+    ],
+    "dodge": {
+      "raw": "22% (11/4)",
+      "value": 22,
+      "half": 11,
+      "fifth": 4
+    },
+    "skills": [
+      {
+        "name": "Выживание",
+        "skill": "coc:skill:survival",
+        "value": {
+          "raw": "20%",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Искусство/ремесло",
+        "skill": "coc:skill:art-craft",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Работа в библиотеке",
+        "skill": "coc:skill:library-use",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "10%",
+          "value": 10,
+          "half": 5,
+          "fifth": 2
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Брат покойной Анны Чейз, бывшей жены Артура Стоуна. Алкоголик без левой ступни; выглядит физически очень слабым, истощённым. Разжалован из войск за неподобающее поведение, агрессию и пьянство. Живёт в маленькой полуразрушенной квартирке в беднейшем квартале города.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Пьёт из-за исчезновения сестры, считает виновным Артура, но не может доказать. Много раз приходил к нему домой и в офис, но не получил ответов. Подозревает Артура в домашнем насилии и готовится к поджогу дома Стоунов (следы горючей смеси по всей квартире). Может примкнуть к сыщикам, если его убедить (трудная проверка), что они готовы убить Артура. Может отправить сыщиков к ветеранам в порт; если сыщики проявят неуважение или не смогут доказать, что не работают на Артура, — не станет помогать. Отказался от своей доли наследства отца, делая военную карьеру (вывод из текста: «старший брат» Анны — он, Р-41).",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "rozhdestvenskaya-vecherinka-ru",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Грегори Чейз»"
+    },
+    {
+      "book_id": "rozhdestvenskaya-vecherinka-ru",
+      "physical_page": 10,
+      "printed_page": 10,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Грегори Чейз» (окончание)"
+    },
+    {
+      "book_id": "rozhdestvenskaya-vecherinka-ru",
+      "physical_page": 14,
+      "printed_page": 14,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Персонажи Хранителя»: «Грегори Чейз» (характеристики, бой, навыки)"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.attacks[Ближний бой (драка)].chance",
+      "printed": "55% (26/11)",
+      "expected": "55% (27/11)",
+      "note": "Половина 55 — 27; исправлено в записи (Р-35).",
+      "fixed": true
+    },
+    {
+      "field": "statblock.mp",
+      "printed": "11",
+      "expected": "8",
+      "note": "По МОЩ 40 ПМ 8; оставлено как напечатано.",
+      "fixed": false
+    },
+    {
+      "field": "statblock.move",
+      "printed": "5",
+      "expected": "7",
+      "note": "По СИЛ и ЛВК меньше ТЕЛ — Скорость 7; возможно, книга учла отсутствие левой ступни. Оставлено как напечатано.",
+      "fixed": false
+    }
+  ],
+  "corrections": [
+    {
+      "field": "statblock.attacks[Ближний бой (драка)].chance",
+      "from": "55% (26/11)",
+      "to": "55% (27/11)",
+      "reason": "опечатка половины в книге (с. 14)",
+      "ref": "Р-35"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": "Источник — официальное русское издание (скан без текстового слоя; распознавание tesseract со сверкой по изображениям страниц). Номеров страниц в книге нет: «с. N» — физическая страница PDF. Уклонение напечатано «22% (1¼)» — дробь «11/4» набрана лигатурой; в записи «22% (11/4)» (Р-39). Статблок — с. 14."
+  }
+}

@@ -1,0 +1,374 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "rozhdestvenskaya-vecherinka-ru/character/ralf-khendzh",
+  "kind": "character",
+  "name": {
+    "ru": "Ральф Хэндж",
+    "en": null
+  },
+  "aliases": [
+    "Доктор Ральф Хэндж",
+    "доктор Хэндж"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "хирург, оккультист",
+    "en": null
+  },
+  "sex": "мужской",
+  "residence": "морг «Чистилище»",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "servitor_of",
+      "target": "rozhdestvenskaya-vecherinka-ru/creature/ninkhursag",
+      "note": "поставщик мяса; подчиняется её Зову, но ненавидит и готовит изгнание",
+      "note_back": "поставщик мяса доктор Хэндж"
+    },
+    {
+      "type": "rival_of",
+      "target": "rozhdestvenskaya-vecherinka-ru/character/mark",
+      "note": "держит в плену",
+      "note_back": "похититель"
+    },
+    {
+      "type": "rival_of",
+      "target": "rozhdestvenskaya-vecherinka-ru/character/sara",
+      "note": "держит в плену",
+      "note_back": "похититель"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "50",
+        "value": 50
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "55",
+        "value": 55
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "85",
+        "value": 85
+      },
+      "POW": {
+        "raw": "70",
+        "value": 70
+      },
+      "EDU": {
+        "raw": "85",
+        "value": 85
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "14",
+      "value": 14
+    },
+    "sanity": {
+      "raw": "20",
+      "value": 20,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Стрельба (револьвер)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "1d8",
+          "dice": "1d8",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:32-revolver",
+        "notes": "Урон совпадает с револьвером .32 (вывод из текста, Р-41)."
+      }
+    ],
+    "dodge": {
+      "raw": "32% (16/6)",
+      "value": 32,
+      "half": 16,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Медицина",
+        "skill": "coc:skill:medicine",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "20%",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Наука (биология)",
+        "skill": "coc:skill:science",
+        "specialization": "Биология",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Наука (фармакология)",
+        "skill": "coc:skill:science",
+        "specialization": "Фармакология",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Психоанализ",
+        "skill": "coc:skill:psychoanalysis",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Работа в библиотеке",
+        "skill": "coc:skill:library-use",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Язык (румынский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "Румынский",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      }
+    ],
+    "spells": {
+      "raw": "«Разговор с кровавой богиней», «Создать зомби», «Анафема демону», «Воскрешение», «Защита плоти»",
+      "items": [
+        {
+          "name": "Разговор с кровавой богиней",
+          "spell": null
+        },
+        {
+          "name": "Создать зомби",
+          "spell": "coc:spell:create-zombie"
+        },
+        {
+          "name": "Анафема демону",
+          "spell": null
+        },
+        {
+          "name": "Воскрешение",
+          "spell": "coc:spell:resurrection"
+        },
+        {
+          "name": "Защита плоти",
+          "spell": "coc:spell:flesh-ward"
+        }
+      ]
+    }
+  },
+  "description": {
+    "ru": "Безумный хирург, оккультист, маниакально одержимый поиском знаний Древних. Культист, убийца, алкоголик и каннибал. Живёт и работает в морге «Чистилище». Текущий владелец фолианта «Carne de Aruru» (рум. «Плоть Аруру»). Сейчас занимается поиском бессмертия.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Один из поставщиков мяса для Нинхурсаг: заманивает больных из трущоб города, расчленяет и отдаёт выбранные части демону. Применяя знания из фолианта, магически оживляет останки жертв, пытается их контролировать, но не может и снова их умерщвляет; иногда отпускает мертвецов в лес, откуда они разбредаются по районам города, разнося болезни. Победил в ИГРЕ и пожелал магическую книгу. Хочет большего, боится проиграть. Ненавидит демона, но пока подчиняется Зову Нинхурсаг и ждёт подходящего момента для атаки: он уже изучил заклинание для изгнания («Анафема демону»). Сейчас держит в плену двух пропавших детей, Марка и Сару, пришедших за лекарством для Дональда Бонса, и погубит их, если сыщики не найдут это место и не остановят его. Если сыщикам уже многое известно про Нинхурсаг, они могут попытаться убедить его помочь им (трудная проверка Убеждения/Запугивания).",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "rozhdestvenskaya-vecherinka-ru",
+      "physical_page": 11,
+      "printed_page": 11,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Доктор Ральф Хэндж в «Чистилище»»"
+    },
+    {
+      "book_id": "rozhdestvenskaya-vecherinka-ru",
+      "physical_page": 12,
+      "printed_page": 12,
+      "method": "book_text",
+      "verified": true,
+      "note": "Хэндж: поставщик мяса, ИГРА, пленные дети"
+    },
+    {
+      "book_id": "rozhdestvenskaya-vecherinka-ru",
+      "physical_page": 14,
+      "printed_page": 14,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Персонажи Хранителя»: «Доктор Ральф Хэндж» (характеристики, бой, навыки, заклинания)"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.attacks[Ближний бой (драка)].chance",
+      "printed": "45% (42/9)",
+      "expected": "45% (22/9)",
+      "note": "Половина 45 — 22; исправлено в записи (Р-35).",
+      "fixed": true
+    }
+  ],
+  "corrections": [
+    {
+      "field": "statblock.attacks[Ближний бой (драка)].chance",
+      "from": "45% (42/9)",
+      "to": "45% (22/9)",
+      "reason": "опечатка половины в книге (с. 14)",
+      "ref": "Р-35"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": "Источник — официальное русское издание (скан без текстового слоя; распознавание tesseract со сверкой по изображениям страниц). Номеров страниц в книге нет: «с. N» — физическая страница PDF. Статблок — с. 14. Заклинаний «Разговор с кровавой богиней» и «Анафема демону» в справочнике нет (кандидаты в kb/spells; «Анафема демону» — аналог «Изгнания Йде Итад» по книге). «Создать зомби» связано с записью «Создание зомби»."
+  }
+}

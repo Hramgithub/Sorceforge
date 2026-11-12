@@ -1,0 +1,319 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "rozhdestvenskaya-vecherinka-ru/character/rassel-douson",
+  "kind": "character",
+  "name": {
+    "ru": "Рассел Доусон",
+    "en": null
+  },
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "писатель, военный журналист",
+    "en": null
+  },
+  "sex": "мужской",
+  "residence": "трущобы у порта",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "rival_of",
+      "target": "rozhdestvenskaya-vecherinka-ru/creature/ninkhursag",
+      "note": "напал на «Айрис», мстя за дочь",
+      "note_back": "напавший на неё Рассел Доусон"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "85",
+        "value": 85
+      },
+      "CON": {
+        "raw": "90",
+        "value": 90
+      },
+      "SIZ": {
+        "raw": "70",
+        "value": 70
+      },
+      "DEX": {
+        "raw": "75",
+        "value": 75
+      },
+      "APP": {
+        "raw": "60",
+        "value": 60
+      },
+      "INT": {
+        "raw": "60",
+        "value": 60
+      },
+      "POW": {
+        "raw": "30",
+        "value": 30
+      },
+      "EDU": {
+        "raw": "50",
+        "value": 50
+      }
+    },
+    "hp": {
+      "raw": "39 (+5 за раунд)",
+      "value": 39,
+      "note": "восстанавливает 5 ПЗ за раунд"
+    },
+    "mp": {
+      "raw": "6",
+      "value": 6
+    },
+    "sanity": {
+      "raw": "15",
+      "value": 15,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+2d4",
+      "value": "2d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d3 + 2d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Стрельба (винтовка)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d6+1",
+          "dice": "1d6+1",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:22-bolt-action-rifle",
+        "notes": "Урон совпадает с винтовкой .22 таблицы оружия (вывод из текста, Р-41)."
+      }
+    ],
+    "dodge": {
+      "raw": "38% (19/7)",
+      "value": 38,
+      "half": 19,
+      "fifth": 7
+    },
+    "skills": [
+      {
+        "name": "Выживание",
+        "skill": "coc:skill:survival",
+        "value": {
+          "raw": "20%",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Искусство/ремесло",
+        "skill": "coc:skill:art-craft",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Работа в библиотеке",
+        "skill": "coc:skill:library-use",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "20%",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Фактическое бессмертие",
+      "summary": "Почти бессмертен: падение с высоты, таблетки, петля не убили его; ему не нужен воздух (ходит по дну реки); восстанавливает 5 ПЗ за раунд.",
+      "raw": "ПЗ 39 (+5 за раунд); Он почти бессмертен - падение с высоты, таблетки, петля, хождение по дну реки - не смогли решить его проблему."
+    }
+  ],
+  "description": {
+    "ru": "Некогда известный писатель, военный журналист, ветеран войны. Потратил все деньги на лечение дочери. Сейчас обитает в трущобах у порта, находится на грани безумия. Проклят бессмертием после ИГРЫ.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Выиграл в ИГРУ в доме Стоунов и пожелал выздоровления дочери (болезнь — испанский грипп), но желание не сбылось: оно должно было касаться того, кто играл. Вместо этого он получил необъяснимо крепкое здоровье, фактическое бессмертие: рука и нога, потерянные на войне, наутро вернулись на свои места. Дочь пропала — возможно, съедена. Считая Айрис обманщицей и самим злом, он хотел отомстить за дочь: проник на вечеринку, идя по дну реки (он не умеет плавать, но ему не нужен воздух), вошёл с внешней террасы промокшим до нитки, с царапинами на лице, и напал на Айрис с ножом.\nХранителю: он почти бессмертен — падение с высоты, таблетки, петля, хождение по дну реки не смогли решить его проблему. Может продемонстрировать свою неуязвимость. Его можно разговорить (проверка социальных навыков): он расскажет, что навредить ему не получится. Сыщики могут скрутить его и доставить Артуру или убедить помочь в борьбе с демоном (сцена «Рассел Доусон»).",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "rozhdestvenskaya-vecherinka-ru",
+      "physical_page": 6,
+      "printed_page": 6,
+      "method": "book_text",
+      "verified": true,
+      "note": "мокрый человек во время речи Артура"
+    },
+    {
+      "book_id": "rozhdestvenskaya-vecherinka-ru",
+      "physical_page": 10,
+      "printed_page": 10,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Рассел Доусон»"
+    },
+    {
+      "book_id": "rozhdestvenskaya-vecherinka-ru",
+      "physical_page": 11,
+      "printed_page": 11,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Рассел Доусон» (окончание)"
+    },
+    {
+      "book_id": "rozhdestvenskaya-vecherinka-ru",
+      "physical_page": 14,
+      "printed_page": 14,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Персонажи Хранителя»: «Рассел Доусон»"
+    },
+    {
+      "book_id": "rozhdestvenskaya-vecherinka-ru",
+      "physical_page": 15,
+      "printed_page": 15,
+      "method": "book_text",
+      "verified": true,
+      "note": "характеристики (окончание), бой, навыки"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.damage_bonus",
+      "printed": "+2d4",
+      "expected": "+1d4",
+      "note": "СИЛ 85 + ТЕЛ 70 = 155 — БкУ +1d4 (Комплекция 1, как напечатано); значения «+2d4» в таблице нет. Возможно, задумано как часть проклятия; оставлено как напечатано.",
+      "fixed": false
+    },
+    {
+      "field": "statblock.hp",
+      "printed": "39 (+5 за раунд)",
+      "expected": "16",
+      "note": "По ВЫН 90 и ТЕЛ 70 ПЗ 16; 39 и восстановление — вероятно, задуманное бессмертие (Р-76). Оставлено как напечатано.",
+      "fixed": false
+    },
+    {
+      "field": "statblock.move",
+      "printed": "8",
+      "expected": "9",
+      "note": "СИЛ и ЛВК больше ТЕЛ — Скорость 9; возраст в книге не указан (возможна возрастная поправка). Оставлено как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": "Источник — официальное русское издание (скан без текстового слоя; распознавание tesseract со сверкой по изображениям страниц). Номеров страниц в книге нет: «с. N» — физическая страница PDF. Сокращение ловкости напечатано не так, как в «Книге хранителя» (с. 14). Статблок — с. 14–15; Уклонение 38% больше половины ЛВК (37) — книга подняла навык."
+  }
+}

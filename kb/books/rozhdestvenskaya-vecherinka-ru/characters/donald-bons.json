@@ -1,0 +1,269 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "rozhdestvenskaya-vecherinka-ru/character/donald-bons",
+  "kind": "character",
+  "name": {
+    "ru": "Дональд Бонс",
+    "en": null
+  },
+  "aliases": [
+    "Дональд"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "беспризорник",
+    "en": null
+  },
+  "sex": "мужской",
+  "residence": "заброшенный детский приют",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "knows",
+      "target": "rozhdestvenskaya-vecherinka-ru/character/mark",
+      "note": "беспризорник из приюта, которого он опекает",
+      "note_back": "старший в приюте, опекун"
+    },
+    {
+      "type": "knows",
+      "target": "rozhdestvenskaya-vecherinka-ru/character/sara",
+      "note": "беспризорница из приюта, которую он опекает",
+      "note_back": "старший в приюте, опекун"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "40",
+        "value": 40
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "50",
+        "value": 50
+      },
+      "POW": {
+        "raw": "55",
+        "value": 55
+      },
+      "EDU": {
+        "raw": "40",
+        "value": 40
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "11",
+      "value": 11
+    },
+    "sanity": {
+      "raw": "40",
+      "value": 40,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (нож)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d4",
+          "dice": "1d4",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:knife-small",
+        "notes": "В тексте — заточка."
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "skills": [
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Плавание",
+        "skill": "coc:skill:swim",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "5%",
+          "value": 5,
+          "half": 2,
+          "fifth": 1
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Темнокожий худой юноша в серой рубашке и штанах на подтяжках; агрессивный беспризорник, считает себя опекуном других беспризорных детей, обитающих в заброшенном детском приюте. Чем-то болеет (проверка Медицины): испарина, сухость кожи, едва заметный тремор конечностей; позже ему становится хуже — едва стоит на ногах, пот крупными каплями на лбу, сильный кашель.",
+    "en": null
+  },
+  "legend": {
+    "ru": "На вечеринке проявляет агрессию к одному из сыщиков с небольшим показателем СИЛ: толкает его в спину и не извиняется, идёт на конфликт, пытается выгнать из дома. Его мотив: он забирает оставшуюся после приёма еду, чтобы прокормить беспризорников, с которыми живёт, и не хочет делиться, поэтому пытается выгнать как можно больше гостей своей комплекции. Если все сыщики физически развитые, будет конфликтовать с кем-нибудь из гостей. Проверка Психологии — Дональда переполняют страх и злость. При развитии конфликта достаёт заточку; обезоруженный или побитый, убегает (выронит записку с адресом заброшенного дома) и прыгает в реку (сцена «Конфликт с Дональдом»).\nПока он был на вечеринке, пропали двое детей приюта — Марк и Сара. В зависимости от прошлого общения Дональд будет скрытен (можно разговорить по усмотрению Хранителя) либо напрямую попросит сыщиков о помощи.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "rozhdestvenskaya-vecherinka-ru",
+      "physical_page": 5,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Дональд Бонс»"
+    },
+    {
+      "book_id": "rozhdestvenskaya-vecherinka-ru",
+      "physical_page": 11,
+      "printed_page": 11,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Заброшенный детский приют»"
+    },
+    {
+      "book_id": "rozhdestvenskaya-vecherinka-ru",
+      "physical_page": 13,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Персонажи Хранителя»: «Дональд Бонс» (характеристики, бой, навыки)"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Источник — официальное русское издание (скан без текстового слоя; распознавание tesseract со сверкой по изображениям страниц). Номеров страниц в книге нет: «с. N» — физическая страница PDF."
+  }
+}

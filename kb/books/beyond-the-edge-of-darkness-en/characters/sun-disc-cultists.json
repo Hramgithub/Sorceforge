@@ -1,0 +1,297 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "beyond-the-edge-of-darkness-en/character/sun-disc-cultists",
+  "kind": "character",
+  "name": {
+    "ru": "Дети Солнечного Диска (рядовые культисты)",
+    "en": "Children of the Sun Disc (generic)"
+  },
+  "aliases": [
+    "Культист Детей Солнечного Диска",
+    "Children of the Sun Disc"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "культист Детей Солнечного Диска",
+  "names": [
+    "Махмуд Абдель-Азиз",
+    "Юсуф эль-Масри",
+    "Фарида Рагаб",
+    "Карим Хассанейн",
+    "Эдмунд Грейвз",
+    "Амина Саид"
+  ],
+  "occupation": {
+    "ru": "учёные, археологи, мистики — члены культа",
+    "en": "scholars, archaeologists, and mystics"
+  },
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "beyond-the-edge-of-darkness-en/character/imset-aten",
+      "note": "глава культа",
+      "note_back": "члены культа"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "70",
+        "value": 70
+      },
+      "DEX": {
+        "raw": "80",
+        "value": 80
+      },
+      "APP": {
+        "raw": "65",
+        "value": 65
+      },
+      "INT": {
+        "raw": "55",
+        "value": 55
+      },
+      "POW": {
+        "raw": "40",
+        "value": 40
+      },
+      "EDU": {
+        "raw": "60",
+        "value": 60
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "8",
+      "value": 8
+    },
+    "sanity": {
+      "raw": "40",
+      "value": 40,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Револьвер .32",
+          "en": ".32 Revolver"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d8",
+          "dice": "1d8",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:32-revolver"
+      },
+      {
+        "name": {
+          "ru": "Небольшой клинок",
+          "en": "Small Blade"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d4",
+          "dice": "1d4",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:knife-small"
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "spells": {
+      "raw": "У высокопоставленных членов культа: Очищение Атона",
+      "items": [
+        {
+          "name": "Aten’s Purification",
+          "spell": null
+        }
+      ]
+    }
+  },
+  "abilities": [
+    {
+      "name": "Очищение Атона (только у высокопоставленных членов культа)",
+      "raw": "Aten’s Purification. Cost: 1d6 Sanity points, 5 magic points, Casting time: 3 rounds. This hideous spell bathes a target in scortching solar rays projected from the eyes and mouth of the caster, burning away clothes and flesh alike. The victim is burned likely causing horrific disfigurement (1d4 damage per 15 CON points of the target). Witnessing someone suffer the effects of Aten’s Purification costs 1/1d6 Sanity points.",
+      "summary": "Заклинание; цена — 1d6 Рассудка и 5 пунктов магии, время сотворения — 3 раунда: палящие солнечные лучи бьют из глаз и рта заклинателя в цель, сжигая одежду и плоть; жертва получает ожоги, скорее всего оставляющие ужасные увечья, — 1d4 урона за каждые 15 пунктов ВЫН цели. Свидетель того, как кто-то страдает от Очищения Атона, теряет 1/1d6 Рассудка."
+    }
+  ],
+  "description": {
+    "ru": "Рядовой член египетского культа Детей Солнечного Диска. Многие — учёные, археологи и мистики, разочарованные жестокостью и хаосом мира; новички порой считают культ интеллектуальным обществом, изучающим утраченную историю Древнего Египта. Двое мужчин с ближневосточным акцентом расспрашивали Викторию Блан; люди в масках напали на Адама Годфрея; наблюдатели культа следят за лавкой Виктории (фигуры в припаркованных машинах, подозрительные зеваки, блеск бинокля в окне) и при приближении уходят; в Каире культисты мелькают в толпах Эзбекии и в финале идут за сыщиками к заброшенной мечети, чтобы забрать реликвию. Они умеют управлять солнечными оболочками. Старые татуировки культа можно распознать (бонусная кость — изучившим руку из банки в лавке Виктории).",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "beyond-the-edge-of-darkness-en",
+      "physical_page": 13,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Children of the Sun Disc (generic)»"
+    },
+    {
+      "book_id": "beyond-the-edge-of-darkness-en",
+      "physical_page": 12,
+      "printed_page": 8,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Membership»"
+    },
+    {
+      "book_id": "beyond-the-edge-of-darkness-en",
+      "physical_page": 17,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "двое мужчин с ближневосточным акцентом; за лавкой следят"
+    },
+    {
+      "book_id": "beyond-the-edge-of-darkness-en",
+      "physical_page": 20,
+      "printed_page": 16,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Those Watching the Shop»"
+    },
+    {
+      "book_id": "beyond-the-edge-of-darkness-en",
+      "physical_page": 25,
+      "printed_page": 21,
+      "method": "book_text",
+      "verified": true,
+      "note": "нападение на Адама Годфрея"
+    },
+    {
+      "book_id": "beyond-the-edge-of-darkness-en",
+      "physical_page": 27,
+      "printed_page": 23,
+      "method": "book_text",
+      "verified": true,
+      "note": "культисты в толпе Эзбекии"
+    },
+    {
+      "book_id": "beyond-the-edge-of-darkness-en",
+      "physical_page": 33,
+      "printed_page": 29,
+      "method": "book_text",
+      "verified": true,
+      "note": "культисты приходят за реликвией и управляют оболочками"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.dodge",
+      "printed": "40% (20/9)",
+      "expected": "40% (20/8)",
+      "note": "Пятая часть от 40 — 8; исправлено в записи (Р-35).",
+      "fixed": true
+    },
+    {
+      "field": "statblock.damage_bonus",
+      "printed": "0",
+      "expected": "+1d4",
+      "note": "По правилам СИЛ 60 + ТЕЛ 70 = 130 дают БкУ +1d4; книга печатает 0 — как напечатано.",
+      "fixed": false
+    },
+    {
+      "field": "statblock.build",
+      "printed": "0",
+      "expected": "1",
+      "note": "По правилам СИЛ 60 + ТЕЛ 70 = 130 дают Комплекцию 1; книга печатает 0 — как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "editorial_text",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — по рабочему переводу владельца (2_Обработка/1924 Beyond the Edge of Darkness, Beyond_the_Edge_of_Darkness_Full_RU_v34.html), сверен с английским оригиналом; числа — по английской странице. Групповой профиль (Р-74); имена придуманы (Р-151), в книге — «Children of the Sun Disc (generic)». Очищение Атона — новое заклинание сценария, в справочнике заклинаний его нет (черновик — в отчёте части)."
+  }
+}

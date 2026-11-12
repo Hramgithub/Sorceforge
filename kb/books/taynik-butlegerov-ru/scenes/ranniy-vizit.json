@@ -1,0 +1,58 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "taynik-butlegerov-ru/scene/ranniy-vizit",
+  "kind": "scene",
+  "name": {
+    "ru": "Ранний визит",
+    "en": null
+  },
+  "description": {
+    "ru": "Если сыщики пришли к складу раньше времени, они найдут пустой и тёмный задний двор и стальную дверь, запертую на надёжный замок. Взломщик среди сыщиков может попробовать сложную проверку Взлома: провал ломает замок и впоследствии вызовет подозрения у мафиози; при успехе сыщики окажутся в подвале раньше бутлегеров, однако без трости, которую принёс Герберт, не смогут вскрыть тайный ход, даже если обнаружат его сложной проверкой Внимания. Силовая проверка активирует защитное заклятие («Пепельная печать»).",
+    "en": null
+  },
+  "when": "Если сыщики пришли на склад раньше назначенного времени",
+  "arc": {
+    "scenario": "taynik-butlegerov-ru/scenario/taynik-butlegerov",
+    "part": "Портовые склады",
+    "order": 4
+  },
+  "where": [
+    {
+      "location": "taynik-butlegerov-ru/location/sklad-6-zadniy-dvor"
+    },
+    {
+      "location": "taynik-butlegerov-ru/location/sklad-7-podval"
+    },
+    {
+      "location": "taynik-butlegerov-ru/location/sklad-9-potaynaya-dver"
+    }
+  ],
+  "mechanics": {
+    "ru": "Сложная проверка Взлома (провал — сломанный замок, подозрения мафиози); сложная проверка Внимания — найти тайный ход; силой — срабатывает «Пепельная печать» (3d6+2 урона всем у стены в пределах метра).",
+    "en": null
+  },
+  "refs": [
+    "taynik-butlegerov-ru/item/trost-stardzha"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "taynik-butlegerov-ru",
+      "physical_page": 6,
+      "printed_page": 4,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Ранний визит»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Страницы «с. N» — печатные (печатная = физическая − 2). Книга — скан без текстового слоя: распознавание tesseract со сверкой по изображениям страниц."
+  }
+}

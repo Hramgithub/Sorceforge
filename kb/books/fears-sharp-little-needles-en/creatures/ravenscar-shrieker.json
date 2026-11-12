@@ -1,0 +1,231 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "fears-sharp-little-needles-en/creature/ravenscar-shrieker",
+  "kind": "creature",
+  "name": {
+    "ru": "Крикун",
+    "en": "Shrieker"
+  },
+  "aliases": [
+    "Shrieker (Servitor of the Outer Gods)",
+    "Крикун — служитель Внешних богов",
+    "слуга Внешних богов"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "служитель Внешних богов",
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:servitor-of-outer-gods",
+      "note_back": "Крикун, связанный с доктором Ричардом Греем («Призраки Рейвенскара»)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "105",
+        "value": 105
+      },
+      "SIZ": {
+        "raw": "50",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "95",
+        "value": 95
+      },
+      "INT": {
+        "raw": "75",
+        "value": 75
+      },
+      "POW": {
+        "raw": "110",
+        "value": 110
+      }
+    },
+    "hp": {
+      "raw": "15",
+      "value": 15
+    },
+    "damage_bonus": {
+      "raw": "нет",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет; физическое оружие не причиняет вреда",
+      "value": 0
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Щупальца с когтями",
+          "en": "Claw-tipped tentacles"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d6 за каждый коготь",
+          "dice": "1d6",
+          "adds_db": false,
+          "extra": "после попадания 1d3 — сколько когтей наносят урон"
+        },
+        "notes": "Масса извивающихся ног с когтями на концах бьёт и обвивает цель; после успешного попадания бросьте 1d3, чтобы узнать, сколько когтей наносят урон (по 1d6 каждый)."
+      },
+      {
+        "name": {
+          "ru": "Захват ногами (манёвр)",
+          "en": "seize an opponent (fighting maneuver)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "цель схвачена",
+          "dice": null,
+          "adds_db": false
+        },
+        "notes": "Ноги могут схватить противника успешным боевым манёвром; досягаемость ног — 10 м. Крикун может утащить схваченного сыщика в канализацию и доставить в Рейвен-холл."
+      }
+    ],
+    "spells": {
+      "raw": "Alter Weather, Implant Fear, Shriveling",
+      "items": [
+        {
+          "name": "Alter Weather",
+          "spell": "coc:spell:alter-weather"
+        },
+        {
+          "name": "Implant Fear",
+          "spell": "coc:spell:implant-fear"
+        },
+        {
+          "name": "Shriveling",
+          "spell": "coc:spell:shrivelling"
+        }
+      ]
+    },
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d10",
+        "trigger": "увидеть Крикуна"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Музыка безумия",
+      "summary": "Диссонирующая музыка Крикуна — для человеческого уха высокий визг переменной тональности — пагубно действует на слушателей: каждые два раунда, пока звук слышен, нужно проходить проверку Рассудка, при провале — потеря 1d4 Рассудка. Её постоянное применение когда-то превратило самого Грея в слугу Крикуна.",
+      "raw": "Music of Madness: The discordant music that Shrieker makes, which to human ears resembles a high-pitched shriek varying in tone, adversely affects listeners. Those who hear the wail must make a Sanity roll every two rounds that they endure the sound or lose 1d4 Sanity points."
+    },
+    {
+      "name": "Обнаружить жизнь",
+      "summary": "Врождённо чувствует жизнь в радиусе 3,2 км, не тратя пунктов магии; различает виды (собаку и человека), но не узнаёт конкретную особь. Так он замечает сыщиков, едва они прибывают в Рейвенскар, и сообщает о них Грею.",
+      "raw": "Sense Life: Shrieker has the innate ability to sense life within a 2-mile radius. This does not cost any Magic Points to use. It can distinguish species (such as a dog or a person) but cannot recognize a specific individual.",
+      "refs": [
+        "coc:spell:sense-life"
+      ]
+    },
+    {
+      "name": "Неуязвимость и регенерация",
+      "summary": "Физическое оружие не причиняет Крикуну вреда; заклинания и магическое оружие наносят обычный урон. Восстанавливает 3 ПЗ за раунд, пока не погибнет.",
+      "raw": "Defenses: Physical weapons cannot harm it; spells and magical weapons do normal damage; regenerates 3 hit points per round until dead."
+    },
+    {
+      "name": "Связь с Греем",
+      "summary": "Крикун и Грей связаны так, что если Грея убьют, Крикун утратит опору в земном мире и исчезнет через 1d4 раунда.",
+      "raw": "Keeper’s Note: Shrieker and Grey are linked in such a way that should Grey be killed, Shrieker will lose its hold upon this earthly plane and disappear 1d4 rounds later.",
+      "refs": [
+        "fears-sharp-little-needles-en/character/ravenscar-richard-grey"
+      ]
+    }
+  ],
+  "description": {
+    "ru": "Помесь огромного белого паука и многоножки с несколькими брюшками. Его покрывают десятки длинных хитиновых ног, усеянных шипами и стекловидными круглыми глазами. Несмотря на производимый шум, у него нет ни видимого рта, ни чего-либо похожего на голову. Навыки — только базовые.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Служитель Внешних богов, которого доктор Ричард Грей призвал и связал два века назад опытами с заклинанием, объединяющим «Продление жизни» и «Призыв/укрощение служителя Внешних богов»; оно же связало их жизненные силы. Сущность научила Грея заклинаниям и тайнам, но постоянное применение Музыки безумия превратило Грея в её слугу. Теперь оба неразрывно связаны, охотятся на всех, кто приблизится к Рейвенскару, и наслаждаются ужасом жертв.\nВ сценарии Крикун выслеживает сыщиков по канализации, Музыкой безумия, нападениями и заклинаниями гонит их к Рейвен-холлу, может утащить одного туда, а при попытке бегства преграждает путь из внешнего хода. Загнав сыщиков в угол, он сочетает Музыку безумия, «Зародить страх» и «Иссушение»; его цель — покалечить, а не убить. Убить его, скорее всего, сыщикам не по силам — лучший шанс выжить в том, чтобы найти и убить Грея.",
+    "en": null
+  },
+  "habitat": "канализация под Рейвенскаром",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 134,
+      "printed_page": 133,
+      "method": "book_text",
+      "verified": true,
+      "note": "сценарий «Ghosts of Ravenscar»: «Shrieker (Servitor of the Outer Gods)» — статблок"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 130,
+      "printed_page": 129,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Introduction», «Welcome to Ravenscar»"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 133,
+      "printed_page": 132,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Encountering Grey»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.attacks[Щупальца с когтями].chance",
+      "printed": "45% (22/8)",
+      "expected": "45% (22/9)",
+      "note": "Пятая часть от 45 — 9 (Р-35); исправлено в записи и в манёвре.",
+      "fixed": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Особь вида «Служитель Внешних богов» со своим статблоком (Р-75, Р-79). Во вступлении (с. 129) способность названа заклинанием «Detect Life», в статблоке — «Sense Life»: одно и то же, ссылка на «Почувствовать жизнь»; название способности — по реестру владельца («Обнаружить жизнь»). Атака названа «Claw-tipped tentacles», хотя описаны ноги, — как напечатано. 10 ярдов — 10 м, 2 мили — 3,2 км (Р-64). Пункты магии не напечатаны. Русский текст — по рабочему переводу владельца (fears-sharp-little-needles/document.html, «Призраки Рейвенскара»), сверен с английским оригиналом; числа — по оригиналу."
+  }
+}

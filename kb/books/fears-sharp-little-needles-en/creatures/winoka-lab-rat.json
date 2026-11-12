@@ -1,0 +1,166 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "fears-sharp-little-needles-en/creature/winoka-lab-rat",
+  "kind": "creature",
+  "name": {
+    "ru": "Лабораторная крыса Уинока-Пойнт",
+    "en": "Winoka Point Lab Rat"
+  },
+  "aliases": [
+    "Крыса",
+    "The Rat"
+  ],
+  "category": "supernatural",
+  "subcategory": "нежить (заражённое животное)",
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "10",
+        "value": 10
+      },
+      "CON": {
+        "raw": "190",
+        "value": 190
+      },
+      "SIZ": {
+        "raw": "10",
+        "value": 10
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "INT": {
+        "raw": "10",
+        "value": 10
+      },
+      "POW": {
+        "raw": "10",
+        "value": 10
+      }
+    },
+    "hp": {
+      "raw": "20",
+      "value": 20
+    },
+    "damage_bonus": {
+      "raw": "-2",
+      "value": -2
+    },
+    "build": {
+      "raw": "-2",
+      "value": -2
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Укус",
+          "en": "Bite"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (укус)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1 пункт + заражение",
+          "dice": "1",
+          "adds_db": false,
+          "extra": "заражение вирусом O-12-W"
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "50% (25/10)",
+      "value": 50,
+      "half": 25,
+      "fifth": 10
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d3",
+        "trigger": "увидеть крысу, поняв, что она ненормальна (например, когда она переживает попытку её растоптать и продолжает нападать)"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Почти неуязвима",
+      "summary": "От немагических атак получает минимально возможный урон; невосприимчива к ядам. Лишь полное разрушение немагическими средствами ломает тело настолько, что оно больше не может двигаться, но и тогда крыса жива на клеточном уровне: мышцы дёргаются, красные глаза следят за сыщиками. По-настоящему уничтожить её можно, только сжегши тело или растворив его в кислоте.",
+      "raw": "Defenses: Takes minimum possible damage from non-magical attacks. Immune to poison. Killing the Rat: The lab animal is so resilient to damage that it seems nearly invulnerable. Only gross destruction (by non-magical means) renders its body so broken that it is no longer able to move. However, even then it remains alive on a cellular level, muscles twitching and red eyes following the investigators. Only by burning or dissolving the body in acid can the rat truly is destroyed."
+    },
+    {
+      "name": "Заразный укус",
+      "summary": "Слюна крысы кишит активным вирусом O-12-W: укушенный заражается (см. запись вируса).",
+      "raw": "The rat’s saliva teems with active O-12-W virus, which is lethal.",
+      "refs": [
+        "fears-sharp-little-needles-en/item/winoka-o-12-w-virus"
+      ]
+    }
+  ],
+  "description": {
+    "ru": "Грязная лабораторная крыса — на первый взгляд безобидная. Её слышно в темноте раньше, чем видно. Ожившая и голодная нежить, заражённая вирусом O-12-W.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Сидит в упавшей клетке за перевёрнутым стулом на первом подземном уровне. Дверца клетки хлипкая: сыщик, поднявший клетку, чтобы рассмотреть, рискует быть укушенным; потревоженная крыса вырывается и нападает.",
+    "en": null
+  },
+  "habitat": "первый подземный уровень исследовательского центра Уинока-Пойнт",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 146,
+      "printed_page": 145,
+      "method": "book_text",
+      "verified": true,
+      "note": "сценарий «The Winoka Point Research Center»: «Winoka Point Lab Rat» — статблок, «Killing the Rat»"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 144,
+      "printed_page": 143,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Rat», «The O-12-W Virus»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.damage_bonus",
+      "printed": "Damage bonus: none.",
+      "expected": "-2",
+      "note": "СИЛ 10 + ТЕЛ 10 = 20 — по таблице БкУ −2 и Комплекция −2; напечатанная Комплекция −2 согласуется с этим, БкУ «нет» — нет. Исправлено по большинству (Р-36).",
+      "fixed": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Новое существо сценария. Русский текст — по рабочему переводу владельца (fears-sharp-little-needles/document.html, «Исследовательский центр Уинока-Пойнт»), сверен с английским оригиналом; числа — по оригиналу."
+  }
+}

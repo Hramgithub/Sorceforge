@@ -1,0 +1,93 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "bezymyannyy-tuman-ru/scene/park-boston-kommon",
+  "kind": "scene",
+  "name": {
+    "ru": "Парк Бостон-Коммон",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "17 августа в 09:00 сыщикам звонит знакомый полицейский и сообщает о пропавших в парке детях (на усмотрение Хранителя сыщики могут получить эти сведения из другого источника).\nЕсли сыщики приедут в парк рано утром после пропажи детей, они наткнутся на оцепление полиции. Знакомый коп поможет им пройти на место вероятного преступления — в домик смотрителя парка. Внутри они обнаружат два комплекта одежды пропавших мальчишек, покрытых толстым слоем пыли (прахом); следов Линды (сестры одного из пропавших) здесь нет.\nЕсли сыщики опоздают, им придётся лично ехать в полицейский участок, чтобы узнать подробности. Копы также расскажут, что вчера вечером недалеко от парка одна пожилая дама угодила под колёса машины; по словам медиков, она сейчас в невменяемом состоянии из-за шока, поэтому её пока не допрашивали.\nВ парке (особенно вечером) лучше всего заметны последствия электромагнитной аномалии: из строя выведено значительное число уличных фонарей.",
+    "en": null
+  },
+  "when": "17 августа: звонок знакомого полицейского в 09:00; утром — оцепление, позже — полицейский участок",
+  "arc": {
+    "scenario": "bezymyannyy-tuman-ru/scenario/bezymyannyy-tuman",
+    "part": "Магазин Деррика Йорка (так напечатан заголовок раздела о парке, с. 5)",
+    "order": 5
+  },
+  "where": [
+    {
+      "location": "bezymyannyy-tuman-ru/location/park-boston-kommon",
+      "note": null
+    },
+    {
+      "location": "bezymyannyy-tuman-ru/location/park-boston-kommon-domik-smotritelya",
+      "note": null
+    }
+  ],
+  "participants": [
+    {
+      "id": "bezymyannyy-tuman-ru/character/politseyskiy",
+      "role": "знакомый коп"
+    }
+  ],
+  "mechanics": {
+    "ru": "Ориентирование (вечером — с бонусной костью) — аномалия распространялась сферой радиусом 200 м с эпицентром в домике смотрителя.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Мальчики обращены в прах, Линда пропала; пожилая дама, сбитая у парка, лежит в больнице; эпицентр аномалии — домик смотрителя.",
+    "en": null
+  },
+  "refs": [
+    "bezymyannyy-tuman-ru/item/odezhda-malchikov",
+    "bezymyannyy-tuman-ru/character/bogdan-zalevskiy",
+    "bezymyannyy-tuman-ru/character/konrad-marsh",
+    "bezymyannyy-tuman-ru/character/linda-marsh",
+    "bezymyannyy-tuman-ru/scene/massachusetskaya-bolnitsa",
+    "bezymyannyy-tuman-ru/scene/elektromagnitnaya-anomaliya",
+    "coc:skill:navigate"
+  ],
+  "axes": {
+    "era": [
+      "1930s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "bezymyannyy-tuman-ru",
+      "physical_page": 5,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "раздел о парке (заголовок «Магазин Деррика Йорка»)"
+    },
+    {
+      "book_id": "bezymyannyy-tuman-ru",
+      "physical_page": 3,
+      "printed_page": 3,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Хронология событий», 17 августа"
+    }
+  ],
+  "errata": [
+    {
+      "field": "arc.part",
+      "printed": "Магазин Деррика Йорка",
+      "expected": "Парк Бостон-Коммон",
+      "note": "Раздел о парке Бостон-Коммон (с. 5) напечатан под заголовком «Магазин Деррика Йорка», повторяющим заголовок раздела с. 4; по содержанию это парк.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": null
+  }
+}

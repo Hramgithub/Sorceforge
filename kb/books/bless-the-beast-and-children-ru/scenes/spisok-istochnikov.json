@@ -1,0 +1,99 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "bless-the-beast-and-children-ru/scene/spisok-istochnikov",
+  "kind": "scene",
+  "name": {
+    "ru": "Список источников",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Харден собирается систематически расспросить всех, кто мог быть в районе в воскресенье утром; первые в списке — молочники, водители трамваев и таксисты. Быстро соображающие сыщики могут добраться до них раньше.\nМолочная ферма «Аркхэм фармс»: конторы — к западу по Ривер-стрит между Вест- и Баундари-стрит. По воскресеньям молоко не развозят — тупик.\nТрамвайное управление: конторы на южной стороне Коммона. Немногие водители, работавшие тем утром, ничего подозрительного не видели и женщины с коляской не помнят.\nТаксомоторная компания: у диспетчера Грегори Далберга — журнал водителей, дежуривших тем утром. Полиции он показывает его охотно, частным лицам — за «плату за услуги» $4 себе в карман. Работали четверо: Брайан Кэнфилд, Пол Уайатт, Леон Отт и Донни О’Ши. Первые трое ничего не знают, но О’Ши помнит женщину, похожую на мисс Лангфорд, которая около 9:20 шла на запад по Вашингтон-стрит между Гаррисон- и Вест-стрит и толкала детскую коляску, похожую на описанную Андерсонами.\nЕсли сыщики не догадаются сами, успешный бросок Идеи подсказывает повторить её прогулку и поискать улики: прочесать обе стороны улиц по всем маршрутам, которыми она могла идти к Первой пресвитерианской церкви.",
+    "en": null
+  },
+  "when": "после разговора с полицией",
+  "arc": {
+    "scenario": "bless-the-beast-and-children-ru/scenario/bless-the-beast-and-children",
+    "part": "Аркхэм",
+    "order": 3
+  },
+  "where": [
+    {
+      "location": "bless-the-beast-and-children-ru/location/molochnaya-ferma-arkham-farms",
+      "note": "тупик"
+    },
+    {
+      "location": "bless-the-beast-and-children-ru/location/upravlenie-arkhemskogo-tramvaya",
+      "note": "ничего"
+    },
+    {
+      "location": "bless-the-beast-and-children-ru/location/arkham-keb",
+      "note": "журнал водителей"
+    }
+  ],
+  "participants": [
+    {
+      "id": "bless-the-beast-and-children-ru/character/gregori-dalberg",
+      "role": "диспетчер"
+    },
+    {
+      "id": "bless-the-beast-and-children-ru/character/donni-o-shi",
+      "role": "таксист-свидетель"
+    }
+  ],
+  "mechanics": {
+    "ru": "Журнал Далберга — $4 для частных лиц. Бросок Идеи — подсказка пройти маршрут няни.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Свидетельство О’Ши сужает поиск до Вашингтон-стрит к западу от Вест-стрит; повторив маршрут, сыщики выходят к месту убийства («Жуткая находка»).",
+    "en": null
+  },
+  "refs": [
+    "bless-the-beast-and-children-ru/character/lyuter-harden",
+    "bless-the-beast-and-children-ru/character/emili-langford",
+    "bless-the-beast-and-children-ru/location/pervaya-presviterianskaya-tserkov",
+    "bless-the-beast-and-children-ru/scene/zhutkaya-nakhodka"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "bless-the-beast-and-children-ru",
+      "physical_page": 5,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": false,
+      "note": "«Список источников»"
+    },
+    {
+      "book_id": "bless-the-beast-and-children-ru",
+      "physical_page": 6,
+      "printed_page": 6,
+      "method": "book_text",
+      "verified": false,
+      "note": "«Список источников»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "sources",
+      "printed": null,
+      "expected": null,
+      "note": "Оригинал не найден, числа не сверены (Р-223): все числа записи — по переводу владельца; сверить, если появится оригинал.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Источник — перевод владельца (Р-223), русский текст — его; оригинал в библиотеке не найден. Оригинал не найден, числа не сверены (Р-223)."
+  }
+}

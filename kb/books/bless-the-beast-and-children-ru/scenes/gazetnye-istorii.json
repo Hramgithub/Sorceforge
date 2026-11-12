@@ -1,0 +1,84 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "bless-the-beast-and-children-ru/scene/gazetnye-istorii",
+  "kind": "scene",
+  "name": {
+    "ru": "Газетные истории",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Сыщики, ищущие в подшивках «Аркхэм эдвертайзер» или «Аркхэм газетт» истории о Дэнни Эймсе, при успешной Работе в библиотеке находят статьи трёхлетней давности о неизвестном юноше, бродившем по лесу, и о том, как его опознали как Дэнни Эймса, пропавшего более семи лет назад. Там указана дата его похищения десять лет назад — это ведёт к газетной истории о похищении: подозреваемых не установили, преступление не раскрыто.\nЕсли сыщики исследуют имя Сноудена, они могут наткнуться на статью «Детские бумаги #5» — о брошенной у Глостера машине пропавшего пастора.",
+    "en": null
+  },
+  "when": "когда сыщики ищут в подшивках газет",
+  "arc": {
+    "scenario": "bless-the-beast-and-children-ru/scenario/bless-the-beast-and-children",
+    "part": "Государственная больница",
+    "order": 13
+  },
+  "where": [
+    {
+      "location": "innsmouth-terror-en/location/arkham-advertiser",
+      "note": "подшивки"
+    },
+    {
+      "location": "bless-the-beast-and-children-ru/location/redaktsiya-arkham-gazett",
+      "note": "подшивки"
+    }
+  ],
+  "mechanics": {
+    "ru": "Работа в библиотеке — статьи о Дэнни; поиск имени Сноудена — «Детские бумаги #5».",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Связь Дэнни Эймса со Сноуденом и история исчезновения пастора.",
+    "en": null
+  },
+  "refs": [
+    "bless-the-beast-and-children-ru/handout/detskie-bumagi-5",
+    "bless-the-beast-and-children-ru/character/denni-eyms",
+    "bless-the-beast-and-children-ru/character/garold-snouden",
+    "bless-the-beast-and-children-ru/scene/pervaya-baptistskaya-tserkov"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "bless-the-beast-and-children-ru",
+      "physical_page": 11,
+      "printed_page": 11,
+      "method": "book_text",
+      "verified": false,
+      "note": "«Газетные истории»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "description",
+      "printed": "«пропавшего более семи лет назад» (с. 11); «пропавшего более десяти лет назад» (с. 7); «пропал десять лет назад» (с. 10)",
+      "expected": "один срок",
+      "note": "Срок исчезновения Дэнни в газетной статье и в других разделах разный.",
+      "fixed": false
+    },
+    {
+      "field": "sources",
+      "printed": null,
+      "expected": null,
+      "note": "Оригинал не найден, числа не сверены (Р-223): все числа записи — по переводу владельца; сверить, если появится оригинал.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Источник — перевод владельца (Р-223), русский текст — его; оригинал в библиотеке не найден. Оригинал не найден, числа не сверены (Р-223)."
+  }
+}

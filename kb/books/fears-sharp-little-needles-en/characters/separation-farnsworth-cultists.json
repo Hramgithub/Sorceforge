@@ -1,0 +1,441 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "fears-sharp-little-needles-en/character/separation-farnsworth-cultists",
+  "kind": "character",
+  "name": {
+    "ru": "Культисты семьи Фарнсуортов",
+    "en": "Sample Farnsworth Family Cultist"
+  },
+  "aliases": [
+    "Типичный культист из семьи Фарнсуортов",
+    "Фарнсуорты",
+    "гибриды Фарнсуортов"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "культист семьи Фарнсуортов",
+  "names": [
+    "Эзра Фарнсуорт",
+    "Лайла Белл",
+    "Калеб Фарнсуорт",
+    "Ханна Белл",
+    "Джошуа Фарнсуорт",
+    "Ребекка Белл"
+  ],
+  "occupation": {
+    "ru": "фермеры, члены семьи-культа",
+    "en": null
+  },
+  "age": {
+    "raw": "разный",
+    "value": null
+  },
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "fears-sharp-little-needles-en/character/separation-james-farnsworth",
+      "note": "глава семьи",
+      "note_back": "члены семьи-культа"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "65",
+        "value": 65
+      },
+      "CON": {
+        "raw": "90",
+        "value": 90
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "APP": {
+        "raw": "40",
+        "value": 40
+      },
+      "INT": {
+        "raw": "55",
+        "value": 55
+      },
+      "POW": {
+        "raw": "65",
+        "value": 65
+      },
+      "EDU": {
+        "raw": "55",
+        "value": 55
+      }
+    },
+    "hp": {
+      "raw": "15",
+      "value": 15
+    },
+    "sanity": {
+      "raw": "0",
+      "value": 0,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "9 (немного быстрее обычного человека)",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "notes": "Урон в книге не напечатан; оружие — ниже."
+      },
+      {
+        "name": {
+          "ru": "Ближний бой (топор)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d8+2+БкУ",
+          "dice": "1d8+2",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:wood-axe",
+        "notes": "У 60% культистов — острые сельскохозяйственные орудия: топоры, секачи или вилы."
+      },
+      {
+        "name": {
+          "ru": "Ближний бой (секач)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d8+БкУ",
+          "dice": "1d8",
+          "adds_db": true
+        },
+        "notes": "Садовый секач (billhook) — одно из сельскохозяйственных орудий (у 60% культистов)."
+      },
+      {
+        "name": {
+          "ru": "Ближний бой (вилы)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d8+БкУ",
+          "dice": "1d8",
+          "adds_db": true
+        },
+        "notes": "Одно из сельскохозяйственных орудий (у 60% культистов)."
+      },
+      {
+        "name": {
+          "ru": "Стрельба (дробовик)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "4d6/2d6/1d6",
+          "dice": "4d6/2d6/1d6",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:shotgun-12-gauge-semi-auto",
+        "notes": "У 20% культистов; 2 выстрела за раунд, дальность 10/20/50 м, осечка 00, ёмкость 5."
+      },
+      {
+        "name": {
+          "ru": "Ближний бой (бензопила)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (бензопила)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "2d8",
+          "dice": "2d8",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:chainsaw",
+        "notes": "У 20% культистов; осечка 95–00."
+      }
+    ],
+    "dodge": {
+      "raw": "50% (25/10)",
+      "value": 50,
+      "half": 25,
+      "fifth": 10
+    },
+    "skills": [
+      {
+        "name": "Ремесло (сельское хозяйство)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "Сельское хозяйство",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "10%",
+          "value": 10,
+          "half": 5,
+          "fifth": 2
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "05%",
+          "value": 5,
+          "half": 2,
+          "fifth": 1
+        }
+      },
+      {
+        "name": "Уклонение",
+        "skill": "coc:skill:dodge",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Вождение автомобиля",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Язык (английский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "Английский",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Механика",
+        "skill": "coc:skill:mechanical-repair",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Естествознание",
+        "skill": "coc:skill:natural-world",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Оккультизм",
+        "skill": "coc:skill:occult",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Управление тяжёлыми машинами (трактор)",
+        "skill": "coc:skill:heavy-machinery",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Выживание (лес)",
+        "skill": "coc:skill:survival",
+        "specialization": "Лес",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      }
+    ],
+    "spells": {
+      "raw": "нет"
+    }
+  },
+  "abilities": [
+    {
+      "name": "Защита",
+      "summary": "Получает минимальный урон от огнестрельного оружия и режущих/колющих атак и, если не убит, постепенно отращивает конечности и утраченные части тела — по 1 ПЗ в день; от тупого оружия получает двойной урон.",
+      "raw": "Defenses: Take minimum damage from firearms and cutting/piercing attacks, and will eventually regenerate limbs and lost body parts at the rate of one HP per day unless killed, but take double damage from blunt instruments."
+    }
+  ],
+  "description": {
+    "ru": "Типичный член семьи-культа Фарнсуортов на ферме в округе Дарк. Всего там 40 Фарнсуортов (у многих другие фамилии), из них 30 — в боеспособном возрасте; около двух третей внешне похожи на Би-Би (синдром Фарнсуорта—Белл), остальные — супруги и дети. Вооружены по-разному: 60% — острыми сельскохозяйственными орудиями (топоры, секачи, вилы), 20% — дробовиками, 20% — бензопилами. Все до единого — психопаты-убийцы (бессрочное безумие), хоть и держат маску нормальности: церковь, школы, клубы 4-H, веганство, никаких животных, никаких наёмных работников. Под одеждой у всех гибридов ужасные шрамы. Национальность — американцы, возраст разный, заклинаний не знают. При угрозе Патриарху, темнице или дереву жертвоприношений нападают, любят погоню по саду, пытки и охоту на людей с комбайна; выстрелы их едва замедляют (сочится густой тёмный ихор), а от удара тупым оружием они валятся как мешок с землёй.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 13,
+      "printed_page": 12,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Sample Farnsworth Family Cultist»"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 12,
+      "printed_page": 11,
+      "method": "book_text",
+      "verified": true,
+      "note": "40 Фарнсуортов, 30 боеспособных; странности"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 13,
+      "printed_page": 12,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Farnsworths Defend Themselves/Calling 911»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.move",
+      "printed": "9 (slightly faster than normal human)",
+      "expected": "8",
+      "note": "По правилам при СИЛ 65 = ТЕЛ 65 и ЛВК 60 < ТЕЛ Скорость 8; книга нарочно даёт 9 — «немного быстрее обычного человека» (задумано, Р-76).",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "editorial_text",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — по рабочему переводу владельца (2_Обработка/fears-sharp-little-needles/document.html), сверен с английским оригиналом; числа — по английской странице. Групповой профиль (Р-74); имена придуманы (Р-151), в книге — «типичный культист». «Mytho05%» книги — опечатка набора, записано «Мифы Ктулху 05%». Атаки секачом и вилами не связаны с записями оружия: таких строк в таблице оружия нет; дробовик (2 выстрела, ёмкость 5) отнесён к полуавтоматическому."
+  }
+}

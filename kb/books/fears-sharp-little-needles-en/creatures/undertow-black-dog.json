@@ -1,0 +1,231 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "fears-sharp-little-needles-en/creature/undertow-black-dog",
+  "kind": "creature",
+  "name": {
+    "ru": "Чёрная собака",
+    "en": "The Black Dog"
+  },
+  "aliases": [
+    "Снарлейгоу",
+    "Snarleyyow",
+    "чёрный лабрадор"
+  ],
+  "category": "avatar",
+  "subcategory": "аватар Ньярлатхотепа",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "avatar_of",
+      "target": "coc:creature:nyarlathotep",
+      "note_back": "Чёрная собака — проекция депрессии писателя Джастина Хейза («Подводное течение»)"
+    },
+    {
+      "type": "works_for",
+      "target": "fears-sharp-little-needles-en/character/undertow-justin-hayes",
+      "note": "«хозяин»: собака — проекция его депрессии",
+      "note_back": "Чёрная собака, проекция его депрессии"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "70",
+        "value": 70
+      },
+      "DEX": {
+        "raw": "90",
+        "value": 90
+      },
+      "INT": {
+        "raw": "50",
+        "value": 50
+      },
+      "POW": {
+        "raw": "100",
+        "value": 100
+      }
+    },
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "16 (неестественно быстро для собаки)",
+      "value": 16,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 16
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "1d6+БкУ (когти, укусы и раздирание)",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "20% (10/4)",
+      "value": 20,
+      "half": 10,
+      "fifth": 4
+    },
+    "skills": [
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "90%",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1d4",
+        "fail": "1d10",
+        "trigger": "ночью, когда собака принимает зловещий облик перед лунатиком"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Проклятие Чёрной собаки",
+      "summary": "Вытягивает из Хейза дурные мысли, и они действуют на окружающих: кто намеренно не избегает собаки, проклят. После заката проклятые расслаблены, у моря их зачаровывают волны (отвернуться — проверка МОЩ), а лунатики слышат зов моря.",
+      "raw": "Those negative thoughts that The Black Dog takes begin to affect those around it. Unless anyone deliberately avoids The Black Dog, they begin suffer its curse."
+    },
+    {
+      "name": "Зловещий облик",
+      "summary": "Если лунатик решит выступить против Хейза или собаки, комната темнеет, шерсть встаёт шипами, глаза чернеют, в пасти вырастают ряды зубов: проверка Рассудка 1d4/1d10, затем обморок до рассвета. Днём собака снова обычная.",
+      "raw": "If the sleepwalker is determined to confront Hayes, or take on The Black Dog, the room darkens as the creature takes on an increasingly menacing appearance… The investigator must make a SAN roll, with a 1d4/1d10 loss, and then blacks out, coming to where they fell at sunrise."
+    },
+    {
+      "name": "Возвращение",
+      "summary": "Временно победить собаку легко, но она появляется снова, пока Хейз не поверит в неё (после этого её можно «убить», пока она не привяжется к другому) или пока Хейз не погибнет. При Хейзе не показывается: только он может прогнать её насовсем.",
+      "raw": "The Black Dog itself is easy to temporarily defeat, although the investigators may learn that it doesn’t stay dead for long. It simply reappears, when and as necessary for dramatic tension, until Hayes is either confronted and comes to believe in it… or Hayes is killed himself."
+    },
+    {
+      "name": "Защитник хозяина",
+      "summary": "Если кто-то нападёт на самого Хейза, собака чувствует, что он потерян, и появляется, будто защищая хозяина.",
+      "raw": "If anyone attacks Hayes himself, The Black Dog senses that he is a lost cause and will turn up as if to defend its master."
+    }
+  ],
+  "description": {
+    "ru": "Днём — ласковый чёрный лабрадор-ретривер с красным мячом: ходит за людьми, кладёт голову на колени, роняет мяч к ногам, спит в комнате гостей. На деле — проекция депрессии Джастина Хейза, воплощённая Ньярлатхотепом; в обмен на дурные мысли дарит Хейзу фантастические сны. У Хейза нет собаки, он о ней не знает; соседка считает пса его собакой. Победа над Чёрной собакой — +1d6 Рассудка (но эти очки и ещё 1d6 теряются, если сыщики поймут, что Собака просто перешла к другому).",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 18,
+      "printed_page": 17,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «The Black Dog (“Snarleyyow”)»"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 15,
+      "printed_page": 14,
+      "method": "book_text",
+      "verified": true,
+      "note": "вступление; лабрадор у дома"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 16,
+      "printed_page": 15,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Meeting Hayes»"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 17,
+      "printed_page": 16,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Dog Returns», «Night Falls»"
+    },
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 18,
+      "printed_page": 17,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Confrontation»; награды"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — по рабочему переводу владельца (2_Обработка/fears-sharp-little-needles/document.html), сверен с английским оригиналом; числа — по английской странице. У владельца фамилия то «Хейз», то «Хейс»: принято «Хейз». В статблоке книги нет НАР, ОБР, ПМ; Скорость 16 — нарочно («неестественно быстро для собаки»)."
+  }
+}

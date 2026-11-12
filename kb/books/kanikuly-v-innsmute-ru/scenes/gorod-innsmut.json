@@ -1,0 +1,90 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "kanikuly-v-innsmute-ru/scene/gorod-innsmut",
+  "kind": "scene",
+  "name": {
+    "ru": "Город Иннсмут",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Город выглядит заброшенным и неухоженным, давно пропах рыбой; жители крайне немногословны и выглядят странно, даже немного пугающе. У многих на голове явно не по возрасту лысины и проплешины, как будто волосы выпадают с каждым днём; глаза выпученные, и кажется, что их обладатели даже не моргают. Большая часть жителей одета неопрятно — у некоторых живот торчит наружу, — а у некоторых вдобавок нездоровая синевато-серая кожа. Поначалу они не проявляют никакой агрессии, но и общаться не желают; чем больше сыщики лезут не в своё дело, тем больше злят жителей.\nГеография Иннсмута — места, куда могут отправиться сыщики:\n• 1. Гостиница «Джилмен-Хаус»\n• 2. Церковь Тайного ордена Дагона\n• 3. «Лавка весёлых побрякушек» при гостинице\n• 4. Жилые районы\n• 5. Порт\n• 6. Автобус\n• 7. Кладбище автомобилей\n• 8. Заброшенный золото-плавильный завод\n• 9. Риф Дьявола\nПервостепенная задача сыщиков — найти водителя Генри Уолдера и благополучно покинуть Иннсмут. Зайдя в город, они могут пойти расспрашивать жителей, посетить лавку безделушек, гостиницу, порт или церковь. Жители будут внимательно наблюдать за действиями сыщиков.",
+    "en": null
+  },
+  "when": "Сыщики входят в город",
+  "arc": {
+    "scenario": "kanikuly-v-innsmute-ru/scenario/kanikuly-v-innsmute",
+    "part": "Город Иннсмут",
+    "order": 2
+  },
+  "where": [
+    {
+      "location": "coc:location:innsmouth",
+      "note": null
+    }
+  ],
+  "participants": [
+    {
+      "id": "kanikuly-v-innsmute-ru/character/zhiteli-innsmuta",
+      "role": "наблюдают, не идут на разговор"
+    }
+  ],
+  "mechanics": {
+    "ru": "Шкала Агрессии: каждое «заполнение» — Хранитель бросает 1d10 и прибавляет выпавшее к пулу (0–25 Спокойный, 26–50 Подозрительный, 51–75 Угрожающий, 76–100 Воинственный, 100+ Эндшпиль). Заполняется за каждое неуместное любопытство или полученную сыщиками информацию — подробно в сценах.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Сыщики выбирают, куда идти: гостиница, лавка, порт, церковь, жилые районы.",
+    "en": null
+  },
+  "refs": [
+    "coc:location:innsmouth-703-otel-dom-gilmana",
+    "coc:location:innsmouth-207-ezotericheskiy-orden-dagona",
+    "kanikuly-v-innsmute-ru/location/lavka-veselykh-pobryakushek",
+    "kanikuly-v-innsmute-ru/location/dom-mastera",
+    "coc:location:innsmouth-gavan",
+    "kanikuly-v-innsmute-ru/location/mesto-polomki-avtobusa",
+    "kanikuly-v-innsmute-ru/location/kladbishche-avtomobiley",
+    "coc:location:innsmouth-501-affinazhnyy-zavod-marsha",
+    "coc:location:innsmouth-1011-rif-dyavola",
+    "kanikuly-v-innsmute-ru/scene/gostinitsa",
+    "kanikuly-v-innsmute-ru/scene/tserkov-dnem",
+    "kanikuly-v-innsmute-ru/scene/lavka",
+    "kanikuly-v-innsmute-ru/scene/zhilye-rayony",
+    "kanikuly-v-innsmute-ru/scene/port",
+    "kanikuly-v-innsmute-ru/scene/avtobus-propal",
+    "kanikuly-v-innsmute-ru/scene/kladbishche-avtomobiley",
+    "kanikuly-v-innsmute-ru/scene/zavod-vkhody",
+    "kanikuly-v-innsmute-ru/scene/rif-dyavola",
+    "coc:creature:deep-one-hybrid"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "kanikuly-v-innsmute-ru",
+      "physical_page": 2,
+      "printed_page": 2,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Город Иннсмут», «География Иннсмута»"
+    },
+    {
+      "book_id": "kanikuly-v-innsmute-ru",
+      "physical_page": 3,
+      "printed_page": 3,
+      "method": "book_text",
+      "verified": true,
+      "note": "начало страницы: куда могут пойти сыщики"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

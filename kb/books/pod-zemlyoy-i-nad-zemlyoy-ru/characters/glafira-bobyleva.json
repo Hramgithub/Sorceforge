@@ -1,0 +1,160 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "pod-zemlyoy-i-nad-zemlyoy-ru/character/glafira-bobyleva",
+  "kind": "character",
+  "name": {
+    "ru": "Глафира Бобылёва",
+    "en": null
+  },
+  "aliases": [
+    "Глафира"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "жительница Янкылмы, готовит отвар смерти и отвар силы",
+    "en": null
+  },
+  "sex": "женский",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "pod-zemlyoy-i-nad-zemlyoy-ru/creature/zhivye-mertvetsy-yankylmy",
+      "note_back": "давно мёртвая старожилка Янкылмы"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "120",
+        "value": 120
+      },
+      "CON": {
+        "raw": "110",
+        "value": 110
+      },
+      "SIZ": {
+        "raw": "55",
+        "value": 55
+      },
+      "DEX": {
+        "raw": "130",
+        "value": 130
+      },
+      "INT": {
+        "raw": "70",
+        "value": 70
+      },
+      "POW": {
+        "raw": "85",
+        "value": 85
+      }
+    },
+    "hp": {
+      "raw": "19",
+      "value": 19
+    },
+    "damage_bonus": {
+      "raw": "2d4",
+      "value": "2d4"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50 / 25 / 10",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "weapon": "coc:weapon:unarmed",
+        "notes": null
+      },
+      {
+        "name": {
+          "ru": "Метание",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Метание",
+        "chance": {
+          "raw": "40 / 20 / 8",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "notes": null
+      }
+    ]
+  },
+  "description": {
+    "ru": "Одна из старейших жителей деревни, давно мертва; просыпается ближе к вечеру. Необщительна, но полна сил: часто моет полы в своём пропахшем затхлостью доме, следит за хозяйством. Чудовищно сильна и быстра; восстанавливает 3d6 ПЗ, выпив свежей крови или съев мяса.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Из мёртвой воды, набранной у ключа, варит отвар смерти — концентрат с добавлением дурмана: для воскрешения умерших односельчан и чтобы одурманить жертв и довести их до савынкана. На похоронах Аксиньи даёт отвар силы всем живым деревенским, а ребёнку (если он там) и связанному зэку — отвар смерти, после чего вливает его в рот покойнице.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "pod-zemlyoy-i-nad-zemlyoy-ru",
+      "physical_page": 7,
+      "printed_page": 7,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Жители Янкылмы»: статблок Глафиры"
+    },
+    {
+      "book_id": "pod-zemlyoy-i-nad-zemlyoy-ru",
+      "physical_page": 15,
+      "printed_page": 15,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Мертвая вода»: отвар смерти"
+    },
+    {
+      "book_id": "pod-zemlyoy-i-nad-zemlyoy-ru",
+      "physical_page": 18,
+      "printed_page": 18,
+      "method": "book_text",
+      "verified": true,
+      "note": "«За мертвой водой», «Похороны Аксиньи»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.hp",
+      "printed": "19",
+      "expected": "16",
+      "note": "ПЗ = (ВЫН 110 + ТЕЛ 55) / 10 = 16. Живой мертвец: по правилу 4-й стадии (с. 15) СИЛ, ЛВК, ВЫН и ПЗ мертвеца удвоены; напечатанные ПЗ с формулой не сходятся ни прямо, ни с удвоением. Как напечатано.",
+      "fixed": false
+    },
+    {
+      "field": "statblock.damage_bonus",
+      "printed": "2d4",
+      "expected": "+1d6",
+      "note": "СИЛ + ТЕЛ = 175 → по таблице 7-й редакции +1d6. Как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": "Статблок без ПМ, Скорости, НАР и ОБР — как в книге."
+  }
+}

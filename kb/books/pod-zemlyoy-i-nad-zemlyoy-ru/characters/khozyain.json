@@ -1,0 +1,181 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "pod-zemlyoy-i-nad-zemlyoy-ru/character/khozyain",
+  "kind": "character",
+  "name": {
+    "ru": "Хозяин",
+    "en": null
+  },
+  "aliases": [
+    "Хозяин менквов",
+    "менкв",
+    "хозяин тайги"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "менкв, хозяин этого леса",
+    "en": null
+  },
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "pod-zemlyoy-i-nad-zemlyoy-ru/creature/menkvy",
+      "note_back": "нынешний хозяин леса"
+    },
+    {
+      "type": "relative_of",
+      "target": "pod-zemlyoy-i-nad-zemlyoy-ru/character/khozyayka",
+      "note": "жена",
+      "note_back": "муж"
+    },
+    {
+      "type": "relative_of",
+      "target": "pod-zemlyoy-i-nad-zemlyoy-ru/character/malenkiy-khozyain",
+      "note": "сын",
+      "note_back": "отец"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "200",
+        "value": 200
+      },
+      "CON": {
+        "raw": "150",
+        "value": 150
+      },
+      "SIZ": {
+        "raw": "180",
+        "value": 180
+      },
+      "DEX": {
+        "raw": "80",
+        "value": 80
+      },
+      "INT": {
+        "raw": "60",
+        "value": 60
+      },
+      "POW": {
+        "raw": "70",
+        "value": 70
+      }
+    },
+    "hp": {
+      "raw": "37",
+      "value": 37
+    },
+    "damage_bonus": {
+      "raw": "2d6",
+      "value": "2d6"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "70 / 35 / 14",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "weapon": "coc:weapon:unarmed",
+        "notes": null
+      },
+      {
+        "name": {
+          "ru": "Метание",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Метание",
+        "chance": {
+          "raw": "65 / 32 / 13",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "notes": null
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d4",
+        "trigger": "увидеть Хозяина (рост около 2,7 м)"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Менкв ростом около 2,7 м, в колпаке; хозяин тайги вокруг Янкылмы. Хозяева ценят покой, не угрожают людям, интересуются образом жизни людей, дружат с некоторыми деревенскими; читают их книги. Менквы нынче намного ниже своих предков — «вырождаются».",
+    "en": null
+  },
+  "legend": {
+    "ru": "В сценарии: подойдя к болотам, студенты слышат его крики о помощи — он тонет в болоте, видна только голова в колпаке, массивные руки и плечи. Спасение требует трудного успеха Выживания и Силы, и есть большой шанс начать тонуть самим; тогда менкв укажет путь по старым жердям к своему дому. Если ему не помочь, он утонет. Спасение менква даёт две бонусные кости при общении с ним; вернувшиеся «хозяева» радушны и благодарны, могут рассказать правду о себе и намекнуть об опасности со стороны деревенских, но на остальную группу благодарность не распространяется. Может за кадром убить охотника Лысенко.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "pod-zemlyoy-i-nad-zemlyoy-ru",
+      "physical_page": 8,
+      "printed_page": 8,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Дом менквов»"
+    },
+    {
+      "book_id": "pod-zemlyoy-i-nad-zemlyoy-ru",
+      "physical_page": 16,
+      "printed_page": 16,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Дом менквов» (события)"
+    },
+    {
+      "book_id": "pod-zemlyoy-i-nad-zemlyoy-ru",
+      "physical_page": 20,
+      "printed_page": 20,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Менквы»: статблок хозяина"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.hp",
+      "printed": "37",
+      "expected": "33",
+      "note": "ПЗ = (ВЫН 150 + ТЕЛ 180) / 10 = 33. Как напечатано.",
+      "fixed": false
+    },
+    {
+      "field": "statblock.damage_bonus",
+      "printed": "2d6",
+      "expected": "+4d6",
+      "note": "СИЛ + ТЕЛ = 380 → по таблице 7-й редакции +4d6. Как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": "Менквы друг друга называют «хозяин» и «хозяйка» — «имена им без надобности» (с. 18); эти слова и взяты именами."
+  }
+}

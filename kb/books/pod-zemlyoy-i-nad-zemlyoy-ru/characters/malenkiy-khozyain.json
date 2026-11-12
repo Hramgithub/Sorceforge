@@ -1,0 +1,152 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "pod-zemlyoy-i-nad-zemlyoy-ru/character/malenkiy-khozyain",
+  "kind": "character",
+  "name": {
+    "ru": "Маленький хозяин",
+    "en": null
+  },
+  "aliases": [
+    "МХ",
+    "менкв пяти лет",
+    "будущий хозяин леса"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "менкв, будущий хозяин этого леса",
+    "en": null
+  },
+  "age": {
+    "raw": "пяти лет",
+    "value": 5
+  },
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "pod-zemlyoy-i-nad-zemlyoy-ru/creature/menkvy",
+      "note_back": "будущий хозяин леса"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "65",
+        "value": 65
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "45",
+        "value": 45
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "INT": {
+        "raw": "30",
+        "value": 30
+      },
+      "POW": {
+        "raw": "40",
+        "value": 40
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50 / 25 / 10",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "weapon": "coc:weapon:unarmed",
+        "notes": null
+      },
+      {
+        "name": {
+          "ru": "Копье",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (копьё)",
+        "chance": {
+          "raw": "70 / 35 / 14",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "1d6+2",
+          "dice": "1d6+2",
+          "adds_db": false
+        },
+        "notes": null
+      }
+    ]
+  },
+  "description": {
+    "ru": "Менкв пяти лет, ростом с 12-летнего подростка. Несуразные пропорции тела, большая голова с шапкой-колпаком; одет как дикарь в самодельную меховую и кожаную одежду, под ней тело покрыто шерстью. Не агрессивен, но ловко обращается с копьём (1d6+2) и может дать отпор. Самостоятельный житель тайги, для игроков может стать «гоблином-боблином».",
+    "en": null
+  },
+  "legend": {
+    "ru": "Ему запрещено соваться в деревню, но очень интересно, как живут люди: слышал от отца про домашних котов, радио и прочее, но никогда не видел.\nВ сценарии: ребёнок, оставшись один на качелях или ещё где-то, увидит его на границе леса, приветливо машущего рукой. Маленький хозяин предложит сходить к нему домой, пообещав, что ребёнка не съедят, сходить на лесное озеро подразнить Вит-куля или просто показать, как охотится с копьём.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "pod-zemlyoy-i-nad-zemlyoy-ru",
+      "physical_page": 18,
+      "printed_page": 18,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Маленький хозяин»"
+    },
+    {
+      "book_id": "pod-zemlyoy-i-nad-zemlyoy-ru",
+      "physical_page": 20,
+      "printed_page": 20,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Менквы»: статблок маленького хозяина"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.hp",
+      "printed": "12",
+      "expected": "10",
+      "note": "ПЗ = (ВЫН 60 + ТЕЛ 45) / 10 = 10 (11 с округлением вверх). Как напечатано (Р-161).",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": "Менквы друг друга называют «хозяин» и «хозяйка» — «имена им без надобности» (с. 18); эти слова и взяты именами. Урон копья — из текста той же страницы (с. 20)."
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "pod-zemlyoy-i-nad-zemlyoy-ru/character/matvey-bobylev",
+  "kind": "character",
+  "name": {
+    "ru": "Матвей Бобылёв",
+    "en": null
+  },
+  "aliases": [
+    "Дед Матвей",
+    "Матвей"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "житель Янкылмы",
+    "en": null
+  },
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "pod-zemlyoy-i-nad-zemlyoy-ru/creature/zhivye-mertvetsy-yankylmy",
+      "note_back": "давно мёртвый старожил Янкылмы"
+    },
+    {
+      "type": "relative_of",
+      "target": "pod-zemlyoy-i-nad-zemlyoy-ru/character/glafira-bobyleva",
+      "note": "жена",
+      "note_back": "муж"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "140",
+        "value": 140
+      },
+      "CON": {
+        "raw": "120",
+        "value": 120
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "150",
+        "value": 150
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "85",
+        "value": 85
+      }
+    },
+    "hp": {
+      "raw": "21",
+      "value": 21
+    },
+    "damage_bonus": {
+      "raw": "2d4",
+      "value": "2d4"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "75 / 37 / 15",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        },
+        "weapon": "coc:weapon:unarmed",
+        "notes": null
+      },
+      {
+        "name": {
+          "ru": "Винт./Дроб.",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "40 / 20 / 8",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "notes": null
+      }
+    ]
+  },
+  "description": {
+    "ru": "Один из старейших жителей деревни, давно мёртв; просыпается ближе к вечеру. Очень любит поболтать и покурить самосад на завалинке. Чудовищно силён и быстр; восстанавливает 3d6 ПЗ, выпив свежей крови или съев мяса.",
+    "en": null
+  },
+  "legend": {
+    "ru": "В сценарии: самый старый и харизматичный npc для ребёнка — расскажет истории о том, что раньше на этих землях жили охотники манси, а некоторые и до сих пор живут. С Николаем легко одолеет безоружных зэков: одного держит связанным у себя во дворе (ребёнок может тайком пообщаться с ним или даже развязать), второго — отдельно где-то в доме.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "pod-zemlyoy-i-nad-zemlyoy-ru",
+      "physical_page": 7,
+      "printed_page": 7,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Жители Янкылмы»: Матвей и Глафира Бобылёвы, статблок Матвея"
+    },
+    {
+      "book_id": "pod-zemlyoy-i-nad-zemlyoy-ru",
+      "physical_page": 17,
+      "printed_page": 17,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Прибытие ребенка в Янкылму»: дед Матвей"
+    },
+    {
+      "book_id": "pod-zemlyoy-i-nad-zemlyoy-ru",
+      "physical_page": 18,
+      "printed_page": 18,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Визит беглых зэков»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.hp",
+      "printed": "21",
+      "expected": "18",
+      "note": "ПЗ = (ВЫН 120 + ТЕЛ 65) / 10 = 18. Живой мертвец: по правилу 4-й стадии (с. 15) СИЛ, ЛВК, ВЫН и ПЗ мертвеца удвоены; напечатанные ПЗ с формулой не сходятся ни прямо, ни с удвоением. Как напечатано.",
+      "fixed": false
+    },
+    {
+      "field": "statblock.damage_bonus",
+      "printed": "2d4",
+      "expected": "+2d6",
+      "note": "СИЛ + ТЕЛ = 205 → по таблице 7-й редакции +2d6; книга у всех сверхсильных персонажей пишет «2d4». Как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": "Статблок без ПМ, Скорости, НАР и ОБР — как в книге. Чей статблок чей на с. 7, видно по подписям фотографий."
+  }
+}

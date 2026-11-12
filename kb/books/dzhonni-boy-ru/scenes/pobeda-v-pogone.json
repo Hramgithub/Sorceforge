@@ -1,0 +1,70 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "dzhonni-boy-ru/scene/pobeda-v-pogone",
+  "kind": "scene",
+  "name": {
+    "ru": "Победа в погоне",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Если сыщикам удаётся вырваться вперёд, опишите, что эвакуатор до сих пор гонится за ними, но расстояние между машинами медленно, но верно увеличивается. Впереди на дороге, у поворота к ферме, растянута колючая проволока прямо над землёй.",
+    "en": null
+  },
+  "when": "сыщикам удалось вырваться вперёд",
+  "arc": {
+    "scenario": "dzhonni-boy-ru/scenario/dzhonni-boy",
+    "part": "Победа в погоне",
+    "order": 3
+  },
+  "where": [
+    {
+      "location": "dzhonni-boy-ru/location/obezdnaya-doroga"
+    },
+    {
+      "location": "dzhonni-boy-ru/location/povorot-na-fermu",
+      "note": "ловушка"
+    }
+  ],
+  "participants": [
+    {
+      "id": "dzhonni-boy-ru/character/dzhonni-dikson",
+      "role": "маньяк-вампир"
+    }
+  ],
+  "mechanics": {
+    "ru": "В какой-то момент попросите сделать проверку Внимания для водителя и того, кто сидит на переднем сиденье. При трудном успехе они успеют заметить, что на дороге впереди что-то поблёскивает в свете фар, но что — понять сложно. При чрезвычайном успехе можно сообщить, что впереди растянута колючая проволока.\nПроверка Вождения позволит вовремя затормозить, однако удар эвакуатора в задний бампер всё же вытолкнет машину прямо на ловушку, повредив шины. При чрезвычайном успехе машину удастся свернуть на обочину, не подставившись под удар преследователя, но, как назло, автомобиль при этом забуксует.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Далее — «Вечеринка с коктейлями».",
+    "en": null
+  },
+  "refs": [
+    "dzhonni-boy-ru/item/evakuator-dzhonni-boya",
+    "dzhonni-boy-ru/scene/vecherinka-s-kokteylyami",
+    "coc:skill:spot-hidden",
+    "coc:skill:drive-auto"
+  ],
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "dzhonni-boy-ru",
+      "physical_page": 2,
+      "printed_page": 2,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Победа в погоне»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

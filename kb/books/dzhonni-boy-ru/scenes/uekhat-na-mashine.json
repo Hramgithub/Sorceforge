@@ -1,0 +1,93 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "dzhonni-boy-ru/scene/uekhat-na-mashine",
+  "kind": "scene",
+  "name": {
+    "ru": "Уехать на машине?",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Сыщики могут воспользоваться одной из машин и уехать прочь, сохранив себе жизнь, но учитывайте тот факт, что вампир в курсе про рабочую машину у фермы, плюс он может остановить одну из редких машин (в том числе подоспевшую полицейскую), убить владельцев, угнать её и отправиться в погоню за сыщиками ради мести. Включать ли подобную сцену в игру, остаётся на усмотрение Хранителя.\nМашины, на которых можно уехать: рабочая машина у фермы Бишопов (ключи — в доме), трактор в поле (ключ — проверка Внимания, управление — навык Управление тяжёлыми машинами), случайный автомобиль на шоссе (если отбить его у Джонни Боя), отремонтированная машина сыщиков (ящик автоинструментов из трактора и проверка Механики) или полицейская машина.",
+    "en": null
+  },
+  "when": "когда у сыщиков есть рабочая машина",
+  "arc": {
+    "scenario": "dzhonni-boy-ru/scenario/dzhonni-boy",
+    "part": "Уехать на машине?",
+    "order": 10
+  },
+  "where": [
+    {
+      "location": "dzhonni-boy-ru/location/ferma-bishopov"
+    },
+    {
+      "location": "dzhonni-boy-ru/location/obezdnaya-doroga"
+    }
+  ],
+  "participants": [
+    {
+      "id": "dzhonni-boy-ru/character/dzhonni-dikson",
+      "role": "маньяк-вампир"
+    }
+  ],
+  "mechanics": {
+    "ru": "Погоня — правила погони «Книги хранителя». Достижение Хранителя «Так просто не отделаетесь!» — злодей пускается в погоню за сыщиками, которым удалось уехать.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Сыщики спасаются бегством — или Джонни Бой догоняет их на угнанной машине.",
+    "en": null
+  },
+  "refs": [
+    "dzhonni-boy-ru/location/kukuruznye-polya",
+    "coc:rule:kc-vehicle-chases",
+    "coc:skill:heavy-machinery",
+    "coc:skill:mechanical-repair"
+  ],
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "dzhonni-boy-ru",
+      "physical_page": 6,
+      "printed_page": 6,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Уехать на машине?»"
+    },
+    {
+      "book_id": "dzhonni-boy-ru",
+      "physical_page": 4,
+      "printed_page": 4,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Ферма»: две легковые машины"
+    },
+    {
+      "book_id": "dzhonni-boy-ru",
+      "physical_page": 5,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Возможные события на полях», пункты 3–4; ключи от машины"
+    },
+    {
+      "book_id": "dzhonni-boy-ru",
+      "physical_page": 7,
+      "printed_page": 7,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Достижения Хранителя»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Список машин во втором абзаце собран из разных мест книги (с. 4–5) — сведение редакции (Р-41)."
+  }
+}

@@ -64,6 +64,7 @@ CHECKS = {
     "grouping.under_city_in_range": ("grouping", "Место с номером прямо под городом, а номер в диапазоне района", "Р-209, Р-80", "авто: да — `part_of` → район по номеру (диапазон района однозначен)"),
     "grouping.wrong_district": ("grouping", "Место с номером в районе, а номер — из диапазона другого района", "Р-209", "авто: да при однозначном диапазоне, иначе чтение"),
     "grouping.same_number": ("grouping", "Места одной книги с одинаковым `number` под одним городом", "Р-206, Р-209", "чтение: двойник или опечатка номера"),
+    "grouping.under_city_with_districts": ("grouping", "Место прямо под городом, у которого есть районы (в гайде — вперемешку с районами или в «Прочих»)", "Р-159, Р-209", "чтение: район по карте или адресу; то же место путеводителя — слить (Р-154)"),
     "grouping.empty_district": ("grouping", "Район без мест", "Р-80, Р-209", "чтение: удалить район или разнести в него места"),
     # hint
     "hint.spoiler": ("hint", "Подпись места похожа на спойлер (тайна, улика, проверка, культ, проценты, кубы)", "Р-209", "чтение: подпись переписывается в нейтральное «что это за место», остальное — в описание"),
@@ -458,6 +459,20 @@ class Audit:
         for i, r in self.locs.items():
             if r.get("location_type") == "район" and not self.kids.get(i):
                 self.add("grouping.empty_district", i, f"район в «{self.name(r.get('part_of'))}» без мест", "medium")
+        # a city with districts: a place right under the city (not a district, not an area, no children) is listed
+        # among the districts or in «Прочие» — it should stand in its district by the map or the address (Р-209)
+        for city, r in self.locs.items():
+            if self.ltype(city) not in TOPS:
+                continue
+            kids = [k for k in self.kids.get(city, []) if k in self.locs]
+            if not any(self.ltype(k) == "район" for k in kids):
+                continue
+            for k in kids:
+                if self.ltype(k) in ("район", "область", "зона") or self.kids.get(k):
+                    continue
+                self.add("grouping.under_city_with_districts", k,
+                         f"место прямо под городом «{self.name(city)}», у которого есть районы: адрес — «{(self.locs[k].get('address') or '—')[:60]}»",
+                         "medium", target=city)
 
     # --- 3. hints --------------------------------------------------------------------------------------------
     def hints(self):

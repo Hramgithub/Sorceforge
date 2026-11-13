@@ -101,7 +101,7 @@ Isola di Malamente в реестре нет русской формы — дан
 | The Plague Monk | 66 | `…/creature/plague-monk` |
 | The Reliquae (статблок, Infected Flesh, таблицы болезней) | 66–67 | `…/creature/reliquae`; сценарий: таблицы «Заражение Реликв: серьёзное / смертельное» |
 | New Mythos Tome: Iuramentum Corruptionis | 67 | `…/tome/iuramentum-corruptionis` |
-| New Spell: Control Reliquae | 68 | сценарий: keeper_info (пересказ); черновик общей записи — в отчёте (kb/spells общий) |
+| New Spell: Control Reliquae | 68 | заклинание `coc:spell:control-reliquae`; сценарий: keeper_info (пересказ) |
 | A Few Pointers on Running Viral from Bud | 68 | сценарий: advice; персонажи (description) |
 | Player Handouts: #1 Original Google Map | 69 | `…/handout/handout-1-google-map` |
 | #2a–2b The Sight: Player Reference Sheet | 70–71 | `…/handout/handout-2-the-sight` |

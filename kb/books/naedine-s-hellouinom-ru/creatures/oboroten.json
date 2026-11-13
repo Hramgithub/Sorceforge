@@ -1,0 +1,159 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "naedine-s-hellouinom-ru/creature/oboroten",
+  "kind": "creature",
+  "name": {
+    "ru": "Оборотень (особняк фон Райшт)",
+    "en": null
+  },
+  "aliases": [],
+  "category": "supernatural",
+  "subcategory": "ликантроп",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:werewolf",
+      "note": null,
+      "note_back": "в особняке фон Райшт и в лесу"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "150",
+        "value": 150
+      },
+      "CON": {
+        "raw": "35",
+        "value": 35
+      },
+      "SIZ": {
+        "raw": "75",
+        "value": 75
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "APP": {
+        "raw": "5",
+        "value": 5
+      },
+      "INT": {
+        "raw": "50",
+        "value": 50
+      },
+      "POW": {
+        "raw": "35",
+        "value": 35
+      }
+    },
+    "hp": {
+      "raw": "11",
+      "value": 11
+    },
+    "mp": {
+      "raw": "-",
+      "value": null
+    },
+    "damage_bonus": {
+      "raw": "+2d6",
+      "value": "2d6"
+    },
+    "build": {
+      "raw": "3",
+      "value": 3
+    },
+    "armor": {
+      "raw": "1 пункт",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Укус",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d8+1d4",
+          "dice": "1d8",
+          "adds_db": false
+        }
+      }
+    ],
+    "sanity": {
+      "raw": "0",
+      "value": 0,
+      "max": null
+    }
+  },
+  "abilities": [
+    {
+      "name": "Неуязвимость",
+      "summary": "Оборотням можно причинить вред только серебром и огнём.",
+      "raw": "Примечание: оборотням можно причинить вред только серебром и огнем."
+    }
+  ],
+  "description": {
+    "ru": "Высокое худое голодное волкоподобное существо, ходящее на задних лапах; рычит почти человеческим голосом (абзацы 450, 547, 579, 601). Встречается в запертой комнате без окон третьего этажа (450; девушка-оборотень 579 или оборотень, появившийся рядом с ней, 547), в лесу на тропе (601) и по таблице встреч у мавзолея и на кладбище (537). Вред ему причиняют только серебро и огонь; серебряные пули — см. револьвер (529).",
+    "en": null
+  },
+  "habitat": null,
+  "sources": [
+    {
+      "book_id": "naedine-s-hellouinom-ru",
+      "physical_page": 194,
+      "printed_page": 194,
+      "method": "book_text",
+      "verified": true,
+      "note": "абзац 526: характеристики"
+    },
+    {
+      "book_id": "naedine-s-hellouinom-ru",
+      "physical_page": 164,
+      "printed_page": 164,
+      "method": "book_text",
+      "verified": true,
+      "note": "абзац 450"
+    },
+    {
+      "book_id": "naedine-s-hellouinom-ru",
+      "physical_page": 223,
+      "printed_page": 223,
+      "method": "book_text",
+      "verified": true,
+      "note": "абзац 601"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.attacks[Укус].damage",
+      "printed": "1d8+1d4",
+      "expected": "1d8+2d6",
+      "note": "при БкУ +2d6 укус напечатан с прибавкой 1d4 (абзац 526); значение оставлено как напечатано",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": null
+  }
+}

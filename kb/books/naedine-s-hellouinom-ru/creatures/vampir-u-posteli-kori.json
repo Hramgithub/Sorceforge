@@ -1,0 +1,100 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "naedine-s-hellouinom-ru/creature/vampir-u-posteli-kori",
+  "kind": "creature",
+  "name": {
+    "ru": "Вампир у постели Кори",
+    "en": null
+  },
+  "aliases": [],
+  "category": "supernatural",
+  "subcategory": "вампир",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:vampire",
+      "note": null,
+      "note_back": "у постели Кори в особняке фон Райшт"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {},
+    "hp": {
+      "raw": "2d6",
+      "value": null,
+      "note": "абзац 300; в абзаце 388 — 1d10+8"
+    },
+    "armor": {
+      "raw": "нет",
+      "value": null
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Укус",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50 %",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d4 урона, плюс высасывает 3d8+2 пунктов СИЛ (крови)",
+          "dice": "1d4",
+          "adds_db": false,
+          "extra": "высасывание 3d8+2 СИЛ"
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Фигура в черной мантии с бледным изможденным лицом, злобными красными глазами, заострёнными ушами и клыками, появляющаяся из пара у кровати, к которой прикован Кори, в спальне 382 (абзацы 327, 387; 0/1d6 Рассудка). Быстрее Криса и всегда атакует первым; укусив, держится и пьёт кровь, пока жертва не умрёт. Прогнанный, отшатывается к окну и исчезает туманом (330; 1d6 Рассудка).",
+    "en": null
+  },
+  "habitat": null,
+  "sources": [
+    {
+      "book_id": "naedine-s-hellouinom-ru",
+      "physical_page": 116,
+      "printed_page": 116,
+      "method": "book_text",
+      "verified": true,
+      "note": "абзац 300"
+    },
+    {
+      "book_id": "naedine-s-hellouinom-ru",
+      "physical_page": 144,
+      "printed_page": 144,
+      "method": "book_text",
+      "verified": true,
+      "note": "абзацы 387, 388"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.hp",
+      "printed": "2d6 (абзац 300); 1d10+8 (абзац 388)",
+      "expected": null,
+      "note": "у одного и того же вампира два разных количества ПЗ: если Крис споткнулся при бегстве — 2d6 (прогнать — 7+ урона), если ждал или напал — 1d10+8 (прогнать — половина ПЗ)",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": null
+  }
+}

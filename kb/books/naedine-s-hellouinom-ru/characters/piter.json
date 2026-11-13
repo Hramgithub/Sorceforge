@@ -1,0 +1,173 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "naedine-s-hellouinom-ru/character/piter",
+  "kind": "character",
+  "name": {
+    "ru": "Питер",
+    "en": null
+  },
+  "aliases": [],
+  "roles": [
+    "npc"
+  ],
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "naedine-s-hellouinom-ru/character/doktor-karri",
+      "note": "создатель",
+      "note_back": "оживлённый голем-раб"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "90",
+        "value": 90
+      },
+      "CON": {
+        "raw": "90",
+        "value": 90
+      },
+      "SIZ": {
+        "raw": "80",
+        "value": 80
+      },
+      "DEX": {
+        "raw": "25",
+        "value": 25
+      },
+      "APP": {
+        "raw": "75",
+        "value": 75
+      },
+      "INT": {
+        "raw": "15",
+        "value": 15
+      },
+      "POW": {
+        "raw": "65",
+        "value": 65
+      },
+      "EDU": {
+        "raw": "–",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "17",
+      "value": 17
+    },
+    "mp": {
+      "raw": "13",
+      "value": 13
+    },
+    "damage_bonus": {
+      "raw": "+1d6",
+      "value": "1d6"
+    },
+    "build": {
+      "raw": "2",
+      "value": 2
+    },
+    "armor": {
+      "raw": "этот голем получает только половину урона от любого проникающего оружия (ножи, огнестрельное оружие и т. д.), но получает полный урон от ударного оружия и огня",
+      "value": null
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d3+1d6",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Молот",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "2d8+ 1d6",
+          "dice": "2d8",
+          "adds_db": true
+        }
+      }
+    ],
+    "sanity": {
+      "raw": "0",
+      "value": 0,
+      "max": null
+    },
+    "spells": {
+      "raw": "нет",
+      "items": []
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "0",
+        "trigger": "без потери – он кажется нормальным человеком"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Высокий мускулистый молодой человек, бледный и неподвижный, в свободной белой мантии (абзац 452). Оживлённый голем доктора Карри: полностью покорен своему создателю.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Погиб в трагической автокатастрофе прямо за территорией замка на тёмной дороге внизу — и доктор Карри «создал его заново» (452). По приказу Карри нападает на Криса (422).",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "naedine-s-hellouinom-ru",
+      "physical_page": 155,
+      "printed_page": 155,
+      "method": "book_text",
+      "verified": true,
+      "note": "абзац 427: характеристики"
+    },
+    {
+      "book_id": "naedine-s-hellouinom-ru",
+      "physical_page": 165,
+      "printed_page": 165,
+      "method": "book_text",
+      "verified": true,
+      "note": "абзац 452"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "оживлённый мертвец; вид — голем (coc:creature:golem), но у Питера свой статблок"
+  }
+}

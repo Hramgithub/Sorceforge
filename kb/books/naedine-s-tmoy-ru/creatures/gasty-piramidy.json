@@ -1,0 +1,119 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "naedine-s-tmoy-ru/creature/gasty-piramidy",
+  "kind": "creature",
+  "name": {
+    "ru": "Гасты пирамиды",
+    "en": "Ghasts (pyramid)"
+  },
+  "category": "mythos_monster",
+  "subcategory": "служитель",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:gast",
+      "note_back": "гасты пирамиды Эхнатона («Наедине с тьмой»)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {},
+    "hp": {
+      "raw": "10",
+      "value": 10
+    },
+    "attacks_per_round": {
+      "raw": "2",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Укус или когти",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "3d6",
+          "dice": "3d6",
+          "adds_db": false
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "при встрече"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Омерзительные твари, прыгающие на длинных задних ногах, с мордами-карикатурами на человеческие лица, кашляющими хрипами и красными голодными глазами (абз. 304). В пирамиде Эхнатона носят пищу мумиям и тычут пленников крючьями (355, 412).",
+    "en": null
+  },
+  "legend": {
+    "ru": "Сбегает, получив 5 и более урона; перстень против них не помогает (абз. 304).",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "naedine-s-tmoy-ru",
+      "physical_page": 55,
+      "printed_page": 54,
+      "method": "book_text",
+      "verified": true,
+      "note": "абз. 304: Гасты пирамиды"
+    },
+    {
+      "book_id": "naedine-s-tmoy-ru",
+      "physical_page": 60,
+      "printed_page": 59,
+      "method": "book_text",
+      "verified": true,
+      "note": "абз. 355"
+    },
+    {
+      "book_id": "naedine-s-tmoy-ru",
+      "physical_page": 66,
+      "printed_page": 65,
+      "method": "book_text",
+      "verified": true,
+      "note": "абз. 402"
+    },
+    {
+      "book_id": "naedine-s-tmoy-ru",
+      "physical_page": 67,
+      "printed_page": 66,
+      "method": "book_text",
+      "verified": true,
+      "note": "абз. 412"
+    },
+    {
+      "book_id": "naedine-s-tmoy-ru",
+      "physical_page": 69,
+      "printed_page": 68,
+      "method": "book_text",
+      "verified": true,
+      "note": "абз. 430"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Числа — из абз. 304 (10 ПЗ, две атаки за раунд 45% (22/9), 3d6); книга отсылает к «Книге хранителя» (с. 284). Урон 3d6 — как напечатано."
+  }
+}

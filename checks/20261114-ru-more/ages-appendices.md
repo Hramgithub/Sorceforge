@@ -44,8 +44,8 @@
 - `kb/terms/` пересобирается `pipeline/migrate/terms_build.py`, который сначала удаляет папку; шага для глоссария
   «Тёмных веков» (доверенный перевод) в нём нет — при пересборке 84 термина пропадут. Нужен шаг 1d по образцу
   `kr-glossary.json`, читающий `checks/20261114-ru-more/ages-glossary.json` (готовый файл — `.cache/ages-appendices/ages-glossary.json`:
-  `{ru, en, definition, page, physical_page}`) с `by: "trusted"`, `scope`, пометками и ссылкой на `coc:skill:alchemy`.
-- Картинки листа сыщика: `python pipeline/art/add_images.py .cache/ages-appendices/images.json`, затем применить предложения.
+  `{ru, en, definition, page, physical_page}`) с `by: "trusted"`, `scope`, пометками и ссылкой на `coc:skill:alchemy`. — сделано (коммит `45be0b8`: шаг 1d глоссария).
+- Картинки листа сыщика: `python pipeline/art/add_images.py .cache/ages-appendices/images.json`, затем применить предложения. — сделано (коммит `45be0b8`: картинки у `handout/sheet-investigator`).
 
 ## Вопросы владельцу
 

@@ -107,7 +107,7 @@
 
 ## Кандидаты в общие записи
 
-- Озеро Хали — уже три книжные записи (`lokhmotya-korolya-ru/location/carcosa-lake-hali`, `fears-sharp-little-needles-en/location/poetry-night-lake-of-hali`, `mify-hastura-ru/location/lake-hali`) → `coc:location:lake-hali`?
-- Дворец Каркозы (Йхтилла) — `lokhmotya-korolya-ru/location/carcosa-palace` и `mify-hastura-ru/location/palace`.
+- Озеро Хали — уже три книжные записи (`lokhmotya-korolya-ru/location/carcosa-lake-hali`, `fears-sharp-little-needles-en/location/poetry-night-lake-of-hali`, `mify-hastura-ru/location/lake-hali`) → `coc:location:lake-hali`? — сделано (общая запись `coc:location:lake-hali`).
+- Дворец Каркозы (Йхтилла) — `lokhmotya-korolya-ru/location/carcosa-palace` и `mify-hastura-ru/location/palace`. — сделано (общая запись `coc:location:carcosa-palace`).
 - Стивен Алзис и «Судьба» (the Fate), клуб «Апокалипсис» — персонажи «Delta Green», могут встретиться в других книгах.
 - Дом на Скале (Висконсин) — место вне городов базы.

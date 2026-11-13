@@ -81,7 +81,7 @@
 
 ## Ссылки на записи других частей (лягут после сведения)
 
-`L/character/malcolm-quarrie` (часть house) — в `L/scenario/carcosa` и сценах `carcosa-yolanda`, `carcosa-sculpture-museum-roby`, `carcosa-fate-of-cannich`, `carcosa-aftermath`. Остальные ссылки (madman, park, springer-flight, goatswood, intro) уже в базе.
+`L/character/malcolm-quarrie` (часть house) — в `L/scenario/carcosa` и сценах `carcosa-yolanda`, `carcosa-sculpture-museum-roby`, `carcosa-fate-of-cannich`, `carcosa-aftermath`. Остальные ссылки (madman, park, springer-flight, goatswood, intro) уже в базе. — сделано (сведение, коммит `c326b15`).
 
 ## Предложения
 

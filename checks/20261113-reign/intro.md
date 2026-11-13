@@ -77,5 +77,5 @@
 
 ## Ссылки на записи других частей (появятся при сведении)
 
-- `tsarstvo-terrora-ru/scenario/part-1789`, `tsarstvo-terrora-ru/scenario/part-1794` (этапы), `tsarstvo-terrora-ru/location/1789-versailles` — части 1789 и 1794.
-- `coc:table:reign-timeline`, `coc:rule:reign-bibliography` — часть appendices.
+- `tsarstvo-terrora-ru/scenario/part-1789`, `tsarstvo-terrora-ru/scenario/part-1794` (этапы), `tsarstvo-terrora-ru/location/1789-versailles` — части 1789 и 1794. — сделано (сведение, коммит `ca3f06d`).
+- `coc:table:reign-timeline`, `coc:rule:reign-bibliography` — часть appendices. — сделано (сведение, коммит `ca3f06d`).

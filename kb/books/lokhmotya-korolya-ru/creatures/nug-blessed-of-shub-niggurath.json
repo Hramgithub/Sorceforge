@@ -444,7 +444,7 @@
             },
             {
               "name": "Искалечить/Исцелить животное",
-              "spell": null
+              "spell": "coc:spell:lame-heal-animal-folk"
             }
           ]
         },
@@ -874,7 +874,7 @@
             },
             {
               "name": "Очаровать животное",
-              "spell": null
+              "spell": "coc:spell:charm-animal-folk"
             }
           ]
         },
@@ -1174,5 +1174,35 @@
       "parse_uncertain"
     ],
     "notes": "Групповой профиль (Р-74): основной статблок — #1, варианты — шесть Благословенных из таблицы с. 191. Характеристик НАР и ОБР книга не даёт. Строка БкУ напечатана «+0 +0 + 0 −1d4 +0 +0» (у #3 лишний «+»). Существо, а не персонаж: безымянные гибриды-чудовища (Р-94); общей записи такого вида нет — книга прямо говорит, что это не существа Malleus Monstrorum. «Скрыться» — Hide (Скрытность), «Запах» — Scent (Нюх)."
-  }
+  },
+  "images": [
+    {
+      "file": "art/creatures/nug-blessed-of-shub-niggurath.webp",
+      "kind": "art",
+      "caption": "Благословенный Шуб-Ниггурат",
+      "source": "«Лохмотья Короля», с. 191"
+    },
+    {
+      "file": "art/creatures/nug-blessed-of-shub-niggurath-2.webp",
+      "kind": "illustration",
+      "caption": "Благословенный в лесу Гоатсвуда",
+      "source": "«Лохмотья Короля», с. 175"
+    }
+  ],
+  "corrections": [
+    {
+      "field": "variants[1].statblock.spells.items[Искалечить/Исцелить животное].spell",
+      "from": null,
+      "to": "coc:spell:lame-heal-animal-folk",
+      "reason": "заклинание заведено в справочнике по Grand Grimoire (grand-grimoire-en, с. 135)",
+      "ref": null
+    },
+    {
+      "field": "variants[4].statblock.spells.items[Очаровать животное].spell",
+      "from": null,
+      "to": "coc:spell:charm-animal-folk",
+      "reason": "заклинание заведено в справочнике по Grand Grimoire (grand-grimoire-en, с. 64)",
+      "ref": null
+    }
+  ]
 }

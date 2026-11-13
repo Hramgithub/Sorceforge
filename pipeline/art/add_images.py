@@ -2,9 +2,10 @@
 
 The mapping is a JSON list, one item per picture:
   {"target": "<record id>", "src": "<original file>", "kind": "art|portrait|card|handout|plan|illustration|photo",
-   "caption": "…", "source": "where it comes from"}
-Each picture is saved as app/art/<record kind>s/<record slug>[-<n>].webp, at most 1400 px on the long side, WebP
-quality 80; the originals stay where they are. The proposals file is written next to the mapping
+   "caption": "…", "source": "where it comes from", "name": "<file name, optional>"}
+Each picture is saved as app/art/<record kind>s/<name or record slug>[-<n>].webp, at most 1400 px on the long side, WebP
+quality 80; a given `name` (a book prefix against clashes of slugs between books) never overwrites an existing file;
+the originals stay where they are. The proposals file is written next to the mapping
 (<mapping>-proposals.json) for pipeline/integrate/apply.py.
 
 Usage: python pipeline/art/add_images.py <mapping.json> [--dry-run]
@@ -43,11 +44,14 @@ def main() -> int:
             print(f"нет файла {src}")
             return 1
         rec = read(where[it["target"]])
-        slug = rec["id"].split("/")[-1].split(":")[-1]
+        slug = it.get("name") or rec["id"].split("/")[-1].split(":")[-1]
         n = taken.get(rec["id"], len(rec.get("images") or []))
         taken[rec["id"]] = n + 1
         rel = f"art/{rec['kind']}s/{slug}{'-' + str(n + 1) if n else ''}.webp"
         out = ROOT / "app" / rel
+        if it.get("name") and out.exists():
+            print(f"файл {rel} уже есть — дай другое имя (name)")
+            return 1
         if not a.dry_run:
             im = Image.open(src)
             im = im.convert("RGBA" if im.mode in ("RGBA", "LA", "P") else "RGB")

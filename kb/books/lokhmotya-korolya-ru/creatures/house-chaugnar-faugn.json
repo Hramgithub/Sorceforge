@@ -213,7 +213,7 @@
         },
         {
           "name": "Затуманить память",
-          "spell": null
+          "spell": "coc:spell:imprison-mind"
         },
         {
           "name": "Мысленное внушение",
@@ -316,7 +316,7 @@
       "field": "statblock.spells",
       "printed": "«Затуманить память»; нет Create Window, Perfection, Wrack",
       "expected": "Imprison Mind; Create Window, Perfection, Wrack",
-      "note": "Русский список короче оригинала: пропущены Create Window, Perfection и Wrack, а на месте Imprison Mind стоит «Затуманить память» (Cloud Memory — другое заклинание). Ссылки «Затуманить память» и «Околдовать жертву» (Mesmerize Sacrifice — атака) не поставлены.",
+      "note": "Русский список короче оригинала: пропущены Create Window, Perfection и Wrack, а на месте Imprison Mind стоит «Затуманить память» (Cloud Memory — другое заклинание). Ссылка «Затуманить память» — на Imprison Mind (`coc:spell:imprison-mind`) по оригиналу; «Околдовать жертву» (Mesmerize Sacrifice — атака) без ссылки.",
       "fixed": false
     },
     {
@@ -333,5 +333,21 @@
       "parse_uncertain"
     ],
     "notes": "Числа отличаются от общей записи «Шагнер Фан», поэтому — отдельный профиль книги (Р-75). Статблок как напечатан (с. 282–283): характеристики — оригинал 6-й редакции ×5; ПЗ 90 = (700 + 200) / 10. Скорость «СКОР 70» — так и в оригинале 6-й редакции (70). МОЩ в книге обозначена «ВОЛ», ловкость — прежним сокращением перевода. Название в книге — «Чагнар Фан» / «Чагнар Фагн»; термин базы — «Шагнер Фан»."
-  }
+  },
+  "corrections": [
+    {
+      "field": "statblock.spells.items[Затуманить память].spell",
+      "from": null,
+      "to": "coc:spell:imprison-mind",
+      "reason": "по оригиналу: на этом месте списка в английском издании — Imprison Mind (errata записи); заклинание заведено в справочнике по Grand Grimoire (grand-grimoire-en, с. 130)",
+      "ref": null
+    },
+    {
+      "field": "errata[statblock.spells].note",
+      "from": "Русский список короче оригинала: пропущены Create Window, Perfection и Wrack, а на месте Imprison Mind стоит «Затуманить память» (Cloud Memory — другое заклинание). Ссылки «Затуманить память» и «Околдовать жертву» (Mesmerize Sacrifice — атака) не поставлены.",
+      "to": "Русский список короче оригинала: пропущены Create Window, Perfection и Wrack, а на месте Imprison Mind стоит «Затуманить память» (Cloud Memory — другое заклинание). Ссылка «Затуманить память» — на Imprison Mind (`coc:spell:imprison-mind`) по оригиналу; «Околдовать жертву» (Mesmerize Sacrifice — атака) без ссылки.",
+      "reason": "заведено заклинание Imprison Mind; ссылка поставлена по оригиналу",
+      "ref": null
+    }
+  ]
 }

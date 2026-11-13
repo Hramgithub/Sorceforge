@@ -387,7 +387,7 @@
       "field": "variants[«Ужас в Иннсмуте» (1923, с. 30)].spells",
       "printed": "Summon Star Spawn",
       "expected": null,
-      "note": "заклинания «Summon Star Spawn» нет ни в справочнике заклинаний, ни в тексте сценария (механика не дана); ссылка пустая.",
+      "note": "заклинания «Summon Star Spawn» нет ни в справочнике заклинаний, ни в тексте сценария (механика не дана); ссылка — на семейство «Заклинания призыва».",
       "fixed": false
     }
   ],
@@ -838,7 +838,7 @@
             },
             {
               "name": "Summon Star Spawn",
-              "spell": null
+              "spell": "coc:spell:summon-bind"
             },
             {
               "name": "Power Drain",
@@ -950,6 +950,20 @@
       "from": "pobeg-iz-innsmuta-ru/character/dzheremayya-bryuster",
       "to": "coc:character:jeremiah-brewster",
       "reason": "Р-154: персонаж встретился во второй книге («Ужас в Иннсмуте», The Innsmouth Terror) — общая запись"
+    },
+    {
+      "field": "variants[1].statblock.spells.items[Summon Star Spawn].spell",
+      "from": null,
+      "to": "coc:spell:summon-bind",
+      "reason": "отдельной статьи нет ни в одной книге базы; ссылка — на семейство «Заклинания призыва», как «Summon/Bind Star Spawn of Cthulhu» у Ратиллы (pulp-cthulhu-en)",
+      "ref": null
+    },
+    {
+      "field": "errata[variants[«Ужас в Иннсмуте» (1923, с. 30)].spells].note",
+      "from": "заклинания «Summon Star Spawn» нет ни в справочнике заклинаний, ни в тексте сценария (механика не дана); ссылка пустая.",
+      "to": "заклинания «Summon Star Spawn» нет ни в справочнике заклинаний, ни в тексте сценария (механика не дана); ссылка — на семейство «Заклинания призыва».",
+      "reason": "заклинание связано с семейством «Заклинания призыва»",
+      "ref": null
     }
   ]
 }

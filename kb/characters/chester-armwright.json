@@ -1,0 +1,407 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "coc:character:chester-armwright",
+  "kind": "character",
+  "name": {
+    "ru": "Честер Армрайт",
+    "en": "Dr. Chester Armwright"
+  },
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "декан Медицинского колледжа, доктор медицины",
+    "en": "Dean and M. D."
+  },
+  "occupation_ref": "coc:occupation:vrach",
+  "age": {
+    "raw": "53",
+    "value": 53
+  },
+  "sex": "мужской",
+  "residence": "Аркхэм",
+  "axes": {
+    "era": [
+      "1920s",
+      "1930s"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "75",
+        "value": 75
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65
+      },
+      "APP": {
+        "raw": "65",
+        "value": 65
+      },
+      "INT": {
+        "raw": "75",
+        "value": 75
+      },
+      "POW": {
+        "raw": "70",
+        "value": 70
+      },
+      "EDU": {
+        "raw": "91",
+        "value": 91
+      }
+    },
+    "hp": {
+      "raw": "14",
+      "value": 14
+    },
+    "mp": {
+      "raw": "14",
+      "value": 14
+    },
+    "sanity": {
+      "raw": "68",
+      "value": 68,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "5",
+      "value": 5,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 5
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Револьвер .45",
+          "en": ".45 revolver"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1d10+2",
+          "dice": "1d10+2",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:45-revolver"
+      },
+      {
+        "name": {
+          "ru": "Винтовка со скользящим затвором .30-06",
+          "en": ".30–06 bolt action rifle"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "2d6+4",
+          "dice": "2d6+4",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:30-06-bolt-action-rifle"
+      },
+      {
+        "name": {
+          "ru": "Дробовик 20-го калибра (2 ствола)",
+          "en": "20-g shotgun (2B)"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "2d6/1d6/1d3",
+          "dice": "2d6/1d6/1d3",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:shotgun-20-gauge-2b"
+      }
+    ],
+    "dodge": {
+      "raw": "32% (16/6)",
+      "value": 32,
+      "half": 16,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Обаяние",
+        "skill": "coc:skill:charm",
+        "value": {
+          "raw": "35%",
+          "value": 35
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "70%",
+          "value": 70
+        }
+      },
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "80%",
+          "value": 80
+        }
+      },
+      {
+        "name": "Работа в библиотеке",
+        "skill": "coc:skill:library-use",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Медицина",
+        "skill": "coc:skill:medicine",
+        "value": {
+          "raw": "70%",
+          "value": 70
+        }
+      },
+      {
+        "name": "Ориентирование (Аркхэм)",
+        "skill": "coc:skill:navigate",
+        "specialization": "Аркхэм",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Наука (химия)",
+        "skill": "coc:skill:science",
+        "specialization": "химия",
+        "value": {
+          "raw": "35%",
+          "value": 35
+        }
+      },
+      {
+        "name": "Наука (фармакология)",
+        "skill": "coc:skill:science",
+        "specialization": "фармакология",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Иностранный язык (французский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "французский",
+        "value": {
+          "raw": "30%",
+          "value": 30
+        }
+      },
+      {
+        "name": "Иностранный язык (латынь)",
+        "skill": "coc:skill:language-other",
+        "specialization": "латынь",
+        "value": {
+          "raw": "20%",
+          "value": 20
+        }
+      }
+    ]
+  },
+  "background": {
+    "description": "Худощавый, с тонким лицом в морщинах и тёмными мешками под глазами; гладко выбрит, тёмно-каштановые волосы зачёсаны назад; носит тёмные строгие костюмы, белые рубашки и тёмный галстук.",
+    "traits": "Прямая и порой властная манера скрывает доброе сердце."
+  },
+  "description": {
+    "ru": "Доктор, декан Медицинского колледжа (624) и, как глава медицинской школы, заодно главный управляющий Клинической больницы св. Марии. Выпускник университета; недолго практиковал, затем вернулся в университет профессором. Около 1904 года был знаком с третьекурсником Гербертом Уэстом и, хотя почти не имел с ним дела, знал о слухах вокруг странных теорий юноши. Страстный охотник, член Аркхэмского оружейного клуба (с. 132).\nВ Pulp Cthulhu (1930-е; гл. 3, клуб «Авангард», с. 48): Член аркхемского клуба «Авангард», страстный охотник. Вступил в клуб студентом-медиком Мискатоникского университета вскоре после начала века и возобновил членство, вернувшись в Аркхем деканом медицинского факультета в 1920-е.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "arkham-en",
+      "physical_page": 182,
+      "printed_page": 181,
+      "method": "book_text",
+      "verified": true,
+      "note": "624 Notable Folk; статблок «Dr. Chester Armwright, Dean and M. D. age 53»"
+    },
+    {
+      "book_id": "arkham-en",
+      "physical_page": 181,
+      "printed_page": 180,
+      "method": "book_text",
+      "verified": true,
+      "note": "624: глава школы управляет больницей"
+    },
+    {
+      "book_id": "arkham-guide-hort-ru",
+      "physical_page": 70,
+      "printed_page": 70,
+      "method": "book_text",
+      "verified": true,
+      "note": "609. Медицинский факультет (с. 70): пометка"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 49,
+      "printed_page": 48,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 3, «Аркхемский клуб «Авангард»»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Путеводитель «Аркхэм»: Аркхэмский оружейный клуб (с. 132) — Торговый район. Путеводитель Hort (с. 70): статблок у Hort другой: СИЛ 60 ВЫН 70 ТЕЛ 75 ЛВК 65 НАР 75 ИНТ 85 МОЩ 80 ОБР 96, Рассудок 88, ПЗ 15, БкУ +1d4, Комплекция 1, Скорость 7, ПМ 16; револьвер .45 55%, винтовка .30-06 70% (2d6+3), помповый дробовик 20-го калибра 75%, Уклонение 32%; Наука (химия) 35%, Наука (фармакология) 35%, Средства 75%, Первая помощь 80%, Язык (латинский) 15%, Работа в библиотеке 50%, Медицина 65%; в записи — по книге 2023 (Р-234). Pulp-версия (Pulp Cthulhu, 1930-е) — абзац в описании; статблока в Pulp Cthulhu нет (с. 48), вариант не заводится; axes.ruleset — core. Профессия (Pulp Cthulhu) — «декан медицинского факультета Мискатоникского университета»."
+  },
+  "corrections": [
+    {
+      "field": "quality.notes",
+      "from": "Кандидат на слияние с pulp-cthulhu-en/character/chester-armwright (Р-154). Аркхэмский оружейный клуб (с. 132) — Торговый район.",
+      "to": "Кандидат на слияние с pulp-cthulhu-en/character/chester-armwright (Р-154). Аркхэмский оружейный клуб (с. 132) — Торговый район. Путеводитель Hort (с. 70): статблок у Hort другой: СИЛ 60 ВЫН 70 ТЕЛ 75 ЛВК 65 НАР 75 ИНТ 85 МОЩ 80 ОБР 96, Рассудок 88, ПЗ 15, БкУ +1d4, Комплекция 1, Скорость 7, ПМ 16; револьвер .45 55%, винтовка .30-06 70% (2d6+3), помповый дробовик 20-го калибра 75%, Уклонение 32%; Наука (химия) 35%, Наука (фармакология) 35%, Средства 75%, Первая помощь 80%, Язык (латинский) 15%, Работа в библиотеке 50%, Медицина 65%; в записи — по книге 2023 (Р-234).",
+      "reason": "расхождения с книгой 2023 и данные Hort — только пометкой: путеводитель Hort (arkham-guide-hort-ru, с. 70) — дополнение к книге 2023 (Р-234)",
+      "ref": "Р-234"
+    },
+    {
+      "field": "sources",
+      "from": null,
+      "to": "{\"book_id\": \"arkham-guide-hort-ru\", \"physical_page\": 70, \"printed_page\": 70, \"method\": \"book_text\", \"verified\": true, \"note\": \"609. Медицинский факультет (с. 70): пометка\"}",
+      "reason": "источник дополнения: путеводитель Hort (arkham-guide-hort-ru, с. 70) — дополнение к книге 2023 (Р-234)",
+      "ref": "Р-234"
+    },
+    {
+      "field": "id",
+      "from": "arkham-en/character/campus-chester-armwright",
+      "to": "coc:character:chester-armwright",
+      "reason": "Р-154: персонаж путеводителя «Аркхэм» (2023) встретился в других книгах — общая запись; основа — запись путеводителя (Р-234)",
+      "ref": "Р-154"
+    },
+    {
+      "field": "description.ru",
+      "from": null,
+      "to": "абзац «В Pulp Cthulhu (1930-е; гл. 3, клуб «Авангард», с. 48): …» — текст записи pulp-cthulhu-en/character/chester-armwright без изменений",
+      "reason": "слияние записей: у абзаца — своя книга (Р-125, Р-154)",
+      "ref": "Р-154"
+    },
+    {
+      "field": "sources",
+      "from": null,
+      "to": "источники Pulp Cthulhu (с. 48)",
+      "reason": "источники влитой записи",
+      "ref": "Р-154"
+    },
+    {
+      "field": "axes.era",
+      "from": "[\"1920s\"]",
+      "to": "[\"1920s\", \"1930s\"]",
+      "reason": "эпоха влитой записи Pulp Cthulhu",
+      "ref": "Р-154"
+    },
+    {
+      "field": "id",
+      "from": "pulp-cthulhu-en/character/chester-armwright",
+      "to": "coc:character:chester-armwright",
+      "reason": "Р-154: запись Pulp Cthulhu влита в общую запись (абзац в описании, источники, ссылки; Р-234: места и люди Аркхэма — по путеводителю 2023 года)",
+      "ref": "Р-154"
+    },
+    {
+      "field": "aliases",
+      "from": null,
+      "to": "[\"Chester Armwright\"]",
+      "reason": "названия и имена влитых записей как напечатаны (Р-96)",
+      "ref": "Р-154"
+    }
+  ],
+  "aliases": [
+    "Chester Armwright"
+  ]
+}

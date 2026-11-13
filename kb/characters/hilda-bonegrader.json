@@ -1,0 +1,105 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "coc:character:hilda-bonegrader",
+  "kind": "character",
+  "name": {
+    "ru": "Хильда Боунгрейдер",
+    "en": "Hilda Bonegrader"
+  },
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "старшая служащая библиотеки",
+    "en": "supervisory clerk"
+  },
+  "occupation_ref": "coc:occupation:bibliotekar",
+  "age": {
+    "raw": "44",
+    "value": 44
+  },
+  "sex": "женский",
+  "residence": "Аркхэм",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "coc:character:henry-armitage",
+      "note": "директор библиотеки",
+      "note_back": "старшая служащая"
+    }
+  ],
+  "description": {
+    "ru": "Старшая (надзирающая) служащая библиотеки Орна.\nВ сценарии «Вышел срок» («Черноводный ручей», с. 66): Начальница библиотекаря Люси Коласки в университетской библиотеке.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "arkham-en",
+      "physical_page": 176,
+      "printed_page": 175,
+      "method": "book_text",
+      "verified": true
+    },
+    {
+      "book_id": "chernovodnyy-ruchey-ru",
+      "physical_page": 65,
+      "printed_page": 66,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Библиотека Мискатоникского университета»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Профессия («Вышел срок») — «начальница библиотекарей». Запись «Вышел срок»: статблока нет; в сценарии только упомянута."
+  },
+  "aliases": [
+    "миссис Боунгрейдер"
+  ],
+  "corrections": [
+    {
+      "field": "id",
+      "from": "arkham-en/character/campus-hilda-bonegrader",
+      "to": "coc:character:hilda-bonegrader",
+      "reason": "Р-154: персонаж путеводителя «Аркхэм» (2023) встретился в других книгах — общая запись; основа — запись путеводителя (Р-234)",
+      "ref": "Р-154"
+    },
+    {
+      "field": "description.ru",
+      "from": null,
+      "to": "абзац «В сценарии «Вышел срок» («Черноводный ручей», с. 66): …» — текст записи chernovodnyy-ruchey-ru/character/dues-khilda-boungreyder без изменений",
+      "reason": "слияние записей: у абзаца — своя книга (Р-125, Р-154)",
+      "ref": "Р-154"
+    },
+    {
+      "field": "sources",
+      "from": null,
+      "to": "источники «Вышел срок» (с. 66)",
+      "reason": "источники влитой записи",
+      "ref": "Р-154"
+    },
+    {
+      "field": "id",
+      "from": "chernovodnyy-ruchey-ru/character/dues-khilda-boungreyder",
+      "to": "coc:character:hilda-bonegrader",
+      "reason": "Р-154: запись «Вышел срок» влита в общую запись (абзац в описании, источники, ссылки; Р-234: места и люди Аркхэма — по путеводителю 2023 года)",
+      "ref": "Р-154"
+    },
+    {
+      "field": "aliases",
+      "from": null,
+      "to": "[\"миссис Боунгрейдер\"]",
+      "reason": "названия и имена влитых записей как напечатаны (Р-96)",
+      "ref": "Р-154"
+    }
+  ]
+}

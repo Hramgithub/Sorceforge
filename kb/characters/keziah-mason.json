@@ -1,0 +1,528 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "coc:character:keziah-mason",
+  "kind": "character",
+  "name": {
+    "ru": "Кеция Мейсон",
+    "en": "Keziah Mason"
+  },
+  "aliases": [
+    "Old Keziah",
+    "Старая Кеция",
+    "Нахав"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "бессмертная ведьма",
+    "en": "Immortal Witch"
+  },
+  "age": {
+    "raw": "неизвестен",
+    "value": null
+  },
+  "sex": "женский",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:nyarlathotep",
+      "note": "заключила договор с ним в облике Тёмного, или Рогатого человека",
+      "note_back": "ведьма, заключившая с ним договор"
+    },
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:azathoth",
+      "note": "по преданию, расписалась кровью в великой Книге Азатота",
+      "note_back": "ведьма, расписавшаяся в Книге Азатота"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "75",
+        "value": 75
+      },
+      "CON": {
+        "raw": "75",
+        "value": 75
+      },
+      "SIZ": {
+        "raw": "50",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "APP": {
+        "raw": "40",
+        "value": 40
+      },
+      "INT": {
+        "raw": "105",
+        "value": 105
+      },
+      "POW": {
+        "raw": "115",
+        "value": 115
+      },
+      "EDU": {
+        "raw": "125",
+        "value": 125
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "23",
+      "value": 23
+    },
+    "sanity": {
+      "raw": "00",
+      "value": 0,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Мясницкий нож",
+          "en": "butcher's knife"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "1d6+1d4",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "notes": "в книге — «или мясницкий нож» в строке драки; урон напечатан 1d6+1d4, у ножей справочника он другой — ссылки на оружие нет"
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "81%",
+          "value": 81
+        }
+      },
+      {
+        "name": "История",
+        "skill": "coc:skill:history",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "80%",
+          "value": 80
+        }
+      },
+      {
+        "name": "Медицина (яды и снадобья)",
+        "skill": "coc:skill:medicine",
+        "specialization": "яды и снадобья",
+        "value": {
+          "raw": "70%",
+          "value": 70
+        }
+      },
+      {
+        "name": "Оккультизм",
+        "skill": "coc:skill:occult",
+        "value": {
+          "raw": "65%",
+          "value": 65
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "70%",
+          "value": 70
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      },
+      {
+        "name": "Наука (астрономия)",
+        "skill": "coc:skill:science",
+        "specialization": "астрономия",
+        "value": {
+          "raw": "35%",
+          "value": 35
+        }
+      },
+      {
+        "name": "Наука (химия)",
+        "skill": "coc:skill:science",
+        "specialization": "химия",
+        "value": {
+          "raw": "55%",
+          "value": 55
+        }
+      },
+      {
+        "name": "Наука (геометрия)",
+        "skill": "coc:skill:science",
+        "specialization": "геометрия",
+        "value": {
+          "raw": "90%",
+          "value": 90
+        }
+      },
+      {
+        "name": "Наука (фармацевтика)",
+        "skill": "coc:skill:science",
+        "specialization": "фармацевтика",
+        "value": {
+          "raw": "70%",
+          "value": 70
+        }
+      },
+      {
+        "name": "Наука (физика)",
+        "skill": "coc:skill:science",
+        "specialization": "физика",
+        "value": {
+          "raw": "90%",
+          "value": 90
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "65%",
+          "value": 65
+        }
+      },
+      {
+        "name": "Родной язык (английский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "английский",
+        "value": {
+          "raw": "70%",
+          "value": 70
+        }
+      }
+    ],
+    "armor": {
+      "raw": "нет, но может сотворить Защиту плоти: 1d6 брони за каждое вложенное ПМ",
+      "value": 0
+    },
+    "spells": {
+      "raw": "Связь с Тёмным (Ньярлатхотеп)∆, Зловещее проклятье Азатота, Зачаровать флейту, Защита плоти, Врата‡, Иссушение, Призыв/укрощение охотящегося ужаса, Вурский знак, Черви†, другие — на усмотрение Хранителя",
+      "items": [
+        {
+          "name": "Contact Dark One (Nyarlathotep)∆",
+          "spell": "coc:spell:contact-nyarlathotep"
+        },
+        {
+          "name": "Dread Curse of Azathoth",
+          "spell": "coc:spell:dread-curse-of-azathoth"
+        },
+        {
+          "name": "Enchant Pipes",
+          "spell": "coc:spell:enchant-pipes"
+        },
+        {
+          "name": "Flesh Ward",
+          "spell": "coc:spell:flesh-ward"
+        },
+        {
+          "name": "Gate‡",
+          "spell": "coc:spell:create-gate"
+        },
+        {
+          "name": "Shrivelling",
+          "spell": "coc:spell:shrivelling"
+        },
+        {
+          "name": "Summon/Bind Hunting Horror",
+          "spell": "coc:spell:summon-bind-hunting-horror"
+        },
+        {
+          "name": "Voorish Sign",
+          "spell": "coc:spell:voorish-sign"
+        },
+        {
+          "name": "Worms†",
+          "spell": null
+        }
+      ]
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d4",
+        "trigger": "встреча с Кецией Мейсон, когда она творит магию или какое-то мерзкое дело"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Особая связь с Ньярлатхотепом",
+      "summary": "Кажется, может связаться с ним когда угодно и не тратя пунктов магии.",
+      "raw": "∆ Mason possesses a special relationship with Nyarlathotep, seemingly able to contact the entity at will and without expenditure of magic points.",
+      "refs": [
+        "coc:creature:nyarlathotep",
+        "coc:spell:contact-nyarlathotep"
+      ]
+    },
+    {
+      "name": "Глубинное знание Врат",
+      "summary": "Знает магию Врат глубже большинства ведьм и колдунов: создаёт Врата за один раунд и утаскивает жертв в другие места и времена против их воли (при необходимости — встречная проверка МОЩ).",
+      "raw": "‡ Possesses a deeper knowledge of Gate magic beyond the ken of most other witches and sorcerers; able to create a Gate in one round and drag her victims into other spaces and times against their will (use opposed POW roll as necessary).",
+      "refs": [
+        "coc:spell:create-gate"
+      ]
+    },
+    {
+      "name": "Неприязнь к христианским символам",
+      "summary": "Возможно, из-за преследований в XVII веке, при крахе проверки МОЩ отступает или на миг замирает перед распятием или другой христианской святыней.",
+      "raw": "Perhaps due to an aversion to the symbols and rhetoric of Christianity stemming from her persecution in the 1600s, Mason may, if fumbling a POW roll, withdraw or momentarily freeze when encountering a crucifix or another icon of Christianity."
+    },
+    {
+      "name": "Заклинание «Черви»",
+      "summary": "Заклинание «Черви» (Worms) описано в «Великом гримуаре магии Мифов Ктулху», с. 191; записи этого заклинания в базе нет.",
+      "raw": "† Worms spell is detailed in The Grand Grimoire of Cthulhu Mythos Magic, page 191."
+    },
+    {
+      "name": "Pulp Cthulhu: модификация",
+      "summary": "ПЗ 25; Удача 60; Скорость 9; Комплекция 1 (2).",
+      "raw": "Pulp Modification: HP: 25; Luck: 60; Move: 9; Build: 1 (2)"
+    },
+    {
+      "name": "Талант Pulp: Стремительная атака",
+      "summary": "потратив 10 Удачи, получает дополнительную атаку в ближнем бою в одном раунде",
+      "raw": "Rapid Attack: spend 10 Luck points to gain extra melee attack in a single combat round."
+    },
+    {
+      "name": "Талант Pulp: Ловкий манёвр",
+      "summary": "Комплекция +1, когда она начинает боевой манёвр",
+      "raw": "Outmaneuver: build increased by +1 when initiating combat maneuver."
+    }
+  ],
+  "background": {
+    "traits": "Злобна, коварна и насквозь порочна."
+  },
+  "description": {
+    "ru": "Старческое, как у карги, лицо с пронзительными глазами и пятнистой кожей; носит грязный капюшон.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Женщина признанного зла времён охоты на ведьм. В 1692 году её, обвинённую в колдовстве, схватили салемские власти, но она исчезла из салемской камеры прямо во время суда: знание углов пространства-времени и Врат позволило ей уйти в другое измерение. Её якорем в этом пространстве-времени, по-видимому, стал её аркхэмский дом, в последующие века прозванный «Ведьминым домом» (723). Считается, что Кеция расписалась кровью в великой Книге Азатота и заключила договор с Ньярлатхотепом в его облике Тёмного, или Рогатого человека.\nПо тем же углам она возвращается в Ведьмин дом и Аркхэм вершить свои дела: справлять кощунственные обряды на Незримом острове (401) посреди Мискатоника и вместе с другими членами Аркхэмского ковена (с. 51) — в бесплодной долине за Мидоу-Хилл (OS105). Тайник в мансарде Ведьмина дома с вратами в иное измерение, где она хранит книги и культовые предметы, описан у дома. Её вместе с Бурым Дженкином время от времени видят и в проходе Орна (725).\nПо путеводителю Hort (Arkham Unveiled): обычно её замечают накануне Вальпургиевой ночи или Дня всех святых, и за этим всегда следует похищение ребёнка; минимум дважды в год, в эти дни, она возвращается в тайник и приносит там в жертву младенцев.\nВ сценарии «Багровые письмена» («Книга хранителя», с. 368–369, 377–378): Осуждённая ведьма и детоубийца Аркхэмского процесса над ведьмами 1690-х годов. Наложила путы на порабощённую ею сущность — Ужас, заточённый кровью и чернилами меж углов и линий на страницах; около дюжины детально иллюстрированных страниц с геометрическими или алхимическими формулами и схемами, якобы изъятых у неё, вошли в документы процесса. Энтони Флиндерс хорошо осведомлён о легенде о Кеции Мейсон; блуждающие огоньки могут появляться у легендарного Ведьмина дома Кеции Мейсон. Бормотание Хантера («Она, её судили, её бумаги, её имя, её символы, её пленник…») — о ней. Эмилия Кёрт может оказаться её потомком (Мейсоны), а колдунья-предок — украсть её тело. Книга советует прочитать «Грёзы в ведьмовском доме».",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "arkham-en",
+      "physical_page": 203,
+      "printed_page": 202,
+      "method": "book_text",
+      "verified": true,
+      "entry_page": 201,
+      "note": "723 Dombrowski’s Boarding House: Strangeness; врезка «Keziah Mason, Immortal Witch, age unknown» — статблок, Pulp Cthulhu"
+    },
+    {
+      "book_id": "arkham-en",
+      "physical_page": 204,
+      "printed_page": 203,
+      "method": "book_text",
+      "verified": true,
+      "note": "725 Orne’s Gangway: Keziah Mason и Brown Jenkin"
+    },
+    {
+      "book_id": "arkham-guide-hort-ru",
+      "physical_page": 85,
+      "printed_page": 85,
+      "method": "book_text",
+      "verified": true,
+      "note": "711. Ведьмин дом: Кеция Мейсон — легенда (канун Первого мая и Дня всех святых, жертвоприношения)"
+    },
+    {
+      "book_id": "arkham-guide-hort-ru",
+      "physical_page": 105,
+      "printed_page": 105,
+      "method": "book_text",
+      "verified": true,
+      "note": "1007. Мидоу-хилл (с. 105): псевдоним"
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 354,
+      "printed_page": 377,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Документы Аркхэмского процесса над ведьмами», «Проявления Ужаса»"
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 345,
+      "printed_page": 368,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Эмилия Кёрт»: «В роли виновника», врезка «Наследие Провиденса»"
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 346,
+      "printed_page": 369,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Энтони Флиндерс»: легенда о Кеции Мейсон"
+    },
+    {
+      "book_id": "keeper-rulebook-ru",
+      "physical_page": 355,
+      "printed_page": 378,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Знамения»: Ведьмин дом Кеции Мейсон"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.attacks[Драка].chance",
+      "printed": "65% (32/7)",
+      "expected": "65% (32/13)",
+      "note": "Пятая часть от 65 — 13, напечатано 7; исправлено в записи (Р-35).",
+      "fixed": true
+    },
+    {
+      "field": "statblock.move",
+      "printed": "8",
+      "expected": "9",
+      "note": "СИЛ 75 и ЛВК 70 больше ТЕЛ 50 — Скорость 9; возраст неизвестен, поправку за возраст проверить нельзя — оставлено как напечатано (Р-161). В Pulp-модификации — Скорость 9."
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Путеводитель «Аркхэм»: Рассудок «00» — как напечатано. В путеводителе Hort (Arkham Unveiled) статблок другой (СИЛ 70, ПЗ 13, Скорость 9, нож 65% (32/13), другие навыки и заклинания, потеря Рассудка 1/1d2); взят по книге 2023 года. Названия заклинаний в raw переведены по справочнику; «Gate» — запись «Создание врат». Профессия («Багровые письмена») — «ведьма». Запись «Багровые письмена»: упомянутый персонаж без статблока; книжная запись «Багровых письмен» (общей записи Кеции Мейсон в базе нет; Бурый Дженкин — её фамильяр, coc:creature:brown-jenkin)."
+  },
+  "corrections": [
+    {
+      "field": "aliases",
+      "from": null,
+      "to": "Нахав",
+      "reason": "русская форма названия в путеводитель Hort (arkham-guide-hort-ru, с. 105) — дополнение к книге 2023 (Р-234)",
+      "ref": "Р-234"
+    },
+    {
+      "field": "sources",
+      "from": null,
+      "to": "{\"book_id\": \"arkham-guide-hort-ru\", \"physical_page\": 105, \"printed_page\": 105, \"method\": \"book_text\", \"verified\": true, \"note\": \"1007. Мидоу-хилл (с. 105): псевдоним\"}",
+      "reason": "источник дополнения: путеводитель Hort (arkham-guide-hort-ru, с. 105) — дополнение к книге 2023 (Р-234)",
+      "ref": "Р-234"
+    },
+    {
+      "field": "id",
+      "from": "arkham-en/character/frenchhill-keziah-mason",
+      "to": "coc:character:keziah-mason",
+      "reason": "Р-154: персонаж путеводителя «Аркхэм» (2023) встретился в других книгах — общая запись; основа — запись путеводителя (Р-234)",
+      "ref": "Р-154"
+    },
+    {
+      "field": "legend.ru",
+      "from": null,
+      "to": "абзац «В сценарии «Багровые письмена» («Книга хранителя», с. 368–369, 377–378): …» — текст записи keeper-rulebook-ru/character/crimson-keziah-mason без изменений",
+      "reason": "слияние записей: у абзаца — своя книга (Р-125, Р-154)",
+      "ref": "Р-154"
+    },
+    {
+      "field": "sources",
+      "from": null,
+      "to": "источники «Багровые письмена» (с. 368–369, 377–378)",
+      "reason": "источники влитой записи",
+      "ref": "Р-154"
+    },
+    {
+      "field": "id",
+      "from": "keeper-rulebook-ru/character/crimson-keziah-mason",
+      "to": "coc:character:keziah-mason",
+      "reason": "Р-154: запись «Багровые письмена» влита в общую запись (абзац в описании, источники, ссылки; Р-234: места и люди Аркхэма — по путеводителю 2023 года)",
+      "ref": "Р-154"
+    }
+  ]
+}

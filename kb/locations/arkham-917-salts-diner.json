@@ -13,7 +13,7 @@
   "address": "Ист-Солтонстолл-стрит, 207",
   "keeper_hint": "закусочная для рабочих напротив дома Симпсона: завтраки и обеды, по пятницам и субботам до 19:00",
   "description": {
-    "ru": "Почти напротив многоквартирного дома Симпсона (911) закусочная подаёт завтраки и обеды, а по пятницам и субботам работает дольше. Кукурузная каша с тушёным инжиром и тресковые шарики в томатном соусе — популярные завтраки у рабочих, которым нужна сытная еда перед трудовым днём. Открыто с 6:30 до 13:30, с понедельника по субботу; по пятницам и субботам — до 19:00.",
+    "ru": "Почти напротив многоквартирного дома Симпсона (911) закусочная подаёт завтраки и обеды, а по пятницам и субботам работает дольше. Кукурузная каша с тушёным инжиром и тресковые шарики в томатном соусе — популярные завтраки у рабочих, которым нужна сытная еда перед трудовым днём. Открыто с 6:30 до 13:30, с понедельника по субботу; по пятницам и субботам — до 19:00.\nВ сценарии «Будь у меня молоток» («Keeper's Companion», с. 142, 146): Закусочная в Аркхэме (путеводитель Chaosium «Аркхэм», с. 226); сыщики часто обедают здесь. Здесь неполный день работает официанткой Фрэнки Мерл; после работы культист Элвин Харрис следит, чтобы она вернулась домой.",
     "en": null
   },
   "residents": [
@@ -32,7 +32,10 @@
   ],
   "refs": [
     "coc:location:arkham-911-simpson-apartments",
-    "keepers-companion-en/scenario/if-i-had-a-hammer"
+    "keepers-companion-en/scenario/if-i-had-a-hammer",
+    "keepers-companion-en/character/hammer-frankie-merle",
+    "keepers-companion-en/character/hammer-alvin-harris",
+    "keepers-companion-en/scene/hammer-knock-at-the-door"
   ],
   "axes": {
     "era": [
@@ -48,6 +51,22 @@
       "method": "book_text",
       "verified": true,
       "note": "«917 Salt’s Diner», «Notable Folk»"
+    },
+    {
+      "book_id": "keepers-companion-en",
+      "physical_page": 147,
+      "printed_page": 146,
+      "method": "book_text",
+      "verified": true,
+      "note": "сценарий «If I Had a Hammer» (гл. 7): «Knock at the Door»"
+    },
+    {
+      "book_id": "keepers-companion-en",
+      "physical_page": 143,
+      "printed_page": 142,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Frankie & the Cult»: работа в закусочной"
     }
   ],
   "quality": {
@@ -55,7 +74,36 @@
     "flags": [
       "translated"
     ],
-    "notes": "Место 917 путеводителя «Аркхэм» (Chaosium, 2023), район 9 «Нижний Саутсайд» (Р-234). Русский текст — наш перевод с английского; машинный перевод книги не использовался как источник (Р-147). Та же закусочная, что в сценарии «Будь у меня молоток» («Компаньон хранителя»; keepers-companion-en/location/hammer-salts-diner) — кандидат на слияние (Р-154)."
+    "notes": "Место 917 путеводителя «Аркхэм» (Chaosium, 2023), район 9 «Нижний Саутсайд» (Р-234). Русский текст — наш перевод с английского; машинный перевод книги не использовался как источник (Р-147)."
   },
-  "corrections": []
+  "corrections": [
+    {
+      "field": "description.ru",
+      "from": null,
+      "to": "абзац «В сценарии «Будь у меня молоток» («Keeper's Companion», с. 142, 146): …» — текст записи keepers-companion-en/location/hammer-salts-diner без изменений",
+      "reason": "слияние записей: у абзаца — своя книга (Р-125, Р-154)",
+      "ref": "Р-154"
+    },
+    {
+      "field": "sources",
+      "from": null,
+      "to": "источники «Будь у меня молоток» (с. 142, 146)",
+      "reason": "источники влитой записи",
+      "ref": "Р-154"
+    },
+    {
+      "field": "refs",
+      "from": null,
+      "to": "[\"keepers-companion-en/character/hammer-frankie-merle\", \"keepers-companion-en/character/hammer-alvin-harris\", \"keepers-companion-en/scene/hammer-knock-at-the-door\"]",
+      "reason": "ссылки записи «Будь у меня молоток»",
+      "ref": "Р-154"
+    },
+    {
+      "field": "id",
+      "from": "keepers-companion-en/location/hammer-salts-diner",
+      "to": "coc:location:arkham-917-salts-diner",
+      "reason": "Р-154: запись «Будь у меня молоток» влита в общую запись (абзац в описании, источники, ссылки; Р-234: места и люди Аркхэма — по путеводителю 2023 года)",
+      "ref": "Р-154"
+    }
+  ]
 }

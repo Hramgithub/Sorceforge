@@ -15,13 +15,17 @@
   "address": "311 W Pickman Street",
   "keeper_hint": "закрытый мужской клуб в георгианском особняке",
   "description": {
-    "ru": "Георгианский особняк, принадлежащий закрытому мужскому клубу «Мискатоник». Двери всегда открыты для членов, привратник дежурит всегда. Есть библиотека, бильярдная, общая гостиная, бар и небольшая столовая; для ночёвки — три спальни. Женщин не пускают дальше комнаты привратника в вестибюле. Членство, взносы, известные члены и выгоды — в записи клуба.",
+    "ru": "Георгианский особняк, принадлежащий закрытому мужскому клубу «Мискатоник». Двери всегда открыты для членов, привратник дежурит всегда. Есть библиотека, бильярдная, общая гостиная, бар и небольшая столовая; для ночёвки — три спальни. Женщин не пускают дальше комнаты привратника в вестибюле. Членство, взносы, известные члены и выгоды — в записи клуба.\nВ сценарии «Благослови детей его» («Bless the Beast and Children», перевод владельца; с. 3, 5): Роскошный клуб «Мискатоник» — № 11 на карте. Андерсона, гостя Роберта Бекворта, здесь часто можно застать.",
     "en": null
   },
   "refs": [
     "arkham-en/organization/uptown-miskatonic-club",
     "arkham-en/character/uptown-stewart-portman",
-    "arkham-en/character/overview-william-danvers-johnston"
+    "arkham-en/character/overview-william-danvers-johnston",
+    "bless-the-beast-and-children-ru/character/charlz-anderson",
+    "coc:character:robert-beckworth",
+    "bless-the-beast-and-children-ru/scene/nachalo-pokhishcheniya",
+    "bless-the-beast-and-children-ru/scenario/bless-the-beast-and-children"
   ],
   "axes": {
     "era": [
@@ -45,6 +49,22 @@
       "method": "book_text",
       "verified": true,
       "note": "812 «Мискатоник-клуб»: форма названия"
+    },
+    {
+      "book_id": "bless-the-beast-and-children-ru",
+      "physical_page": 5,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": false,
+      "note": "«Ключ к карте Аркхэма»: 11 Miskatonic Club"
+    },
+    {
+      "book_id": "bless-the-beast-and-children-ru",
+      "physical_page": 3,
+      "printed_page": 3,
+      "method": "book_text",
+      "verified": false,
+      "note": "«Сведения для сыщиков»"
     }
   ],
   "quality": {
@@ -52,7 +72,36 @@
     "flags": [
       "translated"
     ],
-    "notes": "Наш перевод путеводителя «Аркхэм» (Chaosium, 2023), часть rivertown-uptown (Р-234). Адрес по книге 2023 — 311 W Pickman Street (у Хорта — 411 W Хай-стрит)."
+    "notes": "Наш перевод путеводителя «Аркхэм» (Chaosium, 2023), часть rivertown-uptown (Р-234). Адрес по книге 2023 — 311 W Pickman Street (у Хорта — 411 W Хай-стрит). Запись «Благослови детей его»: источник — перевод владельца (Р-223), русский текст — его; оригинал в библиотеке не найден. Номер — метка на карте Аркхэма (с. 5)."
   },
-  "corrections": []
+  "corrections": [
+    {
+      "field": "description.ru",
+      "from": null,
+      "to": "абзац «В сценарии «Благослови детей его» («Bless the Beast and Children», перевод владельца; с. 3, 5): …» — текст записи bless-the-beast-and-children-ru/location/klub-miskatonik без изменений",
+      "reason": "слияние записей: у абзаца — своя книга (Р-125, Р-154)",
+      "ref": "Р-154"
+    },
+    {
+      "field": "sources",
+      "from": null,
+      "to": "источники «Благослови детей его» (с. 3, 5)",
+      "reason": "источники влитой записи",
+      "ref": "Р-154"
+    },
+    {
+      "field": "refs",
+      "from": null,
+      "to": "[\"bless-the-beast-and-children-ru/character/charlz-anderson\", \"bless-the-beast-and-children-ru/character/robert-bekvort\", \"bless-the-beast-and-children-ru/scene/nachalo-pokhishcheniya\", \"bless-the-beast-and-children-ru/scenario/bless-the-beast-and-children\"]",
+      "reason": "ссылки записи «Благослови детей его»",
+      "ref": "Р-154"
+    },
+    {
+      "field": "id",
+      "from": "bless-the-beast-and-children-ru/location/klub-miskatonik",
+      "to": "coc:location:arkham-804-miskatonic-club",
+      "reason": "Р-154: запись «Благослови детей его» влита в общую запись (абзац в описании, источники, ссылки; Р-234: места и люди Аркхэма — по путеводителю 2023 года)",
+      "ref": "Р-154"
+    }
+  ]
 }

@@ -6,14 +6,16 @@
     "ru": "Пекарня Хогана",
     "en": "Hogan’s Bakery"
   },
-  "aliases": [],
+  "aliases": [
+    "кабинет О’Лири"
+  ],
   "location_type": "здание",
   "part_of": "coc:location:arkham-french-hill",
   "number": "716",
   "address": "302 S French Hill Street",
   "keeper_hint": "ирландская пекарня — прикрытие банды О’Банниона; задний кабинет О’Лири",
   "description": {
-    "ru": "Саут-Френч-Хилл-стрит, 302. Пекарня в основном для ирландской общины Френч-Хилла и окрестностей. Её традиционные пахтовые сконы, содовый хлеб и пирожные популярны, но по сути пекарня — прикрытие одного из предприятий Дэнни О’Банниона (транспортная компания «Лаки Кловер», 412), которым из заднего кабинета заправляет Мордехай «Молоток» О’Лири.\nКиллиан Хоган когда-то занял у О’Банниона, не смог расплатиться и переписал пекарню на него; теперь он лишь пекарь и подставной «владелец». О’Лири — тайная власть: ведёт преступные дела и каждую неделю отсылает деньги боссу. Его правая рука и громила — Найл «Гвоздь» О’Кифи. Рядом — спортзал «Саутсайд» (717), где собираются «Камни»; они обходят пекарню стороной.",
+    "ru": "Саут-Френч-Хилл-стрит, 302. Пекарня в основном для ирландской общины Френч-Хилла и окрестностей. Её традиционные пахтовые сконы, содовый хлеб и пирожные популярны, но по сути пекарня — прикрытие одного из предприятий Дэнни О’Банниона (транспортная компания «Лаки Кловер», 412), которым из заднего кабинета заправляет Мордехай «Молоток» О’Лири.\nКиллиан Хоган когда-то занял у О’Банниона, не смог расплатиться и переписал пекарню на него; теперь он лишь пекарь и подставной «владелец». О’Лири — тайная власть: ведёт преступные дела и каждую неделю отсылает деньги боссу. Его правая рука и громила — Найл «Гвоздь» О’Кифи. Рядом — спортзал «Саутсайд» (717), где собираются «Камни»; они обходят пекарню стороной.\nВ сценарии «Вышел срок» («Черноводный ручей», с. 61–62): Пекарня Хогана служит прикрытием для незаконных делишек Мордехая О’Лири; в дальнем помещении он устроил себе кабинет. В кабинете — стол, на котором только чашка кофе, свежая газета и старый плотничный молоток; за правым плечом О’Лири у стены стоит Гвоздь О’Кифи. Здесь помощи искать не у кого.",
     "en": null
   },
   "residents": [
@@ -26,17 +28,22 @@
       "note": "тайный хозяин, кабинет в задней комнате"
     },
     {
-      "id": "arkham-en/character/frenchhill-niall-okeeffe",
-      "note": "правая рука О’Лири"
+      "id": "coc:character:niall-okeeffe",
+      "note": "правая рука О’Лири; подручный О’Лири («Вышел срок»)"
+    },
+    {
+      "id": "chernovodnyy-ruchey-ru/character/dues-mordekhay-oliri",
+      "note": "кабинет в дальнем помещении («Вышел срок»)"
     }
   ],
   "refs": [
     "arkham-en/organization/frenchhill-the-rocks",
-    "chernovodnyy-ruchey-ru/location/dues-pekarnya-khogana",
     "coc:location:arkham-412-lucky-clover-cartage",
     "coc:location:arkham-717-southside-gym",
-    "arkham-en/character/merchant-danny-obannion",
-    "arkham-en/organization/merchant-obannion-organization"
+    "coc:character:danny-obannion",
+    "coc:organization:obannion-organization",
+    "chernovodnyy-ruchey-ru/scene/dues-poyavlenie-syshchikov",
+    "chernovodnyy-ruchey-ru/scenario/dues-vyshel-srok"
   ],
   "axes": {
     "era": [
@@ -68,6 +75,22 @@
       "method": "book_text",
       "verified": true,
       "note": "карта района и ключ «Points of Interest» (с. 193)"
+    },
+    {
+      "book_id": "chernovodnyy-ruchey-ru",
+      "physical_page": 60,
+      "printed_page": 61,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Появление сыщиков»: кабинет О’Лири в пекарне Хогана"
+    },
+    {
+      "book_id": "chernovodnyy-ruchey-ru",
+      "physical_page": 61,
+      "printed_page": 62,
+      "method": "book_text",
+      "verified": true,
+      "note": "кабинет, Гвоздь О’Кифи"
     }
   ],
   "quality": {
@@ -75,6 +98,50 @@
     "flags": [
       "translated"
     ],
-    "notes": "Та же пекарня — в сценарии «Вышел срок» (chernovodnyy-ruchey-ru/location/dues-pekarnya-khogana) — кандидат на слияние (Р-154)."
-  }
+    "notes": "Адрес («Вышел срок»): «Саут-Френч-Хилл-стрит, район Френч-Хилл»."
+  },
+  "corrections": [
+    {
+      "field": "description.ru",
+      "from": null,
+      "to": "абзац «В сценарии «Вышел срок» («Черноводный ручей», с. 61–62): …» — текст записи chernovodnyy-ruchey-ru/location/dues-pekarnya-khogana без изменений",
+      "reason": "слияние записей: у абзаца — своя книга (Р-125, Р-154)",
+      "ref": "Р-154"
+    },
+    {
+      "field": "sources",
+      "from": null,
+      "to": "источники «Вышел срок» (с. 61–62)",
+      "reason": "источники влитой записи",
+      "ref": "Р-154"
+    },
+    {
+      "field": "residents",
+      "from": null,
+      "to": "[\"chernovodnyy-ruchey-ru/character/dues-mordekhay-oliri\", \"chernovodnyy-ruchey-ru/character/dues-gvozd-okifi\"]",
+      "reason": "жители из записи «Вышел срок»",
+      "ref": "Р-154"
+    },
+    {
+      "field": "refs",
+      "from": null,
+      "to": "[\"chernovodnyy-ruchey-ru/scene/dues-poyavlenie-syshchikov\", \"chernovodnyy-ruchey-ru/organization/dues-mafiya-obanniona\", \"chernovodnyy-ruchey-ru/scenario/dues-vyshel-srok\"]",
+      "reason": "ссылки записи «Вышел срок»",
+      "ref": "Р-154"
+    },
+    {
+      "field": "id",
+      "from": "chernovodnyy-ruchey-ru/location/dues-pekarnya-khogana",
+      "to": "coc:location:arkham-716-hogans-bakery",
+      "reason": "Р-154: запись «Вышел срок» влита в общую запись (абзац в описании, источники, ссылки; Р-234: места и люди Аркхэма — по путеводителю 2023 года)",
+      "ref": "Р-154"
+    },
+    {
+      "field": "aliases",
+      "from": null,
+      "to": "[\"кабинет О’Лири\"]",
+      "reason": "названия и имена влитых записей как напечатаны (Р-96)",
+      "ref": "Р-154"
+    }
+  ]
 }

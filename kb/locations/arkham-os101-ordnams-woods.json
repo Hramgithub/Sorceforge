@@ -14,7 +14,7 @@
   "number": "OS101",
   "keeper_hint": "тёмный лес к западу от города",
   "description": {
-    "ru": "Тёмный, нависающий лес начинается к западу от города. Аркхэмцы редко заходят под его деревья: им милее холмистые и приветливые земли к северу и юго-востоку. Полог из сплетённых ветвей и листвы так густ, что солнце почти не пробивается; место жуткое, почти мёртвенно тихое, лишь изредка вскрикнет птица или зашуршит подлесок.\n\nПо слухам, в лесу иногда отсиживаются мелкие преступники в бегах, когда их ищет полиция. Большинство делает это лишь однажды: пережитое в лесу пугает и тревожит сильнее, чем встреча с полицией.\n\nЛес на карте окрестностей — метка 101, клетка E-3.",
+    "ru": "Тёмный, нависающий лес начинается к западу от города. Аркхэмцы редко заходят под его деревья: им милее холмистые и приветливые земли к северу и юго-востоку. Полог из сплетённых ветвей и листвы так густ, что солнце почти не пробивается; место жуткое, почти мёртвенно тихое, лишь изредка вскрикнет птица или зашуршит подлесок.\n\nПо слухам, в лесу иногда отсиживаются мелкие преступники в бегах, когда их ищет полиция. Большинство делает это лишь однажды: пережитое в лесу пугает и тревожит сильнее, чем встреча с полицией.\n\nЛес на карте окрестностей — метка 101, клетка E-3.\nВ сценарии «Маленькие чудеса» («Keeper's Companion», с. 125–126, 128): Старый лес в нескольких километрах к западу от Аркхэма. С Эйлсберийской дороги сворачивают направо на грунтовку, которая ведёт к остаткам сгоревшей хижины; за хижиной в лес уходит тропа, у начала которой стоит небольшая каменная фигурка. Древние деревья, лиственный полог, сквозь который изредка пробиваются лучи луны. В глубине леса — «чарующее место», любимое место покойной Мейбелл Уотсон: поляна у пруда между тремя деревьями, где Джеймс Уотсон начал ритуал. В путеводителе Chaosium «Аркхэм» — статья OS101. Хранитель может перенести сценарий в другой городок с лесом на окраине.",
     "en": null
   },
   "history": {
@@ -22,7 +22,12 @@
     "en": null
   },
   "refs": [
-    "arkham-en/character/outskirts-john-ordnam"
+    "arkham-en/character/outskirts-john-ordnam",
+    "keepers-companion-en/map/little-miracles-ordnams-woods",
+    "keepers-companion-en/map/little-miracles-deep-dark-woods",
+    "keepers-companion-en/creature/little-miracles-pixie-horde",
+    "keepers-companion-en/creature/little-miracles-red-lady-of-the-wood",
+    "keepers-companion-en/scenario/little-miracles"
   ],
   "axes": {
     "era": [
@@ -46,6 +51,30 @@
       "method": "book_text",
       "verified": true,
       "note": "карта «Highway Map of Arkham & portions of Essex Co.» (с. 230–231): метка 101, клетка E-3"
+    },
+    {
+      "book_id": "keepers-companion-en",
+      "physical_page": 126,
+      "printed_page": 125,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Keeper Information»: лес Орднэма в нескольких километрах к западу от Аркхэма, статья OS101 путеводителя"
+    },
+    {
+      "book_id": "keepers-companion-en",
+      "physical_page": 129,
+      "printed_page": 128,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Ordnam’s Woods»: дорога, хижина, тропа"
+    },
+    {
+      "book_id": "keepers-companion-en",
+      "physical_page": 127,
+      "printed_page": 126,
+      "method": "book_text",
+      "verified": true,
+      "note": "любимое место Мейбелл"
     }
   ],
   "quality": {
@@ -53,6 +82,43 @@
     "flags": [
       "translated"
     ],
-    "notes": "Место путеводителя «Аркхэм» (Chaosium, 2023), глава «Окрестности: за городской чертой» (OS100–OS199); русский текст — наш перевод (Р-234)."
-  }
+    "notes": "Место путеводителя «Аркхэм» (Chaosium, 2023), глава «Окрестности: за городской чертой» (OS100–OS199); русский текст — наш перевод (Р-234). Места сценария «Маленькие чудеса» в лесу (сгоревшая хижина, грунтовка, тропа, место ритуала) и его карта — записи сценария с part_of / ссылкой на это место."
+  },
+  "corrections": [
+    {
+      "field": "part_of",
+      "from": "coc:location:arkham",
+      "to": "coc:location:arkham-environs",
+      "reason": "запись keepers-companion-en/location/little-miracles-ordnams-woods: лес Орднэма — за городом (в нескольких километрах к западу, «Компаньон хранителя», с. 125, 128): место за городом — под областью «Окрестности Аркхэма» (Р-209)",
+      "ref": "Р-209"
+    },
+    {
+      "field": "description.ru",
+      "from": null,
+      "to": "абзац «В сценарии «Маленькие чудеса» («Keeper's Companion», с. 125–126, 128): …» — текст записи keepers-companion-en/location/little-miracles-ordnams-woods без изменений",
+      "reason": "слияние записей: у абзаца — своя книга (Р-125, Р-154)",
+      "ref": "Р-154"
+    },
+    {
+      "field": "sources",
+      "from": null,
+      "to": "источники «Маленькие чудеса» (с. 125–126, 128)",
+      "reason": "источники влитой записи",
+      "ref": "Р-154"
+    },
+    {
+      "field": "refs",
+      "from": null,
+      "to": "[\"keepers-companion-en/map/little-miracles-ordnams-woods\", \"keepers-companion-en/map/little-miracles-deep-dark-woods\", \"keepers-companion-en/creature/little-miracles-pixie-horde\", \"keepers-companion-en/creature/little-miracles-red-lady-of-the-wood\", \"keepers-companion-en/scenario/little-miracles\"]",
+      "reason": "ссылки записи «Маленькие чудеса»",
+      "ref": "Р-154"
+    },
+    {
+      "field": "id",
+      "from": "keepers-companion-en/location/little-miracles-ordnams-woods",
+      "to": "coc:location:arkham-os101-ordnams-woods",
+      "reason": "Р-154: запись «Маленькие чудеса» влита в общую запись (абзац в описании, источники, ссылки; Р-234: места и люди Аркхэма — по путеводителю 2023 года)",
+      "ref": "Р-154"
+    }
+  ]
 }

@@ -47,15 +47,15 @@
     },
     {
       "name": "«Нанести жертвенную мандалу» (Enchant Sacrificial Dagger)",
-      "spell": null
+      "spell": "coc:spell:enchant-sacrificial-dagger"
     },
     {
       "name": "«Ритуал жертвоприношения»",
-      "spell": null
+      "spell": "coc:spell:ritual-of-sacrifice"
     },
     {
       "name": "«Призыв Призрачного Охотника» (Summon Spectral Hunter)",
-      "spell": null
+      "spell": "coc:spell:become-spectral-hunter"
     }
   ],
   "refs": [
@@ -110,6 +110,15 @@
   "quality": {
     "needs_review": false,
     "flags": [],
-    "notes": "Книга Мифов из одного сценария, но задание помещает её в общий справочник (kb/tomes). Названия заклинаний — как напечатано в списке книги, с английским названием в скобках; в оригинале у «Призыва Призрачного Охотника» есть и своё название книги — «Summon Guardian Unseen», у «Беседы» — «Converse With Those Outside». «Нанести жертвенную мандалу», «Ритуал жертвоприношения» (с. 96) и «Призыв Призрачного Охотника» (по The Grand Grimoire of Cthulhu Mythos Magic, как помечает книга) в справочнике заклинаний нет. Числа сверены с английским оригиналом (с. 73)."
-  }
+    "notes": "Книга Мифов из одного сценария, но задание помещает её в общий справочник (kb/tomes). Названия заклинаний — как напечатано в списке книги, с английским названием в скобках; в оригинале у «Призыва Призрачного Охотника» есть и своё название книги — «Summon Guardian Unseen», у «Беседы» — «Converse With Those Outside». «Призыв Призрачного Охотника» книга отсылает к The Grand Grimoire of Cthulhu Mythos Magic — там это «Стать спектральным охотником» (Become Spectral Hunter). Числа сверены с английским оригиналом (с. 73)."
+  },
+  "corrections": [
+    {
+      "field": "spells",
+      "from": "spell: null у «Нанести жертвенную мандалу», «Ритуал жертвоприношения», «Призыв Призрачного Охотника»",
+      "to": "coc:spell:enchant-sacrificial-dagger, coc:spell:ritual-of-sacrifice, coc:spell:become-spectral-hunter",
+      "reason": "заклинания заведены в справочнике по «Царству Террора» (с. 73, 96) и Grand Grimoire (с. 37–38)",
+      "ref": "Р-228"
+    }
+  ]
 }

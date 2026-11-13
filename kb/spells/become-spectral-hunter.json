@@ -1,0 +1,107 @@
+{
+  "schema": "sourcefold.spell.v0",
+  "id": "coc:spell:become-spectral-hunter",
+  "kind": "spell",
+  "name": {
+    "ru": "Стать спектральным охотником",
+    "en": "Become Spectral Hunter"
+  },
+  "aliases": [
+    "Вызов Призрачного Охотника",
+    "Призыв Призрачного Охотника",
+    "Summon Spectral Hunter",
+    "Summon Guardian Unseen",
+    "Summon Creeping Guardian",
+    "Rite of the Unseeing Watcher"
+  ],
+  "category": "Создание существ",
+  "mechanic": "ритуал",
+  "cost": {
+    "raw": "16 ПМ, 10 МОЩ, 3d6 Рассудка",
+    "magic_points": "16",
+    "sanity": "3d6",
+    "pow": "10",
+    "other": "особым образом изготовленная фигурка, кровь нескольких животных; цель теряет весь Рассудок"
+  },
+  "casting_time": {
+    "raw": "1 час"
+  },
+  "description": {
+    "ru": "Заклинатель превращает добровольца в невидимое отвратительное человекоподобное чудовище, способное охранять, преследовать или нападать. Для заклинания нужны особым образом изготовленная фигурка, кровь нескольких животных и потеря целью заклинания всего Рассудка. Цель превращается навсегда и становится практически бессмертной.\nСпектральный охотник связан с подготовленной фигуркой и не может далеко уходить от места, где она находится. Если фигурку уничтожить, существо развеивается, но за неделю может (магически) изготовить себе новую фигурку. Если фигурку уничтожить в тот момент, когда произносится «Песнопение изгнания» (Chant of Dismissal), спектральный охотник изгнан навсегда.\nПо слухам, «Песнопение изгнания» знало племя хотетк из пустыни Мохаве (умевшее и создавать спектральных охотников); говорят, по меньшей мере один гость записал его, прежде чем хотетк исчезли.\nВ «Царстве Террора» этим заклинанием («Вызов Призрачного Охотника») Риго создал охотника, охраняющего гильотину на площади Революции; фигурку он закопал в землю под гильотиной (с. 95, 96).",
+    "en": null
+  },
+  "deeper_magic": {
+    "ru": "Удвоив вложенную в заклинание МОЩ (до 32), чародей создаёт ещё более чудовищного спектрального охотника — с удвоенными СИЛ, ВЫН, ТЕЛ и ПЗ.",
+    "en": null
+  },
+  "variant_of": null,
+  "refs": [
+    "coc:creature:spectral-hunter",
+    "tsarstvo-terrora-ru/creature/rigault-spectral-hunter"
+  ],
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "grand-grimoire-en",
+      "physical_page": 38,
+      "printed_page": 37,
+      "method": "book_text",
+      "verified": true,
+      "note": "Become Spectral Hunter (начало) и врезка о спектральных охотниках"
+    },
+    {
+      "book_id": "grand-grimoire-en",
+      "physical_page": 39,
+      "printed_page": 38,
+      "method": "book_text",
+      "verified": true,
+      "note": "окончание: фигурка, Chant of Dismissal, глубинная магия, другие названия"
+    },
+    {
+      "book_id": "tsarstvo-terrora-ru",
+      "physical_page": 96,
+      "printed_page": 96,
+      "method": "book_text",
+      "verified": true,
+      "note": "заклинания Риго: «Вызов Призрачного Охотника (Summon Spectral Hunter)»"
+    },
+    {
+      "book_id": "tsarstvo-terrora-ru",
+      "physical_page": 73,
+      "printed_page": 73,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Верховная Пустота»: «Призыв Призрачного Охотника» (Summon Spectral Hunter*), сноска «См. The Grand Grimoire of Cthulhu Mythos Magic»"
+    },
+    {
+      "book_id": "tsarstvo-terrora-ru",
+      "physical_page": 95,
+      "printed_page": 95,
+      "method": "book_text",
+      "verified": true,
+      "note": "призрачный охотник Риго, фигурка под гильотиной"
+    }
+  ],
+  "errata": [
+    {
+      "field": "deeper_magic",
+      "printed": "by doubling the amount of POW invested in the spell to 32",
+      "expected": null,
+      "note": "Цена заклинания — 16 ПМ и 10 МОЩ; «удвоив МОЩ до 32» не сходится с 10 МОЩ (32 — это удвоенные 16 ПМ). Оставлено как напечатано, решает Хранитель.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Текст — наш перевод Grand Grimoire (русского текста заклинания нет). «Царство Террора» называет заклинание «Вызов Призрачного Охотника» / «Призыв Призрачного Охотника» (Summon Spectral Hunter) и отсылает к Grand Grimoire, где заклинание о спектральном охотнике одно — Become Spectral Hunter; по существу совпадает (фигурка, привязка охотника к ней). «Summon Guardian Unseen» — название в списке «Верховной Пустоты» английского оригинала (по пометке записи coc:tome:supreme-void, английский оригинал в базе не зарегистрирован). Это не призыв/укрощение (нет встречной проверки МОЩ и приказа — доброволец превращается навсегда), поэтому без `variant_of` на «Заклинания призыва»; тип «Создание существ» — как у «Создания зомби». Характеристики спектрального охотника во врезке Grand Grimoire (СИЛ 100, ВЫН 40, ТЕЛ 95, ЛВК 55, ИНТ 65, МОЩ 90, ПЗ 13, ПМ 18) в заклинание не перенесены — вид описан по Malleus в coc:creature:spectral-hunter."
+  }
+}

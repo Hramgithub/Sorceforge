@@ -1,0 +1,306 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "arkham-en/character/merchant-elijah-potts",
+  "kind": "character",
+  "name": {
+    "ru": "Элайджа Поттс",
+    "en": "Elijah Potts"
+  },
+  "aliases": [
+    "Каменотёс Элайджа",
+    "Elijah the Stonecutter"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "каменотёс",
+    "en": "Stonecutter"
+  },
+  "age": {
+    "raw": "78",
+    "value": 78
+  },
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "knows",
+      "target": "arkham-en/character/merchant-goody-fowler",
+      "note": "видел её призрак на Висельном холме",
+      "note_back": "свидетель её явлений и убийства 1901 года"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "55",
+        "value": 55
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "70",
+        "value": 70
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "APP": {
+        "raw": "70",
+        "value": 70
+      },
+      "INT": {
+        "raw": "70",
+        "value": 70
+      },
+      "POW": {
+        "raw": "55",
+        "value": 55
+      },
+      "EDU": {
+        "raw": "35",
+        "value": 35
+      }
+    },
+    "hp": {
+      "raw": "14",
+      "value": 14
+    },
+    "mp": {
+      "raw": "11",
+      "value": 11
+    },
+    "sanity": {
+      "raw": "39*",
+      "value": 39,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "3",
+      "value": 3,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 3
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed",
+        "notes": "или инструмент 1d6+1d4"
+      },
+      {
+        "name": {
+          "ru": "Инструмент",
+          "en": "tool"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d6+1d4",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Оценка (камень)",
+        "skill": "coc:skill:appraise",
+        "specialization": "камень",
+        "value": {
+          "raw": "70%",
+          "value": 70
+        }
+      },
+      {
+        "name": "Искусство/ремесло (каменотёс)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "каменотёс",
+        "value": {
+          "raw": "90%",
+          "value": 90
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "47%",
+          "value": 47
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "7%",
+          "value": 7
+        }
+      },
+      {
+        "name": "История (Аркхэм)",
+        "skill": "coc:skill:history",
+        "specialization": "Аркхэм",
+        "value": {
+          "raw": "55%",
+          "value": 55
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Ориентирование (Аркхэм)",
+        "skill": "coc:skill:navigate",
+        "specialization": "Аркхэм",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Оккультизм",
+        "skill": "coc:skill:occult",
+        "value": {
+          "raw": "30%",
+          "value": 30
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "30%",
+          "value": 30
+        }
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Привычка к ужасу",
+      "summary": "Больше не теряет Рассудок от упырей и призрака Гуди Фаулер.",
+      "raw": "*Now immune to further Sanity loss from ghouls or Goody Fowler’s Ghost."
+    }
+  ],
+  "background": {
+    "traits": "Осторожен и сдержан, но может оттаять к тем, кто заслужит его доверие."
+  },
+  "description": {
+    "ru": "Каменотёс, 60 лет вырезающий надгробия Аркхэма; живёт и работает в доме XVII века напротив Старого лесного кладбища (406). Хмурый афроамериканец, чьи точёные черты не выдают возраста; седые волосы, гладко выбрит. Обычно носит толстый свитер и комбинезон и курит трубку. Знает упырей кладбища («таящихся») и не трогает их; видел призрак Гуди Фаулер и в 1901 году — как она убила приезжего из Бостона.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "arkham-en",
+      "physical_page": 126,
+      "printed_page": 125,
+      "method": "book_text",
+      "verified": true,
+      "entry_page": 125,
+      "note": "профиль «Elijah Potts, Stonecutter»"
+    },
+    {
+      "book_id": "arkham-en",
+      "physical_page": 125,
+      "printed_page": 124,
+      "method": "book_text",
+      "verified": true,
+      "note": "«406 Elijah the Stonecutter»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": null
+  },
+  "corrections": []
+}

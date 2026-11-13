@@ -1,0 +1,284 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "arkham-en/character/merchant-goody-fowler",
+  "kind": "character",
+  "name": {
+    "ru": "Гуди Фаулер",
+    "en": "Goody Fowler"
+  },
+  "aliases": [
+    "Призрак Гуди Фаулер",
+    "Goody Fowler's Ghost",
+    "Мстительная тень",
+    "Матушка Фаулер"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "призрак ведьмы, мстительная тень",
+    "en": "Vengeful Shade"
+  },
+  "sex": "женский",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "(70*)",
+        "value": 70
+      },
+      "CON": {
+        "raw": "—",
+        "value": null
+      },
+      "SIZ": {
+        "raw": "(65*)",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "(80*)",
+        "value": 80
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "INT": {
+        "raw": "70",
+        "value": 70
+      },
+      "POW": {
+        "raw": "85",
+        "value": 85
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "—",
+      "value": "—"
+    },
+    "mp": {
+      "raw": "17",
+      "value": 17
+    },
+    "sanity": {
+      "raw": "00",
+      "value": 0,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "(+1d4*)",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "(1*)",
+      "value": 1
+    },
+    "move": {
+      "raw": "(9*)",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "None; immune to mundane attacks; magically enchanted weapons deal normal damage; spells and rituals affecting/draining POW or INT may be effective against her.",
+      "value": 0,
+      "note": "нет; неуязвима для обычных атак; зачарованное оружие наносит обычный урон; против неё могут подействовать заклинания и обряды, влияющие на МОЩ или ИНТ либо вытягивающие их"
+    },
+    "attacks_per_round": {
+      "raw": "2",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (рассечение или удушение)",
+          "en": "Fighting (slash or strangulation)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "90% (45/18)",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        },
+        "damage": {
+          "raw": "1d6+1+1d4",
+          "dice": "1d6+1",
+          "adds_db": true
+        },
+        "notes": "только в материальном облике; удушение — 1d6+1 урона за раунд, вырваться — встречная проверка СИЛ каждый ход"
+      },
+      {
+        "name": {
+          "ru": "Укус",
+          "en": "Bite (see above)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "2d10 CON loss",
+          "dice": "2d10",
+          "adds_db": false
+        },
+        "notes": "потеря 2d10 ВЫН; см. «Физический облик»"
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "spells": {
+      "raw": "While once possessing a formidable array of spells in her day, Fowler’s ghost no longer retains the memory to cast spells.",
+      "items": []
+    },
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d6",
+        "trigger": "встреча с призраком Гуди Фаулер"
+      },
+      {
+        "success": "0",
+        "fail": "1d2",
+        "trigger": "встреча с призрачным светом и огоньками"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Бестелесность",
+      "summary": "Призрак бестелесен, но может на время обрести плоть, чтобы напасть. Бестелесная, она неуязвима для обычного оружия и атак; зачарованное оружие ранит её, когда она материальна.",
+      "raw": "Fowler’s wraith is incorporeal but she may temporarily physically manifest to attack. When incorporeal, she is immune to mundane weapons and attacks, but enchanted weapons can inflict damage when she is physically manifest."
+    },
+    {
+      "name": "Материализация",
+      "summary": "За 5 ПМ обретает плоть и может атаковать физически; держит облик сколько хочет, но не больше пяти минут (может потратить ещё 1 ПМ, чтобы продлить, но вряд ли станет). Переход из духа в материю и обратно занимает раунд. В каждом раунде, когда ей наносят материальный урон, с шансом 50% она дематериализуется и уходит; иначе отшатывается от успешной атаки на раунд и затем возобновляет нападение. Может преследовать того, кто отбивается или отступает, но не может покинуть Старое лесное кладбище или пересечь его железную ограду — там она дематериализуется и уходит.",
+      "raw": "Fowler may spend 5 magic points to physically manifest, allowing her to tangibly attack a person. She retains physical form for as long as she desires, up to a maximum of five minutes, but could conceivably spend another magic point to retain material form, although is unlikely to do so. The transformation from spirit to material takes one round, and vice versa. During each round in which she suffers material damage, there is a 50% chance that Fowler dematerializes and departs. Otherwise, she recoils from a successful attack for one round before renewing her attack (thus, takes one round to recover her composure before attacking again). Fowler may pursue a target that fights back or retreats, but she cannot leave or go past the iron fence surrounding the Old Wooded Graveyard, at which point she dematerializes and departs."
+    },
+    {
+      "name": "Облик духа",
+      "summary": "В облике духа у призрака есть только МОЩ и ИНТ, и физически атаковать она не может, но за 10 ПМ вступает в духовный бой (см. ниже), отнимая у жертвы 3d10 МОЩ. Каждая следующая духовная атака стоит 1 ПМ (то есть 1 ПМ за ход после первого раунда). Когда ПМ кончаются, она тает и не может вернуться 1d6 месяцев; если её МОЩ падает до нуля, она перестаёт существовать. Духовный бой она начинает редко — ей милее животный ужас физического нападения. Жертва может восстанавливать потерянную МОЩ по 1d10 в день — на усмотрение Хранителя.",
+      "raw": "Spirit form: Fowler’s ghost possesses POW and INT only, and thus cannot physically attack, although can, at the cost of 10 magic points, engage in Spirit Combat (see box, nearby), causing 3d10 POW loss to her victim. Each spirit attack thereafter costs her 1 magic point (thus, 1 MP per turn after the first round). When Fowler’s magic points reach zero, she fades away and cannot return for 1d6 months. Should her POW be reduced to zero, she ceases to exist. Note that it is unusual for Fowler to initiate spirit combat as the ghost prefers the visceral terror caused by physically attacking a target. A victim may regenerate lost POW at the rate of 1d10 points per day at the discretion of the Keeper."
+    },
+    {
+      "name": "Физический облик",
+      "summary": "(5 ПМ на проявление.) Фаулер старается укусить жертву и выпить её кровь, но может сперва ударить или задушить, чтобы одолеть строптивую цель. Укушенный теряет 2d10 ВЫН** и проходит проверку МОЩ: вырвется ли он в конце атаки или останется схвачен и зачарован (не может вырваться). Зачарованная жертва ничего не может, кроме как отдавать жизнь, но каждый следующий раунд, после того как Фаулер поглотит её МОЩ, может пробовать новую проверку МОЩ со штрафной костью. Когда жертва потеряла половину МОЩ, дальнейшие проверки МОЩ — с двумя штрафными костями. Убив жертву, Фаулер бросает окровавленный труп на землю, чтобы его утащили упыри. Удушаемая жертва получает 1d6+1 урона за раунд, но каждый ход может пытаться вырваться встречной проверкой СИЛ. **Потеря ВЫН обычно постоянна, но добрый Хранитель может сделать её временной (восстанавливается по 1d10 в неделю или быстрее).",
+      "raw": "Physical form: (5 magic points to manifest) Fowler attempts to bite and drain the blood of her victim but may strike or strangle to first best a feisty target. If bitten, the target suffers 2d10 CON loss**, but should attempt a POW roll to see whether they are able to break free at the end of the attack or if they are held and entranced (unable to break free). If entranced, the victim can do nothing except be drained of life, but may attempt a new POW roll with a penalty die to break free each round thereafter, following Fowler’s consumption of their POW. Once a victim has lost 50 percent of their POW, any further POW rolls suffer two penalty dice. Once a victim is dead, Fowler tosses the bloody corpse to the ground for the ghouls to drag away. If being strangled, the victim suffers 1d6+1 damage per round, but may attempt to break free with an opposed STR roll each turn. **CON loss is usually permanent, but a kind Keeper may elect to make this temporary (regenerating 1d10 points per week or sooner)."
+    },
+    {
+      "name": "Духовный бой (врезка)",
+      "summary": "Духовный бой — встречная проверка МОЩ; нападает призрак. Если сыщик не выигрывает встречную проверку, он теряет от 2d10 до 3d10 МОЩ (сильные призраки отнимают больше); иногда она восстанавливается сама по 1d10 в день через сутки, но некоторые призраки отнимают МОЩ навсегда (временная потеря или постоянная — решает Хранитель). Если сыщик выигрывает встречную проверку, призрак теряет 2d10 МОЩ. Некоторые сыщики (например, герои Pulp Cthulhu) могут сами начинать духовный бой; тогда делается та же встречная проверка, и сыщик с духом по очереди каждый раунд нападают и защищаются, как в обычном бою.",
+      "raw": "Spirit combat is an opposed POW roll, with the ghost initiating the attack. If an investigator fails to win the opposed POW roll, they suffer the loss of 2d10 to 3d10 POW (powerful ghosts inflict greater damage)—in some cases, this naturally regenerates at 1d10 points per day after 24 hours, although some ghosts can inflict permanent POW loss (the Keeper should determine if loss is temporary or permanent). If an investigator wins the opposed POW roll, the ghost loses 2d10 POW. Some investigators (such as heroes from Pulp Cthulhu) may be able to initiate spirit combat; if so, make the same opposed roll, with both investigator and spirit taking turns each round to initiate and then defend against an attack, just as in normal combat."
+    }
+  ],
+  "background": {
+    "traits": "Злобна; ею движет ненависть к жителям Аркхэма. Смешивает правду с ложью, чтобы обмануть и заманить людей."
+  },
+  "description": {
+    "ru": "Призрак Гуди Фаулер, «знающей» женщины, повешенной на Висельном холме (403) в 1704 году. Обычно она проявляется, сгущаясь из белого тумана на вершине холма: по мере того как туман уплотняется, обретает очертания её фигура — злое морщинистое лицо и тело под погребальным саваном. Чаще всего Фаулер является лишь одному человеку; остальные не видят ничего или в лучшем случае странное марево.\nТому, кому она является, Фаулер может что-то сказать, открыть тайны и рассказать о своей смерти, но почти каждое её слово — ложь, чтобы заманить человека к себе. Если к ней подойти, она, скорее всего, нападёт. Хранитель может потребовать от сыщика проверку Удачи или МОЩ, чтобы узнать, повезёт ли ему на этот раз избежать её гнева.\nЧтобы атаковать, она обхватывает горло жертвы одной рукой, удерживая её, а эктоплазменными отростками пальцев другой пронзает сердце жертвы и держится так, чтобы брызги крови проходили сквозь верхнюю часть её фигуры.\nЯвление. Суеверие гласит, что призрак Фаулер является только в канун Мая и в День всех святых (1 ноября), хотя разные рассказы говорят иное. Во всех рассказах общее одно — место: Висельный холм на Старом лесном кладбище.",
+    "en": null
+  },
+  "legend": {
+    "ru": "См. Висельный холм (403): «знающая» женщина, бежавшая из Салема; аркхэмцы обвинили её в колдовстве и в 1704 году повесили на Висельном холме. По слухам, перед смертью она прокляла жителей Аркхэма. В 1901 году Элайджа Поттс видел, как её призрак задушил и обескровил приезжего из Бостона.\nПри жизни (окрестности, с. 241): Слывшая ведьмой знахарка и зельеварка конца XVII века; жила в доме, который стоит до сих пор (Дом Гуди Фаулер, OS117). В 1704 году разъярённая толпа вытащила её из дома и повесила. Одно из обвинений против неё гласило, что она с другими регулярно сходилась у Расколотой скалы на Медоу-Хилле (OS105) на нечестивые обряды. Говорят, воду для зелий она брала из пруда Самнера (OS119), водилась там с жабами и лягушками-быками и приказывала им служить ей и шпионить. После её смерти в 1704 году в её дом никто не входил; всё в нём осталось как в день убийства, а за камнями очага спрятан её гримуар — большинство её заклинаний переделаны в рецепты зелий.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "arkham-en",
+      "physical_page": 124,
+      "printed_page": 123,
+      "method": "book_text",
+      "verified": true,
+      "entry_page": 122,
+      "note": "профиль «Goody Fowler's Ghost, Vengeful Shade», «Spirit Combat»"
+    },
+    {
+      "book_id": "arkham-en",
+      "physical_page": 122,
+      "printed_page": 121,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Appearance», «Description», «Traits», начало описания атаки"
+    },
+    {
+      "book_id": "arkham-en",
+      "physical_page": 123,
+      "printed_page": 122,
+      "method": "book_text",
+      "verified": true,
+      "note": "окончание атаки, «Incorporeal», «Materialization», «Spirit form», «Physical form»"
+    },
+    {
+      "book_id": "arkham-en",
+      "physical_page": 242,
+      "printed_page": 241,
+      "method": "book_text",
+      "verified": true,
+      "note": "OS117 Goody Fowler Cottage"
+    },
+    {
+      "book_id": "arkham-en",
+      "physical_page": 230,
+      "printed_page": 229,
+      "method": "book_text",
+      "verified": true,
+      "note": "OS105: обвинение в сборищах у Расколотой скалы"
+    },
+    {
+      "book_id": "arkham-en",
+      "physical_page": 244,
+      "printed_page": 243,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «Goody Fowler’s Grimoire»"
+    },
+    {
+      "book_id": "arkham-en",
+      "physical_page": 245,
+      "printed_page": 244,
+      "method": "book_text",
+      "verified": true,
+      "note": "OS119: пруд Самнера, «Strangeness»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Профиль «Goody Fowler's Ghost, Vengeful Shade» (с. 123); значения со звёздочкой — только в материальном облике, как напечатано. ПЗ в книге «—». Врезка «Spirit Combat» (с. 123) хранится здесь способностью; общего правила о духовном бое в базе нет — кандидат в запись правила."
+  },
+  "corrections": [
+    {
+      "field": "id",
+      "from": "arkham-en/character/outskirts-goody-fowler",
+      "to": "arkham-en/character/merchant-goody-fowler",
+      "reason": "дубль внутри путеводителя «Аркхэм»: запись части «outskirts» без статблока слита в полную запись «merchant-goody-fowler» при сведении частей; её источник, текст и связи перенесены сюда, ссылки по базе переписаны",
+      "ref": "Р-154"
+    }
+  ],
+  "residence": "Дом Гуди Фаулер (OS117)"
+}

@@ -1,0 +1,333 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "arkham-en/character/southside-lou-benito",
+  "kind": "character",
+  "name": {
+    "ru": "Лу Бенито",
+    "en": "Lou Benito"
+  },
+  "aliases": [],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "подручный и телохранитель",
+    "en": "Henchman/Bodyguard"
+  },
+  "occupation_ref": "coc:occupation:gangster-podruchnyy",
+  "age": {
+    "raw": "29",
+    "value": 29
+  },
+  "sex": "мужской",
+  "residence": "Аркхэм",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "arkham-en/character/southside-joe-potrello",
+      "note": "босс",
+      "note_back": "подручный и телохранитель"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "70",
+        "value": 70
+      },
+      "DEX": {
+        "raw": "75",
+        "value": 75
+      },
+      "APP": {
+        "raw": "60",
+        "value": 60
+      },
+      "INT": {
+        "raw": "60",
+        "value": 60
+      },
+      "POW": {
+        "raw": "55",
+        "value": 55
+      },
+      "EDU": {
+        "raw": "40",
+        "value": 40
+      }
+    },
+    "hp": {
+      "raw": "14",
+      "value": 14
+    },
+    "mp": {
+      "raw": "11",
+      "value": 11
+    },
+    "sanity": {
+      "raw": "46",
+      "value": 46,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "75% (37/15)",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed",
+        "notes": "или стилет"
+      },
+      {
+        "name": {
+          "ru": "Стилет",
+          "en": "stiletto"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "75% (37/15)",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        },
+        "damage": {
+          "raw": "1d4+2+1d4",
+          "dice": "1d4+2",
+          "adds_db": true
+        },
+        "notes": "в книге — в строке Драки: «1d3+1d4 or stiletto 1d4+2+1d4»; шанс — навык Драки; урон стилета 1d4+2 — по книге, у ножа малого в справочнике 1d4"
+      },
+      {
+        "name": {
+          "ru": "Револьвер .45",
+          "en": ".45 revolver"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "75% (37/15)",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        },
+        "damage": {
+          "raw": "1d10+2",
+          "dice": "1d10+2",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:45-revolver"
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Оценка",
+        "skill": "coc:skill:appraise",
+        "value": {
+          "raw": "20%",
+          "value": 20
+        }
+      },
+      {
+        "name": "Обаяние",
+        "skill": "coc:skill:charm",
+        "value": {
+          "raw": "30%",
+          "value": 30
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "36%",
+          "value": 36
+        }
+      },
+      {
+        "name": "Вождение автомобиля",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "35%",
+          "value": 35
+        }
+      },
+      {
+        "name": "Ориентирование (Аркхэм)",
+        "skill": "coc:skill:navigate",
+        "specialization": "Аркхэм",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "35%",
+          "value": 35
+        }
+      },
+      {
+        "name": "Поддакивать Портелло",
+        "value": {
+          "raw": "90%",
+          "value": 90
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Иностранный язык (английский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "английский",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Родной язык (итальянский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "итальянский",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      }
+    ]
+  },
+  "background": {
+    "traits": "Рвётся угодить боссу, быстро вскипает и порой бывает немного опрометчив."
+  },
+  "description": {
+    "ru": "Последний верный подручный и телохранитель Джо Портелло («Итальянский клуб», 912). Гладко выбрит, с худым угловатым лицом и мрачными глазами; носит довольно щеголеватый костюм в тонкую полоску и фетровую шляпу.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "arkham-en",
+      "physical_page": 225,
+      "printed_page": 224,
+      "method": "book_text",
+      "verified": true,
+      "entry_page": 223,
+      "note": "профиль «Lou Benito, Henchman/Bodyguard, age 29»"
+    },
+    {
+      "book_id": "arkham-en",
+      "physical_page": 224,
+      "printed_page": 223,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Notable Folk» места 912"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Житель путеводителя «Аркхэм» (Chaosium, 2023), район «Нижний Саутсайд» (Р-234). Русский текст — наш перевод с английского. Английский и итальянский — оба 40%, равны ОБР 40; родным условно взят итальянский (вывод, Р-41). «Say Yes To Potrello» (Поддакивать Портелло) — навык без механики (Р-126)."
+  },
+  "corrections": []
+}

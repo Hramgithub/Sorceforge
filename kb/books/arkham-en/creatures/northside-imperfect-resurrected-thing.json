@@ -1,0 +1,190 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "arkham-en/creature/northside-imperfect-resurrected-thing",
+  "kind": "creature",
+  "name": {
+    "ru": "Несовершенное воскрешённое существо",
+    "en": "The Imperfect Resurrected Thing"
+  },
+  "aliases": [
+    "Imperfect Resurrected Thing",
+    "изувеченная собака"
+  ],
+  "category": "supernatural",
+  "subcategory": "бродячий ужас (несовершенное «воскрешение» Герберта Уэста)",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:reanimated",
+      "note_back": "калека Герберта Уэста на путях Нортсайда"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "80",
+        "value": 80
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "INT": {
+        "raw": "10",
+        "value": 10
+      },
+      "POW": {
+        "raw": "10",
+        "value": 10
+      }
+    },
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "mp": {
+      "raw": "2",
+      "value": 2
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет; получает половину урона от обычного оружия ближнего боя; минимальный урон от пуль; невосприимчиво к жару, холоду и электричеству; нельзя утопить или задушить; огонь и кислота наносят обычный урон.",
+      "value": 0,
+      "note": "обычное оружие ближнего боя — половина урона; пули — минимальный"
+    },
+    "attacks_per_round": {
+      "raw": "1 (ударить, разорвать, укусить)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d6+1d4",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "notes": "сначала избивает цель, потом разрывает её; может пользоваться простым оружием вроде дубинки"
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Почувствовать жизнь",
+        "skill": "coc:skill:sense-life",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      }
+    ],
+    "spells": {
+      "raw": "нет."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "при встрече с несовершенным воскрешённым существом"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Живучесть мертвеца",
+      "summary": "Обычное оружие ближнего боя наносит половину урона, пули — минимальный; невосприимчиво к жару, холоду и электричеству; нельзя утопить или задушить; огонь и кислота действуют обычно.",
+      "raw": "None; suffers half damage from mundane melee weapons; minimum damage from bullets; immune to effects of heat, cold, and electricity; cannot be drowned or suffocated; suffers normal damage from fire or acid."
+    }
+  ],
+  "description": {
+    "ru": "Одно из старых несовершенных «воскрешений» Герберта Уэста: издали похоже на изувеченную собаку в свалявшейся шерсти и язвах. Едва ли больше, чем торс с двумя действующими руками, волочащий два бесполезных обломка ног.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Гнездо твари — в пространстве под старой водонапорной башней на железнодорожных владениях Нортсайда (140). Ночью она ползает между товарными вагонами; время от времени выходит искать жертву — жаждет живой плоти и крови — и обычно разрывает какое-нибудь животное, а иногда бесследно исчезает спящий бродяга. Однажды охранник застал её за поеданием дохлой кошки; она избила его так, что он ничего не помнит, но на ногах и руках у него остались слишком человеческие следы укусов.",
+    "en": null
+  },
+  "habitat": "Аркхэм, железнодорожные владения Нортсайда (140)",
+  "sources": [
+    {
+      "book_id": "arkham-en",
+      "physical_page": 95,
+      "printed_page": 94,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Imperfect Resurrected Thing» и «140 Railroad Properties»: Strangeness"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.dodge",
+      "printed": "Dodge 30% (15/6) 1D10",
+      "expected": "Dodge 30% (15/6)",
+      "note": "в строке Уклонения в колонке урона напечатано «1d10» — у уклонения урона нет; вероятно, остаток строки другой атаки (укуса?), из текста не восстановить"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Профиль из путеводителя «Аркхэм» (с. 94); числа отличаются от общего профиля реанимированного (ЛВК 70, Скорость 7, есть Уклонение), поэтому отдельная запись (Р-75). НАР, ОБР и Рассудок — «—»."
+  }
+}

@@ -1,0 +1,330 @@
+{
+  "schema": "sourcefold.proposals.v0",
+  "by": "frenchhill (Аркхэм 2023, Френч-Хилл, физ. с. 193–206)",
+  "proposals": [
+    {
+      "target": "coc:creature:brown-jenkin",
+      "op": "set",
+      "path": "statblock",
+      "after": "relations",
+      "value": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "15",
+            "value": 15
+          },
+          "CON": {
+            "raw": "25",
+            "value": 25
+          },
+          "SIZ": {
+            "raw": "15",
+            "value": 15
+          },
+          "DEX": {
+            "raw": "90",
+            "value": 90
+          },
+          "APP": {
+            "raw": "—",
+            "value": null
+          },
+          "INT": {
+            "raw": "70",
+            "value": 70
+          },
+          "POW": {
+            "raw": "60",
+            "value": 60
+          },
+          "EDU": {
+            "raw": "15",
+            "value": 15
+          }
+        },
+        "hp": {
+          "raw": "4",
+          "value": 4
+        },
+        "mp": {
+          "raw": "23*",
+          "value": 23,
+          "note": "усиленные пункты магии"
+        },
+        "sanity": {
+          "raw": "—",
+          "value": null,
+          "max": null
+        },
+        "damage_bonus": {
+          "raw": "-2",
+          "value": -2
+        },
+        "build": {
+          "raw": "-2",
+          "value": -2
+        },
+        "move": {
+          "raw": "9*",
+          "value": 9,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 9,
+              "note": "повышенная скорость"
+            }
+          ]
+        },
+        "armor": {
+          "raw": "нет, но из-за малого размера атаки по Бурому Дженкину получают штрафную кость",
+          "value": 0
+        },
+        "attacks_per_round": {
+          "raw": "1 (зубы и когтистые ногти)",
+          "value": 1
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Бой (зубы и когти)",
+              "en": "Fighting"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "80% (40/16)",
+              "value": 80,
+              "half": 40,
+              "fifth": 16
+            },
+            "damage": {
+              "raw": "1d4-2",
+              "dice": "1d4-2",
+              "adds_db": false
+            },
+            "notes": "зубы и когтеподобные ногти"
+          }
+        ],
+        "dodge": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "skills": [
+          {
+            "name": "Лазание",
+            "skill": "coc:skill:climb",
+            "value": {
+              "raw": "80%",
+              "value": 80
+            }
+          },
+          {
+            "name": "Прогрызть стену",
+            "value": {
+              "raw": "80%",
+              "value": 80
+            }
+          },
+          {
+            "name": "Прыжки",
+            "skill": "coc:skill:jump",
+            "value": {
+              "raw": "70%",
+              "value": 70
+            }
+          },
+          {
+            "name": "Язык (английский)",
+            "skill": "coc:skill:language-other",
+            "specialization": "английский",
+            "value": {
+              "raw": "70%",
+              "value": 70
+            }
+          },
+          {
+            "name": "Слух",
+            "skill": "coc:skill:listen",
+            "value": {
+              "raw": "70%",
+              "value": 70
+            }
+          },
+          {
+            "name": "Убеждение",
+            "skill": "coc:skill:persuade",
+            "value": {
+              "raw": "60%",
+              "value": 60
+            }
+          },
+          {
+            "name": "Внимание",
+            "skill": "coc:skill:spot-hidden",
+            "value": {
+              "raw": "60%",
+              "value": 60
+            }
+          },
+          {
+            "name": "Скрытность",
+            "skill": "coc:skill:stealth",
+            "value": {
+              "raw": "80%",
+              "value": 80
+            }
+          }
+        ],
+        "spells": {
+          "raw": "На усмотрение Хранителя может знать 1d3 заклинания из списка: Затуманить память, Сглаз, Зародить страх, Разрушение",
+          "items": [
+            {
+              "name": "Cloud Memory",
+              "spell": "coc:spell:cloud-memory"
+            },
+            {
+              "name": "Evil Eye",
+              "spell": "coc:spell:evil-eye"
+            },
+            {
+              "name": "Implant Fear",
+              "spell": "coc:spell:implant-fear"
+            },
+            {
+              "name": "Wrack",
+              "spell": "coc:spell:wrack"
+            }
+          ]
+        },
+        "sanity_loss": [
+          {
+            "success": "1",
+            "fail": "1d4",
+            "trigger": "встреча с Бурым Дженкином"
+          }
+        ]
+      },
+      "reason": "профиль Бурого Дженкина — путеводитель «Аркхэм» (arkham-en, с. 203, физ. 204, у статьи 723 «Ведьмин дом»); у общей записи статблока не было (Р-75: профиль берётся из книги с источником)",
+      "ref": "Р-234"
+    },
+    {
+      "target": "coc:creature:brown-jenkin",
+      "op": "set",
+      "path": "abilities",
+      "after": "statblock",
+      "reason": "профиль Бурого Дженкина — путеводитель «Аркхэм» (arkham-en, с. 203, физ. 204, у статьи 723 «Ведьмин дом»); у общей записи статблока не было (Р-75: профиль берётся из книги с источником)",
+      "ref": "Р-234",
+      "value": [
+        {
+          "name": "Крошечный размер",
+          "summary": "Брони нет, но из-за малого размера атаки по Бурому Дженкину получают штрафную кость.",
+          "raw": "None, but its small size means a penalty die is imposed on attacks targeting Brown Jenkin."
+        },
+        {
+          "name": "Усиленные пункты магии и скорость",
+          "summary": "Скорость 9 и 23 ПМ помечены звёздочкой: «усиленные пункты магии и повышенная скорость».",
+          "raw": "*Enhanced magic points and increased movement."
+        }
+      ]
+    },
+    {
+      "target": "coc:creature:brown-jenkin",
+      "op": "replace",
+      "path": "description.ru",
+      "old": "В книге упомянут одной фразой в статье о крысиных тварях, отдельного профиля нет.",
+      "new": "В Malleus Monstrorum упомянут одной фразой в статье о крысиных тварях. Путеводитель «Аркхэм» (2023, с. 203) даёт его профиль: большая крыса со светлым мехом на брюхе, с человеческим лицом и руками вместо лап; хитёр, зол и служит Кеции Мейсон (или она — ему?). Цитата Лавкрафта в книге: свидетели говорили, что у него длинная шерсть и облик крысы, но острозубая бородатая морда зловеще человечна, а лапы — как крошечные человеческие руки; он носил вести между старой Кецией и дьяволом и питался кровью ведьмы, высасывая её, как вампир; голос его — мерзкое хихиканье, и говорил он на всех языках. Вместе с хозяйкой бывает в Ведьмином доме (723) и в проходе Орна (725) во Френч-Хилле.",
+      "reason": "профиль Бурого Дженкина — путеводитель «Аркхэм» (arkham-en, с. 203, физ. 204, у статьи 723 «Ведьмин дом»); у общей записи статблока не было (Р-75: профиль берётся из книги с источником); описание и черты — со с. 203",
+      "ref": "Р-234"
+    },
+    {
+      "target": "coc:creature:brown-jenkin",
+      "op": "append",
+      "path": "relations",
+      "value": {
+        "type": "servitor_of",
+        "target": "arkham-en/character/frenchhill-keziah-mason",
+        "note": "хозяйка-ведьма",
+        "note_back": "крысиный фамильяр"
+      },
+      "reason": "фамильяр Кеции Мейсон (arkham-en, с. 202–203)",
+      "ref": "Р-234",
+      "correction": false
+    },
+    {
+      "target": "coc:creature:brown-jenkin",
+      "op": "append",
+      "path": "sources",
+      "value": {
+        "book_id": "arkham-en",
+        "physical_page": 204,
+        "printed_page": 203,
+        "method": "book_text",
+        "verified": true,
+        "entry_page": 201,
+        "note": "врезка «Brown Jenkin, Rat Familiar» — статблок, описание, заклинания, потеря Рассудка (у статьи 723)"
+      },
+      "reason": "профиль Бурого Дженкина — путеводитель «Аркхэм» (arkham-en, с. 203, физ. 204, у статьи 723 «Ведьмин дом»); у общей записи статблока не было (Р-75: профиль берётся из книги с источником)",
+      "ref": "Р-234"
+    },
+    {
+      "target": "coc:creature:brown-jenkin",
+      "op": "append",
+      "path": "sources",
+      "value": {
+        "book_id": "arkham-guide-hort-ru",
+        "physical_page": 85,
+        "printed_page": 85,
+        "method": "book_text",
+        "verified": true,
+        "note": "«Бурый Дженкин, ведьмин прислужник-крысотварь» — русская форма имени; профиль Arkham Unveiled (не взят)"
+      },
+      "reason": "русская форма имени в путеводителе Hort (Р-234)",
+      "ref": "Р-234"
+    },
+    {
+      "target": "coc:creature:brown-jenkin",
+      "op": "remove",
+      "path": "quality.flags",
+      "match": {
+        "value": "incomplete"
+      },
+      "reason": "профиль теперь есть (arkham-en, с. 203)",
+      "ref": "Р-234"
+    },
+    {
+      "target": "coc:creature:brown-jenkin",
+      "op": "set",
+      "path": "quality.notes",
+      "value": "Профиль — из путеводителя «Аркхэм» (2023, с. 203); в Malleus Monstrorum — только упоминание. Звёздочки у Скорости 9* и ПМ 23* — как напечатано («усиленные пункты магии и повышенная скорость»). Навык «Gnaw Through Wall» («Прогрызть стену») без механики — записи справочника нет (Р-126). В путеводителе Hort (Arkham Unveiled, с. 85) профиль другой (СИЛ 20, ПМ 12, укус 80% (40/16) 1d2, Уклонение 45%, потеря Рассудка 0/1d4) — не взят.",
+      "reason": "профиль Бурого Дженкина — путеводитель «Аркхэм» (arkham-en, с. 203, физ. 204, у статьи 723 «Ведьмин дом»); у общей записи статблока не было (Р-75: профиль берётся из книги с источником)",
+      "ref": "Р-234"
+    },
+    {
+      "target": "coc:location:arkham-french-hill",
+      "op": "replace",
+      "path": "description.ru",
+      "old": "который считают старейшим зданием Аркхэма.",
+      "new": "который считают старейшим зданием Аркхэма.\nПо путеводителю Hort (Arkham Unveiled): польский квартал на юго-западном склоне холма — тесно стоящие дома с характерными крышами и фронтонами — можно грубо ограничить шестью кварталами между Колледж-, Пибоди-, Хай- и Гаррисон-стрит.",
+      "reason": "дополнение из путеводителя Hort (arkham-guide-hort-ru, с. 83) — того, чего нет в книге 2023 года (Р-234)",
+      "ref": "Р-234"
+    },
+    {
+      "target": "coc:location:arkham-french-hill",
+      "op": "append",
+      "path": "sources",
+      "value": {
+        "book_id": "arkham-guide-hort-ru",
+        "physical_page": 83,
+        "printed_page": 83,
+        "method": "book_text",
+        "verified": true,
+        "note": "«Френч-Хилл»: польский квартал на юго-западном склоне"
+      },
+      "reason": "дополнение из путеводителя Hort (Р-234)",
+      "ref": "Р-234"
+    }
+  ]
+}

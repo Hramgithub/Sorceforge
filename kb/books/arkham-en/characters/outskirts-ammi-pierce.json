@@ -1,0 +1,351 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "arkham-en/character/outskirts-ammi-pierce",
+  "kind": "character",
+  "name": {
+    "ru": "Эмми Пирс",
+    "en": "Ammi Pierce"
+  },
+  "aliases": [
+    "Ammi Pearce"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "старый фермер",
+    "en": "Old Farmer"
+  },
+  "occupation_ref": "coc:occupation:fermer",
+  "age": {
+    "raw": "80",
+    "value": 80
+  },
+  "sex": "мужской",
+  "residence": "ферма Эмми Пирса (OS111)",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "knows",
+      "target": "arkham-en/character/outskirts-nahum-gardner",
+      "note": "сосед и старый знакомый",
+      "note_back": "один из старейших соседей; единственный, кто навещал ферму"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "35",
+        "value": 35
+      },
+      "CON": {
+        "raw": "45",
+        "value": 45
+      },
+      "SIZ": {
+        "raw": "50",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "35",
+        "value": 35
+      },
+      "APP": {
+        "raw": "45",
+        "value": 45
+      },
+      "INT": {
+        "raw": "90",
+        "value": 90
+      },
+      "POW": {
+        "raw": "60",
+        "value": 60
+      },
+      "EDU": {
+        "raw": "30",
+        "value": 30
+      }
+    },
+    "hp": {
+      "raw": "9",
+      "value": 9
+    },
+    "mp": {
+      "raw": "12",
+      "value": 12
+    },
+    "sanity": {
+      "raw": "48",
+      "value": 48,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "2",
+      "value": 2,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 2
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "+1d3",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Дробовик двуствольный 16-го калибра",
+          "en": "16g shotgun (2B)"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "+2d6+2/1d6+1/1d4",
+          "dice": "2d6+2/1d6+1/1d4",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:shotgun-16-gauge-2b"
+      },
+      {
+        "name": {
+          "ru": "Винтовка со скользящим затвором .30-06",
+          "en": ".30-06 bolt-action rifle"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "+2d6+4",
+          "dice": "2d6+4",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:30-06-bolt-action-rifle"
+      }
+    ],
+    "dodge": {
+      "raw": "17% (8/3)",
+      "value": 17,
+      "half": 8,
+      "fifth": 3
+    },
+    "skills": [
+      {
+        "name": "Обращение с животными",
+        "skill": "coc:skill:animal-handling",
+        "value": {
+          "raw": "75%",
+          "value": 75
+        }
+      },
+      {
+        "name": "Искусство/ремесло (фермерство)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "фермерство",
+        "value": {
+          "raw": "90%",
+          "value": 90
+        }
+      },
+      {
+        "name": "Обаяние",
+        "skill": "coc:skill:charm",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "19%",
+          "value": 19
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "6%",
+          "value": 6
+        }
+      },
+      {
+        "name": "История (Аркхэм)",
+        "skill": "coc:skill:history",
+        "specialization": "Аркхэм",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Механика",
+        "skill": "coc:skill:mechanical-repair",
+        "value": {
+          "raw": "55%",
+          "value": 55
+        }
+      },
+      {
+        "name": "Естествознание",
+        "skill": "coc:skill:natural-world",
+        "value": {
+          "raw": "70%",
+          "value": 70
+        }
+      },
+      {
+        "name": "Ориентирование (Аркхэм)",
+        "skill": "coc:skill:navigate",
+        "specialization": "Аркхэм",
+        "value": {
+          "raw": "25%",
+          "value": 25
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Верховая езда",
+        "skill": "coc:skill:ride",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "35%",
+          "value": 35
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "55%",
+          "value": 55
+        }
+      }
+    ]
+  },
+  "background": {
+    "traits": "Когда-то общительный и дружелюбный, к старости стал немного подозрителен и предпочитает жить один, чтобы его не трогали.",
+    "secret": "Единственный живой человек, который помнит подробности падения метеорита в 1882 году и последовавших странных дней и хоть сколько-нибудь представляет, что случилось с Гарднерами. Его воспоминания Хранитель может взять из рассказа Лавкрафта «Цвет из иных миров»."
+  },
+  "description": {
+    "ru": "Старый фермер, хозяин фермы Эмми Пирса (OS111); многие зовут его «чудаковатым старым воробьём». Худощавый, среднего роста, гладко выбритый, седой; носит простую рубашку и комбинезон.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Ведёт хозяйство на своей ферме у заброшенной дороги к Испепелённой пустоши и руинам Кларкс-Корнерса: держит несколько коров, коз и кур, огород и немного посевов. Большинство аркхэмцев забыло о его существовании, но некоторые помнят, что он знался с бедным Наумом Гарднером. Когда ферму Гарднеров все стали обходить, навещать её решался лишь он. Если уговорить его вспомнить те ужасные события, он расскажет очень многое, но к старости он стал недоверчив и с тем же успехом встретит непрошеных гостей стволами дробовика. Его ферма — единственная, что не опустела вокруг Испепелённой пустоши.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "arkham-en",
+      "physical_page": 236,
+      "printed_page": 235,
+      "method": "book_text",
+      "verified": true,
+      "entry_page": 235,
+      "note": "статблок «Ammi Pierce, Old Farmer, age 80»; «Notable Folk», «Strangeness»"
+    },
+    {
+      "book_id": "arkham-en",
+      "physical_page": 237,
+      "printed_page": 236,
+      "method": "book_text",
+      "verified": true,
+      "note": "OS112, «Useful»: единственный другой свидетель событий 1882 и 1883 годов"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Персонаж путеводителя «Аркхэм» (Chaosium, 2023), глава «Окрестности: за городской чертой»; русский текст — наш перевод (Р-234). В таблице боя урон напечатан с плюсом впереди («+1d3», «+2d6+2/1d6+1/1d4», «+2d6+4»); в raw — как напечатано, кубы — без плюса; числа совпадают с таблицей оружия. В таблице слухов (с. 48) имя напечатано «Ammi Pearce» — в aliases. Скорость 2 — с поправкой за возраст."
+  }
+}

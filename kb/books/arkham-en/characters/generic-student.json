@@ -1,0 +1,254 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "arkham-en/character/generic-student",
+  "kind": "character",
+  "name": {
+    "ru": "Студент (типовой персонаж Аркхэма)",
+    "en": "Student"
+  },
+  "aliases": [
+    "Студент"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "студент",
+  "names": [
+    "Тед Олни",
+    "Сьюзан Осгуд",
+    "Роберт Уилкокс",
+    "Энн Сьюолл",
+    "Чарли Уоррен"
+  ],
+  "occupation": {
+    "ru": "студент",
+    "en": "Student"
+  },
+  "residence": "Аркхэм",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "55",
+        "value": 55
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "APP": {
+        "raw": "65",
+        "value": 65
+      },
+      "INT": {
+        "raw": "75",
+        "value": 75
+      },
+      "POW": {
+        "raw": "65",
+        "value": 65
+      },
+      "EDU": {
+        "raw": "80",
+        "value": 80
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "13",
+      "value": 13
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "+1d3",
+          "dice": "1d3",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:unarmed",
+        "notes": "в книге урон напечатан с плюсом впереди («+1d3») — как напечатано; где БкУ не нулевой, он вписан в урон"
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Обаяние",
+        "skill": "coc:skill:charm",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "48%",
+          "value": 48,
+          "half": 24,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Ориентирование (Аркхэм)",
+        "skill": "coc:skill:navigate",
+        "specialization": "Аркхэм",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Две специализации на выбор (Антропология, История, Язык, Наука, и т. п.) — каждая",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      }
+    ],
+    "sanity": {
+      "raw": "65",
+      "value": 65
+    }
+  },
+  "description": {
+    "ru": "Типовой персонаж из раздела «Generic NPCs» Приложения B путеводителя «Аркхэм»: студент для любой встречи в Аркхэме, когда нужен безымянный горожанин. Хранитель берёт статблок как есть и выбирает имя из списка.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "arkham-en",
+      "physical_page": 257,
+      "printed_page": 256,
+      "method": "book_text",
+      "verified": true,
+      "note": "Appendix B: Game Aids — Generic NPCs: «Student»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "editorial_text"
+    ],
+    "notes": "Групповой типаж: имена придуманы (Р-151), в книге — «Student». Числа — по странице книги (с. 256), сверены по изображению. Перевод наш (Р-21)."
+  }
+}

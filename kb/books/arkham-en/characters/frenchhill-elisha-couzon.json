@@ -1,0 +1,269 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "arkham-en/character/frenchhill-elisha-couzon",
+  "kind": "character",
+  "name": {
+    "ru": "Элиша Кузон",
+    "en": "Elisha Couzon"
+  },
+  "aliases": [
+    "Ален Кюзон"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "гипнотизёр",
+    "en": "Hypnotist"
+  },
+  "age": {
+    "raw": "52",
+    "value": 52
+  },
+  "sex": "женский",
+  "residence": "Аркхэм, Френч-Хилл",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "knows",
+      "target": "arkham-en/character/frenchhill-phineas-smith",
+      "note": "хозяин меблированных комнат",
+      "note_back": "жилица"
+    },
+    {
+      "type": "knows",
+      "target": "arkham-en/character/frenchhill-harriet-smith",
+      "note": "хозяйка меблированных комнат",
+      "note_back": "жилица"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "35",
+        "value": 35
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "55",
+        "value": 55
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "70",
+        "value": 70
+      },
+      "POW": {
+        "raw": "80",
+        "value": 80
+      },
+      "EDU": {
+        "raw": "80",
+        "value": 80
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "16",
+      "value": 16
+    },
+    "sanity": {
+      "raw": "79",
+      "value": 79,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "5",
+      "value": 5,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 5
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "44%",
+          "value": 44
+        }
+      },
+      {
+        "name": "Гипноз",
+        "skill": "coc:skill:hypnosis",
+        "value": {
+          "raw": "85%",
+          "value": 85
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Ориентирование (Аркхэм)",
+        "skill": "coc:skill:navigate",
+        "specialization": "Аркхэм",
+        "value": {
+          "raw": "35%",
+          "value": 35
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Иностранный язык (английский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "английский",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Родной язык (французский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "французский",
+        "value": {
+          "raw": "80%",
+          "value": 80
+        }
+      },
+      {
+        "name": "Иностранный язык (латынь)",
+        "skill": "coc:skill:language-other",
+        "specialization": "латынь",
+        "value": {
+          "raw": "15%",
+          "value": 15
+        }
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Лечение фобий и маний гипнозом",
+      "summary": "Курс — пять недель, одно занятие в неделю, всего 30–60 долларов (смотря по видимому достатку); тяжёлые случаи — дольше и дороже. После последнего занятия пациент проходит проверку МОЩ с бонусной костью: успех — излечение, фобия или мания стирается с листа сыщика, и он получает +1d4 Рассудка. Если та же фобия или мания вернётся, Кузон может лечить снова, но нужна уже трудная проверка МОЩ без бонусной кости. При крахе проверки МОЩ фобия или мания усиливается: в безумии такой персонаж получает две штрафные кости ко всем действиям (кроме боя и бегства) рядом с её источником; к тому же эту фобию или манию Элиша Кузон вылечить уже не сможет.",
+      "raw": "For the treatment of phobias and manias, a person undergoes a five-week program of one session per week at a total cost of $30 to $60 (dependent on their apparent wealth); severe cases may require longer and cost more. At the end of the final session, the candidate should attempt a POW roll with a bonus die. If successful, they are cured and may remove the phobia or mania from the character sheet; in addition, they gain +1d4 Sanity points. If the same phobia or mania later returns, Couzon may treat them again, although a Hard POW roll with no bonus die is now required. If they fumble the POW roll, the phobia or mania worsens; when insane, such a character suffers two penalty dice to all actions (except combat or fleeing) when exposed to the source of their phobia or mania. In addition, a fumbled result means that particular phobia or mania cannot be cured by Elisha Couzon.",
+      "refs": [
+        "coc:skill:hypnosis"
+      ]
+    },
+    {
+      "name": "Обучение гипнозу",
+      "summary": "За 200 долларов (вперёд) учит гипнозу шесть месяцев. В конце ученик получает навык Гипноз с начальным значением 2d10+10 (не выше 50%), но только если у него МОЩ 70 или больше; ученики с меньшей МОЩ тратят деньги зря и навыку не учатся (снисходительный Хранитель может дать им навык с начальным значением 1d10+2).",
+      "raw": "For $200 (in advance), Couzon can teach hypnosis over a period of six months. At the end of that time, the student gains the Hypnosis skill at a starting level of 2d10+10 percentiles to a maximum of 50%, but only if the candidate possesses POW 70 or better. Those with lower POWs waste their money and never pick up the skill; although lenient Keepers may prefer to award such low-POW candidates the skill starting at 1d10+2 percentiles.",
+      "refs": [
+        "coc:skill:hypnosis"
+      ]
+    }
+  ],
+  "background": {
+    "traits": "Несмотря на суровый вид, на деле очень заботлива и обычно старается помочь тем, кому нужны её услуги."
+  },
+  "description": {
+    "ru": "Стройная, строгого и властного вида; волосы туго собраны в пучок, предпочитает чёрные платья. Живёт жилицей в меблированных комнатах Смита (713).",
+    "en": null
+  },
+  "legend": {
+    "ru": "Искусству гипноза Кузон научилась в Квебеке, а потом уехала строить жизнь в Аркхэме. Почему она покинула Квебек, она пока не рассказывала, хотя любопытные хозяева подозревают какую-то мрачную причину. Скромно зарабатывает гипнозом: помогает людям избавиться от привычек, побороть страхи, обрести уверенность. Иногда её удаётся уговорить научить гипнозу платного ученика. Ещё пишет внештатные статьи для журналов на английском и французском.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "arkham-en",
+      "physical_page": 197,
+      "printed_page": 196,
+      "method": "book_text",
+      "verified": true,
+      "note": "713 Smith’s Boarding House: Notable Folk; врезка «Elisha Couzon, Hypnotist, age 52» — статблок, Benefits"
+    },
+    {
+      "book_id": "arkham-guide-hort-ru",
+      "physical_page": 87,
+      "printed_page": 87,
+      "method": "book_text",
+      "verified": true,
+      "note": "716. Пансионат Смита: гипнотизёр «Ален Кюзон» — русская форма имени в путеводителе Hort"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Родной язык — французский: его значение равно ОБР 80 (вывод из текста, Р-41). В путеводителе Hort (Arkham Unveiled) гипнотизёр — мужчина «Ален Кюзон», около 45 лет, Гипноз 85%, французский 75%, обучение даёт 1d20+10; взято по книге 2023 года, имя Hort — в псевдонимах (Р-234)."
+  }
+}

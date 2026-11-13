@@ -1,0 +1,206 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "viral-en/creature/reliquae",
+  "kind": "creature",
+  "name": {
+    "ru": "Реликвы",
+    "en": "The Reliquae"
+  },
+  "aliases": [
+    "Реликва",
+    "Проклятые чумные зомби",
+    "Cursed Plague Zombies",
+    "Plague Zombie",
+    "чумной зомби"
+  ],
+  "category": "supernatural",
+  "subcategory": "проклятые чумные зомби",
+  "relations": [
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:hastalyk",
+      "note": "ждут слияния с ним",
+      "note_back": "Реликвы — мёртвые острова, ждущие слияния"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "50",
+        "value": 50
+      },
+      "CON": {
+        "raw": "25",
+        "value": 25
+      },
+      "SIZ": {
+        "raw": "55",
+        "value": 55
+      },
+      "DEX": {
+        "raw": "55",
+        "value": 55
+      },
+      "APP": {
+        "raw": "10",
+        "value": 10
+      },
+      "INT": {
+        "raw": "50",
+        "value": 50
+      },
+      "POW": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "8",
+      "value": 8
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "5",
+      "value": 5,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 5
+        }
+      ]
+    },
+    "armor": {
+      "raw": "none; The Reliquae are animated by the worms inside them, and so all physical weapons only do minimum damage.",
+      "value": 0,
+      "note": "Нет; Реликв оживляют черви внутри, поэтому любое физическое оружие наносит минимальный урон. Урон по рукам мешает хватать, по ногам — замедляет или останавливает."
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": "Fighting (Brawl)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed",
+        "notes": "Реликва пытается схватить любого живого человека и заразить его (см. «Заражённая плоть»)."
+      }
+    ],
+    "dodge": {
+      "raw": "27%",
+      "value": 27,
+      "half": 13,
+      "fifth": 5
+    },
+    "skills": [],
+    "sanity_loss": [
+      {
+        "success": "1d3",
+        "fail": "1d8",
+        "trigger": "при виде Реликвы"
+      },
+      {
+        "success": "1d4",
+        "fail": "2d4",
+        "trigger": "если Реликва изрыгает на сыщика желчь"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Заражённая плоть",
+      "summary": "Реликвы несут множество болезней — от бубонной чумы до оспы. Схватив сыщика, изрыгают на него заражённую желчь: проверка ВЫН. Успех — серьёзной болезни удаётся избежать; провал — сильная тошнота и серьёзная болезнь; экстремальный провал — смертельная (таблицы «Заражение Реликв: серьёзное» и «…: смертельное» в сценарии, 1d8). Приступ безумия или долгое безумие, скорее всего, дают боязнь микробов.",
+      "raw": "Infected Flesh: The Reliquae carry a number of illnesses from the Bubonic Plague to Smallpox. Once they grab hold of an Investigator, they vomit infected bile on them. The victim must make a CON check. Success means that they avoid contracting any serious diseases. Failure means that they become violently nauseous and contract something more serious, and an Extreme failure means a more deadly infection."
+    }
+  ],
+  "description": {
+    "ru": "Несчастные души, ни живые, ни мёртвые, застрявшие в мучительном существовании в ожидании появления Хасталыка, чтобы достичь с ним апофеоза. По сути — люди, умершие с восемью и более уровнями Порчи; чаще всего их принесли в жертву монахи, другие погибли от недуга, приведшего их на Изола-ди-Маламенте. В катакомбах лежат в нишах: покрытый гнилью труп в лохмотьях, свисающая плоть кишит бледными червями и грибком, распухшие молочные глаза; внутри что-то хлюпает, как мешок мокрой овсянки. Умоляют на итальянском, латыни, испанском или греческом дать им умереть. Когда поднимается Хасталык, они ползут и бросаются в яму, сливаясь с ним; подняться могут и мертвецы братских могил. Заклинание «Управлять Реликвой» подчиняет их.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "viral-en",
+      "physical_page": 66,
+      "printed_page": 66,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Reliquae — Cursed Plague Zombies»"
+    },
+    {
+      "book_id": "viral-en",
+      "physical_page": 67,
+      "printed_page": 67,
+      "method": "book_text",
+      "verified": true,
+      "note": "атаки, «Infected Flesh», таблицы болезней"
+    },
+    {
+      "book_id": "viral-en",
+      "physical_page": 48,
+      "printed_page": 48,
+      "method": "book_text",
+      "verified": true,
+      "note": "катакомбы: Plague Zombie"
+    },
+    {
+      "book_id": "viral-en",
+      "physical_page": 49,
+      "printed_page": 49,
+      "method": "book_text",
+      "verified": true,
+      "note": "Реликвы преследуют"
+    },
+    {
+      "book_id": "viral-en",
+      "physical_page": 60,
+      "printed_page": 60,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Catacomb Encounters»"
+    },
+    {
+      "book_id": "viral-en",
+      "physical_page": 68,
+      "printed_page": 68,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Control Reliquae»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "МОЩ в книге — «—». Уклонение напечатано «27%» без долей, доли вычислены. «Реликвы» — по реестру терминов владельца (The Reliquae)."
+  }
+}

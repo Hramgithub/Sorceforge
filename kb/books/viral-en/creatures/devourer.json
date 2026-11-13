@@ -1,0 +1,298 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "viral-en/creature/devourer",
+  "kind": "creature",
+  "name": {
+    "ru": "Пожиратель",
+    "en": "The Devourer"
+  },
+  "aliases": [
+    "Аспект Хасталыка",
+    "Aspect of Hastalÿk",
+    "Зараза",
+    "The Contagion"
+  ],
+  "category": "avatar",
+  "subcategory": "аватар Хасталыка",
+  "relations": [
+    {
+      "type": "avatar_of",
+      "target": "coc:creature:hastalyk",
+      "note": null,
+      "note_back": "аспект, рождающийся из Ямы костей на Изола-ди-Маламенте"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "150",
+        "value": 150
+      },
+      "CON": {
+        "raw": "150",
+        "value": 150
+      },
+      "SIZ": {
+        "raw": "200*",
+        "value": 200
+      },
+      "DEX": {
+        "raw": "100",
+        "value": 100
+      },
+      "POW": {
+        "raw": "250",
+        "value": 250
+      }
+    },
+    "hp": {
+      "raw": "35",
+      "value": 35,
+      "note": "растёт вместе с ТЕЛ при поглощении"
+    },
+    "mp": {
+      "raw": "50",
+      "value": 50
+    },
+    "damage_bonus": {
+      "raw": "3d6",
+      "value": "+3d6"
+    },
+    "build": {
+      "raw": "4*",
+      "value": 4,
+      "note": "звёздочка в книге: начальные значения"
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "armor": {
+      "raw": "none; can only be harmed with fire. It regenerates 5 HP/round of slashing damage, but cannot regenerate fire damage.",
+      "value": 0,
+      "note": "Нет; вредит только огонь. Регенерирует 5 ПЗ в раунд от рубящего урона, но не урон от огня."
+    },
+    "attacks_per_round": {
+      "raw": "3",
+      "value": 3
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Захват",
+          "en": "Grab (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": null,
+        "chance": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "1d6 + 1d6 per round",
+          "dice": "1d6",
+          "adds_db": false
+        },
+        "notes": "Ложноножками хватает жертв в пределах 10 м и подтягивает по 3 м за раунд; дотянутую жертву поглощает своей массой. Пока жертва в контакте с щупальцем, её плоть гниёт — 1d6 урона за раунд. Вырваться — сложная проверка СИЛ или ЛВК или 10 ПЗ урона (огнём или рубящим) по удерживающему щупальцу. Каждый раунд удержания Порча жертвы растёт на 1; на 10 уровнях жертва добровольно сдаётся и становится частью Великого Древнего."
+      }
+    ],
+    "dodge": {
+      "raw": "50% (25/10)",
+      "value": 50,
+      "half": 25,
+      "fifth": 10
+    },
+    "skills": [],
+    "spells": {
+      "raw": "Augury, Awaken the Beast, Bind Soul, Cloud Memory, Command Animal, Command Plants, Control Elements, Dampen Light, Enthrall Victim, Fury, Healing (variant), Human Shrub, The Red Sign, Return of the Beloved, Summon/Bind Dark Young",
+      "items": [
+        {
+          "name": "Augury",
+          "spell": "coc:spell:augury-folk"
+        },
+        {
+          "name": "Awaken the Beast",
+          "spell": "coc:spell:awaken-the-beast-folk"
+        },
+        {
+          "name": "Bind Soul",
+          "spell": "coc:spell:bind-soul"
+        },
+        {
+          "name": "Cloud Memory",
+          "spell": "coc:spell:cloud-memory"
+        },
+        {
+          "name": "Command Animal",
+          "spell": "coc:spell:command-animal-folk"
+        },
+        {
+          "name": "Command Plants",
+          "spell": "coc:spell:command-plants"
+        },
+        {
+          "name": "Control Elements",
+          "spell": "coc:spell:control-elements"
+        },
+        {
+          "name": "Dampen Light",
+          "spell": "coc:spell:dampen-light"
+        },
+        {
+          "name": "Enthrall Victim",
+          "spell": "coc:spell:enthrall-victim"
+        },
+        {
+          "name": "Fury",
+          "spell": "coc:spell:fury"
+        },
+        {
+          "name": "Healing (variant)",
+          "spell": "coc:spell:healing-folk"
+        },
+        {
+          "name": "Human Shrub",
+          "spell": "coc:spell:human-shrub"
+        },
+        {
+          "name": "The Red Sign",
+          "spell": "coc:spell:red-sign-of-shudde-mell"
+        },
+        {
+          "name": "Return of the Beloved",
+          "spell": "coc:spell:return-of-the-beloved"
+        },
+        {
+          "name": "Summon/Bind Dark Young",
+          "spell": "coc:spell:summon-bind-dark-young"
+        }
+      ]
+    },
+    "sanity_loss": [
+      {
+        "success": "1d8",
+        "fail": "4d10",
+        "trigger": "при виде Пожирателя"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Пожирание",
+      "summary": "Поглощает любую органику, коснувшуюся его, и прибавляет её к своей массе: ложноножками хватает и подтягивает добычу, выдвигает длинный мясистый хоботок и покрывает её едким пищеварительным ферментом, превращающим её в серую вязкую жидкость, которую жадно всасывает. Поглощая плоть (живую или мёртвую), прибавляет половину её массы: при ТЕЛ 150, поглотив человека с ТЕЛ 55, получает ТЕЛ 177 (150 + 27); ПЗ растут соответственно.",
+      "raw": "Devour: This avatar of Hasalÿk can absorb any organic matter that comes into contact with it, which then adds to its mass. … When any flesh (living or dead) is absorbed in this manner, half of that mass is added to The Devourer. In other words, if The Devourer has a SIZ 150, and it absorbs a human with a SIZ of 55, The Devourer’s new SIZ is 177 (150+27). Its Hit Points increase accordingly."
+    },
+    {
+      "name": "Рой мух",
+      "summary": "При первом физическом ударе по Пожирателю в бою его тело разрывается, выпуская облако мух, которые лезут во все отверстия ударившего: штрафная кость к его дальнейшим атакам. Мухи добавляют к какофонии шума.",
+      "raw": "Swarm of Flies: The first time The Devourer is struck a physical blow in combat, its body tears open and releases a cloud of flies that gets in all of the orifices of the person striking, giving them a Penalty Die for further attacks."
+    },
+    {
+      "name": "Боязнь огня",
+      "summary": "Пожиратель отпугивается огнём: даже граната, упавшая в пределах 10 м, заставляет его замереть на раунд (в «Кинематографичном финале»).",
+      "raw": "The Devourer is repelled by fire, so even if the investigators manage to land a grenade within 10 yards, it will cause the thing to pause for a round."
+    },
+    {
+      "name": "Рост и стремление к воде",
+      "summary": "Поглощая Реликв, испорченную флору и фауну острова, растёт до колоссальных размеров (в несколько этажей) с нимбом жужжащих мух вокруг головы; преследует сыщиков (если разделились — группу с наименьшей суммарной Удачей). Добравшись до воды, лопается, как шар, и рассеивает Порчу в море и по миру; Знак Старших богов не пускает его за Плачущий мост. Его присутствие заставляет воду отступать от острова; электронику он заражает и выводит из строя, способен войти в ретранслятор Wi-Fi и через него — в Интернет.",
+      "raw": "Its form is now colossal, reaching several stories in height… it follows them, or if they split up, it pursues the group with the lowest collective Luck… Once it is able to touch the water, it bursts like a balloon to scatter its Taint"
+    }
+  ],
+  "description": {
+    "ru": "Аватар Хасталыка, который собирает плоть живых и мёртвых, чтобы проявить этот ужасный облик. Сначала это огромная колония заражённой мякоти, но, когда Чумной монах сливается с ней, из ямы поднимается Зараза. Колоссальная мерзость сильно напоминает вирусный бактериофаг, почти до свода зала, и большая часть её поверхности покрыта пульсирующими кистами. «Голова» — своего рода капсид цвета синяка, смутно икосаэдрический, покрытый чернильными пульсирующими кистами; через неё он видит и слышит во всех направлениях. Издаёт леденящий звук — пронзительное улюлюканье или стрекот. Порой из-под полупрозрачной перепончатой трупно-серой кожи беззвучно кричат лица прежних жертв. Под головой — мясистый ствол, кончающийся аморфным основанием с шестью длинными насекомьими ногами в шипах, на которых он с пугающей скоростью и ловкостью бегает и лезет в любом направлении. Снизу — студенистые ложноножки, выстреливающие, как язык лягушки; бьющуюся жертву подтягивают под чудовище, где трубка-язык опрыскивает её тёмной едкой жидкостью, мгновенно превращающей её в серую слизь, которую мерзкий язык всасывает, — и Пожиратель заметно растёт.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Хасталык (HAS-tah-lik): Зараза, Император мух, Великая Порча, Болезнь Осмелевшая. «Внешне бесформенный, своим касанием он портит целые миры. Составленный из многих частей, связанных воедино, он странствует в пустоте, ища жизнь, чтобы изменить и поглотить. Никто не устоит перед ним». Один из самых коварных и могущественных Великих Древних, воплощение и усилитель болезни и заразы: в больших эпидемиях и даже местных вспышках может быть виноват он. Он не сама болезнь, а усилитель местной заразы — превращает вспышку в эпидемию.\nНа Изола-ди-Маламенте аспект рождается в Яме костей, когда последний чумной монах бросается туда при свидетелях в Чумную ночь; итальянские военные уничтожают его бомбардировкой (раздатки 38–39).",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "viral-en",
+      "physical_page": 65,
+      "printed_page": 65,
+      "method": "book_text",
+      "verified": true,
+      "note": "«New Mythos Horrors»: Hastalÿk, «The Devourer — Aspect of Hastalÿk»"
+    },
+    {
+      "book_id": "viral-en",
+      "physical_page": 49,
+      "printed_page": 49,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Hastalÿk Awakens»"
+    },
+    {
+      "book_id": "viral-en",
+      "physical_page": 50,
+      "printed_page": 50,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Hastalÿk Rises»"
+    },
+    {
+      "book_id": "viral-en",
+      "physical_page": 51,
+      "printed_page": 51,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Hastalÿk Unleashed»"
+    },
+    {
+      "book_id": "viral-en",
+      "physical_page": 55,
+      "printed_page": 55,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Cinematic Ending»: отпугивается огнём"
+    },
+    {
+      "book_id": "viral-en",
+      "physical_page": 102,
+      "printed_page": 102,
+      "method": "book_text",
+      "verified": true,
+      "note": "раздатка 38"
+    },
+    {
+      "book_id": "viral-en",
+      "physical_page": 103,
+      "printed_page": 103,
+      "method": "book_text",
+      "verified": true,
+      "note": "раздатка 39"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.damage_bonus",
+      "printed": "3d6",
+      "expected": "+3d6",
+      "note": "Знак «+» не напечатан; при СИЛ + ТЕЛ = 350 по таблице выходит +3d6 и Комплекция 4, как в книге."
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Звёздочка у ТЕЛ и Комплекции — «начальные значения»: они растут при поглощении. Расстояния захвата переведены из футов (30 и 10 футов). Кавычка-девиз — как в книге. Общая запись Хасталыка (Malleus Monstrorum) — coc:creature:hastalyk; имена и эпитеты «Вирусного» предложены туда псевдонимами."
+  }
+}

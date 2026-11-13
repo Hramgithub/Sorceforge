@@ -1,0 +1,107 @@
+{
+  "book_id": "tsarstvo-terrora-ru",
+  "goal": "the campaign «Царство Террора» (Reign of Terror, French Revolution, 1789 and 1794) playable from the base: campaign, its two parts as stages, scenes, Paris and its places, maps with spots, characters, creatures, items, handouts, occupations, scenario seeds; the supplement «Women of the French Revolution» alongside (Р-228).",
+  "decision": "Р-228, Р-190, Р-206, Р-209",
+  "check_dir": "checks/20261113-reign",
+  "models": [
+    "kb/books/masks-of-nyarlathotep-en/scenarios/masks-of-nyarlathotep.json",
+    "kb/books/masks-of-nyarlathotep-en/scenarios/egypt.json",
+    "kb/books/masks-of-nyarlathotep-en/scenes/egypt-arriving.json",
+    "kb/books/masks-of-nyarlathotep-en/maps/egypt-cairo.json",
+    "kb/books/masks-of-nyarlathotep-en/locations/egypt-cairo-environs.json",
+    "kb/locations/cairo.json",
+    "kb/books/masks-of-nyarlathotep-en/handouts/egypt-carlyle-papers-1.json",
+    "kb/books/masks-of-nyarlathotep-en/items/america-carved-scepter.json",
+    "kb/books/masks-of-nyarlathotep-en/organizations/america-cult-of-the-bloody-tongue.json",
+    "kb/books/masks-of-nyarlathotep-en/characters/abdul-nawisha.json",
+    "kb/books/osobnyaki-bezumiya-ru/scenarios/code-secret-code.json",
+    "kb/books/dead-light-en/scenarios/seed-suitcase.json",
+    "kb/occupations/soldat.json"
+  ],
+  "extra": "## This work (Р-228)\n\n«Царство Террора» (Reign of Terror, Chaosium, Mark Morrison with Penelope Love, James Coquillat and Darren Watson) — a two-part campaign set in the French Revolution: Part One in June–July 1789 (Paris, Versailles, Poissy), Part Two in June 1794 (Paris during the Terror); a «secret chapter» of «Horror on the Orient Express». The source is the fan translation by Green Goblin Gang (`[RU-фан 7e]`, edition `trusted`): **the Russian text is the source and the flag `translated` is NOT set** (unlike batch 4). Names of known Mythos entities, creatures, spells, tomes and shared records follow the official forms already in the base (`python tools/terms.py <word>`, `kb/creatures`, `kb/spells`, `kb/tomes`, `kb/weapons`); the fan forms go to `aliases`. Known cases: «гуль» → «Упырь» (`coc:creature:ghoul`), so the character is «Упырь, что был Гийомом» with the alias «Гуль, что был Гийомом»; «Призрачный охотник» → «Спектральный охотник» (`coc:creature:spectral-hunter`); «вампир» → `coc:creature:vampire`; «Иссушение» etc. — as in `kb/spells`. Where the fan text spells one name two ways (printer «Ремон» / map «Реймон»; «Франсуа Эрон» in Appendix 1 / «Луи Жюльен Симон Эрон» on p. 76), take the form that matches the English original, the other goes to `aliases`, and say so in your report.\n\nRead pages with `python -B pipeline/source/pages.py show tsarstvo-terrora-ru <page>` (printed page = physical, 125 pages; the Russian book has no index). The English original (7e) is for checking numbers and names: `C:\\_Hobby\\Yandex.Disk\\НРИ\\1_Зов Ктулху\\1_Библиотека\\Кампании\\Царство Террора (Reign of Terror)\\[EN 7e] Call Of Cthulhu 7ed - Reign of Terror (French Revolution).pdf` — its printed pages equal the Russian pages, its physical page = printed + 1 (`pdftotext -layout -enc UTF-8 -f <p+1> -l <p+1> \"<pdf>\" -`). Check every number (statblocks, skills, damage, SAN, ages, dates, distances) against the original: a translator's error (the Russian differs from the English) — put the English value and record the printed Russian value in `corrections`; a misprint that the English original has too — keep as printed and flag it (`errata`, Р-35). Known case: Étienne Babin, «сапёр пехоты, 24 лет» (RU p. 124) vs «age 39» in the original. Map labels and handout pages are pictures: map keys and labels are not in the text layer (read the page image, OCR with `tesseract <png> - -l rus` or `tsv` for spot coordinates), and the handout pages 114–119 have broken spacing in the text layer («пов ерить») — read them from the page image. Run tools as `python -B …`; keep scratch files in your own scratchpad subfolder named after your unit.\n\n### Fixed ids (all units use them; a reference to a record another unit is still writing is expected to fail `check.py` until that unit lands — list such refs in the report, do not drop them)\n\n- Campaign: `tsarstvo-terrora-ru/scenario/reign-of-terror` (unit intro). Stages — scenario records with `part_of` = the campaign: `tsarstvo-terrora-ru/scenario/part-1789` (`order` 1, unit 1789: Part One, pp. 17–48) and `tsarstvo-terrora-ru/scenario/part-1794` (`order` 2, unit 1794: Part Two, pp. 57–89). The Interlude «Революция» (pp. 52–53) is a step of the campaign record between the two stages, not a stage. Scenario seeds (Appendix 4) are separate scenario records `tsarstvo-terrora-ru/scenario/seed-<slug>` with `part_of: null` (unit appendices).\n- City: Paris is a new shared city `kb/locations/paris.json`, id `coc:location:paris`, `location_type: город`, `part_of: null` (model `kb/locations/cairo.json`) — made by unit intro; it is the city of both parts (and of any later book set in Paris, Р-190). No districts: the book labels the faubourgs on its maps but does not describe them, so places go straight under Paris. Places outside the city wall (Versailles, Poissy, the Comte's estate, roads) go under one area «Окрестности Парижа» `tsarstvo-terrora-ru/location/paris-environs` (`location_type: область`, `part_of` `coc:location:paris`, unit intro; Р-209). Versailles is not a shared city here: `tsarstvo-terrora-ru/location/1789-versailles` under the environs (unit 1789).\n- Places of the two Paris keeper maps (p. 18 «1789», p. 61 «1794») — one record per place for both years, made by unit intro: small records (name as printed, the key line of each map, `number` from the 1789 map or, if only on the 1794 map, from it, a neutral `keeper_hint` (Р-209), the description from wherever the book describes the place — find it by `локация N` and the name), `part_of` `coc:location:paris` (or the environs for Charenton if the text puts it outside the wall). Ids `tsarstvo-terrora-ru/location/paris-<slug>`: `paris-tuileries` (1789 №1 «Дворец Тюильри»; 1794 №1 «Национальное собрание»), `paris-place-de-la-revolution` (1789 №2 «Площадь Людовика XV»; 1794 №2 «Площадь Революции», the guillotine), `paris-royal-library` (№3; 1794 «Национальная библиотека»), `paris-les-halles` (№4), `paris-bastille` (№5; 1794 «Площадь Бастилии»), `paris-notre-dame` (№6), `paris-champ-de-mars` (№7), `paris-catacombs` (№8), `paris-luxembourg-garden` (№9), `paris-charenton-asylum` (№10), `paris-innocents-cemetery` (1789 №11), `paris-rigault-rooms` (№12, «Квартира Риго» / «Комнаты Риго»), `paris-bakery-riot` (1789 №13), `paris-raymond-printing` (1789 №14), `paris-picpus-cemetery` (1789 №15, 1794 №17), `paris-zann-house` (1794 №15 «Чердак Цанна» — the lodging house of Dietrich and Céline), `paris-madeleine-cemetery` (1794 №16), `paris-heron-apartment` (1794 №18), `paris-feydeau-theatre` (1794 №19), `paris-committee-of-public-safety` (1794 №20). Part units put their own rooms and sub-places under these (`part_of`) and propose richer descriptions, residents and scene links for them in their proposals file.\n- Characters and creatures of Appendix 1 (pp. 90–96), the Dramatis Personae (pp. 13–16) and the pre-generated investigators (Appendix 6, pp. 120–125) — unit cast; ids `tsarstvo-terrora-ru/character/<slug>`: `lucien-rigault` (one record, two statblocks: 1789 physician p. 91 and 1794 physician-sorcerer p. 96 as `variants`), `louis-malon`, `fenalik`, `guillaume-ghoul`, `dietrich-zann`, `celine-bessette`, `francois-heron`, `raymond-printer` (deceased, no statblock), `louis-xvi`, `marie-antoinette`, `comte-benoit`; pregens `thierry-renault`, `michel-beaumains`, `jean-dupois`, `christophe-pressi`, `etienne-babin`, `joseph-hugel`; group profiles (Р-151, `names`) `common-people`, `soldiers`, `aristocrats`, `fenalik-footmen`, `revolutionaries`, `rigault-servants`, `secret-police`; creatures `tsarstvo-terrora-ru/creature/<slug>`: `proto-vampire`, `guillotined-dead`, `feasting-ghouls` (`instance_of` `coc:creature:ghoul`), `rigault-spectral-hunter` (`instance_of` `coc:creature:spectral-hunter`). Any other character a part needs (Raymond's family, the innkeeper Alexis Roux, Aceline Simon, guards, courtiers…) is made by that part with its prefix.\n- Shared records: the Sedefkar Simulacrum — `kb/items/sedefkar-simulacrum.json` (`coc:item:sedefkar-simulacrum`, an artifact of «Horror on the Orient Express»; unit intro; Grep `kb/items` first); the tome «Верховная Пустота» (The Supreme Void) — `kb/tomes/` (unit 1794; Grep first); the weapons of p. 13 — `kb/weapons/` (Grep first: `flintlock` «Пистолет кремнёвый», `bayonet`, `sword-*` exist; link them, a missing one — the Charleville musket, the cavalry sabre, the rapier — is a new shared weapon, unit intro); occupations of Appendix 3 — `kb/occupations/` (`coc:occupation:<slug>`, unit cast; Grep first: `soldat` and others exist — an existing one gets a proposal, not a duplicate). Rules and tables of the book in shared folders get the prefix `reign-`: `kb/rules/reign-<slug>.json`, `kb/tables/reign-<slug>.json`. New spells (Rigault's, p. 96 — Summon Spectral Hunter and others not in `kb/spells`) — draft them in your report (`kb/spells` is shared).\n- Every other book-scoped record (scene, item, handout, organization, map, location, character) has a slug starting with its unit: intro `reign-…` (and `paris-…` for the map places above), 1789 `1789-…`, 1794 `1794-…`, appendices `seed-…` / `appendix-…`; cast uses the fixed slugs above. Organizations acting in both parts (the Committee of Public Safety, the Gardes françaises / Captain Malon's company, the Revolutionary Tribunal, the Cult of the Supreme Being) are made once by the unit of the part where the book introduces them; the other part links them.\n\n### What to make\n\n- Campaign record (intro): `summary`, `keeper_info` (Keeper Background, the conditions for continuity with the 1923 campaign), `hook`, `advice` (ways to use the scenario, Paris 1789 everyday life, continuity, the investigators and the army, the 1789→1794 gap and «Судьбы сыщиков» in short), `steps` (stage 1789, the Interlude as text, stage 1794), `conclusion`, `tables` (the city's daily routine, money). «Horror on the Orient Express» is not in the base: its handouts and chapters are named as text only.\n- Stage records (1789, 1794): `summary`, `keeper_info`, `hook`, `advice`, `steps` with `refs`, `conclusion` (incl. Sanity rewards), `tables`.\n- Scenes: every location visit and event retold fully for play (`arc` = {scenario: the stage, part: the book's section heading, order}); `where`, `participants`, `mechanics`, `outcome`. Paired duels of the Bastille, chases, the raid — `mechanics` with numbers.\n- Items, handouts (Царство #1–#5 and the player maps of pp. 118–119, text as printed in the Russian book), organizations, places with `residents`, roll tables (`table`), rules sidebars of real use at the table (Luck spending in standalone scenarios, revolutionary law and order, social class, prices) as `kb/rules/reign-…`.\n- Maps: a `map` record with the image for every map of your pages — render `pdftoppm -r 150 -f <p> -l <p> -png`, crop to the map with PIL, save `app/maps/reign-<slug>.jpg` (quality 85, ≤ 2000 px wide), `width`/`height` of the image, `location` = the city or area, `shows` = the place it shows, and spots on every printed number or room label (Р-206; check each by eye on a crop); every key number gets a place record (fixed ones above for the Paris keeper maps). Spot captions (`keeper_hint`) neutral, no spoilers (Р-209). The two-page «City of Paris 1789–1794» (pp. 50–51) has English labels: one image of both pages.\n- Coverage: `checks/20261113-reign/<your unit>.md` — every heading of your pages → record(s), «не взято» with the reason (nothing dropped silently: a sidebar of history goes into `advice`/`keeper_info` or a rule). Proposals: `checks/20261113-reign/proposals-<your unit>.json`.\n- Conventions for this book: dice with lowercase d everywhere, even in quotes (the book prints `1D6`; Р-27); distances in metres and kilometres even in quotes (the book has miles and feet; Р-64; map images stay as printed); `axes.era` [\"other\"] (the schema has no 18th-century era — say «1789 и 1794, Французская революция» in the summary), `axes.ruleset` \"core\"; misprints — `errata` as printed (Р-35); the lead sets nothing else per unit.\n- Pointers only (the book is the source): the owner's handout pack `…\\Царство Террора (Reign of Terror)\\Раздатка\\` (scene art and VTT maps: Paris, the Comte's estate floors, Rigault's and Zann's houses — for kb-art later), the pregenerated sheets `…\\Прегены\\[RU 7e] Царство Террора.pdf`.\n\n### Order\n\nintro and cast first (in parallel: they own the city, its map places, the characters and the shared records); then 1789 and 1794 (in parallel); appendices any time; women after cast (it links the occupations of Appendix 3).",
+  "units": [
+    {
+      "name": "intro",
+      "pages": "5-16 18 48 50-53 61 114-115 118-119",
+      "target": "(Also read the pages where the Paris map places are described — find them with `pages.py grep` by «локация N» and the place names.) Introduction:campaign record `reign-of-terror` (Вступление, Предисловие, Информация для Хранителя, Использование этого сценария, part of «Horror on the Orient Express», Paris 1789: everyday life — continuity, the city's daily routine and money as tables, the investigators, the army, the weapons table p. 13 → shared weapons), the Interlude «Революция» (pp. 52–53) as a campaign step; Paris (shared city) and «Окрестности Парижа»; maps: Paris 1789 keeper map (p. 18), Paris environs (p. 48), «City of Paris 1789–1794» (pp. 50–51), Paris 1794 keeper map (p. 61) with spots, and the 20 fixed map places; handouts Царство #1, #2 (pp. 114–115) and the player maps of Paris (pp. 118–119); the Sedefkar Simulacrum (shared item).",
+      "owns": [
+        "kb/books/tsarstvo-terrora-ru/scenarios/reign-of-terror.json",
+        "kb/books/tsarstvo-terrora-ru/{scenes,items,handouts,organizations,locations,maps}/reign-* (new files)",
+        "kb/books/tsarstvo-terrora-ru/locations/paris-* (the fixed map places), paris-environs.json",
+        "kb/books/tsarstvo-terrora-ru/maps/paris-* (new files)",
+        "kb/locations/paris.json",
+        "kb/items/sedefkar-simulacrum.json",
+        "new shared weapons of p. 13 (kb/weapons/)",
+        "kb/tables/reign-paris-*, kb/rules/reign-paris-* (new files)",
+        "app/maps/reign-paris-*",
+        "checks/20261113-reign/intro.md, proposals-intro.json"
+      ],
+      "sites": "Paris (shared city, new), Окрестности Парижа"
+    },
+    {
+      "name": "cast",
+      "pages": "13-16 90-96 103-107 120-125",
+      "target": "Dramatis Personae (pp. 13–16) and Appendix 1 «Персонажи и чудовища» (pp. 90–96): every character, group profile and creature with the fixed ids (Rigault with two statblocks as `variants`; Fenalik with his vampire abilities, the Simulacrum armour as a note; proto-vampires, the guillotined dead, feasting ghouls, Rigault's spectral hunter); Appendix 6 the six pre-generated investigators (pp. 120–125); Appendix 3 «Роды занятий сыщиков» (pp. 103–107) — occupations as shared records, «Социальный класс», «Наличные и имущество», «Цены» as `kb/rules/reign-…` / `kb/tables/reign-…`.",
+      "owns": [
+        "kb/books/tsarstvo-terrora-ru/characters/<fixed slugs> (new files)",
+        "kb/books/tsarstvo-terrora-ru/creatures/<fixed slugs> (new files)",
+        "kb/occupations/<new occupations of Appendix 3>",
+        "kb/rules/reign-social-class*, reign-cash*, kb/tables/reign-prices* (new files)",
+        "checks/20261113-reign/cast.md, proposals-cast.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "1789",
+      "pages": "17-49",
+      "target": "Part One: 1789 — stage `part-1789`: Prologue 1794 («Человек в повозке»), the cemetery (start), murder at the printing press, Versailles 1789, Poissy, the Comte's estate and mansion, an evening of horrors (carriages, getting into the cellar), rumours of revolution, planning, before the party, the raid, the assault, the cellar (the dangerous option), the road to revolution (the Tennis Court Oath, the Bastille, the Declaration); maps: Catacombs (p. 22), Raymond's printing house (p. 24), the palace of Versailles (pp. 27–28), Fenalik's mansion and estate (p. 33), Fenalik's cellar (pp. 42–43) with spots; handouts Царство #3, #4 (p. 116); items of the Comte's cabinet of horrors.",
+      "owns": [
+        "kb/books/tsarstvo-terrora-ru/scenarios/part-1789.json",
+        "kb/books/tsarstvo-terrora-ru/*/1789-* (new files)",
+        "kb/tables/reign-1789-*, kb/rules/reign-1789-* (new files)",
+        "app/maps/reign-1789-*",
+        "checks/20261113-reign/1789.md, proposals-1789.json"
+      ],
+      "sites": "Paris (catacombs, printing house, bakery), Окрестности Парижа (Versailles, Poissy, the Comte's estate), the Bastille"
+    },
+    {
+      "name": "1794",
+      "pages": "57-89 117",
+      "target": "Part Two: June 1794 — stage `part-1794`: introduction (1789→1794), the fates of the investigators (incl. «Пять лет опыта?»), keeper background, start: June 1794 (the meeting), Paris during the Terror, interview with the ghoul, investigating Rigault (Rigault's rooms), revolutionary law and order (the Committee, the secret police, the Tribunal; Héron, «Robespierre's pit bull»), finding Dietrich Zann (asking about Zann and Céline, direct confrontation, the lodging house), the guillotine (public execution, the plan), denouement; the tome «Верховная Пустота»; maps: Rigault's rooms (p. 69), Zann's attic (p. 81) with spots; handout Царство #5 (p. 117).",
+      "owns": [
+        "kb/books/tsarstvo-terrora-ru/scenarios/part-1794.json",
+        "kb/books/tsarstvo-terrora-ru/*/1794-* (new files)",
+        "kb/tomes/<the Supreme Void> (new file)",
+        "kb/tables/reign-1794-*, kb/rules/reign-1794-* (new files)",
+        "app/maps/reign-1794-*",
+        "checks/20261113-reign/1794.md, proposals-1794.json"
+      ],
+      "sites": "Paris (Place de la Révolution, Rigault's rooms, the Committee, Héron's apartment, the Feydeau theatre, Zann's lodging house, the catacombs)"
+    },
+    {
+      "name": "appendices",
+      "pages": "97-102 108-113",
+      "target": "Appendix 2 «Хронология и библиография» — the timeline of the Revolution as a table `kb/tables/reign-timeline.json`, the bibliography as one rule record `kb/rules/reign-bibliography.json` (a reading list, nothing dropped); Appendix 4 «Идеи для сценариев» — every seed (The Thing in the Bastille, Cold Blooded, The Bleeding Page, La Maladie Imaginaire, The Bookworms, Highly Collectable, The Shell Game, Fear of the Dark, The Laboratory of Antoine Lavoisier) as a scenario record `seed-<slug>` (model dead-light seed), its named people as characters `seed-<slug>` without statblocks if the text gives them.",
+      "owns": [
+        "kb/books/tsarstvo-terrora-ru/scenarios/seed-* (new files)",
+        "kb/books/tsarstvo-terrora-ru/*/seed-*, appendix-* (new files)",
+        "kb/tables/reign-timeline.json, kb/rules/reign-bibliography.json",
+        "checks/20261113-reign/appendices.md, proposals-appendices.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "women",
+      "book_id": "reign-of-terror-women-en",
+      "pages": "1-12",
+      "target": "All 12 pages of `reign-of-terror-women-en` (content pp. 5–11; `[EN 7e] Women of the French Revolution - Reign of Terror CoC.pdf`, Kelly Grant, Chaosium 2023). The supplement «Women of the French Revolution» for the Reign of Terror setting: the rights of women before, during and after the Revolution (one rule record `kb/rules/reign-women-of-the-revolution.json`), the salons (rule), investigator occupations for women (Explorer, Hairdresser, Sans-culotte, Spy, Artist Entrepreneur, Courtesan, Midwife, Political Activist, Noble) — shared occupations; an occupation that Appendix 3 of the main book already gives (unit cast) gets a proposal, not a duplicate; the biographies of historical women (Claire Lacombe, Théroigne de Méricourt, Marie Tussaud, Angélique du Coudray, Etta Palm d'Aelders, Charlotte Corday and any other) as characters without statblocks in the supplement's book folder. This book is the English original: our translation, flag `translated`, Russian names from the glossary and the base (official forms first, Р-184), machine translation is not a source; printed page = physical.",
+      "owns": [
+        "kb/books/reign-of-terror-women-en/** (new)",
+        "kb/occupations/<new occupations of the supplement>",
+        "kb/rules/reign-women-* (new files)",
+        "checks/20261113-reign/women.md, proposals-women.json"
+      ],
+      "sites": "Paris (links only)"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "tri-koshmarnykh-vechera-ru/scene/glow-pobeg",
+  "kind": "scene",
+  "name": {
+    "ru": "Побег",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Сыщики могут покинуть территорию либо достигнув целей, либо чтобы избежать смерти. Вместо проверок можно провести полноценную погоню по правилам «Книги хранителя».\nЕсли сыщики бегут с Мисси, Цвет может определить её местоположение: скрыться от него проверкой Скрытности нельзя, остаётся только убегать. Кроме того, Мисси становится плохо, если она покидает ферму, пока Цвет жив. Успешная проверка Медицины или Первой помощи может помочь ей пережить это; неудача — Мисси впадает в кому, и Хранитель решает, выживет ли она. Если она выживет, то вдали от фермы связь между ней и Цветом разрывается; её тело снова работает нормально, но медленное разложение и смерть близких оставляют психологическую травму на всю жизнь.",
+    "en": null
+  },
+  "when": "Когда сыщики уходят с фермы — выполнив цели или спасаясь от смерти",
+  "arc": {
+    "scenario": "tri-koshmarnykh-vechera-ru/scenario/glow-sinee-siyanie",
+    "part": "Столкновение с Цветом",
+    "order": 16
+  },
+  "where": [
+    {
+      "location": "tri-koshmarnykh-vechera-ru/location/glow-ferma-bikerov",
+      "note": "уход с фермы"
+    },
+    {
+      "location": "tri-koshmarnykh-vechera-ru/location/glow-ferma-10-zanesennaya-snegom-doroga",
+      "note": "дорога прочь"
+    }
+  ],
+  "participants": [
+    {
+      "id": "tri-koshmarnykh-vechera-ru/character/glow-anna-khollouz",
+      "role": "готовый сыщик, агент Бюро"
+    },
+    {
+      "id": "tri-koshmarnykh-vechera-ru/character/glow-buker-ris",
+      "role": "готовый сыщик, агент Бюро"
+    },
+    {
+      "id": "tri-koshmarnykh-vechera-ru/character/glow-titus-frimen",
+      "role": "готовый сыщик, агент Бюро"
+    },
+    {
+      "id": "tri-koshmarnykh-vechera-ru/character/glow-virdzhiniya-rayt",
+      "role": "готовый сыщик, агент Бюро"
+    },
+    {
+      "id": "tri-koshmarnykh-vechera-ru/creature/glow-tsvet-iz-inogo-mira",
+      "role": "преследует"
+    },
+    {
+      "id": "tri-koshmarnykh-vechera-ru/character/glow-missi-biker",
+      "role": "если сыщики берут её с собой"
+    }
+  ],
+  "mechanics": {
+    "ru": "• Если Цвет знает о присутствии сыщиков, но не обнаружил их, они могут раствориться в темноте, пройдя проверку Скрытности.\n• Если Цвет преследует их — проверка ЛВК сыщика против ЛВК монстра 90. Два последовательных успеха — сыщики отрываются и убегают. Дайте бонусную кость тем, кто ранее преуспел в проверке Ориентирования на территории фермы.\n• На отремонтированной машине или грузовике Джейкоба проверку ЛВК заменяет Вождение.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Сыщики уходят (или нет) — «Заключение».",
+    "en": null
+  },
+  "refs": [
+    "tri-koshmarnykh-vechera-ru/item/glow-sluzhebnyy-ford-model-t",
+    "tri-koshmarnykh-vechera-ru/item/glow-pikap-dzheykoba",
+    "tri-koshmarnykh-vechera-ru/character/glow-missi-biker",
+    "tri-koshmarnykh-vechera-ru/scene/glow-zaklyuchenie",
+    "coc:rule:chases",
+    "coc:rule:monsters-in-a-chase"
+  ],
+  "axes": {
+    "era": [
+      "1930s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "tri-koshmarnykh-vechera-ru",
+      "physical_page": 85,
+      "printed_page": 84,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Побег»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

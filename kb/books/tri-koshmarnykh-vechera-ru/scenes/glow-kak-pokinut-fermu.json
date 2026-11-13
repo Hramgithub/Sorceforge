@@ -1,0 +1,92 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "tri-koshmarnykh-vechera-ru/scene/glow-kak-pokinut-fermu",
+  "kind": "scene",
+  "name": {
+    "ru": "Как покинуть ферму",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "В идеале сыщики должны покинуть владения Бикеров после выполнения миссии. Для этого они могут поискать детали для ремонта своей машины. В сарае Джейкоба разбросаны различные механические запчасти; их поиск требует успешной проверки Внимания (детали легко найти, если есть время, но предполагается, что сыщики торопятся). Дайте бонусную кость, если сыщики ранее преуспели в проверке Механики при осмотре своей сломанной машины.\nКогда сыщики возвращаются к машине, снег становится глубже, и после относительного тепла владений Бикеров холод пронизывает до костей. Те, кто снял тёплую одежду, сильно замерзают: по усмотрению Хранителя повысьте сложность соответствующих проверок до трудной или добавляйте штрафную кость. Если сыщики нашли подходящие детали (успешная проверка Внимания в сарае), машину можно завести без проверки.\nУ Джейкоба есть и пыльный пикап, на котором он ездил за припасами в Анкоридж; месяцами он стоит в глубине сарая и опутан мутировавшими лианами.",
+    "en": null
+  },
+  "when": "После выполнения миссии или при бегстве",
+  "arc": {
+    "scenario": "tri-koshmarnykh-vechera-ru/scenario/glow-sinee-siyanie",
+    "part": "Как покинуть ферму",
+    "order": 14
+  },
+  "where": [
+    {
+      "location": "tri-koshmarnykh-vechera-ru/location/glow-ferma-2-bolshoy-saray",
+      "note": "сарай: запчасти и пикап"
+    },
+    {
+      "location": "tri-koshmarnykh-vechera-ru/location/glow-ferma-10-zanesennaya-snegom-doroga",
+      "note": "машина сыщиков на дороге"
+    }
+  ],
+  "participants": [
+    {
+      "id": "tri-koshmarnykh-vechera-ru/character/glow-anna-khollouz",
+      "role": "готовый сыщик, агент Бюро"
+    },
+    {
+      "id": "tri-koshmarnykh-vechera-ru/character/glow-buker-ris",
+      "role": "готовый сыщик, агент Бюро"
+    },
+    {
+      "id": "tri-koshmarnykh-vechera-ru/character/glow-titus-frimen",
+      "role": "готовый сыщик, агент Бюро"
+    },
+    {
+      "id": "tri-koshmarnykh-vechera-ru/character/glow-virdzhiniya-rayt",
+      "role": "готовый сыщик, агент Бюро"
+    }
+  ],
+  "mechanics": {
+    "ru": "• Пикап: успешная проверка Взлома или трудная проверка Механики позволяет завести машину; проверка Вождения помогает освободить её от растительности. Совместно оторвать лианы вручную тоже можно, но это займёт 1d6+2 раунда, если Цвет атакует или приближается.\n• Если Джейкоб ещё поблизости, он слышит запуск двигателя пикапа и приходит проверить (сцена «Столкновение с Джейкобом»). Пробудившийся Цвет тоже замечает беспокойство и движется к источнику звука.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Зацепки: «Столкновение с Цветом» — сыщики сталкиваются с Цветом (очевидно); «Столкновение с Джейкобом» — если он ещё рядом, Джейкоб противостоит сыщикам (очевидно).",
+    "en": null
+  },
+  "refs": [
+    "tri-koshmarnykh-vechera-ru/item/glow-sluzhebnyy-ford-model-t",
+    "tri-koshmarnykh-vechera-ru/item/glow-pikap-dzheykoba",
+    "tri-koshmarnykh-vechera-ru/scene/glow-stolknovenie-s-tsvetom",
+    "tri-koshmarnykh-vechera-ru/scene/glow-stolknovenie-s-dzheykobom",
+    "tri-koshmarnykh-vechera-ru/scene/glow-pobeg"
+  ],
+  "axes": {
+    "era": [
+      "1930s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "tri-koshmarnykh-vechera-ru",
+      "physical_page": 83,
+      "printed_page": 82,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Как покинуть ферму»"
+    },
+    {
+      "book_id": "tri-koshmarnykh-vechera-ru",
+      "physical_page": 84,
+      "printed_page": 83,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Как покинуть ферму» (окончание), «Зацепки»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

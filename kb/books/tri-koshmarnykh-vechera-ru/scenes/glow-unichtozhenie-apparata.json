@@ -1,0 +1,93 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "tri-koshmarnykh-vechera-ru/scene/glow-unichtozhenie-apparata",
+  "kind": "scene",
+  "name": {
+    "ru": "Уничтожение самогонного аппарата",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Самогонный аппарат Джейкоба, на котором он производит «Синее сияние», стоит в задней части сарая. Чтобы остановить производство, сыщики должны вывести аппарат из строя и уничтожить все запасы «Синего сияния», которые Джейкоб оставил на ближайших столах. Сыщики должны выполнить эту сложную задачу на совесть, чтобы производство не возобновилось.\nЕсли Джейкоб всё ещё поблизости, он появляется либо услышав взрыв, либо в какой-то момент долгой возни сыщиков в сарае. Если сыщики прячутся, он слишком одурманен, чтобы заметить перемены в мастерской, и не обращает внимания на мелкие нарушения порядка: несколько минут бродит по сараю, поправляя коробки и осматривая аппарат, а затем начинает новый обход фермы. Если он обнаружит, что аппарат уничтожен, он воет и начинает бродить по ферме в поисках виновных (сцена «Столкновение с Джейкобом»).\nХранителю на заметку: взрыв самогонного аппарата — один из способов навредить Цвету (сцена «Столкновение с Цветом»).",
+    "en": null
+  },
+  "when": "Когда сыщики добираются до сарая",
+  "arc": {
+    "scenario": "tri-koshmarnykh-vechera-ru/scenario/glow-sinee-siyanie",
+    "part": "Зачистка хижины",
+    "order": 12
+  },
+  "where": [
+    {
+      "location": "tri-koshmarnykh-vechera-ru/location/glow-ferma-2-bolshoy-saray",
+      "note": "сарай"
+    },
+    {
+      "location": "tri-koshmarnykh-vechera-ru/location/glow-ferma-6-proizvodstvo",
+      "note": "перегонный куб"
+    },
+    {
+      "location": "tri-koshmarnykh-vechera-ru/location/glow-ferma-8-stoly-dlya-rozliva",
+      "note": "запасы джина на столах"
+    }
+  ],
+  "participants": [
+    {
+      "id": "tri-koshmarnykh-vechera-ru/character/glow-anna-khollouz",
+      "role": "готовый сыщик, агент Бюро"
+    },
+    {
+      "id": "tri-koshmarnykh-vechera-ru/character/glow-buker-ris",
+      "role": "готовый сыщик, агент Бюро"
+    },
+    {
+      "id": "tri-koshmarnykh-vechera-ru/character/glow-titus-frimen",
+      "role": "готовый сыщик, агент Бюро"
+    },
+    {
+      "id": "tri-koshmarnykh-vechera-ru/character/glow-virdzhiniya-rayt",
+      "role": "готовый сыщик, агент Бюро"
+    },
+    {
+      "id": "tri-koshmarnykh-vechera-ru/character/glow-dzheykob-biker",
+      "role": "может прийти на шум"
+    }
+  ],
+  "mechanics": {
+    "ru": "• Окончательно вывести аппарат из строя: успешная проверка Механики и 1d2 часа. Просто сжечь сарай недостаточно.\n• Или взорвать аппарат и спиртное разом: проверка Взрывчатки для безопасного подрыва. Неудача — неконтролируемый взрыв: 1d6 урона устроившему взрыв и 1d4 тем, кто поблизости. Расположенный к игрокам Хранитель может разрешить проверку Уклонения, чтобы уменьшить урон вдвое.\nХранителю на заметку: если ни у кого нет навыка Взрывчатки, замените его проверкой Удачи; если сыщики торопятся — трудной проверкой Удачи.\n• Приближение Джейкоба: успешная проверка Слуха позволяет его услышать; если сыщики шумят, проверка трудная.\n• Заметив его, сыщики могут пройти проверку Скрытности, чтобы спрятаться до того, как он войдёт в сарай.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Аппарат и запасы уничтожены (первая цель налёта); шум и взрыв будят Джейкоба и раньше времени — Цвет.",
+    "en": null
+  },
+  "refs": [
+    "tri-koshmarnykh-vechera-ru/item/glow-dzhin-sinee-siyanie",
+    "tri-koshmarnykh-vechera-ru/character/glow-dzheykob-biker",
+    "tri-koshmarnykh-vechera-ru/scene/glow-stolknovenie-s-dzheykobom",
+    "tri-koshmarnykh-vechera-ru/scene/glow-stolknovenie-s-tsvetom",
+    "tri-koshmarnykh-vechera-ru/scene/glow-otschet-vremeni",
+    "coc:rule:luck-rolls"
+  ],
+  "axes": {
+    "era": [
+      "1930s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "tri-koshmarnykh-vechera-ru",
+      "physical_page": 82,
+      "printed_page": 81,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Уничтожение самогонного аппарата»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

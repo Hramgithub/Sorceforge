@@ -41,8 +41,8 @@ RULES = [
 ]
 DECISION = re.compile(r"^Р-\d+$")
 # where the old measures may stay (Р-64, Р-124, Р-142): our remarks about the data, reasons of corrections and misprints,
-# names of calibres, and a scenario's numbers quoted as printed
-KEEP_MEASURES = re.compile(r"^(quality\.notes|errata\[\d+\]\.(note|expected)|corrections\[\d+\]\.reason|caliber|source_variants\[\d+\]\..*)$")
+# names of calibres, a scenario's numbers quoted as printed, and printed titles kept as aliases (Р-229)
+KEEP_MEASURES = re.compile(r"^(quality\.notes|errata\[\d+\]\.(note|expected)|corrections\[\d+\]\.reason|caliber|source_variants\[\d+\]\..*|aliases\[\d+\])$")
 # characteristics are named by id but are not records (schemas/skill.schema.json, opposed_by)
 VIRTUAL = re.compile(r"^coc:characteristic:[a-z]+$")
 # fields that quote other data as it was: a correction's «from» and a misprint's «printed» keep the old writing

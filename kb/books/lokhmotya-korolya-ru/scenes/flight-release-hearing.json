@@ -1,0 +1,80 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "lokhmotya-korolya-ru/scene/flight-release-hearing",
+  "kind": "scene",
+  "name": {
+    "ru": "Слушание об освобождении Александра Роби",
+    "en": "Alexander Roby's Release Hearing"
+  },
+  "description": {
+    "ru": "Решение об освобождении Александра Роби принимается по доказательствам, представленным в магистратский суд Херефорда 30 ноября 1928 года; Роби не присутствует. Херефорд, в 32 км от Уобли и приюта, — главный город графства с населением 23 000 человек, в основном на северном берегу реки Уай, с прекрасным собором; сыщики вполне могут захотеть присутствовать; гостиницы — «Зелёный дракон», «Митра» и «Сити Армс». Если против этого не выступят успешно, доктор Чарльз Хайсмит рекомендует выписать пациента из приюта Святой Агнессы и перевести в Саутгейтский дом престарелых в Диле, Кент.\nСыщики, вероятно, понимают, как важно не допустить освобождения. Возможно, они уже пытались убедить Хайсмита оставить Александра до дальнейшего изучения — разыграйте эту встречу: он будет недоволен, проиграв спор. Если Хайсмит не поддаётся, можно убедить Грэхема Роби использовать свои связи, чтобы брата не освободили.",
+    "en": null
+  },
+  "when": "30 ноября 1928 года.",
+  "arc": {
+    "scenario": "lokhmotya-korolya-ru/scenario/flight-north",
+    "part": "Слушание об освобождении Александра Роби",
+    "order": 2
+  },
+  "where": [
+    {
+      "location": "coc:location:hereford",
+      "note": "магистратский суд Херефорда"
+    }
+  ],
+  "participants": [
+    {
+      "id": "lokhmotya-korolya-ru/character/charles-highsmith",
+      "role": "суперинтендант, даёт рекомендацию"
+    },
+    {
+      "id": "lokhmotya-korolya-ru/character/grahame-roby",
+      "role": "брат Роби, может повлиять на решение"
+    }
+  ],
+  "mechanics": {
+    "ru": "Разговор с Хайсмитом или Грэхемом Роби (социальные навыки по ситуации). Если слушание решает оставить Александра в приюте Святой Агнессы, каждый сыщик получает 1d6 Рассудка.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Суд либо продлевает содержание Роби, либо велит перевести его в дом престарелых в Кенте. В любом случае Эдвардс увозит Роби.",
+    "en": null
+  },
+  "refs": [
+    "coc:location:hereford",
+    "lokhmotya-korolya-ru/character/charles-highsmith",
+    "lokhmotya-korolya-ru/character/grahame-roby",
+    "lokhmotya-korolya-ru/character/alexander-roby",
+    "lokhmotya-korolya-ru/location/madman-st-agnes-asylum",
+    "lokhmotya-korolya-ru/location/madman-weobley"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "lokhmotya-korolya-ru",
+      "physical_page": 108,
+      "printed_page": 108,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Слушание об освобождении Александра Роби»"
+    },
+    {
+      "book_id": "lokhmotya-korolya-ru",
+      "physical_page": 109,
+      "printed_page": 109,
+      "method": "book_text",
+      "verified": true,
+      "note": "решение суда, награда Рассудком"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "20 миль — 32 км (Р-64). Сведения о Херефорде (население, собор, гостиницы) — предложение к записи города части madman."
+  }
+}

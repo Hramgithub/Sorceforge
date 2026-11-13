@@ -1,0 +1,386 @@
+{
+  "images": [
+    {
+      "file": "art/characters/andrew-taylor.webp",
+      "kind": "portrait",
+      "caption": "Детектив-инспектор Эндрю Тейлор",
+      "source": "«Лохмотья Короля», с. 66"
+    }
+  ],
+  "schema": "sourcefold.character.v0",
+  "id": "lokhmotya-korolya-ru/character/andrew-taylor",
+  "kind": "character",
+  "name": {
+    "ru": "Детектив-инспектор Эндрю Тейлор",
+    "en": "Detective Inspector Andrew Taylor"
+  },
+  "aliases": [
+    "Эндрю Тейлор",
+    "Детектив Эндрю Тейлор",
+    "Инспектор Тейлор",
+    "Det. Insp. Taylor"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "инспектор полиции, отдел уголовного розыска Скотланд-Ярда",
+    "en": "Police Inspector"
+  },
+  "occupation_ref": "coc:occupation:detektiv-politsii",
+  "age": {
+    "raw": "39 лет",
+    "value": 39
+  },
+  "sex": "мужской",
+  "birthplace": "Шотландия",
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "masks-of-nyarlathotep-en/organization/england-metropolitan-police",
+      "note": "детектив-инспектор отдела уголовного розыска Скотланд-Ярда на набережной",
+      "note_back": "детектив-инспектор, ведущий дело об убийстве доктора Троллопа («Лохмотья Короля»)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "80",
+        "value": 80
+      },
+      "INT": {
+        "raw": "80",
+        "value": 80
+      },
+      "APP": {
+        "raw": "75",
+        "value": 75
+      },
+      "POW": {
+        "raw": "35",
+        "value": 35
+      },
+      "EDU": {
+        "raw": "40",
+        "value": 40
+      }
+    },
+    "hp": {
+      "raw": "11",
+      "value": 11
+    },
+    "sanity": {
+      "raw": "50",
+      "value": 50,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+0",
+      "value": "0"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Револьвер Webley Mark 1",
+          "en": null
+        },
+        "kind": "attack",
+        "chance": {
+          "raw": "48%",
+          "value": 48,
+          "half": 24,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d10 + 2",
+          "dice": "1d10+2",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:webley-revolver",
+        "notes": "Урон как напечатан; в справочнике револьвер «Вебли» — 1d10, модель .455 (Mk VI) — 1d10+2."
+      },
+      {
+        "name": {
+          "ru": "Кулак/удар",
+          "en": null
+        },
+        "kind": "attack",
+        "chance": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Дубинка",
+          "en": null
+        },
+        "kind": "attack",
+        "chance": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d6",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:club-small"
+      },
+      {
+        "name": {
+          "ru": "Захват",
+          "en": null
+        },
+        "kind": "maneuver",
+        "chance": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "специальный",
+          "dice": null,
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:unarmed"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Торговля",
+        "skill": "coc:skill:bargain",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Средство",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Вождение авто",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Юриспруденция",
+        "skill": "coc:skill:law",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Ремонт механизмов",
+        "skill": "coc:skill:mechanical-repair",
+        "value": {
+          "raw": "47%",
+          "value": 47,
+          "half": 23,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Маскировка",
+        "skill": "coc:skill:disguise",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Английский",
+        "skill": "coc:skill:language-own",
+        "specialization": "английский",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      }
+    ]
+  },
+  "background": {
+    "description": "Симпатичный, чисто выбритый, ростом чуть выше 1,8 м. Одевается хорошо, но не дорого, держится очень прямо. Вежлив — чрезмерно часто говорит «сэр» и «мадам», — смел и открыт, говорит мягким голосом с широким шотландским акцентом."
+  },
+  "description": {
+    "ru": "Детектив-инспектор отдела уголовного розыска (ОУР) Скотланд-Ярда на набережной, шотландец тридцати девяти лет. Симпатичный, чисто выбритый, чуть выше 1,8 м; одевается хорошо, но не дорого, держится очень прямо. Вежлив до чрезмерного «сэр» и «мадам», смел и открыт, говорит мягким голосом с широким шотландским акцентом.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Известно: работает в отделе уголовного розыска (ОУР) Скотланд-Ярда на набережной.\nИнсайдерские знания: с отличием служил в Великой войне офицером шотландской гвардии.\nСюжет: детектив, ответственный за расследование смерти Троллопа. Допрашивает сыщиков через два-три дня после убийства, если они не пришли сами.\nВ главе 2 «Прогулка в парке»: получил книгу записей приёмов доктора Троллопа, где записана его беседа с сыщиками, и через несколько дней после убийства связывается с ними. Вряд ли их подозревает, но в начале разговора — проверка Средств. Спрашивает об их деле к Троллопу, о беседе и о душевном состоянии доктора; очень заинтересуется, если окажется, что человек, похожий на убийцу, мог попасться сыщикам на глаза или приходил к их дому, и просит позвать констебля, если они снова его увидят. Теории о связи убийства с Александром Роби и убийствами Герберта и Джорджины Роби выслушивает с вежливым интересом и записывает, но действовать по ним не станет: доказательств слишком мало.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "lokhmotya-korolya-ru",
+      "physical_page": 65,
+      "printed_page": 65,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Детектив-инспектор Эндрю Тейлор»"
+    },
+    {
+      "book_id": "lokhmotya-korolya-ru",
+      "physical_page": 66,
+      "printed_page": 66,
+      "method": "book_text",
+      "verified": true,
+      "note": "внешний вид и поведение, «Известно», «Инсайдерские знания», «Сюжет»; статблок «Детектив-инспектор Эндрю Тейлор, 39 лет, шотландец, инспектор полиции»"
+    },
+    {
+      "book_id": "lokhmotya-korolya-ru",
+      "physical_page": 67,
+      "printed_page": 67,
+      "method": "book_text",
+      "verified": true,
+      "note": "атаки, навыки и языки"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.characteristics.POW",
+      "printed": "35",
+      "expected": "85",
+      "note": "с. 66: в оригинале 6-й редакции МОЩ 17 (×5 = 85); остальные характеристики переведены умножением на 5. Возможно, ошибка перевода. Оставлено как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": "Статблок как напечатан в русском издании 7-й редакции: характеристики, Рассудок, ПЗ, бонус к урону, атаки, навыки и языки (ПМ, Скорости, Комплекции и Уклонения книга не даёт). В книге МОЩ обозначена «ВОЛ», ловкость и Рассудок — прежними сокращениями перевода. Навык «Средство 40%» — так в книге (Средства). «Скрытность 40%» и «Маскировка 50%» — так в русском издании (в оригинале — Hide и Sneak). Портрет — с. 66."
+  }
+}

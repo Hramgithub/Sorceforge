@@ -1,0 +1,173 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "lokhmotya-korolya-ru/creature/carcosa-montague-edwards-unspeakable-possessor",
+  "kind": "creature",
+  "name": {
+    "ru": "Монтегю Эдвардс, Невыразимый Одержимый",
+    "en": "Montague Edwards, Unspeakable Possessor"
+  },
+  "aliases": [
+    "Невыразимый Одержимый Монтегю Эдвардс"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "Невыразимый Одержимый",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:adherent-of-the-unspeakable-oath",
+      "note_back": "Монтегю Эдвардс («Лохмотья Короля», гл. 5)"
+    },
+    {
+      "type": "form_of",
+      "target": "lokhmotya-korolya-ru/character/montague-edwards",
+      "note": "человеческий облик до превращения",
+      "note_back": "Невыразимый Одержимый — облик после воскрешения Хастуром (гл. 5)"
+    },
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:hastur",
+      "note": "воскресил его Невыразимым Одержимым"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "90",
+        "value": 90
+      },
+      "CON": {
+        "raw": "120",
+        "value": 120
+      },
+      "SIZ": {
+        "raw": "100",
+        "value": 100
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "INT": {
+        "raw": "75",
+        "value": 75
+      },
+      "POW": {
+        "raw": "175",
+        "value": 175
+      }
+    },
+    "hp": {
+      "raw": "22",
+      "value": 22
+    },
+    "damage_bonus": {
+      "raw": "+1d6",
+      "value": "1d6"
+    },
+    "move": {
+      "raw": "08",
+      "value": 8
+    },
+    "armor": {
+      "raw": "6 пунктов чешуя и резиновая плоть",
+      "value": 6
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Касание",
+          "en": "Touch"
+        },
+        "kind": "attack",
+        "skill": null,
+        "chance": {
+          "raw": "85%",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        },
+        "damage": {
+          "raw": "смерть или 1d10 хит-поинтов, высасываемых за раунд",
+          "dice": "1d10",
+          "adds_db": false,
+          "extra": "смерть или 1d10 ПЗ, высасываемых за раунд"
+        }
+      }
+    ],
+    "skills": [
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d6",
+        "trigger": "при виде Невыразимого Одержимого"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Ужасен. Лицо страдальца всё ещё узнаваемо — оно зияет ужасом и ненавистью из волнистого моря бескостной плоти; чешуя и кости прорастают под странными углами из этой вязкой массы, а впереди него идёт зловоние гнилого мяса. Человеческая статистика Эдвардса приведена ранее (запись персонажа); Одержимый может сохранить некоторые его навыки и заклинания по усмотрению Хранителя.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Приветствуя культистов, Хастур поднимает их и подносит к глазам; Эдвардс становится последним — и в ту же ночь его воскрешают как Невыразимого Одержимого возле дома Маллардок на Земле. Если вызов был прерван и Каркоза исчезла, сыщики, задержавшиеся возле дома Маллардок, могут встретить Одержимого Монтегю Эдвардса — атмосферное небольшое происшествие.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "lokhmotya-korolya-ru",
+      "physical_page": 153,
+      "printed_page": 153,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Невыразимый Одержимый»; статблок «Монтегю Эдвардс, невыразимый одержимый»"
+    },
+    {
+      "book_id": "lokhmotya-korolya-ru",
+      "physical_page": 155,
+      "printed_page": 155,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Судьба Канниха и окрестностей»: встреча у дома Маллардок"
+    },
+    {
+      "book_id": "lokhmotya-korolya-ru",
+      "physical_page": 156,
+      "printed_page": 156,
+      "method": "book_text",
+      "verified": true,
+      "note": "встреча с Одержимым (окончание)"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Статблок как напечатан в русском издании 7-й редакции (МОЩ в книге — «ВОЛ», Скорость — «СКОР 08»). Вид — «Приверженец Неизречённой клятвы» (Unspeakable Possessors — псевдоним общей записи); второй профиль того же вида в книге — Лоуренс Бэкон (глава 3, с. 100–101, `springer-unspeakable-possessor-bacon`). В оригинале — Unspeakable Possessor."
+  }
+}

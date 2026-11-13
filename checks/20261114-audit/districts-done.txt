@@ -1,0 +1,211 @@
+# Места прямо под городом, у которого есть районы (Р-209, Р-159, Р-154, Р-234)
+# Ревизия 2026-11-14, класс grouping.under_city_with_districts (tools/audit.py).
+# Было 269 мест под 19 городами с районами (скрипт: part_of = город, у которого есть район); слито 8 мест (10 старых id,
+# вместе с 2 записями «Масок»); перенесено в район 33, осталось 228 (tools/audit.py после правок — 210 находок класса).
+# Проверка: python -B tools/check.py --changed — ошибок 0, предупреждений 0.
+
+## Слито (Р-154): старый id -> общая запись (10)
+sny-o-yaponii-ru/location/mu-1-dom-veteranov -> coc:location:arkham-601-miskatonic-valley-veterans-home  (Дом ветеранов долины Мискатоника)
+sny-o-yaponii-ru/location/mu-3-srednyaya-shkola -> coc:location:arkham-603-arkham-public-high-school  (Аркхэмская государственная средняя школа)
+sny-o-yaponii-ru/location/mu-27-obshchestvo-zashchity-zhivotnykh -> coc:location:arkham-635-spca  (Общество предотвращения жестокого обращения с животными)
+bless-the-beast-and-children-ru/location/molochnaya-ferma-arkham-farms -> coc:location:arkham-405-arkham-dairy  (Аркхэмская молочная)
+naedine-s-tmoy-ru/location/arkham-zheleznodorozhnaya-stantsiya -> coc:location:arkham-134-bm-train-station  (Вокзал «Бостон и Мэн»)
+naedine-s-tmoy-ru/location/arkham-dokhodnyy-dom-missis-harding -> coc:location:arkham-117-harding-boarding-house  (Меблированные комнаты Хардингов)
+naedine-s-tmoy-ru/location/kair-muzey -> coc:location:cairo-egyptian-museum  (Египетский музей)
+masks-of-nyarlathotep-en/location/egypt-egyptian-museum -> coc:location:cairo-egyptian-museum  (Египетский музей)
+naedine-s-tmoy-ru/location/kair-vokzal -> coc:location:cairo-main-station  (Центральный вокзал)
+masks-of-nyarlathotep-en/location/egypt-main-station -> coc:location:cairo-main-station  (Центральный вокзал)
+Основа: то же место путеводителя «Аркхэм» (2023) или «Масок Ньярлатхотепа»; текст влитой книги — абзацем со своей книгой,
+источники, псевдонимы, ссылки по всей базе переписаны, старые файлы удалены, в corrections — field: id, ref: Р-154.
+Обоснования: схема кампуса «Снов о Японии» № 1, 3, 27 = места 601, 603, 635 (названия совпадают); «Arkham Farms Dairy» на
+Ривер-стрит («Arkham Dairy» в списке источников книги) = 405 (559 W River Street); станция «Бостон и Мэн» «Наедине с тьмой» = 134;
+доходный дом миссис Хардинг (Harding House) = 117 Harding Boarding House (вывод, Р-41: адреса в «Наедине с тьмой» нет);
+Каирский музей = Египетский музей (11); Каирский вокзал (поезда в Александрию) = Центральный вокзал (1). Места «Масок»
+переехали в общие записи coc:location:cairo-egyptian-museum и coc:location:cairo-main-station (Р-154).
+
+## Перенесено в район (Р-209, corrections field: part_of, ref: Р-209) — 33
+keepers-companion-en/location/puzzler-blanco-puzzle-factory (Фабрика головоломок «Бланко») -> coc:location:arkham-rivertown (Ривертаун): книга: «A small factory on North Powder Mill Street, Arkham in River-Town (see Arkham, page 149)» (Keeper’s Companion, с. 173)
+keepers-companion-en/location/puzzler-dooley-house (Дом Дули) -> coc:location:arkham-french-hill (Френч-Хилл): книга: «411 East Pickman Street, Arkham in French Hill (see Chaosium’s Arkham, page 192)» (Keeper’s Companion, с. 167)
+keepers-companion-en/location/puzzler-mcguire-art-and-design (Контора «Макгуайр: искусство и дизайн») -> coc:location:arkham-merchant-district (Торговый район): книга: «Located at 134 East Church Street in the Merchant District (see Arkham, page 119)» (Keeper’s Companion, с. 177)
+keepers-companion-en/location/puzzler-four-leaf-clover (Закусочная «Четырёхлистный клевер») -> coc:location:arkham-rivertown (Ривертаун): по адресу, вывод (Р-41): Ист-Черч-стрит, 453; по путеводителю «Аркхэм» нечётная сторона Ист-Черч-стрит с домами 400-х — Ривертаун (507 — дом 403, 511 — дом 505), Торговый район на ней кончается домом 267 (452), чётная сторона — Френч-Хилл
+keepers-companion-en/location/puzzler-mcguire-house (Дом Макгуайр) -> coc:location:arkham-french-hill (Френч-Хилл): по адресу, вывод (Р-41): Саут-Пибоди-авеню, 287; по путеводителю «Аркхэм» дом 209 той же авеню — Френч-Хилл (706 «Баня „Саутсайд“»), а Нижний Саутсайд на южных улицах начинается с домов 430–500 (907 — Саут-Пибоди-стрит, 434; 915 — Саут-Сентинел-стрит, 503)
+keepers-companion-en/location/hammer-investigator-house (Дом сыщика) -> coc:location:arkham-lower-southside (Нижний Саутсайд): книга: дом сыщика — в Нижнем Саутсайде («Lower Southside (see Chaosium’s Arkham, page 214)», Keeper’s Companion, с. 141), Саут-Пибоди-стрит, 703
+keepers-companion-en/location/hammer-agnews-house (Дом Синтии Агню) -> coc:location:arkham-lower-southside (Нижний Саутсайд): по адресу, вывод (Р-41): Саут-Сентинел-стрит, 585; по путеводителю «Аркхэм» дом 503 той же улицы — Нижний Саутсайд (915 «Похоронное бюро „Морнингсайд“»), Френч-Хилл на ней кончается домом 415 (728); по книге дом — в нескольких кварталах от дома сыщика в Нижнем Саутсайде (с. 150)
+keepers-companion-en/location/hammer-merle-house (Дом Мерлов) -> coc:location:arkham-uptown (Аптаун): книга: «address on South Boundary Street, in the Uptown (see Arkham, page 206) neighborhood» (Keeper’s Companion, с. 149)
+chernovodnyy-ruchey-ru/location/dues-dom-stenli-devida (Дом профессора Стэнли Дэвида) -> coc:location:arkham-uptown (Аптаун): по адресу, вывод (Р-41): Уэст-Пикман-стрит, 225; по путеводителю «Аркхэм» нечётная сторона Уэст-Пикман-стрит — Аптаун (808 — дом 111, 805 — 299, 804 — 311), чётная — Кампус (638 — дом 102 … 628 — 234)
+tri-koshmarnykh-vechera-ru/location/pieces-apartamenty-uorvika (Апартаменты Уорвика) -> coc:location:arkham-northside (Нортсайд): апартаменты — в здании Tower Professional Building (книга, с. 40), это место 119 путеводителя «Аркхэм» (Тауэр-билдинг, Уэст-Армитедж-стрит, 350) в районе Нортсайд; место ставится в район здания, здание — в `refs`
+fears-sharp-little-needles-en/location/undertow-bolinas-beach (Пляж Болинас) -> fears-sharp-little-needles-en/location/undertow-duxbury-point-area (Жилой район у мыса Даксбери): по карте: пляж (метки «The Beach», «Path to the Beach») — на карте «Duxbury Point & its Environs», это карта района
+fears-sharp-little-needles-en/location/undertow-duxbury-point (Мыс Даксбери) -> fears-sharp-little-needles-en/location/undertow-duxbury-point-area (Жилой район у мыса Даксбери): по карте: мыс (метка «Duxbury Point») — на карте «Duxbury Point & its Environs», это карта района
+fears-sharp-little-needles-en/location/undertow-duxbury-reef (Риф у мыса Даксбери) -> fears-sharp-little-needles-en/location/undertow-duxbury-point-area (Жилой район у мыса Даксбери): по карте: риф (метка «The start of the reef») — на карте «Duxbury Point & its Environs», это карта района
+lokhmotya-korolya-ru/location/india-bombay-taj-mahal-palace (Отель «Тадж Махал Палас») -> lokhmotya-korolya-ru/location/india-bombay-colaba (Колаба): по географии Бомбея, вывод (Р-41): отель стоит на набережной Аполло-Бандер у основания мыса Колаба, окна столовой — на залив; карта книги места отеля не показывает
+lokhmotya-korolya-ru/location/india-bombay-victoria-station (Вокзал Виктория) -> lokhmotya-korolya-ru/location/india-bombay-fort (Форт): по географии Бомбея, вывод (Р-41): вокзал Виктория стоит у северной границы Форта — центра города; карта книги вокзала не показывает
+lokhmotya-korolya-ru/location/india-bombay-hornby-road-bazaars (Базары Хорнби-роуд) -> lokhmotya-korolya-ru/location/india-bombay-fort (Форт): по географии Бомбея, вывод (Р-41): Хорнби-роуд — главная улица Форта, центра города; карта книги улицы не показывает
+beyond-the-edge-of-darkness-en/location/abandoned-mosque (Заброшенная мечеть) -> masks-of-nyarlathotep-en/location/egypt-old-city (Старый город): книга: мечеть — «in the winding alleys of Cairo’s old quarter» (Beyond the Edge of Darkness, с. 26), старый квартал — район «Старый город» карты Каира «Масок»
+lokhmotya-korolya-ru/location/madman-ames-funeral-home (Похоронное бюро Эймса) -> masks-of-nyarlathotep-en/location/england-westminster (Вестминстер): книга: в некрологе — «похоронное бюро Ames в Вестминстере», Нижняя Белгрейв-стрит
+lokhmotya-korolya-ru/location/madman-st-peters-church (Церковь Святого Петра) -> masks-of-nyarlathotep-en/location/england-westminster (Вестминстер): по географии Лондона, вывод (Р-41), как у мест «Масок» (checks/20261111-masks-cities/london-districts.md): Верхняя Белгрейв-стрит у вокзала Виктория — Белгравия, боро Вестминстер
+pax-cthuliana-ru/location/igla-kleopatry (Игла Клеопатры) -> masks-of-nyarlathotep-en/location/england-westminster (Вестминстер): по географии Лондона, вывод (Р-41), как у мест «Масок» (checks/20261111-masks-cities/london-districts.md): набережная Виктории — в Вестминстере (там же Новый Скотланд-Ярд)
+lokhmotya-korolya-ru/location/park-royal-society (Королевское общество) -> masks-of-nyarlathotep-en/location/england-mayfair (Мэйфэр): по географии Лондона, вывод (Р-41), как у мест «Масок» (checks/20261111-masks-cities/london-districts.md): Королевское общество в 1920-е — в Берлингтон-хаусе на Пикадилли, где и Королевская академия (25), отнесённая к Мэйфэру
+lokhmotya-korolya-ru/location/prologue-bow-street-police-station (Полицейский участок на Боу-стрит) -> masks-of-nyarlathotep-en/location/england-covent-garden (Ковент-Гарден): по географии Лондона, вывод (Р-41), как у мест «Масок» (checks/20261111-masks-cities/london-districts.md): Боу-стрит — улица Ковент-Гардена (у рынка и Королевского оперного театра)
+pax-cthuliana-ru/location/khanvellskaya-lechebnitsa (Ханвеллская лечебница) -> masks-of-nyarlathotep-en/location/england-london-environs (Окрестности Лондона): книга: лечебница — у деревни Ханвелл, примерно в 13 км к западу от Центрального Лондона (в 1920-е — графство Мидлсекс, за пределами графства Лондон)
+vedomo-li-lyubvi-ru/location/otel-pensilvaniya (Отель «Пенсильвания») -> coc:location:midtown (Мидтаун): по адресу, вывод (Р-41): Седьмая авеню, 401 (у 33-й улицы, напротив Пенсильванского вокзала) — Мидтаун, рядом с местами 15–17 «Масок» (Западная 32-я улица, Бродвей у 31-й улицы)
+naedine-s-tmoy-ru/location/nyu-york-tsentralnyy-vokzal (Центральный вокзал Нью-Йорка) -> coc:location:midtown (Мидтаун): по географии Нью-Йорка, вывод (Р-41): Центральный вокзал (Grand Central) — у Парк-авеню и 42-й улицы, в Мидтауне, рядом с местами 12 и 13 «Масок» (Пятая авеню и 42-я улица, Восточная 40-я улица и Парк-авеню)
+taynik-butlegerov-ru/location/gradostroitelnoe-byuro (Градостроительное бюро Нью-Йорка) -> coc:location:lower-manhattan (Нижний Манхэттен): по адресу, вывод (Р-41): бюро — в городской ратуше, Бродвей, 260, у мэрии (23) и Архива записей на Чеймберс-стрит (21) района «Нижний Манхэттен»
+dveri-vo-tmu-ru/location/darkness-john-hay-library (Библиотека им. Джона Хэя) -> dveri-vo-tmu-ru/location/darkness-college-hill (Колледж-хилл): по адресу, вывод (Р-41): Проспект-стрит, 20 — библиотека Брауновского университета на Колледж-хилле, менее чем в километре от дома Винскотта (Пауэр-стрит, 79, Колледж-хилл)
+dveri-vo-tmu-ru/location/darkness-providence-athenaeum (Провиденский Атенеум) -> dveri-vo-tmu-ru/location/darkness-college-hill (Колледж-хилл): по адресу, вывод (Р-41): Бенефит-стрит, 251 — улица на склоне Колледж-хилла, менее чем в километре от дома Винскотта (Пауэр-стрит, 79, Колледж-хилл)
+dveri-vo-tmu-ru/location/darkness-john-brown-house (Дом Джона Брауна) -> dveri-vo-tmu-ru/location/darkness-college-hill (Колледж-хилл): вывод из текста (Р-41): особняк работорговца Джона Брауна с тоннелем к Бенефит-стрит — один из особняков на холме, куда, по описанию Колледж-хилла, вели тоннели работорговцев
+dveri-vo-tmu-ru/location/darkness-serpent-catacombs (Катакомбы змеиного народа) -> dveri-vo-tmu-ru/location/darkness-college-hill (Колледж-хилл): книга: под Колледж-хиллом — тоннель Элайджи Винскотта, а глубже — катакомбы змеиного народа (сценарий «Тьма под холмом»; описание района Колледж-хилл)
+naedine-s-hellouinom-ru/location/osobnyak-fon-raysht (Особняк фон Райшт) -> fears-sharp-little-needles-en/location/do-not-call-salem-environs (Окрестности Салема): книга: особняк — на холме у лесной дороги из Аркхэма в Салем, в нескольких километрах от ближайшего города (с. 18, абз. 1, 2, 33)
+naedine-s-hellouinom-ru/location/forest-road (Лесная дорога у особняка) -> fears-sharp-little-needles-en/location/do-not-call-salem-environs (Окрестности Салема): книга: длинная дорога из Аркхэма в сторону Салема через пустынный лес, особняк — в нескольких километрах от ближайшего города (с. 18, абз. 1, 2)
+naedine-s-tmoy-ru/location/kair-universitet-al-azkhar (Университет Аль-Азхар) -> masks-of-nyarlathotep-en/location/egypt-old-city (Старый город): по географии Каира, вывод (Р-41): университет при мечети аль-Азхар стоит в старом городе напротив мечети аль-Хуссейн (10) и рядом с Хан аль-Халили (9), отнесёнными к району «Старый город»; книга адреса не даёт
+
+## Оставлено под городом (уйдут в «Прочие», Р-159)
+### Аркхэм (19)
+coc:location:arkham-sewers — Канализация Аркхэма: общегородская система, не в одном районе («Прочие», Р-159).
+coc:location:miskatonic-university — Мискатоникский университет: общая запись, под ней Библиотека Орна (623) и корпуса «Снов о Японии» (mu-5…mu-28); перенос в Кампус опустит их на уровень комнат. Вопрос владельцу: сделать университет частью Кампуса и влить корпуса mu-* в места 6xx путеводителя (как mu-1, mu-3, mu-27).
+sny-o-yaponii-ru/location/hickman-boarding-house — Пансионат мисс Хикман: адреса нет («в конце квартала»).
+sny-o-yaponii-ru/location/shipping-office — Офис «Агенты Морского Восточного судоходства»: только «недалеко от университета, между почтой и кафе», улицы нет.
+otel-skaylayn-ru/location/otel-skaylayn — Отель «Скайлайн»: адреса нет.
+ograblenie-po-arkhemski-ru/location/spikizi-v-arkkheme — Спикизи в Аркхэме: адреса нет; возможно «Забегаловка» (113), книга не уточняет — слияние не делалось.
+naedine-s-tmoy-ru/location/arkham-dom-gryunevalda — Дом Грюневальда: адреса нет.
+naedine-s-tmoy-ru/location/arkham-pervyy-natsionalnyy-bank — Первый национальный банк Аркхэма: название другое, чем у «Первого банка Аркхэма» (214, Arkham First Bank), адреса нет; низкая уверенность (как в checks/20261114-arkham/merge-candidates.md).
+keeper-rulebook-ru/location/crimson-hibbs-roadhouse — «Закусочная Хибба»: «на окраине Аркхэма», адреса нет (город или окрестности — неясно).
+keeper-rulebook-ru/location/crimson-hunter-studio — Студия Хантера: «в бедном районе», адреса нет.
+keeper-rulebook-ru/location/crimson-leiter-cottage — Коттедж Лейтера: «возле кампуса», адреса нет (Кампус или Аптаун).
+karnaval-bezumiya-ru/location/zakusochnaya-riversayd — Закусочная «Риверсайд»: адреса нет.
+innsmouth-terror-en/location/miskatonic-playhouse — Мискатоникский театр: адреса нет; это не «Зал Мискатоникских актёров» (604) — там бывший дом под репетиции, здесь сгоревший театр.
+chernovodnyy-ruchey-ru/location/blackwater-dom-geriga — Дом Уолта Герига: «старый запущенный район на окраине», адреса нет.
+beyond-the-edge-of-darkness-en/location/bertrands-apartment — Квартира Бертрана: «Солтонстолл, 180» без «Ист/Уэст»: Ист-Солтонстолл-стрит — Нижний Саутсайд, Уэст-Солтонстолл-стрит — Аптаун.
+beyond-the-edge-of-darkness-en/location/recovered-treasures — Лавка «Recovered Treasures»: Норт-Паудер-Милл-стрит, 499, «в северной части Аркхэма»; дома 106–173 этой улицы — Ривертаун, а 400-е номера северных улиц — уже за рекой (Даунтаун, Ист-Таун); где эта улица за рекой, путеводитель не показывает.
+bless-the-beast-and-children-ru/location/dom-pokhititeley — Дом похитителей: «Хилл-стрит между Хай- и Солтонстолл-стрит» — такой улицы в путеводителе нет; метка 14 карты не расшифрована.
+bless-the-beast-and-children-ru/location/dom-segreto — Дом Сегрето: адреса нет.
+bless-the-beast-and-children-ru/location/mesto-obnaruzheniya-trupa — Место обнаружения трупа: западная сторона Баундари-стрит (край города) между Вашингтон- и Мискатоник-стрит — Аптаун или окрестности; метка 12 и текст расходятся.
+### Бомбей (2)
+lokhmotya-korolya-ru/location/india-bombay-benares-railway — Железная дорога Бомбей — Бенарес — Наутанва: зона между городами.
+lokhmotya-korolya-ru/location/ship-bombay-dock — Причал P&O в гавани Бомбея: какой причал гавани — книга не говорит.
+### Бостон (44)
+Все места. Районы Бостона в базе — только Честнат-стрит («Особняки безумия», пригородная улица), Лонгвуд («Безымянный туман») и область «Дорога из Бостона в Буффало»; места других книг стоят в других частях города (Бэк-Бэй, Бикон-хилл, Роксбери, Уэст-Роксбери, Норт-Энд, доки, центр) или без адреса. Записей этих районов нет.
+Попутно (не в задаче, Р-154): похожие пары разных книг — «Бостонская публичная библиотека» (prizrak-ru и bezymyannyy-tuman-ru), городские архивы (prizrak-ru/location/arkhiv, bezymyannyy-tuman-ru/location/gorodskoy-arkhiv, odno-nebolshoe-deltse-ru/location/city-library-archive), полицейские участки.
+### Каир (17)
+13 мест «Масок» (1 — теперь coc:location:cairo-main-station, 3, 4, 5, 7, 11 — теперь coc:location:cairo-egyptian-museum, 13, 17–20, Отель «Дю Сюд», Редакция «Каирского вестника»): оставлены разбором Р-209 (checks/20261111-masks-cities/cairo.md) — на карте вне подписей районов.
+naedine-s-tmoy-ru/location/kair-aeroport, kair-bazar-fudzhayra, kair-gostinitsy, kair-politsiya — адресов нет (базар Фуджайра на карте «Масок» не найден).
+### Каркоза (10)
+Все места. Единственный район — «Северный квартал» (встреча 5 маршрута «Лохмотьев Короля»); ворота, эспланада, мост, амфитеатр, музей — другие точки маршрута, Дворец, озеро Хали, Галерея Теней, Лабиринт Шёпота — вне квартала.
+### Иннсмут (6)
+Дом Кроуфордов, Келли-Коув, Подводная лодка S-19, Река Мануксет — законно под городом (Р-163, Р-135; «Прочие»).
+innsmouth-terror-en/location/cave-system — Пещеры под Иннсмутом: под всем городом и утёсами.
+kanikuly-v-innsmute-ru/location/dom-mastera — Дом мастера: «в Жилых районах неподалёку от лавки» — какой из жилых районов, не сказано.
+### Лима (3), Момбаса (12), Найроби (28), Шанхай (8)
+Все — места «Масок», оставленные под городом разбором Р-209 (checks/20261111-masks-cities/peru.md, kenya.md, shanghai.md); там же вопросы владельцу (чёрные подписи районов Найроби, Старый город Момбасы).
+### Лондон (17)
+masks-of-nyarlathotep-en/location/england-british-empire-exhibition, england-diamondback-club — оставлены разбором Р-209 (london-districts.md, п. 8–9: решение владельца).
+lokhmotya-korolya-ru/location/flight-slade-school — Гоуэр-стрит: граница Холборна и Сент-Панкраса.
+lokhmotya-korolya-ru/location/madman-great-western-hotel — у вокзала Паддингтон: района Паддингтон нет.
+lokhmotya-korolya-ru/location/park-grahame-roby-house — Хилл-стрит, 17, W1: по адресу Мэйфэр, а книга пишет «в престижном районе Белгравия».
+lokhmotya-korolya-ru/location/park-edwards-lodgings, springer-bacon-house — Ислингтон: района нет.
+lokhmotya-korolya-ru/location/park-tuck-office — Уоппинг (Степни): района нет.
+lokhmotya-korolya-ru/location/prologue-scala-theatre — Шарлотт-стрит (Фицровия): граница Сент-Панкраса и Мэрилебона.
+lokhmotya-korolya-ru/location/springer-regents-canal — канал через несколько районов (зона).
+lokhmotya-korolya-ru/location/talk-old-street-magistrates-court, talk-st-lukes-old-street — Олд-стрит (Финсбери/Шордич): района нет.
+lokhmotya-korolya-ru/location/talk-st-george-in-the-east — Степни: района нет.
+pax-cthuliana-ru/location/dom-megan-shnayder, muzey-nauki — Кенсингтон: района нет.
+pax-cthuliana-ru/location/pab-dva-golodayushchikh-gnolla — Коммершл-стрит, 40: на границе Уайтчепела и Спиталфилдса, номер дома не решает.
+secrets-of-the-kremlin-en/location/london-flat — адреса нет.
+### Москва (16)
+Все места. Районы — Кремль (крепость: Красная площадь, Александровский сад, Москва-река, Москворецкий мост, люк за рекой и гостиница «Россия» — вне стен), «Центр Москвы (маршрут экскурсии)» одной книги и «Окрестности Москвы»; места «Террора» адресов не имеют («недалеко от Кремля», «у вокзала», «у реки»).
+### Новый Орлеан (7)
+Все места: адресов нет; «Трущобы в порту» — только портовый склад (квартира Чейза — «в беднейшем квартале», не обязательно в порту).
+### Нью-Йорк (25)
+coc:location:central-park, masks-of-nyarlathotep-en/location/america-medical-affairs-board, america-st-george-terminal — оставлены разбором Р-209 (new-york.md).
+autofagiya-ru/location/essexiya — корабль на карантине в гавани.
+naedine-s-tmoy-ru: Греческое консульство, «Э. С. Уиленц», квартиры Холта и Лау, Отель в Нью-Йорке, «Нью-Йорк Сан» — адресов нет; Пирс 56 «Кунард лайн» — причалы Челси у 14-й улицы, между Мидтауном и Нижним Манхэттеном («Портовый район Вест-Сайда» — Адская кухня, 40-е улицы).
+taynik-butlegerov-ru: Антикварная лавка Блейка (адреса нет), Клиника Маунт-Синай (Пятая авеню у 100-й улицы — Восточный Гарлем или Верхний Ист-Сайд, граница).
+vedomo-li-lyubvi-ru: Отель «Ансония» (Бродвей, 2109, Верхний Вест-Сайд — района нет), Особняк Рестонов (адреса нет).
+cursed-idol-of-manco-capac-en: Заброшенная церковь (Куинс — района нет), квартиры Кокса и Бэнкрофта (Верхний Вест-Сайд у Центрального парка — района нет).
+griby-s-yuggota-ru: квартиры ЛеМонда, Роджерса, Питерс, Уайтфилда, офис Уайтфилда, склад Уэкслера — только «лучшая/старая часть города», «центр», «набережная».
+mify-hastura-ru/location/apocalypse-club — адреса нет.
+### Провиденс (2)
+ten-nad-providensom-ru/location/milton-hotel — центр города (у мэрии): района нет.
+ten-nad-providensom-ru/location/rhode-island-hospital — «район Федерал-Хилл»: записи района нет.
+### Салем (7)
+dveri-vo-tmu-ru/location/genius-phillips-library, genius-salem-news — адресов нет.
+dveri-vo-tmu-ru/location/genius-salem-hospital — Салемская больница: вероятно та же, что «Больница Салема» «Эликсира жизни» (Хайленд-авеню, 81, Соут-Салем); это двойник двух сценариев (Р-154), а не место путеводителя — вопрос владельцу.
+eliksir-zhizni-ru/location/dom-mera-khamfri, muzey-vedm-salema, otel-saylent — книга адресов не даёт (адреса «Соут-Салем, …» есть только у мест, уже стоящих в районе).
+fears-sharp-little-needles-en/location/do-not-call-pickering-wharf — пристань, адреса и района нет.
+### Сан-Франциско (5)
+Все места: адресов нет; адрес храма Лэнг-Фу узнают расспросами в Китайском квартале, но где храм — книга не говорит; склад — «к югу от Маркет-стрит», вне Китайского квартала.
+
+## Новые файлы (2)
+kb/locations/cairo-egyptian-museum.json
+kb/locations/cairo-main-station.json
+
+## Удалённые файлы (10)
+kb/books/bless-the-beast-and-children-ru/locations/molochnaya-ferma-arkham-farms.json
+kb/books/masks-of-nyarlathotep-en/locations/egypt-egyptian-museum.json
+kb/books/masks-of-nyarlathotep-en/locations/egypt-main-station.json
+kb/books/naedine-s-tmoy-ru/locations/arkham-dokhodnyy-dom-missis-harding.json
+kb/books/naedine-s-tmoy-ru/locations/arkham-zheleznodorozhnaya-stantsiya.json
+kb/books/naedine-s-tmoy-ru/locations/kair-muzey.json
+kb/books/naedine-s-tmoy-ru/locations/kair-vokzal.json
+kb/books/sny-o-yaponii-ru/locations/mu-1-dom-veteranov.json
+kb/books/sny-o-yaponii-ru/locations/mu-27-obshchestvo-zashchity-zhivotnykh.json
+kb/books/sny-o-yaponii-ru/locations/mu-3-srednyaya-shkola.json
+
+## Изменённые файлы (58)
+kb/books/beyond-the-edge-of-darkness-en/locations/abandoned-mosque.json
+kb/books/bless-the-beast-and-children-ru/maps/karta-arkhema.json
+kb/books/bless-the-beast-and-children-ru/scenarios/bless-the-beast-and-children.json
+kb/books/bless-the-beast-and-children-ru/scenes/spisok-istochnikov.json
+kb/books/chernovodnyy-ruchey-ru/locations/dues-dom-stenli-devida.json
+kb/books/dveri-vo-tmu-ru/locations/darkness-john-brown-house.json
+kb/books/dveri-vo-tmu-ru/locations/darkness-john-hay-library.json
+kb/books/dveri-vo-tmu-ru/locations/darkness-providence-athenaeum.json
+kb/books/dveri-vo-tmu-ru/locations/darkness-serpent-catacombs.json
+kb/books/fears-sharp-little-needles-en/locations/undertow-bolinas-beach.json
+kb/books/fears-sharp-little-needles-en/locations/undertow-duxbury-point.json
+kb/books/fears-sharp-little-needles-en/locations/undertow-duxbury-reef.json
+kb/books/keepers-companion-en/locations/hammer-agnews-house.json
+kb/books/keepers-companion-en/locations/hammer-investigator-house.json
+kb/books/keepers-companion-en/locations/hammer-merle-house.json
+kb/books/keepers-companion-en/locations/puzzler-blanco-puzzle-factory.json
+kb/books/keepers-companion-en/locations/puzzler-dooley-house.json
+kb/books/keepers-companion-en/locations/puzzler-four-leaf-clover.json
+kb/books/keepers-companion-en/locations/puzzler-mcguire-art-and-design.json
+kb/books/keepers-companion-en/locations/puzzler-mcguire-house.json
+kb/books/lokhmotya-korolya-ru/locations/india-bombay-hornby-road-bazaars.json
+kb/books/lokhmotya-korolya-ru/locations/india-bombay-taj-mahal-palace.json
+kb/books/lokhmotya-korolya-ru/locations/india-bombay-victoria-station.json
+kb/books/lokhmotya-korolya-ru/locations/madman-ames-funeral-home.json
+kb/books/lokhmotya-korolya-ru/locations/madman-st-peters-church.json
+kb/books/lokhmotya-korolya-ru/locations/park-royal-society.json
+kb/books/lokhmotya-korolya-ru/locations/prologue-bow-street-police-station.json
+kb/books/masks-of-nyarlathotep-en/locations/egypt-ezbekiya-park.json
+kb/books/masks-of-nyarlathotep-en/locations/egypt-museum-vaults.json
+kb/books/masks-of-nyarlathotep-en/maps/egypt-cairo.json
+kb/books/masks-of-nyarlathotep-en/scenarios/egypt.json
+kb/books/masks-of-nyarlathotep-en/scenes/egypt-arriving.json
+kb/books/masks-of-nyarlathotep-en/scenes/egypt-egyptian-museum.json
+kb/books/masks-of-nyarlathotep-en/scenes/egypt-fresh-off-the-boat.json
+kb/books/masks-of-nyarlathotep-en/scenes/egypt-talking-to-kafour.json
+kb/books/naedine-s-hellouinom-ru/locations/forest-road.json
+kb/books/naedine-s-hellouinom-ru/locations/osobnyak-fon-raysht.json
+kb/books/naedine-s-tmoy-ru/handouts/simvol-vozmozhno-karta.json
+kb/books/naedine-s-tmoy-ru/handouts/strannyy-risunok-gliera.json
+kb/books/naedine-s-tmoy-ru/items/amulet-ekhnatona.json
+kb/books/naedine-s-tmoy-ru/items/karpatosskiy-mekhanizm.json
+kb/books/naedine-s-tmoy-ru/items/karta-zvezdnogo-neba.json
+kb/books/naedine-s-tmoy-ru/locations/kair-universitet-al-azkhar.json
+kb/books/naedine-s-tmoy-ru/locations/nyu-york-tsentralnyy-vokzal.json
+kb/books/naedine-s-tmoy-ru/scenarios/naedine-s-tmoy.json
+kb/books/pax-cthuliana-ru/locations/igla-kleopatry.json
+kb/books/pax-cthuliana-ru/locations/khanvellskaya-lechebnitsa.json
+kb/books/sny-o-yaponii-ru/maps/miskatonic-campus.json
+kb/books/taynik-butlegerov-ru/locations/gradostroitelnoe-byuro.json
+kb/books/tri-koshmarnykh-vechera-ru/locations/pieces-apartamenty-uorvika.json
+kb/books/vedomo-li-lyubvi-ru/locations/otel-pensilvaniya.json
+kb/locations/arkham-117-harding-boarding-house.json
+kb/locations/arkham-134-bm-train-station.json
+kb/locations/arkham-405-arkham-dairy.json
+kb/locations/arkham-601-miskatonic-valley-veterans-home.json
+kb/locations/arkham-603-arkham-public-high-school.json
+kb/locations/arkham-635-spca.json
+kb/locations/cairo.json

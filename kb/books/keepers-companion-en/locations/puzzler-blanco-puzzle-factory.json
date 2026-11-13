@@ -8,7 +8,7 @@
   },
   "aliases": [],
   "location_type": "здание",
-  "part_of": "coc:location:arkham",
+  "part_of": "coc:location:arkham-rivertown",
   "address": "Норт-Паудер-Милл-стрит, 40",
   "keeper_hint": "небольшая фабрика в Ривертауне",
   "description": {
@@ -61,6 +61,22 @@
     "flags": [
       "translated"
     ],
-    "notes": "Номер дома (40) — с раздатки «Головоломка» 1; в тексте только улица. Ривертаун записи пока не имеет."
-  }
+    "notes": "Номер дома (40) — с раздатки «Головоломка» 1; в тексте только улица."
+  },
+  "corrections": [
+    {
+      "field": "part_of",
+      "from": "coc:location:arkham",
+      "to": "coc:location:arkham-rivertown",
+      "reason": "Р-209: место отнесено к району «Ривертаун» — книга: «A small factory on North Powder Mill Street, Arkham in River-Town (see Arkham, page 149)» (Keeper’s Companion, с. 173).",
+      "ref": "Р-209"
+    },
+    {
+      "field": "quality.notes",
+      "from": "Ривертаун записи пока не имеет.",
+      "to": null,
+      "reason": "пометка устарела: запись района есть, место перенесено в район",
+      "ref": "Р-209"
+    }
+  ]
 }

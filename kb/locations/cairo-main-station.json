@@ -1,0 +1,133 @@
+{
+  "schema": "sourcefold.location.v0",
+  "id": "coc:location:cairo-main-station",
+  "kind": "location",
+  "name": {
+    "ru": "Центральный вокзал",
+    "en": "Main Station"
+  },
+  "aliases": [
+    "Central Station",
+    "Каирский железнодорожный вокзал",
+    "Cairo Rail Station"
+  ],
+  "location_type": "здание",
+  "part_of": "coc:location:cairo",
+  "number": "1",
+  "description": {
+    "ru": "В «Масках Ньярлатхотепа» (с. 296, 300, 311): Главный железнодорожный вокзал Каира — метка 1 на карте города (с. 296). Поезда из Александрии и Порт-Саида приходят на Центральный вокзал, примерно в 1,6 км от садов Эзбекия; от моря — меньше суток пути. От вокзала до гостиниц возят моторные такси, но до конца десятилетия куда чаще — конные экипажи; смелые едут трамваем (с. 300). На перроне сыщиков может ждать необязательная сцена «Прямо с корабля» (с. 311).\nВ книге-игре «Наедине с тьмой» (с. 40, 95): Здесь можно поесть с 5:00 до 20:00; вонь, похожая на навоз, и британские солдаты. Поезда в Александрию — в 9:00, 12:00 и 17:00.",
+    "en": null
+  },
+  "refs": [
+    "masks-of-nyarlathotep-en/scene/egypt-arriving",
+    "masks-of-nyarlathotep-en/scene/egypt-fresh-off-the-boat",
+    "masks-of-nyarlathotep-en/location/egypt-ezbekiya-park",
+    "naedine-s-tmoy-ru/scenario/naedine-s-tmoy"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "masks-of-nyarlathotep-en",
+      "physical_page": 299,
+      "printed_page": 296,
+      "method": "book_text",
+      "verified": true,
+      "note": "карта «The city of Cairo»: ключ 1–21"
+    },
+    {
+      "book_id": "masks-of-nyarlathotep-en",
+      "physical_page": 303,
+      "printed_page": 300,
+      "method": "book_text",
+      "verified": true,
+      "note": "«On to Cairo»: Central Station"
+    },
+    {
+      "book_id": "masks-of-nyarlathotep-en",
+      "physical_page": 314,
+      "printed_page": 311,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Optional Scene: Fresh off the Boat»"
+    },
+    {
+      "book_id": "naedine-s-tmoy-ru",
+      "physical_page": 41,
+      "printed_page": 40,
+      "method": "book_text",
+      "verified": true,
+      "note": "абз. 205: Каирский железнодорожный вокзал"
+    },
+    {
+      "book_id": "naedine-s-tmoy-addresses-ru",
+      "physical_page": 2,
+      "printed_page": 95,
+      "method": "book_text",
+      "verified": true,
+      "note": "список адресов"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Запись «Масок Ньярлатхотепа»: Заведено по Р-206: метка карты получает свою запись. Название — по официальной русской карте Каира («Материалы для игроков», с. 63; таблица «Каир: места на карте»). На карте — «Main Station», в тексте с. 300 — Central Station. «Main Station» на с. 317 — другое место: вымышленный полицейский участок у садов Эзбекия (сцена «Красный переулок»). Запись «Наедине с тьмой» (coc:location:cairo-main-station): Описание составлено по абзацам 205 и списку адресов; номера абзацев — по русскому изданию."
+  },
+  "corrections": [
+    {
+      "field": "id",
+      "from": "masks-of-nyarlathotep-en/location/egypt-main-station",
+      "to": "coc:location:cairo-main-station",
+      "reason": "Р-154: Центральный вокзал Каира «Масок Ньярлатхотепа» встретился во второй книге («Наедине с тьмой», «Каирский железнодорожный вокзал») — общая запись места Каира; ревизия 2026-11-14 (checks/20261114-audit, класс «Места прямо под городом с районами»)",
+      "ref": "Р-154"
+    },
+    {
+      "field": "description.ru",
+      "from": "Главный железнодорожный вокзал Каира — метка 1 на карте города (с. 296). Поезда из Александрии и Порт-Саида приходят на Центральный вокзал, примерно в 1,6 км от садов Эзбекия; от моря — меньше суток пути. От вокзала до гостиниц возят моторные такси, но до конца десятилетия куда чаще — конные экипажи; смелые едут трамваем (с. 300). На перроне сыщиков может ждать необязательная сцена «Прямо с корабля» (с. 311).",
+      "to": "тот же текст с началом «В «Масках Ньярлатхотепа» (с. 296, 300, 311): …»",
+      "reason": "слияние записей: у абзаца — своя книга (Р-125, Р-154)",
+      "ref": "Р-154"
+    },
+    {
+      "field": "description.ru",
+      "from": null,
+      "to": "абзац «В книге-игре «Наедине с тьмой» (с. 40, 95): …» — текст записи naedine-s-tmoy-ru/location/kair-vokzal без изменений",
+      "reason": "слияние записей: у абзаца — своя книга (Р-125, Р-154)",
+      "ref": "Р-154"
+    },
+    {
+      "field": "sources",
+      "from": null,
+      "to": "источники «Наедине с тьмой» (с. 40, 95)",
+      "reason": "источники влитой записи",
+      "ref": "Р-154"
+    },
+    {
+      "field": "refs",
+      "from": null,
+      "to": "[\"naedine-s-tmoy-ru/scenario/naedine-s-tmoy\"]",
+      "reason": "ссылки записи «Наедине с тьмой»",
+      "ref": "Р-154"
+    },
+    {
+      "field": "id",
+      "from": "naedine-s-tmoy-ru/location/kair-vokzal",
+      "to": "coc:location:cairo-main-station",
+      "reason": "Р-154: Каирский железнодорожный вокзал «Наедине с тьмой» (поезда в Александрию) — тот же главный вокзал Каира, куда приходят поезда из Александрии, что место 1 карты Каира «Масок Ньярлатхотепа»; запись влита в общую запись; ревизия 2026-11-14 (checks/20261114-audit, класс «Места прямо под городом с районами»)",
+      "ref": "Р-154"
+    },
+    {
+      "field": "aliases",
+      "from": null,
+      "to": "[\"Каирский железнодорожный вокзал\", \"Cairo Rail Station\"]",
+      "reason": "названия и имена влитых записей как напечатаны (Р-96)",
+      "ref": "Р-154"
+    }
+  ]
+}

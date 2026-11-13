@@ -10,7 +10,7 @@
     "Квартира Уорвика"
   ],
   "location_type": "место",
-  "part_of": "coc:location:arkham",
+  "part_of": "coc:location:arkham-northside",
   "number": null,
   "address": "Tower Professional Building, центр Аркхэма",
   "keeper_hint": "апартаменты и кабинет доктора Уорвика",
@@ -32,7 +32,8 @@
     "tri-koshmarnykh-vechera-ru/item/pieces-karta-arkhema-s-krugami",
     "tri-koshmarnykh-vechera-ru/item/pieces-instrumenty-dlya-izbavleniya-ot-tela",
     "tri-koshmarnykh-vechera-ru/handout/pieces-razdatka-1-gazeta",
-    "tri-koshmarnykh-vechera-ru/handout/pieces-razdatka-2-zametki"
+    "tri-koshmarnykh-vechera-ru/handout/pieces-razdatka-2-zametki",
+    "coc:location:arkham-119-tower-professional-building"
   ],
   "axes": {
     "era": [
@@ -69,6 +70,20 @@
       "from": "разгром, бензин; улики — в комнатах 1 и 2",
       "to": "апартаменты и кабинет доктора Уорвика",
       "reason": "Р-209: подпись места видна всем за столом — нейтральное «что это за место»; тайны, проверки и кубы — в описании",
+      "ref": "Р-209"
+    },
+    {
+      "field": "part_of",
+      "from": "coc:location:arkham",
+      "to": "coc:location:arkham-northside",
+      "reason": "Р-209: место отнесено к району «Нортсайд» — апартаменты — в здании Tower Professional Building (книга, с. 40), это место 119 путеводителя «Аркхэм» (Тауэр-билдинг, Уэст-Армитедж-стрит, 350) в районе Нортсайд; место ставится в район здания, здание — в `refs`.",
+      "ref": "Р-209"
+    },
+    {
+      "field": "refs",
+      "from": null,
+      "to": "[\"coc:location:arkham-119-tower-professional-building\"]",
+      "reason": "здание, где находится место (Р-209)",
       "ref": "Р-209"
     }
   ]

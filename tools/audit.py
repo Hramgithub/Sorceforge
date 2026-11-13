@@ -47,6 +47,7 @@ CHECKS = {
     "map.target_missing": ("map", "Метка ведёт на несуществующую запись", "Р-120", "авто: нет — нужна верная цель; но список короткий"),
     "map.coords": ("map", "Координаты метки вне 0–100", "Р-120", "авто: нет — положение правится в редакторе меток (Р-160)"),
     "map.location_missing": ("map", "Поле `location`/`shows` карты ведёт на несуществующую запись или не на место", "Р-120", "авто: нет"),
+    "map.location_not_top": ("map", "`location` карты — не город верхнего уровня: просмотрщик показывает карту только в разделе «Карта» города", "Р-120", "авто: да — `location` = город по цепочке `part_of`, изображаемое место — в `shows`"),
     "map.location_shows": ("map", "Место, которое показывает карта (`shows`), не лежит в городе карты (`location`)", "Р-120", "чтение: поправить `location` карты или `part_of` места; метки такой карты в «вне города» не повторяются"),
     "map.image_missing": ("map", "Нет файла картинки карты в `app/maps/`", "Р-120", "авто: нет — картинку надо вырезать из книги"),
     "map.no_spots": ("map", "Карта без меток (и без пометки «меток нет» в `quality.notes`)", "Р-120, Р-206", "авто: нет — метки ставятся по распознаванию и глазами"),
@@ -268,6 +269,11 @@ class Audit:
             for fld, v in (("location", city), ("shows", shows)):
                 if v and v not in self.locs:
                     self.add("map.location_missing", mid, f"`{fld}` = {v}: такой записи места нет", "high")
+            # the viewer shows a map only in the «Карта» section of a top-level city (mapsOf: m.location === city)
+            if city in self.locs and self.locs[city].get("part_of"):
+                self.add("map.location_not_top", mid,
+                         f"`location` = «{self.name(city)}» — не город верхнего уровня (город по `part_of` — {self.name(self.top(city)) or 'нет'}): карта не видна в просмотрщике",
+                         "high", target=city)
             if city in self.locs and shows in self.locs and city not in self.chain(shows):
                 top = self.top(shows)
                 self.add("map.location_shows", mid,
@@ -304,7 +310,8 @@ class Audit:
                              "medium" if big else "low", target=t)
                 # the number printed on the map against the number of the record
                 num = self.locs[t].get("number")
-                if num and t != shows and LABEL_NUM.match(lab.strip()):
+                # a spot with `text` or `note` is explained (a door, a piece of furniture, the map's own key)
+                if num and t != shows and LABEL_NUM.match(lab.strip()) and not s.get("text") and not s.get("note"):
                     base = AB.match(lab.strip())
                     nl = {norm_label(lab), norm_label(base.group(1)) if base else norm_label(lab), digits(lab)}
                     if not nl & number_forms(num):

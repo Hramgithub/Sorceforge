@@ -119,12 +119,15 @@ def main() -> int:
 
     # 1d. the glossary of a book other than the Keeper Rulebook — an official edition or a trusted fan translation
     #     (checks/*/book-terms.json: {en, ru, by, book_id, page, variant_note, aliases, avoid, domain, scope, definition,
-    #     refs, sources, notes, slug?}; first: the Dark Ages glossary, Р-232); the fields are those of the term record itself
+    #     refs, sources, notes, slug?}; first: the Dark Ages glossary, Р-232); the fields are those of the term record itself.
+    #     An entry without `ru` adds no translation, only its other fields to an existing term — links of a term to the
+    #     records of a book (`{en, refs}`, once applied as proposals straight to kb/terms)
     for bt in sorted(ROOT.glob("checks/*/book-terms.json")):
         for g in json.loads(bt.read_text(encoding="utf-8")):
             t = term(g["en"])
-            t["variants"].append({"ru": g["ru"], "by": g["by"], "book_id": g["book_id"], "page": g.get("page"),
-                                  "note": g.get("variant_note") or f"глоссарий книги ({bt.parent.name})"})
+            if g.get("ru"):
+                t["variants"].append({"ru": g["ru"], "by": g["by"], "book_id": g["book_id"], "page": g.get("page"),
+                                      "note": g.get("variant_note") or f"глоссарий книги ({bt.parent.name})"})
             t["aliases"] += g.get("aliases") or []
             t["avoid"] += g.get("avoid") or []
             t["domain"] = t["domain"] or g.get("domain")
@@ -151,22 +154,35 @@ def main() -> int:
 
     # 3. names of records: skills and occupations (official when a source is an official Russian edition);
     #    Pulp archetypes and talents — our translation
-    # a translated name that is word for word the name of an official record of the same kind (a pulp occupation
-    # «Антиквар» = the Investigator Handbook's «Антиквар») is the official term
+    # a name we translated that is word for word the name of an official record of the same kind (a pulp occupation
+    # «Антиквар» = the Investigator Handbook's «Антиквар») is the official term; so is a name printed in a fan
+    # translation, unless the official record is known to be another English term (the Dark Ages «Учёный» is Scholar,
+    # the Investigator Handbook's «Учёный» is Scientist — the pulp «Учёный» says so)
     recs = [r for _, r in records()]
+    flags = lambda r: (r.get("quality") or {}).get("flags") or []  # noqa: E731
     official_names = defaultdict(dict)
     for r in recs:
         if any(s.get("book_id") in official for s in r.get("sources") or []) and (r.get("name") or {}).get("ru"):
             official_names[r.get("kind")][r["name"]["ru"].lower()] = r
+    official_en = defaultdict(dict)  # the English of an official record: its own, or of a record we translated to its name
+    for r in recs:
+        n = r.get("name") or {}
+        if n.get("ru") and n.get("en") and "translated" in flags(r) and n["ru"].lower() in official_names[r.get("kind")]:
+            official_en[r.get("kind")].setdefault(n["ru"].lower(), n["en"].lower())
+    for kind, names in official_names.items():
+        for ru, r in names.items():
+            if (r.get("name") or {}).get("en"):
+                official_en[kind][ru] = r["name"]["en"].lower()
     for rec in recs:
         kind, name = rec.get("kind"), rec.get("name") or {}
         if kind not in ("skill", "occupation", "archetype", "talent") or not name.get("en") or not name.get("ru"):
             continue
         srcs = rec.get("sources") or []
         off = next((s for s in srcs if s.get("book_id") in official), None)
-        by = "official" if off and "translated" not in ((rec.get("quality") or {}).get("flags") or []) else "ours"
+        translated = "translated" in flags(rec)
+        by = "official" if off and not translated else "ours"
         twin = official_names[kind].get(name["ru"].lower())
-        if by == "ours" and twin:
+        if by == "ours" and twin and (translated or official_en[kind].get(name["ru"].lower(), name["en"].lower()) == name["en"].lower()):
             by, off = "official", next(s for s in twin["sources"] if s.get("book_id") in official)
         t = term(name["en"])
         t["variants"].append({"ru": name["ru"], "by": by, "book_id": (off or (srcs[0] if srcs else {})).get("book_id"),
@@ -186,17 +202,19 @@ def main() -> int:
         t["en"] = t["en"] if t["en"] is not None else None
         seen, vs = set(), []
         for v in sorted(t["variants"], key=lambda v: rank.get(v["by"], 9)):
-            key = (v["ru"].lower(), v["by"])
+            # our same translation in two books stays twice (the Pulp «Моряк» and the Dark Ages «Моряк»)
+            key = (v["ru"].lower(), v["by"], v["book_id"] if v["by"] == "ours" else None)
             if key not in seen:
                 seen.add(key); vs.append(v)
-        best = vs[0]
+        # an empty translation in the owner's registry is no name: the next variant gives it
+        best = next((v for v in vs if v["ru"]), vs[0])
         # the glossary inverts headwords for the alphabet («Удачи проверка»): the same words in the order of the
         # owner's registry are the term itself, still official
         natural = next((v for v in vs if v["by"] == "owner" and sorted(v["ru"].lower().split()) == sorted(best["ru"].lower().split())
                         and v["ru"].lower() != best["ru"].lower()), None)
         if best["by"] == "official" and natural:
             best = {**best, "ru": natural["ru"], "note": (best.get("note") or "") + "; в глоссарии — «" + vs[0]["ru"] + "» (порядок слов для алфавита)"}
-        others = {v["ru"].lower() for v in vs if v["by"] != best["by"]} - {best["ru"].lower()}
+        others = {v["ru"].lower() for v in vs if v["by"] != best["by"] and v["ru"]} - {best["ru"].lower()}
         if best["by"] == "official" and any(v["by"] == "owner" and v["ru"].lower() != best["ru"].lower() for v in vs):
             conflicts.append((t["en"], best["ru"], [v["ru"] for v in vs if v["by"] == "owner"]))
         s = t.get("slug") or slug(t["en"] or translit(k)) or "term"

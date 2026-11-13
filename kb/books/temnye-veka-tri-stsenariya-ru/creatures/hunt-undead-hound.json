@@ -1,0 +1,210 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "temnye-veka-tri-stsenariya-ru/creature/hunt-undead-hound",
+  "kind": "creature",
+  "name": {
+    "ru": "Гончая-нежить",
+    "en": "Undead Hound"
+  },
+  "aliases": [
+    "Несчастная Йорхельма",
+    "Гончая Йорхельма",
+    "Собака-нежить"
+  ],
+  "category": "supernatural",
+  "subcategory": "нежить (уникальное существо сценария)",
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:dog",
+      "note_back": "гончая Йорхельма, поднятая чёрным ихором («Охота»)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "45",
+        "value": 45
+      },
+      "CON": {
+        "raw": "55",
+        "value": 55
+      },
+      "SIZ": {
+        "raw": "45",
+        "value": 45
+      },
+      "DEX": {
+        "raw": "85",
+        "value": 85
+      },
+      "INT": {
+        "raw": "05",
+        "value": 5
+      },
+      "APP": {
+        "raw": "–",
+        "value": null
+      },
+      "POW": {
+        "raw": "05",
+        "value": 5
+      },
+      "EDU": {
+        "raw": "–",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "10",
+      "value": 10
+    },
+    "mp": {
+      "raw": "1",
+      "value": 1
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "10 (6 плавая)",
+      "value": 10,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 10
+        },
+        {
+          "mode": "swim",
+          "value": 6
+        }
+      ]
+    },
+    "armor": {
+      "raw": "Серьёзная рана приводит к потере конечности. В противном случае игнорируйте повреждения, кроме головы (одна штрафная кость при атаке в голову).",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "1d6",
+          "dice": "1d6",
+          "adds_db": false
+        },
+        "notes": "укус"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "90%",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d8",
+        "trigger": "при виде гончей-нежити"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Гончая Йорхельма, убитая на ферме (на зубах чёрная сукровица, раны — от ножа); тело заброшено на дерево. Чёрный ихор, молоко Шуб-Ниггурат, может поднять её вместе с Ангифу.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 230,
+      "printed_page": 229,
+      "method": "book_text",
+      "verified": true,
+      "note": "приложение А: «Гончая-нежить, Несчастная Йорхельма»"
+    },
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 223,
+      "printed_page": 222,
+      "method": "book_text",
+      "verified": true,
+      "note": "тело гончей на дереве"
+    },
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 224,
+      "printed_page": 223,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Восстание мертвецов»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "ПЗ 10 — как в переводе (физ. 230; ВЫН 55 + ТЕЛ 45 = 100 → 10); в оригинале (с. 183) — 9. Английское «Eorhelm's Unfortunate» переведено «Несчастная Йорхельма»."
+  }
+}

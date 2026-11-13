@@ -1,0 +1,539 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:cu-sith",
+  "kind": "creature",
+  "name": {
+    "ru": "Ку ши",
+    "en": "Cu Sith"
+  },
+  "aliases": [
+    "Ку-ши"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "клан слуг Лордов Тиндалоса (люди-волки)",
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:lords-of-tindalos"
+    }
+  ],
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "65–70",
+        "value": 65,
+        "roll": "(3d6+3)×5"
+      },
+      "CON": {
+        "raw": "65–70",
+        "value": 65,
+        "roll": "(3d6+3)×5"
+      },
+      "SIZ": {
+        "raw": "65–70",
+        "value": 65,
+        "roll": "(3d6+3)×5"
+      },
+      "DEX": {
+        "raw": "65–70",
+        "value": 65,
+        "roll": "(3d6+3)×5"
+      },
+      "INT": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      },
+      "POW": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      }
+    },
+    "hp": {
+      "raw": "13–14",
+      "value": 13
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "2 пункта (кожаный доспех)",
+      "value": 2
+    },
+    "attacks_per_round": {
+      "raw": "1 (оружием)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "1d3+БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Меч",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d6+БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:sword-short"
+      },
+      {
+        "name": {
+          "ru": "Копьё, короткое",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d6+БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:spear-short"
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "spells": {
+      "raw": "Связь с Лордом Тиндалоса, Создание Врат или любые другие, на усмотрение Хранителя.",
+      "items": [
+        {
+          "name": "Связь с Лордом Тиндалоса",
+          "spell": null
+        },
+        {
+          "name": "Создание Врат",
+          "spell": "coc:spell:create-gate"
+        }
+      ]
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "0",
+        "trigger": "при виде ку ши в человеческом обличье"
+      }
+    ]
+  },
+  "variants": [
+    {
+      "label": "Человеческое обличье",
+      "statblock": {
+        "averages": true,
+        "characteristics": {
+          "STR": {
+            "raw": "65–70",
+            "value": 65,
+            "roll": "(3d6+3)×5"
+          },
+          "CON": {
+            "raw": "65–70",
+            "value": 65,
+            "roll": "(3d6+3)×5"
+          },
+          "SIZ": {
+            "raw": "65–70",
+            "value": 65,
+            "roll": "(3d6+3)×5"
+          },
+          "DEX": {
+            "raw": "65–70",
+            "value": 65,
+            "roll": "(3d6+3)×5"
+          },
+          "INT": {
+            "raw": "50–55",
+            "value": 50,
+            "roll": "3d6×5"
+          },
+          "POW": {
+            "raw": "50–55",
+            "value": 50,
+            "roll": "3d6×5"
+          }
+        },
+        "hp": {
+          "raw": "13–14",
+          "value": 13
+        },
+        "mp": {
+          "raw": "10",
+          "value": 10
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "8",
+          "value": 8,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 8
+            }
+          ]
+        },
+        "armor": {
+          "raw": "2 пункта (кожаный доспех)",
+          "value": 2
+        },
+        "attacks_per_round": {
+          "raw": "1 (оружием)",
+          "value": 1
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Ближний бой",
+              "en": null
+            },
+            "kind": "attack",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "70% (35/14)",
+              "value": 70,
+              "half": 35,
+              "fifth": 14
+            },
+            "damage": {
+              "raw": "1d3+БкУ",
+              "dice": "1d3",
+              "adds_db": true
+            }
+          },
+          {
+            "name": {
+              "ru": "Меч",
+              "en": null
+            },
+            "kind": "attack",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "60% (30/12)",
+              "value": 60,
+              "half": 30,
+              "fifth": 12
+            },
+            "damage": {
+              "raw": "1d6+БкУ",
+              "dice": "1d6",
+              "adds_db": true
+            },
+            "weapon": "coc:weapon:sword-short"
+          },
+          {
+            "name": {
+              "ru": "Копьё, короткое",
+              "en": null
+            },
+            "kind": "attack",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "50% (25/10)",
+              "value": 50,
+              "half": 25,
+              "fifth": 10
+            },
+            "damage": {
+              "raw": "1d6+БкУ",
+              "dice": "1d6",
+              "adds_db": true
+            },
+            "weapon": "coc:weapon:spear-short"
+          }
+        ],
+        "dodge": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "spells": {
+          "raw": "Связь с Лордом Тиндалоса, Создание Врат или любые другие, на усмотрение Хранителя.",
+          "items": [
+            {
+              "name": "Связь с Лордом Тиндалоса",
+              "spell": null
+            },
+            {
+              "name": "Создание Врат",
+              "spell": "coc:spell:create-gate"
+            }
+          ]
+        },
+        "sanity_loss": [
+          {
+            "success": "0",
+            "fail": "0",
+            "trigger": "при виде ку ши в человеческом обличье"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Волчье обличье",
+      "statblock": {
+        "averages": true,
+        "characteristics": {
+          "STR": {
+            "raw": "65–70",
+            "value": 65,
+            "roll": "(3d6+3)×5"
+          },
+          "CON": {
+            "raw": "80–85",
+            "value": 80,
+            "roll": "(3d6+6)×5"
+          },
+          "SIZ": {
+            "raw": "80",
+            "value": 80,
+            "roll": "(4d6+2)×5"
+          },
+          "DEX": {
+            "raw": "80",
+            "value": 80,
+            "roll": "(4d6+2)×5"
+          },
+          "INT": {
+            "raw": "80–85",
+            "value": 80,
+            "roll": "(3d6+6)×5"
+          },
+          "POW": {
+            "raw": "50–55",
+            "value": 50,
+            "roll": "3d6×5"
+          }
+        },
+        "hp": {
+          "raw": "16",
+          "value": 16
+        },
+        "mp": {
+          "raw": "10",
+          "value": 10
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "12",
+          "value": 12,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 12
+            }
+          ]
+        },
+        "armor": {
+          "raw": "4 пункта (толстый зелёный мех)",
+          "value": 4
+        },
+        "attacks_per_round": {
+          "raw": "1 (1 × клыки, 2 × когти или терзание)",
+          "value": 1
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Ближний бой",
+              "en": null
+            },
+            "kind": "attack",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "70% (35/14)",
+              "value": 70,
+              "half": 35,
+              "fifth": 14
+            },
+            "damage": {
+              "raw": "1d8+БкУ",
+              "dice": "1d8",
+              "adds_db": true
+            }
+          }
+        ],
+        "dodge": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "spells": {
+          "raw": "Может колдовать только в человеческом обличье."
+        },
+        "sanity_loss": [
+          {
+            "success": "1",
+            "fail": "1d3",
+            "trigger": "при встрече с призрачным зелёным волком"
+          }
+        ]
+      }
+    }
+  ],
+  "abilities": [
+    {
+      "name": "Волчье обличье",
+      "summary": "Ку ши могут по-настоящему принимать облик призрачного зелёного волка; колдовать — только в человеческом обличье."
+    },
+    {
+      "name": "Врата",
+      "summary": "Пользуются Вратами для перемещения по своим владениям.",
+      "refs": [
+        "coc:spell:create-gate"
+      ]
+    }
+  ],
+  "description": {
+    "ru": "Свирепые воины-слуги Лордов Тиндалоса, бродящие по лесам Файфа и восточному побережью Британии. Носят черепа и шкуры волков, окрашенные в зелёный цвет, чтобы вселять страх во врагов и чтить своих хищных хозяев. Теперь могут по-настоящему принимать облик волка (а не только носить шкуры) и пользоваться Вратами, чтобы перемещаться по своим владениям; все, даже скандинавские захватчики, боятся появления призрачных зелёных волков у своих ворот.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Ку ши впервые столкнулись с Лордами Тиндалоса, когда совершили набег на деревню, поклонявшуюся Йог-Сототу. Впечатлённые их мастерством и довольные ударом по давнему врагу, Лорды в ту же ночь посетили каждого члена клана с предложением: служить им и получить великую силу против врагов — или отказаться и умереть. Гордый народ, большая часть ку ши выступила против Лордов; принявшие предложение на следующий день похоронили остальных. С тех пор они и их потомки следуют за Лордами Тиндалоса, и каждое поколение всё искуснее владеет дарованными силами.",
+    "en": null
+  },
+  "habitat": "леса Файфа и восточное побережье Британии",
+  "sources": [
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 169,
+      "printed_page": 168,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Ку ши»: описание, «КУ ШИ, человеческое обличье», «КУ ШИ, волчье обличье»"
+    },
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 170,
+      "printed_page": 169,
+      "method": "book_text",
+      "verified": true,
+      "entry_page": 169,
+      "note": "бой и броня волчьего обличья"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.characteristics.POW",
+      "printed": "ВОЛ 50-55",
+      "expected": "МОЩ 50-55",
+      "note": "в обоих статблоках ку ши (с. 168) строка МОЩ подписана «ВОЛ»",
+      "fixed": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": "Основной статблок — человеческое обличье, волчье — во втором варианте. Английский файл `cthulhu-dark-ages-en` — предварительная вёрстка (ссылки «page @@»), числа в нём местами другие; источник — русское издание."
+  },
+  "corrections": [
+    {
+      "field": "statblock.attacks[Меч].weapon",
+      "from": null,
+      "to": "coc:weapon:sword-short",
+      "reason": "ссылка на оружие эпохи (Р-59): короткий меч (1d6) таблицы «Рукопашное оружие», с. 92; запись оружия заведена при сведении частей «Тёмных веков»",
+      "ref": "Р-232"
+    },
+    {
+      "field": "statblock.attacks[Копьё, короткое].weapon",
+      "from": null,
+      "to": "coc:weapon:spear-short",
+      "reason": "ссылка на оружие эпохи (Р-59): короткое копьё (1d6) таблицы «Рукопашное оружие», с. 92; запись оружия заведена при сведении частей «Тёмных веков»",
+      "ref": "Р-232"
+    },
+    {
+      "field": "variants[0].statblock.attacks[Меч].weapon",
+      "from": null,
+      "to": "coc:weapon:sword-short",
+      "reason": "ссылка на оружие эпохи (Р-59): короткий меч (1d6) таблицы «Рукопашное оружие», с. 92; запись оружия заведена при сведении частей «Тёмных веков»",
+      "ref": "Р-232"
+    },
+    {
+      "field": "variants[0].statblock.attacks[Копьё, короткое].weapon",
+      "from": null,
+      "to": "coc:weapon:spear-short",
+      "reason": "ссылка на оружие эпохи (Р-59): короткое копьё (1d6) таблицы «Рукопашное оружие», с. 92; запись оружия заведена при сведении частей «Тёмных веков»",
+      "ref": "Р-232"
+    }
+  ]
+}

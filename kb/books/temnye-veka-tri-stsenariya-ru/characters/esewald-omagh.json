@@ -1,0 +1,360 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "temnye-veka-tri-stsenariya-ru/character/esewald-omagh",
+  "kind": "character",
+  "name": {
+    "ru": "Ома",
+    "en": "Omagh"
+  },
+  "aliases": [
+    "Ома, угольщик"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "угольщик",
+    "en": null
+  },
+  "sex": "мужской",
+  "relations": [
+    {
+      "type": "relative_of",
+      "target": "temnye-veka-tri-stsenariya-ru/character/esewald-teleri",
+      "note": "жена",
+      "note_back": "муж"
+    },
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:horig",
+      "note": "бог, которому он приносит жертвы",
+      "note_back": "приверженец, глава угольщиков"
+    },
+    {
+      "type": "knows",
+      "target": "temnye-veka-tri-stsenariya-ru/character/totburg-guthlaf",
+      "note": "пастух, которого он «спас» от пуцела",
+      "note_back": "угольщик, «спасший» его от пуцела"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "75",
+        "value": 75
+      },
+      "SIZ": {
+        "raw": "70",
+        "value": 70
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "APP": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "60",
+        "value": 60
+      },
+      "EDU": {
+        "raw": "70",
+        "value": 70
+      }
+    },
+    "hp": {
+      "raw": "14",
+      "value": 14
+    },
+    "mp": {
+      "raw": "12",
+      "value": 12
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "sanity": {
+      "raw": "42",
+      "value": 42,
+      "max": null
+    },
+    "armor": {
+      "raw": "Нет.",
+      "value": 0
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d3+1d4, или нож 1d4+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Топор",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1d6+1d4",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:axe"
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Обращение с животными",
+        "skill": "coc:skill:animal-handling",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Искусство/Ремесло (Создание угля)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "Создание угля",
+        "value": {
+          "raw": "85%",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Естествознание",
+        "skill": "coc:skill:natural-world-dark-ages",
+        "value": {
+          "raw": "85%",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        }
+      },
+      {
+        "name": "Ориентирование",
+        "skill": "coc:skill:navigate",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Религия",
+        "skill": "coc:skill:religion-dark-ages",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Статус",
+        "skill": "coc:skill:status",
+        "value": {
+          "raw": "10%",
+          "value": 10,
+          "half": 5,
+          "fifth": 2
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      }
+    ]
+  },
+  "legend": {
+    "ru": "Глава угольщиков, приверженец Хорига (Народ). Живёт с женой Телери в хижине у края Эсевальда; пуцел в облике их дочери Адды заманивает путников. Гостеприимен и «спасает» заблудившихся от пуцела, чтобы самому доставить их Хоригу; так он когда-то встретил пастуха Гутлафа. Рассказывает о драке англосаксов с кимри и ведёт сыщиков в рощу, где уговаривает остаться подольше, толкает ослабевших в кольцо поганок и привязывает потерявших сознание к деревьям. Лоскут его плаща с золотой нитью остался в руке Ингара; в его котле — голова Ваду, в хижине — кольца Вленсинга и тайник оружия.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 250,
+      "printed_page": 249,
+      "method": "book_text",
+      "verified": true,
+      "note": "приложение А: «Ома, угольщик»"
+    },
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 248,
+      "printed_page": 247,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Угольщики»"
+    },
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 247,
+      "printed_page": 246,
+      "method": "book_text",
+      "verified": true,
+      "note": "лоскут плаща"
+    },
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 249,
+      "printed_page": 248,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Роща Хорига»"
+    },
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 246,
+      "printed_page": 245,
+      "method": "book_text",
+      "verified": true,
+      "note": "секрет Гутлафа"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.dodge",
+      "printed": "30% (15/6)",
+      "expected": "35% (17/7)",
+      "note": "Уклонение по правилам не ниже половины ЛВК 70 = 35%; так же в оригинале (с. 200). Как напечатано (Р-161).",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": "«Искусство/Ремесло (Создание угля) 85%» — как в переводе; в оригинале (с. 200) значение навыка не напечатано."
+  },
+  "corrections": [
+    {
+      "field": "statblock.attacks[Топор].weapon",
+      "from": null,
+      "to": "coc:weapon:axe",
+      "reason": "ссылка на оружие эпохи (Р-59): топор (1d6) таблицы «Рукопашное оружие», с. 92; запись оружия заведена при сведении частей «Тёмных веков»",
+      "ref": "Р-232"
+    }
+  ]
+}

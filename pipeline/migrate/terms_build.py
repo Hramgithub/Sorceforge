@@ -117,6 +117,26 @@ def main() -> int:
                 t["sources"].append({"book_id": src["book_id"], "physical_page": src.get("physical_page"), "printed_page": src.get("printed_page"),
                                      "method": "book_text", "verified": bool(src.get("verified")), "note": f"{nt.parent.name}/new-terms.json"})
 
+    # 1d. the glossary of a book other than the Keeper Rulebook — an official edition or a trusted fan translation
+    #     (checks/*/book-terms.json: {en, ru, by, book_id, page, variant_note, aliases, avoid, domain, scope, definition,
+    #     refs, sources, notes, slug?}; first: the Dark Ages glossary, Р-232); the fields are those of the term record itself
+    for bt in sorted(ROOT.glob("checks/*/book-terms.json")):
+        for g in json.loads(bt.read_text(encoding="utf-8")):
+            t = term(g["en"])
+            t["variants"].append({"ru": g["ru"], "by": g["by"], "book_id": g["book_id"], "page": g.get("page"),
+                                  "note": g.get("variant_note") or f"глоссарий книги ({bt.parent.name})"})
+            t["aliases"] += g.get("aliases") or []
+            t["avoid"] += g.get("avoid") or []
+            t["domain"] = t["domain"] or g.get("domain")
+            t["scope"] = t["scope"] or g.get("scope")
+            t["definition"] = t["definition"] or g.get("definition")
+            t["refs"] += g.get("refs") or []
+            t["sources"] += g.get("sources") or []
+            # an id fixed before the build knew the file (en «Fêtes, Christian» → fetes-christian) is kept
+            t["slug"] = t.get("slug") or g.get("slug")
+            if g.get("notes"):
+                t["notes"].append(g["notes"])
+
     # 2. official characteristics
     for en, ru, abbr, cid in CHARACTERISTICS:
         t = term(en)
@@ -179,7 +199,7 @@ def main() -> int:
         others = {v["ru"].lower() for v in vs if v["by"] != best["by"]} - {best["ru"].lower()}
         if best["by"] == "official" and any(v["by"] == "owner" and v["ru"].lower() != best["ru"].lower() for v in vs):
             conflicts.append((t["en"], best["ru"], [v["ru"] for v in vs if v["by"] == "owner"]))
-        s = slug(t["en"] or translit(k)) or "term"
+        s = t.get("slug") or slug(t["en"] or translit(k)) or "term"
         while s in used:
             s += "-2"
         used.add(s)
@@ -190,7 +210,8 @@ def main() -> int:
                "definition": {"ru": t["definition"], "en": None} if t["definition"] else None,
                "refs": sorted(set(t["refs"])), "sources": t["sources"] or [{"book_id": REGISTRY_BOOK, "physical_page": None, "printed_page": None,
                                                                              "method": "manual", "verified": False, "note": None}],
-               "quality": {"needs_review": False, "flags": [], "notes": ("Другие переводы: " + "; ".join(sorted(others))) if others else None}}
+               "quality": {"needs_review": False, "flags": [],
+                           "notes": " ".join(t["notes"] + (["Другие переводы: " + "; ".join(sorted(others))] if others else [])) or None}}
         if rec["definition"] is None:
             del rec["definition"]
         out.append(rec)

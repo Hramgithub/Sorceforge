@@ -1,0 +1,399 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "temnye-veka-tri-stsenariya-ru/character/totburg-turec",
+  "kind": "character",
+  "name": {
+    "ru": "Турек",
+    "en": "Turec"
+  },
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "фермер",
+    "en": "farmer"
+  },
+  "age": {
+    "raw": "22 года",
+    "value": 22
+  },
+  "sex": "мужской",
+  "residence": "Тотбург: Дом Дермана (№ 23)",
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "relative_of",
+      "target": "temnye-veka-tri-stsenariya-ru/character/totburg-derman",
+      "note": "муж матери",
+      "note_back": "сын жены"
+    },
+    {
+      "type": "spawn_of",
+      "target": "coc:creature:nyarlathotep",
+      "note": "сын Хаунилд от Чёрного человека, аватара Ньярлатхотепа (Миф)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "80",
+        "value": 80
+      },
+      "CON": {
+        "raw": "75",
+        "value": 75
+      },
+      "SIZ": {
+        "raw": "80",
+        "value": 80
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "APP": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "70",
+        "value": 70
+      },
+      "EDU": {
+        "raw": "60",
+        "value": 60
+      }
+    },
+    "hp": {
+      "raw": "15",
+      "value": 15
+    },
+    "mp": {
+      "raw": "14",
+      "value": 14
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "2 пункта (врожденная магическая броня)* — если используется тег «Миф».",
+      "value": null
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "1d3+1d4, или нож 1d6+1d4",
+          "dice": "1d3",
+          "adds_db": true,
+          "extra": "или нож 1d6+1d4"
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Копье",
+          "en": null
+        },
+        "kind": "attack",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d6+1d4 (1d2 если метать)",
+          "dice": "1d6",
+          "adds_db": true,
+          "extra": "(1d2 если метать)"
+        },
+        "weapon": "coc:weapon:spear-short"
+      },
+      {
+        "name": {
+          "ru": "Лук",
+          "en": null
+        },
+        "kind": "attack",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d6+1d2",
+          "dice": "1d6",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:bow-and-arrows"
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "skills": [
+      {
+        "name": "Искусство/Ремесло (Фермерство)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "Фермерство",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Мифы Ктулху*",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "15%",
+          "value": 15,
+          "half": 7,
+          "fifth": 3
+        }
+      },
+      {
+        "name": "Проницательность",
+        "skill": "coc:skill:insight",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Естествознание",
+        "skill": "coc:skill:natural-world-dark-ages",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Ориентирование",
+        "skill": "coc:skill:navigate",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Оккультизм",
+        "skill": "coc:skill:occult",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Ремонт/Разработка",
+        "skill": "coc:skill:repair-devise",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Статус",
+        "skill": "coc:skill:status",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      }
+    ],
+    "sanity": {
+      "raw": "70 (00)*",
+      "value": 70,
+      "max": null
+    },
+    "spells": {
+      "raw": "Магические способности* (действуют как заклинания): Стать призраком, Власть над зверем, Иссушение. *Если используется тег Миф.",
+      "items": [
+        {
+          "name": "Стать призраком",
+          "spell": null
+        },
+        {
+          "name": "Власть над зверем",
+          "spell": "coc:spell:command-animal-folk"
+        },
+        {
+          "name": "Иссушение",
+          "spell": "coc:spell:shrivelling"
+        }
+      ]
+    }
+  },
+  "abilities": [
+    {
+      "name": "Врождённая магия",
+      "summary": "Миф: 2 пункта врождённой магической брони; способности «Стать призраком», «Власть над зверем», «Иссушение» действуют как заклинания.",
+      "refs": [
+        "coc:spell:command-animal-folk",
+        "coc:spell:shrivelling"
+      ]
+    }
+  ],
+  "background": {
+    "secret": "Миф: сын Хаунилд от Чёрного человека; обладает врождёнными магическими способностями — магической бронёй 2 пункта и способностями, действующими как заклинания."
+  },
+  "legend": {
+    "ru": "Взрослый сын Дермана и Хаунилд, помогает на полях.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 204,
+      "printed_page": 203,
+      "method": "book_text",
+      "verified": true,
+      "note": "глава «Тотбург»: № 23: сын Дермана и Хаунилд, «Миф»"
+    },
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 205,
+      "printed_page": 204,
+      "method": "book_text",
+      "verified": true,
+      "note": "глава «Тотбург»: статблок «Турек, 22 года, фермер»"
+    },
+    {
+      "book_id": "cthulhu-dark-ages-en",
+      "physical_page": 168,
+      "printed_page": 166,
+      "method": "book_text",
+      "verified": true,
+      "note": "сверка чисел и названий с английским оригиналом"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Статблок сверен по изображениям страниц перевода и с английским оригиналом (cthulhu-dark-ages-en); русский текст — из перевода. Навык «Зелья» без записи в справочнике оставлен без ссылки; оружие эпохи (кроме драки) — без ссылки на справочник. Урон ножа 1d6+1d4 — как напечатано (так же в оригинале)."
+  },
+  "corrections": [
+    {
+      "field": "statblock.attacks[Копье].weapon",
+      "from": null,
+      "to": "coc:weapon:spear-short",
+      "reason": "ссылка на оружие эпохи (Р-59): короткое копьё (1d6) таблицы «Рукопашное оружие», с. 92; запись оружия заведена при сведении частей «Тёмных веков»",
+      "ref": "Р-232"
+    },
+    {
+      "field": "statblock.attacks[Лук].weapon",
+      "from": null,
+      "to": "coc:weapon:bow-and-arrows",
+      "reason": "ссылка на оружие эпохи (Р-59): лук таблицы «Дальнобойное оружие», с. 93 (числа эпохи — в source_variants); запись оружия заведена при сведении частей «Тёмных веков»",
+      "ref": "Р-232"
+    }
+  ]
+}

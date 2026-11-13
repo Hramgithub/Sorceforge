@@ -1,0 +1,85 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "temnye-veka-tri-stsenariya-ru/scene/hunt-dead-rise",
+  "kind": "scene",
+  "name": {
+    "ru": "Восстание мертвецов",
+    "en": "The Dead Rise"
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Хранители, желающие сразу включить в сценарий бой, могут поднять ожившие трупы Ангифу и гончей, которых к неестественной жизни приводит чёрный ихор — молоко Шуб-Ниггурат. В отличие от современных зомби, которые шатаются и действуют бездумно, ожившие мертвецы средневековых сказок двигаются и ведут себя так же, как при жизни.\nХранитель выбирает лучшее время для нападения — когда сыщики застигнуты врасплох. Если сыщики остаются на ночь на ферме, Ангифу может подняться и атаковать, возможно, заползя на крышу и пробив солому. Кто знает, что пронесётся в головах сыщиков, когда они услышат, как что-то скребётся по соломенной крыше? Проверка Слуха — слышат ли они, как что-то ползает по крыше. Если же сыщики покинут ферму после первого осмотра, Ангифу и собака могут преследовать их по лесу. Возможности посеять страх безграничны. Провал повторной проверки Чтения следов в лесу тоже может означать нападение зомби Ангифу и/или собаки-нежити.",
+    "en": null
+  },
+  "when": "по выбору Хранителя: ночью на ферме или в лесу",
+  "arc": {
+    "scenario": "temnye-veka-tri-stsenariya-ru/scenario/hunt-the-hunt",
+    "part": "Ферма",
+    "order": 3
+  },
+  "where": [
+    {
+      "location": "temnye-veka-tri-stsenariya-ru/location/hunt-eorhelm-farm"
+    }
+  ],
+  "participants": [
+    {
+      "id": "temnye-veka-tri-stsenariya-ru/character/hunt-angifu",
+      "role": "оживший труп"
+    },
+    {
+      "id": "temnye-veka-tri-stsenariya-ru/creature/hunt-undead-hound",
+      "role": "оживший труп"
+    }
+  ],
+  "mechanics": {
+    "ru": "Слух — услышать, как что-то ползает по крыше. Вид зомби Ангифу или гончей-нежити — Рассудок 0/1d8. Тела не получают урона, кроме попаданий в голову (штрафная кость); серьёзная рана тела отрывает конечность.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Необязательная встреча; сценарий продолжается.",
+    "en": null
+  },
+  "refs": [
+    "coc:creature:shub-niggurath",
+    "coc:creature:zombie",
+    "temnye-veka-tri-stsenariya-ru/scene/hunt-tracks"
+  ],
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 224,
+      "printed_page": 223,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «Восстание мертвецов»"
+    },
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 226,
+      "printed_page": 225,
+      "method": "book_text",
+      "verified": true,
+      "note": "провал повторной проверки Чтения следов"
+    },
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 230,
+      "printed_page": 229,
+      "method": "book_text",
+      "verified": true,
+      "note": "профили Ангифу и гончей"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

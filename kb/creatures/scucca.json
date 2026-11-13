@@ -1,0 +1,161 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:scucca",
+  "kind": "creature",
+  "name": {
+    "ru": "Скукка",
+    "en": "Scucca"
+  },
+  "aliases": [
+    "Скукка-мертвец",
+    "Холмовой скукка",
+    "Драугр",
+    "Гуль",
+    "Ревенант"
+  ],
+  "category": "supernatural",
+  "subcategory": "нежить англосаксонского фольклора",
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      },
+      "CON": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      },
+      "DEX": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      },
+      "INT": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      },
+      "POW": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      }
+    },
+    "hp": {
+      "raw": "11–12",
+      "value": 11
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "6",
+      "value": 6,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 6
+        }
+      ]
+    },
+    "armor": {
+      "raw": "2 пункта (испещрённая плоть). При нанесении урона из раны вырываются личинки.",
+      "value": 2
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d6+БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      }
+    ],
+    "skills": [
+      {
+        "name": "Уклонение",
+        "skill": "coc:skill:dodge",
+        "value": {
+          "raw": "N/A",
+          "value": null
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      }
+    ],
+    "spells": {
+      "raw": "нет."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "при виде скукки"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Существо англосаксонского фольклора: неуклюжий раздутый труп, из которого при ходьбе сыплются личинки; кожа в синяках и запёкшейся крови. Бродящего по сельской местности считают скуккой-мертвецом, обитающего в курганах и на кладбищах — холмовым скуккой. Говорят, что неотомщённые и убитые скуккой встают снова; считается, что обезглавливание мёртвых не даёт трупу подняться скуккой.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 181,
+      "printed_page": 180,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Скукка» и статблок «СКУККА, также драугр, гуль, ревенант, существо»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Подпись «Combat» в статблоке не переведена. Английский файл `cthulhu-dark-ages-en` — предварительная вёрстка (ссылки «page @@»), числа в нём местами другие; источник — русское издание."
+  }
+}

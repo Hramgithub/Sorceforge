@@ -1,0 +1,206 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:basilisk",
+  "kind": "creature",
+  "name": {
+    "ru": "Василиск",
+    "en": "Basilisk"
+  },
+  "aliases": [
+    "Царёк",
+    "Кокатрис",
+    "Королёк"
+  ],
+  "category": "supernatural",
+  "subcategory": "чудовище фольклора",
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "related_to",
+      "target": "coc:creature:serpent-person",
+      "note": "вероятно, создан змеелюдьми"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "5",
+        "value": 5,
+        "roll": null
+      },
+      "CON": {
+        "raw": "5",
+        "value": 5,
+        "roll": null
+      },
+      "SIZ": {
+        "raw": "5",
+        "value": 5,
+        "roll": null
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50,
+        "roll": null
+      },
+      "INT": {
+        "raw": "15",
+        "value": 15,
+        "roll": null
+      },
+      "POW": {
+        "raw": "5",
+        "value": 5,
+        "roll": null
+      }
+    },
+    "hp": {
+      "raw": "1",
+      "value": 1
+    },
+    "mp": {
+      "raw": "1",
+      "value": 1
+    },
+    "damage_bonus": {
+      "raw": "N/A",
+      "value": null
+    },
+    "build": {
+      "raw": "–2",
+      "value": -2
+    },
+    "move": {
+      "raw": "6",
+      "value": 6,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 6
+        }
+      ]
+    },
+    "armor": {
+      "raw": "4 пункта (чешуя)",
+      "value": 4
+    },
+    "attacks_per_round": {
+      "raw": "1 (укус)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "1d4 + яд*",
+          "dice": "1d4",
+          "adds_db": false
+        },
+        "notes": "*Яд: если кожа повреждена, жертва делает бросок ВЫН: при провале — автоматическая смерть после одного раунда; при успехе — 4d10 урона; при критическом успехе — 2d10 урона"
+      },
+      {
+        "name": {
+          "ru": "Ядовитый плевок",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": null,
+        "chance": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "урон ядом** (базовая дальность 3 метра)",
+          "dice": null,
+          "adds_db": false
+        },
+        "notes": "**Чрезвычайный успех — плевок попадает в глаза, вызывая слепоту"
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      }
+    ],
+    "spells": {
+      "raw": "нет."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "0",
+        "trigger": "Потеря Рассудка: нет"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Змей-василиск («королёк») — змея длиной 2–3 метра, настолько ядовитая, что живёт в созданной ею же пустыне. Плиний в «Естественной истории»: василиск «украшен яркой белой отметиной на голове, напоминающей своего рода диадему… и не двигает своё тело вперёд множеством витков, как другие змеи, а продвигается вперёд с высоко поднятой серединой». Олицетворение яда: укушенный умирает через раунд, спастись можно разве что немедленной ампутацией укушенной конечности. Легенда о ядовитом дыхании — неверное толкование того, что василиск плюёт ядом до 6 м, целясь в глаза. Родом из Киренаики, к западу от Египта; вероятно, их изначально создали змеелюди.",
+    "en": null
+  },
+  "habitat": "Киренаика, к западу от Египта",
+  "sources": [
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 179,
+      "printed_page": 178,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Монстры из фольклора», «Василиск»"
+    },
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 180,
+      "printed_page": 179,
+      "method": "book_text",
+      "verified": true,
+      "entry_page": 179,
+      "note": "статблок «ВАСИЛИСК, также царёк, кокатрис»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.mp",
+      "printed": "Ср. ПЗ: 1",
+      "expected": "Ср. ПМ: 1",
+      "note": "строка ПМ подписана «ПЗ» (МОЩ 5 → 1 ПМ)",
+      "fixed": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": "Английский файл `cthulhu-dark-ages-en` — предварительная вёрстка (ссылки «page @@»), числа в нём местами другие; источник — русское издание."
+  }
+}

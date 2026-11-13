@@ -1,0 +1,93 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:moryak",
+  "kind": "occupation",
+  "name": {
+    "ru": "Моряк",
+    "en": "Sailor"
+  },
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Вы умеете управлять парусами, лодками и кораблями, знаете приливы, ветер и звёзды. Вы видели Гамбург, Венецию или Константинополь. Жизнь прекрасна, если не считать штормов, пиратов и ужасов морских глубин.\n\nДиапазон в поле «Средства» — стартовый Статус (навык Статус, с. 80). В правилах ядра близкая профессия — «Гражданский моряк».",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ЛВК × 2 + ВЫН × 2",
+    "options": [
+      [
+        [
+          "DEX",
+          2
+        ],
+        [
+          "CON",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "0–30",
+    "min": 0,
+    "max": 30
+  },
+  "contacts": null,
+  "skills": [
+    {
+      "raw": "Лазание",
+      "skill": "coc:skill:climb"
+    },
+    {
+      "raw": "Красноречие",
+      "skill": "coc:skill:fast-talk"
+    },
+    {
+      "raw": "Естествознание",
+      "skill": "coc:skill:natural-world-dark-ages"
+    },
+    {
+      "raw": "Ориентирование",
+      "skill": "coc:skill:navigate"
+    },
+    {
+      "raw": "Другие королевства",
+      "skill": "coc:skill:other-kingdoms"
+    },
+    {
+      "raw": "Управление лодкой",
+      "skill": "coc:skill:pilot",
+      "specialization": "Лодка"
+    },
+    {
+      "raw": "любые два навыка личной специализации",
+      "choice": {
+        "count": 2,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 66,
+      "printed_page": 65,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Род занятий»: Моряк"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "editorial_text"
+    ],
+    "notes": "Фраза о Статусе и сравнение с профессией других эпох в описании — наши (Р-123)."
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "temnye-veka-tri-stsenariya-ru/scene/wessex-hygerd-ravings",
+  "kind": "scene",
+  "name": {
+    "ru": "Бред Хигерда",
+    "en": "Hygerd's Ravings"
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Хигерд — отшельник при церкви Хафдена. Он замурован в маленькой келье и говорит с людьми через окно с закрытыми ставнями. Сегодня у него плохой день: совращение монахов Фетом каким-то образом действует и на Хигерда, доводя его ещё глубже до безумия. Если сыщики подходят к окну, Хигерд с рычанием бросается к нему, бушуя и разглагольствуя.\nПопасть к нему в келью сыщики не могут — говорить приходится через окно. Если сыщики спросят о событиях в монастыре, Хигерд три часа будет разглагольствовать. Большая часть его речи бессвязна, бессмысленна и тревожна, но подсказка (раздаточный материал «Подсказка Хигерда») звучит, когда Хранитель сочтёт нужным; Хранитель может вплести в речь и семена будущих сценариев. Чтобы дать игрокам полное впечатление от речи, обратитесь к разделу «Устные традиции». Прочитайте вслух или перескажите подсказку.\nВ подходящий момент Хигерд, измученный своими речами, скрывается из виду и замолкает; успешная проверка Слуха позволяет услышать тихий храп из кельи.\nЕсли их спросят, священники попытаются истолковать речь Хигерда:\n• «Господь Саваоф» может означать армию или воинство.\n• Фет — один из многих названных демонов ада (это показывает и успешная проверка Оккультизма).\n• Священники предполагают, что Хигерд, возможно, дал обряд изгнания этого демона: у всемогущих демонов есть особые, уникальные для них обряды изгнания.\n• Согласно некоторым еретическим учениям, человечество сейчас живёт в 11-м эоне, а конец света предсказан в 12-м (это показывает и успешная проверка Оккультизма или Религии).\n• Несмешанное вино — вино, не разбавленное водой.",
+    "en": null
+  },
+  "when": "в Тотбурге, после монастыря",
+  "arc": {
+    "scenario": "temnye-veka-tri-stsenariya-ru/scenario/wessex-doom-that-came-to-wessex",
+    "part": "Тотбург",
+    "order": 7
+  },
+  "where": [
+    {
+      "location": "coc:location:totburg-wooden-church"
+    }
+  ],
+  "participants": [
+    {
+      "id": "temnye-veka-tri-stsenariya-ru/character/totburg-hygerd",
+      "role": "бредит у окна кельи"
+    },
+    {
+      "id": "temnye-veka-tri-stsenariya-ru/character/totburg-halfdene",
+      "role": "толкует речь"
+    },
+    {
+      "id": "temnye-veka-tri-stsenariya-ru/character/totburg-eadda",
+      "role": "толкует речь"
+    },
+    {
+      "id": "temnye-veka-tri-stsenariya-ru/character/totburg-earnwulf",
+      "role": "толкует речь"
+    }
+  ],
+  "mechanics": {
+    "ru": "Прослушивание: Оккультизм +4%, Религия +3%; проверка Рассудка (1/1d4); три часа, чтобы услышать и понять. Слух — храп из кельи. Оккультизм — Фет как демон ада; Оккультизм или Религия — 11-й эон.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Сыщики знают обряд: несмешанное вино и слова «Я изгоняю тебя одиннадцатым эоном…» (→ «Назад в монастырь»).",
+    "en": null
+  },
+  "refs": [
+    "temnye-veka-tri-stsenariya-ru/handout/wessex-hygerd-clue",
+    "temnye-veka-tri-stsenariya-ru/scene/wessex-back-to-monastery",
+    "temnye-veka-tri-stsenariya-ru/creature/wessex-pheth",
+    "coc:rule:dark-ages-system-oral-tradition",
+    "coc:skill:occult",
+    "coc:skill:religion-dark-ages"
+  ],
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 238,
+      "printed_page": 237,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Бред Хигерда»"
+    },
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 239,
+      "printed_page": 238,
+      "method": "book_text",
+      "verified": true,
+      "note": "толкование священников"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  },
+  "corrections": [
+    {
+      "field": "refs",
+      "from": null,
+      "to": "coc:skill:religion-dark-ages",
+      "reason": "ссылка на навык, упомянутый в тексте. Сведение частей «Тёмных веков» (Р-232): навык эпохи coc:skill:religion-dark-ages заведён частью ages-investigators («Религия», с. 79)",
+      "ref": "Р-232"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:serzhant-mer",
+  "kind": "occupation",
+  "name": {
+    "ru": "Сержант / Мэр",
+    "en": "Sergeant / Mayor"
+  },
+  "aliases": [
+    "Сержант",
+    "Мэр"
+  ],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Вы наняты лордом или монастырём для наблюдения за управлением доменом. Ваша главная задача — собирать налоги и натуральные сборы.\n\nДиапазон в поле «Средства» — стартовый Статус (навык Статус, с. 80).",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "СИЛ × 2 + МОЩ × 2",
+    "options": [
+      [
+        [
+          "STR",
+          2
+        ],
+        [
+          "POW",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "9–75",
+    "min": 9,
+    "max": 75
+  },
+  "contacts": null,
+  "skills": [
+    {
+      "raw": "Бухгалтерское дело",
+      "skill": "coc:skill:accounting"
+    },
+    {
+      "raw": "Обаяние",
+      "skill": "coc:skill:charm"
+    },
+    {
+      "raw": "Ближний бой (выберите один)",
+      "skill": "coc:skill:fighting",
+      "specialization": "выберите один"
+    },
+    {
+      "raw": "Проницательность",
+      "skill": "coc:skill:insight"
+    },
+    {
+      "raw": "Чтение и письмо (Латынь)",
+      "skill": "coc:skill:read-and-write-language",
+      "specialization": "Латынь"
+    },
+    {
+      "raw": "Внимание",
+      "skill": "coc:skill:spot-hidden"
+    },
+    {
+      "raw": "Скрытность",
+      "skill": "coc:skill:stealth"
+    },
+    {
+      "raw": "любой другой навык личной специализации",
+      "choice": {
+        "count": 1,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 66,
+      "printed_page": 65,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Род занятий»: Сержант / Мэр"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "editorial_text"
+    ],
+    "notes": "Фраза о Статусе и сравнение с профессией других эпох в описании — наши (Р-123)."
+  }
+}

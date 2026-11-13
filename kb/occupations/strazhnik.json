@@ -1,0 +1,98 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:strazhnik",
+  "kind": "occupation",
+  "name": {
+    "ru": "Стражник",
+    "en": "Guard"
+  },
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Вы работаете в соборном городе на бургграфа или епископа. В мирное время вам нечего делать, кроме как тренироваться с оружием и поддерживать форму.\n\nДиапазон в поле «Средства» — стартовый Статус (навык Статус, с. 80).",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "СИЛ × 2 + ЛВК × 2",
+    "options": [
+      [
+        [
+          "STR",
+          2
+        ],
+        [
+          "DEX",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "9–30",
+    "min": 9,
+    "max": 30
+  },
+  "contacts": null,
+  "skills": [
+    {
+      "raw": "Ближний бой (Драка)",
+      "skill": "coc:skill:fighting",
+      "specialization": "Драка"
+    },
+    {
+      "raw": "Ближний бой (Копьё)",
+      "skill": "coc:skill:fighting",
+      "specialization": "Копьё"
+    },
+    {
+      "raw": "Слух",
+      "skill": "coc:skill:listen"
+    },
+    {
+      "raw": "Родное королевство",
+      "skill": "coc:skill:own-kingdom"
+    },
+    {
+      "raw": "Верховая езда",
+      "skill": "coc:skill:ride"
+    },
+    {
+      "raw": "Внимание",
+      "skill": "coc:skill:spot-hidden"
+    },
+    {
+      "raw": "Метание",
+      "skill": "coc:skill:throw"
+    },
+    {
+      "raw": "любой другой навык личной специализации",
+      "choice": {
+        "count": 1,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 60,
+      "printed_page": 59,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Род занятий»: Стражник"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "editorial_text"
+    ],
+    "notes": "Фраза о Статусе и сравнение с профессией других эпох в описании — наши (Р-123)."
+  }
+}

@@ -1,0 +1,233 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "temnye-veka-tri-stsenariya-ru/character/hunt-angifu",
+  "kind": "character",
+  "name": {
+    "ru": "Ангифу",
+    "en": "Angifu"
+  },
+  "aliases": [
+    "Зомби Ангифу"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "нежить (жена фермера)",
+    "en": null
+  },
+  "age": {
+    "raw": "28 лет",
+    "value": 28
+  },
+  "sex": "женский",
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:zombie",
+      "note_back": "Ангифу, жена Йорхельма, поднятая чёрным ихором («Охота»)"
+    },
+    {
+      "type": "relative_of",
+      "target": "temnye-veka-tri-stsenariya-ru/character/hunt-inric",
+      "note": "сын",
+      "note_back": "мать"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "65",
+        "value": 65
+      },
+      "CON": {
+        "raw": "55",
+        "value": 55
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "INT": {
+        "raw": "30",
+        "value": 30
+      },
+      "APP": {
+        "raw": "–",
+        "value": null
+      },
+      "POW": {
+        "raw": "05",
+        "value": 5
+      },
+      "EDU": {
+        "raw": "–",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "1",
+      "value": 1
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "sanity": {
+      "raw": "–",
+      "value": null,
+      "max": null
+    },
+    "armor": {
+      "raw": "Серьёзная рана приводит к потере конечности. В противном случае игнорируйте повреждения, кроме головы (одна штрафная кость при атаке в голову).",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d4+1d4",
+          "dice": "1d4",
+          "adds_db": true
+        },
+        "notes": "когти и укусы ожившего трупа (вывод из текста, Р-41)"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d8",
+        "trigger": "при виде зомби Ангифу"
+      }
+    ]
+  },
+  "legend": {
+    "ru": "Жена Йорхельма, мать Инрика. Когда вель-вульф напал на ферму, она ударила его ножом в бок (нож остался в звере до логова) и была растерзана; её тело сидит у дальней стены дома, правая рука в чёрной сукровице, в левой — окровавленное пеленальное одеяло. Чёрный ихор, молоко Шуб-Ниггурат, может поднять её мёртвой: ночью она заползает на соломенную крышу или преследует сыщиков по лесу (сцена «Восстание мертвецов»). Как и мертвецы средневековых сказок, двигается и ведёт себя так же, как при жизни.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 230,
+      "printed_page": 229,
+      "method": "book_text",
+      "verified": true,
+      "note": "приложение А: «Ангифу, 28 лет, нежить»"
+    },
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 222,
+      "printed_page": 221,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Ферма»"
+    },
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 224,
+      "printed_page": 223,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Восстание мертвецов»"
+    },
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 226,
+      "printed_page": 225,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Следы»: нож Ангифу"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "БкУ +1d4 и Комплекция 1 — как в переводе (физ. 230); в английском оригинале (с. 183) «Damage Bonus: 0, Build: 0», но СИЛ 65 + ТЕЛ 65 = 130 дают +1d4 и 1 — перевод исправил опечатку оригинала. НАР, ОБР и Рассудка нет (нежить)."
+  }
+}

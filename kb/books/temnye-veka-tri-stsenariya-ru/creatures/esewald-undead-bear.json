@@ -1,0 +1,221 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "temnye-veka-tri-stsenariya-ru/creature/esewald-undead-bear",
+  "kind": "creature",
+  "name": {
+    "ru": "Медведь-нежить",
+    "en": "Bear, undead guardian"
+  },
+  "aliases": [
+    "Медведь, нежить-хранитель",
+    "Медведь-хранитель",
+    "Медовый лорд с костяной короной"
+  ],
+  "category": "supernatural",
+  "subcategory": "нежить, одержимая Хоригом",
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:bear",
+      "note_back": "мёртвый медведь-страж рощи Хорига («Эсевальд»)"
+    },
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:horig",
+      "note": "одержим Хоригом, страж кольца",
+      "note_back": "страж кольца — медведь-нежить"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "165",
+        "value": 165
+      },
+      "CON": {
+        "raw": "85",
+        "value": 85
+      },
+      "SIZ": {
+        "raw": "170",
+        "value": 170
+      },
+      "DEX": {
+        "raw": "55",
+        "value": 55
+      },
+      "INT": {
+        "raw": "—",
+        "value": null
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "POW": {
+        "raw": "55",
+        "value": 55
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "25",
+      "value": 25
+    },
+    "mp": {
+      "raw": "11",
+      "value": 11
+    },
+    "damage_bonus": {
+      "raw": "+3d6",
+      "value": "+3d6"
+    },
+    "build": {
+      "raw": "4",
+      "value": 4
+    },
+    "move": {
+      "raw": "14",
+      "value": 14,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 14
+        }
+      ]
+    },
+    "sanity": {
+      "raw": "—",
+      "value": null,
+      "max": null
+    },
+    "armor": {
+      "raw": "3 пункта (мех)",
+      "value": 3
+    },
+    "attacks_per_round": {
+      "raw": "2 (клыки, когти или швырнуть)",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "швырянием 3d6 урона или клыки/когти 1d6+3d6",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "notes": "швыряние — 3d6 (как БкУ); клыки/когти — 1d6+БкУ"
+      }
+    ],
+    "dodge": {
+      "raw": "27% (13/5)",
+      "value": 27,
+      "half": 13,
+      "fifth": 5
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1d4",
+        "fail": "1d6",
+        "trigger": "при виде медведя-нежити"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Туша огромного медведя на дальней стороне грибного кольца в роще Хорига: из неё прорастают грибы и растения, сгнившая голова — голая кость. Дремлет над Хоригом; просыпается, одержимый Хоригом, если кто-то коснётся туши или повредит кольцо (или сразу, по желанию Хранителя). Первая фраза Хигерда («медовый лорд с костяной короной») — намёк на него. Убить медведя-хранителя — часть осквернения поляны (+1d4 Рассудка).",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 251,
+      "printed_page": 250,
+      "method": "book_text",
+      "verified": true,
+      "note": "приложение А: «Медведь, нежить-хранитель»"
+    },
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 249,
+      "printed_page": 248,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Роща Хорига»"
+    },
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 246,
+      "printed_page": 245,
+      "method": "book_text",
+      "verified": true,
+      "note": "бред Хигерда"
+    },
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 250,
+      "printed_page": 249,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Итоги»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": null
+  }
+}

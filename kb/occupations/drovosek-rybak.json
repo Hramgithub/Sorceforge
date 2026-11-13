@@ -1,0 +1,119 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:drovosek-rybak",
+  "kind": "occupation",
+  "name": {
+    "ru": "Дровосек / Рыбак",
+    "en": "Woodsman / Fisherman"
+  },
+  "aliases": [
+    "Дровосек",
+    "Рыбак",
+    "Лесник"
+  ],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Будучи лесником, вы эксплуатируете лес: вы можете быть охотником, собирателем мёда или дровосеком, добывающим древесный уголь. Если вы рыбак, вы живёте в рыбацком посёлке на берегу озера или моря.\n\nДиапазон в поле «Средства» — стартовый Статус (навык Статус, с. 80).",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + ИНТ × 2",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "INT",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "0–25",
+    "min": 0,
+    "max": 25
+  },
+  "contacts": null,
+  "skills": [
+    {
+      "raw": "Искусство/Ремесло (выберите одно)",
+      "skill": "coc:skill:art-craft"
+    },
+    {
+      "raw": "Слух или Внимание",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:listen",
+          "coc:skill:spot-hidden"
+        ]
+      }
+    },
+    {
+      "raw": "Естествознание",
+      "skill": "coc:skill:natural-world-dark-ages"
+    },
+    {
+      "raw": "Ориентирование",
+      "skill": "coc:skill:navigate"
+    },
+    {
+      "raw": "Управление лодкой или Чтение следов",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:pilot",
+          "coc:skill:track"
+        ]
+      }
+    },
+    {
+      "raw": "Плавание или Скрытность",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:swim",
+          "coc:skill:stealth"
+        ]
+      }
+    },
+    {
+      "raw": "Метание",
+      "skill": "coc:skill:throw"
+    },
+    {
+      "raw": "любой навык личной специализации",
+      "choice": {
+        "count": 1,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 67,
+      "printed_page": 66,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Род занятий»: Дровосек / Рыбак"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "editorial_text"
+    ],
+    "notes": "Фраза о Статусе и сравнение с профессией других эпох в описании — наши (Р-123)."
+  }
+}

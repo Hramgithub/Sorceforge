@@ -1,0 +1,137 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "temnye-veka-tri-stsenariya-ru/creature/mythos-dog",
+  "kind": "creature",
+  "name": {
+    "ru": "Собака («Тёмные века»)",
+    "en": "Dog (Cthulhu Dark Ages)"
+  },
+  "aliases": [
+    "Собаки"
+  ],
+  "category": "animal",
+  "subcategory": "домашнее животное",
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:dog",
+      "note_back": "профиль «Тёмных веков»"
+    }
+  ],
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "35",
+        "value": 35,
+        "roll": "2d6×5"
+      },
+      "CON": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      },
+      "SIZ": {
+        "raw": "20–25",
+        "value": 20,
+        "roll": "(1d6+1)×5"
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      },
+      "POW": {
+        "raw": "35",
+        "value": 35,
+        "roll": "2d6×5"
+      }
+    },
+    "hp": {
+      "raw": "7–8",
+      "value": 7
+    },
+    "damage_bonus": {
+      "raw": "–2",
+      "value": -2
+    },
+    "build": {
+      "raw": "–2",
+      "value": -2
+    },
+    "move": {
+      "raw": "12 (6 swimming)",
+      "value": 12,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 12
+        },
+        {
+          "mode": "swim",
+          "value": 6
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1 (укус)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d6–БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    }
+  },
+  "description": {
+    "ru": "Собак ценят за преданность и держат для охраны; домашние и дикие собаки — стайные животные, в дикой природе часто сбиваются в стаи по 1d8+3 и более. Статблок — стандартная сторожевая собака (для крупных пород увеличьте СИЛ, ВЫН и ТЕЛ; для очень крупных собак берите статистику волка, с. 187).",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 186,
+      "printed_page": 185,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Собака» и статблок"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Урон напечатан «1d6–БкУ» (БкУ −2). Скорость плавания подписана по-английски. Английский файл `cthulhu-dark-ages-en` — предварительная вёрстка (ссылки «page @@»), числа в нём местами другие; источник — русское издание."
+  }
+}

@@ -1,0 +1,333 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "temnye-veka-tri-stsenariya-ru/character/totburg-vikings",
+  "kind": "character",
+  "name": {
+    "ru": "Викинги, люди Ингви",
+    "en": "Vikings, Yngvi’s men"
+  },
+  "aliases": [
+    "Викинги"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "викинг из лагеря Ингви",
+  "names": [
+    "Торир",
+    "Кетиль",
+    "Хальвдан",
+    "Бьорн",
+    "Ульф",
+    "Асгейр"
+  ],
+  "occupation": {
+    "ru": "викинги",
+    "en": "Vikings"
+  },
+  "residence": "Тотбург: Поселение викингов (№ 32)",
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "temnye-veka-tri-stsenariya-ru/character/totburg-yngvi",
+      "note": "предводитель",
+      "note_back": "его люди"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "80",
+        "value": 80
+      },
+      "CON": {
+        "raw": "85",
+        "value": 85
+      },
+      "SIZ": {
+        "raw": "80",
+        "value": 80
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "INT": {
+        "raw": "50",
+        "value": 50
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "POW": {
+        "raw": "65",
+        "value": 65
+      },
+      "EDU": {
+        "raw": "45",
+        "value": 45
+      }
+    },
+    "hp": {
+      "raw": "16",
+      "value": 16
+    },
+    "mp": {
+      "raw": "13",
+      "value": 13
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "Кольчуга и шлем 1d8 пунктов.",
+      "value": null
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Меч",
+          "en": null
+        },
+        "kind": "attack",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d8+1d4",
+          "dice": "1d8",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:sword-long"
+      },
+      {
+        "name": {
+          "ru": "Копье",
+          "en": null
+        },
+        "kind": "attack",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d6+1d4 (1d2 если метать)",
+          "dice": "1d6",
+          "adds_db": true,
+          "extra": "(1d2 если метать)"
+        },
+        "weapon": "coc:weapon:spear-short"
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Проницательность",
+        "skill": "coc:skill:insight",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Ориентирование",
+        "skill": "coc:skill:navigate",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Статус",
+        "skill": "coc:skill:status",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      }
+    ],
+    "sanity": {
+      "raw": "60",
+      "value": 60,
+      "max": null
+    }
+  },
+  "description": {
+    "ru": "120 викингов лагеря Ингви у устья Северна; у них три баркаса. Совершают набеги на Ирландию, Корнуолл и вверх по Северну.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 215,
+      "printed_page": 214,
+      "method": "book_text",
+      "verified": true,
+      "note": "глава «Тотбург»: статблок «Викинги, люди Ингви»"
+    },
+    {
+      "book_id": "cthulhu-dark-ages-en",
+      "physical_page": 175,
+      "printed_page": 173,
+      "method": "book_text",
+      "verified": true,
+      "note": "сверка чисел и названий с английским оригиналом"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "editorial_text"
+    ],
+    "notes": "Статблок сверен по изображениям страниц перевода и с английским оригиналом (cthulhu-dark-ages-en); русский текст — из перевода. Групповой профиль (Р-74): имена придуманы (Р-151), в книге — «Викинги, люди Ингви». Навык «Зелья» без записи в справочнике оставлен без ссылки; оружие эпохи (кроме драки) — без ссылки на справочник. В английском издании, с которым сверялись, статблока нет; числа — по переводу."
+  },
+  "corrections": [
+    {
+      "field": "statblock.attacks[Меч].weapon",
+      "from": null,
+      "to": "coc:weapon:sword-long",
+      "reason": "ссылка на оружие эпохи (Р-59): длинный меч (1d8) таблицы «Рукопашное оружие», с. 92; запись оружия заведена при сведении частей «Тёмных веков»",
+      "ref": "Р-232"
+    },
+    {
+      "field": "statblock.attacks[Копье].weapon",
+      "from": null,
+      "to": "coc:weapon:spear-short",
+      "reason": "ссылка на оружие эпохи (Р-59): короткое копьё (1d6) таблицы «Рукопашное оружие», с. 92; запись оружия заведена при сведении частей «Тёмных веков»",
+      "ref": "Р-232"
+    }
+  ]
+}

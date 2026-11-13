@@ -1,0 +1,326 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "temnye-veka-tri-stsenariya-ru/character/wessex-vikings",
+  "kind": "character",
+  "name": {
+    "ru": "Викинг, типичный налётчик",
+    "en": "Viking, typical raider"
+  },
+  "aliases": [
+    "Викинги",
+    "Морские волки"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "налётчик-викинг",
+  "names": [
+    "Торбранд",
+    "Кетиль",
+    "Хальвдан",
+    "Ульф",
+    "Асгейр",
+    "Гуннар"
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "80",
+        "value": 80
+      },
+      "CON": {
+        "raw": "85",
+        "value": 85
+      },
+      "SIZ": {
+        "raw": "80",
+        "value": 80
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "INT": {
+        "raw": "50",
+        "value": 50
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "POW": {
+        "raw": "65",
+        "value": 65
+      },
+      "EDU": {
+        "raw": "45",
+        "value": 45
+      }
+    },
+    "hp": {
+      "raw": "16",
+      "value": 16
+    },
+    "mp": {
+      "raw": "13",
+      "value": 13
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "sanity": {
+      "raw": "60",
+      "value": 60,
+      "max": null
+    },
+    "armor": {
+      "raw": "Кольчуга и шлем 1d8.",
+      "value": null
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Меч",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d8+1d4",
+          "dice": "1d8",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:sword-long"
+      },
+      {
+        "name": {
+          "ru": "Копье",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d6+1d4 (+1d2 если метать)",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:spear-short"
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Проницательность",
+        "skill": "coc:skill:insight",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Ориентирование",
+        "skill": "coc:skill:navigate",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Статус",
+        "skill": "coc:skill:status",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      }
+    ]
+  },
+  "legend": {
+    "ru": "Отряд викингов, поднявшийся по Северну на корабле: двадцать налётчиков по лестницам лезут через стены Тотбурга, чтобы ограбить рынок, десять остаются на корабле; ещё десять посланы грабить монастырь Св. Свитуна, где попадают под власть Фета. Свейн преследует их до рассвета, но они уплывают вниз по Северну к морю.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 241,
+      "printed_page": 240,
+      "method": "book_text",
+      "verified": true,
+      "note": "приложение А: «Викинг, типичный налётчик»"
+    },
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 234,
+      "printed_page": 233,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Морские волки»"
+    },
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 235,
+      "printed_page": 234,
+      "method": "book_text",
+      "verified": true,
+      "note": "викинги в монастыре"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "editorial_text"
+    ],
+    "notes": "Групповой профиль; имена придуманы (Р-151). Те же числа у профиля «Викинги, люди Ингви» в главе о Тотбурге (с. 214); связь отрядов книга не называет. В переводе у копья «(+1d2 если метать)», в оригинале (с. 192) «(1d2 if thrown)» — как напечатано в переводе."
+  },
+  "corrections": [
+    {
+      "field": "statblock.attacks[Меч].weapon",
+      "from": null,
+      "to": "coc:weapon:sword-long",
+      "reason": "ссылка на оружие эпохи (Р-59): длинный меч (1d8) таблицы «Рукопашное оружие», с. 92; запись оружия заведена при сведении частей «Тёмных веков»",
+      "ref": "Р-232"
+    },
+    {
+      "field": "statblock.attacks[Копье].weapon",
+      "from": null,
+      "to": "coc:weapon:spear-short",
+      "reason": "ссылка на оружие эпохи (Р-59): короткое копьё (1d6) таблицы «Рукопашное оружие», с. 92; запись оружия заведена при сведении частей «Тёмных веков»",
+      "ref": "Р-232"
+    }
+  ]
+}

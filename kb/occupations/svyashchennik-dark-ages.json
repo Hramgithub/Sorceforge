@@ -1,0 +1,94 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:svyashchennik-dark-ages",
+  "kind": "occupation",
+  "name": {
+    "ru": "Священник",
+    "en": "Priest"
+  },
+  "aliases": [
+    "Священник (Тёмные века)",
+    "Послушник",
+    "Экзорцист"
+  ],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Вы выполняете миссию Церкви — наставлять мирян и женщин на пути Божьи. Вы можете быть послушником, экзорцистом или полноправным священником, привязанным к приходу и собирающим десятину с фермеров, большая часть которой идёт вашему жадному господину. Хотя св. Павел высоко ценит безбрачие и настоятельно рекомендует его, вы можете иметь наложницу и даже детей, хотя они ничего от вас не унаследуют.\n\nДиапазон в поле «Средства» — стартовый Статус (навык Статус, с. 80). Профессия 1920-х того же названия — «Священник».",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + ИНТ × 2",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "INT",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "9–99",
+    "min": 9,
+    "max": 99
+  },
+  "contacts": null,
+  "skills": [
+    {
+      "raw": "Проницательность",
+      "skill": "coc:skill:insight"
+    },
+    {
+      "raw": "Другой язык (Латынь)",
+      "skill": "coc:skill:language-other",
+      "specialization": "Латынь"
+    },
+    {
+      "raw": "Убеждение",
+      "skill": "coc:skill:persuade"
+    },
+    {
+      "raw": "Оккультизм",
+      "skill": "coc:skill:occult"
+    },
+    {
+      "raw": "Религия",
+      "skill": "coc:skill:religion-dark-ages"
+    },
+    {
+      "raw": "любые три навыка личной специализации",
+      "choice": {
+        "count": 3,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 66,
+      "printed_page": 65,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Род занятий»: Священник"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "editorial_text"
+    ],
+    "notes": "Фраза о Статусе и сравнение с профессией других эпох в описании — наши (Р-123)."
+  }
+}

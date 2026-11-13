@@ -1,0 +1,192 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:teutates",
+  "kind": "creature",
+  "name": {
+    "ru": "Тевтат",
+    "en": "Teutates"
+  },
+  "aliases": [
+    "Тевтаты"
+  ],
+  "category": "supernatural",
+  "subcategory": "разумная нежить, слуги Гла’аки",
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:glaaki"
+    },
+    {
+      "type": "related_to",
+      "target": "coc:creature:servant-of-glaaki",
+      "note": "тоже воскрешены шипом Гла’аки"
+    }
+  ],
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "80",
+        "value": 80,
+        "roll": "(4d6+2)×5"
+      },
+      "CON": {
+        "raw": "100–110",
+        "value": 100,
+        "roll": "3d6×10"
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      },
+      "DEX": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      },
+      "POW": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      }
+    },
+    "hp": {
+      "raw": "16–17",
+      "value": 16
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "armor": {
+      "raw": "2 пункта (кожаная броня)",
+      "value": 2
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "оружием (меч 1d8+БкУ)",
+          "dice": "1d8",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "65%",
+          "value": 65
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      }
+    ],
+    "spells": {
+      "raw": "сохраняет все известные при жизни, а также все новые заклинания, которым научил Гла’аки."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "0",
+        "trigger": "если выглядит как человек"
+      },
+      {
+        "success": "1",
+        "fail": "1d8",
+        "trigger": "если выглядит как живой труп"
+      },
+      {
+        "success": "1",
+        "fail": "1d10",
+        "trigger": "если подвержен Зелёному Распаду"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Избранные защитники своего племени, живущие на окраинах постоянно развивающегося мира: когда-то люди-воины, теперь разумная нежить. Племена, «рождающие» тевтатов, поклоняются Гла’аки, Наблюдателю в Воде, отдавая ему лучших воинов, чтобы он даровал им нежизнь. Дар ограничен: воинов-нежить можно убить, а покинув владения племени, они поддаются Зелёному Распаду, который медленно их пожирает.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 178,
+      "printed_page": 177,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Тевтат» и статблок «ТЕВТАТ, неживой защитник своего племени»"
+    },
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 150,
+      "printed_page": 149,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Тевтаты» (культ): посвящение"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Культ и обряд посвящения — в записи организации «Тевтаты». Английский файл `cthulhu-dark-ages-en` — предварительная вёрстка (ссылки «page @@»), числа в нём местами другие; источник — русское издание."
+  }
+}

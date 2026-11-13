@@ -1,0 +1,149 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "temnye-veka-tri-stsenariya-ru/creature/mythos-wolf",
+  "kind": "creature",
+  "name": {
+    "ru": "Волк («Тёмные века»)",
+    "en": "Wolf (Cthulhu Dark Ages)"
+  },
+  "aliases": [
+    "Волки",
+    "Боевой пёс"
+  ],
+  "category": "animal",
+  "subcategory": "хищник",
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:wolf",
+      "note_back": "профиль «Тёмных веков»"
+    }
+  ],
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      },
+      "CON": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      },
+      "SIZ": {
+        "raw": "40",
+        "value": 40,
+        "roll": "(2d6+1)×5"
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      },
+      "POW": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      }
+    },
+    "hp": {
+      "raw": "9",
+      "value": 9
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "10",
+      "value": 10,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 10
+        }
+      ]
+    },
+    "armor": {
+      "raw": "2 пункта (мех)",
+      "value": 2
+    },
+    "attacks_per_round": {
+      "raw": "1 (укус)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d8+БкУ",
+          "dice": "1d8",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Сбить с ног (манёвр)",
+          "en": "Knockdown (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "notes": "совместная атака трёх и более волков равна Комплекции 1 (больше, если волков больше); в случае успеха цель сбивается с ног; процент — как у Ближнего боя (вывод из текста, Р-41)"
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    }
+  },
+  "description": {
+    "ru": "Волки осторожны и редко беспокоят людей, хотя издавна их считают злыми и приписывают им зловещие мотивы. Охотятся стаями от дюжины до 40 и более, наваливаясь на противника, чтобы сбить добычу с ног, пока остальная стая атакует. Статистику можно использовать и для большого боевого пса.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 188,
+      "printed_page": 187,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Волк» и статблок"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Английский файл `cthulhu-dark-ages-en` — предварительная вёрстка (ссылки «page @@»), числа в нём местами другие; источник — русское издание."
+  }
+}

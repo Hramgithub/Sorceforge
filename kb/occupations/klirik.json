@@ -1,0 +1,108 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:klirik",
+  "kind": "occupation",
+  "name": {
+    "ru": "Клирик",
+    "en": "Cleric"
+  },
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Вы — ребёнок богатого человека или блестящий крестьянский мальчик, который привлёк внимание человека Церкви. Вы получили формальное религиозное образование в епископстве или монастыре. Теперь вы секретарь, администратор, юрист или архитектор на службе у графа или епископа.\n\nДиапазон в поле «Средства» — стартовый Статус (навык Статус, с. 80).",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + МОЩ × 2 или ОБР × 2 + НАР × 2",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "POW",
+          2
+        ]
+      ],
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "APP",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "9–99",
+    "min": 9,
+    "max": 99
+  },
+  "contacts": null,
+  "skills": [
+    {
+      "raw": "Обаяние",
+      "skill": "coc:skill:charm"
+    },
+    {
+      "raw": "Работа в библиотеке",
+      "skill": "coc:skill:library-use"
+    },
+    {
+      "raw": "Убеждение",
+      "skill": "coc:skill:persuade"
+    },
+    {
+      "raw": "Другой язык (Латынь)",
+      "skill": "coc:skill:language-other",
+      "specialization": "Латынь"
+    },
+    {
+      "raw": "Родное королевство",
+      "skill": "coc:skill:own-kingdom"
+    },
+    {
+      "raw": "Чтение и письмо (Латынь или язык местной канцелярии)",
+      "skill": "coc:skill:read-and-write-language",
+      "specialization": "Латынь или язык местной канцелярии"
+    },
+    {
+      "raw": "Религия",
+      "skill": "coc:skill:religion-dark-ages"
+    },
+    {
+      "raw": "любой другой навык личной специализации",
+      "choice": {
+        "count": 1,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 60,
+      "printed_page": 59,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Род занятий»: Клирик"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "editorial_text"
+    ],
+    "notes": "Фраза о Статусе и сравнение с профессией других эпох в описании — наши (Р-123)."
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:nishchiy",
+  "kind": "occupation",
+  "name": {
+    "ru": "Нищий",
+    "en": "Beggar"
+  },
+  "aliases": [
+    "Нищая"
+  ],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Вы посвящаете свою жизнь выпрашиванию еды и товаров на продажу у прохожих.\n\nДиапазон в поле «Средства» — стартовый Статус (навык Статус, с. 80). В правилах ядра близкая профессия — «Бездомный».",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "МОЩ × 2 + НАР × 2",
+    "options": [
+      [
+        [
+          "POW",
+          2
+        ],
+        [
+          "APP",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "0–10",
+    "min": 0,
+    "max": 10
+  },
+  "contacts": null,
+  "skills": [
+    {
+      "raw": "Искусство/Ремесло (Актёрское мастерство)",
+      "skill": "coc:skill:art-craft",
+      "specialization": "Актёрское мастерство"
+    },
+    {
+      "raw": "Проницательность",
+      "skill": "coc:skill:insight"
+    },
+    {
+      "raw": "Слух или Внимание",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:listen",
+          "coc:skill:spot-hidden"
+        ]
+      }
+    },
+    {
+      "raw": "Ловкость рук",
+      "skill": "coc:skill:sleight-of-hand"
+    },
+    {
+      "raw": "два социальных навыка (Обаяние, Красноречие, Запугивание или Убеждение)",
+      "choice": {
+        "count": 2,
+        "of": [
+          "coc:skill:charm",
+          "coc:skill:fast-talk",
+          "coc:skill:intimidate",
+          "coc:skill:persuade"
+        ]
+      }
+    },
+    {
+      "raw": "любые два других навыка личной специализации",
+      "choice": {
+        "count": 2,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 60,
+      "printed_page": 59,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Род занятий»: Нищий"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "editorial_text"
+    ],
+    "notes": "Фраза о Статусе и сравнение с профессией других эпох в описании — наши (Р-123). «Ловкость рук» — английское «Conceal» (с. 11)."
+  }
+}

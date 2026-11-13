@@ -1,0 +1,102 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:naemnik-razboynik",
+  "kind": "occupation",
+  "name": {
+    "ru": "Наёмник / Разбойник",
+    "en": "Mercenary / Brigand"
+  },
+  "aliases": [
+    "Наёмник",
+    "Разбойник"
+  ],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "В роли наёмника вы сражаетесь за того, кто предложит самую высокую цену, а затем обыскиваете поля сражений в поисках трофеев. Будучи разбойником, вы, возможно, стали жертвой какой-то природной катастрофы или чудовищной несправедливости, навсегда изменившей вашу жизнь. Теперь вы прячетесь глубоко в лесу и грабите странствующих монахов или торговцев.\n\nДиапазон в поле «Средства» — стартовый Статус (навык Статус, с. 80).",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ВЫН × 2 + СИЛ × 2",
+    "options": [
+      [
+        [
+          "CON",
+          2
+        ],
+        [
+          "STR",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "0–20",
+    "min": 0,
+    "max": 20
+  },
+  "contacts": null,
+  "skills": [
+    {
+      "raw": "Ближний бой (Драка)",
+      "skill": "coc:skill:fighting",
+      "specialization": "Драка"
+    },
+    {
+      "raw": "Ближний бой (выберите оружие)",
+      "skill": "coc:skill:fighting",
+      "specialization": "выберите оружие"
+    },
+    {
+      "raw": "Естествознание",
+      "skill": "coc:skill:natural-world-dark-ages"
+    },
+    {
+      "raw": "Ориентирование",
+      "skill": "coc:skill:navigate"
+    },
+    {
+      "raw": "Чтение следов",
+      "skill": "coc:skill:track"
+    },
+    {
+      "raw": "Скрытность",
+      "skill": "coc:skill:stealth"
+    },
+    {
+      "raw": "Метание",
+      "skill": "coc:skill:throw"
+    },
+    {
+      "raw": "любой другой навык личной специализации",
+      "choice": {
+        "count": 1,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 65,
+      "printed_page": 64,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Род занятий»: Наёмник / Разбойник"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "editorial_text"
+    ],
+    "notes": "Фраза о Статусе и сравнение с профессией других эпох в описании — наши (Р-123)."
+  }
+}

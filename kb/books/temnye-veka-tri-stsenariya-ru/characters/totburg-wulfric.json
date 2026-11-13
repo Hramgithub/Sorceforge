@@ -1,0 +1,428 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "temnye-veka-tri-stsenariya-ru/character/totburg-wulfric",
+  "kind": "character",
+  "name": {
+    "ru": "Вулфрик",
+    "en": "Wulfric"
+  },
+  "aliases": [
+    "Вульфрик"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "фермер",
+    "en": "farmer"
+  },
+  "age": {
+    "raw": "21 год",
+    "value": 21
+  },
+  "sex": "мужской",
+  "residence": "Тотбург: Дом Дермана (№ 23)",
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "relative_of",
+      "target": "temnye-veka-tri-stsenariya-ru/character/totburg-derman",
+      "note": "муж матери",
+      "note_back": "сын жены"
+    },
+    {
+      "type": "relative_of",
+      "target": "temnye-veka-tri-stsenariya-ru/character/totburg-turec",
+      "note": "брат",
+      "note_back": "брат"
+    },
+    {
+      "type": "spawn_of",
+      "target": "coc:creature:nyarlathotep",
+      "note": "сын Хаунилд от Чёрного человека, аватара Ньярлатхотепа (Миф)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "50",
+        "value": 50
+      },
+      "CON": {
+        "raw": "55",
+        "value": 55
+      },
+      "SIZ": {
+        "raw": "45",
+        "value": 45
+      },
+      "DEX": {
+        "raw": "55",
+        "value": 55
+      },
+      "INT": {
+        "raw": "80",
+        "value": 80
+      },
+      "APP": {
+        "raw": "45",
+        "value": 45
+      },
+      "POW": {
+        "raw": "80*",
+        "value": 80
+      },
+      "EDU": {
+        "raw": "70",
+        "value": 70
+      }
+    },
+    "hp": {
+      "raw": "10",
+      "value": 10
+    },
+    "mp": {
+      "raw": "16*",
+      "value": 16
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "Нет.",
+      "value": null
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        },
+        "damage": {
+          "raw": "1d3, или нож 1d4",
+          "dice": "1d3",
+          "adds_db": false,
+          "extra": "или нож 1d4"
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Копье",
+          "en": null
+        },
+        "kind": "attack",
+        "chance": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        },
+        "damage": {
+          "raw": "1d6",
+          "dice": "1d6",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:spear-short"
+      },
+      {
+        "name": {
+          "ru": "Лук",
+          "en": null
+        },
+        "kind": "attack",
+        "chance": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "1d6",
+          "dice": "1d6",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:bow-and-arrows"
+      },
+      {
+        "name": {
+          "ru": "Щупальца*",
+          "en": null
+        },
+        "kind": "attack",
+        "chance": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "1d6+1",
+          "dice": "1d6",
+          "adds_db": false
+        },
+        "notes": "Если используется тег «Миф»: за 3 ПМ меняет форму тела; до четырёх щупалец — до 4 атак за раунд по разным целям."
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Обращение с животными",
+        "skill": "coc:skill:animal-handling",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Искусство/Ремесло (Пивовар)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "Пивовар",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Искусство/Ремесло (Фермерство)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "Фермерство",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Искусство/Ремесло (Зелья)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "Зелья",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Обаяние",
+        "skill": "coc:skill:charm",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Мифы Ктулху*",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "18%",
+          "value": 18,
+          "half": 9,
+          "fifth": 3
+        }
+      },
+      {
+        "name": "Естествознание",
+        "skill": "coc:skill:natural-world-dark-ages",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Ориентирование",
+        "skill": "coc:skill:navigate",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Оккультизм",
+        "skill": "coc:skill:occult",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Чтение и Письмо (Старо-английский)",
+        "skill": "coc:skill:read-and-write-language",
+        "specialization": "Старо-английский",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Ремонт/Разработка",
+        "skill": "coc:skill:repair-devise",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Статус",
+        "skill": "coc:skill:status",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      }
+    ],
+    "sanity": {
+      "raw": "80*",
+      "value": 80,
+      "max": null
+    },
+    "spells": {
+      "raw": "Магические способности* (действуют как заклинания): Демонические чувства, Круг тошноты. *Если используется тег Миф.",
+      "items": [
+        {
+          "name": "Демонические чувства",
+          "spell": "coc:spell:demon-senses"
+        },
+        {
+          "name": "Круг тошноты",
+          "spell": "coc:spell:circle-of-nausea"
+        }
+      ]
+    },
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d6",
+        "trigger": "при виде смены формы Вульфрика (если используется тег «Миф»)"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Смена формы",
+      "summary": "Миф: за 3 ПМ меняет форму тела; щупальца 65% (32/13), урон 1d6+1, до четырёх щупалец — до 4 атак за раунд по разным целям. Потеря Рассудка 1/1d6 при виде смены формы."
+    }
+  ],
+  "background": {
+    "secret": "Миф: сын Хаунилд от Чёрного человека с врождёнными магическими способностями. С тегом «Миф» его МОЩ 100, Рассудок 0 и ПМ 20. За 3 ПМ может изменить форму тела: сформировав щупальца, атакует ими с шансом 65% (32/13), урон 1d6+1; может отрастить до четырёх щупалец (до 4 атак за раунд по разным целям). Вид смены формы стоит 1/1d6 Рассудка."
+  },
+  "legend": {
+    "ru": "Взрослый сын Дермана и Хаунилд, помогает на полях.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 204,
+      "printed_page": 203,
+      "method": "book_text",
+      "verified": true,
+      "note": "глава «Тотбург»: № 23: сын Дермана и Хаунилд"
+    },
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 205,
+      "printed_page": 204,
+      "method": "book_text",
+      "verified": true,
+      "note": "глава «Тотбург»: статблок «Вулфрик, 21 год, фермер»"
+    },
+    {
+      "book_id": "cthulhu-dark-ages-en",
+      "physical_page": 168,
+      "printed_page": 166,
+      "method": "book_text",
+      "verified": true,
+      "note": "сверка чисел и названий с английским оригиналом"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Статблок сверен по изображениям страниц перевода и с английским оригиналом (cthulhu-dark-ages-en); русский текст — из перевода. Навык «Зелья» без записи в справочнике оставлен без ссылки; оружие эпохи (кроме драки) — без ссылки на справочник. В статблоке перевода звёздочки у МОЩ 80, Рассудка 80 и ПМ 16 отсылают к сноске: с тегом «Миф» МОЩ 100, Рассудок 0, ПМ 20 (так же в оригинале, с. 166). «Demon Senses» в тексте перевода повторено по-английски."
+  },
+  "corrections": [
+    {
+      "field": "statblock.attacks[Копье].weapon",
+      "from": null,
+      "to": "coc:weapon:spear-short",
+      "reason": "ссылка на оружие эпохи (Р-59): короткое копьё (1d6) таблицы «Рукопашное оружие», с. 92; запись оружия заведена при сведении частей «Тёмных веков»",
+      "ref": "Р-232"
+    },
+    {
+      "field": "statblock.attacks[Лук].weapon",
+      "from": null,
+      "to": "coc:weapon:bow-and-arrows",
+      "reason": "ссылка на оружие эпохи (Р-59): лук таблицы «Дальнобойное оружие», с. 93 (числа эпохи — в source_variants); запись оружия заведена при сведении частей «Тёмных веков»",
+      "ref": "Р-232"
+    }
+  ]
+}

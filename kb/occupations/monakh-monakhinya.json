@@ -1,0 +1,100 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:monakh-monakhinya",
+  "kind": "occupation",
+  "name": {
+    "ru": "Монах / Монахиня",
+    "en": "Monk / Nun"
+  },
+  "aliases": [
+    "Монах",
+    "Монахиня"
+  ],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Вы живёте в монастыре, в тишине и молитве, ведя простую жизнь. Когда вы не молитесь и не поёте, вы выполняете хозяйственные дела или копируете тайные рукописи из монастырской библиотеки. Будучи членом вашего ордена, вы не имеете права владеть частной собственностью, но если вы покинете монастырь по специальному разрешению, вы всегда можете рассчитывать на гостеприимство и благотворительность других монастырей.\n\nДиапазон в поле «Средства» — стартовый Статус (навык Статус, с. 80).",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 4",
+    "options": [
+      [
+        [
+          "EDU",
+          4
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "9–45",
+    "min": 9,
+    "max": 45
+  },
+  "contacts": null,
+  "skills": [
+    {
+      "raw": "Искусство/Ремесло или Наука (выберите одно)",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:art-craft",
+          "coc:skill:science"
+        ]
+      }
+    },
+    {
+      "raw": "Работа в библиотеке",
+      "skill": "coc:skill:library-use"
+    },
+    {
+      "raw": "Слух",
+      "skill": "coc:skill:listen"
+    },
+    {
+      "raw": "Иностранный язык (Латынь)",
+      "skill": "coc:skill:language-other",
+      "specialization": "Латынь"
+    },
+    {
+      "raw": "Религия",
+      "skill": "coc:skill:religion-dark-ages"
+    },
+    {
+      "raw": "Чтение и письмо (Латынь)",
+      "skill": "coc:skill:read-and-write-language",
+      "specialization": "Латынь"
+    },
+    {
+      "raw": "любые два навыка личной специализации",
+      "choice": {
+        "count": 2,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 65,
+      "printed_page": 64,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Род занятий»: Монах / Монахиня"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "editorial_text"
+    ],
+    "notes": "Фраза о Статусе и сравнение с профессией других эпох в описании — наши (Р-123). В английском издании (с. 13) среди навыков есть Sign Language (язык жестов), а свободный навык один; взят перевод."
+  }
+}

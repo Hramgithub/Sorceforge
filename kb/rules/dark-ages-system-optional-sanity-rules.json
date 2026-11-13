@@ -1,0 +1,70 @@
+{
+  "schema": "sourcefold.rule.v0",
+  "id": "coc:rule:dark-ages-system-optional-sanity-rules",
+  "kind": "rule",
+  "name": {
+    "ru": "Необязательные правила Рассудка (Тёмные века)",
+    "en": "Optional Rules"
+  },
+  "aliases": [
+    "Опциональные правила (Рассудок)"
+  ],
+  "category": "рассудок",
+  "optional": true,
+  "parent": "coc:rule:dark-ages-system-sanity",
+  "summary": {
+    "ru": "Необязательные правила Рассудка для игр в Тёмные века: простое восстановление (бонусная кость к проверкам восстановления), альтернативная проверка Рассудка через Естествознание или Религию и встреча с монстром (иммунитет к повторной потере Рассудка от того же вида)."
+  },
+  "text": {
+    "ru": "Вот несколько дополнительных правил, которые можно использовать в играх в Тёмные века. Первые дают скорректированную механику Рассудка, основанную на мировоззрении персонажа, а последнее несколько укрепляет решимость сыщика перед лицом неописуемых ужасов."
+  },
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 127,
+      "printed_page": 126,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Опциональные правила» (Рассудок)"
+    },
+    {
+      "book_id": "cthulhu-dark-ages-en",
+      "physical_page": 71,
+      "printed_page": 69,
+      "method": "book_text",
+      "verified": false,
+      "note": "Optional Rules (name.en)"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Русский текст — фанатский перевод «Ктулху: Тёмные века» (2-е издание 7e, надёжный, Р-232), язык слегка выправлен без изменения механики. Английский PDF cthulhu-dark-ages-en — предварительная версия книги (ссылки «@@», © 2004, 2015, без ISBN, другая вёрстка): по нему взято name.en; где его числа расходятся с русским изданием, оставлено русское (перевод вышедшего 2-го издания), расхождения перечислены здесь. Ссылки «с. N» без пометки — страницы «Тёмных веков», «с. N „Книги хранителя“» — как в книге."
+  },
+  "refs": [
+    "coc:skill:natural-world-dark-ages",
+    "coc:skill:religion-dark-ages"
+  ],
+  "corrections": [
+    {
+      "field": "refs",
+      "from": null,
+      "to": "coc:skill:natural-world-dark-ages",
+      "reason": "ссылка на навык, упомянутый в тексте. Сведение частей «Тёмных веков» (Р-232): навык эпохи coc:skill:natural-world-dark-ages заведён частью ages-investigators («Естествознание», с. 78)",
+      "ref": "Р-232"
+    },
+    {
+      "field": "refs",
+      "from": null,
+      "to": "coc:skill:religion-dark-ages",
+      "reason": "ссылка на навык, упомянутый в тексте. Сведение частей «Тёмных веков» (Р-232): навык эпохи coc:skill:religion-dark-ages заведён частью ages-investigators («Религия», с. 79)",
+      "ref": "Р-232"
+    }
+  ]
+}

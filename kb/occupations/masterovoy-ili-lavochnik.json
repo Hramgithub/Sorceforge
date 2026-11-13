@@ -1,0 +1,111 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:masterovoy-ili-lavochnik",
+  "kind": "occupation",
+  "name": {
+    "ru": "Мастеровой или Лавочник",
+    "en": "Craftsman or Shop Keeper"
+  },
+  "aliases": [
+    "Мастеровой",
+    "Лавочник",
+    "Мастеровой/лавочник"
+  ],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Вы можете быть кузнецом, пекарем или ткачом. Выберите своё ремесло. Вы живёте в деревне или в городе.\n\nДиапазон в поле «Средства» — стартовый Статус (навык Статус, с. 80). В правилах ядра близкие профессии — «Ремесленник» и «Лавочник».",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + СИЛ × 2 или ОБР × 2 + ЛВК × 2",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "STR",
+          2
+        ]
+      ],
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "DEX",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "9–60",
+    "min": 9,
+    "max": 60
+  },
+  "contacts": null,
+  "skills": [
+    {
+      "raw": "Бухгалтерское дело",
+      "skill": "coc:skill:accounting"
+    },
+    {
+      "raw": "Обаяние",
+      "skill": "coc:skill:charm"
+    },
+    {
+      "raw": "Искусство/Ремесло (выберите одно)",
+      "skill": "coc:skill:art-craft"
+    },
+    {
+      "raw": "Красноречие",
+      "skill": "coc:skill:fast-talk"
+    },
+    {
+      "raw": "Проницательность",
+      "skill": "coc:skill:insight"
+    },
+    {
+      "raw": "Естествознание",
+      "skill": "coc:skill:natural-world-dark-ages"
+    },
+    {
+      "raw": "Родное королевство",
+      "skill": "coc:skill:own-kingdom"
+    },
+    {
+      "raw": "любой другой навык личной специализации",
+      "choice": {
+        "count": 1,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 60,
+      "printed_page": 59,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Род занятий»: Мастеровой или Лавочник"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "editorial_text"
+    ],
+    "notes": "Фраза о Статусе и сравнение с профессией других эпох в описании — наши (Р-123)."
+  }
+}

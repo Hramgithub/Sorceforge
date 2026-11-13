@@ -1,0 +1,321 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "temnye-veka-tri-stsenariya-ru/character/inv-prikhozhanin-miryanin",
+  "kind": "character",
+  "name": {
+    "ru": "Прихожанин-мирянин",
+    "en": null
+  },
+  "aliases": [
+    "брат-мирянин"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "прихожанин-мирянин (брат-мирянин ордена бенедиктинцев)",
+  "names": [
+    "Леофрик",
+    "Годвин",
+    "Вульфстан",
+    "Эльфрик",
+    "Одда"
+  ],
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "temnye-veka-tri-stsenariya-ru/character/inv-etelvold",
+      "note": "глава Прихожан",
+      "note_back": "прихожане-миряне в его группах"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "50",
+        "value": 50
+      },
+      "CON": {
+        "raw": "65",
+        "value": 65
+      },
+      "SIZ": {
+        "raw": "75",
+        "value": 75
+      },
+      "DEX": {
+        "raw": "80",
+        "value": 80
+      },
+      "APP": {
+        "raw": "40",
+        "value": 40
+      },
+      "INT": {
+        "raw": "85",
+        "value": 85
+      },
+      "POW": {
+        "raw": "70",
+        "value": 70
+      },
+      "EDU": {
+        "raw": "70",
+        "value": 70
+      }
+    },
+    "hp": {
+      "raw": "14",
+      "value": 14
+    },
+    "mp": {
+      "raw": "14",
+      "value": 14
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "Тяжёлая одежда (1d3-1)",
+      "value": "1d3-1"
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближ.бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Ближний бой (нож)",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближ.бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d4+1d4",
+          "dice": "1d4",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:knife-small",
+        "notes": "в книге — «или нож 1d4+1d4» в той же строке"
+      },
+      {
+        "name": {
+          "ru": "Копьё",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Копьё",
+        "chance": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "1d6+1d4",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:spear-short"
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Бухгалтерское дело",
+        "skill": "coc:skill:accounting",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Проницательность",
+        "skill": "coc:skill:insight",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Естествознание",
+        "skill": "coc:skill:natural-world-dark-ages",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Ориентирование",
+        "skill": "coc:skill:navigate",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Религия",
+        "skill": "coc:skill:religion-dark-ages",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Статус (Церковь)",
+        "skill": "coc:skill:status",
+        "specialization": "Церковь",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Статус (Прихожане)",
+        "skill": "coc:skill:status",
+        "specialization": "Прихожане",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      }
+    ],
+    "sanity": {
+      "raw": "70",
+      "value": 70,
+      "max": null
+    }
+  },
+  "description": {
+    "ru": "Типаж: брат-мирянин из группы Прихожан («Прихода» из шести человек).",
+    "en": null
+  },
+  "legend": {
+    "ru": "Значимый член Прихожан: нерукоположенный член Церкви, ездит с группой из монастыря в монастырь, проверяет бухгалтерские книги и обряды и выискивает дьявольщину.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 86,
+      "printed_page": 85,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «Прихожане: значимые члены»: «Прихожанин-мирянин»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.armor",
+      "printed": "Тяжелая одежда (1D3-1)",
+      "expected": "Тяжёлая одежда (1d2-1)",
+      "note": "В таблице доспехов (с. 95) тяжёлая одежда — 1d2-1. Оставлено как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "editorial_text",
+      "parse_uncertain"
+    ],
+    "notes": "Групповой типаж; имена придуманы из списка англосаксонских имён книги (с. 70) (Р-151). Удача в книге не указана."
+  },
+  "corrections": [
+    {
+      "field": "statblock.attacks[Копьё].weapon",
+      "from": null,
+      "to": "coc:weapon:spear-short",
+      "reason": "ссылка на оружие эпохи (Р-59): короткое копьё (1d6) таблицы «Рукопашное оружие», с. 92; запись оружия заведена при сведении частей «Тёмных веков»",
+      "ref": "Р-232"
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "temnye-veka-tri-stsenariya-ru/creature/esewald-wolf",
+  "kind": "creature",
+  "name": {
+    "ru": "Волк («Эсевальд»)",
+    "en": "Wolf"
+  },
+  "aliases": [],
+  "category": "animal",
+  "subcategory": "наземный хищник",
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:wolf",
+      "note_back": "профиль сценария «Эсевальд»"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "65",
+        "value": 65
+      },
+      "CON": {
+        "raw": "55",
+        "value": 55
+      },
+      "SIZ": {
+        "raw": "40",
+        "value": 40
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65
+      },
+      "INT": {
+        "raw": "—",
+        "value": null
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "9",
+      "value": 9
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "10",
+      "value": 10,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 10
+        }
+      ]
+    },
+    "armor": {
+      "raw": "2 пункта (мех).",
+      "value": 2
+    },
+    "attacks_per_round": {
+      "raw": "1 (укус)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d8",
+          "dice": "1d8",
+          "adds_db": false
+        },
+        "notes": "укус"
+      },
+      {
+        "name": {
+          "ru": "Сбивание с ног",
+          "en": "Knockdown"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "совместная атака трёх и более волков",
+          "value": null
+        },
+        "notes": "совместная атака трёх и более волков равна Комплекции 1 (увеличьте, если особей больше); в случае успеха цель сбивается с ног"
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    }
+  },
+  "description": {
+    "ru": "Волки бродят по Лесу Дина. Профиль из приложения «Эсевальда»; по секрету Витгара, на дороге у Кордуона на него напал большой волк больного вида — животные Эсевальда тяжело больны.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 250,
+      "printed_page": 249,
+      "method": "book_text",
+      "verified": true,
+      "note": "приложение А: «Волк»"
+    },
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 246,
+      "printed_page": 245,
+      "method": "book_text",
+      "verified": true,
+      "note": "секрет Витгара; слухи о лесе"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "ПЗ 9 — как в переводе (ВЫН 55 + ТЕЛ 40 = 95 → 9); в оригинале (с. 200) — 10. Профиль отличается от общего волка «Книги хранителя» (Скорость, броня, навык), поэтому отдельная запись (Р-75)."
+  }
+}

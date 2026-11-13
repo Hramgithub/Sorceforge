@@ -1,0 +1,80 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "temnye-veka-tri-stsenariya-ru/scene/hunt-totburg-information",
+  "kind": "scene",
+  "name": {
+    "ru": "Дополнительная информация в Тотбурге",
+    "en": "Other Information in Totburh"
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Расспрашивая в Тотбурге о глухом лесе, волках и прочем, сыщикам советуют поговорить с Бегильдой, угольщицей, у которой есть лагерь в лесу. Им могут объяснить дорогу, но и предупредить: Бегильде нельзя доверять — она преступница, убившая собственного мужа.\nДругой человек может предложить спросить монахов монастыря Св. Свитуна за рекой Северн, в дне пути от Тотбурга. Если сыщики отложат преследование волка и направятся в монастырь, они могут поговорить с аббатом Гримцителом, который направит их в скрипторий. О вель-вульфах (или готиях) написано немного; большая часть того, что известно, передаётся устно, в сказках и легендах. Однако в скриптории есть отрывок из полевых записей римского центуриона, столкнувшегося с готиями (раздаточный материал «Охота 1»).\nСкрипторий неорганизован и совсем не похож на современную библиотеку: книги разложены по прихоти аббата Гримцитела, а все бумаги аккуратно лежат на полке в порядке лет, когда Гримцител принёс их в скрипторий. Чтобы найти нужный отрывок, требуется целых восемь часов поиска; успешная проверка Работы в библиотеке сокращает это время вдвое (чрезвычайный успех — ещё вдвое).",
+    "en": null
+  },
+  "when": "после беота",
+  "arc": {
+    "scenario": "temnye-veka-tri-stsenariya-ru/scenario/hunt-the-hunt",
+    "part": "Тотбург",
+    "order": 5
+  },
+  "where": [
+    {
+      "location": "coc:location:totburg"
+    },
+    {
+      "location": "coc:location:totburg-st-swithuns-monastery"
+    }
+  ],
+  "participants": [
+    {
+      "id": "temnye-veka-tri-stsenariya-ru/character/totburg-grimcytel",
+      "role": "аббат, направляет в скрипторий"
+    },
+    {
+      "id": "temnye-veka-tri-stsenariya-ru/character/totburg-begilda",
+      "role": "о ней рассказывают в Тотбурге"
+    }
+  ],
+  "mechanics": {
+    "ru": "Работа в библиотеке: 8 часов поиска; успех — 4 часа, чрезвычайный успех — 2 часа.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Раздаточный материал «Охота 1»; совет поговорить с Бегильдой (→ «Бегильда»).",
+    "en": null
+  },
+  "refs": [
+    "temnye-veka-tri-stsenariya-ru/handout/hunt-handout-1",
+    "temnye-veka-tri-stsenariya-ru/scene/hunt-begilda",
+    "coc:skill:library-use"
+  ],
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 225,
+      "printed_page": 224,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Дополнительная информация в Тотбурге»"
+    },
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 226,
+      "printed_page": 225,
+      "method": "book_text",
+      "verified": true,
+      "note": "скрипторий (окончание)"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Время поиска при чрезвычайном успехе («ещё вдвое») — по оригиналу (с. 179: «an Extreme success further cuts that time in half»)."
+  }
+}

@@ -1,0 +1,412 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "temnye-veka-tri-stsenariya-ru/character/totburg-delwyn",
+  "kind": "character",
+  "images": [
+    {
+      "file": "art/characters/totburg-delwyn.webp",
+      "kind": "portrait",
+      "caption": "Делвин",
+      "source": "«Ктулху: Тёмные века» (фанатский перевод), с. 201, иллюстрация"
+    }
+  ],
+  "name": {
+    "ru": "Делвин",
+    "en": "Delwyn"
+  },
+  "aliases": [
+    "Цастха",
+    "Дервин"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "пиявочник; змеечеловек*",
+    "en": "leech; serpent man*"
+  },
+  "age": {
+    "raw": "38 лет; Цастха — 4501 год",
+    "value": 38
+  },
+  "sex": "мужской",
+  "residence": "Тотбург: Дом Делвина (№ 17)",
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:serpent-person",
+      "note_back": "Делвин (Цастха), пиявочник Тотбурга (Миф)"
+    },
+    {
+      "type": "works_for",
+      "target": "temnye-veka-tri-stsenariya-ru/character/totburg-osvin",
+      "note": "тэн, которому он служит",
+      "note_back": "пиявочник"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "55",
+        "value": 55
+      },
+      "SIZ": {
+        "raw": "55",
+        "value": 55
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "INT": {
+        "raw": "85",
+        "value": 85
+      },
+      "APP": {
+        "raw": "55",
+        "value": 55
+      },
+      "POW": {
+        "raw": "80",
+        "value": 80
+      },
+      "EDU": {
+        "raw": "70",
+        "value": 70
+      }
+    },
+    "hp": {
+      "raw": "11",
+      "value": 11
+    },
+    "mp": {
+      "raw": "16",
+      "value": 16
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "Нет/1 пункт (чешуя*).",
+      "value": null
+    },
+    "attacks_per_round": {
+      "raw": "1 (либо в облике человека, либо в форме змеи*)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "1d3, или нож 1d4",
+          "dice": "1d3",
+          "adds_db": false,
+          "extra": "или нож 1d4"
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Укус*",
+          "en": null
+        },
+        "kind": "attack",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d8 + яд (Требуется чрезвычайный успех ВЫН, при провале 1d8 урона)",
+          "dice": "1d8",
+          "adds_db": false,
+          "extra": "(Требуется чрезвычайный успех ВЫН, при провале 1d8 урона)"
+        },
+        "notes": "Только в облике змеечеловека (если используется тег «Миф»)."
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "skills": [
+      {
+        "name": "Искусство/Ремесло (Зелья)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "Зелья",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Искусство/Ремесло (Гончар)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "Гончар",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Проницательность",
+        "skill": "coc:skill:insight",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Медицина",
+        "skill": "coc:skill:medicine",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Естествознание",
+        "skill": "coc:skill:natural-world-dark-ages",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Ориентирование",
+        "skill": "coc:skill:navigate",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Религия",
+        "skill": "coc:skill:religion-dark-ages",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Наука* (Биология)",
+        "skill": "coc:skill:science",
+        "specialization": "Биология",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Наука* (Химия)",
+        "skill": "coc:skill:science",
+        "specialization": "Химия",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Статус",
+        "skill": "coc:skill:status",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      }
+    ],
+    "sanity": {
+      "raw": "76 (00)*",
+      "value": 76,
+      "max": null
+    },
+    "spells": {
+      "raw": "Заклинания*: Наслать/Исцелить слепоту, Связь с Тсатхоггуа, Покорение, Зародить страх, Затуманить память. *Если используется тег Миф.",
+      "items": [
+        {
+          "name": "Наслать/Исцелить слепоту",
+          "spell": "coc:spell:cause-cure-blindness"
+        },
+        {
+          "name": "Связь с Тсатхоггуа",
+          "spell": "coc:spell:contact-tsathoggua"
+        },
+        {
+          "name": "Покорение",
+          "spell": "coc:spell:dominate"
+        },
+        {
+          "name": "Зародить страх",
+          "spell": "coc:spell:implant-fear"
+        },
+        {
+          "name": "Затуманить память",
+          "spell": "coc:spell:cloud-memory"
+        }
+      ]
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "при виде превращения Делвина в змеечеловека (если используется тег «Миф»)"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Облик змеечеловека",
+      "summary": "Миф: может принять облик змеечеловека (атака укусом с ядом, чешуя 1 пункт брони); вид превращения стоит 0/1d6 Рассудка.",
+      "refs": [
+        "coc:creature:serpent-person"
+      ]
+    },
+    {
+      "name": "Сыворотка подчинения",
+      "summary": "Миф: держит своих рабов Эльфгиста и Ламбина под контролем сывороткой подчинения.",
+      "refs": [
+        "temnye-veka-tri-stsenariya-ru/item/totburg-domination-serum"
+      ]
+    }
+  ],
+  "background": {
+    "description": "Сгорбленный лысый мужчина, постоянно что-то бормочущий себе под нос.",
+    "traits": "Неизменно предан Освину. Каждого исцелённого считает личным успехом и чувствует боль родных, когда не может помочь.",
+    "secret": "Миф: Делвин — замаскированный змеечеловек Цастха (4501 год), который изучает людей, чтобы создать действенные яды и оружие на тот день, когда его великая раса восстанет и вернёт себе планету. Кормится он за пределами поселения, говоря, что идёт собирать травы. Эльфгист и Ламбин подчинены ему сывороткой подчинения. С тегом «Миф»: укус, чешуя (броня 1), заклинания, Рассудок 0."
+  },
+  "legend": {
+    "ru": "Сельский пиявочник (целитель) Тотбурга; последние десять лет служит Освину. Его дом (№ 17) наполнен всеми атрибутами ремесла, в воздухе висит тяжёлый аромат сушёных трав и свежих мазей. С ним живут рабы Эльфгист и Ламбин: удерживают пациентов во время процедур и собирают припасы. На невозделанном поле (№ 22) выращивает лекарственные травы. Хотер из монастыря глубоко уважает его мастерство.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 201,
+      "printed_page": 200,
+      "method": "book_text",
+      "verified": true,
+      "note": "глава «Тотбург»: № 17 «Дом Делвина»: описание"
+    },
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 202,
+      "printed_page": 201,
+      "method": "book_text",
+      "verified": true,
+      "note": "глава «Тотбург»: «Миф», статблок «Делвин, 38 лет, пиявочник; Цастха, 4501 год, змеечеловек*»"
+    },
+    {
+      "book_id": "cthulhu-dark-ages-en",
+      "physical_page": 163,
+      "printed_page": 161,
+      "method": "book_text",
+      "verified": true,
+      "note": "сверка чисел и названий с английским оригиналом"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Статблок сверен по изображениям страниц перевода и с английским оригиналом (cthulhu-dark-ages-en); русский текст — из перевода. Навык «Зелья» без записи в справочнике оставлен без ссылки; оружие эпохи (кроме драки) — без ссылки на справочник. В описании монастыря (с. 210) Хотер уважает навыки «Дервина» — так и в оригинале; это Делвин."
+  }
+}

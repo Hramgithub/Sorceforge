@@ -1,0 +1,138 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "temnye-veka-tri-stsenariya-ru/creature/mythos-black-bear",
+  "kind": "creature",
+  "name": {
+    "ru": "Чёрный медведь («Тёмные века»)",
+    "en": "Black Bear (Cthulhu Dark Ages)"
+  },
+  "aliases": [
+    "Медведь",
+    "Чёрный медведь"
+  ],
+  "category": "animal",
+  "subcategory": "медведь",
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:bear",
+      "note_back": "чёрный медведь «Тёмных веков»"
+    }
+  ],
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "100–105",
+        "value": 100,
+        "roll": "(3d6+10)×5"
+      },
+      "CON": {
+        "raw": "85",
+        "value": 85,
+        "roll": "(2d6+10)×5"
+      },
+      "SIZ": {
+        "raw": "100–105",
+        "value": 100,
+        "roll": "(3d6+10)×5"
+      },
+      "DEX": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      },
+      "POW": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
+      }
+    },
+    "hp": {
+      "raw": "18",
+      "value": 18
+    },
+    "damage_bonus": {
+      "raw": "от +1d6 до +2d6",
+      "value": "+1d6"
+    },
+    "build": {
+      "raw": "2–3",
+      "value": 2
+    },
+    "move": {
+      "raw": "14 (8 плавая)",
+      "value": 14,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 14
+        },
+        {
+          "mode": "swim",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "3 пункта (мех)",
+      "value": 3
+    },
+    "attacks_per_round": {
+      "raw": "2 (когти, клыки)",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "damage 1d6+DB",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "25% (12/5)",
+      "value": 25,
+      "half": 12,
+      "fifth": 5
+    }
+  },
+  "description": {
+    "ru": "Чёрный медведь — самый распространённый медведь в Европе.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 185,
+      "printed_page": 184,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Медведь», «Чёрный медведь»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Урон в строке боя не переведён («damage 1d6+DB»). Английский файл `cthulhu-dark-ages-en` — предварительная вёрстка (ссылки «page @@»), числа в нём местами другие; источник — русское издание."
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "coc:creature:hawk",
+  "kind": "creature",
+  "name": {
+    "ru": "Ястреб",
+    "en": "Hawk"
+  },
+  "aliases": [
+    "Ястребы",
+    "Сокол",
+    "Сова",
+    "Стервятник"
+  ],
+  "category": "animal",
+  "subcategory": "хищная птица",
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "10",
+        "value": 10,
+        "roll": "1d3×5"
+      },
+      "CON": {
+        "raw": "25",
+        "value": 25,
+        "roll": "2d4×5"
+      },
+      "SIZ": {
+        "raw": "5–10",
+        "value": 5,
+        "roll": "1d2×5"
+      },
+      "DEX": {
+        "raw": "140–145",
+        "value": 140,
+        "roll": "(3d6+18)×5"
+      },
+      "POW": {
+        "raw": "35",
+        "value": 35,
+        "roll": "2d6×5"
+      }
+    },
+    "hp": {
+      "raw": "3",
+      "value": 3
+    },
+    "damage_bonus": {
+      "raw": "–2",
+      "value": -2
+    },
+    "build": {
+      "raw": "–2",
+      "value": -2
+    },
+    "move": {
+      "raw": "1 (12 летая)",
+      "value": 1,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 1
+        },
+        {
+          "mode": "fly",
+          "value": 12
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "2 (когти, клюв)",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d4–БкУ",
+          "dice": "1d4",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "70% (35/14)",
+      "value": 70,
+      "half": 35,
+      "fifth": 14
+    }
+  },
+  "description": {
+    "ru": "Хищные птицы, которых люди иногда дрессируют для охоты. Статблок — для большого ястреба, подходит и для совы, стервятника или другого хищника, например сокола.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 186,
+      "printed_page": 185,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Ястреб» и статблок"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Английский файл `cthulhu-dark-ages-en` — предварительная вёрстка (ссылки «page @@»), числа в нём местами другие; источник — русское издание."
+  }
+}

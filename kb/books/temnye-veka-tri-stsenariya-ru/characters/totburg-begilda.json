@@ -1,0 +1,348 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "temnye-veka-tri-stsenariya-ru/character/totburg-begilda",
+  "kind": "character",
+  "images": [
+    {
+      "file": "art/characters/totburg-begilda.webp",
+      "kind": "portrait",
+      "caption": "Бегильда",
+      "source": "«Ктулху: Тёмные века» (фанатский перевод), с. 209, иллюстрация"
+    }
+  ],
+  "name": {
+    "ru": "Бегильда",
+    "en": "Begilda"
+  },
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "угольщик",
+    "en": "charcoal burner"
+  },
+  "age": {
+    "raw": "42 года",
+    "value": 42
+  },
+  "sex": "женский",
+  "residence": "Тотбург: Лес (№ 29)",
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:fire-vampire",
+      "note": "угольщики поклоняются огненному вампиру (Миф)",
+      "note_back": "Бегильда и угольщики Тотбурга (Миф)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "75",
+        "value": 75
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "INT": {
+        "raw": "55",
+        "value": 55
+      },
+      "APP": {
+        "raw": "45",
+        "value": 45
+      },
+      "POW": {
+        "raw": "40",
+        "value": 40
+      },
+      "EDU": {
+        "raw": "80",
+        "value": 80
+      }
+    },
+    "hp": {
+      "raw": "14",
+      "value": 14
+    },
+    "mp": {
+      "raw": "8",
+      "value": 8
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "armor": {
+      "raw": "Прочная кожаная одежда 1d2-1.",
+      "value": null
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": null
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d3+1d4, или нож 1d4+1d4",
+          "dice": "1d3",
+          "adds_db": true,
+          "extra": "или нож 1d4+1d4"
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Топор",
+          "en": null
+        },
+        "kind": "attack",
+        "chance": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "1d6+1d4",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:axe"
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Искусство/Ремесло (Производство угля)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "Производство угля",
+        "value": {
+          "raw": "85%",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        }
+      },
+      {
+        "name": "Искусство/Ремесло (Зелья)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "Зелья",
+        "value": {
+          "raw": "10%",
+          "value": 10,
+          "half": 5,
+          "fifth": 2
+        }
+      },
+      {
+        "name": "Обаяние",
+        "skill": "coc:skill:charm",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Мифы Ктулху*",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "8%",
+          "value": 8,
+          "half": 4,
+          "fifth": 1
+        }
+      },
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Естествознание",
+        "skill": "coc:skill:natural-world-dark-ages",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Ремонт/Разработка",
+        "skill": "coc:skill:repair-devise",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Статус",
+        "skill": "coc:skill:status",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      }
+    ],
+    "sanity": {
+      "raw": "40(33)*",
+      "value": 40,
+      "max": null
+    },
+    "spells": {
+      "raw": "Заклинания*: Призыв огненного вампира. *Если используется тег Миф.",
+      "items": [
+        {
+          "name": "Призыв огненного вампира",
+          "spell": "coc:spell:summon-bind-fire-vampire"
+        }
+      ]
+    }
+  },
+  "background": {
+    "secret": "Миф: Бегильда и другие угольщики тайным обрядом вызывают огненного вампира посреди костра. Они поклоняются ему, принося в жертву животных, и верят, что могут им управлять. Бегильда хочет однажды натравить его на Тотбург — если найдёт способ полностью подчинить его своей воле. С тегом «Миф» её Рассудок — 33."
+  },
+  "legend": {
+    "ru": "Лидер угольщиков — свободных людей, живущих в лесу в двух часах ходьбы от Тотбурга (№ 29). Её муж погиб: дерево, которое они рубили, сломало ему ногу, и через пару месяцев он умер от заражения. Знает, что Освин и другие жители недолюбливают её людей, но пока они меняют металлические изделия, соль и мёд на уголь, её это, похоже, не волнует.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 209,
+      "printed_page": 208,
+      "method": "book_text",
+      "verified": true,
+      "note": "глава «Тотбург»: № 29 «Лес»: угольщики, «Миф»"
+    },
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 210,
+      "printed_page": 209,
+      "method": "book_text",
+      "verified": true,
+      "note": "глава «Тотбург»: статблок «Бегильда, 42 года, угольщик»"
+    },
+    {
+      "book_id": "cthulhu-dark-ages-en",
+      "physical_page": 171,
+      "printed_page": 169,
+      "method": "book_text",
+      "verified": true,
+      "note": "сверка чисел и названий с английским оригиналом"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Статблок сверен по изображениям страниц перевода и с английским оригиналом (cthulhu-dark-ages-en); русский текст — из перевода. Навык «Зелья» без записи в справочнике оставлен без ссылки; оружие эпохи (кроме драки) — без ссылки на справочник."
+  },
+  "corrections": [
+    {
+      "field": "statblock.attacks[Топор].weapon",
+      "from": null,
+      "to": "coc:weapon:axe",
+      "reason": "ссылка на оружие эпохи (Р-59): топор (1d6) таблицы «Рукопашное оружие», с. 92; запись оружия заведена при сведении частей «Тёмных веков»",
+      "ref": "Р-232"
+    }
+  ]
+}

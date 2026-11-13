@@ -1,0 +1,92 @@
+{
+  "schema": "sourcefold.location.v0",
+  "id": "coc:location:totburg-roman-ruins",
+  "kind": "location",
+  "name": {
+    "ru": "Римские руины",
+    "en": "The Roman Ruins"
+  },
+  "location_type": "место",
+  "part_of": "coc:location:totburg",
+  "number": "28",
+  "keeper_hint": "руины римской виллы: вампир Атильда, призрак Гая Монса, мерзкий грибок",
+  "description": {
+    "ru": "Остатки римской виллы в пяти часах езды к северо-востоку от поселения. Сохранилось немного: несколько каменных стен, небольшое здание и мозаичные полы; большую часть камня растащили на постройки Тотбург и другие поселения. Пастухи часто укрывают здесь стада от непогоды. Ходят слухи, что римская семья перед бегством закопала своё серебро и золото в катакомбах под виллой. В руинах обитают вампир Атильда и призрак Гай.\n\nМиф: вампир Атильда, бывшая жена Освина и рабыня Лилит, прячется в катакомбах под руинами и охотится на всякого, кто придёт за золотом.\n\nМиф: римского колдуна Гая Монса казнили на этой вилле много веков назад; над его могилой на северной стороне виллы растёт мерзкий грибок, медленно расползающийся от могилы (см. «Мерзкий грибок»).",
+    "en": null
+  },
+  "residents": [
+    {
+      "id": "temnye-veka-tri-stsenariya-ru/character/totburg-athilda",
+      "note": "вампир, прячется в катакомбах под руинами"
+    },
+    {
+      "id": "temnye-veka-tri-stsenariya-ru/character/totburg-gaius-mons",
+      "note": "призрак, привязан к месту казни"
+    }
+  ],
+  "tables": [
+    {
+      "title": "Слух о римских руинах",
+      "kind": "слухи",
+      "dice": null,
+      "intro": null,
+      "rows": [
+        {
+          "roll": null,
+          "text": "Римская семья перед бегством закопала своё серебро и золото в катакомбах под виллой (Миф: в катакомбах прячется вампир Атильда).",
+          "refs": [
+            "temnye-veka-tri-stsenariya-ru/character/totburg-athilda"
+          ]
+        }
+      ],
+      "source": {
+        "book_id": "temnye-veka-tri-stsenariya-ru",
+        "physical_page": 208,
+        "printed_page": 207,
+        "method": "book_text",
+        "verified": true,
+        "note": "№ 28, «Миф», статблок Атильды"
+      }
+    }
+  ],
+  "refs": [
+    "temnye-veka-tri-stsenariya-ru/item/totburg-gaius-fungus"
+  ],
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 208,
+      "printed_page": 207,
+      "method": "book_text",
+      "verified": true,
+      "note": "глава «Тотбург»: № 28, «Миф», статблок Атильды"
+    },
+    {
+      "book_id": "temnye-veka-tri-stsenariya-ru",
+      "physical_page": 209,
+      "printed_page": 208,
+      "method": "book_text",
+      "verified": true,
+      "note": "глава «Тотбург»: Гай Монс"
+    },
+    {
+      "book_id": "cthulhu-dark-ages-en",
+      "physical_page": 169,
+      "printed_page": 167,
+      "method": "book_text",
+      "verified": true,
+      "note": "сверка чисел и названий с английским оригиналом"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Текст — пересказ перевода, сверенного с английским оригиналом; абзацы «Миф:» — теги-подсказки Хранителю (используются по выбору)."
+  }
+}

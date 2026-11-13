@@ -1,0 +1,71 @@
+{
+  "schema": "sourcefold.map.v0",
+  "id": "griby-s-yuggota-ru/map/moon-peru",
+  "kind": "map",
+  "name": {
+    "ru": "Карта Перу и Боливии",
+    "en": "Peru and Bolivia"
+  },
+  "location": "coc:location:lima",
+  "shows": "coc:location:lima-environs",
+  "order": 2,
+  "image": "maps/fungi-moon-peru.jpg",
+  "width": 1500,
+  "height": 1208,
+  "spot_shape": {
+    "kind": "label",
+    "w": 5.0,
+    "h": 3.0
+  },
+  "spots": [
+    {
+      "label": "LIMA",
+      "x": 31.33,
+      "y": 45.53,
+      "target": "coc:location:lima",
+      "text": "Лима — порт прибытия; Хуанкучо в 80 км от Лимы в горах на карте не отмечен."
+    },
+    {
+      "label": "Puno",
+      "x": 50.77,
+      "y": 62.09,
+      "target": "coc:location:puno"
+    },
+    {
+      "label": "Lake Titicaca",
+      "x": 60.0,
+      "y": 62.5,
+      "target": "masks-of-nyarlathotep-en/location/peru-lake-titicaca"
+    }
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "griby-s-yuggota-ru",
+      "physical_page": 43,
+      "printed_page": 42,
+      "method": "book_text",
+      "verified": true,
+      "note": "карта «Peru and Bolivia» (Rand McNally, с масштабной линейкой) без подписи в тексте главы"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Картинка вырезана со с. 42 (200 dpi). Карта — атлас Rand McNally начала XX века с сотнями подписей; метки (Р-206) поставлены только на подписи, у которых есть записи базы: LIMA, Puno, Lake Titicaca. Без меток: страны (Ecuador, Colombia, Brazil, Peru, Bolivia, Chile, Argentina, Paraguay), Тихий океан и остальные города и реки (Callao, Cuzco, Arequipa, Iquitos, La Paz и др.) — записей нет. Мест главы (Хуанкучо, шахта НМ) на карте нет; shows — окрестности Лимы, где идёт глава (записи всего Перу нет)."
+  },
+  "corrections": [
+    {
+      "field": "spots",
+      "from": "[]",
+      "to": "3 метки",
+      "reason": "метки по Р-206: подписи найдены по увеличенным вырезкам; каждая метка проверена глазами по вырезке с нанесёнными рамками",
+      "ref": "Р-206"
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "schema": "sourcefold.scenario.v0",
+  "id": "griby-s-yuggota-ru/scenario/halls-of-celaeno",
+  "kind": "scenario",
+  "name": {
+    "ru": "Дополнительная сцена 1: «Залы Целаено»",
+    "en": "Optional Scene 1: Halls of Celaeno"
+  },
+  "aliases": [
+    "Залы Целаено",
+    "Вспомогательный эпизод 1: «Залы Целаено»"
+  ],
+  "part_of": "griby-s-yuggota-ru/scenario/fungi-from-yuggoth",
+  "order": 9,
+  "summary": {
+    "ru": "Необязательная сцена: сыщики отправляются в библиотеку за 9,6 триллиона км, на четвёртую планету звезды Целаено, на поиски свитка с жизненно необходимым заклинанием Создать Барьер Наах-Тит, которым можно заточить Зверя. В Великом зале под потолком ждут голодные бьякхи, в галерее 5 лежат копии заклинаний Призвать Зверя (рука Нофру-Ка) и Создать Барьер Наах-Тит (рука Эдварда Чандлера, 1896), а вынести из библиотеки хоть клочок записей не даст Спящий в Озере.",
+    "en": null
+  },
+  "keeper_info": {
+    "ru": "Библиотека находится на окутанной туманом четвёртой планете в системе. Много тысяч лет назад Неименуемый, «Тот, кого нельзя называть», оставил в Великом зале своих слуг-бьякхи для охраны от посторонних. Они оголодали, но всё ещё ждут во тьме под потолком. Книги охраняет и тот, кого называют «Спящим в Озере».\nЗдесь уже бывали Братство и Чандлер: в 1896 году Эдвард Чандлер с бароном Гауптманом несколько раз отправлялись в библиотеки Целаено, где изучали тайное заклинание для призыва Зверя (Прил. В, Ж); их следы — на столе в галерее 5.",
+    "en": null
+  },
+  "hook": {
+    "ru": "Всё необходимое для путешествия в Целаено можно найти в главе III. Если сыщики пропустят часть этих предметов, Хранитель может предоставить их или сведения где-нибудь в другом месте приключения. В качестве стимула сыщики могут узнать о существовании заклинания Создать Барьер Наах-Тит, которым можно заточить Зверя, при встрече с Нофру-Ка или из видений Пола.\nИм должно быть известно, что Целаено — звезда, одна из Плеяд, в созвездии Овна. Она находится между звёздами Альциона и Электра с одной стороны и Майя и Тайгета с другой, более чем в 1400 световых лет от Земли. Чтобы создать Врата на такое расстояние, потребуется мгновенная трата 13 пунктов МОЩ, так что, скорее всего, сыщики отправятся верхом на призванном чудовище. Для путешествия нужен Космический мёд, в том числе на обратный путь. Призванное чудовище можно укротить, чтобы оно подождало и вернуло пассажира на Землю. Путешествие на такое расстояние под действием мёда стоит 3 ПМ и 2 пункта Рассудка.",
+    "en": null
+  },
+  "advice": {
+    "ru": "Текст о Р’льехе (копия страницы из главы III) предупреждает, что в Великом зале нельзя смотреть вверх, указывает галерею 5 со сведениями о Звере и упоминает Спящего в Озере: из библиотеки нельзя выносить знаний.\nЗнак Древних защищает от бьякхи, но не от Спящего; без него при входе нужна проверка Скрытности.\nЗаклинания в галерее 5 учатся за день каждое; унести их можно только в памяти — любая вынесенная запись будит Спящего (вывод из текста).",
+    "en": null
+  },
+  "steps": [
+    {
+      "title": "Путь",
+      "text": "Перелёт под Космическим мёдом (3 ПМ, 2 Рассудка); прибытие — Рассудок 0/1d6; вид библиотеки — 0/1 и проверки каждый час поблизости.",
+      "refs": [
+        "griby-s-yuggota-ru/scene/celaeno-voyage",
+        "griby-s-yuggota-ru/location/celaeno",
+        "griby-s-yuggota-ru/location/celaeno-lake",
+        "coc:spell:brew-space-mead",
+        "coc:spell:summon-bind-byakhee",
+        "coc:spell:create-gate",
+        "griby-s-yuggota-ru/scenario/castle-dark"
+      ]
+    },
+    {
+      "title": "Библиотека",
+      "text": "Каменный причал, фигурки уходят под воду; чёрные блоки, колонны выше 130 м; свет сквозь трещины.",
+      "refs": [
+        "griby-s-yuggota-ru/scene/celaeno-library",
+        "griby-s-yuggota-ru/location/celaeno-great-library",
+        "griby-s-yuggota-ru/map/celaeno-library"
+      ]
+    },
+    {
+      "title": "Великий зал",
+      "text": "Ярусы балконов, известковый помёт (Мифы Ктулху), шорохи (0/1d3); бьякхи наверху (1/6); безумие или вход без Знака Древних и Скрытности — смерть. A — обвал крыши, B — слышно песнопение из галереи 6.",
+      "refs": [
+        "griby-s-yuggota-ru/scene/celaeno-great-hall",
+        "griby-s-yuggota-ru/location/celaeno-great-hall",
+        "coc:creature:byakhee",
+        "coc:spell:elder-sign",
+        "coc:tome:rlyeh-text"
+      ]
+    },
+    {
+      "title": "Галереи",
+      "text": "1 — затоплена, дребезжание; 2–4 — темно и тихо; 5 — шестой балкон, стол со свитком Нофру-Ка, копией Чандлера, ручкой и мёдом Гауптмана; 6 — четыре мага и светящийся предмет (0/1d3; кошмары 1d3 в неделю).",
+      "refs": [
+        "griby-s-yuggota-ru/scene/celaeno-galleries",
+        "griby-s-yuggota-ru/location/celaeno-gallery-1",
+        "griby-s-yuggota-ru/location/celaeno-galleries-2-4",
+        "griby-s-yuggota-ru/location/celaeno-gallery-5",
+        "griby-s-yuggota-ru/location/celaeno-gallery-6",
+        "griby-s-yuggota-ru/item/celaeno-call-the-beast-scroll",
+        "griby-s-yuggota-ru/item/celaeno-naach-tith-copy",
+        "griby-s-yuggota-ru/item/celaeno-space-mead-bottle"
+      ]
+    },
+    {
+      "title": "Спящий в Озере",
+      "text": "Вынесший книгу или запись утянут под воду при взлёте; Спящий берёт одну жертву.",
+      "refs": [
+        "griby-s-yuggota-ru/scene/celaeno-sleeper-in-the-lake",
+        "griby-s-yuggota-ru/creature/celaeno-sleeper-in-the-lake",
+        "griby-s-yuggota-ru/location/celaeno-lake"
+      ]
+    }
+  ],
+  "conclusion": {
+    "ru": "Отдельного финала у сцены нет. Выученное здесь заклинание Создать Барьер Наах-Тит — главный способ заточить Зверя в главе VIII; выученное Призвать Зверя открывает и путь к изгнанию (вывод из текста). Наград Рассудком книга не называет.",
+    "en": null
+  },
+  "refs": [
+    "griby-s-yuggota-ru/scenario/fungi-from-yuggoth",
+    "griby-s-yuggota-ru/scenario/day-of-the-beast",
+    "coc:creature:hastur",
+    "griby-s-yuggota-ru/character/edward-chandler",
+    "griby-s-yuggota-ru/character/baron-hauptmann",
+    "starter-edge-of-darkness-ru/character/nofru-ka",
+    "coc:spell:create-barrier-of-naach-tith"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "griby-s-yuggota-ru",
+      "physical_page": 72,
+      "printed_page": 71,
+      "method": "book_text",
+      "verified": true,
+      "note": "доп. сцена «Залы Целаено»: титул, «Информация для сыщиков», «Информация для хранителя», «Путь», «Библиотека», «Великий зал»"
+    },
+    {
+      "book_id": "griby-s-yuggota-ru",
+      "physical_page": 73,
+      "printed_page": 72,
+      "method": "book_text",
+      "verified": true,
+      "note": "карта библиотеки, A, B, «Галереи» 1–5"
+    },
+    {
+      "book_id": "griby-s-yuggota-ru",
+      "physical_page": 74,
+      "printed_page": 73,
+      "method": "book_text",
+      "verified": true,
+      "note": "№ 6, «Спящий в Озере», врезка «Создать Барьер Наах-Тит»"
+    },
+    {
+      "book_id": "griby-s-yuggota-ru",
+      "physical_page": 75,
+      "printed_page": 74,
+      "method": "book_text",
+      "verified": true,
+      "note": "окончание «Спящего в Озере»"
+    },
+    {
+      "book_id": "griby-s-yuggota-ru",
+      "physical_page": 79,
+      "printed_page": 78,
+      "method": "book_text",
+      "verified": true,
+      "note": "Прил. В: Чандлер и Гауптман в Целаено"
+    }
+  ],
+  "errata": [
+    {
+      "field": "hook.ru",
+      "printed": "одна из Плеяд, в созвездии Овна",
+      "expected": "в созвездии Тельца",
+      "note": "Плеяды — в созвездии Тельца; английский оригинал (1984, с. 66): «in the constellation Taurus». Оставлено как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": "«Неименуемый, „Тот, кого нельзя называть“» — ссылка на Хастура (Hastur the Unspeakable, «He Who is Not to be Named») — вывод из текста (Р-41). «Шесть триллионов миль» переведены в километры (Р-64)."
+  }
+}

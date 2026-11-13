@@ -1,0 +1,97 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "griby-s-yuggota-ru/scene/castle-dinner",
+  "kind": "scene",
+  "name": {
+    "ru": "Обед у барона",
+    "en": null
+  },
+  "description": {
+    "ru": "Если барону наскучит ждать, что предпримут сыщики, он пошлёт Лазло пригласить их на обед в замок. По прибытии их попросят подождать в гостиной. Барон не появится до заката, сославшись на то, что привык работать ночью, а днём спать (это может сбить игроков с толку, заставив считать его вампиром). За обедом он угощает их роскошными яствами, приправленными наркотиком, вызывающим глубокий сон. Затем Гауптман со слугами пытается одолеть оставшихся в сознании и запереть всех в подземелье, где систематически пытает сыщиков одного за другим на глазах у товарищей, сбрасывая тела в дыру в соседнем помещении (логово Ниогты).",
+    "en": null
+  },
+  "when": "Финал; если барону наскучит ждать.",
+  "arc": {
+    "scenario": "griby-s-yuggota-ru/scenario/castle-dark",
+    "part": "Финал",
+    "order": 21
+  },
+  "where": [
+    {
+      "location": "griby-s-yuggota-ru/location/castle-parlor",
+      "note": null
+    },
+    {
+      "location": "griby-s-yuggota-ru/location/castle-dining-room",
+      "note": null
+    },
+    {
+      "location": "griby-s-yuggota-ru/location/castle-torture-chamber",
+      "note": null
+    },
+    {
+      "location": "griby-s-yuggota-ru/location/castle-lair-of-nyogtha",
+      "note": "дыра, куда сбрасывают тела"
+    }
+  ],
+  "participants": [
+    {
+      "id": "griby-s-yuggota-ru/character/baron-hauptmann",
+      "role": "хозяин обеда"
+    },
+    {
+      "id": "griby-s-yuggota-ru/character/lazlo",
+      "role": "приглашает, помогает одолеть сыщиков"
+    },
+    {
+      "id": "griby-s-yuggota-ru/character/jerzy",
+      "role": null
+    },
+    {
+      "id": "griby-s-yuggota-ru/character/jurek",
+      "role": null
+    }
+  ],
+  "mechanics": {
+    "ru": "Наркотик: сила 12 пунктов, действует примерно через 20 минут; действие — по правилам ядов «Книги правил». Не устоявшие засыпают глубоким сном на 4–5 часов; устоявшие всё равно под действием зелья — их навыки уменьшены вдвое на несколько часов. Наблюдать медленную смерть товарищей под пытками — проверка Рассудка 0/1d8.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Сыщиков может спасти Сергей Росалович (сцена «Сергей — козырь»), который не должен появиться, пока один-два сыщика не встретят свою ужасную судьбу.",
+    "en": null
+  },
+  "refs": [
+    "griby-s-yuggota-ru/item/castle-sleeping-drug",
+    "griby-s-yuggota-ru/scene/castle-sergei",
+    "griby-s-yuggota-ru/location/castle-catacombs"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "griby-s-yuggota-ru",
+      "physical_page": 31,
+      "printed_page": 30,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Финал»: приглашение на обед, сила наркотика"
+    },
+    {
+      "book_id": "griby-s-yuggota-ru",
+      "physical_page": 32,
+      "printed_page": 31,
+      "method": "book_text",
+      "verified": true,
+      "note": "действие наркотика, пытки"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "«Сила наркотика 12 пунктов» — так в книге (правила ядов старых редакций)."
+  }
+}

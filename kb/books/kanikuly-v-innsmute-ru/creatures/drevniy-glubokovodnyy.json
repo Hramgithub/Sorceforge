@@ -17,10 +17,9 @@
   },
   "relations": [
     {
-      "type": "form_of",
+      "type": "instance_of",
       "target": "coc:creature:deep-one",
-      "note": "крупнее обычного Глубоководного, характеристики в 1,5 раза выше",
-      "note_back": null
+      "note_back": "крупная особь: характеристики в 1,5 раза выше («Каникулы в Иннсмуте»)"
     }
   ],
   "description": {
@@ -43,5 +42,21 @@
       "incomplete"
     ],
     "notes": "Статблока нет: книга велит взять характеристики обычного Глубоководного (coc:creature:deep-one) и умножить на 1,5."
-  }
+  },
+  "corrections": [
+    {
+      "field": "relations",
+      "from": "{\"type\": \"form_of\", \"target\": \"coc:creature:deep-one\", \"note\": \"крупнее обычного Глубоководного, характеристики в 1,5 раза выше\", \"note_back\": null}",
+      "to": null,
+      "reason": "Р-82: отдельная особь вида — instance_of, а не form_of (form_of — только облик того же существа, Р-79)",
+      "ref": "Р-82"
+    },
+    {
+      "field": "relations",
+      "from": null,
+      "to": "{\"type\": \"instance_of\", \"target\": \"coc:creature:deep-one\", \"note_back\": \"крупная особь: характеристики в 1,5 раза выше («Каникулы в Иннсмуте»)\"}",
+      "reason": "Р-82: отдельная особь вида — instance_of; пояснение — в note_back (Р-122)",
+      "ref": "Р-82"
+    }
+  ]
 }

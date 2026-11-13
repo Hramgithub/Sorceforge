@@ -20,9 +20,8 @@
   },
   "relations": [
     {
-      "type": "form_of",
+      "type": "instance_of",
       "target": "terror-ru/creature/meteoritnoe-nechto",
-      "note": "общий вид",
       "note_back": "заражённый бабуин из клеток Червякова"
     }
   ],
@@ -150,5 +149,21 @@
     "needs_review": false,
     "flags": [],
     "notes": "Статблок как напечатан (с. 20); БкУ, Комплекция и ПМ в книге не даны. Сколько бабуинов в клетках, книга не говорит («одного из бабуинов»). Страницы «с. N» — печатные (печатная = физическая − 1)."
-  }
+  },
+  "corrections": [
+    {
+      "field": "relations",
+      "from": "{\"type\": \"form_of\", \"target\": \"terror-ru/creature/meteoritnoe-nechto\", \"note\": \"общий вид\", \"note_back\": \"заражённый бабуин из клеток Червякова\"}",
+      "to": null,
+      "reason": "Р-82: отдельная особь вида — instance_of, а не form_of (form_of — только облик того же существа, Р-79)",
+      "ref": "Р-82"
+    },
+    {
+      "field": "relations",
+      "from": null,
+      "to": "{\"type\": \"instance_of\", \"target\": \"terror-ru/creature/meteoritnoe-nechto\", \"note_back\": \"заражённый бабуин из клеток Червякова\"}",
+      "reason": "Р-82: отдельная особь вида — instance_of; пояснение — в note_back (Р-122)",
+      "ref": "Р-82"
+    }
+  ]
 }

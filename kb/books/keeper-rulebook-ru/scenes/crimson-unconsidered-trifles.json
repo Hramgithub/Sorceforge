@@ -19,11 +19,7 @@
   "where": [
     {
       "location": "coc:location:arkham-431-unconsidered-trifles",
-      "note": "лавка"
-    },
-    {
-      "location": "coc:location:arkham-431-unconsidered-trifles",
-      "note": "подвал"
+      "note": "лавка и подвал"
     },
     {
       "location": "coc:location:arkham-431-unconsidered-trifles-subbasement",
@@ -81,5 +77,21 @@
     "needs_review": false,
     "flags": [],
     "notes": null
-  }
+  },
+  "corrections": [
+    {
+      "field": "where.0.note",
+      "from": "лавка",
+      "to": "лавка и подвал",
+      "reason": "Р-30: два элемента where на одно место объединены, заметки слиты",
+      "ref": "Р-30"
+    },
+    {
+      "field": "where",
+      "from": "coc:location:arkham-431-unconsidered-trifles",
+      "to": null,
+      "reason": "Р-30: повтор места в where убран (заметка перенесена в первый элемент)",
+      "ref": "Р-30"
+    }
+  ]
 }

@@ -24,10 +24,9 @@
   },
   "relations": [
     {
-      "type": "form_of",
+      "type": "instance_of",
       "target": "coc:creature:shoggoth",
-      "note": "половина его природы",
-      "note_back": "гибрид человека и шоггота (не властелин шогготов)"
+      "note_back": "гибрид человека и шоггота, не властелин шогготов («Pulp Cthulhu»)"
     }
   ],
   "statblock": {
@@ -327,5 +326,21 @@
       "parse_uncertain"
     ],
     "notes": "ПЗ удвоены по книге (с. 121). Скорость 10 — как напечатано (правила Скорости — только для людей). Местоимение книги — «он/оно»."
-  }
+  },
+  "corrections": [
+    {
+      "field": "relations",
+      "from": "{\"type\": \"form_of\", \"target\": \"coc:creature:shoggoth\", \"note\": \"половина его природы\", \"note_back\": \"гибрид человека и шоггота (не властелин шогготов)\"}",
+      "to": null,
+      "reason": "Р-82: отдельная особь вида — instance_of, а не form_of (form_of — только облик того же существа, Р-79)",
+      "ref": "Р-82"
+    },
+    {
+      "field": "relations",
+      "from": null,
+      "to": "{\"type\": \"instance_of\", \"target\": \"coc:creature:shoggoth\", \"note_back\": \"гибрид человека и шоггота, не властелин шогготов («Pulp Cthulhu»)\"}",
+      "reason": "Р-82: отдельная особь вида — instance_of; пояснение — в note_back (Р-122)",
+      "ref": "Р-82"
+    }
+  ]
 }

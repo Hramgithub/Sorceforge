@@ -1,0 +1,146 @@
+# Двойники ревизии 2026-11-14 — разбор (Р-154, Р-99, Р-184, Р-224, Р-234)
+
+Источник: checks/20261114-audit/report.md, findings.json — класс «Двойники»: twins.cross_book 34, twins.same_book 17 (всего 51).
+Итог после разбора: `python -I -B tools/audit.py --out .cache/audit-twins` — twins.cross_book 24, twins.same_book 17 (всего 41; −10).
+Проверка: `python -B tools/check.py --changed` — 65 записей, ошибок 0, предупреждений 0.
+Скрипты (временные, в scratchpad сессии): twins/merge_twins.py (копия merge_arkham.py с настройками twins_cfg.py),
+twins/rewrite_refs.py (переписывание ссылок по всей базе; `corrections` не трогаются), twins/notes.py (пометки «не путать»).
+
+## Слито (старые id → новый id)
+
+Места Аркхэма: записи других книг влиты в общие записи путеводителя «Аркхэм» (2023; Р-234), абзац книги — со своим источником:
+- sny-o-yaponii-ru/location/mu-2-transformatornaya-podstantsiya → coc:location:arkham-602-southwest-transformer-station
+- sny-o-yaponii-ru/location/mu-18-zapadnoe-obshchezhitie → coc:location:arkham-617-west-dormitory
+- sny-o-yaponii-ru/location/mu-19-vostochnoe-obshchezhitie → coc:location:arkham-620-east-dormitory
+- sny-o-yaponii-ru/location/mu-22-dom-prezidenta → coc:location:arkham-622-presidents-house
+- bless-the-beast-and-children-ru/location/pervaya-presviterianskaya-tserkov → coc:location:arkham-817-first-presbyterian-church
+  (расхождение адресов — в quality.notes; адрес — по путеводителю)
+
+Персонажи (общие записи coc:character:*, основа — запись путеводителя, кроме Тилтон):
+- arkham-en/character/campus-martin-fen + naedine-s-tmoy-ru/character/martin-fen → coc:character:martin-fen
+- arkham-en/character/downtown-ezekiel-wallace + pobeg-iz-innsmuta-ru/character/iezekil-uolles → coc:character:ezekiel-wallace
+- arkham-en/character/downtown-mickey-harrigan + pobeg-iz-innsmuta-ru/character/mikki-kharrigan → coc:character:mickey-harrigan
+  (статблок только в путеводителе — он и основной)
+- pobeg-iz-innsmuta-ru/character/anna-tilton + lightless-beacon-ru/character/beacon-anna-tilton → coc:character:anna-tilton
+  (куратор Исторического общества Ньюберипорта в обеих книгах; name.en «Anna Tilton» — из «Погасшего маяка»)
+
+Организации:
+- arkham-en/organization/outskirts-massachusetts-state-police + mothers-love-ru/organization/politsiya-shtata-massachusets → coc:organization:massachusetts-state-police
+
+В каждой новой записи: старые id — `corrections` с `field: "id"`, `ref: "Р-154"`; тексты другой книги — абзацем «В сценарии «…» (с. N): …»;
+источники, ссылки, связи, флаги, пометки влитых записей перенесены; ссылки по всей базе (включая метки карт) переписаны, старые файлы удалены.
+Побочный эффект: метки карт «Снов о Японии» (2, 18, 19, 22) и «Благослови детей его» (7) теперь ведут на места путеводителя с другим номером —
+audit показывает их как map.label_number «место другой книги: у карты может быть своя нумерация» (так же, как у прежних слияний Аркхэма).
+
+## Оставлено — разные записи с одинаковым именем (Р-99)
+
+С пометкой «Не путать с …» в quality.notes обеих (и `corrections` с `ref: "Р-99"`):
+- coc:character:stephen-hurst (антиквар, Curious Characters Deck) ≠ pobeg-iz-innsmuta-ru/character/stiven-kherst (капитан Береговой охраны)
+- coc:creature:horse-of-the-invisible (призрачный конь Malleus) ≠ mify-hastura-ru/creature/unseen-horse (явление Каркозы)
+- arkham-en/character/northside-lucy-james (хозяйка закусочной в Аркхэме) ≠ pobeg-iz-innsmuta-ru/character/lyusi-dzheyms (регистратор конторы Марша в Иннсмуте) — в отчёте ревизии названы «явными», по тексту — разные люди
+- lightless-beacon-ru/character/artist ≠ pax-cthuliana-ru/character/edmund-kheyl — оба имени «Эдмунд Хейл» придуманы нами (Р-67, Р-150); вопрос владельцу: переименовать одно из них
+- dveri-vo-tmu-ru/character/darkness-john-brown (работорговец Провиденса XVIII в.) ≠ za-zakrytymi-dveryami-ru/character/john-brown (готовый сыщик-механик)
+- coc:location:eagle-lake (город) ≠ fears-sharp-little-needles-en/location/pulvis-eagle-lake-lake (озеро)
+- griby-s-yuggota-ru/item/bay-call-beast-parchment (китайский пергамент Лэнг-Фу) ≠ griby-s-yuggota-ru/item/castle-beast-vellum (латинский пергамент барона) — внутри одной книги
+- coc:location:arkham-137-newsstand ≠ coc:location:arkham-437-a-newsstand — путеводитель сам говорит о двух киосках города; внутри одной книги
+
+Без пометки (путаница маловероятна — разные сценарии, общие слова или разные роли):
+- профили сценария к общему виду (Р-75, уже связаны instance_of): coc:creature:horig ↔ temnye-veka-tri-stsenariya-ru/creature/esewald-horig; coc:creature:pucel ↔ temnye-veka-tri-stsenariya-ru/creature/esewald-pucel; griby-s-yuggota-ru/creature/sands-byakhee ↔ lokhmotya-korolya-ru/creature/milan-byakhee (оба — профили книг к coc:creature:byakhee с разными числами)
+- одно имя у разных людей разных книг: Салли (трёхлетняя подопечная Сноудена ≠ механик у Иннсмута); Эдит (соседка ведьмы сто лет назад ≠ ассистентка фокусника); Уильям (управляющий «Джилмен-Хауса» ≠ друг Эбенезера Уэйта, 1896)
+- групповые профили разных сценариев: Носильщики (Непал, «Лохмотья Короля» ≠ вокзал, «Погоня в поезде»); Полицейские (бостонские патрульные ≠ полиция Редвилла)
+- разные места: Колодец (поместье Уэйлендов ≠ ферма стартового набора); Поляна (у озера Гла’аки ≠ лес «Маленьких чудес»)
+- разная раздатка: «Вводная для игроков» двух русских сценариев; Player Handout A–G «Теней Ленинграда» ≠ «Снов о Японии» (7 пар: у каждой книги свой набор букв)
+- внутри одной книги — разные сцены: cursed-idol-of-manco-capac-en «Scene 1: Travel» (акт 2 ≠ акт 3); fears-sharp-little-needles-en: две «Dreamscape Interlude» (первая ≠ вторая), «Investigation» (Аниак ≠ Руби), «Interview, Jess Bell» (в Лос-Анджелесе ≠ в клинике), «Returning to Earth» (три шага ритуала ≠ само возвращение); pulp-cthulhu-en «Aftermath» (в отеле ≠ финал сценария)
+- внутри одной книги — разные предметы: fears-sharp-little-needles-en записи камер («Bone Deep» ≠ «Phlebotomy»)
+- внутри одной книги — разные правила: coc:rule:dark-ages-setting-a-z-oral-tradition (статья словаря эпохи) ≠ coc:rule:dark-ages-system-oral-tradition (механика); coc:rule:dark-ages-system-optional-combat-rules ≠ …-optional-sanity-rules (разные разделы книги, Р-177)
+- внутри одной книги — одноимённые места разных деревень или зданий: mts-kharkov-37-ru «Кладбище», «Община», «Кузница», «Амбары» (Байленхов ≠ Чеченка / Юренково); tri-koshmarnykh-vechera-ru «Офис» (квартира Уорвика ≠ морг); viral-en «Операционная» (1E ≠ 1U операционная культа)
+
+## Сомнительные — не слиты
+
+Нет: все пары разобраны по тексту записей.
+
+## Новые файлы (5)
+kb/characters/anna-tilton.json
+kb/characters/ezekiel-wallace.json
+kb/characters/martin-fen.json
+kb/characters/mickey-harrigan.json
+kb/organizations/massachusetts-state-police.json
+
+## Удалённые файлы (15)
+kb/books/arkham-en/characters/campus-martin-fen.json
+kb/books/arkham-en/characters/downtown-ezekiel-wallace.json
+kb/books/arkham-en/characters/downtown-mickey-harrigan.json
+kb/books/arkham-en/organizations/outskirts-massachusetts-state-police.json
+kb/books/bless-the-beast-and-children-ru/locations/pervaya-presviterianskaya-tserkov.json
+kb/books/lightless-beacon-ru/characters/beacon-anna-tilton.json
+kb/books/mothers-love-ru/organizations/politsiya-shtata-massachusets.json
+kb/books/naedine-s-tmoy-ru/characters/martin-fen.json
+kb/books/pobeg-iz-innsmuta-ru/characters/anna-tilton.json
+kb/books/pobeg-iz-innsmuta-ru/characters/iezekil-uolles.json
+kb/books/pobeg-iz-innsmuta-ru/characters/mikki-kharrigan.json
+kb/books/sny-o-yaponii-ru/locations/mu-18-zapadnoe-obshchezhitie.json
+kb/books/sny-o-yaponii-ru/locations/mu-19-vostochnoe-obshchezhitie.json
+kb/books/sny-o-yaponii-ru/locations/mu-2-transformatornaya-podstantsiya.json
+kb/books/sny-o-yaponii-ru/locations/mu-22-dom-prezidenta.json
+
+## Изменённые файлы (60)
+kb/books/arkham-en/characters/northside-lucy-james.json
+kb/books/bless-the-beast-and-children-ru/handouts/detskie-bumagi-1.json
+kb/books/bless-the-beast-and-children-ru/maps/karta-arkhema.json
+kb/books/bless-the-beast-and-children-ru/scenes/arkhamskaya-politsiya.json
+kb/books/bless-the-beast-and-children-ru/scenes/spisok-istochnikov.json
+kb/books/dveri-vo-tmu-ru/characters/darkness-john-brown.json
+kb/books/fears-sharp-little-needles-en/locations/pulvis-eagle-lake-lake.json
+kb/books/griby-s-yuggota-ru/items/bay-call-beast-parchment.json
+kb/books/griby-s-yuggota-ru/items/castle-beast-vellum.json
+kb/books/lightless-beacon-ru/characters/artist.json
+kb/books/lightless-beacon-ru/characters/beacon-george-cassidy.json
+kb/books/lightless-beacon-ru/handouts/beacon-1-tilton-letter.json
+kb/books/lightless-beacon-ru/organizations/beacon-newburyport-society.json
+kb/books/lightless-beacon-ru/scenarios/lightless-beacon.json
+kb/books/lightless-beacon-ru/scenes/beacon-study.json
+kb/books/mify-hastura-ru/creatures/unseen-horse.json
+kb/books/mothers-love-ru/scenarios/lyubov-materi.json
+kb/books/mothers-love-ru/scenes/affinazhnyy-zavod.json
+kb/books/mothers-love-ru/scenes/bank-morskikh-torgovtsev.json
+kb/books/mothers-love-ru/scenes/gavan.json
+kb/books/mothers-love-ru/scenes/ograblenie-v-ipsviche.json
+kb/books/mothers-love-ru/scenes/otel-dom-gilmana.json
+kb/books/mothers-love-ru/scenes/propavshiy-politseyskiy.json
+kb/books/naedine-s-tmoy-ru/scenarios/naedine-s-tmoy.json
+kb/books/pax-cthuliana-ru/characters/edmund-kheyl.json
+kb/books/pobeg-iz-innsmuta-ru/characters/gart-gregg.json
+kb/books/pobeg-iz-innsmuta-ru/characters/lyusi-dzheyms.json
+kb/books/pobeg-iz-innsmuta-ru/characters/stiven-kherst.json
+kb/books/pobeg-iz-innsmuta-ru/characters/uilyam-bernkhem.json
+kb/books/pobeg-iz-innsmuta-ru/handouts/dnevnik-yudzhina-kharta.json
+kb/books/pobeg-iz-innsmuta-ru/handouts/dnevniki-i-zametki-uollesa.json
+kb/books/pobeg-iz-innsmuta-ru/handouts/innsmut-kurer.json
+kb/books/pobeg-iz-innsmuta-ru/items/diadema-iz-nyuberiporta.json
+kb/books/pobeg-iz-innsmuta-ru/items/portrety-iz-kollektsii-uollesa.json
+kb/books/pobeg-iz-innsmuta-ru/items/tablichka-dagon.json
+kb/books/pobeg-iz-innsmuta-ru/scenarios/pobeg-iz-innsmuta.json
+kb/books/pobeg-iz-innsmuta-ru/scenes/doktor-iezekil-uolles.json
+kb/books/pobeg-iz-innsmuta-ru/scenes/komnata-brayana-u-greggov.json
+kb/books/pobeg-iz-innsmuta-ru/scenes/politsiya-arkhema.json
+kb/books/pobeg-iz-innsmuta-ru/scenes/roditeli-brayana.json
+kb/books/sny-o-yaponii-ru/maps/miskatonic-campus.json
+kb/books/za-zakrytymi-dveryami-ru/characters/john-brown.json
+kb/characters/stephen-hurst.json
+kb/creatures/horse-of-the-invisible.json
+kb/locations/arkham-137-newsstand.json
+kb/locations/arkham-208-asbury-methodist-episcopal-church.json
+kb/locations/arkham-228-police-station.json
+kb/locations/arkham-437-a-newsstand.json
+kb/locations/arkham-602-southwest-transformer-station.json
+kb/locations/arkham-614-robert-carter-memorial-hall.json
+kb/locations/arkham-617-west-dormitory.json
+kb/locations/arkham-620-east-dormitory.json
+kb/locations/arkham-622-presidents-house.json
+kb/locations/arkham-817-first-presbyterian-church.json
+kb/locations/arkham-environs.json
+kb/locations/arkham-os108-fenners-roadhouse.json
+kb/locations/eagle-lake.json
+kb/locations/innsmouth.json
+kb/locations/miskatonic-university.json
+kb/tables/arkham-chronology.json

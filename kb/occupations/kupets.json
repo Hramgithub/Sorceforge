@@ -1,0 +1,96 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:kupets",
+  "kind": "occupation",
+  "name": {
+    "ru": "Купец",
+    "en": "Merchant"
+  },
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Купцы, как единственные, кто может оплатить необходимую форму, чтобы записаться в активные граждане, составляют основную массу армии. Тех, кто не пошёл солдатами, Революционное правительство быстро перехватывает для ремёсел вроде слесарей, корабельных плотников, седельников, колёсных мастеров и каменщиков. Квалифицированные ремесленники всегда востребованы. Сыщики в этой роли могут располагать большими деньгами и влиянием, что даёт им больше возможностей воздействовать на происходящее.\n\nСоциальный класс: низший–средний (правило «Социальный класс», «Царство Террора», с. 105).",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 4",
+    "options": [
+      [
+        [
+          "EDU",
+          4
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "20–60",
+    "min": 20,
+    "max": 60
+  },
+  "contacts": null,
+  "skills": [
+    {
+      "raw": "Бухгалтерия",
+      "skill": "coc:skill:accounting"
+    },
+    {
+      "raw": "Оценка",
+      "skill": "coc:skill:appraise"
+    },
+    {
+      "raw": "Искусство/Ремесло (любое)",
+      "skill": "coc:skill:art-craft"
+    },
+    {
+      "raw": "Обаяние",
+      "skill": "coc:skill:charm"
+    },
+    {
+      "raw": "Юриспруденция",
+      "skill": "coc:skill:law"
+    },
+    {
+      "raw": "Взлом или Механика",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:locksmith",
+          "coc:skill:mechanical-repair"
+        ]
+      }
+    },
+    {
+      "raw": "Убеждение",
+      "skill": "coc:skill:persuade"
+    },
+    {
+      "raw": "плюс ещё один навык как область специализации",
+      "choice": {
+        "count": 1,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "tsarstvo-terrora-ru",
+      "physical_page": 104,
+      "printed_page": 104,
+      "method": "book_text",
+      "verified": true,
+      "note": "Приложение 3 «Роды занятий сыщиков»: «Купец» (Франция XVIII века)"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Профессия для Франции XVIII века (1789–1794) из «Царства Террора»."
+  }
+}

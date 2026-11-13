@@ -1,0 +1,112 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:prestupnik",
+  "kind": "occupation",
+  "name": {
+    "ru": "Преступник",
+    "en": "Criminal"
+  },
+  "group": "Преступник",
+  "lovecraftian": false,
+  "description": {
+    "ru": "XVIII век переполнен историями о французских контрабандистах вроде Луи Мандрена, которые перегоняли соль, вино, табак и облагаемые налогами ткани по всей Европе. Старый порядок регулировал проституцию, услуги кормилиц и торговлю, что породило богатый преступный мир в низших слоях общества. Во время революции драконовские наказания калечат этот мир, но поколения воров всё ещё заполняют улицы, наслаждаясь последним вздохом «золотого века» преступности.\n\nСоциальный класс: низший (правило «Социальный класс», «Царство Террора», с. 105).",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + (ЛВК × 2 или НАР × 2)",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "DEX",
+          2
+        ]
+      ],
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "APP",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "5–49",
+    "min": 5,
+    "max": 49
+  },
+  "contacts": null,
+  "skills": [
+    {
+      "raw": "Оценка",
+      "skill": "coc:skill:appraise"
+    },
+    {
+      "raw": "Искусство/Ремесло (Подделка) или Взлом",
+      "choice": {
+        "count": 1,
+        "of": [
+          {
+            "skill": "coc:skill:art-craft",
+            "specialization": "Подделка",
+            "raw": "Искусство/Ремесло (Подделка)"
+          },
+          "coc:skill:locksmith"
+        ]
+      }
+    },
+    {
+      "raw": "Маскировка",
+      "skill": "coc:skill:disguise"
+    },
+    {
+      "raw": "Ближний бой (Драка)",
+      "skill": "coc:skill:fighting",
+      "specialization": "Драка"
+    },
+    {
+      "raw": "Красноречие",
+      "skill": "coc:skill:fast-talk"
+    },
+    {
+      "raw": "Запугивание",
+      "skill": "coc:skill:intimidate"
+    },
+    {
+      "raw": "Скрытность",
+      "skill": "coc:skill:stealth"
+    },
+    {
+      "raw": "Ловкость рук",
+      "skill": "coc:skill:sleight-of-hand"
+    }
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "tsarstvo-terrora-ru",
+      "physical_page": 103,
+      "printed_page": 103,
+      "method": "book_text",
+      "verified": true,
+      "note": "Приложение 3 «Роды занятий сыщиков»: «Преступник» (Франция XVIII века)"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Профессия для Франции XVIII века (1789–1794) из «Царства Террора»."
+  }
+}

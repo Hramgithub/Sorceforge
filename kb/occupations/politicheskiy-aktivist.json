@@ -1,0 +1,128 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:politicheskiy-aktivist",
+  "kind": "occupation",
+  "name": {
+    "ru": "Политический активист",
+    "en": "Political Activist"
+  },
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Участница политических клубов, обществ и уличной борьбы революции: ораторы, организаторы женских клубов и салонов, вожаки вооружённых санкюлоток. Примеры — Клер Лакомб, Теруань де Мерикур и Этта Пальм д’Эльдерс (с. 7–10). В октябре 1793 года Национальный конвент запретил все женские клубы и общества (с. 7).\n\nСоциальный класс: низший–средний (правило «Социальный класс»).",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + (ИНТ × 2 или НАР × 2) или ОБР × 4",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "INT",
+          2
+        ]
+      ],
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "APP",
+          2
+        ]
+      ],
+      [
+        [
+          "EDU",
+          4
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "20–50",
+    "min": 20,
+    "max": 50
+  },
+  "contacts": null,
+  "skills": [
+    {
+      "raw": "История",
+      "skill": "coc:skill:history"
+    },
+    {
+      "raw": "Юриспруденция",
+      "skill": "coc:skill:law"
+    },
+    {
+      "raw": "Слух",
+      "skill": "coc:skill:listen"
+    },
+    {
+      "raw": "Психология",
+      "skill": "coc:skill:psychology"
+    },
+    {
+      "raw": "два навыка общения (Обаяние, Красноречие, Запугивание, Убеждение)",
+      "choice": {
+        "count": 2,
+        "of": [
+          "coc:skill:charm",
+          "coc:skill:fast-talk",
+          "coc:skill:intimidate",
+          "coc:skill:persuade"
+        ]
+      }
+    },
+    {
+      "raw": "плюс два из: Ближний бой (Драка), Ближний бой (Меч), Стрельба (Пистолет)",
+      "choice": {
+        "count": 2,
+        "of": [
+          {
+            "skill": "coc:skill:fighting",
+            "specialization": "Драка",
+            "raw": "Ближний бой (Драка)"
+          },
+          {
+            "skill": "coc:skill:fighting",
+            "specialization": "Меч",
+            "raw": "Ближний бой (Меч)"
+          },
+          {
+            "skill": "coc:skill:firearms",
+            "specialization": "Пистолет",
+            "raw": "Стрельба (Пистолет)"
+          }
+        ]
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "reign-of-terror-women-en",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "профиль «Political Activist»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Профессия для Франции 1789–1794 годов из дополнения «Женщины Французской революции» (Women of the French Revolution, Kelly Grant, Chaosium 2023) к «Царству Террора»; русского издания нет — наш перевод (Р-21). Описание сведено по биографиям книги (с. 7–10); вывод из текста (Р-41)."
+  }
+}

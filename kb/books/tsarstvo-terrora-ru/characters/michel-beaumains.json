@@ -1,0 +1,436 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "tsarstvo-terrora-ru/character/michel-beaumains",
+  "kind": "character",
+  "name": {
+    "ru": "Мишель Бомэн",
+    "en": "Michel Beaumains"
+  },
+  "roles": [
+    "pregen"
+  ],
+  "occupation": {
+    "ru": "солдат",
+    "en": "Soldat (Soldier)"
+  },
+  "occupation_ref": "coc:occupation:soldat",
+  "age": {
+    "raw": "29",
+    "value": 29
+  },
+  "sex": "мужской",
+  "residence": "Париж (июнь 1789)",
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "tsarstvo-terrora-ru/character/louis-malon",
+      "note": "капитан их роты",
+      "note_back": "солдат его роты, сыщик"
+    },
+    {
+      "type": "knows",
+      "target": "tsarstvo-terrora-ru/character/jean-dupois",
+      "note": "товарищ по роте: сварливый старый крестьянин, слепой к лишениям, причиняемым королём",
+      "note_back": "товарищ по роте: опасный дурак"
+    },
+    {
+      "type": "knows",
+      "target": "tsarstvo-terrora-ru/character/christophe-pressi",
+      "note": "товарищ по роте: горячий молодой человек, приятный в общении, но совершенно безнадёжен в своём деле",
+      "note_back": "товарищ по роте: интересный человек с заманчивыми идеями о равенстве"
+    },
+    {
+      "type": "knows",
+      "target": "tsarstvo-terrora-ru/character/etienne-babin",
+      "note": "товарищ по роте: заблуждающийся королевист — у него есть мозги, но он отказывается ими пользоваться",
+      "note_back": "товарищ по роте: всё время живёт завтрашним днём, но, по мнению Бабена, один сегодня стоит двух завтрашних"
+    },
+    {
+      "type": "knows",
+      "target": "tsarstvo-terrora-ru/character/joseph-hugel",
+      "note": "товарищ по роте: благоразумный бретонец и, как все бретонцы, товарищ-революционер",
+      "note_back": "товарищ по роте: революционер, разделяющий её представления о новом порядке"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "90",
+        "value": 90
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "80",
+        "value": 80
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50
+      },
+      "APP": {
+        "raw": "45",
+        "value": 45
+      },
+      "INT": {
+        "raw": "70",
+        "value": 70
+      },
+      "POW": {
+        "raw": "60",
+        "value": 60
+      },
+      "EDU": {
+        "raw": "60",
+        "value": 60
+      }
+    },
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "mp": {
+      "raw": "12",
+      "value": 12
+    },
+    "damage_bonus": {
+      "raw": "+1d6",
+      "value": "+1d6"
+    },
+    "build": {
+      "raw": "2",
+      "value": 2
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "luck": {
+      "raw": "50",
+      "value": 50
+    },
+    "sanity": {
+      "raw": "60",
+      "value": 60,
+      "max": 99
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (Драка)",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "1d3+1d6",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Мушкет, кремнёвый",
+          "en": "Musket, Flintlock"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (Мушкет)",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1d10+4",
+          "dice": "1d10+4",
+          "adds_db": false
+        },
+        "notes": "один выстрел в четыре раунда",
+        "weapon": "coc:weapon:charleville-musket"
+      },
+      {
+        "name": {
+          "ru": "Штык",
+          "en": "Bayonet"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (Копьё)",
+        "chance": {
+          "raw": "75% (37/15)",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        },
+        "damage": {
+          "raw": "1d8+1+1d6",
+          "dice": "1d8+1",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:bayonet"
+      }
+    ],
+    "dodge": {
+      "raw": "50% (25/10)",
+      "value": 50,
+      "half": 25,
+      "fifth": 10
+    },
+    "skills": [
+      {
+        "name": "Ближний бой (Копьё)",
+        "skill": "coc:skill:fighting",
+        "specialization": "Копьё",
+        "value": {
+          "raw": "75% (37/15)",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Верховая езда",
+        "skill": "coc:skill:ride",
+        "value": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "20% (10/4)",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "История",
+        "skill": "coc:skill:history",
+        "value": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Механика",
+        "skill": "coc:skill:mechanical-repair",
+        "value": {
+          "raw": "20% (10/4)",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Природоведение",
+        "skill": "coc:skill:natural-world",
+        "value": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "20% (10/4)",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "20% (10/4)",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "20% (10/4)",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Стрельба (Мушкет)",
+        "skill": "coc:skill:firearms",
+        "specialization": "Мушкет",
+        "value": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Юриспруденция",
+        "skill": "coc:skill:law",
+        "value": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      }
+    ]
+  },
+  "background": {
+    "description": "Худой и очень высокий; сутулит плечи и склоняет голову, стараясь казаться одного роста с окружающими.",
+    "significant_people": "Старый отец Реми, крестьянин, ставший калекой после жизни, полной тяжёлого труда; Бомэн перевёз его из Нантера в Париж и ухаживает за ним — без его поддержки отец вскоре умер бы.",
+    "traits": "Умный, верный, политически подкованный молодой человек с чутьём на возможности.",
+    "injuries": "Лишился глаза в трактирной драке в Шарантоне, пригороде Парижа, где находится сумасшедший дом, — в Шарантоне, как поговаривают, все безумцы."
+  },
+  "possessions": [
+    "мушкет со штыком"
+  ],
+  "sources": [
+    {
+      "book_id": "tsarstvo-terrora-ru",
+      "physical_page": 121,
+      "printed_page": 121,
+      "method": "book_text",
+      "verified": true,
+      "note": "Приложение 6, готовые сыщики: лист «Мишель Бомэн, солдат, 29 лет» (предыстория: Париж, июнь 1789)"
+    }
+  ],
+  "corrections": [
+    {
+      "field": "statblock.characteristics.APP",
+      "from": "65",
+      "to": "45",
+      "reason": "Число — по английскому оригиналу (с. 121: «APP 45»); в русском переводе (с. 121) напечатано НАР 65.",
+      "ref": "Р-147"
+    },
+    {
+      "field": "statblock.attacks[Мушкет, кремнёвый].chance",
+      "from": "55% (22/11)",
+      "to": "55% (27/11)",
+      "reason": "Половина — по английскому оригиналу (с. 121: «55% (27/11)»); в русском переводе (с. 121) напечатано 22/11.",
+      "ref": "Р-147"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Числа сверены с английским оригиналом (Reign of Terror, Chaosium; печатные страницы совпадают). Снаряжение из сноски английского оригинала («Carries …»; в русском переводе этой фразы нет)."
+  }
+}

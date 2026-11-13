@@ -1,0 +1,443 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "tsarstvo-terrora-ru/character/thierry-renault",
+  "kind": "character",
+  "name": {
+    "ru": "Тьерри Рено",
+    "en": "Thierry Renault"
+  },
+  "aliases": [
+    "Сержант Рено"
+  ],
+  "roles": [
+    "pregen"
+  ],
+  "occupation": {
+    "ru": "сержант",
+    "en": "Serjant (Sergeant)"
+  },
+  "occupation_ref": "coc:occupation:soldat",
+  "age": {
+    "raw": "24",
+    "value": 24
+  },
+  "sex": "мужской",
+  "residence": "Париж (июнь 1789)",
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "tsarstvo-terrora-ru/character/louis-malon",
+      "note": "капитан их роты",
+      "note_back": "солдат его роты, сыщик"
+    },
+    {
+      "type": "knows",
+      "target": "tsarstvo-terrora-ru/character/michel-beaumains",
+      "note": "товарищ по роте: трудолюбивый, но никогда не даёт понять, о чём думает",
+      "note_back": "товарищ по роте: хороший человек, который просто следует неверным приказам"
+    },
+    {
+      "type": "knows",
+      "target": "tsarstvo-terrora-ru/character/jean-dupois",
+      "note": "товарищ по роте: пьяница, но трезвым надёжен; смерть жены сильно его подкосила",
+      "note_back": "товарищ по роте: хороший командир, заслуживший его уважение"
+    },
+    {
+      "type": "knows",
+      "target": "tsarstvo-terrora-ru/character/christophe-pressi",
+      "note": "товарищ по роте: юный романтик, который, скорее всего, рано или поздно погубит себя или всех их",
+      "note_back": "товарищ по роте: командир, который действует по уставу и не стремится к славе"
+    },
+    {
+      "type": "knows",
+      "target": "tsarstvo-terrora-ru/character/etienne-babin",
+      "note": "товарищ по роте: крепкий и верный товарищ, раненный в бою, теперь служит посыльным",
+      "note_back": "товарищ по роте: благородная кровь всегда даёт о себе знать"
+    },
+    {
+      "type": "knows",
+      "target": "tsarstvo-terrora-ru/character/joseph-hugel",
+      "note": "товарищ по роте: первоклассный разведчик, заготовщик и вивандье, но отвратительный солдат",
+      "note_back": "товарищ по роте: умный сержант, который знает, чего стоит Хюгель"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "65",
+        "value": 65
+      },
+      "CON": {
+        "raw": "80",
+        "value": 80
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "55",
+        "value": 55
+      },
+      "APP": {
+        "raw": "65",
+        "value": 65
+      },
+      "INT": {
+        "raw": "75",
+        "value": 75
+      },
+      "POW": {
+        "raw": "80",
+        "value": 80
+      },
+      "EDU": {
+        "raw": "80",
+        "value": 80
+      }
+    },
+    "hp": {
+      "raw": "14",
+      "value": 14
+    },
+    "mp": {
+      "raw": "16",
+      "value": 16
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "luck": {
+      "raw": "60",
+      "value": 60
+    },
+    "sanity": {
+      "raw": "80",
+      "value": 80,
+      "max": 99
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (Драка)",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Пистоль, кремнёвый (×2)",
+          "en": "Pistol, Flintlock"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (Пистоль)",
+        "chance": {
+          "raw": "90% (45/18)",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        },
+        "damage": {
+          "raw": "1d6+1",
+          "dice": "1d6+1",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:flintlock",
+        "notes": "один выстрел в четыре раунда; носит два пистоля"
+      },
+      {
+        "name": {
+          "ru": "Сабля",
+          "en": "Saber"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (Меч)",
+        "chance": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "1d8+1+1d4",
+          "dice": "1d8+1",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:sword-heavy"
+      }
+    ],
+    "dodge": {
+      "raw": "50% (25/10)",
+      "value": 50,
+      "half": 25,
+      "fifth": 10
+    },
+    "skills": [
+      {
+        "name": "Ближний бой (Меч)",
+        "skill": "coc:skill:fighting",
+        "specialization": "Меч",
+        "value": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Верховая езда",
+        "skill": "coc:skill:ride",
+        "value": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Выживание",
+        "skill": "coc:skill:survival",
+        "value": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Навигация",
+        "skill": "coc:skill:navigate",
+        "value": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "15% (7/3)",
+          "value": 15,
+          "half": 7,
+          "fifth": 3
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Стрельба (Мушкет)",
+        "skill": "coc:skill:firearms",
+        "specialization": "Мушкет",
+        "value": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Стрельба (Пистоль)",
+        "skill": "coc:skill:firearms",
+        "specialization": "Пистоль",
+        "value": {
+          "raw": "90% (45/18)",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Французский",
+        "skill": "coc:skill:language-own",
+        "specialization": "Французский",
+        "value": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "20% (10/4)",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Юриспруденция",
+        "skill": "coc:skill:law",
+        "value": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      }
+    ]
+  },
+  "background": {
+    "description": "Широкоплечий и коренастый, с проседью в волосах.",
+    "ideology": "Считает, что нынешнюю монархию Людовика XVI следует заменить конституционной монархией по образцу английской, чтобы абсолютная власть короля сдерживалась избираемым парламентом. Разумеется, парламент должны составлять те, кто по праву рождения и положению в обществе лучше всего подходит для правления, — аристократия.",
+    "significant_people": "Любимая жена Маргарита, которой раньше приходилось обходиться почти без всего, а теперь она разделяет его достаток; две маленькие дочери, Люси и Оливия, в которых он души не чает.",
+    "traits": "Предусмотрительный, выполняет приказы капитана Малона; награждён за разумное и взвешенное руководство.",
+    "injuries": "Наполовину затянувшееся отверстие в левой щеке от пистолетного выстрела, полученного в бою с голландцами."
+  },
+  "possessions": [
+    "два кремнёвых пистоля",
+    "сабля"
+  ],
+  "sources": [
+    {
+      "book_id": "tsarstvo-terrora-ru",
+      "physical_page": 120,
+      "printed_page": 120,
+      "method": "book_text",
+      "verified": true,
+      "note": "Приложение 6, готовые сыщики: лист «Тьерри Рено, сержант, 24 лет» (предыстория: Париж, июнь 1789)"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [],
+    "notes": "Числа сверены с английским оригиналом (Reign of Terror, Chaosium; печатные страницы совпадают). Снаряжение из сноски английского оригинала («Carries …»; в русском переводе этой фразы нет)."
+  }
+}

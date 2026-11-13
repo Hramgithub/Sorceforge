@@ -1,0 +1,100 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:khudozhnik-predprinimatel",
+  "kind": "occupation",
+  "name": {
+    "ru": "Художник-предприниматель",
+    "en": "Artist Entrepreneur"
+  },
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Женщина искусства, которая сама зарабатывает своим ремеслом и ведёт своё дело. Отдельного описания у профиля нет; среди родов занятий буржуазии книга называет художницу (с. 7), а рядом с профилем (с. 9) — биографию Мари Тюссо, мастерицы восковых портретов, «успешной и независимой предпринимательницы».\n\nСоциальный класс: низший–средний (правило «Социальный класс»).",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 4",
+    "options": [
+      [
+        [
+          "EDU",
+          4
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "20–60",
+    "min": 20,
+    "max": 60
+  },
+  "contacts": null,
+  "skills": [
+    {
+      "raw": "Бухгалтерское дело",
+      "skill": "coc:skill:accounting"
+    },
+    {
+      "raw": "Искусство/ремесло (любые два: Рисование, Живопись, Скульптура, Пение, Танец или другое подходящее)",
+      "skill": "coc:skill:art-craft",
+      "count": 2
+    },
+    {
+      "raw": "Оккультизм",
+      "skill": "coc:skill:occult"
+    },
+    {
+      "raw": "Убеждение",
+      "skill": "coc:skill:persuade"
+    },
+    {
+      "raw": "Внимание",
+      "skill": "coc:skill:spot-hidden"
+    },
+    {
+      "raw": "два навыка общения (Обаяние, Красноречие, Запугивание или Убеждение)",
+      "choice": {
+        "count": 2,
+        "of": [
+          "coc:skill:charm",
+          "coc:skill:fast-talk",
+          "coc:skill:intimidate",
+          "coc:skill:persuade"
+        ]
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "reign-of-terror-women-en",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "профиль «Artist Entrepreneur»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "skills",
+      "printed": "Persuade … two interpersonal skills (Charm, Fast Talk, Intimidate, or Persuade)",
+      "expected": null,
+      "note": "Убеждение стоит и отдельным навыком, и среди навыков общения на выбор; если взято отдельно, два навыка общения выбираются из Обаяния, Красноречия и Запугивания (вывод из текста, Р-41).",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Профессия для Франции 1789–1794 годов из дополнения «Женщины Французской революции» (Women of the French Revolution, Kelly Grant, Chaosium 2023) к «Царству Террора»; русского издания нет — наш перевод (Р-21). Связь профиля с Мари Тюссо — по соседству на странице, вывод из текста (Р-41)."
+  }
+}

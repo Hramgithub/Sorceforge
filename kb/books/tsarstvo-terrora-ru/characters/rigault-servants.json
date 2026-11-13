@@ -1,0 +1,230 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "tsarstvo-terrora-ru/character/rigault-servants",
+  "kind": "character",
+  "name": {
+    "ru": "Слуги Риго",
+    "en": "Servants, Rigault’s faithful staff"
+  },
+  "aliases": [
+    "Слуги, верный персонал Риго",
+    "дворецкий Риго"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "слуга в доме доктора Риго",
+  "names": [
+    "Бертран (дворецкий)",
+    "мадам Обри (кухарка)",
+    "Жоффруа (лакей)",
+    "Сюзанна (горничная)",
+    "Клеман (посыльный)"
+  ],
+  "residence": "Париж и окрестности",
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "tsarstvo-terrora-ru/character/lucien-rigault",
+      "note": "хозяин",
+      "note_back": "верные слуги"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "50",
+        "value": 50
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "55",
+        "value": 55
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "APP": {
+        "raw": "60",
+        "value": 60
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "55",
+        "value": 55
+      },
+      "EDU": {
+        "raw": "60",
+        "value": 60
+      }
+    },
+    "hp": {
+      "raw": "10",
+      "value": 10
+    },
+    "mp": {
+      "raw": "11",
+      "value": 11
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "sanity": {
+      "raw": "60",
+      "value": 60
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (Драка)",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:unarmed"
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Бухгалтерское дело",
+        "skill": "coc:skill:accounting",
+        "value": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Искусство/Ремесло (Кулинария)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "Кулинария",
+        "value": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Французский",
+        "skill": "coc:skill:language-own",
+        "specialization": "Французский",
+        "value": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      }
+    ]
+  },
+  "possessions": [
+    "хозяйственные инструменты",
+    "кухонная утварь"
+  ],
+  "description": {
+    "ru": "Типаж: верный персонал доктора Риго в 1794 году.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Слуги восхищаются Риго и верны ему.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "tsarstvo-terrora-ru",
+      "physical_page": 94,
+      "printed_page": 94,
+      "method": "book_text",
+      "verified": true,
+      "note": "Приложение 1 «Персонажи и чудовища», часть 2: 1794: «Слуги, верный персонал Риго»"
+    }
+  ],
+  "corrections": [
+    {
+      "field": "statblock.move",
+      "from": "7",
+      "to": "8",
+      "reason": "Скорость — по английскому оригиналу (с. 94: «Move: 8»); в русском переводе (с. 94) напечатано 7.",
+      "ref": "Р-147"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "editorial_text"
+    ],
+    "notes": "Имена в «names» придуманы (Р-151): книга даёт только групповой профиль. Числа сверены с английским оригиналом (Reign of Terror, Chaosium; печатные страницы совпадают)."
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "book_id": "lokhmotya-korolya-ru",
+  "goal": "the campaign «Лохмотья Короля» (Tatters of the King, official Russian 7e edition) playable from the base: campaign, prologue and twelve chapters as stages, scenes, places, characters, items, handouts, organizations, maps with spots, tables (Р-228).",
+  "decision": "Р-228, Р-190, Р-206, Р-209",
+  "check_dir": "checks/20261113-tatters",
+  "models": [
+    "kb/books/masks-of-nyarlathotep-en/scenarios/masks-of-nyarlathotep.json",
+    "kb/books/masks-of-nyarlathotep-en/scenarios/england.json",
+    "kb/books/osobnyaki-bezumiya-ru/scenarios/code-secret-code.json",
+    "kb/books/pobeg-iz-innsmuta-ru/scenes/angel-khranitel.json",
+    "kb/locations/kingsport.json",
+    "kb/books/masks-of-nyarlathotep-en/maps/america-harlem.json"
+  ],
+  "extra": "## This work (Р-228)\n\nThe campaign «Лохмотья Короля» (Tim Wiseman, Chaosium 2006; official Russian 7e edition, 359 pages, a text PDF made from a Word file) goes into the base whole, like «Маски Ньярлатхотепа» (models). Your unit is one part of it. **Printed page = physical page**: the PDF prints no page numbers (`pages.py` shows both, they are equal); write `printed_page` = `physical_page`. Chapter title pages are pictures (36 Book I, 159 Book II, 193 Book III); the Russian text gives no chapter titles — take `name.ru` from the Russian text if it names the chapter anywhere (grep «глав»), else translate the English title (below) and flag `translated`. Each chapter ends with «Краткое содержание главы» and the statblocks of its cast — they belong to that chapter.\n\nThe English 6e original `C:\\_Hobby\\Yandex.Disk\\НРИ\\1_Зов Ктулху\\1_Библиотека\\Кампании\\Лохмотья Короля (Tatters of the King)\\[EN 6e] Call of Cthulhu - 1920 - Tatters of the King.pdf` (240 pages, `pdftotext -layout -f N -l N`) is **only for names**: `name.en`, English slugs, the spelling of people and places. Numbers, statblocks and text come from the Russian 7e book. The Russian text is the source (no `translated` flag), but it is uneven: terms of the base win (Р-184: `python tools/terms.py <word>`; бьякхи, Тёмная молодь, Шантак, Ми-Го… as in the shared records; Russian forms of this book that differ go to `aliases` through proposals); characteristic abbreviations, skill names and «рассудок» (the book mixes «здравомыслие», «рассудок», «РАС», «ВОЛ», «следователи/сыщики») — as in the Russian Keeper Rulebook (`docs/conventions.md`). The book spells some names two ways (Хилари/Хиллари, Малкольм/Малькольм, Гоатсвуд/Гоутсвуд): take the form of the cast list on pp. 9–10, the other one goes to `aliases`.\n\n### Fixed ids (all units use them; a reference to a record another unit is still writing is expected to fail `check.py` until that unit lands — list such refs in the report, do not drop them)\n\n- Campaign: `lokhmotya-korolya-ru/scenario/tatters-of-the-king` (unit intro): `summary`, `keeper_info`, `hook`, `advice`, `steps` grouped by Book I «Безумец» / Book II «Британские боги» / Book III «Монастырь», `refs`, `conclusion`, `tables`.\n- Stages — scenario records with `part_of` = the campaign and `order`: `…/scenario/opening-night` (1, Prologue «Opening Night», intro), `madman` (2, ch. 1 «The Madman»), `walk-in-the-park` (3, ch. 2 «A Walk in the Park»), `springer-mound` (4, ch. 3 «Springer Mound & the Canal»), `flight-north` (5, ch. 4 «The Flight North»), `carcosa` (6, ch. 5 «To Walk on the Earth in Carcosa»), `talk-of-goatswood` (7, ch. 6 «Talk of Goatswood»), `nugs-farm` (8, ch. 7 «Nug's Farm»), `brothers-of-the-yellow-sign` (9, ch. 8 «The Brothers of the Yellow Sign»), `viceroy-of-india` (10, ch. 9 «The Viceroy of India»), `thousand-miles` (11, ch. 10 «A Thousand Miles»), `to-drakmar` (12, ch. 11 «To Drakmar»), `upper-house` (13, ch. 12 «The Upper House»). Each stage record: `summary`, `keeper_info`, `hook`, `advice`, `steps` with `refs`, `conclusion` (incl. Sanity rewards), `tables`; scenes have `arc` = {scenario: the stage, part: the book's section heading, order}.\n- File prefixes (every book-scoped record except characters and stages): `campaign-` (introduction), `prologue-`, `madman-`, `park-`, `springer-`, `flight-`, `carcosa-`, `talk-`, `nug-`, `milan-` (ch. 8), `ship-` (ch. 9), `india-` (ch. 10), `drakmar-` (ch. 11), `house-` (ch. 12), `appendix-`. Slugs from the English names (6e book), e.g. `madman-st-agnes-asylum`.\n- Characters: `lokhmotya-korolya-ru/character/<english-name>`, no prefix (they cross chapters). A character is made by the unit whose pages print his statblock first (the book: «статистика приводится там, где персонаж впервые встречается»); other units link and send changes through proposals. Fixed: intro — `talbot-estus`, `michael-gillen`, `jean-hewart`, `george-keith`, `hannah-keith`, `walter-paige`; madman — `charles-highsmith`, `montague-edwards` (alias Майкл Эванс), `alexander-roby`, `lucius-harriwell`; park — `michael-coombs`, `lionel-trollope`, `grahame-roby`, `andrew-taylor`, `vincent-tuck`, `delia-morrison`, `peter-morrison`; springer-flight — `dick-blair`, `harold-jennings`, `lawrence-bacon`, `aleister-crowley`, `henry-lister`; carcosa — `quentin-spence`, `noss`, `yolanda`; goatswood — `wilfred-gresty`, `hillary-quarrie`, `will`, `atkinson`; milan-ship — `paulo-tuminardo`, `thomas-villiers`, `giuseppe-colombo`, `ian-gore`, `julian-knight`, `henrietta-tullis`, `francesca-nicholson`, `patricia-berry`, `stephen-thomas`; india — `sivakumar-patel`, `jigme-rinzing`; drakmar — `tsewan-pemba`, `carlo-schippone`; house — `malcolm-quarrie`, `roberto-anzalone`. Unnamed groups (cultists, Tcho-Tcho, porters, ghouls #1–#5) — one record per group with the numbered stat lines as printed.\n- Organizations: `…/organization/campaign-cult-of-hastur` (intro, «Культ Хастура» p. 17), `…/organization/nug-goat-cult` (goatswood, Atkinson's Cult of the Goat), `…/organization/milan-brothers-of-the-yellow-sign` (milan-ship, Il Fratelli del Signo Giallo). The Golden Dawn and the Tcho-Tcho of Mustang — by the unit that describes them, only if the text gives them more than a mention.\n- Mythos already in the base — link, never duplicate: creatures `coc:creature:hastur`, `king-in-yellow`, `spawn-of-hastur`, `byakhee`, `ghoul`, `dark-young-of-shub-niggurath`, `shub-niggurath`, `nug-and-yeb`, `ygolonac`, `glaaki`, `shantak`, `chaugnar-faugn`, `miri-nigri`; tomes `coc:tome:king-in-yellow`, `revelations-of-glaaki`; spells `coc:spell:call-dismiss-hastur`, `contact-hastur`, `summon-bind-byakhee`, `summon-bind-dark-young`, `contact-ghoul`, `send-dream`, `evil-eye`, `unspeakable-promise`, `yellow-sign`… (Grep `kb/spells`, `kb/tomes`, `kb/creatures` first). A known creature with its own numbers in this book → book-scoped creature with `instance_of` the shared one. **New spells and tomes** printed in your pages (Build Carcosa p. 49 → madman; Bespeak the End of the Day p. 73 and Alexander Roby's book → park; the Turner Codex → springer-flight) — create them as new shared files `kb/spells/<slug>.json`, `kb/tomes/<slug>.json` (English slug, only after a Grep shows they do not exist); anything else shared — proposals.\n\n### Places (Р-190, Р-209)\n\n- Shared cities `kb/locations/<slug>.json` (id `coc:location:<slug>`, `location_type: город`, `part_of: null`, model `kb/locations/kingsport.json`). **Existing — never rewrite, add only through proposals:** `london` (much text from «Маски» and «Pax Cthuliana»; London places of this book are book records with `part_of: coc:location:london`), `carcosa` (the city of Hastur; Carcosa's quarters of ch. 5 are book records `carcosa-…` with `part_of: coc:location:carcosa`), `bristol`. **New, each made only by its unit:** `hereford` (madman), `clare-melford` (village in Suffolk, springer-flight), `inverness` (springer-flight), `clotton` and `goatswood` (Severn valley villages, goatswood), `milan` (milan-ship), `bombay` and `benares` (india), `plateau-of-leng` (`location_type: область`, «Плато Ленг», house). A unit that needs a city of another unit links its id (expected to fail until it lands) and writes no copy.\n- Places outside a city — one area «Окрестности <города>» per city (`location_type: область`, book record): `madman-hereford-environs` (if the asylum stands outside Hereford), `flight-inverness-environs` (springer-flight; Cannich, Loch Mullardoch and the valley of the monoliths of ch. 5 go under it — carcosa unit), `nug-clotton-environs` (goatswood; Nug's farm, Mercy Hill, the woods). Nepal: `india-western-nepal` («Западный Непал и долина Кали-Гандаки», `область`, `part_of: null`, india unit) holds the route places of ch. 10–11 (Nautanwa, Butwal, Tansen, Pokhara, Kag, Tayen…: a record only if the text describes something there, else a line in the stage `steps`); `drakmar-drakmar-valley` (drakmar, `part_of` the region) holds Drakmar, its monastery and caves; the Upper House is `house-upper-house` (`здание`, `part_of: coc:location:plateau-of-leng`). Ships — `location_type: корабль`, `part_of: null` (Р-189): `ship-viceroy-of-india` (milan-ship). Under each city — districts by the map, places in the district where they stand on the map; list captions (`keeper_hint`) neutral, no secrets, clues or outcomes (Р-209).\n\n### Maps (Р-206)\n\n`map` record `lokhmotya-korolya-ru/map/<prefix>-<slug>` with the image: render the page (`pdftoppm -r 200 -f <p> -l <p> -png`), crop to the map with PIL, save `app/maps/tatters-<prefix>-<slug>.jpg` (quality 85, ≤ 2000 px wide), `width`/`height` of the image, `location` = the city or area, `shows` = the place it shows; **spots on every printed number and label** (find them with `tesseract … tsv`, check each by eye on a crop); every key number gets a place record (`number`, `part_of` by the map). Map pages found: 22 (theatre «Scala»), 43 and 45 (St Agnes asylum and around it), 64 (St James's Park), 88–89 (Springer Mound, Jennings farm, the monoliths), 97 (Lawrence Bacon's house), 170 (Clotton and Goatswood), 180 (Nug's farm), 206 (Villiers' workshop), 231 (Bombay), 237 (Western Nepal), 265 and 269 (Drakmar, the monastery Te), 279 (the caves / the Upper House) — look at every picture of your pages, there may be more.\n\n### Handouts\n\nThe player handouts «Раздаточный материал «Лохмотья Короля» #N» are printed in Appendix H, pp. 328–359 (many as pictures: read the image; the newspaper texts may be only there); some are also in the chapter text. Each is made by the unit whose chapter uses it: intro #1–#4, madman #5–#7, park #8–#11, springer-flight #12–#17, carcosa #18–#19, goatswood #20–#24, milan-ship #25–#27, india #28, drakmar #29–#30 (Carlo Schippone's diary: chapter text pp. 270–273 and Appendix H pp. 356–359). Slug `<prefix>-handout-<N>-<slug>`; the text as printed in Russian; the picture of an image handout goes to `images` (crop it from the page render, add it with `pipeline/art/add_images.py` → `app/art/handouts/`, Р-165). Read your Appendix H pages too (add them to your page list).\n\n### Writing\n\n- Dice with lowercase d everywhere, even in quotes (`1d10/1d100`, Р-27); distances, heights and weights in metric even in quotes (the book keeps miles, feet, yards and pounds of the original — convert, Р-64); money as printed (£/s/d).\n- Statblocks as printed (Р-25): the Russian edition gives 7e values. Book misprints — keep as printed and add `errata` (Р-35); a changed value goes to `corrections`.\n- `axes.era` [\"1920s\"] (the campaign runs October 1928 – March 1930), `axes.ruleset` \"core\".\n- Coverage: `checks/20261113-tatters/<your unit>.md` — every heading of your pages → record(s), «не взято» with the reason; proposals: `checks/20261113-tatters/proposals-<unit>.json`. Keep scratch files in your own scratchpad subfolder named after your unit; run tools as `python -B …`.\n- Order: intro first (campaign and stage ids are fixed, the others may run in parallel with it); appendices last — it links the dreams and timelines to the records of the chapter units.",
+  "units": [
+    {
+      "name": "intro",
+      "book_id": "lokhmotya-korolya-ru",
+      "pages": "1-34 319-321 328-332",
+      "physical": "1-34 319-321 328-332 (printed = physical)",
+      "target": "Introduction (campaign record `tatters-of-the-king`: overview of Books I–III, Hastur and his influence, Taurus, Aldebaran and the Hyades, dreams and visions (overview; the texts are Appendix D — appendices), plot and plotters 1905–1928, the cast of NPCs pp. 9–10, the Cult of Hastur, notes on NPC entries); Prologue «Opening Night» (stage `opening-night`: joining the investigators, starting the story, presenting the play «Каркоза», the riot, the conversation with Talbot Estus, Estus's bibliography as a table, «Король в жёлтом», prologue summary and cast stats); Appendix E «Running the campaign» (`advice` of the campaign record, pp. 319–321 up to Appendix F); handouts #1–#4",
+      "owns": [
+        "kb/books/lokhmotya-korolya-ru/scenarios/tatters-of-the-king.json, opening-night.json",
+        "kb/books/lokhmotya-korolya-ru/{scenes,items,handouts,organizations,locations,maps}/campaign-*, prologue-* (new files)",
+        "kb/books/lokhmotya-korolya-ru/characters/{talbot-estus,michael-gillen,jean-hewart,george-keith,hannah-keith,walter-paige}.json",
+        "kb/tables/tatters-campaign-*, tatters-prologue-* (new files)",
+        "app/maps/tatters-prologue-*, app/maps/tatters-campaign-*",
+        "checks/20261113-tatters/intro.md, proposals-intro.json"
+      ],
+      "sites": "London (exists — book places with part_of coc:location:london: the «Scala» theatre, map p. 22)"
+    },
+    {
+      "name": "madman",
+      "book_id": "lokhmotya-korolya-ru",
+      "pages": "35-59 333-335",
+      "physical": "35-59 333-335 (printed = physical)",
+      "target": "Book I, chapter 1 «The Madman» — stage `madman`: interview with Dr Highsmith, news coverage of the Roby murders, St Agnes asylum (British asylums sidebar, preparing the interview, Montague Edwards, Alexander Roby and his state of mind, the new spell Build Carcosa, Summoning Hastur, questioning Evans and Harriwell, the secret of the asylum), the Hereford police, investigating a new murder, Edwards that night, the dream vision, chapter summary; handouts #5–#7; maps pp. 43, 45",
+      "owns": [
+        "kb/books/lokhmotya-korolya-ru/scenarios/madman.json",
+        "kb/books/lokhmotya-korolya-ru/*/madman-* (new files)",
+        "kb/books/lokhmotya-korolya-ru/characters/{charles-highsmith,montague-edwards,alexander-roby,lucius-harriwell}.json",
+        "kb/locations/hereford.json",
+        "kb/spells/build-carcosa.json (new)",
+        "kb/tables/tatters-madman-*",
+        "app/maps/tatters-madman-*",
+        "checks/20261113-tatters/madman.md, proposals-madman.json"
+      ],
+      "sites": "Hereford (new shared city) and «Окрестности Херефорда»: St Agnes asylum; London (exists): Roby family house"
+    },
+    {
+      "name": "park",
+      "book_id": "lokhmotya-korolya-ru",
+      "pages": "60-84 336-339",
+      "physical": "60-84 336-339 (printed = physical)",
+      "target": "Book I, chapter 2 «A Walk in the Park» — stage `walk-in-the-park`: Michael Coombs, Dr Trollope at home, the byakhee whistle, Coombs and Trollope's death, Inspector Andrew Taylor, Trollope's posthumous letter, investigation options (Coombs's coming attack, Der Wanderer, Grahame Roby and the police, the Roby household staff, Vincent Tuck and his strange report, Delia Morrison, searching for Malcolm Quarrie and Edwards, Lawrence Bacon, Talbot Estus, getting Alexander Roby's book), the new spell Bespeak the End of the Day, chapter summary, sidebar «Британские боги: религия и миф…»; handouts #8–#11; map p. 64",
+      "owns": [
+        "kb/books/lokhmotya-korolya-ru/scenarios/walk-in-the-park.json",
+        "kb/books/lokhmotya-korolya-ru/*/park-* (new files)",
+        "kb/books/lokhmotya-korolya-ru/characters/{michael-coombs,lionel-trollope,grahame-roby,andrew-taylor,vincent-tuck,delia-morrison,peter-morrison}.json",
+        "kb/spells/bespeak-the-end-of-the-day.json (new)",
+        "kb/tomes/<Alexander Roby's book>.json (new)",
+        "kb/tables/tatters-park-*",
+        "app/maps/tatters-park-*",
+        "checks/20261113-tatters/park.md, proposals-park.json"
+      ],
+      "sites": "London (exists): St James's Park, Trollope's house (Long Acre), Liverpool Road and other addresses"
+    },
+    {
+      "name": "springer-flight",
+      "book_id": "lokhmotya-korolya-ru",
+      "pages": "85-123 339-343",
+      "physical": "85-123 339-343 (printed = physical)",
+      "target": "Book I, chapters 3 «Springer Mound & the Canal» (stage `springer-mound`: Clare Melford, Jennings farm, the monoliths, the killing, byakhee, Harold Jennings, the farmhouse, Springer Mound, the village, Highsmith's letter, Lawrence Bacon's story, his house in North London, Wilfred Gresty's first letter, meeting on the Regent's Canal, Bacon's death, the Unspeakable Possessed, searching Bacon's house, ghouls, notes on the Turner Codex, summary) and 4 «The Flight North» (stage `flight-north`: Roby's release hearing, identifying the body, searching for Roby and Edwards, Bacon's obituary, Aleister Crowley, the wild party, Edwards's final plans and deadlines, getting to Scotland, geography, passage of time, Henry Lister, Inverness, the road and the forest, desecrating the monoliths, summary); handouts #12–#17; maps pp. 88–89, 97",
+      "owns": [
+        "kb/books/lokhmotya-korolya-ru/scenarios/springer-mound.json, flight-north.json",
+        "kb/books/lokhmotya-korolya-ru/*/springer-*, flight-* (new files)",
+        "kb/books/lokhmotya-korolya-ru/characters/{dick-blair,harold-jennings,lawrence-bacon,aleister-crowley,henry-lister}.json",
+        "kb/locations/clare-melford.json, inverness.json",
+        "kb/tomes/turner-codex.json (new)",
+        "kb/tables/tatters-springer-*, tatters-flight-*",
+        "app/maps/tatters-springer-*, app/maps/tatters-flight-*",
+        "checks/20261113-tatters/springer-flight.md, proposals-springer-flight.json"
+      ],
+      "sites": "Clare Melford (new shared village, Suffolk): the «Railway» pub, Jennings farm, Springer Mound, the monoliths; London (exists): Bacon's house, the Regent's Canal; Hereford (madman's city): the release hearing; Inverness (new shared city) and «Окрестности Инвернесса» (`flight-inverness-environs`)"
+    },
+    {
+      "name": "carcosa",
+      "book_id": "lokhmotya-korolya-ru",
+      "pages": "124-158 344-345",
+      "physical": "124-158 344-345 (printed = physical)",
+      "target": "Book I, chapter 5 «To Walk on the Earth in Carcosa» — stage `carcosa`: Cannich and the shadows of Yog-Sothoth, Carcosa in the play and in play (a city in motion, its citizens, navigation, getting lost, masks), the encounters 1–8 (city gates, esplanade, canal bridge, amphitheatre — Quentin Spence, northern quarter — Noss, sculpture museum — Alexander Roby, Lake Hali, the palace — Coombs, Yolanda), stopping the play, Hastur's influence and arrival, the Unspeakable Possessed, byakhee, leaving Carcosa, the fate of Cannich, aftermath (press, Yolanda, Roby and the cultists, the academic paper), summary; handouts #18–#19",
+      "owns": [
+        "kb/books/lokhmotya-korolya-ru/scenarios/carcosa.json",
+        "kb/books/lokhmotya-korolya-ru/*/carcosa-* (new files)",
+        "kb/books/lokhmotya-korolya-ru/characters/{quentin-spence,noss,yolanda}.json",
+        "kb/tables/tatters-carcosa-*",
+        "app/maps/tatters-carcosa-*",
+        "checks/20261113-tatters/carcosa.md, proposals-carcosa.json"
+      ],
+      "sites": "Carcosa (exists — places 1–8 as book records part_of coc:location:carcosa, changes to carcosa.json by proposals); Cannich, Loch Mullardoch, the valley — under `flight-inverness-environs` (springer-flight)"
+    },
+    {
+      "name": "goatswood",
+      "book_id": "lokhmotya-korolya-ru",
+      "pages": "159-192 346-350",
+      "physical": "159-192 346-350 (printed = physical)",
+      "target": "Book II «British Gods», chapters 6 «Talk of Goatswood» (stage `talk-of-goatswood`: the gap year, Gresty's arrest, Gresty in court, interviewing Gresty, Hawksmoor's churches, sidebar Shub-Niggurath, Y'Golonac and Nug, Mercy Hill and Hillary Quarrie, summary) and 7 «Nug's Farm» (stage `nugs-farm`: the bus to Clotton, the village, the walk to the farm and Goatswood, teacher and pupil, Hillary Quarrie, the farm, Gresty arrives, the lull, Malcolm's letters and the decision, Revelations of Glaaki and the papers, the attack, summoning/binding the Dark Young, leaving the Severn valley, Hillary and the Goatswood cult, summary, stats of the attackers and Atkinson); handouts #20–#24; maps pp. 170, 180",
+      "owns": [
+        "kb/books/lokhmotya-korolya-ru/scenarios/talk-of-goatswood.json, nugs-farm.json",
+        "kb/books/lokhmotya-korolya-ru/*/talk-*, nug-* (new files)",
+        "kb/books/lokhmotya-korolya-ru/characters/{wilfred-gresty,hillary-quarrie,will,atkinson}.json",
+        "kb/locations/clotton.json, goatswood.json",
+        "kb/tables/tatters-talk-*, tatters-nug-*",
+        "app/maps/tatters-talk-*, app/maps/tatters-nug-*",
+        "checks/20261113-tatters/goatswood.md, proposals-goatswood.json"
+      ],
+      "sites": "London (exists): the court, Hawksmoor's churches; Clotton and Goatswood (new shared villages, Severn valley); «Окрестности Клоттона» (`nug-clotton-environs`): Nug's farm, Mercy Hill, the woods"
+    },
+    {
+      "name": "milan-ship",
+      "book_id": "lokhmotya-korolya-ru",
+      "pages": "193-226 350-352",
+      "physical": "193-226 350-352 (printed = physical)",
+      "target": "Book III «Монастырь», chapters 8 «The Brothers of the Yellow Sign» (stage `brothers-of-the-yellow-sign`: travel options, arriving in Milan, the guide, Milan in 1929, the rise of fascism, Il Fratelli del Signo Giallo, the pilgrimage of grace, the Navigli and the bookshop, Thomas Villiers, Giuseppe Colombo, the interview and Villiers's workshop, the Angel attacks, the university and the mention of Drakmar, if the investigators do not intervene, summary) and 9 «The Viceroy of India» (stage `viceroy-of-india`: running the ship sessions, the companions at table, the ship itself, dreams of Hastur, events on board, drama on the Bombay dock, summary); handouts #25–#27; map p. 206",
+      "owns": [
+        "kb/books/lokhmotya-korolya-ru/scenarios/brothers-of-the-yellow-sign.json, viceroy-of-india.json",
+        "kb/books/lokhmotya-korolya-ru/*/milan-*, ship-* (new files)",
+        "kb/books/lokhmotya-korolya-ru/characters/{paulo-tuminardo,thomas-villiers,giuseppe-colombo,ian-gore,julian-knight,henrietta-tullis,francesca-nicholson,patricia-berry,stephen-thomas}.json",
+        "kb/locations/milan.json",
+        "kb/tables/tatters-milan-*, tatters-ship-*",
+        "app/maps/tatters-milan-*, app/maps/tatters-ship-*",
+        "checks/20261113-tatters/milan-ship.md, proposals-milan-ship.json"
+      ],
+      "sites": "Milan (new shared city): the Navigli, the bookshop, Villiers's workshop, the university; the liner «Viceroy of India» (`ship-viceroy-of-india`, корабль); the Bombay dock — a place part_of coc:location:bombay (india's city)"
+    },
+    {
+      "name": "india",
+      "book_id": "lokhmotya-korolya-ru",
+      "pages": "227-249 353",
+      "physical": "227-249 353 (printed = physical)",
+      "target": "Book III, chapter 10 «A Thousand Miles» — stage `thousand-miles`: the guide Sivakumar Patel, the King's coming and dreams, tracing the Italian expedition in Bombay, Bombay and India, the holy man's prophecy, leaving Bombay by train, the railway journey, the Benares riots, equipping for Nepal, entering Nepal, Mustang and the Tcho-Tcho, Jigme Rinzing, the Italian expedition, across the border, summary; handout #28; maps pp. 231, 237",
+      "owns": [
+        "kb/books/lokhmotya-korolya-ru/scenarios/thousand-miles.json",
+        "kb/books/lokhmotya-korolya-ru/*/india-* (new files)",
+        "kb/books/lokhmotya-korolya-ru/characters/{sivakumar-patel,jigme-rinzing}.json",
+        "kb/locations/bombay.json, benares.json",
+        "kb/tables/tatters-india-*",
+        "app/maps/tatters-india-*",
+        "checks/20261113-tatters/india.md, proposals-india.json"
+      ],
+      "sites": "Bombay (new shared city, map p. 231), Benares (new shared city); the region «Западный Непал и долина Кали-Гандаки» (`india-western-nepal`, map p. 237): Nautanwa, the border"
+    },
+    {
+      "name": "drakmar",
+      "book_id": "lokhmotya-korolya-ru",
+      "pages": "250-274 354-359",
+      "physical": "250-274 354-359 (printed = physical)",
+      "target": "Book III, chapter 11 «To Drakmar» — stage `to-drakmar`: way of life, the party's progress, going alone, eighteen days to Drakmar (day by day), mountain sickness, Rigsum Gonpo, Schippone's diary (handout #30, Russian text pp. 270–273, Appendix H pp. 356–359), tales in Tayen, the ascent and its effect, the investigators on their own, the firefight, inside the monastery Te, summary; handout #29; maps pp. 265, 269",
+      "owns": [
+        "kb/books/lokhmotya-korolya-ru/scenarios/to-drakmar.json",
+        "kb/books/lokhmotya-korolya-ru/*/drakmar-* (new files)",
+        "kb/books/lokhmotya-korolya-ru/characters/{tsewan-pemba,carlo-schippone}.json",
+        "kb/tables/tatters-drakmar-*",
+        "app/maps/tatters-drakmar-*",
+        "checks/20261113-tatters/drakmar.md, proposals-drakmar.json"
+      ],
+      "sites": "places of the route under `india-western-nepal` (Pokhara, Kag, Tayen, Rigsum Gonpo); `drakmar-drakmar-valley` (область): Drakmar, the monastery Te"
+    },
+    {
+      "name": "house",
+      "book_id": "lokhmotya-korolya-ru",
+      "pages": "275-307",
+      "physical": "275-307 (printed = physical)",
+      "target": "Book III, chapter 12 «The Upper House» — stage `upper-house`: exploring the caves, notes on the ending, nightmares, is it a trap, the horror from the hills (Chaugnar Faugn and the Miri Nigri, the Tcho-Tcho, the King in Yellow and the Tcho-Tcho, Roberto Anzalone), the gate, the Plateau of Leng, Malcolm Quarrie and the talk with him, the shantak encounter, the Upper House (pipes, navigation, corridors, exhaustion, its heart), the King in Yellow's way to Earth (the guide, the step onto Earth), stopping the King (self-sacrifice, killing, escape, defiance and suicide), afterword «An investigator in Carcosa», the end of the campaign; map p. 279",
+      "owns": [
+        "kb/books/lokhmotya-korolya-ru/scenarios/upper-house.json",
+        "kb/books/lokhmotya-korolya-ru/*/house-* (new files)",
+        "kb/books/lokhmotya-korolya-ru/characters/{malcolm-quarrie,roberto-anzalone}.json",
+        "kb/locations/plateau-of-leng.json",
+        "kb/tables/tatters-house-*",
+        "app/maps/tatters-house-*",
+        "checks/20261113-tatters/house.md, proposals-house.json"
+      ],
+      "sites": "the caves of Drakmar (under `drakmar-drakmar-valley`); the Plateau of Leng (new shared область `plateau-of-leng`); the Upper House (`house-upper-house`, здание)"
+    },
+    {
+      "name": "appendices",
+      "book_id": "lokhmotya-korolya-ru",
+      "pages": "308-318 321-328",
+      "physical": "308-318 321-328 (printed = physical)",
+      "target": "Appendices (runs after the chapter units): A «Timeline to the start of the campaign», B «Projected timeline from the start», C «Timeline of the Italian expedition» — tables `coc:table:tatters-timeline-before-campaign`, `tatters-timeline-campaign`, `tatters-timeline-italian-expedition` with refs to the chapter records; D «Dreams, visions, messages» — handouts `appendix-dream-*` (the text read to the dreamer) and a table of them, each linked to the scene where the chapter gives it; F «Notes on London» (geography, money, transport, food, clubs, the British Museum reading room, society) — new tables `kb/tables/tatters-london-*` and proposals to `coc:location:london`; G «Bibliography, sources and inspirations» — a proposal of a short note for the campaign record or «не взято» with the reason; check that every handout #1–#30 of Appendix H (pp. 328–359) was taken by a chapter unit",
+      "owns": [
+        "kb/books/lokhmotya-korolya-ru/*/appendix-* (new files)",
+        "kb/tables/tatters-timeline-*, tatters-dreams-*, tatters-london-* (new files)",
+        "checks/20261113-tatters/appendices.md, proposals-appendices.json"
+      ],
+      "sites": "London (exists — proposals only)"
+    }
+  ]
+}

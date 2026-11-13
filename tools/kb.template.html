@@ -1339,7 +1339,15 @@ function occupationCard(c) {
 
 // maps (Р-120): a book map with spots over the printed numbers; a spot opens a place or another map of the same city
 const MAPS = (DATA.maps || []).slice().sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
-const mapsOf = cityId => MAPS.filter(m => m.location === cityId);
+// a city's maps: first the plans of the city itself, then of its districts and areas, then of single places
+// (buildings, floorplans), each group by book and order — the city plan opens first, not a floorplan of some scenario
+const mapRank = m => {
+  const s = m.shows && m.shows !== m.location ? byId(m.shows) : null;
+  if (!s) return 0;
+  return ['район', 'область', 'зона'].includes(s.location_type) ? 1 : 2;
+};
+const mapsOf = cityId => MAPS.filter(m => m.location === cityId)
+  .map((m, i) => [m, i]).sort(([a, i], [b, j]) => mapRank(a) - mapRank(b) || i - j).map(([m]) => m);
 const mapById = id => MAPS.find(m => m.id === id);
 const spotsAt = ids => MAPS.flatMap(m => m.spots.filter(s => ids.includes(s.target)).map(s => [m, s]));
 // mapFocus: ids to highlight on the next map render (set by «Показать на карте»)

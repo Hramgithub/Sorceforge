@@ -8,7 +8,7 @@ description: Выпуск изменений базы знаний — сбор�
 1. `python tools/check.py` — ошибок 0.
 2. `python tools/build_viewer.py`; если менялся показ — проверить в браузере (preview `kb-viewer`, порт 8765,
    новый `?r=N` в адресе, чтобы страница не бралась из кэша).
-3. Коммит сразу, вместе с `app/kb.html` (и `app/index.html`, если изменился), push в `main`.
+3. Коммит сразу (данные, `app/index.html`, если изменился; собранный `app/kb.html` в git не хранится — Р-231, он собирается заново при выкладке), push в `main`.
    Сообщение — по-английски, с номером решения; последняя строка —
    `Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>`. Force push — только с подтверждения владельца.
    Перед коммитом — `git status`: в коммит не попадают `.cache/`, `.claude/launch.json`, временные копии

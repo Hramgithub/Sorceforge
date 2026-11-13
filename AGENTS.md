@@ -15,8 +15,8 @@
 - Rules of writing records: `docs/conventions.md` (one source; briefs include it verbatim). The import
   pipeline and its tools: `pipeline/README.md`.
 - Check every change: `python tools/check.py --changed` (schemas, references across the whole base,
-  writing rules, file format); rebuild the viewer with `python tools/build_viewer.py` and commit
-  `app/kb.html` with the data.
+  writing rules, file format); rebuild the viewer with `python tools/build_viewer.py` to look at it; the built
+  `app/kb.html` is not kept in git (Р-231) — it is built again for every deploy.
 - Summary of the base (records by kind, pictures, source books): `python tools/status.py [--md]`; what is
   done and what is not — `docs/handoff/20261021-kb-state.md`. Workflows for Claude — `.claude/skills/`
   (kb-import, kb-rules-book, kb-terms, kb-integrate, kb-check, kb-art, kb-release, kb-decision, viewer-change).

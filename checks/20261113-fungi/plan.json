@@ -1,0 +1,112 @@
+{
+  "book_id": "griby-s-yuggota-ru",
+  "goal": "queue item 9 (Р-228): the campaign «Грибы с Юггота» playable from the base, as «Маски Ньярлатхотепа»: campaign, chapters as stages, scenes, places, characters, items, handouts, organizations, maps, tables.",
+  "decision": "Р-228, Р-190, Р-206, Р-209",
+  "check_dir": "checks/20261113-fungi",
+  "models": [
+    "kb/books/pobeg-iz-innsmuta-ru/scenarios/reyd-na-innsmut.json",
+    "kb/books/pobeg-iz-innsmuta-ru/scenes/angel-khranitel.json",
+    "kb/books/pobeg-iz-innsmuta-ru/handouts/arkham-advertiser-spetsvypusk.json",
+    "kb/locations/kingsport.json",
+    "kb/books/pulp-cthulhu-en/maps/wisteria-island.json",
+    "kb/books/masks-of-nyarlathotep-en/scenarios/peru.json",
+    "kb/books/osobnyaki-bezumiya-ru/scenarios/code-secret-code.json"
+  ],
+  "extra": "## This work (Р-228)\n\nThe campaign «Грибы с Юггота» (Keith Herber, Chaosium 1984; Russian edition registered as `griby-s-yuggota-ru`, edition `official`, 100 PDF pages, text layer on every text page) goes into the base whole, as «Маски Ньярлатхотепа» did. Your unit is one part of it. The Russian text is the source, including all numbers: the statblocks are converted to 7e in the Russian edition (СИЛ 75, НАР, ПЗ…). The English originals are only for checking names (`name.en`) and obvious misprints of dates, sums and distances (put those in `errata`, the value stays as printed): `C:\\_Hobby\\Yandex.Disk\\НРИ\\1_Зов Ктулху\\1_Библиотека\\Кампании\\Грибы с Юггота (The Fungi from Yuggoth)\\[EN 6e] Call of Cthulhu - 1920 - The Fungi from Yuggoth.pdf` (in fact the 1984 original, the same text, OCR text layer: `pdftotext -layout -f N -l N`; its page numbers differ from the Russian) and `[EN 5e] Day of the Beast.pdf` (the 1998 expanded edition, other chapters — names only). Their stats are of the old edition (3–18): never take numbers from them.\n\n### Pages\n\nThe Russian pages carry no printed numbers; the only numbers are the Russian contents (phys. 4). Printed page = physical − 1 (contents: Introduction 5 → phys. 6, Chapter I 8 → phys. 9 … Appendix 77 → phys. 78; the English scan page phys. 5 shows «4»). The contents prints Chapter V at 39, but it starts on phys. 41 (printed 40): a misprint of the contents. Read pages with `python -B pipeline/source/pages.py show griby-s-yuggota-ru <phys> --physical` and look at every page with numbers, a map or a handout on its image (`pages.py image … --physical`). In `sources` give `physical_page` and `printed_page` = physical − 1 (none for phys. 1–3, 5, 77, 100: English scan pages — cover, credits, Lovecraft portrait, skull art, back cover). Keep scratch files in your own scratchpad subfolder named after your unit; run tools as `python -B …`.\n\n### Fixed ids (all units use them; a reference to a record another unit is still writing is expected to fail `check.py` until that unit lands — list such refs in the report, do not drop them)\n\n- Campaign: `griby-s-yuggota-ru/scenario/fungi-from-yuggoth` (unit intro), a `scenario` record with `part_of: null` like `kb/books/masks-of-nyarlathotep-en/scenarios/masks-of-nyarlathotep.json`: summary, keeper_info (the prophecy, the Brotherhood of the Beast, New World, the Day of the Beast), hook, advice (time 1928–1929, chapters played separately, expanding the campaign), `steps` = the stages with refs, `conclusion`.\n- Stages (scenario records with `part_of` = the campaign and `order`, like `kb/books/masks-of-nyarlathotep-en/scenarios/peru.json`): `…/scenario/dreamer` (1, Глава I «Сновидец», unit intro), `…/scenario/thing-in-the-well` (2, Глава II «Нечто в колодце», unit castle), `…/scenario/castle-dark` (3, Глава III «Замок Тёмный», castle), `…/scenario/sands-of-time` (4, Глава IV «Пески времени», sands), `…/scenario/mountains-of-the-moon` (5, Глава V «Горы Луны», moon), `…/scenario/by-the-bay-1` (6, Глава VI «В гавани: часть I», bay), `…/scenario/by-the-bay-2` (7, Глава VII «В гавани: часть II», bay), `…/scenario/day-of-the-beast` (8, Глава VIII «День Зверя» with the conclusion «Подрыв Братства», final), `…/scenario/halls-of-celaeno` (9, Дополнительная сцена 1 «Залы Целаено», final), `…/scenario/voice-out-of-time` (10, Дополнительная сцена 2 «Голос из вневремени», final). The optional scenes are stages marked optional in the campaign `steps`.\n- Organizations of the whole campaign (made by unit final from the Appendices; the other units link them): `…/organization/brotherhood-of-the-beast` (Братство Зверя, Прил. Б), `…/organization/new-world-incorporated` (корпорация «Новый Мир», НМ, the Chandler Foundation inside it, Прил. Г), `…/organization/sons-of-terror` (Сыны Террора, Прил. Д), `…/organization/ron-paku-temples` (храмы Рон-Паку, Прил. Е).\n- Characters who act in several chapters (made once by the named unit, from the pages with their statblock; other units link them and send new facts as proposals): `…/character/paul-lemond` (Пол ЛеМонд, intro), `…/character/irene-lemond` (Ирен ЛеМонд, intro), `…/character/herb-whitefield` (Герб Уайтфилд, intro), `…/character/baron-hauptmann` (барон Гауптман, castle; Прил. Б facts → proposals of final), `…/character/abd-katif` (Абд Катиф, sands), `…/character/ronald-galloway` (доктор Рональд Гэллоуэй, sands), `…/character/jonathan-harris` (Джонатан Харрис, moon), `…/character/lang-fu` (Лэнг-Фу, bay), `…/character/doctor-dieter` (доктор Дитер, bay), `…/character/edward-chandler` (Эдвард Чандлер, final, Прил. В). Nofru-Ka already exists as `starter-edge-of-darkness-ru/character/nofru-ka`: link it; unit final proposes moving it to the shared `coc:character:nofru-ka` (Р-154) with the facts of Appendix A. Other characters — slug from the name, made by the unit whose pages introduce them.\n- Every other book-scoped record of yours (scene, item, handout, map, location) has a slug starting with a prefix of your unit (table below): intro — `campaign-`, `dreamer-`; castle — `well-`, `castle-`; sands — `sands-`; moon — `moon-`; bay — `bay-`; final — `beast-`, `celaeno-`, `voice-`, `appendix-`. Tables — `kb/tables/fungi-<prefix>-<slug>.json`; map images — `app/maps/fungi-<prefix>-<slug>.jpg`.\n\n### Places (Р-190, Р-209)\n\n- Cities are shared records in `kb/locations/` (id `coc:location:<slug>`, `location_type: город`, `part_of: null`, model `kb/locations/kingsport.json`). Grep `kb/locations/` first. Existing ones are never rewritten — add your facts and refs through proposals: `new-york`, `new-york-environs`, `buffalo` (intro), `boston` (castle), `cairo` (sands, final), `lima` (moon), `chicago` (final). New shared cities are made only by the unit named here: `klausenburg` (Клаусенбург, alias Клуж, Cluj) and `klausenburg-environs` (castle); `lima-environs` (moon); `san-francisco`, `san-francisco-environs`, `oakland` (bay); `boston-environs` only if Chapter II really has places outside Boston (castle). Another city you meet — propose it in your report, do not create it.\n- A place outside a city goes under «Окрестности <города>» (`<city>-environs`, `location_type: область`, model `kb/locations/new-york-environs.json`): the village Drovosna, Munte Mare and Castle Hauptmann → `klausenburg-environs`; Huancucho, the NW mine and the Andes camp → `lima-environs`; Pearl Beach → `san-francisco-environs`; the upstate New York sanatorium → `new-york-environs`. Egypt: «Окрестности Каира», Giza and the Great Sphinx exist only as records of «Маски» (`masks-of-nyarlathotep-en/location/egypt-cairo-environs`, `…/egypt-giza`, `…/egypt-great-sphinx`): link them as `part_of` (the desert tomb of Nofru-Ka and the Valley of the Winds under the Cairo environs; the Sphinx scenes of Chapter VIII under Giza) and propose moving them to shared records (Р-154) — never rewrite them. Celaeno and its Great Library — top place of unit final (`location_type` as fits, `part_of: null`), check `kb/` for an existing record first.\n- Districts, buildings and rooms — `kb/books/griby-s-yuggota-ru/locations/<prefix>-<slug>.json`, `part_of` the shared city (or your building).\n\n### What to make\n\n- Stage record: `summary`, `keeper_info` (what really happens), `hook` (the «Информация для сыщиков» and how the investigators arrive), `advice` (the «Хранителю на заметку» notes), `steps` with `refs`, `conclusion` («ФИНАЛ», with Sanity rewards), `tables`.\n- Scenes: every place visit and event of «СЦЕНЫ» retold fully for play (`arc` = {scenario: stage, part: the book's heading, order}); `where`, `participants`, `mechanics`, `outcome`.\n- Characters with statblocks as printed (Р-25), creatures (known Mythos creatures — `instance_of` the shared `coc:creature:*`: Grep `kb/creatures/` — Nyogtha, star vampire, dhole, mi-go, chthonians, deep ones, Faceless God (the Beast) exist), items and artifacts (Гауптмановы окуляры, коммуникатор Иитиан, Плащ Жизни, посох…), tomes (Grep `kb/tomes/` — al-Azif and the Necronomicon exist), organizations, places with `residents`. New spells — draft them in your report (`kb/spells` is shared; Grep it first: Call/Dismiss Nyogtha, Create Barrier of Naach-Tith, Summon/Bind Star Vampire exist).\n- Handouts: the player text as printed. The book has 9 numbered handouts («Раздаточный материал 1–9», text in the chapter, again on phys. 82–85 and as styled pictures on phys. 87–99) and 9 supplementary ones («Доп. раздаточный материал 1–9», only as pictures on phys. 86–98 — read the text off the image: crop at 200 dpi, OCR `tesseract <png> - -l rus` if needed). Slugs keep them apart: `<prefix>-handout-N` and `<prefix>-extra-handout-N`; the picture of each handout goes to `images` (Р-165). The chapter text sometimes cites a «Раздаточный материал N» that is really a supplementary one: link the right one, note it in `errata` of the referring record.\n- Maps (Р-206): `map` with the image cropped from the page (render the page `pdftoppm -r 200 -f <phys> -l <phys> -png`, crop with PIL, `app/maps/fungi-<prefix>-<slug>.jpg`, quality 85, ≤ 2000 px wide), `width`/`height`, `location`, `shows`, and spots on every printed number and label (check each spot by eye on a crop; labels may be in English — translate the spot name, keep the printed label in the note). Every key number gets a place record. List captions — neutral, no spoilers (Р-209). Maps seen on the contact sheet (physical pages; confirm on your pages): 10 (New York State), 23 (Romania), 26, 28, 30 (castle plans and vaults), 34 (Egypt), 38 (the tomb), 43 (Peru), 54 (the Bay Area), 59 (Pearl Beach), 63 (the NW research station), 69 (Giza), 73 (the Library of Celaeno).\n- Rules of writing: dice with lowercase d everywhere, even in quotes (Р-27); metric units in all texts — miles → km, feet → m, yards → m (Р-64; the book uses miles and feet); characteristic abbreviations as in the Russian Keeper Rulebook. Book misprints — `errata` as printed (Р-35); obvious OCR breaks of the text layer («Сoдержание», «ЛеМодн», split words) are not misprints — just fix them in your text.\n- Russian names: as printed in this edition; known Mythos entities, spells and tomes follow the official forms already in the base (Grep, `python tools/terms.py <word>`); the book's other forms go to `aliases`.\n- `axes.era` [\"1920s\"] (the book suggests mid-1928 to 1929), `axes.ruleset` \"core\". No pregenerated investigators in this book.\n- Coverage: `checks/20261113-fungi/<unit>.md` — every heading of your pages → record(s), «не взято» with the reason. Proposals (changes to records you do not own): `checks/20261113-fungi/proposals-<unit>.json`.",
+  "units": [
+    {
+      "name": "intro",
+      "book_id": "griby-s-yuggota-ru",
+      "pages": "physical 1–15 (printed 4–14; phys. 1–3, 5 are English scan pages without numbers) and the handouts of Chapter I: phys. 82 (Раздаточный материал 1), 86 (Доп. 1), 87 (РМ 1 styled), 88 (Доп. 2, 3)",
+      "target": "Вступление «Пророчество» (phys. 6) and Основной сюжет «Братство Зверя» (phys. 7–8): the campaign record `fungi-from-yuggoth` with the ten stages in `steps` (fixed ids in «This work») and the campaign-level advice. Глава I «Сновидец» (phys. 9–15): stage `dreamer` — the disappearance of the medium Paul LeMond, New York and Buffalo (existing shared cities — proposals only), the house of Irene LeMond, Clarence Rogers and the cult of the Great Race, Bugsy Wexler and his thugs, the Yithian communicator, the upstate sanatorium (under `new-york-environs`), the map of New York State (phys. 10), finale. Makes Paul and Irene LeMond, Herb Whitefield. No new shared cities",
+      "owns": [
+        "kb/books/griby-s-yuggota-ru/scenarios/fungi-from-yuggoth.json, dreamer.json",
+        "kb/books/griby-s-yuggota-ru/*/campaign-*, dreamer-* (new files)",
+        "kb/books/griby-s-yuggota-ru/characters/<characters of Chapter I> (new files, incl. paul-lemond, irene-lemond, herb-whitefield)",
+        "kb/tables/fungi-campaign-*, fungi-dreamer-*",
+        "app/maps/fungi-campaign-*, fungi-dreamer-*",
+        "checks/20261113-fungi/intro.md, proposals-intro.json"
+      ],
+      "sites": "New York, Buffalo (existing)"
+    },
+    {
+      "name": "castle",
+      "book_id": "griby-s-yuggota-ru",
+      "pages": "physical 16–32 (printed 15–31) and the handouts of Chapters II–III: phys. 82 (РМ 2), 83 (РМ 3, 4, 5), 88 (Доп. 4), 89 (Доп. 5), 90–91 (РМ 2-а, 2-б styled), 92 (РМ 3 styled), 93 (РМ 4, 5 styled)",
+      "target": "Глава II «Нечто в колодце» (phys. 16–20): stage `thing-in-the-well` — the child murders in Boston (existing city — proposals), Dr. Cornwallis and his house, the well and the carriage house, the cemetery, Hauptmann's letters from Klausenburg, Hauptmann's eyepieces (item). Глава III «Замок Тёмный» (phys. 21–32): stage `castle-dark` — Klausenburg, the village Drovosna, the priest Jan Savechik's will, Castle Hauptmann on Munte Mare with its plans and vaults (maps phys. 23, 26, 28, 30), Nyogtha, the star vampire, Baron Hauptmann (statblock phys. 30–31), the tablets and scrolls (prophecy of Nofru-Ka, description of R'lyeh), finale. Creates the new shared `kb/locations/klausenburg.json`, `klausenburg-environs.json` (and `boston-environs.json` only if needed)",
+      "owns": [
+        "kb/books/griby-s-yuggota-ru/scenarios/thing-in-the-well.json, castle-dark.json",
+        "kb/books/griby-s-yuggota-ru/*/well-*, castle-* (new files)",
+        "kb/books/griby-s-yuggota-ru/characters/<characters of Chapters II–III> (new files, incl. baron-hauptmann)",
+        "kb/locations/klausenburg.json, klausenburg-environs.json, boston-environs.json (new)",
+        "kb/tables/fungi-well-*, fungi-castle-*",
+        "app/maps/fungi-well-*, fungi-castle-*",
+        "checks/20261113-fungi/castle.md, proposals-castle.json"
+      ],
+      "sites": "Boston (existing); Klausenburg, Drovosna, Castle Hauptmann (new)"
+    },
+    {
+      "name": "sands",
+      "book_id": "griby-s-yuggota-ru",
+      "pages": "physical 33–40 (printed 32–39) and the handout of Chapter IV: phys. 84 (РМ 6), 94 (РМ 6 styled)",
+      "target": "Глава IV «Пески времени»: stage `sands-of-time` — Cairo (existing city — proposals), the Miskatonic expedition of Dr. Galloway in the Valley of the Winds 100 miles west of Cairo, the desert road and the camel trek past Giza (the Chandler Foundation mooring tower), Kemal's desert raiders, the hidden cave and the shade of Nofru-Ka, the tomb of Nofru-Ka (maps phys. 34, 38), Abd Katif the Brotherhood agent (statblock), the mummy, the dhole scroll, finale. Places outside Cairo under `masks-of-nyarlathotep-en/location/egypt-cairo-environs` (link; propose moving it to a shared record). No new shared cities",
+      "owns": [
+        "kb/books/griby-s-yuggota-ru/scenarios/sands-of-time.json",
+        "kb/books/griby-s-yuggota-ru/*/sands-* (new files)",
+        "kb/books/griby-s-yuggota-ru/characters/<characters of Chapter IV> (new files, incl. abd-katif, ronald-galloway)",
+        "kb/tables/fungi-sands-*",
+        "app/maps/fungi-sands-*",
+        "checks/20261113-fungi/sands.md, proposals-sands.json"
+      ],
+      "sites": "Cairo (existing), the Western Desert"
+    },
+    {
+      "name": "moon",
+      "book_id": "griby-s-yuggota-ru",
+      "pages": "physical 41–51 (printed 40–50; the contents prints 39 for the chapter start) and the handouts of Chapter V: phys. 84 (РМ 7), 95 (Доп. 6, 7), 96 (РМ 7 styled), 97 (Доп. 8)",
+      "target": "Глава V «Горы Луны»: stage `mountains-of-the-moon` — Paul LeMond's vision of the Peruvian earthquakes, Lima (existing city — proposals), the village Huancucho and Victor's shop with the treasure map, the Peruvian army patrol, the New World mining station and Jonathan Harris (statblock), Peel and the rebels, the mine doctor, the mi-go and the Blue John mineral, the cylinders room, the Child of Yig and its spell, Ngansa and his paste, the map of Peru (phys. 43), finale. Creates the new shared `kb/locations/lima-environs.json` (Huancucho, the mine, the Andes camp)",
+      "owns": [
+        "kb/books/griby-s-yuggota-ru/scenarios/mountains-of-the-moon.json",
+        "kb/books/griby-s-yuggota-ru/*/moon-* (new files)",
+        "kb/books/griby-s-yuggota-ru/characters/<characters of Chapter V> (new files, incl. jonathan-harris)",
+        "kb/locations/lima-environs.json (new)",
+        "kb/tables/fungi-moon-*",
+        "app/maps/fungi-moon-*",
+        "checks/20261113-fungi/moon.md, proposals-moon.json"
+      ],
+      "sites": "Lima (existing), Huancucho, the Andes (new environs)"
+    },
+    {
+      "name": "bay",
+      "book_id": "griby-s-yuggota-ru",
+      "pages": "physical 52–67 (printed 51–66) and the handouts of Chapters VI–VII: phys. 85 (РМ 8, 9), 97 (РМ 8 styled), 98 (Доп. 9), 99 (РМ 9 styled)",
+      "target": "Глава VI «В гавани: часть I» (phys. 52–60): stage `by-the-bay-1` — the Blue John shipments from Peru, the waterfront warehouse, the Ron-Paku temple and what lies beneath it, Lang-Fu (statblock) and his deep-one cult, the Cloak of Life, the ritual to Cthulhu and Hydra on Pearl Beach, the mummified liver of Nofru-Ka, maps phys. 54, 59, finale. Глава VII «В гавани: часть II» (phys. 61–67): stage `by-the-bay-2` — the night attack in the hotel, the NW Electronics Research Station in Oakland with the public tour and the restricted laboratory (plan phys. 63), Dr. Dieter (statblock) and his brain implants, Philip Jurgens, the plans of the Sons of Terror attacks, finale. Creates the new shared `kb/locations/san-francisco.json`, `san-francisco-environs.json`, `oakland.json`",
+      "owns": [
+        "kb/books/griby-s-yuggota-ru/scenarios/by-the-bay-1.json, by-the-bay-2.json",
+        "kb/books/griby-s-yuggota-ru/*/bay-* (new files)",
+        "kb/books/griby-s-yuggota-ru/characters/<characters of Chapters VI–VII> (new files, incl. lang-fu, doctor-dieter)",
+        "kb/locations/san-francisco.json, san-francisco-environs.json, oakland.json (new)",
+        "kb/tables/fungi-bay-*",
+        "app/maps/fungi-bay-*",
+        "checks/20261113-fungi/bay.md, proposals-bay.json"
+      ],
+      "sites": "San Francisco, Pearl Beach, Oakland (new)"
+    },
+    {
+      "name": "final",
+      "book_id": "griby-s-yuggota-ru",
+      "pages": "physical 68–81 (printed 67–80; phys. 77 is an English scan art page) and phys. 100 (back cover, English scan)",
+      "target": "Глава VIII «День Зверя» with the conclusion «Подрыв Братства» (phys. 68–71): stage `day-of-the-beast` — Giza at dawn, Chandler, Hauptmann, Lang-Fu and the Arab guards, the calling of the Beast into the Great Sphinx (`coc:creature:faceless-god`), the plan of Giza (phys. 69), the ways to foil the Brotherhood; Giza and the Sphinx — link the «Маски» records, propose moving them to shared ones. Дополнительная сцена 1 «Залы Целаено» (phys. 72–75): stage `halls-of-celaeno` — the Great Library of Celaeno (plan phys. 73), byakhee, the Barrier of Naach-Tith, the Sleeper. Дополнительная сцена 2 «Голос из вневремени» (phys. 76): stage `voice-out-of-time` — Paul LeMond's séance with the spirit of Nofru-Ka. Приложение А–Ж (phys. 78–81): the death of Nofru-Ka (proposal to move `starter-edge-of-darkness-ru/character/nofru-ka` to `coc:character:nofru-ka`), the Brotherhood of the Beast, Edward Chandler (statblock), New World Incorporated, the Sons of Terror, the Ron-Paku temples (the four campaign organizations), the chronology 1733 BC – 1928 as a table. Chicago (existing) — proposals only. No new shared cities",
+      "owns": [
+        "kb/books/griby-s-yuggota-ru/scenarios/day-of-the-beast.json, halls-of-celaeno.json, voice-out-of-time.json",
+        "kb/books/griby-s-yuggota-ru/*/beast-*, celaeno-*, voice-*, appendix-* (new files)",
+        "kb/books/griby-s-yuggota-ru/organizations/brotherhood-of-the-beast.json, new-world-incorporated.json, sons-of-terror.json, ron-paku-temples.json",
+        "kb/books/griby-s-yuggota-ru/characters/<characters of Chapter VIII, the optional scenes and the Appendices> (new files, incl. edward-chandler)",
+        "kb/tables/fungi-beast-*, fungi-celaeno-*, fungi-appendix-*",
+        "app/maps/fungi-beast-*, fungi-celaeno-*",
+        "checks/20261113-fungi/final.md, proposals-final.json"
+      ],
+      "sites": "Giza (Masks record), Celaeno"
+    }
+  ]
+}

@@ -73,10 +73,11 @@ class ScenarioCheck:
         for i, r in a.recs.items():
             if r.get("kind") != "scenario":
                 continue
-            for s in r.get("sources") or []:
-                if s.get("book_id") in BOOKS and isinstance(s.get("physical_page"), int):
-                    self.starts[s["book_id"]].append((s["physical_page"], i))
-                    break
+            bid = next((s["book_id"] for s in r.get("sources") or [] if s.get("book_id") in BOOKS), None)
+            if bid:
+                st = self.start(i, bid)
+                if st:
+                    self.starts[bid].append((st, i))
             fam = {i} | set(self.scenes.get(i, []))
             for x in list(fam):
                 body = {k: v for k, v in a.recs[x].items() if k not in ("sources", "corrections", "errata", "quality", "arc", "id")}
@@ -93,6 +94,18 @@ class ScenarioCheck:
         f.update({k: v for k, v in extra.items() if v not in (None, "", [])})
         self.findings.append(f)
 
+    def start(self, sid: str, bid: str) -> int | None:
+        """The scenario's title page: its own cited page nearest before its first scene (a page of the book's contents
+        or introduction that the record also cites is not the start)."""
+        own = [s["physical_page"] for s in self.a.recs[sid].get("sources") or []
+               if s.get("book_id") == bid and isinstance(s.get("physical_page"), int)]
+        sc = [s["physical_page"] for i in self.scenes.get(sid, []) for s in self.a.recs[i].get("sources") or []
+              if s.get("book_id") == bid and isinstance(s.get("physical_page"), int)]
+        if sc:
+            before = [p for p in own if p <= min(sc)]
+            return max(before) if before else min(sc)
+        return max(own) if len(own) > 1 and max(own) - min(own) > 20 else (min(own) if own else None)
+
     def span(self, sid: str, bid: str) -> tuple[int, int] | None:
         """Pages of the scenario's chapter: from its first page to the last page of its scenes (appendix pages that the
         scenario cites in notes are left out — they would cover the chapters of other scenarios)."""
@@ -102,10 +115,8 @@ class ScenarioCheck:
               if s.get("book_id") == bid and isinstance(s.get("physical_page"), int)]
         if not own and not sc:
             return None
-        first = min(own or sc)
+        first = self.start(sid, bid)
         last = max(sc) if sc else max(own)
-        if sc:
-            first = min(first, min(sc))
         # other scenarios of the book that start inside: stop before them
         for o in self.starts.get(bid, []):
             if o[1] != sid and first < o[0] <= last:

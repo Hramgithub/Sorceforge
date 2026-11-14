@@ -1,0 +1,79 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "fears-sharp-little-needles-en/scene/fuel-capture",
+  "kind": "scene",
+  "name": {
+    "ru": "Захват",
+    "en": "Setting Up the Investigator (capture)"
+  },
+  "description": {
+    "ru": "Когда приходит время переходить к финалу, Хранитель выбирает способ захвата сыщика по тому, как тот общался с вербовщиком ИГИЛ:\n• Если между ними завязались дружеские отношения, вербовщик может проводить сыщика в район за больницей Святой Марии и пригласить подняться поужинать (романтически или нет) на пришвартованную там узкую лодку. Лодка, говорит он, принадлежит его родственнику. Если роман разгорался медленно, это можно подать как романтическое свидание.\n• Если сыщик очень доверчив, вербовщик в подходящий момент подмешивает ему что-то в напиток, чтобы обезвредить, и под видом поездки в больницу — выяснить, что случилось, — спешно сажает его в машину, где ждут колдуны.\n• Если настоящей связи не возникло, выбор у вербовщика меньше — придётся похищать. Например, проникнуть в номер сыщика с сообщником с помощью Скрытности (или украденного либо одолженного ключа) и одолеть его — или заплатить местным, чтобы те подъехали к идущему по улице сыщику и затащили его в фургон. Оба пути рискованны: прохожие могут стать свидетелями и вызвать полицию.",
+    "en": null
+  },
+  "when": "конец недели, ночь ритуала",
+  "arc": {
+    "scenario": "fears-sharp-little-needles-en/scenario/fuel-whose-fuel-is-men-and-stones",
+    "part": "Setting Up the Investigator (capture)",
+    "order": 4
+  },
+  "where": [
+    {
+      "location": "fears-sharp-little-needles-en/location/fuel-st-marys-hospital",
+      "note": "район за больницей"
+    },
+    {
+      "location": "fears-sharp-little-needles-en/location/fuel-raghad",
+      "note": null
+    },
+    {
+      "location": "fears-sharp-little-needles-en/location/fuel-investigator-hotel",
+      "note": "номер сыщика"
+    }
+  ],
+  "participants": [
+    {
+      "id": "fears-sharp-little-needles-en/character/fuel-isis-recruiter",
+      "role": "заманивает, одурманивает или похищает сыщика"
+    },
+    {
+      "id": "fears-sharp-little-needles-en/character/fuel-jaleel",
+      "role": "ждёт в машине"
+    },
+    {
+      "id": "fears-sharp-little-needles-en/character/fuel-haytham",
+      "role": "ждёт в машине"
+    }
+  ],
+  "outcome": {
+    "ru": "Сыщик — на узкой лодке в бассейне Паддингтон (сцена «Призыв»), если не заметил ловушку раньше.",
+    "en": null
+  },
+  "refs": [
+    "fears-sharp-little-needles-en/location/fuel-paddington-green-police-station",
+    "coc:skill:stealth",
+    "fears-sharp-little-needles-en/scenario/fuel-whose-fuel-is-men-and-stones"
+  ],
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "fears-sharp-little-needles-en",
+      "physical_page": 33,
+      "printed_page": 32,
+      "method": "book_text",
+      "verified": true,
+      "note": "способы захвата"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — по рабочему переводу владельца (fears-sharp-little-needles/document.html, «Чьё топливо — люди и камни», страницы pdf-page-030–034 и 181), сверен с английским оригиналом; числа — по английской странице. Отдельного перевода владельца для этого сценария нет. Ктугха и его заклинание — по записям базы (у владельца «Ктхугха», «Призыв Ктхугхи»)."
+  }
+}

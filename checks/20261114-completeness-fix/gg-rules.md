@@ -33,7 +33,7 @@
 | Ley Lines; Tracks Around the World; Ley Lines and Magic | 19–21 | `coc:rule:gg-ley-lines` |
 | Врезка о предложениях главы (без заголовка) | 21 | `coc:rule:gg-concerning-spells` |
 | Fictional Magic | 21 | `coc:rule:gg-fictional-magic` |
-| Гл. 3 Spell Categories; Categories (17 списков) | 22–25 | не взято — фильтр (повтор); категории GG — справочный список названий заклинаний |
+| Гл. 3 Spell Categories; Categories (17 списков) | 22–25 | `coc:rule:gg-spell-categories` — собрана скриптом ведущего по тексту книги (17 категорий, 619 ссылок на 530 записей) |
 | Entry Format | 25 | `coc:rule:gg-spell-entry-format` |
 | Call, Contact, and Summon Disambiguation | 25 | предложение (proposals-gg-rules.json): источник GG к `coc:rule:call-contact-and-summon-disambiguation` |
 | Conjuration of the Turua (врезка) | 71 | `coc:rule:gg-conjuration-of-the-turua` (профиль туруа — в tables) |

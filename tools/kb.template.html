@@ -686,6 +686,8 @@ function renderLocList(list) {
     // Р-235: a level with districts (a city with районы) always keeps its loose places in «Прочие»
     const isGroup = d => res ? descendants(d.id).some(x => hasRes(x) && inGuide(x)) : childrenOf(d.id).some(inGuide);
     const levelHtml = (items, lvl, key) => {
+      // Р-236: a district with no places (only a label on a book's map) is not listed; its record and spot stay
+      items = items.filter(d => d.location_type !== 'район' || isGroup(d) || d.id === current);
       const groups = items.filter(isGroup), loose = items.filter(d => !isGroup(d));
       const districts = groups.some(d => d.location_type === 'район');
       if (!loose.length || (!districts && groups.length <= loose.length)) return items.map(d => node(d, lvl)).join('');

@@ -1,0 +1,103 @@
+# Мискатоникский университет — в районе Кампус (Р-238; слияния — Р-154, Р-234)
+
+Решение владельца (Р-238): «Мискатоникский университет» (coc:location:miskatonic-university) стоит в районе Кампус
+(coc:location:arkham-campus) и остаётся общим описанием университета; его вложенные места — прямо в районе, рядом с местами
+путеводителя 601–638; то же здание, что место путеводителя, — сливается в него; помещения — под своим корпусом.
+Проверка: `python -B tools/check.py --changed` — ошибок 0, предупреждений 0.
+Ревизия: `python -I -B tools/audit.py --out .cache/audit-mu` — класс «Группировка мест» без изменений (217 до и после: ни новых, ни ушедших находок);
+новые только 14 находок map.label_number (low) у карты sny-o-yaponii-ru/map/miskatonic-campus: метки «5»…«28» теперь ведут на места путеводителя
+с номерами 6NN — «место другой книги: у карты может быть своя нумерация», так же, как у прежних слияний (метки 1, 2, 3, 18, 19, 22, 27).
+Скрипты (временные, в scratchpad сессии): mu/merge.py (копия districts/merge.py с настройками mu/mu_cfg.py), mu/rewrite_refs.py, mu/move.py.
+
+## Как найдены пары
+
+Ключ «Схемы кампуса» «Снов о Японии» (с. 41, дополнительные материалы переводчиков) повторяет нумерацию путеводителя Hort
+(arkham-guide-hort-ru, по Arkham Unveiled): № N схемы = место 6NN у Hort (для № 6–8 — со сдвигом на один, у Hort 606 — дом Пизли).
+Номер Hort каждого места путеводителя 2023 года уже записан в его sources (псевдоним Hort); названия и назначение совпадают.
+
+## Слито (старый id → новый id), corrections `field: "id"`, `ref: "Р-154"`
+
+- sny-o-yaponii-ru/location/mu-5-atleticheskaya-assotsiatsiya → coc:location:arkham-605-miskatonic-athletic-association (Hort 605)
+- sny-o-yaponii-ru/location/mu-6-kholl-dzhonatana-edvardsa → coc:location:arkham-609-jonathan-edwards-hall (Hort 607; в 1922 — стройка, пометка в quality.notes)
+- sny-o-yaponii-ru/location/mu-7-sportivnyy-kompleks-akstona → coc:location:arkham-611-axton-field-house (Hort 608)
+- sny-o-yaponii-ru/location/mu-8-shkola-meditsiny → coc:location:arkham-624-college-of-medicine (Hort 609)
+- sny-o-yaponii-ru/location/mu-10-prachechnaya → coc:location:arkham-625-university-laundry-and-steam-plant (Hort 610)
+- sny-o-yaponii-ru/location/mu-12-dom-tochnykh-nauk → coc:location:arkham-612-science-hall (Hort 612 «Научный корпус»)
+- sny-o-yaponii-ru/location/mu-13-nauchnyy-korpus-taynera → coc:location:arkham-613-charles-tyner-science-annex (Hort 613)
+- sny-o-yaponii-ru/location/mu-14-kolokolnya-brataev-kopli → coc:location:arkham-615-copley-memorial-bell-tower (Hort 614)
+- sny-o-yaponii-ru/location/mu-15-dom-gumanitarnykh-nauk → coc:location:arkham-614-robert-carter-memorial-hall (Hort 615 «Корпус гуманитарных наук»)
+- sny-o-yaponii-ru/location/mu-16-pamyatnik-dekanu-khalsi → coc:location:arkham-616-statue-lawn (Hort 616 «Памятник декану Хэлси»)
+- sny-o-yaponii-ru/location/mu-17-korpus-loksli → coc:location:arkham-618-george-locksley-hall (Hort 617 «Локсли-холл»)
+- sny-o-yaponii-ru/location/mu-21-dom-gostinitsa-aspirantov → coc:location:arkham-621-derby-hall (Hort 621 «Общежитие для бакалавров и выпускников»)
+- sny-o-yaponii-ru/location/mu-25-zdanie-khoyta → coc:location:arkham-629-hoyt-administration-building (Hort 625)
+- sny-o-yaponii-ru/location/mu-28-gostinitsa-botsford → coc:location:arkham-637-harriet-botsford-hotel-for-women (Hort 628)
+
+В каждой записи путеводителя: абзац «В сценарии «Сны о Японии» (…; с. 41): …», источник с. 41, название схемы — в aliases,
+ссылка на карту схемы — в refs, пометка «На схеме кампуса … это здание — № N … Там название — «…»» — в quality.notes; все шаги — в corrections.
+Ссылки по всей базе переписаны: единственные внешние ссылки были метками карты sny-o-yaponii-ru/map/miskatonic-campus (14 меток).
+У 624 из пометок убрана фраза «Морг медицинского факультета … — кандидат на слияние (Р-154)» (correction quality.notes, Р-238): морг теперь помещение колледжа.
+
+## Перенесено (part_of), corrections `ref: "Р-238"`
+
+- coc:location:miskatonic-university: coc:location:arkham → coc:location:arkham-campus
+- coc:location:orne-library (место 623): coc:location:miskatonic-university → coc:location:arkham-campus
+- sny-o-yaponii-ru/location/mu-9-obshchezhitie-medfakulteta: → coc:location:arkham-campus (места путеводителя с таким назначением нет; у Hort тоже)
+- idol-tota-ru/location/kabinet-366: → coc:location:arkham-campus (книга называет только «отдельно стоящее здание в западной части кампуса»)
+- keeper-rulebook-ru/location/crimson-leiter-office: → coc:location:arkham-campus (здание в книге не названо)
+- keeper-rulebook-ru/location/crimson-medical-school-morgue: → coc:location:arkham-624-college-of-medicine (помещение под своим корпусом:
+  по путеводителю в здании колледжа — морг и прозекторская, с. 180)
+
+У университета вложенных мест больше нет. Комнаты и этажи, уже стоявшие под своим корпусом (морг больницы св. Марии «Кусков и фрагментов»
+и его помещения), не трогались.
+
+## Изменённые файлы
+
+kb/locations/miskatonic-university.json
+kb/locations/orne-library.json
+kb/locations/arkham-605-miskatonic-athletic-association.json
+kb/locations/arkham-609-jonathan-edwards-hall.json
+kb/locations/arkham-611-axton-field-house.json
+kb/locations/arkham-612-science-hall.json
+kb/locations/arkham-613-charles-tyner-science-annex.json
+kb/locations/arkham-614-robert-carter-memorial-hall.json
+kb/locations/arkham-615-copley-memorial-bell-tower.json
+kb/locations/arkham-616-statue-lawn.json
+kb/locations/arkham-618-george-locksley-hall.json
+kb/locations/arkham-621-derby-hall.json
+kb/locations/arkham-624-college-of-medicine.json
+kb/locations/arkham-625-university-laundry-and-steam-plant.json
+kb/locations/arkham-629-hoyt-administration-building.json
+kb/locations/arkham-637-harriet-botsford-hotel-for-women.json
+kb/books/sny-o-yaponii-ru/maps/miskatonic-campus.json
+kb/books/sny-o-yaponii-ru/locations/mu-9-obshchezhitie-medfakulteta.json
+kb/books/idol-tota-ru/locations/kabinet-366.json
+kb/books/keeper-rulebook-ru/locations/crimson-leiter-office.json
+kb/books/keeper-rulebook-ru/locations/crimson-medical-school-morgue.json
+
+## Удалённые файлы
+
+kb/books/sny-o-yaponii-ru/locations/mu-5-atleticheskaya-assotsiatsiya.json
+kb/books/sny-o-yaponii-ru/locations/mu-6-kholl-dzhonatana-edvardsa.json
+kb/books/sny-o-yaponii-ru/locations/mu-7-sportivnyy-kompleks-akstona.json
+kb/books/sny-o-yaponii-ru/locations/mu-8-shkola-meditsiny.json
+kb/books/sny-o-yaponii-ru/locations/mu-10-prachechnaya.json
+kb/books/sny-o-yaponii-ru/locations/mu-12-dom-tochnykh-nauk.json
+kb/books/sny-o-yaponii-ru/locations/mu-13-nauchnyy-korpus-taynera.json
+kb/books/sny-o-yaponii-ru/locations/mu-14-kolokolnya-brataev-kopli.json
+kb/books/sny-o-yaponii-ru/locations/mu-15-dom-gumanitarnykh-nauk.json
+kb/books/sny-o-yaponii-ru/locations/mu-16-pamyatnik-dekanu-khalsi.json
+kb/books/sny-o-yaponii-ru/locations/mu-17-korpus-loksli.json
+kb/books/sny-o-yaponii-ru/locations/mu-21-dom-gostinitsa-aspirantov.json
+kb/books/sny-o-yaponii-ru/locations/mu-25-zdanie-khoyta.json
+kb/books/sny-o-yaponii-ru/locations/mu-28-gostinitsa-botsford.json
+
+## Вопросы владельцу (не менялось)
+
+1. Метка «4» схемы «Снов о Японии» («Морг») ведёт на «Морг медицинского факультета» «Багровых письмен» (вывод из текста, Р-41).
+   По нумерации Hort № 4 — «604. Морг Уайтчепел», то есть похоронное бюро Уайтчепела (coc:location:arkham-608-whitechapel-mortuary);
+   метка стоит рядом с № 6 (Джонатан-Эдвардс-холл, 609), как и 608 в путеводителе. Рекомендация: перевести метку на 608.
+2. Кабинет Лейтера («Багровые письмена», профессор исторического факультета) можно поставить под Мемориальный корпус Роберта Картера (614,
+   Школа истории и общественных наук) — вывод из другой книги, поэтому пока прямо в районе. Кабинет 366 «Идола Тота» — так же (кафедра археологии
+   есть в 614, но книга говорит об отдельном здании на западе кампуса).
+3. Пометка карты sny-o-yaponii-ru/map/miskatonic-campus «Номера 4, 11, 20, 23, 24 и 26 ведут на уже заведённые места…» устарела
+   (теперь на места путеводителя ведут все метки, кроме 4, 9 и заголовка); у mu-9 и у записи университета остались пометки «кандидат в общее место».

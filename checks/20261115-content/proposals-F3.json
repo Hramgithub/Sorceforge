@@ -1,0 +1,50 @@
+{
+  "schema": "sourcefold.proposals.v0",
+  "by": "F3 «Книга хранителя» (сверка контента 2026-11-15)",
+  "proposals": [
+    {
+      "target": "coc:rule:skill-specializations",
+      "op": "replace",
+      "path": "quality.notes",
+      "old": "Необязательное правило о переносе пользы между специализациями стоит в конце главы 4 (за пределами с. 50–53 этой части) и здесь не записано.",
+      "new": "Необязательное правило о переносе пользы между специализациями (конец главы 4, с. 76–77) — coc:rule:specializations-transferable-skill-benefit.",
+      "reason": "заведена запись необязательного правила «Специализации: перенос бонусов» (checks/20261115-content/kr-rules.md, гл. 4)",
+      "ref": "Р-247"
+    },
+    {
+      "target": "coc:rule:skill-specializations",
+      "op": "append",
+      "path": "refs",
+      "value": "coc:rule:specializations-transferable-skill-benefit",
+      "reason": "ссылка на необязательное правило конца главы 4 («см. необязательное правило в конце этой главы», с. 52)",
+      "ref": "Р-247",
+      "correction": false
+    },
+    {
+      "target": "coc:creature:shan",
+      "op": "set",
+      "path": "errata",
+      "after": "corrections",
+      "value": [
+        {
+          "field": "statblock.characteristics.DEX",
+          "printed": "ЛВК 80, бросок (2d6+24)×5 («Книга хранителя», RU с. 295, EN с. 305)",
+          "expected": "бросок, дающий в среднем 80, например (2d6+9)×5",
+          "note": "Бросок (2d6+24)×5 даёт в среднем 155, а не напечатанные 80; так в обоих изданиях «Книги хранителя». В записи ЛВК по Malleus Monstrorum — 85, (2d6+10)×5 (Р-22), поэтому на значение записи опечатка не влияет.",
+          "fixed": true
+        }
+      ],
+      "reason": "опечатка «Книги хранителя» в броске ЛВК насекомого с Шаггая не была отмечена (checks/20261115-content/kr-lists.md, гл. 14)",
+      "ref": "Р-247"
+    },
+    {
+      "target": "coc:creature:shan",
+      "op": "append",
+      "path": "quality.flags",
+      "value": "parse_uncertain",
+      "reason": "флаг «опечатка книги» к новому errata (Р-141)",
+      "ref": "Р-141",
+      "correction": false
+    }
+  ]
+}

@@ -7,7 +7,9 @@
     "en": "Bear"
   },
   "aliases": [
-    "Барибал"
+    "Барибал",
+    "Чёрный медведь",
+    "Black Bear"
   ],
   "category": "animal",
   "subcategory": "наземный хищник",
@@ -22,7 +24,7 @@
       "STR": {
         "raw": "100",
         "value": 100,
-        "roll": "(3d6+10)×5"
+        "roll": "(4d6+6)×5"
       },
       "CON": {
         "raw": "65",
@@ -32,10 +34,15 @@
       "SIZ": {
         "raw": "100",
         "value": 100,
-        "roll": "(3d6+10)×5"
+        "roll": "(4d6+6)×5"
       },
       "DEX": {
-        "raw": "50",
+        "raw": "55",
+        "value": 55,
+        "roll": "(2d6+4)×5"
+      },
+      "POW": {
+        "raw": "50–55",
         "value": 50,
         "roll": "3d6×5"
       }
@@ -46,20 +53,24 @@
       "value": 16
     },
     "damage_bonus": {
-      "raw": "+2d6",
-      "value": "2d6"
+      "raw": "+1d6",
+      "value": "1d6"
     },
     "build": {
-      "raw": "3",
-      "value": 3
+      "raw": "2",
+      "value": 2
     },
     "move": {
-      "raw": "12",
+      "raw": "12 / 7 плавание",
       "value": 12,
       "modes": [
         {
           "mode": "walk",
           "value": 12
+        },
+        {
+          "mode": "swim",
+          "value": 7
         }
       ]
     },
@@ -69,14 +80,14 @@
       "note": "шерсть и хрящи"
     },
     "attacks_per_round": {
-      "raw": "2",
+      "raw": "2 (укус, когти)",
       "value": 2
     },
     "attacks": [
       {
         "name": {
           "ru": "Ближний бой",
-          "en": null
+          "en": "Fighting"
         },
         "kind": "attack",
         "skill": "Ближний бой",
@@ -87,16 +98,17 @@
           "fifth": 8
         },
         "damage": {
-          "raw": "1d6+БкУ",
-          "dice": "1d6",
+          "raw": "БкУ",
+          "dice": null,
           "adds_db": true
-        }
+        },
+        "notes": "урон равен БкУ"
       }
     ],
     "dodge": {
-      "raw": "25% (12/5)",
-      "value": 25,
-      "half": 12,
+      "raw": "27% (13/5)",
+      "value": 27,
+      "half": 13,
       "fifth": 5
     },
     "skills": [
@@ -104,24 +116,40 @@
         "name": "Лазание",
         "skill": "coc:skill:climb",
         "value": {
-          "raw": "30%",
-          "value": 30
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
         }
       },
       {
         "name": "Слух",
         "skill": "coc:skill:listen",
         "value": {
-          "raw": "75%",
-          "value": 75
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
         }
       },
       {
         "name": "Нюх",
         "skill": "coc:skill:scent-prey",
         "value": {
-          "raw": "70%",
-          "value": 70
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Плавание",
+        "skill": "coc:skill:swim",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
         }
       }
     ],
@@ -131,7 +159,16 @@
     "ru": "Крупный сильный зверь с лапами, когтями и зубами; параметры даны для барибала и легко масштабируются.",
     "en": null
   },
+  "habitat": "от юга Мексики до юга Канады",
   "sources": [
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 187,
+      "printed_page": 186,
+      "method": "book_text",
+      "verified": true,
+      "note": "столбец «Black Bear» таблицы «Bear»; боевые строки этого столбца книга подписывает «Brown Bear»"
+    },
     {
       "book_id": "keeper-rulebook-ru",
       "physical_page": 316,
@@ -145,14 +182,125 @@
       "printed_page": 9,
       "method": "book_text",
       "verified": true,
-      "note": "«Маленький клуб ужасов», «Нападение чёрного медведя»: одержимый медведь — тот же профиль (СИЛ 100, ВЫН 65, ТЕЛ 100, ЛВК 50, ПЗ 16, БкУ +2d6, Комплекция 3, Скорость 12, 2 атаки, Ближний бой 40%, Уклонение 25%, Лазание 30%, Слух 75%, Запах добычи 70%); сценарий добавляет МОЩ 50 и не печатает броню"
+      "note": "«Маленький клуб ужасов», «Нападение чёрного медведя»: одержимый медведь — профиль «Книги хранителя» (СИЛ 100, ВЫН 65, ТЕЛ 100, ЛВК 50, ПЗ 16, БкУ +2d6, Комплекция 3, Скорость 12, 2 атаки, Ближний бой 40%, Уклонение 25%, Лазание 30%, Слух 75%, Запах добычи 70%); сценарий добавляет МОЩ 50 и не печатает броню"
     }
   ],
-  "corrections": [],
+  "errata": [
+    {
+      "field": "statblock.attacks",
+      "printed": "Brown Bear",
+      "expected": "Black Bear",
+      "note": "Malleus, с. 186: столбец таблицы назван «Black Bear», а его боевые строки (Ближний бой 40%, Уклонение 27%) подписаны «Brown Bear»; бурый медведь — это гризли (coc:creature:bear-grizzly). Значения взяты как напечатаны.",
+      "fixed": false
+    }
+  ],
+  "corrections": [
+    {
+      "field": "aliases",
+      "from": null,
+      "to": "Чёрный медведь, Black Bear",
+      "reason": "столбец Malleus «Black Bear» (с. 186); «Книга хранителя» (с. 337): «Чёрные медведи (барибалы)»",
+      "ref": "Р-247"
+    },
+    {
+      "field": "statblock.characteristics.STR",
+      "from": "100 (3d6+10)×5",
+      "to": "100 (4d6+6)×5",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 186 (физ. 187), столбец «Black Bear»; прежнее значение — «Книга хранителя» (Р-22)",
+      "ref": "Р-22"
+    },
+    {
+      "field": "statblock.characteristics.SIZ",
+      "from": "100 (3d6+10)×5",
+      "to": "100 (4d6+6)×5",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 186 (физ. 187), столбец «Black Bear»; прежнее значение — «Книга хранителя» (Р-22)",
+      "ref": "Р-22"
+    },
+    {
+      "field": "statblock.characteristics.DEX",
+      "from": "50 3d6×5",
+      "to": "55 (2d6+4)×5",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 186 (физ. 187), столбец «Black Bear»; прежнее значение — «Книга хранителя» (Р-22)",
+      "ref": "Р-22"
+    },
+    {
+      "field": "statblock.characteristics.POW",
+      "from": null,
+      "to": "50–55 3d6×5",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 186 (физ. 187), столбец «Black Bear»; прежнее значение — «Книга хранителя» (Р-22); в «Книге хранителя» — 50 3d6×5, в записи не было",
+      "ref": "Р-22"
+    },
+    {
+      "field": "statblock.damage_bonus",
+      "from": "+2d6",
+      "to": "+1d6",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 186 (физ. 187), столбец «Black Bear»; прежнее значение — «Книга хранителя» (Р-22)",
+      "ref": "Р-22"
+    },
+    {
+      "field": "statblock.build",
+      "from": "3",
+      "to": "2",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 186 (физ. 187), столбец «Black Bear»; прежнее значение — «Книга хранителя» (Р-22)",
+      "ref": "Р-22"
+    },
+    {
+      "field": "statblock.move",
+      "from": "12",
+      "to": "12 / 7 плавание",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 186 (физ. 187), столбец «Black Bear»; прежнее значение — «Книга хранителя» (Р-22)",
+      "ref": "Р-22"
+    },
+    {
+      "field": "statblock.attacks_per_round",
+      "from": "2",
+      "to": "2 (укус, когти)",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 186 (физ. 187), столбец «Black Bear»; прежнее значение — «Книга хранителя» (Р-22)",
+      "ref": "Р-22"
+    },
+    {
+      "field": "statblock.attacks[Ближний бой].damage",
+      "from": "1d6+БкУ",
+      "to": "БкУ",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 186 (физ. 187), столбец «Black Bear»; прежнее значение — «Книга хранителя» (Р-22)",
+      "ref": "Р-22"
+    },
+    {
+      "field": "statblock.dodge",
+      "from": "25% (12/5)",
+      "to": "27% (13/5)",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 186 (физ. 187), столбец «Black Bear»; прежнее значение — «Книга хранителя» (Р-22)",
+      "ref": "Р-22"
+    },
+    {
+      "field": "statblock.skills",
+      "from": "Лазание 30%, Слух 75%, Нюх 70%",
+      "to": "Лазание 40%, Слух 70%, Нюх (Scent Prey) 80%, Плавание 80%",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 186 (физ. 187), столбец «Black Bear»; прежнее значение — «Книга хранителя» (Р-22)",
+      "ref": "Р-22"
+    },
+    {
+      "field": "habitat",
+      "from": null,
+      "to": "от юга Мексики до юга Канады",
+      "reason": "«Книга хранителя», с. 337: «Обитает»",
+      "ref": "Р-247"
+    },
+    {
+      "field": "sources",
+      "from": null,
+      "to": "Malleus Monstrorum, т. I, с. 186 — первым источником",
+      "reason": "числа по Malleus (Р-22); замечание сверки checks/20261115-content/mm1.md",
+      "ref": "Р-22"
+    }
+  ],
   "quality": {
     "needs_review": false,
-    "flags": [],
-    "notes": null
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Числа — по столбцу «Black Bear» Malleus Monstrorum (Р-22); прежние числа «Книги хранителя» — в corrections. «Нюх» — название навыка в «Книге хранителя», в Malleus — Scent Prey."
   },
   "images": [
     {

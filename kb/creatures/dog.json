@@ -26,11 +26,21 @@
         "roll": "2d6×5"
       },
       "CON": {
-        "raw": "50",
-        "value": 50,
-        "roll": "3d6×5"
+        "raw": "60",
+        "value": 60,
+        "roll": "(2d6+5)×5"
       },
       "SIZ": {
+        "raw": "30",
+        "value": 30,
+        "roll": "(2d3+2)×5"
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70,
+        "roll": "(2d6+7)×5"
+      },
+      "POW": {
         "raw": "35",
         "value": 35,
         "roll": "2d6×5"
@@ -38,8 +48,8 @@
     },
     "averages": true,
     "hp": {
-      "raw": "8",
-      "value": 8
+      "raw": "9",
+      "value": 9
     },
     "damage_bonus": {
       "raw": "-1",
@@ -65,61 +75,109 @@
       "note": null
     },
     "attacks_per_round": {
-      "raw": "1",
+      "raw": "1 (укус, когти, трёпка)",
       "value": 1
     },
     "attacks": [
       {
         "name": {
           "ru": "Ближний бой",
-          "en": null
+          "en": "Fighting"
         },
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "50% (25/10)",
-          "value": 50,
-          "half": 25,
-          "fifth": 10
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
         },
         "damage": {
-          "raw": "1d6",
-          "dice": "1d6",
-          "adds_db": false
-        }
+          "raw": "1d4–БкУ (мин. 1)",
+          "dice": "1d4",
+          "adds_db": true
+        },
+        "notes": "отрицательный БкУ уменьшает урон, минимум 1; у обученных бойцовых собак Ближний бой 80% (40/16); в основном кусает, может драть когтями"
       }
     ],
     "dodge": {
-      "raw": "42% (21/8)",
-      "value": 42,
-      "half": 21,
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
       "fifth": 8
     },
     "skills": [
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
       {
         "name": "Слух",
         "skill": "coc:skill:listen",
         "value": {
           "raw": "75%",
-          "value": 75
+          "value": 75,
+          "half": 37,
+          "fifth": 15
         }
       },
       {
-        "name": "Учуять что-то интересное",
-        "skill": "coc:skill:scent-something-interesting",
+        "name": "Выслеживание (по запаху)",
+        "skill": "coc:skill:track",
         "value": {
-          "raw": "90%",
-          "value": 90
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
         }
       }
     ],
     "sanity_loss": []
   },
+  "abilities": [
+    {
+      "name": "Трёпка",
+      "summary": "Некоторые породы собак после успешного укуса смыкают челюсти на цели и каждый следующий раунд наносят 1d2±БкУ урона; жертва освобождается, только ранив зверя (2+ урона); обученная собака отпускает по команде хозяина."
+    },
+    {
+      "name": "Стая",
+      "summary": "Собак встречают поодиночке и группами; в дикой природе собаки и их родичи охотятся стаями по 1d8+3 особи."
+    },
+    {
+      "name": "Дрессировка",
+      "summary": "Собаку можно выучить охранять, нападать или искать определённое (людей, бомбы и т. п.): обученный навык — от 60 до 80%. ТЕЛ домашних собак сильно различается (здесь — средняя собака); для крупных собак берите профиль волка или гиены."
+    }
+  ],
   "description": {
     "ru": "Верный спутник человека или дикая стайная угроза; легко варьируется по размеру и породе.",
     "en": null
   },
+  "habitat": "рядом с людьми",
   "sources": [
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 190,
+      "printed_page": 189,
+      "method": "book_text",
+      "verified": true,
+      "note": "столбец «Dog» таблицы «Dogs, Various Canines, & Hyena»"
+    },
     {
       "book_id": "keeper-rulebook-ru",
       "physical_page": 317,
@@ -128,11 +186,98 @@
       "verified": true
     }
   ],
-  "corrections": [],
+  "corrections": [
+    {
+      "field": "statblock.characteristics.CON",
+      "from": "50 3d6×5",
+      "to": "60 (2d6+5)×5",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 189 (физ. 190), столбец «Dog»; прежнее значение — «Книга хранителя» (Р-22)",
+      "ref": "Р-22"
+    },
+    {
+      "field": "statblock.characteristics.SIZ",
+      "from": "35 2d6×5",
+      "to": "30 (2d3+2)×5",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 189 (физ. 190), столбец «Dog»; прежнее значение — «Книга хранителя» (Р-22)",
+      "ref": "Р-22"
+    },
+    {
+      "field": "statblock.characteristics.DEX",
+      "from": null,
+      "to": "70 (2d6+7)×5",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 189 (физ. 190), столбец «Dog»; прежнее значение — «Книга хранителя» (Р-22); в «Книге хранителя» — 70 4d6×5, в записи не было",
+      "ref": "Р-22"
+    },
+    {
+      "field": "statblock.characteristics.POW",
+      "from": null,
+      "to": "35 2d6×5",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 189 (физ. 190), столбец «Dog»; прежнее значение — «Книга хранителя» (Р-22); в «Книге хранителя» — 35 2d6×5, в записи не было",
+      "ref": "Р-22"
+    },
+    {
+      "field": "statblock.hp",
+      "from": "8",
+      "to": "9",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 189 (физ. 190), столбец «Dog»; прежнее значение — «Книга хранителя» (Р-22)",
+      "ref": "Р-22"
+    },
+    {
+      "field": "statblock.attacks_per_round",
+      "from": "1",
+      "to": "1 (укус, когти, трёпка)",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 189 (физ. 190), столбец «Dog»; прежнее значение — «Книга хранителя» (Р-22)",
+      "ref": "Р-22"
+    },
+    {
+      "field": "statblock.attacks[Ближний бой]",
+      "from": "50% (25/10), урон 1d6",
+      "to": "40% (20/8), урон 1d4–БкУ (мин. 1)",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 189 (физ. 190), столбец «Dog»; прежнее значение — «Книга хранителя» (Р-22)",
+      "ref": "Р-22"
+    },
+    {
+      "field": "statblock.dodge",
+      "from": "42% (21/8)",
+      "to": "40% (20/8)",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 189 (физ. 190), столбец «Dog»; прежнее значение — «Книга хранителя» (Р-22)",
+      "ref": "Р-22"
+    },
+    {
+      "field": "statblock.skills",
+      "from": "Слух 75%, Учуять что-то интересное 90%",
+      "to": "Прыжки 70%, Слух 75%, Выслеживание (по запаху) 80%, Внимание 60%",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 189 (физ. 190), столбец «Dog»; прежнее значение — «Книга хранителя» (Р-22)",
+      "ref": "Р-22"
+    },
+    {
+      "field": "abilities",
+      "from": null,
+      "to": "Трёпка; Стая; Дрессировка",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 189 (физ. 190), столбец «Dog»; прежнее значение — «Книга хранителя» (Р-22)",
+      "ref": "Р-22"
+    },
+    {
+      "field": "habitat",
+      "from": null,
+      "to": "рядом с людьми",
+      "reason": "«Книга хранителя», с. 338: «Обитает»",
+      "ref": "Р-247"
+    },
+    {
+      "field": "sources",
+      "from": null,
+      "to": "Malleus Monstrorum, т. I, с. 189 — первым источником",
+      "reason": "числа по Malleus (Р-22); замечание сверки checks/20261115-content/mm1.md",
+      "ref": "Р-22"
+    }
+  ],
   "quality": {
     "needs_review": false,
-    "flags": [],
-    "notes": null
+    "flags": [
+      "translated"
+    ],
+    "notes": "Числа — по столбцу «Dog» Malleus Monstrorum (Р-22); прежние числа «Книги хранителя» — в corrections (навык «Учуять что-то интересное 90%» есть только в «Книге хранителя»)."
   },
   "images": [
     {

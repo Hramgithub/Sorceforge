@@ -26,19 +26,29 @@
         "roll": "(2d6+6)×5"
       },
       "CON": {
-        "raw": "50",
-        "value": 50,
-        "roll": "3d6×5"
+        "raw": "60",
+        "value": 60,
+        "roll": "(2d6+5)×5"
       },
       "SIZ": {
         "raw": "40",
         "value": 40,
-        "roll": "(2d6+1)×5"
+        "roll": "(2d3+4)×5"
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      },
+      "POW": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
       }
     },
     "hp": {
-      "raw": "9",
-      "value": 9
+      "raw": "10",
+      "value": 10
     },
     "damage_bonus": {
       "raw": "нет",
@@ -64,28 +74,29 @@
       "note": "шерсть"
     },
     "attacks_per_round": {
-      "raw": "1",
+      "raw": "1 (укус, когти, трёпка)",
       "value": 1
     },
     "attacks": [
       {
         "name": {
-          "ru": "Зубы, когти и терзание",
-          "en": null
+          "ru": "Ближний бой",
+          "en": "Fighting"
         },
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "50% (25/10)",
-          "value": 50,
-          "half": 25,
-          "fifth": 10
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
         },
         "damage": {
-          "raw": "1d8 + БкУ",
-          "dice": "1d8",
+          "raw": "1d4+БкУ",
+          "dice": "1d4",
           "adds_db": true
-        }
+        },
+        "notes": "зубы, когти и терзание"
       }
     ],
     "dodge": {
@@ -96,11 +107,33 @@
     },
     "skills": [
       {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
         "name": "Чтение следов (по запаху)",
         "skill": "coc:skill:track",
         "value": {
-          "raw": "90%",
-          "value": 90
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
         }
       },
       {
@@ -108,18 +141,38 @@
         "skill": "coc:skill:spot-hidden",
         "value": {
           "raw": "60%",
-          "value": 60
+          "value": 60,
+          "half": 30,
+          "fifth": 12
         }
       }
     ],
     "sanity_loss": []
   },
+  "abilities": [
+    {
+      "name": "Трёпка",
+      "summary": "После успешного укуса челюсти смыкаются на цели и каждый следующий раунд наносят 1d2±БкУ урона; жертва освобождается, только ранив зверя (2+ урона)."
+    },
+    {
+      "name": "Стая",
+      "summary": "В дикой природе охотятся стаями по 1d8+3 особи."
+    }
+  ],
   "description": {
     "ru": "Волки часто охотятся стаей на стада лосей или оленей, но выходят на охоту и в одиночку или семейной парой. Обычно избегают людей.",
     "en": null
   },
   "habitat": "примерно в тех же областях холодных и умеренных широт, что и крупные жвачные животные",
   "sources": [
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 190,
+      "printed_page": 189,
+      "method": "book_text",
+      "verified": true,
+      "note": "столбец «Wolf» таблицы «Dogs, Various Canines, & Hyena»"
+    },
     {
       "book_id": "keeper-rulebook-ru",
       "physical_page": 313,
@@ -128,10 +181,84 @@
       "verified": true
     }
   ],
-  "corrections": [],
+  "corrections": [
+    {
+      "field": "statblock.characteristics.CON",
+      "from": "50 3d6×5",
+      "to": "60 (2d6+5)×5",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 189 (физ. 190), столбец «Wolf»; прежнее значение — «Книга хранителя» (Р-22)",
+      "ref": "Р-22"
+    },
+    {
+      "field": "statblock.characteristics.SIZ",
+      "from": "40 (2d6+1)×5",
+      "to": "40 (2d3+4)×5",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 189 (физ. 190), столбец «Wolf»; прежнее значение — «Книга хранителя» (Р-22)",
+      "ref": "Р-22"
+    },
+    {
+      "field": "statblock.characteristics.DEX",
+      "from": null,
+      "to": "65 (2d6+6)×5",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 189 (физ. 190), столбец «Wolf»; прежнее значение — «Книга хранителя» (Р-22); в «Книге хранителя» — 65 (2d6+6)×5, в записи не было",
+      "ref": "Р-22"
+    },
+    {
+      "field": "statblock.characteristics.POW",
+      "from": null,
+      "to": "50–55 3d6×5",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 189 (физ. 190), столбец «Wolf»; прежнее значение — «Книга хранителя» (Р-22); в «Книге хранителя» — 50 3d6×5, в записи не было",
+      "ref": "Р-22"
+    },
+    {
+      "field": "statblock.hp",
+      "from": "9",
+      "to": "10",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 189 (физ. 190), столбец «Wolf»; прежнее значение — «Книга хранителя» (Р-22)",
+      "ref": "Р-22"
+    },
+    {
+      "field": "statblock.attacks_per_round",
+      "from": "1",
+      "to": "1 (укус, когти, трёпка)",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 189 (физ. 190), столбец «Wolf»; прежнее значение — «Книга хранителя» (Р-22)",
+      "ref": "Р-22"
+    },
+    {
+      "field": "statblock.attacks[Зубы, когти и терзание]",
+      "from": "Зубы, когти и терзание 50% (25/10), урон 1d8 + БкУ",
+      "to": "Ближний бой 40% (20/8), урон 1d4+БкУ",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 189 (физ. 190), столбец «Wolf»; прежнее значение — «Книга хранителя» (Р-22)",
+      "ref": "Р-22"
+    },
+    {
+      "field": "statblock.skills",
+      "from": "Чтение следов (по запаху) 90%, Внимание 60%",
+      "to": "Прыжки 70%, Слух 75%, Чтение следов (по запаху) 80%, Внимание 60%",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 189 (физ. 190), столбец «Wolf»; прежнее значение — «Книга хранителя» (Р-22)",
+      "ref": "Р-22"
+    },
+    {
+      "field": "abilities",
+      "from": null,
+      "to": "Трёпка; Стая",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 189 (физ. 190), столбец «Wolf»; прежнее значение — «Книга хранителя» (Р-22)",
+      "ref": "Р-22"
+    },
+    {
+      "field": "sources",
+      "from": null,
+      "to": "Malleus Monstrorum, т. I, с. 189 — первым источником",
+      "reason": "числа по Malleus (Р-22); замечание сверки checks/20261115-content/mm1.md",
+      "ref": "Р-22"
+    }
+  ],
   "quality": {
     "needs_review": false,
-    "flags": []
+    "flags": [
+      "translated"
+    ],
+    "notes": "Числа — по столбцу «Wolf» Malleus Monstrorum (Р-22); прежние числа «Книги хранителя» — в corrections. Броня в Malleus — «1-point fur and skin», в «Книге хранителя» — «1 пункт (шерсть)»."
   },
   "images": [
     {

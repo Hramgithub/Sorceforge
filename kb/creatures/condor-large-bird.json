@@ -25,27 +25,33 @@
       "STR": {
         "raw": "110",
         "value": 110,
-        "roll": "(3d6+12)×5"
+        "roll": "(4d6+8)×5"
       },
       "CON": {
-        "raw": "50",
-        "value": 50,
-        "roll": "3d6×5"
+        "raw": "55",
+        "value": 55,
+        "roll": "(2d6+4)×5"
       },
       "SIZ": {
         "raw": "80",
         "value": 80,
-        "roll": "(3d6+6)×5"
+        "roll": "(4d6+2)×5"
+      },
+      "DEX": {
+        "raw": "95",
+        "value": 95,
+        "roll": "(2d6+12)×5"
       },
       "POW": {
         "raw": "65",
-        "value": 65
+        "value": 65,
+        "roll": "(2d6+6)×5"
       }
     },
     "averages": true,
     "hp": {
-      "raw": "13",
-      "value": 13
+      "raw": "14",
+      "value": 14
     },
     "damage_bonus": {
       "raw": "+1d6",
@@ -70,19 +76,19 @@
       ]
     },
     "armor": {
-      "raw": "1 пункт (оперение)",
-      "value": 1,
-      "note": "оперение"
+      "raw": "нет",
+      "value": 0,
+      "note": null
     },
     "attacks_per_round": {
-      "raw": "1",
+      "raw": "1 (клюв, когти)",
       "value": 1
     },
     "attacks": [
       {
         "name": {
           "ru": "Ближний бой",
-          "en": null
+          "en": "Fighting"
         },
         "kind": "attack",
         "skill": "Ближний бой",
@@ -96,7 +102,8 @@
           "raw": "1d6+БкУ",
           "dice": "1d6",
           "adds_db": true
-        }
+        },
+        "notes": "в основном клюёт, может драть когтями"
       }
     ],
     "dodge": {
@@ -117,11 +124,26 @@
     ],
     "sanity_loss": []
   },
+  "abilities": [
+    {
+      "name": "Полёт",
+      "summary": "Пока птица в воздухе, шансы попасть по ней атакой снижаются вдвое (одна штрафная кость к проверке атаки). Нападают на людей только самые крупные птицы; стервятники атакуют беспомощных жертв любого вида."
+    }
+  ],
   "description": {
     "ru": "Крупная птица вроде кондора, орла или грифа: атакует с воздуха клювом и когтями.",
     "en": null
   },
+  "habitat": "в Северной и Южной Америке",
   "sources": [
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 188,
+      "printed_page": 187,
+      "method": "book_text",
+      "verified": true,
+      "note": "столбец «Condor» таблицы «Bird (Eagle, Condor, & Vulture)»; у строки ТЕЛ звёздочка без сноски"
+    },
     {
       "book_id": "keeper-rulebook-ru",
       "physical_page": 316,
@@ -130,11 +152,91 @@
       "verified": true
     }
   ],
-  "corrections": [],
+  "corrections": [
+    {
+      "field": "statblock.characteristics.STR",
+      "from": "110 (3d6+12)×5",
+      "to": "110 (4d6+8)×5",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 187 (физ. 188), столбец «Condor»; прежнее значение — «Книга хранителя» (Р-22)",
+      "ref": "Р-22"
+    },
+    {
+      "field": "statblock.characteristics.CON",
+      "from": "50 3d6×5",
+      "to": "55 (2d6+4)×5",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 187 (физ. 188), столбец «Condor»; прежнее значение — «Книга хранителя» (Р-22)",
+      "ref": "Р-22"
+    },
+    {
+      "field": "statblock.characteristics.SIZ",
+      "from": "80 (3d6+6)×5",
+      "to": "80 (4d6+2)×5",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 187 (физ. 188), столбец «Condor»; прежнее значение — «Книга хранителя» (Р-22)",
+      "ref": "Р-22"
+    },
+    {
+      "field": "statblock.characteristics.DEX",
+      "from": null,
+      "to": "95 (2d6+12)×5",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 187 (физ. 188), столбец «Condor»; прежнее значение — «Книга хранителя» (Р-22); в «Книге хранителя» — 95 (2d6+12)×5, в записи не было",
+      "ref": "Р-22"
+    },
+    {
+      "field": "statblock.characteristics.POW",
+      "from": "65",
+      "to": "65 (2d6+6)×5",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 187 (физ. 188), столбец «Condor»; прежнее значение — «Книга хранителя» (Р-22)",
+      "ref": "Р-22"
+    },
+    {
+      "field": "statblock.hp",
+      "from": "13",
+      "to": "14",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 187 (физ. 188), столбец «Condor»; прежнее значение — «Книга хранителя» (Р-22); (55+80)/10 = 13,5, книга округляет вверх",
+      "ref": "Р-22"
+    },
+    {
+      "field": "statblock.armor",
+      "from": "1 пункт (оперение)",
+      "to": "нет",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 187 (физ. 188), столбец «Condor»; прежнее значение — «Книга хранителя» (Р-22)",
+      "ref": "Р-22"
+    },
+    {
+      "field": "statblock.attacks_per_round",
+      "from": "1",
+      "to": "1 (клюв, когти)",
+      "reason": "значение по Malleus Monstrorum 7e, т. I, с. 187 (физ. 188), столбец «Condor»; прежнее значение — «Книга хранителя» (Р-22)",
+      "ref": "Р-22"
+    },
+    {
+      "field": "abilities",
+      "from": null,
+      "to": "Полёт",
+      "reason": "«Книга хранителя», с. 337, статья «Птица»: особая способность всех птиц",
+      "ref": "Р-247"
+    },
+    {
+      "field": "habitat",
+      "from": null,
+      "to": "в Северной и Южной Америке",
+      "reason": "«Книга хранителя», с. 338: «Обитает»",
+      "ref": "Р-247"
+    },
+    {
+      "field": "sources",
+      "from": null,
+      "to": "Malleus Monstrorum, т. I, с. 187 — первым источником",
+      "reason": "числа по Malleus (Р-22); замечание сверки checks/20261115-content/mm1.md",
+      "ref": "Р-22"
+    }
+  ],
   "quality": {
     "needs_review": false,
-    "flags": [],
-    "notes": null
+    "flags": [
+      "translated"
+    ],
+    "notes": "Числа — по столбцу «Condor» Malleus Monstrorum (Р-22); прежние числа «Книги хранителя» — в corrections. ПЗ 14 — как напечатано в Malleus ((55+80)/10 = 13,5, округлено вверх)."
   },
   "images": [
     {

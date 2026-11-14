@@ -1,0 +1,86 @@
+{
+  "book_id": "keeper-rulebook-ru",
+  "goal": "the game content of the rulebooks that the completeness check found missing (Р-242)",
+  "decision": "Р-242, Р-175, Р-171, Р-51, Р-184",
+  "check_dir": "checks/20261114-completeness-fix",
+  "models": [
+    "kb/rules/poisons.json",
+    "kb/rules/other-forms-of-damage.json",
+    "kb/tables/hit-locations.json",
+    "schemas/rule.schema.json",
+    "kb/spells/brew-space-mead.json"
+  ],
+  "extra": "## This work (Р-242, Р-230, Р-51)\n\nThe completeness check (`checks/20261114-completeness/`, files `verify-rules.md`, `verify-malleus.md`, `verify-scenarios.md`) found game content of these books that the base does not hold. Your unit takes exactly the items of its `target`; read the matching rows of those verify files first — they say what is covered (do not duplicate) and what is missing or partly there.\n\nRules of rule and table records (as in the Keeper Rulebook work, Р-175, Р-171):\n- One `rule` record per section of the book: a heading of a section inside the chapter («Боевой раунд», «Броня», «Фаза развития сыщиков»); its small subsections go inside the same record (`text`, `steps`, `tables`, `examples`). A section that is only a lead-in of one line joins the next section.\n- `id` — `coc:rule:<slug>`, slug from the English name of the section in Keeper Rulebook (`keeper-rulebook-en`), lower case with hyphens; file `kb/rules/<slug>.json`. Before creating a file, check that `kb/rules/<slug>.json` does not exist; if another unit could own the same subject, prefer the more specific slug (`chase-movement`, not `movement`).\n- `category` — one of the schema's; `optional: true` only where the book says «необязательное правило».\n- A table with a die roll (1d10, 1d20, 1d100…) is a `table` record (`kb/tables/<slug>.json`, Р-171) referenced from the rule's `refs`; a table without a roll stays in the rule's `tables`.\n- `refs` — existing records only (skills `coc:skill:*`, characteristics `coc:characteristic:*`, tables, other rules, spells, tomes); check every id exists in `kb/`. Links to rules that other units are writing now: use the slug you expect only if you are sure of it, otherwise leave it out and list it in the report.\n- Text and every number from the page image of the Russian Keeper Rulebook (`python pipeline/source/pages.py image keeper-rulebook-ru <printed page>`); the text layer is noisy. Printed page = «с. N» of pages.py, physical = «физ. M»; check that the number on the page image is N.\n- `name.en` and a second source from `keeper-rulebook-en` (printed page = physical − 1; pages.py does it).\n- Examples of play in the book — `examples`, in full. Keeper advice without mechanics belongs in records of the chapter «Ход игры» only; elsewhere keep it inside the rule's `text`.\n- The owner's Foundry journals `checks/20261107-foundry/journals/*.md` are hints only: never take their additions that are not in the book.\n- Records already done and yours to keep consistent with: `kb/rules/poisons.json`, `kb/rules/suffocation-and-drowning.json`, `kb/rules/other-forms-of-damage.json` (combat unit owns them and may improve them), `kb/tables/*.json` (bouts of madness, phobias, manias, hit locations) — do not duplicate them.\n- Coverage: in `checks/20261114-completeness-fix/<your unit name>.md` list every section heading of your pages → the record that holds it (or «не взято» with the reason).\n\nFor the English books (Malleus Monstrorum, Grand Grimoire, Pulp Cthulhu): numbers and facts from the English page (`python -B pipeline/source/pages.py show <book_id> <page>`, check numbers on `pages.py image`); the Russian text is our translation (flag `translated`); official Russian forms of names — glossary `python -B tools/terms.py <word>` and existing records (Р-184). `id` slugs — from the English heading; look at a few existing records citing the book for `axes`.\n\nShared records (kb/creatures, kb/spells, kb/weapons, kb/rules…) that already exist: your unit may edit only the files listed in its `owns`; for any other existing record write a proposal (`pipeline/integrate/README.md`). Adding lore to an existing creature: put the article's narrative (history, theories, other names, cult) into the record's description/legend fields as the schema allows, add the Malleus page to `sources`, keep everything already there.\n\nNew spells (`kb/spells/<slug>.json`, `coc:spell:<slug>`): model `kb/spells` records that cite grand-grimoire-en; cost and casting time as printed; check first that the spell is not there under another name (Grep by the English name in `name.en` and `aliases`, and by the Russian name).\n\nWeapons with 1930s prices (Pulp): `cost` has the key `1930s` (Р-242). A weapon that exists (from the Keeper Rulebook) gets the 1930s price and a Pulp source; a model that does not exist (Beretta 1938A, Lewis Mk VI…) is a new `coc:weapon:*` record; a price list without dice is a `table` or rule `tables` as the rules above say.\n\nCoverage: in `checks/20261114-completeness-fix/<your unit name>.md` list every item of your target → the record that holds it (or «не взято» with the reason).\n",
+  "units": [
+    {
+      "name": "kr-ru",
+      "book_id": "keeper-rulebook-ru",
+      "pages": "RU printed 11–17, 255–259, 318–319, 395 (see verify-rules.md)",
+      "target": "Keeper Rulebook (RU): ch. 1 «Введение» (overview, example of play, dice and reading d100, the investigator sheet); the opening of ch. 14 about monsters (creature characteristics, table XV «Сравнение Комплекции», monsters in combat, manoeuvres, fighting back, how to kill a monster, monster spells, pronunciation of Mythos names); sidebar «Вариант структуры Мифов Ктулху»; «Мистические слова». Not ch. 2 (essay on Lovecraft, Р-242).",
+      "owns": [
+        "new files in kb/rules/ and kb/tables/ for these pages",
+        "checks/20261114-completeness-fix/kr-ru.md, proposals-kr-ru.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "mm1",
+      "book_id": "malleus-monstrorum-1-en",
+      "pages": "10–30, 76, 100, 115, 135, 150, 197–198 and the partly rows of verify-malleus.md for vol. I",
+      "target": "Malleus Monstrorum I: monster magic and spells by group (17–18), creating monsters with the size scheme and 9 random-trait tables (18–24), monster profile rules (27–30), table «Hit Point Losses by Damage Type» (29), keeper advice on describing and playing monsters and death scenes (10–16, as rule text), old monster classes (25–26), chlorine gas (100), venomous snakes table (197–198), black lotus extracts (135), lore sidebars (Poplan's journal «Severn Valley» 76, «Wendigoism» 150); lore of the articles of gnoph-keh, lloigor, mi-go, serpent-person and the Gof'nn Hupadgh article (76) into those creatures.",
+      "owns": [
+        "new files in kb/rules/, kb/tables/, kb/items/ for these pages",
+        "kb/creatures/ files of gnoph-keh, lloigor, mi-go, serpent-person, lesser-satyr-gof-nn-hupadgh, cho-cho, venomous-snake (existing ones)",
+        "checks/20261114-completeness-fix/mm1.md, proposals-mm1.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "mm2",
+      "book_id": "malleus-monstrorum-2-en",
+      "pages": "10–24, 28, 33, 141, 167 and the partly rows of verify-malleus.md for vol. II",
+      "target": "Malleus Monstrorum II: deities in play and standard gifts (12–14), creating deities (17–18), deity profile rules (18–20), deity classes and «Deities by type» (10–12, 20–22), hit table 1D20 of Aphoom Zhah (28) as a table record, spell Vach-Viraj (167) as a spell, lore sidebars «Spiders in myth» (33) and Poplan's «Elder Gods» (141); lore of the articles of atlach-nacha, bast, chaugnar-faugn, great-cthulhu, daoloth, yibb-tstll, yog-sothoth into those creatures; report the Abhoth type (Malleus: Great Old One).",
+      "owns": [
+        "new files in kb/rules/, kb/tables/ for these pages",
+        "new kb/spells/ file of Vach-Viraj",
+        "kb/creatures/ files of the deities named in target (existing ones)",
+        "checks/20261114-completeness-fix/mm2.md, proposals-mm2.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "gg-rules",
+      "book_id": "grand-grimoire-en",
+      "pages": "6–26, 72, 86, 134, 186",
+      "target": "Grand Grimoire: ch. 1 «Concerning Magic» (with tables of days of the week, phases of the moon, wheel of the year), ch. 2 (spell names, casting difficulty, folk and lesser magic, Dreamlands magic, spirit attacks in the GG version, components and tools with table 1 «Spell Components», amulets, talismans, residual magic, ley lines, fictional magic, GG's spell categories — keep consistent with coc:rule:deeper-magic, spell-variations, call-contact-and-summon-disambiguation), sidebar «Conjuration of the Turua» (72), sorcerer examples Hestia Locksby, Thomas Davenport, Niels-Viggo Schou (86, 134, 186).",
+      "owns": [
+        "new files in kb/rules/, kb/tables/, kb/items/ for these pages",
+        "checks/20261114-completeness-fix/gg-rules.md, proposals-gg-rules.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "gg-spells",
+      "book_id": "grand-grimoire-en",
+      "pages": "chapters 3–4 spell entries; index 195–200",
+      "target": "Grand Grimoire: every spell of the book that the base does not hold. Make the full list from the book's index (195–200), check each against kb/spells (English name, aliases, Russian name), create the missing ones (verify-rules.md names ~32: Bind Child of the Sphinx, Bind Shoggoth, Bind Were-Creature, Call Aku-Shin Kage, Call Ahtu, Call Arwassa, Call Avatar of The Skinless One, Eyes of a Stranger, Fang of Yig, Feast of the Owl, Reach, Reanimation, Sacred Molting of the Serpent, Saaamaaa Ritual, Zymoticism, Brew Elixir of Life, Brew Liao Drug, Koshchey's Death, Raise Night Fog, Reincarnate, Seal Pit, Voice Thoughts and others). Vach-Viraj belongs to unit mm2. Grand Grimoire sources for existing spells — through proposals.",
+      "owns": [
+        "new files in kb/spells/",
+        "checks/20261114-completeness-fix/gg-spells.md, proposals-gg-spells.json"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "pulp",
+      "book_id": "pulp-cthulhu-en",
+      "pages": "255–256, 260–262 printed (see verify-rules.md)",
+      "target": "Pulp Cthulhu: price list of the 1930s (equipment) and the weapons table with 1930s prices; new weapon models (Beretta 1938A, Lewis Mk VI and any other not in kb/weapons). Not the essay on the pulps and not the bibliography (Р-242).",
+      "owns": [
+        "new files in kb/tables/, kb/rules/, kb/weapons/ for these pages",
+        "the cost.1930s field and a pulp-cthulhu-en source in existing kb/weapons/*.json",
+        "checks/20261114-completeness-fix/pulp.md, proposals-pulp.json"
+      ],
+      "sites": "—"
+    }
+  ]
+}

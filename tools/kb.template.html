@@ -879,7 +879,7 @@ function weaponCard(c) {
   const rows = [['Навык', sk], ['Урон', esc(d.raw) + ([DB_RU[d.db], d.impaling ? 'пронзающее' : ''].filter(Boolean).length ? ` <span class="muted">(${[DB_RU[d.db], d.impaling ? 'пронзающее' : ''].filter(Boolean).join(', ')})</span>` : '')],
     ['Дальность', esc(c.range)], ['Атак за раунд', esc(c.attacks)], ['Боезапас', esc(c.ammo)], ['Осечка', esc(c.malfunction)],
     ['Калибр', esc(caliberOf(c))], ['Перезарядка', esc(c.reload)], ['Доступность', esc(c.availability)],
-    ['Цена в 1920-х', esc(c.cost?.['1920s'])], ['Цена сейчас', esc(c.cost?.modern)]].filter(([, v]) => v);
+    ['Цена в 1920-х', esc(c.cost?.['1920s'])], ['Цена в 1930-х', esc(c.cost?.['1930s'])], ['Цена сейчас', esc(c.cost?.modern)]].filter(([, v]) => v);
   return `<h2>${esc(c.name.ru)}</h2>
     <div class="sub">${esc(c.name.en||'')} · ${WGROUP[c.group]||''}${(c.aliases||[]).length ? ' · также: ' + c.aliases.map(esc).join(', ') : ''}</div>
     ${flags(c)}

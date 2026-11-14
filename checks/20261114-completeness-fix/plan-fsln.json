@@ -1,0 +1,28 @@
+{
+  "book_id": "fears-sharp-little-needles-en",
+  "goal": "the scenario «Whose Fuel is Men and Stones» of «Fear's Sharp Little Needles», left out earlier by Р-217 (found by the completeness check; solo format Р-230 exists now)",
+  "decision": "Р-220, Р-219, Р-213, Р-190, Р-206, Р-209, Р-230",
+  "check_dir": "checks/20261114-completeness-fix",
+  "models": [
+    "kb/books/dveri-vo-tmu-ru/scenarios/darkness-beneath-the-hill.json",
+    "kb/books/osobnyaki-bezumiya-ru/scenarios/code-secret-code.json",
+    "kb/books/keepers-companion-en/scenes/little-miracles-start.json",
+    "kb/books/pulp-cthulhu-en/handouts/disintegrator-1-finch-telegram.json",
+    "kb/locations/boston.json",
+    "kb/books/masks-of-nyarlathotep-en/maps/america-harlem.json"
+  ],
+  "extra": "## This work (Р-220)\n\nSource of numbers and facts: the English original `fears-sharp-little-needles-en` (text layer; `python -B pipeline/source/pages.py show fears-sharp-little-needles-en <page>`; check numbers on the page image `pages.py image`; the page map found no printed numbers — find the printed/physical relation on the page images and report it). Russian text and names: the owner's working translation `C:\\_Hobby\\Yandex.Disk\\НРИ\\1_Зов Ктулху\\2_Обработка\\fears-sharp-little-needles\\document.html` (markers «Страница оригинала N» align it with the original; the owner ranks above our translation, but every number comes from the English page; where the owner's text and the original differ in facts, follow the original and note it). The owner's folders `2_Обработка\\2020 Dissociation`, `…\\1920 Bless the Beast and Children`, `…\\1920 Mothers Love`, `…\\2021 Number 7 Dream` hold his separate translations of single scenarios — if one is yours, prefer its wording over the collection file and note which you used. Official Russian forms of known Mythos names: glossary `python -B tools/terms.py <word>` and existing records. Flag `translated` on records with our or the owner's translation. Run tools as `python -B …`.\n\n- Each scenario is its own `scenario` record. Records — book-scoped `fears-sharp-little-needles-en/<kind>/<scenario-slug>-<slug>` in `kb/books/fears-sharp-little-needles-en/<kinds>/` (prefix every file name with your scenario's short slug, so units never collide).\n- Scenario record (summary, keeper_info, hook, advice, steps with refs, conclusion with Sanity rewards, tables), every scene retold for play (`arc`), items, handouts, tomes, organizations, characters (statblocks as printed, Р-25; pregenerated investigators of a scenario are its characters), creatures (known Mythos creatures → `instance_of` the shared `coc:creature:*`; new monsters — book records), places. Cities — shared records (Р-190): Grep `kb/locations/` first (Boston, New York with Harlem, Arkham, London… exist) and never rewrite an existing one — add through proposals; a city that does not exist yet you create as a new shared record only if your scenario is set there and no other unit of this plan could need it; otherwise propose it in the report. Places outside a city — under «Окрестности <города>» (Р-209); a scenario without a named city gets a «город сценария» record (Р-190) inside the book. Maps — `map` with the image (`app/maps/fsln-<scenario-slug>-<slug>.jpg`) and spots on every printed number/label (Р-206; check each by eye on a crop); every key number gets a place record. List captions — neutral, no spoilers (Р-209). New spells — draft them in your report (`kb/spells` is shared).\n- `axes.era` — the scenario's era as printed (most are [\"modern\"]), `ruleset` \"core\". Book misprints — `errata` as printed (Р-35); metric units (Р-64).\n- Solo gamebook «Whose Fuel is Men and Stones» (pp. 28–33) is NOT imported (Р-217) — list it in «не взято».\n- Coverage: `checks/20261111-fsln/<unit>.md` — every heading → record(s), «не взято» with the reason.\n\n## Solo format (Р-230)\nIf the scenario is a gamebook with numbered paragraphs, it is one scenario record with `solo: true`, all paragraphs in the «Абзацы» table, transitions as the last line «Переходы: …» (docs/conventions.md). If it is a scenario for a Keeper and one player, it is an ordinary scenario. Say which in the report. Notes of the completeness check: `checks/20261114-completeness/verify-scenarios.md` (strange-events table, three cultists, avatar of Cthugha, Paddington places, the map on physical p. 180).",
+  "units": [
+    {
+      "name": "fsln-fuel",
+      "pages": "physical 30–34 and the map on physical 180",
+      "target": "Whose Fuel is Men and Stones",
+      "owns": [
+        "kb/books/fears-sharp-little-needles-en/** files of this scenario (new, file names prefixed fuel-)",
+        "app/maps/fsln-fuel-*",
+        "checks/20261114-completeness-fix/fsln-fuel.md, proposals-fsln-fuel.json"
+      ],
+      "sites": "—"
+    }
+  ]
+}

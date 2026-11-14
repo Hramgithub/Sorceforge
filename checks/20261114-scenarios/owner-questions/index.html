@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Вопросы по сверке</title>
+<style>
+  :root { --bg:#faf8f4; --fg:#222; --muted:#666; --card:#fff; --line:#e3ded4; --accent:#8a5a00; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#1b1a18; --fg:#eee; --muted:#aaa; --card:#26241f; --line:#3a372f; --accent:#e0b060; } }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.5 system-ui, sans-serif; }
+  main { max-width: 980px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { font-size: 24px; margin: 0 0 8px; }
+  .lead { color: var(--muted); margin: 0 0 24px; }
+  section { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 18px; margin: 0 0 20px; }
+  h2 { font-size: 19px; margin: 0 0 8px; }
+  .rec { border-left: 3px solid var(--accent); padding: 6px 12px; margin: 12px 0 0; }
+  .rec b { color: var(--accent); }
+  figure { margin: 12px 0 0; }
+  figure img { max-width: 100%; height: auto; border: 1px solid var(--line); border-radius: 6px; display: block; }
+  figcaption { color: var(--muted); font-size: 14px; margin-top: 4px; }
+  .row { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
+  code { font-size: 14px; }
+  ul { margin: 6px 0; padding-left: 20px; }
+</style>
+</head>
+<body>
+<main>
+<h1>Открытые вопросы сверки сценариев</h1>
+<p class="lead">По каждому — что напечатано в книге, что сейчас в базе и что я предлагаю.</p>
+
+<section>
+  <h2>1. «Девятнадцатая лунка»: Уклонение Гордона Килбёрна</h2>
+  <p>«Особняки безумия», с. 177. Напечатано: <b>Уклонение 0% (15/6)</b>. Половина и пятая часть от 0% — это 0/0. А 15/6 — это половина и пятая часть от <b>30%</b>. ЛВК у Килбёрна 65, так что по правилам базовое Уклонение — 32%. Значит, в процентах выпала цифра «3».</p>
+  <figure><img src="kilburn.jpg" alt="Статблок Гордона Килбёрна"><figcaption>Скан с. 177: доли 15/6 при 0%</figcaption></figure>
+  <p>Сейчас в базе стоит 30%, а напечатанное «0%» сохранено в <code>errata</code> и <code>corrections</code>.</p>
+  <div class="rec"><b>Предлагаю:</b> оставить 30% (доли напечатаны верно, ошибка в одной цифре).</div>
+</section>
+
+<section>
+  <h2>2. Английское название «Девятнадцатой лунки»</h2>
+  <p>Русская книга — перевод «Mansions of Madness Vol. 1: Behind Closed Doors» (Chaosium). Английских названий в ней нет. В описаниях английского издания пять сценариев: Mister Corbitt, The Crack’d and Crook’d Manse, The Code, The House of Memphis, <b>The Nineteenth Hole</b>. Последний — про гольф-клуб Thistledown под ремонтом, откуда пропал владелец. Это наш «Тислдаун» и пропавший Артур Макмиллан.</p>
+  <div class="rec"><b>Предлагаю:</b> <code>name.en</code> = «The Nineteenth Hole». Попутно можно заполнить и остальные: «Mister Corbitt», «The Crack’d and Crook’d Manse», «The Code», «The House of Memphis».</div>
+</section>
+
+<section>
+  <h2>3. «Рождественская вечеринка»: пара «Стоуны»</h2>
+  <p>Картинка подписана «Стоуны», стоит рядом с описаниями Артура и Айрис Стоун. Айрис в тексте — молодая рыжеволосая, в положении: совпадает. Артур в тексте лысый, а на картинке — с причёской и усами.</p>
+  <figure><img src="rozhdestvenskaya-vecherinka-ru-4.jpg" alt="Страница со Стоунами"><figcaption>Физ. с. 4</figcaption></figure>
+  <div class="rec"><b>Предлагаю:</b> одна картинка у обеих записей (как у других пар в базе), с подписью «Стоуны».</div>
+</section>
+
+<section>
+  <h2>4. «Забывающийся»: «агент» и шериф</h2>
+  <div class="row">
+    <figure><img src="zabyvayushchiysya-ru-5.jpg" alt="Страница 2"><figcaption>Физ. с. 5 (с. 2): фото рядом с текстом «Встреча с „агентом“» — пришелец в облике сына фермера выдаёт себя за агента Томаса Спенсера</figcaption></figure>
+    <figure><img src="zabyvayushchiysya-ru-13.jpg" alt="Страница 10"><figcaption>Физ. с. 13 (с. 10): фото у раздела «Полицейские» — шериф Эдвард Мортимер и помощник Стивен Бигсби</figcaption></figure>
+  </div>
+  <div class="rec"><b>Предлагаю:</b> фото с. 2 — пришельцу (подпись «в облике сына фермера»), фото с. 10 — шерифу Мортимеру.</div>
+</section>
+
+<section>
+  <h2>5. «Тени Ленинграда»: Итакуа или гноф-кех?</h2>
+  <p>Рисунок стоит под статблоком Итакуа. Но на нём существо с одним рогом ломает стену, за которой прячется сыщик. Текст на этой же странице: «первыми сыщиков встречают гноф-кехи… просто врезаются в стены». Рог — отличительная черта гноф-кеха; у Итакуа рогов нет.</p>
+  <figure><img src="shadows-of-leningrad-en-35.jpg" alt="Страница 34"><figcaption>Физ. с. 35 (с. 34)</figcaption></figure>
+  <div class="rec"><b>Предлагаю:</b> отдать гноф-кеху этого сценария (подпись «Гноф-кех ломает стены храма»), Итакуа оставить без картинки.</div>
+</section>
+
+<section>
+  <h2>6. «Парк развлечений»: фото без подписей</h2>
+  <p>Портреты на листах раздатки, подписей нет. Без картинки в базе: Генри Дж. Перкинс (владелец, 41 год), Кэсси Фортье (26), Мэтт Донахью и Роб Дональдс (по 15 лет), Дэвин Джонс (19), Дэнни Флорес (19) и другие.</p>
+  <div class="row">
+    <figure><img src="park-razvlecheniy-ru-21.jpg" alt="Страница 21"><figcaption>Физ. с. 21: блондинка (вверху слева) не сопоставлена; остальные три уже стоят у записей</figcaption></figure>
+    <figure><img src="park-razvlecheniy-ru-32.jpg" alt="Страница 32"><figcaption>Физ. с. 32: мужчина с усами; два мальчика</figcaption></figure>
+  </div>
+  <div class="rec"><b>Предлагаю:</b> двое мальчиков — Мэтт Донахью и Роб Дональдс (одна картинка на двоих, как подростки, нашедшие тело); мужчина с усами — Генри Перкинс, владелец парка; блондинку — Кэсси Фортье. Это догадка по возрасту и роли, подписей в книге нет.</div>
+</section>
+</main>
+</body>
+</html>

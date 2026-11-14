@@ -1,0 +1,125 @@
+{
+  "schema": "sourcefold.table.v0",
+  "id": "coc:table:malleus-monster-special-abilities",
+  "kind": "table",
+  "name": {
+    "ru": "Особые способности чудовища",
+    "en": "Special Abilities"
+  },
+  "aliases": [
+    "Special Abilities / Cost"
+  ],
+  "category": "магия",
+  "dice": "1d10",
+  "description": {
+    "ru": "Таблица случайных черт чудовища (раздел «Создание чудовища: случайный способ»): бросьте 1d10 или выберите строку. Сколько у чудовища особых способностей — бросок 1d4: 1 — нет; 2 — одна; 3 — две; 4 — три. Есть ли у каждой способности цена — бросок 1d6: 1 — бесплатно; 2 — 1 пункт магии за применение; 3 — 2 пункта магии; 4 — 3 пункта магии; 5 — 4 пункта магии; 6 — 5 пунктов магии за применение. Затем каждая способность — по таблице (КХ — «Книга хранителя», GG — «Grand Grimoire of Cthulhu Mythos Magic»; страницы английских изданий)."
+  },
+  "rows": [
+    {
+      "roll": "1",
+      "title": "Контроль разума",
+      "text": "На основе заклинания «Покорение» (КХ 254, GG 98)",
+      "refs": [
+        "coc:spell:dominate"
+      ]
+    },
+    {
+      "roll": "2",
+      "title": "Оглушающий звук",
+      "text": "Издаёт оглушающий звук — на основе заклинания «Околдовать жертву» (КХ 258, GG 113)",
+      "refs": [
+        "coc:spell:enthrall-victim"
+      ]
+    },
+    {
+      "roll": "3",
+      "title": "Иссушающее касание",
+      "text": "Касание иссушает плоть — на основе заклинания «Иссушение» (КХ 262, GG 167)",
+      "refs": [
+        "coc:spell:shrivelling"
+      ]
+    },
+    {
+      "roll": "4",
+      "title": "Телепортация",
+      "text": "Может телепортироваться — на основе заклинания «Создание врат» (Gate; КХ 256; страница GG не напечатана)",
+      "refs": [
+        "coc:spell:create-gate"
+      ]
+    },
+    {
+      "roll": "5",
+      "title": "Обман облика",
+      "text": "Обманывает жертву, будто чудовище — человек; на основе заклинания «Песнь сирены» (GG 168)",
+      "refs": [
+        "coc:spell:sirens-song"
+      ]
+    },
+    {
+      "roll": "6",
+      "title": "Превращение",
+      "text": "Может превращаться или менять облик — на основе заклинания «Метаморфозы Горгорота» (КХ 246, GG 45)",
+      "refs": [
+        "coc:spell:body-warping-of-gorgoroth"
+      ]
+    },
+    {
+      "roll": "7",
+      "title": "Психическая волна",
+      "text": "Может испускать психическую волну, способную ранить (1d6 урона)"
+    },
+    {
+      "roll": "8",
+      "title": "Невидимость",
+      "text": "Может становиться невидимым или невидимо"
+    },
+    {
+      "roll": "9",
+      "title": "Бесплотность",
+      "text": "Может становиться бесплотным или бесплотно и проходить сквозь твёрдые предметы"
+    },
+    {
+      "roll": "10",
+      "title": "Чтение мыслей",
+      "text": "Может читать мысли и чувства"
+    }
+  ],
+  "refs": [
+    "coc:rule:malleus-creating-a-monster-random-version",
+    "coc:rule:malleus-creating-monsters",
+    "coc:rule:kc-monstrous-powers"
+  ],
+  "axes": {
+    "era": [
+      "any"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 24,
+      "printed_page": 23,
+      "method": "book_text",
+      "verified": true,
+      "note": "Таблица «Special Abilities»; сверено по изображению страницы"
+    }
+  ],
+  "errata": [
+    {
+      "field": "rows[3].text",
+      "printed": "(base on Gate spell; CR 256, GG",
+      "expected": "(base on Gate spell; CR 256, GG 120)",
+      "note": "Страница Grand Grimoire не напечатана; в списке «Магия чудовищ» (с. 17) Gate — 256/120.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Наш перевод с английского (Р-21). Броски числа способностей (1d4) и их цены (1d6) — в вступлении (description). «Gorgorth» в строке 6 — опечатка книги в названии заклинания (Body Warping of Gorgoroth), исправлено молча (Р-39)."
+  }
+}

@@ -33,6 +33,16 @@
         "raw": "15",
         "value": 15,
         "roll": "1d6×5"
+      },
+      "DEX": {
+        "raw": "90",
+        "value": 90,
+        "roll": "(4d6+4)×5"
+      },
+      "POW": {
+        "raw": "50–55",
+        "value": 50,
+        "roll": "3d6×5"
       }
     },
     "averages": true,
@@ -64,14 +74,14 @@
       "note": null
     },
     "attacks_per_round": {
-      "raw": "1 (может контратаковать укусом несколько раз за раунд)",
-      "value": null
+      "raw": "1 (укус)",
+      "value": 1
     },
     "attacks": [
       {
         "name": {
-          "ru": "Ближний бой",
-          "en": null
+          "ru": "Ближний бой (укус)",
+          "en": "Fighting"
         },
         "kind": "attack",
         "skill": "Ближний бой",
@@ -82,17 +92,19 @@
           "fifth": 8
         },
         "damage": {
-          "raw": "1d4+ БкУ +яд",
+          "raw": "1d4−БкУ (минимум 1) + яд",
           "dice": "1d4",
-          "adds_db": true
-        }
+          "adds_db": true,
+          "extra": "яд — см. «Яд»"
+        },
+        "notes": "укус; БкУ змеи −2, урон не меньше 1"
       }
     ],
     "dodge": {
-      "raw": "42% (21/8)",
-      "value": 42,
-      "half": 21,
-      "fifth": 8
+      "raw": "45% (22/9)",
+      "value": 45,
+      "half": 22,
+      "fifth": 9
     },
     "skills": [
       {
@@ -106,11 +118,38 @@
     ],
     "sanity_loss": []
   },
+  "abilities": [
+    {
+      "name": "Яд",
+      "summary": "Токсичность яда зависит от вида. Укушенный делает чрезвычайную проверку ВЫН: успех — урон делится на четыре, вдвое или его нет (на усмотрение Хранителя); провал — если в ближайшие часы нет противоядия или медицинской помощи, полный урон, возможна смерть. В 1920-х лечение примитивно: совмещённая проверка Удачи и Медицины, при успехе урон может быть уменьшен вдвое. Сила и скорость яда разных змей — таблица «Ядовитые змеи».",
+      "raw": "The toxicity of snake venom varies; a victim must make an Extreme CON roll to resist the venom’s full effect—a successful roll indicates quartered, halved, or no damage (at the Keeper’s discretion). If failed, and unless antivenin or suitable medical treatment can be found within a few hours, the victim suffers full rolled damage and may die—treatment in the 1920s is rudimentary at best, calling for a combined Luck and Medicine roll, which if successful, may halve damage.",
+      "refs": [
+        "coc:rule:malleus-venomous-snakes",
+        "coc:rule:poisons"
+      ]
+    }
+  ],
   "description": {
-    "ru": "Небольшая или средняя ядовитая змея: сама атака не так страшна, как яд и задержка лечения.",
+    "ru": "Небольшая или средняя ядовитая змея: сама атака не так страшна, как яд и задержка лечения. Змеи делятся на удавов, которые хватают и душат добычу, и ядовитых, которые кусают (Malleus Monstrorum, с. 196).",
     "en": null
   },
   "sources": [
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 197,
+      "printed_page": 196,
+      "method": "book_text",
+      "verified": true,
+      "note": "Статья «Snake (Various)», столбец «Venomous»: профиль и яд"
+    },
+    {
+      "book_id": "malleus-monstrorum-1-en",
+      "physical_page": 198,
+      "printed_page": 197,
+      "method": "book_text",
+      "verified": true,
+      "note": "Рамка «Venomous Snakes» (coc:rule:malleus-venomous-snakes)"
+    },
     {
       "book_id": "keeper-rulebook-ru",
       "physical_page": 314,
@@ -119,11 +158,63 @@
       "verified": true
     }
   ],
-  "corrections": [],
+  "corrections": [
+    {
+      "field": "statblock.characteristics.DEX",
+      "from": null,
+      "to": "90 [(4d6+4)×5]",
+      "reason": "статья Malleus Monstrorum, т. I (malleus-monstrorum-1-en), с. 196 (физ. 197); в «Книге хранителя» (с. 335) — 90 [5d6×5]; пробел полноты из checks/20261114-completeness/verify-malleus.md",
+      "ref": "Р-22"
+    },
+    {
+      "field": "statblock.characteristics.POW",
+      "from": null,
+      "to": "50–55 [3d6×5]",
+      "reason": "статья Malleus Monstrorum, т. I (malleus-monstrorum-1-en), с. 196 (физ. 197); в «Книге хранителя» (с. 335) — 50 [3d6×5]; пробел полноты из checks/20261114-completeness/verify-malleus.md",
+      "ref": "Р-22"
+    },
+    {
+      "field": "statblock.attacks_per_round",
+      "from": "1 (может контратаковать укусом несколько раз за раунд)",
+      "to": "1 (укус)",
+      "reason": "статья Malleus Monstrorum, т. I (malleus-monstrorum-1-en), с. 196 (физ. 197); пробел полноты из checks/20261114-completeness/verify-malleus.md",
+      "ref": "Р-22"
+    },
+    {
+      "field": "statblock.attacks[Ближний бой].damage",
+      "from": "1d4+ БкУ +яд",
+      "to": "1d4−БкУ (минимум 1) + яд",
+      "reason": "статья Malleus Monstrorum, т. I (malleus-monstrorum-1-en), с. 196 (физ. 197); пробел полноты из checks/20261114-completeness/verify-malleus.md",
+      "ref": "Р-22"
+    },
+    {
+      "field": "statblock.dodge",
+      "from": "42% (21/8)",
+      "to": "45% (22/9)",
+      "reason": "статья Malleus Monstrorum, т. I (malleus-monstrorum-1-en), с. 196 (физ. 197); пробел полноты из checks/20261114-completeness/verify-malleus.md",
+      "ref": "Р-22"
+    },
+    {
+      "field": "abilities",
+      "from": null,
+      "to": "Яд (по Malleus)",
+      "reason": "статья Malleus Monstrorum, т. I (malleus-monstrorum-1-en), с. 196 (физ. 197); пробел полноты из checks/20261114-completeness/verify-malleus.md",
+      "ref": "Р-22"
+    },
+    {
+      "field": "description.ru",
+      "from": "Небольшая или средняя ядовитая змея: сама атака не так страшна, как яд и задержка лечения.",
+      "to": "добавлена фраза Malleus о двух категориях змей",
+      "reason": "статья Malleus Monstrorum, т. I (malleus-monstrorum-1-en), с. 196 (физ. 197); пробел полноты из checks/20261114-completeness/verify-malleus.md",
+      "ref": "Р-242"
+    }
+  ],
   "quality": {
     "needs_review": false,
-    "flags": [],
-    "notes": null
+    "flags": [
+      "translated"
+    ],
+    "notes": "Числа — по Malleus Monstrorum (Р-22), прежние значения «Книги хранителя» — в corrections: там атак «1 (может контратаковать укусом несколько раз за раунд)», урон «1d4+БкУ+яд», Уклонение 42% (21/8), ЛВК 5d6×5. Обитает (по «Книге хранителя»): в умеренных, тропических и субтропических широтах. Удав (Constrictor) той же статьи Malleus в эту запись не перенесён."
   },
   "images": [
     {

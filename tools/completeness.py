@@ -160,6 +160,13 @@ class Completeness:
         self.cited: dict[str, set[int]] = defaultdict(set)
         self.by_page: dict[str, dict[int, set[str]]] = defaultdict(lambda: defaultdict(set))
         self.art_pages: dict[str, set[int]] = defaultdict(set)
+        # pages whose pictures were looked at and listed as atmosphere (Р-241): not findings any more
+        self.reviewed: dict[str, set[int]] = defaultdict(set)
+        atm = ROOT / "pipeline/art/atmosphere.json"
+        if atm.exists():
+            for p in json.loads(atm.read_text(encoding="utf-8")).get("pages", []):
+                if p.get("status") == "atmosphere":
+                    self.reviewed[p["book_id"]].add(int(p["physical_page"]))
         for i, r in a.recs.items():
             for s in r.get("sources") or []:
                 bid = s.get("book_id")
@@ -261,7 +268,7 @@ class Completeness:
             row["gap_words"] = sum(words[p - 1] for p in gaps)
         if b.get("pdf") and not (kind != "текст" and n > 20):   # a long scan is pictures of pages: not counted
             pics = images_of_book(bid, b)
-            have = self.art_pages[bid]
+            have = self.art_pages[bid] | self.reviewed.get(bid, set())   # Р-241: looked at, atmosphere
             row["art_pages"] = len(pics)
             for p, sizes in sorted(pics.items()):
                 if p in have or p > n:

@@ -1,0 +1,89 @@
+{
+  "schema": "sourcefold.proposals.v0",
+  "by": "исправление связей по проверке полноты 2026-11-14: правки записей вне задания (не применены)",
+  "proposals": [
+    {
+      "target": "chernovodnyy-ruchey-ru/location/blackwater-sklad-makbrayda",
+      "op": "set",
+      "path": "part_of",
+      "value": "coc:location:boston-doki",
+      "reason": "склад Макбрайда стоит «в бостонских доках» (chernovodnyy-ruchey-ru, с. 38); заведена общая запись доков (Р-243)",
+      "ref": "Р-243"
+    },
+    {
+      "target": "pobeg-iz-innsmuta-ru/organization/proekt-zavet",
+      "op": "replace",
+      "path": "based_at.0.note",
+      "old": "цель операции; штаб — Федеральное здание в Бостоне (отдельной записи нет)",
+      "new": "цель операции",
+      "reason": "заведена запись Федерального здания в Бостоне (Р-243); штаб — отдельным элементом based_at",
+      "ref": "Р-243",
+      "correction": false
+    },
+    {
+      "target": "pobeg-iz-innsmuta-ru/organization/proekt-zavet",
+      "op": "append",
+      "path": "based_at",
+      "value": {
+        "location": "pobeg-iz-innsmuta-ru/location/federalnoe-zdanie-v-bostone",
+        "note": "штаб операции: кабинет 402 и комната для совещаний"
+      },
+      "reason": "вербовка и инструктаж рейда — в кабинете 402 Федерального здания (pobeg-iz-innsmuta-ru, с. 99–101)",
+      "ref": "Р-243"
+    },
+    {
+      "target": "coc:location:boston",
+      "op": "append",
+      "path": "refs",
+      "value": "pobeg-iz-innsmuta-ru/location/federalnoe-zdanie-v-bostone",
+      "reason": "место «Побега из Иннсмута» в Бостоне (с. 99–104)",
+      "ref": "Р-243",
+      "correction": false
+    },
+    {
+      "target": "coc:location:boston",
+      "op": "append",
+      "path": "refs",
+      "value": "coc:location:boston-doki",
+      "reason": "бостонские доки («Побег из Иннсмута», с. 104; «Черноводный ручей», с. 38)",
+      "ref": "Р-243",
+      "correction": false
+    },
+    {
+      "target": "coc:location:ipswich",
+      "op": "append",
+      "path": "refs",
+      "value": "pobeg-iz-innsmuta-ru/location/dom-greggov",
+      "reason": "дом Греггов в Ипсвиче («Побег из Иннсмута», с. 80–81)",
+      "ref": "Р-243",
+      "correction": false
+    },
+    {
+      "target": "coc:location:cleveland",
+      "op": "append",
+      "path": "refs",
+      "value": "fears-sharp-little-needles-en/location/separation-case-western-school-of-medicine",
+      "reason": "медицинская школа Кейс Вестерн в Кливленде («Страх разлуки», с. 8)",
+      "ref": "Р-243",
+      "correction": false
+    },
+    {
+      "target": "coc:location:montreal",
+      "op": "append",
+      "path": "refs",
+      "value": "podzemka-ru/location/politsiya-monrealya",
+      "reason": "полиция Монреаля («Подземка», с. 2–3)",
+      "ref": "Р-243",
+      "correction": false
+    },
+    {
+      "target": "coc:location:berezovyy",
+      "op": "append",
+      "path": "refs",
+      "value": "poselok-berezovyy-ru/location/koloniya-45",
+      "reason": "колония № 45 («Посёлок Берёзовый», с. 11)",
+      "ref": "Р-243",
+      "correction": false
+    }
+  ]
+}

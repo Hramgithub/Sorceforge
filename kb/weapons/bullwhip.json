@@ -25,6 +25,7 @@
   "malfunction": null,
   "cost": {
     "1920s": "$5",
+    "1930s": "$6",
     "modern": "$50"
   },
   "description": {
@@ -35,7 +36,8 @@
   "availability": "1920-е",
   "axes": {
     "era": [
-      "1920s"
+      "1920s",
+      "1930s"
     ],
     "ruleset": "core"
   },
@@ -63,9 +65,32 @@
       "method": "book_text",
       "verified": true,
       "note": "Приложение A, Table 7: Hand-to-Hand Weapons: «Bullwhip» — пересмотренная строка таблицы; отличия от записи справочника — в source_variants"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 257,
+      "printed_page": 256,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 15 «References», «Weapon Lists»: строка «Bullwhip» — цена 1930-х $6; остальные числа совпадают с записью (сверено по изображению страницы)"
     }
   ],
-  "corrections": [],
+  "corrections": [
+    {
+      "field": "cost.1930s",
+      "from": null,
+      "to": "$6",
+      "reason": "цена 1930-х — «Pulp Cthulhu», гл. 15 «References», «Weapon Lists», с. 256 (сверено по изображению страницы)",
+      "ref": "Р-242"
+    },
+    {
+      "field": "axes.era",
+      "from": null,
+      "to": "1930s",
+      "reason": "оружие есть в списках оружия «Pulp Cthulhu» с ценой 1930-х (гл. 15 «Weapon Lists», с. 256); запись получила cost.1930s и источник Pulp — эпоха 1930-х",
+      "ref": "Р-242"
+    }
+  ],
   "errata": [],
   "quality": {
     "needs_review": false,

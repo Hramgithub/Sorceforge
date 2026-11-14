@@ -28,6 +28,7 @@
   "malfunction": "100",
   "cost": {
     "1920s": "$20",
+    "1930s": "$25",
     "modern": "$200"
   },
   "description": {
@@ -38,7 +39,8 @@
   "availability": "1920-е",
   "axes": {
     "era": [
-      "1920s"
+      "1920s",
+      "1930s"
     ],
     "ruleset": "core"
   },
@@ -66,9 +68,32 @@
       "method": "book_text",
       "verified": true,
       "note": "Приложение A, Table 9: Rifles: «Martini-Henry Rifle (.577/450)» — пересмотренная строка таблицы; отличия от записи справочника — в source_variants"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 259,
+      "printed_page": 258,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 15 «References», «Weapon Lists»: строка «.45 Martini-Henry Rifle» — цена 1930-х $25; остальные числа совпадают с записью (сверено по изображению страницы)"
     }
   ],
-  "corrections": [],
+  "corrections": [
+    {
+      "field": "cost.1930s",
+      "from": null,
+      "to": "$25",
+      "reason": "цена 1930-х — «Pulp Cthulhu», гл. 15 «References», «Weapon Lists», с. 258 (сверено по изображению страницы)",
+      "ref": "Р-242"
+    },
+    {
+      "field": "axes.era",
+      "from": null,
+      "to": "1930s",
+      "reason": "оружие есть в списках оружия «Pulp Cthulhu» с ценой 1930-х (гл. 15 «Weapon Lists», с. 258); запись получила cost.1930s и источник Pulp — эпоха 1930-х",
+      "ref": "Р-242"
+    }
+  ],
   "errata": [],
   "quality": {
     "needs_review": false,

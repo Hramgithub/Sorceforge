@@ -27,6 +27,7 @@
   "malfunction": "97",
   "cost": {
     "1920s": "$7",
+    "1930s": "$5",
     "modern": "$75"
   },
   "description": {
@@ -39,7 +40,8 @@
     "era": [
       "1920s",
       "modern",
-      "dark-ages"
+      "dark-ages",
+      "1930s"
     ],
     "ruleset": "core"
   },
@@ -75,6 +77,14 @@
       "method": "book_text",
       "verified": true,
       "note": "«Таблица: Дальнобойное оружие» — строка эпохи; отличия от записи справочника — в source_variants"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 257,
+      "printed_page": 256,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 15 «References», «Weapon Lists»: строка «Bow and Arrows» — цена 1930-х $5; остальные числа совпадают с записью (сверено по изображению страницы)"
     }
   ],
   "corrections": [
@@ -91,6 +101,20 @@
       "to": "Лук",
       "reason": "название строки в таблице оружия «Ктулху: Тёмные века» (с. 92–93)",
       "ref": "Р-232"
+    },
+    {
+      "field": "cost.1930s",
+      "from": null,
+      "to": "$5",
+      "reason": "цена 1930-х — «Pulp Cthulhu», гл. 15 «References», «Weapon Lists», с. 256 (сверено по изображению страницы)",
+      "ref": "Р-242"
+    },
+    {
+      "field": "axes.era",
+      "from": null,
+      "to": "1930s",
+      "reason": "оружие есть в списках оружия «Pulp Cthulhu» с ценой 1930-х (гл. 15 «Weapon Lists», с. 256); запись получила cost.1930s и источник Pulp — эпоха 1930-х",
+      "ref": "Р-242"
     }
   ],
   "errata": [],

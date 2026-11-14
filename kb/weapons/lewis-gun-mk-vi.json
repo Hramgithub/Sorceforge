@@ -1,0 +1,70 @@
+{
+  "schema": "sourcefold.weapon.v0",
+  "id": "coc:weapon:lewis-gun-mk-vi",
+  "kind": "weapon",
+  "name": {
+    "ru": "Пулемёт «Льюис» Mk VI",
+    "en": "Lewis Gun MK VI"
+  },
+  "group": "automatic",
+  "skill": {
+    "raw": "Стрельба (ПМ)",
+    "skill": "coc:skill:firearms",
+    "specialization": "Пулемёт"
+  },
+  "damage": {
+    "raw": "2d6+4",
+    "dice": "2d6+4",
+    "db": "none",
+    "impaling": true
+  },
+  "range": "140 метров",
+  "attacks": "Непр. огонь",
+  "ammo": "47",
+  "malfunction": "97",
+  "cost": {
+    "1920s": null,
+    "1930s": "$1500",
+    "modern": null
+  },
+  "description": {
+    "ru": "Пулемёт «Льюис» модели Mk VI из списков оружия «Pulp Cthulhu»: только непрерывный огонь (правила автоматической стрельбы), магазин на 47 патронов. Оружие с непрерывным огнём обычно недоступно гражданским, цена — подпольного рынка.",
+    "en": null
+  },
+  "model_of": "coc:weapon:lewis-gun-mark-i",
+  "caliber": null,
+  "reload": null,
+  "availability": "1930-е",
+  "axes": {
+    "era": [
+      "1930s"
+    ],
+    "ruleset": "pulp"
+  },
+  "sources": [
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 261,
+      "printed_page": 260,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 15 «References», «Weapon Lists», «Machine guns*»: строка «Lewis Gun MK VI» (сверено по изображению страницы); о ценах автоматического оружия — ключ к таблице, с. 261"
+    }
+  ],
+  "corrections": [
+    {
+      "field": "damage.impaling",
+      "from": null,
+      "to": "true",
+      "reason": "в таблице «Pulp Cthulhu» (с. 260) у пулемётов пометки (i) нет (заголовок «Machine guns*»); в таблице XVII «Книги хранителя» пулемёты пронзающие («Machine Guns (i)», KR-en с. 404) — вывод из текста (Р-41)",
+      "ref": "Р-41"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Наш перевод (Р-21). Позиции в таблице XVII «Книги хранителя» нет; ближайшая — «Пулемёт «Льюис» Mk I» (тот же навык и урон), отсюда model_of. Калибр в книге не указан, и для модели Mk VI мы его не знаем наверняка — поле пустое, вопрос владельцу. У записи каталога 1920-х coc:weapon:bsa-lewis-mk-iii-savage-lewis-m1917 есть псевдоним «Savage-Lewis M1917 (MK VI)» (каталог веб-помощника, не книга); числа там другие (110 метров, 47/97, осечка 96), записи не объединены."
+  }
+}

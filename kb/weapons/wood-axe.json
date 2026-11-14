@@ -25,6 +25,7 @@
   "malfunction": null,
   "cost": {
     "1920s": "$5",
+    "1930s": "$5",
     "modern": "$10"
   },
   "description": {
@@ -36,7 +37,8 @@
   "axes": {
     "era": [
       "1920s",
-      "modern"
+      "modern",
+      "1930s"
     ],
     "ruleset": "core"
   },
@@ -64,6 +66,14 @@
       "method": "book_text",
       "verified": true,
       "note": "Приложение A, Table 7: Hand-to-Hand Weapons: «Wood Axe» — пересмотренная строка таблицы; отличия от записи справочника — в source_variants"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 258,
+      "printed_page": 257,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 15 «References», «Weapon Lists»: строка «Wood Axe» — цена 1930-х $5; остальные числа совпадают с записью (сверено по изображению страницы)"
     }
   ],
   "corrections": [
@@ -73,6 +83,20 @@
       "to": "{\"book_id\": \"hellouin-v-danviche-ru\", \"printed_page\": 16, \"text\": \"«Хэллоуин в Данвиче», лист Гордона Брюстера: «Колун 50% 25% 10%, урон 1d8+1d2+БкУ, дальн. –, атаки 1». Отличие: урон 1d8+1d2+БкУ (в справочнике 1d8+2+БкУ); в списке «Простейшее оружие» того же сценария (с. 8) колун — 1d8+2+БкУ, как в справочнике.\"}",
       "reason": "иное число сценария — в source_variants, справочник не меняется (Р-124)",
       "ref": "Р-124"
+    },
+    {
+      "field": "cost.1930s",
+      "from": null,
+      "to": "$5",
+      "reason": "цена 1930-х — «Pulp Cthulhu», гл. 15 «References», «Weapon Lists», с. 257 (сверено по изображению страницы)",
+      "ref": "Р-242"
+    },
+    {
+      "field": "axes.era",
+      "from": null,
+      "to": "1930s",
+      "reason": "оружие есть в списках оружия «Pulp Cthulhu» с ценой 1930-х (гл. 15 «Weapon Lists», с. 257); запись получила cost.1930s и источник Pulp — эпоха 1930-х",
+      "ref": "Р-242"
     }
   ],
   "errata": [],

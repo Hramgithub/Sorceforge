@@ -33,6 +33,7 @@
   "malfunction": "96",
   "cost": {
     "1920s": "$1000",
+    "1930s": "$200",
     "modern": "$20 000"
   },
   "caliber": "9×19 мм Парабеллум",
@@ -43,7 +44,8 @@
   },
   "axes": {
     "era": [
-      "1920s"
+      "1920s",
+      "1930s"
     ],
     "ruleset": "core"
   },
@@ -71,6 +73,14 @@
       "method": "book_text",
       "verified": true,
       "note": "Приложение A, Table 12: Submachine Guns: «MP-28» — пересмотренная строка таблицы; отличия от записи справочника — в source_variants"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 261,
+      "printed_page": 260,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 15 «References», «Weapon Lists»: строка «MP18», «MP-28/II» — цена 1930-х $200; отличия чисел от записи — в source_variants (сверено по изображению страницы)"
     }
   ],
   "errata": [
@@ -79,6 +89,22 @@
       "printed": "«Бергманн» MP181/MP2811",
       "expected": "«Бергманн» MP18.I/MP28.II",
       "note": "Римские цифры I и II в обозначениях моделей напечатаны как «1» и «11» (так же в английской таблице). Название оставлено как напечатано."
+    }
+  ],
+  "corrections": [
+    {
+      "field": "cost.1930s",
+      "from": null,
+      "to": "$200",
+      "reason": "цена 1930-х — «Pulp Cthulhu», гл. 15 «References», «Weapon Lists», с. 260 (сверено по изображению страницы)",
+      "ref": "Р-242"
+    },
+    {
+      "field": "axes.era",
+      "from": null,
+      "to": "1930s",
+      "reason": "оружие есть в списках оружия «Pulp Cthulhu» с ценой 1930-х (гл. 15 «Weapon Lists», с. 260); запись получила cost.1930s и источник Pulp — эпоха 1930-х",
+      "ref": "Р-242"
     }
   ],
   "quality": {
@@ -107,6 +133,16 @@
       "book_id": "keepers-companion-en",
       "printed_page": 197,
       "text": "«Компаньон хранителя», приложение A, табл. 12 «Пистолеты-пулемёты» — пересмотренная таблица, которой по желанию заменяют таблицу «Книги хранителя»: «MP-28*»: Firearms (Rifle); Damage 1d10; Base Range 30 yards; Uses per Round 1 (2) or Burst or Full Auto; Bullets in Gun 32; Cost 20s/Modern $250/$27,000; Malf. 97; Era 1920s. Отличия: навык Стрельба (В/Д) (в справочнике Стрельба (ППМ)); дальность 30 метров (в справочнике 20 метров); атак за раунд 1 (2), очередь или непр. огонь (в справочнике 1 (2) или непр. огонь); боезапас 32 (в справочнике 20/30/32); осечка 97 (в справочнике 96); цена $250 / $27 000 (в справочнике $1000 / $20 000)."
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "printed_page": 260,
+      "text": "«Pulp Cthulhu», гл. 15 «References», «Weapon Lists» (с. 260), таблица с ценами 1930-х: «MP18»: Firearms (SMG); Damage 1d10; Base Range 20 yards; Uses per Round Full auto; Bullets in Gun (Mag) 32; Cost 1930s $200; Malfunction (MAL) 95. Отличия: атак за раунд непр. огонь (в справочнике 1 (2) или непр. огонь); патронов 32 (в справочнике 20/30/32); осечка 95 (в справочнике 96)."
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "printed_page": 260,
+      "text": "«Pulp Cthulhu», гл. 15 «References», «Weapon Lists» (с. 260), таблица с ценами 1930-х: «MP-28/II»: Firearms (SMG); Damage 1d10+2; Base Range 20 yards; Uses per Round 1 or Full auto; Bullets in Gun (Mag) 20/32; Cost 1930s $200; Malfunction (MAL) 96. Отличия: урон 1d10+2 (в справочнике 1d10); атак за раунд 1 или непр. огонь (в справочнике 1 (2) или непр. огонь); патронов 20/32 (в справочнике 20/30/32)."
     }
   ]
 }

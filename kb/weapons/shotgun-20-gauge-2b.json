@@ -30,6 +30,7 @@
   "malfunction": "100",
   "cost": {
     "1920s": "$35",
+    "1930s": "$20",
     "modern": "редкое"
   },
   "caliber": "20-й калибр",
@@ -40,7 +41,8 @@
   },
   "axes": {
     "era": [
-      "1920s"
+      "1920s",
+      "1930s"
     ],
     "ruleset": "core"
   },
@@ -60,6 +62,30 @@
       "method": "book_text",
       "verified": true,
       "note": "Weapons table (английские названия, сверка)."
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 260,
+      "printed_page": 259,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 15 «References», «Weapon Lists»: строка «20-gauge Shotgun (2B)» — цена 1930-х $20; остальные числа совпадают с записью (сверено по изображению страницы)"
+    }
+  ],
+  "corrections": [
+    {
+      "field": "cost.1930s",
+      "from": null,
+      "to": "$20",
+      "reason": "цена 1930-х — «Pulp Cthulhu», гл. 15 «References», «Weapon Lists», с. 259 (сверено по изображению страницы)",
+      "ref": "Р-242"
+    },
+    {
+      "field": "axes.era",
+      "from": null,
+      "to": "1930s",
+      "reason": "оружие есть в списках оружия «Pulp Cthulhu» с ценой 1930-х (гл. 15 «Weapon Lists», с. 259); запись получила cost.1930s и источник Pulp — эпоха 1930-х",
+      "ref": "Р-242"
     }
   ],
   "quality": {

@@ -25,6 +25,7 @@
   "malfunction": null,
   "cost": {
     "1920s": null,
+    "1930s": null,
     "modern": null
   },
   "description": {
@@ -37,7 +38,8 @@
     "era": [
       "1920s",
       "modern",
-      "dark-ages"
+      "dark-ages",
+      "1930s"
     ],
     "ruleset": "core"
   },
@@ -73,6 +75,14 @@
       "method": "book_text",
       "verified": true,
       "note": "«Таблица: Дальнобойное оружие» — строка эпохи; отличия от записи справочника — в source_variants"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 258,
+      "printed_page": 257,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 15 «References», «Weapon Lists»: строка «Rock, Thrown» — цена 1930-х не указана («—»); остальные числа совпадают с записью (сверено по изображению страницы)"
     }
   ],
   "corrections": [
@@ -82,6 +92,13 @@
       "to": "dark-ages",
       "reason": "оружие есть в таблице оружия «Ктулху: Тёмные века» (с. 92–93); числа эпохи — в source_variants (Р-124)",
       "ref": "Р-232"
+    },
+    {
+      "field": "axes.era",
+      "from": null,
+      "to": "1930s",
+      "reason": "оружие есть в списках оружия «Pulp Cthulhu» с ценой 1930-х (гл. 15 «Weapon Lists», с. 257); запись получила cost.1930s и источник Pulp — эпоха 1930-х",
+      "ref": "Р-242"
     }
   ],
   "errata": [],

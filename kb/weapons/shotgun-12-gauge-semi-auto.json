@@ -29,6 +29,7 @@
   "malfunction": "100",
   "cost": {
     "1920s": "$45",
+    "1930s": "$30",
     "modern": "$100"
   },
   "caliber": "12-й калибр",
@@ -39,7 +40,8 @@
   },
   "axes": {
     "era": [
-      "modern"
+      "modern",
+      "1930s"
     ],
     "ruleset": "core"
   },
@@ -67,6 +69,30 @@
       "method": "book_text",
       "verified": true,
       "note": "Приложение A, Table 10: Shotguns: «12-Gauge Shotgun (Semi-Auto)» — пересмотренная строка таблицы; отличия от записи справочника — в source_variants"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 260,
+      "printed_page": 259,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 15 «References», «Weapon Lists»: строка «12-gauge Shotgun (semi-auto)» — цена 1930-х $30; отличия чисел от записи — в source_variants (сверено по изображению страницы)"
+    }
+  ],
+  "corrections": [
+    {
+      "field": "cost.1930s",
+      "from": null,
+      "to": "$30",
+      "reason": "цена 1930-х — «Pulp Cthulhu», гл. 15 «References», «Weapon Lists», с. 259 (сверено по изображению страницы)",
+      "ref": "Р-242"
+    },
+    {
+      "field": "axes.era",
+      "from": null,
+      "to": "1930s",
+      "reason": "оружие есть в списках оружия «Pulp Cthulhu» с ценой 1930-х (гл. 15 «Weapon Lists», с. 259); запись получила cost.1930s и источник Pulp — эпоха 1930-х",
+      "ref": "Р-242"
     }
   ],
   "quality": {
@@ -92,6 +118,11 @@
       "book_id": "keepers-companion-en",
       "printed_page": 196,
       "text": "«Компаньон хранителя», приложение A, табл. 10 «Дробовики» — пересмотренная таблица, которой по желанию заменяют таблицу «Книги хранителя»: «12-Gauge Shotgun (Semi-Auto)»: Firearms (Shotgun); Damage 4d6/2d6/1d6; Base Range 10/20/50 yards; Uses per Round 1 (3); Bullets in Gun 5; Cost 20s/Modern $60/$350; Malf. 100; Era Modern. Отличия: атак за раунд 1 (3) (в справочнике 1 (2)); цена $60 / $350 (в справочнике $45 / $100)."
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "printed_page": 259,
+      "text": "«Pulp Cthulhu», гл. 15 «References», «Weapon Lists» (с. 259), таблица с ценами 1930-х: «12-gauge Shotgun (semi-auto)»: Firearms (R/S); Damage 4d6/2d6/1d6; Base Range 10/20/50 yards; Uses per Round 2; Bullets in Gun (Mag) 5; Cost 1930s $30; Malfunction (MAL) 100. Отличия: атак за раунд 2 (в справочнике 1 (2))."
     }
   ]
 }

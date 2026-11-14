@@ -28,6 +28,7 @@
   "malfunction": null,
   "cost": {
     "1920s": "$30",
+    "1930s": "$30",
     "modern": "$75"
   },
   "description": {
@@ -39,7 +40,8 @@
   "axes": {
     "era": [
       "1920s",
-      "modern"
+      "modern",
+      "1930s"
     ],
     "ruleset": "core"
   },
@@ -75,6 +77,14 @@
       "method": "book_text",
       "verified": true,
       "note": "«Царство Террора», таблица «Оружие»: «Кавалерийская сабля (п)» — пометка (п) в source_variants"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 258,
+      "printed_page": 257,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 15 «References», «Weapon Lists»: строка «Sword, heavy (cavalry sabre) (i)» — цена 1930-х $30; остальные числа совпадают с записью (сверено по изображению страницы)"
     }
   ],
   "corrections": [
@@ -105,6 +115,20 @@
       "to": "{\"book_id\": \"tsarstvo-terrora-ru\", \"printed_page\": 13, \"text\": \"«Царство Террора», таблица «Оружие»: «Кавалерийская сабля (п)»: Ближний бой (Меч); урон 1d8+1+БкУ; касание; 1 атака в раунд; (п) — оружие наносит проникающий урон. Отличия: сабля помечена как пронзающая (в справочнике — не пронзающая).\"}",
       "reason": "иное свойство в сценарии — в source_variants (с. 13); в английском оригинале так же: Cavalry Saber (i), «Key: (i)—capable of impaling»",
       "ref": "Р-124"
+    },
+    {
+      "field": "cost.1930s",
+      "from": null,
+      "to": "$30",
+      "reason": "цена 1930-х — «Pulp Cthulhu», гл. 15 «References», «Weapon Lists», с. 257 (сверено по изображению страницы)",
+      "ref": "Р-242"
+    },
+    {
+      "field": "axes.era",
+      "from": null,
+      "to": "1930s",
+      "reason": "оружие есть в списках оружия «Pulp Cthulhu» с ценой 1930-х (гл. 15 «Weapon Lists», с. 257); запись получила cost.1930s и источник Pulp — эпоха 1930-х",
+      "ref": "Р-242"
     }
   ],
   "errata": [],

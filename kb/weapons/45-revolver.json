@@ -39,6 +39,7 @@
   "malfunction": "100",
   "cost": {
     "1920s": "$30",
+    "1930s": "$35",
     "modern": "$300"
   },
   "description": {
@@ -50,7 +51,8 @@
   "axes": {
     "era": [
       "1920s",
-      "modern"
+      "modern",
+      "1930s"
     ],
     "ruleset": "core"
   },
@@ -78,6 +80,14 @@
       "method": "book_text",
       "verified": true,
       "note": "Weapon Notes: значения строки «Webley Mk VI Revolver (.455) (Rare)» подходят и для этого оружия — в source_variants"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 259,
+      "printed_page": 258,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 15 «References», «Weapon Lists»: строка «.45 Revolver» — цена 1930-х $35; остальные числа совпадают с записью (сверено по изображению страницы)"
     }
   ],
   "corrections": [
@@ -87,6 +97,20 @@
       "to": "{\"book_id\": \"ten-nad-providensom-ru\", \"printed_page\": null, \"text\": \"«Тень над Провиденсом», лист сыщика Теодора Джеймсона: «„Смит и Вессон“ M1917 — 60 / 30 / 12, урон 1d10 + 2, дальность 14 м, атаки 1 (3), патроны 6, неисправность 100».\"}",
       "reason": "оружие готового сыщика привязано к позиции «Револьвер .45»; дальность на листе — 14 м вместо 15 м (Р-124)",
       "ref": "Р-124"
+    },
+    {
+      "field": "cost.1930s",
+      "from": null,
+      "to": "$35",
+      "reason": "цена 1930-х — «Pulp Cthulhu», гл. 15 «References», «Weapon Lists», с. 258 (сверено по изображению страницы)",
+      "ref": "Р-242"
+    },
+    {
+      "field": "axes.era",
+      "from": null,
+      "to": "1930s",
+      "reason": "оружие есть в списках оружия «Pulp Cthulhu» с ценой 1930-х (гл. 15 «Weapon Lists», с. 258); запись получила cost.1930s и источник Pulp — эпоха 1930-х",
+      "ref": "Р-242"
     }
   ],
   "errata": [],

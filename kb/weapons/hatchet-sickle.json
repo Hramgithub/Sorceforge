@@ -25,6 +25,7 @@
   "malfunction": null,
   "cost": {
     "1920s": "$3",
+    "1930s": "$3",
     "modern": "$9"
   },
   "description": {
@@ -36,7 +37,8 @@
   "axes": {
     "era": [
       "1920s",
-      "modern"
+      "modern",
+      "1930s"
     ],
     "ruleset": "core"
   },
@@ -64,6 +66,14 @@
       "method": "book_text",
       "verified": true,
       "note": "Приложение A, Table 7: Hand-to-Hand Weapons: «Hatchet/Sickle» — пересмотренная строка таблицы; отличия от записи справочника — в source_variants"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 257,
+      "printed_page": 256,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 15 «References», «Weapon Lists»: строка «Hatchet/Sickle» — цена 1930-х $3; отличия чисел от записи — в source_variants (сверено по изображению страницы)"
     }
   ],
   "corrections": [
@@ -73,6 +83,20 @@
       "to": "1d6+1+БкУ",
       "reason": "таблица XVII, стр. 399 (web_helper_coc_gm weapons book-026)",
       "ref": null
+    },
+    {
+      "field": "cost.1930s",
+      "from": null,
+      "to": "$3",
+      "reason": "цена 1930-х — «Pulp Cthulhu», гл. 15 «References», «Weapon Lists», с. 256 (сверено по изображению страницы)",
+      "ref": "Р-242"
+    },
+    {
+      "field": "axes.era",
+      "from": null,
+      "to": "1930s",
+      "reason": "оружие есть в списках оружия «Pulp Cthulhu» с ценой 1930-х (гл. 15 «Weapon Lists», с. 256); запись получила cost.1930s и источник Pulp — эпоха 1930-х",
+      "ref": "Р-242"
     }
   ],
   "errata": [],
@@ -94,6 +118,11 @@
       "book_id": "keepers-companion-en",
       "printed_page": 193,
       "text": "«Компаньон хранителя», приложение A, табл. 7 «Оружие ближнего боя» — пересмотренная таблица, которой по желанию заменяют таблицу «Книги хранителя»: «Hatchet/Sickle (i)»: Fighting (Brawl); Damage 1d6+1+DB; Base Range Touch; Uses per Round 1; Ammo -; Cost 20s/Modern $1/$15; Malf. -; Era 1920s, Modern. Отличия: цена $1 / $15 (в справочнике $3 / $9)."
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "printed_page": 256,
+      "text": "«Pulp Cthulhu», гл. 15 «References», «Weapon Lists» (с. 256), таблица с ценами 1930-х: «Hatchet/Sickle»: Fighting (Axe); Damage 1d6+1+DB; Base Range Touch; Uses per Round 1; Bullets in Gun (Mag) —; Cost 1930s $3; Malfunction (MAL) —. Отличия: навык Ближний бой (топор) (в справочнике Ближний бой (драка))."
     }
   ]
 }

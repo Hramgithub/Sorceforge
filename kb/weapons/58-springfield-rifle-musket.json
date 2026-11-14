@@ -29,6 +29,7 @@
   "malfunction": "95",
   "cost": {
     "1920s": "$25",
+    "1930s": "$40",
     "modern": "$350"
   },
   "description": {
@@ -40,7 +41,8 @@
   "axes": {
     "era": [
       "1920s",
-      "modern"
+      "modern",
+      "1930s"
     ],
     "ruleset": "core"
   },
@@ -68,6 +70,14 @@
       "method": "book_text",
       "verified": true,
       "note": "Приложение A, Table 9: Rifles: «1861 Springfield Rifle Musket (.58) (Rare)» — пересмотренная строка таблицы; отличия от записи справочника — в source_variants"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 259,
+      "printed_page": 258,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 15 «References», «Weapon Lists»: строка «.58 Springfield Rifle Musket» — цена 1930-х $40; остальные числа совпадают с записью (сверено по изображению страницы)"
     }
   ],
   "corrections": [
@@ -84,6 +94,20 @@
       "to": "{\"book_id\": \"zhertvy-severnykh-vetrov-ru\", \"printed_page\": 7, \"text\": \"«Жертвы северных ветров», «Сторожка Бакстера»: ружьё «Несносная», «нарезной мушкет „Спрингфилд“ 1863 года: 1d10+5 урона на дистанции до 60 метров, 1 атака за раунд + 1 раунд на перезарядку, 1 патрон в обойме и осечка при 95 и выше». Отличия: урон 1d10+5 (в справочнике 1d10+4); атаки 1 за раунд + 1 раунд на перезарядку (в справочнике 1/4).\"}",
       "reason": "числа сценария не переписывают справочник (Р-124)",
       "ref": "Р-124"
+    },
+    {
+      "field": "cost.1930s",
+      "from": null,
+      "to": "$40",
+      "reason": "цена 1930-х — «Pulp Cthulhu», гл. 15 «References», «Weapon Lists», с. 258 (сверено по изображению страницы)",
+      "ref": "Р-242"
+    },
+    {
+      "field": "axes.era",
+      "from": null,
+      "to": "1930s",
+      "reason": "оружие есть в списках оружия «Pulp Cthulhu» с ценой 1930-х (гл. 15 «Weapon Lists», с. 258); запись получила cost.1930s и источник Pulp — эпоха 1930-х",
+      "ref": "Р-242"
     }
   ],
   "errata": [],

@@ -33,6 +33,7 @@
   "malfunction": "100",
   "cost": {
     "1920s": "$75",
+    "1930s": "$45",
     "modern": "$175"
   },
   "caliber": ".30-06",
@@ -44,7 +45,8 @@
   "axes": {
     "era": [
       "1920s",
-      "modern"
+      "modern",
+      "1930s"
     ],
     "ruleset": "core"
   },
@@ -72,6 +74,14 @@
       "method": "book_text",
       "verified": true,
       "note": "Приложение A, Table 9: Rifles: «.30-06 Bolt-Action Rifle» — пересмотренная строка таблицы; отличия от записи справочника — в source_variants"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 260,
+      "printed_page": 259,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 15 «References», «Weapon Lists»: строка «.30-06 Bolt-Action Rifle» — цена 1930-х $45; отличия чисел от записи — в source_variants (сверено по изображению страницы)"
     }
   ],
   "errata": [
@@ -80,6 +90,22 @@
       "printed": "Рычажная винтовка калибра .30-06",
       "expected": "Винтовка калибра .30-06 со скользящим затвором",
       "note": "В английской таблице .30-06 Bolt-Action Rifle (скользящий затвор); «рычажная» — ошибка перевода. Название оставлено как напечатано."
+    }
+  ],
+  "corrections": [
+    {
+      "field": "cost.1930s",
+      "from": null,
+      "to": "$45",
+      "reason": "цена 1930-х — «Pulp Cthulhu», гл. 15 «References», «Weapon Lists», с. 259 (сверено по изображению страницы)",
+      "ref": "Р-242"
+    },
+    {
+      "field": "axes.era",
+      "from": null,
+      "to": "1930s",
+      "reason": "оружие есть в списках оружия «Pulp Cthulhu» с ценой 1930-х (гл. 15 «Weapon Lists», с. 259); запись получила cost.1930s и источник Pulp — эпоха 1930-х",
+      "ref": "Р-242"
     }
   ],
   "quality": {
@@ -119,6 +145,11 @@
       "book_id": "keepers-companion-en",
       "printed_page": 195,
       "text": "«Компаньон хранителя», приложение A, табл. 9 «Винтовки» — пересмотренная таблица, которой по желанию заменяют таблицу «Книги хранителя»: «.30-06 Bolt-Action Rifle*»: Firearms (Rifle); Damage 2d6+4; Base Range 110 yards; Uses per Round 1; Bullets in Gun 5; Cost 20s/Modern $30/$1,000; Malf. 99; Era 1920s, Modern. Отличия: осечка 99 (в справочнике 100); цена $30 / $1000 (в справочнике $75 / $175)."
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "printed_page": 259,
+      "text": "«Pulp Cthulhu», гл. 15 «References», «Weapon Lists» (с. 259), таблица с ценами 1930-х: «.30-06 Bolt-Action Rifle»: Firearms (R/S); Damage 2d6+4; Base Range 110 yards; Uses per Round 1; Bullets in Gun (Mag) 10; Cost 1930s $45; Malfunction (MAL) 100. Отличия: патронов 10 (в справочнике 5)."
     }
   ]
 }

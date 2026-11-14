@@ -25,6 +25,7 @@
   "malfunction": "93",
   "cost": {
     "1920s": "Нет",
+    "1930s": "Нет",
     "modern": "Нет"
   },
   "caliber": null,
@@ -36,7 +37,8 @@
   "axes": {
     "era": [
       "1920s",
-      "modern"
+      "modern",
+      "1930s"
     ],
     "ruleset": "core"
   },
@@ -64,6 +66,14 @@
       "method": "book_text",
       "verified": true,
       "note": "Приложение A, Table 14: Explosives, Heavy Weapons, Misc.: «Flamethrower» — пересмотренная строка таблицы; числа совпадают со справочником"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 262,
+      "printed_page": 261,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 15 «References», «Weapon Lists»: строка «Flamethrower» — цена 1930-х Нет; остальные числа совпадают с записью (сверено по изображению страницы)"
     }
   ],
   "source_variants": [
@@ -71,6 +81,22 @@
       "book_id": "pobeg-iz-innsmuta-ru",
       "printed_page": 131,
       "text": "Базовый навык 05%; урон 2d6 за короткую очередь, 4d6 и выше за продолжительную; полный урон до 15 м, половина — 15–25 м, дальше урона нет; топлива на 8d6 общего урона (четыре короткие очереди); ранец снижает ЛВК на 20; пробитый горящий бак взрывается, нанося весь оставшийся урон в радиусе 10 м; снять огнемёт — 2 раунда, заправить — не меньше 5 раундов."
+    }
+  ],
+  "corrections": [
+    {
+      "field": "cost.1930s",
+      "from": null,
+      "to": "Нет",
+      "reason": "цена 1930-х — «Pulp Cthulhu», гл. 15 «References», «Weapon Lists», с. 261 (сверено по изображению страницы)",
+      "ref": "Р-242"
+    },
+    {
+      "field": "axes.era",
+      "from": null,
+      "to": "1930s",
+      "reason": "оружие есть в списках оружия «Pulp Cthulhu» с ценой 1930-х (гл. 15 «Weapon Lists», с. 261); запись получила cost.1930s и источник Pulp — эпоха 1930-х",
+      "ref": "Р-242"
     }
   ],
   "quality": {

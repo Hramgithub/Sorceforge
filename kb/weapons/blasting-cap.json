@@ -27,6 +27,7 @@
   "malfunction": "100",
   "cost": {
     "1920s": "$1",
+    "1930s": "$20 коробка",
     "modern": "$20 коробка"
   },
   "caliber": null,
@@ -38,7 +39,8 @@
   "axes": {
     "era": [
       "1920s",
-      "modern"
+      "modern",
+      "1930s"
     ],
     "ruleset": "core"
   },
@@ -66,6 +68,14 @@
       "method": "book_text",
       "verified": true,
       "note": "Приложение A, Table 14: Explosives, Heavy Weapons, Misc.: «Blasting Cap (Electric)» — пересмотренная строка таблицы; отличия от записи справочника — в source_variants"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 261,
+      "printed_page": 260,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 15 «References», «Weapon Lists»: строка «Blasting Cap» — цена 1930-х $20 коробка; остальные числа совпадают с записью (сверено по изображению страницы)"
     }
   ],
   "corrections": [
@@ -82,6 +92,20 @@
       "to": "Электрический капсюль-детонатор для подрыва зарядов; одноразовый. Радиус поражения 1 м: до 2 м урон уменьшается вдвое, до 3 м — вчетверо, дальше урон не наносится.",
       "reason": "таблица XVII, примечание «2 метра, 3 метра и т. д.»: урон вчетверо до 3x, дальше не наносится (в помощнике границы 2x и 4x) («Книга хранителя», таблица XVII, примечания, с. 404 (физ. 380))",
       "ref": null
+    },
+    {
+      "field": "cost.1930s",
+      "from": null,
+      "to": "$20 коробка",
+      "reason": "цена 1930-х — «Pulp Cthulhu», гл. 15 «References», «Weapon Lists», с. 260 (сверено по изображению страницы)",
+      "ref": "Р-242"
+    },
+    {
+      "field": "axes.era",
+      "from": null,
+      "to": "1930s",
+      "reason": "оружие есть в списках оружия «Pulp Cthulhu» с ценой 1930-х (гл. 15 «Weapon Lists», с. 260); запись получила cost.1930s и источник Pulp — эпоха 1930-х",
+      "ref": "Р-242"
     }
   ],
   "quality": {

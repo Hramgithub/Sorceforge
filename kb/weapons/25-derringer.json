@@ -30,6 +30,7 @@
   "malfunction": "100",
   "cost": {
     "1920s": "$12",
+    "1930s": "$20",
     "modern": "$55"
   },
   "description": {
@@ -40,7 +41,8 @@
   "availability": "1920-е",
   "axes": {
     "era": [
-      "1920s"
+      "1920s",
+      "1930s"
     ],
     "ruleset": "core"
   },
@@ -60,6 +62,14 @@
       "method": "book_text",
       "verified": true,
       "note": "Table XVII: Weapon Lists — английское название, сверка."
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 259,
+      "printed_page": 258,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 15 «References», «Weapon Lists»: строка «.25 Derringer (1B)» — цена 1930-х $20; остальные числа совпадают с записью (сверено по изображению страницы)"
     }
   ],
   "corrections": [
@@ -69,6 +79,20 @@
       "to": "«Дерринджер» 25-го калибра (1С)",
       "reason": "таблица XVII, стр. 400 (web_helper_coc_gm weapons book-032)",
       "ref": null
+    },
+    {
+      "field": "cost.1930s",
+      "from": null,
+      "to": "$20",
+      "reason": "цена 1930-х — «Pulp Cthulhu», гл. 15 «References», «Weapon Lists», с. 258 (сверено по изображению страницы)",
+      "ref": "Р-242"
+    },
+    {
+      "field": "axes.era",
+      "from": null,
+      "to": "1930s",
+      "reason": "оружие есть в списках оружия «Pulp Cthulhu» с ценой 1930-х (гл. 15 «Weapon Lists», с. 258); запись получила cost.1930s и источник Pulp — эпоха 1930-х",
+      "ref": "Р-242"
     }
   ],
   "errata": [],

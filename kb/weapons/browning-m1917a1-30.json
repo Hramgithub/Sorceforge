@@ -28,6 +28,7 @@
   "malfunction": "96",
   "cost": {
     "1920s": "$3000",
+    "1930s": "$3000",
     "modern": "$30 000"
   },
   "caliber": ".30",
@@ -38,7 +39,8 @@
   },
   "axes": {
     "era": [
-      "1920s"
+      "1920s",
+      "1930s"
     ],
     "ruleset": "core"
   },
@@ -66,6 +68,30 @@
       "method": "book_text",
       "verified": true,
       "note": "Приложение A, Table 13: Machine Guns: «Belt-Fed Machine Gun (.30-06)» — пересмотренная строка таблицы; отличия от записи справочника — в source_variants"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 261,
+      "printed_page": 260,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 15 «References», «Weapon Lists»: строка «.30 Browning M1917A1, belt-fed» — цена 1930-х $3000; остальные числа совпадают с записью (сверено по изображению страницы)"
+    }
+  ],
+  "corrections": [
+    {
+      "field": "cost.1930s",
+      "from": null,
+      "to": "$3000",
+      "reason": "цена 1930-х — «Pulp Cthulhu», гл. 15 «References», «Weapon Lists», с. 260 (сверено по изображению страницы)",
+      "ref": "Р-242"
+    },
+    {
+      "field": "axes.era",
+      "from": null,
+      "to": "1930s",
+      "reason": "оружие есть в списках оружия «Pulp Cthulhu» с ценой 1930-х (гл. 15 «Weapon Lists», с. 260); запись получила cost.1930s и источник Pulp — эпоха 1930-х",
+      "ref": "Р-242"
     }
   ],
   "quality": {

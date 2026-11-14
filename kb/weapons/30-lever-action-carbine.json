@@ -32,6 +32,7 @@
   "malfunction": "98",
   "cost": {
     "1920s": "$19",
+    "1930s": "$20",
     "modern": "$150"
   },
   "description": {
@@ -43,7 +44,8 @@
   "axes": {
     "era": [
       "1920s",
-      "modern"
+      "modern",
+      "1930s"
     ],
     "ruleset": "core"
   },
@@ -71,9 +73,32 @@
       "method": "book_text",
       "verified": true,
       "note": "Приложение A, Table 9: Rifles: «Winchester Model 1894 (.30-30)» — пересмотренная строка таблицы; отличия от записи справочника — в source_variants"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 259,
+      "printed_page": 258,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 15 «References», «Weapon Lists»: строка «.30 Lever-Action Carbine» — цена 1930-х $20; остальные числа совпадают с записью (сверено по изображению страницы)"
     }
   ],
-  "corrections": [],
+  "corrections": [
+    {
+      "field": "cost.1930s",
+      "from": null,
+      "to": "$20",
+      "reason": "цена 1930-х — «Pulp Cthulhu», гл. 15 «References», «Weapon Lists», с. 258 (сверено по изображению страницы)",
+      "ref": "Р-242"
+    },
+    {
+      "field": "axes.era",
+      "from": null,
+      "to": "1930s",
+      "reason": "оружие есть в списках оружия «Pulp Cthulhu» с ценой 1930-х (гл. 15 «Weapon Lists», с. 258); запись получила cost.1930s и источник Pulp — эпоха 1930-х",
+      "ref": "Р-242"
+    }
+  ],
   "errata": [],
   "quality": {
     "needs_review": false,

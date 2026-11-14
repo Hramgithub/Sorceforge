@@ -32,6 +32,7 @@
   "malfunction": "100",
   "cost": {
     "1920s": "$40",
+    "1930s": "$40",
     "modern": "$375"
   },
   "description": {
@@ -43,7 +44,8 @@
   "axes": {
     "era": [
       "1920s",
-      "modern"
+      "modern",
+      "1930s"
     ],
     "ruleset": "core"
   },
@@ -71,6 +73,14 @@
       "method": "book_text",
       "verified": true,
       "note": "Приложение A, Table 8: Handguns: «M1911 Pistol (.45 ACP)» — пересмотренная строка таблицы; отличия от записи справочника — в source_variants"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 259,
+      "printed_page": 258,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 15 «References», «Weapon Lists»: строка «.45 Automatic» — цена 1930-х $40; остальные числа совпадают с записью (сверено по изображению страницы)"
     }
   ],
   "corrections": [
@@ -80,6 +90,20 @@
       "to": "{\"book_id\": \"popalis-ru\", \"printed_page\": 2, \"text\": \"«Попались!», лист сыщика «Червяка» Гретича: «Кольт 1911 - урон 1d10». Отличие: урон 1d10 (в справочнике 1d10+2). Персонаж — popalis-ru/character/chervyak-gretich.\"}",
       "reason": "иные числа сценария не переписывают справочник, а идут в source_variants (с. 2)",
       "ref": "Р-124"
+    },
+    {
+      "field": "cost.1930s",
+      "from": null,
+      "to": "$40",
+      "reason": "цена 1930-х — «Pulp Cthulhu», гл. 15 «References», «Weapon Lists», с. 258 (сверено по изображению страницы)",
+      "ref": "Р-242"
+    },
+    {
+      "field": "axes.era",
+      "from": null,
+      "to": "1930s",
+      "reason": "оружие есть в списках оружия «Pulp Cthulhu» с ценой 1930-х (гл. 15 «Weapon Lists», с. 258); запись получила cost.1930s и источник Pulp — эпоха 1930-х",
+      "ref": "Р-242"
     }
   ],
   "errata": [],

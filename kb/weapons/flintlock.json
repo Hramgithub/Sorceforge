@@ -30,6 +30,7 @@
   "malfunction": "95",
   "cost": {
     "1920s": "$30",
+    "1930s": "$35",
     "modern": "$300"
   },
   "description": {
@@ -41,7 +42,8 @@
   "axes": {
     "era": [
       "1920s",
-      "modern"
+      "modern",
+      "1930s"
     ],
     "ruleset": "core"
   },
@@ -77,6 +79,14 @@
       "method": "book_text",
       "verified": true,
       "note": "«Царство Террора», таблица «Оружие»: «Пистоль, кремнёвый» — числа совпадают со справочником"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 259,
+      "printed_page": 258,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 15 «References», «Weapon Lists»: строка «Flintlock Handgun» — цена 1930-х $35; остальные числа совпадают с записью (сверено по изображению страницы)"
     }
   ],
   "corrections": [
@@ -93,6 +103,20 @@
       "to": "Pistol, Flintlock",
       "reason": "английский оригинал «Reign of Terror», с. 13: «Pistol, Flintlock»",
       "ref": "Р-96"
+    },
+    {
+      "field": "cost.1930s",
+      "from": null,
+      "to": "$35",
+      "reason": "цена 1930-х — «Pulp Cthulhu», гл. 15 «References», «Weapon Lists», с. 258 (сверено по изображению страницы)",
+      "ref": "Р-242"
+    },
+    {
+      "field": "axes.era",
+      "from": null,
+      "to": "1930s",
+      "reason": "оружие есть в списках оружия «Pulp Cthulhu» с ценой 1930-х (гл. 15 «Weapon Lists», с. 258); запись получила cost.1930s и источник Pulp — эпоха 1930-х",
+      "ref": "Р-242"
     }
   ],
   "errata": [],

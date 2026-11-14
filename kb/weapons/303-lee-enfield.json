@@ -31,6 +31,7 @@
   "malfunction": "100",
   "cost": {
     "1920s": "$50",
+    "1930s": "$60",
     "modern": "$300"
   },
   "caliber": ".303",
@@ -42,7 +43,8 @@
   "axes": {
     "era": [
       "1920s",
-      "modern"
+      "modern",
+      "1930s"
     ],
     "ruleset": "core"
   },
@@ -70,6 +72,14 @@
       "method": "book_text",
       "verified": true,
       "note": "Приложение A, Table 9: Rifles: «Lee-Enfield (.303)» — пересмотренная строка таблицы; отличия от записи справочника — в source_variants"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 260,
+      "printed_page": 259,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 15 «References», «Weapon Lists»: строка «.303 Lee-Enfield» — цена 1930-х $60; остальные числа совпадают с записью (сверено по изображению страницы)"
     }
   ],
   "quality": {
@@ -110,6 +120,20 @@
       "to": ".303 Ли-Энфилд",
       "reason": "так винтовка названа в «Проклятии Ганеши» (с. 27–28)",
       "ref": "Р-96"
+    },
+    {
+      "field": "cost.1930s",
+      "from": null,
+      "to": "$60",
+      "reason": "цена 1930-х — «Pulp Cthulhu», гл. 15 «References», «Weapon Lists», с. 259 (сверено по изображению страницы)",
+      "ref": "Р-242"
+    },
+    {
+      "field": "axes.era",
+      "from": null,
+      "to": "1930s",
+      "reason": "оружие есть в списках оружия «Pulp Cthulhu» с ценой 1930-х (гл. 15 «Weapon Lists», с. 259); запись получила cost.1930s и источник Pulp — эпоха 1930-х",
+      "ref": "Р-242"
     }
   ]
 }

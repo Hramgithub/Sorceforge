@@ -28,6 +28,7 @@
   "malfunction": "98",
   "cost": {
     "1920s": "$40",
+    "1930s": "$40",
     "modern": "$3500"
   },
   "description": {
@@ -40,7 +41,8 @@
   "availability": "1920-е, редкое",
   "axes": {
     "era": [
-      "1920s"
+      "1920s",
+      "1930s"
     ],
     "ruleset": "core"
   },
@@ -52,9 +54,32 @@
       "method": "book_text",
       "verified": true,
       "note": "Приложение A, Table 8: Handguns: «Mauser C96 \"Broomhandle\" (7.63x25mm) (Rare)»; числа сверены по изображению страницы"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 259,
+      "printed_page": 258,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 15 «References», «Weapon Lists»: строка «Mauser C96» — цена 1930-х $40; отличия чисел от записи — в source_variants (сверено по изображению страницы)"
     }
   ],
-  "corrections": [],
+  "corrections": [
+    {
+      "field": "cost.1930s",
+      "from": null,
+      "to": "$40",
+      "reason": "цена 1930-х — «Pulp Cthulhu», гл. 15 «References», «Weapon Lists», с. 258 (сверено по изображению страницы)",
+      "ref": "Р-242"
+    },
+    {
+      "field": "axes.era",
+      "from": null,
+      "to": "1930s",
+      "reason": "оружие есть в списках оружия «Pulp Cthulhu» с ценой 1930-х (гл. 15 «Weapon Lists», с. 258); запись получила cost.1930s и источник Pulp — эпоха 1930-х",
+      "ref": "Р-242"
+    }
+  ],
   "errata": [],
   "quality": {
     "needs_review": false,
@@ -62,5 +87,12 @@
       "translated"
     ],
     "notes": "Наш перевод (Р-21). Позиция пересмотренной таблицы «Компаньона хранителя» (Table 8: Handguns, с. 195); в таблице XVII «Книги хранителя» такой позиции нет — числа по «Компаньону». Калибр — из названия в книге. В базе есть модель каталога «Пистолет «Маузер» C96 M1930/M1932» (coc:weapon:mauser-c96-m1930-m1932); строка «Компаньона» — общий C96 («Broomhandle»), отдельная позиция."
-  }
+  },
+  "source_variants": [
+    {
+      "book_id": "pulp-cthulhu-en",
+      "printed_page": 258,
+      "text": "«Pulp Cthulhu», гл. 15 «References», «Weapon Lists» (с. 258), таблица с ценами 1930-х: «Mauser C96»: Firearms (HG); Damage 1d10+1; Base Range 15 yards; Uses per Round 1 (3); Bullets in Gun (Mag) 6; Cost 1930s $40; Malfunction (MAL) 99. Отличия: патронов 6 (в справочнике 10); осечка 99 (в справочнике 98)."
+    }
+  ]
 }

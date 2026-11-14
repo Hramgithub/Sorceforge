@@ -30,6 +30,7 @@
   "malfunction": "100",
   "cost": {
     "1920s": "$800",
+    "1930s": "$800",
     "modern": "$1500"
   },
   "caliber": ".30-06 Springfield (7,62×63 мм)",
@@ -40,7 +41,8 @@
   },
   "axes": {
     "era": [
-      "1920s"
+      "1920s",
+      "1930s"
     ],
     "ruleset": "core"
   },
@@ -68,6 +70,14 @@
       "method": "book_text",
       "verified": true,
       "note": "Приложение A, Table 13: Machine Guns: «Browning Auto Rifle (.30-06 M1918)» — пересмотренная строка таблицы; отличия от записи справочника — в source_variants"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 261,
+      "printed_page": 260,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 15 «References», «Weapon Lists»: строка «Browning Auto Rifle M1918» — цена 1930-х $800; остальные числа совпадают с записью (сверено по изображению страницы)"
     }
   ],
   "source_variants": [
@@ -80,6 +90,22 @@
       "book_id": "keepers-companion-en",
       "printed_page": 198,
       "text": "«Компаньон хранителя», приложение A, табл. 13 «Пулемёты» — пересмотренная таблица, которой по желанию заменяют таблицу «Книги хранителя»: «Browning Auto Rifle (.30-06 M1918)»: Firearms (MG); Damage 2d6+4; Base Range 90 yards; Uses per Round 1 (2) or Burst or Full Auto; Bullets in Gun 20; Cost 20s/Modern $850/$12,000; Malf. 100; Era 1920s, WWII. Отличия: атак за раунд 1 (2), очередь или непр. огонь (в справочнике 1 (2) или непр. огонь); цена $850 / $12 000 (в справочнике $800 / $1500); эпоха 1920-е, Вторая мировая (в справочнике 1920-е)."
+    }
+  ],
+  "corrections": [
+    {
+      "field": "cost.1930s",
+      "from": null,
+      "to": "$800",
+      "reason": "цена 1930-х — «Pulp Cthulhu», гл. 15 «References», «Weapon Lists», с. 260 (сверено по изображению страницы)",
+      "ref": "Р-242"
+    },
+    {
+      "field": "axes.era",
+      "from": null,
+      "to": "1930s",
+      "reason": "оружие есть в списках оружия «Pulp Cthulhu» с ценой 1930-х (гл. 15 «Weapon Lists», с. 260); запись получила cost.1930s и источник Pulp — эпоха 1930-х",
+      "ref": "Р-242"
     }
   ],
   "quality": {

@@ -29,6 +29,7 @@
   "malfunction": "99",
   "cost": {
     "1920s": "$13",
+    "1930s": "$20",
     "modern": "$70"
   },
   "description": {
@@ -40,7 +41,8 @@
   "axes": {
     "era": [
       "1920s",
-      "modern"
+      "modern",
+      "1930s"
     ],
     "ruleset": "core"
   },
@@ -68,6 +70,14 @@
       "method": "book_text",
       "verified": true,
       "note": "Приложение A, Table 9: Rifles: «.22 Bolt-Action Rifle» — пересмотренная строка таблицы; отличия от записи справочника — в source_variants"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 259,
+      "printed_page": 258,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 15 «References», «Weapon Lists»: строка «.22 Bolt-Action Rifle» — цена 1930-х $20; остальные числа совпадают с записью (сверено по изображению страницы)"
     }
   ],
   "source_variants": [
@@ -82,7 +92,22 @@
       "text": "«Компаньон хранителя», приложение A, табл. 9 «Винтовки» — пересмотренная таблица, которой по желанию заменяют таблицу «Книги хранителя»: «.22 Bolt-Action Rifle»: Firearms (Rifle); Damage 1d6+1; Base Range 25 yards; Uses per Round 1; Bullets in Gun 6; Cost 20s/Modern $6/$250; Malf. 98; Era 1920s, Modern. Отличия: дальность 25 метров (в справочнике 30 метров); осечка 98 (в справочнике 99); цена $6 / $250 (в справочнике $13 / $70)."
     }
   ],
-  "corrections": [],
+  "corrections": [
+    {
+      "field": "cost.1930s",
+      "from": null,
+      "to": "$20",
+      "reason": "цена 1930-х — «Pulp Cthulhu», гл. 15 «References», «Weapon Lists», с. 258 (сверено по изображению страницы)",
+      "ref": "Р-242"
+    },
+    {
+      "field": "axes.era",
+      "from": null,
+      "to": "1930s",
+      "reason": "оружие есть в списках оружия «Pulp Cthulhu» с ценой 1930-х (гл. 15 «Weapon Lists», с. 258); запись получила cost.1930s и источник Pulp — эпоха 1930-х",
+      "ref": "Р-242"
+    }
+  ],
   "errata": [],
   "quality": {
     "needs_review": false,

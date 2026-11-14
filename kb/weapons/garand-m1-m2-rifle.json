@@ -28,6 +28,7 @@
   "malfunction": "100",
   "cost": {
     "1920s": null,
+    "1930s": "$400",
     "modern": "$400"
   },
   "description": {
@@ -38,7 +39,8 @@
   "availability": "После Второй мировой",
   "axes": {
     "era": [
-      "modern"
+      "modern",
+      "1930s"
     ],
     "ruleset": "core"
   },
@@ -66,9 +68,32 @@
       "method": "book_text",
       "verified": true,
       "note": "Приложение A, Table 9: Rifles: «M1 Garand (.30-06)» — пересмотренная строка таблицы; отличия от записи справочника — в source_variants"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 260,
+      "printed_page": 259,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 15 «References», «Weapon Lists»: строка «Garand M1, M2 Rifle» — цена 1930-х $400; остальные числа совпадают с записью (сверено по изображению страницы)"
     }
   ],
-  "corrections": [],
+  "corrections": [
+    {
+      "field": "cost.1930s",
+      "from": null,
+      "to": "$400",
+      "reason": "цена 1930-х — «Pulp Cthulhu», гл. 15 «References», «Weapon Lists», с. 259 (сверено по изображению страницы)",
+      "ref": "Р-242"
+    },
+    {
+      "field": "axes.era",
+      "from": null,
+      "to": "1930s",
+      "reason": "оружие есть в списках оружия «Pulp Cthulhu» с ценой 1930-х (гл. 15 «Weapon Lists», с. 259); запись получила cost.1930s и источник Pulp — эпоха 1930-х",
+      "ref": "Р-242"
+    }
+  ],
   "errata": [],
   "quality": {
     "needs_review": false,

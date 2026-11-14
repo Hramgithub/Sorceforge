@@ -29,6 +29,7 @@
   "malfunction": "100",
   "cost": {
     "1920s": "Нет",
+    "1930s": "Нет",
     "modern": "Нет"
   },
   "caliber": "12-й калибр",
@@ -39,7 +40,8 @@
   },
   "axes": {
     "era": [
-      "1920s"
+      "1920s",
+      "1930s"
     ],
     "ruleset": "core"
   },
@@ -67,6 +69,30 @@
       "method": "book_text",
       "verified": true,
       "note": "Приложение A, Table 10: Shotguns: «12-Gauge Shotgun (2B Sawed-Off)» — пересмотренная строка таблицы; отличия от записи справочника — в source_variants"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 260,
+      "printed_page": 259,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 15 «References», «Weapon Lists»: строка «12-gauge Shotgun (2B, sawed off)» — цена 1930-х Нет; остальные числа совпадают с записью (сверено по изображению страницы)"
+    }
+  ],
+  "corrections": [
+    {
+      "field": "cost.1930s",
+      "from": null,
+      "to": "Нет",
+      "reason": "цена 1930-х — «Pulp Cthulhu», гл. 15 «References», «Weapon Lists», с. 259 (сверено по изображению страницы)",
+      "ref": "Р-242"
+    },
+    {
+      "field": "axes.era",
+      "from": null,
+      "to": "1930s",
+      "reason": "оружие есть в списках оружия «Pulp Cthulhu» с ценой 1930-х (гл. 15 «Weapon Lists», с. 259); запись получила cost.1930s и источник Pulp — эпоха 1930-х",
+      "ref": "Р-242"
     }
   ],
   "quality": {

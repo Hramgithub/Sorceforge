@@ -28,6 +28,7 @@
   "malfunction": "96",
   "cost": {
     "1920s": "$3000",
+    "1930s": "$1000",
     "modern": "$20 000"
   },
   "caliber": ".303 British (7,7×56 мм R)",
@@ -38,7 +39,8 @@
   },
   "axes": {
     "era": [
-      "1920s"
+      "1920s",
+      "1930s"
     ],
     "ruleset": "core"
   },
@@ -66,6 +68,30 @@
       "method": "book_text",
       "verified": true,
       "note": "Приложение A, Table 13: Machine Guns: «Lewis Gun (.303)» — пересмотренная строка таблицы; отличия от записи справочника — в source_variants"
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "physical_page": 261,
+      "printed_page": 260,
+      "method": "book_text",
+      "verified": true,
+      "note": "гл. 15 «References», «Weapon Lists»: строка «Lewis Gun MK I» — цена 1930-х $1000; отличия чисел от записи — в source_variants (сверено по изображению страницы)"
+    }
+  ],
+  "corrections": [
+    {
+      "field": "cost.1930s",
+      "from": null,
+      "to": "$1000",
+      "reason": "цена 1930-х — «Pulp Cthulhu», гл. 15 «References», «Weapon Lists», с. 260 (сверено по изображению страницы)",
+      "ref": "Р-242"
+    },
+    {
+      "field": "axes.era",
+      "from": null,
+      "to": "1930s",
+      "reason": "оружие есть в списках оружия «Pulp Cthulhu» с ценой 1930-х (гл. 15 «Weapon Lists», с. 260); запись получила cost.1930s и источник Pulp — эпоха 1930-х",
+      "ref": "Р-242"
     }
   ],
   "quality": {
@@ -85,6 +111,11 @@
       "book_id": "keepers-companion-en",
       "printed_page": 198,
       "text": "«Компаньон хранителя», приложение A, табл. 13 «Пулемёты» — пересмотренная таблица, которой по желанию заменяют таблицу «Книги хранителя»: «Lewis Gun (.303)*»: Firearms (MG); Damage 2d6+4; Base Range 90 yards; Uses per Round Burst or Full Auto; Bullets in Gun 47/97; Cost 20s/Modern $850/$27,000*; Malf. 98; Era 1920s, WWII. Отличия: дальность 90 метров (в справочнике 110 метров); атак за раунд Очередь или непр. огонь (в справочнике Непр. огонь); осечка 98 (в справочнике 96); цена $850 / $27 000* (в справочнике $3000 / $20 000); эпоха 1920-е, Вторая мировая (в справочнике 1920-е)."
+    },
+    {
+      "book_id": "pulp-cthulhu-en",
+      "printed_page": 260,
+      "text": "«Pulp Cthulhu», гл. 15 «References», «Weapon Lists» (с. 260), таблица с ценами 1930-х: «Lewis Gun MK I»: Firearms (MG); Damage 2d6+4; Base Range 110 yards; Uses per Round Full auto; Bullets in Gun (Mag) 27/97; Cost 1930s $1,000; Malfunction (MAL) 96. Отличия: патронов 27/97 — так напечатано, вероятно опечатка: у пулемёта «Льюис» диски на 47 и 97 патронов (в справочнике 47/97)."
     }
   ]
 }

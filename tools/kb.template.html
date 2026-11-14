@@ -1307,7 +1307,7 @@ function skillCard(c) {
     ${seeAlso(c)}
     ${specs ? `<section><h3>Специализации</h3><table><tr><th>Название</th><th>База</th></tr>${specs}</table></section>` : ''}
     ${occsOf(c.id).length ? `<section><h3>В профессиях (${occsOf(c.id).length})</h3><p>${occsOf(c.id).map(o => link(o.id, o.name.ru)).join(', ')}</p></section>` : ''}
-    ${(c.examples||[]).length ? `<section><h3>Примеры</h3><ul>${c.examples.map(e => `<li>${esc(e)}</li>`).join('')}</ul></section>` : ''}
+    ${(c.examples||[]).length ? `<section><h3>Примеры${(c.quality?.flags || []).includes('editorial_text') ? ' <small title="Не из книги: написано редакцией (Р-248)">— текст редакции</small>' : ''}</h3><ul>${c.examples.map(e => `<li>${esc(e)}</li>`).join('')}</ul></section>` : ''}
     ${errata(c)}
     <section><h3>Источник</h3><div>${sources(c)}</div></section>
     ${corrections(c)}`;

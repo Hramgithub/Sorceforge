@@ -12,7 +12,7 @@
 | `links.character_unused` | Персонаж без связей: ни сцена, ни сценарий, ни другая запись на него не ссылаются, своих связей нет | 3 |
 | `links.scene_no_place` | Сцена без места (`where`) | 79 |
 | `links.unused` | Раздатка или предмет, которые не использует ни сцена, ни сценарий | 0 |
-| `context.no_description` | Запись без описания | 465 |
+| `context.no_description` | Запись без описания | 21 |
 | `context.handout_empty` | Раздатка без текста и без картинки | 14 |
 | `context.scenario_thin` | Сценарий без краткого содержания (`summary`) или сведений для хранителя (`keeper_info`/`steps`) | 0 |
 | `context.incomplete` | Запись помечена `incomplete` | 157 |
@@ -26,72 +26,72 @@
 | Malleus Monstrorum, т. II (`malleus-monstrorum-2-en`) | en | текст | 267 | 147 | 178 | 66 (34198) | 82 | 82 | 137 |
 | Malleus Monstrorum, т. I (`malleus-monstrorum-1-en`) | en | текст | 219 | 243 | 149 | 49 (22596) | 83 | 83 | 108 |
 | Grand Grimoire of Cthulhu Mythos Magic (`grand-grimoire-en`) | en | текст | 203 | 293 | 134 | 38 (16920) | 38 | 38 | 52 |
-| Книга хранителя (`keeper-rulebook-ru`) | ru | текст | 400 | 1057 | 340 | 40 (15516) | 17 | 17 | 49 |
+| Книга хранителя (`keeper-rulebook-ru`) | ru | текст | 400 | 1057 | 340 | 40 (15516) | 17 | 17 | 47 |
 | Pulp Cthulhu (`pulp-cthulhu-en`) | en | текст | 275 | 797 | 232 | 21 (6299) | 113 | 95 | 103 |
 | Arkham (Chaosium, 2023) (`arkham-en`) | en | текст | 275 | 1021 | 232 | 12 (4536) | 188 | 85 | 104 |
 | Fear's Sharp Little Needles (`fears-sharp-little-needles-en`) | en | текст | 201 | 929 | 177 | 6 (3215) | 119 | 103 | 139 |
-| Ктулху: Тёмные века (фанатский перевод 2-го издания 7e) (`temnye-veka-tri-stsenariya-ru`) | ru | текст | 275 | 675 | 232 | 12 (2894) | 132 | 105 | 182 |
+| Ктулху: Тёмные века (фанатский перевод 2-го издания 7e) (`temnye-veka-tri-stsenariya-ru`) | ru | текст | 275 | 675 | 232 | 12 (2894) | 132 | 105 | 108 |
 | Маски Ньярлатхотепа: материалы для игроков (рус.) (`masks-of-nyarlathotep-ru-players`) | players | текст | 98 | 119 | 50 | 10 (2780) | 40 | 40 | 41 |
 | Keeper's Companion (англ., 7e) (`keepers-companion-en`) | en | текст | 227 | 520 | 200 | 11 (2462) | 105 | 98 | 103 |
-| Маски Ньярлатхотепа (англ., 7e, т. I–II) (`masks-of-nyarlathotep-en`) | en | текст | 670 | 1569 | 629 | 12 (2207) | 330 | 288 | 326 |
-| Особняки безумия. За закрытыми дверями (`osobnyaki-bezumiya-ru`) | ru | OCR | 226 | 488 | 211 | 7 (1465) | 0 | 0 | 23 |
-| Путеводитель по Аркхэму (Hort, по Arkham Unveiled) (`arkham-guide-hort-ru`) | ru | текст | 112 | 395 | 101 | 7 (1265) | 14 | 14 | 17 |
+| Маски Ньярлатхотепа (англ., 7e, т. I–II) (`masks-of-nyarlathotep-en`) | en | текст | 670 | 1569 | 629 | 12 (2207) | 330 | 288 | 296 |
+| Особняки безумия. За закрытыми дверями (`osobnyaki-bezumiya-ru`) | ru | OCR | 226 | 488 | 211 | 7 (1465) | 0 | 0 | 8 |
+| Путеводитель по Аркхэму (Hort, по Arkham Unveiled) (`arkham-guide-hort-ru`) | ru | текст | 112 | 395 | 101 | 7 (1265) | 14 | 14 | 16 |
 | Dead Light and Other Dark Turns (`dead-light-en`) | en | текст | 91 | 142 | 78 | 5 (1068) | 74 | 64 | 66 |
-| Сны о Японии (Эра Ктулху 6) (`sny-o-yaponii-ru`) | ru | текст | 49 | 137 | 45 | 2 (979) | 18 | 7 | 39 |
+| Сны о Японии (Эра Ктулху 6) (`sny-o-yaponii-ru`) | ru | текст | 49 | 137 | 45 | 2 (979) | 18 | 7 | 12 |
 | Миры Говарда Филлипса Лавкрафта: артефакты и легендарные… (`miry-lavkrafta-artefakty-ru`) | ru | текст | 125 | 46 | 90 | 6 (977) | 5 | 5 | 9 |
 | Pax Cthuliana (`pax-cthuliana-ru`) | ru | текст | 73 | 86 | 67 | 1 (795) | 71 | 68 | 71 |
 | Beyond the Edge of Darkness (`beyond-the-edge-of-darkness-en`) | en | текст | 38 | 72 | 31 | 2 (617) | 28 | 27 | 33 |
 | Три кошмарных вечера (No Time to Scream) (`tri-koshmarnykh-vechera-ru`) | ru | текст | 106 | 159 | 98 | 2 (578) | 88 | 32 | 34 |
 | Women of the French Revolution (`reign-of-terror-women-en`) | en | текст | 12 | 24 | 8 | 2 (577) | 8 | 8 | 9 |
 | Карнавал безумия (`karnaval-bezumiya-ru`) | ru | текст | 98 | 212 | 94 | 1 (486) | 44 | 39 | 44 |
-| Царство Террора (`tsarstvo-terrora-ru`) | ru | текст | 126 | 290 | 110 | 1 (472) | 75 | 32 | 44 |
+| Царство Террора (`tsarstvo-terrora-ru`) | ru | текст | 126 | 290 | 110 | 1 (472) | 75 | 32 | 38 |
 | Наедине с приливом: правила (`naedine-s-prilivom-rules-ru`) | ru | текст | 10 | 1 | 7 | 1 (393) | 5 | 5 | 6 |
 | Ведомо ли любви прощение Ктулху (`vedomo-li-lyubvi-ru`) | ru | текст | 62 | 90 | 51 | 2 (368) | 35 | 35 | 37 |
 | Мифы Хастура. Том 1: Путь в Каркозу (`mify-hastura-ru`) | ru | OCR | 46 | 55 | 39 | 2 (326) | 0 | 0 | 8 |
 | Погасший маяк (`lightless-beacon-ru`) | ru | текст | 44 | 78 | 38 | 1 (241) | 37 | 31 | 32 |
 | The Cursed Idol of Manco Capác (`cursed-idol-of-manco-capac-en`) | en | текст | 53 | 138 | 43 | 1 (232) | 48 | 41 | 48 |
-| Побег из Иннсмута (`pobeg-iz-innsmuta-ru`) | ru | текст | 188 | 558 | 182 | 1 (190) | 56 | 50 | 80 |
-| The Innsmouth Terror (`innsmouth-terror-en`) | en | текст | 47 | 83 | 41 | 1 (164) | 36 | 36 | 42 |
+| Побег из Иннсмута (`pobeg-iz-innsmuta-ru`) | ru | текст | 188 | 558 | 182 | 1 (190) | 56 | 50 | 73 |
+| The Innsmouth Terror (`innsmouth-terror-en`) | en | текст | 47 | 83 | 41 | 1 (164) | 36 | 36 | 37 |
 | Месяц Ночи (`mesyats-nochi-ru`) | ru | текст | 47 | 93 | 41 | 1 (162) | 29 | 27 | 28 |
-| Новая жизнь (`novaya-zhizn-ru`) | ru | текст | 29 | 57 | 25 | 1 (151) | 21 | 15 | 26 |
+| Новая жизнь (`novaya-zhizn-ru`) | ru | текст | 29 | 57 | 25 | 1 (151) | 21 | 15 | 19 |
 | Arkham: Arkham Advertiser insert (`arkham-advertiser-en`) | en | скан | 4 | 4 | 4 | 0 (0) | 4 | 0 | 0 |
 | Arkham: insert maps (`arkham-insert-maps-en`) | en | скан | 4 | 3 | 3 | 0 (0) | 4 | 1 | 1 |
 | Arkham: floorplans (Keeper) (`arkham-maps-en`) | en | текст | 34 | 36 | 27 | 0 (0) | 33 | 6 | 6 |
 | Аукцион (`auktsion-ru`) | ru | текст | 49 | 93 | 48 | 0 (0) | 20 | 17 | 18 |
 | Аутофагия (`autofagiya-ru`) | ru | текст | 37 | 61 | 33 | 0 (0) | 24 | 19 | 19 |
-| Безымянный туман (`bezymyannyy-tuman-ru`) | ru | текст | 8 | 71 | 7 | 0 (0) | 7 | 7 | 22 |
-| Bless the Beast and Children (перевод владельца) (`bless-the-beast-and-children-ru`) | ru | скан | 15 | 92 | 15 | 0 (0) | 7 | 3 | 21 |
+| Безымянный туман (`bezymyannyy-tuman-ru`) | ru | текст | 8 | 71 | 7 | 0 (0) | 7 | 7 | 13 |
+| Bless the Beast and Children (перевод владельца) (`bless-the-beast-and-children-ru`) | ru | скан | 15 | 92 | 15 | 0 (0) | 7 | 3 | 4 |
 | Черная кассета (`chernaya-kasseta-ru`) | ru | текст | 17 | 38 | 16 | 0 (0) | 16 | 16 | 17 |
 | Черноводный ручей (`chernovodnyy-ruchey-ru`) | ru | скан | 99 | 195 | 94 | 0 (0) | 0 | 0 | 0 |
 | Чулки возле печки (`chulki-vozle-pechki-ru`) | ru | текст | 18 | 68 | 16 | 0 (0) | 1 | 1 | 2 |
 | Реестр терминов владельца (`coc-terminology`) | ru | скан | 0 | 429 | 0 | 0 (0) | 0 | 0 | 0 |
-| Curious Characters Deck (`curious-characters-deck-en`) | en | скан | 30 | 47 | 23 | 0 (0) | 0 | 0 | 46 |
+| Curious Characters Deck (`curious-characters-deck-en`) | en | скан | 30 | 47 | 23 | 0 (0) | 0 | 0 | 0 |
 | Кошмары цифровой эпохи: готовые персонажи (`digital-nightmares-pregens-ru`) | ru | скан | 36 | 30 | 30 | 0 (0) | 0 | 0 | 0 |
 | Двери во тьму: готовые персонажи (`dveri-vo-tmu-pregens-ru`) | ru | скан | 11 | 10 | 10 | 0 (0) | 1 | 1 | 1 |
-| Двери во тьму (`dveri-vo-tmu-ru`) | ru | скан | 142 | 322 | 111 | 0 (0) | 0 | 0 | 35 |
+| Двери во тьму (`dveri-vo-tmu-ru`) | ru | скан | 142 | 322 | 111 | 0 (0) | 0 | 0 | 1 |
 | Джонни бой (`dzhonni-boy-ru`) | ru | текст | 9 | 34 | 8 | 0 (0) | 3 | 3 | 3 |
 | Экспонат новая жизнь (`eksponat-novaya-zhizn-ru`) | ru | текст | 21 | 35 | 18 | 0 (0) | 15 | 15 | 15 |
-| Эликсир жизни (`eliksir-zhizni-ru`) | ru | скан | 12 | 79 | 12 | 0 (0) | 12 | 9 | 29 |
-| Грибы с Юггота (`griby-s-yuggota-ru`) | ru | текст | 101 | 441 | 98 | 0 (0) | 50 | 11 | 38 |
-| Хэллоуин в Данвиче (`hellouin-v-danviche-ru`) | ru | текст | 19 | 66 | 17 | 0 (0) | 2 | 2 | 14 |
+| Эликсир жизни (`eliksir-zhizni-ru`) | ru | скан | 12 | 79 | 12 | 0 (0) | 12 | 9 | 14 |
+| Грибы с Юггота (`griby-s-yuggota-ru`) | ru | текст | 101 | 441 | 98 | 0 (0) | 50 | 11 | 30 |
+| Хэллоуин в Данвиче (`hellouin-v-danviche-ru`) | ru | текст | 19 | 66 | 17 | 0 (0) | 2 | 2 | 3 |
 | Домашние правила (`house-rules`) | ru | скан | 0 | 5 | 0 | 0 (0) | 0 | 0 | 0 |
 | Идол Тота (`idol-tota-ru`) | ru | скан | 24 | 65 | 21 | 0 (0) | 0 | 0 | 0 |
-| Книга сыщика (`investigator-handbook-ru`) | ru | скан | 269 | 187 | 42 | 0 (0) | 0 | 0 | 19 |
+| Книга сыщика (`investigator-handbook-ru`) | ru | скан | 269 | 187 | 42 | 0 (0) | 0 | 0 | 0 |
 | Каникулы в Иннсмуте (`kanikuly-v-innsmute-ru`) | ru | текст | 9 | 50 | 8 | 0 (0) | 4 | 4 | 5 |
 | Холодный урожай: готовые персонажи (`kholodnyy-urozhay-pregens-ru`) | ru | скан | 16 | 10 | 16 | 0 (0) | 1 | 1 | 1 |
-| Холодный урожай (`kholodnyy-urozhay-ru`) | ru | текст | 64 | 111 | 62 | 0 (0) | 10 | 8 | 16 |
+| Холодный урожай (`kholodnyy-urozhay-ru`) | ru | текст | 64 | 111 | 62 | 0 (0) | 10 | 8 | 8 |
 | Когда зажигаются костры (`kogda-zazhigayutsya-kostry-ru`) | ru | текст | 25 | 51 | 24 | 0 (0) | 14 | 13 | 13 |
 | Когда зло побеждает (`kogda-zlo-pobezhdaet-ru`) | ru | текст | 15 | 41 | 10 | 0 (0) | 6 | 5 | 7 |
 | Кошмарный прилив: готовые персонажи (`koshmarnyy-priliv-pregens-ru`) | ru | скан | 6 | 2 | 4 | 0 (0) | 2 | 0 | 0 |
 | Лагерь Санни (`lager-sanni-ru`) | ru | текст | 29 | 67 | 28 | 0 (0) | 2 | 1 | 1 |
-| Лечебница (`lechebnitsa-ru`) | ru | текст | 32 | 117 | 31 | 0 (0) | 3 | 0 | 10 |
+| Лечебница (`lechebnitsa-ru`) | ru | текст | 32 | 117 | 31 | 0 (0) | 3 | 0 | 2 |
 | Лес Вендиго: готовые персонажи (`les-vendigo-pregens-ru`) | ru | скан | 10 | 5 | 10 | 0 (0) | 4 | 0 | 0 |
 | Лохмотья Короля (`lokhmotya-korolya-ru`) | ru | текст | 360 | 455 | 355 | 0 (0) | 83 | 29 | 36 |
 | Маленький клуб ужасов (`malenkiy-klub-uzhasov-ru`) | ru | текст | 21 | 66 | 19 | 0 (0) | 15 | 15 | 15 |
 | Malleus Keeper Deck (`malleus-keeper-deck-en`) | en | скан | 71 | 65 | 65 | 0 (0) | 0 | 0 | 0 |
 | Маски Ньярлатхотепа, т. II (рус.) (`masks-of-nyarlathotep-ru-2`) | 2 | скан | 235 | 4 | 2 | 0 (0) | 0 | 0 | 0 |
 | Мертвенный свет: готовые персонажи (`mertvennyy-svet-pregens-ru`) | ru | скан | 18 | 6 | 18 | 0 (0) | 0 | 0 | 0 |
-| Mothers Love (перевод владельца) (`mothers-love-ru`) | ru | скан | 15 | 73 | 15 | 0 (0) | 8 | 7 | 13 |
+| Mothers Love (перевод владельца) (`mothers-love-ru`) | ru | скан | 15 | 73 | 15 | 0 (0) | 8 | 7 | 7 |
 | Моя маленькая сестра (`moya-malenkaya-sestra-ru`) | ru | текст | 35 | 70 | 34 | 0 (0) | 17 | 12 | 12 |
 | МТС Харьков 37 (`mts-kharkov-37-ru`) | ru | текст | 94 | 144 | 91 | 0 (0) | 16 | 10 | 16 |
 | Набор хранителя: готовые персонажи (`nabor-khranitelya-pregens-ru`) | ru | скан | 0 | 12 | 0 | 0 (0) | 0 | 0 | 0 |
@@ -102,7 +102,7 @@
 | Наедине с помехами: Чарли (лист персонажа) (`naedine-s-pomekhami-pregens-2-ru`) | ru | текст | 4 | 1 | 2 | 0 (0) | 2 | 2 | 2 |
 | Наедине с помехами: Алекс (лист персонажа) (`naedine-s-pomekhami-pregens-ru`) | ru | текст | 4 | 2 | 2 | 0 (0) | 2 | 2 | 2 |
 | Наедине с помехами (`naedine-s-pomekhami-ru`) | ru | текст | 192 | 34 | 192 | 0 (0) | 46 | 37 | 37 |
-| Наедине с приливом (Alone Against the Tide) (`naedine-s-prilivom-ru`) | ru | текст | 91 | 37 | 91 | 0 (0) | 37 | 25 | 31 |
+| Наедине с приливом (Alone Against the Tide) (`naedine-s-prilivom-ru`) | ru | текст | 91 | 37 | 91 | 0 (0) | 37 | 25 | 27 |
 | Наедине с тьмой: список адресов (`naedine-s-tmoy-addresses-ru`) | ru | текст | 3 | 49 | 2 | 0 (0) | 2 | 2 | 2 |
 | Наедине с тьмой: календарь (`naedine-s-tmoy-calendar-ru`) | ru | скан | 2 | 1 | 2 | 0 (0) | 2 | 2 | 2 |
 | Наедине с тьмой: раздатка (`naedine-s-tmoy-handouts-ru`) | ru | скан | 3 | 1 | 2 | 0 (0) | 3 | 3 | 3 |
@@ -112,10 +112,10 @@
 | Necropolis (англ.) (`necropolis-en`) | en | текст | 23 | 43 | 21 | 0 (0) | 13 | 10 | 10 |
 | Ничего кроме ветра (`nichego-krome-vetra-ru`) | ru | текст | 18 | 30 | 15 | 0 (0) | 3 | 2 | 2 |
 | Number 7 Dream (`number-7-dream-en`) | en | текст | 27 | 100 | 26 | 0 (0) | 15 | 12 | 13 |
-| Одно небольшое дельце... (`odno-nebolshoe-deltse-ru`) | ru | текст | 13 | 48 | 11 | 0 (0) | 2 | 1 | 5 |
-| Ограбление по-Аркхэмски (`ograblenie-po-arkhemski-ru`) | ru | текст | 15 | 61 | 14 | 0 (0) | 1 | 0 | 10 |
+| Одно небольшое дельце... (`odno-nebolshoe-deltse-ru`) | ru | текст | 13 | 48 | 11 | 0 (0) | 2 | 1 | 1 |
+| Ограбление по-Аркхэмски (`ograblenie-po-arkhemski-ru`) | ru | текст | 15 | 61 | 14 | 0 (0) | 1 | 0 | 2 |
 | Омерзительная пятёрка (`omerzitelnaya-pyaterka-ru`) | ru | текст | 12 | 39 | 11 | 0 (0) | 3 | 3 | 4 |
-| Остров лучезарной надежды (`ostrov-luchezarnoy-nadezhdy-ru`) | ru | скан | 20 | 38 | 20 | 0 (0) | 2 | 0 | 3 |
+| Остров лучезарной надежды (`ostrov-luchezarnoy-nadezhdy-ru`) | ru | скан | 20 | 38 | 20 | 0 (0) | 2 | 0 | 0 |
 | Отель Скайлайн (`otel-skaylayn-ru`) | ru | скан | 31 | 92 | 31 | 0 (0) | 0 | 0 | 0 |
 | Парк развлечений (`park-razvlecheniy-ru`) | ru | текст | 33 | 108 | 27 | 0 (0) | 14 | 13 | 20 |
 | Под землёй и над землёй (`pod-zemlyoy-i-nad-zemlyoy-ru`) | ru | текст | 23 | 114 | 22 | 0 (0) | 17 | 14 | 14 |
@@ -123,7 +123,7 @@
 | Погоня в Поезде (`pogonya-v-poezde-ru`) | ru | скан | 22 | 80 | 20 | 0 (0) | 0 | 0 | 0 |
 | Попались (`popalis-ru`) | ru | текст | 3 | 28 | 2 | 0 (0) | 2 | 2 | 4 |
 | Поселок Березовый (`poselok-berezovyy-ru`) | ru | текст | 13 | 48 | 12 | 0 (0) | 3 | 3 | 4 |
-| Призрак (`prizrak-ru`) | ru | текст | 18 | 87 | 17 | 0 (0) | 0 | 0 | 10 |
+| Призрак (`prizrak-ru`) | ru | текст | 18 | 87 | 17 | 0 (0) | 0 | 0 | 1 |
 | Проклятие Ганеши (`proklyatie-ganeshi-ru`) | ru | текст | 36 | 57 | 35 | 0 (0) | 24 | 23 | 23 |
 | Пустые страницы (`pustye-stranitsy-ru`) | ru | текст | 16 | 46 | 15 | 0 (0) | 1 | 1 | 2 |
 | Рождественская вечеринка (`rozhdestvenskaya-vecherinka-ru`) | ru | текст | 21 | 81 | 20 | 0 (0) | 15 | 10 | 11 |
@@ -131,11 +131,11 @@
 | Shadows of Leningrad (`shadows-of-leningrad-en`) | en | текст | 50 | 138 | 48 | 0 (0) | 14 | 11 | 11 |
 | Шанс на чудо (`shans-na-chudo-ru`) | ru | текст | 10 | 24 | 9 | 0 (0) | 6 | 6 | 6 |
 | Стартовый набор: Мертвецкий стомп (`starter-dead-mans-stomp-ru`) | ru | скан | 28 | 105 | 27 | 0 (0) | 0 | 0 | 0 |
-| Стартовый набор: Грань тьмы (`starter-edge-of-darkness-ru`) | ru | скан | 31 | 119 | 31 | 0 (0) | 0 | 0 | 17 |
+| Стартовый набор: Грань тьмы (`starter-edge-of-darkness-ru`) | ru | скан | 31 | 119 | 31 | 0 (0) | 0 | 0 | 0 |
 | Стартовый набор: Бумажный след (`starter-paper-chase-ru`) | ru | скан | 12 | 43 | 12 | 0 (0) | 0 | 0 | 0 |
 | Стартовый набор: готовые персонажи (`startovyy-nabor-pregens-ru`) | ru | скан | 12 | 5 | 10 | 0 (0) | 0 | 0 | 0 |
 | Судьба братьев Вашингтон (`sudba-bratev-vashington-ru`) | ru | текст | 10 | 40 | 7 | 0 (0) | 3 | 2 | 2 |
-| Тайник Бутлегеров (`taynik-butlegerov-ru`) | ru | скан | 20 | 90 | 19 | 0 (0) | 3 | 3 | 12 |
+| Тайник Бутлегеров (`taynik-butlegerov-ru`) | ru | скан | 20 | 90 | 19 | 0 (0) | 3 | 3 | 4 |
 | Тень над Провиденсом (`ten-nad-providensom-ru`) | ru | текст | 39 | 66 | 37 | 0 (0) | 10 | 8 | 8 |
 | Террор (`terror-ru`) | ru | текст | 31 | 81 | 28 | 0 (0) | 16 | 16 | 19 |
 | Туманы острова Сан-Кристобаль (`tumany-san-kristobal-ru`) | ru | текст | 25 | 55 | 25 | 0 (0) | 15 | 14 | 15 |
@@ -231,7 +231,7 @@
 - [medium] с. 143 (физ. 144): 1 карт. (1026×834); на странице: Персонажи создают помехи, Присоединение к погоне, Смена способа передвижения
 - … ещё 266 (все — в findings.json)
 
-### Маски Ньярлатхотепа (англ., 7e, т. I–II) (`masks-of-nyarlathotep-en`) — 326
+### Маски Ньярлатхотепа (англ., 7e, т. I–II) (`masks-of-nyarlathotep-en`) — 296
 
 **Тексты** (2)
 
@@ -309,176 +309,10 @@
 - [low] `masks-of-nyarlathotep-en/scene/campaign-message-from-an-old-friend` Послание от старого друга — сцена без места; сценарий masks-of-nyarlathotep-en/scenario/campaign-beginning
 - [low] `masks-of-nyarlathotep-en/scene/conclusion-the-eclipse` Полное солнечное затмение — сцена без места; сценарий masks-of-nyarlathotep-en/scenario/grand-conclusion
 
-**Контекст** (32)
+**Контекст** (2)
 
 - [high] `masks-of-nyarlathotep-en/handout/america-carlyle-papers-4` Фотография яхты — раздатка без текста и картинки
 - [high] `masks-of-nyarlathotep-en/handout/america-carlyle-papers-8` Знак на лбу Джексона Элиаса — раздатка без текста и картинки
-- [medium] `masks-of-nyarlathotep-en/character/adrian-ferris` Адриан Феррис — character без описания
-- [medium] `masks-of-nyarlathotep-en/character/alice-pitchlock` Элис Питчлок — character без описания
-- [medium] `masks-of-nyarlathotep-en/character/arthur-macwhirr` Артур Мак-Уирр — character без описания
-- [medium] `masks-of-nyarlathotep-en/character/auntie-gee` Тётушка Гэ — character без описания
-- [medium] `masks-of-nyarlathotep-en/character/badru` Бадру — character без описания
-- [medium] `masks-of-nyarlathotep-en/character/bill-tatlock` Билл Татлок — character без описания
-- [medium] `masks-of-nyarlathotep-en/character/chang-ning` Чжан Нин — character без описания
-- [medium] `masks-of-nyarlathotep-en/character/charlie-grey` Чарли Грей — character без описания
-- [medium] `masks-of-nyarlathotep-en/character/derby-dave` Дерби Дейв — character без описания
-- [medium] `masks-of-nyarlathotep-en/character/e-m-boyle` доктор Э. М. Бойл — character без описания
-- [medium] `masks-of-nyarlathotep-en/character/edith-osgood` Эдит Осгуд — character без описания
-- [medium] `masks-of-nyarlathotep-en/character/ernest-wallop` Эрнест Уоллоп — character без описания
-- [medium] `masks-of-nyarlathotep-en/character/gregory-munden` инспектор Грегори Манден — character без описания
-- [medium] `masks-of-nyarlathotep-en/character/harold-short` Гарольд Шорт — character без описания
-- [medium] `masks-of-nyarlathotep-en/character/imelda-bosch` Имельда Бош — character без описания
-- [medium] `masks-of-nyarlathotep-en/character/jed-wainwright` Джед Уэйнрайт — character без описания
-- [medium] `masks-of-nyarlathotep-en/character/jemima-slattery` Джемима — character без описания
-- [medium] `masks-of-nyarlathotep-en/character/john-parkins` Джон Паркинс — character без описания
-- [medium] `masks-of-nyarlathotep-en/character/john-pitchlock` Джон Питчлок — character без описания
-- [medium] `masks-of-nyarlathotep-en/character/johnny-bigbush` Джонни Бигбуш — character без описания
-- [medium] `masks-of-nyarlathotep-en/character/li-chou` Ли Чжоу — character без описания
-- [medium] `masks-of-nyarlathotep-en/character/liu-chen-dai` Ли Ченьдай — character без описания
-- [medium] `masks-of-nyarlathotep-en/character/mad-ginger-muldoon` Безумный Джинджер Малдун — character без описания
-- [medium] `masks-of-nyarlathotep-en/character/maddy-albright` Мэдди Олбрайт — character без описания
-- [medium] `masks-of-nyarlathotep-en/character/magenta-joy` Пурпурная Радость — character без описания
-- [medium] `masks-of-nyarlathotep-en/character/mr-mao` Господин Мао — character без описания
-- [medium] `masks-of-nyarlathotep-en/character/neville-lloyd-price` Невилл Ллойд-Прайс — character без описания
-- [medium] `masks-of-nyarlathotep-en/character/quivering-jade` Трепещущий Нефрит — character без описания
-- [medium] `masks-of-nyarlathotep-en/character/sarah-bright` Сара Брайт — character без описания
-- [medium] `masks-of-nyarlathotep-en/character/wang-yong` Ван Юн — character без описания
-
-### Ктулху: Тёмные века (фанатский перевод 2-го издания 7e) (`temnye-veka-tri-stsenariya-ru`) — 182
-
-**Тексты** (3)
-
-- [low] с. 0 (физ. 1) — с. 3 (физ. 4): 3 стр., 1000 слов не цитирует ни одна запись; headings: HORROR ROLEPLAYING DURING THE DARK AGES; England, with nothing but their wits; Dark Ages begins…; Printed in Lithuania
-- [low] с. 263 (физ. 264) — с. 270 (физ. 271): 8 стр., 1577 слов не цитирует ни одна запись; headings: THE HUNT; INDEX; Assets ����������������������71, 73, 98, 99; Aberffraw�����������������������������������36; near: Библиография (Тёмные века); Лист сыщика Тёмных веков
-- [low] с. 273 (физ. 274): 1 стр., 317 слов не цитирует ни одна запись; headings: HORROR ROLEPLAYING DURING THE DARK AGES; England, with nothing but their wits; Dark Ages begins…; Printed in Lithuania; near: Лист сыщика Тёмных веков
-
-**Картинки** (105)
-
-- [high] с. 152 (физ. 153): 1 карт. (580×740); без картинки: Демонолорум (tome), Иерон Айгиптон (tome), Liber Ivonis (tome), Некрономикон (греческий) (tome), Пнакотика (tome)
-- [high] с. 167 (физ. 168): 1 карт. (533×629); без картинки: Хладный («Тёмные века») (creature)
-- [high] с. 168 (физ. 169): 1 карт. (355×856); без картинки: Ку ши (creature), Хладный («Тёмные века») (creature)
-- [high] с. 174 (физ. 175): 1 карт. (542×869); без картинки: Древний (creature)
-- [high] с. 192 (физ. 193): 1 карт. (518×767); без картинки: Хартверу (character), Иса (character), Кость пальца святого Мартина (item)
-- [high] с. 193 (физ. 194): 1 карт. (491×786); без картинки: Альфред (character), Хартверу (character)
-- [high] с. 196 (физ. 197): 1 карт. (475×682); без картинки: Эдд (character), Хафден (character), Свиток «Президии Финиум» и шкура ночного призрака (item)
-- [high] с. 197 (физ. 198): 1 карт. (512×736); без картинки: Синред (character), Эрнвульф (character), Годред и Гримволд (character), Хафден (character), Хигит (character)
-- [high] с. 198 (физ. 199): 1 карт. (538×719); без картинки: Годред и Гримволд (character), Хигит (character), Вульфрун (character), Продукция варениев (item)
-- [high] с. 201 (физ. 202): 1 карт. (502×683); без картинки: Элфгиест (character), Ламбин (character), Унфурт (character), Сыворотка подчинения (item)
-- [high] с. 206 (физ. 207): 1 карт. (517×829); без картинки: Ланфранк (character), Окта (character), Ослафа (character), Медовуха Милдойны (item)
-- [high] с. 207 (физ. 208): 1 карт. (457×733); без картинки: Гай Монс (character), Окта (character), Мерзкий грибок (item)
-- [high] с. 210 (физ. 211): 1 карт. (465×744); без картинки: Гримцител (character), Хотер (character), Джумин (character), Ланфранк (character), Медвин (character)
-- [high] с. 212 (физ. 213): 1 карт. (1031×668); без картинки: Медвин (character), Пенда Орлиный Глаз (character)
-- [high] с. 214 (физ. 215): 1 карт. (578×815); без картинки: Викинги, люди Ингви (character)
-- [high] с. 225 (физ. 226): 2 карт. (720×1032, 2475×3225); без картинки: Ангифу (character), Гай Аквилий Коллатин (character), Инрик (character), Нож с чёрным ихором (item), Бурдюк из-под волчьего молока (item)
-- [medium] с. 0 (физ. 1): 12 карт. (2550×3300, 651×358, 583×559, 583×560…); страницу не цитирует никто
-- [medium] с. 2 (физ. 3): 1 карт. (1245×1621); страницу не цитирует никто
-- [medium] с. 6 (физ. 7): 1 карт. (1245×1621); на странице: Введение и предисловие
-- [medium] с. 8 (физ. 9): 1 карт. (1193×1553); страницу не цитирует никто
-- [medium] с. 14 (физ. 15): 1 карт. (1193×1553); страницу не цитирует никто
-- [medium] с. 15 (физ. 16): 1 карт. (1193×1553); страницу не цитирует никто
-- [medium] с. 26 (физ. 27): 1 карт. (1156×815); на странице: Военное дело
-- [medium] с. 27 (физ. 28): 1 карт. (1173×815); на странице: Военное дело
-- [medium] с. 42 (физ. 43): 1 карт. (1193×1553); страницу не цитирует никто
-- [medium] с. 55 (физ. 56): 1 карт. (1193×1553); страницу не цитирует никто
-- [medium] с. 56 (физ. 57): 1 карт. (1193×1553); страницу не цитирует никто
-- [medium] с. 60 (физ. 61): 1 карт. (5176×3376); на странице: Отшельник / Еретик, Целитель (а также Хитрый мужчина/женщина), Шаг 4: определите род занятий и распределите пункты навыков (Тёмные века)
-- [medium] с. 62 (физ. 63): 1 карт. (684×1095); на странице: Быстрое создание персонажа (Тёмные века)
-- [medium] с. 67 (физ. 68): 1 карт. (1193×1553); страницу не цитирует никто
-- [medium] с. 82 (физ. 83): 1 карт. (1193×1553); страницу не цитирует никто
-- [medium] с. 83 (физ. 84): 1 карт. (1193×1553); страницу не цитирует никто
-- [medium] с. 96 (физ. 97): 1 карт. (1193×1553); страницу не цитирует никто
-- [medium] с. 115 (физ. 116): 2 карт. (1245×1621, 1193×1553); страницу не цитирует никто
-- [medium] с. 118 (физ. 119): 1 карт. (1193×1553); страницу не цитирует никто
-- [medium] с. 119 (физ. 120): 1 карт. (1193×1553); страницу не цитирует никто
-- [medium] с. 128 (физ. 129): 1 карт. (1193×1553); страницу не цитирует никто
-- [medium] с. 129 (физ. 130): 1 карт. (1193×1553); на странице: Соберите группу вместе (Тёмные века), Расследование ужасов в Тёмные века
-- [medium] с. 132 (физ. 133): 2 карт. (1245×1621, 1193×1553); страницу не цитирует никто
-- [medium] с. 138 (физ. 139): 1 карт. (1193×1553); страницу не цитирует никто
-- [medium] с. 139 (физ. 140): 2 карт. (1245×1621, 1193×1553); на странице: Мифы Ктулху в Тёмные века
-- [medium] с. 153 (физ. 154): 1 карт. (1193×1553); страницу не цитирует никто
-- [medium] с. 166 (физ. 167): 1 карт. (1193×1553); страницу не цитирует никто
-- [medium] с. 188 (физ. 189): 1 карт. (1193×1553); страницу не цитирует никто
-- [medium] с. 189 (физ. 190): 1 карт. (1193×1553); страницу не цитирует никто
-- [medium] с. 190 (физ. 191): 1 карт. (1193×1553); страницу не цитирует никто
-- [medium] с. 209 (физ. 210): 1 карт. (358×498); без картинки: Хлод, члены банды Эдрика (character)
-- [medium] с. 218 (физ. 219): 1 карт. (1193×1553); страницу не цитирует никто
-- [medium] с. 219 (физ. 220): 1 карт. (1193×1553); страницу не цитирует никто
-- [medium] с. 220 (физ. 221): 1 карт. (1193×1553); страницу не цитирует никто
-- [medium] с. 232 (физ. 233): 1 карт. (1193×1553); страницу не цитирует никто
-- [medium] с. 239 (физ. 240): 1 карт. (1193×1553); страницу не цитирует никто
-- [medium] с. 242 (физ. 243): 1 карт. (1193×1553); страницу не цитирует никто
-- [medium] с. 258 (физ. 259): 1 карт. (1245×1621); на странице: Кто есть кто (Тёмные века)
-- [medium] с. 270 (физ. 271): 3 карт. (1193×1553, 429×594, 429×612); страницу не цитирует никто
-- [medium] с. 273 (физ. 274): 12 карт. (2550×3300, 651×358, 583×559, 583×560…); страницу не цитирует никто
-- [low] с. 1 (физ. 2): 1 карт. (935×351); страницу не цитирует никто
-- [low] с. 13 (физ. 14): 1 карт. (580×740); на странице: Имена, Социальная структура
-- [low] с. 16 (физ. 17): 1 карт. (580×740); на странице: Люди
-- [low] с. 17 (физ. 18): 1 карт. (580×740); на странице: Вопрос о грамотности и алфавите, Люди
-- … ещё 45 (все — в findings.json)
-
-**Контекст** (74)
-
-- [medium] `temnye-veka-tri-stsenariya-ru/character/esewald-alfgar` Альфгар — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/esewald-anwar` Анвар — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/esewald-cenric` Сенрик — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/esewald-edwulf` Эдвульф — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/esewald-eiddol` Эйддол — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/esewald-eurwen` Эурвен — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/esewald-ingar` Ингар — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/esewald-omagh` Ома — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/esewald-osred` Осред — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/esewald-teleri` Телери — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/esewald-wadu` Ваду — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/esewald-warriors` Викинги или кимрские воины — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/hunt-angifu` Ангифу — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/hunt-ealhaf` Эльхаф — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/hunt-eorhelm` Йорхельм — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/hunt-gaius-aquilius-collatinus` Гай Аквилий Коллатин — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/hunt-inric` Инрик — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-aelfgiest` Элфгиест — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-aethelu` Этелу — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-alfred` Альфред — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-alfric` Альфрик — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-athelstan` Ательстан — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-athilda` Атильда — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-aylild` Эйлильд — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-begilda` Бегильда — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-bregeswith` Брегесвит — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-cuthen` Кутен — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-cynred` Синред — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-delwyn` Делвин — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-derman` Дерман — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-eadda` Эдд — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-earnwulf` Эрнвульф — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-edric` Эдрик Кровавая Рука — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-eward` Эвард — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-ewards-daughters` Сэвинн, Теберга и Миндред — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-gaius-mons` Гай Монс — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-godred-grimwold` Годред и Гримволд — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-grimcytel` Гримцител — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-guthlaf` Гутлаф — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-halfdene` Хафден — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-haunild` Хаунилд — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-heagyth` Хигит — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-herewynn` Херевинн — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-hothere` Хотер — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-hygerd` Хигерд — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-ilhelm` Ильхельм — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-isa` Иса — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-jumin` Джумин — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-lambin` Ламбин — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-lanfranc` Ланфранк — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-madulf` Мадульф — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-medwin` Медвин — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-mildoina` Милдойна — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-niall` Найл — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-octa` Окта — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-ormar` Ормар — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-oslafa` Ослафа — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-osvin` Освин — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-penda` Пенда Орлиный Глаз — character без описания
-- [medium] `temnye-veka-tri-stsenariya-ru/character/totburg-roswitha` Росвита — character без описания
-- … ещё 14 (все — в findings.json)
 
 ### Fear's Sharp Little Needles (`fears-sharp-little-needles-en`) — 139
 
@@ -897,6 +731,78 @@
 - [low] `coc:creature:venomous-spider` Ядовитый паук — Блока характеристик в книге нет: для пауков книга прямо называет профиль ненужным. Потеря рассудка не указана.
 - [low] `coc:creature:wasp-and-bee-swarm` Рои ос и пчёл — блока характеристик в книге нет: статья даёт только правила роя (длительность, бросок ВЫН, последствия). Потеря рассудка не указана.
 
+### Ктулху: Тёмные века (фанатский перевод 2-го издания 7e) (`temnye-veka-tri-stsenariya-ru`) — 108
+
+**Тексты** (3)
+
+- [low] с. 0 (физ. 1) — с. 3 (физ. 4): 3 стр., 1000 слов не цитирует ни одна запись; headings: HORROR ROLEPLAYING DURING THE DARK AGES; England, with nothing but their wits; Dark Ages begins…; Printed in Lithuania
+- [low] с. 263 (физ. 264) — с. 270 (физ. 271): 8 стр., 1577 слов не цитирует ни одна запись; headings: THE HUNT; INDEX; Assets ����������������������71, 73, 98, 99; Aberffraw�����������������������������������36; near: Библиография (Тёмные века); Лист сыщика Тёмных веков
+- [low] с. 273 (физ. 274): 1 стр., 317 слов не цитирует ни одна запись; headings: HORROR ROLEPLAYING DURING THE DARK AGES; England, with nothing but their wits; Dark Ages begins…; Printed in Lithuania; near: Лист сыщика Тёмных веков
+
+**Картинки** (105)
+
+- [high] с. 152 (физ. 153): 1 карт. (580×740); без картинки: Демонолорум (tome), Иерон Айгиптон (tome), Liber Ivonis (tome), Некрономикон (греческий) (tome), Пнакотика (tome)
+- [high] с. 167 (физ. 168): 1 карт. (533×629); без картинки: Хладный («Тёмные века») (creature)
+- [high] с. 168 (физ. 169): 1 карт. (355×856); без картинки: Ку ши (creature), Хладный («Тёмные века») (creature)
+- [high] с. 174 (физ. 175): 1 карт. (542×869); без картинки: Древний (creature)
+- [high] с. 192 (физ. 193): 1 карт. (518×767); без картинки: Хартверу (character), Иса (character), Кость пальца святого Мартина (item)
+- [high] с. 193 (физ. 194): 1 карт. (491×786); без картинки: Альфред (character), Хартверу (character)
+- [high] с. 196 (физ. 197): 1 карт. (475×682); без картинки: Эдд (character), Хафден (character), Свиток «Президии Финиум» и шкура ночного призрака (item)
+- [high] с. 197 (физ. 198): 1 карт. (512×736); без картинки: Синред (character), Эрнвульф (character), Годред и Гримволд (character), Хафден (character), Хигит (character)
+- [high] с. 198 (физ. 199): 1 карт. (538×719); без картинки: Годред и Гримволд (character), Хигит (character), Вульфрун (character), Продукция варениев (item)
+- [high] с. 201 (физ. 202): 1 карт. (502×683); без картинки: Элфгиест (character), Ламбин (character), Унфурт (character), Сыворотка подчинения (item)
+- [high] с. 206 (физ. 207): 1 карт. (517×829); без картинки: Ланфранк (character), Окта (character), Ослафа (character), Медовуха Милдойны (item)
+- [high] с. 207 (физ. 208): 1 карт. (457×733); без картинки: Гай Монс (character), Окта (character), Мерзкий грибок (item)
+- [high] с. 210 (физ. 211): 1 карт. (465×744); без картинки: Гримцител (character), Хотер (character), Джумин (character), Ланфранк (character), Медвин (character)
+- [high] с. 212 (физ. 213): 1 карт. (1031×668); без картинки: Медвин (character), Пенда Орлиный Глаз (character)
+- [high] с. 214 (физ. 215): 1 карт. (578×815); без картинки: Викинги, люди Ингви (character)
+- [high] с. 225 (физ. 226): 2 карт. (720×1032, 2475×3225); без картинки: Ангифу (character), Гай Аквилий Коллатин (character), Инрик (character), Нож с чёрным ихором (item), Бурдюк из-под волчьего молока (item)
+- [medium] с. 0 (физ. 1): 12 карт. (2550×3300, 651×358, 583×559, 583×560…); страницу не цитирует никто
+- [medium] с. 2 (физ. 3): 1 карт. (1245×1621); страницу не цитирует никто
+- [medium] с. 6 (физ. 7): 1 карт. (1245×1621); на странице: Введение и предисловие
+- [medium] с. 8 (физ. 9): 1 карт. (1193×1553); страницу не цитирует никто
+- [medium] с. 14 (физ. 15): 1 карт. (1193×1553); страницу не цитирует никто
+- [medium] с. 15 (физ. 16): 1 карт. (1193×1553); страницу не цитирует никто
+- [medium] с. 26 (физ. 27): 1 карт. (1156×815); на странице: Военное дело
+- [medium] с. 27 (физ. 28): 1 карт. (1173×815); на странице: Военное дело
+- [medium] с. 42 (физ. 43): 1 карт. (1193×1553); страницу не цитирует никто
+- [medium] с. 55 (физ. 56): 1 карт. (1193×1553); страницу не цитирует никто
+- [medium] с. 56 (физ. 57): 1 карт. (1193×1553); страницу не цитирует никто
+- [medium] с. 60 (физ. 61): 1 карт. (5176×3376); на странице: Отшельник / Еретик, Целитель (а также Хитрый мужчина/женщина), Шаг 4: определите род занятий и распределите пункты навыков (Тёмные века)
+- [medium] с. 62 (физ. 63): 1 карт. (684×1095); на странице: Быстрое создание персонажа (Тёмные века)
+- [medium] с. 67 (физ. 68): 1 карт. (1193×1553); страницу не цитирует никто
+- [medium] с. 82 (физ. 83): 1 карт. (1193×1553); страницу не цитирует никто
+- [medium] с. 83 (физ. 84): 1 карт. (1193×1553); страницу не цитирует никто
+- [medium] с. 96 (физ. 97): 1 карт. (1193×1553); страницу не цитирует никто
+- [medium] с. 115 (физ. 116): 2 карт. (1245×1621, 1193×1553); страницу не цитирует никто
+- [medium] с. 118 (физ. 119): 1 карт. (1193×1553); страницу не цитирует никто
+- [medium] с. 119 (физ. 120): 1 карт. (1193×1553); страницу не цитирует никто
+- [medium] с. 128 (физ. 129): 1 карт. (1193×1553); страницу не цитирует никто
+- [medium] с. 129 (физ. 130): 1 карт. (1193×1553); на странице: Соберите группу вместе (Тёмные века), Расследование ужасов в Тёмные века
+- [medium] с. 132 (физ. 133): 2 карт. (1245×1621, 1193×1553); страницу не цитирует никто
+- [medium] с. 138 (физ. 139): 1 карт. (1193×1553); страницу не цитирует никто
+- [medium] с. 139 (физ. 140): 2 карт. (1245×1621, 1193×1553); на странице: Мифы Ктулху в Тёмные века
+- [medium] с. 153 (физ. 154): 1 карт. (1193×1553); страницу не цитирует никто
+- [medium] с. 166 (физ. 167): 1 карт. (1193×1553); страницу не цитирует никто
+- [medium] с. 188 (физ. 189): 1 карт. (1193×1553); страницу не цитирует никто
+- [medium] с. 189 (физ. 190): 1 карт. (1193×1553); страницу не цитирует никто
+- [medium] с. 190 (физ. 191): 1 карт. (1193×1553); страницу не цитирует никто
+- [medium] с. 209 (физ. 210): 1 карт. (358×498); без картинки: Хлод, члены банды Эдрика (character)
+- [medium] с. 218 (физ. 219): 1 карт. (1193×1553); страницу не цитирует никто
+- [medium] с. 219 (физ. 220): 1 карт. (1193×1553); страницу не цитирует никто
+- [medium] с. 220 (физ. 221): 1 карт. (1193×1553); страницу не цитирует никто
+- [medium] с. 232 (физ. 233): 1 карт. (1193×1553); страницу не цитирует никто
+- [medium] с. 239 (физ. 240): 1 карт. (1193×1553); страницу не цитирует никто
+- [medium] с. 242 (физ. 243): 1 карт. (1193×1553); страницу не цитирует никто
+- [medium] с. 258 (физ. 259): 1 карт. (1245×1621); на странице: Кто есть кто (Тёмные века)
+- [medium] с. 270 (физ. 271): 3 карт. (1193×1553, 429×594, 429×612); страницу не цитирует никто
+- [medium] с. 273 (физ. 274): 12 карт. (2550×3300, 651×358, 583×559, 583×560…); страницу не цитирует никто
+- [low] с. 1 (физ. 2): 1 карт. (935×351); страницу не цитирует никто
+- [low] с. 13 (физ. 14): 1 карт. (580×740); на странице: Имена, Социальная структура
+- [low] с. 16 (физ. 17): 1 карт. (580×740); на странице: Люди
+- [low] с. 17 (физ. 18): 1 карт. (580×740); на странице: Вопрос о грамотности и алфавите, Люди
+- … ещё 45 (все — в findings.json)
+
 ### Arkham (Chaosium, 2023) (`arkham-en`) — 104
 
 **Тексты** (4)
@@ -1148,7 +1054,73 @@
 
 - [low] `pulp-cthulhu-en/organization/eight-fortunes-mutual-aid-society` Общество взаимопомощи «Восемь удач» — Упоминается только в этом сценарии; подробностей (устройство, члены, база) книга не даёт; Шанхай — текстом, записи города нет. Эпоха сценария — 1931 год.
 
-### Побег из Иннсмута (`pobeg-iz-innsmuta-ru`) — 80
+### Viral (`viral-en`) — 78
+
+**Картинки** (78)
+
+- [high] с. 7: 1 карт. (1226×1093); без картинки: Марко Энтони Мальони (character)
+- [high] с. 8: 3 карт. (637×623, 638×623, 495×635); без картинки: Коррина Тренч (character), Марко Энтони Мальони (character), Раздатка 12: изыскания Коррины (handout), Ведьмина доска Коррины (item)
+- [high] с. 9: 1 карт. (495×635); без картинки: Инок Джеремайя Икинс (character), Питер Уортон (character)
+- [high] с. 10: 2 карт. (495×633, 495×632); без картинки: Ку Хён (character), Майя Адедуон (character), Питер Уортон (character)
+- [high] с. 11: 2 карт. (495×636, 494×432); без картинки: Эмили «Эм» Лавин (character), Местные подростки (character), Майя Адедуон (character), Перевёрнутая лодка в Бухте Нищих (item)
+- [high] с. 13: 1 карт. (1226×1193); без картинки: Нунцио Вендра (character)
+- [high] с. 15: 1 карт. (495×682); без картинки: Нунцио Вендра (character)
+- [high] с. 22: 1 карт. (1226×1588); без картинки: Синьор Марино (character)
+- [high] с. 23: 1 карт. (1226×1588); без картинки: Падре Анджело (character), Сантина Мария Сальваторе (character)
+- [high] с. 24: 1 карт. (1008×440); без картинки: Алонзо Сальваторе (character), Нунцио Вендра (character), Падре Анджело (character), Паоло (character), Сантина Мария Сальваторе (character)
+- [high] с. 25: 3 карт. (347×449, 495×646, 494×300); без картинки: Алонзо Сальваторе (character), Падре Анджело (character), Сантина Мария Сальваторе (character)
+- [high] с. 31: 1 карт. (495×813); без картинки: Нунцио Вендра (character), Чумной монах (creature)
+- [high] с. 33: 1 карт. (494×702); без картинки: Снаряжение команды «Спектрал» (item)
+- [high] с. 40: 2 карт. (508×704, 491×687); без картинки: Доктор Энцо Бьянко (character)
+- [high] с. 51: 1 карт. (1012×438); без картинки: Пожиратель (creature), Знак Старших богов у Плачущего моста (item)
+- [high] с. 52: 1 карт. (1226×926); без картинки: Эмили «Эм» Лавин (character), Майя Адедуон (character), Раздатка 11: видение Инока (handout), Перевёрнутая лодка в Бухте Нищих (item)
+- [high] с. 54: 1 карт. (1226×1588); без картинки: Знак Старших богов у Плачущего моста (item)
+- [high] с. 60: 1 карт. (1226×556); без картинки: Реликвы (creature), Раздатка 2: Зрение — памятка игрока (handout)
+- [high] с. 66: 2 карт. (494×819, 494×756); без картинки: Чумной монах (creature), Реликвы (creature)
+- [high] с. 67: 4 карт. (570×322, 564×317, 578×668, 538×447); без картинки: Реликвы (creature), Клятва порчи (tome)
+- [high] с. 69: 4 карт. (1226×463, 1089×318, 778×951, 761×938); без картинки: Раздатка 1: исходная карта Google (handout)
+- [high] с. 74: 1 карт. (495×1022); без картинки: Раздатка 4: письмо Марко (1) (handout), Раздатка 5: письмо Марко (2) (handout)
+- [high] с. 75: 1 карт. (495×1022); без картинки: Раздатка 6: письмо Майи (1) (handout), Раздатка 7: письмо Майи (2) (handout)
+- [high] с. 76: 1 карт. (495×1022); без картинки: Раздатка 8: письмо Майи (3) (handout)
+- [high] с. 77: 1 карт. (1008×956); без картинки: Раздатка 9: распечатка карты острова с пометками (handout)
+- [high] с. 78: 2 карт. (1007×781, 990×764); без картинки: Раздатка 10: план больницы (ксерокопия от Майи) (handout), Раздатка 11: видение Инока (handout)
+- [high] с. 79: 2 карт. (783×1022, 744×980); без картинки: Доктор Энцо Бьянко (character), Раздатка 12: изыскания Коррины (handout)
+- [high] с. 80: 2 карт. (895×1244, 855×1202); без картинки: Раздатка 13: сценарий вступления Марко (handout)
+- [high] с. 81: 1 карт. (707×990); без картинки: Раздатка 14: маяк Изола-ди-Маламенте (handout)
+- [high] с. 82: 1 карт. (1014×710); без картинки: Ку Хён (character), Раздатка 15: iPad Хёна — начало стрима и Плачущий мост (handout), Раздатка 16: iPad Хёна — Лимонная роща (handout), Раздатка 17: iPad Хёна — Кремационная яма (handout), Раздатка 18: iPad Хёна — Братские могилы (handout)
+- [high] с. 94: 1 карт. (1008×1008); без картинки: Раздатка 28: Плачущий мост (handout)
+- [high] с. 95: 1 карт. (1008×672); без картинки: Раздатка 29: Знак Старших богов (handout), Знак Старших богов у Плачущего моста (item)
+- [high] с. 96: 1 карт. (878×1132); без картинки: Чумной монах (creature), Раздатка 30: что-то в окне (Чумной монах) (handout)
+- [high] с. 97: 1 карт. (878×1132); без картинки: Раздатка 31: что-то в окне (просто занавески) (handout)
+- [high] с. 98: 1 карт. (1012×792); без картинки: Раздатка 32: Лимонная роща (handout)
+- [high] с. 99: 1 карт. (1008×672); без картинки: Раздатка 33: Кремационная яма (handout)
+- [high] с. 100: 2 карт. (513×413, 1008×537); без картинки: Раздатка 34: ведьмина доска (handout), Раздатка 35: фрагмент книги (handout), Ведьмина доска Коррины (item)
+- [high] с. 101: 2 карт. (519×372, 1008×672); без картинки: Раздатка 36: катакомбы (handout), Раздатка 37: забытый рыцарь (handout)
+- [high] с. 102: 1 карт. (1156×832); без картинки: Пожиратель (creature), Раздатка 38: Хасталык поднимается (handout)
+- [high] с. 103: 1 карт. (1156×828); без картинки: Пожиратель (creature), Раздатка 39: Хасталык уничтожен (handout)
+- [high] с. 111: 1 карт. (1228×1588); без картинки: Марко Энтони Мальони (character)
+- [high] с. 112: 1 карт. (1228×1588); без картинки: Марко Энтони Мальони (character)
+- [high] с. 113: 1 карт. (1228×1588); без картинки: Коррина Тренч (character)
+- [high] с. 114: 1 карт. (1228×1588); без картинки: Коррина Тренч (character), Ведьмина доска Коррины (item)
+- [high] с. 115: 1 карт. (1228×1588); без картинки: Инок Джеремайя Икинс (character)
+- [high] с. 116: 1 карт. (1228×1588); без картинки: Инок Джеремайя Икинс (character)
+- [high] с. 117: 1 карт. (1228×1588); без картинки: Питер Уортон (character)
+- [high] с. 118: 1 карт. (1228×1588); без картинки: Питер Уортон (character)
+- [high] с. 119: 1 карт. (1228×1588); без картинки: Ку Хён (character)
+- [high] с. 120: 1 карт. (1228×1588); без картинки: Ку Хён (character)
+- [medium] с. 1: 1 карт. (1228×1588); на странице: Вирусный
+- [medium] с. 3: 2 карт. (619×404, 533×344); без картинки: Раздатка 4: письмо Марко (1) (handout), Раздатка 5: письмо Марко (2) (handout)
+- [medium] с. 4: 2 карт. (1080×1355, 1024×1297); на странице: Вирусный
+- [medium] с. 6: 1 карт. (1226×940); на странице: Изола-ди-Маламенте (location), Культ Хасталыка (чумные монахи) (organization), Команда «Спектрал» (organization)
+- [medium] с. 14: 1 карт. (494×253); без картинки: Снаряжение команды «Спектрал» (item)
+- [medium] с. 17: 2 карт. (1226×1588, 1092×270); на странице: Перла (location), Добро пожаловать в Перлу (scene)
+- [medium] с. 19: 1 карт. (335×506); без картинки: Анджело Руссо (character), Нунцио Вендра (character), Паоло (character)
+- [medium] с. 20: 1 карт. (490×368); без картинки: Эмили «Эм» Лавин (character), Местные подростки (character), Нунцио Вендра (character)
+- [medium] с. 26: 1 карт. (1226×1588); страницу не цитирует никто
+- [medium] с. 32: 1 карт. (495×358); без картинки: Нунцио Вендра (character), Раздатка 1: исходная карта Google (handout), Раздатка 11: видение Инока (handout), Раздатка 4: письмо Марко (1) (handout)
+- … ещё 18 (все — в findings.json)
+
+### Побег из Иннсмута (`pobeg-iz-innsmuta-ru`) — 73
 
 **Тексты** (1)
 
@@ -1226,87 +1198,14 @@
 - [low] `pobeg-iz-innsmuta-ru/scene/tsel-4-sbor-v-bostonskikh-dokakh` Цель 4: сбор в бостонских доках — суда и экипажи — сцена без места; сценарий pobeg-iz-innsmuta-ru/scenario/reyd-tsel-4
 - [low] `pobeg-iz-innsmuta-ru/scene/vstrevozhennyy-artur-anderson` Встревоженный Артур Андерсон — сцена без места; сценарий pobeg-iz-innsmuta-ru/scenario/pobeg-iz-innsmuta
 
-**Контекст** (13)
+**Контекст** (6)
 
-- [medium] `pobeg-iz-innsmuta-ru/character/bill-forbs` Билл Форбс — character без описания
-- [medium] `pobeg-iz-innsmuta-ru/character/evelin-gregg` Эвелин Грегг — character без описания
-- [medium] `pobeg-iz-innsmuta-ru/character/gart-gregg` Гарт Грегг — character без описания
-- [medium] `pobeg-iz-innsmuta-ru/character/meri-krouford` Мэри Кроуфорд — character без описания
-- [medium] `pobeg-iz-innsmuta-ru/character/rovena-dzhordan` Ровена Джордан — character без описания
-- [medium] `pobeg-iz-innsmuta-ru/character/uilyam-bernkhem` Уильям Бёрнхэм — character без описания
-- [medium] `coc:character:henry-armitage` Генри Армитедж — character без описания
 - [low] `pobeg-iz-innsmuta-ru/creature/plotoyadnye-rakoobraznye` Плотоядные ракообразные — Блока характеристик в книге нет: числа (СИЛ хватки 45, 1 ПЗ, броня 2, урон 1 за раунд, потери Рассудка) взяты из текста; шанс атаки не указан.
 - [low] `coc:spell:command-porpoise` Повелевать морской свиньёй — Только название из списков заклинаний «Побега из Иннсмута»; описания в книге нет. Русское название — наш перевод; тип и механика выведены из названия.
 - [low] `coc:spell:command-shark` Повелевать акулой — Только название из списков заклинаний «Побега из Иннсмута»; описания в книге нет. Русское название — наш перевод; тип и механика выведены из названия.
 - [low] `coc:spell:curse-of-the-stone` Проклятие камня — Только название из списков заклинаний «Побега из Иннсмута»; описания в книге нет. Русское название — наш перевод; тип и механика выведены из названия.
 - [low] `coc:spell:enchant-stone-tablet` Зачаровать каменную табличку — Только название из списков заклинаний «Побега из Иннсмута»; описания в книге нет. Русское название — наш перевод; тип и механика выведены из названия.
 - [low] `coc:tome:abyss-lore` Знание Бездны — Книга из «Побега из Иннсмута»: язык, автор, время изучения и уровень Мифов не указаны; кроме двух заклинаний — ещё 1–4 по выбору Хранителя. Английское название не известно (русское издание).
-
-### Viral (`viral-en`) — 78
-
-**Картинки** (78)
-
-- [high] с. 7: 1 карт. (1226×1093); без картинки: Марко Энтони Мальони (character)
-- [high] с. 8: 3 карт. (637×623, 638×623, 495×635); без картинки: Коррина Тренч (character), Марко Энтони Мальони (character), Раздатка 12: изыскания Коррины (handout), Ведьмина доска Коррины (item)
-- [high] с. 9: 1 карт. (495×635); без картинки: Инок Джеремайя Икинс (character), Питер Уортон (character)
-- [high] с. 10: 2 карт. (495×633, 495×632); без картинки: Ку Хён (character), Майя Адедуон (character), Питер Уортон (character)
-- [high] с. 11: 2 карт. (495×636, 494×432); без картинки: Эмили «Эм» Лавин (character), Местные подростки (character), Майя Адедуон (character), Перевёрнутая лодка в Бухте Нищих (item)
-- [high] с. 13: 1 карт. (1226×1193); без картинки: Нунцио Вендра (character)
-- [high] с. 15: 1 карт. (495×682); без картинки: Нунцио Вендра (character)
-- [high] с. 22: 1 карт. (1226×1588); без картинки: Синьор Марино (character)
-- [high] с. 23: 1 карт. (1226×1588); без картинки: Падре Анджело (character), Сантина Мария Сальваторе (character)
-- [high] с. 24: 1 карт. (1008×440); без картинки: Алонзо Сальваторе (character), Нунцио Вендра (character), Падре Анджело (character), Паоло (character), Сантина Мария Сальваторе (character)
-- [high] с. 25: 3 карт. (347×449, 495×646, 494×300); без картинки: Алонзо Сальваторе (character), Падре Анджело (character), Сантина Мария Сальваторе (character)
-- [high] с. 31: 1 карт. (495×813); без картинки: Нунцио Вендра (character), Чумной монах (creature)
-- [high] с. 33: 1 карт. (494×702); без картинки: Снаряжение команды «Спектрал» (item)
-- [high] с. 40: 2 карт. (508×704, 491×687); без картинки: Доктор Энцо Бьянко (character)
-- [high] с. 51: 1 карт. (1012×438); без картинки: Пожиратель (creature), Знак Старших богов у Плачущего моста (item)
-- [high] с. 52: 1 карт. (1226×926); без картинки: Эмили «Эм» Лавин (character), Майя Адедуон (character), Раздатка 11: видение Инока (handout), Перевёрнутая лодка в Бухте Нищих (item)
-- [high] с. 54: 1 карт. (1226×1588); без картинки: Знак Старших богов у Плачущего моста (item)
-- [high] с. 60: 1 карт. (1226×556); без картинки: Реликвы (creature), Раздатка 2: Зрение — памятка игрока (handout)
-- [high] с. 66: 2 карт. (494×819, 494×756); без картинки: Чумной монах (creature), Реликвы (creature)
-- [high] с. 67: 4 карт. (570×322, 564×317, 578×668, 538×447); без картинки: Реликвы (creature), Клятва порчи (tome)
-- [high] с. 69: 4 карт. (1226×463, 1089×318, 778×951, 761×938); без картинки: Раздатка 1: исходная карта Google (handout)
-- [high] с. 74: 1 карт. (495×1022); без картинки: Раздатка 4: письмо Марко (1) (handout), Раздатка 5: письмо Марко (2) (handout)
-- [high] с. 75: 1 карт. (495×1022); без картинки: Раздатка 6: письмо Майи (1) (handout), Раздатка 7: письмо Майи (2) (handout)
-- [high] с. 76: 1 карт. (495×1022); без картинки: Раздатка 8: письмо Майи (3) (handout)
-- [high] с. 77: 1 карт. (1008×956); без картинки: Раздатка 9: распечатка карты острова с пометками (handout)
-- [high] с. 78: 2 карт. (1007×781, 990×764); без картинки: Раздатка 10: план больницы (ксерокопия от Майи) (handout), Раздатка 11: видение Инока (handout)
-- [high] с. 79: 2 карт. (783×1022, 744×980); без картинки: Доктор Энцо Бьянко (character), Раздатка 12: изыскания Коррины (handout)
-- [high] с. 80: 2 карт. (895×1244, 855×1202); без картинки: Раздатка 13: сценарий вступления Марко (handout)
-- [high] с. 81: 1 карт. (707×990); без картинки: Раздатка 14: маяк Изола-ди-Маламенте (handout)
-- [high] с. 82: 1 карт. (1014×710); без картинки: Ку Хён (character), Раздатка 15: iPad Хёна — начало стрима и Плачущий мост (handout), Раздатка 16: iPad Хёна — Лимонная роща (handout), Раздатка 17: iPad Хёна — Кремационная яма (handout), Раздатка 18: iPad Хёна — Братские могилы (handout)
-- [high] с. 94: 1 карт. (1008×1008); без картинки: Раздатка 28: Плачущий мост (handout)
-- [high] с. 95: 1 карт. (1008×672); без картинки: Раздатка 29: Знак Старших богов (handout), Знак Старших богов у Плачущего моста (item)
-- [high] с. 96: 1 карт. (878×1132); без картинки: Чумной монах (creature), Раздатка 30: что-то в окне (Чумной монах) (handout)
-- [high] с. 97: 1 карт. (878×1132); без картинки: Раздатка 31: что-то в окне (просто занавески) (handout)
-- [high] с. 98: 1 карт. (1012×792); без картинки: Раздатка 32: Лимонная роща (handout)
-- [high] с. 99: 1 карт. (1008×672); без картинки: Раздатка 33: Кремационная яма (handout)
-- [high] с. 100: 2 карт. (513×413, 1008×537); без картинки: Раздатка 34: ведьмина доска (handout), Раздатка 35: фрагмент книги (handout), Ведьмина доска Коррины (item)
-- [high] с. 101: 2 карт. (519×372, 1008×672); без картинки: Раздатка 36: катакомбы (handout), Раздатка 37: забытый рыцарь (handout)
-- [high] с. 102: 1 карт. (1156×832); без картинки: Пожиратель (creature), Раздатка 38: Хасталык поднимается (handout)
-- [high] с. 103: 1 карт. (1156×828); без картинки: Пожиратель (creature), Раздатка 39: Хасталык уничтожен (handout)
-- [high] с. 111: 1 карт. (1228×1588); без картинки: Марко Энтони Мальони (character)
-- [high] с. 112: 1 карт. (1228×1588); без картинки: Марко Энтони Мальони (character)
-- [high] с. 113: 1 карт. (1228×1588); без картинки: Коррина Тренч (character)
-- [high] с. 114: 1 карт. (1228×1588); без картинки: Коррина Тренч (character), Ведьмина доска Коррины (item)
-- [high] с. 115: 1 карт. (1228×1588); без картинки: Инок Джеремайя Икинс (character)
-- [high] с. 116: 1 карт. (1228×1588); без картинки: Инок Джеремайя Икинс (character)
-- [high] с. 117: 1 карт. (1228×1588); без картинки: Питер Уортон (character)
-- [high] с. 118: 1 карт. (1228×1588); без картинки: Питер Уортон (character)
-- [high] с. 119: 1 карт. (1228×1588); без картинки: Ку Хён (character)
-- [high] с. 120: 1 карт. (1228×1588); без картинки: Ку Хён (character)
-- [medium] с. 1: 1 карт. (1228×1588); на странице: Вирусный
-- [medium] с. 3: 2 карт. (619×404, 533×344); без картинки: Раздатка 4: письмо Марко (1) (handout), Раздатка 5: письмо Марко (2) (handout)
-- [medium] с. 4: 2 карт. (1080×1355, 1024×1297); на странице: Вирусный
-- [medium] с. 6: 1 карт. (1226×940); на странице: Изола-ди-Маламенте (location), Культ Хасталыка (чумные монахи) (organization), Команда «Спектрал» (organization)
-- [medium] с. 14: 1 карт. (494×253); без картинки: Снаряжение команды «Спектрал» (item)
-- [medium] с. 17: 2 карт. (1226×1588, 1092×270); на странице: Перла (location), Добро пожаловать в Перлу (scene)
-- [medium] с. 19: 1 карт. (335×506); без картинки: Анджело Руссо (character), Нунцио Вендра (character), Паоло (character)
-- [medium] с. 20: 1 карт. (490×368); без картинки: Эмили «Эм» Лавин (character), Местные подростки (character), Нунцио Вендра (character)
-- [medium] с. 26: 1 карт. (1226×1588); страницу не цитирует никто
-- [medium] с. 32: 1 карт. (495×358); без картинки: Нунцио Вендра (character), Раздатка 1: исходная карта Google (handout), Раздатка 11: видение Инока (handout), Раздатка 4: письмо Марко (1) (handout)
-- … ещё 18 (все — в findings.json)
 
 ### Pax Cthuliana (`pax-cthuliana-ru`) — 71
 
@@ -1517,66 +1416,6 @@
 - [low] с. 189: 1 карт. (777×672); на странице: Охранный Знак
 - [low] с. 201: 2 карт. (429×573, 427×571); страницу не цитирует никто
 
-### Книга хранителя (`keeper-rulebook-ru`) — 49
-
-**Тексты** (9)
-
-- [high] с. 5 — с. 24: 18 стр., 7370 слов не цитирует ни одна запись; headings: Имя сыщика; Крас 1юречие (навык); Обычный уровень сложности; ЗОВ КТУЛХУ; near: «Мелкие безделицы»; Выносливость; Интеллект
-- [high] с. 276 (физ. 255) — с. 280 (физ. 259): 5 стр., 2041 слов не цитирует ни одна запись; headings: ЗО В КТУ Л ХУ; Ктулху, боги Мифов Ктулху, традиционные чудовища; Параметры существ; Сам Лавкрафт не придерживался чёткоrо описания чу­; near: Бесформенное отродье; Бродяга между измерениями
-- [high] с. 405 (физ. 381) — с. 408 (физ. 384): 4 стр., 1607 слов не цитирует ни одна запись; headings: Бонусные; Кратко; Проверки навыков; Из характеристики врага по очереди вычитают харак­; near: Автомат «M16A2»; Автомат «M4»; Автомат «АК-47 / АКМ»
-- [high] с. 410 (физ. 386) — с. 413 (физ. 389): 4 стр., 1146 слов не цитирует ни одна запись; headings: Определите порядок атак; Внезапная атака; Разыграйте в порядкеЛВК; В бою; near: Автомобиль; Другие виды урона; Задержка дыхания и утопление
-- [high] с. 415 (физ. 391) — с. 419 (физ. 395): 4 стр., 1663 слов не цитирует ни одна запись; headings: Кратко; И грокам нужно отслеживать, сколько пунктов рассудка; Провал проверки Рассудка -; Потеря 5 или более пунктов рассудка -; near: Автомобиль
-- [medium] с. 318 — с. 341 (физ. 319): 2 стр., 911 слов не цитирует ни одна запись; headings: ЗОВ КТУЛХУ; Ньярлатхотеп -; Сами Великие Древние, судя по всему, бесконечно; Даолот,; near: Брайс Фэллон; Поручение декана Фэллона; Собака
-- [low] с. 2: 1 стр., 151 слов не цитирует ни одна запись; near: Коттедж Лейтера
-- [low] с. 54 (физ. 51): 1 стр., 186 слов не цитирует ни одна запись; headings: ЗОВ КТУЛХУ; Инженерия (01%) -; Иностранный язык (01%) ~; Искусство/ремесло (05%) ~; near: Антропология; Артиллерия; Археология
-- [low] с. 321 (физ. 300): 1 стр., 441 слов не цитирует ни одна запись; headings: Ктугха напоминает постоя нно изменяю ­; Н иогта; Омерзительная вонь начала; Обитает он на звезде Фомальгаут; near: Король в жёлтом; Ктугха; Ниогта
-
-**Картинки** (17)
-
-- [medium] с. 1: 1 карт. (1700×2201); страницу не цитирует никто
-- [medium] с. 2: 1 карт. (1275×1650); страницу не цитирует никто
-- [medium] с. 3: 1 карт. (5139×6631); на странице: Коттедж Лейтера (map)
-- [medium] с. 4: 1 карт. (5100×6601); на странице: «Мелкие безделицы» (map)
-- [medium] с. 5: 1 карт. (5100×6601); страницу не цитирует никто
-- [medium] с. 6: 1 карт. (5100×6601); страницу не цитирует никто
-- [medium] с. 7: 1 карт. (5126×6621); страницу не цитирует никто
-- [medium] с. 8: 1 карт. (5100×6601); страницу не цитирует никто
-- [medium] с. 9: 1 карт. (5125×6622); страницу не цитирует никто
-- [medium] с. 10: 1 карт. (2897×3746); страницу не цитирует никто
-- [medium] с. 18: 1 карт. (1725×2221); страницу не цитирует никто
-- [medium] с. 33 (физ. 31): 1 карт. (1808×2288); на странице: Создаём своего сыщика, Шаг 3. Выбор навыков и распределение пунктов навыков, Ключевая связь в биографии
-- [medium] с. 74 (физ. 70): 1 карт. (4914×6969); на странице: Уклонение, Управление тяжёлыми машинами, Чтение по губам
-- [medium] с. 75 (физ. 71): 1 карт. (4927×6979); на странице: Электрика, Электроника, Юриспруденция
-- [medium] с. 92 (физ. 86): 1 карт. (2456×3483); на странице: Бонусные и штрафные кости, Награда за опыт: фаза развития сыщиков
-- [medium] с. 93 (физ. 87): 1 карт. (2456×3483); на странице: Изменение биографии сыщика, Средства и траты сыщика, Награда за опыт: фаза развития сыщиков
-- [medium] с. 121: 1 карт. (1738×2231); на странице: Погоня
-
-**Контекст** (23)
-
-- [medium] `keeper-rulebook-ru/character/crimson-caleb-hobbhouse` Калеб Хоббхаус — character без описания
-- [medium] `keeper-rulebook-ru/character/crimson-joshua-hobbhouse` Джошуа Хоббхаус — character без описания
-- [low] `coc:tome:book-of-iod-ancient-tongue` Книга Иода (древнее наречие) — tome без описания
-- [low] `coc:tome:book-of-iod-english` Книга Иода (английский) — tome без описания
-- [low] `coc:tome:book-of-skelos` Книга Скелоса — tome без описания
-- [low] `coc:tome:cabala-of-saboth` Каббала Саваофа — tome без описания
-- [low] `coc:tome:chronike-von-nath` Chronike von Nath — tome без описания
-- [low] `coc:tome:ilarnek-papyri` Иларнекские папирусы — tome без описания
-- [low] `coc:tome:in-pressured-places` Под высоким давлением — tome без описания
-- [low] `coc:tome:johansen-narrative` Рассказ Йохансена — tome без описания
-- [low] `coc:tome:legends-of-liqualia` Легенды Ликвалии — tome без описания
-- [low] `coc:tome:liber-damnatus-damnationum` Liber Damnatus Damnationum — tome без описания
-- [low] `coc:tome:life-of-eibon` Жизнь Эйбона — tome без описания
-- [low] `coc:tome:occult-foundation` Основы оккультизма — tome без описания
-- [low] `coc:tome:of-evil-sorceries-done-in-new-england` О злодеяниях чародеев в Новой Англии — tome без описания
-- [low] `coc:tome:parchments-of-pnom` Пергаменты Пнома — tome без описания
-- [low] `coc:tome:prehistoric-pacific-in-the-light-of-the-ponape-scripture` Доисторическая Океания в свете Понапского писания — tome без описания
-- [low] `coc:tome:revelations-of-hali` Откровения Хали — tome без описания
-- [low] `coc:tome:saducismus-triumphatus` Saducismus Triumphatus — tome без описания
-- [low] `coc:tome:tunneler-below` Роющие в глубине — tome без описания
-- [low] `coc:tome:uralteschrecken` Uralteschrecken — tome без описания
-- [low] `coc:tome:we-pass-from-view` Мы уходим из виду — tome без описания
-- [low] `coc:tome:yuggya-chants` Песнопения Юггья — tome без описания
-
 ### The Cursed Idol of Manco Capác (`cursed-idol-of-manco-capac-en`) — 48
 
 **Тексты** (1)
@@ -1636,56 +1475,63 @@
 - [high] `cursed-idol-of-manco-capac-en/handout/10-encasing-museum-half` Раздатка 10: половина метеоритной оболочки (из музея) — раздатка без текста и картинки
 - [high] `cursed-idol-of-manco-capac-en/handout/bridgeport-map` Карта Бриджпорта (раздатка) — раздатка без текста и картинки
 
-### Curious Characters Deck (`curious-characters-deck-en`) — 46
+### Книга хранителя (`keeper-rulebook-ru`) — 47
 
-**Контекст** (46)
+**Тексты** (9)
 
-- [medium] `coc:character:alex-coxen` Алекс Коксен — character без описания
-- [medium] `coc:character:alfonse-treggore` Альфонс Треггоре — character без описания
-- [medium] `coc:character:anthony-mayhew` Энтони Мэйхью — character без описания
-- [medium] `coc:character:artemis-ravenor` Артемис Равенор — character без описания
-- [medium] `coc:character:aubrey-pike-temple` Обри Пайк-Темпл — character без описания
-- [medium] `coc:character:bartholomew-crane-iii` Бартоломью Крейн III — character без описания
-- [medium] `coc:character:bertie-macdonald` Доктор Берти Макдональд — character без описания
-- [medium] `coc:character:bessie-ringwald` Бесси Рингуолд — character без описания
-- [medium] `coc:character:billy-mclaughlin` Билли «Ямочки» Маклафлин — character без описания
-- [medium] `coc:character:bix-wannamaker` Бикс Уоннамейкер — character без описания
-- [medium] `coc:character:chloe-kirscher` Хлоя Киршер — character без описания
-- [medium] `coc:character:clint-madeira` Клинт Мадейра — character без описания
-- [medium] `coc:character:devan-black` Деван Блэк — character без описания
-- [medium] `coc:character:duncan-forrest` Лейтенант Дункан Форрест — character без описания
-- [medium] `coc:character:ed-mclain` Эд Маклейн — character без описания
-- [medium] `coc:character:eleanor-milne` Элинор Милн — character без описания
-- [medium] `coc:character:frankie-mowlop` Фрэнки Моулоп — character без описания
-- [medium] `coc:character:giuseppe-principe` Джузеппе Принчипе — character без описания
-- [medium] `coc:character:herb-alachuck` Херб Алачак — character без описания
-- [medium] `coc:character:hester-broomaker` Хестер Брумейкер — character без описания
-- [medium] `coc:character:jack-odonnell` Отец Джек О’Доннелл — character без описания
-- [medium] `coc:character:jenny-oreilly` Дженни О’Райли — character без описания
-- [medium] `coc:character:joey-montana` Джои «Леденец» Монтана — character без описания
-- [medium] `coc:character:juliette-von-schwenke` Джульетта фон Швенке — character без описания
-- [medium] `coc:character:june-destrider` Джун Дестрайдер — character без описания
-- [medium] `coc:character:kieran-hoogan` Киран «Крекер» Хуган — character без описания
-- [medium] `coc:character:kieran-ohara` Киран О’Хара — character без описания
-- [medium] `coc:character:lester-chadbaker` Лестер Чадбейкер — character без описания
-- [medium] `coc:character:lilly-diamond` Лилли «Своенравная» Даймонд — character без описания
-- [medium] `coc:character:mable-parker-greene` Мейбл Паркер-Грин — character без описания
-- [medium] `coc:character:maxie-robbins` Макси Роббинс — character без описания
-- [medium] `coc:character:maynard-pope` Мейнард «Здоровяк» Поуп — character без описания
-- [medium] `coc:character:mike-johnson` Майк «Огурчик» Джонсон — character без описания
-- [medium] `coc:character:nelson-caprissi` Нельсон «Весельчак» Каприсси — character без описания
-- [medium] `coc:character:nigel-hedenhammer` Найджел Хеденхаммер — character без описания
-- [medium] `coc:character:obadiah-henge` Обадайя Хендж — character без описания
-- [medium] `coc:character:pat-nessen` Пэт Нессен — character без описания
-- [medium] `coc:character:sebastian-crickleshank` Себастьян Крикклшенк — character без описания
-- [medium] `coc:character:sissy-albrecht` Сисси Альбрехт — character без описания
-- [medium] `coc:character:skylar-mordant` Скайлар Мордант — character без описания
-- [medium] `coc:character:stephen-hurst` Стивен Хёрст — character без описания
-- [medium] `coc:character:teddy-nugent` Тедди «Манерный» Ньюджент — character без описания
-- [medium] `coc:character:uncle-giggle` Дядюшка Гиггл — character без описания
-- [medium] `coc:character:wentworth` Уэнтуорт — character без описания
-- [medium] `coc:character:wilberforce-poncenby-hall` Уилберфорс Понсенби-Холл — character без описания
-- [medium] `coc:character:zebedee-silver` Зебеди Сильвер — character без описания
+- [high] с. 5 — с. 24: 18 стр., 7370 слов не цитирует ни одна запись; headings: Имя сыщика; Крас 1юречие (навык); Обычный уровень сложности; ЗОВ КТУЛХУ; near: «Мелкие безделицы»; Выносливость; Интеллект
+- [high] с. 276 (физ. 255) — с. 280 (физ. 259): 5 стр., 2041 слов не цитирует ни одна запись; headings: ЗО В КТУ Л ХУ; Ктулху, боги Мифов Ктулху, традиционные чудовища; Параметры существ; Сам Лавкрафт не придерживался чёткоrо описания чу­; near: Бесформенное отродье; Бродяга между измерениями
+- [high] с. 405 (физ. 381) — с. 408 (физ. 384): 4 стр., 1607 слов не цитирует ни одна запись; headings: Бонусные; Кратко; Проверки навыков; Из характеристики врага по очереди вычитают харак­; near: Автомат «M16A2»; Автомат «M4»; Автомат «АК-47 / АКМ»
+- [high] с. 410 (физ. 386) — с. 413 (физ. 389): 4 стр., 1146 слов не цитирует ни одна запись; headings: Определите порядок атак; Внезапная атака; Разыграйте в порядкеЛВК; В бою; near: Автомобиль; Другие виды урона; Задержка дыхания и утопление
+- [high] с. 415 (физ. 391) — с. 419 (физ. 395): 4 стр., 1663 слов не цитирует ни одна запись; headings: Кратко; И грокам нужно отслеживать, сколько пунктов рассудка; Провал проверки Рассудка -; Потеря 5 или более пунктов рассудка -; near: Автомобиль
+- [medium] с. 318 — с. 341 (физ. 319): 2 стр., 911 слов не цитирует ни одна запись; headings: ЗОВ КТУЛХУ; Ньярлатхотеп -; Сами Великие Древние, судя по всему, бесконечно; Даолот,; near: Брайс Фэллон; Поручение декана Фэллона; Собака
+- [low] с. 2: 1 стр., 151 слов не цитирует ни одна запись; near: Коттедж Лейтера
+- [low] с. 54 (физ. 51): 1 стр., 186 слов не цитирует ни одна запись; headings: ЗОВ КТУЛХУ; Инженерия (01%) -; Иностранный язык (01%) ~; Искусство/ремесло (05%) ~; near: Антропология; Артиллерия; Археология
+- [low] с. 321 (физ. 300): 1 стр., 441 слов не цитирует ни одна запись; headings: Ктугха напоминает постоя нно изменяю ­; Н иогта; Омерзительная вонь начала; Обитает он на звезде Фомальгаут; near: Король в жёлтом; Ктугха; Ниогта
+
+**Картинки** (17)
+
+- [medium] с. 1: 1 карт. (1700×2201); страницу не цитирует никто
+- [medium] с. 2: 1 карт. (1275×1650); страницу не цитирует никто
+- [medium] с. 3: 1 карт. (5139×6631); на странице: Коттедж Лейтера (map)
+- [medium] с. 4: 1 карт. (5100×6601); на странице: «Мелкие безделицы» (map)
+- [medium] с. 5: 1 карт. (5100×6601); страницу не цитирует никто
+- [medium] с. 6: 1 карт. (5100×6601); страницу не цитирует никто
+- [medium] с. 7: 1 карт. (5126×6621); страницу не цитирует никто
+- [medium] с. 8: 1 карт. (5100×6601); страницу не цитирует никто
+- [medium] с. 9: 1 карт. (5125×6622); страницу не цитирует никто
+- [medium] с. 10: 1 карт. (2897×3746); страницу не цитирует никто
+- [medium] с. 18: 1 карт. (1725×2221); страницу не цитирует никто
+- [medium] с. 33 (физ. 31): 1 карт. (1808×2288); на странице: Создаём своего сыщика, Шаг 3. Выбор навыков и распределение пунктов навыков, Ключевая связь в биографии
+- [medium] с. 74 (физ. 70): 1 карт. (4914×6969); на странице: Уклонение, Управление тяжёлыми машинами, Чтение по губам
+- [medium] с. 75 (физ. 71): 1 карт. (4927×6979); на странице: Электрика, Электроника, Юриспруденция
+- [medium] с. 92 (физ. 86): 1 карт. (2456×3483); на странице: Бонусные и штрафные кости, Награда за опыт: фаза развития сыщиков
+- [medium] с. 93 (физ. 87): 1 карт. (2456×3483); на странице: Изменение биографии сыщика, Средства и траты сыщика, Награда за опыт: фаза развития сыщиков
+- [medium] с. 121: 1 карт. (1738×2231); на странице: Погоня
+
+**Контекст** (21)
+
+- [low] `coc:tome:book-of-iod-ancient-tongue` Книга Иода (древнее наречие) — tome без описания
+- [low] `coc:tome:book-of-iod-english` Книга Иода (английский) — tome без описания
+- [low] `coc:tome:book-of-skelos` Книга Скелоса — tome без описания
+- [low] `coc:tome:cabala-of-saboth` Каббала Саваофа — tome без описания
+- [low] `coc:tome:chronike-von-nath` Chronike von Nath — tome без описания
+- [low] `coc:tome:ilarnek-papyri` Иларнекские папирусы — tome без описания
+- [low] `coc:tome:in-pressured-places` Под высоким давлением — tome без описания
+- [low] `coc:tome:johansen-narrative` Рассказ Йохансена — tome без описания
+- [low] `coc:tome:legends-of-liqualia` Легенды Ликвалии — tome без описания
+- [low] `coc:tome:liber-damnatus-damnationum` Liber Damnatus Damnationum — tome без описания
+- [low] `coc:tome:life-of-eibon` Жизнь Эйбона — tome без описания
+- [low] `coc:tome:occult-foundation` Основы оккультизма — tome без описания
+- [low] `coc:tome:of-evil-sorceries-done-in-new-england` О злодеяниях чародеев в Новой Англии — tome без описания
+- [low] `coc:tome:parchments-of-pnom` Пергаменты Пнома — tome без описания
+- [low] `coc:tome:prehistoric-pacific-in-the-light-of-the-ponape-scripture` Доисторическая Океания в свете Понапского писания — tome без описания
+- [low] `coc:tome:revelations-of-hali` Откровения Хали — tome без описания
+- [low] `coc:tome:saducismus-triumphatus` Saducismus Triumphatus — tome без описания
+- [low] `coc:tome:tunneler-below` Роющие в глубине — tome без описания
+- [low] `coc:tome:uralteschrecken` Uralteschrecken — tome без описания
+- [low] `coc:tome:we-pass-from-view` Мы уходим из виду — tome без описания
+- [low] `coc:tome:yuggya-chants` Песнопения Юггья — tome без описания
 
 ### Карнавал безумия (`karnaval-bezumiya-ru`) — 44
 
@@ -1794,114 +1640,6 @@
 - [low] `naedine-s-hellouinom-ru/creature/rastenie-mukholovka` Растение-мухоловка старой оранжереи — ПЗ и прочие характеристики в книге не даны
 - [low] `naedine-s-hellouinom-ru/tome/kniga-iz-pentagrammy` Книга из пентаграммы в башне — название дано по месту, книга безымянная
 
-### Царство Террора (`tsarstvo-terrora-ru`) — 44
-
-**Тексты** (1)
-
-- [low] с. 3: 1 стр., 472 слов не цитирует ни одна запись; headings: CREDITS; Author; Mark Morrison; Additional Writing
-
-**Картинки** (32)
-
-- [high] с. 25: 1 карт. (714×484); без картинки: Платок с монограммой «M.A.» (item)
-- [high] с. 57: 1 карт. (1193×1530); без картинки: Максимилиан Робеспьер (character)
-- [high] с. 90: 1 карт. (1195×1546); без картинки: Аристо, знать и сикофанты (character), Обычные люди (character), Солдаты (character)
-- [high] с. 108: 1 карт. (1197×1545); без картинки: Аксель Дюран (character), Пьер-Франсуа Палуа (character), Нечто в Бастилии (creature)
-- [medium] с. 1: 3 карт. (1388×1794, 2884×704, 471×471); страницу не цитирует никто
-- [medium] с. 2: 1 карт. (1080×1080); страницу не цитирует никто
-- [medium] с. 4: 1 карт. (1147×1481); страницу не цитирует никто
-- [medium] с. 5: 1 карт. (1147×1481); на странице: Царство Террора
-- [medium] с. 16: 1 карт. (1149×1481); страницу не цитирует никто
-- [medium] с. 17: 1 карт. (1147×1481); на странице: Площадь Революции (location), Нарратив пролога: Человек в повозке (scene)
-- [medium] с. 20: 1 карт. (832×1072); на странице: Катакомбы (location), Начало: кладбище (scene), Карета (scene)
-- [medium] с. 39: 1 карт. (407×552); без картинки: Дофин Людовик-Жозеф (character), Свитки и книги из подвала Феналика (item), Письмо о реквизиции (item), Порошок Риго (item)
-- [medium] с. 52: 2 карт. (1198×1546, 912×477); на странице: Париж (location)
-- [medium] с. 54: 1 карт. (1147×1481); страницу не цитирует никто
-- [medium] с. 55: 1 карт. (1121×1481); страницу не цитирует никто
-- [medium] с. 56: 1 карт. (1178×1540); страницу не цитирует никто
-- [medium] с. 59: 1 карт. (1191×1532); страницу не цитирует никто
-- [medium] с. 63: 1 карт. (571×393); без картинки: Максимилиан Робеспьер (character)
-- [medium] с. 74: 1 карт. (972×1237); на странице: Зачаровать жертвенный кинжал, Ритуал жертвоприношения, Царство #5: отрывок из «Верховной Пустоты»
-- [medium] с. 85: 1 карт. (1189×1553); страницу не цитирует никто
-- [medium] с. 87: 1 карт. (1193×1553); страницу не цитирует никто
-- [medium] с. 88: 1 карт. (1131×1462); страницу не цитирует никто
-- [medium] с. 89: 1 карт. (1131×1462); страницу не цитирует никто
-- [medium] с. 94: 1 карт. (433×408); без картинки: Революционеры (character), Слуги Риго (character), Пирующие упыри (creature)
-- [medium] с. 97: 1 карт. (1146×1451); на странице: Марсово поле (location)
-- [medium] с. 103: 1 карт. (1146×1454); на странице: Преступник, Священник, Врач
-- [medium] с. 106: 1 карт. (913×676); на странице: Доход, наличные и имущество («Царство Террора»), Социальный класс («Царство Террора»), Цены («Царство Террора»)
-- [low] с. 9: 1 карт. (913×591); на странице: Париж (location), Рынок Ле-Аль (location), Люксембургский сад (location), Дворец Тюильри (location), Пале-Рояль (location)
-- [low] с. 71: 1 карт. (746×550); на странице: Революционный трибунал (organization)
-- [low] с. 79: 1 карт. (912×542); на странице: Культ Верховного Существа (organization), Прямое противостояние (scene)
-- [low] с. 98: 1 карт. (912×591); на странице: Хронология Французской революции («Царство Террора»)
-- [low] с. 99: 1 карт. (912×591); на странице: Хронология Французской революции («Царство Террора»)
-
-**Контекст** (11)
-
-- [medium] `tsarstvo-terrora-ru/character/christophe-pressi` Кристоф Пресси — character без описания
-- [medium] `tsarstvo-terrora-ru/character/etienne-babin` Этьен Бабен — character без описания
-- [medium] `tsarstvo-terrora-ru/character/jean-dupois` Жан Дюпуа — character без описания
-- [medium] `tsarstvo-terrora-ru/character/joseph-hugel` Жозеф Хюгель — character без описания
-- [medium] `tsarstvo-terrora-ru/character/michel-beaumains` Мишель Бомэн — character без описания
-- [medium] `tsarstvo-terrora-ru/character/thierry-renault` Тьерри Рено — character без описания
-- [low] `tsarstvo-terrora-ru/character/1794-richebourg` Ришбур — Только характеристики для погони (Скорость 7, ВЫН 60, ЛВК 50, СИЛ 45 и четыре навыка), как в книге и в английском оригинале; половина и пятая навыков посчитаны (в книге их нет). Герцогиня Орлеанская с
-- [low] `tsarstvo-terrora-ru/creature/seed-bastille-thing` Нечто в Бастилии — Своего статблока нет: книга велит брать характеристики огненного вампира (coc:creature:fire-vampire) с заменой жара на холод. Название записи — по заголовку задумки.
-- [low] `tsarstvo-terrora-ru/creature/seed-gaueko` Гауэко — Своего статблока нет — по профилю бесформенного отродья (instance_of). В переводе — «бесформенное порождение Цатхоггуа».
-- [low] `coc:spell:enchant-sacrificial-dagger` Зачаровать жертвенный кинжал — Новое заклинание кампании «Царство Террора»: книга только называет его (с. 73, 96), механика — из сюжета (с. 66, 74, 78), вывод из текста (Р-41). В Grand Grimoire заклинания нет. С «Зачаровать нож» (c
-- [low] `coc:spell:ritual-of-sacrifice` Ритуал жертвоприношения — Новое заклинание кампании «Царство Террора» (фанатский перевод 7e — источник русского текста). Цены, времени сотворения и проверок книга не даёт: в `cost` и `casting_time` — то, что сказано во врезке 
-
-### The Innsmouth Terror (`innsmouth-terror-en`) — 42
-
-**Тексты** (1)
-
-- [low] с. -1 (физ. 3): 1 стр., 164 слов не цитирует ни одна запись; headings: Written by; John Hedge, with The Playhouse Staff; Editing; Matt ‘Doc’ Tracey; near: Ужас в Иннсмуте
-
-**Картинки** (36)
-
-- [high] с. 1 (физ. 5): 3 карт. (1788×780, 2559×1057, 1921×1061); без картинки: Хьюго «Шримпи» Харгривз (character), Иэн Торрес (character), Маргарет «Мэгги» Майерс (character), Пэтти Гиллиан (character), Тиффани Киспе (character)
-- [high] с. 3 (физ. 7): 2 карт. (640×544, 939×766); без картинки: Плёнка фильма «Ужас Иннсмута» (item), Цветная камера Макгвайра (item), Пачка антацида «Там-Из» (item)
-- [high] с. 4 (физ. 8): 3 карт. (585×823, 572×764, 521×705); без картинки: Толстый Тони (character), Женевьева «Джинни» Дюбуа (character), Финеас Артур Баззлдон (character)
-- [high] с. 5 (физ. 9): 4 карт. (680×708, 685×682, 572×764, 404×569); без картинки: Анна Диас (character), Кристофер Макгвайр (character), Цветная камера Макгвайра (item)
-- [high] с. 6 (физ. 10): 2 карт. (636×856, 363×496); без картинки: Джеремайя Брюстер (character), Зэдок Аллен (character), Диана Лоринг (character), Член съёмочной группы (character), Франк Тёрнер (character)
-- [high] с. 7 (физ. 11): 2 карт. (484×640, 333×466); без картинки: Диана Лоринг (character), Нил Артур Тепп (character), Атлантийская драгоценность (item)
-- [high] с. 8 (физ. 12): 2 карт. (484×640, 728×970); без картинки: Диана Лоринг (character), Карен Джеффрис (character), Атлантийская драгоценность (item)
-- [high] с. 9 (физ. 13): 2 карт. (484×640, 724×914); без картинки: Франк Тёрнер (character), Карен Джеффрис (character)
-- [high] с. 10 (физ. 14): 3 карт. (1436×1838, 500×688, 929×257); без картинки: Раздатка 1-a: письмо (внутреннее) (handout)
-- [high] с. 12 (физ. 16): 2 карт. (704×944, 1076×1447); без картинки: Анна Диас (character)
-- [high] с. 13 (физ. 17): 2 карт. (1268×676, 1273×686); без картинки: Анна Диас (character), Запасные ключи от вагонов (item)
-- [high] с. 14 (физ. 18): 2 карт. (704×944, 501×635); без картинки: Толстый Тони (character), Финеас Артур Баззлдон (character), Напольный сейф Баззлдона (item), Бумаги на столе Баззлдона (item), Письмо Толстого Тони (item)
-- [high] с. 15 (физ. 19): 1 карт. (1379×1268); без картинки: Раздатка 2: записка (handout), Статья о пожаре в театре (item)
-- [high] с. 16 (физ. 20): 1 карт. (2560×2318); без картинки: Кристофер Макгвайр (character), Схема пещер Макгвайра (item), Цветная камера Макгвайра (item)
-- [high] с. 18 (физ. 22): 2 карт. (908×1828, 360×750); без картинки: Разбитый бинокль (item)
-- [high] с. 21 (физ. 25): 2 карт. (1264×512, 1856×755); без картинки: Кристофер Макгвайр (character), Член съёмочной группы (character), Женевьева «Джинни» Дюбуа (character), Финеас Артур Баззлдон (character), Сэмми Брюстер (character)
-- [high] с. 22 (физ. 26): 2 карт. (556×744, 419×583); без картинки: Зэдок Аллен (character), Пит (character)
-- [high] с. 23 (физ. 27): 3 карт. (552×736, 464×618, 406×571); без картинки: Зэдок Аллен (character)
-- [high] с. 24 (физ. 28): 2 карт. (1268×676, 1793×999); без картинки: Джеремайя Брюстер (character), Обычный житель Иннсмута (гибрид) (character), Глубоководный («Ужас в Иннсмуте») (creature)
-- [high] с. 26 (физ. 30): 3 карт. (1312×784, 830×501, 1796×1148); без картинки: Паровоз MVR класса B1 «Олмстед» (item)
-- [high] с. 27 (физ. 31): 2 карт. (1796×1148, 2555×1609); без картинки: Кристофер Макгвайр (character), Член съёмочной группы (character), Женевьева «Джинни» Дюбуа (character), Финеас Артур Баззлдон (character), Пачка антацида «Там-Из» (item)
-- [high] с. 28 (физ. 32): 2 карт. (1268×676, 1517×988); без картинки: Толстый Тони (character), Финеас Артур Баззлдон (character), Атлантийская драгоценность (item), Напольный сейф Баззлдона (item), Плёнка фильма «Ужас Иннсмута» (item)
-- [high] с. 32 (физ. 36): 2 карт. (596×800, 821×1153); без картинки: Хьюго «Шримпи» Харгривз (character)
-- [high] с. 35 (физ. 39): 2 карт. (596×800, 352×496); без картинки: Тиффани Киспе (character)
-- [high] с. 36 (физ. 40): 2 карт. (596×800, 326×460); без картинки: Маргарет «Мэгги» Майерс (character)
-- [high] с. 37 (физ. 41): 2 карт. (1204×1652, 486×688); без картинки: Нил Артур Тепп (character), Раздатка 1-a: письмо (внутреннее) (handout)
-- [high] с. 38 (физ. 42): 2 карт. (1204×1652, 486×688); без картинки: Нил Артур Тепп (character), Раздатка 1-b: письмо (внешнее) (handout)
-- [high] с. 39 (физ. 43): 1 карт. (1237×988); без картинки: Сэмми Брюстер (character), Раздатка 2: записка (handout)
-- [medium] с. -3 (физ. 1): 1 карт. (2056×2659); страницу не цитирует никто
-- [medium] с. -2 (физ. 2): 16 карт. (2014×2581, 1544×845, 1505×812, 1028×832…); на странице: Ужас в Иннсмуте
-- [medium] с. -1 (физ. 3): 2 карт. (935×513, 1921×1061); страницу не цитирует никто
-- [medium] с. 0 (физ. 4): 2 карт. (1788×780, 751×366); на странице: Ужас в Иннсмуте
-- [medium] с. 11 (физ. 15): 2 карт. (1780×1328, 1105×808); на странице: Прибытие в Иннсмут (scene), Съёмочный поезд ночью (scene)
-- [medium] с. 33 (физ. 37): 1 карт. (395×556); без картинки: Пэтти Гиллиан (character)
-- [medium] с. 40 (физ. 44): 10 карт. (2083×3478, 2176×270, 1496×844, 1282×642…); страницу не цитирует никто
-- [medium] с. 41 (физ. 45): 8 карт. (2094×3478, 2176×270, 876×1577, 876×1645…); страницу не цитирует никто
-
-**Контекст** (5)
-
-- [medium] `innsmouth-terror-en/character/hugo-hargreaves` Хьюго «Шримпи» Харгривз — character без описания
-- [medium] `innsmouth-terror-en/character/ian-torres` Иэн Торрес — character без описания
-- [medium] `innsmouth-terror-en/character/margaret-myers` Маргарет «Мэгги» Майерс — character без описания
-- [medium] `innsmouth-terror-en/character/patty-gillian` Пэтти Гиллиан — character без описания
-- [medium] `innsmouth-terror-en/character/tiffany-quispe` Тиффани Киспе — character без описания
-
 ### Маски Ньярлатхотепа: материалы для игроков (рус.) (`masks-of-nyarlathotep-ru-players`) — 41
 
 **Тексты** (1)
@@ -1951,107 +1689,99 @@
 - [medium] с. 84: 1 карт. (1754×1240); страницу не цитирует никто
 - [medium] с. 95: 1 карт. (1264×1771); страницу не цитирует никто
 
-### Сны о Японии (Эра Ктулху 6) (`sny-o-yaponii-ru`) — 39
+### Царство Террора (`tsarstvo-terrora-ru`) — 38
 
 **Тексты** (1)
 
-- [low] с. 45 (физ. 46) — с. 46 (физ. 47): 2 стр., 979 слов не цитирует ни одна запись; headings: Возможные реакции японцев; near: «100 свечей»; Сны о Японии; Суэ Кунихико
+- [low] с. 3: 1 стр., 472 слов не цитирует ни одна запись; headings: CREDITS; Author; Mark Morrison; Additional Writing
 
-**Картинки** (7)
+**Картинки** (32)
 
-- [high] с. 3 (физ. 4): 1 карт. (1280×774); без картинки: Сущность (creature)
-- [high] с. 26 (физ. 27): 1 карт. (1600×988); без картинки: Регина Чедвик (character), Сущность (creature)
-- [medium] с. 0 (физ. 1): 7 карт. (2511×3264, 2507×3264, 540×427, 519×407…); страницу не цитирует никто
-- [medium] с. 2 (физ. 3): 1 карт. (2071×1297); на странице: Лес Аокигахара (location)
-- [medium] с. 21 (физ. 22): 1 карт. (1021×736); на странице: Лес Аокигахара (location), Вход в лес Аокигахара (scene)
-- [medium] с. 24 (физ. 25): 1 карт. (460×289); без картинки: Головорезы Общества Чёрного Океана (character), Ота Наоя (character), Призрак гейши (creature), Сущность (creature)
-- [medium] с. 47 (физ. 48): 5 карт. (834×1089, 647×310, 638×304, 669×425…); на странице: Сны о Японии
+- [high] с. 25: 1 карт. (714×484); без картинки: Платок с монограммой «M.A.» (item)
+- [high] с. 57: 1 карт. (1193×1530); без картинки: Максимилиан Робеспьер (character)
+- [high] с. 90: 1 карт. (1195×1546); без картинки: Аристо, знать и сикофанты (character), Обычные люди (character), Солдаты (character)
+- [high] с. 108: 1 карт. (1197×1545); без картинки: Аксель Дюран (character), Пьер-Франсуа Палуа (character), Нечто в Бастилии (creature)
+- [medium] с. 1: 3 карт. (1388×1794, 2884×704, 471×471); страницу не цитирует никто
+- [medium] с. 2: 1 карт. (1080×1080); страницу не цитирует никто
+- [medium] с. 4: 1 карт. (1147×1481); страницу не цитирует никто
+- [medium] с. 5: 1 карт. (1147×1481); на странице: Царство Террора
+- [medium] с. 16: 1 карт. (1149×1481); страницу не цитирует никто
+- [medium] с. 17: 1 карт. (1147×1481); на странице: Площадь Революции (location), Нарратив пролога: Человек в повозке (scene)
+- [medium] с. 20: 1 карт. (832×1072); на странице: Катакомбы (location), Начало: кладбище (scene), Карета (scene)
+- [medium] с. 39: 1 карт. (407×552); без картинки: Дофин Людовик-Жозеф (character), Свитки и книги из подвала Феналика (item), Письмо о реквизиции (item), Порошок Риго (item)
+- [medium] с. 52: 2 карт. (1198×1546, 912×477); на странице: Париж (location)
+- [medium] с. 54: 1 карт. (1147×1481); страницу не цитирует никто
+- [medium] с. 55: 1 карт. (1121×1481); страницу не цитирует никто
+- [medium] с. 56: 1 карт. (1178×1540); страницу не цитирует никто
+- [medium] с. 59: 1 карт. (1191×1532); страницу не цитирует никто
+- [medium] с. 63: 1 карт. (571×393); без картинки: Максимилиан Робеспьер (character)
+- [medium] с. 74: 1 карт. (972×1237); на странице: Зачаровать жертвенный кинжал, Ритуал жертвоприношения, Царство #5: отрывок из «Верховной Пустоты»
+- [medium] с. 85: 1 карт. (1189×1553); страницу не цитирует никто
+- [medium] с. 87: 1 карт. (1193×1553); страницу не цитирует никто
+- [medium] с. 88: 1 карт. (1131×1462); страницу не цитирует никто
+- [medium] с. 89: 1 карт. (1131×1462); страницу не цитирует никто
+- [medium] с. 94: 1 карт. (433×408); без картинки: Революционеры (character), Слуги Риго (character), Пирующие упыри (creature)
+- [medium] с. 97: 1 карт. (1146×1451); на странице: Марсово поле (location)
+- [medium] с. 103: 1 карт. (1146×1454); на странице: Преступник, Священник, Врач
+- [medium] с. 106: 1 карт. (913×676); на странице: Доход, наличные и имущество («Царство Террора»), Социальный класс («Царство Террора»), Цены («Царство Террора»)
+- [low] с. 9: 1 карт. (913×591); на странице: Париж (location), Рынок Ле-Аль (location), Люксембургский сад (location), Дворец Тюильри (location), Пале-Рояль (location)
+- [low] с. 71: 1 карт. (746×550); на странице: Революционный трибунал (organization)
+- [low] с. 79: 1 карт. (912×542); на странице: Культ Верховного Существа (organization), Прямое противостояние (scene)
+- [low] с. 98: 1 карт. (912×591); на странице: Хронология Французской революции («Царство Террора»)
+- [low] с. 99: 1 карт. (912×591); на странице: Хронология Французской революции («Царство Террора»)
 
-**Связи** (3)
+**Контекст** (5)
 
-- [low] `sny-o-yaponii-ru/scene/dreams` Сны о лесе — сцена без места; сценарий sny-o-yaponii-ru/scenario/sny-o-yaponii
-- [low] `sny-o-yaponii-ru/scene/researching-aokigahara` Исследуя Аокигахару — сцена без места; сценарий sny-o-yaponii-ru/scenario/sny-o-yaponii
-- [low] `sny-o-yaponii-ru/scene/taint-aftermath` Порча: исчезновения знакомых — сцена без места; сценарий sny-o-yaponii-ru/scenario/sny-o-yaponii
+- [low] `tsarstvo-terrora-ru/character/1794-richebourg` Ришбур — Только характеристики для погони (Скорость 7, ВЫН 60, ЛВК 50, СИЛ 45 и четыре навыка), как в книге и в английском оригинале; половина и пятая навыков посчитаны (в книге их нет). Герцогиня Орлеанская с
+- [low] `tsarstvo-terrora-ru/creature/seed-bastille-thing` Нечто в Бастилии — Своего статблока нет: книга велит брать характеристики огненного вампира (coc:creature:fire-vampire) с заменой жара на холод. Название записи — по заголовку задумки.
+- [low] `tsarstvo-terrora-ru/creature/seed-gaueko` Гауэко — Своего статблока нет — по профилю бесформенного отродья (instance_of). В переводе — «бесформенное порождение Цатхоггуа».
+- [low] `coc:spell:enchant-sacrificial-dagger` Зачаровать жертвенный кинжал — Новое заклинание кампании «Царство Террора»: книга только называет его (с. 73, 96), механика — из сюжета (с. 66, 74, 78), вывод из текста (Р-41). В Grand Grimoire заклинания нет. С «Зачаровать нож» (c
+- [low] `coc:spell:ritual-of-sacrifice` Ритуал жертвоприношения — Новое заклинание кампании «Царство Террора» (фанатский перевод 7e — источник русского текста). Цены, времени сотворения и проверок книга не даёт: в `cost` и `casting_time` — то, что сказано во врезке 
 
-**Контекст** (28)
+### The Innsmouth Terror (`innsmouth-terror-en`) — 37
 
-- [medium] `sny-o-yaponii-ru/character/alfred-noble` Альфред Нобл — character без описания
-- [medium] `sny-o-yaponii-ru/character/black-ocean-thugs` Головорезы Общества Чёрного Океана — character без описания
-- [medium] `sny-o-yaponii-ru/character/david-lloyd` Дэвид Ллойд — character без описания
-- [medium] `sny-o-yaponii-ru/character/ferret` Чарли Проби — character без описания
-- [medium] `sny-o-yaponii-ru/character/hans-fricke` Ханс Фрике — character без описания
-- [medium] `sny-o-yaponii-ru/character/herbert-monroe` Герберт Монро — character без описания
-- [medium] `sny-o-yaponii-ru/character/james-axelby` Джеймс Аксельби — character без описания
-- [medium] `sny-o-yaponii-ru/character/japan-bridget-barrett` Бриджит Барретт — character без описания
-- [medium] `sny-o-yaponii-ru/character/japan-francis-hardy` Э. Фрэнсис Харди — character без описания
-- [medium] `sny-o-yaponii-ru/character/japan-ted-nelson` Тед Нельсон — character без описания
-- [medium] `sny-o-yaponii-ru/character/japan-theodore-krugman` Теодор Кругман — character без описания
-- [medium] `sny-o-yaponii-ru/character/japan-tilda-smith-chadwick` Тильда Смит-Чедвик — character без описания
-- [medium] `sny-o-yaponii-ru/character/japan-tony-esposito` Тони Эспозито — character без описания
-- [medium] `sny-o-yaponii-ru/character/konouga-taing` Коноуга Таинг — character без описания
-- [medium] `sny-o-yaponii-ru/character/maria-sicilia` Мария Сицилия — character без описания
-- [medium] `sny-o-yaponii-ru/character/miss-hickman` Мисс Хикман — character без описания
-- [medium] `sny-o-yaponii-ru/character/mitchell-fry` Митчелл Фрай — character без описания
-- [medium] `sny-o-yaponii-ru/character/nelson-myers` Нельсон Майерс — character без описания
-- [medium] `sny-o-yaponii-ru/character/ota-naoya` Ота Наоя — character без описания
-- [medium] `sny-o-yaponii-ru/character/paula-devereux` Паула Деверу — character без описания
-- [medium] `sny-o-yaponii-ru/character/regina-chadwick` Регина Чедвик — character без описания
-- [medium] `sny-o-yaponii-ru/character/sue-kunihiko` Суэ Кунихико — character без описания
-- [medium] `sny-o-yaponii-ru/character/swenson-ames` Свенсон Эймс — character без описания
-- [medium] `sny-o-yaponii-ru/character/toyotomi-sachi` Тоетоми Сати — character без описания
-- [medium] `sny-o-yaponii-ru/character/toyotomi-yori` Тоетоми Йори — character без описания
-- [medium] `sny-o-yaponii-ru/character/veronica-chadwick` Вероника Чедвик — character без описания
-- [medium] `sny-o-yaponii-ru/character/yamura-kunihiko` Ямура Кунихико — character без описания
-- [low] `sny-o-yaponii-ru/item/maria-postcard` Открытка Марии Сицилии — Текста открытки в книге нет.
+**Тексты** (1)
 
-### Грибы с Юггота (`griby-s-yuggota-ru`) — 38
+- [low] с. -1 (физ. 3): 1 стр., 164 слов не цитирует ни одна запись; headings: Written by; John Hedge, with The Playhouse Staff; Editing; Matt ‘Doc’ Tracey; near: Ужас в Иннсмуте
 
-**Картинки** (11)
+**Картинки** (36)
 
-- [high] с. 23 (физ. 24): 1 карт. (680×569); без картинки: Барон Гауптман (character), Дробне (character), Отец Иоан Бэлан (character), Ян Савечик (character), Лайонел Ньюмэн (character)
-- [medium] с. 0 (физ. 1): 1 карт. (1268×1631); на странице: Грибы с Юггота
-- [medium] с. 2 (физ. 3): 1 карт. (1249×1616); на странице: Грибы с Юггота
-- [medium] с. 3 (физ. 4): 2 карт. (799×1037, 409×330); на странице: Глава VIII: «День Зверя», Грибы с Юггота, Глава V. Горы Луны
-- [medium] с. 4 (физ. 5): 1 карт. (1247×1610); страницу не цитирует никто
-- [medium] с. 19 (физ. 20): 1 карт. (330×421); без картинки: Существо из другого измерения (creature)
-- [medium] с. 63 (физ. 64): 1 карт. (549×327); без картинки: Доктор Дитер (character), Филип Юргенс (character), Записи доктора Дитера (item), Схема дистанционного переключателя (item), Имплант Сынов Террора (item)
-- [medium] с. 76 (физ. 77): 1 карт. (681×951); страницу не цитирует никто
-- [medium] с. 99 (физ. 100): 1 карт. (1276×1629); на странице: Грибы с Юггота
-- [low] с. 82 (физ. 83): 1 карт. (680×569); на странице: Завещание Яна Савечика, Пророчество из Китаб аль-Азиф, Перевод барона Гауптмана из описания Р’льеха
-- [low] с. 84 (физ. 85): 1 карт. (549×327); на странице: Раздаточный материал 8: газетная статья о Жемчужном пляже, Раздаточный материал 9: письмо доктора Дитера Эдварду Чандлеру
-
-**Связи** (1)
-
-- [low] `griby-s-yuggota-ru/scene/moon-vision-and-research` Видение о землетрясениях в Перу — сцена без места; сценарий griby-s-yuggota-ru/scenario/mountains-of-the-moon
-
-**Контекст** (26)
-
-- [medium] `griby-s-yuggota-ru/character/boston-detective` Детектив Шон Мэлоун — character без описания
-- [medium] `griby-s-yuggota-ru/character/emily-cornwallis` Емили Холстед Корнуоллис — character без описания
-- [medium] `griby-s-yuggota-ru/character/jan-savechik` Ян Савечик — character без описания
-- [medium] `griby-s-yuggota-ru/character/jerzy` Джерзи — character без описания
-- [medium] `griby-s-yuggota-ru/character/jurek` Юрек — character без описания
-- [medium] `griby-s-yuggota-ru/character/larry-holmes` Ларри Холмс — character без описания
-- [medium] `griby-s-yuggota-ru/character/lazlo` Лазло — character без описания
-- [medium] `griby-s-yuggota-ru/character/lionel-newman` Лайонел Ньюмэн — character без описания
-- [low] `griby-s-yuggota-ru/character/beast-black-robed-arabs` Арабы в чёрных балахонах — Статблока в книге нет. Имена придуманы (Р-151), в книге — «шестеро арабов в чёрных балахонах».
-- [low] `griby-s-yuggota-ru/character/goyo` Гойо — В книге у статблока только характеристики, Рассудок, ПЗ и навыки (иногда заклинания): ПМ, БкУ, Комплекции, Скорости и атак нет. «Составление карт» и «Бесшумное передвижение» — навыки старой редакции, 
-- [low] `griby-s-yuggota-ru/character/jonathan-harris` Джонатан Харрис — В книге у статблока только характеристики, Рассудок, ПЗ и навыки (иногда заклинания): ПМ, БкУ, Комплекции, Скорости и атак нет. Имя в английском оригинале — Johnathan Harris.
-- [low] `griby-s-yuggota-ru/character/lawrence-richards` Лоуренс Ричардс — В книге у статблока только характеристики, Рассудок, ПЗ и навыки (иногда заклинания): ПМ, БкУ, Комплекции, Скорости и атак нет. «Лечение от ядов» и «Поставить диагноз» — навыки старой редакции, ссылок
-- [low] `griby-s-yuggota-ru/character/melvin-peale` Мелвин Пил — В книге у статблока только характеристики, Рассудок, ПЗ и навыки (иногда заклинания): ПМ, БкУ, Комплекции, Скорости и атак нет.
-- [low] `griby-s-yuggota-ru/character/moon-mine-guards` Охранники шахты НМ — Групповой профиль (Р-74), имена придуманы (Р-151). Навык «Маскировка» — в оригинале Camouflage (не «Маскировка» Disguise 7-й редакции), ссылка не поставлена; «Бесшумное передвижение» — навык старой ре
-- [low] `griby-s-yuggota-ru/character/moon-rebels` Повстанцы Гойо — Групповой профиль (Р-74), имена придуманы (Р-151). В книге у статблока только характеристики, Рассудок, ПЗ и навыки (иногда заклинания): ПМ, БкУ, Комплекции, Скорости и атак нет.
-- [low] `griby-s-yuggota-ru/character/ngansa` Нганса — В книге у статблока только характеристики, Рассудок, ПЗ и навыки (иногда заклинания): ПМ, БкУ, Комплекции, Скорости и атак нет. Броня — словесное описание пасты, числового значения нет. «Бесшумное пер
-- [low] `griby-s-yuggota-ru/character/ron-paku` Рон-Паку — Статблока в книге нет.
-- [low] `griby-s-yuggota-ru/character/sancho` Санчо — В книге у статблока только характеристики, Рассудок, ПЗ и навыки (иногда заклинания): ПМ, БкУ, Комплекции, Скорости и атак нет.
-- [low] `griby-s-yuggota-ru/character/victor-montain-wife` Мария Уаман — Имя придумано (Р-150), в книге — «Жена Виктора». В книге у статблока только характеристики, Рассудок, ПЗ и навыки (иногда заклинания): ПМ, БкУ, Комплекции, Скорости и атак нет.
-- [low] `griby-s-yuggota-ru/character/victor-montain` Виктор Монтэйн — В книге у статблока только характеристики, Рассудок, ПЗ и навыки (иногда заклинания): ПМ, БкУ, Комплекции, Скорости и атак нет. Возраст: в сцене — «мужчина 55 лет», в описании — «в свои пятьдесят с по
-- [low] `griby-s-yuggota-ru/creature/bay-robot` Робот доктора Дитера — Машина с блоком характеристик — по образцу «Робота-убийцы» Pulp Cthulhu (вид существа, подкатегория «робот»). У робота нет ВЫН, НАР, ИНТ, МОЩ, ОБР; ЛВК — половина ЛВК оператора. «С внутренним уроном» 
-- [low] `griby-s-yuggota-ru/creature/bay-thing-from-between-planes` Нечто из межмирья — Уникальное существо сценария (Р-74). В книге нет МОЩ, ПМ, БкУ и Комплекции.
-- [low] `griby-s-yuggota-ru/creature/celaeno-sleeper-in-the-lake` Спящий в Озере — Статблока в книге нет.
-- [low] `coc:spell:create-yithian-communicator` Создание коммуникатора — Новое заклинание «Грибов с Юггота»: в книге только название и условие. Английское название — по оригиналу «The Fungi from Yuggoth» (Chaosium, 1984; указатель заклинаний, с. 74); оригинал не записан в 
-- [low] `coc:spell:dismiss-dhole` Отпустить Дхоула — Новое заклинание «Грибов с Юггота»: в книге только название, цены, времени и механики нет. Английское название — по оригиналу «The Fungi from Yuggoth» (Chaosium, 1984; указатель заклинаний, с. 74); ор
-- [low] `coc:spell:enchant-incense` Зачаровать ладан — Новое заклинание «Грибов с Юггота»: в книге только название и назначение. Тип «Зачарование», семейство «Зачаровать предмет» и механика «ритуал» — вывод из текста (Р-41). Английское название — по ориги
+- [high] с. 1 (физ. 5): 3 карт. (1788×780, 2559×1057, 1921×1061); без картинки: Хьюго «Шримпи» Харгривз (character), Иэн Торрес (character), Маргарет «Мэгги» Майерс (character), Пэтти Гиллиан (character), Тиффани Киспе (character)
+- [high] с. 3 (физ. 7): 2 карт. (640×544, 939×766); без картинки: Плёнка фильма «Ужас Иннсмута» (item), Цветная камера Макгвайра (item), Пачка антацида «Там-Из» (item)
+- [high] с. 4 (физ. 8): 3 карт. (585×823, 572×764, 521×705); без картинки: Толстый Тони (character), Женевьева «Джинни» Дюбуа (character), Финеас Артур Баззлдон (character)
+- [high] с. 5 (физ. 9): 4 карт. (680×708, 685×682, 572×764, 404×569); без картинки: Анна Диас (character), Кристофер Макгвайр (character), Цветная камера Макгвайра (item)
+- [high] с. 6 (физ. 10): 2 карт. (636×856, 363×496); без картинки: Джеремайя Брюстер (character), Зэдок Аллен (character), Диана Лоринг (character), Член съёмочной группы (character), Франк Тёрнер (character)
+- [high] с. 7 (физ. 11): 2 карт. (484×640, 333×466); без картинки: Диана Лоринг (character), Нил Артур Тепп (character), Атлантийская драгоценность (item)
+- [high] с. 8 (физ. 12): 2 карт. (484×640, 728×970); без картинки: Диана Лоринг (character), Карен Джеффрис (character), Атлантийская драгоценность (item)
+- [high] с. 9 (физ. 13): 2 карт. (484×640, 724×914); без картинки: Франк Тёрнер (character), Карен Джеффрис (character)
+- [high] с. 10 (физ. 14): 3 карт. (1436×1838, 500×688, 929×257); без картинки: Раздатка 1-a: письмо (внутреннее) (handout)
+- [high] с. 12 (физ. 16): 2 карт. (704×944, 1076×1447); без картинки: Анна Диас (character)
+- [high] с. 13 (физ. 17): 2 карт. (1268×676, 1273×686); без картинки: Анна Диас (character), Запасные ключи от вагонов (item)
+- [high] с. 14 (физ. 18): 2 карт. (704×944, 501×635); без картинки: Толстый Тони (character), Финеас Артур Баззлдон (character), Напольный сейф Баззлдона (item), Бумаги на столе Баззлдона (item), Письмо Толстого Тони (item)
+- [high] с. 15 (физ. 19): 1 карт. (1379×1268); без картинки: Раздатка 2: записка (handout), Статья о пожаре в театре (item)
+- [high] с. 16 (физ. 20): 1 карт. (2560×2318); без картинки: Кристофер Макгвайр (character), Схема пещер Макгвайра (item), Цветная камера Макгвайра (item)
+- [high] с. 18 (физ. 22): 2 карт. (908×1828, 360×750); без картинки: Разбитый бинокль (item)
+- [high] с. 21 (физ. 25): 2 карт. (1264×512, 1856×755); без картинки: Кристофер Макгвайр (character), Член съёмочной группы (character), Женевьева «Джинни» Дюбуа (character), Финеас Артур Баззлдон (character), Сэмми Брюстер (character)
+- [high] с. 22 (физ. 26): 2 карт. (556×744, 419×583); без картинки: Зэдок Аллен (character), Пит (character)
+- [high] с. 23 (физ. 27): 3 карт. (552×736, 464×618, 406×571); без картинки: Зэдок Аллен (character)
+- [high] с. 24 (физ. 28): 2 карт. (1268×676, 1793×999); без картинки: Джеремайя Брюстер (character), Обычный житель Иннсмута (гибрид) (character), Глубоководный («Ужас в Иннсмуте») (creature)
+- [high] с. 26 (физ. 30): 3 карт. (1312×784, 830×501, 1796×1148); без картинки: Паровоз MVR класса B1 «Олмстед» (item)
+- [high] с. 27 (физ. 31): 2 карт. (1796×1148, 2555×1609); без картинки: Кристофер Макгвайр (character), Член съёмочной группы (character), Женевьева «Джинни» Дюбуа (character), Финеас Артур Баззлдон (character), Пачка антацида «Там-Из» (item)
+- [high] с. 28 (физ. 32): 2 карт. (1268×676, 1517×988); без картинки: Толстый Тони (character), Финеас Артур Баззлдон (character), Атлантийская драгоценность (item), Напольный сейф Баззлдона (item), Плёнка фильма «Ужас Иннсмута» (item)
+- [high] с. 32 (физ. 36): 2 карт. (596×800, 821×1153); без картинки: Хьюго «Шримпи» Харгривз (character)
+- [high] с. 35 (физ. 39): 2 карт. (596×800, 352×496); без картинки: Тиффани Киспе (character)
+- [high] с. 36 (физ. 40): 2 карт. (596×800, 326×460); без картинки: Маргарет «Мэгги» Майерс (character)
+- [high] с. 37 (физ. 41): 2 карт. (1204×1652, 486×688); без картинки: Нил Артур Тепп (character), Раздатка 1-a: письмо (внутреннее) (handout)
+- [high] с. 38 (физ. 42): 2 карт. (1204×1652, 486×688); без картинки: Нил Артур Тепп (character), Раздатка 1-b: письмо (внешнее) (handout)
+- [high] с. 39 (физ. 43): 1 карт. (1237×988); без картинки: Сэмми Брюстер (character), Раздатка 2: записка (handout)
+- [medium] с. -3 (физ. 1): 1 карт. (2056×2659); страницу не цитирует никто
+- [medium] с. -2 (физ. 2): 16 карт. (2014×2581, 1544×845, 1505×812, 1028×832…); на странице: Ужас в Иннсмуте
+- [medium] с. -1 (физ. 3): 2 карт. (935×513, 1921×1061); страницу не цитирует никто
+- [medium] с. 0 (физ. 4): 2 карт. (1788×780, 751×366); на странице: Ужас в Иннсмуте
+- [medium] с. 11 (физ. 15): 2 карт. (1780×1328, 1105×808); на странице: Прибытие в Иннсмут (scene), Съёмочный поезд ночью (scene)
+- [medium] с. 33 (физ. 37): 1 карт. (395×556); без картинки: Пэтти Гиллиан (character)
+- [medium] с. 40 (физ. 44): 10 карт. (2083×3478, 2176×270, 1496×844, 1282×642…); страницу не цитирует никто
+- [medium] с. 41 (физ. 45): 8 карт. (2094×3478, 2176×270, 876×1577, 876×1645…); страницу не цитирует никто
 
 ### Наедине с помехами (`naedine-s-pomekhami-ru`) — 37
 
@@ -2187,49 +1917,6 @@
 
 - [low] `lokhmotya-korolya-ru/handout/drakmar-handout-29-schippone-diary` Раздаточный материал «Лохмотья Короля» № 29: дневник Карло Скиппоне (итальянский текст) — Текст на картинках не расшифровывается: это рукописный итальянский оригинал, по сюжету — то, что сыщикам ещё нужно перевести (Р-130: в text — пересказ). В русском издании четыре листа (с. 354–355, до 
 
-### Двери во тьму (`dveri-vo-tmu-ru`) — 35
-
-**Связи** (1)
-
-- [low] `dveri-vo-tmu-ru/scene/lake-involving` Вовлечение сыщиков — сцена без места; сценарий dveri-vo-tmu-ru/scenario/servants-of-the-lake
-
-**Контекст** (34)
-
-- [medium] `dveri-vo-tmu-ru/character/black-franklin-stewart` Франклин Стюарт — character без описания
-- [medium] `dveri-vo-tmu-ru/character/black-jacob-dover` Джейкоб Дувр — character без описания
-- [medium] `dveri-vo-tmu-ru/character/black-jonathan-dover` Джонатан Дувр — character без описания
-- [medium] `dveri-vo-tmu-ru/character/black-leslie` Лесли — character без описания
-- [medium] `dveri-vo-tmu-ru/character/black-margaret-dover` Маргарет Дувр — character без описания
-- [medium] `dveri-vo-tmu-ru/character/black-mary-clawson` Мэри Клоусон — character без описания
-- [medium] `dveri-vo-tmu-ru/character/black-seamus-oshea` Шеймус О’Ши — character без описания
-- [medium] `dveri-vo-tmu-ru/character/black-thomas-swanson` Томас Свонсон — character без описания
-- [medium] `dveri-vo-tmu-ru/character/black-walter-resnick` Уолтер Резник — character без описания
-- [medium] `dveri-vo-tmu-ru/character/black-willis-carter` Уиллис Картер — character без описания
-- [medium] `dveri-vo-tmu-ru/character/chris-parker` Крис Паркер — character без описания
-- [medium] `dveri-vo-tmu-ru/character/darkness-aunt-florence` Флоренс — character без описания
-- [medium] `dveri-vo-tmu-ru/character/darkness-elijah-winscott` Элайджа Винскотт — character без описания
-- [medium] `dveri-vo-tmu-ru/character/darkness-jacob-bishop` Джейкоб Бишоп — character без описания
-- [medium] `dveri-vo-tmu-ru/character/darkness-john-brown` Джон Браун — character без описания
-- [medium] `dveri-vo-tmu-ru/character/darkness-john-harper` Джон Харпер — character без описания
-- [medium] `dveri-vo-tmu-ru/character/darkness-josh-winscott` Джош Винскотт — character без описания
-- [medium] `dveri-vo-tmu-ru/character/darkness-micah-winscott` Мика Винскотт — character без описания
-- [medium] `dveri-vo-tmu-ru/character/darkness-phillip` Филлип — character без описания
-- [medium] `dveri-vo-tmu-ru/character/david-wilcox` Дэвид Уилкокс — character без описания
-- [medium] `dveri-vo-tmu-ru/character/geraldine-thornhill` Джеральдина Торнхилл — character без описания
-- [medium] `dveri-vo-tmu-ru/character/jacob-gibson` Джейкоб Гибсон — character без описания
-- [medium] `dveri-vo-tmu-ru/character/jessica-brooks` Джессика Брукс — character без описания
-- [medium] `dveri-vo-tmu-ru/character/john-lucas` Джон Лукас — character без описания
-- [medium] `dveri-vo-tmu-ru/character/lake-elizabeth-brophy` Элизабет Брофи — character без описания
-- [medium] `dveri-vo-tmu-ru/character/lake-gemma-brophy` Гемма Брофи — character без описания
-- [medium] `dveri-vo-tmu-ru/character/lake-gerald-frazer` Джеральд Фрейзер — character без описания
-- [medium] `dveri-vo-tmu-ru/character/lake-mr-smith` Мистер Смит — character без описания
-- [medium] `dveri-vo-tmu-ru/character/lake-mrs-smith` Миссис Смит — character без описания
-- [medium] `dveri-vo-tmu-ru/character/lake-tori-hickey` Тори Хикки — character без описания
-- [medium] `dveri-vo-tmu-ru/character/maximilian-hurst` Максимилиан Хёрст — character без описания
-- [medium] `dveri-vo-tmu-ru/character/melissa-devries` Мелисса Девриз — character без описания
-- [medium] `dveri-vo-tmu-ru/character/stanley-ace` Стэнли Эйс — character без описания
-- [medium] `dveri-vo-tmu-ru/character/stefan-shchepolovsky` Стефан Щеполовский — character без описания
-
 ### Три кошмарных вечера (No Time to Scream) (`tri-koshmarnykh-vechera-ru`) — 34
 
 **Тексты** (1)
@@ -2359,81 +2046,46 @@
 - [medium] с. 5 (физ. 6): 1 карт. (1203×784); на странице: Рокпорт (location), Остров Бикон (location)
 - [medium] с. 42 (физ. 43): 6 карт. (1191×639, 2479×401, 2479×802, 2479×400…); страницу не цитирует никто
 
-### Наедине с приливом (Alone Against the Tide) (`naedine-s-prilivom-ru`) — 31
+### Грибы с Юггота (`griby-s-yuggota-ru`) — 30
 
-**Картинки** (25)
+**Картинки** (11)
 
-- [high] с. 9: 2 карт. (536×652, 456×596); без картинки: Лэнс Сэнфорд (character), Уильям Харрис (character), Жители и гости Эсбери (character)
-- [high] с. 33: 2 карт. (928×652, 869×610); без картинки: Жители и гости Эсбери (character), Индийская корона (item)
-- [high] с. 76: 1 карт. (770×548); без картинки: Артур Дункан (character), Декстер Джеймс (character), Жители и гости Эсбери (character), Золотой слиток (item)
-- [medium] с. 1: 2 карт. (2592×3310, 412×411); на странице: Наедине с приливом
-- [medium] с. 2: 1 карт. (1245×1621); на странице: Наедине с приливом
-- [medium] с. 3: 1 карт. (1245×1621); на странице: Наедине с приливом
-- [medium] с. 4: 2 карт. (1245×1621, 973×685); на странице: Наедине с приливом
-- [medium] с. 5: 1 карт. (1245×1621); на странице: Наедине с приливом
-- [medium] с. 6: 3 карт. (1245×1621, 548×660, 456×596); на странице: Наедине с приливом
-- [medium] с. 8: 1 карт. (973×685); на странице: Наедине с приливом
-- [medium] с. 14: 2 карт. (1016×712, 952×669); страницу не цитирует никто
-- [medium] с. 38: 1 карт. (952×669); страницу не цитирует никто
-- [medium] с. 44: 1 карт. (973×685); на странице: Существа Иба
-- [medium] с. 45: 1 карт. (952×669); на странице: Гостиница (location)
-- [medium] с. 48: 1 карт. (557×392); без картинки: Амелия Харрис (character), Жители и гости Эсбери (character)
-- [medium] с. 49: 1 карт. (952×669); на странице: Эсбери (location)
-- [medium] с. 54: 1 карт. (509×1273); на странице: Леса вокруг Эсбери (location)
-- [medium] с. 61: 1 карт. (952×669); на странице: Леса вокруг Эсбери (location)
-- [medium] с. 65: 1 карт. (952×669); на странице: Бокруг, Существа Иба, Идол Бокруга
-- [medium] с. 67: 1 карт. (938×661); на странице: Дом Джошуа (location)
-- [medium] с. 90: 2 карт. (1087×843, 1400×999); на странице: Наедине с приливом
-- [low] с. 55: 1 карт. (498×351); на странице: Гостиница (location)
-- [low] с. 85: 1 карт. (429×594); страницу не цитирует никто
-- [low] с. 86: 1 карт. (429×594); страницу не цитирует никто
-- [low] с. 87: 3 карт. (429×612, 579×749, 384×493); страницу не цитирует никто
+- [high] с. 23 (физ. 24): 1 карт. (680×569); без картинки: Барон Гауптман (character), Дробне (character), Отец Иоан Бэлан (character), Ян Савечик (character), Лайонел Ньюмэн (character)
+- [medium] с. 0 (физ. 1): 1 карт. (1268×1631); на странице: Грибы с Юггота
+- [medium] с. 2 (физ. 3): 1 карт. (1249×1616); на странице: Грибы с Юггота
+- [medium] с. 3 (физ. 4): 2 карт. (799×1037, 409×330); на странице: Глава VIII: «День Зверя», Грибы с Юггота, Глава V. Горы Луны
+- [medium] с. 4 (физ. 5): 1 карт. (1247×1610); страницу не цитирует никто
+- [medium] с. 19 (физ. 20): 1 карт. (330×421); без картинки: Существо из другого измерения (creature)
+- [medium] с. 63 (физ. 64): 1 карт. (549×327); без картинки: Доктор Дитер (character), Филип Юргенс (character), Записи доктора Дитера (item), Схема дистанционного переключателя (item), Имплант Сынов Террора (item)
+- [medium] с. 76 (физ. 77): 1 карт. (681×951); страницу не цитирует никто
+- [medium] с. 99 (физ. 100): 1 карт. (1276×1629); на странице: Грибы с Юггота
+- [low] с. 82 (физ. 83): 1 карт. (680×569); на странице: Завещание Яна Савечика, Пророчество из Китаб аль-Азиф, Перевод барона Гауптмана из описания Р’льеха
+- [low] с. 84 (физ. 85): 1 карт. (549×327); на странице: Раздаточный материал 8: газетная статья о Жемчужном пляже, Раздаточный материал 9: письмо доктора Дитера Эдварду Чандлеру
 
-**Контекст** (6)
+**Связи** (1)
 
-- [medium] `naedine-s-prilivom-ru/character/artur-dunkan` Артур Дункан — character без описания
-- [medium] `naedine-s-prilivom-ru/character/dekster-dzheyms` Декстер Джеймс — character без описания
-- [medium] `naedine-s-prilivom-ru/character/doktor-uebber` Уэббер — character без описания
-- [medium] `naedine-s-prilivom-ru/character/uilyam-kharris` Уильям Харрис — character без описания
-- [low] `naedine-s-prilivom-ru/creature/bokrug` Бокруг — Статблока в книге нет. Общей записи Бокруга в базе нет — кандидат в общую запись (предложение в proposals-tide.json). Картинка — рисунок с обложки (с. 88).
-- [low] `naedine-s-prilivom-ru/creature/sushchestva-iba` Существа Иба — Статблока в книге нет. Общей записи существ Иба в базе нет — кандидат в общую запись (предложение). Название — по тексту цилиндров (абз. 204) и подписи к иллюстрации «Существо Иба» (с. 73).
+- [low] `griby-s-yuggota-ru/scene/moon-vision-and-research` Видение о землетрясениях в Перу — сцена без места; сценарий griby-s-yuggota-ru/scenario/mountains-of-the-moon
 
-### Эликсир жизни (`eliksir-zhizni-ru`) — 29
+**Контекст** (18)
 
-**Картинки** (9)
-
-- [high] с. 1 (физ. 2): 2 карт. (2539×397, 2539×391); без картинки: Дэвид Райт (character), Табельный пистолет инспектора Райта (item)
-- [high] с. 2 (физ. 3): 1 карт. (2532×385); без картинки: Брейдли Хартсфилд (character), Дэвид Райт (character), Джон Фокс (character), Корделия Хамфри (character), Нил Фокс (character)
-- [high] с. 3 (физ. 4): 2 карт. (2539×397, 2539×391); без картинки: Дэвид Райт (character), Дональд Тайлер (character), Джон Фокс (character), Кассандра Дуглас (character), Корделия Хамфри (character)
-- [high] с. 4 (физ. 5): 2 карт. (2539×397, 2539×391); без картинки: Дэвид Райт (character), Дональд Тайлер (character), Джон Фокс (character), Корделия Хамфри (character), Нил Фокс (character)
-- [high] с. 5 (физ. 6): 1 карт. (2144×373); без картинки: Дональд Тайлер (character), Джозеф Коннелли (character), Нил Фокс (character), Фото жертв (handout)
-- [high] с. 7 (физ. 8): 1 карт. (1476×574); без картинки: Джон Фокс (character), Лора Мартин (character), Мэтью Крайтон (character), Мики (character), Мисти Крайтон (character)
-- [high] с. 10 (физ. 11): 1 карт. (1332×528); без картинки: Джон Фокс (character), Сивилия (character), Гончая Шаб-Ниггурат (creature), Посеребрённые кинжалы (item)
-- [medium] с. 0 (физ. 1): 2 карт. (2532×792, 2532×392); на странице: Эликсир жизни
-- [medium] с. 11 (физ. 12): 2 карт. (2539×397, 2539×391); на странице: Эликсир жизни
-
-**Контекст** (20)
-
-- [high] `eliksir-zhizni-ru/handout/foto-medalona` Фотография медальона — раздатка без текста и картинки
-- [high] `eliksir-zhizni-ru/handout/foto-zhertv` Фото жертв — раздатка без текста и картинки
-- [medium] `eliksir-zhizni-ru/character/breydli-khartsfild` Брейдли Хартсфилд — character без описания
-- [medium] `eliksir-zhizni-ru/character/devid-rayt` Дэвид Райт — character без описания
-- [medium] `eliksir-zhizni-ru/character/kassandra-duglas` Кассандра Дуглас — character без описания
-- [medium] `eliksir-zhizni-ru/character/kordeliya-khamfri` Корделия Хамфри — character без описания
-- [medium] `eliksir-zhizni-ru/character/kristofer-duglas` Кристофер Дуглас — character без описания
-- [medium] `eliksir-zhizni-ru/character/lora-martin` Лора Мартин — character без описания
-- [medium] `eliksir-zhizni-ru/character/metyu-krayton` Мэтью Крайтон — character без описания
-- [medium] `eliksir-zhizni-ru/character/miki` Мики — character без описания
-- [medium] `eliksir-zhizni-ru/character/misti-krayton` Мисти Крайтон — character без описания
-- [medium] `eliksir-zhizni-ru/character/nil-foks` Нил Фокс — character без описания
-- [medium] `eliksir-zhizni-ru/character/nil-uilkins` Нил Уилкинс — character без описания
-- [medium] `eliksir-zhizni-ru/character/patrik-donovan` Патрик Донован — character без описания
-- [medium] `eliksir-zhizni-ru/character/rubi-kheys` Руби Хейс — character без описания
-- [medium] `eliksir-zhizni-ru/character/teylor-dayson` Тэйлор Дайсон — character без описания
-- [medium] `eliksir-zhizni-ru/character/tommi-bennet` Томми Беннет — character без описания
-- [low] `eliksir-zhizni-ru/character/dzhon-foks` Джон Фокс — Статблок — с. 10. МОЩ, ПМ и Удачи книга не даёт. Скорость 8 напечатана; по ЛВК 60 и СИЛ 60 больше ТЕЛ 55 — 9, возраст не указан.
-- [low] `eliksir-zhizni-ru/tome/kniga-svyashchennika` Книга священника — Книга не даёт потери Рассудка, прибавки Мифов Ктулху, времени изучения и списка заклинаний.
-- [low] `eliksir-zhizni-ru/tome/kniga-zaklinaniy-kulta-salema` Книга заклинаний и ритуалов ведьмовского культа Салема — Книга не даёт потери Рассудка, прибавки Мифов Ктулху, времени изучения и списка заклинаний.
+- [low] `griby-s-yuggota-ru/character/beast-black-robed-arabs` Арабы в чёрных балахонах — Статблока в книге нет. Имена придуманы (Р-151), в книге — «шестеро арабов в чёрных балахонах».
+- [low] `griby-s-yuggota-ru/character/goyo` Гойо — В книге у статблока только характеристики, Рассудок, ПЗ и навыки (иногда заклинания): ПМ, БкУ, Комплекции, Скорости и атак нет. «Составление карт» и «Бесшумное передвижение» — навыки старой редакции, 
+- [low] `griby-s-yuggota-ru/character/jonathan-harris` Джонатан Харрис — В книге у статблока только характеристики, Рассудок, ПЗ и навыки (иногда заклинания): ПМ, БкУ, Комплекции, Скорости и атак нет. Имя в английском оригинале — Johnathan Harris.
+- [low] `griby-s-yuggota-ru/character/lawrence-richards` Лоуренс Ричардс — В книге у статблока только характеристики, Рассудок, ПЗ и навыки (иногда заклинания): ПМ, БкУ, Комплекции, Скорости и атак нет. «Лечение от ядов» и «Поставить диагноз» — навыки старой редакции, ссылок
+- [low] `griby-s-yuggota-ru/character/melvin-peale` Мелвин Пил — В книге у статблока только характеристики, Рассудок, ПЗ и навыки (иногда заклинания): ПМ, БкУ, Комплекции, Скорости и атак нет.
+- [low] `griby-s-yuggota-ru/character/moon-mine-guards` Охранники шахты НМ — Групповой профиль (Р-74), имена придуманы (Р-151). Навык «Маскировка» — в оригинале Camouflage (не «Маскировка» Disguise 7-й редакции), ссылка не поставлена; «Бесшумное передвижение» — навык старой ре
+- [low] `griby-s-yuggota-ru/character/moon-rebels` Повстанцы Гойо — Групповой профиль (Р-74), имена придуманы (Р-151). В книге у статблока только характеристики, Рассудок, ПЗ и навыки (иногда заклинания): ПМ, БкУ, Комплекции, Скорости и атак нет.
+- [low] `griby-s-yuggota-ru/character/ngansa` Нганса — В книге у статблока только характеристики, Рассудок, ПЗ и навыки (иногда заклинания): ПМ, БкУ, Комплекции, Скорости и атак нет. Броня — словесное описание пасты, числового значения нет. «Бесшумное пер
+- [low] `griby-s-yuggota-ru/character/ron-paku` Рон-Паку — Статблока в книге нет.
+- [low] `griby-s-yuggota-ru/character/sancho` Санчо — В книге у статблока только характеристики, Рассудок, ПЗ и навыки (иногда заклинания): ПМ, БкУ, Комплекции, Скорости и атак нет.
+- [low] `griby-s-yuggota-ru/character/victor-montain-wife` Мария Уаман — Имя придумано (Р-150), в книге — «Жена Виктора». В книге у статблока только характеристики, Рассудок, ПЗ и навыки (иногда заклинания): ПМ, БкУ, Комплекции, Скорости и атак нет.
+- [low] `griby-s-yuggota-ru/character/victor-montain` Виктор Монтэйн — В книге у статблока только характеристики, Рассудок, ПЗ и навыки (иногда заклинания): ПМ, БкУ, Комплекции, Скорости и атак нет. Возраст: в сцене — «мужчина 55 лет», в описании — «в свои пятьдесят с по
+- [low] `griby-s-yuggota-ru/creature/bay-robot` Робот доктора Дитера — Машина с блоком характеристик — по образцу «Робота-убийцы» Pulp Cthulhu (вид существа, подкатегория «робот»). У робота нет ВЫН, НАР, ИНТ, МОЩ, ОБР; ЛВК — половина ЛВК оператора. «С внутренним уроном» 
+- [low] `griby-s-yuggota-ru/creature/bay-thing-from-between-planes` Нечто из межмирья — Уникальное существо сценария (Р-74). В книге нет МОЩ, ПМ, БкУ и Комплекции.
+- [low] `griby-s-yuggota-ru/creature/celaeno-sleeper-in-the-lake` Спящий в Озере — Статблока в книге нет.
+- [low] `coc:spell:create-yithian-communicator` Создание коммуникатора — Новое заклинание «Грибов с Юггота»: в книге только название и условие. Английское название — по оригиналу «The Fungi from Yuggoth» (Chaosium, 1984; указатель заклинаний, с. 74); оригинал не записан в 
+- [low] `coc:spell:dismiss-dhole` Отпустить Дхоула — Новое заклинание «Грибов с Юггота»: в книге только название, цены, времени и механики нет. Английское название — по оригиналу «The Fungi from Yuggoth» (Chaosium, 1984; указатель заклинаний, с. 74); ор
+- [low] `coc:spell:enchant-incense` Зачаровать ладан — Новое заклинание «Грибов с Юггота»: в книге только название и назначение. Тип «Зачарование», семейство «Зачаровать предмет» и механика «ритуал» — вывод из текста (Р-41). Английское название — по ориги
 
 ### Месяц Ночи (`mesyats-nochi-ru`) — 28
 
@@ -2471,76 +2123,40 @@
 - [low] с. 8: 1 карт. (539×700); на странице: Месяц ночи
 - [low] с. 40: 1 карт. (703×694); страницу не цитирует никто
 
-### Новая жизнь (`novaya-zhizn-ru`) — 26
+### Наедине с приливом (Alone Against the Tide) (`naedine-s-prilivom-ru`) — 27
 
-**Тексты** (1)
+**Картинки** (25)
 
-- [low] с. 26: 1 стр., 151 слов не цитирует ни одна запись; near: Эрик Диггори
+- [high] с. 9: 2 карт. (536×652, 456×596); без картинки: Лэнс Сэнфорд (character), Уильям Харрис (character), Жители и гости Эсбери (character)
+- [high] с. 33: 2 карт. (928×652, 869×610); без картинки: Жители и гости Эсбери (character), Индийская корона (item)
+- [high] с. 76: 1 карт. (770×548); без картинки: Артур Дункан (character), Декстер Джеймс (character), Жители и гости Эсбери (character), Золотой слиток (item)
+- [medium] с. 1: 2 карт. (2592×3310, 412×411); на странице: Наедине с приливом
+- [medium] с. 2: 1 карт. (1245×1621); на странице: Наедине с приливом
+- [medium] с. 3: 1 карт. (1245×1621); на странице: Наедине с приливом
+- [medium] с. 4: 2 карт. (1245×1621, 973×685); на странице: Наедине с приливом
+- [medium] с. 5: 1 карт. (1245×1621); на странице: Наедине с приливом
+- [medium] с. 6: 3 карт. (1245×1621, 548×660, 456×596); на странице: Наедине с приливом
+- [medium] с. 8: 1 карт. (973×685); на странице: Наедине с приливом
+- [medium] с. 14: 2 карт. (1016×712, 952×669); страницу не цитирует никто
+- [medium] с. 38: 1 карт. (952×669); страницу не цитирует никто
+- [medium] с. 44: 1 карт. (973×685); на странице: Существа Иба
+- [medium] с. 45: 1 карт. (952×669); на странице: Гостиница (location)
+- [medium] с. 48: 1 карт. (557×392); без картинки: Амелия Харрис (character), Жители и гости Эсбери (character)
+- [medium] с. 49: 1 карт. (952×669); на странице: Эсбери (location)
+- [medium] с. 54: 1 карт. (509×1273); на странице: Леса вокруг Эсбери (location)
+- [medium] с. 61: 1 карт. (952×669); на странице: Леса вокруг Эсбери (location)
+- [medium] с. 65: 1 карт. (952×669); на странице: Бокруг, Существа Иба, Идол Бокруга
+- [medium] с. 67: 1 карт. (938×661); на странице: Дом Джошуа (location)
+- [medium] с. 90: 2 карт. (1087×843, 1400×999); на странице: Наедине с приливом
+- [low] с. 55: 1 карт. (498×351); на странице: Гостиница (location)
+- [low] с. 85: 1 карт. (429×594); страницу не цитирует никто
+- [low] с. 86: 1 карт. (429×594); страницу не цитирует никто
+- [low] с. 87: 3 карт. (429×612, 579×749, 384×493); страницу не цитирует никто
 
-**Картинки** (15)
+**Контекст** (2)
 
-- [high] с. 4: 1 карт. (700×700); без картинки: Гэлилэхи (character), Фраза Гэлилэхи (handout), Охотничья винтовка (item), Валочный топор (item)
-- [high] с. 5: 1 карт. (2046×1328); без картинки: Шарлотта Эдингтон (character), Крампус (creature), Северный олень («Новая жизнь») (creature), Карточка «Внезапное похолодание» (handout), Хрустальный шар (item)
-- [high] с. 6: 2 карт. (998×562, 642×1017); без картинки: Крампус (creature), Хрустальный шар (item)
-- [high] с. 10: 1 карт. (768×1447); без картинки: Крампус (creature), Хрустальный шар (item)
-- [high] с. 11: 2 карт. (720×894, 630×846); без картинки: Шарлотта Эдингтон (character), Северный олень («Новая жизнь») (creature), Волки («Новая жизнь») (creature)
-- [high] с. 12: 2 карт. (736×974, 736×981); без картинки: Итакуа («Новая жизнь») (creature), Медведь («Новая жизнь») (creature), Волки («Новая жизнь») (creature)
-- [high] с. 13: 2 карт. (1030×1389, 457×457); без картинки: Гэлилэхи (character), Итакуа («Новая жизнь») (creature), Крампус (creature)
-- [high] с. 14: 3 карт. (687×687, 993×1698, 971×1650); без картинки: Гэлилэхи (character), Владимир Кузнецов (character), Карточка «Ужас!» (handout), Карточка «Внезапное похолодание» (handout)
-- [high] с. 15: 4 карт. (952×1632, 993×1718, 866×1474, 878×1539); без картинки: Карточка «Гемофобия» (handout), Карточка «Лигирофобия» (handout), Карточка «Никтофобия» (handout), Карточка «Одонтофобия» (handout)
-- [high] с. 16: 4 карт. (955×1654, 1033×1764, 2122×1338, 1069×650); без картинки: Карточка «Маска Хранителя Леса» (handout), Карточка «Топор валочный» (handout), Карточка «Винтовка «Ли-Энфилд» 303-го калибра» (handout), Маска Хранителя Леса (item), Охотничья винтовка (item)
-- [high] с. 24: 1 карт. (2481×3300); без картинки: Шарлотта Эдингтон (character)
-- [high] с. 25: 1 карт. (2481×3508); без картинки: Эрик Диггори (character)
-- [medium] с. 27: 2 карт. (2560×1918, 2560×1920); страницу не цитирует никто
-- [medium] с. 28: 2 карт. (2560×1918, 2560×1920); страницу не цитирует никто
-- [low] с. 1: 1 карт. (640×800); на странице: Новая жизнь
-
-**Контекст** (10)
-
-- [medium] `novaya-zhizn-ru/character/bernard-edington` Бернард Эдингтон — character без описания
-- [medium] `novaya-zhizn-ru/character/charli` Чарли — character без описания
-- [medium] `novaya-zhizn-ru/character/elizabet-edington` Элизабет Эдингтон — character без описания
-- [medium] `novaya-zhizn-ru/character/erik-diggori` Эрик Диггори — character без описания
-- [medium] `novaya-zhizn-ru/character/norman-edington` Норман Эдингтон — character без описания
-- [medium] `novaya-zhizn-ru/character/sharlotta-edington` Шарлотта Эдингтон — character без описания
-- [medium] `novaya-zhizn-ru/character/silviya-edington` Сильвия Эдингтон — character без описания
-- [low] `coc:spell:banishment-of-yde-etad-krampus` Изгнание Йде Итад (ритуал Крампуса) — Вариант «Изгнания Йде Итад» из сценария «Новая жизнь» (русский оригинал): книга прямо называет ритуал Крампуса видоизменённым заклинанием «Книги хранителя», но цены, времени и порядка сотворения не пе
-- [low] `coc:spell:stop-time` Остановка времени — Новое заклинание сценария «Новая жизнь» (русский оригинал, английского названия нет). Книга даёт только цену и действие одной фразой в статблоке Крампуса. Тип «Врата и путешествия» (заклинания времени
-- [low] `coc:spell:telekinesis` Телекинез — Новое заклинание сценария «Новая жизнь» (русский оригинал, английского названия нет). Книга даёт только цену и действие одной фразой в статблоке Крампуса — остальное не напечатано. Тип «Природа и стих
-
-### Особняки безумия. За закрытыми дверями (`osobnyaki-bezumiya-ru`) — 23
-
-**Тексты** (2)
-
-- [medium] с. 8 (физ. 9) — с. 9 (физ. 10): 2 стр., 681 слов не цитирует ни одна запись; headings: ПРЕЙИСАОВИЕ; НЕМНОГО ИСТОРИИ; Первое издание «Особняков безумия» было опубликова-; Майкла (Шона) Девульфа, «Плантация» Уэсли Мартина,; near: Материал «Корбитт 4»: дневники Корбитта
-- [low] с. 220 (физ. 221) — с. 225 (физ. 226): 5 стр., 784 слов не цитирует ни одна запись; headings: Карты; Владения мистера Корбитта; УВИЕрОкОВ) 15, 189; Дом Корбитта
-
-**Связи** (5)
-
-- [low] `osobnyaki-bezumiya-ru/scene/code-letter` Завязка: письмо — сцена без места; сценарий osobnyaki-bezumiya-ru/scenario/code-secret-code
-- [low] `osobnyaki-bezumiya-ru/scene/code-meeting-connolly` Знакомство с Коннолли — сцена без места; сценарий osobnyaki-bezumiya-ru/scenario/code-secret-code
-- [low] `osobnyaki-bezumiya-ru/scene/code-ordinary-day` Самый обычный день — сцена без места; сценарий osobnyaki-bezumiya-ru/scenario/code-secret-code
-- [low] `osobnyaki-bezumiya-ru/scene/crooked-preliminary-research` Предварительное расследование — сцена без места; сценарий osobnyaki-bezumiya-ru/scenario/crooked-manse
-- [low] `osobnyaki-bezumiya-ru/scene/memphis-staying-on-track` Как не сбиться со следа — сцена без места; сценарий osobnyaki-bezumiya-ru/scenario/memphis-house-of-memphis
-
-**Контекст** (16)
-
-- [medium] `osobnyaki-bezumiya-ru/character/corbitt-dunlap-doctor` Доктор Уильям Ормсби — character без описания
-- [medium] `osobnyaki-bezumiya-ru/character/corbitt-edward-myers` Эдвард Майерс — character без описания
-- [medium] `osobnyaki-bezumiya-ru/character/corbitt-elaine-corbitt` Элейн Корбитт — character без описания
-- [medium] `osobnyaki-bezumiya-ru/character/corbitt-lynn-corbitt` Линн Корбитт — character без описания
-- [medium] `osobnyaki-bezumiya-ru/character/corbitt-mona-dunlap` Мона Данлэп — character без описания
-- [medium] `osobnyaki-bezumiya-ru/character/corbitt-neighbors` Соседи Корбитта — character без описания
-- [medium] `osobnyaki-bezumiya-ru/character/corbitt-shirley-myers` Ширли Майерс — character без описания
-- [medium] `osobnyaki-bezumiya-ru/character/corbitt-theodore-corbitt` Теодор Корбитт — character без описания
-- [medium] `osobnyaki-bezumiya-ru/character/crooked-arthur-grimstock` Артур Гримсток — character без описания
-- [medium] `osobnyaki-bezumiya-ru/character/crooked-gloria-curwen` Глория Карвен — character без описания
-- [medium] `osobnyaki-bezumiya-ru/character/crooked-henry-franklin` Генри Франклин — character без описания
-- [medium] `osobnyaki-bezumiya-ru/character/crooked-martha-franklin` Марта Франклин — character без описания
-- [medium] `osobnyaki-bezumiya-ru/character/crooked-nigel-tellings` Найджел Теллингс — character без описания
-- [medium] `osobnyaki-bezumiya-ru/character/crooked-thomas-pratt` Томас Пратт — character без описания
-- [medium] `osobnyaki-bezumiya-ru/character/crooked-william-fitzgerald` Уильям Фицджеральд — character без описания
-- [low] `osobnyaki-bezumiya-ru/character/memphis-edith` Эдит — Полного статблока в книге нет: только пункты здоровья (с. 114).
+- [low] `naedine-s-prilivom-ru/creature/bokrug` Бокруг — Статблока в книге нет. Общей записи Бокруга в базе нет — кандидат в общую запись (предложение в proposals-tide.json). Картинка — рисунок с обложки (с. 88).
+- [low] `naedine-s-prilivom-ru/creature/sushchestva-iba` Существа Иба — Статблока в книге нет. Общей записи существ Иба в базе нет — кандидат в общую запись (предложение). Название — по тексту цилиндров (абз. 204) и подписи к иллюстрации «Существо Иба» (с. 73).
 
 ### Проклятие Ганеши (`proklyatie-ganeshi-ru`) — 23
 
@@ -2569,68 +2185,6 @@
 - [medium] с. 35: 4 карт. (451×792, 1220×2799, 441×512, 848×485); на странице: Проклятие Ганеши
 - [low] с. 1: 4 карт. (436×561, 637×304, 441×512, 848×485); на странице: Проклятие Ганеши
 - [low] с. 2: 2 карт. (423×485, 441×512); на странице: Проклятие Ганеши
-
-### Безымянный туман (`bezymyannyy-tuman-ru`) — 22
-
-**Картинки** (7)
-
-- [high] с. 1: 2 карт. (769×315, 678×726); без картинки: Анна Йорк (character), Деррик Йорк (character), Эннис Гибсон (character), Генри Пирс (character), Майкл Пирс (character)
-- [high] с. 2: 1 карт. (769×1010); без картинки: Богдан Залевский (character), Дуэйн Шерман (character), Генри Пирс (character), Конрад Марш (character), Линда Марш (character)
-- [high] с. 3: 3 карт. (769×637, 769×1117, 916×917); без картинки: Анна Йорк (character), Богдан Залевский (character), Деррик Йорк (character), Дуэйн Шерман (character), Эннис Гибсон (character)
-- [high] с. 4: 2 карт. (769×901, 481×500); без картинки: Анна Йорк (character), Деррик Йорк (character), Эннис Гибсон (character), Генри Пирс (character), Майкл Пирс (character)
-- [high] с. 5: 1 карт. (678×726); без картинки: Богдан Залевский (character), Конрад Марш (character), Линда Марш (character), Полицейский (character), Ребекка Марш (character)
-- [high] с. 7: 1 карт. (773×398); без картинки: Туманное отродье (creature)
-- [medium] с. 6: 1 карт. (773×298); без картинки: Дуэйн Шерман (character), Генри Пирс (character), Охрана Генри Пирса (character), Полицейский (character), Рене Пирс (character)
-
-**Контекст** (15)
-
-- [high] `bezymyannyy-tuman-ru/handout/foto-derrika-yorka` Фотография Деррика Йорка — раздатка без текста и картинки
-- [high] `bezymyannyy-tuman-ru/handout/foto-rene` Фотография Рене — раздатка без текста и картинки
-- [high] `bezymyannyy-tuman-ru/handout/izobrazhenie-amuleta` Изображение амулета — раздатка без текста и картинки
-- [high] `bezymyannyy-tuman-ru/handout/simvol-shchita-akhilla` Символ «Щита Ахилла» — раздатка без текста и картинки
-- [medium] `bezymyannyy-tuman-ru/character/anna-york` Анна Йорк — character без описания
-- [medium] `bezymyannyy-tuman-ru/character/bogdan-zalevskiy` Богдан Залевский — character без описания
-- [medium] `bezymyannyy-tuman-ru/character/ennis-gibson` Эннис Гибсон — character без описания
-- [medium] `bezymyannyy-tuman-ru/character/konrad-marsh` Конрад Марш — character без описания
-- [medium] `bezymyannyy-tuman-ru/character/linda-marsh` Линда Марш — character без описания
-- [medium] `bezymyannyy-tuman-ru/character/maykl-pirs` Майкл Пирс — character без описания
-- [medium] `bezymyannyy-tuman-ru/character/norman-khadson` Норман Хадсон — character без описания
-- [medium] `bezymyannyy-tuman-ru/character/pablo-ferreyra` Пабло Феррейра — character без описания
-- [medium] `bezymyannyy-tuman-ru/character/rebekka-marsh` Ребекка Марш — character без описания
-- [low] `bezymyannyy-tuman-ru/creature/bezymyannyy-tuman` Безымянный Туман — Статблока и потери Рассудка за встречу книга не даёт: божество проявляется только туманом Рене. Божество придумано для сценария; с «Безымянной мглой» (Nameless Mist) мифов Лавкрафта — Лумли книга его 
-- [low] `bezymyannyy-tuman-ru/tome/kniga-s-simvolom-valknut` Книга культа с символом «Валькнут» — Потеря Рассудка 1/1d6 — за прикосновение (галлюцинация), а не за чтение; прибавки Мифов Ктулху, времени изучения и заклинаний книга не даёт. Название записи — по описанию книги (у неё нет имени).
-
-### Bless the Beast and Children (перевод владельца) (`bless-the-beast-and-children-ru`) — 21
-
-**Картинки** (3)
-
-- [high] с. 6: 1 карт. (770×1640); без картинки: Донни О’Ши (character), Эмили Лангфорд (character), Окровавленная золотая серьга (item), Грегори Далберг (character)
-- [high] с. 10: 1 карт. (1240×795); без картинки: Дэнни Эймс (character), Энсон Бест (character), Детские бумаги #4. Выдержки из истории болезни Дэнни Эймса (handout)
-- [medium] с. 1: 1 карт. (1183×548); на странице: Благослови детей его
-
-**Связи** (1)
-
-- [low] `bless-the-beast-and-children-ru/scene/istoriya-denni-eymsa` История Дэнни Эймса — сцена без места; сценарий bless-the-beast-and-children-ru/scenario/bless-the-beast-and-children
-
-**Контекст** (17)
-
-- [medium] `bless-the-beast-and-children-ru/character/art-smit` Арт Смит — character без описания
-- [medium] `bless-the-beast-and-children-ru/character/billi` Билли — character без описания
-- [medium] `bless-the-beast-and-children-ru/character/delmar-van-de-ford` Делмар ван де Форд — character без описания
-- [medium] `bless-the-beast-and-children-ru/character/donna-segreto` Донна Сегрето — character без описания
-- [medium] `bless-the-beast-and-children-ru/character/donni-o-shi` Донни О’Ши — character без описания
-- [medium] `bless-the-beast-and-children-ru/character/dzhek-uilson` Джек Уилсон — character без описания
-- [medium] `bless-the-beast-and-children-ru/character/dzhozef-segreto` Джозеф Сегрето — character без описания
-- [medium] `bless-the-beast-and-children-ru/character/dzhun-anderson` Джун Андерсон — character без описания
-- [medium] `bless-the-beast-and-children-ru/character/ebigeyl-harding` Эбигейл Хардинг — character без описания
-- [medium] `bless-the-beast-and-children-ru/character/enson-best` Энсон Бест — character без описания
-- [medium] `bless-the-beast-and-children-ru/character/khayram` Хайрам — character без описания
-- [medium] `bless-the-beast-and-children-ru/character/mariya-segreto` Мария Сегрето — character без описания
-- [medium] `bless-the-beast-and-children-ru/character/nik-kasl` Ник Касл — character без описания
-- [medium] `bless-the-beast-and-children-ru/character/piter` Питер — character без описания
-- [medium] `bless-the-beast-and-children-ru/character/rut` Рут — character без описания
-- [medium] `bless-the-beast-and-children-ru/character/salli` Салли — character без описания
-- [medium] `bless-the-beast-and-children-ru/character/sara-kelso` Сара Келсо — character без описания
 
 ### Парк развлечений (`park-razvlecheniy-ru`) — 20
 
@@ -2684,6 +2238,36 @@
 - [low] с. 5: 1 карт. (984×566); на странице: Аутофагия
 - [low] с. 13: 1 карт. (444×699); страницу не цитирует никто
 
+### Новая жизнь (`novaya-zhizn-ru`) — 19
+
+**Тексты** (1)
+
+- [low] с. 26: 1 стр., 151 слов не цитирует ни одна запись; near: Эрик Диггори
+
+**Картинки** (15)
+
+- [high] с. 4: 1 карт. (700×700); без картинки: Гэлилэхи (character), Фраза Гэлилэхи (handout), Охотничья винтовка (item), Валочный топор (item)
+- [high] с. 5: 1 карт. (2046×1328); без картинки: Шарлотта Эдингтон (character), Крампус (creature), Северный олень («Новая жизнь») (creature), Карточка «Внезапное похолодание» (handout), Хрустальный шар (item)
+- [high] с. 6: 2 карт. (998×562, 642×1017); без картинки: Крампус (creature), Хрустальный шар (item)
+- [high] с. 10: 1 карт. (768×1447); без картинки: Крампус (creature), Хрустальный шар (item)
+- [high] с. 11: 2 карт. (720×894, 630×846); без картинки: Шарлотта Эдингтон (character), Северный олень («Новая жизнь») (creature), Волки («Новая жизнь») (creature)
+- [high] с. 12: 2 карт. (736×974, 736×981); без картинки: Итакуа («Новая жизнь») (creature), Медведь («Новая жизнь») (creature), Волки («Новая жизнь») (creature)
+- [high] с. 13: 2 карт. (1030×1389, 457×457); без картинки: Гэлилэхи (character), Итакуа («Новая жизнь») (creature), Крампус (creature)
+- [high] с. 14: 3 карт. (687×687, 993×1698, 971×1650); без картинки: Гэлилэхи (character), Владимир Кузнецов (character), Карточка «Ужас!» (handout), Карточка «Внезапное похолодание» (handout)
+- [high] с. 15: 4 карт. (952×1632, 993×1718, 866×1474, 878×1539); без картинки: Карточка «Гемофобия» (handout), Карточка «Лигирофобия» (handout), Карточка «Никтофобия» (handout), Карточка «Одонтофобия» (handout)
+- [high] с. 16: 4 карт. (955×1654, 1033×1764, 2122×1338, 1069×650); без картинки: Карточка «Маска Хранителя Леса» (handout), Карточка «Топор валочный» (handout), Карточка «Винтовка «Ли-Энфилд» 303-го калибра» (handout), Маска Хранителя Леса (item), Охотничья винтовка (item)
+- [high] с. 24: 1 карт. (2481×3300); без картинки: Шарлотта Эдингтон (character)
+- [high] с. 25: 1 карт. (2481×3508); без картинки: Эрик Диггори (character)
+- [medium] с. 27: 2 карт. (2560×1918, 2560×1920); страницу не цитирует никто
+- [medium] с. 28: 2 карт. (2560×1918, 2560×1920); страницу не цитирует никто
+- [low] с. 1: 1 карт. (640×800); на странице: Новая жизнь
+
+**Контекст** (3)
+
+- [low] `coc:spell:banishment-of-yde-etad-krampus` Изгнание Йде Итад (ритуал Крампуса) — Вариант «Изгнания Йде Итад» из сценария «Новая жизнь» (русский оригинал): книга прямо называет ритуал Крампуса видоизменённым заклинанием «Книги хранителя», но цены, времени и порядка сотворения не пе
+- [low] `coc:spell:stop-time` Остановка времени — Новое заклинание сценария «Новая жизнь» (русский оригинал, английского названия нет). Книга даёт только цену и действие одной фразой в статблоке Крампуса. Тип «Врата и путешествия» (заклинания времени
+- [low] `coc:spell:telekinesis` Телекинез — Новое заклинание сценария «Новая жизнь» (русский оригинал, английского названия нет). Книга даёт только цену и действие одной фразой в статблоке Крампуса — остальное не напечатано. Тип «Природа и стих
+
 ### Террор (`terror-ru`) — 19
 
 **Картинки** (16)
@@ -2714,30 +2298,6 @@
 
 - [low] `terror-ru/item/papka-tolko-dlya-molotova` Папка «Только для Молотова В.М.» — Содержимое папки книга не описывает. Страницы «с. N» — печатные (печатная = физическая − 1).
 
-### Книга сыщика (`investigator-handbook-ru`) — 19
-
-**Контекст** (19)
-
-- [medium] `investigator-handbook-ru/character/astrid-chantal` Астрид Шанталь — character без описания
-- [medium] `investigator-handbook-ru/character/daniel-lofer` Дэниел Лофер — character без описания
-- [medium] `investigator-handbook-ru/character/daniel-skomorovsky` Доктор Даниэль Скоморовский — character без описания
-- [medium] `investigator-handbook-ru/character/douglas-lee-hakston` Дуглас Ли Хакстон — character без описания
-- [medium] `investigator-handbook-ru/character/dwayne-haven` Дуэйн Хейвен — character без описания
-- [medium] `investigator-handbook-ru/character/erik-elstrom` Эрик Эльстрём — character без описания
-- [medium] `investigator-handbook-ru/character/franklin-dakota` Франклин Дакота — character без описания
-- [medium] `investigator-handbook-ru/character/henry-talotep` Генри Талотэп — character без описания
-- [medium] `investigator-handbook-ru/character/joe-van-bordde` Джо ван Бордде — character без описания
-- [medium] `investigator-handbook-ru/character/luke-atkinson` Люк Аткинсон — character без описания
-- [medium] `investigator-handbook-ru/character/pierre-leblanc` Пьер Леблан — character без описания
-- [medium] `investigator-handbook-ru/character/reggie-wyness` Реджи Уайнесс — character без описания
-- [medium] `investigator-handbook-ru/character/robert-andersson` Роберт Андерссон — character без описания
-- [medium] `investigator-handbook-ru/character/sam-marsh` Сэм Марш — character без описания
-- [medium] `investigator-handbook-ru/character/sean-wolf` Шон Вульф — character без описания
-- [medium] `investigator-handbook-ru/character/simon-chen` Саймон Чен — character без описания
-- [medium] `investigator-handbook-ru/character/svainung-svei` Свайнунг Свей — character без описания
-- [medium] `investigator-handbook-ru/character/victoria-knight` Виктория Найт — character без описания
-- [medium] `investigator-handbook-ru/character/wentworth-avebury` Вентуорт Эйвбери — character без описания
-
 ### Аукцион (`auktsion-ru`) — 18
 
 **Картинки** (17)
@@ -2764,34 +2324,6 @@
 
 - [low] `auktsion-ru/tome/liber-tenebrea` Liber Tenebrea — Книга Мифов только этого сценария (Р-131). Прибавка к Мифам одна (+8%), без деления на беглое и полное чтение; язык, автор, значение Мифов и время изучения книга не даёт. Названия заклинаний — фанатск
 
-### Путеводитель по Аркхэму (Hort, по Arkham Unveiled) (`arkham-guide-hort-ru`) — 17
-
-**Тексты** (2)
-
-- [low] с. 2 — с. 8: 6 стр., 1093 слов не цитирует ни одна запись; headings: Предисловие; near: Аркхэм
-- [low] с. 90: 1 стр., 172 слов не цитирует ни одна запись; headings: Аптаун; near: Жизель Хельцимер; Пансион «Франклин-плейс»; Проход Орна
-
-**Картинки** (14)
-
-- [high] с. 16: 1 карт. (831×1009); без картинки: Лабан Шрюсбери (character)
-- [high] с. 71: 1 карт. (649×606); без картинки: У. Э. Кэмерон (character)
-- [medium] с. 102: 1 карт. (942×672); на странице: Биллингтонский лес (location)
-- [medium] с. 104: 1 карт. (1031×1454); страницу не цитирует никто
-- [low] с. 29: 1 карт. (527×1024); на странице: Аркхэмская психбольница (location)
-- [low] с. 44: 1 карт. (423×1016); на странице: Дом Пикеринга (location)
-- [low] с. 47: 1 карт. (842×516); на странице: Торговый район (location)
-- [low] с. 51: 1 карт. (650×747); на странице: Непосещаемый остров (location)
-- [low] с. 59: 1 карт. (570×410); на странице: Бакалея Масса (location), Университетская лавка (location), Магазин «Вулворт» «Всё по 5 и 10 центов» (location), Восточные склады и пристани (location)
-- [low] с. 63: 1 карт. (652×509); на странице: Берег (location)
-- [low] с. 67: 1 карт. (622×436); на странице: Дом ветеранов долины Мискатоника (location)
-- [low] с. 83: 1 карт. (764×515); на странице: Аптека «Уэллхелс» (location), Велосипедный магазин «Кампус» (location), Френч-Хилл (location)
-- [low] с. 90: 1 карт. (868×640); страницу не цитирует никто
-- [low] с. 95: 1 карт. (744×494); на странице: Аркхэмское историческое общество (location), Нижний Саутсайд (location)
-
-**Контекст** (1)
-
-- [medium] `arkham-guide-hort-ru/character/nathaniel-corey` Натаниэль Кори — character без описания
-
 ### Черная кассета (`chernaya-kasseta-ru`) — 17
 
 **Картинки** (16)
@@ -2817,51 +2349,29 @@
 
 - [low] `chernaya-kasseta-ru/character/lilya-chizhova` Лиля Чижова — Книга о ней больше ничего не сообщает; то, что копия у неё, — вывод из текста (Р-41). Страницы «с. N» — печатные (печатная = физическая − 1).
 
-### Стартовый набор: Грань тьмы (`starter-edge-of-darkness-ru`) — 17
+### Путеводитель по Аркхэму (Hort, по Arkham Unveiled) (`arkham-guide-hort-ru`) — 16
 
-**Контекст** (17)
+**Тексты** (2)
 
-- [medium] `starter-edge-of-darkness-ru/character/bradley-washington` Брэдли Вашингтон — character без описания
-- [medium] `starter-edge-of-darkness-ru/character/cecil-jones` Сесил Джонс — character без описания
-- [medium] `starter-edge-of-darkness-ru/character/crawford-harris` Кроуфорд Харрис — character без описания
-- [medium] `starter-edge-of-darkness-ru/character/harold-copley` Гарольд Копли — character без описания
-- [medium] `starter-edge-of-darkness-ru/character/harold-warren` Гарольд Уоррен — character без описания
-- [medium] `starter-edge-of-darkness-ru/character/howard-corman` Говард Корман — character без описания
-- [medium] `starter-edge-of-darkness-ru/character/ma-peters` Мамаша Питерс — character без описания
-- [medium] `starter-edge-of-darkness-ru/character/maggie-mcferter` Мэгги Макфертер — character без описания
-- [medium] `starter-edge-of-darkness-ru/character/officer-wood` Вуд — character без описания
-- [medium] `starter-edge-of-darkness-ru/character/pa-peters` Папаша Питерс — character без описания
-- [medium] `starter-edge-of-darkness-ru/character/robert-menkin` Роберт Менкин — character без описания
-- [medium] `starter-edge-of-darkness-ru/character/sarah-washington` Сара Вашингтон — character без описания
-- [medium] `starter-edge-of-darkness-ru/character/wilbur-lawrence` Уилбур Лоуренс — character без описания
-- [medium] `coc:character:agnes-merriweather` Агнес Мерривезер — character без описания
-- [medium] `coc:character:marion-allen` Марион Аллен — character без описания
-- [medium] `coc:character:nofru-ka` Нофру-Ка — character без описания
-- [medium] `coc:character:rupert-merriweather` Руперт Мерривезер — character без описания
+- [low] с. 2 — с. 8: 6 стр., 1093 слов не цитирует ни одна запись; headings: Предисловие; near: Аркхэм
+- [low] с. 90: 1 стр., 172 слов не цитирует ни одна запись; headings: Аптаун; near: Жизель Хельцимер; Пансион «Франклин-плейс»; Проход Орна
 
-### Холодный урожай (`kholodnyy-urozhay-ru`) — 16
+**Картинки** (14)
 
-**Картинки** (8)
-
-- [medium] с. 1: 1 карт. (696×899); на странице: Холодный урожай
-- [medium] с. 23: 1 карт. (628×309); без картинки: Борис Александрович Гапон (character), Галина Петровна Смольская (character), Ллойгор («Холодный урожай») (creature)
-- [medium] с. 35: 2 карт. (307×399, 305×398); без картинки: Александр Гайдарович Баршай (character), Мария Андроновна Елизарова (character), Василий Викторович Смольский (character), Грузовик ГАЗ АА (item)
-- [medium] с. 37: 1 карт. (306×398); без картинки: Дмитрий Петрович Абрамов (character), Кравчуки и Витрукины (character), Вениамин Тимурович Кесин (character)
-- [medium] с. 38: 1 карт. (630×308); без картинки: Берия (character), Мария Андроновна Елизарова (character), Раиса Андреевна Елизарова (character), Рисунок Раисы (handout), Приказ НКВД № 00447 (item)
-- [medium] с. 39: 1 карт. (302×399); без картинки: Андрей Галинович Елизаров (character), Рисунок Раисы (handout)
-- [low] с. 25: 1 карт. (313×402); на странице: Депо (location), Окрестности Куйбышева (location), Поезд (scene), Сон и кошмары (scene)
-- [low] с. 63: 1 карт. (568×778); страницу не цитирует никто
-
-**Контекст** (8)
-
-- [medium] `kholodnyy-urozhay-ru/character/aleksandr-bure` Александр Борисович Буре — character без описания
-- [medium] `kholodnyy-urozhay-ru/character/ekaterina-shemkova` Екатерина Марковна Шемкова — character без описания
-- [medium] `kholodnyy-urozhay-ru/character/georgiy-zamyatin` Георгий Евгеньевич Замятин — character без описания
-- [medium] `kholodnyy-urozhay-ru/character/leonid-matsenko` Леонид Карлович Маценко — character без описания
-- [medium] `kholodnyy-urozhay-ru/character/maksim-kravchuk` Максим Фёдорович Кравчук — character без описания
-- [medium] `kholodnyy-urozhay-ru/character/mikhail-akhmerov` Михаил Андреевич Ахмеров — character без описания
-- [medium] `kholodnyy-urozhay-ru/character/nikita-gurov` Никита Павлович Гуров — character без описания
-- [medium] `kholodnyy-urozhay-ru/character/timur-yarov` Тимур Александрович Яров — character без описания
+- [high] с. 16: 1 карт. (831×1009); без картинки: Лабан Шрюсбери (character)
+- [high] с. 71: 1 карт. (649×606); без картинки: У. Э. Кэмерон (character)
+- [medium] с. 102: 1 карт. (942×672); на странице: Биллингтонский лес (location)
+- [medium] с. 104: 1 карт. (1031×1454); страницу не цитирует никто
+- [low] с. 29: 1 карт. (527×1024); на странице: Аркхэмская психбольница (location)
+- [low] с. 44: 1 карт. (423×1016); на странице: Дом Пикеринга (location)
+- [low] с. 47: 1 карт. (842×516); на странице: Торговый район (location)
+- [low] с. 51: 1 карт. (650×747); на странице: Непосещаемый остров (location)
+- [low] с. 59: 1 карт. (570×410); на странице: Бакалея Масса (location), Университетская лавка (location), Магазин «Вулворт» «Всё по 5 и 10 центов» (location), Восточные склады и пристани (location)
+- [low] с. 63: 1 карт. (652×509); на странице: Берег (location)
+- [low] с. 67: 1 карт. (622×436); на странице: Дом ветеранов долины Мискатоника (location)
+- [low] с. 83: 1 карт. (764×515); на странице: Аптека «Уэллхелс» (location), Велосипедный магазин «Кампус» (location), Френч-Хилл (location)
+- [low] с. 90: 1 карт. (868×640); страницу не цитирует никто
+- [low] с. 95: 1 карт. (744×494); на странице: Аркхэмское историческое общество (location), Нижний Саутсайд (location)
 
 ### МТС Харьков 37 (`mts-kharkov-37-ru`) — 16
 
@@ -2971,27 +2481,27 @@
 
 - [low] `tumany-san-kristobal-ru/creature/kakamora` Какамора — Статблока в книге нет.
 
-### Хэллоуин в Данвиче (`hellouin-v-danviche-ru`) — 14
+### Эликсир жизни (`eliksir-zhizni-ru`) — 14
 
-**Картинки** (2)
+**Картинки** (9)
 
-- [medium] с. 1: 2 карт. (1083×1592, 385×385); на странице: Хэллоуин в Данвиче
-- [medium] с. 7: 1 карт. (625×399); без картинки: Эдит (character), Морин Уэйтли (character), Уильям Морган (character), Материал «Дневник»: гнилой дневник Морин Уэйтли-Морган (handout), Самогон «эпплджек» с Ядом Полуночного Сна (item)
+- [high] с. 1 (физ. 2): 2 карт. (2539×397, 2539×391); без картинки: Дэвид Райт (character), Табельный пистолет инспектора Райта (item)
+- [high] с. 2 (физ. 3): 1 карт. (2532×385); без картинки: Брейдли Хартсфилд (character), Дэвид Райт (character), Джон Фокс (character), Корделия Хамфри (character), Нил Фокс (character)
+- [high] с. 3 (физ. 4): 2 карт. (2539×397, 2539×391); без картинки: Дэвид Райт (character), Дональд Тайлер (character), Джон Фокс (character), Кассандра Дуглас (character), Корделия Хамфри (character)
+- [high] с. 4 (физ. 5): 2 карт. (2539×397, 2539×391); без картинки: Дэвид Райт (character), Дональд Тайлер (character), Джон Фокс (character), Корделия Хамфри (character), Нил Фокс (character)
+- [high] с. 5 (физ. 6): 1 карт. (2144×373); без картинки: Дональд Тайлер (character), Джозеф Коннелли (character), Нил Фокс (character), Фото жертв (handout)
+- [high] с. 7 (физ. 8): 1 карт. (1476×574); без картинки: Джон Фокс (character), Лора Мартин (character), Мэтью Крайтон (character), Мики (character), Мисти Крайтон (character)
+- [high] с. 10 (физ. 11): 1 карт. (1332×528); без картинки: Джон Фокс (character), Сивилия (character), Гончая Шаб-Ниггурат (creature), Посеребрённые кинжалы (item)
+- [medium] с. 0 (физ. 1): 2 карт. (2532×792, 2532×392); на странице: Эликсир жизни
+- [medium] с. 11 (физ. 12): 2 карт. (2539×397, 2539×391); на странице: Эликсир жизни
 
-**Контекст** (12)
+**Контекст** (5)
 
-- [medium] `hellouin-v-danviche-ru/character/donald-satton` Дональд Саттон — character без описания
-- [medium] `hellouin-v-danviche-ru/character/dzhordzh-uidon` Джордж Уидон — character без описания
-- [medium] `hellouin-v-danviche-ru/character/edit` Эдит — character без описания
-- [medium] `hellouin-v-danviche-ru/character/edvard-derbi` Эдвард Дерби — character без описания
-- [medium] `hellouin-v-danviche-ru/character/elis-sanders` Элис Сандерс — character без описания
-- [medium] `hellouin-v-danviche-ru/character/gerdi-poup` Гертруда «Герди» Поуп — character без описания
-- [medium] `hellouin-v-danviche-ru/character/gordon-bryuster` Гордон Брюстер — character без описания
-- [medium] `hellouin-v-danviche-ru/character/saymon` Саймон — character без описания
-- [medium] `hellouin-v-danviche-ru/character/sol-morgan` Сол Морган — character без описания
-- [medium] `hellouin-v-danviche-ru/character/uilyam-morgan` Уильям Морган — character без описания
-- [medium] `hellouin-v-danviche-ru/character/yonas-morgan` Йонас Морган — character без описания
-- [low] `hellouin-v-danviche-ru/creature/khobgobliny` Хобгоблины — Статблока в книге нет — только проявления и потеря Рассудка.
+- [high] `eliksir-zhizni-ru/handout/foto-medalona` Фотография медальона — раздатка без текста и картинки
+- [high] `eliksir-zhizni-ru/handout/foto-zhertv` Фото жертв — раздатка без текста и картинки
+- [low] `eliksir-zhizni-ru/character/dzhon-foks` Джон Фокс — Статблок — с. 10. МОЩ, ПМ и Удачи книга не даёт. Скорость 8 напечатана; по ЛВК 60 и СИЛ 60 больше ТЕЛ 55 — 9, возраст не указан.
+- [low] `eliksir-zhizni-ru/tome/kniga-svyashchennika` Книга священника — Книга не даёт потери Рассудка, прибавки Мифов Ктулху, времени изучения и списка заклинаний.
+- [low] `eliksir-zhizni-ru/tome/kniga-zaklinaniy-kulta-salema` Книга заклинаний и ритуалов ведьмовского культа Салема — Книга не даёт потери Рассудка, прибавки Мифов Ктулху, времени изучения и списка заклинаний.
 
 ### Под землёй и над землёй (`pod-zemlyoy-i-nad-zemlyoy-ru`) — 14
 
@@ -3012,6 +2522,27 @@
 - [high] с. 22: 1 карт. (1200×675); без картинки: Артём Карманов (character), Федя Арбузов (character), Геннадий Еремин (character), Геннадий Костылев (character), Лена Чернышева (character)
 - [medium] с. 1: 1 карт. (768×1102); на странице: Под землёй и над землёй
 
+### Безымянный туман (`bezymyannyy-tuman-ru`) — 13
+
+**Картинки** (7)
+
+- [high] с. 1: 2 карт. (769×315, 678×726); без картинки: Анна Йорк (character), Деррик Йорк (character), Эннис Гибсон (character), Генри Пирс (character), Майкл Пирс (character)
+- [high] с. 2: 1 карт. (769×1010); без картинки: Богдан Залевский (character), Дуэйн Шерман (character), Генри Пирс (character), Конрад Марш (character), Линда Марш (character)
+- [high] с. 3: 3 карт. (769×637, 769×1117, 916×917); без картинки: Анна Йорк (character), Богдан Залевский (character), Деррик Йорк (character), Дуэйн Шерман (character), Эннис Гибсон (character)
+- [high] с. 4: 2 карт. (769×901, 481×500); без картинки: Анна Йорк (character), Деррик Йорк (character), Эннис Гибсон (character), Генри Пирс (character), Майкл Пирс (character)
+- [high] с. 5: 1 карт. (678×726); без картинки: Богдан Залевский (character), Конрад Марш (character), Линда Марш (character), Полицейский (character), Ребекка Марш (character)
+- [high] с. 7: 1 карт. (773×398); без картинки: Туманное отродье (creature)
+- [medium] с. 6: 1 карт. (773×298); без картинки: Дуэйн Шерман (character), Генри Пирс (character), Охрана Генри Пирса (character), Полицейский (character), Рене Пирс (character)
+
+**Контекст** (6)
+
+- [high] `bezymyannyy-tuman-ru/handout/foto-derrika-yorka` Фотография Деррика Йорка — раздатка без текста и картинки
+- [high] `bezymyannyy-tuman-ru/handout/foto-rene` Фотография Рене — раздатка без текста и картинки
+- [high] `bezymyannyy-tuman-ru/handout/izobrazhenie-amuleta` Изображение амулета — раздатка без текста и картинки
+- [high] `bezymyannyy-tuman-ru/handout/simvol-shchita-akhilla` Символ «Щита Ахилла» — раздатка без текста и картинки
+- [low] `bezymyannyy-tuman-ru/creature/bezymyannyy-tuman` Безымянный Туман — Статблока и потери Рассудка за встречу книга не даёт: божество проявляется только туманом Рене. Божество придумано для сценария; с «Безымянной мглой» (Nameless Mist) мифов Лавкрафта — Лумли книга его 
+- [low] `bezymyannyy-tuman-ru/tome/kniga-s-simvolom-valknut` Книга культа с символом «Валькнут» — Потеря Рассудка 1/1d6 — за прикосновение (галлюцинация), а не за чтение; прибавки Мифов Ктулху, времени изучения и заклинаний книга не даёт. Название записи — по описанию книги (у неё нет имени).
+
 ### Когда зажигаются костры (`kogda-zazhigayutsya-kostry-ru`) — 13
 
 **Картинки** (13)
@@ -3029,27 +2560,6 @@
 - [medium] с. 16: 1 карт. (608×385); без картинки: Егор Димитриевич Еремин (character), Житель посёлка (character), Дневник Инги (handout), Обрывки синего платья (item)
 - [medium] с. 18: 1 карт. (491×584); без картинки: Игорь Станиславович Давыдов (character), Инга Юрьевна Миронова (character), Валерий Иванович Гущин (character), Тамара Ильинична Нестерова (character), Хозяин Леса (creature)
 - [medium] с. 19: 2 карт. (512×347, 491×584); без картинки: Игорь Станиславович Давыдов (character), Валерий Иванович Гущин (character), Тамара Ильинична Нестерова (character), Житель посёлка (character), Медицинские карты пропавших пациентов (item)
-
-### Mothers Love (перевод владельца) (`mothers-love-ru`) — 13
-
-**Картинки** (7)
-
-- [high] с. 1: 1 карт. (2560×3310); без картинки: Анджела Мэй Бэйстебл (character), Роберто Сото (character), Тедди Уинн (character), «Аркхэм Эдвертайзер», 11 сентября 1928 года (handout), Раздатка H01: документы «Материнская любовь» № 1 (досье Бюро на банду «Лягушка») (handout)
-- [high] с. 4: 2 карт. (2025×1418, 2560×3310); без картинки: Анджела Мэй Бэйстебл (character), Мэри Сиск (character), Тобиас Сиск (character), Полицейская ищейка («Любовь матери») (creature), «Аркхэм Эдвертайзер», 11 сентября 1928 года (handout)
-- [high] с. 6: 1 карт. (2233×2945); без картинки: Джеффри Кинселла (character), Эйб Дункан (character), Пёрл Каммайр (character), Роберто Сото (character), Тедди Уинн (character)
-- [high] с. 8: 1 карт. (2080×1471); без картинки: Чарльз Гилман (character), Мойра Пирс (character), Карл Этеридж (character), Тедди Уинн (character), Типичный сотрудник полиции штата / агент BOI (character)
-- [high] с. 9: 2 карт. (1259×1244, 2025×1163); без картинки: Грейс Декерт (character), Иезекииль Сиск (character), Карл Этеридж (character), Тедди Уинн (character), Томас Хейнс (character)
-- [high] с. 10: 2 карт. (865×1200, 2073×1446); без картинки: Грейс Декерт (character), Карл Этеридж (character), Пёрл Каммайр (character), Томас Хейнс (character)
-- [high] с. 11: 1 карт. (1340×1871); без картинки: Эйб Дункан (character), Карл Этеридж (character), Мэри Сиск (character), Пёрл Каммайр (character), Роберто Сото (character)
-
-**Контекст** (6)
-
-- [medium] `mothers-love-ru/character/anzhela-beystebl` Анджела Мэй Бэйстебл — character без описания
-- [medium] `mothers-love-ru/character/dzhonni-logan` Джонни Логан — character без описания
-- [medium] `mothers-love-ru/character/karl-eteridzh` Карл Этеридж — character без описания
-- [medium] `mothers-love-ru/character/konrad-franklin` Конрад Т. Франклин — character без описания
-- [medium] `mothers-love-ru/character/otets-maykl-kalkhun` Отец Майкл Калхун — character без описания
-- [medium] `mothers-love-ru/character/roda-goldsteyn` Рода Голдстейн — character без описания
 
 ### Не забывай меня (`ne-zabyvay-menya-ru`) — 13
 
@@ -3110,42 +2620,31 @@
 - [medium] с. 20: 1 карт. (665×443); без картинки: Ронни Блейз (character)
 - [low] с. 1: 1 карт. (340×440); на странице: Моя маленькая сестра
 
-### Тайник Бутлегеров (`taynik-butlegerov-ru`) — 12
+### Сны о Японии (Эра Ктулху 6) (`sny-o-yaponii-ru`) — 12
 
-**Картинки** (3)
+**Тексты** (1)
 
-- [high] с. 0 (физ. 2): 7 карт. (1270×595, 1270×594, 2532×396, 2532×388…); без картинки: Стивен Уэлрайт (character)
-- [high] с. 17 (физ. 19): 5 карт. (1270×595, 1270×594, 276×796, 1312×492…); без картинки: Джордж Нортон (character), Герберт Ловетт (character), Итан Уолкер (character), Лютер Роял (character), Сальваторе Маранцано (character)
-- [medium] с. 1 (физ. 3): 6 карт. (1270×595, 1270×594, 692×600, 292×796…); на странице: Тайник Бутлегеров
+- [low] с. 45 (физ. 46) — с. 46 (физ. 47): 2 стр., 979 слов не цитирует ни одна запись; headings: Возможные реакции японцев; near: «100 свечей»; Сны о Японии; Суэ Кунихико
 
-**Контекст** (9)
+**Картинки** (7)
 
-- [medium] `taynik-butlegerov-ru/character/devid-bleyk` Дэвид Блейк — character без описания
-- [medium] `taynik-butlegerov-ru/character/dzhuzeppe-masseriya` Джузеппе «Джо» Массерия — character без описания
-- [medium] `taynik-butlegerov-ru/character/kornelius-vanderbilt` Корнелиус Вандербильт — character без описания
-- [medium] `taynik-butlegerov-ru/character/lyuter-royal` Лютер Роял — character без описания
-- [medium] `taynik-butlegerov-ru/character/mariya-bellomo` Мария Белломо — character без описания
-- [medium] `taynik-butlegerov-ru/character/salvatore-marantsano` Сальваторе Маранцано — character без описания
-- [medium] `taynik-butlegerov-ru/character/sofi-pappeto` Софи Паппето — character без описания
-- [medium] `taynik-butlegerov-ru/character/uilyam-stoun` Уильям Стоун — character без описания
-- [low] `coc:spell:pepelnaya-pechat` Пепельная печать — Новое заклинание сценария «Тайник Бутлегеров» (русский оригинал, английского названия нет; скан без текстового слоя, сверено по изображениям страниц). Книга описывает только действие уже наложенной пе
+- [high] с. 3 (физ. 4): 1 карт. (1280×774); без картинки: Сущность (creature)
+- [high] с. 26 (физ. 27): 1 карт. (1600×988); без картинки: Регина Чедвик (character), Сущность (creature)
+- [medium] с. 0 (физ. 1): 7 карт. (2511×3264, 2507×3264, 540×427, 519×407…); страницу не цитирует никто
+- [medium] с. 2 (физ. 3): 1 карт. (2071×1297); на странице: Лес Аокигахара (location)
+- [medium] с. 21 (физ. 22): 1 карт. (1021×736); на странице: Лес Аокигахара (location), Вход в лес Аокигахара (scene)
+- [medium] с. 24 (физ. 25): 1 карт. (460×289); без картинки: Головорезы Общества Чёрного Океана (character), Ота Наоя (character), Призрак гейши (creature), Сущность (creature)
+- [medium] с. 47 (физ. 48): 5 карт. (834×1089, 647×310, 638×304, 669×425…); на странице: Сны о Японии
 
-### nabor-khranitelya-ru (`nabor-khranitelya-ru`) — 12
+**Связи** (3)
 
-**Контекст** (12)
+- [low] `sny-o-yaponii-ru/scene/dreams` Сны о лесе — сцена без места; сценарий sny-o-yaponii-ru/scenario/sny-o-yaponii
+- [low] `sny-o-yaponii-ru/scene/researching-aokigahara` Исследуя Аокигахару — сцена без места; сценарий sny-o-yaponii-ru/scenario/sny-o-yaponii
+- [low] `sny-o-yaponii-ru/scene/taint-aftermath` Порча: исчезновения знакомых — сцена без места; сценарий sny-o-yaponii-ru/scenario/sny-o-yaponii
 
-- [medium] `nabor-khranitelya-ru/character/eddie-kelly` Эдди «Левый Крен» Келли — character без описания
-- [medium] `nabor-khranitelya-ru/character/jimmy-mcbride` Джимми Макбрайд — character без описания
-- [medium] `nabor-khranitelya-ru/character/kieran-murphy` Киран «Шляпа» Мёрфи — character без описания
-- [medium] `nabor-khranitelya-ru/character/lenny-valentine` Ленни Валентайн — character без описания
-- [medium] `nabor-khranitelya-ru/character/lulu-winnie` Луиза (Лулу) Винни — character без описания
-- [medium] `nabor-khranitelya-ru/character/manny-ziegler` Мэнни Зиглер — character без описания
-- [medium] `nabor-khranitelya-ru/character/marty-oconnor` Марти «Бульдог» О’Коннор — character без описания
-- [medium] `nabor-khranitelya-ru/character/mickey-valentine` Микки Валентайн — character без описания
-- [medium] `nabor-khranitelya-ru/character/sean-doyle` Шон «Надёжа» Дойл — character без описания
-- [medium] `nabor-khranitelya-ru/character/stanley-corrigan` Стэнли Корриган — character без описания
-- [medium] `nabor-khranitelya-ru/character/wendy-kelly` Венди «Без глупостей» Келли — character без описания
-- [medium] `nabor-khranitelya-ru/character/wesley-ogrady` Уэсли «Франт» О’Грейди — character без описания
+**Контекст** (1)
+
+- [low] `sny-o-yaponii-ru/item/maria-postcard` Открытка Марии Сицилии — Текста открытки в книге нет.
 
 ### Рождественская вечеринка (`rozhdestvenskaya-vecherinka-ru`) — 11
 
@@ -3197,57 +2696,6 @@
 - [medium] с. 13 (физ. 2): 1 карт. (902×1174); на странице: Луксор (location), Окрестности Луксора (location), Долина царей (location)
 - [medium] с. 18 (физ. 7): 3 карт. (902×632, 902×634, 902×1149); на странице: Входная камера (location), Коридор (location), Некрополь (location), Некрополь: карта Хранителя (map), Открытия во тьме (scene)
 
-### Лечебница (`lechebnitsa-ru`) — 10
-
-**Связи** (1)
-
-- [low] `lechebnitsa-ru/scene/put-na-ostrov` Путь на остров — сцена без места; сценарий lechebnitsa-ru/scenario/lechebnitsa
-
-**Контекст** (9)
-
-- [medium] `lechebnitsa-ru/character/bobbi-byorch` Бобби Бёрч — character без описания
-- [medium] `lechebnitsa-ru/character/dzheyms-shelli` Джеймс Шелли — character без описания
-- [medium] `lechebnitsa-ru/character/dzheymson` Джеймсон — character без описания
-- [medium] `lechebnitsa-ru/character/genri-tiller` Генри Тиллер — character без описания
-- [medium] `lechebnitsa-ru/character/ketrin-ems` Кэтрин Эмс — character без описания
-- [medium] `lechebnitsa-ru/character/melba` Мельба — character без описания
-- [medium] `lechebnitsa-ru/character/oldos-bryuer` Олдос Брюэр — character без описания
-- [medium] `lechebnitsa-ru/character/uilyam` Уильям — character без описания
-- [low] `lechebnitsa-ru/tome/manuskript-kastro` Манускрипт Кастро — Потери Рассудка, прибавки к Мифам и заклинаний книга не даёт.
-
-### Ограбление по-Аркхэмски (`ograblenie-po-arkhemski-ru`) — 10
-
-**Контекст** (10)
-
-- [medium] `ograblenie-po-arkhemski-ru/character/anabel-martines` Анабель Мартинес — character без описания
-- [medium] `ograblenie-po-arkhemski-ru/character/artur-martines` Артур Мартинес — character без описания
-- [medium] `ograblenie-po-arkhemski-ru/character/dzherri` Джерри — character без описания
-- [medium] `ograblenie-po-arkhemski-ru/character/genrikh-sayer` Генрих Сайер — character без описания
-- [medium] `ograblenie-po-arkhemski-ru/character/prisluga-martinesa` Прислуга особняка Мартинеса — character без описания
-- [medium] `ograblenie-po-arkhemski-ru/character/rayan-khenderson` Райан Хендерсон — character без описания
-- [medium] `ograblenie-po-arkhemski-ru/character/rey-teylor` Рэй Тейлор — character без описания
-- [medium] `ograblenie-po-arkhemski-ru/character/volfgan-sayer` Вольфган Сайер — character без описания
-- [low] `ograblenie-po-arkhemski-ru/creature/kharkhan` Кхархан — Характеристик у Кхархана книга не даёт: способности — по тексту сцен, без статблока. Мифы Ктулху книга не упоминает; категория «сверхъестественное» — по описанию духа. «Кхарахан» (с. 8) — опечатка име
-- [low] `coc:spell:call-kharkhan` Призвание Кхархана — Новое заклинание сценария «Ограбление по-Аркхемски» (русский оригинал). Собственного названия у заклинания в книге нет: «Призвание Кхархана» составлено по словам книги («призвания демона», с. 9; «чтоб
-
-### Призрак (`prizrak-ru`) — 10
-
-**Связи** (1)
-
-- [low] `prizrak-ru/scene/priglashenie` Приглашение — сцена без места; сценарий prizrak-ru/scenario/prizrak
-
-**Контекст** (9)
-
-- [medium] `prizrak-ru/character/alessandro-makarios` Алессандро Макариос — character без описания
-- [medium] `prizrak-ru/character/ameli-khuper` Амели Хупер — character без описания
-- [medium] `prizrak-ru/character/bendzhamin-khuper` Бенджамин Хупер — character без описания
-- [medium] `prizrak-ru/character/deniel-ellsvort` Дэниел Эллсворт — character без описания
-- [medium] `prizrak-ru/character/genri-uebber` Генри Уэббер — character без описания
-- [medium] `prizrak-ru/character/maykl-tomas` Майкл Томас — character без описания
-- [medium] `prizrak-ru/character/pedro-makarios` Педро Макариос — character без описания
-- [medium] `prizrak-ru/character/piter-ellsvort` Питер Эллсворт — character без описания
-- [medium] `prizrak-ru/character/rozalina` Розалина — character без описания
-
 ### Миры Говарда Филлипса Лавкрафта: артефакты и легендарные… (`miry-lavkrafta-artefakty-ru`) — 9
 
 **Тексты** (4)
@@ -3282,6 +2730,19 @@
 - [medium] с. 4: 2 карт. (2484×3234, 2480×3225); на странице: Роды занятий сыщиц («Женщины Французской революции»)
 - [medium] с. 5: 1 карт. (2484×3234); на странице: Права женщин до, во время и после революции («Женщины Французской революции»)
 
+### Холодный урожай (`kholodnyy-urozhay-ru`) — 8
+
+**Картинки** (8)
+
+- [medium] с. 1: 1 карт. (696×899); на странице: Холодный урожай
+- [medium] с. 23: 1 карт. (628×309); без картинки: Борис Александрович Гапон (character), Галина Петровна Смольская (character), Ллойгор («Холодный урожай») (creature)
+- [medium] с. 35: 2 карт. (307×399, 305×398); без картинки: Александр Гайдарович Баршай (character), Мария Андроновна Елизарова (character), Василий Викторович Смольский (character), Грузовик ГАЗ АА (item)
+- [medium] с. 37: 1 карт. (306×398); без картинки: Дмитрий Петрович Абрамов (character), Кравчуки и Витрукины (character), Вениамин Тимурович Кесин (character)
+- [medium] с. 38: 1 карт. (630×308); без картинки: Берия (character), Мария Андроновна Елизарова (character), Раиса Андреевна Елизарова (character), Рисунок Раисы (handout), Приказ НКВД № 00447 (item)
+- [medium] с. 39: 1 карт. (302×399); без картинки: Андрей Галинович Елизаров (character), Рисунок Раисы (handout)
+- [low] с. 25: 1 карт. (313×402); на странице: Депо (location), Окрестности Куйбышева (location), Поезд (scene), Сон и кошмары (scene)
+- [low] с. 63: 1 карт. (568×778); страницу не цитирует никто
+
 ### Мифы Хастура. Том 1: Путь в Каркозу (`mify-hastura-ru`) — 8
 
 **Тексты** (2)
@@ -3300,6 +2761,25 @@
 - [low] `mify-hastura-ru/creature/night-flyers` Летящие сквозь ночь — Характеристик в книге нет: «используйте любые характеристики существ, которые вы захотите; они могут стать практически чем угодно эквивалентной массы и размера». Фанатский перевод (издание trusted): р
 - [low] `mify-hastura-ru/creature/unseen-horse` Незримый Конь — Явление без характеристик и без атак. Фанатский перевод (издание trusted): русский текст — источник, флаг translated не ставится (Р-230, Р-147). Книга — скан: текст по распознаванию, числа и кубы свер
 - [low] `mify-hastura-ru/tome/le-roi-en-jaune-1895` Король в жёлтом (издание 1895 года) — Числа чтения (потеря Рассудка, Мифы Ктулху, время изучения) книга не даёт — см. общую запись. Язык не назван (французское заглавие — только название). Другие датировки в сборнике: «напечатана частным 
+
+### Особняки безумия. За закрытыми дверями (`osobnyaki-bezumiya-ru`) — 8
+
+**Тексты** (2)
+
+- [medium] с. 8 (физ. 9) — с. 9 (физ. 10): 2 стр., 681 слов не цитирует ни одна запись; headings: ПРЕЙИСАОВИЕ; НЕМНОГО ИСТОРИИ; Первое издание «Особняков безумия» было опубликова-; Майкла (Шона) Девульфа, «Плантация» Уэсли Мартина,; near: Материал «Корбитт 4»: дневники Корбитта
+- [low] с. 220 (физ. 221) — с. 225 (физ. 226): 5 стр., 784 слов не цитирует ни одна запись; headings: Карты; Владения мистера Корбитта; УВИЕрОкОВ) 15, 189; Дом Корбитта
+
+**Связи** (5)
+
+- [low] `osobnyaki-bezumiya-ru/scene/code-letter` Завязка: письмо — сцена без места; сценарий osobnyaki-bezumiya-ru/scenario/code-secret-code
+- [low] `osobnyaki-bezumiya-ru/scene/code-meeting-connolly` Знакомство с Коннолли — сцена без места; сценарий osobnyaki-bezumiya-ru/scenario/code-secret-code
+- [low] `osobnyaki-bezumiya-ru/scene/code-ordinary-day` Самый обычный день — сцена без места; сценарий osobnyaki-bezumiya-ru/scenario/code-secret-code
+- [low] `osobnyaki-bezumiya-ru/scene/crooked-preliminary-research` Предварительное расследование — сцена без места; сценарий osobnyaki-bezumiya-ru/scenario/crooked-manse
+- [low] `osobnyaki-bezumiya-ru/scene/memphis-staying-on-track` Как не сбиться со следа — сцена без места; сценарий osobnyaki-bezumiya-ru/scenario/memphis-house-of-memphis
+
+**Контекст** (1)
+
+- [low] `osobnyaki-bezumiya-ru/character/memphis-edith` Эдит — Полного статблока в книге нет: только пункты здоровья (с. 114).
 
 ### Тень над Провиденсом (`ten-nad-providensom-ru`) — 8
 
@@ -3328,6 +2808,18 @@
 
 - [low] `kogda-zlo-pobezhdaet-ru/character/kultisty` Культисты — Групповой профиль без статблока: чисел книга не даёт; оружие — кухонные ножи (для игры подойдёт нож из справочника, вывод из текста, Р-41). Имена придуманы (Р-151).
 - [low] `kogda-zlo-pobezhdaet-ru/creature/avatar-v-tele-melindy` Аватар Ньярлатхотепа в теле Мелинды — Статблока книга не даёт — только описание способностей; числа Хранитель задаёт сам.
+
+### Mothers Love (перевод владельца) (`mothers-love-ru`) — 7
+
+**Картинки** (7)
+
+- [high] с. 1: 1 карт. (2560×3310); без картинки: Анджела Мэй Бэйстебл (character), Роберто Сото (character), Тедди Уинн (character), «Аркхэм Эдвертайзер», 11 сентября 1928 года (handout), Раздатка H01: документы «Материнская любовь» № 1 (досье Бюро на банду «Лягушка») (handout)
+- [high] с. 4: 2 карт. (2025×1418, 2560×3310); без картинки: Анджела Мэй Бэйстебл (character), Мэри Сиск (character), Тобиас Сиск (character), Полицейская ищейка («Любовь матери») (creature), «Аркхэм Эдвертайзер», 11 сентября 1928 года (handout)
+- [high] с. 6: 1 карт. (2233×2945); без картинки: Джеффри Кинселла (character), Эйб Дункан (character), Пёрл Каммайр (character), Роберто Сото (character), Тедди Уинн (character)
+- [high] с. 8: 1 карт. (2080×1471); без картинки: Чарльз Гилман (character), Мойра Пирс (character), Карл Этеридж (character), Тедди Уинн (character), Типичный сотрудник полиции штата / агент BOI (character)
+- [high] с. 9: 2 карт. (1259×1244, 2025×1163); без картинки: Грейс Декерт (character), Иезекииль Сиск (character), Карл Этеридж (character), Тедди Уинн (character), Томас Хейнс (character)
+- [high] с. 10: 2 карт. (865×1200, 2073×1446); без картинки: Грейс Декерт (character), Карл Этеридж (character), Пёрл Каммайр (character), Томас Хейнс (character)
+- [high] с. 11: 1 карт. (1340×1871); без картинки: Эйб Дункан (character), Карл Этеридж (character), Мэри Сиск (character), Пёрл Каммайр (character), Роберто Сото (character)
 
 ### Вне власти времени (`vne-vlasti-vremeni-ru`) — 7
 
@@ -3388,28 +2880,6 @@
 - [high] с. 12 (физ. 15): 1 карт. (1231×1822); без картинки: Эйдан Мёрдок (character), Охотничий нож Мёрдока (item)
 - [medium] с. -2 (физ. 1): 1 карт. (2480×3508); на странице: Забывающийся
 
-### mertvennyy-svet-ru (`mertvennyy-svet-ru`) — 6
-
-**Контекст** (6)
-
-- [medium] `mertvennyy-svet-ru/character/eduard-mansur-diop` Эдуард Мансур Диоп — character без описания
-- [medium] `mertvennyy-svet-ru/character/ektor-bonilya` Эктор Бонилья — character без описания
-- [medium] `mertvennyy-svet-ru/character/grace-riley` Грейс Райли — character без описания
-- [medium] `mertvennyy-svet-ru/character/jacob-carfax` Джейкоб Карфакс — character без описания
-- [medium] `mertvennyy-svet-ru/character/lili-berzheron` Лили Бержерон — character без описания
-- [medium] `mertvennyy-svet-ru/character/rose-preston` Роуз Престон — character без описания
-
-### za-zakrytymi-dveryami-ru (`za-zakrytymi-dveryami-ru`) — 6
-
-**Контекст** (6)
-
-- [medium] `za-zakrytymi-dveryami-ru/character/atef-farid-al-tadir` Атеф Фарид аль-Тадир — character без описания
-- [medium] `za-zakrytymi-dveryami-ru/character/daphne-lexington` Дафна Лексингтон — character без описания
-- [medium] `za-zakrytymi-dveryami-ru/character/idella-brown` Иделла Браун — character без описания
-- [medium] `za-zakrytymi-dveryami-ru/character/john-brown` Джон Браун — character без описания
-- [medium] `za-zakrytymi-dveryami-ru/character/peter-lexington` Питер Лексингтон — character без описания
-- [medium] `za-zakrytymi-dveryami-ru/character/yuna-nakane` Юна Наканэ — character без описания
-
 ### Каникулы в Иннсмуте (`kanikuly-v-innsmute-ru`) — 5
 
 **Картинки** (4)
@@ -3422,19 +2892,6 @@
 **Контекст** (1)
 
 - [low] `kanikuly-v-innsmute-ru/creature/drevniy-glubokovodnyy` Древний Глубоководный — Статблока нет: книга велит взять характеристики обычного Глубоководного (coc:creature:deep-one) и умножить на 1,5.
-
-### Одно небольшое дельце... (`odno-nebolshoe-deltse-ru`) — 5
-
-**Картинки** (1)
-
-- [high] с. 10 (физ. 11): 2 карт. (1283×809, 1316×845); без картинки: Материал 1. Открытка с приглашением (handout)
-
-**Контекст** (4)
-
-- [medium] `odno-nebolshoe-deltse-ru/character/brian-paterson` Брайан Патерсон — character без описания
-- [medium] `odno-nebolshoe-deltse-ru/character/douglas-parker` Дуглас Паркер — character без описания
-- [medium] `odno-nebolshoe-deltse-ru/character/leonard-miller` Леонард Миллер — character без описания
-- [medium] `odno-nebolshoe-deltse-ru/character/michael-green` Майкл Грин — character без описания
 
 ### Подземка (`podzemka-ru`) — 5
 
@@ -3449,25 +2906,17 @@
 
 - [low] `podzemka-ru/scene/chto-pomnit-lyao-khan` Что помнит Ляо Хан — сцена без места; сценарий podzemka-ru/scenario/podzemka
 
-### les-vendigo-ru (`les-vendigo-ru`) — 5
+### Bless the Beast and Children (перевод владельца) (`bless-the-beast-and-children-ru`) — 4
 
-**Контекст** (5)
+**Картинки** (3)
 
-- [medium] `les-vendigo-ru/character/bernard-ebshteyn` Бернард Эбштейн — character без описания
-- [medium] `les-vendigo-ru/character/charlie-lisiy-khvost` Чарли Лисий Хвост — character без описания
-- [medium] `les-vendigo-ru/character/neidelman` Доктор Л. К. Нейдельман — character без описания
-- [medium] `les-vendigo-ru/character/norman-faulkner` Норман Фолкнер — character без описания
-- [medium] `les-vendigo-ru/character/sylvia-davidson` Сильвия Дэвидсон — character без описания
+- [high] с. 6: 1 карт. (770×1640); без картинки: Донни О’Ши (character), Эмили Лангфорд (character), Окровавленная золотая серьга (item), Грегори Далберг (character)
+- [high] с. 10: 1 карт. (1240×795); без картинки: Дэнни Эймс (character), Энсон Бест (character), Детские бумаги #4. Выдержки из истории болезни Дэнни Эймса (handout)
+- [medium] с. 1: 1 карт. (1183×548); на странице: Благослови детей его
 
-### startovyy-nabor-ru (`startovyy-nabor-ru`) — 5
+**Связи** (1)
 
-**Контекст** (5)
-
-- [medium] `startovyy-nabor-ru/character/jessie-williams` Джесси Уильямс — character без описания
-- [medium] `startovyy-nabor-ru/character/keiko-kane` Кейко Кейн — character без описания
-- [medium] `startovyy-nabor-ru/character/louisa-russo` Луиза Руссо — character без описания
-- [medium] `startovyy-nabor-ru/character/nevada-jones` Невада Джонс — character без описания
-- [medium] `startovyy-nabor-ru/character/wentworth-avebury` Уэнтворт Эйвбери — character без описания
+- [low] `bless-the-beast-and-children-ru/scene/istoriya-denni-eymsa` История Дэнни Эймса — сцена без места; сценарий bless-the-beast-and-children-ru/scenario/bless-the-beast-and-children
 
 ### Омерзительная пятёрка (`omerzitelnaya-pyaterka-ru`) — 4
 
@@ -3517,6 +2966,18 @@
 
 - [low] `secrets-of-the-kremlin-en/tome/russian-necronomicon` Русский «Некрономикон» — Русский текст — по рабочему переводу владельца (2_Обработка/тайны кремля 1931/document.html), сверен с английским оригиналом; числа — по английской странице; меры переведены в метрические (Р-64). Хара
 
+### Тайник Бутлегеров (`taynik-butlegerov-ru`) — 4
+
+**Картинки** (3)
+
+- [high] с. 0 (физ. 2): 7 карт. (1270×595, 1270×594, 2532×396, 2532×388…); без картинки: Стивен Уэлрайт (character)
+- [high] с. 17 (физ. 19): 5 карт. (1270×595, 1270×594, 276×796, 1312×492…); без картинки: Джордж Нортон (character), Герберт Ловетт (character), Итан Уолкер (character), Лютер Роял (character), Сальваторе Маранцано (character)
+- [medium] с. 1 (физ. 3): 6 карт. (1270×595, 1270×594, 692×600, 292×796…); на странице: Тайник Бутлегеров
+
+**Контекст** (1)
+
+- [low] `coc:spell:pepelnaya-pechat` Пепельная печать — Новое заклинание сценария «Тайник Бутлегеров» (русский оригинал, английского названия нет; скан без текстового слоя, сверено по изображениям страниц). Книга описывает только действие уже наложенной пе
+
 ### Джонни бой (`dzhonni-boy-ru`) — 3
 
 **Картинки** (3)
@@ -3525,6 +2986,17 @@
 - [high] с. 8: 2 карт. (1416×939, 574×866); без картинки: Джонни «Бой» Диксон (character), Фотокарточка Джонни Боя (handout), Радиоприёмник Regency TR-1 (item)
 - [medium] с. 1: 1 карт. (1170×2532); на странице: Джонни Бой
 
+### Хэллоуин в Данвиче (`hellouin-v-danviche-ru`) — 3
+
+**Картинки** (2)
+
+- [medium] с. 1: 2 карт. (1083×1592, 385×385); на странице: Хэллоуин в Данвиче
+- [medium] с. 7: 1 карт. (625×399); без картинки: Эдит (character), Морин Уэйтли (character), Уильям Морган (character), Материал «Дневник»: гнилой дневник Морин Уэйтли-Морган (handout), Самогон «эпплджек» с Ядом Полуночного Сна (item)
+
+**Контекст** (1)
+
+- [low] `hellouin-v-danviche-ru/creature/khobgobliny` Хобгоблины — Статблока в книге нет — только проявления и потеря Рассудка.
+
 ### Наедине с тьмой: раздатка (`naedine-s-tmoy-handouts-ru`) — 3
 
 **Картинки** (3)
@@ -3532,14 +3004,6 @@
 - [medium] с. 1: 4 карт. (6210×4050, 484×1784, 436×1605, 2550×3300); на странице: Головоломка с пирамидой
 - [medium] с. 2: 2 карт. (3129×4022, 2550×3300); страницу не цитирует никто
 - [medium] с. 3: 4 карт. (3129×4022, 484×1784, 436×1605, 2550×3300); на странице: Головоломка с пирамидой
-
-### Остров лучезарной надежды (`ostrov-luchezarnoy-nadezhdy-ru`) — 3
-
-**Контекст** (3)
-
-- [medium] `ostrov-luchezarnoy-nadezhdy-ru/character/arman` Арман — character без описания
-- [medium] `ostrov-luchezarnoy-nadezhdy-ru/character/bayard` Баярд — character без описания
-- [medium] `ostrov-luchezarnoy-nadezhdy-ru/character/markiz-de-dammarten` Маркиз де Даммартен — character без описания
 
 ### Чулки возле печки (`chulki-vozle-pechki-ru`) — 2
 
@@ -3617,12 +3081,15 @@
 - [high] с. 18: 3 карт. (1648×1222, 1024×528, 1298×592); без картинки: Роберт Бэйтс (character), Материал 1. Фрагмент книги «История Огайо в легендах и преданиях» (handout), Материал 2. Записка Бэйтса (handout), «История Огайо в легендах и преданиях» (item), Пакет с деньгами Бэйтса (item)
 - [medium] с. 1: 1 карт. (946×1024); на странице: Жертвы северных ветров
 
-### koshmarnyy-priliv-ru (`koshmarnyy-priliv-ru`) — 2
+### Лечебница (`lechebnitsa-ru`) — 2
 
-**Контекст** (2)
+**Связи** (1)
 
-- [medium] `koshmarnyy-priliv-ru/character/eleanor-woods` Элеанор Вудс — character без описания
-- [medium] `koshmarnyy-priliv-ru/character/ellery-woods` Эллери Вудс — character без описания
+- [low] `lechebnitsa-ru/scene/put-na-ostrov` Путь на остров — сцена без места; сценарий lechebnitsa-ru/scenario/lechebnitsa
+
+**Контекст** (1)
+
+- [low] `lechebnitsa-ru/tome/manuskript-kastro` Манускрипт Кастро — Потери Рассудка, прибавки к Мифам и заклинаний книга не даёт.
 
 ### Стартовый набор: Наедине с пламенем (простая версия) (`naedine-s-plamenem-ru`) — 2
 
@@ -3630,6 +3097,13 @@
 
 - [low] `naedine-s-plamenem-ru/creature/vspykhnuvshie-zveri` Вспыхнувшие звери — Статблока нет. Что это за звери (волки? койоты?) и реальны ли они, книга не говорит; потеря Рассудка составлена по двум абзацам (успех — абз. 269, провал — абз. 5).
 - [low] `coc:spell:vyzov-nebesnogo-plameni` Вызов Небесного Пламени — Только «Наедине с пламенем» (официальный перевод): цены и шанса успеха книга не даёт, механики сотворения нет — только сюжетный исход (абз. 80). Английское название не сверено: английского издания при
+
+### Ограбление по-Аркхэмски (`ograblenie-po-arkhemski-ru`) — 2
+
+**Контекст** (2)
+
+- [low] `ograblenie-po-arkhemski-ru/creature/kharkhan` Кхархан — Характеристик у Кхархана книга не даёт: способности — по тексту сцен, без статблока. Мифы Ктулху книга не упоминает; категория «сверхъестественное» — по описанию духа. «Кхарахан» (с. 8) — опечатка име
+- [low] `coc:spell:call-kharkhan` Призвание Кхархана — Новое заклинание сценария «Ограбление по-Аркхемски» (русский оригинал). Собственного названия у заклинания в книге нет: «Призвание Кхархана» составлено по словам книги («призвания демона», с. 9; «чтоб
 
 ### Arkham: insert maps (`arkham-insert-maps-en`) — 1
 
@@ -3654,4 +3128,22 @@
 **Картинки** (1)
 
 - [medium] с. 3: 1 карт. (1080×1080); на странице: Лагерь Санни
+
+### Одно небольшое дельце... (`odno-nebolshoe-deltse-ru`) — 1
+
+**Картинки** (1)
+
+- [high] с. 10 (физ. 11): 2 карт. (1283×809, 1316×845); без картинки: Материал 1. Открытка с приглашением (handout)
+
+### Двери во тьму (`dveri-vo-tmu-ru`) — 1
+
+**Связи** (1)
+
+- [low] `dveri-vo-tmu-ru/scene/lake-involving` Вовлечение сыщиков — сцена без места; сценарий dveri-vo-tmu-ru/scenario/servants-of-the-lake
+
+### Призрак (`prizrak-ru`) — 1
+
+**Связи** (1)
+
+- [low] `prizrak-ru/scene/priglashenie` Приглашение — сцена без места; сценарий prizrak-ru/scenario/prizrak
 

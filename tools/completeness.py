@@ -62,7 +62,9 @@ CLASSES = {"text": "Тексты", "art": "Картинки", "links": "Связ
 
 def ru(v) -> str:
     if isinstance(v, dict):
-        return (v.get("ru") or v.get("en") or "").strip()
+        if "ru" in v or "en" in v:
+            return (v.get("ru") or v.get("en") or "").strip()
+        return " ".join(ru(x) for x in v.values()).strip()     # background: {description, ideology, traits, …}
     if isinstance(v, list):
         return " ".join(ru(x) for x in v)
     return v.strip() if isinstance(v, str) else ""
@@ -301,8 +303,9 @@ class Completeness:
                 self.add("links.unused", bid, f"{k}: ни одна запись на него не ссылается", "low", i)
             if k in ("character", "creature", "location", "scenario", "handout", "item", "tome", "organization", "spell") \
                     and not ru(r.get("description")) and not ru(r.get("summary")) and not ru(r.get("background")) \
-                    and not ru(r.get("text")) and not ru(r.get("definition")):
-                self.add("context.no_description", bid, f"{k} без описания", "medium" if k in ("character", "scenario", "creature") else "low", i)
+                    and not ru(r.get("text")) and not ru(r.get("definition")) and not ru(r.get("legend")):
+                self.add("context.no_description", bid, f"{k} без описания", "low" if k == "tome" and r.get("reading")
+                         else "medium" if k in ("character", "scenario", "creature") else "low", i)
             if k == "handout" and not ru(r.get("text")) and not r.get("images"):
                 self.add("context.handout_empty", bid, "раздатка без текста и картинки", "high", i)
             if k == "scenario":

@@ -318,7 +318,8 @@
   "quality": {
     "needs_review": false,
     "flags": [
-      "translated"
+      "translated",
+      "parse_uncertain"
     ],
     "notes": "Житель района «Даунтаун» путеводителя «Аркхэм» (2023); статблок как напечатан (Р-25), перевод наш. В книге — «Language (English) 60%, Language (German) 85%»; немецкий записан родным языком по происхождению персонажа (вывод из текста, Р-41). Путеводитель Hort (с. 35): у Hort учился у Фрейда, затем у Юнга; навык Психоанализа — 70%; адрес — 555 Марш-стрит."
   },
@@ -343,6 +344,13 @@
       "to": "{\"book_id\": \"arkham-guide-hort-ru\", \"physical_page\": 35, \"printed_page\": 35, \"method\": \"book_text\", \"verified\": true, \"note\": \"219. Доктор Хайнрих Т.Мюльхиг (с. 35): псевдоним, пометка\"}",
       "reason": "источник дополнения: путеводитель Hort (arkham-guide-hort-ru, с. 35) — дополнение к книге 2023 (Р-234)",
       "ref": "Р-234"
+    },
+    {
+      "field": "errata",
+      "from": null,
+      "to": "statblock.attacks[Драка].damage: опечатка урона (лишний «+» в начале)",
+      "reason": "сверка контента (checks/20261115-content/arkham-a.md): опечатка урона не была отмечена (arkham-en, с. 97, физ. 98)",
+      "ref": "Р-247"
     }
   ],
   "images": [
@@ -351,6 +359,15 @@
       "kind": "portrait",
       "caption": null,
       "source": "Arkham (Chaosium, 2023), с. 97 (физ. 98)"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.attacks[Драка].damage",
+      "printed": "+1D3+1D4",
+      "expected": "1d3+1d4 (1d3 + БкУ +1d4)",
+      "note": "Урон драки напечатан с лишним «+» в начале (arkham-en, с. 97, физ. 98); в raw — как напечатано, кубы и БкУ разобраны по смыслу.",
+      "fixed": false
     }
   ]
 }

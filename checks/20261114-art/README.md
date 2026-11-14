@@ -43,4 +43,13 @@ are **not** imported, only listed. Pictures the book itself says are AI-made are
 5. Write `checks/20261114-art/<unit>-atmosphere.json` (a JSON list) and `checks/20261114-art/<unit>.md` (Russian):
    per book — pages looked at, pictures added (record → kind), atmosphere count, doubts, handout candidates.
 
+## Scans (books without a text layer, added 2026-11-14 evening)
+
+The completeness check did not look for pictures in long scans (every page is one image), so these books have no
+candidate list: go through all pages yourself. Render thumbnails (`pdftoppm -r 40 -png`, contact sheets of 6–9 pages,
+≤ 800 px wide) to find pages with pictures, then render those pages at 150–200 dpi and crop each picture by a frame
+(fractions of the page; save frames to `checks/20261114-art/<unit>-boxes.json`). Match with records by the page's text
+(OCR `.cache/ocr/<book_id>/NNN.txt` when present, otherwise read the page image) and by the records citing that page.
+Small portraits are taken when the character has no larger picture (Р-245). List atmosphere pages as usual.
+
 Never commit. Do not touch other units' books. Final report: counts by book (added by kind / atmosphere / doubts).

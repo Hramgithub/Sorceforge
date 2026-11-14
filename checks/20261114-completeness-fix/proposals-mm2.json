@@ -1,0 +1,41 @@
+{
+  "schema": "sourcefold.proposals.v0",
+  "by": "часть mm2 (Malleus Monstrorum II, Р-242)",
+  "proposals": [
+    {
+      "target": "coc:creature:abhoth",
+      "op": "set",
+      "path": "subcategory",
+      "value": "Великий Древний",
+      "reason": "В Malleus Monstrorum II Абхот — Великий Древний: заголовок статьи «Abhoth (Great Old One)», с. 23, и указатель «Божества по типам», с. 20 (coc:rule:malleus-deities-by-type); в базе было «Внешний бог». Malleus важнее «Книги хранителя»",
+      "ref": "Р-22"
+    },
+    {
+      "target": "coc:creature:aphoom-zhah",
+      "op": "append",
+      "path": "abilities.0.refs",
+      "value": "coc:table:malleus-aphoom-zhah-hit-location",
+      "reason": "«Ледяное касание»: часть тела при провале трудной проверки ВЫН — по таблице попаданий 1d20 (Malleus II, с. 26–27), заведена отдельной записью",
+      "ref": "Р-242",
+      "correction": false
+    },
+    {
+      "target": "coc:creature:nyogtha",
+      "op": "append",
+      "path": "abilities.4.refs",
+      "value": "coc:spell:vach-viraj-incantation",
+      "reason": "«Изгнание»: заклинание Vach-Viraj (врезка Malleus II, с. 166) заведено записью заклинания",
+      "ref": "Р-242",
+      "correction": false
+    },
+    {
+      "target": "coc:creature:nyogtha",
+      "op": "replace",
+      "path": "abilities.4.summary",
+      "old": "лишь заклинанием Vach-Viraj",
+      "new": "лишь «Песнопением Вак-Вирадж» (Vach-Viraj)",
+      "reason": "официальное русское название заклинания — «Песнопение Вак-Вирадж» («Книга хранителя», с. 303); полная механика — coc:spell:vach-viraj-incantation",
+      "ref": "Р-184"
+    }
+  ]
+}

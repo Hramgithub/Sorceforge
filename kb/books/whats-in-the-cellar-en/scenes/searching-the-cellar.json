@@ -1,0 +1,101 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "whats-in-the-cellar-en/scene/searching-the-cellar",
+  "kind": "scene",
+  "name": {
+    "ru": "Обыск погреба",
+    "en": "Searching the Cellar"
+  },
+  "description": {
+    "ru": "Полки забиты бесполезным хламом, среди которого спрятаны полезные инструменты и оружие. Чтобы найти разные предметы, обыскивающему полки сыщику нужна успешная проверка Внимания. Некоторые предметы найти труднее — нужен трудный или чрезвычайный успех; Хранитель выбирает одну находку из списков ниже по результату броска игрока (урон предмета, если им сражаться, — в скобках). Разрешите игрокам проходить проверку Внимания не один раз, если они говорят, что обыскивают разные части погреба (или позже по ходу сценария).\nОбычный успех:\n• Фонарь*\n• Старая коробка (см. «Улика третья»)\n• Собрание книг (см. «Улика четвёртая»)\n• Три пары старых кожаных перчаток (см. «Улика пятая»)\n• Лопата (1d6+БкУ)\n• Мотыга (1d4+БкУ)\n• Бейсбольная бита (1d6+БкУ)\n• Молоток (1d4+БкУ)\n*Фонарю нужно масло: успешная проверка ИНТ напоминает сыщику, что он видел на кухне маленькую канистру керосина.\nТрудный успех:\n• Тяжёлый гаечный ключ (1d6+БкУ)\n• Кинжал (1d4+2+БкУ)\n• Садовый совок с очень острыми краями (1d4+2+БкУ)\nЧрезвычайный успех:\n• Кавалерийская сабля (1d8+БкУ)\nГде на полках лежат предметы — ключ «Карты погреба для Хранителя» (с. 8): 1 — бейсбольная бита, 2 — лопата и мотыга, 3 — фонарь, 4 — совок, 5 — кинжал, 6 — кавалерийская сабля, 7 — гаечный ключ, 8 — молоток.",
+    "en": null
+  },
+  "when": "В любой момент, пока сыщики в погребе",
+  "arc": {
+    "scenario": "whats-in-the-cellar-en/scenario/whats-in-the-cellar",
+    "part": "3. Улики с первой по четвёртую",
+    "order": 3
+  },
+  "where": [
+    {
+      "location": "whats-in-the-cellar-en/location/blackwood-cellar",
+      "note": "полки погреба"
+    }
+  ],
+  "participants": [
+    {
+      "id": "whats-in-the-cellar-en/character/clarke",
+      "role": "сыщик"
+    },
+    {
+      "id": "whats-in-the-cellar-en/character/rumberger",
+      "role": "сыщик"
+    },
+    {
+      "id": "whats-in-the-cellar-en/character/dr-pennyworth",
+      "role": "сыщик"
+    },
+    {
+      "id": "whats-in-the-cellar-en/character/hughes",
+      "role": "сыщик"
+    }
+  ],
+  "mechanics": {
+    "ru": "Проверка Внимания: обычный, трудный или чрезвычайный успех — разные находки; повторные проверки — при обыске разных частей погреба. Проверка ИНТ — вспомнить о керосине на кухне.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Сыщики вооружаются и находят старую коробку, книги и перчатки (улики третья–пятая).",
+    "en": null
+  },
+  "refs": [
+    "whats-in-the-cellar-en/item/cellar-tools-and-weapons",
+    "whats-in-the-cellar-en/map/keepers-cellar-map",
+    "whats-in-the-cellar-en/scene/clue-3-old-box",
+    "whats-in-the-cellar-en/scene/clue-4-scrapbook",
+    "whats-in-the-cellar-en/scene/clue-5-digging-up-the-floor",
+    "coc:skill:spot-hidden",
+    "coc:rule:skill-rolls"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "whats-in-the-cellar-en",
+      "physical_page": 7,
+      "printed_page": 7,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Searching the Cellar»"
+    },
+    {
+      "book_id": "whats-in-the-cellar-en",
+      "physical_page": 8,
+      "printed_page": 8,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Keeper’s Cellar Map»: ключ"
+    }
+  ],
+  "errata": [
+    {
+      "field": "description.ru",
+      "printed": "Regular success finds: … An old box (see Clue Three)",
+      "expected": "старая коробка — при трудном успехе",
+      "note": "Список обычного успеха (с. 7) включает старую коробку, а «Clue Three: Old Box» (с. 9) требует трудной проверки Внимания. Оставлено как напечатано; Хранитель выбирает сам.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической)."
+  }
+}

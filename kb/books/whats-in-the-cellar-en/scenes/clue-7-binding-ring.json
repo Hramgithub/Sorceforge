@@ -1,0 +1,95 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "whats-in-the-cellar-en/scene/clue-7-binding-ring",
+  "kind": "scene",
+  "name": {
+    "ru": "Улика седьмая: связующее кольцо",
+    "en": "Clue Seven: Binding Ring"
+  },
+  "description": {
+    "ru": "Попросите каждого сыщика, раскапывающего пол, пройти проверку Удачи: сыщик с наименьшим успешным результатом находит кольцо, которое уронил Артур, — фамильное кольцо Блэквудов. Если сыщик — родственник Артура Блэквуда наденет связующее кольцо, магический знак вновь наполняется силой, и существо опять связано и больше не может причинить вреда.\nРодственники Артура среди готовых сыщиков — Кларк (кузен) и, о чём никто не знает, Доктор Пенниуорт (очень дальний родственник).",
+    "en": null
+  },
+  "when": "Пока существо атакует (около 10 минут)",
+  "arc": {
+    "scenario": "whats-in-the-cellar-en/scenario/whats-in-the-cellar",
+    "part": "5. Улика седьмая",
+    "order": 11
+  },
+  "where": [
+    {
+      "location": "whats-in-the-cellar-en/location/blackwood-cellar",
+      "note": "гравийный пол"
+    }
+  ],
+  "participants": [
+    {
+      "id": "whats-in-the-cellar-en/character/clarke",
+      "role": "сыщик"
+    },
+    {
+      "id": "whats-in-the-cellar-en/character/rumberger",
+      "role": "сыщик"
+    },
+    {
+      "id": "whats-in-the-cellar-en/character/dr-pennyworth",
+      "role": "сыщик"
+    },
+    {
+      "id": "whats-in-the-cellar-en/character/hughes",
+      "role": "сыщик"
+    },
+    {
+      "id": "whats-in-the-cellar-en/creature/creature-of-darkness",
+      "role": "нападает"
+    }
+  ],
+  "mechanics": {
+    "ru": "Проверка Удачи у каждого, кто копает: кольцо находит сыщик с наименьшим успешным результатом. Надеть кольцо должен кровный родственник Блэквудов.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Существо снова заточено под знаком (+1d8 Рассудка) — развязка сценария. Иначе бой идёт до уничтожения существа или гибели сыщиков; убив двух сыщиков, существо вырывается на свободу.",
+    "en": null
+  },
+  "refs": [
+    "whats-in-the-cellar-en/item/blackwood-ring",
+    "whats-in-the-cellar-en/item/arcane-symbol",
+    "whats-in-the-cellar-en/creature/creature-of-darkness",
+    "whats-in-the-cellar-en/character/clarke",
+    "whats-in-the-cellar-en/character/dr-pennyworth",
+    "whats-in-the-cellar-en/character/arthur-blackwood",
+    "coc:rule:luck-rolls"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "whats-in-the-cellar-en",
+      "physical_page": 10,
+      "printed_page": 10,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Clue Seven: Binding Ring»"
+    },
+    {
+      "book_id": "whats-in-the-cellar-en",
+      "physical_page": 7,
+      "printed_page": 7,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «The Importance of Blood»: кто из сыщиков родственник"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической)."
+  }
+}

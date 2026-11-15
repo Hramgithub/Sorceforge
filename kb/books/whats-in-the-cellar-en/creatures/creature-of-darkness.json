@@ -1,0 +1,313 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "whats-in-the-cellar-en/creature/creature-of-darkness",
+  "kind": "creature",
+  "name": {
+    "ru": "Существо тьмы",
+    "en": "The Creature of Darkness"
+  },
+  "aliases": [
+    "Существо тьмы, воплощение ненависти и злобы",
+    "The Creature of Darkness, Manifestation of Hate and Malice",
+    "creature of darkness",
+    "«джинн» Блэквудов",
+    "genie",
+    "daemon"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "безымянное существо из иного измерения",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "250",
+        "value": 250
+      },
+      "SIZ": {
+        "raw": "80",
+        "value": 80
+      },
+      "DEX": {
+        "raw": "35",
+        "value": 35
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "INT": {
+        "raw": "110",
+        "value": 110
+      },
+      "POW": {
+        "raw": "220",
+        "value": 220
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "33",
+      "value": 33
+    },
+    "mp": {
+      "raw": "44",
+      "value": 44
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "armor": {
+      "raw": "3 пункта: внеземная биология — пронзающее оружие наносит половину урона",
+      "value": 3
+    },
+    "attacks_per_round": {
+      "raw": "2 (за раунд может атаковать только одну цель)",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (щупальца)",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d4+1",
+          "dice": "1d4+1",
+          "adds_db": false
+        },
+        "notes": "Хлещет щупальцами, оканчивающимися кольцом острых зубов; вместо удара может попытаться провести «укус и захват»."
+      },
+      {
+        "name": {
+          "ru": "Укус и захват (манёвр)",
+          "en": "Bite + hold (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1 + захвачена конечность или голова",
+          "dice": null,
+          "adds_db": false,
+          "extra": "1 пункт урона"
+        },
+        "notes": "Способность «Укус и захват»: щупальце обвивает конечность, зубы впиваются — 1 пункт урона; нужно пять захватов (конечности и голова)."
+      },
+      {
+        "name": {
+          "ru": "Разорвать на части",
+          "en": "Rip and tear"
+        },
+        "kind": "special",
+        "skill": null,
+        "chance": {
+          "raw": "автоматический успех, встречная проверка (см. выше)",
+          "value": null
+        },
+        "damage": {
+          "raw": "5d6+1d4 (половина, если цель победит во встречной проверке)",
+          "dice": "5d6+1d4",
+          "adds_db": false
+        },
+        "notes": "Только когда захвачены все конечности и голова цели; встречная проверка ВЫН цели против СИЛ существа (способность «Разорвать на части»)."
+      }
+    ],
+    "dodge": {
+      "raw": "20% (10/4)",
+      "value": 20,
+      "half": 10,
+      "fifth": 4
+    },
+    "skills": [],
+    "sanity": {
+      "raw": "—",
+      "value": null
+    },
+    "spells": {
+      "raw": "нет",
+      "items": []
+    },
+    "sanity_loss": [
+      {
+        "success": "1d3",
+        "fail": "1d8",
+        "trigger": "увидеть существо тьмы"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Перемещение сквозь тени",
+      "summary": "Использует тени как порталы: перемещается из тени в тень в радиусе 20 м. Каждый «прыжок» стоит 1 ПМ. Существо пользуется этим для внезапных атак: позвольте сыщику пройти проверку Слуха — при провале существо внезапно атакует беспомощного сыщика.",
+      "raw": "Move through shadows: can use shadows as portals, allowing it to move from shadow to shadow within a twenty-yard radius. Each “jump” costs 1 magic point. The creature uses this ability for surprise attacks: allow an investigator to make a Listen roll: if failed, the creature gets a surprise attack against the helpless investigator.",
+      "refs": [
+        "coc:skill:listen",
+        "coc:rule:striking-the-first-blow"
+      ]
+    },
+    {
+      "name": "Телекинез",
+      "summary": "Мечет предметы по воздуху — в сыщиков как атаку или чтобы их отвлечь. Стоит 5 ПМ за включение плюс 1 ПМ за каждый пункт ТЕЛ перемещаемого предмета (например, банка с гвоздями или молоток — 3 ПМ, лопата — 6 ПМ и т. д.). Урон от разных предметов определяет Хранитель, сравнивая с уроном предметов из погреба (с. 7).",
+      "raw": "Telekinesis: able to hurl objects through the air, directed against the investigators as an attack or to distract them. Costs 5 magic points to activate plus 1 magic point per point of SIZ of the object being moved (e.g. a jar full of nails or a hammer costs 3 magic points, a spade or shovel 6 points, and so on). The Keeper should determine the damage caused by differing objects (referring to the item damages provided on page 7 for comparison).",
+      "refs": [
+        "whats-in-the-cellar-en/item/cellar-tools-and-weapons"
+      ]
+    },
+    {
+      "name": "Укус и захват",
+      "summary": "При успехе одно из щупалец обвивает конечность, и зубы впиваются в неё, нанося 1 пункт урона. Для человека существу нужно провести этот манёвр пять раз; цель может вырваться из каждого захвата успешной встречной проверкой СИЛ. Стойкие товарищи могут попытаться отрубить щупальце, держащее голову, руку или ногу друга, успешной атакой: 4 пункта урона (после брони) заставляют щупальце отпустить захват. Крах товарища при атаке означает, что удар достаётся другу, а не существу.",
+      "raw": "Bite and hold (mnvr): if successful, one of the creature’s tentacles has looped around a limb and its teeth latch onto the limb, inflicting 1 point of damage. The creature needs to perform this maneuver five times for a human target, who may attempt to break free of each hold with a successful opposed STR roll. Steadfast comrades may also attempt to sever a tentacle gripping a friend’s head, arms, or legs with a successful attack roll (4 points of damage (after armor) is enough to cause a tentacle to release its hold)—note that a comrade’s fumbled attack roll means their attack hurts their friend rather than the creature.",
+      "refs": [
+        "coc:rule:fighting-maneuvers",
+        "coc:rule:opposed-skill-rolls"
+      ]
+    },
+    {
+      "name": "Разорвать на части",
+      "summary": "Манёвр возможен, только когда захвачены все конечности цели; в одном раунде боя существо не может проводить и «укус и захват», и «разорвать на части». Если захвачены все конечности и голова сыщика, вместо проверки атаки существа проводится встречная проверка: ВЫН цели против СИЛ существа. Победило существо — цель в буквальном смысле разорвана на части и получает 5d6+1d4 урона; победила цель — она получает лишь половину урона. Свидетели такой страшной смерти проходят проверку Рассудка (потеря 1d4/1d8).",
+      "raw": "Rip and tear: this maneuver is only possible once all its target’s limbs have been successfully held. The creature cannot make a “bite and hold” and a “rip and tear” attack in the same combat round. If all of an investigator’s limbs and head are held, call for an opposed roll (instead of the creature’s attack roll), with the target’s CON opposing the creature’s STR. If the creature wins, the target is literally torn limb-from-limb, causing 5d6+1d4 damage. Should the target win, they suffer only half damage. Those witnessing such a sticky end should make a Sanity roll (1d4/1d8 loss).",
+      "refs": [
+        "coc:rule:opposed-skill-rolls"
+      ]
+    },
+    {
+      "name": "Сила от убийств",
+      "summary": "Каждое убийство усиливает существо. Если оно убьёт ещё двух людей (то есть двух сыщиков), то станет достаточно сильным, чтобы покинуть домик и отправиться исследовать наше измерение.",
+      "raw": "The creature has been waiting for someone with Blackwood blood to return to the cabin, as each kill strengthens it. If it kills two more humans (i.e. two of the investigators) it is strong enough to leave the cabin and begin exploring this dimension—which can only mean bad news for any humans it then comes upon."
+    },
+    {
+      "name": "Узы знака и кольца",
+      "summary": "Существо привязано к погребу магическим знаком, высеченным на известняковом полу (под гравием и ракушками), — знак действует, только пока кольцо Блэквудов носит живой потомок Колдуна Блэквуда. Если родственник Артура Блэквуда наденет найденное кольцо, знак вновь наполняется силой, и существо снова заперто и больше не может причинить вреда.",
+      "raw": "Keeper note: the magical sigil binds the creature to the cellar but requires the Blackwood ring to be worn by a living descendant of Wizard Blackwood to be effective. […] If the investigator related to Arthur Blackwood puts the binding ring on, the magical sigil is reenergized and the creature is bound once more, unable to cause further harm.",
+      "refs": [
+        "whats-in-the-cellar-en/item/arcane-symbol",
+        "whats-in-the-cellar-en/item/blackwood-ring"
+      ]
+    }
+  ],
+  "description": {
+    "ru": "Извивающаяся масса теневых чёрных щупалец, каждое из которых оканчивается кольцом острых зубов; ни черт, ни глаз у существа нет. Вблизи чувствуется его смрад — как от тухлых яиц и разрытой могилы. Головы нет, но есть колышущаяся центральная масса, из которой растут щупальца; отверстия на концах щупалец окружены иглоподобными зубами. Измерение, откуда оно пришло, совсем не похоже на наше. Впитывает пролитую кровь: после гибели Роуз Блэквуд на полу погреба не осталось ни капли.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Безымянное существо из иного измерения, с которым колдун Милтон Блэквуд заключил договор: оно наделило род Блэквудов сверхъестественной удачей — богатством и везением, — требуя платы кровью и костями. Затем Милтон заточил его в погребе своего летнего домика близ Уайтхолла знаком, высеченным на полу, и кольцом, которое носит кровный Блэквуд, — так род пользовался удачей без новых жертв. Двести лет существо пробыло в заточении, а правда о нём стала мифом и забылась. Ненависть к Блэквудам сделала его злобным и коварным: оно жаждет мести и истребления рода.\n18 июля 1928 года Артур Блэквуд снял кольцо, и существо растерзало его жену Роуз, спустившуюся в погреб; выпавшее у Артура кольцо существо закопало глубоко в пол, чтобы никто из Блэквудов больше не нашёл его. Существо нападает только на тех, кто находится рядом с членом семьи Блэквудов, приберегая кровных Блэквудов для последнего удара; поэтому оно не тронуло полицейских, осматривавших погреб.",
+    "en": null
+  },
+  "aura": {
+    "ru": "Ненависть существа проявляется резким падением температуры: чем злее существо, тем холоднее вокруг. Перед тем как оно проявится физически, воздух начинает пахнуть тухлыми яйцами и гниющей плотью.",
+    "en": null
+  },
+  "encounters": {
+    "ru": "Когда сыщики осмотрелись в погребе и, возможно, нашли улики с первой по третью, существо, чуя кровь Блэквудов, начинает проявляться: шумит и опрокидывает вещи телекинезом, чтобы отделить сыщика от товарищей, и нападает на тех, кто поодиночке ушёл в другую часть погреба. Находка улик 4–7 угрожает его существованию, и с каждой из них оно нападает яростнее, пока не проявится полностью и не сосредоточит атаки на одном сыщике. Сначала оно нападает на сыщиков без крови Блэквудов, а родственников приберегает напоследок. Если игроки совсем растерялись, существо может дразнить их и тем самым подсказывать («Я освобожусь! Кольцо больше не свяжет меня!», «Твои раскопки тебе не помогут!», «Твоя кровь проклята! Все Блэквуды должны умереть!»).",
+    "en": null
+  },
+  "habitat": "заточено под полом погреба хижины Блэквудов близ Уайтхолла (штат Нью-Йорк)",
+  "sources": [
+    {
+      "book_id": "whats-in-the-cellar-en",
+      "physical_page": 11,
+      "printed_page": 11,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «The Creature of Darkness, Manifestation of Hate and Malice»: статблок, способности (сверено по изображению страницы)"
+    },
+    {
+      "book_id": "whats-in-the-cellar-en",
+      "physical_page": 4,
+      "printed_page": 4,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Truth»: договор с Милтоном Блэквудом"
+    },
+    {
+      "book_id": "whats-in-the-cellar-en",
+      "physical_page": 5,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Truth», «The Blackwood Cabin»: заточение, гибель Роуз, кого существо атакует"
+    },
+    {
+      "book_id": "whats-in-the-cellar-en",
+      "physical_page": 7,
+      "printed_page": 7,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Clue One»: существо впитало кровь; врезка «The Importance of Blood»"
+    },
+    {
+      "book_id": "whats-in-the-cellar-en",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Playing the Creature of Darkness»: как ведёт себя существо"
+    },
+    {
+      "book_id": "whats-in-the-cellar-en",
+      "physical_page": 10,
+      "printed_page": 10,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Playing the Creature of Darkness» (окончание), врезка «Directing the Players», «Clue Six», «Clue Seven»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "abilities[Телекинез]",
+      "printed": "Costs 5 magic points to activate plus 1 magic point per point of SIZ … (e.g. a jar full of nails or a hammer costs 3 magic points, a spade or shovel 6 points)",
+      "expected": "не меньше 5 ПМ за любой предмет (5 за включение + 1 за пункт ТЕЛ)",
+      "note": "Примеры книги (3 ПМ за молоток, 6 ПМ за лопату) не сходятся с формулой «5 ПМ + 1 ПМ за пункт ТЕЛ»: молоток не может стоить меньше 5 ПМ. Оставлено как напечатано; какое правило брать, решает Хранитель.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Уникальное существо сценария, вида в справочниках нет; category «mythos_monster» — наш выбор (книга: «nameless creature», «not of this Earth», «extra-terrene biology», измерение, «совсем не похожее на наше»). Способности: raw — английский текст книги. Атака «Ближний бой» без БкУ — как напечатано (урон 1d4+1)."
+  }
+}

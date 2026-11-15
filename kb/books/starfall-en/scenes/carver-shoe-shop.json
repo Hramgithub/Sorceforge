@@ -1,0 +1,82 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "starfall-en/scene/carver-shoe-shop",
+  "kind": "scene",
+  "name": {
+    "ru": "Расспросы в обувной лавке Карвера",
+    "en": "Carver’s Shoe Shop"
+  },
+  "description": {
+    "ru": "Скромная мастерская по ремонту и продаже обуви в небольшом помещении в центре города; открыта с 9 утра до 8 вечера. Лавкой заведует помощница Уэнделла Мэрилин Бакнем. Мэрилин любит своего начальника и свою работу и старается помочь, но знает лишь то, что прочла в газетах. Если сыщики внушают доверие и хотят поговорить с Ритой, женой Уэнделла, она даст его домашний адрес. О жизни хозяина лавка говорит немного, но успешная проверка Внимания находит на его столе книгу заказов с записями об особых заказах; один из них — для Густава Годвина (с его адресом). Кроме того, за прилавком можно заметить пачку сигарет Уэнделла.",
+    "en": null
+  },
+  "when": "Первый акт, в часы работы лавки (с 9 утра до 8 вечера)",
+  "arc": {
+    "scenario": "starfall-en/scenario/starfall",
+    "part": "Акт первый: город сыщиков",
+    "order": 7
+  },
+  "where": [
+    {
+      "location": "starfall-en/location/carver-shoe-shop",
+      "note": null
+    }
+  ],
+  "participants": [
+    {
+      "id": "starfall-en/character/marilyn-bucknam",
+      "role": "помощница"
+    },
+    {
+      "id": "starfall-en/character/wendell-carver",
+      "role": "хозяин (в больнице)"
+    }
+  ],
+  "mechanics": {
+    "ru": "Внимание — книга заказов. О пачке сигарет — см. «Сигареты «Лаки Стар»».",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Адрес Карверов (к Рите), адрес Густава Годвина, ещё одна пачка сигарет.",
+    "en": null
+  },
+  "refs": [
+    "starfall-en/item/carver-sales-ledger",
+    "starfall-en/item/lucky-star-cigarettes",
+    "starfall-en/scene/carver-house",
+    "starfall-en/scene/godwin-estate"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "starfall-en",
+      "physical_page": 8,
+      "printed_page": 7,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Carver’s Shoe Shop»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "description.ru",
+      "printed": "See note on Lucky Star Cigarette Packs (p. 5)",
+      "expected": "p. 4",
+      "note": "Заметка о сигаретах «Лаки Стар» — на с. 4; в «Carver’s Shoe Shop» ссылка на с. 5.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1)."
+  }
+}

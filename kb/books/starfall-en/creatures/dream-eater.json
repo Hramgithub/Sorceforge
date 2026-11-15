@@ -1,0 +1,151 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "starfall-en/creature/dream-eater",
+  "kind": "creature",
+  "name": {
+    "ru": "Пожиратель снов",
+    "en": "The Dream Eater"
+  },
+  "aliases": [
+    "Dream Eater",
+    "Филип Гейнор, Пожиратель снов",
+    "Philip Gainor, Dream Eater"
+  ],
+  "category": "supernatural",
+  "subcategory": "сновидческое тело сновидца",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "form_of",
+      "target": "starfall-en/character/philip-gainor",
+      "note": "это сновидческое тело Филипа Гейнора",
+      "note_back": "сновидческое тело в Стране грёз"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "INT": {
+        "raw": "76",
+        "value": 76
+      },
+      "POW": {
+        "raw": "90",
+        "value": 90
+      }
+    },
+    "hp": {
+      "raw": "—",
+      "value": null,
+      "note": "неуязвим для физического урона"
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Встречная проверка МОЩ",
+          "en": "opposed POW check"
+        },
+        "kind": "special",
+        "skill": null,
+        "chance": {
+          "raw": "МОЩ 90, бонусная кость",
+          "value": 90
+        },
+        "damage": {
+          "raw": "проигравший сыщик теряет 3d10 МОЩ",
+          "dice": "3d10",
+          "adds_db": false,
+          "extra": "потеря МОЩ, а не ПЗ"
+        },
+        "notes": "Попытка вырвать у противника власть над реальностью Страны грёз; Пожиратель снов получает бонусную кость. Проиграл сыщик — теряет 3d10 МОЩ; проиграл Пожиратель снов — теряет 1d10 МОЩ."
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Неуязвимость",
+      "summary": "Сновидческое тело Филипа неуязвимо для физического урона; его призрачная форма состоит только из ИНТ и МОЩ.",
+      "raw": "Philip’s dreamlands form is immune to physical damage, and his wraith-like form consists only of INT and POW."
+    },
+    {
+      "name": "Поединок воли",
+      "summary": "Чтобы атаковать Пожирателя снов, сыщик проходит встречную проверку МОЩ, в которой Пожиратель снов получает бонусную кость: это попытка вырвать друг у друга власть над реальностью Страны грёз. Филип может так же атаковать сыщиков, сам начав проверку. Проиграл сыщик — теряет 3d10 МОЩ; проиграл Пожиратель снов — теряет 1d10 МОЩ.",
+      "raw": "To attack The Dream Eater, investigators must make an opposed POW check, which The Dream Eater receives a bonus die on. This represents an attempt to wrest control of reality in the Dreamlands from one another. Philip can similarly attack the investigators by initiating the check. If the investigator loses the POW check, they lose 3d10 POW. If the Dream Eater loses, he loses 1d10 POW.",
+      "refs": [
+        "coc:rule:opposed-pow-rolls",
+        "coc:rule:bonus-and-penalty-dice"
+      ]
+    },
+    {
+      "name": "Призыв обитателей Старфолла",
+      "summary": "Действием Пожиратель снов может призвать себе на помощь 1d4 обитателей Старфолла.",
+      "raw": "The Dream Eater can also summon 1d4 Starfall Denizens to assist him as an action.",
+      "refs": [
+        "starfall-en/creature/starfall-denizens"
+      ]
+    },
+    {
+      "name": "Клетка разума",
+      "summary": "Бой с Пожирателем снов скорее всего закончится тем, что сыщик окажется в одной из клеток Старфолла, а его разум — в плену за стеной сна.",
+      "raw": "Fighting the Dream Eater is likely to result in imprisonment inside one of the many cages in Starfall, their minds imprisoned beyond the wall of sleep.",
+      "refs": [
+        "starfall-en/item/mindcage"
+      ]
+    }
+  ],
+  "description": {
+    "ru": "Сновидческая форма Филипа Гейнора: существо высотой около 3 м из развевающихся плащей и полос почерневшей ткани; во вступлении книги — высокая тёмная фигура в тёмных одеждах, парящая невысоко над землёй. Чем дольше сыщики остаются в Старфолле, тем вероятнее встреча с ним.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Филип Гейнор с помощью листа Эреба развил дар Сновидения и создал в Стране грёз тёмный город Старфолл; порча листа исказила его разум, и это отражается в облике его сновидческого тела. Пожиратель снов держит разумы курильщиков листа Эреба в клетках Старфолла и питается их силой, возвращая себе молодость. Уничтожив Пожирателя снов в Стране грёз, сыщики навсегда закроют Филипу путь туда; его власть над Страной грёз угаснет, и разумы пленников Старфолла вернутся в их тела.",
+    "en": null
+  },
+  "encounters": {
+    "ru": "В Старфолле: чем дольше сыщики там остаются, тем вероятнее встреча. Бой — встречными проверками МОЩ; Пожиратель снов призывает на помощь 1d4 обитателей Старфолла. Победа над ним в Стране грёз оставляет меньше всего физических улик, но даётся очень тяжело.",
+    "en": null
+  },
+  "habitat": "Старфолл, Страна грёз",
+  "sources": [
+    {
+      "book_id": "starfall-en",
+      "physical_page": 14,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «The Dream Eater»"
+    },
+    {
+      "book_id": "starfall-en",
+      "physical_page": 4,
+      "printed_page": 3,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Philip Gainor, Dream Eater»: облик в Стране грёз"
+    },
+    {
+      "book_id": "starfall-en",
+      "physical_page": 13,
+      "printed_page": 12,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Dreamlands»: облик, клетки; «Conclusion»: уничтожение Пожирателя снов"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1). Уникальное существо сценария — сновидческое тело Филипа Гейнора; category «supernatural» — наш выбор. «ten-foot tall» — около 3 м (Р-64). Статблок книги — только ИНТ, МОЩ и «Attacks: 1»; ПЗ нет (неуязвим). Способности: raw — английский текст книги."
+  }
+}

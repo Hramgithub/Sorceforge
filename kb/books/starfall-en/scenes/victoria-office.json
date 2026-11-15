@@ -1,0 +1,80 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "starfall-en/scene/victoria-office",
+  "kind": "scene",
+  "name": {
+    "ru": "Обыск конторы Виктории Дойл",
+    "en": "Victoria’s Office"
+  },
+  "description": {
+    "ru": "Контора Виктории — в нескольких минутах ходьбы от больницы Святой Марии, в обветшалом квартале конторских зданий. Номер конторы — на почтовых ящиках у входа в комплекс. Дверь заперта; её можно вскрыть Взломом или СИЛ, а ещё подойдут ключи Виктории из больницы.\nВ конторе — стол, заваленный стопками записей по разным делам, полка со множеством книг и несколько растений. Успешная проверка Внимания находит папку с записями о передвижениях некоего «Марка Бейли» и фотографиями, где он застигнут с неизвестной женщиной. Проверка ИНТ (Идеи) позволит сыщикам понять, что женщина на снимках — молодая привлекательная медсестра со стойки приёмной больницы Святой Марии, мимо которой они проходили. На столе также несколько блокнотов, полупустая пачка сигарет и разная канцелярия.",
+    "en": null
+  },
+  "when": "После разговора с Дарлин Бейли или по визитной карточке Виктории",
+  "arc": {
+    "scenario": "starfall-en/scenario/starfall",
+    "part": "Акт первый: город сыщиков",
+    "order": 3
+  },
+  "where": [
+    {
+      "location": "starfall-en/location/victoria-doyle-office",
+      "note": null
+    }
+  ],
+  "participants": [
+    {
+      "id": "starfall-en/character/victoria-doyle",
+      "role": "хозяйка конторы (в больнице)"
+    },
+    {
+      "id": "starfall-en/character/mark-bayley",
+      "role": "на фотографиях"
+    }
+  ],
+  "mechanics": {
+    "ru": "Взлом или СИЛ — открыть дверь (или ключи Виктории). Внимание — папка. ИНТ (Идея) — узнать медсестру на снимках. О пачке сигарет — см. «Сигареты «Лаки Стар»».",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Ещё одна пачка сигарет; побочная линия Бейли (к болезни сновидений не ведёт).",
+    "en": null
+  },
+  "refs": [
+    "starfall-en/item/bayley-folder",
+    "starfall-en/item/lucky-star-cigarettes",
+    "starfall-en/item/victoria-doyle-effects",
+    "starfall-en/character/darlene-bayley"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "starfall-en",
+      "physical_page": 6,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Victoria’s Office»"
+    },
+    {
+      "book_id": "starfall-en",
+      "physical_page": 7,
+      "printed_page": 6,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Victoria’s Office» (окончание)"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1)."
+  }
+}

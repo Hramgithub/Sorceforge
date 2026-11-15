@@ -1,0 +1,222 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "starfall-en/creature/starfall-denizens",
+  "kind": "creature",
+  "name": {
+    "ru": "Обитатели Старфолла",
+    "en": "Starfall Denizens"
+  },
+  "aliases": [
+    "обитатель Старфолла",
+    "Starfall Denizen",
+    "бледнолицые слуги",
+    "residents of Starfall"
+  ],
+  "category": "supernatural",
+  "subcategory": "обитатели сновидческого города",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "servitor_of",
+      "target": "starfall-en/creature/dream-eater",
+      "note": "хозяин, создавший их город",
+      "note_back": "бледнолицые слуги"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "80",
+        "value": 80
+      },
+      "CON": {
+        "raw": "75",
+        "value": 75
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "POW": {
+        "raw": "80",
+        "value": 80
+      }
+    },
+    "hp": {
+      "raw": "10",
+      "value": 10
+    },
+    "mp": {
+      "raw": "1",
+      "value": 1
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "armor": {
+      "raw": "2",
+      "value": 2
+    },
+    "attacks_per_round": {
+      "raw": "2",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (когти)",
+          "en": "Fighting (Claws)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d6+БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d6",
+        "trigger": "увидеть странных бледнолицых слуг Пожирателя снов"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Одержимость через Клетку разума",
+      "summary": "Пока разум жертвы заперт в Клетке разума, обитатели Старфолла могут завладеть её телом через связь с Клеткой. Связь несовершенна и вызывает много странностей; неудачные тела («оболочки») Гейнор перерабатывает в кровавой яме.",
+      "raw": "So long as the victim's mind is trapped, the residents of Starfall can assume control via the link to the Mindcage. The link is imperfect and causes many strange behaviors.",
+      "refs": [
+        "starfall-en/item/mindcage",
+        "starfall-en/character/possessed-townsfolk"
+      ]
+    }
+  ],
+  "description": {
+    "ru": "Измождённые бледнолицые мужчины и женщины, слуги Пожирателя снов; они населяют высокие тёмные здания Старфолла и бродят по его улицам.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Обитатели тёмного города, созданного сновидениями Филипа Гейнора. Через Клетку разума они вселяются в тела пленённых жертв и переходят стену сна — так появились одержимые рабочие Старсайда. Пожиратель снов может действием призвать 1d4 обитателей себе на помощь.",
+    "en": null
+  },
+  "encounters": {
+    "ru": "На улицах Старфолла; в бою с Пожирателем снов — 1d4 призванных.",
+    "en": null
+  },
+  "habitat": "Старфолл, Страна грёз",
+  "sources": [
+    {
+      "book_id": "starfall-en",
+      "physical_page": 14,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Starfall Denizens»"
+    },
+    {
+      "book_id": "starfall-en",
+      "physical_page": 4,
+      "printed_page": 3,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Philip Gainor, Dream Eater»: бледнолицые слуги, одержимость через Клетку разума"
+    },
+    {
+      "book_id": "starfall-en",
+      "physical_page": 13,
+      "printed_page": 12,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Dreamlands»: бледнолицые мужчины и женщины на улицах"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.damage_bonus",
+      "printed": "DB: 1d6",
+      "expected": "+1d4",
+      "note": "СИЛ 80 + ТЕЛ 65 = 145 — это +1d4 и Комплекция 1 (Комплекция напечатана 1); БкУ «1d6» расходится с двумя согласованными значениями — исправлено по большинству (Р-36).",
+      "fixed": true
+    },
+    {
+      "field": "statblock.hp",
+      "printed": "HP 10",
+      "expected": "14 ((ВЫН 75 + ТЕЛ 65) / 10)",
+      "note": "ПЗ 10 не сходятся с ВЫН и ТЕЛ (у одержимых горожан с теми же ВЫН и ТЕЛ — 14). Оставлено как напечатано; вопрос владельцу.",
+      "fixed": false
+    },
+    {
+      "field": "statblock.mp",
+      "printed": "MP: 1",
+      "expected": "16 (МОЩ 80 / 5)",
+      "note": "Оставлено как напечатано (как у одержимых горожан).",
+      "fixed": false
+    },
+    {
+      "field": "statblock.attacks[Ближний бой (когти)]",
+      "printed": "60% (30/)",
+      "expected": "60% (30/12)",
+      "note": "Пятая часть пропущена; дописана (Р-35).",
+      "fixed": true
+    }
+  ],
+  "corrections": [
+    {
+      "field": "statblock.damage_bonus",
+      "from": "1d6",
+      "to": "+1d4",
+      "reason": "Starfall, с. 13 (физ. 14): СИЛ 80 + ТЕЛ 65 = 145 и Комплекция 1 дают +1d4; БкУ исправлен по большинству.",
+      "ref": "Р-36"
+    },
+    {
+      "field": "statblock.attacks[Ближний бой (когти)].chance.fifth",
+      "from": null,
+      "to": 12,
+      "reason": "Starfall, с. 13 (физ. 14): «60% (30/)» — пятая часть пропущена.",
+      "ref": "Р-35"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1). Существа сценария, общего вида в справочниках нет; category «supernatural» — наш выбор. Скорость 7 — как напечатано."
+  }
+}

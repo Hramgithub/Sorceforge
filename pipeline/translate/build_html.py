@@ -5,7 +5,9 @@ Input folder (the translation of one book), one Markdown file per physical page 
                   a picture is a line  ![caption](img/<file>)  — the file lies in the folder's img/;
                   a handout is a block starting with  > **Раздатка …**  (shown framed);
                   a stat block — a fenced block ```stat … ``` (shown monospaced in a frame).
-  meta.json       {"title_ru", "title_en", "book_id", "authors", "publisher", "year", "note"}
+  meta.json       {"title_ru", "title_en", "book_id", "authors", "publisher", "year", "note", "printed_offset"}
+                  NNN is the physical page of the PDF; "printed_offset" (default 0) — printed page = physical − it,
+                  for the page footer «с. N оригинала».
 Pictures are embedded (base64, JPEG ≤ 1400 px), so the result is one file.
 
 Usage: python pipeline/translate/build_html.py <folder> <output.html>
@@ -89,7 +91,10 @@ def main() -> int:
             anchor = f"s{len(toc) + 1}"
             h = h.replace(f"<h{lvl}>{title}</h{lvl}>", f'<h{lvl} id="{anchor}">{title}</h{lvl}>', 1)
             toc.append((lvl, re.sub("<[^>]+>", "", title), anchor))
-        body.append(h + f'<div class="page">с. {int(re.match(r"^(\d+)", p.stem).group(1))} оригинала</div>')
+        phys = int(re.match(r"^(\d+)", p.stem).group(1))
+        printed = phys - int(meta.get("printed_offset", 0))
+        label = f"с. {printed} оригинала" if printed >= 1 else f"стр. {phys} PDF оригинала (без номера)"
+        body.append(h + f'<div class="page">{label}</div>')
     toc_html = "".join(f'<a href="#{a}">{"&nbsp;&nbsp;" if l == "2" else ""}{html.escape(t)}</a>' for l, t, a in toc)
     note = meta.get("note") or ("Перевод выполнен для личного некоммерческого использования. Это не официальное издание; "
                                 "оригинал принадлежит правообладателю.")

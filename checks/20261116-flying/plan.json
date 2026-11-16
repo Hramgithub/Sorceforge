@@ -1,0 +1,28 @@
+{
+  "book_id": "we-dream-of-flying-en",
+  "goal": "the scenario «We Dream of Flying» playable from the base, a work of the English series (Р-251)",
+  "decision": "Р-251, Р-139, Р-184, Р-206, Р-241",
+  "check_dir": "checks/20261116-flying",
+  "models": [
+    "kb/books/starfall-en/scenarios/starfall.json",
+    "kb/books/starfall-en/scenes/introduction.json",
+    "kb/books/starfall-en/maps/starside-gm-map.json",
+    "kb/books/whats-in-the-cellar-en/handouts/cellar-papers-1-herald-article.json",
+    "kb/books/dveri-vo-tmu-ru/scenarios/darkness-beneath-the-hill.json"
+  ],
+  "extra": "## This work (Р-251, English works series, one at a time)\n\nSource: the English original `we-dream-of-flying-en` (text layer; `python -B pipeline/source/pages.py show we-dream-of-flying-en <page>`; page image `python -B pipeline/source/pages.py image we-dream-of-flying-en <physical page> --physical`). Page numbers: `pagemap` often misses printed numbers in these PDFs — look at 2–3 page images and find printed vs physical; in `sources` give the printed page as printed (null for unnumbered pages). Do NOT edit `pipeline/source/books.json` — report the offset (physical = printed − offset, e.g. «p. 3» on physical 4 → offset −1) and the lead sets it.\nRussian text — our translation (flag `translated`); official Russian forms of names and terms — glossary `python -B tools/terms.py <word>` and existing records (Р-184), e.g. Dreamlands = «Страна грёз»; Hard/Extreme roll = «трудная/экстремальная проверка» (official «трудный успех», never «сложная»). New terms of this book — choose one Russian form each, use it everywhere, and list them all in your report (English → Russian); the translator of the book will reuse exactly these forms.\n- FIRST: check that this scenario is not already in the base under a Russian translation (Grep key character and place names, transliterated, in `kb/books/*-ru/`; e.g. «The Haunted Clubhouse» was already there as «Маленький клуб ужасов»). If it is — do NOT create a second set: per Р-147 the translation keeps the text, the original gives the numbers; write proposals to the translation records (English sources, `name.en`, errata for translation errors) and report.\n- Jim Phillips, 2023 (Miskatonic Repository); present day, flight 19 Los Angeles — Tokyo, between the Waking World and the Dreamlands (= «Страна грёз», Dreaming = «Сновидение»); a role-play puzzle without monsters: the orphan girl Yuu, the artifact Dream Crystallizer (Grep the base — it may exist as an item/tome from Dreamlands books), the Guardian; pregenerated dreamers (role pregen) if the book gives them. The plane and its cabins — book places.\n- One `scenario` record (summary, keeper_info, hook, advice, steps with refs, conclusion with Sanity rewards, tables), every scene (`arc`), characters (stat blocks as printed, Р-25; pregenerated investigators are characters with role `pregen`; unnamed crowds — group profile with invented `names`, Р-151), creatures (known Mythos creatures and deities → `instance_of` the shared record, Grep `kb/creatures` first; a unique being — book record), organizations, items and clues, tomes and spells (known spells → refs to the shared `coc:spell:*`), handouts (text as printed + our full translation), places (a real city — the shared record `coc:location:<city>` if it exists (Grep first), book places `part_of` it; a fictional town — a book place with its places `part_of` it; do not create shared records in `kb/locations/`), maps (`map` records with a spot on every printed label, Р-206; every key number without a record gets a small place record).\n- Book-scoped ids `we-dream-of-flying-en/<kind>/<slug>` in `kb/books/we-dream-of-flying-en/<kinds>/`.\n- Pictures (skill `.claude/skills/kb-art/SKILL.md`, Р-241, Р-245): portraits, creature art, handouts, item pictures, maps — mapping `checks/20261116-flying/art.json`, `python -B pipeline/art/add_images.py … --dry-run` then real; apply the proposals yourself (`pipeline/integrate/apply.py`) — you own this book; atmosphere pictures (cover, decoration, mood art not tied to a record) → `checks/20261116-flying/atmosphere.json` (the lead merges it). File prefix for pictures: `flying-`.\n- Lessons from earlier checks (skill kb-import, «Ошибки, которые уже находили»): every page of an entry in `sources`; handout texts in full; maps are `map` records, not atmosphere; no two records with the same `name.ru`; terms inside text agree with the record names; book misprints kept as printed, in `errata`, with the obvious ones fixed in `corrections`.\n- When done, run `python -I -B tools/completeness.py --books we-dream-of-flying-en --out checks/20261116-flying/completeness` and `python -I -B tools/scenario_check.py --books we-dream-of-flying-en --out checks/20261116-flying/scenario` and fix what they find; then `python -B tools/check.py kb/books/we-dream-of-flying-en` — 0 errors.\n- Coverage: in `checks/20261116-flying/flying.md` list every heading of the book → the record that holds it (or «не взято» with the reason), misprints, and the term list (English → Russian).",
+  "units": [
+    {
+      "name": "flying",
+      "pages": "whole book",
+      "target": "We Dream of Flying — the whole scenario",
+      "owns": [
+        "kb/books/we-dream-of-flying-en/** (new)",
+        "app/art/* files with prefix flying-",
+        "app/maps/flying-*",
+        "checks/20261116-flying/*"
+      ],
+      "sites": "—"
+    }
+  ]
+}

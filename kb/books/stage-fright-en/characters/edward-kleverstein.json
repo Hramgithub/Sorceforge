@@ -1,0 +1,371 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "stage-fright-en/character/edward-kleverstein",
+  "kind": "character",
+  "name": {
+    "ru": "Эдвард Клеверштейн",
+    "en": "Edward Kleverstein"
+  },
+  "aliases": [
+    "Клеверштейн",
+    "Kleverstein"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "продюсер Мискатоникского театра",
+    "en": "producer of the Miskatonic Playhouse"
+  },
+  "age": {
+    "raw": "38",
+    "value": 38
+  },
+  "sex": "мужской",
+  "residence": "Аркхэм, кабинет в Мискатоникском театре",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "knows",
+      "target": "stage-fright-en/character/hannah-carter",
+      "note": "заведующая постановочной частью: по его указке строит фальшивые стены",
+      "note_back": "продюсер театра, её начальник"
+    },
+    {
+      "type": "rival_of",
+      "target": "stage-fright-en/character/ginny-dubois",
+      "note": "ведущая актриса, которую он терпит лишь из-за богатой семьи",
+      "note_back": "продюсер театра, которого она терпеть не может"
+    },
+    {
+      "type": "knows",
+      "target": "stage-fright-en/character/franc-turner",
+      "note": "новый уборщик театра",
+      "note_back": "продюсер театра; Франк подозревает, что он знает о пропаже брата"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "35",
+        "value": 35
+      },
+      "CON": {
+        "raw": "65",
+        "value": 65
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "APP": {
+        "raw": "55",
+        "value": 55
+      },
+      "INT": {
+        "raw": "60",
+        "value": 60
+      },
+      "POW": {
+        "raw": "80",
+        "value": 80
+      },
+      "EDU": {
+        "raw": "80",
+        "value": 80
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "16",
+      "value": 16
+    },
+    "sanity": {
+      "raw": "10",
+      "value": 10,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "6",
+      "value": 6,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 6
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Искусство/ремесло (актёрское мастерство)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "Актёрское мастерство",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Бухгалтерское дело",
+        "skill": "coc:skill:accounting",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "15%",
+          "value": 15,
+          "half": 7,
+          "fifth": 3
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "История",
+        "skill": "coc:skill:history",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Работа в библиотеке",
+        "skill": "coc:skill:library-use",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Родной язык (английский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "Английский",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Иностранный язык (язык Му)",
+        "skill": "coc:skill:language-other",
+        "specialization": "Язык Му",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Оккультизм",
+        "skill": "coc:skill:occult",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Dominate — Cost: 1 magic point. The caster must succeed on an opposed POW roll against the target. On a success, the target must do exactly as the caster requests during the next round of combat. Shrivelling — The caster must succeed on an opposed POW roll against the target. On a success, the target loses 1 hitpoint per magic point invested in the spell as their flesh withers.",
+      "items": [
+        {
+          "name": "Dominate",
+          "spell": "coc:spell:dominate"
+        },
+        {
+          "name": "Shrivelling",
+          "spell": "coc:spell:shrivelling"
+        }
+      ]
+    }
+  },
+  "abilities": [
+    {
+      "name": "Покорение (кратко по сценарию)",
+      "raw": "Dominate — Cost: 1 magic point. The caster must succeed on an opposed POW roll against the target. On a success, the target must do exactly as the caster requests during the next round of combat.",
+      "summary": "Стоит 1 ПМ. Заклинатель должен выиграть встречную проверку МОЩ против цели; при успехе цель весь следующий раунд боя делает в точности то, что он велит.",
+      "refs": [
+        "coc:spell:dominate"
+      ]
+    },
+    {
+      "name": "Иссушение (кратко по сценарию)",
+      "raw": "Shrivelling — The caster must succeed on an opposed POW roll against the target. On a success, the target loses 1 hitpoint per magic point invested in the spell as their flesh withers.",
+      "summary": "Заклинатель должен выиграть встречную проверку МОЩ против цели; при успехе плоть цели усыхает, и она теряет 1 ПЗ за каждое вложенное в заклинание ПМ. Когда ПМ кончаются, магия начинает тянуть ПЗ самого заклинателя (с. 19).",
+      "refs": [
+        "coc:spell:shrivelling"
+      ]
+    }
+  ],
+  "background": {
+    "description": "Худой как щепка, одет по богемной моде конца XIX века: расстёгнутый фрак поверх тёмно-красной рубашки с открытым воротом, украшения на руках и шее. Смуглая кожа и необычный акцент (он перуанско-немецкого происхождения) мешают понять, откуда он родом. Правое ухо проколото; от него исходит землистый, конопляный запах — не то чтобы неприятный. Грубоватая, слегка раздражённая манера не вяжется с богемным видом."
+  },
+  "description": {
+    "ru": "Продюсер Мискатоникского театра, попавший под власть дневника Пикеринга: по ночам вырезает символы на фасаде, живёт в своём кабинете и прячет дневник в подвале. Хочет, чтобы сыщики поскорее убрались из театра и не заподозрили, что здесь что-то происходит. Заклинания — «Покорение» и «Иссушение».",
+    "en": null
+  },
+  "legend": {
+    "ru": "Художественная натура, жалеющая, что родилась не в ту эпоху. Он решил показать Аркхэму «настоящее искусство», но его мозг медленно гниёт под влиянием дневника Пикеринга, который он нашёл полгода назад в тайнике склада реквизита и с тех пор читает по вечерам. Два месяца назад дневник нашёл уборщик Ксандер Тёрнер; Клеверштейн застал его бормочущим безумцем, съевшим несколько самых «эзотерических» страниц, запер в заброшенной кладовой уборщика, а одежду и вещи Ксандера выбросил. Затем он велел Ханне Картер заделать дверь кладовой и закрыть все входы на склад реквизита, кроме одного; две недели назад начал по ночам вырезать символы на камне фасада. Одержимость дневником совпала с финансовым упадком театра.\nВстречает сыщиков, когда те впервые заходят в его кабинет, но потом его трудно найти: он прячется в подвале. В конце концов он собирается сотворить могущественное заклинание, чтобы заворожить публику и замкнуть её энергию саму на себя — так, чтобы пробудить великого бога Азатота. Но его ждёт неудача.\nОн любит выпить: по всему кабинету — пустые бутылки, в запертом ящике стола — бутылка абсента, $400 и блокнот. Его привлекают и мужчины, и женщины, к привлекательным сыщикам он относится куда лучше (проверка НАР при встрече).",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "stage-fright-en",
+      "physical_page": 6,
+      "printed_page": 2,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Keeper Information», хронология (Table Stage-01)"
+    },
+    {
+      "book_id": "stage-fright-en",
+      "physical_page": 8,
+      "printed_page": 4,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Dramatis Personae»: «Edward Kleverstein, age 38»"
+    },
+    {
+      "book_id": "stage-fright-en",
+      "physical_page": 16,
+      "printed_page": 12,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Kleverstein’s office»"
+    },
+    {
+      "book_id": "stage-fright-en",
+      "physical_page": 23,
+      "printed_page": 19,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Climax»: «Edward Kleverstein»"
+    },
+    {
+      "book_id": "stage-fright-en",
+      "physical_page": 25,
+      "printed_page": 21,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Characters and Monsters», «Playhouse Staff»: статблок и заклинания"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.move",
+      "printed": "6",
+      "expected": "8",
+      "note": "ЛВК 60 равна ТЕЛ 60 — Скорость 8; возраст 38 лет поправки не даёт. Значение оставлено как напечатано (с. 21)."
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 4: обложка, задняя обложка, выходные данные и оглавление без номеров). В книге «Brian» вместо «brain» (с. 4) — словесная опечатка, в переводе исчезает. Заклинания в статблоке — краткие версии сценария; полные правила — в записях заклинаний."
+  },
+  "images": [
+    {
+      "file": "art/characters/stagefright-edward-kleverstein.webp",
+      "kind": "portrait",
+      "caption": "",
+      "source": "Stage Fright at the Playhouse, с. 4 (физ. 8), «Dramatis Personae»: Edward Kleverstein"
+    }
+  ]
+}

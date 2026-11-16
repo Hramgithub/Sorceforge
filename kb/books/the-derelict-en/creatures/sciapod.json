@@ -1,0 +1,365 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "the-derelict-en/creature/sciapod",
+  "kind": "creature",
+  "name": {
+    "ru": "Скиапод",
+    "en": "Sciapod"
+  },
+  "aliases": [
+    "Sciapod, great footed and hungering thing",
+    "The Horror from Ancient Norse “History”",
+    "uniped",
+    "one-footer",
+    "einfætingr",
+    "одноног",
+    "великоногая алчущая тварь"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "уникальное существо, происхождение неизвестно",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "related_to",
+      "target": "coc:creature:yog-sothoth",
+      "note": "возможно, странное порождение Йог-Сотота",
+      "note_back": "возможно, его странное порождение — скиапод («Брошенное судно»)"
+    },
+    {
+      "type": "related_to",
+      "target": "coc:creature:elder-thing",
+      "note": "возможно, мутация или неудачный опыт Старцев на заре жизни на Земле",
+      "note_back": "возможно, их неудачный опыт — скиапод («Брошенное судно»)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "280",
+        "value": 280
+      },
+      "CON": {
+        "raw": "240",
+        "value": 240
+      },
+      "SIZ": {
+        "raw": "210",
+        "value": 210
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "INT": {
+        "raw": "50",
+        "value": 50
+      },
+      "POW": {
+        "raw": "40",
+        "value": 40
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "45",
+      "value": 45
+    },
+    "mp": {
+      "raw": "8",
+      "value": 8
+    },
+    "sanity": {
+      "raw": "—",
+      "value": null,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+5d6",
+      "value": "+5d6"
+    },
+    "build": {
+      "raw": "6",
+      "value": 6
+    },
+    "move": {
+      "raw": "7 / 9 вплавь",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        },
+        {
+          "mode": "swim",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "5 (кожа); серебряное оружие игнорирует броню",
+      "value": 5
+    },
+    "attacks_per_round": {
+      "raw": "1 (укус, удар ногой, захват и сдавливание или оружие)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (укус, удар ногой)",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "5d6",
+          "dice": "5d6",
+          "adds_db": false
+        },
+        "notes": "Скиапод внезапно бросается вперёд, чтобы укусить, или бьёт противника своей огромной ногой. Урон напечатан как 5d6; входит ли в него БкУ (+5d6), книга не уточняет."
+      },
+      {
+        "name": {
+          "ru": "Захват и сдавливание",
+          "en": "Clutch & Crush"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "манёвр (Ближний бой 60% (30/12))",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "удержание; сдавливание в следующем раунде, урон 5d6",
+          "dice": "5d6",
+          "adds_db": false
+        },
+        "notes": "Цепкая нога хватает жертву и не даёт ей двигаться; освободиться можно только успешной встречной проверкой СИЛ. Пока жертва в ноге, скиапод может сдавить её: в описании манёвра — урон 4d6 (в строке атаки — 5d6)."
+      },
+      {
+        "name": {
+          "ru": "Кристаллический лук",
+          "en": "Crystalline bow"
+        },
+        "kind": "attack",
+        "skill": "Стрельба",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d8+2d6",
+          "dice": "1d8+2d6",
+          "adds_db": false,
+          "extra": "+1 урона в каждый следующий раунд, пока стрела не извлечена"
+        },
+        "notes": "Стрела-гарпун длиной 2 м; базовая дальность 40 м. Выжившая жертва чувствует сильный холод и получает ещё 1 урона в каждый следующий раунд, пока кристаллическую стрелу не вытащат."
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "spells": {
+      "raw": "Нет."
+    },
+    "sanity_loss": [
+      {
+        "success": "1d4",
+        "fail": "1d8",
+        "trigger": "увидеть скиапода"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Невидимость",
+      "summary": "Обычно скиапод невидим. Невидимость пропадает для того, чья кожа касается серебра (украшение, нож для бумаг, чаша и т. п.); действуют ли так другие металлы — неизвестно. Хранитель должен следить, у кого из сыщиков кожа касается серебра, и не раскрывать игрокам это правило, пока они не догадаются сами. Тот, кто видит скиапода при свете (в том числе искусственном или лунном), замечает, что его белая туша искрится. Остальные видят лишь последствия: нападение невидимой силы — проверка Рассудка (1d3/1d6).",
+      "raw": "Invisibility: invisibility is negated when the viewer is in contact with silver (jewelry, letter opener, bowl, etc.) | The monster is normally invisible. Somehow, silver seems to negate its invisibility, rendering it visible to humans who are in contact with silver, be it jewelry or otherwise. Whether any other metals have the same effect is unknown. When it can be seen in light (as well as artificial light and moonlight) its white bulk appears to glitter.",
+      "refs": [
+        "the-derelict-en/item/silver-fountain-pen",
+        "the-derelict-en/item/silver-razor",
+        "the-derelict-en/item/silver-letter-opener",
+        "the-derelict-en/item/rum-decanter"
+      ]
+    },
+    {
+      "name": "Захват и сдавливание (манёвр)",
+      "summary": "Цепкая нога хватает жертву и не даёт ей двигаться. Освободиться можно только успешной встречной проверкой СИЛ. Пока жертва в ноге, скиапод может сдавить её на 4d6 урона.",
+      "raw": "Clutch and Crush (mnvr): the prehensile foot can grasp a victim, preventing movement. The victim may only break free as the result of a successful opposed STR roll. When captured by the foot, the sciapod may crush the victim for 4d6 damage.",
+      "refs": [
+        "coc:rule:fighting-maneuvers",
+        "coc:rule:opposed-skill-rolls"
+      ]
+    },
+    {
+      "name": "Кристаллический лук (дальняя атака)",
+      "summary": "Из странного лука скиапод стреляет стрелой-гарпуном длиной 2 м. Базовая дальность — 40 м. Попадание — 1d8+2d6 урона; если жертва выжила, её пронизывает сильный холод: ещё 1 урона в каждый следующий раунд, пока кристаллическую стрелу не вытащат.",
+      "raw": "Crystalline bow (ranged attack): using its strange bow, the sciapod can shoot a 6-foot long harpoon-like arrow at an opponent. The base range is 40 yards. When hit, the arrow causes 1d8+2d6 damage; if surviving, the victim also feels an intense cold—a further 1 damage is suffered each round thereafter if the crystalline arrow is not removed.",
+      "refs": [
+        "the-derelict-en/item/crystal-bow",
+        "the-derelict-en/item/crystal-harpoon"
+      ]
+    },
+    {
+      "name": "Броня",
+      "summary": "Кожа — 5 очков брони. Серебряное оружие броню игнорирует.",
+      "raw": "Armor: 5-point skin. Note that silver weapons ignore armor.",
+      "refs": [
+        "coc:rule:armor"
+      ]
+    },
+    {
+      "name": "Каменная маскировка",
+      "summary": "Нижняя сторона огромной ноги каменно-серая: когда скиапод прячет тело под ногой, он похож на большой органический ком или камень. Даже тот, кто касается серебра, видит под брезентом лишь кучу камней.",
+      "raw": "the underside of its great foot is a stony gray color, acting as a sort of camouflage when its body is hidden beneath the foot, making it look like a large organic lump or a rock."
+    },
+    {
+      "name": "Пловец и прыгун",
+      "summary": "Плавает с помощью ноги, быстро продвигаясь пульсирующими толчками, как лягушка; цепкая нога позволяет прыгать — скиапод легко запрыгивает из воды на палубу судна. Под водой он должен регулярно всплывать за воздухом. На суше он словно скользит — вроде слизня, только куда быстрее.",
+      "raw": "The creature can swim with its foot, propelling itself quite quickly with pulsing kicks in the same manner as a frog. Its prehensile foot provides a means to jump and leap—it is certainly able to leap from water to the deck of boat. When submerged, it must surface for air regularly. On land, it seems to slide along—somewhat in the manner a slug’s motion, but much quicker."
+    },
+    {
+      "name": "Короткие вспышки",
+      "summary": "Скиапод действует короткими вспышками энергии, после которых ему нужен отдых. Если он не охотится, то предпочитает лежать неподвижно, спрятавшись под гигантской ногой.",
+      "raw": "The sciapod tends to operate in short bursts of energy, after which it needs rest. Usually, when not seeking prey, it prefers to remain stationary, hidden beneath its giant foot."
+    }
+  ],
+  "description": {
+    "ru": "Огромная цепкая перепончатая нога, которой скиапод хватает и давит врагов. Верхняя часть тела человекоподобна: две руки с перепончатыми кистями и странной формы голова с единственным глазом над большой пастью. Плоть бледно-белая, а нижняя сторона ноги — каменно-серая. По описанию для игроков: то, что сначала казалось большой неровной бледной каменной глыбой, приподнимает свою тушу: «зонтик» сверху — это огромная цепкая нога, раскинутая над телом, как у какого-то адского моллюска. Подобрав ногу под себя и встав на эту мясистую массу, чудовище поднимается и бросается вперёд: белая мышечная масса извивается, принимая подобие человеческого торса с двумя руками, переходящими в перепончатые кисти; над ней — уродливая голова с зияющей пастью, полной острых как бритва зубов, и единственным светящимся зелёным глазом.\nГолосовых связок у скиапода нет, говорить он не может и с людьми общаться не пытается: для него они — добыча и пища. Он умён: понимает, что человеческая техника опасна (поэтому и ломает связь и приборы управления), и хитро охотится. Опыт общения с людьми он накопил за века наблюдений, но в ярости поддаётся инстинкту, и сообразительные люди могут его перехитрить.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Подобные существа упоминаются на протяжении всей истории человечества. Плиний Старший в «Естественной истории» (77 г. н. э.) писал об одноногих существах, живущих в Эфиопии; на карте мира Mappa Mundi (1290 г. н. э.) скиапод изображён на краю света, а во многих средневековых бестиариях есть создания с человеческим торсом над единственной ногой с большой ступнёй: одни прячутся под ней от дождя, другие защищаются, подняв её над лежащим телом. Название — от греческих skia (тень) и pod (нога). В «Саге об Эйрике Рыжем» (1265) экспедиция Торфинна Карлсефни и Гудрид встречает скиапода («однонога»), который стреляет из лука, убивает сына Эйрика Торвальда и исчезает (раздатка 1).\nПроисхождение чудовища неизвестно. Возможно, это существо Мифов (быть может, странное порождение Йог-Сотота), уцелевший представитель давно ушедшей инопланетной расы или одиночка, упавший на Землю в давние времена. Кто-то сочтёт его реликтом дочеловеческой расы — а может, это мутация или неудачный опыт Старцев на заре жизни на Земле?\nСкиапод носит кристаллический лук. Неясно, как сделаны лук и его стрелы-гарпуны: возможно, это остаток технологии его расы, а возможно, существо умеет само выращивать их из окружающего, выделяя вещество, — как устрица жемчуг. Видимо, стрелы даются ему легко: потраченные стрелы он спокойно бросает. Лук и стрелы похожи на бронестекло, очень прочны и пробивают металл; тетива, если присмотреться, — из сухожилий животного (возможно, глубоководного — или человека). Лук не значит, что скиапод примитивен: это находчивое и умное существо, а кристаллический лук удобен тому, кто порой путешествует под водой.\nПредисловие Сэнди Петерсена: сценарий родился из старой книги о походах викингов в Новый Свет — среди совершенно земных событий саги (бури, рыбалка, айсберги) вдруг появляется скиапод, и викинги говорят о нём так же буднично, как о моржах.",
+    "en": null
+  },
+  "encounters": {
+    "ru": "Когда сыщики поднимаются на «Гренланд Тропиш», скиапод отдыхает под брезентом в трюме 1. Проснувшись, он оценивает обстановку, поднимается на яхту и ломает её приборы управления и радио, чтобы новая добыча не уплыла, затем начинает охоту: первыми гибнут NPC. Найдя убежище сыщиков, он может отступить отдохнуть — но вернётся. Время от времени он возвращается в трюм 1 к груде тел поесть, хотя живая добыча ему больше по вкусу.\nРаненый скиапод: когда он сдастся, решает Хранитель. Он может драться насмерть (он не так уж умён) или, тяжело раненный, уползти зализывать раны — это даст сыщикам время придумать новый план, починить яхту, бежать на шлюпке и т. п. Потеряв половину ПЗ, он точно отступит и перегруппируется. Тяжело раненный и загнанный в угол, он скорее всего впадёт в ярость и отчаяние и ударит изо всех сил, чтобы вырваться.\nУдушье CO2: в закрытом помещении, которое заполняется углекислым газом, скиапод возбуждается и рискует задохнуться: через 1d6+1 раунда он начинает получать 1d6 урона за раунд (без учёта брони), пока не потеряет сознание (половина ПЗ), не умрёт или не вырвется на чистый воздух. Струя из одного баллона вреда не причиняет, но может на мгновение заставить его отступить.",
+    "en": null
+  },
+  "habitat": "Северная Атлантика; логово — трюм 1 рефрижератора «Гренланд Тропиш»",
+  "sources": [
+    {
+      "book_id": "the-derelict-en",
+      "physical_page": 24,
+      "printed_page": 23,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «SCIAPOD, great footed and hungering thing»; описание, невидимость, лук, история"
+    },
+    {
+      "book_id": "the-derelict-en",
+      "physical_page": 23,
+      "printed_page": 22,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Sciapod»: описание для игроков; «Injured?»"
+    },
+    {
+      "book_id": "the-derelict-en",
+      "physical_page": 21,
+      "printed_page": 20,
+      "method": "book_text",
+      "verified": true,
+      "note": "иллюстрация «The Sciapod, The Horror from Ancient Norse “History”»"
+    },
+    {
+      "book_id": "the-derelict-en",
+      "physical_page": 16,
+      "printed_page": 15,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «Erik the Red’s Saga»; Keeper Note: облик скиапода"
+    },
+    {
+      "book_id": "the-derelict-en",
+      "physical_page": 6,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Important note»: серебро и невидимость"
+    },
+    {
+      "book_id": "the-derelict-en",
+      "physical_page": 9,
+      "printed_page": 8,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Sequence of Events»"
+    },
+    {
+      "book_id": "the-derelict-en",
+      "physical_page": 19,
+      "printed_page": 18,
+      "method": "book_text",
+      "verified": true,
+      "note": "Keeper note: скиапод в трюме 1"
+    },
+    {
+      "book_id": "the-derelict-en",
+      "physical_page": 22,
+      "printed_page": 21,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Combating the Sciapod»: CO2"
+    },
+    {
+      "book_id": "the-derelict-en",
+      "physical_page": 5,
+      "printed_page": 4,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Foreword»: Сэнди Петерсен о скиаподе"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.attacks[Захват и сдавливание].damage",
+      "printed": "Clutch & Crush mnvr, held, crush on following round, damage 5D6",
+      "expected": "4d6 (как в описании манёвра)",
+      "note": "Строка атаки — урон 5d6, описание манёвра «Clutch and Crush» — «crush the victim for 4d6 damage». В записи — как напечатано в строке; какое значение верно, решает Хранитель (вопрос владельцу).",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1; обложка, титул, выходные данные и оглавление без номеров). Уникальное существо сценария; общей записи нет (сверено с kb/creatures). category «mythos_monster» —наш выбор: книга сама сомневается в его происхождении, связи с Йог-Сототом и Старцами — related_to. «6-foot long» — 2 м, «40 yards» — 40 м (Р-64). Способности: raw — английский текст книги. БкУ +5d6 и Комплекция 6 сходятся с СИЛ+ТЕЛ 490 (445–524)."
+  },
+  "images": [
+    {
+      "file": "art/creatures/derelict-sciapod.webp",
+      "kind": "art",
+      "caption": "скиапод",
+      "source": "The Derelict, с. 20 (физ. 21): «The Sciapod, The Horror from Ancient Norse “History”», худ. M. Wayne Miller"
+    }
+  ]
+}

@@ -7,7 +7,8 @@
     "en": null
   },
   "aliases": [
-    "Тусовщик"
+    "Тусовщик",
+    "Party Animal"
   ],
   "roles": [
     "pregen"
@@ -86,8 +87,8 @@
       "value": 8
     },
     "sanity": {
-      "raw": "50",
-      "value": 50,
+      "raw": "40",
+      "value": 40,
       "max": null
     },
     "luck": {
@@ -322,6 +323,17 @@
           "half": 2,
           "fifth": 1
         }
+      },
+      {
+        "name": "Наука Математика",
+        "skill": "coc:skill:science",
+        "specialization": "Математика",
+        "value": {
+          "raw": "21%",
+          "value": 21,
+          "half": 10,
+          "fifth": 4
+        }
       }
     ]
   },
@@ -361,6 +373,22 @@
       "method": "book_text",
       "verified": true,
       "note": "«Готовые сыщики»: Тусовщик"
+    },
+    {
+      "book_id": "haunted-clubhouse-en",
+      "physical_page": 13,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "оригинал; «Биография готового сыщика» (1920-е)"
+    },
+    {
+      "book_id": "haunted-clubhouse-en",
+      "physical_page": 18,
+      "printed_page": 18,
+      "method": "book_text",
+      "verified": true,
+      "note": "оригинал; «Готовые сыщики»: Тусовщик"
     }
   ],
   "errata": [
@@ -368,7 +396,21 @@
       "field": "statblock.skills[Электрика]",
       "printed": "Электрика 205",
       "expected": "Электрика 20%",
-      "note": "Знак «%» напечатан как «5»; значение 20% — вывод из текста (Р-41).",
+      "note": "Знак «%» напечатан как «5»; в оригинале (haunted-clubhouse-en, с. 18) — «Electrical Repair 20%».",
+      "fixed": true
+    },
+    {
+      "field": "statblock.sanity",
+      "printed": "РАС 50 (русский перевод, с. 18)",
+      "expected": "Рассудок 40",
+      "note": "В оригинале (haunted-clubhouse-en, с. 18) Рассудок — 40 (= МОЩ 40); значение исправлено по оригиналу (Р-147).",
+      "fixed": true
+    },
+    {
+      "field": "statblock.skills[Наука Математика]",
+      "printed": "в русском переводе (с. 18) навыка нет",
+      "expected": "Наука (Математика) 21%",
+      "note": "В оригинале (haunted-clubhouse-en, с. 18) — «Science Mathematics 21%»; навык добавлен по оригиналу (Р-147).",
       "fixed": true
     }
   ],
@@ -379,5 +421,49 @@
       "parse_uncertain"
     ],
     "notes": "Имя придумано (Р-150), в книге — «Тусовщик». Книга просит игроков самим сообщить имя, биографию и краткое описание сыщика (с. 3)."
-  }
+  },
+  "corrections": [
+    {
+      "field": "aliases",
+      "from": null,
+      "to": "Party Animal",
+      "reason": "обозначение в английском оригинале (haunted-clubhouse-en)",
+      "ref": "Р-147"
+    },
+    {
+      "field": "statblock.sanity",
+      "from": "{\"raw\": \"50\", \"value\": 50, \"max\": null}",
+      "to": "{\"raw\": \"40\", \"value\": 40, \"max\": null}",
+      "reason": "в оригинале (haunted-clubhouse-en, с. 18) Рассудок — 40; в переводе — 50",
+      "ref": "Р-147"
+    },
+    {
+      "field": "statblock.skills",
+      "from": null,
+      "to": "Наука Математика",
+      "reason": "«Science Mathematics 21%» есть в оригинале (haunted-clubhouse-en, с. 18), в переводе пропущена",
+      "ref": "Р-147"
+    },
+    {
+      "field": "errata.0.note",
+      "from": "значение 20% — вывод из текста (Р-41).",
+      "to": "в оригинале (haunted-clubhouse-en, с. 18) — «Electrical Repair 20%».",
+      "reason": "оригинал (haunted-clubhouse-en, с. 18) печатает «Electrical Repair 20%»",
+      "ref": "Р-147"
+    },
+    {
+      "field": "errata",
+      "from": null,
+      "to": "{\"field\": \"statblock.sanity\", \"printed\": \"РАС 50 (русский перевод, с. 18)\", \"expected\": \"Рассудок 40\", \"note\": \"В оригинале (haunted-clubhouse-en, с. 18) Рассудок — 40 (= МОЩ 40); значение исправлено по оригиналу (Р-147).\", \"fixed\": true}",
+      "reason": "расхождение перевода с оригиналом — в errata (Р-147)",
+      "ref": "Р-147"
+    },
+    {
+      "field": "errata",
+      "from": null,
+      "to": "{\"field\": \"statblock.skills[Наука Математика]\", \"printed\": \"в русском переводе (с. 18) навыка нет\", \"expected\": \"Наука (Математика) 21%\", \"note\": \"В оригинале (haunted-clubhouse-en, с. 18) — «Science Mathematics 21%»; навык добавлен по оригиналу (Р-147).\", \"fixed\": true}",
+      "reason": "расхождение перевода с оригиналом — в errata (Р-147)",
+      "ref": "Р-147"
+    }
+  ]
 }

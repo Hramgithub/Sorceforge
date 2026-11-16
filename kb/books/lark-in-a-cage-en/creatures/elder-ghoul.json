@@ -1,0 +1,273 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "lark-in-a-cage-en/creature/elder-ghoul",
+  "kind": "creature",
+  "name": {
+    "ru": "Старейшина упырей логова Святого Матфия",
+    "en": "Elder Ghoul"
+  },
+  "aliases": [
+    "Старейшина",
+    "Elder Ghoul, Leader of the St. Matthias Warren"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "независимая раса",
+  "axes": {
+    "era": [
+      "gaslight"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:ghoul",
+      "note_back": "предводитель логова Святого Матфия («Жаворонок в клетке»)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "45",
+        "value": 45
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "65",
+        "value": 65
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "11",
+      "value": 11
+    },
+    "mp": {
+      "raw": "13",
+      "value": 13
+    },
+    "sanity": {
+      "raw": "—",
+      "value": null,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "Firearms and projectiles do half damage.",
+      "value": 0,
+      "note": "огнестрельное оружие и снаряды наносят половину урона"
+    },
+    "attacks_per_round": {
+      "raw": "2 (claws, bite and hold)",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Когти",
+          "en": "Claws"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "1d6+1d4",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Укус с удержанием (манёвр)",
+          "en": "Bite and hold (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d4 per round",
+          "dice": "1d4",
+          "adds_db": false,
+          "extra": "каждый раунд"
+        },
+        "notes": "вместо когтей упырь вгрызается в жертву и жуёт: 1d4 урона за раунд; оторвать — встречная проверка СИЛ"
+      }
+    ],
+    "dodge": {
+      "raw": "32% (16/6)",
+      "value": 32,
+      "half": 16,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "85%",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Родной язык (английский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "английский",
+        "value": {
+          "raw": "05%",
+          "value": 5,
+          "half": 2,
+          "fifth": 1
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "увидеть упыря"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Укус с удержанием (манёвр)",
+      "summary": "При успехе упырь не бьёт когтями, а вгрызается в жертву и жуёт её, нанося 1d4 урона каждый раунд. Чтобы оторвать его, нужна встречная проверка СИЛ.",
+      "raw": "Bite and hold (mnvr): With a success, the ghoul bites into its victim as opposed to using its claws, chewing to do an ongoing 1d4 damage per round. An opposed STR check is required to dislodge it.",
+      "refs": [
+        "coc:rule:fighting-maneuvers",
+        "coc:rule:opposed-skill-rolls"
+      ]
+    },
+    {
+      "name": "Броня",
+      "summary": "Огнестрельное оружие и снаряды наносят упырю половину урона.",
+      "raw": "Armor: Firearms and projectiles do half damage."
+    }
+  ],
+  "description": {
+    "ru": "Тёмно-зелёный старейшина упырей, 250 лет, предводитель логова Святого Матфия. Кожа свисает с него дряблыми складками, вены видно пульсируют под ней, глаза пусто смотрят в никуда, а голос забыл, как звучит человеческая речь. Старейшина вовсе не мудрый старец: голод его не меньше, чем у других, и лишь жажда мести Грейвзу удерживает его семью от расправы над сыщиками.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Без всякой проверки рассказывает сыщикам хриплым, растрескавшимся от тлена голосом, как Грейвз много лет назад пришёл к упырям под видом друга, принося свежее мясо в обмен на знание «подземного мира»: «И то было самое вкусное мясо, какое у нас бывало, — но порченое. Скоро Грейвз пришёл к нам, когда мы все лежали в дурмане, и украл двоих наших детёнышей. Ничего мы не могли сделать. Мы слышали их вой и чуяли в воздухе их кровь, когда он ими кормился». (На самом деле Грейвз плоти упырей не ел — просто иной причины старейшина вообразить не может.) Сколько прошло времени, он не знает: «Я был уже старейшиной, но моложе». Отдать Саманту упыри согласны только за убийство Грейвза и его «чудовища».",
+    "en": null
+  },
+  "habitat": "цистерна под церковью Святого Матфия, Лондон",
+  "sources": [
+    {
+      "book_id": "lark-in-a-cage-en",
+      "physical_page": 24,
+      "printed_page": 22,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Treating with the Ghouls»: Elder Ghoul"
+    },
+    {
+      "book_id": "lark-in-a-cage-en",
+      "physical_page": 36,
+      "printed_page": 34,
+      "method": "book_text",
+      "verified": true,
+      "note": "приложение 1: статблок «Elder Ghoul, 250, Leader of the St. Matthias Warren»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2). Отличия от вида: СИЛ 70, ВЫН 45, ПЗ 11, Скорость 8, две атаки за раунд, Когти 30%, Уклонение 32%; навыки и язык (английский 05%) — как напечатано. В навыках после «Stealth 70%» лишняя запятая."
+  }
+}

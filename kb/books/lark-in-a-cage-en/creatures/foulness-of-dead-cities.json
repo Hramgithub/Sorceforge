@@ -1,0 +1,88 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "lark-in-a-cage-en/creature/foulness-of-dead-cities",
+  "kind": "creature",
+  "name": {
+    "ru": "Скверна мёртвых городов",
+    "en": "The Foulness of Dead Cities"
+  },
+  "aliases": [
+    "морасс",
+    "the morass"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "уникальное существо",
+  "axes": {
+    "era": [
+      "gaslight"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "DEX": {
+        "raw": "0",
+        "value": 0
+      },
+      "POW": {
+        "raw": "150",
+        "value": 150
+      }
+    },
+    "hp": {
+      "raw": "150",
+      "value": 150
+    },
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d3",
+        "trigger": "приблизиться к существу"
+      },
+      {
+        "success": "1",
+        "fail": "карта из колоды эманаций",
+        "trigger": "оказаться в 13 м, затем в 7 м от существа, затем каждый раунд боя"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Волны эманаций",
+      "summary": "Существо не разумно и по-настоящему сражаться не может: его единственное действие — волны эманаций, сокрушающих рассудок. Они срабатывают, когда сыщик входит в радиус 13 м, затем 7 м, а затем каждый раунд боя (существо всегда действует последним). Каждый раз — проверка Рассудка: при успехе сыщик теряет 1 пункт, при провале тянет карту из колоды эманаций. Все обычные правила потери Рассудка складываются с эффектами эманаций.",
+      "raw": "Whenever an investigator draws within 40 feet, call for Sanity rolls. Successes lose 1 point, while failures draw a card from the Deck of Emanations… triggered when an investigator crosses within a forty-foot radius, a twenty-foot radius, and then every round during combat (it always acts last in combat).",
+      "refs": [
+        "lark-in-a-cage-en/handout/bulwark-deck-of-emanations",
+        "coc:rule:sanity-loss"
+      ]
+    },
+    {
+      "name": "Студенистая плоть",
+      "summary": "Причудливая студенистая плоть неуязвима для пуль: они отскакивают и опасно рикошетят по тоннелю. Атаки по существу заставляют 11 оставшихся в тоннеле рабочих кричать от боли, но убить его можно «обычными» средствами: взрывчаткой, кислотой или, конечно, обрушив на него тоннель (хотя инвесторы будут сильно недовольны).",
+      "raw": "Its bizarre, gelatinous flesh makes it impervious to ballistic weapons (bullets bounce off it and ricochet dangerously through the tunnel). Attacks against it make the 11 remaining workers in the tunnel cry out in pain, but it can be killed by \"conventional\" means: explosives, acids, or, of course, dropping the tunnel on it"
+    }
+  ],
+  "description": {
+    "ru": "Тошнотворная груда прозрачной беловатой плоти, только что обнажённая продвижением щита Гудзонского тоннеля; издалека (Внимание, больше 33 м) видно, что она будто дышит и испускает странный фосфоресцирующий свет. Древнее существо, сложившееся из скверны тысячи мёртвых цивилизаций в злобную глыбу, забытую под землёй и водой. Оно не разумно и по-настоящему сражаться не может. Если оставить его в покое, оно будет искажать разум тех, кто пользуется тоннелем, на поколения вперёд.",
+    "en": null
+  },
+  "habitat": "Гудзонский тоннель, у головы щита",
+  "sources": [
+    {
+      "book_id": "lark-in-a-cage-en",
+      "physical_page": 53,
+      "printed_page": null,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Bulwark of the Hudson»: «Something Beneath the River»; «The Foulness of Dead Cities. DEX 0. POW 150. HP 150.»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2). Профиль книги — только ЛВК 0, МОЩ 150, ПЗ 150. Радиусы в книге — 40 и 20 футов, «well over 100 feet»."
+  }
+}

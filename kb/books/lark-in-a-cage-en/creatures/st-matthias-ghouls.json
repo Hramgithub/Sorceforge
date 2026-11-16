@@ -1,0 +1,289 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "lark-in-a-cage-en/creature/st-matthias-ghouls",
+  "kind": "creature",
+  "name": {
+    "ru": "Упыри логова Святого Матфия",
+    "en": "Ghouls"
+  },
+  "aliases": [
+    "упыри Святого Матфия",
+    "Ghouls of the St. Matthias Warren"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "независимая раса",
+  "axes": {
+    "era": [
+      "gaslight"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:ghoul",
+      "note_back": "профиль сценария «Жаворонок в клетке»: 18 изголодавшихся упырей"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "80",
+        "value": 80
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "65",
+        "value": 65
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "11",
+      "value": 11
+    },
+    "mp": {
+      "raw": "13",
+      "value": 13
+    },
+    "sanity": {
+      "raw": "—",
+      "value": null,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "Firearms and projectiles do half damage.",
+      "value": 0,
+      "note": "огнестрельное оружие и снаряды наносят половину урона"
+    },
+    "attacks_per_round": {
+      "raw": "3 (claws, bite, hold)",
+      "value": 3
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Когти",
+          "en": "Claws"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d6+1d4",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Укус с удержанием (манёвр)",
+          "en": "Bite and hold (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d4 per round",
+          "dice": "1d4",
+          "adds_db": false,
+          "extra": "каждый раунд"
+        },
+        "notes": "вместо когтей упырь вгрызается в жертву и жуёт: 1d4 урона за раунд; оторвать — встречная проверка СИЛ"
+      }
+    ],
+    "dodge": {
+      "raw": "32% (16/6)",
+      "value": 32,
+      "half": 16,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "85%",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Родной язык (английский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "английский",
+        "value": {
+          "raw": "05%",
+          "value": 5,
+          "half": 2,
+          "fifth": 1
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "увидеть упыря"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Укус с удержанием (манёвр)",
+      "summary": "При успехе упырь не бьёт когтями, а вгрызается в жертву и жуёт её, нанося 1d4 урона каждый раунд. Чтобы оторвать его, нужна встречная проверка СИЛ.",
+      "raw": "Bite and hold (mnvr): With a success, the ghoul bites into its victim as opposed to using its claws, chewing to do an ongoing 1d4 damage per round. An opposed STR check is required to dislodge it.",
+      "refs": [
+        "coc:rule:fighting-maneuvers",
+        "coc:rule:opposed-skill-rolls"
+      ]
+    },
+    {
+      "name": "Броня",
+      "summary": "Огнестрельное оружие и снаряды наносят упырю половину урона.",
+      "raw": "Armor: Firearms and projectiles do half damage."
+    }
+  ],
+  "description": {
+    "ru": "Восемнадцать упырей логова Святого Матфия; все недокормлены и ослаблены скудными охотничьими угодьями. Обычно питаются уже умершими (этого добра в Лондоне хватает), но без колебаний убьют сыщиков. Лишь немногие способны к человеческой речи. После встречи с ними ночью из канализационных решёток на сыщиков смотрят чьи-то глаза. Упыри в морге (три мешка с надписью «Бесполый», без указания народности) — жертвы Грейвза.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Колония живёт в римской цистерне под кладбищем церкви Святого Матфия и прежде была многочисленнее; люди всё глубже вгрызаются под землю, и упыри стараются держаться подальше от ужасно шумных подземных железных дорог. Упыри иногда похищают человеческих детей и растят их как своих, чтобы те, повзрослев, свободно ходили по поверхности и выполняли их волю. Грейвз охотится на них ради опытов, похищает упырей любого возраста, когда тем приходится выходить в город, уничтожает их тела и бросает их в реки «гнить». Атаковать Грейвза они боятся — вдруг он снова применит своё «проклятие». Главные охотничьи угодья — Хайгейтское кладбище — они не выдадут ни за что.",
+    "en": null
+  },
+  "habitat": "цистерна под церковью Святого Матфия, Лондон",
+  "sources": [
+    {
+      "book_id": "lark-in-a-cage-en",
+      "physical_page": 23,
+      "printed_page": 21,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Cistern»: восемнадцать упырей"
+    },
+    {
+      "book_id": "lark-in-a-cage-en",
+      "physical_page": 24,
+      "printed_page": 22,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Treating with the Ghouls»"
+    },
+    {
+      "book_id": "lark-in-a-cage-en",
+      "physical_page": 36,
+      "printed_page": 34,
+      "method": "book_text",
+      "verified": true,
+      "note": "приложение 1: статблок «Ghouls»"
+    },
+    {
+      "book_id": "lark-in-a-cage-en",
+      "physical_page": 37,
+      "printed_page": 35,
+      "method": "book_text",
+      "verified": true,
+      "note": "приложение 1: окончание статблока «Ghouls»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2). Отличия от вида: ВЫН 50, ПЗ 11, Когти 40%, Уклонение 32%; три атаки за раунд, как напечатано («claws, bite, hold»). В навыках после «Stealth 70%» лишняя запятая."
+  }
+}

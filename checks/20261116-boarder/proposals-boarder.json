@@ -1,0 +1,48 @@
+{
+  "schema": "sourcefold.proposals.v0",
+  "by": "boarder (Dead Boarder, Р-251)",
+  "proposals": [
+    {
+      "target": "coc:location:providence",
+      "op": "replace",
+      "path": "description.ru",
+      "old": "\nВ других книгах базы: в Провиденсе около 1844 года",
+      "new": "\nВ «Мёртвом жильце» (воскресенье, 21 июня 1931 года, Великая депрессия) — пансион Ма Шэнкс на краю Федерал-Хилла, у итальянского квартала: в запертой комнате третьего этажа жильцы находят тело затворника Джеймса Гардинера, а в полдень летнего солнцестояния в труп вселяется сущность из проклятой «Книги снов».\nВ других книгах базы: в Провиденсе около 1844 года",
+      "reason": "«Dead Boarder» (dead-boarder-en), с. 6: место действия — Ma Shanks’ Boarding House, Federal Hill, Providence",
+      "ref": "Р-251"
+    },
+    {
+      "target": "coc:location:providence",
+      "op": "append",
+      "path": "sources",
+      "value": {
+        "book_id": "dead-boarder-en",
+        "physical_page": 6,
+        "printed_page": 6,
+        "method": "book_text",
+        "verified": true,
+        "note": "«Dead Boarder»: «Ma Shanks’ Boarding House» — пансион на краю Федерал-Хилла, июнь 1931 года"
+      },
+      "reason": "источник нового абзаца",
+      "ref": "Р-251"
+    },
+    {
+      "target": "coc:location:providence",
+      "op": "append",
+      "path": "refs",
+      "value": "dead-boarder-en/scenario/dead-boarder",
+      "reason": "ссылка на запись «Мёртвого жильца»",
+      "ref": "Р-251",
+      "correction": false
+    },
+    {
+      "target": "coc:location:providence",
+      "op": "append",
+      "path": "refs",
+      "value": "dead-boarder-en/location/ma-shanks-boarding-house",
+      "reason": "ссылка на запись «Мёртвого жильца»",
+      "ref": "Р-251",
+      "correction": false
+    }
+  ]
+}

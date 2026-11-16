@@ -1,0 +1,306 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "dead-boarder-en/creature/gardiner-thing",
+  "kind": "creature",
+  "name": {
+    "ru": "Тварь-Гардинер",
+    "en": "Gardiner-Thing"
+  },
+  "aliases": [
+    "Gardiner-Thing, monster from dreams",
+    "чудовище из снов",
+    "сущность из-за пределов"
+  ],
+  "category": "supernatural",
+  "subcategory": "чудовище из снов (одержимое тело)",
+  "description": {
+    "ru": "Изувеченное тело Джеймса Гардинера, в которое вселилась сущность из-за пределов. Труп с волочащимся звуком шевелится и рывком встаёт; кожа на голове начинает отслаиваться и спиралью сползать вниз, как кожура с яблока в жутком фокусе; окровавленный череп оборачивается к «Книге снов», и в безвеких глазах — злоба. Всё тело, кроме головы, покрыто спиральными шрамами-завитками: когда по нему бьют, шрамы вспыхивают бледно-голубым светом и гасят удар. Из «горла-отверстия» тварь издаёт жуткий свист — Песнь утраченных снов.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Сущность отчасти состоит из воли древнего колдуна, давным-давно изгнанного из этого мира. В былые времена он написал свитки, которые позже легли в основу «Книги снов». В текст спрятан путь для возвращения колдуна — дьявольская ловушка: совершенно безумный разум колдуна вселяется в тело того, кто по глупости проведёт обряд. Сущность заперта в Стране грёз как неупокоенный дух древнего колдуна и стремится открыть портал, чтобы перейти в физический мир. Перейти между измерениями она может только в полдень летнего солнцестояния: примерно через 45 минут после того, как сыщики вошли в комнату Гардинера, она проявляется в его трупе.\nЦели в бою: больше всего на свете тварь жаждет «Книги снов» — отнять её у того, кто её держит, и покарать за дерзость прикоснуться к ней. Тактика: начинает с Песни утраченных снов; затем стремится завладеть книгой и вывести из строя всех, кто стреляет в неё или нападает; как только сможет, вываливается из комнаты и ищет укрытия в другом месте. Если сыщики бегут всей группой, гонится за тем, кто держал книгу, даже если он уже бросил её: книга проклята, и каждый, кто её касался, — следующий на очереди. Можно выжить, отпустив чудовище с книгой — особенно если никто её не держит.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "1930s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "90",
+        "value": 90
+      },
+      "CON": {
+        "raw": "110",
+        "value": 110
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "35",
+        "value": 35
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "INT": {
+        "raw": "80",
+        "value": 80
+      },
+      "POW": {
+        "raw": "90",
+        "value": 90
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "17",
+      "value": 17
+    },
+    "mp": {
+      "raw": "18",
+      "value": 18
+    },
+    "sanity": {
+      "raw": "—",
+      "value": null,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "armor": {
+      "raw": "5 (кожа в ритуальных шрамах: заклинание «Подготовка тела» даёт 5 пунктов брони); не действует против ударов, нацеленных в голову",
+      "value": 5,
+      "note": "каждый раз, когда броня поглощает урон, в месте несостоявшейся раны по шрамам пробегают магические голубые линии"
+    },
+    "attacks_per_round": {
+      "raw": "1 (кулак, схватить книгу или особая способность)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d6+1d4",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Схватить книгу (манёвр)",
+          "en": "Grab book (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "notes": "хватает книгу и в следующем раунде может вырвать её (встречная проверка СИЛ). Сыщик в свой следующий ход по ЛВК может сам начать встречную проверку СИЛ, чтобы вырвать книгу у чудовища. Сыщик в оцепенении не получает штрафной кости к встречной проверке, чтобы удержать книгу."
+      }
+    ],
+    "dodge": {
+      "raw": "17% (8/3)",
+      "value": 17,
+      "half": 8,
+      "fifth": 3
+    },
+    "skills": [
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "20%",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Prepare The Body.",
+      "items": [
+        {
+          "name": "Prepare The Body",
+          "spell": "coc:spell:flesh-ward"
+        }
+      ]
+    },
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d6",
+        "trigger": "увидеть, как встаёт Тварь-Гардинер"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Песнь утраченных снов",
+      "raw": "Song of Lost Dreams: the Gardiner-Thing pipes a dreadful whistling from its throat-orifice, causing those who hear its dire tune to become distracted (dazed). On the round the tune starts, those hearing it must each succeed in an opposed POW roll or become dazed for 1d3 rounds. When dazed, the listener is distracted, suffering a penalty die to all skill rolls, and may not initiate an attack (but may dodge or fight back). At the end of 1d3 rounds, the dazed investigator must make a Sanity roll due to the otherworldly visions they have witnessed (1/1d3 loss).",
+      "summary": "Тварь-Гардинер издаёт из горла-отверстия жуткий свист, и все, кто слышит её мелодию, теряют сосредоточенность (впадают в оцепенение). В раунд, когда начинается песнь, каждый слышащий проходит встречную проверку МОЩ; при провале он в оцепенении на 1d3 раунда: штрафная кость ко всем проверкам навыков, сам нападать не может (но может уклоняться и давать отпор). По истечении 1d3 раундов сыщик в оцепенении проходит проверку Рассудка из-за увиденных потусторонних видений (1/1d3).",
+      "refs": [
+        "coc:rule:opposed-pow-rolls",
+        "coc:rule:bonus-and-penalty-dice"
+      ]
+    },
+    {
+      "name": "Броня из шрамов",
+      "raw": "Armor: 5-point ritually scarred skin (spell, Prepare The Body, provides 5 armor points); each time damage is absorbed, magical blue lines trace the scars at the point of the would-be injury. The magical armor is ineffective against hits specifically targeting the head.",
+      "summary": "Кожа в ритуальных шрамах даёт 5 пунктов брони (заклинание «Подготовка тела»); каждый раз, когда броня поглощает урон, в месте несостоявшейся раны по шрамам пробегают магические голубые линии. Против ударов, нацеленных именно в голову, броня не действует: голова уже без кожи и без завитков. Прицельный удар в голову: в ближнем бою — со штрафной костью; из огнестрельного оружия — со штрафной костью, которая отменяет бонусную кость за стрельбу в упор, то есть обычная сложность.",
+      "refs": [
+        "coc:spell:flesh-ward",
+        "coc:rule:armor"
+      ]
+    }
+  ],
+  "habitat": "Страна грёз (заточена как дух древнего колдуна); в сценарии — тело Гардинера в пансионе Ма Шэнкс",
+  "sources": [
+    {
+      "book_id": "dead-boarder-en",
+      "physical_page": 17,
+      "printed_page": 17,
+      "method": "book_text",
+      "verified": true,
+      "note": "Appendix A: «Gardiner-Thing, monster from dreams» — характеристики, Song of Lost Dreams"
+    },
+    {
+      "book_id": "dead-boarder-en",
+      "physical_page": 18,
+      "printed_page": 18,
+      "method": "book_text",
+      "verified": true,
+      "note": "атаки, броня, заклинания, навыки, потеря Рассудка",
+      "entry_page": 17
+    },
+    {
+      "book_id": "dead-boarder-en",
+      "physical_page": 6,
+      "printed_page": 6,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Scenario Background»: сущность, древний колдун, солнцестояние"
+    },
+    {
+      "book_id": "dead-boarder-en",
+      "physical_page": 14,
+      "printed_page": 14,
+      "method": "book_text",
+      "verified": true,
+      "note": "Keeper note: дух древнего колдуна, запертый в Стране грёз"
+    },
+    {
+      "book_id": "dead-boarder-en",
+      "physical_page": 15,
+      "printed_page": 15,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Monster Rises»: как встаёт, проверка Рассудка 1/1d6"
+    },
+    {
+      "book_id": "dead-boarder-en",
+      "physical_page": 16,
+      "printed_page": 16,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Combat»: цели, тактика, броня, удар в голову"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.build",
+      "printed": "0",
+      "expected": "1",
+      "note": "СИЛ 90 + ТЕЛ 60 = 150: по таблице БкУ +1d4 и Комплекция 1; напечатанный БкУ +1d4 с этим согласен, Комплекция 0 — нет. Исправлено по большинству (Р-36).",
+      "fixed": true
+    }
+  ],
+  "corrections": [
+    {
+      "field": "statblock.build",
+      "from": "0",
+      "to": "1",
+      "reason": "Dead Boarder, с. 17: Build 0 при СИЛ 90 + ТЕЛ 60 = 150 и БкУ +1d4; Комплекция исправлена по большинству",
+      "ref": "Р-36"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической; обложка, выходные данные и оглавление — без номеров). Уникальное существо сценария; общей записи нет. НАР, ОБР и Рассудок — «—» как напечатано. Скорость 7 как напечатано (по формуле для человека при СИЛ 90 и ТЕЛ 60 было бы 8; для существа формула не обязательна). Заклинание «Prepare The Body» — вариант «Защиты плоти» (см. «Книгу снов»)."
+  }
+}

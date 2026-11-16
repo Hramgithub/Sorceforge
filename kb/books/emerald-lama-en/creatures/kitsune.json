@@ -1,0 +1,268 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "emerald-lama-en/creature/kitsune",
+  "kind": "creature",
+  "name": {
+    "ru": "Кицунэ",
+    "en": "Kitsune"
+  },
+  "aliases": [
+    "Kitsune, Fox Spirits",
+    "лисий дух",
+    "дух-лиса",
+    "Fox Spirit"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "ёкай, лисий дух",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [],
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "85",
+        "value": 85,
+        "roll": "5d6×5"
+      },
+      "CON": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      },
+      "SIZ": {
+        "raw": "70",
+        "value": 70,
+        "roll": "4d6×5"
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      },
+      "INT": {
+        "raw": "70",
+        "value": 70,
+        "roll": "4d6×5"
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50,
+        "roll": "3d6×5"
+      }
+    },
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "1d4"
+    },
+    "build": {
+      "raw": "+1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8 (в облике лисы — 12)",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        },
+        {
+          "mode": "other",
+          "value": 12,
+          "note": "в облике лисы"
+        }
+      ]
+    },
+    "armor": {
+      "raw": "1 пункт (мех)",
+      "value": 1
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (укусы)",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d4 (укусы)",
+          "dice": "1d4",
+          "adds_db": false
+        },
+        "notes": "оружие в облике лисы"
+      },
+      {
+        "name": {
+          "ru": "Огненное дыхание",
+          "en": "Breathe Fire"
+        },
+        "kind": "attack",
+        "skill": null,
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d6",
+          "dice": "1d6",
+          "adds_db": false
+        },
+        "notes": "в облике лисы; по «Secrets of Japan» лисьи духи выдыхают огонь на расстояние до 1,5 м"
+      },
+      {
+        "name": {
+          "ru": "Кицунэби",
+          "en": "Kitsune-Bi"
+        },
+        "kind": "attack",
+        "skill": null,
+        "chance": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "1d8+2 (огонь или электричество)",
+          "dice": "1d8+2",
+          "adds_db": false,
+          "extra": "огонь или электричество"
+        },
+        "notes": "шар энергии от трения хвостов; 1 ПМ за каждый раунд применения (см. способность «Кицунэби и лисьи огни»)"
+      }
+    ],
+    "spells": {
+      "raw": "нет",
+      "items": []
+    },
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d8",
+        "trigger": "увидеть истинный чуждый облик кицунэ или её превращение"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Облик лисы",
+      "summary": "В облике лисы СИЛ кицунэ — четверть обычной, ТЕЛ — половина обычной (ПЗ соответственно уменьшаются), Скорость — 12.",
+      "raw": "In fox form, STR is one-quarter normal, SIZ is one-half normal (with a corresponding reduction in hit points), and Move is 12."
+    },
+    {
+      "name": "Долгая жизнь",
+      "summary": "За каждые 100 лет жизни к ИНТ и МОЩ кицунэ прибавляется по 1d6.",
+      "raw": "For each 100 years of life add 1d6 to INT and POW."
+    },
+    {
+      "name": "Кицунэби и лисьи огни",
+      "summary": "Цитата из «Secrets of Japan» (с. 230): кицунэ создаёт молнию или огонь, потирая хвосты друг о друга; получается природный шар энергии, которым можно бить противников. Лисьи духи могут и выдыхать огонь на расстояние до 1,5 м. Маленькие кицунэби служат светильниками или их бросают. Эти атаки часто путают с одноимёнными призраками, что кицунэ нравится. Способность стоит 1 ПМ за каждый раунд, когда её применяют.",
+      "raw": "“A kitsune is able to create lightning or fire by rubbing its tails together. This forms into a natural energy ball and is usable as a weapon against opponents. Fox-spirits can also breathe fire up to five feet. Small kitsune-bi can also be used as a source of illumination or hurled. These attacks are often confused with ghosts of the same name, which is to the kitsune’s liking. This kitsune special ability costs the creature 1 magic point per round it is used.”"
+    },
+    {
+      "name": "Высасывание",
+      "summary": "Цитата из «Secrets of Japan» (с. 229): чтобы начать кормиться, кицунэ достаточно один раз коснуться голой кожи цели. В сценарии Хитоси так задевает сыщика-полукицунэ: встречная проверка МОЩ; при победе сыщик теряет 1d4 ВЫН, при проигрыше — 1d8 ВЫН и чувствует сильное головокружение; затем каждую ночь ещё 1d4 ВЫН, смерть при 0.",
+      "raw": "“To initiate a feeding the kitsune need only touch the target’s bare flesh once.”",
+      "refs": [
+        "emerald-lama-en/character/hitoshi",
+        "coc:rule:opposed-pow-rolls"
+      ]
+    },
+    {
+      "name": "Человеческий облик",
+      "summary": "Кицунэ ходят среди людей в человеческом облике (например, красивый японский бизнесмен) и могут в укрытии мгновенно обернуться лисой. Внимательный глаз (Внимание) заметит, что с тенью что-то не так — будто у неё несколько хвостов или щупалец. Сыщик с навыком Общение с духами (рэйкан), пройдя его проверку, на миг видит вместо человека кицунэ — но не её истинный чуждый облик (правило сценария вместо правила «Secrets of Japan»).",
+      "raw": "If he passes the check, the investigator can have a glimpse of the yôkai’s form. That means that instead of seeing a human, the investigator briefly sees a kitsune. Contrary to what is stated in Secrets of Japan, he doesn’t see the true alien form of those creatures.",
+      "refs": [
+        "coc:skill:spot-hidden"
+      ]
+    }
+  ],
+  "description": {
+    "ru": "Лисий дух японского фольклора, ёкай, в мире «Зова Ктулху» — существо с истинным чуждым обликом. Является в облике лисы, в человеческом или получеловеческом облике; могущественная Румико — девятихвостая кицунэ. Кицунэ считают посланниками и слугами Инари, ками плодородия и земледелия. Подробно о кицунэ — «Secrets of Japan», с. 228–230.",
+    "en": null
+  },
+  "legend": {
+    "ru": "В сценарии кицунэ живут общиной в деревне Страны грёз, связанной с миром яви через святилище Мотоносуми Инари в Нагато, и поклоняются Изумрудному ламе. Местная легенда говорит, что святилище построено в честь белого лисьего духа (на деле — Румико, очень давно). По правилу «Secrets of Japan» (с. 229), люди религиозного склада — синтоистские священники, ямабуси, мико и итако — не видят иллюзий кицунэ, а видят их истинный чуждый облик и могут сбить кицунэ сосредоточение; сценарий считает это слишком сильным и заменяет правилом навыка Общение с духами (см. способность «Человеческий облик»). Кицунэ-охотники, стражи и самураи деревни — особи этого вида.",
+    "en": null
+  },
+  "encounters": {
+    "ru": "Святилище Мотоносуми Инари (Хитоси в облике бизнесмена); деревня кицунэ в Стране грёз: стражи у ворот, самурай при Нгаванге Дордже, гости рёкана, торговцы рынка; охотники, которых Хитоси посылает за сыщиками (по одному на сыщика); четыре могущественные кицунэ на церемонии.",
+    "en": null
+  },
+  "habitat": "деревня кицунэ в Стране грёз; святилище Мотоносуми Инари (Нагато)",
+  "sources": [
+    {
+      "book_id": "emerald-lama-en",
+      "physical_page": 11,
+      "printed_page": 11,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «KITSUNE, Fox Spirits», «Kitsune-Bi and Fox Fires»"
+    },
+    {
+      "book_id": "emerald-lama-en",
+      "physical_page": 4,
+      "printed_page": 4,
+      "method": "book_text",
+      "verified": true,
+      "note": "кицунэ, Румико, легенда о белом лисьем духе"
+    },
+    {
+      "book_id": "emerald-lama-en",
+      "physical_page": 5,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "высасывание, тень, потеря Рассудка, Инари"
+    },
+    {
+      "book_id": "emerald-lama-en",
+      "physical_page": 6,
+      "printed_page": 6,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «The Channel Spirit Skill (or Reikan)»"
+    },
+    {
+      "book_id": "emerald-lama-en",
+      "physical_page": 8,
+      "printed_page": 8,
+      "method": "book_text",
+      "verified": true,
+      "note": "кицунэ деревни"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая). Вид из сеттинга «Secrets of Japan»; общей записи нет — запись книги. category «mythos_monster» — наш выбор (книга называет кицунэ ёкай с «истинным чуждым обликом»). «five feet» — 1,5 м (Р-64). Бросок «2d6+6x5» записан как (2d6+6)×5. Способности: raw — английский текст книги."
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "emerald-lama-en/scene/kitsune-hunt",
+  "kind": "scene",
+  "name": {
+    "ru": "Охота кицунэ",
+    "en": null
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Если сыщик-полукицунэ отказывается добровольно участвовать в ритуале, Хитоси выслеживает его (её) и заставляет принять участие. Он посылает в погоню за группой сыщиков охотников-кицунэ — по одному охотнику на каждого сыщика. Пойманных он запирает в камере гостиницы до часа церемонии.",
+    "en": null
+  },
+  "when": "Если сыщик-полукицунэ отказывается участвовать в ритуале",
+  "arc": {
+    "scenario": "emerald-lama-en/scenario/emerald-lama",
+    "part": "Страна грёз: деревня кицунэ",
+    "order": 10
+  },
+  "where": [
+    {
+      "location": "emerald-lama-en/location/kitsune-village",
+      "note": null
+    },
+    {
+      "location": "emerald-lama-en/location/ryokan",
+      "note": "камера в гостинице"
+    }
+  ],
+  "participants": [
+    {
+      "id": "emerald-lama-en/character/hitoshi",
+      "role": "посылает охотников"
+    },
+    {
+      "id": "emerald-lama-en/character/kitsune-hunters",
+      "role": "по одному на сыщика"
+    }
+  ],
+  "mechanics": {
+    "ru": "Погоня; бой с охотниками-кицунэ (профиль кицунэ).",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Сыщики бегут, сражаются или оказываются в камере до церемонии.",
+    "en": null
+  },
+  "refs": [
+    "emerald-lama-en/creature/kitsune",
+    "emerald-lama-en/scene/ceremony"
+  ],
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "emerald-lama-en",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Ceremony»: отказ участвовать"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая). Название сцены — наше (абзац в разделе «The Ceremony»)."
+  }
+}

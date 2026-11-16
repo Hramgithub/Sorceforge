@@ -1,0 +1,250 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "london-3-mythos-london-en/creature/the-spawn",
+  "kind": "creature",
+  "name": {
+    "ru": "Отродье преподобного Ли",
+    "en": "The Spawn"
+  },
+  "aliases": [
+    "отродье",
+    "spawn of Reverend Leigh",
+    "star-shaped spawn"
+  ],
+  "category": "mythos_monster",
+  "subcategory": null,
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "spawn_of",
+      "target": "london-3-mythos-london-en/character/reverend-albert-leigh",
+      "note": "отец: отродье зачато Ли с прихожанками, подвергнутыми коду",
+      "note_back": "его нечеловеческое потомство"
+    },
+    {
+      "type": "related_to",
+      "target": "coc:creature:elder-thing",
+      "note": "крупное отродье разрастается в пятиконечную голову Старца; носители восприимчивы к влиянию Старцев",
+      "note_back": "отродье преподобного Ли, связанное со Старцами"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "20",
+        "value": 20
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "10",
+        "value": 10
+      },
+      "DEX": {
+        "raw": "42",
+        "value": 42
+      },
+      "INT": {
+        "raw": "20",
+        "value": 20
+      },
+      "POW": {
+        "raw": "80",
+        "value": 80
+      }
+    },
+    "hp": {
+      "raw": "6",
+      "value": 6
+    },
+    "damage_bonus": {
+      "raw": "-2",
+      "value": "-2"
+    },
+    "build": {
+      "raw": "-2",
+      "value": -2
+    },
+    "move": {
+      "raw": "4",
+      "value": 4,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 4
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Присасывание",
+          "en": "Special"
+        },
+        "kind": "special",
+        "skill": null,
+        "chance": {
+          "raw": "Special (see notes).",
+          "value": null
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": false
+        },
+        "notes": "подбирается к спящему, выделяет обезболивающую жидкость и кусает, как клещ; см. способности"
+      }
+    ],
+    "dodge": {
+      "raw": "21% (10/4)",
+      "value": 21,
+      "half": 10,
+      "fifth": 4
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d4",
+        "trigger": "увидеть отродье"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Присасывание",
+      "summary": "Двигается бесшумно, предпочитает спящих и старается коснуться кожи цели. Из зазубренного брюшка выделяет обезболивающую жидкость, чтобы держаться незаметно для носителя, затем кусает и питается; сворачивает кровь так, что цель может не заметить укуса — похоже на клеща. Укус — 1d3 урона; проснувшись, человек замечает рану при успешной проверке Внимания.",
+      "raw": "When moving it creeps silently. It prefers sleeping targets and will seek to gain contact with its target’s skin. It then exudes an anaesthetic fluid from its barbed underside, which allows it to grip on without alerting its host. Once attached it will bite and feed. … This attack causes 1d3 damage. Once awake the person will notice the wound with a successful Spot Hidden roll."
+    },
+    {
+      "name": "Вселение в носителя",
+      "summary": "Отродье может зарыться в носителя и укрыться в нём, оставив небольшую рану около 1 см в поперечнике. Носители отродья очень восприимчивы к влиянию и одержимости Старцев. Отродье не нападает на Ли и на носителей другого отродья.",
+      "raw": "Alternatively it may burrow into its host and take refuge there, leaving a small wound about half an inch across. Those that are hosts to the spawn are highly receptive to elder thing influence and possession. The spawn will not attack Leigh or anyone that is host to another spawn."
+    },
+    {
+      "name": "Выход наружу",
+      "summary": "Созревшее или голодное отродье прогрызает путь из носителя: у Элис оно перерезало аорту, напилось крови и выгрызло выход; у Софии живот лопается, и наружу вырываются шесть голодных отродий, ищущих новых носителей. Можно устроить, чтобы отродье вырвалось из доктора Бэнкс — например, из горла."
+    },
+    {
+      "name": "Разрастание в голову Старца",
+      "summary": "Крупное отродье, положенное на головы двух слившихся рабочих, разрастается в пятиконечную голову Старца (см. «Пародия на Старца»).",
+      "refs": [
+        "london-3-mythos-london-en/creature/elder-thing-mockery"
+      ]
+    }
+  ],
+  "description": {
+    "ru": "Похоже на жёлтую морскую звезду величиной с мужскую ладонь, с пятью лучами; брюшко покрыто крошечными зазубринами вокруг центрального клюва. Потомство преподобного Ли от прихожанок, подвергнутых енохианскому коду.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Насилие Ли привело к череде беременностей; он не знает, что его потомство — не вполне люди. Отродье, выбравшееся из Мэри Хеймер (26 января 1924 года), затаилось в морге и прицепилось к спине доктора Бэнкс, когда та задремала, а затем поселилось у неё в животе. Отродье Элис Доу (3 февраля) после её смерти спряталось под её кроватью; если оно ещё там, когда приходит преподобный Ли, оно тянется к нему, но на него набрасывается собака семьи и треплет его; Ли изображает ужас. В животе Софии Де Сантис — целый выводок, который вырывается 5 февраля. Несколько дней назад одно отродье пряталось под кроватью Ли в приорате (пятно засохшей крови). Седрик Мейкпис — носитель крупного отродья.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "london-3-mythos-london-en",
+      "physical_page": 46,
+      "printed_page": 46,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Keeper’s Timeline of Events»: «spawn breaks out»"
+    },
+    {
+      "book_id": "london-3-mythos-london-en",
+      "physical_page": 49,
+      "printed_page": 49,
+      "method": "book_text",
+      "verified": true,
+      "note": "«…Sin of Fornication»: потомство не вполне люди"
+    },
+    {
+      "book_id": "london-3-mythos-london-en",
+      "physical_page": 52,
+      "printed_page": 52,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Spawn»: гибель Элис, способ нападения"
+    },
+    {
+      "book_id": "london-3-mythos-london-en",
+      "physical_page": 53,
+      "printed_page": 53,
+      "method": "book_text",
+      "verified": true,
+      "note": "описание, статблок «The Spawn», «The Reverend Calls»"
+    },
+    {
+      "book_id": "london-3-mythos-london-en",
+      "physical_page": 54,
+      "printed_page": 54,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Visiting Doctor Banks»: отродье Мэри в теле доктора"
+    },
+    {
+      "book_id": "london-3-mythos-london-en",
+      "physical_page": 55,
+      "printed_page": 55,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Playing Edith», «The Death of Mary Hamer»"
+    },
+    {
+      "book_id": "london-3-mythos-london-en",
+      "physical_page": 58,
+      "printed_page": 58,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Sofia De Santis»: выводок из шести"
+    },
+    {
+      "book_id": "london-3-mythos-london-en",
+      "physical_page": 61,
+      "printed_page": 61,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Reverend Leigh’s Room»: пятно крови"
+    },
+    {
+      "book_id": "london-3-mythos-london-en",
+      "physical_page": 65,
+      "printed_page": 65,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Elder Thing Mockeries»: крупное отродье"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.move",
+      "printed": "Move 4",
+      "expected": "9 (СИЛ 20 и ЛВК 42 > ТЕЛ 10)",
+      "note": "с. 53: малая Скорость — существо величиной с ладонь, задумано книгой (Р-76); оставлено как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Статблок — как напечатан (с. 53): у атаки нет процента («Special (see notes)»). Меры — метрические (Р-64): «half an inch» — около 1 см."
+  },
+  "images": [
+    {
+      "file": "art/creatures/london3-poor-souls-the-spawn.webp",
+      "kind": "art",
+      "caption": "отродье преподобного Ли",
+      "source": "Adventures in Mythos London (London 3), «Those Poor Souls Who Dwell in Light», с. 53 (физ. 53): рисунок над статблоком «The Spawn»"
+    }
+  ]
+}

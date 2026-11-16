@@ -1,0 +1,222 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "london-3-mythos-london-en/character/frank-welch",
+  "kind": "character",
+  "name": {
+    "ru": "Фрэнк Уэлч",
+    "en": "Frank Welch"
+  },
+  "aliases": [
+    "Welch"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "боцман",
+    "en": "Boatswain"
+  },
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "london-3-mythos-london-en/character/james-blunden",
+      "note": "капитан банды культистов",
+      "note_back": "боцман"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "55",
+        "value": 55
+      },
+      "APP": {
+        "raw": "65",
+        "value": 65
+      },
+      "INT": {
+        "raw": "60",
+        "value": 60
+      },
+      "POW": {
+        "raw": "60",
+        "value": 60
+      },
+      "EDU": {
+        "raw": "45",
+        "value": 45
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "sanity": {
+      "raw": "35",
+      "value": 35,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Нож",
+          "en": "Knife"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        },
+        "damage": {
+          "raw": "1d4+2+db",
+          "dice": "1d4+2",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        },
+        "damage": {
+          "raw": "1d3+db",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      }
+    ],
+    "skills": [
+      {
+        "name": "Стрельба (винтовка/дробовик)",
+        "skill": "coc:skill:firearms",
+        "specialization": "винтовка/дробовик",
+        "value": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Член экипажа «Луизианской леди» и культист Учеников Алой Ладони. Приметы по сводной таблице: носит боцманский свисток. Живёт в каюте команды B.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Один из Учеников, которых Джеймс Бланден набрал вместо отравленного экипажа Гранта. Убит в обеденном зале; его узнают по свистку.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "london-3-mythos-london-en",
+      "physical_page": 29,
+      "printed_page": 29,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Crewmen»: таблица характеристик и оружие"
+    },
+    {
+      "book_id": "london-3-mythos-london-en",
+      "physical_page": 13,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Crew Cabin B»"
+    },
+    {
+      "book_id": "london-3-mythos-london-en",
+      "physical_page": 20,
+      "printed_page": 20,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Dining Room»: тело Уэлча"
+    },
+    {
+      "book_id": "london-3-mythos-london-en",
+      "physical_page": 40,
+      "printed_page": 40,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Crew and Passenger Summary Table»: каюта, приметы, судьба"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.move",
+      "printed": "Move 9",
+      "expected": "8",
+      "note": "Скорость по правилам 7-й редакции — 8 (СИЛ 60 равна ТЕЛ 60, ЛВК 55 ниже); оставлено как напечатано (Р-161).",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Статблок — строка общей таблицы «Crewmen» (с. 29); оружие общее для всех матросов: Нож 25% (12/5), 1d4+2+БкУ; Драка 25%, 1d3+БкУ; Стрельба (винтовка/дробовик) 35% (17/7). Возраст и Уклонение в таблице не даны."
+  },
+  "images": [
+    {
+      "file": "art/characters/london3-thames-frank-welch.webp",
+      "kind": "portrait",
+      "caption": "",
+      "source": "Adventures in Mythos London, с. 29 (физ. 29), «Crewmen»: 1-й портрет ряда"
+    }
+  ]
+}

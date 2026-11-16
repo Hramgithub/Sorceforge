@@ -1,0 +1,212 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "london-3-mythos-london-en/character/thomas-bowen",
+  "kind": "character",
+  "name": {
+    "ru": "Томас Боуэн",
+    "en": "Thomas Bowen"
+  },
+  "aliases": [
+    "Bowen"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "матрос, официант",
+    "en": "Able Seaman/Waiter"
+  },
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "london-3-mythos-london-en/character/james-blunden",
+      "note": "капитан банды культистов",
+      "note_back": "матрос, официант"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "55",
+        "value": 55
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65
+      },
+      "APP": {
+        "raw": "70",
+        "value": 70
+      },
+      "INT": {
+        "raw": "45",
+        "value": 45
+      },
+      "POW": {
+        "raw": "55",
+        "value": 55
+      },
+      "EDU": {
+        "raw": "45",
+        "value": 45
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "sanity": {
+      "raw": "43",
+      "value": 43,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Нож",
+          "en": "Knife"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        },
+        "damage": {
+          "raw": "1d4+2+db",
+          "dice": "1d4+2",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        },
+        "damage": {
+          "raw": "1d3+db",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      }
+    ],
+    "skills": [
+      {
+        "name": "Стрельба (винтовка/дробовик)",
+        "skill": "coc:skill:firearms",
+        "specialization": "винтовка/дробовик",
+        "value": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Член экипажа «Луизианской леди» и культист Учеников Алой Ладони. Приметы по сводной таблице: сломанный нос и рассечённое ухо. Живёт в каюте команды B.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Один из Учеников, которых Джеймс Бланден набрал вместо отравленного экипажа Гранта. По сводной таблице — выживший культист; в списке культистов в барже (с. 23) его нет.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "london-3-mythos-london-en",
+      "physical_page": 29,
+      "printed_page": 29,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Crewmen»: таблица характеристик и оружие"
+    },
+    {
+      "book_id": "london-3-mythos-london-en",
+      "physical_page": 13,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Crew Cabin B»"
+    },
+    {
+      "book_id": "london-3-mythos-london-en",
+      "physical_page": 23,
+      "printed_page": 23,
+      "method": "book_text",
+      "verified": true,
+      "note": "список культистов в барже (без Боуэна)"
+    },
+    {
+      "book_id": "london-3-mythos-london-en",
+      "physical_page": 40,
+      "printed_page": 40,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Crew and Passenger Summary Table»: каюта, приметы, судьба"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Статблок — строка общей таблицы «Crewmen» (с. 29); оружие общее для всех матросов: Нож 25% (12/5), 1d4+2+БкУ; Драка 25%, 1d3+БкУ; Стрельба (винтовка/дробовик) 35% (17/7). Возраст и Уклонение в таблице не даны."
+  },
+  "images": [
+    {
+      "file": "art/characters/london3-thames-thomas-bowen.webp",
+      "kind": "portrait",
+      "caption": "",
+      "source": "Adventures in Mythos London, с. 29 (физ. 29), «Crewmen»: 2-й портрет ряда"
+    }
+  ]
+}

@@ -44,11 +44,24 @@
     {
       "location": "lark-in-a-cage-en/location/deptford-creek",
       "note": "устье"
+    },
+    {
+      "location": "london-3-mythos-london-en/location/greenwich-pier",
+      "note": "пирс, откуда уходит «Луизианская леди» (1920)"
+    },
+    {
+      "location": "london-3-mythos-london-en/location/coalhouse-fort",
+      "note": "форт в Ист-Тилбери, стоянка с фейерверком (1920)"
+    },
+    {
+      "location": "london-3-mythos-london-en/location/river-medway",
+      "note": "Медуэй, впадающий в эстуарий Темзы"
     }
   ],
   "axes": {
     "era": [
-      "gaslight"
+      "gaslight",
+      "1920s"
     ],
     "ruleset": "core"
   },
@@ -84,6 +97,14 @@
       "method": "book_text",
       "verified": true,
       "note": "карта игроков (с. 44)"
+    },
+    {
+      "book_id": "london-3-mythos-london-en",
+      "physical_page": 10,
+      "printed_page": 10,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Terror on the Thames»: круиз «Луизианской леди» от Гринвичского пирса к форту Коулхаус (с. 5–11)"
     }
   ],
   "quality": {
@@ -92,5 +113,35 @@
       "translated"
     ],
     "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2)."
-  }
+  },
+  "corrections": [
+    {
+      "field": "along",
+      "from": null,
+      "to": "london-3-mythos-london-en/location/greenwich-pier",
+      "reason": "Adventures in Mythos London, с. 6, 10: круиз «Ужаса на Темзе» начинается у Гринвичского пирса",
+      "ref": "Р-135"
+    },
+    {
+      "field": "along",
+      "from": null,
+      "to": "london-3-mythos-london-en/location/coalhouse-fort",
+      "reason": "Adventures in Mythos London, с. 6, 10: форт Коулхаус на Темзе в 40 км ниже Гринвича",
+      "ref": "Р-135"
+    },
+    {
+      "field": "along",
+      "from": null,
+      "to": "london-3-mythos-london-en/location/river-medway",
+      "reason": "Adventures in Mythos London, с. 5: «Ужас на Темзе» кончается в устье Медуэя",
+      "ref": "Р-135"
+    },
+    {
+      "field": "axes.era",
+      "from": null,
+      "to": "1920s",
+      "reason": "Темза — место действия сценария 1920-х «Ужас на Темзе» (Adventures in Mythos London)",
+      "ref": "Р-80"
+    }
+  ]
 }

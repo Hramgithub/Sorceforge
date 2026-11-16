@@ -1,0 +1,208 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "shadows-old-subway-en/character/algernon-carson",
+  "kind": "character",
+  "name": {
+    "ru": "Элджернон Карсон",
+    "en": "Algernon Carson"
+  },
+  "aliases": [
+    "The Deranged Sculptor",
+    "Безумный скульптор"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "sex": "мужской",
+  "occupation": {
+    "ru": "рабочий метро (пропавший)",
+    "en": "subway worker"
+  },
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "shadows-old-subway-en/character/edward-gittings",
+      "note": "мистер Гиттингс велел ему высечь «мать»",
+      "note_back": "последователь, высекший лицо «матери»"
+    },
+    {
+      "type": "knows",
+      "target": "shadows-old-subway-en/character/gladys",
+      "note": "Глэдис, звавшая его остепениться",
+      "note_back": "Элджернон, которого она пригласила на ужин"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "40",
+        "value": 40
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "50",
+        "value": 50
+      },
+      "POW": {
+        "raw": "30",
+        "value": 30
+      }
+    },
+    "hp": {
+      "raw": "10",
+      "value": 10
+    },
+    "damage_bonus": {
+      "raw": "+0",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Зубило",
+          "en": "Chisel"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d4+БкУ",
+          "dice": "1d4",
+          "adds_db": true
+        },
+        "notes": "В бою (абз. 42) атакует с одержимой яростью, +1 к урону, пока не получит больше 3 ПЗ урона. Зубило после боя — как кинжал (абз. 32)."
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    }
+  },
+  "abilities": [
+    {
+      "name": "Тактика",
+      "summary": "Скульптор отчаянно хочет принести своей новой скульптуре жертву. Он атакует с одержимой яростью, +1 к урону, пока не получит больше 3 ПЗ урона; после этого становится осторожнее и теряет бонус. Отлично видит в темноте (абз. 42).",
+      "raw": "Tactics: The sculptor is desperate to give his new sculpture a sacrifice. He will attack with possessed fury, for +1 damage, until he takes more than 3 hp damage, then he will become more cautious and lose that bonus."
+    }
+  ],
+  "possessions": [
+    "зубило",
+    "записка от Глэдис (за поясом)"
+  ],
+  "description": {
+    "ru": "Тощий мужчина без рубашки, в мешковатых брюках; растрёпанные волосы, пустой взгляд, сгнившие зубы, с дёсен сочится белая жидкость. Сжимает острое зубило; называет высеченное им лицо «матерью» и считает, что ей нужна кровь во рту.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Элджернон Карсон — один из рабочих, пропавших в тоннеле Кларк-стрит. Неделями ему снились утешительные сны о голове, качающейся на море бесцветной слизи; Глэдис посмеялась над ним, а мистер Гиттингс пришёл в восторг и велел «воплотить» сон. Элджернон сбежал и высек в железистой скале у развилки огромное женское лицо с железными глазами; он же нарисовал знак на стене у печати (абз. 2, 34). Встреча с ним — абз. 8, 41, 63, 5; бой — абз. 42, победа — абз. 32 (записка Глэдис). Узнать его судьбу — одна из наград (+2 Рассудка, с. 23).",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "shadows-old-subway-en",
+      "physical_page": 14,
+      "printed_page": 14,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «The Deranged Sculptor» (версия 1.1 — «Fixed the Sculptor’s statistics», с. 23); абз. 41, 42"
+    },
+    {
+      "book_id": "shadows-old-subway-en",
+      "physical_page": 4,
+      "printed_page": 4,
+      "method": "book_text",
+      "verified": true,
+      "note": "абз. 8"
+    },
+    {
+      "book_id": "shadows-old-subway-en",
+      "physical_page": 5,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "абз. 8: имя"
+    },
+    {
+      "book_id": "shadows-old-subway-en",
+      "physical_page": 3,
+      "printed_page": 3,
+      "method": "book_text",
+      "verified": true,
+      "note": "абз. 5"
+    },
+    {
+      "book_id": "shadows-old-subway-en",
+      "physical_page": 11,
+      "printed_page": 11,
+      "method": "book_text",
+      "verified": true,
+      "note": "абз. 32"
+    },
+    {
+      "book_id": "shadows-old-subway-en",
+      "physical_page": 20,
+      "printed_page": 20,
+      "method": "book_text",
+      "verified": true,
+      "note": "абз. 63: сны, Глэдис, Гиттингс"
+    },
+    {
+      "book_id": "shadows-old-subway-en",
+      "physical_page": 23,
+      "printed_page": 23,
+      "method": "book_text",
+      "verified": true,
+      "note": "награды: судьба пропавших рабочих"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Статблок напечатан как «The Deranged Sculptor»; в абз. 8 и 32 он — Algernon Carson."
+  }
+}

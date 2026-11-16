@@ -1,0 +1,101 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "gallilee-springs-en/scene/car-wash",
+  "kind": "scene",
+  "name": {
+    "ru": "Часть 1: мойка машин",
+    "en": "Part 1: Car Wash"
+  },
+  "description": {
+    "ru": "Каждый игрок со своей супругой и детьми едет на благотворительную мойку машин у школы. Играйте это как обычный день: семья и жизнь общины. Пока идёт мойка, жёны обсуждают беспокойную ночь мужей; Мэри достаёт дневник снов и рассказывает о странных словах, которые выкрикивал Альберт.\nКогда мойка подходит к концу, жёны подходят к трём друзьям и спрашивают, как они; жёны выглядят встревоженными. Когда мужчины отвечают, жена Альберта Мэри спрашивает, что значит «Переправа Асклепия». Никто из мужчин понятия не имеет, и, когда разговор кончается, мужчины возвращаются к общению.\nЧерез несколько минут Альберту и остальным вспыхивают в памяти их сны. Они вспоминают их как сны и удивляются, что забыли. Обсуждая сны, каждый постепенно понимает, что это не сны, а воспоминания. Тогда Хранитель выдаёт игрокам их НОВЫЕ листы сыщиков.\nКогда жёны отходят, мужчины понемногу вспоминают свою настоящую жизнь; предполагается, что они обсудят это друг с другом. Они всё ещё считают друг друга друзьями — два года общения не забылись. Им нужно решить, что делать, и их тянет уйти в сторону, чтобы поговорить.",
+    "en": null
+  },
+  "when": "Утро субботы",
+  "arc": {
+    "scenario": "gallilee-springs-en/scenario/galilee-springs",
+    "part": "Часть 1: мойка машин",
+    "order": 2
+  },
+  "where": [
+    {
+      "location": "gallilee-springs-en/location/galilee-springs-high-school",
+      "note": "благотворительная мойка машин"
+    }
+  ],
+  "participants": [
+    {
+      "id": "gallilee-springs-en/character/albert-ramirez",
+      "role": "сыщик"
+    },
+    {
+      "id": "gallilee-springs-en/character/jeffrey-gacy",
+      "role": "сыщик"
+    },
+    {
+      "id": "gallilee-springs-en/character/jack-kroll",
+      "role": "сыщик"
+    },
+    {
+      "id": "gallilee-springs-en/character/mary-ramirez",
+      "role": "спрашивает о «Переправе Асклепия»"
+    }
+  ],
+  "mechanics": {
+    "ru": "Если один из персонажей ещё не решил бежать, он проходит проверку Идеи: любой успех — он понимает, что надо бежать.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Через 15 минут звучит объявление по громкоговорителям, и примерно тогда же сыщикам полностью открывается настоящий облик города (сцены «Разговор наедине», «Настоящий город», «Объявление по громкой связи»).",
+    "en": null
+  },
+  "refs": [
+    "gallilee-springs-en/item/mary-dream-journal",
+    "gallilee-springs-en/item/wild-mushroom-spores",
+    "coc:rule:idea-roll",
+    "gallilee-springs-en/scene/talking-in-secret",
+    "gallilee-springs-en/scene/town-revealed",
+    "gallilee-springs-en/scene/announcement",
+    "gallilee-springs-en/scene/barbecue"
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "gallilee-springs-en",
+      "physical_page": 4,
+      "printed_page": 3,
+      "method": "book_text",
+      "verified": true,
+      "note": "предыстория: жёны и дневник снов на мойке"
+    },
+    {
+      "book_id": "gallilee-springs-en",
+      "physical_page": 6,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Part 1: Car Wash»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1; на с. 1–2 номеров нет)."
+  },
+  "errata": [
+    {
+      "field": "description.ru",
+      "printed": "at the three-family barbecue, the wives confront the men, one of them mentioning the words ‘Asclepius Portage’ (с. 3); As the car wash winds down … Marie asks him what “Asclepius portage” means (с. 5)",
+      "expected": "одна сцена",
+      "note": "Предыстория ставит вопрос жён на барбекю, хронология — в конец мойки машин. В сцене — по хронологии; версия предыстории — сцена «Барбекю трёх семей».",
+      "fixed": false
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "gallilee-springs-en/scene/announcement",
+  "kind": "scene",
+  "name": {
+    "ru": "Объявление по громкой связи",
+    "en": "announcement from the Town Council and the Coordinators"
+  },
+  "description": {
+    "ru": "Где бы сыщики ни были, динамики сирен воздушной тревоги с треском оживают, и по скрытым громкоговорителям по всему городу звучит объявление. Три громких пронзительных сигнала, потом успокаивающий мужской голос: «Внимание, граждане. Объявление от городского совета и Координаторов. Джека Кролла, Джеффри Гейси, Альберта Рамиреса следует найти и немедленно задержать. Полиция уже в пути. Джек, Джеффри, Альберт, пожалуйста, сохраняйте спокойствие. Помощь идёт…»\nТеперь мужчины понимают правду о городе и знают, что должны бежать. Когда они выходят на открытое место (если не в машине) или едут по улице, где ходят люди, кто-нибудь замечает их и кричит «Вот они!», и другие сбегаются со всех сторон, чтобы схватить их.",
+    "en": null
+  },
+  "when": "Через 15 минут после того, как сыщики исчезают с мойки машин",
+  "arc": {
+    "scenario": "gallilee-springs-en/scenario/galilee-springs",
+    "part": "Предыстория (заметки для Хранителя)",
+    "order": 6
+  },
+  "where": [
+    {
+      "location": "gallilee-springs-en/location/galilee-springs",
+      "note": "где бы ни были сыщики"
+    }
+  ],
+  "participants": [
+    {
+      "id": "gallilee-springs-en/character/albert-ramirez",
+      "role": "сыщик"
+    },
+    {
+      "id": "gallilee-springs-en/character/jeffrey-gacy",
+      "role": "сыщик"
+    },
+    {
+      "id": "gallilee-springs-en/character/jack-kroll",
+      "role": "сыщик"
+    },
+    {
+      "id": "gallilee-springs-en/character/galilee-springs-townsfolk",
+      "role": "пытаются схватить беглецов"
+    }
+  ],
+  "mechanics": {
+    "ru": "Когда это случается впервые, каждый сыщик проходит проверку Рассудка (величину потери книга не даёт). По хронологии в это же время сыщикам полностью открывается облик города; персонаж, который ещё не решил бежать, проходит проверку Идеи — любой успех означает, что он понимает: надо бежать.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Сыщики бегут к главной дороге из города (часть 4: бегство).",
+    "en": null
+  },
+  "refs": [
+    "gallilee-springs-en/organization/coordinators",
+    "coc:rule:sanity-points-and-san-rolls",
+    "coc:rule:idea-roll",
+    "gallilee-springs-en/scene/flight"
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "gallilee-springs-en",
+      "physical_page": 5,
+      "printed_page": 4,
+      "method": "book_text",
+      "verified": true,
+      "note": "объявление и толпа"
+    },
+    {
+      "book_id": "gallilee-springs-en",
+      "physical_page": 6,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Part 1: Car Wash»: After 15 minutes the announcement"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1; на с. 1–2 номеров нет)."
+  }
+}

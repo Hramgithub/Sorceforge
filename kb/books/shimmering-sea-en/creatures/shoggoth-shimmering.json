@@ -1,0 +1,234 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "shimmering-sea-en/creature/shoggoth-shimmering",
+  "kind": "creature",
+  "name": {
+    "ru": "Шоггот («Мерцающее море»)",
+    "en": "Shoggoth (Shimmering Sea)"
+  },
+  "aliases": [
+    "шоггот глубоководных"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "служитель",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:shoggoth",
+      "note_back": "профиль сценария «Мерцающее море»"
+    },
+    {
+      "type": "servitor_of",
+      "target": "shimmering-sea-en/creature/deep-one-shimmering",
+      "note": "хозяева, потерявшие над ним власть из-за детектора Дебая",
+      "note_back": "шоггот колонии, вырвавшийся из-под власти"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "450",
+        "value": 450
+      },
+      "CON": {
+        "raw": "250",
+        "value": 250
+      },
+      "SIZ": {
+        "raw": "200",
+        "value": 200
+      },
+      "DEX": {
+        "raw": "30",
+        "value": 30
+      },
+      "INT": {
+        "raw": "50",
+        "value": 50
+      },
+      "POW": {
+        "raw": "85",
+        "value": 85
+      }
+    },
+    "hp": {
+      "raw": "80",
+      "value": 80
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "damage_bonus": {
+      "raw": "+8d6",
+      "value": "+8d6"
+    },
+    "build": {
+      "raw": "9",
+      "value": 9
+    },
+    "move": {
+      "raw": "10 перекатываясь",
+      "value": 10,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 10,
+          "note": "перекатываясь"
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет, но (1) взрывы, огонь и электричество наносят лишь половину урона; (2) физическое оружие — огнестрельное, ножи — наносит лишь 1 пункт урона за попадание; (3) шоггот восстанавливает 10 ПЗ за раунд",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "2",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "равен БкУ, или шоггот поглощает цель",
+          "dice": null,
+          "adds_db": true
+        },
+        "notes": "отращивает щупальца, когти и любые отростки для сокрушающего удара; задетого могут поглотить"
+      }
+    ],
+    "dodge": {
+      "raw": "8% (4/1)",
+      "value": 8,
+      "half": 4,
+      "fifth": 1
+    },
+    "sanity_loss": [
+      {
+        "success": "1d6",
+        "fail": "1d20",
+        "trigger": "при виде шоггота"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Поглощение",
+      "summary": "Каждого поглощённого шоггот атакует отдельно: жертва должна выиграть встречную проверку СИЛ, иначе её разрывает на части. Если шоггот атакует несколько целей, он делит свою СИЛ между ними. Те, кто внутри чёрной массы, могут бить в ответ только в раундах, когда выбросят на 1d100 не больше своей СИЛ. Каждый раунд внутри шоггота жертва теряет ПЗ, равные БкУ шоггота (её разрывает, давит и растаскивает на куски). Шоггот может поглотить сколько угодно врагов, но их суммарная ТЕЛ не может превышать его собственную.",
+      "raw": "Engulf: Each person engulfed within the shoggoth is attacked separately and each must make a successful opposed STR roll or be sucked apart. If the shoggoth attacks more than one target, it must divide its STR among all targets. Those held within the shoggoth’s black bulk can strike back only on rounds in which they successfully roll STR or less on 1d100. Each round a victim is held within a shoggoth, he or she loses hit points equal to the shoggoth’s damage bonus; the damage describable as rupturing, crushing, and being sucked into pieces. A shoggoth can engulf any number of enemies; however they may not exceed a total SIZ greater than its own SIZ."
+    },
+    {
+      "name": "Аморфное тело",
+      "summary": "В бою покрывает квадрат со стороной 5 метров и по желанию отращивает щупальца, когти и любые отростки для сокрушающего удара.",
+      "raw": "In combat, a shoggoth covers an area 5 yards square and is able to produce tentacles, claws, or any manner of appendages at will with which to perform a crushing attack."
+    },
+    {
+      "name": "Нападение на корабль",
+      "summary": "Сначала шоггот прикрепляется к корпусу и ищет часть компьютерной сети корабля, затем по источнику сигналов, наводящих на него оружие, находит сыщиков. После этого каждый ход делает четыре проверки МОЩ: сколько успехов, столько атак. Выросший до немыслимых размеров, поглотив несколько судов, он может просовывать части себя сквозь корабль и внутри него и атаковать сыщиков в любой точке корпуса. Если его не обезвредить за пять раундов, корпус корабля начинает разваливаться.",
+      "raw": "The Shoggoth’s first action will be to attach itself to the hull and seek out part of the ship’s computer network. It will then home in on the source of the signals directing the weapons attacking it to pinpoint the location of the Investigators. It will then make four Power rolls per turn, with the number of successful checks equal to the number of attacks it is permitted to make. Having grown to an inconceivable size through the consumption of multiple vessels, it is able to project parts of itself over through and within the ship to attack the investigators at any point in the hull."
+    }
+  ],
+  "description": {
+    "ru": "Шоггот, подвластный колонии глубоководных Южно-Китайского моря. Излучатель детектора Дебая на эсминце «Линдон Джонсон» стал для него маяком и нарушил связь с хозяевами, и шоггот охотится на всё, что встречает в перенаселённых водах: он уничтожил подводный беспилотник ВМС США, китайское судно снабжения, катер, возивший оружие филиппинским повстанцам, и вьетнамскую рыбацкую лодку, а 31 августа в 23:00 — китайскую подлодку. Под водой его видят как зелёный свет. Вырос до немыслимых размеров, поглотив несколько судов.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "shimmering-sea-en",
+      "physical_page": 10,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Bestiary»: «Shoggoth»"
+    },
+    {
+      "book_id": "shimmering-sea-en",
+      "physical_page": 3,
+      "printed_page": 2,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Introduction»"
+    },
+    {
+      "book_id": "shimmering-sea-en",
+      "physical_page": 6,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Chinese Trawler»: зелёный свет"
+    },
+    {
+      "book_id": "shimmering-sea-en",
+      "physical_page": 7,
+      "printed_page": 6,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Loss of the Type 091» (рисунок)"
+    },
+    {
+      "book_id": "shimmering-sea-en",
+      "physical_page": 8,
+      "printed_page": 7,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Someone on the Hull», «The Final Battle»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.hp",
+      "printed": "HP: 80",
+      "expected": "45 ((ВЫН 250 + ТЕЛ 200) / 10)",
+      "note": "ПЗ не сходятся с ВЫН и ТЕЛ; книга подчёркивает, что шоггот вырос до немыслимых размеров, — оставлено как напечатано (Р-76). Вопрос владельцу.",
+      "fixed": false
+    },
+    {
+      "field": "statblock.mp",
+      "printed": "Magic Points: 10",
+      "expected": "17 (МОЩ 85 / 5)",
+      "note": "ПМ не сходятся с МОЩ (10 — как у вида в справочнике); оставлено как напечатано.",
+      "fixed": false
+    },
+    {
+      "field": "statblock.attacks_per_round",
+      "printed": "Attacks per round: 2",
+      "expected": "по числу успехов из четырёх проверок МОЩ за ход («The Final Battle», с. 7)",
+      "note": "В последнем бою текст сценария даёт своё правило числа атак — берётся текст (Р-38); 2 атаки — вне этого боя.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1; обложка без номера). Отличия от вида в справочнике: характеристики (СИЛ 450, ВЫН 250, ТЕЛ 200, ЛВК 30, ИНТ 50, МОЩ 85), ПЗ 80, регенерация 10 ПЗ за раунд (у вида 2), взрывы тоже наносят половину урона; нет атаки «Поглощение» отдельной строкой — поглощение входит в Ближний бой. «5 yards square» — 5 метров (Р-64)."
+  },
+  "images": [
+    {
+      "file": "art/creatures/shimmering-shoggoth.webp",
+      "kind": "art",
+      "caption": "шоггот",
+      "source": "Shimmering Sea, с. 6 (физ. 7), «The Loss of the Type 091»: силуэт шоггота"
+    }
+  ]
+}

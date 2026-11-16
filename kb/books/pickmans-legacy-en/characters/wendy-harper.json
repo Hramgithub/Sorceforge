@@ -1,0 +1,457 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "pickmans-legacy-en/character/wendy-harper",
+  "kind": "character",
+  "name": {
+    "ru": "Венди Харпер",
+    "en": "Wendy Harper"
+  },
+  "aliases": [
+    "Харпер",
+    "мисс Харпер",
+    "Ms. Harper",
+    "Wendy Harper, crazed cult scientist"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "безумная учёная-культистка",
+    "en": "crazed cult scientist"
+  },
+  "occupation_ref": "coc:occupation:uchenyy",
+  "sex": "женский",
+  "residence": "Паркер-уэй, 157, кв. 37, Аркхэм",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "rival_of",
+      "target": "pickmans-legacy-en/character/sara-pickman",
+      "note": "пленница и подопытная, бывшая «подруга»",
+      "note_back": "мучительница, бывшая «подруга»"
+    },
+    {
+      "type": "knows",
+      "target": "pickmans-legacy-en/character/david-mcdermott",
+      "note": "одно время поддерживал с ней связь",
+      "note_back": "одна из немногих, кто не верил в его вину"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "45",
+        "value": 45
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "50",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "55",
+        "value": 55
+      },
+      "APP": {
+        "raw": "60",
+        "value": 60
+      },
+      "INT": {
+        "raw": "70",
+        "value": 70
+      },
+      "POW": {
+        "raw": "75",
+        "value": 75
+      },
+      "EDU": {
+        "raw": "80",
+        "value": 80
+      }
+    },
+    "hp": {
+      "raw": "11",
+      "value": 11
+    },
+    "mp": {
+      "raw": "15",
+      "value": 15
+    },
+    "sanity": {
+      "raw": "20",
+      "value": 20,
+      "max": null
+    },
+    "luck": {
+      "raw": "N/A",
+      "value": null
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Револьвер",
+          "en": "Revolver"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "(урон 1d8+1d4)",
+          "dice": "1d8+1d4",
+          "adds_db": false
+        },
+        "notes": "револьвер лежит на её рабочем столе в лаборатории; урон — как напечатано"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Антропология",
+        "skill": "coc:skill:anthropology",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Искусство/ремесло (живопись)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "живопись",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Обаяние",
+        "skill": "coc:skill:charm",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Работа с компьютером",
+        "skill": "coc:skill:computer-use",
+        "value": {
+          "raw": "53%",
+          "value": 53,
+          "half": 26,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "История",
+        "skill": "coc:skill:history",
+        "value": {
+          "raw": "67%",
+          "value": 67,
+          "half": 33,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Работа в библиотеке",
+        "skill": "coc:skill:library-use",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "42%",
+          "value": 42,
+          "half": 21,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Медицина",
+        "skill": "coc:skill:medicine",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Оккультизм",
+        "skill": "coc:skill:occult",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Наука (биология)",
+        "skill": "coc:skill:science",
+        "specialization": "биология",
+        "value": {
+          "raw": "78%",
+          "value": 78,
+          "half": 39,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "56%",
+          "value": 56,
+          "half": 28,
+          "fifth": 11
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Повелитель пожирателей могил (Grave Eater’s Master)",
+      "items": [
+        {
+          "name": "Grave Eater’s Master",
+          "spell": "coc:spell:grave-eaters-master"
+        }
+      ]
+    }
+  },
+  "abilities": [
+    {
+      "name": "Повелитель пожирателей могил",
+      "summary": "Заклинание (Grave Eater’s Master). Цена: 2 ПМ, 1d4 Рассудка. Время сотворения: 10 минут, укрощение — 1 раунд. Заклинатель бросает человеческую плоть как символическое подношение упырям, которых хочет призвать и укротить. Призванных упырей заклинатель может удерживать укрощёнными ежедневной сложной проверкой МОЩ. Призванные упыри выползают из своих нор. Если в пределах 80 км от места сотворения есть упыри, приходят 1d6 упырей; если нет, им приходится перейти из Страны грёз, и приходят только 1d3. Харпер при сотворении этого заклинания имеет преимущество.",
+      "raw": "Grave Eater’s Master. Cost: 2 Magic Points, 1d4 Sanity. Casting time: 10 minutes, binding takes 1 round. The caster must drop human flesh as a symbolic offering to the ghouls they wish to summon and bind. Once they are summoned, the caster can attempt to keep the ghouls bound with a daily Hard POW roll. The ghouls summoned will crawl from their hiding holes. If ghouls are within 50 miles of the casting, 1d6 ghouls will arrive. If not, they must cross over from the Dreamlands, and only 1d3 will arrive.",
+      "refs": [
+        "coc:creature:ghoul",
+        "pickmans-legacy-en/creature/harper-ghouls",
+        "pickmans-legacy-en/item/dried-human-flesh"
+      ]
+    }
+  ],
+  "background": {
+    "description": "Эксцентричная девушка из «странных готов, которые так и не переросли это»; тёмные тона, книжные полки и чересчур ухоженная мебель в квартире.",
+    "traits": "Любезна и смущённа при знакомстве; скрывает кипящий гнев (Психология).",
+    "arcane_tomes": "«Мемуары каннибала» (по её журналу).",
+    "secret": "Держит Сару Пикман в клетке в старых туннелях под Аркхэмом и превращает её в упыря; ей подчиняются три укрощённых упыря."
+  },
+  "description": {
+    "ru": "Бывшая однокурсница Сары Пикман по Нью-Йоркскому университету: основная специальность — биология, вторая — «Искусство и история искусства». Перевелась в Мискатоникский университет, окончила его в прошлом году и живёт в Аркхэме (Паркер-уэй, 157, кв. 37), собираясь через год-другой вернуться в магистратуру. Её выпускная работа — «Анализ ДНК человека и аномалии эволюции». Похоже, всегда уходит из дома в 22:00 и возвращается к 3:00 ночи; на работу уходит в 5:00 и возвращается между 16:00 и 17:00.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Харпер связана с группой безумных оккультистов, изучающих природу чудовищ, — Орденом Тёмной Луны: по её журналу, Орден держал её «в подвале», пока не позволил пойти учиться и продолжать исследования вне его «унылых залов». По фрагментам дневника из библиотеки Ордена она узнала, как превратить человека в упыря, и нашла записи о Ричарде Аптоне Пикмане, прошедшем метаморфозу из «Мемуаров каннибала». Найдя родственницу Пикмана — Сару, — она решила проверить на ней свою гипотезу: по её просьбе Орден насылал Саре сны, Харпер сблизилась с ней, дарила художественные принадлежности, понемногу посеяла в ней подозрение, будто отец знал правду и скрывал её; по «Сведениям для Хранителя», именно Харпер показала Саре картину Пикмана. В Мискатоникском университете она задавала профессору Дэвису странные вопросы о скрещивании человечества с другими гоминидами, показывала Дженис Макганн снимки из галерей и особенно интересовалась Бостонским художественным клубом. Переводясь в Мискатоникский университет, Харпер тайком увезла Сару в Аркхэм (на весенних каникулах) и заточила её в своей лаборатории в старых туннелях. Она нашла и приручила трёх упырей, которые сторожат Сару; через год неудач она собирается бросить «этот объект», изменить методы и испытать новый.\nВ сценарии. При встрече любезна и смущённа, уверяет, что исчезновение Сары её потрясло, а тех, кто о ней не упоминал, называет завистниками; на деле в ней кипит гнев (Психология). Старается заманить сыщиков в лабораторию или устроить засаду (см. сцены «Звонок Венди Харпер», «Визит к Венди Харпер», «Засада», «Слежка в ночи», «Отчаяние»). В бою прячется за упырём-стражем, первый раунд тратит на призыв остальных упырей, затем стреляет из револьвера; если бой идёт не в её пользу, пытается бежать. Если Харпер погибает, упыри разбегаются — её власть над ними сломлена.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "pickmans-legacy-en",
+      "physical_page": 4,
+      "printed_page": 4,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Keeper Information»"
+    },
+    {
+      "book_id": "pickmans-legacy-en",
+      "physical_page": 5,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Kim Madrigal»: Харпер — эксцентричная студентка-биолог"
+    },
+    {
+      "book_id": "pickmans-legacy-en",
+      "physical_page": 6,
+      "printed_page": 6,
+      "method": "book_text",
+      "verified": true,
+      "note": "Ким Мадригал, Дэвид Макдермотт, Фергус Гуруле о Харпер; «Arkham, Massachusetts»: упыри и заклинание"
+    },
+    {
+      "book_id": "pickmans-legacy-en",
+      "physical_page": 7,
+      "printed_page": 7,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Miskatonic University», «Wendy Harper», «Breaking In», «Calling Ahead», «Stopping In»"
+    },
+    {
+      "book_id": "pickmans-legacy-en",
+      "physical_page": 8,
+      "printed_page": 8,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Ambush», «Stalking in the Night», «Desperation», «Conclusion»"
+    },
+    {
+      "book_id": "pickmans-legacy-en",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Wendy Harper, crazed cult scientist» и врезка «Grave Eater’s Master»"
+    },
+    {
+      "book_id": "pickmans-legacy-en",
+      "physical_page": 11,
+      "printed_page": 11,
+      "method": "book_text",
+      "verified": true,
+      "note": "раздатка «Journal of Wendy Harper»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.attacks[Револьвер].damage",
+      "printed": "(damage 1d8+1d4)",
+      "expected": null,
+      "note": "с. 9: урон револьвера напечатан как «1d8+1d4»; к урону огнестрельного оружия БкУ не прибавляется, а у Харпер БкУ 0 — непонятно, откуда «+1d4». Модель револьвера не названа. Оставлено как напечатано.",
+      "fixed": false
+    },
+    {
+      "field": "statblock.skills",
+      "printed": "Psychology against Harper’s Acting",
+      "expected": "навык Искусство/ремесло (актёрское мастерство) в статблоке",
+      "note": "с. 8 («Ambush»): сыщики проходят проверку Психологии против Актёрского мастерства Харпер, но в её статблоке (с. 9) такого навыка нет; значения книга не даёт.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Заклинание «Grave Eater’s Master» есть только в этой книге; общей записи в справочнике заклинаний нет (справочник — не файлы этой части), черновик — checks/20261116-pickman/spell-draft-grave-eaters-master.json; текст заклинания целиком — в способности. «Has the advantage when casting it» (с. 6) — в правилах 7-й редакции это, вероятно, бонусный кубик (вывод из текста). 50 миль заклинания — 80 км (Р-64). Уклонение в статблоке не напечатано."
+  }
+}

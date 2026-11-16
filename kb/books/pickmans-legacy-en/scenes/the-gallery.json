@@ -1,0 +1,77 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "pickmans-legacy-en/scene/the-gallery",
+  "kind": "scene",
+  "name": {
+    "ru": "Галерея",
+    "en": "The Gallery"
+  },
+  "description": {
+    "ru": "Если сыщикам не удалось встретиться с Макдермоттом, они всё равно могут найти художественную галерею успешной проверкой Работы в библиотеке или Работы с компьютером, как только узнают, когда Сара ездила в Бостон. О Гуруле они знать не будут, но до картины всё же доберутся. Если спросить кого-нибудь из сотрудников о выставке и упомянуть исчезновение Сары, этим сотрудником окажется Гуруле. Он неохотно покажет картину, и дальше сцена разыгрывается примерно как в разделе «Фергус Гуруле».",
+    "en": null
+  },
+  "when": "Если сыщики не встретились с Макдермоттом, но знают даты поездки Сары в Бостон",
+  "arc": {
+    "scenario": "pickmans-legacy-en/scenario/pickmans-legacy",
+    "part": "Нью-Йоркский университет",
+    "order": 7
+  },
+  "where": [
+    {
+      "location": "pickmans-legacy-en/location/harvard-art-museum",
+      "note": "галерея с передвижной выставкой (вывод из текста)"
+    }
+  ],
+  "participants": [
+    {
+      "id": "pickmans-legacy-en/character/fergus-gurule",
+      "role": "сотрудник, показывает картину"
+    }
+  ],
+  "mechanics": {
+    "ru": "Работа в библиотеке или Работа с компьютером (зная, когда Сара ездила в Бостон) — найти галерею.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Сыщики видят картину Пикмана и разговаривают с Гуруле.",
+    "en": null
+  },
+  "refs": [
+    "pickmans-legacy-en/item/pickman-gallery-painting",
+    "pickmans-legacy-en/scene/fergus-gurule",
+    "pickmans-legacy-en/handout/sara-diary"
+  ],
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "pickmans-legacy-en",
+      "physical_page": 6,
+      "printed_page": 6,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Gallery»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "description.ru",
+      "printed": "Labor Day weekend (Borgman, p. 5); late August or early September (Madrigal, p. 5); diary entries September 12 and 18 (p. 10)",
+      "expected": null,
+      "note": "Даты поездки Сары в бостонскую галерею расходятся: Боргман (с. 5) — выходные Дня труда (первые выходные сентября), Ким Мадригал (с. 5) — конец августа или начало сентября, а по дневнику Сары (с. 10) 12 сентября поездка ещё впереди, 18 сентября картина уже увидена. Поиск выставки «по датам» — по любой из версий; оставлено как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической)."
+  }
+}

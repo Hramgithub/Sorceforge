@@ -1,0 +1,718 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "pickmans-legacy-en/creature/harper-ghouls",
+  "kind": "creature",
+  "name": {
+    "ru": "Упыри Венди Харпер",
+    "en": "Ghouls"
+  },
+  "aliases": [
+    "Упыри («Наследие Пикмана»)",
+    "Ghouls (Pickman’s Legacy)"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "независимая раса",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:ghoul",
+      "note_back": "три укрощённых упыря Венди Харпер в туннелях под Аркхэмом («Наследие Пикмана»)"
+    },
+    {
+      "type": "works_for",
+      "target": "pickmans-legacy-en/character/wendy-harper",
+      "note": "хозяйка, укротившая их заклинанием «Повелитель пожирателей могил»",
+      "note_back": "три укрощённых упыря"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "75",
+        "value": 75
+      },
+      "SIZ": {
+        "raw": "50",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "80",
+        "value": 80
+      },
+      "INT": {
+        "raw": "60",
+        "value": 60
+      },
+      "POW": {
+        "raw": "40",
+        "value": 40
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": "0"
+    },
+    "armor": {
+      "raw": "Огнестрельное оружие и снаряды наносят половину выпавшего урона; дроби округляются вниз.",
+      "value": 0,
+      "note": "огнестрельное оружие и снаряды — половина урона (с округлением вниз)"
+    },
+    "attacks_per_round": {
+      "raw": "3",
+      "value": 3
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d6 + БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "notes": "обычный набор безоружных атак гуманоида и острые как бритва грязные когти; раны могут воспалиться и вызвать болезнь, если их не лечить"
+      },
+      {
+        "name": {
+          "ru": "Укус и хватка (манёвр)",
+          "en": "Bite and hold (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "—",
+          "value": null,
+          "half": null,
+          "fifth": null
+        },
+        "damage": {
+          "raw": "1d4 за раунд",
+          "dice": "1d4",
+          "adds_db": false
+        },
+        "notes": "если укус проходит, упырь вцепляется в жертву вместо атак когтями и терзает её клыками, автоматически нанося 1d4 урона каждый раунд; оторвать его — встречная проверка СИЛ. Шанс в книге не напечатан"
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "85%",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "при виде упыря"
+      }
+    ]
+  },
+  "variants": [
+    {
+      "label": "Первый (One)",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "70",
+            "value": 70
+          },
+          "CON": {
+            "raw": "75",
+            "value": 75
+          },
+          "SIZ": {
+            "raw": "50",
+            "value": 50
+          },
+          "DEX": {
+            "raw": "80",
+            "value": 80
+          },
+          "INT": {
+            "raw": "60",
+            "value": 60
+          },
+          "POW": {
+            "raw": "40",
+            "value": 40
+          }
+        },
+        "hp": {
+          "raw": "12",
+          "value": 12
+        },
+        "damage_bonus": {
+          "raw": "0",
+          "value": "0"
+        },
+        "armor": {
+          "raw": "Огнестрельное оружие и снаряды наносят половину выпавшего урона; дроби округляются вниз.",
+          "value": 0,
+          "note": "огнестрельное оружие и снаряды — половина урона (с округлением вниз)"
+        },
+        "attacks_per_round": {
+          "raw": "3",
+          "value": 3
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Драка",
+              "en": "Brawl"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "40% (20/8)",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            },
+            "damage": {
+              "raw": "1d6 + БкУ",
+              "dice": "1d6",
+              "adds_db": true
+            },
+            "notes": "обычный набор безоружных атак гуманоида и острые как бритва грязные когти; раны могут воспалиться и вызвать болезнь, если их не лечить"
+          },
+          {
+            "name": {
+              "ru": "Укус и хватка (манёвр)",
+              "en": "Bite and hold (mnvr)"
+            },
+            "kind": "maneuver",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "—",
+              "value": null,
+              "half": null,
+              "fifth": null
+            },
+            "damage": {
+              "raw": "1d4 за раунд",
+              "dice": "1d4",
+              "adds_db": false
+            },
+            "notes": "если укус проходит, упырь вцепляется в жертву вместо атак когтями и терзает её клыками, автоматически нанося 1d4 урона каждый раунд; оторвать его — встречная проверка СИЛ. Шанс в книге не напечатан"
+          }
+        ],
+        "dodge": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "skills": [
+          {
+            "name": "Лазание",
+            "skill": "coc:skill:climb",
+            "value": {
+              "raw": "85%",
+              "value": 85,
+              "half": 42,
+              "fifth": 17
+            }
+          },
+          {
+            "name": "Скрытность",
+            "skill": "coc:skill:stealth",
+            "value": {
+              "raw": "70%",
+              "value": 70,
+              "half": 35,
+              "fifth": 14
+            }
+          },
+          {
+            "name": "Прыжки",
+            "skill": "coc:skill:jump",
+            "value": {
+              "raw": "75%",
+              "value": 75,
+              "half": 37,
+              "fifth": 15
+            }
+          },
+          {
+            "name": "Слух",
+            "skill": "coc:skill:listen",
+            "value": {
+              "raw": "70%",
+              "value": 70,
+              "half": 35,
+              "fifth": 14
+            }
+          },
+          {
+            "name": "Внимание",
+            "skill": "coc:skill:spot-hidden",
+            "value": {
+              "raw": "50%",
+              "value": 50,
+              "half": 25,
+              "fifth": 10
+            }
+          }
+        ],
+        "sanity_loss": [
+          {
+            "success": "0",
+            "fail": "1d6",
+            "trigger": "при виде упыря"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Второй (Two)",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "90",
+            "value": 90
+          },
+          "CON": {
+            "raw": "90",
+            "value": 90
+          },
+          "SIZ": {
+            "raw": "60",
+            "value": 60
+          },
+          "DEX": {
+            "raw": "50",
+            "value": 50
+          },
+          "INT": {
+            "raw": "65",
+            "value": 65
+          },
+          "POW": {
+            "raw": "60",
+            "value": 60
+          }
+        },
+        "hp": {
+          "raw": "15",
+          "value": 15
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "armor": {
+          "raw": "Огнестрельное оружие и снаряды наносят половину выпавшего урона; дроби округляются вниз.",
+          "value": 0,
+          "note": "огнестрельное оружие и снаряды — половина урона (с округлением вниз)"
+        },
+        "attacks_per_round": {
+          "raw": "3",
+          "value": 3
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Драка",
+              "en": "Brawl"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "40% (20/8)",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            },
+            "damage": {
+              "raw": "1d6 + БкУ",
+              "dice": "1d6",
+              "adds_db": true
+            },
+            "notes": "обычный набор безоружных атак гуманоида и острые как бритва грязные когти; раны могут воспалиться и вызвать болезнь, если их не лечить"
+          },
+          {
+            "name": {
+              "ru": "Укус и хватка (манёвр)",
+              "en": "Bite and hold (mnvr)"
+            },
+            "kind": "maneuver",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "—",
+              "value": null,
+              "half": null,
+              "fifth": null
+            },
+            "damage": {
+              "raw": "1d4 за раунд",
+              "dice": "1d4",
+              "adds_db": false
+            },
+            "notes": "если укус проходит, упырь вцепляется в жертву вместо атак когтями и терзает её клыками, автоматически нанося 1d4 урона каждый раунд; оторвать его — встречная проверка СИЛ. Шанс в книге не напечатан"
+          }
+        ],
+        "dodge": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "skills": [
+          {
+            "name": "Лазание",
+            "skill": "coc:skill:climb",
+            "value": {
+              "raw": "85%",
+              "value": 85,
+              "half": 42,
+              "fifth": 17
+            }
+          },
+          {
+            "name": "Скрытность",
+            "skill": "coc:skill:stealth",
+            "value": {
+              "raw": "70%",
+              "value": 70,
+              "half": 35,
+              "fifth": 14
+            }
+          },
+          {
+            "name": "Прыжки",
+            "skill": "coc:skill:jump",
+            "value": {
+              "raw": "75%",
+              "value": 75,
+              "half": 37,
+              "fifth": 15
+            }
+          },
+          {
+            "name": "Слух",
+            "skill": "coc:skill:listen",
+            "value": {
+              "raw": "70%",
+              "value": 70,
+              "half": 35,
+              "fifth": 14
+            }
+          },
+          {
+            "name": "Внимание",
+            "skill": "coc:skill:spot-hidden",
+            "value": {
+              "raw": "50%",
+              "value": 50,
+              "half": 25,
+              "fifth": 10
+            }
+          }
+        ],
+        "sanity_loss": [
+          {
+            "success": "0",
+            "fail": "1d6",
+            "trigger": "при виде упыря"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Третий (Three)",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "85",
+            "value": 85
+          },
+          "CON": {
+            "raw": "50",
+            "value": 50
+          },
+          "SIZ": {
+            "raw": "85",
+            "value": 85
+          },
+          "DEX": {
+            "raw": "55",
+            "value": 55
+          },
+          "INT": {
+            "raw": "80",
+            "value": 80
+          },
+          "POW": {
+            "raw": "65",
+            "value": 65
+          }
+        },
+        "hp": {
+          "raw": "13",
+          "value": 13
+        },
+        "damage_bonus": {
+          "raw": "+1d6",
+          "value": "+1d6"
+        },
+        "armor": {
+          "raw": "Огнестрельное оружие и снаряды наносят половину выпавшего урона; дроби округляются вниз.",
+          "value": 0,
+          "note": "огнестрельное оружие и снаряды — половина урона (с округлением вниз)"
+        },
+        "attacks_per_round": {
+          "raw": "3",
+          "value": 3
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Драка",
+              "en": "Brawl"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "40% (20/8)",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            },
+            "damage": {
+              "raw": "1d6 + БкУ",
+              "dice": "1d6",
+              "adds_db": true
+            },
+            "notes": "обычный набор безоружных атак гуманоида и острые как бритва грязные когти; раны могут воспалиться и вызвать болезнь, если их не лечить"
+          },
+          {
+            "name": {
+              "ru": "Укус и хватка (манёвр)",
+              "en": "Bite and hold (mnvr)"
+            },
+            "kind": "maneuver",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "—",
+              "value": null,
+              "half": null,
+              "fifth": null
+            },
+            "damage": {
+              "raw": "1d4 за раунд",
+              "dice": "1d4",
+              "adds_db": false
+            },
+            "notes": "если укус проходит, упырь вцепляется в жертву вместо атак когтями и терзает её клыками, автоматически нанося 1d4 урона каждый раунд; оторвать его — встречная проверка СИЛ. Шанс в книге не напечатан"
+          }
+        ],
+        "dodge": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "skills": [
+          {
+            "name": "Лазание",
+            "skill": "coc:skill:climb",
+            "value": {
+              "raw": "85%",
+              "value": 85,
+              "half": 42,
+              "fifth": 17
+            }
+          },
+          {
+            "name": "Скрытность",
+            "skill": "coc:skill:stealth",
+            "value": {
+              "raw": "70%",
+              "value": 70,
+              "half": 35,
+              "fifth": 14
+            }
+          },
+          {
+            "name": "Прыжки",
+            "skill": "coc:skill:jump",
+            "value": {
+              "raw": "75%",
+              "value": 75,
+              "half": 37,
+              "fifth": 15
+            }
+          },
+          {
+            "name": "Слух",
+            "skill": "coc:skill:listen",
+            "value": {
+              "raw": "70%",
+              "value": 70,
+              "half": 35,
+              "fifth": 14
+            }
+          },
+          {
+            "name": "Внимание",
+            "skill": "coc:skill:spot-hidden",
+            "value": {
+              "raw": "50%",
+              "value": 50,
+              "half": 25,
+              "fifth": 10
+            }
+          }
+        ],
+        "sanity_loss": [
+          {
+            "success": "0",
+            "fail": "1d6",
+            "trigger": "при виде упыря"
+          }
+        ]
+      }
+    }
+  ],
+  "abilities": [
+    {
+      "name": "Атака в ближнем бою",
+      "summary": "У упырей обычный набор безоружных атак, доступных гуманоидам. Кроме того, у них острые как бритва грязные когти — костяные наросты, мгновенно рассекающие человеческую плоть; раны могут воспалиться и вызвать болезнь, если их не лечить.",
+      "raw": "Fighting attack: Ghouls have the usual range of unarmed attacks open to humanoids. Also, ghouls have claws that are razor-sharp and filthy; these bony protrusions slice through human flesh in an instant. Wounds caused may become diseased if not treated."
+    },
+    {
+      "name": "Укус и хватка (манёвр)",
+      "summary": "Если укус упыря проходит, упырь вцепляется в жертву вместо атак когтями и терзает её клыками, автоматически нанося 1d4 урона каждый раунд. Чтобы оторвать упыря, разорвать хватку и прекратить урон от укуса, нужна встречная проверка СИЛ.",
+      "raw": "Bite and hold (mnvr): If the ghoul’s bite strikes home it hangs on instead of using claw attacks, and worries the victim with its fangs, continue to do 1d4 damage automatically per round. An opposed STR roll is required to dislodge the ghoul, breaking the hold, and ending the bite damage."
+    }
+  ],
+  "description": {
+    "ru": "Три упыря, которых Венди Харпер нашла и приручила в Аркхэме; мерзкие существа с будто резиновой шкурой и злым блеском в глазах, их шаги в туннелях звучат как стук копыт. Они сторожат Сару Пикман в лаборатории Харпер. Основной профиль — первый упырь, все три — в вариантах.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Упыри подчиняются Харпер благодаря заклинанию «Повелитель пожирателей могил» (при его сотворении у неё преимущество); им нравится смотреть, как ещё одно существо становится таким же жалким, как они. Одного Харпер оставляет стражем в лаборатории, остальных зовёт, когда нужно: в засаде двое ждут у входа в лабораторию, третий крадётся за сыщиками сзади. Когда Харпер погибает, выжившие упыри разбегаются — её власть над ними сломлена; если её тело оставить в туннелях, через несколько дней упыри-слуги доедят его.\nВ сценарии. Сыщики могут заметить одного из них в ливнёвке в центре Аркхэма, у Мискатоникского университета (Внимание; проверка Рассудка 0/1d3; Слух — далёкий стук копыт в канализации).",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "pickmans-legacy-en",
+      "physical_page": 6,
+      "printed_page": 6,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Arkham, Massachusetts»: упырь в ливнёвке, три упыря Харпер"
+    },
+    {
+      "book_id": "pickmans-legacy-en",
+      "physical_page": 7,
+      "printed_page": 7,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Arkham, Massachusetts» (окончание)"
+    },
+    {
+      "book_id": "pickmans-legacy-en",
+      "physical_page": 8,
+      "printed_page": 8,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Ambush», «Stalking in the Night», «Desperation», «Conclusion»"
+    },
+    {
+      "book_id": "pickmans-legacy-en",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Ghouls»: таблица характеристик (One, Two, Three), бонус к урону, атаки, Уклонение, броня, навыки, потеря Рассудка"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Групповой профиль (Р-74); числа отличаются от общей записи «Упырь» — профиль книги (Р-75). Скорость, Комплекция и ПМ в книге не напечатаны (для игры — общая запись «Упырь»). ПЗ и БкУ сходятся с характеристиками (ПЗ с округлением вниз). Шанс манёвра «Укус и хватка» не напечатан."
+  }
+}

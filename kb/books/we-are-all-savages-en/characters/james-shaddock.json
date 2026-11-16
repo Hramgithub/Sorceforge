@@ -1,0 +1,395 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "we-are-all-savages-en/character/james-shaddock",
+  "kind": "character",
+  "name": {
+    "ru": "Джеймс Шаддок",
+    "en": "James Shaddock"
+  },
+  "aliases": [
+    "рядовой Джеймс Шаддок",
+    "Private James Shaddock"
+  ],
+  "roles": [
+    "pregen"
+  ],
+  "occupation": {
+    "ru": "британский пехотинец регулярной армии, рядовой (бывший рейнджер)",
+    "en": "British Regular Infantryman"
+  },
+  "occupation_ref": "coc:occupation:soldat",
+  "age": {
+    "raw": "28",
+    "value": 28
+  },
+  "sex": "мужской",
+  "residence": "форт Ниагара, колония Нью-Йорк",
+  "birthplace": "Брентвуд, Великобритания",
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "50",
+        "value": 50
+      },
+      "CON": {
+        "raw": "90",
+        "value": 90
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "50",
+        "value": 50
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      },
+      "EDU": {
+        "raw": "45",
+        "value": 45
+      }
+    },
+    "hp": {
+      "raw": "15",
+      "value": 15
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "sanity": {
+      "raw": "50",
+      "value": 50,
+      "max": 99
+    },
+    "luck": {
+      "raw": "40",
+      "value": 40
+    },
+    "damage_bonus": {
+      "raw": "нет",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Без оружия",
+          "en": "Unarmed"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        },
+        "damage": {
+          "raw": "1d3+БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Мушкет",
+          "en": "Musket"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1d8+4",
+          "dice": "1d8+4",
+          "adds_db": false
+        },
+        "notes": "Мушкет «Браун Бесс» (см. предмет книги «Мушкет «Браун Бесс»»): дальность 40 метров, 1 выстрел за 4 раунда (1/4), 1 заряд, осечка 97."
+      },
+      {
+        "name": {
+          "ru": "Топорик",
+          "en": "Hatchet"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (топор)",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1d6+БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:hatchet-sickle",
+        "notes": "На листе урон 1d6+БкУ (в справочнике у топорика 1d6+1+БкУ); 1 атака за раунд."
+      }
+    ],
+    "dodge": {
+      "raw": "55% (27/11)",
+      "value": 55,
+      "half": 27,
+      "fifth": 11
+    },
+    "skills": [
+      {
+        "name": "Ближний бой (драка)",
+        "skill": "coc:skill:fighting",
+        "specialization": "Драка",
+        "value": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Ближний бой (топор)",
+        "skill": "coc:skill:fighting",
+        "specialization": "Топор",
+        "value": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Выживание (леса)",
+        "skill": "coc:skill:survival",
+        "specialization": "Леса",
+        "value": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Иностранный язык (ирокезский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "Ирокезский",
+        "value": {
+          "raw": "36% (18/7)",
+          "value": 36,
+          "half": 18,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Иностранный язык (французский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "Французский",
+        "value": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Ориентирование",
+        "skill": "coc:skill:navigate",
+        "value": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Родной язык (английский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "Английский",
+        "value": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "15% (7/3)",
+          "value": 15,
+          "half": 7,
+          "fifth": 3
+        }
+      },
+      {
+        "name": "Стрельба (винтовка/дробовик)",
+        "skill": "coc:skill:firearms",
+        "specialization": "Винтовка/дробовик",
+        "value": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      }
+    ]
+  },
+  "background": {
+    "description": "Жилистый и поджарый, вид в целом неряшливый.",
+    "ideology": "Англиканин.",
+    "significant_people": "Подполковник Роберт Роджерс, создатель рейнджеров: Шаддок учился у него как один из его солдат — лесному делу, рукопашному бою и приёмам партизанской войны, — пока его не перевели.",
+    "meaningful_locations": "Нигде он не чувствует себя спокойнее и ближе к Богу, чем в лесу.",
+    "treasured_possessions": "Его топорик: больше чем инструмент для лесного дела — знак того, что он рейнджер.",
+    "traits": "Невозмутимый, из тех, кто «силён и молчалив»."
+  },
+  "possessions": [
+    "топорик рейнджера"
+  ],
+  "description": {
+    "ru": "Рядовой британской пехоты, 28 лет, жилистый и неряшливый; бывший рейнджер, обученный Робертом Роджерсом лесному делу и партизанской войне.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Джеймс Шаддок родом из Брентвуда (Великобритания), англиканин. Учился у Роберта Роджерса, создателя рейнджеров, а затем был переведён в регулярную пехоту; топорик для него — знак рейнджера. В сценарии «Мы все дикари» — один из шести готовых сыщиков: подполковник Эйр посылает отряд разведчиков найти разграбленный обоз и лагерь французских налётчиков.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "we-are-all-savages-en",
+      "physical_page": 22,
+      "printed_page": null,
+      "method": "book_text",
+      "verified": true,
+      "note": "лист сыщика эпохи 1760-х: характеристики, навыки, оружие (сверено по изображению страницы, Удача — по отметке на шкале)"
+    },
+    {
+      "book_id": "we-are-all-savages-en",
+      "physical_page": 23,
+      "printed_page": null,
+      "method": "book_text",
+      "verified": true,
+      "note": "оборот листа: «Backstory» (снаряжение и средства не заполнены)"
+    },
+    {
+      "book_id": "we-are-all-savages-en",
+      "physical_page": 14,
+      "printed_page": 12,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Beginning the Investigation»: сыщики — разведчики, рейнджеры и лесные следопыты гарнизона"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2). На листе: «Private James Shaddock», профессия «British Regular Infantryman»; на обороте Роджерс назван «Lieutenant-Colonel» — как напечатано."
+  },
+  "images": [
+    {
+      "file": "art/characters/savages-james-shaddock.webp",
+      "kind": "portrait",
+      "caption": "",
+      "source": "We Are All Savages, физ. с. 22: портрет на листе сыщика «Private James Shaddock»"
+    }
+  ]
+}

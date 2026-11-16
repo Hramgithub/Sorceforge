@@ -1,0 +1,381 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "we-are-all-savages-en/character/arnold-howard",
+  "kind": "character",
+  "name": {
+    "ru": "Арнольд Говард",
+    "en": "Arnold Howard"
+  },
+  "aliases": [],
+  "roles": [
+    "pregen"
+  ],
+  "occupation": {
+    "ru": "фермер, колониальный ополченец",
+    "en": "Farmer/Colonial Militiaman"
+  },
+  "occupation_ref": "coc:occupation:fermer",
+  "age": {
+    "raw": "38",
+    "value": 38
+  },
+  "sex": "мужской",
+  "residence": "форт Ниагара, колония Нью-Йорк",
+  "birthplace": "Скенектади, колония Нью-Йорк",
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "65",
+        "value": 65
+      },
+      "SIZ": {
+        "raw": "75",
+        "value": 75
+      },
+      "DEX": {
+        "raw": "45",
+        "value": 45
+      },
+      "APP": {
+        "raw": "55",
+        "value": 55
+      },
+      "INT": {
+        "raw": "75",
+        "value": 75
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      },
+      "EDU": {
+        "raw": "55",
+        "value": 55
+      }
+    },
+    "hp": {
+      "raw": "14",
+      "value": 14
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "sanity": {
+      "raw": "50",
+      "value": 50,
+      "max": 99
+    },
+    "luck": {
+      "raw": "50",
+      "value": 50
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Без оружия",
+          "en": "Unarmed"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        },
+        "damage": {
+          "raw": "1d3+БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Мушкет",
+          "en": "Musket"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d8+4",
+          "dice": "1d8+4",
+          "adds_db": false
+        },
+        "notes": "Мушкет «Браун Бесс» (см. предмет книги «Мушкет «Браун Бесс»»): дальность 40 метров, 1 выстрел за 4 раунда (1/4), 1 заряд, осечка 97."
+      },
+      {
+        "name": {
+          "ru": "Топорик",
+          "en": "Hatchet"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (топор)",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d6+БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:hatchet-sickle",
+        "notes": "На листе урон 1d6+БкУ (в справочнике у топорика 1d6+1+БкУ); 1 атака за раунд."
+      }
+    ],
+    "dodge": {
+      "raw": "22% (11/4)",
+      "value": 22,
+      "half": 11,
+      "fifth": 4
+    },
+    "skills": [
+      {
+        "name": "Ближний бой (драка)",
+        "skill": "coc:skill:fighting",
+        "specialization": "Драка",
+        "value": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Ближний бой (топор)",
+        "skill": "coc:skill:fighting",
+        "specialization": "Топор",
+        "value": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Естествознание",
+        "skill": "coc:skill:natural-world",
+        "value": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Искусство/ремесло (земледелие)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "Земледелие",
+        "value": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Искусство/ремесло (плотницкое дело)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "Плотницкое дело",
+        "value": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Обращение с животными",
+        "skill": "coc:skill:animal-handling",
+        "value": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Родной язык (английский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "Английский",
+        "value": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Стрельба (винтовка/дробовик)",
+        "skill": "coc:skill:firearms",
+        "specialization": "Винтовка/дробовик",
+        "value": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Управление повозкой",
+        "skill": "coc:skill:drive-horses-or-oxen",
+        "value": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "20% (10/4)",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      }
+    ]
+  },
+  "background": {
+    "description": "Плотный, коренастый, с румяным лицом.",
+    "ideology": "К вере равнодушен: в церковь ходит, но про себя считает, что священники знают о Боге ничуть не больше мирян, а может, и куда меньше.",
+    "significant_people": "Молодая жена Абигейл осталась в Олбани; когда весной сойдёт снег и он распашет землю под новую ферму, он пошлёт за ней.",
+    "meaningful_locations": "Сколько бы крови ни пролилось на этой земле за последние годы, Говарду кажется, что есть что-то очень умиротворяющее в том, как Ниагара впадает в озеро Онтарио. Будь его воля, он поставил бы ферму прямо там, где сейчас стоит форт Ниагара.",
+    "treasured_possessions": "Обручальное кольцо — вечное напоминание о любимой Абигейл.",
+    "traits": "Практичный, рассудительный, верный."
+  },
+  "possessions": [
+    "обручальное кольцо"
+  ],
+  "description": {
+    "ru": "Фермер и колониальный ополченец, 38 лет, плотный и румяный; мечтает завести ферму у впадения Ниагары в озеро Онтарио.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Арнольд Говард родом из Скенектади (колония Нью-Йорк); его молодая жена Абигейл ждёт в Олбани, пока он весной не начнёт новую ферму. В сценарии «Мы все дикари» — один из шести готовых сыщиков: подполковник Эйр посылает отряд разведчиков найти разграбленный обоз и лагерь французских налётчиков.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "we-are-all-savages-en",
+      "physical_page": 24,
+      "printed_page": null,
+      "method": "book_text",
+      "verified": true,
+      "note": "лист сыщика эпохи 1760-х: характеристики, навыки, оружие (сверено по изображению страницы, Удача — по отметке на шкале)"
+    },
+    {
+      "book_id": "we-are-all-savages-en",
+      "physical_page": 25,
+      "printed_page": null,
+      "method": "book_text",
+      "verified": true,
+      "note": "оборот листа: «Backstory» (снаряжение и средства не заполнены)"
+    },
+    {
+      "book_id": "we-are-all-savages-en",
+      "physical_page": 14,
+      "printed_page": 12,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Beginning the Investigation»: сыщики — разведчики, рейнджеры и лесные следопыты гарнизона"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2). На листе: «Farmer/Colonial Militiaman». Навык «Drive Wagon (20%)» листа — «Управление повозкой» (справочник: Управление лошадью или волом)."
+  },
+  "images": [
+    {
+      "file": "art/characters/savages-arnold-howard.webp",
+      "kind": "portrait",
+      "caption": "",
+      "source": "We Are All Savages, физ. с. 24: портрет на листе сыщика «Arnold Howard»"
+    }
+  ]
+}

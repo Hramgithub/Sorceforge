@@ -1,0 +1,80 @@
+{
+  "schema": "sourcefold.proposals.v0",
+  "by": "We Are All Savages (часть savages)",
+  "proposals": [
+    {
+      "target": "coc:location:albany",
+      "op": "replace",
+      "path": "description.ru",
+      "old": "235 км до Нью-Йорка.",
+      "new": "235 км до Нью-Йорка.\nВ «Мы все дикари» (январь 1760 года, Франко-индейская война) из Олбани опасной дорогой через форт Освего идут в отрезанный зимой форт Ниагара обозы со свежими припасами против цинги; в летние бои 1759 года многие поселенцы бежали на восток, к Олбани. Здесь родился готовый сыщик Джонатан Веллингтон, а молодая жена ополченца Арнольда Говарда, Абигейл, ждёт его в Олбани до весны.",
+      "reason": "We Are All Savages, с. 2 (припасы из Олбани), с. 4 (поселенцы бежали к Олбани); листы сыщиков физ. с. 25–26 (Говард, Веллингтон)",
+      "ref": "Р-80"
+    },
+    {
+      "target": "coc:location:albany",
+      "op": "append",
+      "path": "refs",
+      "value": "we-are-all-savages-en/scenario/we-are-all-savages",
+      "reason": "сценарий упоминает Олбани как исходный пункт обоза (We Are All Savages, с. 2, 4)",
+      "ref": "Р-80",
+      "correction": false
+    },
+    {
+      "target": "coc:location:albany",
+      "op": "append",
+      "path": "sources",
+      "value": {
+        "book_id": "we-are-all-savages-en",
+        "physical_page": 4,
+        "printed_page": 2,
+        "method": "book_text",
+        "verified": true,
+        "note": "«Introduction»: свежие припасы для форта Ниагара идут опасной дорогой из Олбани (1760 год)"
+      },
+      "reason": "источник нового абзаца описания",
+      "ref": "Р-80",
+      "correction": false
+    },
+    {
+      "target": "coc:weapon:bayonet",
+      "op": "append",
+      "path": "source_variants",
+      "value": {
+        "book_id": "we-are-all-savages-en",
+        "printed_page": 14,
+        "text": "«Мы все дикари», «Statistics», «Average British Soldier»: «Bayonet 50% (25/10), damage 1d6+1d4»; лист сыщика Джона Эмброуза (физ. с. 20): «Bayonet 50 25 10 1d6 + db, 1 атака», навык Fighting (Spear) 50%. Отличия: урон 1d6+БкУ (в справочнике 1d4+2+БкУ)."
+      },
+      "reason": "иные числа сценария для штыка — в source_variants (Р-124); We Are All Savages, с. 14 и физ. с. 20",
+      "ref": "Р-124"
+    },
+    {
+      "target": "coc:weapon:hatchet-sickle",
+      "op": "append",
+      "path": "source_variants",
+      "value": {
+        "book_id": "we-are-all-savages-en",
+        "printed_page": null,
+        "text": "«Мы все дикари», листы сыщиков Джеймса Шаддока и Арнольда Говарда (физ. с. 22, 24): «Hatchet 55 27 11 1d6 + db, 1 атака» и «Hatchet 45 22 9 1d6 + db, 1 атака», навык Fighting (Axe). Отличия: урон 1d6+БкУ (в справочнике 1d6+1+БкУ); навык Ближний бой (топор)."
+      },
+      "reason": "иные числа сценария для топорика — в source_variants (Р-124); We Are All Savages, физ. с. 22, 24 (листы без номеров страниц)",
+      "ref": "Р-124"
+    },
+    {
+      "target": "coc:spell:melt-flesh",
+      "op": "append",
+      "path": "aliases",
+      "value": "The Charm for Unmaking a Wendigo",
+      "reason": "We Are All Savages, с. 14: «The Charm for Unmaking a Wendigo (Melt Flesh)» — народное название заклинания у знахаря сенека",
+      "ref": "Р-96"
+    },
+    {
+      "target": "coc:spell:melt-flesh",
+      "op": "append",
+      "path": "aliases",
+      "value": "Чары развоплощения вендиго",
+      "reason": "наш перевод названия «The Charm for Unmaking a Wendigo» (We Are All Savages, с. 14)",
+      "ref": "Р-96"
+    }
+  ]
+}

@@ -1,0 +1,251 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "we-are-all-savages-en/character/british-soldiers",
+  "kind": "character",
+  "name": {
+    "ru": "Британские солдаты",
+    "en": "Average British Soldier"
+  },
+  "aliases": [
+    "Средний британский солдат",
+    "солдаты гарнизона"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "британский солдат гарнизона",
+  "names": [
+    "Томас Бейкер",
+    "Уильям Харрис",
+    "Сэмюэл Уорд",
+    "Джордж Пирс",
+    "Генри Коллинз"
+  ],
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "75",
+        "value": 75
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50
+      },
+      "APP": {
+        "raw": "45",
+        "value": 45
+      },
+      "INT": {
+        "raw": "40",
+        "value": 40
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      },
+      "EDU": {
+        "raw": "50",
+        "value": 50
+      }
+    },
+    "hp": {
+      "raw": "14",
+      "value": 14
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "sanity": {
+      "raw": "50",
+      "value": 50,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Мушкет",
+          "en": "Musket"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "1d8+4",
+          "dice": "1d8+4",
+          "adds_db": false
+        },
+        "notes": "Мушкет «Браун Бесс»: дальность 40 метров, 1 выстрел за 4 раунда, осечка 97."
+      },
+      {
+        "name": {
+          "ru": "Штык",
+          "en": "Bayonet"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d6+1d4",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:bayonet",
+        "notes": "В книге урон штыка 1d6+БкУ (в справочнике 1d4+2+БкУ)."
+      }
+    ],
+    "dodge": {
+      "raw": "25% (12/5)",
+      "value": 25,
+      "half": 12,
+      "fifth": 5
+    },
+    "skills": [
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Солдаты британского гарнизона форта Ниагара (около 250 человек; 75 из них в ночь бури — во Французском замке). Измотаны, страдают от нехватки овощей и фруктов, у многих уже цинга: кровоточащие дёсны и ослабевшие суставы.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Подкрепление, которое должно было сменить гарнизон в сентябре 1759 года, так и не вышло из Питтсбурга. Зимой цинга и истощение убьют больше сотни солдат до весенней оттепели. Во время бури часть солдат заперта в казармах и госпитале без еды и почти без дров; часовые замерзают насмерть на стенах. Если Кулон добьётся своего, гарнизон станет людоедами-вендиго.\nВ сценарии «Мы все дикари» — гарнизон форта; профиль для любого солдата.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "we-are-all-savages-en",
+      "physical_page": 16,
+      "printed_page": 14,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Statistics»: «Average British Soldier»"
+    },
+    {
+      "book_id": "we-are-all-savages-en",
+      "physical_page": 4,
+      "printed_page": 2,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Keeper’s Information»: цинга и голод"
+    },
+    {
+      "book_id": "we-are-all-savages-en",
+      "physical_page": 12,
+      "printed_page": 10,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Storm»: 75 солдат во Французском замке"
+    },
+    {
+      "book_id": "we-are-all-savages-en",
+      "physical_page": 13,
+      "printed_page": 11,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Anderson’s Plan»: 250 человек гарнизона"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "editorial_text"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2). Групповой профиль (Р-151): имена придуманы, в книге — «Average British Soldier». Навыки статблока без долей — доли посчитаны. ПЗ 14 при (75+60)/10 = 13,5 — округление вверх, как напечатано."
+  }
+}

@@ -23,7 +23,7 @@
 | Settling In | с. 4–5 | `scene/settling-in`, `location/upper-deck` |
 | Trapped Between Worlds | с. 5–6 | `scene/trapped-between-worlds`, `location/aft-lavatory`, `creature/guardian-flight-19` |
 | Meanwhile in the Waking World | с. 6–7 | `scene/meanwhile-in-the-waking-world`, `location/forward-crew-rest`, `location/cockpit`, `character/flight-19-crew` |
-| The Empty Plane (и таблица потерь Рассудка) | с. 7 | `scene/the-empty-plane`; таблица «Потеря Рассудка оставшихся в Мире яви» — `scenario/we-dream-of-flying` (tables); `character/flight-19-passengers` |
+| The Empty Plane (и таблица потерь Рассудка) | с. 7 | `scene/the-empty-plane`; таблица «Потеря Рассудка оставшихся в мире яви» — `scenario/we-dream-of-flying` (tables); `character/flight-19-passengers` |
 | Another Point of View | с. 7 | `scene/another-point-of-view`, спутники `character/*` |
 | Finding Yuu | с. 7–8 | `scene/finding-yuu`, `item/yuu-backpack`, `item/moon-cats-book`, `location/coach-seats` |
 | Yuu Nakano (статблок) | с. 8 | `character/yuu-nakano` |
@@ -91,7 +91,7 @@
 | Flight 19 | рейс 19 |
 | Crystallizer of Dreams / Crystalizer | Кристаллизатор снов (предмет — «Кристаллизатор снов Юу») |
 | The Guardian | Страж (запись — «Страж Кристаллизатора («Мы грезим о полёте»)») |
-| Waking World / waking world | Мир яви |
+| Waking World / waking world | мир яви |
 | Dreamlands | Страна грёз |
 | Dreaming world / Dream world | мир сновидений |
 | Dreaming (skill) | Сновидение |
@@ -116,7 +116,7 @@
 | Do Nothing / Take the Crystalizer / Leave the Plane Without (With) Yuu / Personal Sacrifice | Развязка: бездействие / отнять Кристаллизатор / покинуть самолёт без Юу (с Юу) / самопожертвование |
 | Another Point of View | С другой стороны |
 | Trapped Between Worlds | Между мирами |
-| Meanwhile in the Waking World | Тем временем в Мире яви |
+| Meanwhile in the Waking World | Тем временем в мире яви |
 | The Empty Plane / Finding Yuu / Settling In / Call for Boarding | Пустой самолёт / Поиски Юу / Обустройство на борту / Посадка на рейс 19 |
 
 Имена: Yuu Nakano — Юу Накано; Neko — Нэко; Rajeev Pelagia — Раджив Пелагия; Leonie Kaj — Леони Кай;

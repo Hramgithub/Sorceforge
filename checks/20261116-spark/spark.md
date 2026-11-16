@@ -129,9 +129,9 @@ Jon Hook, 2019, Miskatonic Repository; приключение для одино�
 | Crimson Storm | Багровая буря |
 | Feed the Spark of Life | «Накормить Искру Жизни» |
 | Commune with the Crimson Storm | «Беседа с Багровой бурей» |
-| The Deathless Breath | «Бессмертное дыхание» |
+| The Deathless Breath | «Дыхание бессмертия» |
 | Xeiruu’k’s Caress | «Ласка Ксейруу’ка» |
-| The Cloak of Another’s Flesh | «Плащ чужой плоти» |
+| The Cloak of Another’s Flesh | «Одеяние чужой плоти» |
 | Rite of Salts | «Обряд солей» |
 | Cykranoshian drink (alien chemical agent) | цикраношский напиток |
 | The Spark of Life Papers #N | Раздатка «Искра жизни» N |

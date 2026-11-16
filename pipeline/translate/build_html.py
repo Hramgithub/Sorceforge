@@ -7,7 +7,8 @@ Input folder (the translation of one book), one Markdown file per physical page 
                   a stat block — a fenced block ```stat … ``` (shown monospaced in a frame).
   meta.json       {"title_ru", "title_en", "book_id", "authors", "publisher", "year", "note", "printed_offset"}
                   NNN is the physical page of the PDF; "printed_offset" (default 0) — printed page = physical − it,
-                  for the page footer «с. N оригинала».
+                  for the page footer «с. N оригинала»; "unnumbered" (list of physical pages) — pages without a
+                  printed number, their footer names the PDF page.
 Pictures are embedded (base64, JPEG ≤ 1400 px), so the result is one file.
 
 Usage: python pipeline/translate/build_html.py <folder> <output.html>
@@ -93,7 +94,7 @@ def main() -> int:
             toc.append((lvl, re.sub("<[^>]+>", "", title), anchor))
         phys = int(re.match(r"^(\d+)", p.stem).group(1))
         printed = phys - int(meta.get("printed_offset", 0))
-        label = f"с. {printed} оригинала" if printed >= 1 else f"стр. {phys} PDF оригинала (без номера)"
+        label = f"с. {printed} оригинала" if printed >= 1 and phys not in meta.get("unnumbered", []) else f"стр. {phys} PDF оригинала (без номера)"
         body.append(h + f'<div class="page">{label}</div>')
     toc_html = "".join(f'<a href="#{a}">{"&nbsp;&nbsp;" if l == "2" else ""}{html.escape(t)}</a>' for l, t, a in toc)
     note = meta.get("note") or ("Перевод выполнен для личного некоммерческого использования. Это не официальное издание; "

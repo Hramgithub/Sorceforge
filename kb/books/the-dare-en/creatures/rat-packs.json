@@ -1,0 +1,88 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "the-dare-en/creature/rat-packs",
+  "kind": "creature",
+  "name": {
+    "ru": "Стаи крыс («На спор»)",
+    "en": "Rat Packs, rattus rattus"
+  },
+  "aliases": [
+    "Rat Packs",
+    "rattus rattus",
+    "крысы"
+  ],
+  "category": "animal",
+  "subcategory": "крысы",
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:rat-swarm",
+      "note_back": "стаи крыс дома Барнакеров («На спор»)"
+    }
+  ],
+  "abilities": [
+    {
+      "name": "Стая",
+      "summary": "В каждой стае 3d6 крыс; средние характеристики — по «Книге хранителя». Громкий шум, резкие движения и открытый огонь крупнее свечи каждый раз отгоняют около 20% стаи (если крысами прямо не командует Эвелин); иначе каждая успешная атака убивает одну крысу на каждые 3 урона. Стая, потерявшая половину или больше, бежит.",
+      "raw": "These creatures have average slats (as per page 338 of the Call of Cthulhu Keeper’s Rulebook). … with 3d6 rats in any pack encountered. … Loud noises, sudden movements, and open flames larger than a candle drive off about 20% of a rat pack with each application (unless the creatures are under the direct command of Evelyn); otherwise, each successful attack kills one rat for every three points of damage done. Rat packs losing ½ or more of their original number or more will flee."
+    }
+  ],
+  "description": {
+    "ru": "Крысы дома Барнакеров — подручные Эвелин, которыми она повелевает заклинанием. Где они есть, решает Хранитель; в основном они для атмосферы — не перестарайтесь («это не Экзем-Прайори»). Не называйте точных чисел: детское воображение превратит стаю из шести крыс в голодную орду — волна чёрных бусинок-глаз, усов, шерсти и зубов. Потеря Рассудка — 1/1d3, только за первую встреченную стаю; дальше — без потерь, если у сыщика нет фобии.",
+    "en": null
+  },
+  "encounters": {
+    "ru": "По всему дому; под крыльцом и в кухне нападает одиночная крыса (одна атака и бегство, раненые крысы убегают); в логове Эвелин: в начале боя крысы и летучие мыши лавиной выходят из обоих туннелей, чтобы сыщики не сбежали; ориентир — две стаи крыс и одна стая летучих мышей на каждого сыщика, при затяжном бое — ещё.",
+    "en": null
+  },
+  "habitat": "дом Барнакеров",
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 39,
+      "printed_page": 32,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Rat Packs, rattus rattus»"
+    },
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 35,
+      "printed_page": 28,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Rats and Bats»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "abilities[Стая].raw",
+      "printed": "average slats",
+      "expected": "average stats",
+      "note": "Опечатка «slats» вместо «stats» (с. 32, дважды).",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 7). Статблока нет: книга отсылает к средним значениям «Книги хранителя» (с. 338 англ. издания) — для игры берётся статблок цели связи instance_of. Потеря Рассудка в книге — «1/1d3 points» для стаи."
+  },
+  "images": [
+    {
+      "file": "art/creatures/dare-rat-packs.webp",
+      "kind": "art",
+      "caption": "Крыса",
+      "source": "The Dare, с. 32 (физ. 39), «Rat Packs, rattus rattus»"
+    }
+  ]
+}

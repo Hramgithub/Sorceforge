@@ -1,0 +1,393 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "the-dare-en/character/roger-simmons",
+  "kind": "character",
+  "name": {
+    "ru": "Роджер Симмонс",
+    "en": "Roger Simmons"
+  },
+  "aliases": [
+    "Roger",
+    "Roger Simmons, vindictive bully and undead thing"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "мстительный задира и нежить",
+    "en": "vindictive bully and undead thing"
+  },
+  "sex": "мужской",
+  "residence": "родной город юных сыщиков",
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "the-dare-en/character/evelyn-barnaker",
+      "note": "госпожа, оживившая его кожаным слугой",
+      "note_back": "кожаный слуга, приманка для детей"
+    },
+    {
+      "type": "relative_of",
+      "target": "the-dare-en/character/ace-simmons",
+      "note": "старший брат",
+      "note_back": "младший брат"
+    },
+    {
+      "type": "instance_of",
+      "target": "the-dare-en/creature/skin-servitor",
+      "note_back": "Роджер — кожаный слуга Эвелин"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "50",
+        "value": 50
+      },
+      "CON": {
+        "raw": "75",
+        "value": 75
+      },
+      "SIZ": {
+        "raw": "45",
+        "value": 45
+      },
+      "INT": {
+        "raw": "50",
+        "value": 50
+      },
+      "POW": {
+        "raw": "25",
+        "value": 25
+      },
+      "DEX": {
+        "raw": "45",
+        "value": 45
+      },
+      "APP": {
+        "raw": "40",
+        "value": 40
+      },
+      "EDU": {
+        "raw": "30",
+        "value": 30
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "5",
+      "value": 5
+    },
+    "sanity": {
+      "raw": "0",
+      "value": 0,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "none",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "None; Skin Servitors like Roger … take ½ damage from blunt weapons and only suffer normal damage on impales",
+      "value": 0,
+      "note": "брони нет; кожаный слуга получает половину урона от дробящего оружия и полный — только при пронзании"
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Fighting (Brawl)"
+        },
+        "kind": "attack",
+        "skill": "Драка",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Небольшая дубинка",
+          "en": "Small Club"
+        },
+        "kind": "attack",
+        "skill": "Драка",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d6",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Большой нож",
+          "en": "Large Knife"
+        },
+        "kind": "attack",
+        "skill": "Драка",
+        "chance": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "1d6+1",
+          "dice": "1d6+1",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "50% (25/10)",
+      "value": 50,
+      "half": 25,
+      "fifth": 10
+    },
+    "skills": [
+      {
+        "name": "Красться",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "10%",
+          "value": 10,
+          "half": 5,
+          "fifth": 2
+        }
+      },
+      {
+        "name": "Физкультура",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Замечать всякое",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Дразнить",
+        "value": {
+          "raw": "20%",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1d3",
+        "fail": "1d6",
+        "trigger": "когда юные сыщики узнают, что такое Роджер на самом деле"
+      },
+      {
+        "success": "1d4",
+        "fail": "1d8",
+        "trigger": "если Роджера убить так, что ПЗ падают ниже нуля: из пустой кожи вырываются сотни пауков, червей и прочей мерзости"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Кожаный слуга",
+      "summary": "Роджер — пустая кожа, набитая копошащимися паразитами, которая выдаёт себя за ребёнка. Дробящее оружие наносит ему половину урона, полный урон — только пронзание. Убитый, он опадает, и из кожи выползают жуки, змеи, черви и прочая мерзость.",
+      "raw": "Defenses: None; Skin Servitors like Roger (who is little more than a skin-sack filled with vermin) take ½ damage from blunt weapons and only suffer normal damage on impales.",
+      "refs": [
+        "the-dare-en/creature/skin-servitor"
+      ]
+    }
+  ],
+  "background": {
+    "secret": "Роджер мёртв уже пять дней: его съели Эвелин и её выводок, а его кожу, набитую паразитами, подняли кожаным слугой. Он заманил юных сыщиков в дом, чтобы скормить их ведьме."
+  },
+  "description": {
+    "ru": "Грубый, наглый, громкий и злобный задира. Ничего не принимает всерьёз и не упускает случая высмеять остальных; лишён всякого сочувствия и упивается чужим страхом. Для всех он выглядит обычным мальчишкой, но в доме иногда теряет бдительность: кожа подёргивается, обвисает или неестественно вздувается. Пугает всех старшим братом Эйсом. Его оружие (нож и дубинка) спрятано в доме, чтобы незаметно его забрать.",
+    "en": null
+  },
+  "legend": {
+    "ru": "До пяти дней перед началом сценария Роджер жил обычной для такого мальчишки жизнью: семья по кругу кормила его побоями и равнодушием, что так часто рождает задир. Заскучав от того, что просто пугает местных детей и отбирает деньги на обед, Роджер искал новых жестокостей, и Растис заманил его в дом Барнакеров. Поймать кота не удалось, и Роджер попытался устроить пожар (поджоги — его новое хобби), но огонь необъяснимо погас: Эвелин сотворила «Притушить пламя». Растис сотворил на Роджера «Заворожить» и отвёл его в подвал, на лёгкий ужин Эвелин и её выводку. Кожу оставили, чтобы родился новый «Роджер». Он сохранил всю память и мстительный нрав, но его желания целиком заменила одна цель — служить госпоже. Роджер — «иудин козёл», которому очень нравится его работа.\nВ сценарии. Роджер подбил юных сыщиков провести ночь Хэллоуина в доме Барнакеров и идёт с ними, чтобы никто не струсил; всякий раз, когда кто-то хочет уйти, он дразнит их «трусишками» (fraidy-cats). Войдя, он запирает парадную дверь старым ключом. Примерно через час исследования (лучше — на втором этаже) Роджер исчезает и дальше старается разделить группу, устраивает отвлекающие манёвры, закрывает двери, выманивает детей наружу или втягивает в «розыгрыш», чтобы оглушить одиночку и утащить в логово ведьмы, а если надо — убить. В подходящих местах книга даёт подсказки о его действиях (сцены). Хранителю, которому неуютно играть такого мерзкого персонажа, советуют начинать его реплики с «Роджер говорит…». Ранен, но не убит — может скрыться в пещере под подвалом и ждать там; в финальном бою — самый опасный противник в рукопашной (большой нож, 1d4 урона по с. 28, если не забрал нож с кухни).",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 14,
+      "printed_page": 7,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «Roger Simmons»"
+    },
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 11,
+      "printed_page": 4,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Running The Dare»: Роджер ведёт сыщиков, пропадает через час"
+    },
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 12,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Use Roger»"
+    },
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 16,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Roger’s Actions» (двор, сарай)"
+    },
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 19,
+      "printed_page": 12,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Roger’s Actions» (ключ от двери)"
+    },
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 20,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Roger’s Actions» (кухня)"
+    },
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 21,
+      "printed_page": 14,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Roger’s Actions» (гостиная)"
+    },
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 25,
+      "printed_page": 18,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Roger’s Actions» (обожжённая и хозяйская спальни)"
+    },
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 28,
+      "printed_page": 21,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Ace Arrives»"
+    },
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 35,
+      "printed_page": 28,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Roger (and other reanimated corpses)»"
+    },
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 38,
+      "printed_page": 31,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «ROGER SIMMONS, vindictive bully and undead thing»"
+    },
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 52,
+      "printed_page": 45,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Yearbook Photos»: фото «Roger simmons»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.attacks[Большой нож]",
+      "printed": "Large Knife … damage 1d6+1 (с. 31); «armed with a large knife (1d4 damage)» (с. 28)",
+      "expected": "одно значение урона",
+      "note": "Два разных урона большого ножа Роджера; в статблоке оставлено 1d6+1 как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 7). Статблок — с. 31. Навыки — набор правил «Зов Кид-тулху». «Damage bonus: none» → БкУ 0. Рассудок 0 — как напечатано. Урон большого ножа: в статблоке 1d6+1, в «Battle Against Evelyn» — 1d4."
+  },
+  "images": [
+    {
+      "file": "art/characters/dare-roger-simmons.webp",
+      "kind": "portrait",
+      "caption": "Роджер Симмонс — кожаный слуга с ножом в дверях",
+      "source": "The Dare, с. 31 (физ. 38), «Creature and Character Statistics»: Roger Simmons"
+    }
+  ]
+}

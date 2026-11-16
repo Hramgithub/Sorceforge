@@ -1,0 +1,217 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "the-dare-en/creature/rat-thing-librarian",
+  "kind": "creature",
+  "name": {
+    "ru": "Крысиная тварь-библиотекарь",
+    "en": "The Rat-Thing Librarian"
+  },
+  "aliases": [
+    "библиотекарь"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "крысиная тварь, порождение ведьмы",
+  "relations": [
+    {
+      "type": "related_to",
+      "target": "the-dare-en/creature/evelyn-rat-things",
+      "note": "особо крупная крысиная тварь Эвелин",
+      "note_back": "страж гримуара"
+    },
+    {
+      "type": "works_for",
+      "target": "the-dare-en/character/evelyn-barnaker",
+      "note": "велела сторожить гримуар",
+      "note_back": "страж гримуара в кабинете"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "20",
+        "value": 20
+      },
+      "CON": {
+        "raw": "55",
+        "value": 55
+      },
+      "SIZ": {
+        "raw": "10",
+        "value": 10
+      },
+      "INT": {
+        "raw": "25",
+        "value": 25
+      },
+      "POW": {
+        "raw": "30",
+        "value": 30
+      },
+      "DEX": {
+        "raw": "90",
+        "value": 90
+      }
+    },
+    "hp": {
+      "raw": "6",
+      "value": 6
+    },
+    "damage_bonus": {
+      "raw": "-2",
+      "value": "-2"
+    },
+    "build": {
+      "raw": "-2",
+      "value": -2
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "None, but attacks against a moving rat-thing are made with a penalty die",
+      "value": 0,
+      "note": "нет, но атаки по движущейся крысиной твари — со штрафной костью"
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": null,
+        "chance": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "1d4",
+          "dice": "1d4",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "45% (22/9)",
+      "value": 45,
+      "half": 22,
+      "fifth": 9
+    },
+    "skills": [
+      {
+        "name": "Красться",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Уклонение",
+        "skill": "coc:skill:dodge",
+        "value": {
+          "raw": "85%",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        }
+      },
+      {
+        "name": "Выписывать штрафы за просрочку",
+        "value": {
+          "raw": "0%",
+          "value": 0,
+          "half": 0,
+          "fifth": 0
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d6",
+        "trigger": "увидеть крысиную тварь"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Особо крупная крысиная тварь в крошечных очках из проволоки и стекла. Эвелин велела ей сторожить свой гримуар, и тварь делает это уже несколько десятилетий, хотя хозяйка почти о нём забыла.",
+    "en": null
+  },
+  "encounters": {
+    "ru": "Кабинет в подвале: сидит на большой чёрной книге на верхней полке, полушипит-полухрюкает, если её заметить. Не убегает и нападает на того, кто полезет за книгой; не покидает полку, пока её не атакуют метательным оружием, и защищает книгу до смерти. Если чтение гримуара сорвалось (повторная проверка провалена), «убитая» тварь может внезапно ожить для последней атаки.",
+    "en": null
+  },
+  "habitat": "кабинет в подвале дома Барнакеров",
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 28,
+      "printed_page": 21,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «The Rat-Thing Librarian» со статблоком"
+    },
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 29,
+      "printed_page": 22,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The “Study”»"
+    },
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 31,
+      "printed_page": 24,
+      "method": "book_text",
+      "verified": true,
+      "note": "повторная проверка чтения"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.dodge",
+      "printed": "Dodge 45% (22/9); Skills: … Dodge 85%",
+      "expected": "одно значение",
+      "note": "Два значения Уклонения в одном статблоке; оба оставлены.",
+      "fixed": false
+    },
+    {
+      "field": "statblock.sanity_loss",
+      "printed": "Sanity Loss: 1/1d6 points to see a rat-thing",
+      "expected": "0/1d6 (как у крысиных тварей, с. 32)",
+      "note": "У остальных крысиных тварей потеря 0/1d6; оставлено как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 7). Статблок — с. 21. Характеристики полностью совпадают с «Ужасной нетопыриной тварью» (с. 17) — как напечатано. «Issue Late Fees 0%» — шуточный навык; Уклонение дано дважды: «Dodge 45% (22/9)» в атаках и «Dodge 85%» в навыках."
+  }
+}

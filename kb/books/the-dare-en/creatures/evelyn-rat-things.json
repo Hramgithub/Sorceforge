@@ -1,0 +1,661 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "the-dare-en/creature/evelyn-rat-things",
+  "kind": "creature",
+  "name": {
+    "ru": "Крысиные твари Эвелин",
+    "en": "The Rat-Things, unnatural malevolent scuttlers"
+  },
+  "aliases": [
+    "The Rat-Things",
+    "крысиные твари",
+    "rat-things"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "крысиная тварь, порождение ведьмы",
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:rat-thing",
+      "note_back": "порождения Эвелин Барнакер («На спор») со своим статблоком"
+    },
+    {
+      "type": "spawn_of",
+      "target": "the-dare-en/character/evelyn-barnaker",
+      "note": "рождены ведьмой после её пиршеств из съеденных детей",
+      "note_back": "выводок крысиных тварей"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "10",
+        "value": 10
+      },
+      "CON": {
+        "raw": "35",
+        "value": 35
+      },
+      "SIZ": {
+        "raw": "5",
+        "value": 5
+      },
+      "INT": {
+        "raw": "35",
+        "value": 35
+      },
+      "POW": {
+        "raw": "40",
+        "value": 40
+      },
+      "DEX": {
+        "raw": "90",
+        "value": 90
+      }
+    },
+    "hp": {
+      "raw": "4",
+      "value": 4
+    },
+    "damage_bonus": {
+      "raw": "-2",
+      "value": "-2",
+      "note": "Av. Damage bonus"
+    },
+    "build": {
+      "raw": "-2",
+      "value": -2,
+      "note": "Av. Build"
+    },
+    "move": {
+      "raw": "Av. Move: 9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "None, but attacks against a moving rat-thing are made with a penalty die",
+      "value": 0,
+      "note": "нет, но атаки по движущейся крысиной твари — со штрафной костью"
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": null,
+        "chance": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "1d4 + damage bonus",
+          "dice": "1d4",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "45% (22/9)",
+      "value": 45,
+      "half": 22,
+      "fifth": 9
+    },
+    "skills": [
+      {
+        "name": "Красться",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "увидеть крысиную тварь"
+      }
+    ]
+  },
+  "variants": [
+    {
+      "label": "#1",
+      "statblock": {
+        "characteristics": {
+          "STR": {
+            "raw": "10",
+            "value": 10
+          },
+          "CON": {
+            "raw": "35",
+            "value": 35
+          },
+          "SIZ": {
+            "raw": "5",
+            "value": 5
+          },
+          "INT": {
+            "raw": "35",
+            "value": 35
+          },
+          "POW": {
+            "raw": "40",
+            "value": 40
+          },
+          "DEX": {
+            "raw": "90",
+            "value": 90
+          }
+        },
+        "hp": {
+          "raw": "4",
+          "value": 4
+        }
+      }
+    },
+    {
+      "label": "#2",
+      "statblock": {
+        "characteristics": {
+          "STR": {
+            "raw": "10",
+            "value": 10
+          },
+          "CON": {
+            "raw": "30",
+            "value": 30
+          },
+          "SIZ": {
+            "raw": "5",
+            "value": 5
+          },
+          "INT": {
+            "raw": "40",
+            "value": 40
+          },
+          "POW": {
+            "raw": "25",
+            "value": 25
+          },
+          "DEX": {
+            "raw": "100",
+            "value": 100
+          }
+        },
+        "hp": {
+          "raw": "3",
+          "value": 3
+        }
+      }
+    },
+    {
+      "label": "#3",
+      "statblock": {
+        "characteristics": {
+          "STR": {
+            "raw": "15",
+            "value": 15
+          },
+          "CON": {
+            "raw": "35",
+            "value": 35
+          },
+          "SIZ": {
+            "raw": "5",
+            "value": 5
+          },
+          "INT": {
+            "raw": "50",
+            "value": 50
+          },
+          "POW": {
+            "raw": "15",
+            "value": 15
+          },
+          "DEX": {
+            "raw": "95",
+            "value": 95
+          }
+        },
+        "hp": {
+          "raw": "4",
+          "value": 4
+        }
+      }
+    },
+    {
+      "label": "#4",
+      "statblock": {
+        "characteristics": {
+          "STR": {
+            "raw": "10",
+            "value": 10
+          },
+          "CON": {
+            "raw": "20",
+            "value": 20
+          },
+          "SIZ": {
+            "raw": "5",
+            "value": 5
+          },
+          "INT": {
+            "raw": "25",
+            "value": 25
+          },
+          "POW": {
+            "raw": "45",
+            "value": 45
+          },
+          "DEX": {
+            "raw": "55",
+            "value": 55
+          }
+        },
+        "hp": {
+          "raw": "2",
+          "value": 2
+        }
+      }
+    },
+    {
+      "label": "#5",
+      "statblock": {
+        "characteristics": {
+          "STR": {
+            "raw": "5",
+            "value": 5
+          },
+          "CON": {
+            "raw": "40",
+            "value": 40
+          },
+          "SIZ": {
+            "raw": "5",
+            "value": 5
+          },
+          "INT": {
+            "raw": "35",
+            "value": 35
+          },
+          "POW": {
+            "raw": "35",
+            "value": 35
+          },
+          "DEX": {
+            "raw": "70",
+            "value": 70
+          }
+        },
+        "hp": {
+          "raw": "4",
+          "value": 4
+        }
+      }
+    },
+    {
+      "label": "#6",
+      "statblock": {
+        "characteristics": {
+          "STR": {
+            "raw": "10",
+            "value": 10
+          },
+          "CON": {
+            "raw": "35",
+            "value": 35
+          },
+          "SIZ": {
+            "raw": "5",
+            "value": 5
+          },
+          "INT": {
+            "raw": "15",
+            "value": 15
+          },
+          "POW": {
+            "raw": "30",
+            "value": 30
+          },
+          "DEX": {
+            "raw": "95",
+            "value": 95
+          }
+        },
+        "hp": {
+          "raw": "4",
+          "value": 4
+        }
+      }
+    },
+    {
+      "label": "#7",
+      "statblock": {
+        "characteristics": {
+          "STR": {
+            "raw": "15",
+            "value": 15
+          },
+          "CON": {
+            "raw": "45",
+            "value": 45
+          },
+          "SIZ": {
+            "raw": "5",
+            "value": 5
+          },
+          "INT": {
+            "raw": "20",
+            "value": 20
+          },
+          "POW": {
+            "raw": "25",
+            "value": 25
+          },
+          "DEX": {
+            "raw": "110",
+            "value": 110
+          }
+        },
+        "hp": {
+          "raw": "5",
+          "value": 5
+        }
+      }
+    },
+    {
+      "label": "#8",
+      "statblock": {
+        "characteristics": {
+          "STR": {
+            "raw": "10",
+            "value": 10
+          },
+          "CON": {
+            "raw": "30",
+            "value": 30
+          },
+          "SIZ": {
+            "raw": "5",
+            "value": 5
+          },
+          "INT": {
+            "raw": "30",
+            "value": 30
+          },
+          "POW": {
+            "raw": "45",
+            "value": 45
+          },
+          "DEX": {
+            "raw": "100",
+            "value": 100
+          }
+        },
+        "hp": {
+          "raw": "3",
+          "value": 3
+        }
+      }
+    },
+    {
+      "label": "#9",
+      "statblock": {
+        "characteristics": {
+          "STR": {
+            "raw": "10",
+            "value": 10
+          },
+          "CON": {
+            "raw": "55",
+            "value": 55
+          },
+          "SIZ": {
+            "raw": "5",
+            "value": 5
+          },
+          "INT": {
+            "raw": "25",
+            "value": 25
+          },
+          "POW": {
+            "raw": "35",
+            "value": 35
+          },
+          "DEX": {
+            "raw": "85",
+            "value": 85
+          }
+        },
+        "hp": {
+          "raw": "6",
+          "value": 6
+        }
+      }
+    },
+    {
+      "label": "#10",
+      "statblock": {
+        "characteristics": {
+          "STR": {
+            "raw": "5",
+            "value": 5
+          },
+          "CON": {
+            "raw": "30",
+            "value": 30
+          },
+          "SIZ": {
+            "raw": "5",
+            "value": 5
+          },
+          "INT": {
+            "raw": "25",
+            "value": 25
+          },
+          "POW": {
+            "raw": "15",
+            "value": 15
+          },
+          "DEX": {
+            "raw": "115",
+            "value": 115
+          }
+        },
+        "hp": {
+          "raw": "3",
+          "value": 3
+        }
+      }
+    },
+    {
+      "label": "#11",
+      "statblock": {
+        "characteristics": {
+          "STR": {
+            "raw": "15",
+            "value": 15
+          },
+          "CON": {
+            "raw": "45",
+            "value": 45
+          },
+          "SIZ": {
+            "raw": "5",
+            "value": 5
+          },
+          "INT": {
+            "raw": "35",
+            "value": 35
+          },
+          "POW": {
+            "raw": "20",
+            "value": 20
+          },
+          "DEX": {
+            "raw": "65",
+            "value": 65
+          }
+        },
+        "hp": {
+          "raw": "5",
+          "value": 5
+        }
+      }
+    },
+    {
+      "label": "#12",
+      "statblock": {
+        "characteristics": {
+          "STR": {
+            "raw": "10",
+            "value": 10
+          },
+          "CON": {
+            "raw": "35",
+            "value": 35
+          },
+          "SIZ": {
+            "raw": "5",
+            "value": 5
+          },
+          "INT": {
+            "raw": "39",
+            "value": 39
+          },
+          "POW": {
+            "raw": "40",
+            "value": 40
+          },
+          "DEX": {
+            "raw": "90",
+            "value": 90
+          }
+        },
+        "hp": {
+          "raw": "4",
+          "value": 4
+        }
+      }
+    }
+  ],
+  "abilities": [
+    {
+      "name": "Остатки человечности",
+      "summary": "Твари когда-то были человеческими детьми; некоторые сохранили обрывки памяти и могут пожалеть новых жертв Эвелин. Они понимают речь и, в отличие от обычных крыс, не подчинены заклинанию — у них есть свободная воля. Терпеливые и добрые сыщики могут подружиться с раненой или пойманной тварью (сцена «Сочувствие к дьявольскому отродью»). Эвелин не научила своих тварей никаким заклинаниям.",
+      "raw": "Some of these creatures may retain remnant memories of their former selves, and as such might look upon Evelyn’s newest victims with pity. … Evelyn has not taught any of her bat- or rat-thing thralls any spells.",
+      "refs": [
+        "the-dare-en/scene/sympathy-for-the-devil-spawn"
+      ]
+    },
+    {
+      "name": "Боязнь огня",
+      "summary": "Перед огнём крысиные и нетопыриные твари обычно бегут с шипением «Нет! Огонь! Нет!».",
+      "raw": "if confronted with flames, the rat- and bat-things will normally flee, hissing “No! Fire! No!”"
+    }
+  ],
+  "description": {
+    "ru": "Выводок Эвелин: полулюди-полукрысы, которых она рождает после пиршеств. Чаще, чем обычные крысиные твари, уродливы: лишние конечности, преувеличенные части тела, асимметрия, опухоли. Поодиночке не слишком храбры, но смелее обычных крыс; в стае — гораздо наглее и агрессивнее.",
+    "en": null
+  },
+  "encounters": {
+    "ru": "По всему дому и в логове Эвелин. Подвал: крысиная тварь патрулирует снаружи у окон; три твари гнездятся в чулане подвальной спальни. Финальный бой: по две твари (крысиные или нетопыриные) на каждого сыщика, не занятого другим противником.",
+    "en": null
+  },
+  "habitat": "дом Барнакеров и нора под подвалом",
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 10,
+      "printed_page": 3,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Introduction»"
+    },
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 13,
+      "printed_page": 6,
+      "method": "book_text",
+      "verified": true,
+      "note": "рождение тварей"
+    },
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 27,
+      "printed_page": 20,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «Sympathy for the Devil-Spawn»"
+    },
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 31,
+      "printed_page": 24,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Fire»: «No! Fire! No!»"
+    },
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 35,
+      "printed_page": 28,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Rat-things and Bat-things»"
+    },
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 39,
+      "printed_page": 32,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «THE RAT-THINGS, unnatural malevolent scuttlers» (таблица 12 особей)"
+    },
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 40,
+      "printed_page": 33,
+      "method": "book_text",
+      "verified": true,
+      "note": "«THE BAT-THINGS»: общее описание порождений"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 7). Статблок — с. 32, таблица на 12 особей (варианты #1–#12; основной статблок — #1). Свои числа — поэтому отдельный профиль со связью instance_of (Р-75). ПЗ всех 12 сходятся с (ВЫН + ТЕЛ) / 10."
+  },
+  "images": [
+    {
+      "file": "art/creatures/dare-evelyn-rat-things.webp",
+      "kind": "art",
+      "caption": "Крысиная тварь Эвелин",
+      "source": "The Dare, с. 32 (физ. 39), «THE RAT-THINGS»"
+    }
+  ]
+}

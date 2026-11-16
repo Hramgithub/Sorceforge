@@ -1,0 +1,396 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "the-dare-en/creature/rastis",
+  "kind": "creature",
+  "name": {
+    "ru": "Растис",
+    "en": "Rastis"
+  },
+  "aliases": [
+    "Rastis, Evelyn’s feline familiar",
+    "кот",
+    "фамильяр"
+  ],
+  "category": "supernatural",
+  "subcategory": "фамильяр ведьмы",
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "the-dare-en/character/evelyn-barnaker",
+      "note": "госпожа",
+      "note_back": "кошачий фамильяр"
+    },
+    {
+      "type": "related_to",
+      "target": "coc:creature:ordinary-cats",
+      "note": "кот-фамильяр",
+      "note_back": "Растис — кот-фамильяр ведьмы («На спор»)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "10",
+        "value": 10
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "5",
+        "value": 5
+      },
+      "INT": {
+        "raw": "75",
+        "value": 75
+      },
+      "POW": {
+        "raw": "90",
+        "value": 90
+      },
+      "DEX": {
+        "raw": "145",
+        "value": 145
+      }
+    },
+    "hp": {
+      "raw": "5",
+      "value": 5
+    },
+    "mp": {
+      "raw": "18",
+      "value": 18
+    },
+    "damage_bonus": {
+      "raw": "-2",
+      "value": "-2"
+    },
+    "build": {
+      "raw": "-2",
+      "value": -2
+    },
+    "move": {
+      "raw": "10",
+      "value": 10,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 10
+        }
+      ]
+    },
+    "armor": {
+      "raw": "None; he relies on stealth and evasion",
+      "value": 0,
+      "note": "нет; полагается на скрытность и увёртливость"
+    },
+    "attacks_per_round": {
+      "raw": "2",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Когти",
+          "en": "Claws"
+        },
+        "kind": "attack",
+        "skill": null,
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": false
+        }
+      },
+      {
+        "name": {
+          "ru": "Укус",
+          "en": "Bite"
+        },
+        "kind": "attack",
+        "skill": null,
+        "chance": {
+          "raw": "35% (17/6)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "1d4",
+          "dice": "1d4",
+          "adds_db": false
+        }
+      },
+      {
+        "name": {
+          "ru": "Задние когти",
+          "en": "Rake"
+        },
+        "kind": "special",
+        "skill": null,
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "2d3",
+          "dice": "2d3",
+          "adds_db": false
+        },
+        "notes": "Только если укус удался: Растис раз за разом полосует жертву задними лапами."
+      }
+    ],
+    "dodge": {
+      "raw": "90% (45/18)",
+      "value": 90,
+      "half": 45,
+      "fifth": 18
+    },
+    "skills": [
+      {
+        "name": "Красться",
+        "value": {
+          "raw": "90%",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        }
+      },
+      {
+        "name": "Физкультура",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Замечать всякое",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Drown Mind, Evil Eye, Implant Fear, Mesmerize",
+      "items": [
+        {
+          "name": "Drown Mind",
+          "spell": "coc:spell:drown-mind"
+        },
+        {
+          "name": "Evil Eye",
+          "spell": "coc:spell:evil-eye"
+        },
+        {
+          "name": "Implant Fear",
+          "spell": "coc:spell:implant-fear"
+        },
+        {
+          "name": "Mesmerize",
+          "spell": "coc:spell:mesmerize"
+        }
+      ]
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d3",
+        "trigger": "увидеть Растиса, поняв, что он фамильяр ведьмы или вообще сверхъестествен"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Человеческая речь",
+      "summary": "Как фамильяр ведьмы, Растис может разговаривать обычным человеческим голосом — это позволяет ему, среди прочего, творить заклинания. Говорит редко (ему хватает мысленной связи с Эвелин), но разговор в тёмной комнате может напугать: подражать другим детям он не умеет, зато видит почти в темноте и охотно притворится раненым ребёнком или добрым духом.",
+      "raw": "Human Speech: Rastis, as a witch’s familiar, is able to converse normally as a person would, with a human voice. This enables him to, among other things, cast spells."
+    },
+    {
+      "name": "Мысленная связь",
+      "summary": "Эвелин постоянно связана с Растисом и, сосредоточившись на раунд, видит всё, что видит он. Гибель Растиса оглушает Эвелин на 1d3 раунда и отнимает у неё 25 МОЩ; Растиса гибель Эвелин так не затрагивает, но он сразу бежит из дома.",
+      "raw": "Psychic Link: Evelyn has a permanent psychic link with Rastis and anything he observes, she may view as well, after focusing one round. The death of Rastis stunns Evelyn for 1d3 rounds wherein she is unable to act, she also loses 25 POW. Rastis is not similarly affected, but will immediately flee the house should Evelyn be killed.",
+      "refs": [
+        "the-dare-en/character/evelyn-barnaker"
+      ]
+    },
+    {
+      "name": "Задние когти",
+      "summary": "Если укус удался, Растис может ещё и полосовать жертву задними когтями: 2d3 урона.",
+      "raw": "Rake: Should Rastis succeed with a Bite attack he may also perform a Rake attack, slashing repeatedly at his victim with his hind-claws; this attack causes 2d3 points of damage."
+    },
+    {
+      "name": "Подлые проделки",
+      "summary": "Без рук Растис всё равно устраивает «шутки» и ловушки: закрывает двери за сыщиками, сбрасывает горшки с цветами со второго этажа в прихожую (Уклонение, иначе 1d6 урона), рассыпает гвозди на тёмном полу; ворует или ломает оставленное без присмотра снаряжение (чаще фонарики); выскакивает из засады с шипением или бьёт когтями из-под мебели (50%, 1d2 урона) — не больше раза-двух, чтобы не вызвать подозрений. Магией: незаметный «Сглаз»; «Заворожить» одиночку, чтобы тот вредил друзьям или шёл в подвал; «Утопить разум», чтобы вывести сыщика из строя или защитить Роджера; «Зародить страх» — для бегства или после разговора с одиноким сыщиком.",
+      "raw": "Using Rastis (с. 16): Spells; Tricks and Traps; Theft; Voice in the Dark; Cat Scare and Ambush (50% to hit for 1d2 damage).",
+      "refs": [
+        "the-dare-en/scene/using-rastis"
+      ]
+    }
+  ],
+  "description": {
+    "ru": "Большой серый, зловещий на вид кот со злобным разумом. Шерсть свалялась, шкура исполосована шрамами; на портрете Эвелин он спит у неё на коленях. Один глаз у него — слишком человеческий. В гостиной он прикидывается чучелом на верхней полке.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Фамильяр Эвелин Барнакер: что видит он, видит и она. Знает немного магии и предпочитает заклинания физическим атакам, к которым прибегает только в углу. Упивается охотой и засадами на (в основном) зверьков у дома. Это он заманил Роджера в дом и заворожил его. Задача Растиса — следить за юными сыщиками и вести их к Эвелин, а не злить свежую партию детей. Это самое способное из её созданий: может помогать Роджеру или заменить его, если тот погиб раньше времени, и обладает всеми боевыми умениями крысиных тварей (штраф к попаданию по нему, очень высокое Уклонение). Тяжело раненный, уходит в подвал, чтобы Эвелин залечила раны. В финальном бою Эвелин велит ему обезвредить того, кто стреляет или опаснее всех (с петардами, по Руке славы): обычно он творит «Зародить страх». При затоплении логова взбирается на груду костей.",
+    "en": null
+  },
+  "encounters": {
+    "ru": "Общая комната (сцена «Общая комната»): «чучело» на верхней полке оживает, если его потревожить (1/1d4 Рассудка всем свидетелям); пустив кровь, убегает. Если его не трогать, в следующий раз его там не будет (0/1 Рассудка). Двор: тень у пруда (проверка Замечать всякое — большой облезлый кот). Дальше — где угодно в доме, на усмотрение Хранителя (сцена «Проделки Растиса»). Финал «Победа»: Растис следит за детьми на школьной площадке.",
+    "en": null
+  },
+  "habitat": "дом Барнакеров",
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 10,
+      "printed_page": 3,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Introduction»: Растис"
+    },
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 12,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Use the vermin»: Растис"
+    },
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 14,
+      "printed_page": 7,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «Roger Simmons»: заманил Роджера"
+    },
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 16,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Fish Pond»: тень кота"
+    },
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 20,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Living Room»"
+    },
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 21,
+      "printed_page": 14,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Living Room» (окончание), «Roger’s Actions»"
+    },
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 23,
+      "printed_page": 16,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «Using Rastis»"
+    },
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 31,
+      "printed_page": 24,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Connection to Rastis»"
+    },
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 35,
+      "printed_page": 28,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Rastis» в бою"
+    },
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 40,
+      "printed_page": 33,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «RASTIS, Evelyn’s feline familiar»"
+    },
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 41,
+      "printed_page": 34,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Special Powers», «Note»"
+    },
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 37,
+      "printed_page": 30,
+      "method": "book_text",
+      "verified": true,
+      "note": "финал «Win»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.attacks[Укус].chance",
+      "printed": "Bite: 35% (17/6)",
+      "expected": "35% (17/7)",
+      "note": "Пятая часть 35 — 7; исправлено в записи (Р-35).",
+      "fixed": true
+    }
+  ],
+  "corrections": [
+    {
+      "field": "statblock.attacks[Укус].chance.fifth",
+      "from": 6,
+      "to": 7,
+      "reason": "пятая часть 35% — 7 (с. 33), опечатка книги «(17/6)»",
+      "ref": "Р-35"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 7). Статблок — с. 33–34. Навыки — набор правил «Зов Кид-тулху». Ссылка на советы по заклинаниям «see page 28» — на деле советы во врезке «Using Rastis» (с. 16) и в «The Battle Against Evelyn» (с. 28)."
+  },
+  "images": [
+    {
+      "file": "art/creatures/dare-rastis.webp",
+      "kind": "art",
+      "caption": "Растис, фамильяр Эвелин",
+      "source": "The Dare, с. 33 (физ. 40), статблок «RASTIS»"
+    }
+  ]
+}

@@ -1,0 +1,676 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "the-dare-en/creature/bat-things",
+  "kind": "creature",
+  "name": {
+    "ru": "Нетопыриные твари",
+    "en": "The Bat-Things, fluttering blasphemies"
+  },
+  "aliases": [
+    "The Bat-Things",
+    "A Dozen Bat-Things",
+    "нетопыриная тварь",
+    "bat-things"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "порождение ведьмы",
+  "relations": [
+    {
+      "type": "spawn_of",
+      "target": "the-dare-en/character/evelyn-barnaker",
+      "note": "рождены ведьмой после её пиршеств из съеденных детей",
+      "note_back": "выводок нетопыриных тварей"
+    },
+    {
+      "type": "related_to",
+      "target": "the-dare-en/creature/evelyn-rat-things",
+      "note": "такие же порождения Эвелин, только крылатые",
+      "note_back": "крылатые порождения Эвелин"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "10",
+        "value": 10
+      },
+      "CON": {
+        "raw": "30",
+        "value": 30
+      },
+      "SIZ": {
+        "raw": "5",
+        "value": 5
+      },
+      "INT": {
+        "raw": "30",
+        "value": 30
+      },
+      "POW": {
+        "raw": "30",
+        "value": 30
+      },
+      "DEX": {
+        "raw": "85",
+        "value": 85
+      }
+    },
+    "hp": {
+      "raw": "4",
+      "value": 4
+    },
+    "damage_bonus": {
+      "raw": "-2",
+      "value": "-2",
+      "note": "Av. Damage bonus"
+    },
+    "build": {
+      "raw": "-2",
+      "value": -2,
+      "note": "Av. Build"
+    },
+    "move": {
+      "raw": "Av. Move: 10",
+      "value": 10,
+      "modes": [
+        {
+          "mode": "fly",
+          "value": 10
+        }
+      ]
+    },
+    "armor": {
+      "raw": "None, but attacks against a flying bat-thing are made with a penalty die",
+      "value": 0,
+      "note": "нет, но атаки по летящей нетопыриной твари — со штрафной костью"
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Укус",
+          "en": "Bite"
+        },
+        "kind": "attack",
+        "skill": null,
+        "chance": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "1d3 + damage bonus",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "95% (47/19)",
+      "value": 95,
+      "half": 47,
+      "fifth": 19
+    },
+    "skills": [
+      {
+        "name": "Красться",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Замечать всякое",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d6",
+        "trigger": "увидеть нетопыриную тварь"
+      }
+    ]
+  },
+  "variants": [
+    {
+      "label": "#1",
+      "statblock": {
+        "characteristics": {
+          "STR": {
+            "raw": "10",
+            "value": 10
+          },
+          "CON": {
+            "raw": "30",
+            "value": 30
+          },
+          "SIZ": {
+            "raw": "5",
+            "value": 5
+          },
+          "INT": {
+            "raw": "30",
+            "value": 30
+          },
+          "POW": {
+            "raw": "30",
+            "value": 30
+          },
+          "DEX": {
+            "raw": "85",
+            "value": 85
+          }
+        },
+        "hp": {
+          "raw": "4",
+          "value": 4
+        }
+      }
+    },
+    {
+      "label": "#2",
+      "statblock": {
+        "characteristics": {
+          "STR": {
+            "raw": "10",
+            "value": 10
+          },
+          "CON": {
+            "raw": "15",
+            "value": 15
+          },
+          "SIZ": {
+            "raw": "5",
+            "value": 5
+          },
+          "INT": {
+            "raw": "15",
+            "value": 15
+          },
+          "POW": {
+            "raw": "45",
+            "value": 45
+          },
+          "DEX": {
+            "raw": "130",
+            "value": 130
+          }
+        },
+        "hp": {
+          "raw": "2",
+          "value": 2
+        }
+      }
+    },
+    {
+      "label": "#3",
+      "statblock": {
+        "characteristics": {
+          "STR": {
+            "raw": "5",
+            "value": 5
+          },
+          "CON": {
+            "raw": "35",
+            "value": 35
+          },
+          "SIZ": {
+            "raw": "5",
+            "value": 5
+          },
+          "INT": {
+            "raw": "35",
+            "value": 35
+          },
+          "POW": {
+            "raw": "25",
+            "value": 25
+          },
+          "DEX": {
+            "raw": "105",
+            "value": 105
+          }
+        },
+        "hp": {
+          "raw": "3",
+          "value": 3
+        }
+      }
+    },
+    {
+      "label": "#4",
+      "statblock": {
+        "characteristics": {
+          "STR": {
+            "raw": "15",
+            "value": 15
+          },
+          "CON": {
+            "raw": "35",
+            "value": 35
+          },
+          "SIZ": {
+            "raw": "5",
+            "value": 5
+          },
+          "INT": {
+            "raw": "35",
+            "value": 35
+          },
+          "POW": {
+            "raw": "25",
+            "value": 25
+          },
+          "DEX": {
+            "raw": "80",
+            "value": 80
+          }
+        },
+        "hp": {
+          "raw": "4",
+          "value": 4
+        }
+      }
+    },
+    {
+      "label": "#5",
+      "statblock": {
+        "characteristics": {
+          "STR": {
+            "raw": "10",
+            "value": 10
+          },
+          "CON": {
+            "raw": "45",
+            "value": 45
+          },
+          "SIZ": {
+            "raw": "5",
+            "value": 5
+          },
+          "INT": {
+            "raw": "45",
+            "value": 45
+          },
+          "POW": {
+            "raw": "60",
+            "value": 60
+          },
+          "DEX": {
+            "raw": "85",
+            "value": 85
+          }
+        },
+        "hp": {
+          "raw": "5",
+          "value": 5
+        }
+      }
+    },
+    {
+      "label": "#6",
+      "statblock": {
+        "characteristics": {
+          "STR": {
+            "raw": "15",
+            "value": 15
+          },
+          "CON": {
+            "raw": "25",
+            "value": 25
+          },
+          "SIZ": {
+            "raw": "5",
+            "value": 5
+          },
+          "INT": {
+            "raw": "50",
+            "value": 50
+          },
+          "POW": {
+            "raw": "30",
+            "value": 30
+          },
+          "DEX": {
+            "raw": "135",
+            "value": 135
+          }
+        },
+        "hp": {
+          "raw": "3",
+          "value": 3
+        }
+      }
+    },
+    {
+      "label": "#7",
+      "statblock": {
+        "characteristics": {
+          "STR": {
+            "raw": "5",
+            "value": 5
+          },
+          "CON": {
+            "raw": "50",
+            "value": 50
+          },
+          "SIZ": {
+            "raw": "5",
+            "value": 5
+          },
+          "INT": {
+            "raw": "45",
+            "value": 45
+          },
+          "POW": {
+            "raw": "45",
+            "value": 45
+          },
+          "DEX": {
+            "raw": "125",
+            "value": 125
+          }
+        },
+        "hp": {
+          "raw": "5",
+          "value": 5
+        }
+      }
+    },
+    {
+      "label": "#8",
+      "statblock": {
+        "characteristics": {
+          "STR": {
+            "raw": "10",
+            "value": 10
+          },
+          "CON": {
+            "raw": "30",
+            "value": 30
+          },
+          "SIZ": {
+            "raw": "5",
+            "value": 5
+          },
+          "INT": {
+            "raw": "40",
+            "value": 40
+          },
+          "POW": {
+            "raw": "35",
+            "value": 35
+          },
+          "DEX": {
+            "raw": "120",
+            "value": 120
+          }
+        },
+        "hp": {
+          "raw": "3",
+          "value": 3
+        }
+      }
+    },
+    {
+      "label": "#9",
+      "statblock": {
+        "characteristics": {
+          "STR": {
+            "raw": "15",
+            "value": 15
+          },
+          "CON": {
+            "raw": "55",
+            "value": 55
+          },
+          "SIZ": {
+            "raw": "5",
+            "value": 5
+          },
+          "INT": {
+            "raw": "50",
+            "value": 50
+          },
+          "POW": {
+            "raw": "35",
+            "value": 35
+          },
+          "DEX": {
+            "raw": "65",
+            "value": 65
+          }
+        },
+        "hp": {
+          "raw": "6",
+          "value": 6
+        }
+      }
+    },
+    {
+      "label": "#10",
+      "statblock": {
+        "characteristics": {
+          "STR": {
+            "raw": "10",
+            "value": 10
+          },
+          "CON": {
+            "raw": "45",
+            "value": 45
+          },
+          "SIZ": {
+            "raw": "5",
+            "value": 5
+          },
+          "INT": {
+            "raw": "40",
+            "value": 40
+          },
+          "POW": {
+            "raw": "45",
+            "value": 45
+          },
+          "DEX": {
+            "raw": "480",
+            "value": 480
+          }
+        },
+        "hp": {
+          "raw": "5",
+          "value": 5
+        }
+      }
+    },
+    {
+      "label": "#11",
+      "statblock": {
+        "characteristics": {
+          "STR": {
+            "raw": "5",
+            "value": 5
+          },
+          "CON": {
+            "raw": "45",
+            "value": 45
+          },
+          "SIZ": {
+            "raw": "5",
+            "value": 5
+          },
+          "INT": {
+            "raw": "45",
+            "value": 45
+          },
+          "POW": {
+            "raw": "50",
+            "value": 50
+          },
+          "DEX": {
+            "raw": "110",
+            "value": 110
+          }
+        },
+        "hp": {
+          "raw": "5",
+          "value": 5
+        }
+      }
+    },
+    {
+      "label": "#12",
+      "statblock": {
+        "characteristics": {
+          "STR": {
+            "raw": "10",
+            "value": 10
+          },
+          "CON": {
+            "raw": "55",
+            "value": 55
+          },
+          "SIZ": {
+            "raw": "5",
+            "value": 5
+          },
+          "INT": {
+            "raw": "35",
+            "value": 35
+          },
+          "POW": {
+            "raw": "30",
+            "value": 30
+          },
+          "DEX": {
+            "raw": "95",
+            "value": 95
+          }
+        },
+        "hp": {
+          "raw": "6",
+          "value": 6
+        }
+      }
+    }
+  ],
+  "abilities": [
+    {
+      "name": "Остатки человечности",
+      "summary": "Как и крысиные твари, когда-то были детьми; понимают речь, не подчинены заклинанию и могут стать друзьями сыщиков. Пойманная тварь кричит «Ма-а-ама! Ма-ама-а-а!!!». Заклинаниям Эвелин их не учила.",
+      "raw": "Evelyn has not taught any of her bat- or rat-thing thralls any spells.",
+      "refs": [
+        "the-dare-en/scene/sympathy-for-the-devil-spawn"
+      ]
+    }
+  ],
+  "description": {
+    "ru": "Крылатые порождения Эвелин Барнакер — жуткая смесь человека и летучей мыши; как и её крысиные твари, склонны к уродствам: лишние конечности, преувеличенные части тела, асимметрия, опухоли. Поодиночке не очень храбры, в стае смелы и агрессивны. В логове Эвелин потолок достаточно высок, чтобы они свободно летали; вода при затоплении их не задевает.",
+    "en": null
+  },
+  "encounters": {
+    "ru": "Второй этаж, чердак (на чердаке среди сотен летучих мышей — 1d6 нетопыриных тварей), большое чердачное помещение (маленькая тварь спит на стропилах), крыша и купол, логово Эвелин. Таблицу на дюжину тварей можно использовать повторно.",
+    "en": null
+  },
+  "habitat": "чердак дома Барнакеров и нора под подвалом",
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 10,
+      "printed_page": 3,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Introduction»"
+    },
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 27,
+      "printed_page": 20,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Large Attic Space», «The Attic»"
+    },
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 35,
+      "printed_page": 28,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Rat-things and Bat-things»"
+    },
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 40,
+      "printed_page": 33,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «A DOZEN BAT-THINGS, reuse as needed» и описание «THE BAT-THINGS, fluttering blasphemies»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "description.ru",
+      "printed": "«this creature is a horrifying mixture of human and rat»",
+      "expected": "human and bat",
+      "note": "Описание нетопыриных тварей говорит о смеси человека и крысы — по смыслу и картинке — летучей мыши.",
+      "fixed": true
+    },
+    {
+      "field": "variants[#10].statblock.characteristics.DEX",
+      "printed": "480",
+      "expected": "двузначное или трёхзначное до 135 (например, 80)",
+      "note": "ЛВК 480 у особи #10 — явная опечатка, верное значение не восстановить; оставлено как напечатано.",
+      "fixed": false
+    },
+    {
+      "field": "variants[#3].statblock.hp",
+      "printed": "3",
+      "expected": "4 ((ВЫН 35 + ТЕЛ 5) / 10)",
+      "note": "ПЗ особи #3 не сходятся с ВЫН и ТЕЛ; оставлено как напечатано.",
+      "fixed": false
+    }
+  ],
+  "corrections": [
+    {
+      "field": "description.ru",
+      "from": "mixture of human and rat",
+      "to": "смесь человека и летучей мыши",
+      "reason": "опечатка книги (с. 33): описание нетопыриных тварей",
+      "ref": null
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 7). Статблок — с. 33, таблица на 12 особей (варианты #1–#12; основной статблок — #1). Скорость — полёт (в книге «Av. Move: 10» без уточнения)."
+  },
+  "images": [
+    {
+      "file": "art/creatures/dare-bat-things.webp",
+      "kind": "art",
+      "caption": "Нетопыриная тварь",
+      "source": "The Dare, с. 33 (физ. 40), «THE BAT-THINGS»"
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "the-dare-en/creature/terrible-bat-thing",
+  "kind": "creature",
+  "name": {
+    "ru": "Ужасная нетопыриная тварь",
+    "en": "The Terrible Bat-Thing"
+  },
+  "aliases": [
+    "большая нетопыриная тварь",
+    "large bat-thing"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "порождение ведьмы",
+  "relations": [
+    {
+      "type": "related_to",
+      "target": "the-dare-en/creature/bat-things",
+      "note": "самая крупная из нетопыриных тварей",
+      "note_back": "самая крупная тварь выводка"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "20",
+        "value": 20
+      },
+      "CON": {
+        "raw": "55",
+        "value": 55
+      },
+      "SIZ": {
+        "raw": "10",
+        "value": 10
+      },
+      "INT": {
+        "raw": "25",
+        "value": 25
+      },
+      "POW": {
+        "raw": "30",
+        "value": 30
+      },
+      "DEX": {
+        "raw": "90",
+        "value": 90
+      }
+    },
+    "hp": {
+      "raw": "6",
+      "value": 6
+    },
+    "damage_bonus": {
+      "raw": "-2",
+      "value": "-2"
+    },
+    "build": {
+      "raw": "-2",
+      "value": -2
+    },
+    "move": {
+      "raw": "Move: 9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "fly",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "None, but attacks against free-flying bat things (not those engaged in a “carry off” attack) are made with a penalty die",
+      "value": 0,
+      "note": "нет, но атаки по свободно летящим тварям (не занятым «уносом») — со штрафной костью"
+    },
+    "attacks_per_round": {
+      "raw": "2",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Fighting (Brawl)"
+        },
+        "kind": "attack",
+        "skill": null,
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "notes": "Хватает обеими лапами и борется с жертвой."
+      },
+      {
+        "name": {
+          "ru": "Унести (манёвр)",
+          "en": "Carry off (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": null,
+        "chance": {
+          "raw": "SIZ vs STR 20",
+          "value": null,
+          "half": null,
+          "fifth": null
+        },
+        "notes": "Если одна или обе лапы схватили жертву, её тащит в небо (или в окно), если она проиграет встречную проверку своей ТЕЛ против СИЛ твари 20; если жертва ухватилась за что-то надёжно закреплённое — СИЛ против СИЛ."
+      }
+    ],
+    "dodge": {
+      "raw": "55% (27/11)",
+      "value": 55,
+      "half": 27,
+      "fifth": 11
+    },
+    "skills": [
+      {
+        "name": "Красться",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Уклонение",
+        "skill": "coc:skill:dodge",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Замечать всякое",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d4+1",
+        "trigger": null
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Визг",
+      "summary": "Каждый второй раунд тварь издаёт оглушительный визг: кто провалит проверку ВЫН, выведен из строя на 1d2 раунда.",
+      "raw": "Shriek: Every other round this monster lets out an eardrum piercing shriek. Those who fail to make a CON roll are incapacitated for 1d2 rounds."
+    },
+    {
+      "name": "Унести",
+      "summary": "Схваченную жертву утаскивает в небо или в окно, если та проиграет ТЕЛ против СИЛ 20 (держась за что-то надёжное — СИЛ против СИЛ).",
+      "raw": "Carry off (mnvr): If one or both claws grab a victim, they will be dragged skywards (or out a window) if they lose a contest of SIZ versus the creature’s STR of 20. If the victim is able to grab hold of something securely anchored, the test is STR vs STR instead."
+    }
+  ],
+  "description": {
+    "ru": "Размером с грифа или кондора, крупнейшая тварь выводка Эвелин; размах крыльев около 3 м. Угольно-чёрная, голова — скорее нетопыря, чем человека, но волосатое человеческое туловище с двумя недоразвитыми руками и парой мощных ног с когтями. Приземлившись, стоит около 1,2 м; в бою оглушительно визжит.",
+    "en": null
+  },
+  "encounters": {
+    "ru": "Купол (необязательная встреча «Другой вариант»): с жутким визгом хватает самого маленького сыщика и тащит лицом вперёд в свежую дыру в окне; из-за визга сыщики в куполе не действуют в первом раунде. Тварь атакует, пока не унесёт сыщика, сыщики не убегут или она не получит больше 4 урона. Падение из купола смертельно (PG: всегда дайте ухватиться за край крыши и забраться обратно). Если спускаться по верёвке — нападают две чуть меньшие твари (тот же статблок, ТЕЛ и ПЗ на 1 меньше), потом летучие мыши и твари, пока сыщики не вернутся. Нападает и на того, кто выберется на крышу с чердака.",
+    "en": null
+  },
+  "habitat": "небо над домом Барнакеров",
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 24,
+      "printed_page": 17,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезки «An Alternative Encounter», «The Terrible Bat-Thing» со статблоком"
+    },
+    {
+      "book_id": "the-dare-en",
+      "physical_page": 27,
+      "printed_page": 20,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Attic»: нападение на крыше"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 7). Статблок — с. 17. Навыки — набор правил «Зов Кид-тулху»."
+  }
+}

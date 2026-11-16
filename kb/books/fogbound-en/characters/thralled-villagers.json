@@ -1,0 +1,322 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "fogbound-en/character/thralled-villagers",
+  "kind": "character",
+  "name": {
+    "ru": "Порабощённые жители",
+    "en": "Thralled Villagers"
+  },
+  "aliases": [
+    "Murderous Puppets",
+    "Марионетки-убийцы",
+    "thralls",
+    "порабощённые",
+    "crazies"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "порабощённые жители",
+  "names": [
+    "Гарри Пенгелли",
+    "Кэрол Тремейн",
+    "Дерек Роскилли",
+    "Лоис Карнсью",
+    "Уилл Ханкок"
+  ],
+  "sex": null,
+  "residence": null,
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "spawn_of",
+      "target": "fogbound-en/creature/troglodytes",
+      "note": "троглодиты превратили их в своих рабов",
+      "note_back": "превращённые жертвы — порабощённые жители"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "55",
+        "value": 55
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "APP": {
+        "raw": "10",
+        "value": 10
+      },
+      "INT": {
+        "raw": "50",
+        "value": 50
+      },
+      "POW": {
+        "raw": "40",
+        "value": 40
+      },
+      "EDU": {
+        "raw": "50",
+        "value": 50
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "8",
+      "value": 8
+    },
+    "sanity": {
+      "raw": "00",
+      "value": 0,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d3+БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Молоток",
+          "en": "Hammer"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d6+БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Нож",
+          "en": "Knife"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d4+БкУ",
+          "dice": "1d4",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:knife-small"
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d2",
+        "trigger": "увидеть порабощённого жителя"
+      }
+    ]
+  },
+  "description": {
+    "ru": "«Марионетки-убийцы». Издали похожи на людей, но вблизи видно, что с ними что-то не так: пропорции сбиты — одна рука или нога слишком длинная, отчего походка странная; у других глаза слишком широко расставлены или один выше другого; у некоторых пугающе широкий рот с искривлёнными зубами. Могут говорить и будто бы помнят, кем были, но живут лишь для того, чтобы искать добычу для хозяев: бессвязно хихикают о море, тумане и жажде крови. Носят подручное оружие — монтировки, молотки, кухонные ножи; оружием пользуются как обычные люди.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Троглодиты Вечного берега умеют изменять своих жертв, искажая их тело и разум и превращая в покорных слуг (способность «Порабощение» троглодитов). Порабощённые бродят по туманным улицам Портхоллоу и охотятся на выживших, чтобы утащить их к хозяевам; это они вламывались в дома и убивали жильцов и зарезали коров на ферме. Тим Мёрдок называет их «психами» (crazies). Хранителю советуют сводить встречи с ними к минимуму, но намекать на их присутствие: смех за стеной, шаги и хохот за окнами. Порабощённой стала Саманта Прачет. Если Идол деактивирован, порабощённые исчезают без следа.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "fogbound-en",
+      "physical_page": 5,
+      "printed_page": 4,
+      "method": "book_text",
+      "verified": true,
+      "note": "предыстория: туман и странные силуэты"
+    },
+    {
+      "book_id": "fogbound-en",
+      "physical_page": 14,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "дома, где что-то вломилось и убило жильцов"
+    },
+    {
+      "book_id": "fogbound-en",
+      "physical_page": 15,
+      "printed_page": 14,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Supernatural Inhabitants»"
+    },
+    {
+      "book_id": "fogbound-en",
+      "physical_page": 17,
+      "printed_page": 16,
+      "method": "book_text",
+      "verified": true,
+      "note": "Тим отбивался от «психов»"
+    },
+    {
+      "book_id": "fogbound-en",
+      "physical_page": 19,
+      "printed_page": 18,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Bells in the Dark»; Саманта"
+    },
+    {
+      "book_id": "fogbound-en",
+      "physical_page": 23,
+      "printed_page": 22,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Ritual is Stopped»: порабощённые исчезают"
+    },
+    {
+      "book_id": "fogbound-en",
+      "physical_page": 26,
+      "printed_page": 25,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Thralled Villagers, Murderous Puppets»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.damage_bonus",
+      "printed": "DB: 0",
+      "expected": "+1d4 (СИЛ 60 + ТЕЛ 65 = 125)",
+      "note": "БкУ и Комплекция не сходятся с СИЛ + ТЕЛ; оставлено как напечатано.",
+      "fixed": false
+    },
+    {
+      "field": "statblock.build",
+      "printed": "Build: 0",
+      "expected": "1",
+      "note": "См. БкУ.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "editorial_text",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1). Статблок — как напечатано (с. 25; Р-25). Групповой профиль (Р-74); имена придуманы (Р-151). Рассудок «00» — как напечатано. Молотка в таблице оружия нет — атака без ссылки на оружие."
+  }
+}

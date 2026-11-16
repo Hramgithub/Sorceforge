@@ -1,0 +1,278 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "fogbound-en/creature/troglodytes",
+  "kind": "creature",
+  "name": {
+    "ru": "Троглодиты",
+    "en": "Troglodytes"
+  },
+  "aliases": [
+    "Spindly Hunters",
+    "Долговязые охотники",
+    "троглодит",
+    "troglodyte"
+  ],
+  "category": "mythos_monster",
+  "subcategory": null,
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "100",
+        "value": 100
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "APP": {
+        "raw": "0",
+        "value": 0
+      },
+      "INT": {
+        "raw": "20",
+        "value": 20
+      },
+      "POW": {
+        "raw": "40",
+        "value": 40
+      },
+      "EDU": {
+        "raw": "0",
+        "value": 0
+      }
+    },
+    "hp": {
+      "raw": "16",
+      "value": 16
+    },
+    "mp": {
+      "raw": "8",
+      "value": 8
+    },
+    "sanity": {
+      "raw": "0",
+      "value": 0,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d6",
+      "value": "+1d6"
+    },
+    "build": {
+      "raw": "2",
+      "value": 2
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "armor": {
+      "raw": "2 (кожистая шкура)",
+      "value": 2
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting attacks"
+        },
+        "kind": "special",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "—",
+          "value": null,
+          "half": null,
+          "fifth": null
+        },
+        "notes": "троглодиты атакуют когтями как общей безоружной атакой"
+      },
+      {
+        "name": {
+          "ru": "Хватка",
+          "en": "Seize (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "—",
+          "value": null,
+          "half": null,
+          "fifth": null
+        },
+        "notes": "может схватить когтями жертву своей Комплекции или меньше; при успехе в следующем раунде может пустить в ход укус; процент не указан"
+      },
+      {
+        "name": {
+          "ru": "Коготь",
+          "en": "Claw"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1d4+БкУ",
+          "dice": "1d4",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Укус",
+          "en": "Bite"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d6+БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "skills": [
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "увидеть троглодита"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Шаг по Берегу",
+      "raw": "Stride the Shore: A troglodyte is able to cross between our reality and the Eternal Shore at will. Crossing in either direction costs the troglodyte 1 magic point and takes a round to complete. Troglodytes can use this power to abduct helpless victims, but if taking someone with them then it costs 2 magic points.",
+      "summary": "Троглодит по желанию переходит между нашей реальностью и Вечным берегом: переход в любую сторону стоит 1 ПМ и занимает раунд. Так он похищает беспомощных жертв; если берёт кого-то с собой — 2 ПМ.",
+      "refs": [
+        "fogbound-en/location/eternal-shore"
+      ]
+    },
+    {
+      "name": "Порабощение",
+      "raw": "Enthrall: Troglodytes can turn a helpless victim into a thrall. To do this the troglodyte must spend 5 magic points while staring into the victim’s eyes. The process takes an hour, and the troglodyte is helpless while doing this, so it will usually seek to carry intended victims off to somewhere remote before beginning. Once finished the victim becomes a twisted version of their former selves, seeking only to bring more victims to its troglodyte master.",
+      "summary": "Троглодит превращает беспомощную жертву в порабощённую: тратит 5 ПМ, глядя ей в глаза. Процесс длится час, и всё это время троглодит беспомощен, поэтому обычно уносит жертву в укромное место. Жертва становится искажённым подобием себя прежней и стремится лишь приводить новых жертв к хозяину-троглодиту.",
+      "refs": [
+        "fogbound-en/character/thralled-villagers"
+      ]
+    }
+  ],
+  "description": {
+    "ru": "Странные тощие существа, уроженцы окутанной туманом реальности Вечного берега. Человекоподобны, но гораздо выше человека, с длинными многосуставчатыми конечностями, как у долгоножки, и вытянутыми рыбьими головами, смутно напоминающими мурен. Бродят в тумане осторожными, будто запинающимися шагами, издавая странное щёлканье; в тумане видны лишь их нечеловечески высокие угловатые силуэты, слышны щелчки и кваканье.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Смертоносные охотники: умеют почти неподвижно затаиться в темноте и ударить с молниеносной быстротой. Поймав добычу, утаскивают её в тень, чтобы сожрать; иногда вместо этого изменяют жертву, превращая в порабощённого. Выслеживают всякого, кто забредёт на Вечный берег, и нападают из-под прикрытия тумана; чем дольше сыщик там, тем вероятнее встреча. В Портхоллоу один троглодит затаился в лодочных сараях, двое прибегают на звон колоколов часовни и убивают викария; троглодит обратил Саманту Прачет; встреча с троглодитом свела с ума Кеннета Тига.\nХранителю: убивать всех троглодитов и порабощённых — не цель сценария, это не «зачистка подземелья». Существа нужны, чтобы преследовать, пугать и гнать сыщиков вперёд; встречи с ними лучше свести к минимуму, а их присутствие обозначать намёками: что-то проходит мимо в тумане так близко, что виден нечеловечески высокий угловатый силуэт; слишком высокая фигура в конце улицы щёлкает и квакает и исчезает за домом; из дома дальше по улице доносится жестокий смех; сидящие в доме слышат, как мимо проходят несколько человек, хихикая как безумные. Прямая встреча уместна, если сыщики шумят, слишком задерживаются в одном месте или им просто пора испугаться.",
+    "en": null
+  },
+  "habitat": "Вечный берег",
+  "sources": [
+    {
+      "book_id": "fogbound-en",
+      "physical_page": 6,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "Вечный берег: троглодиты"
+    },
+    {
+      "book_id": "fogbound-en",
+      "physical_page": 15,
+      "printed_page": 14,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Supernatural Inhabitants»"
+    },
+    {
+      "book_id": "fogbound-en",
+      "physical_page": 16,
+      "printed_page": 15,
+      "method": "book_text",
+      "verified": true,
+      "note": "троглодиты на Вечном береге"
+    },
+    {
+      "book_id": "fogbound-en",
+      "physical_page": 18,
+      "printed_page": 17,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Boat Sheds»; Кеннет Тиг"
+    },
+    {
+      "book_id": "fogbound-en",
+      "physical_page": 19,
+      "printed_page": 18,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Bells in the Dark»; Саманта"
+    },
+    {
+      "book_id": "fogbound-en",
+      "physical_page": 26,
+      "printed_page": 25,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Troglodytes, Spindly Hunters»; «Special Powers»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1). Уникальное существо сценария; статблок — как напечатано (с. 25). Подкатегории книга не даёт («Spindly Hunters» — подзаголовок статьи, в aliases). Уклонение 35% при ЛВК 60 — как напечатано."
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "fogbound-en/scene/daniels-flat-search",
+  "kind": "scene",
+  "name": {
+    "ru": "Обыск квартиры Дэниела",
+    "en": "Daniel’s Flat"
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Квартира Дэниела в районе Арбери, в нескольких минутах езды от музея. Дверь заперта: отпереть ключом Стивена или проверкой Взлома, если сыщики так уж хотят. Ясно, что здесь никто не жил по меньшей мере неделю: у двери гора почты, всё заброшено. При беглом осмотре без проверок находятся:\n• рукописная записка с названием и телефоном коттеджа для отдыха в Портхоллоу (Корнуолл); под адресом нацарапан номер — похоже, номер брони;\n• чек за две книги, купленные Дэниелом за несколько дней до отпуска, — «Сокровище Портхоллоу» Сэмюэла Хорнби и «Наследие Харботтла» Закари Уэстленда;\n• по спальне видно, что Дэниел взял несколько комплектов одежды; из ванной пропали туалетные принадлежности — он собирался в долгую поездку.\nУспешная проверка Внимания: в ящике стола спрятан аккуратно сложенный план Музея Удоки; пометки на нём описывают замки на окнах и меры охраны внутри, место карты выделено. По плану совершенно ясно, что в музей вломился и украл карту Дэниел.",
+    "en": null
+  },
+  "when": "Часть первая, в любое время",
+  "arc": {
+    "scenario": "fogbound-en/scenario/fogbound",
+    "part": "Часть первая: Сторож брату своему",
+    "order": 3
+  },
+  "where": [
+    {
+      "location": "fogbound-en/location/daniels-flat",
+      "note": null
+    }
+  ],
+  "participants": [],
+  "mechanics": {
+    "ru": "Взлом (если нет ключа); Внимание — план музея в ящике стола.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Сыщики узнают о Портхоллоу (записка с коттеджем) и о книгах Дэниела; план музея доказывает вину Дэниела.",
+    "en": null
+  },
+  "refs": [
+    "fogbound-en/item/cottage-booking-note",
+    "fogbound-en/item/book-receipt",
+    "fogbound-en/item/museum-floorplan",
+    "fogbound-en/character/daniel-kinkaid",
+    "fogbound-en/location/daniels-cottage",
+    "fogbound-en/scene/books-daniel-bought"
+  ],
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "fogbound-en",
+      "physical_page": 9,
+      "printed_page": 8,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Daniel’s Flat»"
+    },
+    {
+      "book_id": "fogbound-en",
+      "physical_page": 10,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Daniel’s Flat» (окончание)"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1)."
+  }
+}

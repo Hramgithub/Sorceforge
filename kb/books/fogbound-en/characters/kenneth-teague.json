@@ -1,0 +1,221 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "fogbound-en/character/kenneth-teague",
+  "kind": "character",
+  "name": {
+    "ru": "Кеннет Тиг",
+    "en": "Kenneth Teague"
+  },
+  "aliases": [
+    "Homicidal Madman",
+    "Безумец-убийца"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "хозяин сувенирной лавки",
+    "en": "owner of the souvenir shop"
+  },
+  "occupation_ref": "coc:occupation:lavochnik",
+  "sex": "мужской",
+  "residence": "Портхоллоу, сувенирная лавка",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "80",
+        "value": 80
+      },
+      "DEX": {
+        "raw": "40",
+        "value": 40
+      },
+      "APP": {
+        "raw": "30",
+        "value": 30
+      },
+      "INT": {
+        "raw": "50",
+        "value": 50
+      },
+      "POW": {
+        "raw": "20",
+        "value": 20
+      },
+      "EDU": {
+        "raw": "40",
+        "value": 40
+      }
+    },
+    "hp": {
+      "raw": "14",
+      "value": 14
+    },
+    "mp": {
+      "raw": "8",
+      "value": 8
+    },
+    "sanity": {
+      "raw": "0",
+      "value": 0,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Тесак",
+          "en": "Cleaver"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        },
+        "damage": {
+          "raw": "1d6+1+БкУ",
+          "dice": "1d6+1",
+          "adds_db": true
+        },
+        "notes": "мясницкий тесак"
+      }
+    ],
+    "dodge": {
+      "raw": "20% (10/4)",
+      "value": 20,
+      "half": 10,
+      "fifth": 4
+    },
+    "skills": [
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "«Безумец-убийца». Хозяин сувенирной лавки у пристани, буйно помешавшийся после близкой встречи с троглодитом.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Встреча с троглодитом свела Кеннета с ума; в припадке безумия он разгромил собственную лавку и теперь прячется в ней с тесаком. Если сыщики войдут, он с диким воплем выскочит из темноты и нападёт. Он совершенно безумен: даже обезоруженный, бредит о силуэтах в тумане и пытается навредить себе и другим.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "fogbound-en",
+      "physical_page": 18,
+      "printed_page": 17,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Souvenir Shop»"
+    },
+    {
+      "book_id": "fogbound-en",
+      "physical_page": 25,
+      "printed_page": 24,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Kenneth Teague, Homicidal Madman»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.mp",
+      "printed": "MP: 8",
+      "expected": "4 (МОЩ 20 / 5)",
+      "note": "ПМ не сходятся с МОЩ 20; оставлено как напечатано.",
+      "fixed": false
+    },
+    {
+      "field": "statblock.dodge",
+      "printed": "Dodge 20% (10/2)",
+      "expected": "20% (10/4)",
+      "note": "Неверная пятая доля Уклонения исправлена (Р-35).",
+      "fixed": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1). Статблок — как напечатано (глава «NPCs», с. 24; Р-25); проценты навыков книга даёт без долей — половина и пятая посчитаны. Рассудок 0 — как напечатано. Тесака в таблице оружия нет — атака без ссылки на оружие."
+  }
+}

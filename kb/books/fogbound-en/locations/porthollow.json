@@ -1,0 +1,166 @@
+{
+  "schema": "sourcefold.location.v0",
+  "id": "fogbound-en/location/porthollow",
+  "kind": "location",
+  "name": {
+    "ru": "Портхоллоу",
+    "en": "Porthollow"
+  },
+  "aliases": [],
+  "location_type": "город",
+  "part_of": null,
+  "number": null,
+  "address": null,
+  "description": {
+    "ru": "Маленькая прибрежная деревня на кончике полуострова Роузленд, на южном побережье Корнуолла; жителей меньше 200, большинство — фермеры и рыбаки. Тихое живописное местечко с мрачным прошлым: в XVII–XVIII веках контрабандисты рома и пираты часто выгружали здесь груз, а в пещерах в утёсах к югу от деревни, по легенде, спрятан пиратский клад — «сокровище Портхоллоу». Летом сдаются коттеджи для отдыха. Единственная дорога в деревню — Главная дорога; связь с миром уже отрезана: телефоны не отвечают.\nСейчас. За несколько дней до начала сценария пробуждающийся Идол Р’льеха накрыл деревню неестественным туманом. Улицы пусты, машины брошены, двери многих домов хлопают на ветру. В одних домах на столах осталась еда — обедавшие ушли посмотреть на туман; несколько домов наспех забаррикадированы изнутри; в некоторых — жуткие следы того, как что-то вломилось и убило жильцов (порабощённые жители). Большинство жителей пропали: туман унёс их на Вечный берег, где их ждал страшный конец. Другие сошли с ума и покончили с собой или ушли в море, твердя, что их зовёт глубина. Немногие оставшиеся глубоко потрясены, многие временно или даже бессрочно безумны. Шестеро выживших укрылись в пабе «Ромовоз», викарий Малкольм Имз — в часовне на склоне.\nТуман. Неестественный туман заполняет всю деревню: всё дальше пары метров не видно, всё кажется тёмным и тусклым; туман глушит звуки и холодит кожу, солнце его не рассеивает, морской бриз не сдувает. На улице сыщики получают бонусную кость ко всем встречным проверкам Скрытности и штрафную кость ко всем встречным проверкам Внимания. Въехать легко — обманчиво легко: на въезде сыщики пересекают невидимую границу, отделяющую деревню от остальной реальности, и, пока Идол не остановлен, обратного пути нет. Любая попытка уехать — на машине, пешком, даже на лодке — сквозь густой туман приводит обратно в деревню той же дорогой.\nРайоны. Для удобства Хранителя деревня делится на пять районов: Главная дорога, Деревенский луг, Пристань, Склон холма и Ферма. В любой момент один из них «соскальзывает» на Вечный берег; когда сыщики входят в новый район, Хранитель бросает d10 по таблице или сам переносит вход туда, где это уместно. Сначала стоит дать сыщикам немного осмотреться, чтобы нарастало напряжение.",
+    "en": null
+  },
+  "keeper_hint": "Пять районов; каждый раз, входя в новый район, — d10: какой район сейчас на Вечном береге.",
+  "residents": [
+    {
+      "id": "fogbound-en/character/thralled-villagers",
+      "note": "бродят по туманным улицам"
+    },
+    {
+      "id": "fogbound-en/character/kenneth-teague",
+      "note": "сувенирная лавка"
+    }
+  ],
+  "tables": [
+    {
+      "title": "Район, ушедший на Вечный берег",
+      "kind": "события",
+      "dice": "1d10",
+      "intro": "Когда сыщики входят в новый район деревни, Хранитель бросает d10, чтобы определить, где сейчас вход на Вечный берег, или сам переносит его туда, куда уместно. В любой момент на Вечном береге только один район.",
+      "rows": [
+        {
+          "roll": "1–2",
+          "text": "Главная дорога",
+          "refs": [
+            "fogbound-en/location/high-road"
+          ]
+        },
+        {
+          "roll": "3–4",
+          "text": "Деревенский луг",
+          "refs": [
+            "fogbound-en/location/village-green"
+          ]
+        },
+        {
+          "roll": "5–6",
+          "text": "Пристань",
+          "refs": [
+            "fogbound-en/location/docks"
+          ]
+        },
+        {
+          "roll": "7–8",
+          "text": "Склон холма",
+          "refs": [
+            "fogbound-en/location/hillside"
+          ]
+        },
+        {
+          "roll": "9–10",
+          "text": "Ферма",
+          "refs": [
+            "fogbound-en/location/farm"
+          ]
+        }
+      ],
+      "source": {
+        "book_id": "fogbound-en",
+        "physical_page": 15,
+        "printed_page": 14,
+        "method": "book_text",
+        "verified": true,
+        "note": "«Areas of Porthollow»: таблица «D10 Roll / Area Affected»"
+      }
+    }
+  ],
+  "refs": [
+    "fogbound-en/location/eternal-shore",
+    "fogbound-en/item/idol-of-rlyeh",
+    "fogbound-en/location/caves",
+    "fogbound-en/location/cornwall",
+    "fogbound-en/location/roseland-peninsula",
+    "fogbound-en/character/howard-enys",
+    "fogbound-en/scene/entering-porthollow",
+    "fogbound-en/scene/welcome-to-porthollow",
+    "fogbound-en/scene/there-is-no-escape",
+    "fogbound-en/scene/porthollow-in-the-fog",
+    "fogbound-en/scene/sleeping-in-porthollow"
+  ],
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "fogbound-en",
+      "physical_page": 4,
+      "printed_page": 3,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Introduction»"
+    },
+    {
+      "book_id": "fogbound-en",
+      "physical_page": 5,
+      "printed_page": 4,
+      "method": "book_text",
+      "verified": true,
+      "note": "предыстория: туман"
+    },
+    {
+      "book_id": "fogbound-en",
+      "physical_page": 10,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Researching Porthollow»"
+    },
+    {
+      "book_id": "fogbound-en",
+      "physical_page": 12,
+      "printed_page": 11,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Part Three: Porthollow»"
+    },
+    {
+      "book_id": "fogbound-en",
+      "physical_page": 13,
+      "printed_page": 12,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Entering Porthollow»; «The Current State of Porthollow»"
+    },
+    {
+      "book_id": "fogbound-en",
+      "physical_page": 14,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "карта Портхоллоу"
+    },
+    {
+      "book_id": "fogbound-en",
+      "physical_page": 15,
+      "printed_page": 14,
+      "method": "book_text",
+      "verified": true,
+      "note": "дома и туман; «Areas of Porthollow»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1)."
+  }
+}

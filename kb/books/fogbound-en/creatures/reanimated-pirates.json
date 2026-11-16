@@ -1,0 +1,213 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "fogbound-en/creature/reanimated-pirates",
+  "kind": "creature",
+  "name": {
+    "ru": "Ожившие пираты",
+    "en": "Reanimated Pirates"
+  },
+  "aliases": [
+    "Skeletal Horrors",
+    "Скелеты-страшилища",
+    "скелеты Харботтла"
+  ],
+  "category": "supernatural",
+  "subcategory": "нежить",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:skeleton",
+      "note": null,
+      "note_back": "Ожившие пираты Харботтла («В плену тумана»)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "50",
+        "value": 50
+      },
+      "CON": {
+        "raw": "n/a",
+        "value": null
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50
+      },
+      "APP": {
+        "raw": "0",
+        "value": 0
+      },
+      "INT": {
+        "raw": "50",
+        "value": 50
+      },
+      "POW": {
+        "raw": "05",
+        "value": 5
+      },
+      "EDU": {
+        "raw": "30",
+        "value": 30
+      }
+    },
+    "hp": {
+      "raw": "особые",
+      "value": null
+    },
+    "mp": {
+      "raw": "0",
+      "value": 0
+    },
+    "sanity": {
+      "raw": "0",
+      "value": 0,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "armor": {
+      "raw": "сопротивление урону (см. особые силы)",
+      "value": null
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Абордажная сабля",
+          "en": "Cutlass"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d8+1+БкУ",
+          "dice": "1d8+1",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:sword-heavy"
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "увидеть оживших пиратов"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Сопротивление урону",
+      "raw": "Resistant to harm: Due to being little more than old bones and dried meat, Harbottle and his cronies are hard to kill. Any blow striking them has a chance to destroy them equal to the damage done x 5. Apply one penalty die to this roll for attacks made with an impaling weapon (including bullets), since much of the target is simply air.",
+      "summary": "Харботтла и его подручных — почти одни старые кости и высохшее мясо — трудно убить. Любой попавший удар уничтожает скелет с шансом, равным нанесённому урону ×5. К этому броску — штрафная кость, если атака колющим оружием (в том числе пулями): цель большей частью пустота.",
+      "refs": []
+    }
+  ],
+  "description": {
+    "ru": "Иссохшие останки капитана Пита Харботтла и части его команды, оживлённые тёмной силой Идола Р’льеха: едва ли не голые скелеты в истлевших нарядах, со следами ран, что их убили. В пустых глазницах горит зелёный колдовской огонь; двигаются целеустремлённо и хитро, выдавая зловещий разум. Совершенно безмолвны — лишь щёлкают и шуршат кости.",
+    "en": null
+  },
+  "legend": {
+    "ru": "В пиршественном зале туннелей Харботтла останки команды лежат там, где их застала резня 1698 года; Харботтл сидит во главе стола. Через растущую связь с Идолом Андреа наделила силой скелеты капитана и части команды, и они ждут каждого, кто потревожит их госпожу. Оживают, когда сыщики направляются к коридору в сокровищницу; до того неотличимы от других побуревших от времени скелетов в зале. Хранителю советуют осторожно выбирать число скелетов: из-за способности не замечать урона двое уже серьёзный противник для группы до четырёх сыщиков; больше — если в группе есть хорошие бойцы.",
+    "en": null
+  },
+  "habitat": "Туннели Харботтла, пиршественный зал",
+  "sources": [
+    {
+      "book_id": "fogbound-en",
+      "physical_page": 22,
+      "printed_page": 21,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Banquet Room»: оживающие скелеты"
+    },
+    {
+      "book_id": "fogbound-en",
+      "physical_page": 26,
+      "printed_page": 25,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Reanimated Pirates, Skeletal Horrors»; «Special Powers»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.mp",
+      "printed": "MP: 0",
+      "expected": "1 (МОЩ 05 / 5)",
+      "note": "ПМ не сходятся с МОЩ 05; оставлено как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1). Статблок — как напечатано (с. 25); ВЫН «n/a», ПЗ «Special» (особые). Способность совпадает с «Сопротивлением урону» общего скелета (Р-79: свои числа — отдельная запись с instance_of). Абордажная сабля — по урону 1d8+1 как тяжёлый меч (сабля)."
+  },
+  "images": [
+    {
+      "file": "art/creatures/fogbound-reanimated-pirates.webp",
+      "kind": "art",
+      "caption": "",
+      "source": "Fogbound, с. 21 (физ. 22): «Banquet Room», скелет в кресле (стоковое фото)"
+    }
+  ]
+}

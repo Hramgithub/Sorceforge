@@ -1,0 +1,277 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "highway-of-blood-en/creature/spawn-of-yig-well",
+  "kind": "creature",
+  "name": {
+    "ru": "Порождение Йига («Шоссе крови»)",
+    "en": "Spawn of Yig"
+  },
+  "aliases": [],
+  "category": "mythos_monster",
+  "subcategory": "неклассифицированное (порождение Йига)",
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:spawn-of-yig",
+      "note_back": "профиль сценария «Шоссе крови»"
+    }
+  ],
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "120",
+        "value": 120,
+        "roll": "(5d6+6)×5"
+      },
+      "CON": {
+        "raw": "120",
+        "value": 120,
+        "roll": "(5d6+6)×5"
+      },
+      "SIZ": {
+        "raw": "115",
+        "value": 115,
+        "roll": "(5d6+5)×5"
+      },
+      "DEX": {
+        "raw": "120",
+        "value": 120,
+        "roll": "(4d6+12)×5"
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      },
+      "POW": {
+        "raw": "55",
+        "value": 55,
+        "roll": "3d6×5"
+      }
+    },
+    "hp": {
+      "raw": "24",
+      "value": 24
+    },
+    "damage_bonus": {
+      "raw": "+2d6",
+      "value": "+2d6"
+    },
+    "build": {
+      "raw": "3",
+      "value": 3
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "2 очка — чешуя",
+      "value": 2
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Заглатывание",
+          "en": "Swallow"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "1d10 + 1d10 за раунд",
+          "dice": "1d10",
+          "adds_db": false
+        },
+        "notes": "затем 1d10 за раунд от сдавливания, удушья и желудочной кислоты, пока жертва не умрёт или её не извлекут"
+      },
+      {
+        "name": {
+          "ru": "Сокрушающее сжатие",
+          "en": "Constricting Crush"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "20% (10/4)",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        },
+        "damage": {
+          "raw": "1d6+БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Укус",
+          "en": "Bite"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "1d6 + яд",
+          "dice": "1d6",
+          "adds_db": false
+        },
+        "notes": "яд — см. способности"
+      }
+    ],
+    "dodge": {
+      "raw": "60% (30/12)",
+      "value": 60,
+      "half": 30,
+      "fifth": 12
+    },
+    "skills": [
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Плавание",
+        "skill": "coc:skill:swim",
+        "value": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "2",
+        "fail": "2d4+1",
+        "trigger": "при виде Порождения Йига"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Заглатывание",
+      "summary": "Порождения Йига атакуют, высоко подняв голову, и бьют, как обычные змеи; обычно проглатывают жертв и могут проглотить до 20 существ размером с человека.",
+      "raw": "Swallow: Spawn of Yig attack by raising their heads high, then striking like normal snakes. They normally consume victims, and can swallow up to 20 human-sized creatures."
+    },
+    {
+      "name": "Яд",
+      "summary": "Укушенный делает проверку ВЫН: чрезвычайный успех вдвое уменьшает урон, иначе — 2d10 урона ядом. Выживший до 12 часов в полусознании: боли в животе, рвота, понос, озноб, пот, судороги, желтуха, сбитый пульс, ослабленное зрение, конвульсии. Противоядия нет; немедленная трудная проверка Первой помощи или Медицины вдвое сокращает действие яда; при критическом успехе проверки ВЫН Хранитель может позволить стряхнуть действие яда.",
+      "raw": "Venom: When bitten by a Spawn of Yig, the victim must make a CON check. An Extreme CON roll will halve the damage, otherwise the victim suffers 2d10 points of venom damage. If they survive the bite, they’ll remain semi-conscious, suffering stomach pains, vomiting, diarrhea, chills, sweats, cramps, jaundice, altered heart rate, impaired vision, and convulsions for as much as 12 hours. No antivenom exists for this poison, although an immediate Hard First Aid or Medicine check can reduce the duration of the poison’s effects by half. In certain circumstances, Keepers may allow a poison’s effects to be shaken off if the CON roll is a critical success."
+    }
+  ],
+  "description": {
+    "ru": "Непристойное потомство Йига и человека. Может нести черты обоих родителей, но часто выглядит огромным змеем почти 12 м длиной и весом больше 450 кг: чешуйчатым, змееподобным, с иссохшими рудиментарными конечностями, бесполезно болтающимися на теле; лицо часто сохраняет смутно человеческие черты, но глаза всегда холодные и без век. Редко бывает на поверхности, предпочитая тёмные подземелья. Убитое, быстро разлагается в липкую чёрную слизь, облепленную роями мух.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Эпиграф раздела — «Проклятие Йига» Г. Ф. Лавкрафта. В сценарии одно Порождение живёт в колодце Усадьбы (14e) и подчиняется Остину; ночью его выпускают патрулировать Усадьбу; оно разумно, как человек, понимает речь и первым атакует лучше вооружённых. Два Порождения по приказу Аль’иссы обрушили туннель 17 в 1954 году. Физические характеристики Порождения берутся для Аль’иссы в облике гигантской гремучей змеи.",
+    "en": null
+  },
+  "encounters": {
+    "ru": "Колодец Усадьбы (14e); ночной патруль Усадьбы; выпускается Остином, если дела дастбилли плохи.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "highway-of-blood-en",
+      "physical_page": 94,
+      "printed_page": 94,
+      "method": "book_text",
+      "verified": true,
+      "note": "Appendix IV: «Spawn of Yig», статблок"
+    },
+    {
+      "book_id": "highway-of-blood-en",
+      "physical_page": 44,
+      "printed_page": 44,
+      "method": "book_text",
+      "verified": true,
+      "note": "«14e. Well»"
+    },
+    {
+      "book_id": "highway-of-blood-en",
+      "physical_page": 55,
+      "printed_page": 55,
+      "method": "book_text",
+      "verified": true,
+      "note": "два Порождения обрушили туннель 17"
+    },
+    {
+      "book_id": "highway-of-blood-en",
+      "physical_page": 87,
+      "printed_page": 87,
+      "method": "book_text",
+      "verified": true,
+      "note": "облик змеи Аль’иссы"
+    },
+    {
+      "book_id": "highway-of-blood-en",
+      "physical_page": 89,
+      "printed_page": 89,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Homestead Threatened»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической; без номера — обложка, выходные данные, оглавление, эпиграф, полностраничные карты и иллюстрации, приложения VI–VII и задняя обложка: физ. 1–4, 17–18, 42, 69–70, 80, 98–126, 129–130). Профиль сценария (Р-75): числа отличаются от общей записи «Порождение Йига». 40 футов — около 12 м, 1 000 фунтов — больше 450 кг (Р-64). ПЗ 24 при (120+115)/10 = 23,5 — округление вверх, приём книги (Р-161)."
+  },
+  "images": [
+    {
+      "file": "art/creatures/highway-spawn-of-yig-well.webp",
+      "kind": "art",
+      "caption": "",
+      "source": "The Highway of Blood, с. 94: Spawn of Yig"
+    }
+  ]
+}

@@ -1,0 +1,364 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "highway-of-blood-en/creature/teihiihan",
+  "kind": "creature",
+  "name": {
+    "ru": "Тейхиихан",
+    "en": "Teihiihan"
+  },
+  "aliases": [
+    "Teihiihaan",
+    "Tehiihan",
+    "strong little people",
+    "«сильный маленький народ»",
+    "Cruel Cannibals Who Detest Humanity"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "служитель змеелюдей",
+  "relations": [
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:serpent-person",
+      "note": "создатели и хозяева",
+      "note_back": "созданные ими слуги-людоеды"
+    },
+    {
+      "type": "related_to",
+      "target": "coc:creature:cho-cho",
+      "note": "по мнению некоторых знатоков — гибриды с чо-чо"
+    }
+  ],
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "110",
+        "value": 110,
+        "roll": "(3d6+12)×5"
+      },
+      "CON": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      },
+      "SIZ": {
+        "raw": "35",
+        "value": 35,
+        "roll": "2d6×5"
+      },
+      "INT": {
+        "raw": "30",
+        "value": 30,
+        "roll": "(1d6+3)×5"
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50,
+        "roll": "3d6×5"
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      }
+    },
+    "hp": {
+      "raw": "10",
+      "value": 10
+    },
+    "mp": {
+      "raw": "0",
+      "value": 0
+    },
+    "damage_bonus": {
+      "raw": "1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "0",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "2 (царапина и укус) или 1 (оружие)",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d3+БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "notes": "или оружие (предпочитают копья, ножи и томагавки детского размера)"
+      },
+      {
+        "name": {
+          "ru": "Укус",
+          "en": "Bite"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d6+БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Хватка и трёпка (манёвр)",
+          "en": "Grip and Worry (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d4+БкУ за раунд",
+          "dice": "1d4",
+          "adds_db": true
+        },
+        "notes": "после удачного укуса жертва остаётся в челюстях: 1d4+БкУ автоматически каждый раунд; вырваться — встречная проверка СИЛ"
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "75% (37/15)",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Иностранный язык (английский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "английский",
+        "value": {
+          "raw": "15% (7/3)",
+          "value": 15,
+          "half": 7,
+          "fifth": 3
+        }
+      },
+      {
+        "name": "Язык змеелюдей",
+        "skill": "coc:skill:language-other",
+        "specialization": "язык змеелюдей",
+        "value": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "90% (45/18)",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        }
+      },
+      {
+        "name": "Выживание",
+        "skill": "coc:skill:survival",
+        "value": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "при виде тейхиихан"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Маскировка",
+      "summary": "Кожа меняет цвет и фактуру почти точно под фон; форму и размер изменить нельзя, но в подходящих условиях тейхиихан почти невидимы. Затаившись так, должны оставаться неподвижными; при движении или атаке маскировка пропадает. Заметить спрятавшегося тейхиихан можно только критическим успехом (01) проверки Внимания.",
+      "raw": "Camouflage: The Teihiihan’s skin can change its color and texture to match a background almost exactly. Of course it cannot change their basic shape and size, but under the right conditions, they can become virtually invisible. While hidden in this manner, they must remain still. When they move or attack, the camouflage disappears and they return to their normal appearance. Only a Critical success (01) on a Spot Hidden check will allow a character to see a Teihiihan when it is hiding in this way."
+    },
+    {
+      "name": "Хватка и трёпка",
+      "summary": "Если укус удался, жертва остаётся в челюстях: тейхиихан рвёт её заточенными зубами — 1d4+БкУ автоматически каждый раунд; разжать хватку — встречная проверка СИЛ.",
+      "raw": "Grip and Worry (mnvr): If the Teihiihan’s bite attack succeeds, the victim remains locked in their jaws. The Teihiihan then continues to tear with it’s sharpened teeth, doing 1d4 + db damage automatically each round. An opposed STR roll is required to dislodge the Teihiihan, breaking the grip and ending the continuous damage."
+    }
+  ],
+  "description": {
+    "ru": "Тейхиихан ([tay-HEE-han], у арапахо — «сильный маленький народ») — карлики-людоеды, созданные змеелюдьми из людей. Выглядят как смуглые мускулистые дети с длинными спутанными чёрными волосами; лица неестественно искажены лишними мышцами и костями, дающими чудовищную силу укуса. Одежду носят редко; исходный пол не определить — половые органы исчезают при превращении. Зубы заточенные, хищные, длинные и подпиленные до бритвенной остроты; когти — зазубренные жёлтые. Кожа, как у некоторых головоногих, меняет цвет и фактуру, позволяя почти идеально сливаться с окружением. Чувства крайне остры: видят в кромешной тьме, чуют запах за много километров, слышат малейший звук, — но потому уязвимы к яркому свету, громкому шуму и резким запахам.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Мифы. Тейхиихан занимают видное место в фольклоре арапахо и других соседних народов Северной Америки: с ними много раз сражались в далёком прошлом, и они стали обычными противниками в сказаниях о героях. Их описывали уродливыми, ростом с ребёнка, кровожадными человекоподобными существами с заточенными зубами, тёмной кожей, меняющей цвет, чтобы прятаться, и кошачьими глазами; не слишком умными, но умелыми охотниками с простыми орудиями и оружием; несмотря на малый рост — чрезвычайно сильными и быстрыми, способными одолеть всех, кроме самых хитрых воинов; главная слабость — недалёкость, их легко обмануть.\nФакты. Почти всё это верно, но ни одна легенда не говорит, что тейхиихан создали змеелюди. Это итог жутких опытов над человеческими детьми, выбранными за податливость и лёгкость порчи; подопытных змеелюди брали у местных племён, порой вырезая целые деревни. После бесчисленных неудач они выработали формулу и процедуру с достаточной долей успеха — обряд «Порча людоеда», мучительно превращающий человеческих детей 8–12 лет в тейхиихан; неудачи оставляли несчастного ребёнка искалеченным, изуродованным — и, к сожалению, живым. Змеелюди создали тейхиихан охотиться на людей и вложили в них голод по человеческой плоти и умение сливаться с окружением; эти карлики-людоеды наводили ужас на народы юго-запада. Около 10 300 г. до н. э. племена Северной Америки открыли слабость змеелюдей — их жажду крови: позволяя тейхиихан кормиться, змеелюди впадали в оцепенение и гибли от рук слуг-людей. Около 8 300 г. до н. э. уцелевших тейхиихан погрузили в спячку; около 1540 года н. э. их бросили. В 1936 году Аль’исса пробудила их, и они пожрали жителей Мидиана. Некоторые знатоки Мифов считают тейхиихан родственниками чо-чо — гибридами людей и чо-чо, созданными змеелюдьми; это возможно, но убедительных доказательств нет.\nПоведение и тактика. Тейхиихан не очень умны, но далеко не «тупые звери». Охотятся обычно тройками, при серьёзной угрозе — большими группами; Аль’иссе Сс’рисси А’на подчиняются беспрекословно и по её слову умирают не раздумывая. Выслеживают добычу с разных сторон, отрезая пути бегства; обычная уловка — один гонит добычу в засаду, где ждут другие (этот стиль охоты переняли дастбилли для своей Охоты). Ловя сбежавших жертв, оглушают их дубинками (правило нокаута, «Книга хранителя», с. 125); посланные за «De Vermis Mysteriis», вернут её любой ценой — скорее убьют всякого на пути, чем возьмут живым: жрица ясно дала понять, что книга важнее всего. Уязвимость: отлично исполняют указания, но плохо импровизируют, когда что-то идёт не по плану; вместе с лёгкостью, с которой их обмануть, это даёт шанс находчивой жертве, сохранившей самообладание.",
+    "en": null
+  },
+  "encounters": {
+    "ru": "Нападение в пустыне после заката (сцена «Нападение тейхиихан», раздатка 24); Змеиные пещеры — 20–30 в Жилище тейхиихан (15b), трое замаскированы в Храме Йига (16), прячутся по Змеиной пещере (14); погоня за сбежавшими сыщиками; посланные за «De Vermis Mysteriis» (у дастбилли в трейлерах — вырезают языки).",
+    "en": null
+  },
+  "habitat": "Змеиные пещеры под Хребтом Дьявола, Западный Техас",
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "highway-of-blood-en",
+      "physical_page": 92,
+      "printed_page": 92,
+      "method": "book_text",
+      "verified": true,
+      "note": "Appendix IV: «Teihiihan» — Myths, Facts, Abilities, Appearance, Behavior and Tactics"
+    },
+    {
+      "book_id": "highway-of-blood-en",
+      "physical_page": 93,
+      "printed_page": 93,
+      "method": "book_text",
+      "verified": true,
+      "note": "Vulnerabilities, статблок «Teihiihan: Cruel Cannibals Who Detest Humanity»"
+    },
+    {
+      "book_id": "highway-of-blood-en",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Background»: создание тейхиихан"
+    },
+    {
+      "book_id": "highway-of-blood-en",
+      "physical_page": 10,
+      "printed_page": 10,
+      "method": "book_text",
+      "verified": true,
+      "note": "Keeper’s Notes: возможная связь с чо-чо"
+    },
+    {
+      "book_id": "highway-of-blood-en",
+      "physical_page": 11,
+      "printed_page": 11,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Return of the Teihiihan»"
+    },
+    {
+      "book_id": "highway-of-blood-en",
+      "physical_page": 114,
+      "printed_page": null,
+      "method": "book_text",
+      "verified": true,
+      "note": "Handout #24"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.mp",
+      "printed": "Average Magic Points: 0",
+      "expected": "10 (МОЩ 50 / 5)",
+      "note": "При МОЩ 50 средние ПМ — 10; оставлено как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической; без номера — обложка, выходные данные, оглавление, эпиграф, полностраничные карты и иллюстрации, приложения VI–VII и задняя обложка: физ. 1–4, 17–18, 42, 69–70, 80, 98–126, 129–130). Существо сценария (Р-75, Р-94): в общем справочнике тейхиихан нет (проверено по kb/creatures). Статблок — с. 93 («averages» и «rolls»). Вид «Teihiihaan» встречается в New Spells (с. 96), «Tehiihan» — в описании книги (с. 97)."
+  },
+  "images": [
+    {
+      "file": "art/creatures/highway-teihiihan.webp",
+      "kind": "art",
+      "caption": "",
+      "source": "The Highway of Blood, с. 92: Teihiihan"
+    }
+  ]
+}

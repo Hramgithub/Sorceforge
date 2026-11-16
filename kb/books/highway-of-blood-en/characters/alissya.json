@@ -1,0 +1,411 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "highway-of-blood-en/character/alissya",
+  "kind": "character",
+  "name": {
+    "ru": "Аль’исса Сс’рисси А’на",
+    "en": "Al’issya Ss’rissi A’na"
+  },
+  "aliases": [
+    "Al’issya",
+    "Аль’исса",
+    "the Priestess",
+    "жрица Йига",
+    "Serpent Priestess",
+    "Al’issya Ss’rissi’A’na"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "жрица Йига",
+    "en": "Priestess of Yig"
+  },
+  "sex": "женский",
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:serpent-person",
+      "note_back": "жрица Йига на Хребте Дьявола («Шоссе крови»)"
+    },
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:yig",
+      "note": "её бог",
+      "note_back": "жрица"
+    },
+    {
+      "type": "relative_of",
+      "target": "highway-of-blood-en/character/mordechai-osteen",
+      "note": "сын (Тиларисш) и любовник",
+      "note_back": "мать и любовница"
+    },
+    {
+      "type": "knows",
+      "target": "highway-of-blood-en/character/ezekiel-holgate",
+      "note": "соблазнённый и сожранный ею любовник, отец Тиларисша",
+      "note_back": "соблазнившая его жрица"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "50",
+        "value": 50
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "INT": {
+        "raw": "90",
+        "value": 90
+      },
+      "APP": {
+        "raw": "85",
+        "value": 85
+      },
+      "POW": {
+        "raw": "95",
+        "value": 95
+      }
+    },
+    "hp": {
+      "raw": "20",
+      "value": 20
+    },
+    "mp": {
+      "raw": "19",
+      "value": 19
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "1 очко — чешуя",
+      "value": 1
+    },
+    "attacks_per_round": {
+      "raw": "1 (когти, укус или оружие)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Fighting (Brawl)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d3+БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Укус",
+          "en": "Bite"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "1d8 + яд",
+          "dice": "1d8",
+          "adds_db": false
+        },
+        "notes": "яд: чрезвычайная проверка ВЫН, иначе +1d8 урона"
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "skills": [
+      {
+        "name": "Обаяние",
+        "skill": "coc:skill:charm",
+        "value": {
+          "raw": "90% (45/18)",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Иностранный язык (английский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "английский",
+        "value": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Appear Human, Call Yig, Cloud Memory, Contact Yig, Curse of the Cannibal*, Enthrall Victim, Gate, Mindblast, Wither Limb, Wrack (*см. New Spells в приложении)",
+      "items": [
+        {
+          "name": "Appear Human",
+          "spell": "coc:spell:appear-human"
+        },
+        {
+          "name": "Call Yig",
+          "spell": "coc:spell:call-yig"
+        },
+        {
+          "name": "Cloud Memory",
+          "spell": "coc:spell:cloud-memory"
+        },
+        {
+          "name": "Contact Yig",
+          "spell": "coc:spell:contact-yig"
+        },
+        {
+          "name": "Curse of the Cannibal",
+          "spell": null
+        },
+        {
+          "name": "Enthrall Victim",
+          "spell": "coc:spell:enthrall-victim"
+        },
+        {
+          "name": "Gate",
+          "spell": "coc:spell:create-gate"
+        },
+        {
+          "name": "Mindblast",
+          "spell": "coc:spell:mindblast"
+        },
+        {
+          "name": "Wither Limb",
+          "spell": "coc:spell:wither-limb"
+        },
+        {
+          "name": "Wrack",
+          "spell": "coc:spell:wrack"
+        }
+      ]
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "в облике змеечеловека"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Яд",
+      "summary": "Укушенный Аль’иссой должен пройти чрезвычайную проверку ВЫН, иначе получает ещё 1d8 урона.",
+      "raw": "Venom: A victim of Al’issya’s bite must succeed with an Extreme CON roll or take +1d8 additional damage."
+    },
+    {
+      "name": "Смена облика",
+      "summary": "Без усилий меняет облик змеечеловека, человека и колоссальной гремучей змеи (15 м, около 680 кг; в этом облике — физические характеристики Порождения Йига, разум и магия сохраняются).",
+      "raw": "Al’issya has the ability to shift effortlessly between her Serpent Person form, human form, and the form of a colossal rattlesnake, using the latter for combat and escape. Keepers should use the Spawn of Yig’s physical stats (see below) when she is in her snake form, though she retains her mental and magical abilities. Her snake form is 50 feet long and nearly 1,500 pounds."
+    }
+  ],
+  "description": {
+    "ru": "Змеечеловек, жрица Йига и одна из создательниц тейхиихан ([ahl-ISS-yah ss-RISS-ee ah-NAH]). Без усилий меняет облик змеечеловека, человека и колоссальной гремучей змеи (последний — для боя и бегства). В человеческом облике — пышная темноволосая женщина, отдалённо похожая на индианку, с кожей, покрытой будто татуировкой чешуи, которая на деле — чешуя; глаза с глубоким внутренним сиянием приковывают взгляд. В облике змеи — 15 м длиной и почти 680 кг; Хранитель берёт тогда физические характеристики Порождения Йига, но она сохраняет разум и магию.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Когда пришло время покинуть город под Хребтом Дьявола, она осталась охранять священный храм Йига и камеры спячки тейхиихан и, приведя всё в порядок, погрузилась в глубокое оцепенение в ожидании времени, когда змеелюди восстанут вновь. Издавна наблюдая за Мидианом, а затем Абаттуаром, она почуяла преподобного Холгейта в его долгих прогулках по пустыне близ её храма, раздувала его страсть к змеям видениями Йига, затем явилась во плоти под видом Девы Марии, соблазнила его и всё больше подчиняла его разум; в 1936 году пробудила тейхиихан, чтобы те пожрали жителей Мидиана и вернули себе силу, — и сожрала самого Холгейта. В том же году родила от него сына Тиларисша (ныне — преподобный Остин); в 1960 году призвала его в пустыню, вручила ему «De Vermis Mysteriis» и взяла в любовники; сейчас она носит ребёнка, которому однажды предстоит стать сосудом земного воплощения Йига.\nЦели. Всё, что происходит на Хребте Дьявола, ведёт к ней: она управляет тейхиихан и дастбилли, а те — жителями Абаттуара. Великого плана пока нет: восстановить храм Йига и растить армию тейхиихан; как все змеелюди, она презирает млекопитающих и, кроме полезных слуг, рада была бы стереть их с лица Земли. Она одержима поиском «De Vermis Mysteriis», чтобы, когда хватит сил, призвать Йига править этими жалкими созданиями; заподозрив, у кого книга, посылает за ней нескольких обитателей песков (а не тейхиихан — из-за их жестокости: книга нужна целой). Кто держит книгу или хотя бы коснулся её вне защищённого места («Громовая птица», церковь «Кровь Агнца»), того она чувствует и примерно знает, где он; вернуть книгу становится её главной заботой. Через Остина и союзников в городе она, по-видимому, знает о сыщиках многое (магическое наблюдение), но не всеведуща.\nВ Змеиных пещерах. Почти всё время проводит в бассейне Зала жрицы (15d); сыщикам, пришедшим по своей воле, она выходит навстречу, медленно меняя змеиный облик на соблазнительную женщину, и зовёт в комнату для бесед под изображением Йига — чтобы устоять, каждый делает проверку МОЩ (см. сцену «Аудиенция у Аль’иссы»). Ищет, не годится ли кто-то из пленников ей в супруги — «хороший племенной материал», как Холгейт.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "highway-of-blood-en",
+      "physical_page": 87,
+      "printed_page": 87,
+      "method": "book_text",
+      "verified": true,
+      "note": "Appendix III: «Al’issya Ss’rissi A’na», статблок"
+    },
+    {
+      "book_id": "highway-of-blood-en",
+      "physical_page": 88,
+      "printed_page": 88,
+      "method": "book_text",
+      "verified": true,
+      "note": "Тиларисш — её сын и любовник"
+    },
+    {
+      "book_id": "highway-of-blood-en",
+      "physical_page": 8,
+      "printed_page": 8,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Motivations: The Priestess», «The Book»"
+    },
+    {
+      "book_id": "highway-of-blood-en",
+      "physical_page": 11,
+      "printed_page": 11,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Return of the Teihiihan»"
+    },
+    {
+      "book_id": "highway-of-blood-en",
+      "physical_page": 32,
+      "printed_page": 32,
+      "method": "book_text",
+      "verified": true,
+      "note": "история Холгейта"
+    },
+    {
+      "book_id": "highway-of-blood-en",
+      "physical_page": 50,
+      "printed_page": 50,
+      "method": "book_text",
+      "verified": true,
+      "note": "сон в Камере"
+    },
+    {
+      "book_id": "highway-of-blood-en",
+      "physical_page": 67,
+      "printed_page": 67,
+      "method": "book_text",
+      "verified": true,
+      "note": "«15d. Priestess Hall»"
+    },
+    {
+      "book_id": "highway-of-blood-en",
+      "physical_page": 68,
+      "printed_page": 68,
+      "method": "book_text",
+      "verified": true,
+      "note": "«16. Temple of Yig»"
+    },
+    {
+      "book_id": "highway-of-blood-en",
+      "physical_page": 97,
+      "printed_page": 97,
+      "method": "book_text",
+      "verified": true,
+      "note": "«I ssssee you»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.hp",
+      "printed": "20",
+      "expected": "11 ((ВЫН 50 + ТЕЛ 65) / 10)",
+      "note": "ПЗ по формуле — 11; оставлено как напечатано (Р-161).",
+      "fixed": false
+    },
+    {
+      "field": "statblock.spells",
+      "printed": "Curse of the Cannibal*",
+      "expected": "Corruption of the Cannibal",
+      "note": "Сноска ведёт на «New Spells», где описано только «Corruption of the Cannibal»; оставлено как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической; без номера — обложка, выходные данные, оглавление, эпиграф, полностраничные карты и иллюстрации, приложения VI–VII и задняя обложка: физ. 1–4, 17–18, 42, 69–70, 80, 98–126, 129–130). Статблок — с. 87; НАР 85 — в облике человека. «Curse of the Cannibal*» со сноской на «New Spells» — по-видимому, заклинание «Corruption of the Cannibal» (Порча людоеда), описанное в правилах «Новые заклинания» (вывод из текста, Р-41); «Gate» сопоставлено с общей записью «Создание врат». Вес 1 500 фунтов — около 680 кг, 50 футов — 15 м (Р-64)."
+  },
+  "images": [
+    {
+      "file": "art/characters/highway-alissya.webp",
+      "kind": "portrait",
+      "caption": "",
+      "source": "The Highway of Blood, с. 87 (Appendix III «NPCs»): Al’issya Ss’rissi A’na"
+    }
+  ]
+}

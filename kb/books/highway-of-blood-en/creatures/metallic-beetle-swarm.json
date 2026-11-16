@@ -1,0 +1,191 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "highway-of-blood-en/creature/metallic-beetle-swarm",
+  "kind": "creature",
+  "name": {
+    "ru": "Рой металлических жуков",
+    "en": "Metallic Beetle Swarm"
+  },
+  "aliases": [
+    "Metallic Beetles",
+    "металлические жуки"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "конструкт змеелюдей",
+  "relations": [
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:serpent-person",
+      "note": "создатели",
+      "note_back": "созданные ими жуки-уборщики"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "35",
+        "value": 35
+      },
+      "CON": {
+        "raw": "55",
+        "value": 55
+      },
+      "SIZ": {
+        "raw": "35",
+        "value": 35
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      }
+    },
+    "hp": {
+      "raw": "10 (рой из 10 жуков)",
+      "value": 10
+    },
+    "damage_bonus": {
+      "raw": "-1",
+      "value": "-1"
+    },
+    "build": {
+      "raw": "–1",
+      "value": -1
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет; неуязвимы к огню",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Укус",
+          "en": "Bite"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": false
+        }
+      },
+      {
+        "name": {
+          "ru": "Захлёстывание (манёвр)",
+          "en": "Overwhelm (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "1d6",
+          "dice": "1d6",
+          "adds_db": false
+        },
+        "notes": "манёвр роя с бонусной костью: жуки облепляют цель, кусая и царапая"
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1",
+        "trigger": "при виде роя"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "ПЗ роя",
+      "summary": "Рой — 10 металлических жуков; любая удачная атака уничтожает 1d3 жуков, снижая ПЗ роя на столько же.",
+      "raw": "HP: 10 (Each swarm is made up of 10 Metallic Beetles. A successful attack of any kind destroys 1d3 beetles, reducing their Hit Points by that amount.)"
+    },
+    {
+      "name": "Броня",
+      "summary": "Хоть и металлические, они не очень прочны и брони не имеют; к огню неуязвимы.",
+      "raw": "Armor: Though they are metal, they aren’t very tough, so they are not considered to have armor. They are immune to fire."
+    }
+  ],
+  "description": {
+    "ru": "Жуки около 8 см длиной, будто из тёмного живого металла с ржавчиной по краям. Созданы бессчётные эпохи назад змеелюдьми, чтобы очищать их пещеры от органики и редких незваных гостей. Каждый питается от осколка зелёного камня, черпающего силу из магнитного поля Земли, — его не нужно менять. Переговариваются на коротком расстоянии ультразвуковыми щелчками и вместе за минуты обращают любую органику в порошок. Не мыслят, но имеют простые указания — куда идти, что разрушать — и избегают змеелюдей; эта защита распространяется и на тейхиихан, выделяющих феромоны змеелюдей.",
+    "en": null
+  },
+  "legend": {
+    "ru": "В Змеиной пещере (14) жуки повсюду, кроме зданий, но изношены: хуже чувствуют вибрацию и плохо справляются с органикой; рой появляется, только если сыщики задерживаются: за каждые десять минут на одном участке — групповая проверка Удачи, провал — рой вырывается из земли.",
+    "en": null
+  },
+  "encounters": {
+    "ru": "Змеиная пещера (14), кроме зданий храмового комплекса.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "highway-of-blood-en",
+      "physical_page": 95,
+      "printed_page": 95,
+      "method": "book_text",
+      "verified": true,
+      "note": "Appendix IV: «Metallic Beetle Swarm», статблок"
+    },
+    {
+      "book_id": "highway-of-blood-en",
+      "physical_page": 66,
+      "printed_page": 66,
+      "method": "book_text",
+      "verified": true,
+      "note": "«14. The Serpent Cavern»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической; без номера — обложка, выходные данные, оглавление, эпиграф, полностраничные карты и иллюстрации, приложения VI–VII и задняя обложка: физ. 1–4, 17–18, 42, 69–70, 80, 98–126, 129–130). Уникальное существо сценария (Р-75, Р-94); в книге «three inch» (с. 95) и «three to four inch» (с. 66) — около 8–10 см (Р-64)."
+  },
+  "images": [
+    {
+      "file": "art/creatures/highway-metallic-beetle-swarm.webp",
+      "kind": "art",
+      "caption": "",
+      "source": "The Highway of Blood, с. 95: Metallic Beetle Swarm"
+    }
+  ]
+}

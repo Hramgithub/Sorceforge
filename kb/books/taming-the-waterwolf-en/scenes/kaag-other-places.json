@@ -1,0 +1,84 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "taming-the-waterwolf-en/scene/kaag-other-places",
+  "kind": "scene",
+  "name": {
+    "ru": "Другие места Каага",
+    "en": "Other Places of Interest"
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Большинство жителей Каага не любят чужаков, сующих нос в частные дела любимого пастора. Чтобы поговорить с кем-то из жителей, нужна успешная социальная проверка (Обаяние, Средства, Запугивание или Убеждение) со штрафом. Успех — жители подтверждают рассказ Флорентейна. Чрезвычайный успех — жители признают, что никогда прежде не слышали о брате Саломонса.\nЛавка. Небольшая бакалейная лавка, где есть всё нужное жителям. Успешная социальная проверка (со штрафом, см. выше) — лавочник скажет, что пастор редко покупает у него еду и, должно быть, почти ничего не ест.\nТрактир. Деревенский трактир предлагает ночлег, напитки и еду. Здесь можно узнать местные сплетни или даже переночевать, если задержаться и пропустить последний паром на большую землю. Трактирщик Ари Велтстра дружелюбен и словоохотлив, так что проверки для разговора с ним не нужны. Односельчане к нему почти не ходят — их строгая вера запрещает пить, — но дела пошли лучше с постройкой Лехватера: рабочие станции тратят здесь заработок после смены.\nПолицейский пост. Местный полицейский, фельдвахтер Ринус Бринкхорст, арестовал Стробоса после его последней поездки с Юлией Саломонс, но вскоре отпустил — рыбак не совершил преступления. Через две недели Бринкхорста вызвали, когда Юлия напала на Лехватер. Удержать её стоило больших трудов: она обладала огромной, будто бы неестественной силой. Семья Яна Вервера, погибшего в потасовке, получила компенсацию от комитета по осушению и решила не выдвигать обвинений против Юлии; девушку вскоре отдали на попечение пастора, который якобы отправил её к брату.",
+    "en": null
+  },
+  "when": "В Кааге, в любое время",
+  "arc": {
+    "scenario": "taming-the-waterwolf-en/scenario/taming-the-waterwolf",
+    "part": "Лехватер",
+    "order": 18
+  },
+  "where": [
+    {
+      "location": "taming-the-waterwolf-en/location/kaag-shop",
+      "note": "лавка"
+    },
+    {
+      "location": "taming-the-waterwolf-en/location/kaag-inn",
+      "note": "трактир"
+    },
+    {
+      "location": "taming-the-waterwolf-en/location/kaag-police-station",
+      "note": "полицейский пост"
+    }
+  ],
+  "participants": [
+    {
+      "id": "taming-the-waterwolf-en/character/arie-veltstra",
+      "role": "трактирщик"
+    },
+    {
+      "id": "taming-the-waterwolf-en/character/rinus-brinkhorst",
+      "role": "фельдвахтер"
+    }
+  ],
+  "mechanics": {
+    "ru": "Социальная проверка (Обаяние, Средства, Запугивание или Убеждение) со штрафом; чрезвычайный успех — о брате никто не слышал. Трактирщик — без проверок.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Подтверждения рассказа Стробоса и подозрения, что Юлия в доме пастора.",
+    "en": null
+  },
+  "refs": [
+    "taming-the-waterwolf-en/location/kaag-shop",
+    "taming-the-waterwolf-en/location/kaag-inn",
+    "taming-the-waterwolf-en/location/kaag-police-station",
+    "taming-the-waterwolf-en/character/florentijn-strobos",
+    "taming-the-waterwolf-en/character/julia-salomons",
+    "taming-the-waterwolf-en/character/jan-verveer",
+    "taming-the-waterwolf-en/organization/drainage-committee"
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "taming-the-waterwolf-en",
+      "physical_page": 22,
+      "printed_page": 21,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Other Places of Interest», «Shop», «Inn», «Police Station»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1; обложка без номера). Действие — апрель 1849 года, Нидерланды, `axes.era` `other`."
+  }
+}

@@ -1,0 +1,281 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "taming-the-waterwolf-en/character/julia-salomons",
+  "kind": "character",
+  "name": {
+    "ru": "Юлия Саломонс",
+    "en": "Julia Salomons"
+  },
+  "aliases": [
+    "одержимая дочь",
+    "дочь пастора"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "одержимая дочь",
+    "en": "possessed daughter"
+  },
+  "age": {
+    "raw": "16",
+    "value": 16
+  },
+  "sex": "женский",
+  "residence": "подвал пасторского дома в Кааге",
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "knows",
+      "target": "taming-the-waterwolf-en/character/florentijn-strobos",
+      "note": "возлюбленный",
+      "note_back": "возлюбленная"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "80",
+        "value": 80
+      },
+      "CON": {
+        "raw": "65",
+        "value": 65
+      },
+      "SIZ": {
+        "raw": "55",
+        "value": 55
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "INT": {
+        "raw": "20",
+        "value": 20
+      },
+      "POW": {
+        "raw": "70",
+        "value": 70
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "14",
+      "value": 14
+    },
+    "mp": {
+      "raw": "14",
+      "value": 14
+    },
+    "sanity": {
+      "raw": "00",
+      "value": 0,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "3 пункта (кожистая шкура)",
+      "value": 3
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Щупальце (приём)",
+          "en": "Tentacle (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": null,
+        "chance": {
+          "raw": "—",
+          "value": null,
+          "half": null,
+          "fifth": null
+        },
+        "damage": {
+          "raw": "1d4 + 1d4",
+          "dice": "1d4",
+          "adds_db": true
+        },
+        "notes": "хватает и сдавливает; вырваться — встречная проверка СИЛ (opposed STR roll to break free); процент не напечатан"
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "skills": [
+      {
+        "name": "Уклонение",
+        "skill": "coc:skill:dodge",
+        "value": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1d3",
+        "fail": "1d6",
+        "trigger": "увидеть Юлию (статблок, с. 32)"
+      },
+      {
+        "success": "1d3+1",
+        "fail": "1d6+1",
+        "trigger": "увидеть Юлию в подвале (с. 18)"
+      }
+    ]
+  },
+  "background": {
+    "description": "От здоровой когда-то девушки почти ничего не осталось: тело в шрамах и изменениях; щупальца растут из живота и подмышки, рука превратилась в подобие клешни; язык, похоже, отрезан.",
+    "traits": "Из-за отсутствия языка бормочет неразборчиво; в те редкие моменты, когда её можно понять, стонет от шума ближней насосной станции.",
+    "secret": "Безумна, но способна общаться. Главная цель — освободиться от цепей и любыми средствами остановить Лехватер; нападёт на любого, кто встанет на пути."
+  },
+  "description": {
+    "ru": "Дочь пастора Саломонса, порабощённая ллойгором; прикована цепями к деревянному столу в подвале пасторского дома в Кааге. Из её речи можно разобрать только «дракон», «громко» и «барабаны».",
+    "en": null
+  },
+  "legend": {
+    "ru": "С раннего детства слышала в голове странные голоса; подростком голоса стали подталкивать её прятаться от отца и искать единомышленников, которые оценят её по-настоящему. Тайком плавала со Флорентейном Стробосом всё к одной туманной банке над Харлеммермером; там голоса умолкали, заглушённые одним — властным и звучным голосом ллойгора. Когда отец узнал о романе и посадил её под домашний арест, Юлия, страшно одинокая, взмолилась ллойгору о помощи; тот успокоил её, а взамен заставил напасть на Лехватер (инженер Ян Вервер погиб, упав и ударившись головой). Фельдвахтер Бринкхорст с трудом скрутил её — она была неестественно сильна; семья Вервера получила компенсацию от комитета и не стала подавать в суд, и Юлию отдали на попечение отцу. Когда отец заковал её в подвале и она не могла больше откликаться на зов, ллойгор наказал её, засеяв плоть изменениями. Если сыщики её освободят, она убежит и попытается испортить Лехватер, нападая на всех на пути; можно также найти больницу или приют, которые возьмут её, — но для этого придётся как-то объяснить её вид.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "taming-the-waterwolf-en",
+      "physical_page": 6,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Keeper Background»: ллойгор поработил Юлию"
+    },
+    {
+      "book_id": "taming-the-waterwolf-en",
+      "physical_page": 8,
+      "printed_page": 7,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Minor NPCs»: Julia Salomons"
+    },
+    {
+      "book_id": "taming-the-waterwolf-en",
+      "physical_page": 33,
+      "printed_page": 32,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок (приложение A)"
+    },
+    {
+      "book_id": "taming-the-waterwolf-en",
+      "physical_page": 17,
+      "printed_page": 16,
+      "method": "book_text",
+      "verified": true,
+      "note": "нападение на Вервера (рассказ рабочих)"
+    },
+    {
+      "book_id": "taming-the-waterwolf-en",
+      "physical_page": 19,
+      "printed_page": 18,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Into the Depths»: Юлия в подвале"
+    },
+    {
+      "book_id": "taming-the-waterwolf-en",
+      "physical_page": 22,
+      "printed_page": 21,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Fisherman Lover», «Police Station»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.hp",
+      "printed": "HP 14",
+      "expected": "12",
+      "note": "с. 32: по ВЫН 65 и ТЕЛ 55 ПЗ = 12; напечатано 14. Оставлено как напечатано.",
+      "fixed": false
+    },
+    {
+      "field": "statblock.sanity_loss",
+      "printed": "1D3/1D6 Sanity points to see Julia (с. 32)",
+      "expected": "1d3+1/1d6+1 (с. 18)",
+      "note": "Потеря Рассудка при виде Юлии: в статблоке (с. 32) — 1d3/1d6, в сцене в подвале (с. 18) — 1d3+1/1d6+1. Оба значения сохранены.",
+      "fixed": false
+    },
+    {
+      "field": "background.description",
+      "printed": "с. 7: щупальца из живота и левой подмышки, другая (правая) рука — клешня",
+      "expected": null,
+      "note": "с. 18: щупальца из обеих подмышек и живота, правая кисть — клешня. Описания немного расходятся.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1; обложка без номера). Действие — апрель 1849 года, Нидерланды, `axes.era` `other`. НАР и ОБР напечатаны «—»; Рассудок 00 — как напечатано (безумна). Навыков, кроме Уклонения, в статблоке нет."
+  }
+}

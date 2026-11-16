@@ -1,0 +1,101 @@
+{
+  "schema": "sourcefold.location.v0",
+  "id": "taming-the-waterwolf-en/location/leeghwater-pumping-mill",
+  "kind": "location",
+  "name": {
+    "ru": "Насосная станция Лехватер",
+    "en": "Leeghwater Pumping Mill"
+  },
+  "aliases": [
+    "Лехватер",
+    "Leeghwater",
+    "Leeghwater Station"
+  ],
+  "location_type": "здание",
+  "part_of": "taming-the-waterwolf-en/location/haarlemmermeer",
+  "description": {
+    "ru": "Первая из трёх станций, на юго-западе озера у Кагер-Гата, который недавно перекрыл Кольцевой канал. Строилась с июля 1843 года по сентябрь 1845 года, полностью заработала 7 июня 1848 года; опыт её постройки учли в проектах двух других. Главное отличие — одиннадцать насосных рычагов вместо восьми (официально — восьми оказалось достаточно для откачки); насосы работают медленнее, чем на Линдене и Круквиусе (8 циклов в минуту по записям Нилла и расчётам ван Кортландта). Внутри — десять операторов: половина топит котлы, остальные следят за машиной. На заводской табличке поршня — повёрнутый иероглиф 見 («ми», видеть). Названа в честь Яна Лехватера (1575–1650) — архитектора, строителя мельниц и инженера, одним из первых всерьёз задумавшего осушить озеро (он предлагал построить 200 ветряных мельниц).",
+    "en": null
+  },
+  "refs": [
+    "taming-the-waterwolf-en/scene/leeghwater-mill",
+    "taming-the-waterwolf-en/handout/handout-06-leeghwater-symbol",
+    "taming-the-waterwolf-en/location/kager-gat",
+    "taming-the-waterwolf-en/location/kaag",
+    "taming-the-waterwolf-en/character/jan-verveer"
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "taming-the-waterwolf-en",
+      "physical_page": 17,
+      "printed_page": 16,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Leeghwater», «Leeghwater Pumping Mill», «A Second Symbol»"
+    },
+    {
+      "book_id": "taming-the-waterwolf-en",
+      "physical_page": 27,
+      "printed_page": 26,
+      "method": "book_text",
+      "verified": true,
+      "note": "записи Нилла: f=8/m"
+    },
+    {
+      "book_id": "taming-the-waterwolf-en",
+      "physical_page": 29,
+      "printed_page": 28,
+      "method": "book_text",
+      "verified": true,
+      "note": "речь йонкхера: Ян Лехватер"
+    },
+    {
+      "book_id": "taming-the-waterwolf-en",
+      "physical_page": 36,
+      "printed_page": 35,
+      "method": "book_text",
+      "verified": true,
+      "note": "раздатка 2: закладка станции"
+    }
+  ],
+  "errata": [
+    {
+      "field": "description.ru",
+      "printed": "running at a rate of around 16 cycles per minute—much slower than both the Lynden and the Cruquius",
+      "expected": "8 циклов в минуту",
+      "note": "с. 16: 16 циклов — это частота Линдена (с. 14); записи Нилла (с. 26, 40) и расчёты ван Кортландта (с. 37) дают Лехватеру f=8/m, «гораздо медленнее» Линдена. В описании места поставлено 8 по раздаткам; в сцене сохранён напечатанный текст с пометкой.",
+      "fixed": true
+    }
+  ],
+  "corrections": [
+    {
+      "field": "description.ru",
+      "from": "16 cycles per minute (с. 16)",
+      "to": "8 циклов в минуту",
+      "reason": "частота Лехватера — по записям Нилла (с. 26, 40) и расчётам ван Кортландта (раздатка 8, с. 37): f=8/m; на с. 16 напечатано 16, что совпадает с Линденом и противоречит «гораздо медленнее»",
+      "ref": "Р-35"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1; обложка без номера). Действие — апрель 1849 года, Нидерланды, `axes.era` `other`."
+  },
+  "images": [
+    {
+      "file": "art/locations/waterwolf-leeghwater-pumping-mill.webp",
+      "kind": "illustration",
+      "caption": "Насосная станция у воды",
+      "source": "Taming the Waterwolf, с. 16 (физ. 17), «Leeghwater»"
+    }
+  ]
+}

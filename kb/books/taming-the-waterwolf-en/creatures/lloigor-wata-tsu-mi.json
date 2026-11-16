@@ -1,0 +1,296 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "taming-the-waterwolf-en/creature/lloigor-wata-tsu-mi",
+  "kind": "creature",
+  "name": {
+    "ru": "Ллойгор Вата-цу-ми («Укрощение Водяного волка»)",
+    "en": "The Lloigor (Wata-Tsu-Mi)"
+  },
+  "aliases": [
+    "Вата-цу-ми",
+    "Wata-Tsu-Mi",
+    "Watatsumi",
+    "дракон",
+    "Sea Dragon",
+    "морской дракон",
+    "тацу",
+    "Tatsu",
+    "Lords of the Sea",
+    "Владыки моря"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "независимая раса",
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:lloigor",
+      "note_back": "ллойгор, спящий на дне Харлеммермера («Укрощение Водяного волка»)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "200*",
+        "value": 200
+      },
+      "CON": {
+        "raw": "140*",
+        "value": 140
+      },
+      "SIZ": {
+        "raw": "250*",
+        "value": 250
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "INT": {
+        "raw": "100",
+        "value": 100
+      },
+      "POW": {
+        "raw": "70",
+        "value": 70
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "39*",
+      "value": 39,
+      "note": "звёздочка — в облике рептилии"
+    },
+    "mp": {
+      "raw": "150†",
+      "value": 150,
+      "note": "† столько магических пунктов у ллойгора в финальной сцене в Оранжерее"
+    },
+    "sanity": {
+      "raw": "—",
+      "value": null,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+5d6",
+      "value": "5d6"
+    },
+    "build": {
+      "raw": "6*",
+      "value": 6
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "armor": {
+      "raw": "8 пунктов (шкура рептилии)",
+      "value": 8
+    },
+    "attacks_per_round": {
+      "raw": "1 (2 в облике рептилии)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "1d6+5d6",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "notes": "в облике рептилии бьёт, хватает когтями и кусает; иначе пользуется особыми способностями или вихрем"
+      }
+    ],
+    "dodge": {
+      "raw": "25% (12/5)",
+      "value": 25,
+      "half": 12,
+      "fifth": 5
+    },
+    "skills": [
+      {
+        "name": "Уклонение",
+        "skill": "coc:skill:dodge",
+        "value": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Implant fear, Mental suggestion, Wither Limb.",
+      "items": [
+        {
+          "name": "Implant fear",
+          "spell": "coc:spell:implant-fear"
+        },
+        {
+          "name": "Mental suggestion",
+          "spell": "coc:spell:mental-suggestion"
+        },
+        {
+          "name": "Wither Limb",
+          "spell": "coc:spell:wither-limb"
+        }
+      ]
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d8",
+        "trigger": "увидеть ллойгора в облике дракона"
+      },
+      {
+        "success": "1",
+        "fail": "1d4",
+        "trigger": "мысленный контакт"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Вихрь",
+      "summary": "Самое страшное оружие ллойгора — направленный взрыв внутрь, похожий на далёкий раскат грома: всё в зоне разрывает на куски, земля трескается. Нужно не меньше 100 ПМ на круг диаметром 10 м; всё в круге теряет 1d100 ПЗ. Внимательные сыщики могут заметить признаки: в воздухе появляются завихряющиеся линии, тело пронизывает едва слышная пульсация. В кинематографичном финале ллойгор может обрушить вихрь на Круквиус и уничтожить станцию.",
+      "raw": "Vortex Attack: The lloigor’s most fearsome weapon is a type of implosion sounding like the roll of distant thunder. Things in the blast area are torn to pieces and the ground is ruptured. At least 100 magic points are needed for an area ten meters in diameter. Everything within the circle loses 1d100 hit points. Alert investigators may notice the tell-tale effects of swirling lines appearing in the air and a half-unheard throbbing noise penetrating their bodies."
+    },
+    {
+      "name": "Вытягивание магических пунктов у людей",
+      "summary": "Потратив 1 свой ПМ, ллойгор вытягивает 1d6 ПМ (за ночь) у спящего человека, чтобы потратить их на магическое действие; может тянуть сразу у нескольких спящих за несколько километров, сквозь любые преграды. Наутро жертвы жалуются на головную боль и плохой сон; при продолжении слабеют телом и духом, болеют и могут умереть. Пока жертва не восстановит ПМ, она проходит проверку ВЫН: успех — восстанавливает 1 ПМ и просыпается; провал — ПМ не восстанавливаются, она спит дальше, и за следующий час ллойгор может вытянуть ещё 1d6 ПМ, затем новая проверка ВЫН и т. д. В сценарии так он мучает сыщиков, проваливших трудную проверку МОЩ в тумане, и йонквроу Дёйц ван Асенделфт.",
+      "raw": "Drain Magic Points from Humans: by expending one of its own magic points a lloigor may drain 1d6 magic points (per night) from a sleeping human to use in performing some magical action. A lloigor can drain energy from several sleeping humans at once, from up to several miles away despite intervening obstacles. The next morning, the victims wake complaining of headaches and a bad night’s sleep. With continued draining, such individuals become physically and spiritually weak, leading to sickness and possibly death. Whenever a victim is drained of any magic points by lloigor in this way, a CON roll must be made before any magic points can be recovered. If the CON roll succeeds, the victim regains 1 magic point and wakes. If the roll is failed no magic points are recovered and the victim continues to sleep, whereupon the lloigor may drain another 1d6 magic points from the victim over the next hour, after which another CON roll is attempted, and so on."
+    },
+    {
+      "name": "Телекинез",
+      "summary": "Ллойгор может толкать людей и двигать предметы — стрелку компаса, дверную щеколду. Сила телекинеза СИЛ 5 стоит 10 ПМ на поверхности, 6 ПМ под землёй в открытом месте (русло реки, каньон) и 3 ПМ в туннеле или пещере. В сценарии он роняет меч на сыщиков на Линдене, обрушивает крышу лачуги де Вита и захлопывает люк в подвал пастора.",
+      "raw": "Telekinetic Effects: The lloigor can push people and manipulate objects such as a compass needle or a door latch via telekinesis. It takes 10 magic points to create a telekinetic force of STR 5 above ground, 6 magic points to create telekinesis of STR 5 in a subsurface but open area, such as a river bed or canyon, and 3 magic points to cause telekinesis of STR 5 in a tunnel or cave."
+    },
+    {
+      "name": "Облик рептилии",
+      "summary": "Чтобы принять облик чудовищной искажённой рептилии, ллойгор тратит ПМ, равные пятой части своего ТЕЛ. Тело можно держать сколько угодно или распустить по желанию. Убитый в облике рептилии, ллойгор умирает навсегда. В этом облике у него все способности нематериальной формы, но он не проходит сквозь стены и не невидим. Показатели со звёздочкой — для этого облика.",
+      "raw": "Reptilian Manifestation: to take the shape of a monstrous distorted reptile, a lloigor must expend magic points equal to one-fifth of the lloigor’s SIZ. Once the body is formed, it may be maintained indefinitely or dissolved at will. If the lloigor is slain in reptile form, it dies permanently. A lloigor in reptile form has all the powers of one in the immaterial mode, except that it cannot pass through walls and is not invisible."
+    },
+    {
+      "name": "Порабощение",
+      "summary": "Ллойгор подчиняет неустойчивых людей и засевает их плоть изменениями (щупальца, клешня): так он поработил Юлию Саломонс и Геррита де Вита, а «подарок» — щупальце — дал де Виту. Из текста сценария.",
+      "raw": "it used what little power it had recovered to enslave the unstable Julia Salomons of de Kaag",
+      "refs": [
+        "taming-the-waterwolf-en/character/julia-salomons",
+        "taming-the-waterwolf-en/character/gerrit-de-wit"
+      ]
+    }
+  ],
+  "description": {
+    "ru": "Ллойгор, спящий на дне Харлеммермера в облике огромного змееподобного дракона — в японских преданиях Вата-цу-ми, морской дракон. Его спящее тело — холм, свернувшийся вокруг обломков «Драгон Рохо». Если обряд ван Кортландта завершится, из воды поднимется огромная драконоподобная фигура; она не нападает, а питается магическими пунктами обезумевших. Оружие XIX века почти бессильно против его толстой брони.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Эоны назад ллойгор был смертельно ранен и укрылся в подводной пещере; он принял облик рептилии и впал в оцепенение, чтобы залечить раны. Тысячелетия шли, природа и люди перекраивали мир, и ллойгор оказался в глубине Харлеммермера. Тело его исцелилось, но для полной силы не хватало душевной энергии — он ждал, пока кто-нибудь с ним свяжется. С тех пор как заработала первая насосная станция, постоянный шум раздражает его, и он понемногу пробуждается: поработил Юлию Саломонс и велел ей напасть на Лехватер, а когда заработал Линден — Геррита де Вита. Ван Кортландт обрядом связи узнал о нём и хочет разбудить его барабанами-станциями. Когда сыщики попадают в туман, ллойгор чувствует их; проваливших трудную проверку МОЩ он по ночам во сне утаскивает под воду и тянет из них ПМ. Пробудившись и насытившись, он, по решению Хранителя, уходит обратно в озеро, растворяется в нематериальной форме или уничтожает Круквиус вихрем.",
+    "en": null
+  },
+  "habitat": "дно Харлеммермера, под туманом посреди озера",
+  "sources": [
+    {
+      "book_id": "taming-the-waterwolf-en",
+      "physical_page": 34,
+      "printed_page": 33,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «The Lloigor — Wata-Tsu-Mi» (приложение A)"
+    },
+    {
+      "book_id": "taming-the-waterwolf-en",
+      "physical_page": 5,
+      "printed_page": 4,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Keeper Background»: ллойгор в озере"
+    },
+    {
+      "book_id": "taming-the-waterwolf-en",
+      "physical_page": 6,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "ллойгор поработил Юлию и де Вита"
+    },
+    {
+      "book_id": "taming-the-waterwolf-en",
+      "physical_page": 14,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "телекинез: меч, мачта"
+    },
+    {
+      "book_id": "taming-the-waterwolf-en",
+      "physical_page": 15,
+      "printed_page": 14,
+      "method": "book_text",
+      "verified": true,
+      "note": "сны: вытягивание ПМ"
+    },
+    {
+      "book_id": "taming-the-waterwolf-en",
+      "physical_page": 19,
+      "printed_page": 18,
+      "method": "book_text",
+      "verified": true,
+      "note": "люк захлопнут телекинезом"
+    },
+    {
+      "book_id": "taming-the-waterwolf-en",
+      "physical_page": 28,
+      "printed_page": 27,
+      "method": "book_text",
+      "verified": true,
+      "note": "контуры ллойгора на дне (проверка Рассудка 0/1d4)"
+    },
+    {
+      "book_id": "taming-the-waterwolf-en",
+      "physical_page": 31,
+      "printed_page": 30,
+      "method": "book_text",
+      "verified": true,
+      "note": "пробуждение: дракон, 0/1d8"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1; обложка без номера). Действие — апрель 1849 года, Нидерланды, `axes.era` `other`. Профиль сценария для вида «Ллойгор» (Р-75): числа отличаются от Malleus (ЛВК 50 вместо 55, ПМ 150 — запас в финальной сцене, Скорость 7 без хода сквозь камень), поэтому своя запись со связью `instance_of`. Звёздочка (*) — облик рептилии; † — ПМ в финальной сцене. Рассудок, НАР и ОБР напечатаны «—»."
+  }
+}

@@ -133,7 +133,7 @@ Miskatonic Repository, 2018); русский текст — наш перево�
 | Breaking In / Calling Ahead / Stopping In | Взлом квартиры Венди Харпер / Звонок Венди Харпер / Визит к Венди Харпер |
 | Ambush / Stalking in the Night / Desperation / Conclusion | Засада / Слежка в ночи / Отчаяние / Развязка (сцена — «Развязка: судьба Сары») |
 | Pickman’s Model (H. P. Lovecraft) | «Модель Пикмана» |
-| Extreme (success) / Hard (roll) | чрезвычайный успех / сложная проверка |
+| Extreme (success) / Hard (roll) | чрезвычайный успех / трудная проверка |
 | advantage | преимущество (вероятно, бонусный кубик — пометка в записях) |
 | Strength roll | проверка СИЛ |
 | Idea roll | проверка Идеи |

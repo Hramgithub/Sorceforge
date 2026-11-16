@@ -1,0 +1,247 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "gothic-by-gaslight-en/creature/deep-one",
+  "kind": "creature",
+  "name": {
+    "ru": "Глубоководный («Леди Немо»)",
+    "en": "Deep One"
+  },
+  "aliases": [
+    "Deep Ones",
+    "Monstrous Servant of Father Dagon and Mother Hydra"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "служитель",
+  "axes": {
+    "era": [
+      "gaslight"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:deep-one",
+      "note_back": "профиль главы «Леди Немо»"
+    },
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:dagon-i-gidra",
+      "note": "чудовищные слуги Отца Дагона и Матери Гидры",
+      "note_back": "слуги — глубоководные «Леди Немо»"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "85",
+        "value": 85
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "80",
+        "value": 80
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      }
+    },
+    "hp": {
+      "raw": "15",
+      "value": 15
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8 / плавание 10",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        },
+        {
+          "mode": "swim",
+          "value": 10
+        }
+      ]
+    },
+    "armor": {
+      "raw": "1 пункт (кожа и чешуя)",
+      "value": 1
+    },
+    "attacks_per_round": {
+      "raw": "1 (когти, укус)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (когти, укус)",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1d6+БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "25% (12/5)",
+      "value": 25,
+      "half": 12,
+      "fifth": 5
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Плавание",
+        "skill": "coc:skill:swim",
+        "value": {
+          "raw": "90%",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        }
+      }
+    ],
+    "spells": {
+      "raw": "нет",
+      "items": []
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "при встрече с глубоководным"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Профиль глубоководных главы «Леди Немо» (APP и EDU — «—», Удача — «—»). Стая глубоководных, которая шла за «Кастро», выследила «Наутилус» и напала на него: всего десять глубоководных плюс по одному на каждого сыщика, двумя волнами — первая бьётся огромными головами в стёкла мостика, вторая когтями прорывает металл у люка за мостиком. Ведёт их превратившийся Томас Немо. Глубоководные служат Отцу Дагону и Матери Гидре и связаны с Судоходной компанией Марша общим поклонением Великому Ктулху. В машинном отделении с Орбан бьётся глубоководный, которого она ослепила (один глаз зарос шрамом, другой выбит выстрелом и кровоточит). Когда «Наутилус» или спасательная капсула сыщиков всплывает, глубоководные бросают погоню (но возвращаются, если «Наутилус» снова начнёт тонуть).",
+    "en": null
+  },
+  "habitat": "Атлантический океан",
+  "sources": [
+    {
+      "book_id": "gothic-by-gaslight-en",
+      "physical_page": 64,
+      "printed_page": 64,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Deep One», «Monstrous Servant of Father Dagon and Mother Hydra»"
+    },
+    {
+      "book_id": "gothic-by-gaslight-en",
+      "physical_page": 61,
+      "printed_page": 61,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Assault of the Deep Ones»"
+    },
+    {
+      "book_id": "gothic-by-gaslight-en",
+      "physical_page": 62,
+      "printed_page": 62,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Race to Survive»"
+    },
+    {
+      "book_id": "gothic-by-gaslight-en",
+      "physical_page": 63,
+      "printed_page": 63,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Salvation»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.damage_bonus",
+      "printed": "DB: +1d4 Build: 1",
+      "expected": "+1d6 и Комплекция 2 (СИЛ 85 + ТЕЛ 80 = 165)",
+      "note": "БкУ и Комплекция напечатаны как у вида (СИЛ 70 + ТЕЛ 80 = 150), а СИЛ поднята до 85; БкУ и Комплекция согласованы между собой, большинства нет — оставлено как напечатано (Р-36), вопрос владельцу.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Профиль сценария отличается от вида в справочнике (СИЛ 85, ВЫН 70, ИНТ 65; Ближний бой 55%); APP и EDU в книге — «—», поэтому не записаны."
+  }
+}

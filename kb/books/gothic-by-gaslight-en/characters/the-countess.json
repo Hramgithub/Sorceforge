@@ -1,0 +1,540 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "gothic-by-gaslight-en/character/the-countess",
+  "kind": "character",
+  "name": {
+    "ru": "Графиня",
+    "en": "The Countess"
+  },
+  "aliases": [
+    "Элизабет Батори",
+    "графиня Элизабет Батори",
+    "графиня Батори",
+    "Countess Elizabeth Báthory",
+    "Countess Elizabeth Bathory",
+    "Elizabeth Báthory",
+    "Countess Bathory",
+    "графиня Б_____",
+    "Countess B_____",
+    "миссис Ифигения Блессинг",
+    "мисс Ифигения Блессинг",
+    "Mrs. Iphigenia Blessing",
+    "Miss Iphigenia Blessing",
+    "Джон Пейн",
+    "John Payne",
+    "графиня Бат",
+    "Countess of Bath",
+    "Vampiric Libertine",
+    "Mythos Sorceress and Inspiration for Modern Vampire Tales"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "колдунья Мифов, вдохновившая современные истории о вампирах",
+    "en": "Mythos Sorceress and Inspiration for Modern Vampire Tales"
+  },
+  "age": {
+    "raw": "337",
+    "value": 337
+  },
+  "sex": "женский",
+  "residence": "дом на Пикадилли, 347, Лондон",
+  "axes": {
+    "era": [
+      "gaslight"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "servitor_of",
+      "target": "gothic-by-gaslight-en/creature/the-consort",
+      "note": "Консорт — сущность Мифов, с которой она «обвенчана» восемью кровавыми ваннами",
+      "note_back": "Графиня — «супруга» и проводник Консорта в нашем мире"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "100",
+        "value": 100
+      },
+      "CON": {
+        "raw": "65",
+        "value": 65
+      },
+      "SIZ": {
+        "raw": "50",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65
+      },
+      "APP": {
+        "raw": "80",
+        "value": 80
+      },
+      "INT": {
+        "raw": "85",
+        "value": 85
+      },
+      "POW": {
+        "raw": "65",
+        "value": 65
+      },
+      "EDU": {
+        "raw": "85",
+        "value": 85
+      }
+    },
+    "hp": {
+      "raw": "18",
+      "value": 18
+    },
+    "mp": {
+      "raw": "13",
+      "value": 13
+    },
+    "sanity": {
+      "raw": "—",
+      "value": null,
+      "max": null
+    },
+    "luck": {
+      "raw": "80",
+      "value": 80
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        },
+        {
+          "mode": "fly",
+          "value": 9,
+          "note": "не быстрее обычной скорости"
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "2 (когти) или 1 (клык или любое оружие ближнего боя)",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (когти, клык или оружие)",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "1d4+БкУ",
+          "dice": "1d4",
+          "adds_db": true
+        },
+        "notes": "2 атаки когтями за раунд или 1 — клыком или любым оружием ближнего боя"
+      },
+      {
+        "name": {
+          "ru": "Укус (в облике волка)",
+          "en": "Bite"
+        },
+        "kind": "special",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "—",
+          "value": null,
+          "half": null,
+          "fifth": null
+        },
+        "damage": {
+          "raw": "1d8+БкУ",
+          "dice": "1d8",
+          "adds_db": true
+        },
+        "notes": "только в облике волка; шанс книга не даёт — вероятно, Ближний бой 65% (вывод из текста, Р-41)"
+      }
+    ],
+    "dodge": {
+      "raw": "50% (25/10)",
+      "value": 50,
+      "half": 25,
+      "fifth": 10
+    },
+    "skills": [
+      {
+        "name": "Антропология",
+        "skill": "coc:skill:anthropology",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Оценка",
+        "skill": "coc:skill:appraise",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Обаяние",
+        "skill": "coc:skill:charm",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "История",
+        "skill": "coc:skill:history",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Иностранные языки (английский, французский, немецкий, венгерский и другие по необходимости)",
+        "skill": "coc:skill:language-other",
+        "specialization": "английский, французский, немецкий, венгерский и другие",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Связь с Консортом (обряд купания в крови, описанный в тексте сценария)",
+      "items": [
+        {
+          "name": "Связь с Консортом (Commune with Consort)",
+          "spell": null
+        }
+      ]
+    }
+  },
+  "background": {
+    "secret": "Графиня — Элизабет Батори, «обвенчанная» с сущностью Мифов, Консортом; она стоит за всеми сценариями кампании и хочет заполучить Несгоревшее сердце Перси Биши Шелли, чтобы свергнуть викторианский режим."
+  },
+  "description": {
+    "ru": "В своём облике Батори выглядит невзрачно: мышино-русые волосы и бледная кожа. Но её фарфоровая кожа совершенно безупречна, а ногти блестят, как зеркала. Днём её связь с Консортом слабеет из-за помех от Солнца; ночью, когда ей доступна сила Консорта, она может принять облик одного из своих псевдонимов.\nКак графиня Б_____ она звезда скандального лондонского света: высокая, элегантная, в реках драгоценностей и буйно пёстрых платьях, с вечной весёлой дьявольской улыбкой на юном лице с румяными щеками; у неё заметный акцент, который можно описать лишь как «иностранный». Как миссис Ифигения Блессинг она маленькая, пожилая и морщинистая, но бодрая и мило язвительная — шаркающая, приятная, хрупкая дама в простом, но модном зелёном платье и вуали, с большим павлиньим пером на шляпе. Как слуга, кучер Джон Пейн, она носит поношенный красный или зелёный костюм, подобающий ремеслу.\nМиссис Блессинг носит розовые очки, которые скрывают мерцание пламени за её глазами; кучер Джон Пейн носит закопчённые очки по той же причине. Графиня не скрывает костров в своих глазах. Ни при каких обстоятельствах не носит блёклых цветов.\nЕё характер меняется с обликом: как графиня Б_____ она жизнерадостна; как миссис Блессинг — скромна, но зорка и остроумна; как Джон Пейн — невозмутим и услужлив, всегда смотрит и слушает.",
+    "en": null
+  },
+  "legend": {
+    "ru": "В начале XVII века венгерскую графиню Элизабет Батори политические враги ложно обвинили в том, что она пытала и убила сотни девушек и молодых женщин и купалась в их крови. Её и любимых слуг судили за колдовство; слуг казнили, а Батори заточили в собственном замке. Запертая, она всё же нашла способы изучать магические обряды: приняла обвинения врагов в дьявольщине и искала тайного наставничества у оккультных мастеров Восточной Европы. Со временем она коснулась сознания сущности Мифов, не названной ни в одной из её книг, — сущности из-за пределов наших измерений; та искала свободы двигаться в нашем мире, и её влекли гедонизм и сильные чувства Графини. Графиня назвала эту сущность своим Консортом; позволив ей вторгнуться в свой разум, она приобрела черты, которые местный фольклор назвал бы вампирическими. Сущность дала ей вечную жизнь и сверхъестественные силы, а взамен пьёт жизненную силу, которую находит на земле, упиваясь необузданными страстями и исступлёнными чувствами. Вместе они одержимы жизнью: стереть границу между жизнью и смертью, отдаться человеческим страстям — сделать человечество «свободным и диким, по ту сторону добра и зла». Чтобы построить мир себе по нраву, они воплощают противоположность викторианской морали.\nОколо 1885 года Батори тайно приехала в Лондон и под разными именами, из тени, поощряла тот мир, какого хотят она и её Консорт; это и стало причиной событий первых трёх сценариев кампании. Ещё до кампании в облике миссис Блессинг она подружилась с прежним библиотекарем Клуба миссис Уэнлок, соблазнила её и получила от неё выписки из книги Мифов Клуба «Агонии и бред»; эти знания помогли ей приготовить особые соли для Александра Пула (см. «Прятки с Хайдом») и помочь оккультным изысканиям Адама Лавенцы (см. «Дитя Франкенштейна»). Она же — главная покровительница леди Немо («Леди Немо»). В её записных книжках эти дела записаны под заголовками «Ради жизни», «Ради любви» и «Ради духа».\nВ начале 1897 года, изучая древние книги Мифов, она узнала, что некоторые артефакты могут помочь ей открыть разум масс её посланию освобождения и что один такой артефакт хранится в Книжном клубе — Несгоревшее сердце Перси Биши Шелли. В начале сценария «Графиня» она ещё не знает, что это за артефакт, но вместе с Консортом решила найти и заполучить его правдами и неправдами, кого бы ни пришлось уничтожить по пути.\nВ сценарии. Она почти у цели и, стоявшая за всеми прежними сценариями, пускает в ход скрытность, хитрость, а затем и силу, чтобы Ужастики отдали ей желаемое: устраивает с Вирджинией Криз скандальный вечер как «графиня Бат», убивает Джека Уинслоу и освобождает Вирджинию из Хаммерсмитского института, приходит на чтение в Клуб как мисс Блессинг, расспрашивает слуг Клуба как Джон Пейн, затем вежливо просит отдать Сердце в своём настоящем облике и, получив отказ, за несколько часов до рассвета штурмует Клуб с Любовниками.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "gothic-by-gaslight-en",
+      "physical_page": 5,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Meet the Countess»"
+    },
+    {
+      "book_id": "gothic-by-gaslight-en",
+      "physical_page": 11,
+      "printed_page": 11,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Before Ms. Lannigan»: миссис Уэнлок и выписки для Графини"
+    },
+    {
+      "book_id": "gothic-by-gaslight-en",
+      "physical_page": 13,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Mrs. Iphigenia Blessing», apparent age 65, Pleasant Book Lover"
+    },
+    {
+      "book_id": "gothic-by-gaslight-en",
+      "physical_page": 15,
+      "printed_page": 15,
+      "method": "book_text",
+      "verified": true,
+      "note": "Графиня послала соли Джекилу"
+    },
+    {
+      "book_id": "gothic-by-gaslight-en",
+      "physical_page": 52,
+      "printed_page": 52,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Links to the Campaign»: покровительница леди Немо"
+    },
+    {
+      "book_id": "gothic-by-gaslight-en",
+      "physical_page": 60,
+      "printed_page": 60,
+      "method": "book_text",
+      "verified": true,
+      "note": "Графиня — среди покровителей Немо"
+    },
+    {
+      "book_id": "gothic-by-gaslight-en",
+      "physical_page": 67,
+      "printed_page": 67,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Introduction», «Background»"
+    },
+    {
+      "book_id": "gothic-by-gaslight-en",
+      "physical_page": 68,
+      "printed_page": 68,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Dramatis Personae»: «Countess Elizabeth Bathory»"
+    },
+    {
+      "book_id": "gothic-by-gaslight-en",
+      "physical_page": 70,
+      "printed_page": 70,
+      "method": "book_text",
+      "verified": true,
+      "note": "мисс Блессинг на чтении"
+    },
+    {
+      "book_id": "gothic-by-gaslight-en",
+      "physical_page": 71,
+      "printed_page": 71,
+      "method": "book_text",
+      "verified": true,
+      "note": "«графиня Бат»"
+    },
+    {
+      "book_id": "gothic-by-gaslight-en",
+      "physical_page": 74,
+      "printed_page": 74,
+      "method": "book_text",
+      "verified": true,
+      "note": "Джон Пейн, карета"
+    },
+    {
+      "book_id": "gothic-by-gaslight-en",
+      "physical_page": 75,
+      "printed_page": 75,
+      "method": "book_text",
+      "verified": true,
+      "note": "записные книжки, «Счастливое сердце»"
+    },
+    {
+      "book_id": "gothic-by-gaslight-en",
+      "physical_page": 76,
+      "printed_page": 76,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Countess’ Calling Card», «A Polite Request»"
+    },
+    {
+      "book_id": "gothic-by-gaslight-en",
+      "physical_page": 77,
+      "printed_page": 77,
+      "method": "book_text",
+      "verified": true,
+      "note": "«By Hook or By Crook»"
+    },
+    {
+      "book_id": "gothic-by-gaslight-en",
+      "physical_page": 78,
+      "printed_page": 78,
+      "method": "book_text",
+      "verified": true,
+      "note": "«If the Countess Succeeds», статблок «The Countess»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.attacks[Ближний бой].chance",
+      "printed": "Fighting 65% (30/12)",
+      "expected": "65% (32/13)",
+      "note": "Доли подходят к 60% — возможна опечатка в проценте (Р-77); процент оставлен напечатанный, доли исправлены.",
+      "fixed": true
+    },
+    {
+      "field": "statblock.dodge",
+      "printed": "Dodge 50% (20/8)",
+      "expected": "50% (25/10)",
+      "note": "Доли подходят к 40% — возможна опечатка в проценте (Р-77); процент оставлен напечатанный, доли исправлены.",
+      "fixed": true
+    },
+    {
+      "field": "statblock.hp",
+      "printed": "HP 18",
+      "expected": "11 ((ВЫН 65 + ТЕЛ 50) / 10)",
+      "note": "ПЗ не сходятся с ВЫН и ТЕЛ; возможно, задуманы сверхъестественные — оставлено как напечатано (Р-161, Р-76).",
+      "fixed": false
+    },
+    {
+      "field": "age",
+      "printed": "age 337 (с. 68); age 350 (с. 78)",
+      "expected": "337 (Батори родилась в 1560 году; 1897 − 1560 = 337)",
+      "note": "Два разных возраста в одной главе; в записи — 337 по «Dramatis Personae» (с. 68), он сходится с годами жизни.",
+      "fixed": false
+    }
+  ],
+  "corrections": [
+    {
+      "field": "statblock.attacks[Ближний бой].chance",
+      "from": "65% (30/12)",
+      "to": "65% (32/13)",
+      "reason": "«Gothic by Gaslight», с. 78: половина и пятая не сходятся с 65% — исправлены (30/12 подходят к 60%)",
+      "ref": "Р-35"
+    },
+    {
+      "field": "statblock.dodge",
+      "from": "50% (20/8)",
+      "to": "50% (25/10)",
+      "reason": "«Gothic by Gaslight», с. 78: половина и пятая не сходятся с 50% — исправлены (20/8 подходят к 40%)",
+      "ref": "Р-35"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Статблок — её истинный облик; в других человеческих обличьях её физические характеристики — как у обычного человека (с. 78). Псевдоним «Servant» в списке «Aliases» (с. 68) не взят как отдельное имя — это облик слуги Джона Пейна. Заклинание «Commune with Consort» в справочнике заклинаний нет (обряд описан в тексте сценария — см. книгу «Счастливое сердце»), поэтому ссылки нет. Укус волка дан отдельной атакой без шанса."
+  },
+  "abilities": [
+    {
+      "name": "Смена облика",
+      "summary": "Графиня может сменить облик, чтобы двигаться быстрее или лучше сражаться; превращение в тень или волка стоит 1 ПМ.",
+      "raw": "Shape Changes: The countess may change shape to move faster or fight better. It costs 1 MP to change into either Shadow or a Wolf"
+    },
+    {
+      "name": "Тень",
+      "summary": "Длится 30 секунд: бесплотна, не может ни влиять на физический мир, ни испытывать его влияние, но может двигаться по любой поверхности (стене, картине, полу). Видеть превращение (и возвращение в телесный облик) — потеря 1d4 Рассудка. Чтобы найти остановившуюся тень, нужна проверка Внимания; в движении её легко заметить тому, кто её ищет.",
+      "raw": "Shadow (lasts for 30 seconds): Incorporeal, can neither affect nor be affected by the physical world, but may travel along any surface (e.g. a wall, a painting, the floor). 1d4 SAN loss to witness the transformation."
+    },
+    {
+      "name": "Волк",
+      "summary": "Длится до 6 раундов: огромный грозный волк из легенд восточноевропейских лесов. Встреча с этим созданием первобытного кошмара — потеря 1d6 Рассудка: её мускусный хищный запах с помощью Консорта будит в лимбической системе жертвы ужас добычи. Укус: 1d8+БкУ.",
+      "raw": "Wolf (lasts for up to 6 rounds): 1d6 SAN loss to encounter this creature of primordial nightmare. Bite: 1d8+DB"
+    },
+    {
+      "name": "Завораживание",
+      "summary": "Поймав взгляд цели и победив во встречной проверке МОЩ, Графиня на миг погружает её в переживание Консорта: жертва теряет 2+1d6 Рассудка и сразу впадает в гедонистическое исступление на 1d4 раунда.",
+      "raw": "Mesmerize: If she locks eyes with a target and wins an opposed POW roll, the victim loses (2+1d6 SAN) and immediately flies into a hedonistic frenzy for 1d4 Rounds.",
+      "refs": [
+        "gothic-by-gaslight-en/creature/the-consort"
+      ]
+    },
+    {
+      "name": "Полёт",
+      "summary": "Поднимается в воздух по желанию, но не быстрее своей обычной скорости.",
+      "raw": "Flight: She floats into the air at will, but cannot travel faster than her normal move rate."
+    },
+    {
+      "name": "Облики и солнце",
+      "summary": "Днём связь с Консортом слабеет из-за Солнца; последние лучи заката подавляют её силу. Ночью она может принять облик графини Б_____, миссис Блессинг или Джона Пейна; в человеческих обличьях её физические характеристики — как у обычного человека. Может улететь крылатым зверем низко над крышами Лондона. Огромной силой выбивает двери и преграды и даже пробивает внутренние стены (чтобы угадать нужную комнату — проверка Ориентирования).",
+      "raw": "During the day, her connection to her Consort is strained by the Sun’s interference. At night, when she can access the power of her Consort, she can change her appearance to one of her aliases."
+    }
+  ],
+  "images": [
+    {
+      "file": "art/characters/gothic-countess-the-countess.webp",
+      "kind": "portrait",
+      "caption": "Графиня Элизабет Батори",
+      "source": "Gothic by Gaslight, с. 68 (физ. 68), «Dramatis Personae»: Countess Elizabeth Bathory"
+    },
+    {
+      "file": "art/characters/gothic-countess-the-countess-true-form-2.webp",
+      "kind": "portrait",
+      "caption": "истинный облик",
+      "source": "Gothic by Gaslight, с. 78 (физ. 78), «Non-Player Characters & Monsters»: The Countess"
+    },
+    {
+      "file": "art/characters/gothic-countess-the-countess-mrs-blessing-3.webp",
+      "kind": "portrait",
+      "caption": "в облике миссис Ифигении Блессинг",
+      "source": "Gothic by Gaslight, с. 13 (физ. 13), «NPCs Found at the Club»: Mrs. Iphigenia Blessing"
+    }
+  ]
+}

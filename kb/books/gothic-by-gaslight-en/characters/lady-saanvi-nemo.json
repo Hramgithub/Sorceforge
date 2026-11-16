@@ -1,0 +1,411 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "gothic-by-gaslight-en/character/lady-saanvi-nemo",
+  "kind": "character",
+  "name": {
+    "ru": "Леди Саанви Немо",
+    "en": "Lady Saanvi Nemo"
+  },
+  "aliases": [
+    "Саанви Немо",
+    "леди Немо",
+    "капитан Немо",
+    "Lady Nemo",
+    "Captain Nemo",
+    "Nemo"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "капитан «морского чудовища» — «Наутилуса»",
+    "en": "Captain of the “Sea Monster” Nautilus"
+  },
+  "age": {
+    "raw": "42",
+    "value": 42
+  },
+  "sex": "женский",
+  "residence": "подводный корабль «Наутилус»",
+  "axes": {
+    "era": [
+      "gaslight"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "relative_of",
+      "target": "gothic-by-gaslight-en/character/thomas-nemo",
+      "note": "муж, превратившийся в глубоководного",
+      "note_back": "жена"
+    },
+    {
+      "type": "knows",
+      "target": "gothic-by-gaslight-en/character/the-countess",
+      "note": "главная тайная покровительница постройки «Наутилуса»",
+      "note_back": "подопечная: Графиня оплатила постройку «Наутилуса», чтобы руками леди Немо уничтожить Судоходную компанию Марша"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "50",
+        "value": 50
+      },
+      "CON": {
+        "raw": "55",
+        "value": 55
+      },
+      "SIZ": {
+        "raw": "40",
+        "value": 40
+      },
+      "DEX": {
+        "raw": "85",
+        "value": 85
+      },
+      "APP": {
+        "raw": "80",
+        "value": 80
+      },
+      "INT": {
+        "raw": "75",
+        "value": 75
+      },
+      "POW": {
+        "raw": "45",
+        "value": 45
+      },
+      "EDU": {
+        "raw": "85",
+        "value": 85
+      }
+    },
+    "hp": {
+      "raw": "9",
+      "value": 9
+    },
+    "mp": {
+      "raw": "9",
+      "value": 9
+    },
+    "sanity": {
+      "raw": "35",
+      "value": 35,
+      "max": null
+    },
+    "luck": {
+      "raw": "—",
+      "value": null
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1 (без оружия, фехтовальная сабля)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Фехтовальная сабля",
+          "en": "Fencing Saber"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (фехтовальная сабля)",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "1d6+1",
+          "dice": "1d6+1",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:sword-medium"
+      }
+    ],
+    "dodge": {
+      "raw": "50% (25/10)",
+      "value": 50,
+      "half": 25,
+      "fifth": 10
+    },
+    "skills": [
+      {
+        "name": "Бухгалтерское дело",
+        "skill": "coc:skill:accounting",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "10%",
+          "value": 10,
+          "half": 5,
+          "fifth": 2
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Иностранный язык (английский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "английский",
+        "value": {
+          "raw": "85%",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        }
+      },
+      {
+        "name": "Родной язык (хинди)",
+        "skill": "coc:skill:language-own",
+        "specialization": "хинди",
+        "value": {
+          "raw": "85%",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Механика",
+        "skill": "coc:skill:mechanical-repair",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Ориентирование",
+        "skill": "coc:skill:navigate",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Наука (инженерное дело)",
+        "skill": "coc:skill:science",
+        "specialization": "инженерное дело",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "20%",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Плавание",
+        "skill": "coc:skill:swim",
+        "value": {
+          "raw": "20%",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      }
+    ]
+  },
+  "background": {
+    "traits": "Строгая властность капитана; учтива, говорит короткими отрывистыми фразами; холодная ярость с исчезновения мужа.",
+    "treasured_possessions": "Медальон с буквой «N» и портретом мужа."
+  },
+  "possessions": [
+    "медальон с выпуклой буквой «N» и портретом мужа",
+    "фехтовальная сабля"
+  ],
+  "description": {
+    "ru": "Вдова трёх лет. Одевается по викторианской моде, с украшениями, напоминающими о её южноазиатском происхождении; всегда носит медальон с портретом мужа. Держится со строгой властностью, обычной для капитанов того времени: всегда учтива, говорит короткими отрывистыми фразами, требует уважения и ждёт, что её приказы исполнят. Кто бросает ей вызов, становится жертвой холодной ярости, что тлеет в ней с исчезновения мужа. С другими обходится честно, но уничтожение Судоходной компании Марша ставит превыше всего.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Повод для вмешательства сыщиков и ключ к развязке сценария «Леди Немо». Её муж Томас Немо, капитан грузового судна Судоходной компании Марша, слишком глубоко копнул оккультные обряды основателя компании Обеда Марша и, по всей видимости, пропал в море (ноябрь 1891 года). Саанви уверена, что компания убила его — принесла в жертву, чтобы умилостивить тёмных богов; она не знает, что муж на самом деле вернулся в море, к своей истинной семье, и превратился в глубоководного. Поклявшись отомстить, Саанви — сама гениальный инженер — употребила на месть состояние своей бенгальской семьи и наследство мужа и нашла немало тайных покровителей, готовых оплатить постройку судна для возмездия; главная из них — венгерская аристократка, которую Саанви называет просто Графиней. Подводный корабль она назвала «Наутилусом» и построила вместе со старпомом Аникой Орбан; в январе 1894 года «Наутилус» вышел из тайной бухты близ залива Бантри в Ирландии, и к началу сценария леди Немо потопила четыре грузовых судна компании Марша. Команду она набрала из моряков, якобы пропавших в море, которые разделяют её жажду мести Маршам, Империи или человечеству вообще; она всегда ищет новых членов команды и покровителей.\nВ сценарии. Спасённых сыщиков она принимает за ужином на мостике «Наутилуса», расспрашивает о них, открыто рассказывает о себе и решает их судьбу (казнь, заточение в карцере, высадка на остров, испытательный срок в команде или возвращение на сушу). Во время нападения глубоководных она встречает превратившегося мужа: если не вмешаться, она нападает на него с фехтовальной саблей и гибнет; если обратить её внимание на медальон у него на шее, она может принять его руку и уйти с ним под воду — или, по настоянию сыщиков, отказаться, и тогда Томас обращается против своих сородичей.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "gothic-by-gaslight-en",
+      "physical_page": 51,
+      "printed_page": 51,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Background»"
+    },
+    {
+      "book_id": "gothic-by-gaslight-en",
+      "physical_page": 52,
+      "printed_page": 52,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Timeline», «Links to the Campaign»"
+    },
+    {
+      "book_id": "gothic-by-gaslight-en",
+      "physical_page": 53,
+      "printed_page": 53,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Dramatis Personae»: «Lady Saanvi Nemo»"
+    },
+    {
+      "book_id": "gothic-by-gaslight-en",
+      "physical_page": 60,
+      "printed_page": 60,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Dinner is Served»: что она рассказывает, решение о судьбе сыщиков"
+    },
+    {
+      "book_id": "gothic-by-gaslight-en",
+      "physical_page": 61,
+      "printed_page": 61,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Overwhelming Force»: встреча с мужем"
+    },
+    {
+      "book_id": "gothic-by-gaslight-en",
+      "physical_page": 62,
+      "printed_page": 62,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Overwhelming Force» (окончание)"
+    },
+    {
+      "book_id": "gothic-by-gaslight-en",
+      "physical_page": 64,
+      "printed_page": 64,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Lady Saanvi Nemo»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Хинди — родной язык леди Немо по тексту с. 54 («Hindi (his wife’s native language)»); английский — иностранный. Сабля связана с позицией «Меч средний» справочника по урону 1d6+1 (в книге — «Fencing Saber»)."
+  },
+  "images": [
+    {
+      "file": "art/characters/gothic-countess-lady-saanvi-nemo.webp",
+      "kind": "portrait",
+      "caption": "",
+      "source": "Gothic by Gaslight, с. 53 (физ. 53), «Dramatis Personae»: Lady Saanvi Nemo"
+    }
+  ]
+}

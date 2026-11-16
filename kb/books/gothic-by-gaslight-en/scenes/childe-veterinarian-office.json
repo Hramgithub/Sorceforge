@@ -1,0 +1,88 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "gothic-by-gaslight-en/scene/childe-veterinarian-office",
+  "kind": "scene",
+  "name": {
+    "ru": "Кабинет ветеринара",
+    "en": "Veterinarian Office (Dr. Lavenza); Large Writing Desk"
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Хранителю на заметку: если доктор Лавенца ушёл потайным ходом из своего кабинета, портрет Прометея во всю стену остаётся открытым, когда сыщики осматривают кабинет.\nКабинет ветеринара — одна большая комната с большим письменным столом посередине. Два гостевых кресла тёмного дерева с зелёной кожей обращены к большему такому же креслу за столом. По обе стороны — книжные шкафы с медицинскими книгами и журналами. За столом — две большие картины маслом: «Сошествие к чудовищу» Гюстава Доре из «Божественной комедии» и портрет Прометея от пола до потолка работы Питера Пауля Рубенса.\nНа большом письменном столе сыщики находят:\n• Подлинные записи Виктора Франкенштейна о желании сотворить жизнь вопреки ограничениям человеческого бога (раздатка 7).\n• Второй блокнот: записи о собственных опытах доктора Лавенцы, который идёт дальше простой победы над смертью и хочет стать богом среди богов (раздатка 8). Если сыщики раньше нашли раздатку 4, они узнают почерк Лавенцы; иначе понимают лишь, что почерк в блокноте не тот, что у Виктора Франкенштейна.\nЕсли Лавенца уже покинул кабинет, он ушёл потайным ходом за картиной с Прометеем и закрыл его за собой. Сыщики с обычной проверкой Слуха едва слышат, как он мучает научную ассистентку Пегги Дин в Вольере у канала; трудная проверка Слуха показывает, что звук идёт из потайного хода за портретом Прометея. Если ход ещё не найден, проверка Внимания показывает, что картина чуть приоткрыта. Войдя в потайной ход, сыщики после короткого пути выходят в Вольер у канала.",
+    "en": null
+  },
+  "when": "Когда сыщики осматривают кабинет ветеринара",
+  "arc": {
+    "scenario": "gothic-by-gaslight-en/scenario/the-childe-of-frankenstein",
+    "part": "Акт III: Контора Зоологического общества",
+    "order": 12
+  },
+  "where": [
+    {
+      "location": "gothic-by-gaslight-en/location/veterinarian-office",
+      "note": "кабинет доктора Лавенцы"
+    },
+    {
+      "location": "gothic-by-gaslight-en/location/secret-passage",
+      "note": "ход за портретом Прометея"
+    }
+  ],
+  "participants": [
+    {
+      "id": "gothic-by-gaslight-en/character/adam-lavenza",
+      "role": "хозяин кабинета"
+    },
+    {
+      "id": "gothic-by-gaslight-en/character/peggy-dean",
+      "role": "её мучают в вольере"
+    }
+  ],
+  "mechanics": {
+    "ru": "Обычная проверка Слуха — крики Пегги; трудная — звук из-за картины. Внимание — картина приоткрыта.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Сыщики находят раздатки 7 и 8 и идут потайным ходом в Вольер у канала.",
+    "en": null
+  },
+  "refs": [
+    "gothic-by-gaslight-en/handout/handout-7-victor-frankenstein-diary-extracts",
+    "gothic-by-gaslight-en/handout/handout-8-lavenza-diary-extracts",
+    "gothic-by-gaslight-en/handout/handout-4-spark-of-cosmic-life",
+    "gothic-by-gaslight-en/character/victor-frankenstein",
+    "gothic-by-gaslight-en/scene/childe-canal-bank-aviary",
+    "gothic-by-gaslight-en/map/basement-map"
+  ],
+  "axes": {
+    "era": [
+      "gaslight"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "gothic-by-gaslight-en",
+      "physical_page": 35,
+      "printed_page": 35,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Keeper's Note», «Veterinarian Office (Dr. Lavenza)», «Large Writing Desk»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "description",
+      "printed": "see The Doctor Is In below",
+      "expected": null,
+      "note": "с. 35 отсылает к разделу «The Doctor Is In», которого в книге нет."
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической)."
+  }
+}

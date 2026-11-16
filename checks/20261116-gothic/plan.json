@@ -1,0 +1,49 @@
+{
+  "book_id": "gothic-by-gaslight-en",
+  "goal": "the scenario «Gothic by Gaslight (eds. Evan Perlman & Maverick Haenze, Miskatonic Repository, 2026, Victorian London)» playable from the base, a work of the English series (Р-251)",
+  "decision": "Р-251, Р-139, Р-184, Р-206, Р-241",
+  "check_dir": "checks/20261116-gothic",
+  "models": [
+    "kb/books/starfall-en/scenarios/starfall.json",
+    "kb/books/starfall-en/scenes/introduction.json",
+    "kb/books/starfall-en/maps/starside-gm-map.json",
+    "kb/books/whats-in-the-cellar-en/handouts/cellar-papers-1-herald-article.json",
+    "kb/books/dveri-vo-tmu-ru/scenarios/darkness-beneath-the-hill.json"
+  ],
+  "extra": "## This work (Р-251, English works series, one at a time)\n\nSource: the English original `gothic-by-gaslight-en` (text layer; `python -B pipeline/source/pages.py show gothic-by-gaslight-en <page>`; page image `python -B pipeline/source/pages.py image gothic-by-gaslight-en <physical page> --physical`). Page numbers: `pagemap` often misses printed numbers in these PDFs — look at 2–3 page images and find printed vs physical; in `sources` give the printed page as printed (null for unnumbered pages). Offset is set (printed = physical on 4–81). Do NOT edit `pipeline/source/books.json` — report any other offset (physical = printed − offset, e.g. «p. 3» on physical 4 → offset −1) and the lead sets it.\nRussian text — our translation (flag `translated`); official Russian forms of names and terms — glossary `python -B tools/terms.py <word>` and existing records (Р-184), e.g. Dreamlands = «Страна грёз»; Hard/Extreme roll = «трудная/чрезвычайная проверка» (official «трудный/чрезвычайный успех», never «сложная»). New terms of this book — choose one Russian form each, use it everywhere, and list them all in your report (English → Russian); the translator of the book will reuse exactly these forms.\n- FIRST: check that this scenario is not already in the base under a Russian translation (Grep key character and place names, transliterated, in `kb/books/*-ru/`; e.g. «The Haunted Clubhouse» was already there as «Маленький клуб ужасов»). If it is — do NOT create a second set: per Р-147 the translation keeps the text, the original gives the numbers; write proposals to the translation records (English sources, `name.en`, errata for translation errors) and report.\n- Victorian Britain 1886–1897, mostly London: era gaslight. A short campaign of four scenarios plus a frame chapter, split into 3 units — see «Shared scheme» below.\n- One `scenario` record (summary, keeper_info, hook, advice, steps with refs, conclusion with Sanity rewards, tables), every scene (`arc`), characters (stat blocks as printed, Р-25; pregenerated investigators are characters with role `pregen`; unnamed crowds — group profile with invented `names`, Р-151), creatures (known Mythos creatures and deities → `instance_of` the shared record, Grep `kb/creatures` first; a unique being — book record), organizations, items and clues, tomes and spells (known spells → refs to the shared `coc:spell:*`), handouts (text as printed + our full translation), places (a real city — the shared record `coc:location:<city>` if it exists (Grep first), book places `part_of` it; a fictional town — a book place with its places `part_of` it; do not create shared records in `kb/locations/`), maps (`map` records with a spot on every printed label, Р-206; every key number without a record gets a small place record).\n- Helper scripts — only in your own scratchpad subfolder `gen-gothic` (other helpers run in parallel and use the same scratchpad).\n- Book-scoped ids `gothic-by-gaslight-en/<kind>/<slug>` in `kb/books/gothic-by-gaslight-en/<kinds>/`.\n- Pictures (skill `.claude/skills/kb-art/SKILL.md`, Р-241, Р-245): portraits, creature art, handouts, item pictures, maps — mapping `checks/20261116-gothic/art.json`, `python -B pipeline/art/add_images.py … --dry-run` then real; apply the proposals yourself (`pipeline/integrate/apply.py`) — you own this book; atmosphere pictures (cover, decoration, mood art not tied to a record) → `checks/20261116-gothic/atmosphere.json` (the lead merges it). File prefix for pictures: `gothic-`.\n- Lessons from earlier checks (skill kb-import, «Ошибки, которые уже находили»): every page of an entry in `sources`; handout texts in full; maps are `map` records, not atmosphere; no two records with the same `name.ru`; terms inside text agree with the record names; book misprints kept as printed, in `errata`, with the obvious ones fixed in `corrections`.\n- When done, run `python -I -B tools/completeness.py --books gothic-by-gaslight-en --out checks/20261116-gothic/completeness` and `python -I -B tools/scenario_check.py --books gothic-by-gaslight-en --out checks/20261116-gothic/scenario` and fix what they find; then `python -B tools/check.py kb/books/gothic-by-gaslight-en` — 0 errors.\n- Coverage: in `checks/20261116-gothic/gothic.md` list every heading of the book → the record that holds it (or «не взято» with the reason), misprints, and the term list (English → Russian).\n\n## Shared scheme of this book (3 units work in parallel — keep to it exactly)\n\nA short campaign (Miskatonic Repository, 2026): a frame chapter and four scenarios, each also playable as a one-shot. Model of a campaign: one `scenario` record for the whole campaign (`gothic-by-gaslight-en/scenario/gothic-by-gaslight`), each chapter a `scenario` record with `part_of` → it (as `kb/books/griby-s-yuggota-ru/scenarios/*.json` with `part_of` `…/fungi-from-yuggoth`). Victorian London: era `gaslight`; places `part_of` the shared `coc:location:london` (exists; do not edit it).\nEach unit writes ONLY its own files. Refer to records of other units by the ids below even before they exist — dangling refs to these ids are expected until all units finish (list them in your report); no stubs.\n- Unit frame: `gothic-by-gaslight-en/scenario/gothic-by-gaslight` (campaign: summary, keeper_info, hook, steps → the four chapter records, campaign conclusion), organization `gothic-by-gaslight-en/organization/the-dreadfuls` (the Book Club «The Dreadfuls»), place `gothic-by-gaslight-en/location/book-club` (Paternoster Row club house; the Book Club Library & Reading Room of ch. 3 is described by unit childe as `gothic-by-gaslight-en/location/book-club-library` part_of it), character `gothic-by-gaslight-en/character/ms-lannigan` (if she appears), investigator creation and other rules of ch. 1 as `rule` records; plus the whole of chapter 2 «Hyde and Seek» (`gothic-by-gaslight-en/scenario/hyde-and-seek`).\n- Unit childe: chapter 3 «The Childe of Frankenstein» (`gothic-by-gaslight-en/scenario/the-childe-of-frankenstein`), its handouts and maps (p. 40–50).\n- Unit countess: chapters 4 «Lady Nemo» (`gothic-by-gaslight-en/scenario/lady-nemo`) and 5 «The Countess» (`gothic-by-gaslight-en/scenario/the-countess`), and the recurring villain `gothic-by-gaslight-en/character/the-countess` (Elizabeth Báthory; her full profile/stat block from ch. 5; earlier chapters refer to this id).\n- Other ids: slug of the English name (`gothic-by-gaslight-en/character/edward-hyde`, `gothic-by-gaslight-en/location/<slug>`, `gothic-by-gaslight-en/scene/<chapter-short>-<slug>` e.g. `hyde-act-1-murders-most-foul`, `childe-…`, `nemo-…`, `countess-…`). A character met in several chapters is owned by the unit of the chapter where the book gives the stat block; others refer to it.\n- Coverage file `checks/20261116-gothic/gothic-<unit>.md` per unit; art mapping `art-<unit>.json`, atmosphere `atmosphere-<unit>.json`, proposals `proposals-<unit>.json`; picture prefix `gothic-<unit>-`.\n- completeness/scenario_check: run by every unit at the end on the whole book (other units' gaps are expected — report only yours); `python -B tools/check.py kb/books/gothic-by-gaslight-en` — only dangling refs to scheme ids of other units are acceptable.\n",
+  "units": [
+    {
+      "name": "frame",
+      "pages": "1–22 (cover, credits, contents, Chapter 1 Dreadful Doings by Gaslight incl. Investigator Creation and The Dreadfuls, Chapter 2 Hyde and Seek incl. NPCs, tomes, spells, handouts)",
+      "target": "campaign record, the Dreadfuls, rules of ch. 1, the whole scenario Hyde and Seek",
+      "owns": [
+        "kb/books/gothic-by-gaslight-en/** records of these pages",
+        "app/art/* and app/maps/* files with prefix gothic-frame-",
+        "checks/20261116-gothic/*-frame.*"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "childe",
+      "pages": "23–50 (Chapter 3 The Childe of Frankenstein, NPCs, handouts, maps)",
+      "target": "the whole scenario The Childe of Frankenstein",
+      "owns": [
+        "kb/books/gothic-by-gaslight-en/** records of these pages",
+        "app/art/* and app/maps/* files with prefix gothic-childe-",
+        "checks/20261116-gothic/*-childe.*"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "countess",
+      "pages": "51–82 (Chapter 4 Lady Nemo, Chapter 5 The Countess, NPCs & monsters, handouts, back cover)",
+      "target": "the whole scenarios Lady Nemo and The Countess, the Countess herself",
+      "owns": [
+        "kb/books/gothic-by-gaslight-en/** records of these pages",
+        "app/art/* and app/maps/* files with prefix gothic-countess-",
+        "checks/20261116-gothic/*-countess.*"
+      ],
+      "sites": "—"
+    }
+  ]
+}

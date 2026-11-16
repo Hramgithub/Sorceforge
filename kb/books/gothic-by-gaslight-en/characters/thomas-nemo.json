@@ -1,0 +1,369 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "gothic-by-gaslight-en/character/thomas-nemo",
+  "kind": "character",
+  "name": {
+    "ru": "Томас Немо",
+    "en": "Thomas Nemo"
+  },
+  "aliases": [
+    "Томас",
+    "капитан Томас Немо",
+    "Commander Thomas Nemo",
+    "Thomas"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "превратившийся глубоководный",
+    "en": "Transformed Deep One"
+  },
+  "age": {
+    "raw": "45",
+    "value": 45
+  },
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "gaslight"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:deep-one",
+      "note_back": "превратившийся муж леди Немо («Леди Немо»)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "75",
+        "value": 75
+      },
+      "CON": {
+        "raw": "65",
+        "value": 65
+      },
+      "SIZ": {
+        "raw": "55",
+        "value": 55
+      },
+      "DEX": {
+        "raw": "75",
+        "value": 75
+      },
+      "APP": {
+        "raw": "35",
+        "value": 35
+      },
+      "INT": {
+        "raw": "70",
+        "value": 70
+      },
+      "POW": {
+        "raw": "55",
+        "value": 55
+      },
+      "EDU": {
+        "raw": "50",
+        "value": 50
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "sanity": {
+      "raw": "—",
+      "value": null,
+      "max": null
+    },
+    "luck": {
+      "raw": "—",
+      "value": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "9 / плавание 8",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        },
+        {
+          "mode": "swim",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "1 пункт (кожа и чешуя)",
+      "value": 1
+    },
+    "attacks_per_round": {
+      "raw": "1 (когти)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (когти)",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d6+БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "20%",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Иностранный язык (язык глубоководных)",
+        "skill": "coc:skill:language-other",
+        "specialization": "язык глубоководных",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Родной язык (английский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "английский",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Иностранный язык (хинди)",
+        "skill": "coc:skill:language-other",
+        "specialization": "хинди",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Плавание",
+        "skill": "coc:skill:swim",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      }
+    ],
+    "spells": {
+      "raw": "нет",
+      "items": []
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "при встрече с Томасом Немо"
+      }
+    ]
+  },
+  "possessions": [
+    "медальон с выпуклой буквой «N» и портретом жены"
+  ],
+  "description": {
+    "ru": "Завершил превращение в глубоководного. Чуть ниже ростом других глубоководных, но сохранил кое-что от человеческого облика: клочковатую чёрную растительность на лице и глаза, в которых светится память о том, кем он был. На шее — медальон с выпуклой буквой «N» и портретом бывшей жены. Внешне ведёт себя как другие глубоководные — разрушает и убивает без разбора; но если напомнить ему о человечности, может говорить на ломаном гортанном английском (родном языке) или на хинди (родном языке жены), и его можно урезонить.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Пропавший муж леди Немо. Был капитаном грузового судна Судоходной компании Марша (а прежде — офицером Королевского индийского флота); слишком глубоко копнул оккультные обряды Обеда Марша и в ноябре 1891 года, по всей видимости, пропал в море. На самом деле он вернулся в море, к своей истинной семье, и превратился в глубоководного.\nВ сценарии. Появляется в кульминации, во главе глубоководных, напавших на «Наутилус», — и встреча с женой может решить, завершат ли сыщики расследование (и выживут ли). Сыщики замечают медальон с буквой «N» на его огромной голове. Если не вмешиваться, леди Немо нападает на него с саблей, и он её убивает; сыщики, помогая ей, могут прогнать или обездвижить его. Если обратить внимание леди Немо на медальон, становится видно, что она всё ещё любит его, а он, как может, отвечает ей тем же: она может принять его руку и уйти с ним под воду — или отказаться, и тогда Томас обращается против сородичей, давая ей и сыщикам время бежать или переломить ход боя. Сыщики могут даже подружиться с ним и получить знакомого среди глубоководных.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "gothic-by-gaslight-en",
+      "physical_page": 51,
+      "printed_page": 51,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Background»"
+    },
+    {
+      "book_id": "gothic-by-gaslight-en",
+      "physical_page": 52,
+      "printed_page": 52,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Timeline»: исчезновение в ноябре 1891 года"
+    },
+    {
+      "book_id": "gothic-by-gaslight-en",
+      "physical_page": 54,
+      "printed_page": 54,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Antagonists»: «Thomas Nemo»"
+    },
+    {
+      "book_id": "gothic-by-gaslight-en",
+      "physical_page": 55,
+      "printed_page": 55,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Bonus Clues»: пропавший капитан"
+    },
+    {
+      "book_id": "gothic-by-gaslight-en",
+      "physical_page": 61,
+      "printed_page": 61,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Overwhelming Force»"
+    },
+    {
+      "book_id": "gothic-by-gaslight-en",
+      "physical_page": 62,
+      "printed_page": 62,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Overwhelming Force» (окончание)"
+    },
+    {
+      "book_id": "gothic-by-gaslight-en",
+      "physical_page": 63,
+      "printed_page": 63,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Wrapping Things Up»"
+    },
+    {
+      "book_id": "gothic-by-gaslight-en",
+      "physical_page": 64,
+      "printed_page": 64,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Thomas Nemo»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.mp",
+      "printed": "MP: 10",
+      "expected": "11 (МОЩ 55 / 5)",
+      "note": "ПМ не сходятся с МОЩ; оставлено как напечатано (Р-161).",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Статблок — свой, напечатанный (с. 64); связь `instance_of` указывает вид. Строка «Move: 9/8 Swim» прочитана как ходьба 9, плавание 8 (у глубоководного той же страницы — «8/10 Swim»). Скорость 9 — без поправки на возраст."
+  },
+  "images": [
+    {
+      "file": "art/characters/gothic-countess-thomas-nemo.webp",
+      "kind": "portrait",
+      "caption": "",
+      "source": "Gothic by Gaslight, с. 54 (физ. 54), «Antagonists»: Thomas Nemo"
+    }
+  ]
+}

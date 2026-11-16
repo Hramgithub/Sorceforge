@@ -4,7 +4,7 @@
   "kind": "character",
   "name": {
     "ru": "Уинстон Спэйс",
-    "en": null
+    "en": "Winston Spaes"
   },
   "aliases": [
     "Уинтон Спэйс",
@@ -330,6 +330,10 @@
         {
           "name": "Разрушение (Wrack)",
           "spell": "coc:spell:wrack"
+        },
+        {
+          "name": "Вурский знак (Voorish Sign)",
+          "spell": "coc:spell:voorish-sign"
         }
       ]
     }
@@ -420,11 +424,109 @@
       "method": "book_text",
       "verified": true,
       "note": "описание заклинаний Спэйса"
+    },
+    {
+      "book_id": "hung-by-the-chimney-en",
+      "physical_page": 11,
+      "printed_page": 11,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Winston Spaes. Antique collector and dealer»"
+    },
+    {
+      "book_id": "hung-by-the-chimney-en",
+      "physical_page": 2,
+      "printed_page": 2,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Keeper Information»"
+    },
+    {
+      "book_id": "hung-by-the-chimney-en",
+      "physical_page": 4,
+      "printed_page": 4,
+      "method": "book_text",
+      "verified": true,
+      "note": "фото «Thoreau Society»"
+    },
+    {
+      "book_id": "hung-by-the-chimney-en",
+      "physical_page": 5,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "Accounting"
+    },
+    {
+      "book_id": "hung-by-the-chimney-en",
+      "physical_page": 7,
+      "printed_page": 7,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Ambush», «Next Steps», «The Relic Retrospective»"
+    },
+    {
+      "book_id": "hung-by-the-chimney-en",
+      "physical_page": 8,
+      "printed_page": 8,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Relic Retrospective»"
+    },
+    {
+      "book_id": "hung-by-the-chimney-en",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Confrontation»"
+    },
+    {
+      "book_id": "hung-by-the-chimney-en",
+      "physical_page": 10,
+      "printed_page": 10,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Conclusion», «Rewards»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.spells",
+      "printed": "Связь с божеством (И'Голонак), Господство, Порабощение жертвы, Мысленное внушение, Разрушение (перевод, с. 14)",
+      "expected": "+ Вурский знак (Voorish Sign)",
+      "note": "Пропуск перевода: в оригинале (с. 11) «Spells: Contact Deity: Y’golonac, Dominate, Enthrall Victim, Mental Suggestion, Voorish Sign, Wrack»; заклинание добавлено в список.",
+      "fixed": true
+    },
+    {
+      "field": "statblock.move",
+      "printed": "Move: 3 (оригинал, с. 11); СКО 7 (перевод, с. 14)",
+      "expected": "7",
+      "note": "Опечатка оригинала: при СИЛ 55 и ЛВК 50 меньше ТЕЛ 60 Скорость 7 (−1 за возраст 40–49, если Спэйс «средних лет», с. 8); 3 — только с 80 лет. В записи — 7, как в переводе.",
+      "fixed": true
     }
   ],
   "quality": {
     "needs_review": false,
-    "flags": [],
-    "notes": "Русский текст — фанатский перевод Hort (vk.com/call_of_cthulhu_rpg) сценария Марка Харта «Hung by the Chimney with Care» (Petersen Games, по лицензии Chaosium), издание trusted (Р-227); английского оригинала в библиотеке нет — числа по переводу. В заголовке статблока имя напечатано «Уинтон Спэйс» (описка, везде в тексте — «Уинстон») — в псевдонимах. Возраст не напечатан («мужчина средних лет», с. 9)."
-  }
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — фанатский перевод Hort (vk.com/call_of_cthulhu_rpg) сценария Марка Харта «Hung by the Chimney with Care» (Petersen Games, по лицензии Chaosium), издание trusted (Р-227); числа сверены с английским оригиналом (hung-by-the-chimney-en, «Hung by the Chimney with Care», Petersen Games 2021), расхождения — в corrections и errata (Р-147). В заголовке статблока имя напечатано «Уинтон Спэйс» (описка перевода; в оригинале, с. 11, — «Winston Spaes») — в псевдонимах. Возраст не напечатан («мужчина средних лет», с. 9)."
+  },
+  "corrections": [
+    {
+      "field": "name.en",
+      "from": null,
+      "to": "Winston Spaes",
+      "reason": "английское название по оригиналу (hung-by-the-chimney-en, с. 11)",
+      "ref": "Р-147"
+    },
+    {
+      "field": "statblock.spells.items",
+      "from": null,
+      "to": "Вурский знак (Voorish Sign)",
+      "reason": "оригинал, с. 11: в списке заклинаний Спэйса есть «Voorish Sign», в переводе (с. 14) пропущено",
+      "ref": "Р-147"
+    }
+  ]
 }

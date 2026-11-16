@@ -4,7 +4,7 @@
   "kind": "scene",
   "name": {
     "ru": "Посещение Санты",
-    "en": null
+    "en": "A Santa Sighting"
   },
   "aliases": [],
   "description": {
@@ -34,7 +34,7 @@
     }
   ],
   "mechanics": {
-    "ru": "Погоня на машине — сложная проверка Вождения (не врезаться в могильный камень и не потерять цель). Пешком за ним не угнаться (Скорость И’голонака — 10), но можно идти по следу обычной проверкой Выслеживания.",
+    "ru": "Погоня на машине — трудная проверка Вождения (не врезаться в могильный камень и не потерять цель). Пешком за ним не угнаться (Скорость И’голонака — 10), но можно идти по следу лёгкой проверкой Выслеживания.",
     "en": null
   },
   "outcome": {
@@ -69,11 +69,53 @@
       "method": "book_text",
       "verified": true,
       "note": "«Посещение Санты» (продолжение)"
+    },
+    {
+      "book_id": "hung-by-the-chimney-en",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "«A Santa Sighting»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "mechanics.ru",
+      "printed": "«сложная проверка Вождения», «обычной проверки Выслеживания» (перевод, с. 11)",
+      "expected": "трудная проверка Вождения; лёгкая проверка Выслеживания",
+      "note": "Ошибка перевода: в оригинале (с. 9) «a Hard Drive Auto roll» и «an Easy Track roll»; в записи — по оригиналу.",
+      "fixed": true
     }
   ],
   "quality": {
     "needs_review": false,
-    "flags": [],
-    "notes": "Русский текст — фанатский перевод Hort (vk.com/call_of_cthulhu_rpg) сценария Марка Харта «Hung by the Chimney with Care» (Petersen Games, по лицензии Chaosium), издание trusted (Р-227); английского оригинала в библиотеке нет — числа по переводу."
-  }
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — фанатский перевод Hort (vk.com/call_of_cthulhu_rpg) сценария Марка Харта «Hung by the Chimney with Care» (Petersen Games, по лицензии Chaosium), издание trusted (Р-227); числа сверены с английским оригиналом (hung-by-the-chimney-en, «Hung by the Chimney with Care», Petersen Games 2021), расхождения — в corrections и errata (Р-147)."
+  },
+  "corrections": [
+    {
+      "field": "name.en",
+      "from": null,
+      "to": "A Santa Sighting",
+      "reason": "английское название по оригиналу (hung-by-the-chimney-en, с. 9)",
+      "ref": "Р-147"
+    },
+    {
+      "field": "mechanics.ru",
+      "from": "сложная проверка Вождения",
+      "to": "трудная проверка Вождения",
+      "reason": "оригинал, с. 9: «a Hard Drive Auto roll»; «сложная» перевода — трудная проверка (Р-184)",
+      "ref": "Р-147"
+    },
+    {
+      "field": "mechanics.ru",
+      "from": "обычной проверкой Выслеживания",
+      "to": "лёгкой проверкой Выслеживания",
+      "reason": "оригинал, с. 9: «an Easy Track roll»; «обычной» — ошибка перевода",
+      "ref": "Р-147"
+    }
+  ]
 }

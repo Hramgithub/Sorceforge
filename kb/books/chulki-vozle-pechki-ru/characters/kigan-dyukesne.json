@@ -4,7 +4,7 @@
   "kind": "character",
   "name": {
     "ru": "Киган Дюкесне",
-    "en": null
+    "en": "Keegan Duquesne"
   },
   "aliases": [
     "Дюкесне"
@@ -237,17 +237,6 @@
         }
       },
       {
-        "name": "Прыжки",
-        "skill": "coc:skill:jump",
-        "specialization": null,
-        "value": {
-          "raw": "45%",
-          "value": 45,
-          "half": 22,
-          "fifth": 9
-        }
-      },
-      {
         "name": "Язык (английский)",
         "skill": "coc:skill:language-own",
         "specialization": "Английский",
@@ -389,6 +378,22 @@
       "method": "book_text",
       "verified": true,
       "note": "описание «Дурного глаза»"
+    },
+    {
+      "book_id": "hung-by-the-chimney-en",
+      "physical_page": 11,
+      "printed_page": 11,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Keegan Duquesne, 29, Servant and assistant to Winston Spaes»"
+    },
+    {
+      "book_id": "hung-by-the-chimney-en",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Confrontation»"
     }
   ],
   "errata": [
@@ -396,8 +401,15 @@
       "field": "statblock.mp",
       "printed": "19",
       "expected": "14",
-      "note": "ПМ 19 при МОЩ 70 (МОЩ / 5 = 14); как напечатано.",
+      "note": "ПМ 19 при МОЩ 70 (МОЩ / 5 = 14); так же напечатано в оригинале («MP: 19», hung-by-the-chimney-en, с. 11); как напечатано.",
       "fixed": false
+    },
+    {
+      "field": "statblock.skills[Прыжки]",
+      "printed": "Прыжки 45% (перевод, с. 13)",
+      "expected": "нет",
+      "note": "Ошибка перевода: в оригинале (с. 11) у Дюкесне навыка Jump нет (Jump 45% — у Хэнка Эриксона); в записи навык убран.",
+      "fixed": true
     }
   ],
   "quality": {
@@ -405,6 +417,22 @@
     "flags": [
       "parse_uncertain"
     ],
-    "notes": "Русский текст — фанатский перевод Hort (vk.com/call_of_cthulhu_rpg) сценария Марка Харта «Hung by the Chimney with Care» (Petersen Games, по лицензии Chaosium), издание trusted (Р-227); английского оригинала в библиотеке нет — числа по переводу. Заклинание «Contact Spirits of the Dead» в статблоке названо «Связь с духами мёртвых», в разделе «Заклинания» (с. 15) — «Воззвание к мёртвым»; ссылка — на заклинание «Книги хранителя» «Связь с духами мёртвых»."
-  }
+    "notes": "Русский текст — фанатский перевод Hort (vk.com/call_of_cthulhu_rpg) сценария Марка Харта «Hung by the Chimney with Care» (Petersen Games, по лицензии Chaosium), издание trusted (Р-227); числа сверены с английским оригиналом (hung-by-the-chimney-en, «Hung by the Chimney with Care», Petersen Games 2021), расхождения — в corrections и errata (Р-147). Заклинание «Contact Spirits of the Dead» в статблоке названо «Связь с духами мёртвых», в разделе «Заклинания» (с. 15) — «Воззвание к мёртвым»; ссылка — на заклинание «Книги хранителя» «Связь с духами мёртвых»."
+  },
+  "corrections": [
+    {
+      "field": "name.en",
+      "from": null,
+      "to": "Keegan Duquesne",
+      "reason": "английское название по оригиналу (hung-by-the-chimney-en, с. 11)",
+      "ref": "Р-147"
+    },
+    {
+      "field": "statblock.skills",
+      "from": "Прыжки",
+      "to": null,
+      "reason": "оригинал, с. 11: у Дюкесне навыка Jump нет; «Прыжки 45%» перевода (с. 13) — ошибка перевода (так у Эриксона)",
+      "ref": "Р-147"
+    }
+  ]
 }

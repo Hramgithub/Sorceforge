@@ -4,13 +4,15 @@
   "kind": "creature",
   "name": {
     "ru": "И’голонак («Чулки возле печки»)",
-    "en": null
+    "en": "Y’golonac (Hung by the Chimney with Care)"
   },
   "aliases": [
     "И'Голонак",
     "Совратитель",
     "Длань Питающая",
-    "безголовый Санта-Клаус"
+    "безголовый Санта-Клаус",
+    "The Defiler",
+    "the Hand that Feeds"
   ],
   "category": "mythos_deity",
   "subcategory": "Великий Древний",
@@ -100,51 +102,50 @@
     "attacks": [
       {
         "name": {
-          "ru": "Ближний бой (драка)",
-          "en": null
+          "ru": "Ближний бой",
+          "en": "Fighting"
         },
         "kind": "attack",
-        "skill": "Ближний бой (драка)",
+        "skill": "Ближний бой",
         "chance": {
-          "raw": "25% (12/5)",
-          "value": 25,
-          "half": 12,
-          "fifth": 5
+          "raw": "100% (50/20)",
+          "value": 100,
+          "half": 50,
+          "fifth": 20
         },
         "damage": {
-          "raw": "1d3",
-          "dice": "1d3",
-          "adds_db": false
+          "raw": "БкУ",
+          "dice": null,
+          "adds_db": true
         },
-        "weapon": "coc:weapon:unarmed",
         "notes": "пинки ногами или удары кулаками"
       },
       {
         "name": {
           "ru": "Укус",
-          "en": null
+          "en": "Bite"
         },
         "kind": "attack",
         "skill": "Ближний бой",
         "chance": {
-          "raw": "не указан",
-          "value": null,
-          "half": null,
-          "fifth": null
+          "raw": "100% (50/20)",
+          "value": 100,
+          "half": 50,
+          "fifth": 20
         },
         "damage": {
           "raw": "1d4 + 2",
           "dice": "1d4+2",
           "adds_db": false
         },
-        "notes": "рты в ладонях; жертва теряет по 5 пунктов ИНТ и МОЩ; раны воспаляются и не затягиваются естественным образом, исцелить их можно колдовскими способами; шанс попадания книга не печатает"
+        "notes": "рты в ладонях; жертва теряет по 5 пунктов ИНТ и МОЩ; раны воспаляются и не затягиваются естественным образом, исцелить их можно колдовскими способами"
       }
     ],
     "dodge": {
-      "raw": "25% (12/5)",
-      "value": 25,
-      "half": 12,
-      "fifth": 5
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
     },
     "spells": {
       "raw": "различные заклинания призыва существ и связи с ними",
@@ -199,7 +200,7 @@
     }
   ],
   "description": {
-    "ru": "Великий Древний, призванный «Обществом Торо» с помощью двенадцатого тома «Откровений Гла’аки» и вселившийся в тело Эдмунда Льюиса. В отличие от других Древних, целенаправленно ищет контакта с людьми и говорит с ними на их языке; люди для него делятся на тех, кто может служить ему жрецами и рядовыми сектантами, и тех, кто может утолить его голод своей плотью. Истинный облик — распухший безголовый труп с бормочущим ртом на каждой ладони; заточён в подземных руинах под древней каменной стеной.",
+    "ru": "Великий Древний, призванный «Обществом Торо» с помощью двенадцатого тома «Откровений Гла’аки» и вселившийся в тело Эдмунда Льюиса. В отличие от других Древних, целенаправленно ищет контакта с людьми и говорит с ними на их языке; люди для него делятся на тех, кто может служить ему жрецами и рядовыми сектантами, и тех, кто может утолить его голод своей плотью. Истинный облик — распухший безголовый труп с бормочущим ртом на каждой ладони; обычно заточён за древней космической кирпичной стеной.",
     "en": null
   },
   "legend": {
@@ -277,15 +278,78 @@
       "method": "book_text",
       "verified": true,
       "note": "«Кульминация», «Итоги»"
+    },
+    {
+      "book_id": "hung-by-the-chimney-en",
+      "physical_page": 12,
+      "printed_page": 12,
+      "method": "book_text",
+      "verified": true,
+      "note": "характеристики «Y’golonac. The Defiler, the Hand that Feeds»"
+    },
+    {
+      "book_id": "hung-by-the-chimney-en",
+      "physical_page": 2,
+      "printed_page": 2,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Keeper Information», врезка «Y’golonac»"
+    },
+    {
+      "book_id": "hung-by-the-chimney-en",
+      "physical_page": 5,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Murder Scenes»"
+    },
+    {
+      "book_id": "hung-by-the-chimney-en",
+      "physical_page": 6,
+      "printed_page": 6,
+      "method": "book_text",
+      "verified": true,
+      "note": "рисунок Билли"
+    },
+    {
+      "book_id": "hung-by-the-chimney-en",
+      "physical_page": 8,
+      "printed_page": 8,
+      "method": "book_text",
+      "verified": true,
+      "note": "рассказ Хэглунда, «Stakeout of the Haglund Home»"
+    },
+    {
+      "book_id": "hung-by-the-chimney-en",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "«A Santa Sighting», «Confrontation»"
+    },
+    {
+      "book_id": "hung-by-the-chimney-en",
+      "physical_page": 10,
+      "printed_page": 10,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Conclusion»"
     }
   ],
   "errata": [
     {
-      "field": "statblock.attacks[Ближний бой (драка)]",
-      "printed": "Ближний бой (драка) 25% (12/5), урон 1d3; Уклонение 25% (12/5)",
-      "expected": null,
-      "note": "У существа с СИЛ 125 и БкУ +2d6 драка 25% и урон 1d3 без бонуса — похоже на перенесённый профиль человека (в «Книге хранителя» у И’голонака ближний бой 100%, 2d6, укус 80%, уклонение 40%); шанс укуса не напечатан. Как напечатано.",
-      "fixed": false
+      "field": "statblock.attacks[Ближний бой]",
+      "printed": "Ближний бой (драка) 25% (12/5), урон 1d3; Уклонение 25% (12/5); шанс укуса не напечатан (перевод, с. 14)",
+      "expected": "Ближний бой 100% (50/20), урон БкУ; Укус 100% (50/20)",
+      "note": "Ошибка перевода: в оригинале (с. 12) «Fighting 100% (50/20), damage bonus; Bite 100% (50/20), 1d4 non-healing damage and lose 5 INT and 5 POW», уклонения нет. В записи — по оригиналу; уклонение 40% (20/8) — из общей записи coc:creature:ygolonac (вывод из текста, Р-41).",
+      "fixed": true
+    },
+    {
+      "field": "statblock.attacks[Укус].damage",
+      "printed": "1D4 (таблица «Fighting attacks», оригинал, с. 12)",
+      "expected": "1d4+2",
+      "note": "Оригинал противоречит сам себе: в абзаце «Attacks» — «Bite: 1d4+2 damage», в таблице — «1d4 non-healing damage». Взят текст (Р-38), так же в переводе и в Malleus Monstrorum.",
+      "fixed": true
     }
   ],
   "quality": {
@@ -293,7 +357,7 @@
     "flags": [
       "parse_uncertain"
     ],
-    "notes": "Русский текст — фанатский перевод Hort (vk.com/call_of_cthulhu_rpg) сценария Марка Харта «Hung by the Chimney with Care» (Petersen Games, по лицензии Chaosium), издание trusted (Р-227); английского оригинала в библиотеке нет — числа по переводу. Профиль сценария отличается от общего `coc:creature:ygolonac` (бой, укус, одна атака за раунд, потеря Рассудка 1/1d20 при превращении вместо 1/2d10) — отдельная запись книги (Р-75). Официальное название — «И’голонак»; форма перевода «И'Голонак» — в псевдонимах. НАР, ОБР и Рассудок — «-»."
+    "notes": "Русский текст — фанатский перевод Hort (vk.com/call_of_cthulhu_rpg) сценария Марка Харта «Hung by the Chimney with Care» (Petersen Games, по лицензии Chaosium), издание trusted (Р-227); числа сверены с английским оригиналом (hung-by-the-chimney-en, «Hung by the Chimney with Care», Petersen Games 2021), расхождения — в corrections и errata (Р-147). Профиль сценария отличается от общего `coc:creature:ygolonac` (одна атака за раунд, урон ближнего боя — только БкУ, укус 100%, потеря Рассудка 1/1d20 при превращении вместо 1/2d10) — отдельная запись книги (Р-75). Официальное название — «И’голонак»; форма перевода «И'Голонак» — в псевдонимах. НАР, ОБР и Рассудок — «-»."
   },
   "images": [
     {
@@ -301,6 +365,57 @@
       "kind": "art",
       "caption": "И’Голонак",
       "source": "Чулки возле печки, с. 2 (физ. 2)"
+    }
+  ],
+  "corrections": [
+    {
+      "field": "name.en",
+      "from": null,
+      "to": "Y’golonac (Hung by the Chimney with Care)",
+      "reason": "английское название по оригиналу (hung-by-the-chimney-en, с. 12)",
+      "ref": "Р-147"
+    },
+    {
+      "field": "statblock.attacks.0",
+      "from": "{\"name\": {\"ru\": \"Ближний бой (драка)\", \"en\": null}, \"kind\": \"attack\", \"skill\": \"Ближний бой (драка)\", \"chance\": {\"raw\": \"25% (12/5)\", \"value\": 25, \"half\": 12, \"fifth\": 5}, \"damage\": {\"raw\": \"1d3\", \"dice\": \"1d3\", \"adds_db\": false}, \"weapon\": \"coc:weapon:unarmed\", \"notes\": \"пинки ногами или удары кулаками\"}",
+      "to": "{\"name\": {\"ru\": \"Ближний бой\", \"en\": \"Fighting\"}, \"kind\": \"attack\", \"skill\": \"Ближний бой\", \"chance\": {\"raw\": \"100% (50/20)\", \"value\": 100, \"half\": 50, \"fifth\": 20}, \"damage\": {\"raw\": \"БкУ\", \"dice\": null, \"adds_db\": true}, \"notes\": \"пинки ногами или удары кулаками\"}",
+      "reason": "оригинал, с. 12: «Fighting 100% (50/20), damage bonus»; «Ближний бой (драка) 25% (12/5), 1d3» перевода (с. 14) — ошибка перевода",
+      "ref": "Р-147"
+    },
+    {
+      "field": "statblock.attacks.1.name.en",
+      "from": null,
+      "to": "Bite",
+      "reason": "оригинал, с. 12",
+      "ref": "Р-147"
+    },
+    {
+      "field": "statblock.attacks.1.chance",
+      "from": "{\"raw\": \"не указан\", \"value\": null, \"half\": null, \"fifth\": null}",
+      "to": "{\"raw\": \"100% (50/20)\", \"value\": 100, \"half\": 50, \"fifth\": 20}",
+      "reason": "оригинал, с. 12: «Bite 100% (50/20)»; в переводе шанс укуса не напечатан",
+      "ref": "Р-147"
+    },
+    {
+      "field": "statblock.attacks.1.notes",
+      "from": "рты в ладонях; жертва теряет по 5 пунктов ИНТ и МОЩ; раны воспаляются и не затягиваются естественным образом, исцелить их можно колдовскими способами; шанс попадания книга не печатает",
+      "to": "рты в ладонях; жертва теряет по 5 пунктов ИНТ и МОЩ; раны воспаляются и не затягиваются естественным образом, исцелить их можно колдовскими способами",
+      "reason": "оригинал, с. 12: в таблице атак шанс 100%",
+      "ref": "Р-147"
+    },
+    {
+      "field": "statblock.dodge",
+      "from": "{\"raw\": \"25% (12/5)\", \"value\": 25, \"half\": 12, \"fifth\": 5}",
+      "to": "{\"raw\": \"40% (20/8)\", \"value\": 40, \"half\": 20, \"fifth\": 8}",
+      "reason": "в оригинале (с. 12) уклонения нет — «Уклонение 25% (12/5)» перевода (с. 14) взято не из оригинала; по Р-41 — из общей записи coc:creature:ygolonac (Malleus Monstrorum)",
+      "ref": "Р-41"
+    },
+    {
+      "field": "description.ru",
+      "from": "заточён в подземных руинах под древней каменной стеной",
+      "to": "обычно заточён за древней космической кирпичной стеной",
+      "reason": "оригинал, с. 8: «kept imprisoned behind an ancient cosmic brick wall»; «в подземных руинах под древней каменной стеной» — неточность перевода",
+      "ref": "Р-147"
     }
   ]
 }

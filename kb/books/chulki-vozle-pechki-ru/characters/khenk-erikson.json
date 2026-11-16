@@ -4,7 +4,7 @@
   "kind": "character",
   "name": {
     "ru": "Хэнк Эриксон",
-    "en": null
+    "en": "Hank Erickson"
   },
   "aliases": [
     "Эриксон",
@@ -157,10 +157,10 @@
       }
     ],
     "dodge": {
-      "raw": "50% (25/10)",
-      "value": 50,
-      "half": 25,
-      "fifth": 10
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
     },
     "skills": [
       {
@@ -321,11 +321,62 @@
       "method": "book_text",
       "verified": true,
       "note": "«Полиция» (продолжение)"
+    },
+    {
+      "book_id": "hung-by-the-chimney-en",
+      "physical_page": 11,
+      "printed_page": 11,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Hank Erickson, 36, Local police chief»"
+    },
+    {
+      "book_id": "hung-by-the-chimney-en",
+      "physical_page": 6,
+      "printed_page": 6,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Police»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.dodge",
+      "printed": "Уклонение 50% (25/10) (перевод, с. 13)",
+      "expected": "40% (20/8)",
+      "note": "Ошибка перевода: в оригинале «Dodge 40% (20/8)» (hung-by-the-chimney-en, с. 11); в записи — по оригиналу.",
+      "fixed": true
     }
   ],
   "quality": {
     "needs_review": false,
-    "flags": [],
-    "notes": "Русский текст — фанатский перевод Hort (vk.com/call_of_cthulhu_rpg) сценария Марка Харта «Hung by the Chimney with Care» (Petersen Games, по лицензии Chaosium), издание trusted (Р-227); английского оригинала в библиотеке нет — числа по переводу."
-  }
+    "flags": [
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — фанатский перевод Hort (vk.com/call_of_cthulhu_rpg) сценария Марка Харта «Hung by the Chimney with Care» (Petersen Games, по лицензии Chaosium), издание trusted (Р-227); числа сверены с английским оригиналом (hung-by-the-chimney-en, «Hung by the Chimney with Care», Petersen Games 2021), расхождения — в corrections и errata (Р-147)."
+  },
+  "corrections": [
+    {
+      "field": "name.en",
+      "from": null,
+      "to": "Hank Erickson",
+      "reason": "английское название по оригиналу (hung-by-the-chimney-en, с. 11)",
+      "ref": "Р-147"
+    },
+    {
+      "field": "statblock.dodge",
+      "from": "{\"raw\": \"50% (25/10)\", \"value\": 50, \"half\": 25, \"fifth\": 10}",
+      "to": "{\"raw\": \"40% (20/8)\", \"value\": 40, \"half\": 20, \"fifth\": 8}",
+      "reason": "оригинал, с. 11: «Dodge 40% (20/8)»; в переводе (с. 13) — 50% (25/10), ошибка перевода",
+      "ref": "Р-147"
+    }
+  ],
+  "images": [
+    {
+      "file": "art/characters/chimney-khenk-erikson.webp",
+      "kind": "portrait",
+      "caption": "Хэнк Эриксон",
+      "source": "Hung by the Chimney with Care, с. 6 (физ. 6): портрет полицейского в разделе «The Police» рядом с описанием Эриксона (без подписи)"
+    }
+  ]
 }

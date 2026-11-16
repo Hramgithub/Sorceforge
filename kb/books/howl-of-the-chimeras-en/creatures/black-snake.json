@@ -1,0 +1,116 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "howl-of-the-chimeras-en/creature/black-snake",
+  "kind": "creature",
+  "name": {
+    "ru": "Огромная чёрная змея",
+    "en": "Huge Black Snake"
+  },
+  "aliases": [
+    "snake on the loose",
+    "змея на свободе"
+  ],
+  "category": "animal",
+  "subcategory": "рептилия",
+  "axes": {
+    "era": [
+      "gaslight"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {},
+    "hp": {
+      "raw": "7",
+      "value": 7
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (укус)",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": false,
+          "extra": "укус может пробудить погребённое воспоминание"
+        },
+        "notes": "Нападает, только если её загнали в угол или пытаются поймать. После укуса — проверка ВЫН, результат которой Хранитель игнорирует, давая тот эффект, что лучше подходит истории."
+      }
+    ],
+    "dodge": {
+      "raw": "40%",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "sanity_loss": []
+  },
+  "abilities": [
+    {
+      "name": "Укус-воспоминание",
+      "summary": "Укус может пробудить воспоминание, глубоко погребённое в психике персонажа: откровенные галлюцинации (подлый приём, если сыщики отказываются спать и сны надо показать иначе), или вынуждает отдаться в подозрительные руки лэрда.",
+      "raw": "Its bite can awaken a memory buried deep in the characters’ psyches, leading them to experience revelatory hallucinations (a dirty trick if they refuse to sleep and you have to find some other way of showing them the nightmares) or forcing them to place themselves in the suspicious hands of the laird, whom they may no longer trust a whit."
+    }
+  ],
+  "description": {
+    "ru": "Огромная чёрная змея, на которую сыщики натыкаются в плавающей сцене «Змея на свободе». Несмотря на пугающий размер, она не слишком опасна (если вы не мышь), но персонажи этого знать не могут. По сути это домашний питомец, которому никогда не приходилось охотиться ради выживания (отсюда Ближний бой всего 35%). Змей разводят в замке (сиделка Реддинг тяготится тем, что их приходится разводить, — «отродье сатаны»); слуги носят змей в шипящих плетёных корзинах.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "howl-of-the-chimeras-en",
+      "physical_page": 160,
+      "printed_page": 159,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Alarming Events», «Snake on the loose»: Ближний бой 35%, Уклонение 40%, 7 ПЗ, 1 атака, укус 1d3"
+    },
+    {
+      "book_id": "howl-of-the-chimeras-en",
+      "physical_page": 156,
+      "printed_page": 155,
+      "method": "book_text",
+      "verified": true,
+      "note": "Дав со змеёй в корзине"
+    },
+    {
+      "book_id": "howl-of-the-chimeras-en",
+      "physical_page": 166,
+      "printed_page": 165,
+      "method": "book_text",
+      "verified": true,
+      "note": "сиделка Реддинг и разведение змей"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "incomplete"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1). Книга даёт только Ближний бой, Уклонение, ПЗ, число атак и урон (с. 159); характеристик нет — флаг «неполно». Половина и пятая процентов посчитаны нами (Р-35). Вид змеи книга не называет."
+  },
+  "images": [
+    {
+      "file": "art/creatures/howl-core-black-snake.webp",
+      "kind": "illustration",
+      "caption": "Змея (иллюстрация главы «Плавающие сцены»)",
+      "source": "The Howl of the Chimeras, с. 161 (физ. 162), сцены «Arthur Wiltshire: The Snake Venom» (иллюстрации — Alberto Martínez «Kisama», Shutterstock)"
+    }
+  ]
+}

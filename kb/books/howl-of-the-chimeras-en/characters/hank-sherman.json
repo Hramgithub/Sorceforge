@@ -1,0 +1,458 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "howl-of-the-chimeras-en/character/hank-sherman",
+  "kind": "character",
+  "name": {
+    "ru": "Хэнк Шерман",
+    "en": "Mr. Hank Sherman"
+  },
+  "aliases": [
+    "Мистер Шерман",
+    "Hank Sherman"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "пастух",
+    "en": "Shepherd"
+  },
+  "occupation_ref": "coc:occupation:fermer",
+  "age": {
+    "raw": "62",
+    "value": 62
+  },
+  "sex": "мужской",
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "howl-of-the-chimeras-en/character/amadeus-dewar",
+      "note": "лэрд, на которого работает",
+      "note_back": "пастух"
+    },
+    {
+      "type": "relative_of",
+      "target": "howl-of-the-chimeras-en/character/patsy-sherman",
+      "note": "жена",
+      "note_back": "муж"
+    },
+    {
+      "type": "relative_of",
+      "target": "howl-of-the-chimeras-en/character/esther-sherman",
+      "note": "дочь",
+      "note_back": "отец"
+    },
+    {
+      "type": "relative_of",
+      "target": "howl-of-the-chimeras-en/character/amelia-sherman",
+      "note": "дочь",
+      "note_back": "отец"
+    },
+    {
+      "type": "relative_of",
+      "target": "howl-of-the-chimeras-en/character/flora-sherman",
+      "note": "дочь",
+      "note_back": "отец"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "50",
+        "value": 50
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "75",
+        "value": 75
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50
+      },
+      "APP": {
+        "raw": "45",
+        "value": 45
+      },
+      "INT": {
+        "raw": "60",
+        "value": 60
+      },
+      "POW": {
+        "raw": "30",
+        "value": 30
+      },
+      "EDU": {
+        "raw": "45",
+        "value": 45
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "sanity": {
+      "raw": "18",
+      "value": 18
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "4",
+      "value": 4,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 4
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": "Fighting (Brawl)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "42% (21/8)",
+          "value": 42,
+          "half": 21,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d8+БкУ",
+          "dice": "1d8",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:club-large",
+        "notes": "какой-нибудь тупой инструмент под рукой"
+      }
+    ],
+    "dodge": {
+      "raw": "42% (21/8)",
+      "value": 42,
+      "half": 21,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Обращение с животными",
+        "skill": "coc:skill:animal-handling",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Искусство/ремесло (растениеводство)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "растениеводство",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Искусство/ремесло (стрижка овец)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "стрижка овец",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "42%",
+          "value": 42,
+          "half": 21,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "05%",
+          "value": 5,
+          "half": 2,
+          "fifth": 1
+        }
+      },
+      {
+        "name": "Уклонение",
+        "skill": "coc:skill:dodge",
+        "value": {
+          "raw": "42%",
+          "value": 42,
+          "half": 21,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Ближний бой (драка)",
+        "skill": "coc:skill:fighting",
+        "specialization": "драка",
+        "value": {
+          "raw": "42%",
+          "value": 42,
+          "half": 21,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Стрельба (винтовка/дробовик)",
+        "skill": "coc:skill:firearms",
+        "specialization": "винтовка/дробовик",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "34%",
+          "value": 34,
+          "half": 17,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Родной язык (английский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "английский",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Механика",
+        "skill": "coc:skill:mechanical-repair",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Естествознание",
+        "skill": "coc:skill:natural-world",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Ориентирование",
+        "skill": "coc:skill:navigate",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Выживание (горы)",
+        "skill": "coc:skill:survival",
+        "specialization": "горы",
+        "value": {
+          "raw": "20%",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Плавание",
+        "skill": "coc:skill:swim",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "46%",
+          "value": 46,
+          "half": 23,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "68%",
+          "value": 68,
+          "half": 34,
+          "fifth": 13
+        }
+      }
+    ]
+  },
+  "background": {
+    "secret": "Шерманы держат в свинарнике пленницу — Селину Бейнбридж; ключ от висячего замка её логова у Хэнка."
+  },
+  "possessions": [
+    "Обычно под рукой какой-нибудь тупой инструмент",
+    "Ключ от висячего замка логова, устроенного для Селины Бейнбридж в свинарнике"
+  ],
+  "description": {
+    "ru": "62 года; пастух; рабочий класс (бедный).\nВнешность и поведение: Хэнк говорит мало — кивает, опускает голову и делает всё, что велит жена. С сыщиками обходится почтительно и извиняется за неподобающее поведение дочерей, но в разговор не вступает и явно надеется, что они поскорее уйдут. Слова из него не вытянешь, а если что и скажет, то скорее пробормочет себе под нос, чем обратится к другим.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Хэнк — муж Пэтси и отец Эстер, Амелии и Флоры. Робкий, необразованный, суеверный человек, живёт в тени жены и старается не высовываться, хотя не всегда может скрыть тлеющую обиду. Супруги явно знают больше, чем говорят, и держат пару козырей в рукаве: викторианский аналог семейки каннибалов-деревенщин из американской глуши — разве что человечину не едят.\nШерманы — пастухи, работающие на лорда Дьюара; необразованные, суеверные и хитрые; извиняются за дочерей, но, похоже, что-то скрывают, и распускают слухи (с. 22).\nТемы разговора Хэнка и Пэтси (с. 186):\n• Особняк проклят: из замка Дьюар исходит отрицательная земная энергия, связь с самой смертью, которую можно ощутить лишь чутьём. Надо слушать, что говорит Мать-Природа, а в том, что творится за этими стенами, нет ничего естественного.\n• Говорят, покойный лорд Оуэн Дьюар охотился на людей в соседних охотничьих угодьях. Его сын Амадеус разделяет отцовскую страсть к охоте, но до такой дикости, конечно, не опускался. Но… а тот великан-дворецкий, что ходит за ним как тень? Не слыхали сыщики о племенах людоедов в Африке? Лорд Дьюар может наряжать его и учить манерам сколько угодно — такие врождённые убийственные инстинкты не усмирить.\n• Когда-то у лорда Дьюара был надёжный штат, а теперь осталась горстка, один тревожнее другого: малышка Милфорд, у которой не все дома; миссис Реддинг с её лицемерной ухмылкой; и хуже всех Элдон Дав, который, по слухам, практикует тёмную магию своей родной Африки. Чем больше они видят, тем больше уверены, что власть в замке переменилась и Дав на самом деле колдун, держащий лорда в подчинении своими бесовскими заклинаниями. Только посмотрите, как он общается со своей огромной псиной — одной мыслью!",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "gaslight"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "howl-of-the-chimeras-en",
+      "physical_page": 175,
+      "printed_page": 174,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Non-Player Characters»: Mr. Hank Sherman — описание, имущество, статблок; портрет"
+    },
+    {
+      "book_id": "howl-of-the-chimeras-en",
+      "physical_page": 23,
+      "printed_page": 22,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Dramatis Personae»: Hank and Patsy Sherman"
+    },
+    {
+      "book_id": "howl-of-the-chimeras-en",
+      "physical_page": 187,
+      "printed_page": 186,
+      "method": "book_text",
+      "verified": true,
+      "note": "темы разговора Хэнка и Пэтси"
+    },
+    {
+      "book_id": "howl-chimeras-cards-en",
+      "physical_page": 3,
+      "printed_page": null,
+      "method": "book_text",
+      "verified": true,
+      "note": "карточка персонажа «Mr. Hank Sherman»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической − 1)."
+  },
+  "images": [
+    {
+      "file": "art/characters/howl-npcs-hank-sherman.webp",
+      "kind": "card",
+      "caption": "Карточка персонажа «Mr. Hank Sherman»",
+      "source": "The Howl of the Chimeras — NPC cards, физ. 3 (без номера)"
+    }
+  ]
+}

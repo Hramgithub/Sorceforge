@@ -1,0 +1,315 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "little-torches-en/character/florence-sanders",
+  "kind": "character",
+  "name": {
+    "ru": "Флоренс «Фло» Сандерс",
+    "en": "Florence “Flo” Sanders"
+  },
+  "aliases": [
+    "Фло Сандерс",
+    "Фло",
+    "Flo",
+    "Florence “Flo” Sanders, Old Before Her Time"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "пациентка института «Дедал», в прошлом бездомная",
+    "en": "Daedalus patient"
+  },
+  "age": {
+    "raw": "21 (appears to be in her late 70s)",
+    "value": 21,
+    "note": "на деле ей 21 год, но тело состарилось и выглядит лет на 70–79"
+  },
+  "sex": "женский",
+  "residence": "институт «Дедал», комната 4",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "knows",
+      "target": "little-torches-en/character/ainslee-harper",
+      "note": "психиатр, которой она верит",
+      "note_back": "пациентка, один из «маленьких факелов»"
+    },
+    {
+      "type": "knows",
+      "target": "little-torches-en/character/kathy-bell",
+      "note": "подруга по институту",
+      "note_back": "подруга по институту («Фло нравится мне больше всех»)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "30",
+        "value": 30
+      },
+      "CON": {
+        "raw": "40",
+        "value": 40
+      },
+      "SIZ": {
+        "raw": "40",
+        "value": 40
+      },
+      "DEX": {
+        "raw": "40",
+        "value": 40
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "60",
+        "value": 60
+      },
+      "POW": {
+        "raw": "60",
+        "value": 60
+      },
+      "EDU": {
+        "raw": "40",
+        "value": 40
+      }
+    },
+    "hp": {
+      "raw": "8",
+      "value": 8
+    },
+    "mp": {
+      "raw": "12",
+      "value": 12
+    },
+    "sanity": {
+      "raw": "40",
+      "value": 40,
+      "max": null
+    },
+    "luck": {
+      "raw": "N/A",
+      "value": null
+    },
+    "damage_bonus": {
+      "raw": "-1",
+      "value": "-1"
+    },
+    "build": {
+      "raw": "-1",
+      "value": -1
+    },
+    "move": {
+      "raw": "4",
+      "value": 4,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 4
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "20% (10/4)",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        },
+        "damage": {
+          "raw": "1d3+БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "20% (10/4)",
+      "value": 20,
+      "half": 10,
+      "fifth": 4
+    },
+    "skills": [
+      {
+        "name": "Искусство/ремесло (пение)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "пение",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Обаяние",
+        "skill": "coc:skill:charm",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Взлом",
+        "skill": "coc:skill:locksmith",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Самовозгорание",
+      "summary": "Если сыщики пытаются её остановить или связать, или оглушают её, она вспыхивает и сразу призывает столько огненных вампиров, сколько сыщиков рядом. Даже переубеждённая, она — к собственному ужасу — всё равно вспыхивает и призывает вампиров.",
+      "raw": "If at any time Investigators actively try to stop or restrain Sanders, she will ignite, immediately summoning a number of fire vampires equal to the number of Investigators present. Knocking her unconscious brings about the same result. If Investigators succeed in talking her out of her intended fate, she will nevertheless, to her own horror, immolate, and summon the fire vampires, anyway.",
+      "refs": [
+        "little-torches-en/creature/fire-vampires"
+      ]
+    }
+  ],
+  "background": {
+    "description": "Темнокожая женщина на вид лет семидесяти с небольшим; на деле — молодая женщина двадцати с небольшим, и выдают это только ум и интересы. Неизменно в хорошем настроении, широко улыбается и прекрасно разбирается в современной поп-культуре.",
+    "traits": "«Одиноко быть старой — впрочем, одиноко быть и молодой». «Я часто чувствую себя муравьём на пикнике — настолько я ничтожна. Но вы ведь знаете, что бывает, если навести увеличительное стекло на муравья в солнечный день? Он сияет!»",
+    "secret": "Один из «маленьких факелов» Харпер: по её приказу (или по собственному почину) придёт к сыщикам, чтобы сжечь себя и убить их. Знает код двери в восточное крыло."
+  },
+  "description": {
+    "ru": "Пациентка института «Дедал», которая выглядит старухой, хотя ей всего 21 год. Один из «маленьких факелов» доктора Харпер.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Три года назад её отец, торговец древностями, уронил и разбил античную урну и выпустил заключённого в ней духа; тот за секунды состарил отца на несколько тысяч лет, перебил остальную семью и исчез. Флоренс спряталась, но одна близость твари состарила её до нынешнего вида. Ей никто не поверил: её ненадолго обвинили в убийстве собственной семьи, потом отмахнулись как от бродяжки. Она осталась без крова и средств, пока её не заметила доктор Харпер и не приютила в институте «Дедал».\nВ сценарии. Сыщики должны хотя бы встретить её во время первого визита в институт: она справится об их самочувствии. В «Полуночном визите» она приходит к ним домой или в мотель, лучше когда они в сборе, чтобы сжечь себя; может сперва поговорить, отговорить их от расследования, рассказать свою историю и предложить заглянуть в Киносуру. Она ждёт своего «преображения»: идёт война, и некоторым приходится оставить человечность, чтобы свет их новых форм защитил людей от грядущей тьмы. Её комната в институте похожа на комнату Кэти Белл; на сердцевидном зеркале — фотография девочки-подростка (это она сама). Её дверь в Маяке-сновидении — «обычная дверь».",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "little-torches-en",
+      "physical_page": 15,
+      "printed_page": 15,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Encounters in the Institute»"
+    },
+    {
+      "book_id": "little-torches-en",
+      "physical_page": 18,
+      "printed_page": 18,
+      "method": "book_text",
+      "verified": true,
+      "note": "«A Midnight Visit», цитата Фло"
+    },
+    {
+      "book_id": "little-torches-en",
+      "physical_page": 19,
+      "printed_page": 19,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Florence “Flo” Sanders»; «(4) Florence “Flo” Sanders' room»"
+    },
+    {
+      "book_id": "little-torches-en",
+      "physical_page": 22,
+      "printed_page": 22,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Patients»"
+    },
+    {
+      "book_id": "little-torches-en",
+      "physical_page": 30,
+      "printed_page": 30,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Ordinary Door—Florence “Flo” Sanders»"
+    },
+    {
+      "book_id": "little-torches-en",
+      "physical_page": 36,
+      "printed_page": 36,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Florence “Flo” Sanders, Old Before Her Time»"
+    },
+    {
+      "book_id": "little-torches-en",
+      "physical_page": 37,
+      "printed_page": 37,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок (окончание): навыки"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.move",
+      "printed": "Move: 4",
+      "expected": "8 по характеристикам (возраст 21 год)",
+      "note": "Задумано книгой: тело Фло состарилось и выглядит на 70–79 лет; Скорость 4 = 8 − 4 за возраст 70–79 (Р-76). Оставлено как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической; обложка и листы готовых сыщиков, физ. 55–60, без номера). Удача в книге не дана. Навыки напечатаны без половины и пятой — посчитаны (Р-35). В тексте (с. 19) ей «на вид под 80», в статблоке (с. 36) — «early 70s»."
+  },
+  "images": [
+    {
+      "file": "art/characters/torches-florence-sanders.webp",
+      "kind": "portrait",
+      "caption": "Фото: Cristian Newman (Unsplash) — по выходным данным книги",
+      "source": "Little Torches, с. 19: «Florence “Flo” Sanders» (стоковое фото)"
+    }
+  ]
+}

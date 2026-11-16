@@ -1,0 +1,205 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "little-torches-en/creature/fire-vampires",
+  "kind": "creature",
+  "name": {
+    "ru": "Огненные вампиры («Маленькие факелы»)",
+    "en": "Fire Vampires, Children of Fomalhaut"
+  },
+  "aliases": [
+    "Children of Fomalhaut",
+    "Дети Фомальгаута"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "служитель",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:fire-vampire",
+      "note_back": "профиль сценария «Маленькие факелы»"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "N/A",
+        "value": null
+      },
+      "CON": {
+        "raw": "35",
+        "value": 35
+      },
+      "SIZ": {
+        "raw": "01",
+        "value": 1
+      },
+      "DEX": {
+        "raw": "80",
+        "value": 80
+      },
+      "INT": {
+        "raw": "50",
+        "value": 50
+      },
+      "POW": {
+        "raw": "65",
+        "value": 65
+      }
+    },
+    "hp": {
+      "raw": "3",
+      "value": 3
+    },
+    "mp": {
+      "raw": "13",
+      "value": 13
+    },
+    "damage_bonus": {
+      "raw": "N/A",
+      "value": null
+    },
+    "build": {
+      "raw": "-2",
+      "value": -2
+    },
+    "move": {
+      "raw": "11 (полёт)",
+      "value": 11,
+      "modes": [
+        {
+          "mode": "fly",
+          "value": 11
+        }
+      ]
+    },
+    "armor": {
+      "raw": "обычное материальное оружие (клинки, пули и т. п.) не вредит; вода — 1 ПЗ за каждые 2 л, ручной огнетушитель — 1d6 ПЗ, ведро воды — 1d3 ПЗ; огнетушителя хватает на три раза",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (тепловой удар)",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "85% (42/17)",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        },
+        "damage": {
+          "raw": "2d6 ожог + похищение пунктов магии",
+          "dice": "2d6",
+          "adds_db": false
+        },
+        "notes": "при успешной проверке ВЫН цель получает половину урона; той же атакой — встречная проверка МОЩ на похищение 1d10 ПМ"
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "при виде огненного вампира"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Тепловой удар",
+      "summary": "Огненные вампиры атакуют касанием и могут поджечь касанием горючие предметы. Людей они поражают тепловым ударом: бросьте 2d6 урона; если сыщик проходит проверку ВЫН, он получает половину, иначе — полный урон.",
+      "raw": "Fire vampires attack by touching their victims, and can set flammable objects alight by touch. They damage humans by heat-shock. To determine the heat-shock, roll 2d6 damage for the fire vampire's attack. If the Investigator passes a CON roll, half of this damage is taken; if failed, the full damage is inflicted."
+    },
+    {
+      "name": "Похищение магии",
+      "summary": "Той же атакой вампир пытается украсть пункты магии: встречная проверка МОЩ; если победил вампир, он забирает у жертвы 1d10 ПМ, если цель — вампир теряет 1 ПМ. При каждой атаке бросают дважды: на урон от жара и на потерю ПМ.",
+      "raw": "In the same attack, the fire vampire will try to steal magic points from its target: use an opposed POW roll; if the fire vampire wins, it steals 1d10 magic points from the victim, while if the target wins the roll the fire vampire loses one of its own magic points. Thus, in each attack by a Fire Vampire roll twice – once to determine heat damage and once to determine magic point loss."
+    },
+    {
+      "name": "Неуязвимость к оружию, уязвимость к воде",
+      "summary": "Обычное материальное оружие (клинки, пули и т. п.) им не вредит. Вода отнимает 1 ПЗ за каждые 2 л, вылитые на вампира; ручной огнетушитель наносит 1d6 урона, ведро воды — 1d3. Огнетушителя хватает на три раза.",
+      "raw": "Standard material weapons cannot harm Fire Vampires (blades, bullets, etc.). Water costs a Fire Vampire one hit point per half-gallon poured over it. A typical handheld fire extinguisher does 1d6 hit points of damage to a Fire Vampire, while a bucket of water costs them 1d3 hit points. Assume a typical fire extinguisher holds sufficient suppressant for three uses."
+    }
+  ],
+  "description": {
+    "ru": "Прислужники Великого Древнего Ктугхи, чей дом — звезда Фомальгаут. Проявившись, выглядят как небольшие огненные шары; яркость, размер и цвет пламени разные. Отдельные ли они существа или лишь части Ктугхи, неизвестно — сценарий оставляет это неясным; пациенты Харпер верят, что, сжигая себя, не призывают огненных вампиров, а сами становятся ими.",
+    "en": null
+  },
+  "legend": {
+    "ru": "В сценарии огненные вампиры вырываются из тел «маленьких факелов», когда те сжигают себя: сначала шары размером с монету, они растут и поджигают всё вокруг. Пожарные, потушив огонь, тем самым и рассеивают вампиров. Вокруг сновидческого проявления Ктугхи на вершине Маяка кружат сотни огненных вампиров; они не нападают, пока их не спровоцируют.",
+    "en": null
+  },
+  "encounters": {
+    "ru": "Корпус Прайса: три вампира из тела Кэти Белл. «Полуночный визит»: Фло Сандерс призывает столько вампиров, сколько сыщиков рядом. Харлем Бэнкс — 1d3 при ранении; Саймон Чанс и Дана Кроуфорд — при самосожжении. Заворожённый Киносурой, потерявший все ПМ, — 1d3 вампира прожигают его изнутри; сыщик, сжёгший себя (раздатка 4), — 1d3. Если Харпер войдёт в пламя одна, её тело призовёт 1d6+2 вампира, а каждый оставшийся «маленький факел» — ещё по 1d3. Фонарный зал: сотни вампиров вокруг Ктугхи.",
+    "en": null
+  },
+  "habitat": "звезда Фомальгаут; в сценарии — тела «маленьких факелов»",
+  "sources": [
+    {
+      "book_id": "little-torches-en",
+      "physical_page": 4,
+      "printed_page": 4,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Cthugha, Great Old One»: огненные вампиры, Фомальгаут"
+    },
+    {
+      "book_id": "little-torches-en",
+      "physical_page": 10,
+      "printed_page": 10,
+      "method": "book_text",
+      "verified": true,
+      "note": "Part I: три огненных вампира"
+    },
+    {
+      "book_id": "little-torches-en",
+      "physical_page": 11,
+      "printed_page": 11,
+      "method": "book_text",
+      "verified": true,
+      "note": "«School Fire», «Aftermath»"
+    },
+    {
+      "book_id": "little-torches-en",
+      "physical_page": 37,
+      "printed_page": 37,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Fire Vampires, Children of Fomalhaut»: описание и характеристики"
+    },
+    {
+      "book_id": "little-torches-en",
+      "physical_page": 38,
+      "printed_page": 38,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок (окончание): атаки, броня, потеря Рассудка"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической; обложка и листы готовых сыщиков, физ. 55–60, без номера). Профиль сценария (Р-75): числа близки к общему виду (ВЫН 35, ЛВК 80, ИНТ 50, МОЩ 65, ПЗ 3, ПМ 13, Комплекция −2), но нет объединённой атаки и заклинаний, есть огнетушитель (1d6) и три заряда. 1/2 галлона воды — «за каждые 2 л» (Р-64)."
+  }
+}

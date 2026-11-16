@@ -1,0 +1,250 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "little-torches-en/character/daedalus-orderlies",
+  "kind": "character",
+  "name": {
+    "ru": "Санитары института «Дедал»",
+    "en": "Daedalus Institute Orderlies"
+  },
+  "aliases": [],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "санитар института «Дедал»",
+  "names": [
+    "Джоэл Стьюдер",
+    "Коул Апсар",
+    "Анита Гонсалес",
+    "Джейсон Дуайер"
+  ],
+  "occupation": {
+    "ru": "санитар",
+    "en": "orderly"
+  },
+  "occupation_ref": "coc:occupation:sanitar-psikhbolnitsy",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "little-torches-en/character/ainslee-harper",
+      "note": "руководитель института",
+      "note_back": "санитары института"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "65",
+        "value": 65
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "45",
+        "value": 45
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      },
+      "EDU": {
+        "raw": "45",
+        "value": 45
+      }
+    },
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "sanity": {
+      "raw": "40",
+      "value": 40,
+      "max": null
+    },
+    "luck": {
+      "raw": "N/A",
+      "value": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d3+БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "skills": [
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "20%",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Общий статблок санитаров института «Дедал»: дневные санитары Джоэл Стьюдер, Коул Апсар и Анита Гонсалес и ночной санитар Джейсон Дуайер. Санитары берут на себя бытовые дела института и помогают в редких случаях, когда пациента нужно удержать.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Оба набора характеристик (медсёстры и санитары) действуют для всего персонала, но у тех, кто знает истинные цели доктора Харпер, Рассудок вдвое меньше указанного (20): из санитаров это Анита Гонсалес и Джейсон Дуайер.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "little-torches-en",
+      "physical_page": 35,
+      "printed_page": 35,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Daedalus Institute Staff, Nurses and Orderlies»; статблок «Daedalus Institute Orderlies»"
+    },
+    {
+      "book_id": "little-torches-en",
+      "physical_page": 21,
+      "printed_page": 21,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Staff»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.dodge",
+      "printed": "35% (16/7)",
+      "expected": "35% (17/7)",
+      "note": "Половина 35 — 17 (округление вниз); исправлено (Р-35).",
+      "fixed": true
+    }
+  ],
+  "corrections": [
+    {
+      "field": "statblock.dodge.half",
+      "from": 16,
+      "to": 17,
+      "reason": "Little Torches, с. 35: «Dodge 35% (16/7)» — половина 35 с округлением вниз — 17.",
+      "ref": "Р-35"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической; обложка и листы готовых сыщиков, физ. 55–60, без номера). Групповой профиль (Р-74); в `names` — имена санитаров из книги, а не придуманные. Удача не дана. Навыки напечатаны без половины и пятой — посчитаны (Р-35)."
+  }
+}

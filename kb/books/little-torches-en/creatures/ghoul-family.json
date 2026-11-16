@@ -1,0 +1,262 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "little-torches-en/creature/ghoul-family",
+  "kind": "creature",
+  "name": {
+    "ru": "Упыри «Семья»",
+    "en": "“The Family,” Ghoul pack"
+  },
+  "aliases": [
+    "семья упырей",
+    "The Family"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "независимая раса",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:ghoul",
+      "note_back": "семья из трёх упырей под институтом «Дедал» («Маленькие факелы»)"
+    },
+    {
+      "type": "works_for",
+      "target": "little-torches-en/character/ainslee-harper",
+      "note": "покровительница, приютившая их",
+      "note_back": "семья упырей, которую она прячет под институтом"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "80",
+        "value": 80
+      },
+      "CON": {
+        "raw": "65",
+        "value": 65
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "65",
+        "value": 65
+      }
+    },
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "mp": {
+      "raw": "13",
+      "value": 13
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "огнестрельное оружие и снаряды наносят половину выпавшего урона, дроби округляются вниз",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "3",
+      "value": 3
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d6+БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "notes": "обычный набор безоружных атак гуманоида и острые как бритва грязные когти; раны могут воспалиться, если их не лечить"
+      },
+      {
+        "name": {
+          "ru": "Укус и хватка (манёвр)",
+          "en": "Bite and hold (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "—",
+          "value": null,
+          "half": null,
+          "fifth": null
+        },
+        "damage": {
+          "raw": "1d4 за раунд",
+          "dice": "1d4",
+          "adds_db": false
+        },
+        "notes": "шанс в книге не напечатан; оторвать упыря — встречная проверка СИЛ"
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "85%",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "при виде упыря"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Атаки в ближнем бою",
+      "summary": "У упырей обычный набор безоружных атак, доступных гуманоидам; кроме того, у них острые как бритва грязные когти — раны могут воспалиться, если их не лечить.",
+      "raw": "Fighting Attacks: Ghouls have the usual range of unarmed attacks open to humanoids. They also have razor-sharp claws, which are filthy, and may result in infected wounds if not treated."
+    },
+    {
+      "name": "Укус и хватка (манёвр)",
+      "summary": "Если укус упыря проходит, он вцепляется в жертву вместо атак когтями и терзает её клыками, автоматически нанося 1d4 урона каждый раунд. Чтобы оторвать упыря, разорвать хватку и прекратить урон, нужна встречная проверка СИЛ.",
+      "raw": "Bite and hold (mnvr): If the ghoul’s bite strikes home it hands on instead of using claw attacks, and worries the victim with its fangs, continuing to do 1d4 damage automatically per round. An opposed STR roll is required to dislodge the ghoul, breaking the hold and ending the bite damage."
+    }
+  ],
+  "description": {
+    "ru": "Семья из трёх упырей — супружеская пара и их отпрыск, — которые нашли приют под институтом «Дедал». Днём они во второй пещере, ночью уходят добывать мертвечину.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Превратившись в упырей, они забыли свои человеческие имена. С поддержкой и одобрения доктора Харпер они всё ещё носят приметы прежней жизни и играют в былой домашний уклад: мебель, мини-кухня, генератор и детская кроватка во второй пещере. По вечерам они вместе с отпрыском покидают институт в поисках трупного мяса.",
+    "en": null
+  },
+  "encounters": {
+    "ru": "Вторая пещера под институтом «Дедал» — только днём; ночью их там нет.",
+    "en": null
+  },
+  "habitat": "пещеры под институтом «Дедал»",
+  "sources": [
+    {
+      "book_id": "little-torches-en",
+      "physical_page": 21,
+      "printed_page": 21,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Beneath the Institute»: Second Chamber"
+    },
+    {
+      "book_id": "little-torches-en",
+      "physical_page": 22,
+      "printed_page": 22,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Patients»: семья упырей"
+    },
+    {
+      "book_id": "little-torches-en",
+      "physical_page": 36,
+      "printed_page": 36,
+      "method": "book_text",
+      "verified": true,
+      "note": "«“The Family,” Ghoul pack»: описание и статблок"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической; обложка и листы готовых сыщиков, физ. 55–60, без номера). Групповой профиль (Р-74, Р-75) с одним статблоком на всю семью; отличается от общего «Упыря» (СИЛ 80, Скорость 9, нет навыка языка). Шанс манёвра «Укус и хватка» не напечатан. В тексте способности «hands on» — опечатка книги вместо «hangs on» (raw — как напечатано)."
+  }
+}

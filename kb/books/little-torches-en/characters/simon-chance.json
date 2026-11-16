@@ -1,0 +1,267 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "little-torches-en/character/simon-chance",
+  "kind": "character",
+  "name": {
+    "ru": "Саймон Чанс",
+    "en": "Simon Chance"
+  },
+  "aliases": [
+    "Саймон",
+    "Simon Chance, Burnt-out Ballerina",
+    "Simon Chase"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "бывший профессиональный танцовщик",
+    "en": "former professional dancer"
+  },
+  "sex": "мужской",
+  "residence": "институт «Дедал», комната 5",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "knows",
+      "target": "little-torches-en/character/ainslee-harper",
+      "note": "психиатр, в которую он верит",
+      "note_back": "пациент, один из «маленьких факелов»"
+    },
+    {
+      "type": "knows",
+      "target": "little-torches-en/character/kathy-bell",
+      "note": "знакомая по институту",
+      "note_back": "знакомый по институту: спросил её про Маяк"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "50",
+        "value": 50
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "40",
+        "value": 40
+      },
+      "DEX": {
+        "raw": "75",
+        "value": 75
+      },
+      "APP": {
+        "raw": "70",
+        "value": 70
+      },
+      "INT": {
+        "raw": "40",
+        "value": 40
+      },
+      "POW": {
+        "raw": "60",
+        "value": 60
+      },
+      "EDU": {
+        "raw": "40",
+        "value": 40
+      }
+    },
+    "hp": {
+      "raw": "9",
+      "value": 9
+    },
+    "mp": {
+      "raw": "12",
+      "value": 12
+    },
+    "sanity": {
+      "raw": "30",
+      "value": 30,
+      "max": null
+    },
+    "luck": {
+      "raw": "N/A",
+      "value": null
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "1d3+БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "60% (30/12)",
+      "value": 60,
+      "half": 30,
+      "fifth": 12
+    },
+    "skills": [
+      {
+        "name": "Искусство/ремесло (танец)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "танец",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Обаяние",
+        "skill": "coc:skill:charm",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      }
+    ]
+  },
+  "background": {
+    "description": "Измождён, но сохранил фигуру танцора: несмотря на расстройства пищевого поведения и паразитов, физически он всё ещё намного выше среднего. Обычно молчит и лишь дерзко улыбается; говорит игриво и задумчиво-тоскливо.",
+    "traits": "«Вы не устали от того, что ничего не значите? Что вас не замечает Вселенная, которой совершенно всё равно, живы вы или мертвы? Разве вам не хочется хоть раз гореть ярко?»",
+    "secret": "Один из «маленьких факелов» Харпер: собирается сжечь себя в ночном клубе и забрать с собой в погребальный костёр — свой последний танец — как можно больше людей."
+  },
+  "description": {
+    "ru": "Бывший профессиональный танцовщик, постоянный пациент института «Дедал»; погоня за физическим совершенством разрушила его здоровье. Один из «маленьких факелов» доктора Харпер.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Погоня за физическим совершенством подорвала его здоровье: сначала расстройства пищевого поведения, затем экспериментальные препараты, которые оказались иномирными паразитами — теперь они пожирают его внутренние органы. Карьера окончена, здоровье угасает; он лечится в институте «Дедал», а в остальное время ходит по клубам. Себя он считает пропащим, но верит Харпер и надеется вознестись в иное состояние, если заберёт с собой в костёр достаточно других.\nВ сценарии. Сыщики могут увидеть, как он, явно пьяный, шатаясь проходит через вестибюль института к себе. В его комнате (5) — танцевальные туфли в шкафу и, по решению Хранителя, копия головоломки Маяка. Его дверь в Маяке-сновидении — общественный туалет, исписанный неоновыми граффити; второй раз за ней сыщики оказываются в клубе за миг до того, как он вспыхнет. Если он сожжёт себя, сыщики могут получить раздатку 7 «Конец».",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "little-torches-en",
+      "physical_page": 13,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "дневник Кэти Белл: «Саймон… балерина»"
+    },
+    {
+      "book_id": "little-torches-en",
+      "physical_page": 15,
+      "printed_page": 15,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Encounters in the Institute»"
+    },
+    {
+      "book_id": "little-torches-en",
+      "physical_page": 20,
+      "printed_page": 20,
+      "method": "book_text",
+      "verified": true,
+      "note": "«(5) Simon Chance's room»"
+    },
+    {
+      "book_id": "little-torches-en",
+      "physical_page": 22,
+      "printed_page": 22,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Patients»"
+    },
+    {
+      "book_id": "little-torches-en",
+      "physical_page": 25,
+      "printed_page": 25,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Discovering the Path, the Stairs, and the End» («Simon Chase»)"
+    },
+    {
+      "book_id": "little-torches-en",
+      "physical_page": 28,
+      "printed_page": 28,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Graffiti Door—Simon Chance»"
+    },
+    {
+      "book_id": "little-torches-en",
+      "physical_page": 29,
+      "printed_page": 29,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Graffiti Door» (окончание), цитата"
+    },
+    {
+      "book_id": "little-torches-en",
+      "physical_page": 37,
+      "printed_page": 37,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Simon Chance, Burnt-out Ballerina»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической; обложка и листы готовых сыщиков, физ. 55–60, без номера). Удача в книге не дана. Навыки напечатаны без половины и пятой — посчитаны (Р-35). На с. 25 он назван «Simon Chase» — опечатка книги (в псевдонимах)."
+  },
+  "images": [
+    {
+      "file": "art/characters/torches-simon-chance.webp",
+      "kind": "portrait",
+      "caption": "Фото: Olenka Kotyk (Unsplash) — по выходным данным книги",
+      "source": "Little Torches, с. 29: «Simon Chance» (стоковое фото)"
+    }
+  ]
+}

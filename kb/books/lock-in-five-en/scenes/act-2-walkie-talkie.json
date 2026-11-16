@@ -1,0 +1,88 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "lock-in-five-en/scene/act-2-walkie-talkie",
+  "kind": "scene",
+  "name": {
+    "ru": "Акт 2: голос по рации",
+    "en": "Act 2 (walkie-talkie)"
+  },
+  "description": {
+    "ru": "Аптечкой можно обработать затянувшиеся раны (в том числе огнестрельные); она восстанавливает 1d4 ПЗ — всего три раза.\nРация ловит довольно чёткий сигнал от другого живого человека на объекте — формально. Когда сыщики включают её, они слышат треск помех, а затем голос лейтенанта Сэндфорда. Лейтенант говорит торопливо и недоверчиво: сначала требует сказать, кто на том конце его рации, а когда сыщики отвечают, отказывается верить. Быстро становится ясно, что этот Сэндфорд живёт примерно двумя часами раньше — как раз во время ритуала.\nКогда до Сэндфорда доходит, его охватывает паника: он понимает, что силы, которые выпустит ритуал, уничтожат базу и всех, кто в ней. Пока сыщики слушают, Сэндфорд бросает рацию и бежит к ритуалу, чтобы сорвать его. Именно этот срыв и выпускает осколки времени и привлекает внимание Гончей.\nЕсли сыщики не выключат рацию, сквозь помехи они слышат, как разрывают их товарищей, — потеря Рассудка 1d6/1d12. На этом Акт 2 заканчивается.",
+    "en": null
+  },
+  "when": "Акт 2, когда сыщики включают рацию солдата",
+  "arc": {
+    "scenario": "lock-in-five-en/scenario/lock-in-five-in-a-bunker",
+    "part": "Акт 2",
+    "order": 5
+  },
+  "where": [
+    {
+      "location": "lock-in-five-en/location/bunker-chamber",
+      "note": "сыщики с рацией"
+    }
+  ],
+  "participants": [
+    {
+      "id": "lock-in-five-en/character/harvey-walsh",
+      "role": "слушатели"
+    },
+    {
+      "id": "lock-in-five-en/character/corbin-richardson",
+      "role": "слушатели"
+    },
+    {
+      "id": "lock-in-five-en/character/samantha-rockford",
+      "role": "слушатели"
+    },
+    {
+      "id": "lock-in-five-en/character/rachel-king",
+      "role": "слушатели"
+    },
+    {
+      "id": "lock-in-five-en/character/daniel-langsdale",
+      "role": "слушатели"
+    },
+    {
+      "id": "lock-in-five-en/character/sandford",
+      "role": "голос из прошлого (за два часа до того)"
+    }
+  ],
+  "mechanics": {
+    "ru": "Аптечка: 1d4 ПЗ, три раза. Не выключили рацию — Рассудок 1d6/1d12.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Сыщики узнают, что сами виноваты в срыве ритуала; начинается Акт 3 (раздатки № 4).",
+    "en": null
+  },
+  "refs": [
+    "lock-in-five-en/scenario/lock-in-five-in-a-bunker",
+    "lock-in-five-en/item/first-aid-kit",
+    "lock-in-five-en/item/walkie-talkie",
+    "lock-in-five-en/scene/act-3-through-the-fragments"
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "lock-in-five-en",
+      "physical_page": 10,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "аптечка и рация; голос Сэндфорда; конец Акта 2"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1; обложка без номера). Действие — летом 1968 года, `axes.era` `other` (как «Галили-Спрингс», 1975)."
+  }
+}

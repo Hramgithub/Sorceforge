@@ -1,0 +1,205 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "lock-in-five-en/creature/bunker-hound-of-tindalos",
+  "kind": "creature",
+  "name": {
+    "ru": "Гончая Тиндала («Взаперти»)",
+    "en": "The Hound of Tindalos"
+  },
+  "aliases": [
+    "Гончая"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "независимая раса",
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:hound-of-tindalos",
+      "note_back": "гончая, привлечённая сорванным ритуалом и осколками времени («Взаперти: пятеро в бункере»)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "80",
+        "value": 80
+      },
+      "CON": {
+        "raw": "150",
+        "value": 150
+      },
+      "SIZ": {
+        "raw": "85",
+        "value": 85
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "85",
+        "value": 85
+      },
+      "POW": {
+        "raw": "120",
+        "value": 120
+      }
+    },
+    "hp": {
+      "raw": "23",
+      "value": 23
+    },
+    "damage_bonus": {
+      "raw": "+1d6 (средний)",
+      "value": "1d6"
+    },
+    "move": {
+      "raw": "6",
+      "value": 6,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 6
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (лапы, укус)",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "90%",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        },
+        "damage": {
+          "raw": "1d6+БкУ+ихор (2d6 урона за раунд, пока его не удалят)",
+          "dice": "1d6",
+          "adds_db": true,
+          "extra": "ихор: 2d6 за раунд, пока не удалён (проверка ЛВК и кусок ткани)"
+        },
+        "notes": "гончая бьёт лапами или кусает"
+      },
+      {
+        "name": {
+          "ru": "Язык",
+          "en": "Tongue"
+        },
+        "kind": "special",
+        "skill": "Язык",
+        "chance": {
+          "raw": "90%",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        },
+        "damage": {
+          "raw": "вытягивает 3d6 МОЩ за раунд",
+          "dice": "3d6",
+          "adds_db": false,
+          "extra": "безвозвратная потеря 3d6 МОЩ, физического урона нет"
+        },
+        "notes": "раз в раунд; глубокая бескровная и безболезненная рана"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Ихор",
+      "summary": "Гончая покрыта синеватым гноем — ихором. При попадании атакой Ближнего боя на жертву размазывается сгусток этой слизи: живая и деятельная, она наносит 2d6 урона и столько же каждый раунд, пока остаётся на теле. Стереть ихор куском одежды можно проверкой ЛВК.",
+      "raw": "A hound of Tindalos is covered with a sort of bluish pus (Ichor). When a victim is struck by a Fighting attack, a gout of this mucoid stuff is smeared over him or her. This pus-like stuff is alive and active; doing 2d6 damage to the target, and new damage is done in the same amount for each round that the ichor remains on the victim’s body. The ichor can be wiped off with a piece of clothing with a DEX roll."
+    },
+    {
+      "name": "Язык",
+      "summary": "Раз в раунд при успешной атаке языком образуется глубокая проникающая (но бескровная и безболезненная) рана. Физического урона жертва не получает, но навсегда теряет 3d6 МОЩ.",
+      "raw": "Tongue: Once per round, with a successful tongue attack, a deep penetrating (though bloodless and painless) hole is formed. The victim takes no physical damage, despite the peculiar wound, but loses 3d6 POW permanently."
+    },
+    {
+      "name": "Уязвима для револьвера (правило сценария)",
+      "summary": "В этом сценарии по Гончей стреляют обычной проверкой Стрельбы, и попадание из револьвера наносит 1d12 урона (врезка с. 6). Чтобы ритуал завершился верно, Гончую нужно довести до 0 ПЗ (с. 13).",
+      "raw": "None of the above applies to Firearms rolls against the Hound. Against him, the Investigators use their usual Firearms rolls and deal 1d12 Hit Points of damage."
+    },
+    {
+      "name": "Из уголка глаза",
+      "summary": "В разгар обратного ритуала Гончая вырывается в камеру из единственного угла в комнате — уголка глаза сыщика, получившего раздатки A, B и C; помешать этому может только смерть сыщика, и даже тогда Гончая всё равно выйдет.",
+      "raw": "the Hound burst free from the only corner in the room – the corner of the victim’s eye."
+    }
+  ],
+  "description": {
+    "ru": "Гончая Тиндала, которую привлёк сорванный ритуал и осколки времени вокруг базы: она рыщет в туннелях, разрывает солдата у двери бункера и любого, кто не успеет вернуться в камеру. Встречается в Акте 2 в коридоре и в Акте 3 в камере, где вырывается из глаза сыщика.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "lock-in-five-en",
+      "physical_page": 13,
+      "printed_page": 12,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «The Hound of Tindalos» в Акте 3"
+    },
+    {
+      "book_id": "lock-in-five-en",
+      "physical_page": 14,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "пояснения к атакам; Гончую нужно довести до 0 ПЗ"
+    },
+    {
+      "book_id": "lock-in-five-en",
+      "physical_page": 16,
+      "printed_page": 15,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Antagonists»: «The Hound of Tindalos» — тот же статблок"
+    },
+    {
+      "book_id": "lock-in-five-en",
+      "physical_page": 7,
+      "printed_page": 6,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка о револьвере: по Гончей — обычная Стрельба, урон 1d12"
+    },
+    {
+      "book_id": "lock-in-five-en",
+      "physical_page": 5,
+      "printed_page": 4,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Keeper Information»: гончая, призванная прерванным ритуалом"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1; обложка без номера). Действие — летом 1968 года, `axes.era` `other` (как «Галили-Спрингс», 1975). Профиль сценария для вида «Гончая Тиндала» (Р-75): ТЕЛ 85 и Скорость 6 (у вида по Malleus — 7 и полёт 20); ПМ, броня, Уклонение и потеря Рассудка не напечатаны — для игры берётся профиль вида; книга печатает «Average Damage Bonus: +1d6». Вопреки правилам вида (неуязвимость к обычному оружию) сценарий разрешает ранить Гончую из револьвера (с. 6)."
+  },
+  "images": [
+    {
+      "file": "art/creatures/lockin-hound-of-tindalos.webp",
+      "kind": "art",
+      "caption": "Гончая Тиндала",
+      "source": "Lock-in: Five in a Bunker, с. 13 (физ. 14), рядом с описанием атак Гончей"
+    }
+  ]
+}

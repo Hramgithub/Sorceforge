@@ -1,0 +1,144 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "vernissage-en/scene/investigation",
+  "kind": "scene",
+  "name": {
+    "ru": "Поиски в усадьбе",
+    "en": "Locations; Evidence and tools"
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Область приключения: главный зал, терраса, кабинет Артомовского, кабинет Зайдлера, гостевая комната, ванные комнаты, кухня, сарай.\nГлавный зал прямо соединён с террасой, где гости дышат свежим воздухом и говорят свободнее. Немного к северу от террасы стоит небольшой сарай с инструментами, средствами для пропитки дерева и садовым инвентарём. Гостевая комната — слева от входа в главный зал; она открыта для всех, там можно застать нескольких гостей; внутри — небольшая библиотека и шкафы с канцелярскими принадлежностями и чистыми блокнотами. В коридоре, ведущем из главного зала к кабинету Зайдлера и кабинету Артомовского, всегда стоит группа охранников, поэтому попасть в оба кабинета трудно. Ванные комнаты рядом; ничего особенного в них нет, кроме того, что окно одной из них выходит прямо к кабинету Артомовского — так можно обойти охрану.\nУлики и записи, разбросанные по дому, позволят сыщикам понять, что нужно сделать, чтобы остановить ритуал (таблица «Улики» в сценарии). Дополнительные улики, например книги и гримуары, могут подтолкнуть события, если сыщики где-то застрянут.\nКроме того, в усадьбе можно найти много вещей, полезных против ритуала; это зависит от изобретательности Хранителя и сыщиков, но некоторые стоит назвать: люминал (снотворное, фенобарбитал) в кабинете Артомовского — для отвлекающего манёвра; чернила в узорной чернильнице в кабинете Зайдлера — чтобы нарушить узоры глифов; растворитель на полке в сарае — чтобы удалить тайные символы; духи с очень резким запахом в одной из ванных — чтобы на время заглушить благовония; запасной набор столовых приборов без оккультных символов в кухонных шкафах. Это лишь подсказки: если сыщики придумают другие способы и решения, тем лучше.",
+    "en": null
+  },
+  "when": "После открытия статуй, в любое время до конца ритуала",
+  "arc": {
+    "scenario": "vernissage-en/scenario/vernissage",
+    "part": "Расследование",
+    "order": 4
+  },
+  "where": [
+    {
+      "location": "vernissage-en/location/artomowski-estate",
+      "note": null
+    },
+    {
+      "location": "vernissage-en/location/artomowski-study",
+      "note": null
+    },
+    {
+      "location": "vernissage-en/location/zajdler-office",
+      "note": null
+    },
+    {
+      "location": "vernissage-en/location/guest-room",
+      "note": null
+    },
+    {
+      "location": "vernissage-en/location/bathrooms",
+      "note": null
+    },
+    {
+      "location": "vernissage-en/location/kitchen",
+      "note": null
+    },
+    {
+      "location": "vernissage-en/location/shed",
+      "note": null
+    },
+    {
+      "location": "vernissage-en/location/terrace",
+      "note": null
+    },
+    {
+      "location": "vernissage-en/location/hallway",
+      "note": "охрана"
+    }
+  ],
+  "participants": [
+    {
+      "id": "vernissage-en/character/estate-security",
+      "role": "стерегут коридор в закрытую часть дома"
+    },
+    {
+      "id": "vernissage-en/character/adept",
+      "role": "тайно забирает улики"
+    }
+  ],
+  "mechanics": {
+    "ru": "Проверки навыков на поиск улик назначает Хранитель; если среди сыщиков есть Адепт, найденные при успехе улики оказываются неполными (Адепт забирает предметы). Когда налетают мотыльки, обыскать террасу и сарай уже нельзя.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Улики раскрывают устройство ритуала, роли трёх аспектов (Зайдлер, Вжодек, Заховский) и то, как обезвредить проводники ритуала.",
+    "en": null
+  },
+  "refs": [
+    "vernissage-en/item/luminal",
+    "vernissage-en/item/inkwell",
+    "vernissage-en/item/solvent",
+    "vernissage-en/item/perfumes",
+    "vernissage-en/item/spare-cutlery",
+    "vernissage-en/item/artomowski-instructions",
+    "vernissage-en/item/occult-symbols-sheet",
+    "vernissage-en/handout/waiters-instructions",
+    "vernissage-en/tome/power-of-ritual",
+    "vernissage-en/tome/power-of-gemstones",
+    "vernissage-en/handout/note-about-yuggoth",
+    "vernissage-en/item/art-of-reading-symbols",
+    "vernissage-en/item/invocation-manuscript",
+    "vernissage-en/handout/note-the-observer",
+    "vernissage-en/handout/letter-the-accuser",
+    "vernissage-en/handout/letter-the-speaker",
+    "vernissage-en/item/the-hidden",
+    "vernissage-en/item/zajdler-notes",
+    "vernissage-en/scene/invocation"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "vernissage-en",
+      "physical_page": 15,
+      "printed_page": null,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Locations», «Evidence and tools»"
+    },
+    {
+      "book_id": "vernissage-en",
+      "physical_page": 28,
+      "printed_page": null,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Evidence»"
+    },
+    {
+      "book_id": "vernissage-en",
+      "physical_page": 29,
+      "printed_page": null,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Evidence»"
+    },
+    {
+      "book_id": "vernissage-en",
+      "physical_page": 30,
+      "printed_page": null,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Evidence»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги. На страницах книги номеров нет: в sources печатная страница null, физическая страница совпадает с номерами оглавления (с. 4–19)."
+  }
+}

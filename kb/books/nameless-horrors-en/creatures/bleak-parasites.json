@@ -1,0 +1,218 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "nameless-horrors-en/creature/bleak-parasites",
+  "kind": "creature",
+  "name": {
+    "ru": "Паразиты из-за разлома",
+    "en": "The Parasites"
+  },
+  "aliases": [
+    "Паразиты",
+    "The Parasites, otherworldly infestation",
+    "потустороннее заражение",
+    "Parasites"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "мелкие существа из иного измерения, «потустороннее заражение»",
+  "axes": {
+    "era": [
+      "1930s"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "120",
+        "value": 120
+      },
+      "CON": {
+        "raw": "—",
+        "value": null
+      },
+      "SIZ": {
+        "raw": "varies",
+        "value": null
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "INT": {
+        "raw": "00",
+        "value": 0
+      },
+      "POW": {
+        "raw": "40",
+        "value": 40
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "1",
+      "value": 1
+    },
+    "mp": {
+      "raw": "8",
+      "value": 8
+    },
+    "damage_bonus": {
+      "raw": "n/a",
+      "value": null
+    },
+    "build": {
+      "raw": "–2",
+      "value": -2
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Заражение",
+          "en": "Infest"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "проникает в цель",
+          "dice": null,
+          "adds_db": false
+        },
+        "notes": "Боевой манёвр: паразит вбуравливается в цель. Удаётся автоматически, если цель без сознания, удерживается против воли или добровольно впускает паразита."
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d4",
+        "trigger": "увидеть паразита"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Истощение",
+      "summary": "Один паразит каждый день отнимает у носителя 1d6 очков каждой характеристики, кроме ТЕЛ; ТЕЛ уменьшается на 1 в день, пока не уменьшится вдвое (истощение). Действие растёт линейно с каждым паразитом в носителе: например, при двух паразитах — 2d6 от характеристик и 2 от ТЕЛ, и так далее.",
+      "raw": "Drain: A single parasite will rob its host of 1d6 points of every attribute except SIZE every day. SIZE will decrease by a point every day until it is halved, to represent wasting. This effect increases linearly for every additional parasite present in a host (e.g. 2d6 from attributes, 2 from SIZE for two parasites, and so on)."
+    },
+    {
+      "name": "Извлечение",
+      "summary": "Ни носитель, ни врач не могут извлечь паразита обычным путём. Единственная надежда — предложить паразиту более здорового носителя и дать ему перейти, или переделать устройство Хоукса так, чтобы сменить фазу носителя или паразита и извлечь его хирургически; во втором случае, прогрызаясь сквозь плоть, паразит наносит носителю 1d6 урона, прежде чем его извлекут.",
+      "raw": "The only possible ways to remove a parasite are to either present the parasite with a healthier host, or to modify the Hawkes Device to change the phase of either the host or the parasite so that the parasite may be removed surgically (causing host 1d6 damage before it is removed).",
+      "refs": [
+        "nameless-horrors-en/item/hawkes-device"
+      ]
+    }
+  ],
+  "description": {
+    "ru": "Множество мелких и крупных существ, пробравшихся сквозь разлом устройства Хоукса; мелкие враждебны человеческой жизни и, хоть различаются обликом, действуют почти одинаково. На территории «Проспекта» видны маленькие серые и белые слизнеподобные твари; из глазницы Джонни Риса выползает жирный бледный пиявкообразный паразит.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Существуя одновременно в нашей реальности и вне её, паразиты могут прогрызаться в живую плоть, не оставляя видимых повреждений. Внутри они высасывают из носителя жизнь и переходят к другому, когда носитель неизбежно умирает. Устройство Хоукса с каждым включением теряет часть сдерживания, и мелкие твари, оказавшиеся в нашем измерении при выключении, остаются здесь: они кишат на территории «Проспекта», питаются забредшими туда животными или друг другом; трупы оленей и кроликов на территории высушены. Паразиты кишат в жиже затопленного подвала главного дома: Хоукс извергает их из своей новой оболочки.\nЗагадочная болезнь (врезка «The Mystery Disease»): первые признаки — шелушение кожи и вялость; вялость усиливается и в конце концов обездвиживает; мышцы усыхают, становятся сухими и ломкими; на последних стадиях жертва так иссушена, что начинает крошиться — части тела оседают или отламываются; вскоре наступает смерть. На самом деле это побочное действие выкачивания жизненной силы Видом 17, а не болезнь.",
+    "en": null
+  },
+  "encounters": {
+    "ru": "Заражение грозит всем, кто задерживается рядом с Джонни Рисом, бредёт по жиже подвала (проверка Удачи, чтобы не заразиться) или возвращается из-за разлома (проверка Удачи). Эстер Фрейн заражена.",
+    "en": null
+  },
+  "habitat": "территория и подвалы «Проспекта»; иное измерение за разломом",
+  "sources": [
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 137,
+      "printed_page": 135,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «The Parasites, otherworldly infestation»"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 122,
+      "printed_page": 120,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Dramatis Personae»: «The Parasites»"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 123,
+      "printed_page": 121,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Mystery Disease»"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 127,
+      "printed_page": 125,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Grounds»: твари на территории, Джонни Рис"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 129,
+      "printed_page": 127,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Hawkes Device»: потеря сдерживания"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 133,
+      "printed_page": 131,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Cellars»: паразиты в жиже"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 130,
+      "printed_page": 128,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Through the Rift»: проверка Удачи при возвращении"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2). Уникальное существо сценария (новый «безымянный ужас» книги); category — наш выбор. Способности: raw — английский текст книги. СИЛ 120 и ИНТ «00» — как напечатано; ТЕЛ «varies» — у паразитов разный размер. «Attribute» книги понято как характеристика."
+  }
+}

@@ -1,0 +1,386 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "nameless-horrors-en/character/nathaniel-coombes",
+  "kind": "character",
+  "name": {
+    "ru": "Натаниэль Кумбс",
+    "en": "Nathaniel Coombes"
+  },
+  "aliases": [
+    "доктор Кумбс",
+    "Dr. Coombes",
+    "Dr. Nathaniel Coombs"
+  ],
+  "roles": [
+    "pregen"
+  ],
+  "occupation": {
+    "ru": "бывший врач",
+    "en": "former doctor"
+  },
+  "occupation_ref": "coc:occupation:vrach",
+  "age": {
+    "raw": "54",
+    "value": 54
+  },
+  "sex": "мужской",
+  "residence": "Гувервиль под Кроули",
+  "axes": {
+    "era": [
+      "1930s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "knows",
+      "target": "nameless-horrors-en/character/harold-priestly",
+      "note": "пациент",
+      "note_back": "лечащий врач"
+    },
+    {
+      "type": "knows",
+      "target": "nameless-horrors-en/character/james-cavendish",
+      "note": "бывший коллега и протеже, преемник на посту директора больницы Бентама",
+      "note_back": "бывший коллега и наставник"
+    },
+    {
+      "type": "knows",
+      "target": "nameless-horrors-en/character/billy-spitzer",
+      "note": "мальчик, который помогает в медицинской лачуге",
+      "note_back": "доктор, которому он помогает"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "50",
+        "value": 50
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "60",
+        "value": 60
+      },
+      "POW": {
+        "raw": "40",
+        "value": 40
+      },
+      "EDU": {
+        "raw": "80",
+        "value": 80
+      }
+    },
+    "hp": {
+      "raw": "11",
+      "value": 11
+    },
+    "mp": {
+      "raw": "8",
+      "value": 8
+    },
+    "sanity": {
+      "raw": "40",
+      "value": 40,
+      "max": null
+    },
+    "luck": {
+      "raw": "20",
+      "value": 20
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "6",
+      "value": 6,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 6
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Револьвер .38",
+          "en": ".38 Revolver"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "1d10",
+          "dice": "1d10",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:38-revolver",
+        "notes": "Дальность 15 м; атак в раунд 1 (3); патронов 6; осечка 100; 6 патронов в запасе."
+      },
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        },
+        "damage": {
+          "raw": "1d3 + БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "skills": [
+      {
+        "name": "Обаяние",
+        "skill": "coc:skill:charm",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "1%",
+          "value": 1,
+          "half": 0,
+          "fifth": 0
+        }
+      },
+      {
+        "name": "Стрельба (пистолет)",
+        "skill": "coc:skill:firearms",
+        "specialization": "пистолет",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Родной язык (английский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "английский",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Иностранный язык (латынь)",
+        "skill": "coc:skill:language-other",
+        "specialization": "латынь",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Медицина",
+        "skill": "coc:skill:medicine",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Естествознание",
+        "skill": "coc:skill:natural-world",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Психоанализ",
+        "skill": "coc:skill:psychoanalysis",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Наука (фармакология)",
+        "skill": "coc:skill:science",
+        "specialization": "фармакология",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Наука (биология)",
+        "skill": "coc:skill:science",
+        "specialization": "биология",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      }
+    ]
+  },
+  "background": {
+    "description": "Преждевременно постаревший и осунувшийся, с аккуратно подстриженной белой бородой. Всё ещё носит сильно запятнанный белый халат.",
+    "ideology": "Каждый человек заслуживает достоинства и сострадания, каким бы ни было его положение.",
+    "significant_people": "Билли Спитцер, мальчик, который всем помогает в медицинской палатке. Его бодрость заразительна.",
+    "meaningful_locations": "Лачуга в трущобах, которую он превратил в лучшую клинику, какую смог. Сделать в ней можно немного, но это лучше, чем ничего.",
+    "treasured_possessions": "Перьевая ручка «Монблан Мастерпис», подаренная женой в честь его назначения директором больницы Бентама. Можно было бы продать её ради еды и лекарств, но он не в силах с ней расстаться.",
+    "traits": "Шумная манера, за которой прячется тёплая и великодушная натура."
+  },
+  "description": {
+    "ru": "Готовый сыщик сценария «Мрачные перспективы»: бывший директор больницы Бентама, теперь лечит больных Гувервиля в медицинской лачуге.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Не так давно он был самым успешным врачом Кроули. Кроули, конечно, не так велик, как соседний Аркхэм, но он был богат и уважаем. Когда ему предложили стать директором больницы Бентама, ему казалось, что все его планы сбываются.\nЭто было в начале 1929 года. Через несколько месяцев рынки рухнули, и его денежная уверенность исчезла. Оставшиеся деньги были вложены в больницу, и он начал терять всё. Потом, когда он меньше всего мог себе это позволить, он заболел.\nБолезнь была странной и не подходила ни под одну известную ему патологию. Он стал вялым, иногда терял сознание, мышцы начали усыхать. Между денежными трудностями и неспособностью работать он потерял дом, брак, практику и, наконец, друзей.\nТеперь он живёт в трущобах на окраине Кроули. Здесь есть и другие с похожими историями, и все они тоже больны. По правде говоря, он один из самых здоровых здесь. Его старый протеже, доктор Кавендиш из больницы, кое-чем помогает, но Кумбс — самое близкое к врачу, что есть у этих людей, и они на него полагаются. Жаль только, что у него нет средств и сил, чтобы дать им нужную помощь, и умения распознать эту странную болезнь.\nВ сценарии. Изучает загадочную болезнь и выяснил, как она развивается, но не её причину и не способ лечения (врезка «Загадочная болезнь» — в описании паразитов и сценарии).",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 143,
+      "printed_page": 141,
+      "method": "book_text",
+      "verified": true,
+      "note": "лист сыщика «Nathaniel Coombes, age 54, former doctor»: характеристики, навыки, оружие, предыстория, портрет"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 137,
+      "printed_page": 135,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Appendix B»: «A former doctor, who now tends to the sick in the shantytown.»"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 120,
+      "printed_page": 118,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Relationship Map»: «Dr. Nathaniel Coombs (PC)» — бывший коллега Кавендиша, лечит Гарольда, Билли помогает"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 122,
+      "printed_page": 120,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Dramatis Personae»: «Dr. James Cavendish» — сменил Кумбса"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 123,
+      "printed_page": 121,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Mystery Disease»"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 124,
+      "printed_page": 122,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Medical Shack»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2). Готовый сыщик из «Appendix B: Pre-generated Investigators» (с. 135–141): лист с портретом, характеристиками, навыками и предысторией. По условию сценария у всех сыщиков Удача 20 и МОЩ не выше 40 (с. 112)."
+  },
+  "images": [
+    {
+      "file": "art/characters/nameless-bleak-nathaniel-coombes-2.webp",
+      "kind": "portrait",
+      "caption": "Натаниэль Кумбс",
+      "source": "«Безымянные ужасы» (Nameless Horrors), сценарий «Мрачные перспективы», с. 141 (физ. 143), «Appendix B»: портрет с листа сыщика"
+    }
+  ]
+}

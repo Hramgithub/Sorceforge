@@ -1,0 +1,305 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "nameless-horrors-en/character/verity-harrow",
+  "kind": "character",
+  "name": {
+    "ru": "Верити Харроу",
+    "en": "Verity Harrow"
+  },
+  "aliases": [
+    "Verity Harrow, emptied actress, filled with the Void",
+    "Verity Harrow, female lead",
+    "Харроу",
+    "мисс Харроу"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "киноактриса, исполнительница главной роли в «Пространстве между»",
+    "en": "actress, female lead"
+  },
+  "occupation_ref": "coc:occupation:kinoakter",
+  "age": {
+    "raw": "25",
+    "value": 25
+  },
+  "sex": "женский",
+  "residence": "квартира на Хейвенхёрст-драйв, Западный Голливуд; сейчас — Ретрит знаменитостей",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "nameless-horrors-en/creature/the-emptied",
+      "note_back": "единственная Опустошённая в начале игры"
+    },
+    {
+      "type": "knows",
+      "target": "nameless-horrors-en/character/craig-steele",
+      "note": "Опустошил её вместе с Вудвордом и держит в Ретрите",
+      "note_back": "ритуально принёс её в жертву и держит в Ретрите знаменитостей"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "25",
+        "value": 25
+      },
+      "CON": {
+        "raw": "30",
+        "value": 30
+      },
+      "SIZ": {
+        "raw": "50",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50
+      },
+      "APP": {
+        "raw": "80",
+        "value": 80
+      },
+      "INT": {
+        "raw": "60",
+        "value": 60
+      },
+      "POW": {
+        "raw": "90",
+        "value": 90
+      },
+      "EDU": {
+        "raw": "65",
+        "value": 65
+      }
+    },
+    "hp": {
+      "raw": "8*",
+      "value": 8
+    },
+    "mp": {
+      "raw": "18",
+      "value": 18
+    },
+    "sanity": {
+      "raw": "15",
+      "value": 15,
+      "max": 99
+    },
+    "damage_bonus": {
+      "raw": "–1",
+      "value": "-1"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        },
+        "damage": {
+          "raw": "1d3–1",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      }
+    ],
+    "dodge": {
+      "raw": "25% (12/5)",
+      "value": 25,
+      "half": 12,
+      "fifth": 5
+    },
+    "skills": [
+      {
+        "name": "Искусство/ремесло (актёрское мастерство)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "актёрское мастерство",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Обаяние",
+        "skill": "coc:skill:charm",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d8",
+        "trigger": "увидеть Опустошённую такой, какая она есть (глаза, рот или проколотая кожа)"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Опустошённая",
+      "summary": "Особая пометка книги: когда один из Опустошённых получает серьёзную рану, пронзён или ранен острым предметом, его кожа лопается и наружу вытекает Голодная Пустота (см. «Голодная Пустота»). Кто увидит её такой, какая она есть (глаза, рот или проколотая кожа), проходит проверку Рассудка (1/1d8).",
+      "raw": "*Special note: When one of the Emptied suffers a Major Wound, is impaled, or is wounded with a sharp object, their skin will split and the Hungry Void will leak out. See the section titled The Hungry Void (following). Sanity Loss: seeing one of the Emptied for what they are, through their eyes, mouth or by piercing their skin, provokes a Sanity roll (1/1d8 loss).",
+      "refs": [
+        "nameless-horrors-en/creature/the-emptied",
+        "nameless-horrors-en/creature/the-hungry-void"
+      ]
+    }
+  ],
+  "background": {
+    "description": "Прежде — честолюбивая блондинка со свежей красотой, природной грацией и элегантностью, ярко-зелёными глазами и ровной белой улыбкой. Теперь прячется за большими тёмными очками и цветастым шарфом, закрывающим низ лица.",
+    "traits": "Трогает и перебирает всё вокруг, будто пытается убедить себя, что это реально.",
+    "secret": "Убита и Опустошена в ночь на 3 апреля: Вудворд снял с неё кожу живьём, Стил призвал Открывателя Пути, и Голодная Пустота наполнила зашитую кожу. Её останки найдены в ливневом стоке 8 апреля; 11 апреля анализ ДНК это подтвердит."
+  },
+  "description": {
+    "ru": "Актриса около двадцати пяти лет, несколько лет назад перешедшая из телевидения в кино; её карьера пошла в гору после вступления в Церковь Шуньяты с её сетью связей. Главные роли у неё были только в небольших фильмах, но звезда её восходила; роль Клариссы Холлоуз в «Пространстве между» должна была принести ей славу. Когда Стил и Вудворд предложили ей стать Пустой и помочь в этом другим, она решила, что долг перед Церковью важнее. Она помнит всё, что с ней сделали, и стоит на грани безумия: жалеет, что позволила себя уговорить, напугана тем, чем стала, и понимает, что последние остатки её личности тают.\nНа первый взгляд она та же, что и прежде; но если снять очки и шарф, сразу видно, что внутри — лишь тьма и пляшущие точки света. Шарф прячет и большой шрам вдоль шеи сзади, где кожу разрезали и сняли: он грубо зашит, и края раны жутко сдвигаются, когда она двигается. Голос стал придыхательным, с лёгким эхом, но всё ещё узнаваем. Как отыгрывать: взывает к сочувствию сыщиков — этой женщине нужна помощь; не смотрит в глаза — пустой взгляд мимо игроков.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Стил держит её в Ретрите знаменитостей вдали от чужих глаз, пока она привыкает к новому состоянию, — её поступки непредсказуемы. Харроу заявлена пропавшей, полиция ведёт расследование. 8 апреля она пообещала охраннику Ретрита Тайрону Гуду тысячу долларов, чтобы он отвёз её домой за вещами (сцена «Квартира Верити Харроу»). Она думает, что «Пространство между» поможет людям понять истинную природу Пустоты, но не знает, что именно должен сделать фильм; об Иветт Соммерс знает только как о персонаже, а базальтовые утёсы считает спецэффектом. Обдумав своё положение, возвращаться в Ретрит она не хочет: её легко уговорить спрятаться в другом месте или даже бежать, но публичных заявлений она делать не станет — она боится Церкви и ещё больше того, чем стала. На тестовом показе в фильме видно, как Иветт Соммерс касается окровавленной Харроу на утёсах и та оседает пустой кожей.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 183,
+      "printed_page": 181,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Death of Verity Harrow»"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 184,
+      "printed_page": 182,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Death of Verity Harrow» (продолжение)"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 186,
+      "printed_page": 184,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Verity Harrow, emptied actress, filled with the Void»"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 191,
+      "printed_page": 189,
+      "method": "book_text",
+      "verified": true,
+      "note": "раздатка 1B (продолжение): «Verity Harrow, female lead»"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 193,
+      "printed_page": 191,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Verity Harrow’s Apartment»"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 194,
+      "printed_page": 192,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Verity Harrow’s Apartment» (продолжение), «Other Ways of Bringing Harrow into Play»"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 208,
+      "printed_page": 206,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Verity Harrow, age 25, one of the Emptied»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.build",
+      "printed": "Build: 0",
+      "expected": "−1",
+      "note": "СИЛ 25 + ТЕЛ 50 = 75 (65–84): БкУ −1 и Комплекция −1; БкУ напечатан верно (–1), Комплекция — 0. Оставлено как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2). Сценарий «Пространство между» (The Space Between, Скотт Дорвард) из сборника «Безымянные ужасы», с. 178–216. Подзаголовок статблока — «one of the Emptied». Звёздочка у ПЗ («HP 8*») ведёт к особой пометке о Голодной Пустоте (способность). Атака «1d3–1» уже включает БкУ −1. Ссылка книги «see Verity Harrow, page 188» ведёт на с. 184."
+  },
+  "images": [
+    {
+      "file": "art/characters/nameless-space-verity-harrow.webp",
+      "kind": "portrait",
+      "caption": "Верити Харроу",
+      "source": "«Безымянные ужасы», «Пространство между», с. 185 (физ. 187), «Dramatis Personae» — групповой рисунок, вырезка"
+    }
+  ]
+}

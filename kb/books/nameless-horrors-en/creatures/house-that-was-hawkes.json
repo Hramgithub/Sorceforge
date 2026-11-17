@@ -1,0 +1,259 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "nameless-horrors-en/creature/house-that-was-hawkes",
+  "kind": "creature",
+  "name": {
+    "ru": "Дом, который был Хоуксом",
+    "en": "The House That Was Hawkes"
+  },
+  "aliases": [
+    "То, что было Хоуксом",
+    "The Thing That Was Hawkes",
+    "The House That Was Hawkes, once-human alien hybrid",
+    "Hawkes House"
+  ],
+  "category": "supernatural",
+  "subcategory": "бывший человек, чужеродный гибрид",
+  "axes": {
+    "era": [
+      "1930s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "form_of",
+      "target": "nameless-horrors-en/character/aston-hawkes",
+      "note": "это то, чем стал Астон Хоукс",
+      "note_back": "нынешний облик: дом «Проспект», ставший его телом"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "120",
+        "value": 120
+      },
+      "CON": {
+        "raw": "—",
+        "value": null
+      },
+      "SIZ": {
+        "raw": "varies",
+        "value": null
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "INT": {
+        "raw": "—",
+        "value": null
+      },
+      "POW": {
+        "raw": "150",
+        "value": 150
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "30*",
+      "value": 30,
+      "note": "только в потолке спальни хозяина; штукатурка даёт 2 очка брони"
+    },
+    "mp": {
+      "raw": "30",
+      "value": 30
+    },
+    "damage_bonus": {
+      "raw": "n/a",
+      "value": null
+    },
+    "build": {
+      "raw": "n/a**",
+      "value": null
+    },
+    "move": {
+      "raw": "n/a",
+      "value": null,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": null
+        }
+      ]
+    },
+    "armor": {
+      "raw": "2 (штукатурка потолка спальни хозяина)",
+      "value": 2
+    },
+    "attacks_per_round": {
+      "raw": "2",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Переваривание (желудочная кислота)",
+          "en": "Devour (stomach acid)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d8",
+          "dice": "1d8",
+          "adds_db": false
+        },
+        "notes": "Манёвр (mnvr) — в столовой, «желудке» дома."
+      },
+      {
+        "name": {
+          "ru": "Захват языком",
+          "en": "Grab with tongue"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d4, жертва попадает в столовую",
+          "dice": "1d4",
+          "adds_db": false
+        },
+        "notes": "Манёвр (mnvr): хватает языком в спальне хозяина, втягивает в рот и глотает; проглоченный оказывается в столовой, готовый к перевариванию (в книге — «see page 131», столовая — с. 129)."
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "—",
+        "fail": "—",
+        "trigger": "см. описания отдельных проявлений в главном доме «Проспекта»"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Уязвимость",
+      "summary": "Уязвим только в потолке спальни хозяина, где находится его мозг; штукатурка даёт 2 очка брони. Атаки в других местах Хоуксу вреда не наносят. Другой способ уничтожить дом Хоукса — сжечь его целиком (из-за влажности нужно много горючего; см. «Горящая солярка» в описании мастерской).",
+      "raw": "Only vulnerable in bedroom ceiling. Plaster provides 2 points of armor. Attacks in other locations do no damage to Hawkes. Burning down the entire house is the only other option for destroying the Hawkes House.",
+      "refs": [
+        "nameless-horrors-en/location/prospect-master-bedroom",
+        "nameless-horrors-en/item/diesel-drums"
+      ]
+    },
+    {
+      "name": "Комплекция для манёвров",
+      "summary": "Для боевых манёвров его Комплекция считается равной 2.",
+      "raw": "Build 2 for the purpose of performing fighting maneuvers.",
+      "refs": [
+        "coc:rule:fighting-maneuvers"
+      ]
+    },
+    {
+      "name": "Голос дома",
+      "summary": "Если кто-нибудь внятно кричит в доме — например, зовёт Эстер, — Хоукс отвечает ему дыхательным, почти инфразвуковым эхом. Говорить с ним напрямую нужно терпеливо: он с трудом удерживает новую форму, чтобы складывать слова, и отвечает медленно, по слову в несколько секунд. Его голос исходит из спальни хозяина — низкий дыхательный рокот, сотрясающий весь дом; речь обрывочна и бессвязна.",
+      "raw": "If anyone shouts intelligibly in the house—calling out for Esther, for example—Hawkes will answer them with a breathy, almost subsonic echo. Attempting to talk directly to Hawkes will require patience, as he is struggling to maintain enough of his new form to make words. Responses will come slowly, with a single word every few seconds."
+    },
+    {
+      "name": "Голод",
+      "summary": "Хоукс очень голоден: проявление требует сырья, из которого он строит новую плоть. Он уже поглотил всех грызунов и насекомых в доме и попытается либо сожрать сыщиков, либо умолять их принести ему плоти, чтобы снова стать сильным.",
+      "raw": "Hawkes is very hungry. The process of manifestation is demanding, and he needs raw materials to turn into new flesh. Hawkes has already absorbed all the vermin and insects in the house, and will either try to consume the investigators, or plead with them to bring him flesh to make him strong again."
+    }
+  ],
+  "description": {
+    "ru": "Дом «Проспект», который становится живым телом: одни комнаты уже приняли форму органов, другие в переходе и несут лишь следы странных жидкостей; подвалы затоплены отходами и паразитами, которых Хоукс извергает из новой оболочки. Столовая стала его пищеварительной системой, спальня хозяина — мозгом, лёгкими, сердцем и ртом; со временем и новой плотью эти органы переместятся в другие части дома. В конце концов дом станет чем-то целиком живым и чуждым, что всё ещё считает себя Астоном Хоуксом.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Астон Хоукс больше шести лет был заперт за пределами того, что мы считаем реальностью, и теперь совершенно безумен. Он сохранил кое-что человеческое, но в нём живёт колония существ с той стороны, и его разум и порывы принадлежат им не меньше, чем ему. Каждый раз, когда включали устройство Хоукса, он пытался прорваться в наше измерение; в ночь перед вступительной сценой ему это наконец удалось: когда Седжвик добывал свежих особей Вида 17, Хоукс воспользовался утечкой поля устройства. Будучи физически так же несинхронен с нашим измерением, как другие твари из портала, он, чтобы обрести форму, инстинктивно закрепился за первым достаточно большим предметом, который почувствовал, — самим домом «Проспект». Дом затрясся, застонал и начал меняться; Бринк и Моллой, готовившие пленников в подвале, бежали. С каждым часом он всё прочнее овладевает домом.\nУбить Хоукса трудно. Самое прямое — сжечь дом, но это смертный приговор Эстер Фрейн, если её не вывели из подвала; из-за влажности дому нужно много горючего. Он уязвим в спальне хозяина, которая служит ему сердцем и мозгом. Можно переделать устройство Хоукса, чтобы отправить его обратно через разлом: нужна трудная проверка двух навыков — Науки (физика) и Электрики и нарушение сдерживания круга. Хоукс исчезнет, но тысячи паразитов с той стороны окажутся заперты на территории «Проспекта».\nЗацепки для отыгрыша: требует принести ему плоти; Хранитель говорит медленно, низко и задыхаясь.",
+    "en": null
+  },
+  "encounters": {
+    "ru": "Главный дом «Проспекта»: прихожая (дыхание дома), столовая (переваривание), бальный зал (фигура в зеркалах), спальня хозяина (голос, язык, мозг), кухни и подвалы.",
+    "en": null
+  },
+  "habitat": "главный дом усадьбы «Проспект», Кроули",
+  "sources": [
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 137,
+      "printed_page": 135,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «The House That Was Hawkes, once-human alien hybrid» и сноски"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 122,
+      "printed_page": 120,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Dramatis Personae»: «The House That Was Hawkes»"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 123,
+      "printed_page": 121,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The House That Was Hawkes» (продолжение)"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 115,
+      "printed_page": 113,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Things Fall Apart»: вселение в дом"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 131,
+      "printed_page": 129,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Main House»"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 132,
+      "printed_page": 130,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Master Bedroom»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2). Уникальное существо сценария (новый «безымянный ужас» книги); category — наш выбор. Способности: raw — английский текст книги. ПЗ «30*», Комплекция «n/a**», Скорость и БкУ «n/a» — как напечатано, со сносками книги."
+  },
+  "images": [
+    {
+      "file": "art/creatures/nameless-bleak-house-that-was-hawkes.webp",
+      "kind": "illustration",
+      "caption": "Комната «Проспекта», которую захватывает Хоукс",
+      "source": "«Безымянные ужасы» (Nameless Horrors), сценарий «Мрачные перспективы», с. 130 (физ. 132): иллюстрация без подписи"
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "nameless-horrors-en/creature/ghost-of-father-fynche",
+  "kind": "creature",
+  "name": {
+    "ru": "Призрак отца Финча",
+    "en": "Fynche as the Ghost"
+  },
+  "aliases": [
+    "the ghost",
+    "Fynche as THE GHOST",
+    "призрак",
+    "хранитель короны"
+  ],
+  "category": "supernatural",
+  "subcategory": "дух",
+  "axes": {
+    "era": [
+      "gaslight"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:ghost",
+      "note_back": "призрак отца Финча — хранитель данвичской короны («Неувядающее желание»)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "—",
+        "value": null
+      },
+      "CON": {
+        "raw": "—",
+        "value": null
+      },
+      "SIZ": {
+        "raw": "—",
+        "value": null
+      },
+      "DEX": {
+        "raw": "75",
+        "value": 75
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "INT": {
+        "raw": "75",
+        "value": 75
+      },
+      "POW": {
+        "raw": "75",
+        "value": 75
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "—",
+      "value": null
+    },
+    "mp": {
+      "raw": "15",
+      "value": 15
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "—",
+      "value": null
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Атака призрака",
+          "en": "Ghost Attack"
+        },
+        "kind": "special",
+        "skill": "МОЩ",
+        "chance": {
+          "raw": "встречная проверка МОЩ",
+          "value": null,
+          "half": null,
+          "fifth": null
+        },
+        "damage": {
+          "raw": "2d10 МОЩ",
+          "dice": "2d10",
+          "adds_db": false,
+          "extra": "снижает МОЩ противника; оружие проходит сквозь призрака"
+        },
+        "notes": "призрак будто царапает или бьёт цель, но вместо Ближнего боя бросает МОЩ против МОЩ цели"
+      }
+    ],
+    "sanity": {
+      "raw": "—",
+      "value": null,
+      "max": null
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "при виде призрака"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Атака призрака",
+      "summary": "Во всех атаках призрак словно царапает или бьёт цель, но вместо Ближнего боя бросает МОЩ против МОЩ цели; победив, снижает МОЩ противника на 2d10. Физические атаки (оружие) на него не действуют — проходят насквозь. Успешная проверка ИНТ при вступлении в бой подсказывает сыщику, что с призраком надо биться психически — МОЩ против МОЩ призрака; если побеждает противник, призрак теряет 2d10 МОЩ. При 0 МОЩ призрак растворяется в небытии.",
+      "raw": "Ghost Attack: For all attacks, the ghost appears to claw at or otherwise strike its target. However, rather than rolling Fighting, the ghost rolls POW versus its target in combat. If the ghost wins, it reduces its opponents POW by 2d10. Physical attacks (i.e. weapons) have no effect upon the ghost, passing straight through it. A successful Intelligence roll upon engaging the ghost in combat enables the investigator to understand they must engage the ghost in psychic combat, rolling their POW versus the ghost’s POW. If the opponent wins, the ghost loses 2d10 POW. At 0 POW, the ghost fades away into nothing.",
+      "refs": [
+        "coc:rule:opposed-pow-rolls"
+      ]
+    }
+  ],
+  "description": {
+    "ru": "Пронзительные немигающие глаза, угрожающая улыбка; плоть на кистях и руках обожжена, сквозь мёртвую плоть видны кости; грудь под рясой голая и скелетная. Является в священнических одеждах, скрестив руки, с надвинутым на голову капюшоном; если он вытянет руки, видны обгоревшая плоть и обугленные кости, а если распахнуть рясу — тело так же обуглено, торс почти целиком скелет. Черты: существует только чтобы охранять корону; остальное неважно.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Если отец Финч гибнет у мельницы, его призрак появляется в церкви Святого Варфоломея и продолжает стеречь корону. Он знает всё, что знал Финч, но уже точно не человек. Судьба Сары его не заботит. Он молча стоит в проходе к купели посреди церкви и терпит сыщиков, пока те не пытаются спуститься в склеп; если они прокрадутся мимо, он появится у короны, как только начнут поднимать плиту, и нападёт. Вытаскивание короны из земли сразу призывает его; на тех, кто пытается её уничтожить, он нападает, пока они не прекратят. Чрезвычайная проверка Убеждения (доводы, услышанные от Финча в прошлой петле, снижают сложность на ступень): церковь обречена и рухнет к концу ночи, а корону надо перенести вглубь суши, — тогда он не нападает и остаётся при сыщиках, пока они не исполнят обещание. Слуги Древних богов, бьющиеся с ним, видят, что их магия на него не действует, и чахнут, теряя МОЩ. Сыщики, потерявшие МОЩ от призрака, при перезапуске петли возвращают только половину потерянного.\nЕсли сыщики несут корону через пустоту, призрак, последовавший за ними, исчезает на краю и ждёт там, куда корона прибудет. На берегу будущего он в подходящий момент велит закопать корону так далеко от моря, чтобы оно ей больше не грозило, прибегая к насилию, если нужно; получив честное обещание, исчезает, но ещё несколько недель всем сыщикам кажется, что за ними следят. Если корону пытаются уничтожить, он является и нападает, пока его не развеют или не прекратят. Предложенную корону он забирает, мгновенно исчезая, и прячет её в надёжном месте для будущего поколения. В 1895 году, в начале сценария, выжившие в волне сыщики могут заметить фигуру в капюшоне на краю обрыва — это он.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 16,
+      "printed_page": 14,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Father Joseph Fynche»: призрак"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 18,
+      "printed_page": 16,
+      "method": "book_text",
+      "verified": true,
+      "note": "фигура на обрыве"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 19,
+      "printed_page": 17,
+      "method": "book_text",
+      "verified": true,
+      "note": "иллюстрация"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 20,
+      "printed_page": 18,
+      "method": "book_text",
+      "verified": true,
+      "note": "потеря МОЩ и перезапуск петли"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 28,
+      "printed_page": 26,
+      "method": "book_text",
+      "verified": true,
+      "note": "в проходе церкви"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 29,
+      "printed_page": 27,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Ghost Attacks!»"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 31,
+      "printed_page": 29,
+      "method": "book_text",
+      "verified": true,
+      "note": "призрак и пустота"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 33,
+      "printed_page": 31,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Coda»"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 34,
+      "printed_page": 32,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Coda»"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 35,
+      "printed_page": 33,
+      "method": "book_text",
+      "verified": true,
+      "note": "приложение A: «Fynche as THE GHOST»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2). Сценарий «Неувядающее желание» (An Amaranthine Desire; Мэтью Сандерсон), сборник «Безымянные ужасы» (Nameless Horrors; Chaosium, 2015). Особь вида «Привидение» (Р-79): свой статблок сценария; механика атаки совпадает с общей записью."
+  },
+  "images": [
+    {
+      "file": "art/creatures/nameless-amaranthine-ghost-of-father-fynche.webp",
+      "kind": "art",
+      "caption": "«Призрак нападает!» (The Ghost Attacks!)",
+      "source": "Nameless Horrors, с. 27 (физ. 29), «An Amaranthine Desire»: иллюстрация «The Ghost Attacks!»"
+    }
+  ]
+}

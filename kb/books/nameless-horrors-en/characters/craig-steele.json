@@ -1,0 +1,345 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "nameless-horrors-en/character/craig-steele",
+  "kind": "character",
+  "name": {
+    "ru": "Крейг Стил",
+    "en": "Craig Steele"
+  },
+  "aliases": [
+    "Craig Steele, truly empty actor, filled with the Void",
+    "Craig Steele, producer",
+    "Стил",
+    "мистер Стил"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "бывший киноактёр, продюсер «Пространства между»",
+    "en": "retired actor, producer"
+  },
+  "occupation_ref": "coc:occupation:kinoakter",
+  "age": {
+    "raw": "58",
+    "value": 58
+  },
+  "sex": "мужской",
+  "residence": "Ретрит знаменитостей",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "nameless-horrors-en/creature/the-truly-empty",
+      "note_back": "первый Истинно Пустой"
+    },
+    {
+      "type": "knows",
+      "target": "nameless-horrors-en/character/ralph-l-chandler",
+      "note": "наставник; Стил унаследовал его библиотеку",
+      "note_back": "ученик и наследник библиотеки"
+    },
+    {
+      "type": "knows",
+      "target": "nameless-horrors-en/character/brian-musgrove",
+      "note": "единственный, кого Стил сделал Истинно Пустым; делят одно сознание",
+      "note_back": "сделал его Истинно Пустым; делят одно сознание"
+    },
+    {
+      "type": "knows",
+      "target": "nameless-horrors-en/character/milt-schriver",
+      "note": "старый друг, владелец студии",
+      "note_back": "старый друг"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "30",
+        "value": 30
+      },
+      "CON": {
+        "raw": "30",
+        "value": 30
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "APP": {
+        "raw": "75",
+        "value": 75
+      },
+      "INT": {
+        "raw": "70",
+        "value": 70
+      },
+      "POW": {
+        "raw": "150",
+        "value": 150
+      },
+      "EDU": {
+        "raw": "80",
+        "value": 80
+      }
+    },
+    "hp": {
+      "raw": "9*",
+      "value": 9
+    },
+    "mp": {
+      "raw": "30",
+      "value": 30
+    },
+    "sanity": {
+      "raw": "00",
+      "value": 0,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Искусство/ремесло (актёрское мастерство)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "актёрское мастерство",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Обаяние",
+        "skill": "coc:skill:charm",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "95%",
+          "value": 95,
+          "half": 47,
+          "fifth": 19
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d8",
+        "trigger": "увидеть Истинно Пустого таким, какой он есть (глаза, рот или проколотая кожа)"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Истинно Пустой",
+      "summary": "Особая пометка книги: когда один из Истинно Пустых получает серьёзную рану, пронзён или ранен острым предметом, его кожа лопается и наружу вытекает Голодная Пустота (см. «Голодная Пустота»). Кто увидит его таким, какой он есть (глаза, рот или проколотая кожа), проходит проверку Рассудка (1/1d8).",
+      "raw": "*Special note: When one of the Truly Empty suffers a Major Wound, is impaled, or is wounded with a sharp object, their skin will split and the Hungry Void will leak out. See the section titled The Hungry Void (following). Sanity Loss: seeing one of the Truly Empty for what they are, through their eyes, mouth or by piercing their skin, provokes a Sanity roll (1/1d8 loss).",
+      "refs": [
+        "nameless-horrors-en/creature/the-truly-empty",
+        "nameless-horrors-en/creature/the-hungry-void"
+      ]
+    }
+  ],
+  "background": {
+    "description": "Когда-то по-мальчишески красивый, теперь грузный, с брылями; волосы сильно поредели, и он носит накладку — не из тщеславия, а потому что этого ждут люди. При людях — тёмные очки-«капли» с запахом; вставные зубы изображают нормальную улыбку.",
+    "traits": "Благодаря обширным досье на членов Церкви часто знает о людях очень личные подробности и вставляет их в разговор, чтобы напомнить, кто здесь главный.",
+    "secret": "Это не Стил: в его коже — Голодная Пустота. Глаз нет (их прячут очки), во рту нет языка (чрезвычайный успех проверки Внимания)."
+  },
+  "description": {
+    "ru": "Звезда с середины 1970-х: прославился на телевидении, потом перешёл в кино; когда в начале восьмидесятых прошла его слава кумира подростков, продолжал работать героем боевиков, затем характерным актёром и был опорой голливудского кино, пока три года назад не ушёл со сцены. Одним из первых знаменитостей пришёл в Церковь Шуньяты и быстро стал её синонимом — в глазах многих он лицо Церкви; его обаяние привело в Церковь других людей из индустрии развлечений и его поклонников. Изредка ещё даёт интервью о делах Церкви, но в последнее время только печатным изданиям и радио. Продюсер «Пространства между»: в фильме не снимается и был на площадке лишь дважды, но его влияние чувствуется во всём.\nСущество в коже Стила хладнокровно, бесчеловечно и совершенно обаятельно; оно в совершенстве научилось изображать Стила, и даже ближайшие помощники думают, что он просто стал эксцентричнее после ухода на покой. Как отыгрывать: задаёт сыщикам вопросы, чтобы понять, опасны ли они; не смотрит в глаза — пустой взгляд мимо игроков.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Достиг вершины иерархии Церкви, много говорил с Чандлером о его учении и унаследовал его личную библиотеку, в том числе «Сассекскую рукопись» и обширный разбор её Чандлером. После смерти Чандлера (1995) годами изучал его записи и совершил концептуальный прорыв — первым понял, что значит быть «Пустым» по-настоящему. Прозрение пришло почти два года назад во флоатационной камере, во время медитации над последними трудами Чандлера: в одно мгновение, длившееся вечность, он ощутил пустое пространство между всем сущим как конкретную истину, и всё, что составляло Крейга Стила, мгновенно исчезло; из камеры вышло нечто в коже Стила, внутри которого была Голодная Пустота.\nС тех пор он сделал Истинно Пустым только Брайана Масгроува и ищет другие пути: ритуально-хирургический (снять с человека кожу живьём и призвать Открывателя Пути, чтобы тот наполнил оболочку Голодной Пустотой — так появляются Опустошённые) и зрительный — фильм с вклеенными кадрами Мифов. Он призвал Джареда Вудворда воплотить этот замысел. Сейчас работает над тем, чтобы воскресить Ральфа Л. Чандлера как Истинно Пустого (его выделанная кожа хранится в шкафу кабинета). Если сыщики вели себя подозрительно, сам выходит на них и предлагает личный сеанс Опустошения; угрозе для фильма предлагает «Ускоренный путь». Если сыщиков разоблачат как виновников уничтожения фильма, Стил и Масгроув бросят на их поиски все ресурсы Церкви.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 182,
+      "printed_page": 180,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Embracing Celebrities», «True Emptiness»"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 183,
+      "printed_page": 181,
+      "method": "book_text",
+      "verified": true,
+      "note": "«True Emptiness» (продолжение)"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 186,
+      "printed_page": 184,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Craig Steele, truly empty actor, filled with the Void»"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 187,
+      "printed_page": 185,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Craig Steele» (продолжение): описание, черты"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 191,
+      "printed_page": 189,
+      "method": "book_text",
+      "verified": true,
+      "note": "раздатка 1B (продолжение): «Craig Steele, producer»"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 201,
+      "printed_page": 199,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Craig Steele’s Private Office»"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 202,
+      "printed_page": 200,
+      "method": "book_text",
+      "verified": true,
+      "note": "«A Private Session with Steele»"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 208,
+      "printed_page": 206,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Craig Steele, age 58, one of the Truly Empty»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.move",
+      "printed": "Move: 7",
+      "expected": "6 (8 − 2 за возраст 50–59) или 8 без поправки",
+      "note": "ЛВК 70 больше ТЕЛ 60, СИЛ 30 меньше: базовая Скорость 8; для 58 лет — 6. Напечатанная 7 не сходится ни с тем, ни с другим. Оставлено как напечатано (Р-161).",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2). Сценарий «Пространство между» (The Space Between, Скотт Дорвард) из сборника «Безымянные ужасы», с. 178–216. Подзаголовок статблока — «one of the Truly Empty». Рассудок «00» — как напечатано. Статблок на с. 206 продолжается во второй колонке (атаки, навыки). Звёздочка у ПЗ («HP 9*») ведёт к особой пометке о Голодной Пустоте (способность)."
+  },
+  "images": [
+    {
+      "file": "art/characters/nameless-space-craig-steele.webp",
+      "kind": "portrait",
+      "caption": "Крейг Стил",
+      "source": "«Безымянные ужасы», «Пространство между», с. 185 (физ. 187), «Dramatis Personae» — групповой рисунок, вырезка"
+    }
+  ]
+}

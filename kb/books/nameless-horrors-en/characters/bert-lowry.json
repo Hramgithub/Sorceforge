@@ -1,0 +1,346 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "nameless-horrors-en/character/bert-lowry",
+  "kind": "character",
+  "name": {
+    "ru": "Берт Лоури",
+    "en": "Bert Lowry"
+  },
+  "roles": [
+    "pregen"
+  ],
+  "occupation": {
+    "ru": "продавец автомобилей",
+    "en": "car salesman"
+  },
+  "occupation_ref": "coc:occupation:torgovets",
+  "age": {
+    "raw": "27",
+    "value": 27
+  },
+  "sex": "мужской",
+  "residence": "Стоуэлл",
+  "relations": [
+    {
+      "type": "relative_of",
+      "target": "nameless-horrors-en/character/raymond-lowry",
+      "note": "отец",
+      "note_back": "сын"
+    },
+    {
+      "type": "relative_of",
+      "target": "nameless-horrors-en/character/lucile-lowry",
+      "note": "мать",
+      "note_back": "сын"
+    },
+    {
+      "type": "knows",
+      "target": "nameless-horrors-en/character/annabelle-hearn",
+      "note": "девушка, на которой он хотел бы жениться",
+      "note_back": "ухажёр, явно неравнодушен к ней"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "75",
+        "value": 75
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "30",
+        "value": 30
+      },
+      "APP": {
+        "raw": "45",
+        "value": 45
+      },
+      "INT": {
+        "raw": "55",
+        "value": 55
+      },
+      "POW": {
+        "raw": "55",
+        "value": 55
+      },
+      "EDU": {
+        "raw": "50",
+        "value": 50
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "luck": {
+      "raw": "80",
+      "value": 80
+    },
+    "sanity": {
+      "raw": "55",
+      "value": 55,
+      "max": 99
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Большая дубинка (бейсбольная бита)",
+          "en": "large club"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "1d8+1d4",
+          "dice": "1d8",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:club-large",
+        "notes": "в книге — в одной строке с дракой: «or large club 1d8 + 1d4»; старая бейсбольная бита — ценная вещь Берта"
+      }
+    ],
+    "dodge": {
+      "raw": "25% (12/5)",
+      "value": 25,
+      "half": 12,
+      "fifth": 5
+    },
+    "skills": [
+      {
+        "name": "Бухгалтерское дело",
+        "skill": "coc:skill:accounting",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Обаяние",
+        "skill": "coc:skill:charm",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Вождение автомобиля",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Стрельба (пистолет)",
+        "skill": "coc:skill:firearms",
+        "specialization": "пистолет",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Родной язык (английский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "английский",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Юриспруденция",
+        "skill": "coc:skill:law",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Механика",
+        "skill": "coc:skill:mechanical-repair",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      }
+    ]
+  },
+  "background": {
+    "description": "Ты щеголяешь в элегантном костюме, волосы зачёсаны назад.",
+    "ideology": "Надеешься вступить в местную масонскую ложу: членство открывает многие двери — так, по крайней мере, говорят.",
+    "significant_people": "Аннабель Хёрн, очаровательная девушка, которая моет посуду в стейк-хаусе Элмера. Отец, Рэймонд, и мать, Люсиль.",
+    "meaningful_locations": "Школа Стоуэлла: там прошли лучшие годы твоей жизни.",
+    "treasured_possessions": "Старая бейсбольная бита (теперь она в основном собирает пыль).",
+    "traits": "В городе известен тем, что продаст пепел самому дьяволу.",
+    "secret": "Отец Берта, Рэймонд, стал Благословенным и всё время играет музыку; мать, Люсиль, ничего не знает о телескопе и вызвала сына (с. 84–85)."
+  },
+  "description": {
+    "ru": "Готовый сыщик сценария «Иное упало на каменистое место»: все шесть готовых сыщиков — 27-летние жители Стоуэлла, учились в одной школе; с этого Хранитель начинает разговор о том, как они знают друг друга и что их связывает (с. 104). Берт — продавец автомобилей; мать позвала его из-за странного поведения отца (раздатка для Берта Лоури).",
+    "en": null
+  },
+  "legend": {
+    "ru": "Предыстория (раздатка, с. 85, 102, 106): твой отец, Рэймонд Лоури, всегда был гордым человеком и работает в местном Коммерческом трастовом и сберегательном банке Стоуэлла. Недавно позвонила мать, Люсиль: она явно расстроена и беспокоится об отце. По её словам, он занял гостиную и всё время играет музыку; окружил себя пианино, скрипкой и «кое-чем ещё», что бы это ни было.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 108,
+      "printed_page": 106,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Appendix C»: Bert Lowry — характеристики, навыки, предыстория, портрет"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 86,
+      "printed_page": 84,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Bert Lowry (pre-generated investigator)» — сведения для Хранителя"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 87,
+      "printed_page": 85,
+      "method": "book_text",
+      "verified": true,
+      "note": "продолжение сведений для Хранителя, раздатка для Берта Лоури"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 104,
+      "printed_page": 102,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Appendix B: Handouts»: раздатка для Берта Лоури"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2). Сценарий «And Some Fell on Stony Ground» (Пол Фрикер), с. 80–109."
+  },
+  "images": [
+    {
+      "file": "art/characters/nameless-stony-bert-lowry.webp",
+      "kind": "portrait",
+      "caption": "Берт Лоури — готовый сыщик",
+      "source": "Nameless Horrors, с. 106 (физ. 108), «Appendix C: Player Characters»"
+    }
+  ]
+}

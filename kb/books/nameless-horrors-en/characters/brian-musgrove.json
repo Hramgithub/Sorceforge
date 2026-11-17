@@ -1,0 +1,335 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "nameless-horrors-en/character/brian-musgrove",
+  "kind": "character",
+  "name": {
+    "ru": "Брайан Масгроув",
+    "en": "Brian Musgrove"
+  },
+  "aliases": [
+    "Brian Musgrove, truly empty leader of the Church of Sunyata",
+    "Масгроув"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "глава Церкви Шуньяты",
+    "en": "church leader"
+  },
+  "age": {
+    "raw": "63",
+    "value": 63
+  },
+  "sex": "мужской",
+  "residence": "кабинет на десятом этаже штаб-квартиры Церкви (домой не ходит)",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "nameless-horrors-en/creature/the-truly-empty",
+      "note_back": "Истинно Пустой, глава Церкви"
+    },
+    {
+      "type": "knows",
+      "target": "nameless-horrors-en/character/ralph-l-chandler",
+      "note": "учитель; принял у него управление Церковью",
+      "note_back": "восторженный последователь; принял управление Церковью в 1978 году"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "25",
+        "value": 25
+      },
+      "CON": {
+        "raw": "30",
+        "value": 30
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50
+      },
+      "APP": {
+        "raw": "65",
+        "value": 65
+      },
+      "INT": {
+        "raw": "60",
+        "value": 60
+      },
+      "POW": {
+        "raw": "150",
+        "value": 150
+      },
+      "EDU": {
+        "raw": "85",
+        "value": 85
+      }
+    },
+    "hp": {
+      "raw": "8*",
+      "value": 8
+    },
+    "mp": {
+      "raw": "30",
+      "value": 30
+    },
+    "sanity": {
+      "raw": "00",
+      "value": 0,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "–1",
+      "value": "-1"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "4",
+      "value": 4,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 4
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        },
+        "damage": {
+          "raw": "1d3–1",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      }
+    ],
+    "dodge": {
+      "raw": "25% (12/5)",
+      "value": 25,
+      "half": 12,
+      "fifth": 5
+    },
+    "skills": [
+      {
+        "name": "Обаяние",
+        "skill": "coc:skill:charm",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Юриспруденция",
+        "skill": "coc:skill:law",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d8",
+        "trigger": "увидеть Истинно Пустого таким, какой он есть (глаза, рот или проколотая кожа)"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Истинно Пустой",
+      "summary": "Особая пометка книги: когда один из Истинно Пустых получает серьёзную рану, пронзён или ранен острым предметом, его кожа лопается и наружу вытекает Голодная Пустота (см. «Голодная Пустота»). Кто увидит его таким, какой он есть (глаза, рот или проколотая кожа), проходит проверку Рассудка (1/1d8).",
+      "raw": "*Special note: When one of the Truly Empty suffers a Major Wound, is impaled, or is wounded with a sharp object, their skin will split and the Hungry Void will leak out. See the section titled The Hungry Void. Sanity Loss: seeing one of the Truly Empty for what they are, through their eyes, mouth or by piercing their skin, provokes a Sanity roll (1/1d8 loss).",
+      "refs": [
+        "nameless-horrors-en/creature/the-truly-empty",
+        "nameless-horrors-en/creature/the-hungry-void"
+      ]
+    }
+  ],
+  "background": {
+    "description": "Высокий подтянутый белый мужчина лет пятидесяти пяти с коротко стрижеными седеющими волосами; белая рубашка без воротника с тонкими вертикальными полосками и простой чёрный костюм. Обувь надевает только в редких случаях, когда покидает кабинет. Глаза всегда скрыты очками в чёрной оправе, слишком большими для его узкого лица.",
+    "traits": "Как и при жизни, тихий, но напряжённый: задаёт прямые, пронзительные вопросы с прямотой на грани грубости; никогда не повышает голос, но держится властно и пугающе.",
+    "secret": "Истинно Пустой: внутри — Голодная Пустота. Сливает части себя в бутылку на столе, пытаясь опустошать ею людей."
+  },
+  "description": {
+    "ru": "Глава Церкви Шуньяты и в начале игры единственный, кроме Стила, Истинно Пустой: воплощение Голодной Пустоты в человеческой коже. Несмотря на это, остаётся главой Церкви, управляя ею из уединения своего кабинета. Изображать человека ему удаётся хуже, чем Стилу: голос странно отдаётся эхом, и при людях он говорит, прикрывая рот рукой. Больше не спит, не ест и не нуждается в других телесных отправлениях; почти все встречи проводит по телефону и обычно сидит за столом, а когда ничто не требует его внимания, сидит совершенно неподвижно и не дышит. Как отыгрывать: запугивает и унижает тех, кто тратит его время; не смотрит в глаза — пустой взгляд мимо игроков, рот прикрыт.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Восторженный молодой последователь Чандлера, в 1978 году взял на себя повседневное управление Церковью, освободив наставника для написания Писания. Прагматичнее Чандлера: при нём Церковь быстро росла; понимая, что поздние писания Чандлера напугают непосвящённых, он ввёл структуру доступа к эзотерическим учениям — священные книги выдают по уровню понимания, а продвижение зависит от того, сочтут ли вышестоящие человека готовым. В 1985 году начал кампанию по вербовке людей из индустрии развлечений и открыл роскошный Ретрит знаменитостей. Пригласил Спенсера Шалла в «решалы» Церкви, когда того выгнали из полиции. Тестовый показ не посещает, но присоединяется к гостям за напитками.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 182,
+      "printed_page": 180,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Creation of the Church of Sunyata», «Embracing Celebrities»"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 183,
+      "printed_page": 181,
+      "method": "book_text",
+      "verified": true,
+      "note": "«True Emptiness»"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 187,
+      "printed_page": 185,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Brian Musgrove, truly empty leader of the Church of Sunyata»"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 198,
+      "printed_page": 196,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Brian Musgrove’s Office»"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 200,
+      "printed_page": 198,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Brian Musgrove’s Office» (продолжение)"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 204,
+      "printed_page": 202,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Test Screening»"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 208,
+      "printed_page": 206,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Brian Musgrove, age 63, church leader and one of the Truly Empty»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.hp",
+      "printed": "HP 8*",
+      "expected": "9",
+      "note": "(ВЫН 30 + ТЕЛ 60) / 10 = 9; напечатано 8. Оставлено как напечатано (Р-161).",
+      "fixed": false
+    },
+    {
+      "field": "statblock.damage_bonus",
+      "printed": "Damage Bonus: –1",
+      "expected": "0",
+      "note": "СИЛ 25 + ТЕЛ 60 = 85 (85–124): БкУ 0 и Комплекция 0; Комплекция напечатана верно (0), БкУ — −1 (и атака «1d3–1»). Оставлено как напечатано.",
+      "fixed": false
+    },
+    {
+      "field": "age",
+      "printed": "age 63 (с. 206)",
+      "expected": "лет пятидесяти пяти (с. 185)",
+      "note": "В описании (с. 185) Масгроув — «in his mid-fifties», в статблоке (с. 206) — 63 года; Скорость 4 соответствует поправке для 60–69 лет. Возраст оставлен по статблоку.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2). Сценарий «Пространство между» (The Space Between, Скотт Дорвард) из сборника «Безымянные ужасы», с. 178–216. Рассудок «00» — как напечатано. Звёздочка у ПЗ («HP 8*») ведёт к особой пометке о Голодной Пустоте (способность). Скорость 4 — с поправкой на возраст 63 года (7 − 3)."
+  },
+  "images": [
+    {
+      "file": "art/characters/nameless-space-brian-musgrove.webp",
+      "kind": "portrait",
+      "caption": "Брайан Масгроув",
+      "source": "«Безымянные ужасы», «Пространство между», с. 185 (физ. 187), «Dramatis Personae» — групповой рисунок, вырезка"
+    }
+  ]
+}

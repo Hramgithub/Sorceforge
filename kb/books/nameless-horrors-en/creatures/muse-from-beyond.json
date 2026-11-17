@@ -1,0 +1,229 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "nameless-horrors-en/creature/muse-from-beyond",
+  "kind": "creature",
+  "name": {
+    "ru": "Муза из-за грани",
+    "en": "Muse from Beyond"
+  },
+  "aliases": [
+    "Muses from Beyond",
+    "Музы из-за грани"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "астральный ужас",
+  "axes": {
+    "era": [
+      "gaslight"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "transforms_into",
+      "target": "nameless-horrors-en/creature/manifestation-of-inspiration",
+      "note": "вселившись в произведение искусства",
+      "note_back": "Муза, вселившаяся в сосуд"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "—",
+        "value": null
+      },
+      "CON": {
+        "raw": "—",
+        "value": null
+      },
+      "SIZ": {
+        "raw": "—",
+        "value": null
+      },
+      "DEX": {
+        "raw": "85",
+        "value": 85
+      },
+      "INT": {
+        "raw": "100",
+        "value": 100
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "POW": {
+        "raw": "75",
+        "value": 75
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "10",
+      "value": 10
+    },
+    "mp": {
+      "raw": "15",
+      "value": 15
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "–2",
+      "value": -2
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "other",
+          "value": 9,
+          "note": "парит и кружится в воздухе (вывод из текста, Р-41)"
+        }
+      ]
+    },
+    "armor": {
+      "raw": "Нет, но повредить Музу можно только магическими атаками.",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Вращающийся разрез",
+          "en": "Spinning Cut"
+        },
+        "kind": "attack",
+        "skill": null,
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d10",
+          "dice": "1d10",
+          "adds_db": false
+        },
+        "notes": "Музы кружатся и вертятся в воздухе, как клинки, и режут жертв с бритвенной остротой."
+      }
+    ],
+    "dodge": {
+      "raw": "42% (21/8)",
+      "value": 42,
+      "half": 21,
+      "fifth": 8
+    },
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d8",
+        "trigger": "увидеть Музу из-за грани"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Только тем, кто её чувствует",
+      "summary": "Муза может нападать только на существо, которое её ощутило. Если в сыщике прорастает семя вдохновения (последняя стадия), это возможно, лишь когда он заходит в пятна темноты, где Муз видит только он один. Если Музы прорвались в результате неудавшегося прорастания, они бродят и нападают без этих ограничений, и их видят все присутствующие.",
+      "raw": "A Muse may only attack a creature that has sensed it. If an investigator is undergoing the final stages of a Seed of Inspiration (page 47) germinating this can only occur when the investigator moves into patches of darkness, where only the one investigator can see them. If the Muses break through as the result of a failed germination, they may roam and attack without these constraints, and all present can see them.",
+      "refs": [
+        "nameless-horrors-en/scenario/a-message-of-art"
+      ]
+    },
+    {
+      "name": "Без якоря",
+      "summary": "Прорвавшись в наш мир через неудавшееся прорастание семени, Музы не имеют ничего, что держало бы их здесь, и в конце концов гибнут через 1d10 раундов. (В разделе о семенах вдохновения: прорвавшиеся существа остаются в нашем мире 1d10 минут.)",
+      "raw": "Having broken through into our world as the result of a failed germination, they have nothing by which to anchor them to it and ultimately perish within 1d10 rounds."
+    },
+    {
+      "name": "Сосуд",
+      "summary": "Когда Муза вселяется в сосуд — произведение искусства, созданное с чрезвычайным успехом под действием семени вдохновения или заклинания Проводник бога, — она становится Проявлением вдохновения.",
+      "raw": "Once a Muse from Beyond has inhabited a vessel, it becomes a Manifestation of Inspiration.",
+      "refs": [
+        "nameless-horrors-en/creature/manifestation-of-inspiration",
+        "coc:spell:channeling-god"
+      ]
+    },
+    {
+      "name": "Нападают не ради нападения",
+      "summary": "Музы не нападают просто так.",
+      "raw": "The Muses do not attack for the sake of it."
+    }
+  ],
+  "description": {
+    "ru": "Обитатели запредельного, источник художественного творчества человечества. Они словно состоят из мириад вечно меняющихся цветных огней и линий, которые кружатся и вертятся в головокружительном зрелище, режущем глаза всем, кто на них смотрит. Это не только зрелище: свидетели ощущают в воздухе что-то неправильное, волосы у них встают дыбом, их пробирает тревожный холод. В уборной дома Пеладана последняя Муза видна как ромбовидный свет, который поворачивается в тени и через секунду исчезает.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Музы — сущности из-за грани, источник творчества: древние греки были ближе всех к пониманию, считая источником творчества Муз, даровавших художникам божественное вдохновение. Творчество — сила столь же чуждая, как прочие Мифы, и пользуется человечеством как проводником в нашу реальность через изъяны человеческого разума, оставленные Старцами при его создании. Вдохновение заразно, как вирус: произведение сажает семя в зрителе, и тот создаёт новое произведение с тем же действием. По De Vermiis Mysteriis (французский перевод), эти сущности высших измерений входят в наш мир через разум человека: дверь растёт в разуме, как семя, вызывая странное поведение и безумие, пока не прорастёт, разрывая голову изнутри; как обратить процесс, книге неизвестно.",
+    "en": null
+  },
+  "encounters": {
+    "ru": "Сыщик с прорастающим семенем видит Муз в тенях (после трёх четвертей срока). Когда время зараженного выходит, сквозь него прорываются Музы числом в пятую часть его МОЩ — так погибает Пино; быстро ворвавшиеся в уборную (проверка Удачи) успевают увидеть последнюю Музу (проверка Рассудка 1/1d8).",
+    "en": null
+  },
+  "habitat": "запредельное, высшие измерения",
+  "sources": [
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 72,
+      "printed_page": 70,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Muse from Beyond», статблок «Muses from Beyond, astral horrors»"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 48,
+      "printed_page": 46,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Seeds of Inspiration»"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 49,
+      "printed_page": 47,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Manifestations of Inspiration»"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 64,
+      "printed_page": 62,
+      "method": "book_text",
+      "verified": true,
+      "note": "последняя Муза в уборной"
+    }
+  ],
+  "errata": [
+    {
+      "field": "abilities[Без якоря]",
+      "printed": "perish within 1d10 rounds (с. 70)",
+      "expected": "remain in our world for 1d10 minutes (с. 46)",
+      "note": "Срок жизни прорвавшихся Муз в двух местах книги разный: 1d10 раундов (статья существа) и 1d10 минут (врезка «Seeds of Inspiration»).",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2). Сценарий «A Message of Art» (с. 43–79). Русские названия «Муза из-за грани» и «Проявление вдохновения» — как в общей записи заклинания «Проводник бога» (coc:spell:channeling-god). Статблок книги: СИЛ, ВЫН, ТЕЛ, НАР, ОБР — «—». Срок жизни прорвавшихся Муз: «1d10 rounds» (с. 70) и «1d10 minutes» (с. 46) — книга расходится. Ссылки «page 71» в тексте ведут на этот раздел, напечатанный на с. 70."
+  }
+}

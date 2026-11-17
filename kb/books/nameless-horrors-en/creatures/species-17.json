@@ -1,0 +1,233 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "nameless-horrors-en/creature/species-17",
+  "kind": "creature",
+  "name": {
+    "ru": "Вид 17",
+    "en": "Species 17"
+  },
+  "aliases": [
+    "особь Вида 17",
+    "Species 17, organic syphon",
+    "органический сифон"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "существо из иного измерения, «органический сифон»",
+  "axes": {
+    "era": [
+      "1930s"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "40",
+        "value": 40
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "20",
+        "value": 20
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "INT": {
+        "raw": "—",
+        "value": null
+      },
+      "POW": {
+        "raw": "70",
+        "value": 70
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "8",
+      "value": 8
+    },
+    "mp": {
+      "raw": "14",
+      "value": 14
+    },
+    "damage_bonus": {
+      "raw": "–2",
+      "value": "-2"
+    },
+    "build": {
+      "raw": "–2",
+      "value": -2
+    },
+    "move": {
+      "raw": "6",
+      "value": 6,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 6
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет, но от огнестрельного и колющего оружия получает только 1 очко урона (чужеродная плоть)",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Укус",
+          "en": "Bite"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d4 – 2",
+          "dice": "1d4",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Проникнуть в носителя",
+          "en": "Burrow into host"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "notes": "Боевой манёвр. Удаётся автоматически, если цель без сознания, удерживается против воли или добровольно впускает существо."
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d6",
+        "trigger": "увидеть особь Вида 17"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Опасен в руках",
+      "summary": "Если сыщик берёт особь Вида 17 голыми руками, игрок проходит проверку Удачи; при провале сыщик теряет 1d3 ПЗ — руки изодраны — и получает штрафную кость на любые действия руками, пока ему не окажут успешную первую помощь.",
+      "raw": "Hard to handle: If an investigator handles a specimen of Species 17 with bare hands, the player needs to make a Luck roll or their investigator will lose 1d3 hit points as their hands are shredded. They will then take a penalty die on any tasks that involve use of their hands until they receive the benefit of a successful First Aid roll.",
+      "refs": [
+        "coc:rule:luck-rolls",
+        "coc:rule:bonus-and-penalty-dice"
+      ]
+    },
+    {
+      "name": "Пожирание МОЩ",
+      "summary": "Впервые оказавшись в носителе, особь пожирает 1d3×10 МОЩ и Удачи (один бросок на обе). Если её извлечь и сразу поместить в другого носителя, она выделяет в него 1d2×10 МОЩ и Удачи (может выделить больше, чем только что съела: у неё свои запасы). Носитель, из которого извлекли особь, от растерянности и дезориентации получает временную амнезию на 1d20 минут.",
+      "raw": "Devour POW: When one of the creatures is first placed in a host it will devour 1d3 × 10 POW and Luck (one roll for both). If it is then removed and placed immediately in another host, it will excrete 1d2 × 10 POW and Luck into the new host (it is possible that it will excrete more than it has just ingested, as it has its own reserves). When a host has a specimen removed, the process is confusing and disorienting enough to leave them with temporary amnesia for 1d20 minutes."
+    },
+    {
+      "name": "Проницаемая плоть носителя",
+      "summary": "Пока особь Вида 17 находится в теле человека, тело становится настолько нездешним, что в него можно просунуть руку и вынуть тварь: плоть живота становится проницаемой, ощущение — как будто погружаешь руку в тёплое густое рагу. Для носителя это мучительно, но вреда не причиняет; тот, кто лезет внутрь, нащупывает внутренние органы и саму тварь. Брать её голыми руками опасно, и покидать тёплого носителя ей не нравится.",
+      "raw": "If a specimen of Species 17 is present in a human body, the consistency of the body becomes otherworldly enough that it is possible to reach into the body and remove it. The flesh of the host’s abdomen becomes permeable, and anyone putting their hand inside will have the sensation of reaching into a warm, thick stew. This is agonizing for the victim but does no damage."
+    }
+  ],
+  "description": {
+    "ru": "Помесь миноги и кактуса серого цвета, покрытая густой слизью с радужным лиловым отливом; пахнет пряной рвотой. Покрыта острыми шипами и ртами с игольчатыми зубами, которые кричат, как голодные младенцы. Брать такую тварь безопасно только в толстых перчатках или щипцами.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Хоукс назвал так одну из разновидностей фауны, которую открыло его устройство, после того как особь этого вида напала на него. Твари Вида 17 могут входить в тело человека и выходить из него почти без физиологического вреда: когда особь проникает в туловище носителя, окружающая плоть становится проницаемой, и тварь можно достать, просто запустив руку в брюшную полость. Опыты Хоукса на себе и на ассистенте Седжвике показали, что Вид 17 питается чем-то неосязаемым в носителе, а насытившись и сразу попав в другого человека, разряжает излишек в нового носителя: в игровых терминах твари питаются МОЩ и Удачей и выделяют излишек во второго носителя. Хоукс оставил хорошо откормленную особь в собственном теле на несколько дней — она полностью растворилась в нём и начала его менять.\nКруг Мидаса пользуется Видом 17, чтобы красть жизненную силу других и скармливать её себе: это даёт им проницательность, предвидение и удачу. Побочное действие выкачивания — «загадочная болезнь» жителей Гувервиля: шелушение кожи, вялость, усыхание мышц и, на последних стадиях, крошащееся тело. Одна из особей отложила яйца в Гарольде Пристли.",
+    "en": null
+  },
+  "encounters": {
+    "ru": "В баке мастерской «Проспекта» плавают три особи; две банки с особями Круг унёс, убегая из «Проспекта». Особь живёт в Билли Спитцере. Особей ловят, когда они проплывают в круге устройства Хоукса.",
+    "en": null
+  },
+  "habitat": "иное измерение за разломом устройства Хоукса; бак в мастерской «Проспекта»",
+  "sources": [
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 136,
+      "printed_page": 134,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Species 17, organic syphon»"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 122,
+      "printed_page": 120,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Dramatis Personae»: «Species 17»"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 114,
+      "printed_page": 112,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Background for the Keeper»: открытие Хоукса"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 129,
+      "printed_page": 127,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Workshop»: три особи в баке"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 123,
+      "printed_page": 121,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Mystery Disease»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2). Уникальное существо сценария (новый «безымянный ужас» книги); category — наш выбор. Способности: raw — английский текст книги. Броня — сноска книги «Armor: None, but take only 1 point of damage from firearms and impaling weapons due to alien flesh»."
+  },
+  "images": [
+    {
+      "file": "art/creatures/nameless-bleak-species-17-2.webp",
+      "kind": "illustration",
+      "caption": "Особь Вида 17 в руке, вынутая из тела мальчика",
+      "source": "«Безымянные ужасы» (Nameless Horrors), сценарий «Мрачные перспективы», с. 113 (физ. 115): иллюстрация без подписи"
+    }
+  ]
+}

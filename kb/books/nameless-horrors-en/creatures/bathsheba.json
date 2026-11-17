@@ -1,0 +1,291 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "nameless-horrors-en/creature/bathsheba",
+  "kind": "creature",
+  "name": {
+    "ru": "Вирсавия",
+    "en": "Bathsheba"
+  },
+  "aliases": [
+    "Bathsheba La Rush",
+    "Вирсавия Ла Раш",
+    "Батшеба",
+    "La Rush’s masterpiece"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "Проявление вдохновения",
+  "axes": {
+    "era": [
+      "gaslight"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "nameless-horrors-en/creature/manifestation-of-inspiration",
+      "note_back": "Вирсавия — первое Проявление сценария"
+    },
+    {
+      "type": "spawn_of",
+      "target": "nameless-horrors-en/character/pierre-la-rush",
+      "note": "создатель: высек её и вдохнул в неё жизнь обрядом",
+      "note_back": "его творение — ожившая статуя"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "80",
+        "value": 80
+      },
+      "CON": {
+        "raw": "105",
+        "value": 105
+      },
+      "SIZ": {
+        "raw": "45",
+        "value": 45
+      },
+      "DEX": {
+        "raw": "85",
+        "value": 85
+      },
+      "INT": {
+        "raw": "100",
+        "value": 100
+      },
+      "APP": {
+        "raw": "95",
+        "value": 95
+      },
+      "POW": {
+        "raw": "75",
+        "value": 75
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "15",
+      "value": 15
+    },
+    "mp": {
+      "raw": "15",
+      "value": 15
+    },
+    "damage_bonus": {
+      "raw": "+1d6*",
+      "value": "+1d6",
+      "note": "*каменное тело увеличивает БкУ и Комплекцию"
+    },
+    "build": {
+      "raw": "2*",
+      "value": 2,
+      "note": "*каменное тело увеличивает БкУ и Комплекцию"
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "Нет. Однако огнестрельное оружие наносит минимальный урон, огонь и безоружные атаки не действуют.",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d10 + 1d6",
+          "dice": "1d10",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      }
+    ],
+    "dodge": {
+      "raw": "42% (21/8)",
+      "value": 42,
+      "half": 21,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Все языки",
+        "skill": "coc:skill:language-other",
+        "specialization": "все",
+        "value": {
+          "raw": "100%",
+          "value": 100,
+          "half": 50,
+          "fifth": 20
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Вирсавия может знать 1d4 заклинаний на усмотрение Хранителя.",
+      "items": []
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "0",
+        "trigger": "пока она под гримом"
+      },
+      {
+        "success": "1",
+        "fail": "1d10",
+        "trigger": "когда раскрыта её истинная природа"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Семена вдохновения",
+      "summary": "Вирсавия сажает семена вдохновения (правило — у Проявления вдохновения). На вечеринке она говорит с каждым названным персонажем Хранителя и с сыщиками, провалившими проверку Удачи при первом входе в вестибюль; выведав их надежды и мечты, она наклоняется и шепчет вдохновляющую фразу (фразы — в сцене «Ла Раш и Вирсавия: семена вдохновения»). Сыщикам, прошедшим проверку Удачи, грозит то же, если они сами заговорят с ней; подслушавший чужую фразу (трудная проверка Слуха) тоже должен провалить проверку ИНТ.",
+      "raw": "Bathsheba makes a point of talking to each of the named NPCs and investigators who failed their Luck roll.",
+      "refs": [
+        "nameless-horrors-en/creature/manifestation-of-inspiration",
+        "nameless-horrors-en/scene/message-bathsheba-seeds"
+      ]
+    },
+    {
+      "name": "Грим",
+      "summary": "До поры к ней прикасаются только через перчатки. Намеренное прикосновение к открытой «коже» может стереть краску и грим: после успешного физического контакта — проверка Удачи; при успехе грим стёрт настолько, что виден мраморный камень (проверка Рассудка 1/1d10).",
+      "raw": "Any intentional physical contact with her exposed “skin” runs the risk of disturbing the paint and make-up. Successful physical contact should be followed by a Luck roll."
+    },
+    {
+      "name": "Ярость",
+      "summary": "Разоблачённая, она пытается бежать; если сыщики мешают, приходит в ярость и нападает, чтобы заставить их замолчать. Голыми руками против мраморной статуи сыщики почти бессильны. Её уничтожение не останавливает уже посаженные семена. В Туари она отвечает на нападение, но сама его не начинает.",
+      "raw": "While she will attempt to flee at this point, if the investigators attempt to stop her, she flies into a furious rage and begins to attack in an effort to silence them."
+    }
+  ],
+  "description": {
+    "ru": "Ожившая мраморная статуя работы Пьера Ла Раша — первое Проявление вдохновения сценария. Она кажется прекрасной женщиной арабского происхождения лет тридцати с небольшим, с ниспадающими чёрными волосами и тёмными глазами; стройная и грациозная, она будто скользит по комнате. На руке у неё словно бы крупный бриллиант — на деле часть её тела из полированного кварца. Акцент трудно определить: успешная проверка Антропологии даёт лишь неопределённый ответ — где-то на юге Средиземноморья. Платье для бала и длинные оперные перчатки; сразу видно, что она намного превосходит Ла Раша. Её мраморная кожа умело покрыта краской и гримом, и благодаря мастерству Ла Раша она выглядит совершенно человеком. Говорит тихо и, как все Проявления, стремится посадить семена в как можно большее число людей.\nОписание: потрясающе привлекательна, с ниспадающими чёрными волосами и тёмными глазами. Черты: обаятельна. Зацепка для отыгрыша: сеять семена вдохновения везде, где может.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Ла Раш высек её в своём лесном доме близ Туари, совершив обряд из «Évocations du Dieu intérieur» и вложив силу в статую («как у Микеланджело был Давид, так у меня будет Вирсавия», — Вирсавия была женой царя Давида в Ветхом Завете). Статуя ожила и говорит с ним как живая женщина; она сказала ему, что вдохновит мир, но он не понял истинного смысла. Ла Раш представляет её обществу как жену, будто бы приехавшую в Париж и вышедшую за него после стремительного романа; два вечера назад она посадила семя в Пино. На вечеринке она старается вдохновить как можно больше художников и сыщиков, чтобы начать новый художественный ренессанс — новую эпоху, рождённую в крови и безумии. Смерть Пино она встречает бесстрастно: «Смерть — неизбежная часть жизни. Трагедия, что умер талантливый человек, и трагедия, что с ним умирает столько неродившегося искусства. То, что я не всегда показываю чувства, не значит, что я их не испытываю. Я буду оплакивать его по-своему». Её лицо — то самое, что Пино когда-то написал на картине «5 000». Если сыщики сбегут из Туари и вернутся, Ла Раша и Вирсавии уже нет: Париж не готов к посланию искусства, и они ушли искать другое место.",
+    "en": null
+  },
+  "habitat": "Париж; дом Ла Раша в Туари",
+  "sources": [
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 46,
+      "printed_page": 44,
+      "method": "book_text",
+      "verified": true,
+      "note": "иллюстрация: Ла Раш перед ожившей статуей"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 47,
+      "printed_page": 45,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Background for the Keeper»: создание Вирсавии"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 51,
+      "printed_page": 49,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Bathsheba (Manifestation of Inspiration)»"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 52,
+      "printed_page": 50,
+      "method": "book_text",
+      "verified": true,
+      "note": "описание, черты, зацепки"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 57,
+      "printed_page": 55,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Pierre La Rush and Bathsheba»: семена, фразы"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 64,
+      "printed_page": 62,
+      "method": "book_text",
+      "verified": true,
+      "note": "реакция на смерть Пино"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 66,
+      "printed_page": 64,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Potential Point of Conclusion / Divergence»"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 70,
+      "printed_page": 68,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Thoiry»"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 71,
+      "printed_page": 69,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Bathsheba, La Rush’s masterpiece»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2). Сценарий «A Message of Art» (с. 43–79). Статблок — в «Appendix A: Characters» (с. 69). ВЫН 105 и ИНТ 100 — каменное тело; БкУ +1d6 и Комплекция 2 по сноске книги «*Being made of stone increases damage bonus and Build» (по СИЛ + ТЕЛ было бы +1d4 и 1) — задумано книгой (Р-76). Имя — библейская Вирсавия (Bathsheba); на подписи портрета «Bathsheba La Rush»."
+  },
+  "images": [
+    {
+      "file": "art/creatures/nameless-message-bathsheba.webp",
+      "kind": "portrait",
+      "caption": "Вирсавия в человеческом облике",
+      "source": "«Безымянные ужасы», с. 50 (физ. 52): групповой портрет «Dramatis Personae», подпись «Bathsheba La Rush» (вырезка)"
+    },
+    {
+      "file": "art/creatures/nameless-message-bathsheba-statue-2.webp",
+      "kind": "art",
+      "caption": "Ла Раш перед ожившей статуей",
+      "source": "«Безымянные ужасы», с. 44 (физ. 46): полностраничная иллюстрация"
+    }
+  ]
+}

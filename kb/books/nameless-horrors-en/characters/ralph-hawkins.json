@@ -1,0 +1,285 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "nameless-horrors-en/character/ralph-hawkins",
+  "kind": "character",
+  "name": {
+    "ru": "Ральф Хокинс",
+    "en": "Ralph Hawkins"
+  },
+  "aliases": [
+    "Hawkins"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "бывший вор, наёмник Левета",
+    "en": null
+  },
+  "age": {
+    "raw": "25",
+    "value": 25
+  },
+  "sex": "мужской",
+  "residence": "Данвич, 1287 год",
+  "axes": {
+    "era": [
+      "gaslight"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "nameless-horrors-en/character/william-levett",
+      "note": "хозяин; платит за «грязную» работу",
+      "note_back": "наёмник для «грязной» работы"
+    },
+    {
+      "type": "rival_of",
+      "target": "nameless-horrors-en/character/joseph-fynche",
+      "note": "жертва, которую он убивает по приказу Левета",
+      "note_back": "убийца по приказу Левета"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "65",
+        "value": 65
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "50",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "75",
+        "value": 75
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "55",
+        "value": 55
+      },
+      "POW": {
+        "raw": "60",
+        "value": 60
+      },
+      "EDU": {
+        "raw": "45",
+        "value": 45
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "12",
+      "value": 12
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d3 или по оружию",
+          "dice": "1d3",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Нож",
+          "en": "Knife"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d4+2+БкУ",
+          "dice": "1d4+2",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:knife-medium",
+        "notes": "в книге «(Use Brawl skill)» — шанс по навыку Драки"
+      }
+    ],
+    "dodge": {
+      "raw": "45% (22/9)",
+      "value": 45,
+      "half": 22,
+      "fifth": 9
+    },
+    "skills": [
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      }
+    ],
+    "sanity": {
+      "raw": "51",
+      "value": 51,
+      "max": null
+    }
+  },
+  "description": {
+    "ru": "Грязная кожа, длинные спутанные волосы, крючковатый нос, тёмная одежда. Черты: безжалостный и равнодушный убийца.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Бывший вор, которого Уильям Левет держит для грязной работы. Следил за Сарой, схватил её, когда она пыталась проникнуть в церковь, и пытал её. По приказу Левета убивает отца Финча на мельнице, вырезает на его теле знаки из бумаг Сары и поджигает мельницу; если это удалось — идёт к дому Сары в портовом квартале и поджигает его, чтобы скрыть, что Левет забрал её колдовские тексты, а потом возвращается в дом Левета и ждёт хозяина. Наёмник в душе: его преданность можно перекупить. Сражается до смерти или потери сознания, но пощажённый охотно расскажет всё о делах Левета (и о Саре, короне и её планах). Адрес Левета из него можно выбить трудной проверкой Запугивания.\nЗацепки для отыгрыша:\n• У него почти нет совести и много крови на руках. Что значит ещё немного?\n• Цель оправдывает средства: закончить работу — значит получить плату. Деньги дают ему еду и жизнь. Прирождённый выживальщик, готовый на всё.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 11,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "предыстория: слежка и пытка"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 12,
+      "printed_page": 10,
+      "method": "book_text",
+      "verified": true,
+      "note": "убийство Финча"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 16,
+      "printed_page": 14,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Ralph Hawkins»; портрет — с. 13"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 24,
+      "printed_page": 22,
+      "method": "book_text",
+      "verified": true,
+      "note": "засада у мельницы"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 27,
+      "printed_page": 25,
+      "method": "book_text",
+      "verified": true,
+      "note": "поджог дома Сары"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 28,
+      "printed_page": 26,
+      "method": "book_text",
+      "verified": true,
+      "note": "дом Левета, допрос"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 35,
+      "printed_page": 33,
+      "method": "book_text",
+      "verified": true,
+      "note": "приложение A: статблок «RALPH HAWKINS, 25»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.move",
+      "printed": "8",
+      "expected": "9",
+      "note": "Скорость по правилам — 9 (СИЛ и ЛВК больше ТЕЛ, возраст 25); в книге — 8. Оставлено как напечатано (Р-161).",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2). Сценарий «Неувядающее желание» (An Amaranthine Desire; Мэтью Сандерсон), сборник «Безымянные ужасы» (Nameless Horrors; Chaosium, 2015). Нож — «1d4+2+DB» по навыку Драки; ссылка на средний нож справочника — по урону 1d4+2."
+  },
+  "images": [
+    {
+      "file": "art/characters/nameless-amaranthine-ralph-hawkins.webp",
+      "kind": "portrait",
+      "caption": "Ральф Хокинс",
+      "source": "Nameless Horrors, с. 13 (физ. 15), «An Amaranthine Desire»: портрет из группового рисунка «Dramatis Personae»"
+    }
+  ]
+}

@@ -1,0 +1,261 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "nameless-horrors-en/character/church-security-guard",
+  "kind": "character",
+  "name": {
+    "ru": "Охранник Церкви Шуньяты",
+    "en": "Church Security Guard"
+  },
+  "aliases": [
+    "Church Security Guard, loyal and unquestioning",
+    "охранник Ретрита знаменитостей"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "охранник Церкви Шуньяты",
+  "names": [
+    "Дерек Холл",
+    "Марисоль Ортис",
+    "Шон Райли",
+    "Тревор Кинг",
+    "Андре Джексон",
+    "Кэти Уолш"
+  ],
+  "occupation": {
+    "ru": "охранник",
+    "en": "security guard"
+  },
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "50",
+        "value": 50
+      },
+      "CON": {
+        "raw": "55",
+        "value": 55
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "60",
+        "value": 60
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      },
+      "EDU": {
+        "raw": "50",
+        "value": 50
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "sanity": {
+      "raw": "30",
+      "value": 30,
+      "max": 99
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Пистолет",
+          "en": "Pistol"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d10",
+          "dice": "1d10",
+          "adds_db": false
+        }
+      },
+      {
+        "name": {
+          "ru": "Электрошокер",
+          "en": "Taser"
+        },
+        "kind": "attack",
+        "skill": null,
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "особый (цель проходит чрезвычайную проверку ВЫН, иначе выведена из строя на 1d6 раундов)",
+          "dice": null,
+          "adds_db": false
+        },
+        "notes": "Как напечатано: «damage special (target must make Extreme CON roll or be incapacitated for 1d6 rounds)». Вид электрошокера и навык книга не называет."
+      }
+    ],
+    "dodge": {
+      "raw": "45% (22/9)",
+      "value": 45,
+      "half": 22,
+      "fifth": 9
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Вождение автомобиля",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Типовой профиль охранника Церкви Шуньяты — «преданный и не задающий вопросов». По нему играют вооружённых охранников на посту охраны в штаб-квартире (двое в форме — всегда) и охрану Ретрита знаменитостей: там 30 охранников на полной ставке, не меньше шести на дежурстве в любое время. Все обучены (некоторые — бывшие сотрудники правоохранительных органов) и все — члены Церкви; носят пистолеты и электрошокеры. Главный приказ — задерживать нарушителей и смутьянов, но им разрешено применять смертельную силу.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 207,
+      "printed_page": 205,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Church Security Guard, loyal and unquestioning»"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 198,
+      "printed_page": 196,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Security Desk»: двое вооружённых охранников"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 200,
+      "printed_page": 198,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Security»: охрана Ретрита знаменитостей"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "editorial_text"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2). Сценарий «Пространство между» (The Space Between, Скотт Дорвард) из сборника «Безымянные ужасы», с. 178–216. Имена придуманы (Р-151): в книге — типовой профиль без имён; названный в тексте охранник Тайрон Гуд — отдельная запись со связью на этот профиль. Пистолет (1d10) — без ссылки на оружие: марку книга не называет. Страницы-ссылки книги на этот профиль («page 209») — с. 205."
+  }
+}

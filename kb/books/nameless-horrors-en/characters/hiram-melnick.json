@@ -1,0 +1,398 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "nameless-horrors-en/character/hiram-melnick",
+  "kind": "character",
+  "name": {
+    "ru": "Хайрам Мельник",
+    "en": "Hiram Melnick"
+  },
+  "aliases": [
+    "Мельник"
+  ],
+  "roles": [
+    "pregen"
+  ],
+  "occupation": {
+    "ru": "бывший юрист",
+    "en": "former lawyer"
+  },
+  "occupation_ref": "coc:occupation:yurist",
+  "age": {
+    "raw": "35",
+    "value": 35
+  },
+  "sex": "мужской",
+  "residence": "Гувервиль под Кроули",
+  "axes": {
+    "era": [
+      "1930s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "knows",
+      "target": "nameless-horrors-en/character/nancy-carver",
+      "note": "бывшая секретарь; он давно и молча в неё влюблён",
+      "note_back": "бывший начальник"
+    },
+    {
+      "type": "rival_of",
+      "target": "nameless-horrors-en/character/casper-brinck",
+      "note": "деловой соперник, купивший его дом «Гринлиз»",
+      "note_back": "бывший соперник, чей дом он купил"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "50",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "80",
+        "value": 80
+      },
+      "POW": {
+        "raw": "40",
+        "value": 40
+      },
+      "EDU": {
+        "raw": "70",
+        "value": 70
+      }
+    },
+    "hp": {
+      "raw": "10",
+      "value": 10
+    },
+    "mp": {
+      "raw": "8",
+      "value": 8
+    },
+    "sanity": {
+      "raw": "40",
+      "value": 40,
+      "max": null
+    },
+    "luck": {
+      "raw": "20",
+      "value": 20
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Револьвер .38",
+          "en": ".38 Revolver"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d10",
+          "dice": "1d10",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:38-revolver",
+        "notes": "Дальность 15 м; атак в раунд 1 (3); патронов 6; осечка 100."
+      },
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        },
+        "damage": {
+          "raw": "1d3 + БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Бухгалтерское дело",
+        "skill": "coc:skill:accounting",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Оценка",
+        "skill": "coc:skill:appraise",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Обаяние",
+        "skill": "coc:skill:charm",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "1%",
+          "value": 1,
+          "half": 0,
+          "fifth": 0
+        }
+      },
+      {
+        "name": "Вождение автомобиля",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Стрельба (пистолет)",
+        "skill": "coc:skill:firearms",
+        "specialization": "пистолет",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Родной язык (английский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "английский",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Иностранный язык (латынь)",
+        "skill": "coc:skill:language-other",
+        "specialization": "латынь",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Юриспруденция",
+        "skill": "coc:skill:law",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Механика",
+        "skill": "coc:skill:mechanical-repair",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      }
+    ]
+  },
+  "background": {
+    "description": "Невысокий, щуплый, лысеющий, обычно угрюмый.",
+    "ideology": "В этом мире человек человеку волк; процветают только сильные и безжалостные.",
+    "significant_people": "Нэнси Карвер, бывшая секретарь его конторы, которая тоже живёт в лагере. Он много лет в неё влюблён.",
+    "meaningful_locations": "«Гринлиз» — дорогой дом и усадьба на окраине Кроули, которыми он когда-то владел. Его деловой соперник Каспер Бринк купил их, когда Мельник разорился.",
+    "treasured_possessions": "Старые водительские перчатки — напоминание о временах, когда он катался по окрестностям на «Роллс-Ройсе Сильвер Гост».",
+    "traits": "Склонен к горьким жалобам и сетованиям на жизнь."
+  },
+  "description": {
+    "ru": "Готовый сыщик сценария «Мрачные перспективы»: бывший владелец самой преуспевающей юридической конторы Кроули, разорённый соперничеством с Каспером Бринком.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Когда-то у него была самая преуспевающая юридическая практика в Кроули. Теперь он спит под своим пальто на постели из старого картона. Каждую ночь он перебирает подробности того, как это случилось, и каждую ночь едва может это понять.\nКонечно, на крахе рынка он потерял деньги — все потеряли. И да, дела пошли медленнее: многие клиенты оказались в трудном положении. И всё же работы должно было хватить. Соперничество с фирмой Каспера Бринка было здоровым — до тех пор, пока не перестало.\nКогда здоровье стало сдавать, он начал ошибаться: давал клиентам плохие советы, проигрывал верные дела. Клиенты уходили к Бринку, долги росли, и он потерял всё. Когда банк забрал его прекрасный дом «Гринлиз», его купил Бринк — Мельник гадает, не было ли это просто способом ткнуть его носом.\nТеперь он живёт в трущобах с десятками людей, потерявших всё. Единственный просвет — здесь же его бывшая секретарь Нэнси Карвер. Он годами молча обожал её; может быть, теперь, среди всей этой печали, наконец пришло время найти любовь.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 141,
+      "printed_page": 139,
+      "method": "book_text",
+      "verified": true,
+      "note": "лист сыщика «Hiram Melnick, age 35, former lawyer»: характеристики, навыки, оружие, предыстория, портрет"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 137,
+      "printed_page": 135,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Appendix B»: «A former lawyer, fallen on hard times, infatuated with a former co-worker.»"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 120,
+      "printed_page": 118,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Relationship Map»: бывшая коллега — Нэнси Карвер"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 118,
+      "printed_page": 116,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Dramatis Personae»: «Nancy Carver» — секретарь Мельника"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 121,
+      "printed_page": 119,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Dramatis Personae»: «Casper Brinck» — купил «Гринлиз»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.attacks[Револьвер .38]",
+      "printed": ".38 Revolver 60% (30/12); Firearms (Handgun) 40%",
+      "expected": "одно значение",
+      "note": "Шанс атаки револьвером (60%) не совпадает с навыком «Стрельба (пистолет)» 40% в списке навыков того же листа; оба значения оставлены как напечатаны.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2). Готовый сыщик из «Appendix B: Pre-generated Investigators» (с. 135–141): лист с портретом, характеристиками, навыками и предысторией. По условию сценария у всех сыщиков Удача 20 и МОЩ не выше 40 (с. 112)."
+  },
+  "images": [
+    {
+      "file": "art/characters/nameless-bleak-hiram-melnick-2.webp",
+      "kind": "portrait",
+      "caption": "Хайрам Мельник",
+      "source": "«Безымянные ужасы» (Nameless Horrors), сценарий «Мрачные перспективы», с. 139 (физ. 141), «Appendix B»: портрет с листа сыщика"
+    }
+  ]
+}

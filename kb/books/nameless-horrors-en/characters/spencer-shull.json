@@ -1,0 +1,343 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "nameless-horrors-en/character/spencer-shull",
+  "kind": "character",
+  "name": {
+    "ru": "Спенсер Шалл",
+    "en": "Spencer Shull"
+  },
+  "aliases": [
+    "Шалл",
+    "Spencer Shull, fixer for the church"
+  ],
+  "roles": [
+    "pregen"
+  ],
+  "occupation": {
+    "ru": "бывший полицейский, «решала» Церкви Шуньяты",
+    "en": "ex-cop and fixer for the Church of Sunyata"
+  },
+  "age": {
+    "raw": "41",
+    "value": 41
+  },
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "nameless-horrors-en/character/brian-musgrove",
+      "note": "глава Церкви; позвал его на работу, дал цель в жизни",
+      "note_back": "«решала» Церкви; завербован им после изгнания из полиции"
+    },
+    {
+      "type": "rival_of",
+      "target": "nameless-horrors-en/character/samuel-neumeier",
+      "note": "давняя вражда: детектив подавал на него жалобу",
+      "note_back": "давняя вражда: бывший полицейский, на которого он подавал жалобу"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "55",
+        "value": 55
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "75",
+        "value": 75
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65
+      },
+      "APP": {
+        "raw": "45",
+        "value": 45
+      },
+      "INT": {
+        "raw": "85",
+        "value": 85
+      },
+      "POW": {
+        "raw": "65",
+        "value": 65
+      },
+      "EDU": {
+        "raw": "70",
+        "value": 70
+      }
+    },
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "mp": {
+      "raw": "13",
+      "value": 13
+    },
+    "sanity": {
+      "raw": "65",
+      "value": 65,
+      "max": 99
+    },
+    "luck": {
+      "raw": "35",
+      "value": 35
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1d3 + 1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Пистолет автоматический .45",
+          "en": ".45 Auto"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "20% (10/04)",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        },
+        "damage": {
+          "raw": "1d10 + 2",
+          "dice": "1d10+2",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:45-automatic"
+      }
+    ],
+    "dodge": {
+      "raw": "42% (21/08)",
+      "value": 42,
+      "half": 21,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Искусство/ремесло (фотография)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "фотография",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Вождение автомобиля",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Юриспруденция",
+        "skill": "coc:skill:law",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Работа в библиотеке",
+        "skill": "coc:skill:library-use",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Взлом",
+        "skill": "coc:skill:locksmith",
+        "value": {
+          "raw": "51%",
+          "value": 51,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      }
+    ]
+  },
+  "background": {
+    "description": "Худой, угловатый мужчина средних лет с хищным видом.",
+    "ideology": "Можно делать всё, что нужно, каким бы мерзким оно ни было, — лишь бы потом Опустошиться от своих Горестей.",
+    "significant_people": "Брайан Масгроув — он дал тебе цель, когда всё казалось потерянным.",
+    "meaningful_locations": "Твой кабинет в штаб-квартире Церкви, где ты хранишь досье на врагов, друзей и членов Церкви.",
+    "treasured_possessions": "Старинная фляжка, принадлежавшая твоему дяде Элу — тоже детективу отдела убийств; ты держишь её полной хорошего бурбона.",
+    "traits": "Прямолинеен до грубости."
+  },
+  "description": {
+    "ru": "Готовый сыщик сценария «Пространство между» (прил. C, с. 210–216). Бывший полицейский Лос-Анджелеса, «решала» Церкви: улаживает её проблемы. Если игроки не против придумывать прошлое по ходу игры, Хранитель спрашивает игрока Шалла, за что его ненавидит детектив Ноймайер; иначе — Ноймайер подавал на него жалобу за использование ресурсов полиции в интересах Церкви.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Предыстория (лист сыщика): ты работаешь на Церковь Шуньяты с тех пор, как тебя выжили из полиции Лос-Анджелеса. Ты и раньше был членом Церкви, но старался держать веру и личную жизнь отдельно — что бы ни говорило служебное расследование. Сначала ты собирался стать частным детективом, но Брайан Масгроув, глава Церкви, пригласил тебя выпить и намекнул, что человек с твоими навыками будет ценным приобретением для организации.\nС тех пор ты заставляешь проблемы исчезать. Иногда достаточно убедить репортёра отказаться от сочного материала. Время от времени приходится прятать улики — налоговые документы, компрометирующие снимки или тело проститутки. Желудок у тебя закалился. Вера помогает.\nХодят слухи, что Церковь причастна к недавнему исчезновению Верити Харроу. Будь это правдой, именно ты заставил бы её исчезнуть — а ты ничего не знаешь. Ты не любишь ничего не знать, поэтому копаешь сам. Странно, что тебя об этом никто не попросил.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 213,
+      "printed_page": 211,
+      "method": "book_text",
+      "verified": true,
+      "note": "лист готового сыщика «Spencer Shull, age 41, fixer for the church»: характеристики, навыки, предыстория, портрет"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 212,
+      "printed_page": 210,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Appendix C»: «Ex-cop and fixer for the Church of Sunyata»"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 192,
+      "printed_page": 190,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Police Investigation»: Ноймайер и бывшие полицейские"
+    },
+    {
+      "book_id": "nameless-horrors-en",
+      "physical_page": 185,
+      "printed_page": 183,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Relationship Map»: «Recruited» (Масгроув), «Bad blood between» (Ноймайер)"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2). Сценарий «Пространство между» (The Space Between, Скотт Дорвард) из сборника «Безымянные ужасы», с. 178–216. ПЗ 13 — с округлением вверх ((50 + 75) / 10 = 12,5), Скорость 7 — без возрастной поправки: приёмы книги (Р-161). Профессия в справочнике не выбрана: «решала» Церкви не совпадает ни с одной профессией «Книги хранителя»."
+  },
+  "images": [
+    {
+      "file": "art/characters/nameless-space-spencer-shull.webp",
+      "kind": "portrait",
+      "caption": "Спенсер Шалл",
+      "source": "«Безымянные ужасы», «Пространство между», с. 211 (физ. 213), лист готового сыщика"
+    }
+  ]
+}

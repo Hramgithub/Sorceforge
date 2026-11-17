@@ -1,0 +1,110 @@
+{
+  "schema": "sourcefold.tome.v0",
+  "id": "time-to-harvest-1-en/tome/young-mi-go-disc-book",
+  "kind": "tome",
+  "name": {
+    "ru": "Дисковая книга Младых",
+    "en": "Mi-Go Disc Books (Deputy Cutter’s Cult Artifacts)"
+  },
+  "aliases": [
+    "Mi-Go Disc Books",
+    "диски ми-го Каттера"
+  ],
+  "tome_type": "mythos_tome",
+  "language": "ми-го (письменный)",
+  "author": "ми-го",
+  "date": null,
+  "description": {
+    "ru": "Набор пятиугольных металлических дисков, покрытых непонятными письменами и нанизанных на центральный стержень, — дисковая книга ми-го. Содержит сокращённую историю ми-го и планеты Земля и весьма основательный трактат о Шуб-Ниггурат и её детях. Вместе с кинжалом «Рог Чёрного Козла» — знак власти в культе Младых; хранится в тайнике на чердаке Джона Каттера. Как читать дисковые книги — запись «Дисковые книги ми-го».\nКогда культ зарождался (после 1790 года), ми-го научили самых способных фермеров читать на языке ми-го и вручили им книгу знаний в виде набора дисков на центральном стержне; что это та же книга — вывод из текста (Р-41).",
+    "en": null
+  },
+  "reading": {
+    "sanity_loss": "2d6",
+    "mythos_initial": "+3%",
+    "mythos_full": "+7%",
+    "occult": null,
+    "mythos_rating": 30,
+    "study_time": "переменное",
+    "raw": "Language: Mi-go; Sanity loss: 2d6; Cthulhu Mythos: +3%/+7%; Mythos Rating: 30%; Study: variable; Spells: Call and Dismiss Shub-Niggurath, Contact Mi-go, Summon and Bind Dark Young."
+  },
+  "spells": [
+    {
+      "name": "Call and Dismiss Shub-Niggurath",
+      "spell": "coc:spell:call-dismiss-shub-niggurath"
+    },
+    {
+      "name": "Contact Mi-go",
+      "spell": "coc:spell:contact-mi-go"
+    },
+    {
+      "name": "Summon and Bind Dark Young",
+      "spell": "coc:spell:summon-bind-dark-young"
+    }
+  ],
+  "refs": [
+    "time-to-harvest-1-en/organization/the-young",
+    "time-to-harvest-1-en/character/john-cutter",
+    "time-to-harvest-1-en/item/disc-books",
+    "time-to-harvest-1-en/item/horn-of-the-black-goat",
+    "coc:creature:shub-niggurath",
+    "coc:creature:mi-go"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "time-to-harvest-1-en",
+      "physical_page": 30,
+      "printed_page": 28,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Deputy John Cutter’s Home»: «curious five-sided metal disks … (mi-go discs)»"
+    },
+    {
+      "book_id": "time-to-harvest-1-en",
+      "physical_page": 31,
+      "printed_page": 29,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «Deputy Cutter’s Cult Artifacts»: «Mi-Go Disc Books» и строка характеристик"
+    },
+    {
+      "book_id": "time-to-harvest-1-en",
+      "physical_page": 23,
+      "printed_page": 21,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Young: A Brief History»: ми-го дают фермерам книгу знаний из дисков"
+    }
+  ],
+  "errata": [
+    {
+      "field": "reading",
+      "printed": "строка характеристик (язык ми-го, 2D6, +3%/+7%, 30%, заклинания) стоит под описанием кинжала, до заголовка «Mi-Go Disc Books»",
+      "expected": "характеристики дисков",
+      "note": "По смыслу (язык ми-го, заклинания) строка относится к дискам, а не к кинжалу (с. 29); вывод из текста (Р-41).",
+      "fixed": true
+    }
+  ],
+  "corrections": [
+    {
+      "field": "reading",
+      "from": null,
+      "to": "характеристики врезки «Deputy Cutter’s Cult Artifacts» отнесены к дискам, а не к кинжалу",
+      "reason": "строка стоит под описанием кинжала, но называет язык ми-го и заклинания — по смыслу это диски (с. 29, физ. 31); вывод из текста (Р-41)",
+      "ref": "Р-41"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (Month 1: печатная страница = физическая − 2; обложка, обращение к Хранителям, выходные данные и оглавление — без номеров). Изучение — «variable». В разделе «Disc Books» книга отсылает к «Chapter 2», хотя описание дисков — в гл. 1 («Alien Science»)."
+  }
+}

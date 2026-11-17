@@ -1,0 +1,271 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "time-to-harvest-1-en/creature/mi-go-standard-form",
+  "kind": "creature",
+  "name": {
+    "ru": "Ми-го, обычный облик («Время жатвы»)",
+    "en": "Mi-Go, standard form"
+  },
+  "aliases": [
+    "Ми-го («Время жатвы», эпизод 1)",
+    "Грибы с Юггота"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "раса-служитель",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:mi-go",
+      "note_back": "обычный ми-го эпизода 1 «Времени жатвы» (без особых приспособлений)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "50",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "65",
+        "value": 65
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "10",
+      "value": 10
+    },
+    "mp": {
+      "raw": "13",
+      "value": 13
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "7/13 flying",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        },
+        {
+          "mode": "fly",
+          "value": 13
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет, но резонирующее неземное тело получает от любого колющего оружия (включая пули) минимальный урон",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "2 удара клешнями, или 1 захват/удержание, или 1 оружие",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d6 + БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Захват (манёвр)",
+          "en": "Seize (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9), как Ближний бой",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "notes": "схватить жертву (той же Комплекции или меньше) и унести в небо; процент не напечатан — манёвр проводится Ближним боем (вывод из текста, Р-41)"
+      },
+      {
+        "name": {
+          "ru": "Споровое ружьё",
+          "en": "Spore gun"
+        },
+        "kind": "attack",
+        "skill": "Стрельба",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "см. гл. 1",
+          "dice": null,
+          "adds_db": false
+        },
+        "notes": "есть только у одного ми-го из группы; описание — «Spore Gun» в гл. 1 (с. 13)"
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "spells": {
+      "raw": "Each has an INT x2 chance to know 1d3 spells."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "при виде ми-го"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Две клешни разом",
+      "summary": "В рукопашной может бить двумя клешнями одновременно.",
+      "raw": "May attack in hand-to-hand combat with two nippers at once."
+    },
+    {
+      "name": "Полёт с добычей",
+      "summary": "Попав по цели, ми-го может удержать её (манёвр) и взлететь, чтобы сбросить жертву с высоты или унести так высоко, что у неё разорвутся лёгкие.",
+      "raw": "If the target is hit, the mi-go can attempt to hold the victim (maneuver) and fly into the sky to drop the victim from a height, or take the victim up so high that his or her lungs burst."
+    },
+    {
+      "name": "Особые силы",
+      "summary": "Гипноз, Телепатия, Пустотный свет (описаны в гл. 1).",
+      "raw": "Special powers: Hypnosis, Telepathy, Void Light (see Chapter 1)."
+    },
+    {
+      "name": "Заклинания",
+      "summary": "Каждый ми-го с шансом ИНТ×2 знает 1d3 заклинаний.",
+      "raw": "Spells: Each has an INT x2 chance to know 1d3 spells."
+    }
+  ],
+  "description": {
+    "ru": "Профиль обычного ми-го для этого эпизода: эти ми-го не приспособлены особым образом, как касты, описанные в гл. 1. В эпизоде 1 ми-го почти не показываются: Блейн по ночам сигналит фонариком «наблюдателю» в холмах; в грозу у моста через Гисменд в реке мелькает разлагающийся труп ми-го; у уборной остаются следы — помесь гигантской индейки и краба. В финале ми-го в тумане окружают дом Маклиранов (один со споровым ружьём на крыше над входной дверью, ещё четверо — вокруг дома, один со споровым ружьём сзади) или ночью забирают землемеров у кургана. Хранителю советуют описывать их обрывками, лишь намекая, что это такое, и ограничить потерю Рассудка при их виде 0/1d2: тёмная тонкая фигура тянется к вам; клешня, как у краба, но куда больше, задевает лицо; мелькает розовая плоть.",
+    "en": null
+  },
+  "legend": {
+    "ru": "В эпизоде 6: тот же профиль используется для ми-го на Луне — пары рабочих с тележками паскуаллия, ми-го, осматривающих стройку Пространственных врат, и преследователей (сцены «Оглянись!», «Город на Луне», «Погоня на Луне»); для погони: базовая Скорость 7/13 в полёте, навыки Лазание 30%, Прыжки 40%, Внимание 40%, Чтение следов 40%; в полёте проверки Прыжков и Лазания не нужны.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "time-to-harvest-1-en",
+      "physical_page": 48,
+      "printed_page": 46,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Day Two»: Блейн ночью подаёт сигналы ми-го"
+    },
+    {
+      "book_id": "time-to-harvest-1-en",
+      "physical_page": 51,
+      "printed_page": 49,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Day Three: The Accident»: труп ми-го в реке"
+    },
+    {
+      "book_id": "time-to-harvest-1-en",
+      "physical_page": 52,
+      "printed_page": 50,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Harry Higgins’ Rant»: следы ми-го у уборной"
+    },
+    {
+      "book_id": "time-to-harvest-1-en",
+      "physical_page": 58,
+      "printed_page": 56,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Back At The Farm»: нападение ми-го; описание обрывками, Рассудок 0/1d2"
+    },
+    {
+      "book_id": "time-to-harvest-1-en",
+      "physical_page": 62,
+      "printed_page": 60,
+      "method": "book_text",
+      "verified": true,
+      "note": "Appendix A: «Mi-Go, standard form»"
+    },
+    {
+      "book_id": "time-to-harvest-6-en",
+      "physical_page": 18,
+      "printed_page": 18,
+      "method": "book_text",
+      "verified": true,
+      "note": "приложение A «Mi-Go, standard form» (тот же профиль; «Spoor gun» вместо «Spore gun»); врезка «Moon Chase» (с. 15)"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2). Статблок вида — общая запись «Ми-го» (Malleus Monstrorum); здесь профиль сценария с его числами (Р-75). «Move: 7/13 flying» — 7 по земле, 13 в полёте. Касты ми-го и их техника (споровое ружьё и др.) — в гл. 1 книги (часть world)."
+  },
+  "corrections": [
+    {
+      "field": "legend",
+      "from": null,
+      "to": "{\"ru\": \"В эпизоде 6: тот же профиль используется для ми-го на Луне — пары рабочих с тележками паскуаллия, ми-го, осматривающих стройку Пространственных врат, и преследователей (сцены «Оглянись!», «Город на Луне», «Погоня на Луне»); для погони: базовая Скорость 7/13 в полёте, навыки Лазание 30%, Прыжки 40%, Внимание 40%, Чтение следов 40%; в полёте проверки Прыжков и Лазания не нужны.\", \"en\": null}",
+      "reason": "что запись делает в эпизодах 5–6 (Р-125)",
+      "ref": "Р-125"
+    }
+  ]
+}

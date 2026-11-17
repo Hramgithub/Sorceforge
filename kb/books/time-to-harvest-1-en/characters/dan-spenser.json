@@ -1,0 +1,464 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "time-to-harvest-1-en/character/dan-spenser",
+  "kind": "character",
+  "name": {
+    "ru": "Дэн Спенсер",
+    "en": "Dan Spenser"
+  },
+  "aliases": [
+    "Sheriff Spenser",
+    "Spencer"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "шериф Коббс-Корнерс",
+    "en": "puritanical lawman"
+  },
+  "age": {
+    "raw": "40",
+    "value": 40
+  },
+  "sex": "мужской",
+  "residence": "Коббс-Корнерс (Вермонт)",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "relative_of",
+      "target": "time-to-harvest-1-en/character/sarah-maclearan",
+      "note": "младшая сестра (умерла)",
+      "note_back": "старший брат"
+    },
+    {
+      "type": "relative_of",
+      "target": "time-to-harvest-1-en/character/james-maclearan",
+      "note": "бывший зять (муж покойной сестры)",
+      "note_back": "шурин, брат покойной жены"
+    },
+    {
+      "type": "rival_of",
+      "target": "time-to-harvest-1-en/character/james-maclearan",
+      "note": "городской пьяница, которого шериф сажает за решётку",
+      "note_back": "шериф, который постоянно его арестовывает"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "85",
+        "value": 85
+      },
+      "SIZ": {
+        "raw": "55",
+        "value": 55
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "APP": {
+        "raw": "55",
+        "value": 55
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "70",
+        "value": 70
+      },
+      "EDU": {
+        "raw": "70",
+        "value": 70
+      }
+    },
+    "hp": {
+      "raw": "14",
+      "value": 14
+    },
+    "mp": {
+      "raw": "14",
+      "value": 14
+    },
+    "sanity": {
+      "raw": "70",
+      "value": 70,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1d3 + 1d4",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Револьвер .38",
+          "en": "38 revolver"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d10",
+          "dice": "1d10",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:38-revolver"
+      },
+      {
+        "name": {
+          "ru": "Дробовик двуствольный 20-го калибра",
+          "en": "20-g shotgun (2B)"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "2d6/1d6/1d3",
+          "dice": "2d6/1d6/1d3",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:shotgun-20-gauge-2b"
+      }
+    ],
+    "dodge": {
+      "raw": "55% (27/11)",
+      "value": 55,
+      "half": 27,
+      "fifth": 11
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Вождение автомобиля",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Юриспруденция",
+        "skill": "coc:skill:law",
+        "value": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Ориентирование",
+        "skill": "coc:skill:navigate",
+        "value": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Цитирование Писания",
+        "value": {
+          "raw": "75% (37/15)",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Верховая езда",
+        "skill": "coc:skill:ride",
+        "value": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Шериф-пуританин, 40 лет. Крепкого сложения, мускулы проступают под рубашкой. Пронзительные тёмно-синие глаза под иссиня-чёрными волосами; по левой стороне — седая прядь. Лицо изрезанное, дублёное, старше его лет. Зубы очень кривые, но мало кто это знает: он почти не улыбается.\nВсе знают: одной встречи хватает, чтобы понять — шериф серьёзный человек и фанатично предан делу закона в Коббс-Корнерс. Весёлый он примерно как мешок мокрых носков, так что студентам лучше держаться от него подальше.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Спенсер — старший ребёнок в небольшой семье баптистского священника и богобоязненной матери; у него одна сестра, Сара, на три года младше. Единственный сын, он принял на себя большую часть родительских надежд, внимания и строгих убеждений. Любви он толком не знал, зато знал, что «правильно», а что «неправильно». Это привело его в 25 лет к выборам шерифа: горожане были недовольны тогдашним шерифом, и молодой Спенсер победил. С тех пор он держится на должности благодаря непреклонному моральному кодексу. Младые, разумеется, никогда не звали его в культ. Джон Каттер напоминает Спенсеру его самого в том возрасте, и шериф сделал его помощником, не подозревая, что Каттер — глава культа Шуб-Ниггурат.\nИз конторы шерифа Спенсер ведёт непрерывную войну с преступностью и самогоноварением; сухой закон он насаждает с сердцем пуританина и волей фанатика. Причины у него личные и глубокие, и то, что городской пьяница Джеймс Маклиран когда-то был его зятем, делу не помогает.\nРоль в кампании: Спенсер без колебаний запрёт любого студента, заподозрив его в пьянстве, хулиганстве и прочих мелких проступках. Он последний, кто поверит рассказам сыщиков о пришельцах в окрестных холмах. Первая встреча шерифа, помощника Каттера и сыщиков — в эпизоде 1, «День первый» (с. 39). Порох и фитили из его конторы могут пригодиться в эпизоде 5. Статблок шерифа — в эпизоде 1. Шериф и преподобный Уилсон часто появляются вместе.\nВ эпизоде 5: контора шерифа брошена; сам Спенсер схвачен Младыми и среди восьми пленников ждёт жертвоприношения у памятника Гражданской войны (сцены «Контора шерифа», «Мать, это ты?»). Умирающему Кузре кажется, что мужчина у алтаря на шабаше — шериф Спенсер (раздатка «Жатва» 17).\nВ эпизоде 4: неодобрительно смотрит на возвращение команды; по усмотрению Хранителя заезжает на ферму Маклиранов напомнить, что может снова выгнать сыщиков из города. Александру Кузра ходил к нему с рассказами о шабашах; шериф велел помощнику Каттеру их проверить, а Кузра теперь считает самого шерифа одной из стриг.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "time-to-harvest-1-en",
+      "physical_page": 26,
+      "printed_page": 24,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Sheriff’s Office»; «Sheriff Dan Spenser, age 40, puritanical lawman»: внешность, общеизвестное"
+    },
+    {
+      "book_id": "time-to-harvest-1-en",
+      "physical_page": 27,
+      "printed_page": 25,
+      "method": "book_text",
+      "verified": true,
+      "note": "продолжение: тайное («Insider information»), роль («Plot»), «Statistics for Sheriff Spenser can be found in Episode One»"
+    },
+    {
+      "book_id": "time-to-harvest-1-en",
+      "physical_page": 32,
+      "printed_page": 30,
+      "method": "book_text",
+      "verified": true,
+      "note": "«First Baptist Church»: шериф и преподобный Уилсон часто бывают вместе"
+    },
+    {
+      "book_id": "time-to-harvest-1-en",
+      "physical_page": 30,
+      "printed_page": 28,
+      "method": "book_text",
+      "verified": true,
+      "note": "Перри: раскопанная могила сестры шерифа"
+    },
+    {
+      "book_id": "time-to-harvest-1-en",
+      "physical_page": 61,
+      "printed_page": 59,
+      "method": "book_text",
+      "verified": true,
+      "note": "Appendix A эпизода 1: статблок «Sheriff Dan Spenser, age 40, puritanical lawman»"
+    },
+    {
+      "book_id": "time-to-harvest-1-en",
+      "physical_page": 62,
+      "printed_page": 60,
+      "method": "book_text",
+      "verified": true,
+      "note": "Appendix A эпизода 1: окончание статблока «Sheriff Dan Spenser, age 40, puritanical lawman»"
+    },
+    {
+      "book_id": "time-to-harvest-1-en",
+      "physical_page": 44,
+      "printed_page": 42,
+      "method": "book_text",
+      "verified": true,
+      "note": "эпизод 1, «Enter The Sheriff», «The Sheriff’s Speech», «The Lawmen»"
+    },
+    {
+      "book_id": "time-to-harvest-1-en",
+      "physical_page": 45,
+      "printed_page": 43,
+      "method": "book_text",
+      "verified": true,
+      "note": "эпизод 1, «Sheriff Dan Spenser» (окончание)"
+    },
+    {
+      "book_id": "time-to-harvest-4-en",
+      "physical_page": 5,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "эпизод 4: «Day One» — неодобрение шерифа"
+    },
+    {
+      "book_id": "time-to-harvest-4-en",
+      "physical_page": 6,
+      "printed_page": 6,
+      "method": "book_text",
+      "verified": true,
+      "note": "эпизод 4: «Day Two» — возможный визит"
+    },
+    {
+      "book_id": "time-to-harvest-4-en",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "эпизод 4: «Cuzra’s Tale»"
+    },
+    {
+      "book_id": "time-to-harvest-5-en",
+      "physical_page": 12,
+      "printed_page": 12,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Is That You Mother?»: среди восьми пленников"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (Month 1: печатная страница = физическая − 2; обложка, обращение к Хранителям, выходные данные и оглавление — без номеров). Статблок книга даёт в эпизоде 1 (приложение A, с. 59) — добавляется предложением части эпизода 1 (Р-125). Книга пишет фамилию то «Spenser», то «Spencer»."
+  },
+  "corrections": [
+    {
+      "field": "statblock",
+      "from": null,
+      "to": "{\"averages\": false, \"characteristics\": {\"STR\": {\"raw\": \"70\", \"value\": 70}, \"CON\": {\"raw\": \"85\", \"value\": 85}, \"SIZ\": {\"raw\": \"55\", \"value\": 55}, \"DEX\": {\"raw\": \"60\", \"value\": 60}, \"APP\": {\"raw\": \"55\", \"value\": 55}, \"INT\": {\"raw\": \"65\", \"value\": 65}, \"POW\": {\"raw\": \"70\", \"value\": 70}, \"EDU\": {\"raw\": \"70\", \"value\": 70}}, \"hp\": {\"raw\": \"14\", \"value\": 14}, \"mp\": {\"raw\": \"14\", \"value\": 14}, \"sanity\": {\"raw\": \"70\", \"value\": 70, \"max\": null}, \"damage_bonus\": {\"raw\": \"+1d4\", \"value\": \"+1d4\"}, \"build\": {\"raw\": \"1\", \"value\": 1}, \"move\": {\"raw\": \"8\", \"value\": 8, \"modes\": [{\"mode\": \"walk\", \"value\": 8}]}, \"attacks\": [{\"name\": {\"ru\": \"Драка\", \"en\": \"Brawl\"}, \"kind\": \"attack\", \"skill\": \"Ближний бой (драка)\", \"chance\": {\"raw\": \"55% (27/11)\", \"value\": 55, \"half\": 27, \"fifth\": 11}, \"damage\": {\"raw\": \"1d3 + 1d4\", \"dice\": \"1d3\", \"adds_db\": true}}, {\"name\": {\"ru\": \"Револьвер .38\", \"en\": \"38 revolver\"}, \"kind\": \"attack\", \"skill\": \"Стрельба (пистолет)\", \"chance\": {\"raw\": \"50% (25/10)\", \"value\": 50, \"half\": 25, \"fifth\": 10}, \"damage\": {\"raw\": \"1d10\", \"dice\": \"1d10\", \"adds_db\": false}, \"weapon\": \"coc:weapon:38-revolver\"}, {\"name\": {\"ru\": \"Дробовик двуствольный 20-го калибра\", \"en\": \"20-g shotgun (2B)\"}, \"kind\": \"attack\", \"skill\": \"Стрельба (винтовка/дробовик)\", \"chance\": {\"raw\": \"50% (25/10)\", \"value\": 50, \"half\": 25, \"fifth\": 10}, \"damage\": {\"raw\": \"2d6/1d6/1d3\", \"dice\": \"2d6/1d6/1d3\", \"adds_db\": false}, \"weapon\": \"coc:weapon:shotgun-20-gauge-2b\"}], \"dodge\": {\"raw\": \"55% (27/11)\", \"value\": 55, \"half\": 27, \"fifth\": 11}, \"skills\": [{\"name\": \"Лазание\", \"skill\": \"coc:skill:climb\", \"value\": {\"raw\": \"45% (22/9)\", \"value\": 45, \"half\": 22, \"fifth\": 9}}, {\"name\": \"Вождение автомобиля\", \"skill\": \"coc:skill:drive-auto\", \"value\": {\"raw\": \"50% (25/10)\", \"value\": 50, \"half\": 25, \"fifth\": 10}}, {\"name\": \"Запугивание\", \"skill\": \"coc:skill:intimidate\", \"value\": {\"raw\": \"70% (35/14)\", \"value\": 70, \"half\": 35, \"fifth\": 14}}, {\"name\": \"Юриспруденция\", \"skill\": \"coc:skill:law\", \"value\": {\"raw\": \"80% (40/16)\", \"value\": 80, \"half\": 40, \"fifth\": 16}}, {\"name\": \"Слух\", \"skill\": \"coc:skill:listen\", \"value\": {\"raw\": \"65% (32/13)\", \"value\": 65, \"half\": 32, \"fifth\": 13}}, {\"name\": \"Ориентирование\", \"skill\": \"coc:skill:navigate\", \"value\": {\"raw\": \"45% (22/9)\", \"value\": 45, \"half\": 22, \"fifth\": 9}}, {\"name\": \"Убеждение\", \"skill\": \"coc:skill:persuade\", \"value\": {\"raw\": \"60% (30/12)\", \"value\": 60, \"half\": 30, \"fifth\": 12}}, {\"name\": \"Психология\", \"skill\": \"coc:skill:psychology\", \"value\": {\"raw\": \"50% (25/10)\", \"value\": 50, \"half\": 25, \"fifth\": 10}}, {\"name\": \"Цитирование Писания\", \"value\": {\"raw\": \"75% (37/15)\", \"value\": 75, \"half\": 37, \"fifth\": 15}}, {\"name\": \"Верховая езда\", \"skill\": \"coc:skill:ride\", \"value\": {\"raw\": \"55% (27/11)\", \"value\": 55, \"half\": 27, \"fifth\": 11}}, {\"name\": \"Внимание\", \"skill\": \"coc:skill:spot-hidden\", \"value\": {\"raw\": \"50% (25/10)\", \"value\": 50, \"half\": 25, \"fifth\": 10}}, {\"name\": \"Скрытность\", \"skill\": \"coc:skill:stealth\", \"value\": {\"raw\": \"60% (30/12)\", \"value\": 60, \"half\": 30, \"fifth\": 12}}, {\"name\": \"Чтение следов\", \"skill\": \"coc:skill:track\", \"value\": {\"raw\": \"60% (30/12)\", \"value\": 60, \"half\": 30, \"fifth\": 12}}, {\"name\": \"Метание\", \"skill\": \"coc:skill:throw\", \"value\": {\"raw\": \"50% (25/10)\", \"value\": 50, \"half\": 25, \"fifth\": 10}}]}",
+      "reason": "статблок из приложения A эпизода 1 «Sheriff Dan Spenser, age 40, puritanical lawman» (с. 59, 60); гл. 2 отсылает к нему",
+      "ref": "Р-125"
+    },
+    {
+      "field": "legend.ru",
+      "from": "зоде 5. Статблок шерифа — в эпизоде 1. Шериф и преподобный Уилсон часто появляются вместе.",
+      "to": "зоде 5. Статблок шерифа — в эпизоде 1. Шериф и преподобный Уилсон часто появляются вместе.\nВ эпизоде 4: неодобрительно смотрит на возвращение команды; по усмотрению Хранителя заезжает на ферму Маклиранов напомнить, что может снова выгнать сыщиков из города. Александру Кузра ходил к нему с рассказами о шабашах; шериф велел помощнику Каттеру их проверить, а Кузра теперь считает самого шерифа одной из стриг.",
+      "reason": "A Time to Harvest, Month 4, с. 5–6, 9: что персонаж делает в эпизоде 4 — новые факты абзацем (Р-125)",
+      "ref": "Р-125"
+    },
+    {
+      "field": "legend.ru",
+      "from": "изоде 1. Шериф и преподобный Уилсон часто появляются вместе.",
+      "to": "изоде 1. Шериф и преподобный Уилсон часто появляются вместе.\nВ эпизоде 5: контора шерифа брошена; сам Спенсер схвачен Младыми и среди восьми пленников ждёт жертвоприношения у памятника Гражданской войны (сцены «Контора шерифа», «Мать, это ты?»). Умирающему Кузре кажется, что мужчина у алтаря на шабаше — шериф Спенсер (раздатка «Жатва» 17).",
+      "reason": "что запись делает в эпизодах 5–6 (Р-125)",
+      "ref": "Р-125"
+    }
+  ]
+}

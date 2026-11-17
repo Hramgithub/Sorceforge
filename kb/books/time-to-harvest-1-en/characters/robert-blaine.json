@@ -1,0 +1,478 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "time-to-harvest-1-en/character/robert-blaine",
+  "kind": "character",
+  "name": {
+    "ru": "Роберт Блейн",
+    "en": "Robert Blaine"
+  },
+  "aliases": [
+    "Блейн",
+    "Robert Blaine, lovelorn villain"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "старшекурсник, руководитель экспедиции",
+    "en": "expedition leader"
+  },
+  "occupation_ref": "coc:occupation:student-stazher",
+  "age": {
+    "raw": "24",
+    "value": 24
+  },
+  "sex": "мужской",
+  "residence": "Аркхэм",
+  "relations": [
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:mi-go",
+      "note": "его хозяева: выполняет всё, что велят ми-го, ради возвращения Дафны Девайн",
+      "note_back": "Роберт Блейн — человек, выполняющий их волю («Время жатвы»)"
+    },
+    {
+      "type": "knows",
+      "target": "time-to-harvest-1-en/character/clarissa-thurber",
+      "note": "однокурсница, которую он выбрал телом для мозга Дафны Девайн",
+      "note_back": "руководитель экспедиции, который не отходит от неё"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65
+      },
+      "APP": {
+        "raw": "70",
+        "value": 70
+      },
+      "INT": {
+        "raw": "70",
+        "value": 70
+      },
+      "POW": {
+        "raw": "70",
+        "value": 70
+      },
+      "EDU": {
+        "raw": "85",
+        "value": 85
+      }
+    },
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "mp": {
+      "raw": "14",
+      "value": 14
+    },
+    "sanity": {
+      "raw": "18",
+      "value": 18,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "1d3 + 1d4",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Револьвер .38",
+          "en": ".38 revolver"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d10",
+          "dice": "1d10",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:38-revolver"
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Антропология",
+        "skill": "coc:skill:anthropology",
+        "value": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "48% (24/9)",
+          "value": 48,
+          "half": 24,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "10% (5/2)",
+          "value": 10,
+          "half": 5,
+          "fifth": 2
+        }
+      },
+      {
+        "name": "Вождение автомобиля",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "История",
+        "skill": "coc:skill:history",
+        "value": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Работа в библиотеке",
+        "skill": "coc:skill:library-use",
+        "value": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Язвительное замечание",
+        "value": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Оккультизм",
+        "skill": "coc:skill:occult",
+        "value": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Наука (химия)",
+        "skill": "coc:skill:science",
+        "specialization": "химия",
+        "value": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Наука (геология)",
+        "skill": "coc:skill:science",
+        "specialization": "геология",
+        "value": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Ловкость рук",
+        "skill": "coc:skill:sleight-of-hand",
+        "value": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Родной язык (английский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "английский",
+        "value": {
+          "raw": "75% (37/15)",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Иностранный язык (латынь)",
+        "skill": "coc:skill:language-other",
+        "specialization": "латынь",
+        "value": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Contact Mi-go.",
+      "items": [
+        {
+          "name": "Contact Mi-go",
+          "spell": "coc:spell:contact-mi-go"
+        }
+      ]
+    }
+  },
+  "background": {
+    "secret": "Служит ми-го: подаёт им сигналы, подстраивает похищение студентов, чтобы мозг Дафны Девайн пересадили в тело Клариссы Тёрбер."
+  },
+  "description": {
+    "ru": "Хорош собой, поджарый и мускулистый. Одевается неброско, в коричневое и серое. Улыбается редко — разве что отпуская язвительные замечания. В минуты напряжения неосознанно скрипит зубами.\nОбщеизвестно (проверка Знаний): сыщики, которые занимаются в дискуссионном клубе, борьбой или геологией, наверняка раз-другой встречали Блейна в кампусе. Он умён, с едким чувством юмора и твёрдой целеустремлённостью. В последние месяцы он замкнулся и стал ещё язвительнее; больше не выступает за университетские команды по дебатам и борьбе и почти не бывает в прежних местах. В кампусе известно, что когда-то у Блейна были серьёзные проблемы с выпивкой. Друзей у него теперь, похоже, мало.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Тайное: Блейн сменил курс с естественных наук на антропологию, историю и фольклор. Утрата единственной любви — Дафны Девайн — повергла его в чёрное отчаяние, и он готов на всё, чтобы её вернуть.\nРоль в эпизоде 1: трагический злодей этой истории — довольно состоятельный и умный студент, которого утрата любимой довела до грани безумия. Его единственная цель — воссоединиться с любимой женщиной, и ради этого он охотно делает всё, что велят ему ми-го. Для этого он заранее выбрал Клариссу Тёрбер, которая, сама того не зная, должна дать новое тело мозгу Дафны Девайн; постоянно опекает её и бережёт её здоровье (сцена «Роман»). Каждую ночь он тайком подаёт сигналы ми-го фонариком из холмов, не пускает исследователей на Брокен-Хилл, подстраивает похищение землемеров в грозу, а в конце помогает ми-го захватить студентов, разоружает дом и спаивает сыщиков.\nПрошлым летом он был в той же группе, что и пропавшие студенты, но заболел (по слухам — со сломанной рукой) и не пошёл с ними в последний день. О той экспедиции говорит неохотно и только общеизвестные факты; успешная проверка Психологии показывает, что он говорит правду и тяжело переживает потерю Дафны Девайн. По сценарию к концу эпизода Блейн должен остаться жив.\nВ «A Time to Harvest» (эпизод 2, 1930): агенты ми-го заняли тела товарищей, а Дафна Девайн выбрала тело Харролда, а не Клариссы Тёрбер, — Блейн в отчаянии, снова пьёт, пропускает занятия и прячется. В его мансарде (дом Флэнагана, Уэст-Пикман-стрит) — письмо Эмельды Кратчетт, дневник Девайн в матрасе и оккультные книги. Однажды ночью Лоуренс Джарвис убивает его иллюзией Девайн и выстрелом из револьвера .38 в упор; полиция считает это самоубийством.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "time-to-harvest-1-en",
+      "physical_page": 37,
+      "printed_page": 35,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Start: The Trip To Cobb’s Corners»: список участников экспедиции"
+    },
+    {
+      "book_id": "time-to-harvest-1-en",
+      "physical_page": 38,
+      "printed_page": 36,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Prior Knowledge»; «Robert Blaine, age 24, expedition leader»"
+    },
+    {
+      "book_id": "time-to-harvest-1-en",
+      "physical_page": 39,
+      "printed_page": 37,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Robert Blaine» (окончание: тайное, роль в сценарии); портрет «Robert Blaine»"
+    },
+    {
+      "book_id": "time-to-harvest-1-en",
+      "physical_page": 41,
+      "printed_page": 39,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Romance»"
+    },
+    {
+      "book_id": "time-to-harvest-1-en",
+      "physical_page": 60,
+      "printed_page": 58,
+      "method": "book_text",
+      "verified": true,
+      "note": "Appendix A: статблок «Robert Blaine, age 24, lovelorn villain»"
+    },
+    {
+      "book_id": "time-to-harvest-2-en",
+      "physical_page": 5,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "эпизод 2"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2). Сломанная рука прошлым летом — слова Гарольда Хиггинса в его речи (с. 50); в «Prior Knowledge» сказано, что Блейн «заболел». Навык «Язвительное замечание» (Make Cutting Remark) — без правил, записи справочника нет (Р-126)."
+  },
+  "images": [
+    {
+      "file": "art/characters/harvest-ep1-robert-blaine.webp",
+      "kind": "portrait",
+      "caption": "Роберт Блейн",
+      "source": "A Time to Harvest, Month 1, с. 37 (физ. 39), портрет «Robert Blaine»"
+    }
+  ],
+  "corrections": [
+    {
+      "field": "legend.ru",
+      "from": "концу эпизода Блейн должен остаться жив.",
+      "to": "концу эпизода Блейн должен остаться жив.\nВ «A Time to Harvest» (эпизод 2, 1930): агенты ми-го заняли тела товарищей, а Дафна Девайн выбрала тело Харролда, а не Клариссы Тёрбер, — Блейн в отчаянии, снова пьёт, пропускает занятия и прячется. В его мансарде (дом Флэнагана, Уэст-Пикман-стрит) — письмо Эмельды Кратчетт, дневник Девайн в матрасе и оккультные книги. Однажды ночью Лоуренс Джарвис убивает его иллюзией Девайн и выстрелом из револьвера .38 в упор; полиция считает это самоубийством.",
+      "reason": "что персонаж делает в эпизоде 2 (A Time to Harvest, месяц 2, Р-125)",
+      "ref": "Р-125"
+    },
+    {
+      "field": "sources",
+      "from": null,
+      "to": "{\"book_id\": \"time-to-harvest-2-en\", \"physical_page\": 5, \"printed_page\": 5, \"method\": \"book_text\", \"verified\": true, \"note\": \"эпизод 2\"}",
+      "reason": "источник: A Time to Harvest, месяц 2",
+      "ref": "Р-125"
+    }
+  ]
+}

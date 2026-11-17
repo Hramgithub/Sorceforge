@@ -1,0 +1,262 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "time-to-harvest-1-en/creature/zoog",
+  "kind": "creature",
+  "name": {
+    "ru": "Зуги («Время жатвы»)",
+    "en": "Zoogs"
+  },
+  "aliases": [
+    "Зуг",
+    "Zoog",
+    "Zoogs, pesky and cunning"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "обитатели Зачарованного леса",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "15",
+        "value": 15
+      },
+      "CON": {
+        "raw": "35",
+        "value": 35
+      },
+      "SIZ": {
+        "raw": "10",
+        "value": 10
+      },
+      "DEX": {
+        "raw": "100",
+        "value": 100
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "4",
+      "value": 4
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "damage_bonus": {
+      "raw": "–2",
+      "value": "–2"
+    },
+    "build": {
+      "raw": "–2",
+      "value": -2
+    },
+    "move": {
+      "raw": "12",
+      "value": 12,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 12
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d4 + 1 + БкУ",
+          "dice": "1d4+1",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Нож",
+          "en": "knife"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d6 + БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Метательный дротик",
+          "en": "Thrown Dart"
+        },
+        "kind": "attack",
+        "skill": "Метание",
+        "chance": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "1d6 + БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "60% (30/12)",
+      "value": 60,
+      "half": 30,
+      "fifth": 12
+    },
+    "spells": {
+      "raw": "A zoog will usually know at least 1d4 spells."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d3",
+        "trigger": "при виде зуга"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Оружие, укус и когти",
+      "summary": "Умеют пользоваться оружием, а также кусают и царапают жертв.",
+      "raw": "Able to use weapons, as well as bite and claw their victims."
+    },
+    {
+      "name": "Притворная кротость",
+      "summary": "Прикидываются смирными (и даже миловидными), пока цель не подойдёт достаточно близко для нападения; охотятся стаями, устраивая засады неосторожным.",
+      "raw": "Will feign being docile (and somewhat cute-looking) until their target is close enough to be attacked. Works in packs to ambush the unwary."
+    }
+  ],
+  "description": {
+    "ru": "Маленькие бурые существа, по телу и общим очертаниям похожие на грызунов. С морды у них свисают короткие щупальца (звёздчатые выросты, как у звездоноса), скрывающие мелкие, но острые как бритва зубы; глаза — огромные, выпуклые, обсидиановые. Ходят на задних лапах и держат в лапах кинжалы. Едят в основном грибы, но любят свежее мясо.\nВ эпизоде 1 через Врата сна в лес сахарных клёнов за домом Маклиранов пришли почти пятьдесят зугов. Они прекрасно приспособились к лесу, съели или распугали почти всю местную живность и не прочь перекусить сыщиками. Группу людей без повода не трогают, но одиночка должен пройти проверку Удачи: при провале 1d6+6 любопытных и наглых зугов решают попробовать новое мясо. Местные принимают их за огромных бурых крыс (сцены «Дикая охота», «Зачарованный лес»).",
+    "en": null
+  },
+  "legend": {
+    "ru": "В Стране грёз зуги живут в небольших норах и стволах деревьев Зачарованного леса.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "time-to-harvest-1-en",
+      "physical_page": 48,
+      "printed_page": 46,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Wild Hunt»: зуг охотится на зайца"
+    },
+    {
+      "book_id": "time-to-harvest-1-en",
+      "physical_page": 49,
+      "printed_page": 47,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Folklore Interviews»: рассказ о «крысах» в лесу"
+    },
+    {
+      "book_id": "time-to-harvest-1-en",
+      "physical_page": 54,
+      "printed_page": 52,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Enchanted Woods»: около пятидесяти зугов в лесу"
+    },
+    {
+      "book_id": "time-to-harvest-1-en",
+      "physical_page": 63,
+      "printed_page": 61,
+      "method": "book_text",
+      "verified": true,
+      "note": "Appendix A: «Zoogs, pesky and cunning»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2). Общей записи «Зуг» в справочнике нет — кандидат в общую запись; профиль — только из этого сценария («Use these statistics for a typical zoog and repeat as needed»). Названия атаки ножом и дротиком — как в книге: «or by weapon (knife, 1d6 + DB)», «Thrown Dart»."
+  }
+}

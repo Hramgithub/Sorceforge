@@ -1,0 +1,185 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "time-to-harvest-1-en/creature/mi-go-librarian",
+  "kind": "creature",
+  "name": {
+    "ru": "Ми-го (библиотекарь)",
+    "en": "Mi-Go Librarian"
+  },
+  "aliases": [
+    "MI-GO LIBRARIAN"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "независимая раса",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "form_of",
+      "target": "coc:creature:mi-go",
+      "note": "вид, который вырастил библиотекаря",
+      "note_back": "живой библиотекарь архивов («Время жатвы»)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "25",
+        "value": 25
+      },
+      "CON": {
+        "raw": "100",
+        "value": 100
+      },
+      "SIZ": {
+        "raw": "300",
+        "value": 300
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "INT": {
+        "raw": "10",
+        "value": 10
+      },
+      "POW": {
+        "raw": "05",
+        "value": 5
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "40",
+      "value": 40
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "4",
+      "value": 4
+    },
+    "move": {
+      "raw": "0",
+      "value": 0,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 0
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет; внеземное тело получает от проникающего оружия минимальный урон",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks": [],
+    "dodge": {
+      "raw": "25% (12/5)",
+      "value": 25,
+      "half": 12,
+      "fifth": 5
+    },
+    "skills": [
+      {
+        "name": "Найти нужный диск",
+        "value": {
+          "raw": "100%",
+          "value": 100,
+          "half": 50,
+          "fifth": 20
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d4",
+        "trigger": "при виде ми-го-библиотекаря"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Безвредный хранитель архива",
+      "summary": "Знает, где лежат тысячи дисков ми-го, и больше ничего; совершенно безвреден и не может даже предупредить других ми-го об опасности (сыщики этого, конечно, не знают). Другие ми-го общаются с ним химически, касаясь головой одной из его лозообразных рук.",
+      "raw": "The librarians are basically idiot savants, knowing the location of thousands of mi-go discs, but nothing else. They are completely harmless and cannot even warn other mi-go in situations of danger",
+      "refs": [
+        "time-to-harvest-1-en/item/disc-books"
+      ]
+    },
+    {
+      "name": "Внеземное тело",
+      "summary": "Брони нет (если не сказано иное), но резонирующее внеземное тело получает от любого проникающего оружия (включая пули) минимальный урон.",
+      "raw": "Armor: None, however their resonating extra-terrene body causes all piercing weapons (bullets included) to do the minimum damage."
+    }
+  ],
+  "description": {
+    "ru": "Огромные грибковые наросты с множеством тонких щупальцеобразных отростков — живые, смутно сознающие себя массы плесени, созданные как библиотекари архивов ми-го.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "time-to-harvest-1-en",
+      "physical_page": 20,
+      "printed_page": 18,
+      "method": "book_text",
+      "verified": true,
+      "note": "«MI-GO LIBRARIAN»: описание, профиль"
+    },
+    {
+      "book_id": "time-to-harvest-1-en",
+      "physical_page": 17,
+      "printed_page": 15,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Physiological Tinkering»: библиотекарь — в эпизоде 4"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.damage_bonus",
+      "printed": "0, Build 4",
+      "expected": "+4d6, Комплекция 5",
+      "note": "СИЛ 25 + ТЕЛ 300 = 325: по таблице БкУ +4d6 и Комплекция 5; напечатаны БкУ 0 и Комплекция 4 (с. 18) — большинства нет, как напечатано (Р-36).",
+      "fixed": false
+    },
+    {
+      "field": "statblock.mp",
+      "printed": "10",
+      "expected": "1",
+      "note": "МОЩ 5 / 5 = 1 (с. 18); как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (Month 1: печатная страница = физическая − 2; обложка, обращение к Хранителям, выходные данные и оглавление — без номеров). Навык «Locate Desired Disc 100%» — без механики, остаётся текстом статблока (Р-126)."
+  }
+}

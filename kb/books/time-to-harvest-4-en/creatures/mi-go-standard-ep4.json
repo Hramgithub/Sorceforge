@@ -1,0 +1,302 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "time-to-harvest-4-en/creature/mi-go-standard-ep4",
+  "kind": "creature",
+  "name": {
+    "ru": "Ми-го, обычный облик («Время жатвы», эпизод 4)",
+    "en": "Mi-Go Standard Form"
+  },
+  "aliases": [
+    "обычный ми-го («Время жатвы», эпизод 4)",
+    "typical mi-go"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "независимая раса",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "time-to-harvest-1-en/creature/mi-go-standard-form",
+      "note_back": "обычный облик ми-го на базе под Раунд-Хиллом (эпизод 4)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "50",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "65",
+        "value": 65
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "10",
+      "value": 10
+    },
+    "mp": {
+      "raw": "13",
+      "value": 13
+    },
+    "sanity": {
+      "raw": "—",
+      "value": null,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "7 / 13 полёт",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        },
+        {
+          "mode": "fly",
+          "value": 13
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет; резонирующее неземное тело: колющее оружие (в том числе пули) наносит минимальный урон",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "2 удара клешнями, или 1 захват/удержание, или 1 оружие",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (клешни)",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d6",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Схватить (манёвр)",
+          "en": "Seize (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "—",
+          "value": null,
+          "half": null,
+          "fifth": null
+        },
+        "damage": {
+          "raw": "хватает жертву (её Комплекции или меньше) и уносит в небо",
+          "dice": null,
+          "adds_db": false
+        },
+        "notes": "шанс в строке не напечатан"
+      },
+      {
+        "name": {
+          "ru": "Споровое ружьё",
+          "en": "Spoor gun"
+        },
+        "kind": "attack",
+        "skill": "Стрельба",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "особое (см. главу 1)",
+          "dice": null,
+          "adds_db": false
+        }
+      },
+      {
+        "name": {
+          "ru": "Электропушка",
+          "en": "Electric Gun"
+        },
+        "kind": "attack",
+        "skill": "Стрельба",
+        "chance": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "1d10 + особое (см. главу 1)",
+          "dice": "1d10",
+          "adds_db": false
+        }
+      },
+      {
+        "name": {
+          "ru": "Распылитель тумана",
+          "en": "Mist Projector"
+        },
+        "kind": "attack",
+        "skill": "Стрельба",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d10 за раунд (см. главу 1)",
+          "dice": "1d10",
+          "adds_db": false
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "spells": {
+      "raw": "Каждый с шансом ИНТ×2 знает 1d3 заклинания.",
+      "items": []
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "увидеть ми-го"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Хватка и полёт",
+      "summary": "Может атаковать в ближнем бою двумя клешнями сразу. Если цель поражена, ми-го может попытаться удержать её (манёвр) и взлететь, чтобы сбросить жертву с высоты или поднять так высоко, что у неё лопнут лёгкие.",
+      "raw": "May attack in hand-to-hand combat with two nippers at once. If the target is hit, the mi-go can attempt to hold the victim (maneuver) and fly into the sky to drop the victim from a height, or take the victim up so high that his or her lungs burst."
+    },
+    {
+      "name": "Гипноз",
+      "summary": "Вплетая в жужжание сверхвысокие и сверхнизкие тона, ми-го может ввести в транс одного или многих слушающих людей: каждый в пределах 13 м от жужжащего ми-го должен победить во встречной проверке МОЩ, иначе становится неспособен действовать.",
+      "raw": "Hypnosis: by introducing ultra-high and ultra-low frequency tones into its buzzing, the mi-go can put one or many humans listening to it into a trance state. Those within forty-feet of a buzzing mi-go must succeed in an opposed POW roll or become incapable of action.",
+      "refs": [
+        "coc:rule:opposed-pow-rolls"
+      ]
+    },
+    {
+      "name": "Телепатия",
+      "summary": "Ми-го может говорить с людьми телепатически, тратя 1 ПМ за 5 раундов; человек может воспротивиться, победив во встречной проверке МОЩ.",
+      "raw": "Telepathy: mi-go can speak telepathically to humans, costing 1 magic point per 5 rounds. A human can resist the communication by winning an opposed POW roll.",
+      "refs": [
+        "coc:rule:opposed-pow-rolls"
+      ]
+    },
+    {
+      "name": "Пустотный свет",
+      "summary": "Создаёт сток, из которого не выходят фотоны: 1 ПМ за каждый кубический метр черноты. Свет не покидает область — полезная защита от взгляда для этих хрупких существ; тьма может быть полотном или шаром.",
+      "raw": "Void Light: creates a sink from which photons will not emerge. The mi-go must spend 1 magic point for every cubic yard of blackness desired. No light can escape the affected area, making a useful visual protection for these fragile aliens. The darkness may be like a sheet or a spherical volume."
+    }
+  ],
+  "description": {
+    "ru": "Типичный ми-го, встречающийся в комплексе под Раунд-Хиллом, — образец с самыми простыми изменениями для жизни и работы на Земле.",
+    "en": null
+  },
+  "legend": {
+    "ru": "В эпизоде 4. Ми-го на базе под Раунд-Хиллом — в лучшем случае символический гарнизон: вооружены немногие, а внутренняя охрана очень слаба, потому что все входы ми-го считают надёжно защищёнными. Особых спален у них нет: ми-го работают, пока не устанут, и возвращаются к работе, проснувшись, — спящих можно найти свернувшимися в углу комнаты, висящими вниз головой под потолком коридора или рухнувшими у рабочего места. Если на базе обнаружат чужаков, ми-го запирают важные помещения и начинают патрулировать базу хорошо вооружёнными группами.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "time-to-harvest-4-en",
+      "physical_page": 25,
+      "printed_page": 25,
+      "method": "book_text",
+      "verified": true,
+      "note": "приложение A: статблок «Mi-Go Standard Form»"
+    },
+    {
+      "book_id": "time-to-harvest-4-en",
+      "physical_page": 15,
+      "printed_page": 15,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Round Hill Complex»: гарнизон, сон, тревога"
+    },
+    {
+      "book_id": "time-to-harvest-1-en",
+      "physical_page": 17,
+      "printed_page": 15,
+      "method": "book_text",
+      "verified": true,
+      "note": "Month 1, «Common Abilities»: Hypnosis, Telepathy, Void Light (на них ссылается статблок)"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.attacks[Споровое ружьё]",
+      "printed": "Spoor gun",
+      "expected": "Spore gun",
+      "note": "Опечатка в названии оружия (в главе 1 — «Spore Gun»); в записи — «Споровое ружьё».",
+      "fixed": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги («A Time to Harvest», Month 4; печатная страница = физической). Профиль эпизода для общего вида (Р-75): в главе 1 (Month 1, с. 15) у обычного облика оружия нет, в профиле эпизода 1 — только споровое ружьё; здесь — споровое и электропушки и распылитель тумана. Урон клешнями «1d6» — без «+ DB» (БкУ 0). Шанс манёвра «Seize» в строке атак не напечатан. Особые способности — по главе 1 (Month 1, с. 15), сорок футов — 13 м, кубический ярд — кубический метр (Р-64)."
+  }
+}

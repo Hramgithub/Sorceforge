@@ -1,0 +1,755 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "time-to-harvest-5-en/character/the-young-cultists",
+  "kind": "character",
+  "name": {
+    "ru": "Младые, культисты Шуб-Ниггурат",
+    "en": "The Young, cultists of Shub-Niggurath"
+  },
+  "aliases": [
+    "Младые",
+    "The Young",
+    "культисты Младых"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "ребёнок-культист Младых",
+  "names": [
+    "Эбенезер Колби",
+    "Мэри Энн Додж",
+    "Элмер Хаскелл",
+    "Айда Брайант",
+    "Честер Уиллард",
+    "Руфь Пибоди"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:shub-niggurath",
+      "note": "Мать",
+      "note_back": "культ Младых в Коббс-Корнерс"
+    },
+    {
+      "type": "works_for",
+      "target": "time-to-harvest-1-en/character/john-cutter",
+      "note": "вожак культа",
+      "note_back": "культисты-дети"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "25",
+        "value": 25
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "35",
+        "value": 35
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "60",
+        "value": 60
+      },
+      "POW": {
+        "raw": "60",
+        "value": 60
+      }
+    },
+    "hp": {
+      "raw": "8",
+      "value": 8
+    },
+    "sanity": {
+      "raw": "0",
+      "value": 0,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "–2",
+      "value": -2
+    },
+    "build": {
+      "raw": "–2",
+      "value": -2
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка (№1–4)",
+          "en": "Brawl (cultists #1–4)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        },
+        "damage": {
+          "raw": "1d3, оружие 1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed",
+        "notes": "младшие культисты №1–4; оружие 1d4 — на выбор: ножницы, опасная бритва, отвёртка, нож, топорик"
+      },
+      {
+        "name": {
+          "ru": "Драка (№5–7)",
+          "en": "Brawl (cultists #5–7)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d3+БкУ, оружие 1d6 или 1d8+БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed",
+        "notes": "старшие культисты №5–7; оружие 1d6 или 1d8+БкУ — на выбор: коса, валочный топор, кирка, вилы, мясной тесак"
+      },
+      {
+        "name": {
+          "ru": "Дробовик 20-го калибра (двуствольный) (№5–7)",
+          "en": "20-g shotgun (2B) (cultists #5–7)"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "2d6/1d6/1d3",
+          "dice": "2d6/1d6/1d3",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:shotgun-20-gauge-2b",
+        "notes": "только старшие культисты №5–7"
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Обаяние",
+        "skill": "coc:skill:charm",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "5%",
+          "value": 5
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "25%",
+          "value": 25
+        }
+      },
+      {
+        "name": "Ловкость рук",
+        "skill": "coc:skill:sleight-of-hand",
+        "value": {
+          "raw": "30%",
+          "value": 30
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "65%",
+          "value": 65
+        }
+      },
+      {
+        "name": "Плавание",
+        "skill": "coc:skill:swim",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Each cult member has 50% chance to know 1d2 spells from the following: Alter Weather, Augury, Bless/Blight Crop, Cause Disease, Cloud Memory, Command Animal (specify type), Contact Mi-go, Contact Shub-Niggurath, Implant Fear, Lame/Heal Animal, Shrivelling, Summon/Bind Dark Young, Wither Limb.",
+      "items": [
+        {
+          "name": "Alter Weather",
+          "spell": "coc:spell:alter-weather"
+        },
+        {
+          "name": "Augury",
+          "spell": "coc:spell:augury-folk"
+        },
+        {
+          "name": "Bless/Blight Crop",
+          "spell": "coc:spell:blight-bless-crop"
+        },
+        {
+          "name": "Cause Disease",
+          "spell": "coc:spell:cause-disease"
+        },
+        {
+          "name": "Cloud Memory",
+          "spell": "coc:spell:cloud-memory"
+        },
+        {
+          "name": "Command Animal (specify type)",
+          "spell": "coc:spell:command-animal-folk"
+        },
+        {
+          "name": "Contact Mi-go",
+          "spell": "coc:spell:contact-mi-go"
+        },
+        {
+          "name": "Contact Shub-Niggurath",
+          "spell": "coc:spell:contact-shub-niggurath"
+        },
+        {
+          "name": "Implant Fear",
+          "spell": "coc:spell:implant-fear"
+        },
+        {
+          "name": "Lame/Heal Animal",
+          "spell": "coc:spell:lame-heal-animal-folk"
+        },
+        {
+          "name": "Shrivelling",
+          "spell": "coc:spell:shrivelling"
+        },
+        {
+          "name": "Summon/Bind Dark Young",
+          "spell": "coc:spell:summon-bind-dark-young"
+        },
+        {
+          "name": "Wither Limb",
+          "spell": "coc:spell:wither-limb"
+        }
+      ]
+    }
+  },
+  "variants": [
+    {
+      "label": "№1 (младший)",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "25",
+            "value": 25
+          },
+          "CON": {
+            "raw": "50",
+            "value": 50
+          },
+          "SIZ": {
+            "raw": "35",
+            "value": 35
+          },
+          "DEX": {
+            "raw": "50",
+            "value": 50
+          },
+          "INT": {
+            "raw": "60",
+            "value": 60
+          },
+          "POW": {
+            "raw": "60",
+            "value": 60
+          }
+        },
+        "hp": {
+          "raw": "8",
+          "value": 8
+        },
+        "sanity": {
+          "raw": "0",
+          "value": 0,
+          "max": null
+        },
+        "damage_bonus": {
+          "raw": "–2",
+          "value": -2
+        },
+        "build": {
+          "raw": "–2",
+          "value": -2
+        },
+        "dodge": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      }
+    },
+    {
+      "label": "№2 (младший)",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "30",
+            "value": 30
+          },
+          "CON": {
+            "raw": "60",
+            "value": 60
+          },
+          "SIZ": {
+            "raw": "40",
+            "value": 40
+          },
+          "DEX": {
+            "raw": "50",
+            "value": 50
+          },
+          "INT": {
+            "raw": "50",
+            "value": 50
+          },
+          "POW": {
+            "raw": "40",
+            "value": 40
+          }
+        },
+        "hp": {
+          "raw": "10",
+          "value": 10
+        },
+        "sanity": {
+          "raw": "0",
+          "value": 0,
+          "max": null
+        },
+        "damage_bonus": {
+          "raw": "–1",
+          "value": -1
+        },
+        "build": {
+          "raw": "–1",
+          "value": -1
+        },
+        "dodge": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      }
+    },
+    {
+      "label": "№3 (младший)",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "40",
+            "value": 40
+          },
+          "CON": {
+            "raw": "45",
+            "value": 45
+          },
+          "SIZ": {
+            "raw": "45",
+            "value": 45
+          },
+          "DEX": {
+            "raw": "65",
+            "value": 65
+          },
+          "INT": {
+            "raw": "70",
+            "value": 70
+          },
+          "POW": {
+            "raw": "50",
+            "value": 50
+          }
+        },
+        "hp": {
+          "raw": "9",
+          "value": 9
+        },
+        "sanity": {
+          "raw": "0",
+          "value": 0,
+          "max": null
+        },
+        "damage_bonus": {
+          "raw": "0",
+          "value": 0
+        },
+        "build": {
+          "raw": "0",
+          "value": 0
+        },
+        "dodge": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      }
+    },
+    {
+      "label": "№4 (младший)",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "50",
+            "value": 50
+          },
+          "CON": {
+            "raw": "50",
+            "value": 50
+          },
+          "SIZ": {
+            "raw": "50",
+            "value": 50
+          },
+          "DEX": {
+            "raw": "60",
+            "value": 60
+          },
+          "INT": {
+            "raw": "60",
+            "value": 60
+          },
+          "POW": {
+            "raw": "50",
+            "value": 50
+          }
+        },
+        "hp": {
+          "raw": "10",
+          "value": 10
+        },
+        "sanity": {
+          "raw": "0",
+          "value": 0,
+          "max": null
+        },
+        "damage_bonus": {
+          "raw": "0",
+          "value": 0
+        },
+        "build": {
+          "raw": "0",
+          "value": 0
+        },
+        "dodge": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      }
+    },
+    {
+      "label": "№5 (старший)",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "60",
+            "value": 60
+          },
+          "CON": {
+            "raw": "60",
+            "value": 60
+          },
+          "SIZ": {
+            "raw": "65",
+            "value": 65
+          },
+          "DEX": {
+            "raw": "70",
+            "value": 70
+          },
+          "INT": {
+            "raw": "65",
+            "value": 65
+          },
+          "POW": {
+            "raw": "40",
+            "value": 40
+          }
+        },
+        "hp": {
+          "raw": "12",
+          "value": 12
+        },
+        "sanity": {
+          "raw": "0",
+          "value": 0,
+          "max": null
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "dodge": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      }
+    },
+    {
+      "label": "№6 (старший)",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "75",
+            "value": 75
+          },
+          "CON": {
+            "raw": "55",
+            "value": 55
+          },
+          "SIZ": {
+            "raw": "70",
+            "value": 70
+          },
+          "DEX": {
+            "raw": "80",
+            "value": 80
+          },
+          "INT": {
+            "raw": "80",
+            "value": 80
+          },
+          "POW": {
+            "raw": "60",
+            "value": 60
+          }
+        },
+        "hp": {
+          "raw": "12",
+          "value": 12
+        },
+        "sanity": {
+          "raw": "0",
+          "value": 0,
+          "max": null
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "dodge": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      }
+    },
+    {
+      "label": "№7 (старший)",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "85",
+            "value": 85
+          },
+          "CON": {
+            "raw": "70",
+            "value": 70
+          },
+          "SIZ": {
+            "raw": "80",
+            "value": 80
+          },
+          "DEX": {
+            "raw": "60",
+            "value": 60
+          },
+          "INT": {
+            "raw": "60",
+            "value": 60
+          },
+          "POW": {
+            "raw": "60",
+            "value": 60
+          }
+        },
+        "hp": {
+          "raw": "15",
+          "value": 15
+        },
+        "sanity": {
+          "raw": "0",
+          "value": 0,
+          "max": null
+        },
+        "damage_bonus": {
+          "raw": "+1d6",
+          "value": "+1d6"
+        },
+        "build": {
+          "raw": "2",
+          "value": 2
+        },
+        "dodge": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      }
+    }
+  ],
+  "description": {
+    "ru": "Набор из семи профилей для дюжин детей-культистов Шуб-Ниггурат (годится для всех культистов эпизода). Младые очень разные: от восьми до восемнадцати лет, мальчики и девочки всех видов и размеров; Хранителю стоит изображать культистов по возрасту — семнадцатилетний ведёт себя совсем иначе, чем двенадцатилетний. №1–4 — младшие, №5–7 — старшие культисты. У всех Рассудок 0.\nБой: 1 атака за раунд. Младшие (№1–4): Драка 25% (1d3), с оружием 1d4 — ножницы, опасная бритва, отвёртка, нож или топорик; Уклонение 40%. Старшие (№5–7): Драка 50% (1d3+БкУ), с оружием 1d6 или 1d8+БкУ — коса, валочный топор, кирка, вилы или мясной тесак; дробовик 20-го калибра (двуствольный) 35% (2d6/1d6/1d3); Уклонение 35%. Брони нет.\nНавыки: Обаяние 40%, Лазание 60%, Мифы Ктулху 5%, Красноречие 60%, Прыжки 60%, Слух 40%, Психология 25%, Ловкость рук 30%, Внимание 40%, Скрытность 65%, Плавание 50%, Метание 45%.\nЗаклинания: каждый член культа с шансом 50% знает 1d2 заклинания из списка: «Изменить погоду», «Авгурия», «Погубить/благословить урожай», «Наслать болезнь», «Затуманить память», «Повелевать животным» (выбрать вид), «Связь с ми-го», «Связь с божеством: Шуб-Ниггурат», «Зародить страх», «Искалечить/исцелить животное», «Иссушение», «Призыв/укрощение тёмной молоди», «Усыхание конечности».",
+    "en": null
+  },
+  "legend": {
+    "ru": "В эпизоде 5 по приказу вожака, помощника шерифа Джона Каттера, Младые убивают всех в долине Коббс-Корнерс — массовое жертвоприношение Шуб-Ниггурат, «Великая жатва», — призывают тёмную молодь («Братьев»), сжигают школу и библиотеку, держат пленников в центре города и пляшут вокруг Каттера во время ритуала. Каттер велел культистам покончить с собой в миг прихода Матери: при её явлении (полном или частичном) все культисты бросаются в её «объятия» и гибнут.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "time-to-harvest-5-en",
+      "physical_page": 15,
+      "printed_page": 15,
+      "method": "book_text",
+      "verified": true,
+      "note": "приложение A: «The Young, cultists of Shub-Niggurath» — таблица №1–7, бой, навыки, заклинания"
+    },
+    {
+      "book_id": "time-to-harvest-5-en",
+      "physical_page": 5,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "Великая жатва: приказ Каттера убить всех в долине и покончить с собой"
+    },
+    {
+      "book_id": "time-to-harvest-5-en",
+      "physical_page": 14,
+      "printed_page": 14,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Conclusion»: гибель культистов"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "editorial_text"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Имена придуманы (Р-151): дети Вермонта 1920-х; в книге — таблица без имён. Основной статблок — №1 с общим боем, навыками и заклинаниями; варианты — характеристики, ПЗ, Комплекция, БкУ и Уклонение №1–7. НАР, ОБР и ПМ в таблице не даны."
+  }
+}

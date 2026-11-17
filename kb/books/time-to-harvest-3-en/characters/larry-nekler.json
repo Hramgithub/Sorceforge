@@ -1,0 +1,533 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "time-to-harvest-3-en/character/larry-nekler",
+  "kind": "character",
+  "name": {
+    "ru": "Ларри Неклер",
+    "en": "Larry Nekler"
+  },
+  "aliases": [
+    "Неклер",
+    "Nekler",
+    "Larry Nekler, mechanic"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "механик, электрик и радист",
+    "en": "mechanic"
+  },
+  "age": {
+    "raw": "28",
+    "value": 28
+  },
+  "sex": "мужской",
+  "residence": null,
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "time-to-harvest-3-en/character/michael-abelard",
+      "note": "наниматель",
+      "note_back": "механик и радист вермонтской группы"
+    },
+    {
+      "type": "knows",
+      "target": "time-to-harvest-3-en/character/sam-morrison",
+      "note": "товарищ по группе; всегда встанет на его сторону",
+      "note_back": "товарищ по группе"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "80",
+        "value": 80
+      },
+      "CON": {
+        "raw": "75",
+        "value": 75
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50
+      },
+      "APP": {
+        "raw": "40",
+        "value": 40
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "45",
+        "value": 45
+      },
+      "EDU": {
+        "raw": "65",
+        "value": 65
+      }
+    },
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "mp": {
+      "raw": "9",
+      "value": 9
+    },
+    "sanity": {
+      "raw": "36",
+      "value": 36,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Нож",
+          "en": "knife"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d4+2+1d4",
+          "dice": "1d4+2",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:knife-medium",
+        "notes": "в книге — во второй строке атаки «Brawl»: «knife 1d4 + 2 + 1d4»"
+      },
+      {
+        "name": {
+          "ru": "Револьвер .45",
+          "en": ".45 revolver"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d10+2",
+          "dice": "1d10+2",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:45-revolver"
+      },
+      {
+        "name": {
+          "ru": "Дробовик помповый",
+          "en": "12-g shotgun (pump)"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "4d6/2d6/1d6",
+          "dice": "4d6/2d6/1d6",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:shotgun-12-gauge-pump"
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Искусство/ремесло (работа с радио)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "работа с радио",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Обаяние",
+        "skill": "coc:skill:charm",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "46%",
+          "value": 46,
+          "half": 23,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Вождение автомобиля",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Электрика",
+        "skill": "coc:skill:electrical-repair",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Взлом",
+        "skill": "coc:skill:locksmith",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Механика",
+        "skill": "coc:skill:mechanical-repair",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Ориентирование",
+        "skill": "coc:skill:navigate",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Пилотирование (лодка)",
+        "skill": "coc:skill:pilot",
+        "specialization": "лодка",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Управление тяжёлыми машинами",
+        "skill": "coc:skill:heavy-machinery",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Наука (инженерное дело)",
+        "skill": "coc:skill:science",
+        "specialization": "инженерное дело",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Плавание",
+        "skill": "coc:skill:swim",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Родной язык (английский)",
+        "skill": "coc:skill:language-own",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Коренастый, с толстыми руками и шеей; каштановые волосы и глаза; на предплечьях большие татуировки — сердце, роза и имя «Lovely Lucy» («Милая Люси»). Кривой нос явно когда-то был сломан.\nОбщеизвестно: сыщики могут знать Неклера, если служили во флоте США.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Был слишком молод для Великой войны, но отслужил срок во флоте, а потом ушёл в торговый флот. У него инженерная голова и природный талант к радио. Лучшее жалованье и более удобная жизнь привели его на службу в FOC.\nСюжет: едет с сыщиками обратно в Коббс-Корнерс; отвечает за снаряжение и радиосвязь (в Вермонте остаётся на ферме и по расписанию — утром, ближе к вечеру и вечером — выходит на связь со второй группой FOC). Военная выучка делает его неплохим бойцом; при споре или драке первым встанет на сторону Сэма Моррисона.\nВ эпизоде 3: когда гаснет свет, ведёт сыщиков с фонариками к щитку в подвале; отказывается входить на четвёртый этаж, а увидев двух глубоководных на лестнице, вскрикивает, бросает задание и бежит обратно в конференц-зал. Один из ключевых персонажей: спасти его — награда Рассудка.\nВ эпизоде 4: едет с командой в Вермонт и ведёт грузовик; на второй день остаётся на ферме Маклиранов — передать доклад по радио и повозиться с грузовиком («он что-то не так звучал по дороге сюда»). В ночь хаоса по радио вызывает охрану FOC, потом вместе с Моррисоном закидывает тёмную молодь гранатами; вместе с Дрейком — самый вероятный пленник тёмной молоди (его навыки меньше всего нужны дальше), которого уносят на базу ми-го под Раунд-Хиллом.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "time-to-harvest-3-en",
+      "physical_page": 10,
+      "printed_page": 10,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Plans And Preparations»: механик, электрик, отвечает за полевую рацию"
+    },
+    {
+      "book_id": "time-to-harvest-3-en",
+      "physical_page": 12,
+      "printed_page": 12,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «Larry Nekler, age 28, mechanic»"
+    },
+    {
+      "book_id": "time-to-harvest-3-en",
+      "physical_page": 17,
+      "printed_page": 17,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Attack of The Deep Ones»: ведёт сыщиков к щитку"
+    },
+    {
+      "book_id": "time-to-harvest-3-en",
+      "physical_page": 18,
+      "printed_page": 18,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Rewards For Episode Three»: ключевой персонаж"
+    },
+    {
+      "book_id": "time-to-harvest-3-en",
+      "physical_page": 20,
+      "printed_page": 20,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Larry Nekler, age 28, mechanic» (приложение A; атаки, навыки и языки — во второй колонке)"
+    },
+    {
+      "book_id": "time-to-harvest-4-en",
+      "physical_page": 5,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "эпизод 4: поездка, второй день"
+    },
+    {
+      "book_id": "time-to-harvest-4-en",
+      "physical_page": 12,
+      "printed_page": 12,
+      "method": "book_text",
+      "verified": true,
+      "note": "эпизод 4: «Little Pigs, Little Pigs» — вызов по радио"
+    },
+    {
+      "book_id": "time-to-harvest-4-en",
+      "physical_page": 13,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "эпизод 4: гранаты, вероятный пленник"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.move",
+      "printed": "Move: 9",
+      "expected": "8 (СИЛ 80 > ТЕЛ 60, но ЛВК 50 < ТЕЛ 60)",
+      "note": "Скорость 9 не сходится с правилами; оставлено как напечатано (Р-161).",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Окончание статблока Неклера (револьвер .45, помповый дробовик, Уклонение, навыки, языки) напечатано во второй колонке с. 20 перед «FOC Guard»; отнесено к Неклеру по порядку и по навыку работы с радио."
+  },
+  "corrections": [
+    {
+      "field": "legend.ru",
+      "from": "бежит обратно в конференц-зал. Один из ключевых персонажей: спасти его — награда Рассудка.",
+      "to": "бежит обратно в конференц-зал. Один из ключевых персонажей: спасти его — награда Рассудка.\nВ эпизоде 4: едет с командой в Вермонт и ведёт грузовик; на второй день остаётся на ферме Маклиранов — передать доклад по радио и повозиться с грузовиком («он что-то не так звучал по дороге сюда»). В ночь хаоса по радио вызывает охрану FOC, потом вместе с Моррисоном закидывает тёмную молодь гранатами; вместе с Дрейком — самый вероятный пленник тёмной молоди (его навыки меньше всего нужны дальше), которого уносят на базу ми-го под Раунд-Хиллом.",
+      "reason": "A Time to Harvest, Month 4, с. 5, 12–13: что персонаж делает в эпизоде 4 — новые факты абзацем (Р-125)",
+      "ref": "Р-125"
+    }
+  ]
+}

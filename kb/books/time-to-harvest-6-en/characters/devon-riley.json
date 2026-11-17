@@ -1,0 +1,400 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "time-to-harvest-6-en/character/devon-riley",
+  "kind": "character",
+  "name": {
+    "ru": "Девон Райли",
+    "en": "Devon Riley"
+  },
+  "aliases": [
+    "battle-scarred veteran",
+    "FOC military veteran",
+    "Девон"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "военный ветеран FOC",
+    "en": "FOC military"
+  },
+  "age": {
+    "raw": "39",
+    "value": 39
+  },
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "time-to-harvest-3-en/character/michael-abelard",
+      "note": "наниматель",
+      "note_back": "инструктор его частной армии, проводник на Луне"
+    },
+    {
+      "type": "works_for",
+      "target": "time-to-harvest-1-en/organization/federated-oil-and-chemical"
+    },
+    {
+      "type": "knows",
+      "target": "time-to-harvest-6-en/character/colin-lang",
+      "note": "напарник",
+      "note_back": "напарник"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "85",
+        "value": 85
+      },
+      "CON": {
+        "raw": "75",
+        "value": 75
+      },
+      "SIZ": {
+        "raw": "75",
+        "value": 75
+      },
+      "DEX": {
+        "raw": "75",
+        "value": 75
+      },
+      "APP": {
+        "raw": "40",
+        "value": 40
+      },
+      "INT": {
+        "raw": "80",
+        "value": 80
+      },
+      "POW": {
+        "raw": "70",
+        "value": 70
+      },
+      "EDU": {
+        "raw": "60",
+        "value": 60
+      }
+    },
+    "hp": {
+      "raw": "15",
+      "value": 15
+    },
+    "mp": {
+      "raw": "14",
+      "value": 14
+    },
+    "sanity": {
+      "raw": "69",
+      "value": 69,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Дубинка",
+          "en": "cosh"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "1d8+1d4",
+          "dice": "1d8",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:club-small",
+        "notes": "в строке Драки: «cosh 1d8 + 1d4»"
+      },
+      {
+        "name": {
+          "ru": "Винтовка «Ли-Энфилд» .303",
+          "en": ".303 Lee-Enfield rifle"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "2d6+4",
+          "dice": "2d6+4",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:303-lee-enfield"
+      },
+      {
+        "name": {
+          "ru": "Револьвер .45",
+          "en": ".45 revolver"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d10+2",
+          "dice": "1d10+2",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:45-revolver"
+      },
+      {
+        "name": {
+          "ru": "Граната ручная",
+          "en": "Hand grenade"
+        },
+        "kind": "attack",
+        "skill": "Метание",
+        "chance": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "4d10/2d10/1d10 (3/6/9 м)",
+          "dice": "4d10/2d10/1d10",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:hand-grenade",
+        "notes": "на Луне — 4d10 в пределах 18 м, 2d10 в пределах 36 м, 1d10 в пределах 54 м"
+      }
+    ],
+    "dodge": {
+      "raw": "70% (35/14)",
+      "value": 70,
+      "half": 35,
+      "fifth": 14
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "85%",
+          "value": 85
+        }
+      },
+      {
+        "name": "Электрика",
+        "skill": "coc:skill:electrical-repair",
+        "value": {
+          "raw": "20%",
+          "value": 20
+        }
+      },
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "70%",
+          "value": 70
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "80%",
+          "value": 80
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "75%",
+          "value": 75
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "35%",
+          "value": 35
+        }
+      },
+      {
+        "name": "Механика",
+        "skill": "coc:skill:mechanical-repair",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      },
+      {
+        "name": "Медицина",
+        "skill": "coc:skill:medicine",
+        "value": {
+          "raw": "30%",
+          "value": 30
+        }
+      },
+      {
+        "name": "Ориентирование",
+        "skill": "coc:skill:navigate",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Ловкость рук",
+        "skill": "coc:skill:sleight-of-hand",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "65%",
+          "value": 65
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "55%",
+          "value": 55
+        }
+      },
+      {
+        "name": "Выживание (любое)",
+        "skill": "coc:skill:survival",
+        "specialization": "любое",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Плавание",
+        "skill": "coc:skill:swim",
+        "value": {
+          "raw": "70%",
+          "value": 70
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "65%",
+          "value": 65
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Мужчина средних лет, выше среднего роста и очень мускулистый, с короткими седеющими волосами. Зелёные глаза и тонкие усы, такие же седые, как волосы. На левой щеке — большое родимое пятно в форме груши. В учебной части славился полным отсутствием чувства юмора; дурачества не терпит, чем с удовольствием пользуется его напарник Колин Лэнг. Тихий, деловитый, без особого воображения; храбр и готов прийти на помощь тем, кто попал в беду.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Все знают: есть небольшой шанс, что сыщик встречал Райли раньше, если в 1920-е проходил начальную подготовку в Корпусе морской пехоты США в Сан-Диего (Калифорния).\nТайна: большую часть взрослой жизни Райли был инструктором по физподготовке в учебном лагере в Сан-Диего. Вдовец, без детей; FOC предложила ему на пару лет заняться подготовкой того, что по сути является растущей частной армией Абеларда. Он согласился, но успел проучить людей лишь несколько дней, когда Абелард спросил, не хочет ли он поучаствовать в чём-то «неземном». Девон согласился и принял новости о ми-го и их злых планах со спокойным самообладанием. Абелард выбрал Райли для задания за его многочисленные умения, видя в нём идеального человека, чтобы обучить и уберечь всех, кто пройдёт через Лунные врата.\nВ эпизоде 6 вместе с Лэнгом первым прошёл через врата и несколько часов разведывал Луну; ведёт сыщиков к городу Старцев, предлагает отвлечь шогготов взрывом паскуаллия и ведёт отвлекающую команду. Может стать новым сыщиком вместо погибшего.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "time-to-harvest-6-en",
+      "physical_page": 17,
+      "printed_page": 17,
+      "method": "book_text",
+      "verified": true,
+      "note": "приложение A: «Devon Riley, age 39, FOC military veteran» — статблок"
+    },
+    {
+      "book_id": "time-to-harvest-6-en",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «Devon Riley, age 39, battle-scarred veteran»"
+    },
+    {
+      "book_id": "time-to-harvest-6-en",
+      "physical_page": 7,
+      "printed_page": 7,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Plan»: знакомство"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической)."
+  }
+}

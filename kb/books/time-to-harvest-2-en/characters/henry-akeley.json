@@ -1,0 +1,492 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "time-to-harvest-2-en/character/henry-akeley",
+  "kind": "character",
+  "name": {
+    "ru": "Генри Эйкли",
+    "en": "Henry Akeley"
+  },
+  "aliases": [
+    "Генри Эйкли (в теле Уильяма Ноукса)",
+    "Henry Akeley (as William Noakes)"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "агент ми-го, учёный",
+    "en": "revived scholar; scholarly mind swop"
+  },
+  "age": {
+    "raw": "20 (возраст тела)",
+    "value": 20
+  },
+  "sex": "мужской",
+  "residence": "Аркхэм (в теле студента или профессора Мискатоникского университета)",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:mi-go",
+      "note": "хозяева, вложившие мозг в чужое тело",
+      "note_back": "агент в Мискатонике: Генри Эйкли в теле Уильяма Ноукса"
+    },
+    {
+      "type": "related_to",
+      "target": "time-to-harvest-1-en/character/william-noakes",
+      "note": "тело-носитель (эпизод 2)",
+      "note_back": "в его теле — мозг агента ми-го Генри Эйкли (эпизод 2)"
+    },
+    {
+      "type": "knows",
+      "target": "arkham-en/character/campus-albert-wilmarth",
+      "note": "старый друг по Вермонту; Эйкли ищет встреч с ним в чужом теле",
+      "note_back": "старый друг Генри Эйкли; в 1930 году мозг Эйкли — в теле студента Уильяма Ноукса"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "75",
+        "value": 75
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "85",
+        "value": 85
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "INT": {
+        "raw": "85*",
+        "value": 85
+      },
+      "APP": {
+        "raw": "60",
+        "value": 60
+      },
+      "POW": {
+        "raw": "40*",
+        "value": 40
+      },
+      "EDU": {
+        "raw": "95*",
+        "value": 95
+      }
+    },
+    "hp": {
+      "raw": "15",
+      "value": 15
+    },
+    "mp": {
+      "raw": "8",
+      "value": 8
+    },
+    "sanity": {
+      "raw": "00*",
+      "value": 0,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d3 + 1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Электропушка",
+          "en": "Electric Gun"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (электропушка)",
+        "chance": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "1d10 (см. главу 1)",
+          "dice": "1d10",
+          "adds_db": false
+        },
+        "notes": "Оружие ми-го; правила — «Электропушка» (coc:rule:electric-gun), в кампании — главу 1 «Предыстории кампании»"
+      }
+    ],
+    "dodge": {
+      "raw": "30%",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Бухгалтерское дело",
+        "skill": "coc:skill:accounting",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Антропология",
+        "skill": "coc:skill:anthropology",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "22%",
+          "value": 22,
+          "half": 11,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "32%",
+          "value": 32,
+          "half": 16,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "История",
+        "skill": "coc:skill:history",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Работа в библиотеке",
+        "skill": "coc:skill:library-use",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Естествознание",
+        "skill": "coc:skill:natural-world",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Оккультизм",
+        "skill": "coc:skill:occult",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Наука (астрономия)",
+        "skill": "coc:skill:science",
+        "specialization": "астрономия",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Наука (биология)",
+        "skill": "coc:skill:science",
+        "specialization": "биология",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Наука (физика)",
+        "skill": "coc:skill:science",
+        "specialization": "физика",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Родной язык (английский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "английский",
+        "value": {
+          "raw": "95%",
+          "value": 95,
+          "half": 47,
+          "fifth": 19
+        }
+      },
+      {
+        "name": "Иностранный язык (французский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "французский",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Иностранный язык (латынь)",
+        "skill": "coc:skill:language-other",
+        "specialization": "латынь",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      }
+    ]
+  },
+  "background": {
+    "secret": "Мозг Генри Эйкли, похищенный ми-го, в теле студента Уильяма Ноукса; служит ми-го, но не причинит вреда Уилмарту."
+  },
+  "description": {
+    "ru": "«Уильям» больше не носит удобную деревенскую одежду и предпочитает костюм; кажется, он избавился и от почти навязчивой привычки то и дело смотреть время на отцовских карманных часах. Его часто видят рядом с профессором Уилмартом: он подглядывает в окно аудитории, пока тот читает лекцию, а при встрече говорит с профессором как со старым другом, тогда как Уилмарт обращается к нему как к незнакомцу — и немного его побаивается (проверка Психологии).",
+    "en": null
+  },
+  "legend": {
+    "ru": "Мозг Генри Эйкли — в теле Уильяма Ноукса. У обоих много общих интересов: антропология, астрономия и фольклор, — они почти идеально подошли друг другу. Эйкли — тот самый любознательный и обречённый человек из повести Лавкрафта «Шепчущий во тьме»: его изыскания привлекли внимание ми-го, и, опасаясь расплаты, он обратился за помощью к профессору Мискатоникского университета Альберту Н. Уилмарту. Для нужд кампании Уилмарт выжил, а Эйкли, скажем так, «лишился разума».\nТеперь Эйкли работает на тех, кто всего несколько лет назад извлёк его мозг из тела. Он неплохо приспособился: доступ к сведениям библиотек ми-го и возможность жить вечно — не так уж плохо; человек, всегда бывший прежде всего учёным, не мог бы желать большего.\nВ сценарии. Ради дальнейшего доступа к данным ми-го (а значит, к тайнам вселенной) Эйкли готов сделать для пришельцев почти всё — кроме вреда другу. Уилмарта он по-прежнему считает очень хорошим другом и не допустит его устранения; как всякий хороший друг, он хочет связаться с Уилмартом и поддерживать знакомство, хотя теперь он в другом теле. Это одна из двух ошибок плана ми-го («Сбои в плане»): Уилмарт не дурак, и ему странно, что незнакомый студент Уильям Ноукс вдруг так им заинтересовался — то и дело попадается на пути, спрашивает о здоровье, о занятиях, о семье и друзьях, называя их по именам, а однажды приглашает профессора на ужин. Уилмарт непременно наведёт справки и, узнав, что юноша ездил в Вермонт с профессором Харролдом, может начать догадываться. Если Эйкли/Ноукса прижать, он может во всём признаться Уилмарту, а тот — обратиться к сыщикам.\nДнём Эйкли входит в группу, которая ходит к профессору Лирмонту в Научный флигель и подсовывает ему ложные данные о руде Паскуалле. В ночь налёта он — в группе, которая громит библиотеку Орна; уцелевшие бегут на автомобиле профессора Харролда.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "time-to-harvest-2-en",
+      "physical_page": 6,
+      "printed_page": 6,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Mi-Go Agents: Who’s Inside Whom?»: «Henry Akeley (as William Noakes)»"
+    },
+    {
+      "book_id": "time-to-harvest-2-en",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Glitches In The Plan»: Эйкли и Уилмарт"
+    },
+    {
+      "book_id": "time-to-harvest-2-en",
+      "physical_page": 12,
+      "printed_page": 12,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Something Is Not Right»: группа у Лирмонта"
+    },
+    {
+      "book_id": "time-to-harvest-2-en",
+      "physical_page": 13,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Observation»: William Noakes"
+    },
+    {
+      "book_id": "time-to-harvest-2-en",
+      "physical_page": 24,
+      "printed_page": 24,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Raid»: команда библиотеки"
+    },
+    {
+      "book_id": "time-to-harvest-2-en",
+      "physical_page": 27,
+      "printed_page": 27,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Chase Is On!»: машина Харролда"
+    },
+    {
+      "book_id": "time-to-harvest-2-en",
+      "physical_page": 31,
+      "printed_page": 31,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Henry Akeley (as William Noakes), age of body 20, scholarly mind swop»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.skills",
+      "printed": "Credit Rating 22%, Credit Rating 75%",
+      "expected": "одно значение Средств",
+      "note": "Навык Средства напечатан дважды (с. 31). 22% — Средства Уильяма Ноукса из эпизода 1 (тело), 75% — возможно, Средства Эйкли; оба оставлены как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Ось эпохи — 1920-е (классическая эпоха, решение ведущего); действие эпизода — август–сентябрь 1930 года (учебный год 1930/31, сухой закон). В книге значения даны для тела-носителя; звёздочкой (*) помечены характеристики и навыки, которые идут только от мозга агента (с. 31) — звёздочки сохранены в raw. Статблок тела до пересадки — у записи тела-носителя (приложение A эпизода 1)."
+  }
+}

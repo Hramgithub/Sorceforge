@@ -1,0 +1,312 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "time-to-harvest-4-en/character/foc-mercenaries",
+  "kind": "character",
+  "name": {
+    "ru": "Наёмники FOC",
+    "en": "FOC Mercenaries"
+  },
+  "aliases": [
+    "FOC Mercenaries, fighting men",
+    "охрана FOC",
+    "FOC security team",
+    "«солдаты» FOC",
+    "FOC “soldiers”",
+    "люди Абеларда",
+    "Abelard’s men",
+    "маленькая армия FOC",
+    "small FOC army"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "наёмник FOC",
+  "names": [
+    "Эрл Таннер",
+    "Гас Ковальски",
+    "Уолт Маккой",
+    "Фрэнк Делани",
+    "Джо Риордан"
+  ],
+  "sex": null,
+  "residence": "лагерь наёмников FOC в лесу у Коббс-Корнерса",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "time-to-harvest-1-en/organization/federated-oil-and-chemical",
+      "note": "наниматель",
+      "note_back": "наёмники в Вермонте"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "65",
+        "value": 65
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "55",
+        "value": 55
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "60",
+        "value": 60
+      },
+      "EDU": {
+        "raw": "70",
+        "value": 70
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "12",
+      "value": 12
+    },
+    "sanity": {
+      "raw": "60",
+      "value": 60,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Нож",
+          "en": "knife"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "1d8",
+          "dice": "1d8",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:knife-large"
+      },
+      {
+        "name": {
+          "ru": "Винтовка «Ли-Энфилд» .303",
+          "en": ".303 Lee-Enfield rifle"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (В/Д)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "2d6+4",
+          "dice": "2d6+4",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:303-lee-enfield"
+      },
+      {
+        "name": {
+          "ru": "Пистолет-пулемёт «Томпсон»",
+          "en": "Thompson SMG"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (ППМ)",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d10+2",
+          "dice": "1d10+2",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:thompson-smg"
+      },
+      {
+        "name": {
+          "ru": "Автоматическая винтовка «Браунинг» (ручной пулемёт)",
+          "en": "Browning Automatic Rifle MG"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (ПМ)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "2d6+4",
+          "dice": "2d6+4",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:browning-m1918-bar"
+      },
+      {
+        "name": {
+          "ru": "Револьвер .45",
+          "en": ".45 revolver"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (П)",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d10+2",
+          "dice": "1d10+2",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:45-revolver"
+      },
+      {
+        "name": {
+          "ru": "Ручная граната",
+          "en": "Hand grenade"
+        },
+        "kind": "attack",
+        "skill": "Метание",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "4d10/2d10/1d10 (3/6/9 метров)",
+          "dice": "4d10",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:hand-grenade"
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    }
+  },
+  "description": {
+    "ru": "Опытные бойцы, нанятые «Федерейтед Ойл энд Кемикал»; многие прошли Великую войну. Каждый вооружён одним из перечисленных видов огнестрельного оружия.",
+    "en": null
+  },
+  "legend": {
+    "ru": "В эпизоде 4. Небольшая армия FOC стоит лагерем в лесу неподалёку от фермы Маклиранов и ждёт по радио вызова, чтобы прийти на помощь команде. В ночь хаоса ми-го натравливают на лагерь тёмную молодь: четыре молоди и десять солдат-ми-го методично вырезают наёмников (сцена «Бойня»). Грузовик с «солдатами» FOC, отправленный на ферму по вызову Неклера, врывается сквозь ливень и таранит тёмную молодь, вроде бы отгоняя её; после этого кто-то из солдат предлагает пойти по следу раненой твари и добить её (сцена «Поросятки, поросятки»). Выживший при бойне Тедди Хобсон умирает на руках у сыщиков.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "time-to-harvest-4-en",
+      "physical_page": 12,
+      "printed_page": 12,
+      "method": "book_text",
+      "verified": true,
+      "note": "«A Night Of Chaos»: маленькая армия FOC; вызов охраны по радио"
+    },
+    {
+      "book_id": "time-to-harvest-4-en",
+      "physical_page": 13,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Little Pigs, Little Pigs»: грузовик с «солдатами» FOC; «The Massacre»"
+    },
+    {
+      "book_id": "time-to-harvest-4-en",
+      "physical_page": 23,
+      "printed_page": 23,
+      "method": "book_text",
+      "verified": true,
+      "note": "приложение A: статблок «FOC Mercenaries, fighting men»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "editorial_text"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги («A Time to Harvest», Month 4; печатная страница = физической). Групповой профиль (Р-74); имена придуманы (Р-151). Нож — строка «Brawl … knife 1d8» (большой нож). Дистанции гранаты «3/6/9 yards» — метры 1 к 1 (Р-64). Автоматической винтовки «Браунинг» нет в списке арсенала команды (раздатка «Жатва» 15) — так в книге."
+  }
+}

@@ -1,0 +1,445 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "time-to-harvest-2-en/character/robert-tunes",
+  "kind": "character",
+  "name": {
+    "ru": "Роберт Тьюнс",
+    "en": "Robert Tunes"
+  },
+  "aliases": [
+    "Роберт Тьюнс (в теле Джейсона Трента)",
+    "Robert Tunes (as Jason Trent)"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "агент ми-го, историк",
+    "en": "historic historian; historian mind swop"
+  },
+  "age": {
+    "raw": "20 (возраст тела)",
+    "value": 20
+  },
+  "sex": "мужской",
+  "residence": "Аркхэм (в теле студента или профессора Мискатоникского университета)",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:mi-go",
+      "note": "хозяева, вложившие мозг в чужое тело",
+      "note_back": "агент в Мискатонике: Роберт Тьюнс в теле Джейсона Трента"
+    },
+    {
+      "type": "related_to",
+      "target": "time-to-harvest-1-en/character/jason-trent",
+      "note": "тело-носитель (эпизод 2)",
+      "note_back": "в его теле — мозг агента ми-го Роберт Тьюнс (эпизод 2)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "55",
+        "value": 55
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "70",
+        "value": 70
+      },
+      "DEX": {
+        "raw": "55",
+        "value": 55
+      },
+      "INT": {
+        "raw": "80*",
+        "value": 80
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "POW": {
+        "raw": "75*",
+        "value": 75
+      },
+      "EDU": {
+        "raw": "93*",
+        "value": 93
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "15",
+      "value": 15
+    },
+    "sanity": {
+      "raw": "00*",
+      "value": 0,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        },
+        "damage": {
+          "raw": "1d3 + 1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Распылитель тумана",
+          "en": "Mist Projector"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (распылитель тумана)",
+        "chance": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "1d10 (см. главу 1)",
+          "dice": "1d10",
+          "adds_db": false
+        },
+        "notes": "Оружие ми-го; правила — «Распылитель тумана» (coc:rule:mist-projector), в кампании — главу 1 «Предыстории кампании»"
+      }
+    ],
+    "dodge": {
+      "raw": "35%",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "skills": [
+      {
+        "name": "Археология",
+        "skill": "coc:skill:archaeology",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Искусство/ремесло (рисование)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "рисование",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "История",
+        "skill": "coc:skill:history",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Работа в библиотеке",
+        "skill": "coc:skill:library-use",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Оккультизм",
+        "skill": "coc:skill:occult",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Верховая езда",
+        "skill": "coc:skill:ride",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Наука (ботаника)",
+        "skill": "coc:skill:science",
+        "specialization": "ботаника",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Родной язык (английский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "английский",
+        "value": {
+          "raw": "93%",
+          "value": 93,
+          "half": 46,
+          "fifth": 18
+        }
+      },
+      {
+        "name": "Иностранный язык (греческий)",
+        "skill": "coc:skill:language-other",
+        "specialization": "греческий",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Иностранный язык (французский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "французский",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      }
+    ]
+  },
+  "background": {
+    "secret": "Мозг лондонского студента-историка Роберта Тьюнса (у ми-го со времён Войны за независимость) в теле студента Джейсона Трента."
+  },
+  "description": {
+    "ru": "Что бы ни случилось в Вермонте, «Джейсону» это пошло на пользу: он больше не болезненно застенчив. Душой общества его не назовёшь, но теперь он может смотреть собеседнику в глаза и не падает в обморок при виде хорошенькой девушки. Большую часть времени он проводит в библиотеке, в стороне от других агентов, изучая колониальную историю Америки (особенно Войну за независимость) — это выясняется проверкой Скрытности или Внимания; успешная проверка Психологии показывает, что прочитанное его расстраивает или ошеломляет, будто эта история для него новость. Библиотекари сердятся на его новую привычку захлопывать книгу, качать головой и бормотать «Bloody Hell» с британским акцентом.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Тело Джейсона Трента ведёт мозг Роберта Тьюнса. Переход дался легко: оба были молодыми студентами-историками, когда встретились с ми-го. Беда в том, что Тьюнс был англичанином (жил в Лондоне) и пробыл у ми-го так долго, что его знания американской истории кончаются Войной за независимость XVIII века; узнав, чем она кончилась, Тьюнс был потрясён.\nВ сценарии. Тьюнс проводит в теле Трента почти всё время в университетской библиотеке над книгами по истории. Он — в библиотечной группе агентов; в вечер налёта вместе с Хиггинсом поднимается на Висельный холм с распылителем тумана (сцена «Ещё одна ловушка?»), а ночью входит в команду, громящую библиотеку Орна.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "time-to-harvest-2-en",
+      "physical_page": 8,
+      "printed_page": 8,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Robert Tunes (as Jason Trent), age of body 20, historic historian»"
+    },
+    {
+      "book_id": "time-to-harvest-2-en",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "окончание: Тьюнс в библиотеке"
+    },
+    {
+      "book_id": "time-to-harvest-2-en",
+      "physical_page": 13,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Observation»: Jason Trent"
+    },
+    {
+      "book_id": "time-to-harvest-2-en",
+      "physical_page": 22,
+      "printed_page": 22,
+      "method": "book_text",
+      "verified": true,
+      "note": "«On Hangman’s Hill»: Хиггинс и Трент"
+    },
+    {
+      "book_id": "time-to-harvest-2-en",
+      "physical_page": 23,
+      "printed_page": 23,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «Chase Sequence: Agent Reference»"
+    },
+    {
+      "book_id": "time-to-harvest-2-en",
+      "physical_page": 24,
+      "printed_page": 24,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Raid»"
+    },
+    {
+      "book_id": "time-to-harvest-2-en",
+      "physical_page": 33,
+      "printed_page": 33,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Robert Tunes (as Jason Trent), age of body 20, historian mind swop»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.skills[Лазание]",
+      "printed": "Climb 25% (с. 33); Climb 20% (врезка погони, с. 23)",
+      "expected": "одно значение",
+      "note": "Во врезке «Chase Sequence: Agent Reference» у Тьюнса Лазание 20%, в статблоке — 25%. В записи — значение статблока.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Ось эпохи — 1920-е (классическая эпоха, решение ведущего); действие эпизода — август–сентябрь 1930 года (учебный год 1930/31, сухой закон). В книге значения даны для тела-носителя; звёздочкой (*) помечены характеристики и навыки, которые идут только от мозга агента (с. 31) — звёздочки сохранены в raw. Статблок тела до пересадки — у записи тела-носителя (приложение A эпизода 1). Врезка погони (с. 23): ВЫН 50, ЛВК 55, базовая Скорость 7, Лазание 20%, Прыжки 35%, Слух 50%, Внимание 30%."
+  }
+}

@@ -1,0 +1,263 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "time-to-harvest-1-en/creature/mi-go",
+  "kind": "creature",
+  "name": {
+    "ru": "Ми-го, стандартный («Время жатвы»)",
+    "en": "Mi-Go, Standard"
+  },
+  "aliases": [
+    "MI-GO, STANDARD"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "независимая раса",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:mi-go",
+      "note_back": "стандартный профиль кампании «Время жатвы» (гл. 1)"
+    }
+  ],
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "50",
+        "value": 50,
+        "roll": "3d6×5"
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50,
+        "roll": "3d6×5"
+      },
+      "SIZ": {
+        "raw": "50",
+        "value": 50,
+        "roll": "3d6×5"
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70,
+        "roll": "4d6×5"
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      },
+      "POW": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      }
+    },
+    "hp": {
+      "raw": "10",
+      "value": 10
+    },
+    "mp": {
+      "raw": "13",
+      "value": 13
+    },
+    "damage_bonus": {
+      "raw": "нет",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "7 / 13 в полёте",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        },
+        {
+          "mode": "fly",
+          "value": 13
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет, но резонирующее внеземное тело получает от любого проникающего оружия (включая пули) минимальный урон",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "2 удара клешнями, или 1 захват/удержание, или 1 оружие",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d6+БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Захват (манёвр)",
+          "en": "Seize (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "notes": "схватить жертву (её Комплекции или меньше) и унести в небо; процент не напечатан — манёвр Ближнего боя"
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "skills": [],
+    "spells": {
+      "raw": "каждый с шансом ИНТ×2 знает 1d3 заклинаний"
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "при виде ми-го"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Две клешни и полёт с добычей",
+      "summary": "В рукопашной может бить двумя клешнями разом. Попав, может удержать жертву (манёвр) и взлететь, чтобы сбросить её с высоты или поднять так высоко, что у неё разорвутся лёгкие.",
+      "raw": "May attack in hand-to-hand combat with two nippers at once. If the target is hit, the mi-go can attempt to hold the victim (maneuver) and fly into the sky to drop the victim from a height, or take the victim up so high that his or her lungs burst."
+    },
+    {
+      "name": "Внеземное тело",
+      "summary": "Брони нет (если не сказано иное), но резонирующее внеземное тело получает от любого проникающего оружия (включая пули) минимальный урон.",
+      "raw": "Armor: None, however their resonating extra-terrene body causes all piercing weapons (bullets included) to do the minimum damage."
+    },
+    {
+      "name": "Гипноз",
+      "summary": "Добавляя в жужжание сверхвысокие и сверхнизкие тона, ми-го погружает одного или многих слушателей в транс: все в пределах 12 м от жужжащего ми-го, проигравшие встречную проверку МОЩ, не способны действовать.",
+      "raw": "Hypnosis: by introducing ultra-high and ultra-low frequency tones into its buzzing, the mi-go can put one or many humans listening to it into a trance state. Those within forty-feet of a buzzing mi-go must succeed in an opposed POW roll or become incapable of action."
+    },
+    {
+      "name": "Телепатия",
+      "summary": "Ми-го говорит с людьми телепатически за 1 ПМ на 5 раундов; человек может сопротивляться, выиграв встречную проверку МОЩ.",
+      "raw": "Telepathy: mi-go can speak telepathically to humans, costing 1 magic point per 5 rounds. A human can resist the communication by winning an opposed POW roll."
+    },
+    {
+      "name": "Пустотный свет",
+      "summary": "Создаёт сток, из которого не выходят фотоны: 1 ПМ за каждый кубический метр тьмы; свет не покидает область — удобная защита от взглядов для хрупких пришельцев; тьма может быть пеленой или шаром.",
+      "raw": "Void Light: creates a sink from which photons will not emerge. The mi-go must spend 1 magic point for every cubic yard of blackness desired. No light can escape the affected area, making a useful visual protection for these fragile aliens. The darkness may be like a sheet or a spherical volume."
+    },
+    {
+      "name": "Регенерация",
+      "summary": "Отращивает конечности и органы за недели или месяцы, но обычно заменяет их выращенными в чанах; в игре восстанавливает 1 ПЗ в час. «Кровавый след» раненого ми-го обрывается уже через 3 м. При 0 ПЗ даже самоисцеление не спасает: органы отказывают, и ми-го быстро растекается лужей слизи.",
+      "raw": "In game terms, they regenerate one hit point per hour. … by the time it’s ten feet away, the “blood trail” has already stopped. Once reduced to zero hit points even the mi-go’s self-healing properties cannot stop the critical failure of their internal organs, and they quickly dissolve into a puddle of slime."
+    },
+    {
+      "name": "Телепатия ми-го",
+      "summary": "Слабая постоянная телепатия (вместе с изменением цвета голов): передаёт сырые данные, например о чужаках на базе, а подсознательно позволяет пугающе слаженно двигаться — каждый «чувствует», что сделает другой. Дальность — 15 м, легко блокируется камнем и преградами; у живых компьютеров дальность больше. Простые мысли и образы человеку — 1 ПМ за посыл, встречная проверка МОЩ, если человек против; так можно со временем свести человека с ума, посылая знания Мифов или образы существ Мифов (потеря Рассудка и прибавка Мифов Ктулху — по присланному). Зондирование разума — 3 ПМ на начало и 1 ПМ за раунд; несогласного нужно одолеть встречной проверкой МОЩ; каждый раунд ми-го проникает глубже, пока не вберёт весь разум; что именно он узнал — решает Хранитель.",
+      "raw": "Mi-go utilize a weak form of telepathy … The effective range is 50 feet … Sending simple thoughts and images to a human mind costs 1 magic point per sending and involves an opposed POW roll if the human is unwilling. … Mental probing costs 3 magic points to initiate and 1 magic point per round thereafter."
+    },
+    {
+      "name": "Не видны на снимках",
+      "summary": "Из-за многомерной природы обычно не запечатлеваются человеческой фотографией (исключение — эмульсия Уэнделла).",
+      "raw": "In all cases, due to their poly-dimensional nature, they cannot normally be captured by human photography.",
+      "refs": [
+        "time-to-harvest-1-en/item/wendell-emulsion"
+      ]
+    }
+  ],
+  "description": {
+    "ru": "Типичный ми-го, лишь с основными приспособлениями к жизни и деятельности на Земле. Ми-го эпизода 1 — стандартные представители расы (см. этот профиль; профиль эпизода 1 в приложении A — отдельная запись). Многомерные разумные грибы: общаются телепатией и сменой цвета мозгоподобных голов, а после нужной операции говорят с людьми жужжащим, насекомоподобным голосом. На огромных крыльях летают сквозь межзвёздный эфир, но в земной атмосфере — неуклюже. После смерти за минуты или часы (в зависимости от среды и обстоятельств смерти) растекаются лужей желтовато-зелёной слизи.",
+    "en": null
+  },
+  "legend": {
+    "ru": "О ми-го. Грибы с Юггота — межзвёздная раса с главной колонией в Солнечной системе на Югготе (по-нашему — Плутон). Мастера науки и биоинженерии, они хирургически приспосабливают тела к разным средам и ролям. На Земле у них горнодобывающие колонии в горах — они ищут редкие руды, которые есть только на этой планете; есть земную пищу они не могут и привозят свою с других миров. Ми-го поклоняются Ньярлатхотепу и Шуб-Ниггурат, а возможно, и другим; они нанимают или принуждают людей-агентов прикрывать их дела на Земле и для этого создают новые культы или подчиняют существующие.\nФизиологическое переустройство. Ми-го меняют себя под задачу, добавляя, преобразуя или удаляя части тела: крылатый ми-го, похитивший сегодня любопытного фермера, завтра может быть бескрылым учёным. Химией и хирургией они меняют даже свой генетический склад, выращивая нужные инструменты (споровое ружьё, органический компьютер, библиотекарь, биоброня). По-человечески: представьте, что вы родили ребёнка и тут же перекроили его в настольную лампу, потому что старая сломалась; для чуждого разума ми-го они сами — самый доступный возобновляемый ресурс. Солдаты быстрее и крепче учёных; учёные, скорее всего, бескрылы и с увеличенной головой; рабочие выносливы и сильны, но не созданы для боя; шпионы и связные с людьми бескрылы, с меньшим числом рук и более человекоподобны. Возможен любой вариант — Хранитель волен фантазировать.\nВмешательство в разум. В таких книгах, как «Некрономикон» и ещё более древняя «Книга Дзиан», намекается, что Грибы с Юггота веками меняли эволюцию людей ради своих целей. Нестареющие люди подземного, освещённого синим города К’н-йан утверждают, что лишь их род остался чист от порчи «Космических дьяволов», затронувшей всех жителей поверхности: прибыв на Землю, ми-го ставили опыты над мозгом наших предков, и в итоге природная способность человечества к психическим силам была заблокирована или ограничена. Раз ми-го поставили блок, они могут его и снять, но это многолетний процесс из множества долгих операций: разум можно возвращать к полной силе лишь постепенно, иначе он перегружается и получает тяжёлое повреждение. Поэтому такие операции делают только самым способным и верным людям-агентам; один из них — Лоуренс Джарвис, долгоживущий агент, с которым сыщики впервые столкнутся в эпизоде 2.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "time-to-harvest-1-en",
+      "physical_page": 17,
+      "printed_page": 15,
+      "method": "book_text",
+      "verified": true,
+      "note": "«MI-GO, STANDARD»: профиль"
+    },
+    {
+      "book_id": "time-to-harvest-1-en",
+      "physical_page": 16,
+      "printed_page": 14,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Mental Meddling»"
+    },
+    {
+      "book_id": "time-to-harvest-1-en",
+      "physical_page": 12,
+      "printed_page": 10,
+      "method": "book_text",
+      "verified": true,
+      "note": "«About the Mi-Go»: природа ми-го"
+    },
+    {
+      "book_id": "time-to-harvest-1-en",
+      "physical_page": 17,
+      "printed_page": 15,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Physiological Tinkering», «Adapted Variations», «Common Abilities»"
+    },
+    {
+      "book_id": "time-to-harvest-1-en",
+      "physical_page": 19,
+      "printed_page": 17,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «Regenerative Properties»"
+    },
+    {
+      "book_id": "time-to-harvest-1-en",
+      "physical_page": 20,
+      "printed_page": 18,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «Mi-Go Telepathy»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (Month 1: печатная страница = физическая − 2; обложка, обращение к Хранителям, выходные данные и оглавление — без номеров). Числа совпадают с общей записью «Ми-го», кроме шанса заклинаний («INT x2» против 25%) — поэтому отдельная запись (Р-75). Профиль ми-го эпизода 1 из приложения A (СИЛ 60) — запись time-to-harvest-1-en/creature/mi-go-standard-form (часть ep1). «Forty-feet», «cubic yard», «50 feet», «ten feet» — в метрах (Р-64)."
+  }
+}

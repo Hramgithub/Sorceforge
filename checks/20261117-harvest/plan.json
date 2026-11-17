@@ -1,0 +1,83 @@
+{
+  "book_id": "time-to-harvest-1-en",
+  "goal": "the scenario «A Time to Harvest (Brian M. Sammons, Glynn Owen Barrass, Charles P. Zaglanis; Chaosium organized play, 2016, modern day)» playable from the base, a work of the English series (Р-251)",
+  "decision": "Р-251, Р-139, Р-184, Р-206, Р-241",
+  "check_dir": "checks/20261117-harvest",
+  "models": [
+    "kb/books/starfall-en/scenarios/starfall.json",
+    "kb/books/starfall-en/scenes/introduction.json",
+    "kb/books/starfall-en/maps/starside-gm-map.json",
+    "kb/books/whats-in-the-cellar-en/handouts/cellar-papers-1-herald-article.json",
+    "kb/books/dveri-vo-tmu-ru/scenarios/darkness-beneath-the-hill.json"
+  ],
+  "extra": "## This work (Р-251, English works series, one at a time)\n\nSource: the English original `time-to-harvest-1-en` (text layer; `python -B pipeline/source/pages.py show time-to-harvest-1-en <page>`; page image `python -B pipeline/source/pages.py image time-to-harvest-1-en <physical page> --physical`). Page numbers: `pagemap` often misses printed numbers in these PDFs — look at 2–3 page images and find printed vs physical; in `sources` give the printed page as printed (null for unnumbered pages). Offsets are set (Month 1: printed = physical − 2; Months 2–6: printed = physical). Do NOT edit `pipeline/source/books.json` — report any other offset (physical = printed − offset, e.g. «p. 3» on physical 4 → offset −1) and the lead sets it.\nRussian text — our translation (flag `translated`); official Russian forms of names and terms — glossary `python -B tools/terms.py <word>` and existing records (Р-184), e.g. Dreamlands = «Страна грёз»; Hard/Extreme roll = «трудная/чрезвычайная проверка» (official «трудный/чрезвычайный успех», never «сложная»). New terms of this book — choose one Russian form each, use it everywhere, and list them all in your report (English → Russian); the translator of the book will reuse exactly these forms.\n- FIRST: check that this scenario is not already in the base under a Russian translation (Grep key character and place names, transliterated, in `kb/books/*-ru/`; e.g. «The Haunted Clubhouse» was already there as «Маленький клуб ужасов»). If it is — do NOT create a second set: per Р-147 the translation keeps the text, the original gives the numbers; write proposals to the translation records (English sources, `name.en`, errata for translation errors) and report.\n- Modern day: era modern. A six-episode campaign in six PDFs split into 6 units — see «Shared scheme» below.\n- One `scenario` record (summary, keeper_info, hook, advice, steps with refs, conclusion with Sanity rewards, tables), every scene (`arc`), characters (stat blocks as printed, Р-25; pregenerated investigators are characters with role `pregen`; unnamed crowds — group profile with invented `names`, Р-151), creatures (known Mythos creatures and deities → `instance_of` the shared record, Grep `kb/creatures` first; a unique being — book record), organizations, items and clues, tomes and spells (known spells → refs to the shared `coc:spell:*`), handouts (text as printed + our full translation), places (a real city — the shared record `coc:location:<city>` if it exists (Grep first), book places `part_of` it; a fictional town — a book place with its places `part_of` it; do not create shared records in `kb/locations/`), maps (`map` records with a spot on every printed label, Р-206; every key number without a record gets a small place record).\n- Helper scripts — only in your own scratchpad subfolder `gen-harvest` (other helpers run in parallel and use the same scratchpad).\n- Book-scoped ids: see «Shared scheme» (each month has its own book folder).\n- Pictures (skill `.claude/skills/kb-art/SKILL.md`, Р-241, Р-245): portraits, creature art, handouts, item pictures, maps — mapping `checks/20261117-harvest/art.json`, `python -B pipeline/art/add_images.py … --dry-run` then real; apply the proposals yourself (`pipeline/integrate/apply.py`) — you own this book; atmosphere pictures (cover, decoration, mood art not tied to a record) → `checks/20261117-harvest/atmosphere.json` (the lead merges it). File prefix for pictures: `harvest-`.\n- Lessons from earlier checks (skill kb-import, «Ошибки, которые уже находили»): every page of an entry in `sources`; handout texts in full; maps are `map` records, not atmosphere; no two records with the same `name.ru`; terms inside text agree with the record names; book misprints kept as printed, in `errata`, with the obvious ones fixed in `corrections`.\n- When done, run `python -I -B tools/completeness.py --books time-to-harvest-1-en --out checks/20261117-harvest/completeness` and `python -I -B tools/scenario_check.py --books time-to-harvest-1-en --out checks/20261117-harvest/scenario` and fix what they find; then `python -B tools/check.py kb/books/time-to-harvest-1-en` — 0 errors.\n- Coverage: in `checks/20261117-harvest/harvest.md` list every heading of the book → the record that holds it (or «не взято» with the reason), misprints, and the term list (English → Russian).\n\n## Shared scheme of this campaign (6 units work in parallel — keep to it exactly)\n\n«A Time to Harvest» (Chaosium organized play, 2016; Brian M. Sammons, Glynn Owen Barrass, Charles P. Zaglanis; modern day, Miskatonic University students → Federated Oil & Chemical team; Vermont, Arkham, La Tuque, the Moon). Six PDFs registered as six books: `time-to-harvest-1-en` … `time-to-harvest-6-en` (Month 1–6, each one episode; Month 1 also has the campaign background, the mi-go and Cobb's Corners). Pregens: nine PDFs `time-to-harvest-pregen-<anthropology|archaeology|classics|english|geology|languages|metallurgy|paleontology|physics>-en` plus `time-to-harvest-pregen-using-the-pre-generated-investigators-en`; the library folder of Month 1 also has `Episode One Timeline.docx` (read with python-docx if installed, else note it). Era `modern`.\n- Records of month N live in `kb/books/time-to-harvest-N-en/` with ids `time-to-harvest-N-en/<kind>/<slug>`; their `sources` cite that month's book.\n- Campaign model: one `scenario` record for the whole campaign, `time-to-harvest-1-en/scenario/a-time-to-harvest` (unit world), and one `scenario` per episode with `part_of` → it and `order` N: `time-to-harvest-N-en/scenario/episode-N`. Scenes `time-to-harvest-N-en/scene/ep<N>-<slug>`.\n- Unit world owns (in `time-to-harvest-1-en`): the campaign record; the campaign background and «About the Mi-Go» (mi-go castes as creature records `instance_of`/`form_of` the shared `coc:creature:mi-go`, technology/items, pasquallium); Cobb's Corners (a fictional Vermont town: `time-to-harvest-1-en/location/cobbs-corners` and every place of «Places and People of Interest» `part_of` it, its people), the Vermont map, Cobb's Corners Keeper/Player maps, Harvest Papers 1–3; the nine pregens (`time-to-harvest-1-en/character/<slug of name>`, role pregen) and the «Using the Pre-Generated Investigators» notes; the organization Federated Oil and Chemical `time-to-harvest-1-en/organization/federated-oil-and-chemical` (later units refer to it; ep3 writes its HQ etc. in its own folder). Other units refer to these ids (dangling until world finishes — list them; no stubs).\n- Recurring characters: owned by the earliest month where the book gives their stat block; later months refer to that id and add «what they do in episode N» by proposal (`proposals-<unit>.json`, Р-125).\n- Real places: Arkham and Miskatonic University are shared records (Grep `kb/locations` — e.g. `coc:location:arkham`, `miskatonic-university`, Orne Library) — use them, book places `part_of` them; La Tuque (Quebec), the Moon — Grep first; the Dreamlands/Moon cities of the elder things — Grep shared records.\n- Coverage file `checks/20261117-harvest/harvest-<unit>.md`; art mapping `art-<unit>.json`, atmosphere `atmosphere-<unit>.json`, proposals `proposals-<unit>.json`; picture prefix `harvest-<unit>-`.\n- completeness/scenario_check: every unit runs them at the end on its own month book(s) into `checks/20261117-harvest/completeness-<unit>` and `scenario-<unit>`; `python -B tools/check.py kb/books/time-to-harvest-*` — 0 errors in your files except dangling refs to other units' scheme ids.\n",
+  "units": [
+    {
+      "name": "world",
+      "pages": "Month 1 physical 1–36 (cover, guidance, credits, contents, introduction, campaign background, about the mi-go, Cobb's Corners, Vermont map, Harvest Papers 1–3) + the pregen PDFs + Episode One Timeline.docx",
+      "target": "the campaign record, the mi-go, Cobb's Corners, FOC, pregens",
+      "owns": [
+        "kb/books/time-to-harvest-1-en/** records of these pages",
+        "app/art/* and app/maps/* files with prefix harvest-world-",
+        "checks/20261117-harvest/*-world.*"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "ep1",
+      "pages": "Month 1 physical 37–72 (Episode 1 incl. maps, Harvest Papers 4–7, Appendix A, Spell Appendix, Collected Player Handouts)",
+      "target": "Episode 1 complete",
+      "owns": [
+        "kb/books/time-to-harvest-1-en/** records of these pages",
+        "app/art/* and app/maps/* files with prefix harvest-ep1-",
+        "checks/20261117-harvest/*-ep1.*"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "ep2",
+      "pages": "Month 2, all pages (Episode 2, Arkham and Miskatonic University appendix, handouts 8–12)",
+      "target": "Episode 2 complete",
+      "owns": [
+        "kb/books/time-to-harvest-2-en/** records of these pages",
+        "app/art/* and app/maps/* files with prefix harvest-ep2-",
+        "checks/20261117-harvest/*-ep2.*"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "ep3",
+      "pages": "Month 3, all pages (Episode 3, FOC HQ, Appendix B Mission to Canada)",
+      "target": "Episode 3 complete",
+      "owns": [
+        "kb/books/time-to-harvest-3-en/** records of these pages",
+        "app/art/* and app/maps/* files with prefix harvest-ep3-",
+        "checks/20261117-harvest/*-ep3.*"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "ep4",
+      "pages": "Month 4, all pages (Episode 4, Round Hill complex)",
+      "target": "Episode 4 complete",
+      "owns": [
+        "kb/books/time-to-harvest-4-en/** records of these pages",
+        "app/art/* and app/maps/* files with prefix harvest-ep4-",
+        "checks/20261117-harvest/*-ep4.*"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "ep56",
+      "pages": "Months 5 and 6, all pages (Episodes 5 and 6, the Moon)",
+      "target": "Episodes 5 and 6 complete",
+      "owns": [
+        "kb/books/time-to-harvest-5-en/** records of these pages",
+        "kb/books/time-to-harvest-6-en/** records of these pages",
+        "app/art/* and app/maps/* files with prefix harvest-ep56-",
+        "checks/20261117-harvest/*-ep56.*"
+      ],
+      "sites": "—"
+    }
+  ]
+}

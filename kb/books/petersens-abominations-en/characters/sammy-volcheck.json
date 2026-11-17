@@ -1,0 +1,277 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "petersens-abominations-en/character/sammy-volcheck",
+  "kind": "character",
+  "name": {
+    "ru": "Сэмми Волчек",
+    "en": "Sammy Volcheck"
+  },
+  "aliases": [
+    "Volcheck"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "продажный полицейский, детектив",
+    "en": "corrupt cop"
+  },
+  "occupation_ref": "coc:occupation:detektiv-politsii",
+  "age": {
+    "raw": "38",
+    "value": 38
+  },
+  "sex": "мужской",
+  "description": {
+    "ru": "Продажный детектив, чтобы ставить перед игроками-полицейскими нравственные дилеммы. Может быть в группе по борьбе с бандами или просто вести дело в Плезант-Гроуве (убийство). Если сыщик увидит то, чего не должен был (сомнительные методы или прямую взятку), Волчек попытается его подкупить или шантажировать. Бандитам он может продать сведения, которые им иначе не достать, — о пропавших медсёстрах и о том, что заместитель начальника полиции подозревает «крота». Считая, что Кроссли вышла на него, пытается укрепить своё положение, подставив сыщиков в убийстве, которое расследует. Для игры: источник сведений или неприятностей.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "rival_of",
+      "target": "petersens-abominations-en/character/susan-crossley",
+      "note": "подозревает, что она вышла на его след",
+      "note_back": "продажный детектив, которого она может разоблачить"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "55",
+        "value": 55
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "APP": {
+        "raw": "45",
+        "value": 45
+      },
+      "INT": {
+        "raw": "70",
+        "value": 70
+      },
+      "POW": {
+        "raw": "55",
+        "value": 55
+      },
+      "EDU": {
+        "raw": "65",
+        "value": 65
+      }
+    },
+    "hp": {
+      "raw": "11",
+      "value": 11
+    },
+    "mp": {
+      "raw": "11",
+      "value": 11
+    },
+    "sanity": {
+      "raw": "55",
+      "value": 55,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Пистолет «Вальтер» PPK/S",
+          "en": "Walther PPK/S auto"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1d8",
+          "dice": "1d8",
+          "adds_db": false
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "30%",
+          "value": 30
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "30%",
+          "value": 30
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      },
+      {
+        "name": "Юриспруденция",
+        "skill": "coc:skill:law",
+        "value": {
+          "raw": "25%",
+          "value": 25
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Механика",
+        "skill": "coc:skill:mechanical-repair",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "35%",
+          "value": 35
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      }
+    ]
+  },
+  "background": {
+    "description": "Среднего роста, фигура уже не та, бритая голова.",
+    "traits": "Жаден и пользуется любым случаем."
+  },
+  "sources": [
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 161,
+      "printed_page": 160,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Sammy Volcheck, 38, corrupt cop»"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 178,
+      "printed_page": 177,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Appendix»: профиль «Sammy Volcheck, 38, corrupt cop»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1). Сценарий «Voice over the Phone» (гл. 5, с. 149–185); официальные русские формы — по прегенам «Кошмаров цифровой эпохи» (Р-184): «Голос в трубке», ЮВ13 (SE13), Молотило (Long Horn); по официальной раздатке — «Инфернальный механизм»; ЮВ14 (SE14) — по их образцу."
+  }
+}

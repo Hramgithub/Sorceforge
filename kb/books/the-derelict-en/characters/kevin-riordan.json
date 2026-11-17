@@ -3,12 +3,14 @@
   "id": "the-derelict-en/character/kevin-riordan",
   "kind": "character",
   "name": {
-    "ru": "Кевин Риордан",
-    "en": "Kevin Riordan"
+    "ru": "Йорген Хансен",
+    "en": "Jørgen Hansen"
   },
   "aliases": [
     "Captain’s Mate",
-    "помощник капитана"
+    "помощник капитана",
+    "Кевин Риордан",
+    "Kevin Riordan"
   ],
   "roles": [
     "npc"
@@ -290,7 +292,7 @@
     ]
   },
   "description": {
-    "ru": "Помощник капитана яхты «Делайла», нанятый её владельцем; второй из NPC, которых книга даёт для удобства. Хороший механик и электрик — пригодится, чтобы чинить яхту или запускать системы рефрижератора.",
+    "ru": "Помощник капитана яхты «Далила», нанятый её владельцем; второй из NPC, которых книга даёт для удобства. Хороший механик и электрик — пригодится, чтобы чинить яхту или запускать системы рефрижератора.",
     "en": null
   },
   "legend": {
@@ -321,6 +323,22 @@
       "method": "book_text",
       "verified": true,
       "note": "«Sequence of Events»: NPC гибнут первыми"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 43,
+      "printed_page": 42,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Investigators»: капитан и помощник — NPC"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 61,
+      "printed_page": 60,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Non-Player Characters and Monster»: статблок с именем"
     }
   ],
   "errata": [
@@ -336,9 +354,31 @@
     "needs_review": false,
     "flags": [
       "translated",
-      "editorial_text",
       "parse_uncertain"
     ],
-    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1; обложка, титул, выходные данные и оглавление без номеров). Имя придумано (Р-150), в книге — «Captain’s Mate» (Appendix, «Non-Player Characters»). Половина и пятая доли навыков в книге не напечатаны — посчитаны (Р-35). Скорость «8/9 swimming» — 8, вплавь 9."
-  }
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1; обложка, титул, выходные данные и оглавление без номеров). В отдельном издании помощник безымянный («Captain’s Mate», Appendix «Non-Player Characters»), и ему было придумано имя Кевин Риордан (Р-150); в «Кошмарах цифровой эпохи» (Petersen’s Abominations, с. 60) он назван «Jørgen Hansen, captain’s mate» — имя по книге, статблок тот же, кроме Скорости: там «Move: 8» без «9 swimming». Половина и пятая доли навыков в книге не напечатаны — посчитаны (Р-35). Скорость «8/9 swimming» — 8, вплавь 9."
+  },
+  "corrections": [
+    {
+      "field": "name",
+      "from": "{\"ru\": \"Кевин Риордан\", \"en\": \"Kevin Riordan\"}",
+      "to": "{\"ru\": \"Йорген Хансен\", \"en\": \"Jørgen Hansen\"}",
+      "reason": "имя по книге: Petersen’s Abominations, с. 60 (прежнее имя было придумано, Р-150)",
+      "ref": "Р-150"
+    },
+    {
+      "field": "quality.flags",
+      "from": "editorial_text",
+      "to": null,
+      "reason": "имя больше не придумано: оно есть в книге",
+      "ref": "Р-150"
+    },
+    {
+      "field": "quality.notes",
+      "from": "Имя придумано (Р-150), в книге — «Captain’s Mate» (Appendix, «Non-Player Characters»).",
+      "to": "В отдельном издании помощник безымянный («Captain’s Mate», Appendix «Non-Player Characters»), и ему было придумано имя Кевин Риордан (Р-150); в «Кошмарах цифровой эпохи» (Petersen’s Abominations, с. 60) он назван «Jørgen Hansen, captain’s mate» — имя по книге, статблок тот же, кроме Скорости: там «Move: 8» без «9 swimming».",
+      "reason": "имя по книге",
+      "ref": "Р-147"
+    }
+  ]
 }

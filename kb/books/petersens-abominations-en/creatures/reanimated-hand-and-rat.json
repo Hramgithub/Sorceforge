@@ -1,0 +1,227 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "petersens-abominations-en/creature/reanimated-hand-and-rat",
+  "kind": "creature",
+  "name": {
+    "ru": "Оживлённые рука и крыса",
+    "en": "Reanimated Hand and Rat"
+  },
+  "aliases": [
+    "оживлённая рука",
+    "оживлённая крыса",
+    "крыса-зомби"
+  ],
+  "category": "supernatural",
+  "subcategory": "оживлённые «творения» доктора Лопеса",
+  "description": {
+    "ru": "Профиль для оживлённой крысы и руки из квартиры доктора Лопеса, а также для других «творений», каких захочет Хранитель. Рука украдена из больничного морга; крыса больше похожа на крысу-зомби. Оживление сделало эти создания быстрее и злее. Их оживили зелёной жидкостью (líquido verde).",
+    "en": null
+  },
+  "habitat": "квартира доктора Лопеса",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "25",
+        "value": 25
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "05",
+        "value": 5
+      },
+      "DEX": {
+        "raw": "90",
+        "value": 90
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "INT": {
+        "raw": "—",
+        "value": null
+      },
+      "POW": {
+        "raw": "30",
+        "value": 30
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "5",
+      "value": 5
+    },
+    "mp": {
+      "raw": "—",
+      "value": null
+    },
+    "sanity": {
+      "raw": "—",
+      "value": null,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "–2",
+      "value": -2
+    },
+    "build": {
+      "raw": "–2",
+      "value": -2
+    },
+    "move": {
+      "raw": "12",
+      "value": 12,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 12
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1 (хватает, кусает, царапает)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d6–2",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "notes": "быстрая маленькая цель: 2 штрафные кости к атакам противников"
+      }
+    ],
+    "dodge": {
+      "raw": "45% (22/9)",
+      "value": 45,
+      "half": 22,
+      "fifth": 9
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "75%",
+          "value": 75
+        }
+      },
+      {
+        "name": "Чутьё на добычу",
+        "skill": "coc:skill:scent-prey",
+        "value": {
+          "raw": "70%",
+          "value": 70
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d4",
+        "trigger": "при виде этих оживлённых ужасов"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Быстрая маленькая цель",
+      "summary": "Атаки противников против неё — с 2 штрафными костями.",
+      "raw": "Note: being a fast moving and small target imposes 2 penalty dice to opponent’s attacks."
+    },
+    {
+      "name": "Засада в мусоре",
+      "summary": "В квартире доктора Лопеса рука и крыса нападают из засады на ничего не подозревающих сыщиков и получают внезапную атаку (добрый Хранитель может позволить проверку Внимания или Слуха, чтобы избежать внезапности); прячутся в мусоре и беспорядке, так что атаки сыщиков — с двумя штрафными костями."
+    }
+  ],
+  "sources": [
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 168,
+      "printed_page": 167,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Dr. Lopez’s Apartment»: «experiments»; иллюстрация «The Reanimated Hand and Rat»"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 178,
+      "printed_page": 177,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Monsters»: «Reanimated Hand and Rat»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.dodge",
+      "printed": "45% (25/9)",
+      "expected": "45% (22/9)",
+      "note": "половина 25 не подходит к 45% (половина — 22); исправлено по проценту (Р-35)",
+      "fixed": true
+    }
+  ],
+  "corrections": [
+    {
+      "field": "statblock.dodge",
+      "from": "45% (25/9)",
+      "to": "45% (22/9)",
+      "reason": "опечатка профиля (с. 177): половина 45% — 22 (Р-35)",
+      "ref": "Р-35"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1). Сценарий «Voice over the Phone» (гл. 5, с. 149–185); официальные русские формы — по прегенам «Кошмаров цифровой эпохи» (Р-184): «Голос в трубке», ЮВ13 (SE13), Молотило (Long Horn); по официальной раздатке — «Инфернальный механизм»; ЮВ14 (SE14) — по их образцу."
+  },
+  "images": [
+    {
+      "file": "art/creatures/abom-voice-reanimated-hand-and-rat.webp",
+      "kind": "illustration",
+      "caption": "Оживлённая рука нападает",
+      "source": "Petersen's Abominations, с. 167 (физ. 168), «The Reanimated Hand and Rat»"
+    }
+  ]
+}

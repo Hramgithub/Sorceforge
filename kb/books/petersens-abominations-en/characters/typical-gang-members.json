@@ -1,0 +1,829 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "petersens-abominations-en/character/typical-gang-members",
+  "kind": "character",
+  "name": {
+    "ru": "Типичные члены банд",
+    "en": "Typical Gang Members"
+  },
+  "aliases": [
+    "типичный член банды"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "член уличной банды",
+  "names": [
+    "Хосе Мартинес",
+    "Карлос Эрнандес",
+    "Мигель Санчес",
+    "Ана Флорес",
+    "Луис Гомес",
+    "Даниэла Рамирес"
+  ],
+  "description": {
+    "ru": "Набор из десяти профилей для типичных членов банд — ЮВ13, ЮВ14, «Рейес Кальехерос» или «Диаблос Чикос»; годится и для второстепенных персонажей вроде Торро и Гордо. Для всех: средний БкУ +1d4, средняя Комплекция 1, средняя Скорость 8, средние ПМ 11; Драка 60% (1d3+БкУ) или нож 1d6+БкУ; мачете или большой нож 60% (1d8+БкУ); Уклонение 40%; огнестрельное оружие — одно на выбор: пистолет .22, пистолет .38, штурмовая винтовка AR-15 или двуствольный дробовик 12-го калибра; навыки: Лазание 45%, Красноречие 35%, Запугивание 50%, Прыжки 40%, Слух 35%, Внимание 35%, Скрытность 40%, Метание 45%. Основной профиль записи — №1 с общими значениями; варианты — характеристики, Рассудок и ПЗ №1–№10 из таблицы.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "70",
+        "value": 70
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "APP": {
+        "raw": "60",
+        "value": 60
+      },
+      "INT": {
+        "raw": "60",
+        "value": 60
+      },
+      "POW": {
+        "raw": "55",
+        "value": 55
+      },
+      "EDU": {
+        "raw": "50",
+        "value": 50
+      }
+    },
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "mp": {
+      "raw": "11",
+      "value": 11
+    },
+    "sanity": {
+      "raw": "55",
+      "value": 55,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d3+БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Нож",
+          "en": "knife"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d6+БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "notes": "в книге — вместо драки: «or knife 1d6+DB»"
+      },
+      {
+        "name": {
+          "ru": "Мачете или большой нож",
+          "en": "Machete/large knife"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d8+БкУ",
+          "dice": "1d8",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:knife-large"
+      },
+      {
+        "name": {
+          "ru": "Пистолет автоматический .22",
+          "en": ".22 auto"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d6",
+          "dice": "1d6",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:22-short-automatic",
+        "notes": "огнестрельное оружие — одно на выбор из четырёх"
+      },
+      {
+        "name": {
+          "ru": "Пистолет автоматический .38",
+          "en": ".38 auto"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d10",
+          "dice": "1d10",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:38-automatic",
+        "notes": "одно на выбор"
+      },
+      {
+        "name": {
+          "ru": "Штурмовая винтовка AR-15",
+          "en": "AR-15 assault rifle"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "2d6",
+          "dice": "2d6",
+          "adds_db": false
+        },
+        "notes": "одно на выбор; дальность 110 м, выстрелов 1 (3) или автоматический огонь, магазин 20, осечка 97"
+      },
+      {
+        "name": {
+          "ru": "Дробовик 12-го калибра (двуствольный)",
+          "en": "12-g shotgun (2b)"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "4d6/2d6/1d6",
+          "dice": "4d6/2d6/1d6",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:shotgun-12-gauge-2b",
+        "notes": "одно на выбор"
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "35%",
+          "value": 35
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "35%",
+          "value": 35
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "35%",
+          "value": 35
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      }
+    ]
+  },
+  "variants": [
+    {
+      "label": "№1",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "70",
+            "value": 70
+          },
+          "CON": {
+            "raw": "60",
+            "value": 60
+          },
+          "SIZ": {
+            "raw": "70",
+            "value": 70
+          },
+          "DEX": {
+            "raw": "70",
+            "value": 70
+          },
+          "APP": {
+            "raw": "60",
+            "value": 60
+          },
+          "INT": {
+            "raw": "60",
+            "value": 60
+          },
+          "POW": {
+            "raw": "55",
+            "value": 55
+          },
+          "EDU": {
+            "raw": "50",
+            "value": 50
+          }
+        },
+        "hp": {
+          "raw": "13",
+          "value": 13
+        },
+        "sanity": {
+          "raw": "55",
+          "value": 55,
+          "max": null
+        }
+      }
+    },
+    {
+      "label": "№2",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "55",
+            "value": 55
+          },
+          "CON": {
+            "raw": "65",
+            "value": 65
+          },
+          "SIZ": {
+            "raw": "65",
+            "value": 65
+          },
+          "DEX": {
+            "raw": "60",
+            "value": 60
+          },
+          "APP": {
+            "raw": "50",
+            "value": 50
+          },
+          "INT": {
+            "raw": "65",
+            "value": 65
+          },
+          "POW": {
+            "raw": "50",
+            "value": 50
+          },
+          "EDU": {
+            "raw": "55",
+            "value": 55
+          }
+        },
+        "hp": {
+          "raw": "13",
+          "value": 13
+        },
+        "sanity": {
+          "raw": "50",
+          "value": 50,
+          "max": null
+        }
+      }
+    },
+    {
+      "label": "№3",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "65",
+            "value": 65
+          },
+          "CON": {
+            "raw": "55",
+            "value": 55
+          },
+          "SIZ": {
+            "raw": "75",
+            "value": 75
+          },
+          "DEX": {
+            "raw": "50",
+            "value": 50
+          },
+          "APP": {
+            "raw": "45",
+            "value": 45
+          },
+          "INT": {
+            "raw": "55",
+            "value": 55
+          },
+          "POW": {
+            "raw": "60",
+            "value": 60
+          },
+          "EDU": {
+            "raw": "50",
+            "value": 50
+          }
+        },
+        "hp": {
+          "raw": "13",
+          "value": 13
+        },
+        "sanity": {
+          "raw": "60",
+          "value": 60,
+          "max": null
+        }
+      }
+    },
+    {
+      "label": "№4",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "60",
+            "value": 60
+          },
+          "CON": {
+            "raw": "65",
+            "value": 65
+          },
+          "SIZ": {
+            "raw": "60",
+            "value": 60
+          },
+          "DEX": {
+            "raw": "45",
+            "value": 45
+          },
+          "APP": {
+            "raw": "55",
+            "value": 55
+          },
+          "INT": {
+            "raw": "60",
+            "value": 60
+          },
+          "POW": {
+            "raw": "55",
+            "value": 55
+          },
+          "EDU": {
+            "raw": "45",
+            "value": 45
+          }
+        },
+        "hp": {
+          "raw": "12",
+          "value": 12
+        },
+        "sanity": {
+          "raw": "55",
+          "value": 55,
+          "max": null
+        }
+      }
+    },
+    {
+      "label": "№5",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "65",
+            "value": 65
+          },
+          "CON": {
+            "raw": "70",
+            "value": 70
+          },
+          "SIZ": {
+            "raw": "70",
+            "value": 70
+          },
+          "DEX": {
+            "raw": "55",
+            "value": 55
+          },
+          "APP": {
+            "raw": "65",
+            "value": 65
+          },
+          "INT": {
+            "raw": "65",
+            "value": 65
+          },
+          "POW": {
+            "raw": "70",
+            "value": 70
+          },
+          "EDU": {
+            "raw": "50",
+            "value": 50
+          }
+        },
+        "hp": {
+          "raw": "14",
+          "value": 14
+        },
+        "sanity": {
+          "raw": "70",
+          "value": 70,
+          "max": null
+        }
+      }
+    },
+    {
+      "label": "№6",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "60",
+            "value": 60
+          },
+          "CON": {
+            "raw": "60",
+            "value": 60
+          },
+          "SIZ": {
+            "raw": "80",
+            "value": 80
+          },
+          "DEX": {
+            "raw": "65",
+            "value": 65
+          },
+          "APP": {
+            "raw": "50",
+            "value": 50
+          },
+          "INT": {
+            "raw": "70",
+            "value": 70
+          },
+          "POW": {
+            "raw": "50",
+            "value": 50
+          },
+          "EDU": {
+            "raw": "55",
+            "value": 55
+          }
+        },
+        "hp": {
+          "raw": "14",
+          "value": 14
+        },
+        "sanity": {
+          "raw": "50",
+          "value": 50,
+          "max": null
+        }
+      }
+    },
+    {
+      "label": "№7",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "85",
+            "value": 85
+          },
+          "CON": {
+            "raw": "70",
+            "value": 70
+          },
+          "SIZ": {
+            "raw": "75",
+            "value": 75
+          },
+          "DEX": {
+            "raw": "50",
+            "value": 50
+          },
+          "APP": {
+            "raw": "55",
+            "value": 55
+          },
+          "INT": {
+            "raw": "55",
+            "value": 55
+          },
+          "POW": {
+            "raw": "55",
+            "value": 55
+          },
+          "EDU": {
+            "raw": "60",
+            "value": 60
+          }
+        },
+        "hp": {
+          "raw": "14",
+          "value": 14
+        },
+        "sanity": {
+          "raw": "55",
+          "value": 55,
+          "max": null
+        }
+      }
+    },
+    {
+      "label": "№8",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "60",
+            "value": 60
+          },
+          "CON": {
+            "raw": "50",
+            "value": 50
+          },
+          "SIZ": {
+            "raw": "70",
+            "value": 70
+          },
+          "DEX": {
+            "raw": "70",
+            "value": 70
+          },
+          "APP": {
+            "raw": "70",
+            "value": 70
+          },
+          "INT": {
+            "raw": "50",
+            "value": 50
+          },
+          "POW": {
+            "raw": "60",
+            "value": 60
+          },
+          "EDU": {
+            "raw": "70",
+            "value": 70
+          }
+        },
+        "hp": {
+          "raw": "12",
+          "value": 12
+        },
+        "sanity": {
+          "raw": "60",
+          "value": 60,
+          "max": null
+        }
+      }
+    },
+    {
+      "label": "№9",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "55",
+            "value": 55
+          },
+          "CON": {
+            "raw": "45",
+            "value": 45
+          },
+          "SIZ": {
+            "raw": "75",
+            "value": 75
+          },
+          "DEX": {
+            "raw": "65",
+            "value": 65
+          },
+          "APP": {
+            "raw": "60",
+            "value": 60
+          },
+          "INT": {
+            "raw": "65",
+            "value": 65
+          },
+          "POW": {
+            "raw": "70",
+            "value": 70
+          },
+          "EDU": {
+            "raw": "45",
+            "value": 45
+          }
+        },
+        "hp": {
+          "raw": "12",
+          "value": 12
+        },
+        "sanity": {
+          "raw": "70",
+          "value": 70,
+          "max": null
+        }
+      }
+    },
+    {
+      "label": "№10",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "65",
+            "value": 65
+          },
+          "CON": {
+            "raw": "70",
+            "value": 70
+          },
+          "SIZ": {
+            "raw": "75",
+            "value": 75
+          },
+          "DEX": {
+            "raw": "70",
+            "value": 70
+          },
+          "APP": {
+            "raw": "40",
+            "value": 40
+          },
+          "INT": {
+            "raw": "65",
+            "value": 65
+          },
+          "POW": {
+            "raw": "55",
+            "value": 55
+          },
+          "EDU": {
+            "raw": "55",
+            "value": 55
+          }
+        },
+        "hp": {
+          "raw": "14",
+          "value": 14
+        },
+        "sanity": {
+          "raw": "55",
+          "value": 55,
+          "max": null
+        }
+      }
+    }
+  ],
+  "sources": [
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 180,
+      "printed_page": 179,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Typical Gang Members»: таблица №1–№10, общий бой и навыки"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "editorial_text"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1). Сценарий «Voice over the Phone» (гл. 5, с. 149–185); официальные русские формы — по прегенам «Кошмаров цифровой эпохи» (Р-184): «Голос в трубке», ЮВ13 (ЮВ13), Молотило (Long Horn); по официальной раздатке — «Инфернальный механизм»; ЮВ14 (ЮВ14) — по их образцу. Имена придуманы (Р-151): латиноамериканские имена современного Далласа; в книге — таблица без имён. БкУ, Комплекция, Скорость и ПМ в книге даны средними для всех (у отдельных вариантов по правилам могут отличаться). Дальность AR-15 «110yd» — 110 м (Р-64)."
+  }
+}

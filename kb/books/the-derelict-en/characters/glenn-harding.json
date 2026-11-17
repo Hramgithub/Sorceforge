@@ -3,12 +3,14 @@
   "id": "the-derelict-en/character/glenn-harding",
   "kind": "character",
   "name": {
-    "ru": "Гленн Хардинг",
-    "en": "Glenn Harding"
+    "ru": "Джон Кэлхун",
+    "en": "John Calhoun"
   },
   "aliases": [
     "Yacht Captain",
-    "капитан яхты"
+    "капитан яхты",
+    "Гленн Хардинг",
+    "Glenn Harding"
   ],
   "roles": [
     "npc"
@@ -318,7 +320,7 @@
     ]
   },
   "description": {
-    "ru": "Капитан яхты «Делайла», нанятый её владельцем. Один из двух NPC, которых книга даёт для удобства: он может вести яхту, а если игрок захочет — быть ещё одним другом владельца.",
+    "ru": "Капитан яхты «Далила», нанятый её владельцем. Один из двух NPC, которых книга даёт для удобства: он может вести яхту, а если игрок захочет — быть ещё одним другом владельца.",
     "en": null
   },
   "legend": {
@@ -357,14 +359,52 @@
       "method": "book_text",
       "verified": true,
       "note": "«Using the Radio»: NPC, оставшийся на яхте"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 43,
+      "printed_page": 42,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Investigators»: капитан и помощник — NPC"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 61,
+      "printed_page": 60,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Non-Player Characters and Monster»: статблок с именем"
     }
   ],
   "quality": {
     "needs_review": false,
     "flags": [
-      "translated",
-      "editorial_text"
+      "translated"
     ],
-    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1; обложка, титул, выходные данные и оглавление без номеров). Имя придумано (Р-150), в книге — «Yacht Captain» (Appendix, «Non-Player Characters»). Половина и пятая доли навыков в книге не напечатаны — посчитаны (Р-35)."
-  }
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1; обложка, титул, выходные данные и оглавление без номеров). В отдельном издании капитан безымянный («Yacht Captain», Appendix «Non-Player Characters»), и ему было придумано имя Гленн Хардинг (Р-150); в «Кошмарах цифровой эпохи» (Petersen’s Abominations, с. 60) он назван «John Calhoun, yacht captain» — имя по книге, статблок тот же. Половина и пятая доли навыков в книге не напечатаны — посчитаны (Р-35)."
+  },
+  "corrections": [
+    {
+      "field": "name",
+      "from": "{\"ru\": \"Гленн Хардинг\", \"en\": \"Glenn Harding\"}",
+      "to": "{\"ru\": \"Джон Кэлхун\", \"en\": \"John Calhoun\"}",
+      "reason": "имя по книге: Petersen’s Abominations, с. 60 (прежнее имя было придумано, Р-150)",
+      "ref": "Р-150"
+    },
+    {
+      "field": "quality.flags",
+      "from": "editorial_text",
+      "to": null,
+      "reason": "имя больше не придумано: оно есть в книге",
+      "ref": "Р-150"
+    },
+    {
+      "field": "quality.notes",
+      "from": "Имя придумано (Р-150), в книге — «Yacht Captain» (Appendix, «Non-Player Characters»).",
+      "to": "В отдельном издании капитан безымянный («Yacht Captain», Appendix «Non-Player Characters»), и ему было придумано имя Гленн Хардинг (Р-150); в «Кошмарах цифровой эпохи» (Petersen’s Abominations, с. 60) он назван «John Calhoun, yacht captain» — имя по книге, статблок тот же.",
+      "reason": "имя по книге",
+      "ref": "Р-147"
+    }
+  ]
 }

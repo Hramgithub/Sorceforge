@@ -1,0 +1,332 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "petersens-abominations-en/character/viper",
+  "kind": "character",
+  "name": {
+    "ru": "Вайпер (Диего Лопес)",
+    "en": "Viper (Diego Lopez)"
+  },
+  "aliases": [
+    "Viper",
+    "Вайпер",
+    "Diego Lopez",
+    "Диего Лопес",
+    "Франкенштейн",
+    "Frankenstein"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "глава банды ЮВ14",
+    "en": "head of the gang"
+  },
+  "age": {
+    "raw": "28",
+    "value": 28
+  },
+  "sex": "мужской",
+  "residence": "Даллас, Плезант-Гроув",
+  "description": {
+    "ru": "Голова главаря банды ЮВ14, отсечённая и оживлённая его братом — доктором Хуаном Лопесом — с помощью зелёной жидкости (líquido verde). Плавает в прочной пластиковой трубе с жидкостью; от шеи тянутся кабели и трубки к краденым медицинским машинам. Глаза обычно закрыты и открываются, только когда голова пробуждается, — это чёрные бездны, лишённые всякой человечности. На лбу чёрными буквами вытатуировано «ЮВ14». Говорит тихо и внушает банде благоговейное почтение. Стоит в Инфернальном механизме на складе ЮВ14 в точке «12 часов» шестиугольника. На деле голова — лишь рупор Ньярлатхотепа: усиливая банду, Вайпер сеет хаос и безумие.\nДля игры: профиль голов банды (с. 175–176); ИНТ 200 — отражение разума Ньярлатхотепа. Вайпер звонит сыщикам, вводит в заблуждение и ставит в безвыходные положения; если сыщики не действуют быстро, он предвидит их шаги.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "relative_of",
+      "target": "petersens-abominations-en/character/juan-lopez",
+      "note": "младший брат",
+      "note_back": "старший брат"
+    },
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:nyarlathotep",
+      "note": "голова — голос Ньярлатхотепа",
+      "note_back": "его рупор — ожившая голова Вайпера («Голос в трубке»)"
+    },
+    {
+      "type": "knows",
+      "target": "petersens-abominations-en/character/sharpie",
+      "note": "подруга уже два года",
+      "note_back": "возлюбленный; она зовёт его «Франкенштейном»"
+    },
+    {
+      "type": "knows",
+      "target": "petersens-abominations-en/character/goldie",
+      "note": "друг детства, лейтенант",
+      "note_back": "друг детства, вожак"
+    },
+    {
+      "type": "rival_of",
+      "target": "petersens-abominations-en/character/long-horn",
+      "note": "бывший вожак, объявил ему войну",
+      "note_back": "отколовшийся вожак ЮВ14"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "—",
+        "value": null
+      },
+      "CON": {
+        "raw": "20",
+        "value": 20
+      },
+      "SIZ": {
+        "raw": "01",
+        "value": 1
+      },
+      "DEX": {
+        "raw": "—",
+        "value": null
+      },
+      "APP": {
+        "raw": "01",
+        "value": 1
+      },
+      "INT": {
+        "raw": "200*",
+        "value": 200
+      },
+      "POW": {
+        "raw": "60",
+        "value": 60
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "2",
+      "value": 2
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "sanity": {
+      "raw": "00",
+      "value": 0,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "—",
+      "value": null
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "—",
+      "value": null,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": null
+        }
+      ]
+    },
+    "armor": {
+      "raw": "1 пункт — бак-резервуар (2 пункта урона разбивают бак)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "N/A",
+          "value": null
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "N/A",
+      "value": null
+    },
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d6",
+        "trigger": "при виде голов"
+      },
+      {
+        "success": "1d3",
+        "fail": "1d8",
+        "trigger": "если головы активны"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Предсказание будущего",
+        "skill": "coc:skill:foretell-the-future",
+        "value": {
+          "raw": "100%",
+          "value": 100
+        }
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Предсказание будущего",
+      "summary": "Когда Инфернальный механизм включает сегмент Вайпера (раз в 6 часов), голова на 6d10 минут (или дольше — на усмотрение Хранителя) пробуждается и видит события на 6 часов вперёд: предупреждает банду о налётах, засадах и любых планах против неё. Помешать можно, только задумав и выполнив план до следующего пробуждения головы; даже тогда Вайпер обычно чувствует, что сыщики что-то затевают («Они начнут действовать, но подробности неясны — будьте готовы»).",
+      "raw": "Viper’s Skills: Foretell the Future 100%.",
+      "refs": [
+        "petersens-abominations-en/item/infernal-mechanism"
+      ]
+    },
+    {
+      "name": "Откровения Мифов",
+      "summary": "Пробудившись, голова изрекает бесконечную мудрость об истинной природе реальности: за каждые 5 минут её речей слушатель получает 1 пункт Мифов Ктулху и теряет 1 пункт Рассудка.",
+      "raw": "for each 5 minutes that the head speaks of the truth of reality, the listener gains 1 percentile point of Cthulhu Mythos and loses 1 point of Sanity"
+    },
+    {
+      "name": "Голос в трубке",
+      "summary": "Вайпер знает все телефонные номера и пароли, может писать в приложения, соцсети и на компьютеры и в совершенстве подражает любому голосу (полицейскому начальнику, вожаку соперников, другому сыщику). Через одноразовый телефон, который подносит к голове Шарпи или другой член банды, он сбивает сыщиков с толку, заманивает и подставляет; каждое сообщение с откровениями Мифов даёт 1 пункт Мифов Ктулху и стоит 1 пункта Рассудка.",
+      "raw": "Viper innately knows all phone numbers and passwords and can also target smartphone applications, computers, and so on…",
+      "refs": [
+        "petersens-abominations-en/item/viper-burner-phone",
+        "petersens-abominations-en/scene/voice-the-voice-on-the-phone"
+      ]
+    },
+    {
+      "name": "Вне механизма",
+      "summary": "Вынесенная из Инфернального механизма голова остаётся «живой», но неактивной (глаза и рот изредка двигаются) и не говорит; через 1d6+2 часа без подпитки зелёной жидкостью начинает разлагаться: кожа сползает с черепа, мозг и глаза разжижаются (проверка Рассудка 1/1d4).",
+      "raw": "If moved outside of the Infernal Mechanism, Viper’s head (and any other also moved) remains “living” but inactive"
+    }
+  ],
+  "legend": {
+    "ru": "В детстве Диего Лопес и младший брат Хуан были близки. Диего рано бросил школу (в 14 лет, по слухам) и вступил в банду ЮВ13, к огорчению родителей. Со временем он стал одним из главарей ЮВ13, а брат-врач латал раненых бандитов. Когда до вожака ЮВ13 Молотило дошло, что брат Вайпера, посторонний, вхож в банду, он послал людей потребовать, чтобы Вайпер доказал верность («сердце») и порвал с братом. Оскорблённый Вайпер и его люди перестреляли посланцев, откололись и объявили о создании ЮВ14.\nОколо месяца назад (пять недель назад по хронологии) люди Молотило устроили засаду и изрубили Вайпера мачете и ножами; добить его и забрать голову помешал патрульный автомобиль. В приёмном покое умирающего принял его брат: не сумев спасти, Хуан вывез тело на склад, отделил голову и наполнил её зелёной жидкостью. Голова ожила и заговорила; Вайпер объявил банде, что брат творит чудеса и ЮВ14 станет только сильнее. С тех пор банда опережает и соперников, и полицию: голова видит будущее.\nРодители братьев умерли. Уличные слухи считают Вайпера мёртвым или говорят, что кто-то в ЮВ14 прикрывается его именем.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 150,
+      "printed_page": 149,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Voice over the Phone»: вводная"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 151,
+      "printed_page": 150,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Background», «Recent History»: братья Лопес, раскол SE13"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 152,
+      "printed_page": 151,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Recent History», «What is Really Happening», «Timeline»"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 153,
+      "printed_page": 152,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Infernal Mechanism»: голова Вайпера в точке «12 часов»"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 154,
+      "printed_page": 153,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Power of the Heads»: рупор Внешнего бога"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 155,
+      "printed_page": 154,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Investigators’ Dilemma»: звонки по телефону"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 156,
+      "printed_page": 155,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Dramatis Personae»: «Viper (Diego Lopez), 28, head of the gang»"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 157,
+      "printed_page": 156,
+      "method": "book_text",
+      "verified": true,
+      "note": "Вайпер: облик, черты, зацепки для отыгрыша"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 172,
+      "printed_page": 171,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Researching Viper and SE14»: слухи о Вайпере"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 176,
+      "printed_page": 175,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Appendix: Voice on the Phone», «Heads of the Gang: Viper, Over Easy, and Red Hot»: профиль голов"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 177,
+      "printed_page": 176,
+      "method": "book_text",
+      "verified": true,
+      "note": "профиль голов (окончание): бой, броня, навык Вайпера, потеря Рассудка"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.mp",
+      "printed": "10",
+      "expected": "12",
+      "note": "у голов МОЩ 60 — по правилам 12 ПМ; в общем профиле (с. 175) напечатано 10 — оставлено как напечатано (Р-161)",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1). Сценарий «Voice over the Phone» (гл. 5, с. 149–185); официальные русские формы — по прегенам «Кошмаров цифровой эпохи» (Р-184): «Голос в трубке», ЮВ13 (ЮВ13), Молотило (Long Horn); по официальной раздатке — «Инфернальный механизм»; ЮВ14 (ЮВ14) — по их образцу. Профиль общий для трёх голов (с. 175–176); ИНТ 200* — по сноске профиля. В «Dramatis Personae» механизм назван «Infernal Machine» (с. 155) — то же, что Инфернальный механизм. Мачете — «machete and knife wounds»."
+  },
+  "images": [
+    {
+      "file": "art/characters/abom-voice-viper.webp",
+      "kind": "portrait",
+      "caption": "Вайпер (Диего Лопес)",
+      "source": "Petersen's Abominations, с. 155 (физ. 156), «Viper»"
+    }
+  ]
+}

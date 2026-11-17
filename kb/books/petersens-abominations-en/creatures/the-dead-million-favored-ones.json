@@ -1,0 +1,261 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "petersens-abominations-en/creature/the-dead-million-favored-ones",
+  "kind": "creature",
+  "name": {
+    "ru": "Миллион избранных: мертвецы («Адский отель»)",
+    "en": "The Dead, of the Million Favored Ones"
+  },
+  "aliases": [
+    "the dead",
+    "мертвецы",
+    "jealous dead"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "порождения и слуги Ньярлатхотепа",
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:million-favored-ones",
+      "note_back": "мертвецы из врат ада («Адский отель»)"
+    },
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:nyarlathotep",
+      "note": "слуги Внешнего бога Ньярлатхотепа, причислены к «Миллиону избранных»"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "80",
+        "value": 80
+      },
+      "CON": {
+        "raw": "90",
+        "value": 90
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "55",
+        "value": 55
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "INT": {
+        "raw": "05",
+        "value": 5
+      },
+      "POW": {
+        "raw": "10",
+        "value": 10
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "15",
+      "value": 15
+    },
+    "mp": {
+      "raw": "2",
+      "value": 2
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "5 (шаркающей походкой)",
+      "value": 5,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 5
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет; серьёзная рана означает, что отвалилась конечность или голова (она продолжает «жить», пока её не уничтожат полностью)",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1 (укус, раздавливание, разрывание)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "40% (20/8), урон 1d4",
+          "dice": "1d4",
+          "adds_db": false
+        }
+      },
+      {
+        "name": {
+          "ru": "Раздавливание (манёвр)",
+          "en": "Crush (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "цель удержана, раздавливание в следующем раунде, урон 1d6",
+          "dice": "1d6",
+          "adds_db": false
+        },
+        "notes": "раз в раунд сыщик может вырваться или выскользнуть проверкой СИЛ или ЛВК против СИЛ мертвеца"
+      }
+    ],
+    "dodge": {
+      "raw": "нет (N/A)",
+      "value": null
+    },
+    "spells": {
+      "raw": "нет."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "при виде мертвецов"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Численное превосходство",
+      "raw": "Note that gathering numbers of the dead may mean that they outnumber the investigators—refer to Outnumbered, page 108, Call of Cthulhu Rulebook.",
+      "summary": "Собираясь толпой, мертвецы могут численно превосходить сыщиков — см. правило «Численное превосходство» («Книга правил», с. 108).",
+      "refs": [
+        "coc:rule:outnumbered"
+      ]
+    }
+  ],
+  "description": {
+    "ru": "Шаркающие мертвецы любых видов и размеров: истлевшие останки старых старателей и поселенцев, а то и мертвецы со всего света — адское измерение собирает многих в свои ждущие объятия. Любой сыщик, погибший за время сценария, пополнит их ряды. Это не зомби из массовой культуры: они не едят мозги и не питаются живыми, но нападают и убивают всех, кто приблизится, и тех, кто пытается закрыть врата. В остальное время они толпятся вокруг врат ада, словно ждут зова — кто знает, быть может, когда придёт время, Ньярлатхотеп отдаст приказ, и они начнут действовать… Когда врата закрыты, мертвецы падают наземь и больше не опасны.",
+    "en": null
+  },
+  "legend": {
+    "ru": "С открытием врат мертвецы могут появиться в отеле и вокруг в любое время по желанию Хранителя (пусть некоторые и выходят из врат): сначала по одному-двое, потом группами по три-четыре, потом всё больше; к развязке отель и окрестности кишат мертвецами. Хранитель может одеть часть мертвецов в лохмотья старых старателей. Мертвецы преграждают путь к фальшивой стене, тропы, леса и горы; некоторые стоят даже в реке.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 9,
+      "printed_page": 8,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Revelations»: мертвецы встают у отеля «Семь звёзд»"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 10,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Seven Gates of Hell»: «The dead rise»"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 28,
+      "printed_page": 27,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Opening the Gate to Hell»"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 30,
+      "printed_page": 29,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Opening the Gate to Hell», «Events»"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 31,
+      "printed_page": 30,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Events»: крупные события"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 32,
+      "printed_page": 31,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Ending the Scenario»: закрытие врат валит мертвецов"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 34,
+      "printed_page": 33,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Dead, of the Million Favored Ones»: статблок и описание"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.attacks[Ближний бой]",
+      "printed": "Fighting 40% (20/8), damage 1d4",
+      "expected": "1d4 + БкУ (+1d4)?",
+      "note": "У мертвецов БкУ +1d4, но урон Ближнего боя и Раздавливания напечатан без него (1d4, 1d6); в профиле мертвецов «Масок» — 1d4+1d4 и 1d6+1d4. Оставлено как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1). Статблок напечатан без заголовка рядом со статьёй «The Dead» (с. 33). Профиль сценария — отдельная запись со связью instance_of на общий вид (Р-75); числа отличаются от мертвецов «Масок» (ВЫН 90, ПЗ 15)."
+  },
+  "images": [
+    {
+      "file": "art/creatures/abom-hotel-the-dead-million-favored-ones.webp",
+      "kind": "art",
+      "caption": "Мертвец",
+      "source": "Petersen’s Abominations, с. 33 (физ. 34): «The Dead»"
+    }
+  ]
+}

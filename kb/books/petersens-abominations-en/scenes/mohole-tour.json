@@ -1,0 +1,100 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "petersens-abominations-en/scene/mohole-tour",
+  "kind": "scene",
+  "name": {
+    "ru": "Экскурсия по платформе",
+    "en": "Tour of the Platform"
+  },
+  "description": {
+    "ru": "Если сыщики сами не берут дело в свои руки, экскурсия Энджи Юсеф охватывает диспетчерскую, систему управления энергоснабжением, пульт управления реактором, установку охлаждения, систему переработки, буровую площадку и спасательные капсулы (вместе с ТНПА платформы). К генераторам и дизельным двигателям она без особой просьбы не ведёт. Заканчивает экскурсию у кабинета Пирса Голдмана — на первую встречу.\nЭкскурсия поверхностная: сыщики сами должны настаивать, чтобы задержаться где-то подольше или коротко поговорить с группами. Юсеф любезна, но рассчитала экскурсию так, чтобы все успели к ужину, и подгоняет гостей — это можно (ошибочно) принять за подозрительное. Чтобы сразу поднять напряжение, Хранитель может устроить во время экскурсии неисправность.\nПолезные технические термины для разговоров с персоналом:\n• Паровая турбина: реактор даёт пар, который вращает турбины, вырабатывающие энергию.\n• Система охлаждения: у реактора три системы охлаждения; температура достигает 320 °C, давление — около 2 250 psi; в одной точке теплоноситель становится паром при температуре около 260–290 °C и давлении около 1 000 psi.\n• Устье скважины: несущий и герметичный узел, соединяющий оборудование бурения и добычи.\n• Противовыбросовый превентор (ППО, BOP): регулирует давление, чтобы не допустить выброса газа.\n• Сепаратор: сосуд под давлением, разделяющий извлечённое (газ и жидкость); природный газ обычно выходит из земли вместе с водяным паром и другими газами, и их надо разделить, прежде чем газ пойдёт на рынок.\n• Газовые компрессоры: что-то вроде насосов, регулируют давление, чтобы гнать среду по трубам.\n• Система учёта экспорта газа: измеряет объём добытого газа.",
+    "en": null
+  },
+  "when": "Часть 1, после расселения",
+  "arc": {
+    "scenario": "petersens-abominations-en/scenario/mohole",
+    "part": "Часть первая: расследование",
+    "order": 3
+  },
+  "where": [
+    {
+      "location": "petersens-abominations-en/location/mohole-control-room",
+      "note": null
+    },
+    {
+      "location": "petersens-abominations-en/location/mohole-power-control-systems",
+      "note": null
+    },
+    {
+      "location": "petersens-abominations-en/location/mohole-reactor-control-systems",
+      "note": null
+    },
+    {
+      "location": "petersens-abominations-en/location/mohole-coolant-plant",
+      "note": null
+    },
+    {
+      "location": "petersens-abominations-en/location/mohole-processing-systems",
+      "note": null
+    },
+    {
+      "location": "petersens-abominations-en/location/mohole-drilling-floor",
+      "note": null
+    },
+    {
+      "location": "petersens-abominations-en/location/mohole-lifeboats-and-rov",
+      "note": null
+    }
+  ],
+  "participants": [
+    {
+      "id": "petersens-abominations-en/character/angie-yousef",
+      "role": "провожатая"
+    }
+  ],
+  "mechanics": {
+    "ru": "Проверок нет; любые проверки — по желанию сыщиков в разговорах с группами.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Юсеф оставляет сыщиков у кабинета Голдмана (сцена «Беседа с Пирсом Голдманом»).",
+    "en": null
+  },
+  "refs": [
+    "petersens-abominations-en/scene/mohole-goldman-interview",
+    "petersens-abominations-en/scene/mohole-malfunctions"
+  ],
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 126,
+      "printed_page": 125,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Tour of the Platform», врезка «Technical Jargon»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "description.ru",
+      "printed": "32,000 kg per square cm (2,250 psi); 14,000 kg per square cm (1,000 psi)",
+      "expected": "около 158 и 70 кг/см²",
+      "note": "Во врезке «Technical Jargon» (с. 125) перевод давления неверен: 2 250 psi — около 158 кг/см², 1 000 psi — около 70 кг/см²; в записи оставлены psi как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1)."
+  }
+}

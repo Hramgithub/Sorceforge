@@ -1,0 +1,332 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "petersens-abominations-en/character/long-horn",
+  "kind": "character",
+  "name": {
+    "ru": "Молотило (Сантьяго Гарсия)",
+    "en": "Long Horn (Santiago Garcia)"
+  },
+  "aliases": [
+    "Long Horn",
+    "Молотило",
+    "Лонг Хорн",
+    "Santiago Garcia",
+    "Сантьяго Гарсия"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "вожак ЮВ13",
+    "en": "leader of SE13"
+  },
+  "occupation_ref": "coc:occupation:ulichnaya-shpana",
+  "age": {
+    "raw": "34",
+    "value": 34
+  },
+  "sex": "мужской",
+  "description": {
+    "ru": "Правит ЮВ13 вместо Синнера, сидящего в камере смертников. Положение незавидное: ЮВ14 отняла территорию, и усмирить раскольников не удаётся; каждый день, пока Вайпер и ЮВ14 безнаказанны, власть Молотило слабеет, а полиция усиливает облавы. Молотило зол и в отчаянии. Он решил, что в ЮВ13 есть «крот», сливающий планы ЮВ14, и отобрал команду самых надёжных товарищей — сыщиков — с приказом найти и убить Вайпера, чтобы покончить с ЮВ14; сам же занялся поиском «крота». Поэтому большую часть сценария он остаётся за кадром. Некоторые в ЮВ13 уже говорят, что Синнер такого не допустил бы; удачливые сыщики имеют хороший шанс сместить Молотило и взять ЮВ13 в свои руки — Хранителю стоит намекнуть на это игрокам.\nДля игры: посылает сыщиков охотиться на Вайпера; может дать подкрепление и замену погибшим персонажам.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "petersens-abominations-en/character/sinner",
+      "note": "настоящий вожак ЮВ13 (в тюрьме)",
+      "note_back": "правит ЮВ13 за него"
+    },
+    {
+      "type": "knows",
+      "target": "petersens-abominations-en/character/gordo",
+      "note": "тайно поручил ему искать «крота»",
+      "note_back": "вожак, поручивший искать «крота»"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "80",
+        "value": 80
+      },
+      "CON": {
+        "raw": "65",
+        "value": 65
+      },
+      "SIZ": {
+        "raw": "80",
+        "value": 80
+      },
+      "DEX": {
+        "raw": "55",
+        "value": 55
+      },
+      "APP": {
+        "raw": "60",
+        "value": 60
+      },
+      "INT": {
+        "raw": "80",
+        "value": 80
+      },
+      "POW": {
+        "raw": "55",
+        "value": 55
+      },
+      "EDU": {
+        "raw": "45",
+        "value": 45
+      }
+    },
+    "hp": {
+      "raw": "14",
+      "value": 14
+    },
+    "mp": {
+      "raw": "11",
+      "value": 11
+    },
+    "sanity": {
+      "raw": "52",
+      "value": 52,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Мачете",
+          "en": "Machete"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "1d8+1d4",
+          "dice": "1d8",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:knife-large"
+      },
+      {
+        "name": {
+          "ru": "Пистолет-пулемёт MAC-11",
+          "en": "MAC-11 SMG"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет-пулемёт)",
+        "chance": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "1d10",
+          "dice": "1d10",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:ingram-mac-11"
+      },
+      {
+        "name": {
+          "ru": "Револьвер .357",
+          "en": ".357 revolver"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d8+1d4",
+          "dice": "1d8+1d4",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:357-magnum-revolver"
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "30%",
+          "value": 30
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "90%",
+          "value": 90
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "30%",
+          "value": 30
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "65%",
+          "value": 65
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "55%",
+          "value": 55
+        }
+      }
+    ]
+  },
+  "background": {
+    "description": "Выше среднего роста, тучный, но крепко сбитый, волосы до плеч; на лице татуировок нет, но тело покрыто шрамами и наколками банды.",
+    "traits": "Отчасти мегаломан; хитёр и осторожен, взвешивает варианты, прежде чем действовать."
+  },
+  "legend": {
+    "ru": "Когда до него дошло, что брат Вайпера, посторонний, вхож в банду, послал людей потребовать от Вайпера доказать верность и порвать с братом; Вайпер перебил посланцев и основал ЮВ14. Молотило объявил ЮВ14 войну, а его люди изрубили Вайпера в засаде, но забрать его голову, как хотел Молотило, им помешал патруль. Позже его люди убили Ред Хота и Овер Изи.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 151,
+      "printed_page": 150,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Recent History»: Лонг Хорн и раскол"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 152,
+      "printed_page": 151,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Recent History», «Present Day»"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 159,
+      "printed_page": 158,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Long Horn, 34, leader of SE13»"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 177,
+      "printed_page": 176,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Appendix»: профиль «Long Horn, 34, leader of SE13»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1). Сценарий «Voice over the Phone» (гл. 5, с. 149–185); официальные русские формы — по прегенам «Кошмаров цифровой эпохи» (Р-184): «Голос в трубке», ЮВ13 (ЮВ13), Молотило (Long Horn); по официальной раздатке — «Инфернальный механизм»; ЮВ14 (ЮВ14) — по их образцу. Урон револьвера .357 «1d8+1d4» — урон самого оружия (.357 Магнум по «Книге хранителя»), а не бонус к урону."
+  },
+  "images": [
+    {
+      "file": "art/characters/abom-voice-long-horn.webp",
+      "kind": "portrait",
+      "caption": "Молотило (Лонг Хорн)",
+      "source": "Petersen's Abominations, с. 158 (физ. 159), «Long Horn»"
+    }
+  ]
+}

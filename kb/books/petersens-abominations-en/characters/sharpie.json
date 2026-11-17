@@ -1,0 +1,327 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "petersens-abominations-en/character/sharpie",
+  "kind": "character",
+  "name": {
+    "ru": "Шарпи (Ребека Эстрада)",
+    "en": "Sharpie (Rebeca Estrada)"
+  },
+  "aliases": [
+    "Sharpie",
+    "Шарпи",
+    "Rebeca Estrada",
+    "Ребека Эстрада"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "член ЮВ14, хранительница Вайпера",
+    "en": "Viper’s keeper"
+  },
+  "occupation_ref": "coc:occupation:ulichnaya-shpana",
+  "age": {
+    "raw": "17",
+    "value": 17
+  },
+  "sex": "женский",
+  "description": {
+    "ru": "Член ЮВ14, которой поручено стеречь похищенных медсестёр на складе (вместе с ней всегда минимум двое парней) и следить, чтобы они выполняли приказы доктора Лопеса. Медицины она не знает — знает лишь, что баки с зелёной жидкостью нужно доливать, а машины, в которые уходят трубки и кабели от голов, держать включёнными. Помогает Вайперу звонить: подносит одноразовый телефон к голове. Два года — подруга Вайпера; была рядом, когда брат спас ему жизнь, и, хоть сперва ужаснулась, поверила Лопесу, что со временем Вайпер получит новое тело, — с тех пор зовёт его «Франкенштейном». Ради безопасности Вайпера пойдёт на всё.\nДля игры: защищает голову Вайпера любой ценой (охотно пожертвует собой) и в финале дерётся насмерть; но из-за преданности Вайперу и безумия может отвлечься и упустить одну из медсестёр.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "petersens-abominations-en/character/juan-lopez",
+      "note": "исполняет его приказы",
+      "note_back": "стережёт медсестёр и головы"
+    },
+    {
+      "type": "rival_of",
+      "target": "petersens-abominations-en/character/jenette-williams",
+      "note": "пленница, которую она избивает",
+      "note_back": "надзирательница, избивавшая пленниц"
+    },
+    {
+      "type": "rival_of",
+      "target": "petersens-abominations-en/character/mia-torres",
+      "note": "пленница, которую она избивает",
+      "note_back": "надзирательница, избивавшая пленниц"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "50",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "80",
+        "value": 80
+      },
+      "APP": {
+        "raw": "75",
+        "value": 75
+      },
+      "INT": {
+        "raw": "75",
+        "value": 75
+      },
+      "POW": {
+        "raw": "45",
+        "value": 45
+      },
+      "EDU": {
+        "raw": "40",
+        "value": 40
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "9",
+      "value": 9
+    },
+    "sanity": {
+      "raw": "27",
+      "value": 27,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Нож",
+          "en": "knife"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "1d4+2",
+          "dice": "1d4+2",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:knife-medium",
+        "notes": "в книге — вместо драки: «or knife 1d4+2»; любимое оружие наказаний — мачете"
+      },
+      {
+        "name": {
+          "ru": "Пистолет автоматический .32",
+          "en": ".32 auto"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "1d8",
+          "dice": "1d8",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:32-automatic"
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "80%",
+          "value": 80
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Ловкость рук",
+        "skill": "coc:skill:sleight-of-hand",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "30%",
+          "value": 30
+        }
+      }
+    ]
+  },
+  "background": {
+    "description": "Ниже среднего роста, стройная, длинные вьющиеся волосы, ярко-зелёные глаза.",
+    "traits": "Жестока и свирепа к врагам, глубоко влюблена в Вайпера.",
+    "secret": "Дольше всех слушала откровения Мифов из уст Вайпера и теперь совершенно безумна."
+  },
+  "legend": {
+    "ru": "Несколько лет назад её выгнали из школы; банда — её семья. Славится умом и жестокостью: не брезгует наказывать мачете. До нынешнего поручения её знали на улицах Плезант-Гроува: она развозила наркотики по точкам и притонам. Когда шайка подростков попыталась её обобрать, она выследила их и каждому отрубила правую руку — с тех пор все знают, что с ней лучше не связываться.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 153,
+      "printed_page": 152,
+      "method": "book_text",
+      "verified": true,
+      "note": "«What is Really Happening»: Шарпи стережёт медсестёр"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 156,
+      "printed_page": 155,
+      "method": "book_text",
+      "verified": true,
+      "note": "Шарпи помогает Вайперу с телефоном"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 158,
+      "printed_page": 157,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Sharpie (Rebeca Estrada), 17, typical SE14 member»"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 177,
+      "printed_page": 176,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Appendix»: профиль «Sharpie (Rebeca Estrada), 17, Viper’s keeper»; бой и навыки — в начале правой колонки"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1). Сценарий «Voice over the Phone» (гл. 5, с. 149–185); официальные русские формы — по прегенам «Кошмаров цифровой эпохи» (Р-184): «Голос в трубке», ЮВ13 (ЮВ13), Молотило (Long Horn); по официальной раздатке — «Инфернальный механизм»; ЮВ14 (ЮВ14) — по их образцу. Бой и навыки Шарпи напечатаны в начале правой колонки с. 176 после её характеристик (сверено по изображению страницы)."
+  }
+}

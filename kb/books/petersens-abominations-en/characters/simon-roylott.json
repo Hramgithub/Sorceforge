@@ -1,0 +1,435 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "petersens-abominations-en/character/simon-roylott",
+  "kind": "character",
+  "name": {
+    "ru": "Саймон Ройлотт",
+    "en": "Dr. Simon Roylott"
+  },
+  "aliases": [
+    "Ройлотт",
+    "доктор Ройлотт"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "руководитель проекта",
+    "en": "Project Lead"
+  },
+  "occupation_ref": "coc:occupation:uchenyy",
+  "age": {
+    "raw": "53",
+    "value": 53
+  },
+  "sex": "мужской",
+  "residence": "платформа «Дыра дьявола»",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:tsathoggua",
+      "note": "Великий Древний, чьи мысленные приказы он принимает за свои",
+      "note_back": "руководитель проекта «Нергал» под его влиянием"
+    },
+    {
+      "type": "works_for",
+      "target": "petersens-abominations-en/character/gerald-winestep",
+      "note": "министр, который его поддерживает",
+      "note_back": "руководитель проекта «Нергал»"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "40",
+        "value": 40
+      },
+      "CON": {
+        "raw": "55",
+        "value": 55
+      },
+      "SIZ": {
+        "raw": "45",
+        "value": 45
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "INT": {
+        "raw": "90",
+        "value": 90
+      },
+      "APP": {
+        "raw": "35",
+        "value": 35
+      },
+      "POW": {
+        "raw": "35",
+        "value": 35
+      },
+      "EDU": {
+        "raw": "93",
+        "value": 93
+      }
+    },
+    "hp": {
+      "raw": "10",
+      "value": 10
+    },
+    "mp": {
+      "raw": "9",
+      "value": 9
+    },
+    "sanity": {
+      "raw": "00",
+      "value": 0,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "6",
+      "value": 6,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 6
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Пистолет",
+          "en": "Handgun"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        },
+        "damage": {
+          "raw": "1d8",
+          "dice": "1d8",
+          "adds_db": false
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Искусство/ремесло (актёрское мастерство)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "Актёрское мастерство",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Механика",
+        "skill": "coc:skill:mechanical-repair",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Естествознание",
+        "skill": "coc:skill:natural-world",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Управление тяжёлыми машинами",
+        "skill": "coc:skill:heavy-machinery",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Наука (химия)",
+        "skill": "coc:skill:science",
+        "specialization": "Химия",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Наука (инженерия)",
+        "skill": "coc:skill:science",
+        "specialization": "Инженерия",
+        "value": {
+          "raw": "95%",
+          "value": 95,
+          "half": 47,
+          "fifth": 19
+        }
+      },
+      {
+        "name": "Наука (геология)",
+        "skill": "coc:skill:science",
+        "specialization": "Геология",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Наука (физика)",
+        "skill": "coc:skill:science",
+        "specialization": "Физика",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Стирание памяти",
+      "raw": "Brain Wipe: target is unable to recall their last 24 or 36 hours. Costs 6 magic points to wipe 24 hours worth of memory, or 10 points for 36 hours. Roylott must be speaking to the target and be in close proximity. The target may resist with an opposed POW roll but, even if successful, doesn’t recall the attempt. Takes 2 rounds to complete and if Roylott is interrupted he must make a successful POW roll to maintain concentration.",
+      "summary": "Дар Цатхоггуа, похожий на заклинание «Затуманить память»: цель не помнит последние 24 или 36 часов. Стоит 6 ПМ за 24 часа памяти или 10 ПМ за 36 часов. Ройлотт должен разговаривать с целью и находиться рядом с ней. Цель может сопротивляться встречной проверкой МОЩ, но даже при успехе не помнит попытки и считает, что просто беседовала с Ройлоттом. Занимает 2 раунда; если Ройлотта прервали, он должен пройти проверку МОЩ, чтобы не потерять сосредоточение, иначе попытка проваливается.",
+      "refs": [
+        "coc:spell:cloud-memory",
+        "coc:creature:tsathoggua"
+      ]
+    }
+  ],
+  "background": {
+    "description": "среднего роста, лысеющий, с белыми растрёпанными волосами, в толстых очках",
+    "traits": "вспыльчивый, взрывной, безжалостный, чрезвычайно хитрый",
+    "secret": "Под влиянием Цатхоггуа: совершенно безумен (Рассудок 0), принимает мысленные приказы Великого Древнего за свои, стирает людям память и хочет любой ценой вскрыть Мохол."
+  },
+  "description": {
+    "ru": "Среднего роста, лысеющий, с белыми растрёпанными волосами; толстые очки с линзами-бутылочными донцами скрывают острые проницательные глаза (проверки Психологии, чтобы понять его, — с повышенной сложностью или со штрафной костью). Вспыльчивый, взрывной, безжалостный и чрезвычайно хитрый. Под влиянием Цатхоггуа.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Автор проекта «Нергал» и первооткрыватель ролотного газа. Прежде почти никому не известный учёный, после открытия ролота он поднялся в научных и политических кругах и получил доступ к большим деньгам; если ролотный газ станет устойчивым источником энергии, это изменит мир. Ройлотт всегда был безумным гением — темпераментным, взрывным и одержимым, — и как раз из тех впечатлительных умов, что восприимчивы к потусторонним излучениям сущностей Мифов. Уже давно он получает телепатические послания Великого Древнего Цатхоггуа и, не зная правды, считает внушённые мысли своими — они и толкнули его бурить сердце планеты. Ко времени приезда сыщиков разум его повреждён непоправимо: это высокофункциональный, совершенно безумный психопат — эгоцентричный, асоциальный, без угрызений совести. Его главная цель — вскрыть Мохол, и неважно, сколько людей при этом пострадает или погибнет.\nПоследние недели безумие Ройлотта проявляется вовне: в своём кабинете он часами стучит по клавиатуре сломанного компьютера, общаясь с «Высшим разумом»; все думают, что он строит и проверяет компьютерные модели бурения, а на деле он получает мысленные приказы Цатхоггуа. Цатхоггуа наделил его даром стирать людям недавние воспоминания, и он уже им пользуется (так, доктор Кент забыла о своих опасениях).\nОбвинения в небезопасной работе он сначала отметает, но быстро злится, обвиняет Голдмана и всех, кого вспомнит, в близорукости и попытках опорочить его работу; называет жалобщиков «детьми» и твердит, что ограниченные умы не способны постичь его великий труд, который принесёт миллионам новую энергию. Если нажать, он обрушивает на своих «гонителей» поток брани и обвинений и уходит — запирается в кабинете или бежит за помощью к Шталю.\nКак отыгрывать: целиком сосредоточен на ускорении бурения и доступе к Мохолу; винит других в желании саботировать дело его жизни; не даёт никому остановить бурение, руками Шталя и его охраны расправляясь с «диверсантами». Если сыщики возьмут его под стражу, пытается бежать или уговорить охранников отпустить его (Убеждение или стирание памяти, если остался наедине с сыщиком). Если Ройлотт убит, события идут своим чередом: бур уже пробился в Н’кай, и прислужники Цатхоггуа всё равно придут; возможно, влияние Великого Древнего создаст ему замену.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 109,
+      "printed_page": 108,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Background»: Ройлотт руководит работами"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 113,
+      "printed_page": 112,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Dr. Simon Roylott, 53, Project Lead, Under the influence of Tsathoggua»"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 114,
+      "printed_page": 113,
+      "method": "book_text",
+      "verified": true,
+      "note": "продолжение: безумие, компьютер, «Keeper note», стирание памяти"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 127,
+      "printed_page": 126,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Interview with Dr. Roylott»"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 128,
+      "printed_page": 127,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Dr. Roylott’s Madness», «Brain Wipe»; Убеждение 70%"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 138,
+      "printed_page": 137,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Dr. Simon Roylott, project lead»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.mp",
+      "printed": "MP: 9",
+      "expected": "7 (МОЩ 35 / 5)",
+      "note": "ПМ не сходятся с МОЩ 35 (с. 137); оставлено как напечатано: стирание памяти стоит 6 или 10 ПМ, при 7 ПМ Ройлотт не смог бы стереть 36 часов.",
+      "fixed": false
+    },
+    {
+      "field": "statblock.skills[Убеждение]",
+      "printed": "Persuade 55%",
+      "expected": "70% (с. 127)",
+      "note": "В статблоке (с. 137) Убеждение 55%, в тексте «Dr. Roylott’s Madness» (с. 127) — «his Persuade skill (70%)»; в записи — как в статблоке.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1). Рассудок напечатан как «00»."
+  },
+  "images": [
+    {
+      "file": "art/characters/abom-mohole-roylott.webp",
+      "kind": "portrait",
+      "caption": "Саймон Ройлотт",
+      "source": "Petersen’s Abominations, с. 113 (физ. 114), «Mohole»: «Dr. Simon Roylott»"
+    }
+  ]
+}

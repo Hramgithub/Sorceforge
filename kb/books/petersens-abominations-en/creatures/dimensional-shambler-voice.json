@@ -1,0 +1,218 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "petersens-abominations-en/creature/dimensional-shambler-voice",
+  "kind": "creature",
+  "name": {
+    "ru": "Бродяга между измерениями («Голос в трубке»)",
+    "en": "Dimensional Shambler (Voice on the Phone)"
+  },
+  "aliases": [
+    "shambler"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "независимая раса",
+  "description": {
+    "ru": "Чудовище, которое призывает общая магическая сила голов Ред Хота и Овер Изи, когда они активны одновременно, и которое связано с волей Вайпера. Примерно в середине сценария ЮВ14 приносит ужасную жертву (отрубает пленнику кисти и ступни), продлевая пробуждение Ред Хота до пробуждения Овер Изи, — и бродяга появляется (сцена «Бродяга в банде»). Становится постоянной частью арсенала банды: Вайпер посылает его хватать соперников, полицейских, сыщиков, беглых пленников (медсестёр) и предателей вроде Торро.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:dimensional-shambler",
+      "note_back": "профиль сценария «Голос в трубке»: бродяга на службе у Вайпера"
+    },
+    {
+      "type": "servitor_of",
+      "target": "petersens-abominations-en/character/viper",
+      "note": "связан с волей Вайпера",
+      "note_back": "бродяга между измерениями, призванный в банду"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "95",
+        "value": 95
+      },
+      "CON": {
+        "raw": "80",
+        "value": 80
+      },
+      "SIZ": {
+        "raw": "95",
+        "value": 95
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "INT": {
+        "raw": "35",
+        "value": 35
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "17",
+      "value": 17
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "sanity": {
+      "raw": "—",
+      "value": null,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d6",
+      "value": "+1d6"
+    },
+    "build": {
+      "raw": "2",
+      "value": 2
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "armor": {
+      "raw": "3 пункта (толстая шкура)",
+      "value": 3
+    },
+    "attacks_per_round": {
+      "raw": "2 (когти или захват)",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d8+1d6",
+          "dice": "1d8",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Захват (манёвр)",
+          "en": "Grab (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "удержание на 1 раунд, затем исчезает",
+          "dice": null,
+          "adds_db": false
+        },
+        "notes": "схваченный удержан 1 раунд, затем бродяга исчезает с ним"
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "spells": {
+      "raw": "нет (если Хранитель не решит иначе)."
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d10",
+        "trigger": "при виде бродяги между измерениями"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Межпространственное перемещение",
+      "summary": "По своей воле уходит с плана бытия: начинает мерцать и тускнеть; переход стоит 4 ПМ и занимает раунд — в это время его можно атаковать, но он не может ранить нападающих. Может унести предмет или существо, сжав его когтями и потратив ещё 1 ПМ за каждые 50 пунктов ТЕЛ. В сценарии бродяга обычно возвращается к Вайперу с тем, что схватил, если не приказано иное.",
+      "raw": "Trans-dimensional travel: able to leave a plane of existence at will, signaling the change by beginning to shimmer and fade; the transition costs 4 magic points and takes a round to complete…"
+    }
+  ],
+  "sources": [
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 154,
+      "printed_page": 153,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Power of the Heads»: призыв бродяги"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 173,
+      "printed_page": 172,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Shambler in the Gang»"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 179,
+      "printed_page": 178,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Appendix»: профиль «Dimensional Shambler»; иллюстрация"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1). Сценарий «Voice over the Phone» (гл. 5, с. 149–185); официальные русские формы — по прегенам «Кошмаров цифровой эпохи» (Р-184): «Голос в трубке», ЮВ13 (ЮВ13), Молотило (Long Horn); по официальной раздатке — «Инфернальный механизм»; ЮВ14 (ЮВ14) — по их образцу. Отличия от профиля вида в справочнике: Скорость 7 (у вида 8); заклинаний нет (если Хранитель не решит иначе); захват — удержание на 1 раунд, затем исчезает."
+  },
+  "images": [
+    {
+      "file": "art/creatures/abom-voice-dimensional-shambler-voice.webp",
+      "kind": "art",
+      "caption": "Бродяга между измерениями",
+      "source": "Petersen's Abominations, с. 178 (физ. 179), «Dimensional Shambler»"
+    }
+  ]
+}

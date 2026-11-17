@@ -1,0 +1,403 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "petersens-abominations-en/character/stahls-men",
+  "kind": "character",
+  "name": {
+    "ru": "Люди Шталя",
+    "en": "Stahl’s Men"
+  },
+  "aliases": [
+    "Security Team",
+    "охрана",
+    "Джек Денес",
+    "Кэл Фукс",
+    "Грег Беннингс",
+    "Вэнс Норрис",
+    "Лем Строуд",
+    "Тедди Дойл",
+    "Гэри Хант",
+    "Кен Лумис",
+    "Бадд Алвес"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "охранник",
+  "sex": null,
+  "residence": null,
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "petersens-abominations-en/character/david-stahl",
+      "note": "начальник охраны",
+      "note_back": "его охранники"
+    },
+    {
+      "type": "works_for",
+      "target": "petersens-abominations-en/organization/fortudo",
+      "note": "работодатель",
+      "note_back": "охранники на платформе"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "80",
+        "value": 80
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65
+      },
+      "INT": {
+        "raw": "60",
+        "value": 60
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      },
+      "EDU": {
+        "raw": "60",
+        "value": 60
+      }
+    },
+    "hp": {
+      "raw": "15",
+      "value": 15
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "sanity": {
+      "raw": "50",
+      "value": 50,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Винтовка HK416",
+          "en": "HK416 rifle"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "2d8",
+          "dice": "2d8",
+          "adds_db": false
+        },
+        "notes": "штурмовая винтовка Heckler & Koch HK416: базовая дальность 80 м, 1 (2) выстрела или автоматический огонь, магазин 30, осечка 99 (с. 118)"
+      },
+      {
+        "name": {
+          "ru": "Пистолет «Глок» 17",
+          "en": "Glock 17 pistol"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1d10",
+          "dice": "1d10",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:glock-17"
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Взрывчатка",
+        "skill": "coc:skill:explosives",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Подводное плавание",
+        "skill": "coc:skill:diving",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Юриспруденция",
+        "skill": "coc:skill:law",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Механика",
+        "skill": "coc:skill:mechanical-repair",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Управление тяжёлыми машинами",
+        "skill": "coc:skill:heavy-machinery",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Выживание",
+        "skill": "coc:skill:survival",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Плавание",
+        "skill": "coc:skill:swim",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Старшие смены Джек Денес и Кэл Фукс; охранники Найджел Гордон, Грег Беннингс, Вэнс Норрис, Лем Строуд, Тедди Дойл, Гэри Хант, Кен Лумис и Бадд Алвес. Смесь бывших полицейских и бывших военных.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Охрана компании «Фортудо» — десять человек под началом Дэвида Шталя, посменно патрулируют платформу или стерегут ключевые места; один охранник всегда стоит у двери пульта управления реактором, остальные обычно патрулируют или слоняются по палубам. Для связи у них свои рации с наушниками — очень прочные и водонепроницаемые. Вначале все верны Шталю, но по ходу событий кто-то может усомниться в рассудке начальника, и сыщики могут переманить одного-двух на свою сторону — это очень пригодится, если Шталь прикажет их расстрелять. До приезда сыщиков служба была скучной, но лёгкой.\nПоначалу охрана держится в стороне и лишь выглядит мрачно и угрожающе. Найджел Гордон приставлен охранять сыщиков. Под влиянием Цатхоггуа Шталь и часть его людей (Хранитель решает сколько, но не больше половины) переходят под власть Ройлотта; по его приказу Шталь вводит «военное положение»: посты у спасательных капсул, у входов в диспетчерскую и у пульта управления реактором, поисковая группа ищет сыщиков. Не попавшие под влияние ведут себя по обстоятельствам; сыщики могут социальными навыками убедить их, что Шталь безумен (если сыщики заранее сблизились с кем-то из охраны, добрый Хранитель может дать бонусную кость на Убеждение, Красноречие или Обаяние). Вэнс Норрис недавно подрался с Мичем Теннисоном.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 112,
+      "printed_page": 111,
+      "method": "book_text",
+      "verified": true,
+      "note": "организационная схема: «Section Leaders», «Security»"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 119,
+      "printed_page": 118,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Security Team»"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 120,
+      "printed_page": 119,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Stahl’s Men»"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 135,
+      "printed_page": 134,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Madness of Stahl», «The Firing Squad»"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 141,
+      "printed_page": 140,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Stahl’s Men»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1). Групповой профиль (Р-74): статблок книги на несколько названных по имени людей; имена — из книги. На организационной схеме (с. 111) — «Nigel Gorden», «Gay Hunt»; в тексте — «Nigel Gordon», «Gary Hunt». У атаки HK416 нет ссылки на справочник оружия (записи нет)."
+  }
+}

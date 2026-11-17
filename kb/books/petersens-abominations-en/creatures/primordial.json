@@ -1,0 +1,331 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "petersens-abominations-en/creature/primordial",
+  "kind": "creature",
+  "name": {
+    "ru": "Первородный",
+    "en": "Primordial"
+  },
+  "aliases": [
+    "первородные",
+    "Primordials",
+    "shambling jelly monsters",
+    "студенистые чудовища"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "превращённые люди, служители Цатхоггуа",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:tsathoggua",
+      "note": "служат его воле",
+      "note_back": "первородные — люди, превращённые зелёной слизью из Н’кай"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "80",
+        "value": 80
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "70",
+        "value": 70
+      },
+      "DEX": {
+        "raw": "40",
+        "value": 40
+      },
+      "INT": {
+        "raw": "20",
+        "value": 20
+      },
+      "POW": {
+        "raw": "40",
+        "value": 40
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "8",
+      "value": 8
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "5",
+      "value": 5,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 5,
+          "note": "3 при температуре ниже 30 °C"
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет; пули и колющее оружие наносят минимальный урон; дробящее оружие — половину урона; долгое воздействие температуры ниже 0 °C может ранить и убить",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1 (удар или захват)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d6 + ожог",
+          "dice": "1d6",
+          "adds_db": false,
+          "extra": "обжигающее касание: 1d6 урона ожогом"
+        },
+        "notes": "после каждого раунда ближнего боя противники проходят проверку Удачи (если не приняли мер предосторожности): не попала ли на кожу зелёная слизь"
+      },
+      {
+        "name": {
+          "ru": "Захват (манёвр)",
+          "en": "Grab (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "автоматически 1d6 ожогом в следующих раундах",
+          "dice": "1d6",
+          "adds_db": false
+        },
+        "notes": "хватает одну жертву; урон каждый раунд автоматически; вырваться — встречная проверка СИЛ или ЛВК; проверка Удачи — не попала ли зелёная слизь на кожу жертвы"
+      }
+    ],
+    "dodge": {
+      "raw": "нет",
+      "value": null,
+      "half": null,
+      "fifth": null
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Ковылять (Shamble)",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "20%",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Неотступная погоня (Relentless Pursuit)",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      }
+    ],
+    "spells": {
+      "raw": "нет"
+    },
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d6",
+        "trigger": "при виде первородного"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Обжигающее касание",
+      "raw": "Burning touch: causes skin to blister and inflicts 1d6 burn damage.",
+      "summary": "Касание обжигает: кожа покрывается волдырями, 1d6 урона ожогом."
+    },
+    {
+      "name": "Зелёная слизь",
+      "raw": "Green slime: hand-to-hand combat with primordials is risky, as exposure to the green slime that forms their skin is likely. At the end of each round of melee combat opponents in melee should attempt a Luck roll (unless they have taken adequate precautions) to see if any of the slime has latched on to their skin.",
+      "summary": "Кожа первородного — зелёная слизь. В конце каждого раунда ближнего боя противники проходят проверку Удачи (если не приняли достаточных мер предосторожности): при провале слизь цепляется к коже и начинает своё действие.",
+      "refs": [
+        "petersens-abominations-en/item/mohole-green-slime"
+      ]
+    },
+    {
+      "name": "Захват",
+      "raw": "Grab (mnvr): grabs one victim; automatic damage per round thereafter. Victim may attempt opposed STR or DEX roll to break or wriggle free; Luck roll to determine if green slime has latched onto victim’ skin.",
+      "summary": "Хватает одну жертву; далее урон каждый раунд автоматически. Жертва может вырваться встречной проверкой СИЛ или ЛВК; проверка Удачи — не прилипла ли к коже зелёная слизь."
+    },
+    {
+      "name": "Уязвимость к холоду",
+      "raw": "CO2 fire extinguishers: (found all around the platform*) a single 2kg extinguisher sprayed point-blank at a primordial causes 1d6+1 damager per round for 3 rounds (a 5kg extinguisher causes 1d6+1 per round for 7 rounds—probably enough to kill an individual). Cold: a frozen leg of lamb used as a club inflicts 1d3+2 damage, while trapping a primordial in a freezer will kill it after 1d6+1 rounds. Temperatures below 30°C (86°F) make primordials lethargic (MOV 3).",
+      "summary": "Углекислотный огнетушитель на 2 кг в упор наносит 1d6+1 урона за раунд в течение 3 раундов (на 5 кг — 1d6+1 за раунд 7 раундов, скорее всего, этого хватит, чтобы убить одного первородного); помогают только углекислотные огнетушители. Замороженная баранья нога как дубинка наносит 1d3+2 урона; запертый в морозильнике первородный погибает через 1d6+1 раунд. При температуре ниже 30 °C первородные вялые (Скорость 3); долгое воздействие температуры ниже 0 °C может их ранить и убить.",
+      "refs": [
+        "petersens-abominations-en/item/mohole-co2-extinguishers"
+      ]
+    },
+    {
+      "name": "Море",
+      "summary": "Если столкнуть первородного в море, проблема решена лишь на время: холод моря делает его вялым, но не убивает, и чудовище в конце концов выберется обратно на платформу."
+    },
+    {
+      "name": "Тяга к теплу",
+      "summary": "Существа тепла: им нужно тепло, без него они вялые и могут погибнуть. Бродят по платформе в поисках источников тепла — особенно к активной зоне реактора — и исполняют волю Цатхоггуа, сметая препятствия и людей на пути."
+    }
+  ],
+  "description": {
+    "ru": "Люди, превращённые зелёной слизью из Н’кай в жуткие ковыляющие студенистые чудовища — «ходячие студенистые ужасы». Светящаяся зелёная кожа колышется и дрожит; она прозрачна, и сквозь неё видны когда-то человеческие внутренности. Медлительны (Скорость 5), но неумолимы в погоне.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Зелёная слизь, поднятая буром из Н’кай, покрывает человека и разъедает его плоть; когда носитель умирает (0 ПЗ), слизь за 1d10+10 минут превращает его в первородного — ходячую слизистую тварь на службе Цатхоггуа, у которой нет иных мыслей, кроме исполнения его воли. Число их не задано: превратиться может любой член экипажа. Когда превращается буровая бригада, на платформе становится 12 чудовищ. Книга советует одного первородного на 2–3 сыщиков, чтобы сыщики успели понять, насколько чудовища опасны (бегство — хороший выбор), и придумать, как с ними бороться.",
+    "en": null
+  },
+  "habitat": "платформа «Дыра дьявола», Северное море",
+  "sources": [
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 109,
+      "printed_page": 108,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Deep Down»: «primordials»"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 132,
+      "printed_page": 131,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «The Green Slime»: превращение в первородного"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 134,
+      "printed_page": 133,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «The Primordials»"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 135,
+      "printed_page": 134,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Primordials Attack»: Скорость 5"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 141,
+      "printed_page": 140,
+      "method": "book_text",
+      "verified": true,
+      "note": "иллюстрация «Primordial»"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 142,
+      "printed_page": 141,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Primordials, shambling jelly monsters»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.armor",
+      "printed": "Armor: bullets and impaling weapons inflict minimum damage; …  / Armor: none.",
+      "expected": null,
+      "note": "В статблоке (с. 141) броня напечатана дважды: строка с особыми правилами урона и строка «Armor: none»; в записи — «нет» с особыми правилами урона.",
+      "fixed": false
+    },
+    {
+      "field": "abilities[Уязвимость к холоду]",
+      "printed": "page 133",
+      "expected": "с. 141",
+      "note": "«The Primordials Attack» (с. 134) отсылает к профилю чудовищ «on page 133», а статблок — на с. 141 (на с. 133 — врезка «The Primordials»).",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1). Навыки «Shamble» и «Relentless Pursuit» без механики — текстом, без записи справочника (Р-126). Урон «1d6+burn» — в книге без БкУ. Мелкое оформление исправлено молча (Р-39): «00°C» → 0 °C, «damager» → урон."
+  },
+  "images": [
+    {
+      "file": "art/creatures/abom-mohole-primordial.webp",
+      "kind": "art",
+      "caption": "Первородный",
+      "source": "Petersen’s Abominations, с. 140 (физ. 141), «Mohole»: «Primordial»"
+    }
+  ]
+}

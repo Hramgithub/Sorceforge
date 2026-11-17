@@ -4,7 +4,7 @@
   "kind": "character",
   "name": {
     "ru": "Джаред Келли",
-    "en": null
+    "en": "Jared Kelly"
   },
   "roles": [
     "pregen"
@@ -14,7 +14,7 @@
   ],
   "occupation": {
     "ru": "художник / владелец отеля",
-    "en": null
+    "en": "Artist / Hotel Proprietor"
   },
   "occupation_ref": "coc:occupation:khudozhnik",
   "age": {
@@ -368,11 +368,53 @@
       "method": "book_text",
       "verified": true,
       "note": "сценарий: Глава 1: Адский отель"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 35,
+      "printed_page": 34,
+      "method": "book_text",
+      "verified": true,
+      "note": "«JARED KELLY»: готовый сыщик «Hotel Hell» (оригинал) — числа сверены с русским изданием, совпадают"
+    },
+    {
+      "book_id": "petersens-abominations-pregens-en",
+      "physical_page": 2,
+      "printed_page": 2,
+      "method": "book_text",
+      "verified": true,
+      "note": "«JARED KELLY»: тот же лист в английском PDF готовых сыщиков"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 11,
+      "printed_page": 10,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Investigators»: шесть готовых сыщиков «Hotel Hell»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.attacks[Ближний бой (драка)].chance",
+      "printed": "оригинал, с. 34: «Brawl 25% (12/15)»",
+      "expected": "25% (12/5)",
+      "note": "Опечатка английского оригинала в пятой доле; в русском издании и в записи — 25% (12/5).",
+      "fixed": true
+    },
+    {
+      "field": "background.significant_people",
+      "printed": "русское издание: «Кристи Джонсон: сводная сестра…»",
+      "expected": "старая подруга Джареда («an old friend»)",
+      "note": "Расхождение перевода с оригиналом (Petersen’s Abominations, с. 34, 39): в оригинале Кристи — старая подруга Джареда (Дебра подозревает, что бывшая возлюбленная), а не сводная сестра; связь relative_of с Кристи в оригинале — knows. Текст русского издания оставлен.",
+      "fixed": false
     }
   ],
   "quality": {
     "needs_review": false,
-    "flags": []
+    "flags": [
+      "parse_uncertain"
+    ]
   },
   "relations": [
     {
@@ -394,6 +436,36 @@
       "kind": "portrait",
       "caption": null,
       "source": "Кошмары цифровой эпохи: готовые персонажи, лист персонажа (физ. с. 3)"
+    }
+  ],
+  "corrections": [
+    {
+      "field": "name.en",
+      "from": null,
+      "to": "Jared Kelly",
+      "reason": "английское имя — по оригиналу (Petersen’s Abominations, с. 34)",
+      "ref": "Р-147"
+    },
+    {
+      "field": "occupation.en",
+      "from": null,
+      "to": "Artist / Hotel Proprietor",
+      "reason": "профессия по оригиналу (с. 34)",
+      "ref": "Р-147"
+    },
+    {
+      "field": "errata",
+      "from": null,
+      "to": "[{\"field\": \"statblock.attacks[Ближний бой (драка)].chance\", \"printed\": \"оригинал, с. 34: «Brawl 25% (12/15)»\", \"expected\": \"25% (12/5)\", \"note\": \"Опечатка английского оригинала в пятой доле; в русском издании и в записи — 25% (12/5).\", \"fixed\": true}, {\"field\": \"background.significant_people\", \"printed\": \"русское издание: «Кристи Джонсон: сводная сестра…»\", \"expected\": \"старая подруга Джареда («an old friend»)\", \"note\": \"Расхождение перевода с оригиналом (Petersen’s Abominations, с. 34, 39): в оригинале Кристи — старая подруга Джареда (Дебра подозревает, что бывшая возлюбленная), а не сводная сестра; связь relative_of с Кристи в оригинале — knows. Текст русского издания оставлен.\", \"fixed\": false}]",
+      "reason": "расхождение с оригиналом (Р-147: перевод хранит текст, оригинал — числа)",
+      "ref": "Р-147"
+    },
+    {
+      "field": "quality.flags",
+      "from": null,
+      "to": "parse_uncertain",
+      "reason": "у записи есть errata (Р-141)",
+      "ref": "Р-141"
     }
   ]
 }

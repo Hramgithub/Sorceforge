@@ -4,7 +4,7 @@
   "kind": "character",
   "name": {
     "ru": "Уэйд Ботелер",
-    "en": null
+    "en": "Wade Boteler"
   },
   "roles": [
     "pregen"
@@ -14,7 +14,7 @@
   ],
   "occupation": {
     "ru": "консультант по безопасности",
-    "en": null
+    "en": "Security Consultant"
   },
   "occupation_ref": "coc:occupation:chastnyy-syshchik",
   "age": {
@@ -28,6 +28,26 @@
     ],
     "ruleset": "core"
   },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "petersens-abominations-en/organization/zymedbio",
+      "note": "наниматель (23 000 долларов за слежку)",
+      "note_back": "нанятый консультант по безопасности"
+    },
+    {
+      "type": "knows",
+      "target": "petersens-abominations-en/character/jim-conaty",
+      "note": "контакт в «ЗиМедБио»",
+      "note_back": "нанятый им консультант по безопасности"
+    },
+    {
+      "type": "knows",
+      "target": "digital-nightmares-ru/character/marina-kolga",
+      "note": "следит за ней по заданию «ЗиМедБио»",
+      "note_back": "следит за ней по заданию «ЗиМедБио»"
+    }
+  ],
   "statblock": {
     "averages": false,
     "characteristics": {
@@ -360,6 +380,30 @@
       "method": "book_text",
       "verified": true,
       "note": "сценарий: Глава 3: Панацея"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 101,
+      "printed_page": 100,
+      "method": "book_text",
+      "verified": true,
+      "note": "сценарий «Panacea» (гл. 3): лист готового сыщика — числа сверены с русским листом"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 73,
+      "printed_page": 72,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Investigators»: «Wade Boteler: security consultant…»"
+    },
+    {
+      "book_id": "petersens-abominations-pregens-en",
+      "physical_page": 14,
+      "printed_page": 14,
+      "method": "book_text",
+      "verified": true,
+      "note": "отдельный PDF прегенов: лист совпадает с листом в книге"
     }
   ],
   "errata": [
@@ -368,6 +412,13 @@
       "printed": "Джим Конати (персонажи Хранителя)",
       "expected": "Джим Конати (персонаж Хранителя)",
       "note": "Опечатка: множественное число у одного персонажа."
+    },
+    {
+      "field": "statblock.attacks[Стрельба (винтовка калибра .30–06)]",
+      "printed": "50% (35/14) (английский оригинал, с. 100 и лист прегена с. 14)",
+      "expected": "50% (25/10)",
+      "fixed": true,
+      "note": "Опечатка английского оригинала в долях; в русском издании и в записи — верно 50% (25/10)."
     }
   ],
   "quality": {
@@ -382,6 +433,29 @@
       "kind": "portrait",
       "caption": null,
       "source": "Кошмары цифровой эпохи: готовые персонажи, лист персонажа (физ. с. 17)"
+    }
+  ],
+  "corrections": [
+    {
+      "field": "name.en",
+      "from": null,
+      "to": "Wade Boteler",
+      "reason": "английский оригинал сценария «Panacea» (Petersen’s Abominations), Р-147: перевод хранит текст, оригинал даёт числа и английские названия (с. 100, лист прегена с. 14)",
+      "ref": "Р-147"
+    },
+    {
+      "field": "occupation.en",
+      "from": null,
+      "to": "Security Consultant",
+      "reason": "английский оригинал сценария «Panacea» (Petersen’s Abominations), Р-147: перевод хранит текст, оригинал даёт числа и английские названия (с. 100)",
+      "ref": "Р-147"
+    },
+    {
+      "field": "errata",
+      "from": null,
+      "to": "{\"field\": \"statblock.attacks[Стрельба (винтовка калибра .30–06)]\", \"printed\": \"50% (35/14) (английский оригинал, с. 100 и лист прегена с. 14)\", \"expected\": \"50% (25/10)\", \"fixed\": true, \"note\": \"Опечатка английского оригинала в долях; в русском издании и в записи — верно 50% (25/10).\"}",
+      "reason": "сверка с английским оригиналом (Р-147)",
+      "ref": "Р-147"
     }
   ]
 }

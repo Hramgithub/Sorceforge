@@ -1,0 +1,236 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "petersens-abominations-en/creature/formless-spawn-mohole",
+  "kind": "creature",
+  "name": {
+    "ru": "Бесформенное отродье («Мохол»)",
+    "en": "Formless Spawn (Mohole)"
+  },
+  "aliases": [],
+  "category": "mythos_monster",
+  "subcategory": "служитель",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:formless-spawn",
+      "note_back": "профиль сценария «Мохол»"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "90",
+        "value": 90
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "120",
+        "value": 120
+      },
+      "DEX": {
+        "raw": "95",
+        "value": 95
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      }
+    },
+    "hp": {
+      "raw": "17",
+      "value": 17
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "damage_bonus": {
+      "raw": "+2d6",
+      "value": "+2d6"
+    },
+    "build": {
+      "raw": "3",
+      "value": 3
+    },
+    "move": {
+      "raw": "12",
+      "value": 12,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 12
+        }
+      ]
+    },
+    "armor": {
+      "raw": "невосприимчиво к любому физическому оружию — раны просто смыкаются; огонь, химия и другие силы наносят обычный урон; заклинания могут подействовать",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "2 (не больше 1 укуса за раунд)",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "2d6+БкУ",
+          "dice": "2d6",
+          "adds_db": true
+        },
+        "notes": "благодаря текучести бьёт по-разному: формирует хлысты, щупальца и другие отростки"
+      },
+      {
+        "name": {
+          "ru": "Захват (манёвр)",
+          "en": "Grab (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d6+БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "notes": "хватает противника хлыстообразным отростком; дальность — всегда 1/5 ТЕЛ существа в метрах"
+      }
+    ],
+    "dodge": {
+      "raw": "47% (23/9)",
+      "value": 47,
+      "half": 23,
+      "fifth": 9
+    },
+    "spells": {
+      "raw": "с вероятностью 25% знает 1 заклинание"
+    },
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d10",
+        "trigger": "при виде бесформенного отродья"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Укус",
+      "raw": "Bite: victim is instantly swallowed. Each round thereafter the victim suffers 1 damage from constriction—the damage increasing by 1 point per round (e.g., on the second round 2 damage, and so forth). While swallowed, the victim may take no action whatsoever, though friends may attempt to slay the monster to free him or her. May attempt one Bite attack per round and can continue to swallow prey until having swallowed its own SIZ in prey. While digesting a victim, a spawn may continue to fight but may not shift location without disgorging what it has swallowed.",
+      "summary": "Укушенная жертва мгновенно проглочена. Каждый следующий раунд она получает урон от сдавливания: 1, затем на 1 больше каждый раунд (во втором раунде 2 и т. д.). Проглоченный не может ничего делать, но друзья могут попытаться убить чудовище, чтобы освободить его. Один укус за раунд; глотает добычу, пока не проглотит своё ТЕЛ. Переваривая жертву, отродье может сражаться, но не может сдвинуться с места, не изрыгнув проглоченное. Шанс укуса книга не печатает."
+    },
+    {
+      "name": "Текучее тело",
+      "summary": "Чёрное изменчивое существо, мгновенно меняющее форму — от жабоподобного комка до вытянутой твари с сотнями зачаточных ног; просачивается сквозь узкие щели и по желанию удлиняет отростки."
+    },
+    {
+      "name": "Неуязвимость",
+      "summary": "Невосприимчиво к любому физическому оружию — раны просто смыкаются. Огонь, химия и другие силы наносят обычный урон; на него могут действовать заклинания."
+    }
+  ],
+  "description": {
+    "ru": "Чёрные изменчивые существа, мгновенно меняющие форму: от жабоподобных комков до вытянутых тварей с сотнями зачаточных ног. Просачиваются сквозь узкие щели и удлиняют отростки по желанию.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Прислужники Цатхоггуа из Н’кай. Если бурение продолжится, они просочатся вверх по скважине и, подплыв к платформе, вскарабкаются по её опорам, готовя путь для психического явления своего хозяина; вырвавшись, они разнесут смерть по Великобритании и континентальной Европе. На платформе они смертельно опасны для всех, кто приближается к спасательным капсулам или пытается убить доктора Ройлотта; могут расправиться с вертолётом, спрятаться в нём или утащить спасательную капсулу в глубины Н’кай. Если обработать зелёную слизь реактивами или нагреть, она может почернеть и стать зародышем бесформенного отродья со своим разумом.",
+    "en": null
+  },
+  "habitat": "Н’кай; платформа «Дыра дьявола»",
+  "sources": [
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 109,
+      "printed_page": 108,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Deep Down»: «the formless spawn of Tsathoggua»"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 132,
+      "printed_page": 131,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «The Green Slime»: зародыш бесформенного отродья"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 137,
+      "printed_page": 136,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Elastic Horror»; иллюстрация «The Formless Spawn»"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 138,
+      "printed_page": 137,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Escape», «Conclusion»"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 142,
+      "printed_page": 141,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Formless Spawn»"
+    }
+  ],
+  "corrections": [
+    {
+      "field": "statblock",
+      "from": null,
+      "to": "профиль сценария «Мохол»",
+      "reason": "числа сценария (с. 141) отличаются от общей записи: ВЫН 50 (в общей 55), захват 1d6+БкУ (в общей — урон, равный БкУ), броня — невосприимчиво к любому физическому оружию, огонь и химия наносят обычный урон; поэтому отдельная запись книги со связью instance_of (Р-75)",
+      "ref": "Р-75"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1). Профиль сценария (Р-75): числа — по статблоку с. 141; для правил вида — общая запись (instance_of). Дальность захвата «in yards» — в метрах 1 к 1 (Р-64)."
+  },
+  "images": [
+    {
+      "file": "art/creatures/abom-mohole-formless-spawn.webp",
+      "kind": "art",
+      "caption": "Бесформенные отродья взбираются по опоре платформы",
+      "source": "Petersen’s Abominations, с. 136 (физ. 137), «Mohole»: «The Formless Spawn»"
+    }
+  ]
+}

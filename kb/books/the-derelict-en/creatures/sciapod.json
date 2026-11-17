@@ -155,7 +155,7 @@
           "dice": "5d6",
           "adds_db": false
         },
-        "notes": "Цепкая нога хватает жертву и не даёт ей двигаться; освободиться можно только успешной встречной проверкой СИЛ. Пока жертва в ноге, скиапод может сдавить её: в описании манёвра — урон 4d6 (в строке атаки — 5d6)."
+        "notes": "Цепкая нога хватает жертву и не даёт ей двигаться; освободиться можно только успешной встречной проверкой СИЛ. Пока жертва в ноге, скиапод может сдавить её: в описании манёвра отдельного издания — урон 4d6 (в строке атаки — 5d6); в «Кошмарах цифровой эпохи» (с. 61) — 5d6 и в строке, и в описании."
       },
       {
         "name": {
@@ -335,14 +335,46 @@
       "method": "book_text",
       "verified": true,
       "note": "«Foreword»: Сэнди Петерсен о скиаподе"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 54,
+      "printed_page": 53,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Keeper note»: скиапод спит в трюме 1"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 60,
+      "printed_page": 59,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Combating the Sciapod», «Fighting the sciapod»"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 61,
+      "printed_page": 60,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Sciapod»: описание"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 62,
+      "printed_page": 61,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Sciapod»: статблок, Clutch and Crush — 5d6, лук, невидимость, броня"
     }
   ],
   "errata": [
     {
       "field": "statblock.attacks[Захват и сдавливание].damage",
-      "printed": "Clutch & Crush mnvr, held, crush on following round, damage 5D6",
+      "printed": "Clutch & Crush mnvr, held, crush on following round, damage 5d6",
       "expected": "4d6 (как в описании манёвра)",
-      "note": "Строка атаки — урон 5d6, описание манёвра «Clutch and Crush» — «crush the victim for 4d6 damage». В записи — как напечатано в строке; какое значение верно, решает Хранитель (вопрос владельцу).",
+      "note": "Строка атаки — урон 5d6, описание манёвра «Clutch and Crush» — «crush the victim for 4d6 damage». В записи — как напечатано в строке; во втором издании («Кошмары цифровой эпохи», Petersen’s Abominations, с. 61) описание манёвра — «crush the victim for 5d6 damage», так что верно 5d6.",
       "fixed": false
     }
   ],
@@ -360,6 +392,22 @@
       "kind": "art",
       "caption": "скиапод",
       "source": "The Derelict, с. 20 (физ. 21): «The Sciapod, The Horror from Ancient Norse “History”», худ. M. Wayne Miller"
+    }
+  ],
+  "corrections": [
+    {
+      "field": "statblock.attacks.1.notes",
+      "from": "в описании манёвра — урон 4d6 (в строке атаки — 5d6).",
+      "to": "в описании манёвра отдельного издания — урон 4d6 (в строке атаки — 5d6); в «Кошмарах цифровой эпохи» (с. 61) — 5d6 и в строке, и в описании.",
+      "reason": "во втором издании (Petersen’s Abominations, с. 61) описание манёвра даёт 5d6",
+      "ref": "Р-147"
+    },
+    {
+      "field": "errata.0.note",
+      "from": "В записи — как напечатано в строке; какое значение верно, решает Хранитель (вопрос владельцу).",
+      "to": "В записи — как напечатано в строке; во втором издании («Кошмары цифровой эпохи», Petersen’s Abominations, с. 61) описание манёвра — «crush the victim for 5d6 damage», так что верно 5d6.",
+      "reason": "второе издание снимает вопрос",
+      "ref": "Р-147"
     }
   ]
 }

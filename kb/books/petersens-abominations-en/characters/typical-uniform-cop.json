@@ -1,0 +1,366 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "petersens-abominations-en/character/typical-uniform-cop",
+  "kind": "character",
+  "name": {
+    "ru": "Типичный патрульный",
+    "en": "Typical Uniform Cop"
+  },
+  "aliases": [
+    "полицейский в форме"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "патрульный полицейский Далласа",
+  "names": [
+    "Майкл Джонсон",
+    "Роберт Дэвис",
+    "Мария Гонсалес",
+    "Кевин Браун",
+    "Эшли Томас",
+    "Хуан Перес"
+  ],
+  "occupation": {
+    "ru": "патрульный полицейский",
+    "en": "uniform cop"
+  },
+  "occupation_ref": "coc:occupation:patrulnyy-politseyskiy",
+  "description": {
+    "ru": "Профиль для любых полицейских по мере надобности. Полиция усиливает патрули в Плезант-Гроуве: останавливает подозреваемых, фотографирует и записывает их уличные и настоящие имена, составляя карту членов банд.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "55",
+        "value": 55
+      },
+      "CON": {
+        "raw": "65",
+        "value": 65
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "55",
+        "value": 55
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "70",
+        "value": 70
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      },
+      "EDU": {
+        "raw": "65",
+        "value": 65
+      }
+    },
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "sanity": {
+      "raw": "50",
+      "value": 50,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Тонфа (дубинка)",
+          "en": "Tonfa (baton)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d6",
+          "dice": "1d6",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:club-small"
+      },
+      {
+        "name": {
+          "ru": "Пистолет «Глок» 22",
+          "en": "Glock 22 auto"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1d10",
+          "dice": "1d10",
+          "adds_db": false
+        }
+      },
+      {
+        "name": {
+          "ru": "Электрошокер (дротики)",
+          "en": "Taser (dart)"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1d3 + оглушение",
+          "dice": "1d3",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:taser-dart"
+      },
+      {
+        "name": {
+          "ru": "Дробовик «Ремингтон» 870",
+          "en": "Remington 870 shotgun"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "4d6/2d6/1d6",
+          "dice": "4d6/2d6/1d6",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:shotgun-12-gauge-pump",
+        "notes": "магазин 4, осечка 99; только у экипажей патрульных машин"
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "35%",
+          "value": 35
+        }
+      },
+      {
+        "name": "Вождение автомобиля",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "70%",
+          "value": 70
+        }
+      },
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "25%",
+          "value": 25
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "35%",
+          "value": 35
+        }
+      },
+      {
+        "name": "Юриспруденция",
+        "skill": "coc:skill:law",
+        "value": {
+          "raw": "15%",
+          "value": 15
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Механика",
+        "skill": "coc:skill:mechanical-repair",
+        "value": {
+          "raw": "30%",
+          "value": 30
+        }
+      },
+      {
+        "name": "Ориентирование (Даллас)",
+        "skill": "coc:skill:navigate",
+        "specialization": "Даллас",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "35%",
+          "value": 35
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "35%",
+          "value": 35
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "30%",
+          "value": 30
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "30%",
+          "value": 30
+        }
+      }
+    ]
+  },
+  "sources": [
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 178,
+      "printed_page": 177,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Typical Uniform Cop»: «Use this profile for all cops as necessary»"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 175,
+      "printed_page": 174,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Police Crack Down»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.move",
+      "printed": "8",
+      "expected": "7",
+      "note": "СИЛ 55 и ЛВК 55 меньше ТЕЛ 65 — по правилам Скорость 7; в профиле (с. 177) напечатано 8 — оставлено как напечатано (Р-161)",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "editorial_text",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1). Сценарий «Voice over the Phone» (гл. 5, с. 149–185); официальные русские формы — по прегенам «Кошмаров цифровой эпохи» (Р-184): «Голос в трубке», ЮВ13 (ЮВ13), Молотило (Long Horn); по официальной раздатке — «Инфернальный механизм»; ЮВ14 (ЮВ14) — по их образцу. Имена придуманы (Р-151) — жители современного Далласа; в книге — типовой профиль без имён."
+  }
+}

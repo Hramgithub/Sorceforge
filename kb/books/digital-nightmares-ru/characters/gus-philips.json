@@ -4,7 +4,7 @@
   "kind": "character",
   "name": {
     "ru": "Гас Филипс",
-    "en": null
+    "en": "Gus Phillips"
   },
   "roles": [
     "pregen"
@@ -14,7 +14,7 @@
   ],
   "occupation": {
     "ru": "офицер полиции",
-    "en": null
+    "en": "Police Officer"
   },
   "occupation_ref": "coc:occupation:patrulnyy-politseyskiy",
   "age": {
@@ -341,11 +341,46 @@
       "method": "book_text",
       "verified": true,
       "note": "сценарий: Глава 3: Панацея"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 106,
+      "printed_page": 105,
+      "method": "book_text",
+      "verified": true,
+      "note": "сценарий «Panacea» (гл. 3): лист готового сыщика — числа сверены с русским листом"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 73,
+      "printed_page": 72,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Investigators»: «Gus Phillips: police officer…»"
+    },
+    {
+      "book_id": "petersens-abominations-pregens-en",
+      "physical_page": 19,
+      "printed_page": 19,
+      "method": "book_text",
+      "verified": true,
+      "note": "отдельный PDF прегенов: лист совпадает с листом в книге"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.attacks[Стрельба (автоматический пистолет 38-го калибра)]",
+      "printed": "50% (30/12) (английский оригинал, с. 105 и лист прегена с. 19)",
+      "expected": "50% (25/10)",
+      "fixed": true,
+      "note": "Опечатка английского оригинала в долях; в русском издании и в записи — верно 50% (25/10)."
     }
   ],
   "quality": {
     "needs_review": false,
-    "flags": []
+    "flags": [
+      "parse_uncertain"
+    ]
   },
   "relations": [
     {
@@ -359,6 +394,12 @@
       "target": "digital-nightmares-ru/character/wade-boteler",
       "note": "частный детектив без лицензии; едва знакомы",
       "note_back": "полицейский; едва знакомы"
+    },
+    {
+      "type": "works_for",
+      "target": "petersens-abominations-en/character/ted-dawson",
+      "note": "начальник (шеф Доусон)",
+      "note_back": "подчинённый полицейский"
     }
   ],
   "images": [
@@ -367,6 +408,29 @@
       "kind": "portrait",
       "caption": null,
       "source": "Кошмары цифровой эпохи: готовые персонажи, лист персонажа (физ. с. 22)"
+    }
+  ],
+  "corrections": [
+    {
+      "field": "name.en",
+      "from": null,
+      "to": "Gus Phillips",
+      "reason": "английский оригинал сценария «Panacea» (Petersen’s Abominations), Р-147: перевод хранит текст, оригинал даёт числа и английские названия (с. 105, лист прегена с. 19)",
+      "ref": "Р-147"
+    },
+    {
+      "field": "occupation.en",
+      "from": null,
+      "to": "Police Officer",
+      "reason": "английский оригинал сценария «Panacea» (Petersen’s Abominations), Р-147: перевод хранит текст, оригинал даёт числа и английские названия (с. 105)",
+      "ref": "Р-147"
+    },
+    {
+      "field": "errata",
+      "from": null,
+      "to": "[{\"field\": \"statblock.attacks[Стрельба (автоматический пистолет 38-го калибра)]\", \"printed\": \"50% (30/12) (английский оригинал, с. 105 и лист прегена с. 19)\", \"expected\": \"50% (25/10)\", \"fixed\": true, \"note\": \"Опечатка английского оригинала в долях; в русском издании и в записи — верно 50% (25/10).\"}]",
+      "reason": "сверка с английским оригиналом (Р-147)",
+      "ref": "Р-147"
     }
   ]
 }

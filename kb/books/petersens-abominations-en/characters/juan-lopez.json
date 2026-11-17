@@ -1,0 +1,381 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "petersens-abominations-en/character/juan-lopez",
+  "kind": "character",
+  "name": {
+    "ru": "Доктор Хуан Лопес",
+    "en": "Dr. Juan “Doc” Lopez"
+  },
+  "aliases": [
+    "Док",
+    "Doc",
+    "Juan Lopez",
+    "Хуан Лопес",
+    "Dr. J. Lopez"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "врач приёмного покоя, безумец",
+    "en": "insane physician"
+  },
+  "occupation_ref": "coc:occupation:vrach",
+  "age": {
+    "raw": "26",
+    "value": 26
+  },
+  "sex": "мужской",
+  "residence": "Даллас, Саут-Даллас / Фэр-Парк",
+  "description": {
+    "ru": "Брат Вайпера, врач приёмного покоя больницы Паркленд в Далласе. Безумен, но вполне дееспособен: спокойная собранность обманывает большинство коллег, хотя некоторые замечают странности — отрешённый взгляд, одержимость, растущий «комплекс бога». Годами крал из больницы дорогое оборудование и расходные материалы (всё это — в тайной лаборатории на складе ЮВ14 в Плезант-Гроуве); по его приказу банда похитила двух медсестёр, Дженетт Уильямс и Мию Торрес, чтобы ухаживать за головами. Вагхальтер научил его заклинанию Подчинение — им он выкручивается из трудных положений. Связь крови с братом сильна: Лопес сделает всё, чтобы не потерять Вайпера, и верит, что скоро оживит подходящее тело и пришьёт к нему голову брата, — сыщик крепкого телосложения может стать желанным «донором».\nДля игры: следит, чтобы банда исполняла волю Вайпера, латает раненых, исполняет желания Ньярлатхотепа. Предупреждённый Вайпером, может встретить сыщиков в больнице, чтобы сбить их со следа, или попытаться похитить сыщика ради тела. В финале держится рядом с Вайпером; поняв, что сыщики хотят уничтожить голову, нападает, а если всё потеряно — бежит: у Ньярлатхотепа на него свои планы. Только его смерть вместе с уничтожением Инфернального механизма надёжно кончает ужас; выживший Лопес может вернуться безумным слугой Ньярлатхотепа.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "petersens-abominations-en/character/cochin-s-waghalter",
+      "note": "наставник многие годы",
+      "note_back": "ученик, «избранник Ньярлатхотепа»"
+    },
+    {
+      "type": "knows",
+      "target": "petersens-abominations-en/character/goldie",
+      "note": "помог вывезти тело Вайпера",
+      "note_back": "брат вожака; говорит за Вайпера"
+    },
+    {
+      "type": "knows",
+      "target": "petersens-abominations-en/character/jenette-williams",
+      "note": "медсестра его отделения, похищена по его приказу",
+      "note_back": "врач отделения, её тюремщик"
+    },
+    {
+      "type": "knows",
+      "target": "petersens-abominations-en/character/mia-torres",
+      "note": "медсестра его отделения, похищена по его приказу",
+      "note_back": "врач отделения, её тюремщик"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "55",
+        "value": 55
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "50",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "75",
+        "value": 75
+      },
+      "APP": {
+        "raw": "70",
+        "value": 70
+      },
+      "INT": {
+        "raw": "85",
+        "value": 85
+      },
+      "POW": {
+        "raw": "70",
+        "value": 70
+      },
+      "EDU": {
+        "raw": "90",
+        "value": 90
+      }
+    },
+    "hp": {
+      "raw": "11",
+      "value": 11
+    },
+    "mp": {
+      "raw": "14",
+      "value": 14
+    },
+    "sanity": {
+      "raw": "—",
+      "value": null,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Пистолет «Глок» 9 мм",
+          "en": "Glock 9mm auto"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "1d10",
+          "dice": "1d10",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:glock-17"
+      }
+    ],
+    "dodge": {
+      "raw": "45% (22/9)",
+      "value": 45,
+      "half": 22,
+      "fifth": 9
+    },
+    "skills": [
+      {
+        "name": "Обаяние",
+        "skill": "coc:skill:charm",
+        "value": {
+          "raw": "70%",
+          "value": 70
+        }
+      },
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "55%",
+          "value": 55
+        }
+      },
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "70%",
+          "value": 70
+        }
+      },
+      {
+        "name": "Медицина",
+        "skill": "coc:skill:medicine",
+        "value": {
+          "raw": "90%",
+          "value": 90
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "35%",
+          "value": 35
+        }
+      },
+      {
+        "name": "Наука (биология)",
+        "skill": "coc:skill:science",
+        "specialization": "биология",
+        "value": {
+          "raw": "80%",
+          "value": 80
+        }
+      },
+      {
+        "name": "Наука (фармакология)",
+        "skill": "coc:skill:science",
+        "specialization": "фармакология",
+        "value": {
+          "raw": "96%",
+          "value": 96
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "30%",
+          "value": 30
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Подчинение (Dominate).",
+      "items": [
+        {
+          "name": "Dominate",
+          "spell": "coc:spell:dominate"
+        }
+      ]
+    }
+  },
+  "background": {
+    "description": "Бородка, тёмные волосы, очки с толстыми линзами (порой увеличивают его «дикие» глаза).",
+    "traits": "Комплекс бога, одержим опытами и созданием нового тела для брата; безумен.",
+    "secret": "Ученик Кочина С. Вагхальтера (Ньярлатхотепа); оживил голову брата и построил Инфернальный механизм; через голову Вайпера получает тайные знания от Ньярлатхотепа."
+  },
+  "legend": {
+    "ru": "Хуан учился лучше брата, и родители прочили ему жизнь вдали от улиц. На ярмарке профессий в школе к нему подошёл хорошо одетый Кочин С. Вагхальтер: рассказал о чудесах медицины и предложил стипендию фонда. Через несколько дней пришло письмо: фонд Вагхальтера принял Хуана в особую программу «Умы будущего». Фонд устроил и оплатил его учёбу в медицинской школе Мискатоникского университета в Аркхэме. Там под руководством Вагхальтера Хуан втайне начал опыты по поддержанию жизни: по исследованиям врача начала XX века доктора Г. Уэста, которые передал ему Вагхальтер, он создал зелёную жидкость (líquido verde) и научился сохранять живыми головы крыс, кошек и собак. Получив диплом, вернулся в Даллас работать в неотложной помощи и за год стал близким союзником ЮВ13, хоть и не членом банды: латал огнестрельные и ножевые раны бандитов. Когда изрубленного Вайпера привезли в приёмный покой, Хуан вывез брата на склад, отделил голову и оживил её; затем — головы Ред Хота и Овер Изи, и построил Инфернальный механизм. Квартира — на Саут-бульваре (Саут-Даллас / Фэр-Парк); склад арендован на имя «Dr. J. Lopez».",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 151,
+      "printed_page": 150,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Background»: Хуан, Вагхальтер, программа «Minds of the Future»"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 152,
+      "printed_page": 151,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Recent History», «What is Really Happening»"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 153,
+      "printed_page": 152,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Infernal Mechanism»: знания от Ньярлатхотепа"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 157,
+      "printed_page": 156,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Dr. Juan “Doc” Lopez, 26, insane physician»"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 166,
+      "printed_page": 165,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Hospital»"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 167,
+      "printed_page": 166,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Hospital», «Dr. Lopez’s Apartment»"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 168,
+      "printed_page": 167,
+      "method": "book_text",
+      "verified": true,
+      "note": "видеозапись опыта, договор аренды"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 175,
+      "printed_page": 174,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Possible Endings»: Лопес в финале"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 176,
+      "printed_page": 175,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Ending SE14’s Reign», «Conclusion»"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 177,
+      "printed_page": 176,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Appendix»: профиль «Dr. Juan “Doc” Lopez, 26, insane physician»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1). Сценарий «Voice over the Phone» (гл. 5, с. 149–185); официальные русские формы — по прегенам «Кошмаров цифровой эпохи» (Р-184): «Голос в трубке», ЮВ13 (ЮВ13), Молотило (Long Horn); по официальной раздатке — «Инфернальный механизм»; ЮВ14 (ЮВ14) — по их образцу. Навык «Наука (фармакология) 96%» напечатан как «(Pharmacy) 96%» после «Science (Biology) 80%»."
+  },
+  "images": [
+    {
+      "file": "art/characters/abom-voice-juan-lopez.webp",
+      "kind": "portrait",
+      "caption": "Доктор Хуан Лопес",
+      "source": "Petersen's Abominations, с. 156 (физ. 157), «Dr. Juan Lopez»"
+    }
+  ]
+}

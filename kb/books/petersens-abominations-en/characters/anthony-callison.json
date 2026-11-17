@@ -1,0 +1,322 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "petersens-abominations-en/character/anthony-callison",
+  "kind": "character",
+  "name": {
+    "ru": "Энтони Каллисон",
+    "en": "Anthony Callison"
+  },
+  "aliases": [],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "редактор газеты «Морнинг ньюс»",
+    "en": "editor"
+  },
+  "age": {
+    "raw": "48",
+    "value": 48
+  },
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "transforms_into",
+      "target": "petersens-abominations-en/creature/panacea-lesser-satyr",
+      "note": "на пути к превращению в меньшего сатира",
+      "note_back": null
+    },
+    {
+      "type": "works_for",
+      "target": "petersens-abominations-en/organization/morning-news",
+      "note": "редактор",
+      "note_back": "редактор"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "40",
+        "value": 40
+      },
+      "CON": {
+        "raw": "90",
+        "value": 90
+      },
+      "SIZ": {
+        "raw": "45",
+        "value": 45
+      },
+      "DEX": {
+        "raw": "75",
+        "value": 75
+      },
+      "APP": {
+        "raw": "55*",
+        "value": 55
+      },
+      "INT": {
+        "raw": "85",
+        "value": 85
+      },
+      "POW": {
+        "raw": "60",
+        "value": 60
+      },
+      "EDU": {
+        "raw": "80",
+        "value": 80
+      }
+    },
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "mp": {
+      "raw": "9",
+      "value": 9
+    },
+    "sanity": {
+      "raw": "38",
+      "value": 38,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1 (укус, когти)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d4",
+          "dice": "1d4",
+          "adds_db": false
+        },
+        "notes": "укус или когти"
+      }
+    ],
+    "dodge": {
+      "raw": "45% (22/9)",
+      "value": 45,
+      "half": 22,
+      "fifth": 9
+    },
+    "skills": [
+      {
+        "name": "Искусство/ремесло (журналистика)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "журналистика",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Обаяние",
+        "skill": "coc:skill:charm",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d3",
+        "trigger": "при виде мутаций Каллисона"
+      }
+    ]
+  },
+  "background": {
+    "secret": "Гипнотическое внушение защищать «ЗиМедБио» и её владельцев. Внушение хорошо скрыто и раскроется только в крайней ситуации — например, если он получит серьёзную рану или потеряет много Рассудка: тогда внушение берёт верх, Каллисон отбрасывает всякое притворство и превращается в автомат, нацеленный только на защиту «ЗиМедБио» любыми средствами. На усмотрение Хранителя трудный успех проверки Психоанализа или Гипноза может снять внушение и вернуть его в норму."
+  },
+  "description": {
+    "ru": "Выглядит здоровым, лет на сорок с небольшим: непослушные каштановые волосы и борода, широкие пластиковые очки «под черепаху». Черты: обычно живой и лёгкий в общении; о «ЗиМедБио» говорит серьёзно и сдержанно.\nМутировавший облик: получеловек-полусова — неестественно большие глаза, зачаточный клюв, перья; может поворачивать голову почти на 360 градусов.\nХарактеристика НАР (55) — до мутации. Статистика показывает частичное действие «Зилактиса»; если Каллисона встречают позже в сценарии, используйте профиль меньшего сатира.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Каллисон — редактор местной газеты «Морнинг ньюс», где работает Эллиот Клосон. Он никогда не скрывал, что у него ВИЧ, и, когда болезнь перешла в СПИД, заинтересовался расследованием Клосона о «ЗиМедБио»: терять ему было нечего, и он записался на экспериментальные испытания. Попав в программу, он сказал Клосону, что воспользуется случаем и поразнюхает в здании. Через три недели он вернулся в редакцию в полной ремиссии и велел изумлённому Клосону бросить расследование: он-де сам видел доказательства, что фирма и её испытания совершенно законны, и истории тут нет.\nКак и Тед Доусон, Каллисон гипнозом приучен защищать «ЗиМедБио» и её владельцев: если компании понадобится, его можно вызвать, чтобы пресечь журналистские расследования. Если положение обострится, Каллисон может объединиться с Доусоном и попытаться раз и навсегда заставить замолчать строптивых подчинённых (Клосона и Филипса). Со временем он мутирует и может напасть на сыщиков.\nЗацепки для отыгрыша: начальник Эллиота Клосона; старается отвлечь внимание от «ЗиМедБио».",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 73,
+      "printed_page": 72,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Investigators»: Эллиот Клосон, редактор Каллисон"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 75,
+      "printed_page": 74,
+      "method": "book_text",
+      "verified": true,
+      "note": "Dramatis Personae: «Anthony Callison, 48, editor»"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 85,
+      "printed_page": 84,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Contacting People on the Zylactis Trial»"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 99,
+      "printed_page": 98,
+      "method": "book_text",
+      "verified": true,
+      "note": "Appendix: «Anthony Callison, 48, editor» — статблок"
+    },
+    {
+      "book_id": "petersens-abominations-pregens-en",
+      "physical_page": 16,
+      "printed_page": 16,
+      "method": "book_text",
+      "verified": true,
+      "note": "лист прегена Эллиота Клосона: «Anthony Callison (NPC)»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "background.secret",
+      "printed": "Master’s conditioning (с. 74)",
+      "expected": "Callison’s conditioning",
+      "fixed": true,
+      "note": "Остаток шаблона: в абзаце о Каллисоне написано «Master’s conditioning»; в записи — внушение Каллисона."
+    },
+    {
+      "field": "statblock.sanity_loss",
+      "printed": "1/1d3 loss for seeing Master’s mutations (с. 98)",
+      "expected": "…for seeing Callison’s mutations",
+      "fixed": true,
+      "note": "Остаток шаблона: «Master’s» вместо «Callison’s»; в записи — мутации Каллисона."
+    },
+    {
+      "field": "statblock.mp",
+      "printed": "9",
+      "expected": "12",
+      "note": "ПМ = МОЩ/5 = 60/5 = 12; напечатано 9. Значение — как напечатано."
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1). Русские формы «ЗиМедБио», «Зилактис», биоцитов и имён персонажей листов прегенов — по официальному русскому изданию «Кошмары цифровой эпохи» (Р-184). Половина и пятая доли навыков в книге не напечатаны — посчитаны (Р-35)."
+  },
+  "images": [
+    {
+      "file": "art/characters/abom-panacea-anthony-callison.webp",
+      "kind": "portrait",
+      "caption": "Энтони Каллисон (мутировавший облик)",
+      "source": "Petersen’s Abominations, с. 74 (физ. 75), Dramatis Personae: «Anthony Callison»"
+    }
+  ]
+}

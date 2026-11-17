@@ -4,10 +4,12 @@
   "kind": "character",
   "name": {
     "ru": "Антонио Хименес",
-    "en": null
+    "en": "Antonio Jimenez"
   },
   "aliases": [
-    "Копатель"
+    "Копатель",
+    "Digger",
+    "“Digger” (a.k.a. Antonio Jimenez)"
   ],
   "roles": [
     "pregen"
@@ -17,7 +19,7 @@
   ],
   "occupation": {
     "ru": "бандит ЮВ13",
-    "en": null
+    "en": "SE13 Gang Member"
   },
   "occupation_ref": "coc:occupation:gangster-podruchnyy",
   "age": {
@@ -398,11 +400,37 @@
       "method": "book_text",
       "verified": true,
       "note": "сценарий: Глава 5: Голос в трубке"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 181,
+      "printed_page": 180,
+      "method": "book_text",
+      "verified": true,
+      "note": "английский оригинал, «Pre-Generated Gang Investigators»: лист «“Digger” (a.k.a. Antonio Jimenez)» (числа сверены)"
+    },
+    {
+      "book_id": "petersens-abominations-pregens-en",
+      "physical_page": 27,
+      "printed_page": 27,
+      "method": "book_text",
+      "verified": true,
+      "note": "английский оригинал, PDF прегенов: лист «“Digger” (a.k.a. Antonio Jimenez)»"
+    },
+    {
+      "book_id": "petersens-abominations-en",
+      "physical_page": 179,
+      "printed_page": 178,
+      "method": "book_text",
+      "verified": true,
+      "note": "английский оригинал: общая вводная для игроков «Pre-Generated Gang Investigators» и список (с. 154)"
     }
   ],
   "quality": {
     "needs_review": false,
-    "flags": [],
+    "flags": [
+      "parse_uncertain"
+    ],
     "notes": "Родной язык в книге не отмечен; «испанский» взят как родной по наибольшему значению. В книге лист озаглавлен прозвищем: «Копатель (Антонио Хименес)»."
   },
   "relations": [
@@ -435,6 +463,12 @@
       "target": "digital-nightmares-ru/character/tyler-washington",
       "note": "собрат по банде ЮВ13",
       "note_back": "собрат по банде ЮВ13"
+    },
+    {
+      "type": "works_for",
+      "target": "petersens-abominations-en/character/long-horn",
+      "note": "вожак ЮВ13, Молотило",
+      "note_back": "член банды ЮВ13, готовый сыщик «Голоса в трубке»"
     }
   ],
   "images": [
@@ -443,6 +477,31 @@
       "kind": "portrait",
       "caption": null,
       "source": "Кошмары цифровой эпохи: готовые персонажи, лист персонажа (физ. с. 31)"
+    }
+  ],
+  "corrections": [
+    {
+      "field": "name.en",
+      "from": null,
+      "to": "Antonio Jimenez",
+      "reason": "английский оригинал «Petersen's Abominations», с. 180: «“Digger” (a.k.a. Antonio Jimenez)» (Р-147: перевод держит текст, оригинал — английские имена и числа)",
+      "ref": "Р-147"
+    },
+    {
+      "field": "occupation.en",
+      "from": null,
+      "to": "SE13 Gang Member",
+      "reason": "английский оригинал, с. 180: «Occupation: SE13 Gang Member»",
+      "ref": "Р-147"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.attacks[Ближний бой (большой нож)].chance",
+      "printed": "60% (32/13)",
+      "expected": "60% (30/12)",
+      "note": "английский оригинал (с. 180; PDF прегенов, с. 27): половина и пятая 32/13 подходят к 65%, а не к 60%; в официальном переводе — 60% (30/12), как в записи; возможная опечатка оригинала в проценте — 65% (как Драка) (Р-77)",
+      "fixed": true
     }
   ]
 }

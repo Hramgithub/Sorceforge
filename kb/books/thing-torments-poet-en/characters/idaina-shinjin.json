@@ -1,0 +1,416 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "thing-torments-poet-en/character/idaina-shinjin",
+  "kind": "character",
+  "name": {
+    "ru": "Идайна Синдзин",
+    "en": "Idaina Shinjin"
+  },
+  "aliases": [
+    "Идайна",
+    "Idaina Shijin",
+    "Idaina Sinjin",
+    "Idaina Shinin",
+    "Taina Shinjin",
+    "Idaina Shinjin, Tortured poet possessed and on the road to a painful death"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "поэт при театре кабуки «Чёрная утка»",
+    "en": "poet in residence of the Black Duck Kabuki house"
+  },
+  "occupation_ref": "coc:occupation:pisatel",
+  "age": {
+    "raw": "1652–1679",
+    "value": 27
+  },
+  "sex": "мужской",
+  "residence": "комната 3, второй этаж театра «Чёрная утка», Ямагути",
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "thing-torments-poet-en/character/geijutsu-teki",
+      "note": "хозяин театра",
+      "note_back": "поэт при театре"
+    },
+    {
+      "type": "knows",
+      "target": "thing-torments-poet-en/character/yamaguchi-hogo",
+      "note": "покровитель, даймё",
+      "note_back": "любимый поэт"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "20",
+        "value": 20
+      },
+      "CON": {
+        "raw": "30",
+        "value": 30
+      },
+      "SIZ": {
+        "raw": "25",
+        "value": 25
+      },
+      "DEX": {
+        "raw": "15",
+        "value": 15
+      },
+      "APP": {
+        "raw": "05",
+        "value": 5
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "40",
+        "value": 40
+      },
+      "EDU": {
+        "raw": "60",
+        "value": 60
+      }
+    },
+    "hp": {
+      "raw": "8/*15",
+      "value": 8,
+      "note": "15 — пока в нём Старец"
+    },
+    "mp": {
+      "raw": "5/*20",
+      "value": 5,
+      "note": "20 — пока в нём Старец"
+    },
+    "sanity": {
+      "raw": "00",
+      "value": 0,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+2d4*",
+      "value": "+2d4",
+      "note": "только пока в нём Старец"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "3/*8",
+      "value": 3,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 3
+        },
+        {
+          "mode": "other",
+          "value": 8,
+          "note": "пока в нём Старец"
+        }
+      ]
+    },
+    "armor": {
+      "raw": "0",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "2",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        },
+        "damage": {
+          "raw": "1d4+БкУ",
+          "dice": "1d4",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "15% (5/2)",
+      "value": 15,
+      "half": 5,
+      "fifth": 2
+    },
+    "skills": [
+      {
+        "name": "Японский",
+        "skill": "coc:skill:language-own",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": null,
+          "fifth": null
+        }
+      },
+      {
+        "name": "Искусство (поэзия)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "поэзия",
+        "value": {
+          "raw": "90%",
+          "value": 90,
+          "half": null,
+          "fifth": null
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "10%",
+          "value": 10,
+          "half": null,
+          "fifth": null
+        }
+      },
+      {
+        "name": "История",
+        "skill": "coc:skill:history",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": null,
+          "fifth": null
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "60",
+          "value": 60,
+          "half": null,
+          "fifth": null
+        }
+      },
+      {
+        "name": "Естествознание",
+        "skill": "coc:skill:natural-world",
+        "value": {
+          "raw": "—",
+          "value": null,
+          "half": null,
+          "fifth": null
+        }
+      },
+      {
+        "name": "Оккультизм",
+        "skill": "coc:skill:occult",
+        "value": {
+          "raw": "20%",
+          "value": 20,
+          "half": null,
+          "fifth": null
+        }
+      },
+      {
+        "name": "Издать мучительный вопль",
+        "value": {
+          "raw": "90%",
+          "value": 90,
+          "half": null,
+          "fifth": null
+        }
+      },
+      {
+        "name": "Плакать",
+        "value": {
+          "raw": "90%",
+          "value": 90,
+          "half": null,
+          "fifth": null
+        }
+      }
+    ],
+    "spells": {
+      "raw": "*Сглаз, Зародить страх (* — пока в нём Старец)",
+      "items": [
+        {
+          "name": "*Evil eye",
+          "spell": "coc:spell:evil-eye"
+        },
+        {
+          "name": "Implant fear",
+          "spell": "coc:spell:implant-fear"
+        }
+      ]
+    }
+  },
+  "description": {
+    "ru": "Молодой поэт, невероятно худой, едва одетый; кисти и предплечья в чернилах, зрачки такие бледные, что почти белые; когда он говорит, изо рта текут сопли и мокрота. Увидеть его — потеря 1d4 Рассудка. На груди — «сыпь обратного отсчёта»: красный знак-кандзи цифры (при появлении сыщиков — 3). Говорит только хайку: первую и третью строки (пять слогов) произносит один из Старцев Ямагути, вторую (семь слогов) — Бракованный Старец.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Поэт при театре кабуки «Чёрная утка» и любимый поэт даймё Ямагути Хого, прославленный по всей провинции своими хайку о заморских цветах и их экзотической красоте (газета называет его стихи «Big man comes to town» и «Carrot of heaven», письмо даймё — «The little river frog» и «Heron of fifteen toes»). За две недели до начала сценария Идайна, собирая цветы в горах, встретил Бракованного Старца (Кэккан-ноару Тан Бо), который давно сделал его своим кумиром; поэт упал в обморок, а существо заразило его болезнью, которую носило в себе. Идайна выздоровел, но изменился: стал угрюм и непредсказуем, оскорблял актёров и не мог удержать кисть. По приказу даймё его заперли в комнате в «Чёрной утке».\nЗа шесть дней до начала сценария на груди у него появилась сыпь в форме кандзи «6», на следующий день — «5». Это дело рук Старцев Ямагути: обратный отсчёт должен выманить Бракованного Старца, а дойдя до 0, убьёт поэта. С тех пор Идайна говорит лишь ломаными хайку. В него вселились и Бракованный Старец, и Старцы Ямагути; всё, что видит и переживает Идайна, видят и они.\nВ комнате первый голос (Старцы Ямагути, холодный и умный) требует смерти «нападавшего» или «испорченного» и велит «отнести его к святилищу на Сёдзидакэ»; второй (Бракованный Старец, детский) лишь извиняется. Если расспрашивать дольше 1d4+10 минут, первый голос заставит Идайну вонзить ногти себе в шею и пригрозит убить его, если сыщики тотчас не уйдут.\nИсходы: исцелён заклинанием онмёдзи (неделя на поправку, затем снова пишет стихи); проснулся исцелённым без памяти о последних неделях (если Бракованный Старец пожертвовал собой); остался беспомощным калекой до конца жизни при библиотеке-монастыре (если Бракованного Старца убили); растаял в слизь, когда отсчёт дошёл до 0 (если Бракованный Старец остался жив и поэта не исцелили) — похороны в храме Рурикодзи; в газете — «Идайна Синдзин 1652–1679».",
+    "en": null
+  },
+  "background": {
+    "secret": "В нём одновременно сидят Бракованный Старец (Кэккан-ноару Тан Бо) и Старцы Ямагути; сыпь обратного отсчёта — их творение."
+  },
+  "sources": [
+    {
+      "book_id": "thing-torments-poet-en",
+      "physical_page": 4,
+      "printed_page": 1,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Keeper information», «Investigator information»"
+    },
+    {
+      "book_id": "thing-torments-poet-en",
+      "physical_page": 5,
+      "printed_page": 2,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Idaina Shinjin’s encounter with the defective Elder Thing…»"
+    },
+    {
+      "book_id": "thing-torments-poet-en",
+      "physical_page": 7,
+      "printed_page": 4,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Idaina Shijin and his room»"
+    },
+    {
+      "book_id": "thing-torments-poet-en",
+      "physical_page": 13,
+      "printed_page": 10,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The defective Elder Thing is violently killed»"
+    },
+    {
+      "book_id": "thing-torments-poet-en",
+      "physical_page": 14,
+      "printed_page": 11,
+      "method": "book_text",
+      "verified": true,
+      "note": "исходы для Идайны"
+    },
+    {
+      "book_id": "thing-torments-poet-en",
+      "physical_page": 16,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Idaina Shinjin, Tortured poet possessed and on the road to a painful death»"
+    },
+    {
+      "book_id": "thing-torments-poet-en",
+      "physical_page": 26,
+      "printed_page": 23,
+      "method": "book_text",
+      "verified": true,
+      "note": "газета «Local poet hits us with hiatus»"
+    },
+    {
+      "book_id": "thing-torments-poet-en",
+      "physical_page": 31,
+      "printed_page": 28,
+      "method": "book_text",
+      "verified": true,
+      "note": "газеты об исходе"
+    }
+  ],
+  "errata": [
+    {
+      "field": "name",
+      "printed": "Idaina Shijin / Idaina Sinjin / Idaina Shinin",
+      "expected": "Idaina Shinjin",
+      "note": "Фамилия напечатана по-разному: «Shijin» (с. 1, 4), «Sinjin» (с. 1, 6, 28, страховой полис), «Shinin» (карта, с. 20); в статблоке и большинстве мест — «Shinjin».",
+      "fixed": false
+    },
+    {
+      "field": "statblock.skills",
+      "printed": "Jump 60, Natural world Occult 20%",
+      "expected": "Прыжки 60%, Естествознание N%, Оккультизм 20%",
+      "note": "Значение Естествознания пропущено; у Прыжков нет знака %.",
+      "fixed": false
+    },
+    {
+      "field": "Драка",
+      "printed": "25% (10/5)",
+      "expected": "25% (12/5)",
+      "note": "половина и пятая не следуют из процента; исправлено по правилу 7-й редакции (Р-35)",
+      "fixed": true
+    },
+    {
+      "field": "statblock.hp",
+      "printed": "ПЗ: 8/*15",
+      "expected": "5",
+      "note": "ПЗ не сходится с правилами 7-й редакции ((ВЫН + ТЕЛ) / 10); оставлено как напечатано (Р-161).",
+      "fixed": false
+    },
+    {
+      "field": "statblock.mp",
+      "printed": "ПМ: 5/*20",
+      "expected": "8",
+      "note": "ПМ не сходится с правилами 7-й редакции (МОЩ / 5); оставлено как напечатано (Р-161).",
+      "fixed": false
+    },
+    {
+      "field": "statblock.damage_bonus",
+      "printed": "БкУ: +2d4*",
+      "expected": "-2",
+      "note": "БкУ не сходится с правилами 7-й редакции (по СИЛ + ТЕЛ); оставлено как напечатано (Р-161).",
+      "fixed": false
+    },
+    {
+      "field": "statblock.build",
+      "printed": "Комплекция: 1",
+      "expected": "-2",
+      "note": "Комплекция не сходится с правилами 7-й редакции (по СИЛ + ТЕЛ); оставлено как напечатано (Р-161).",
+      "fixed": false
+    },
+    {
+      "field": "statblock.move",
+      "printed": "Скорость: 3/*8",
+      "expected": "7",
+      "note": "Скорость не сходится с правилами 7-й редакции (по СИЛ, ЛВК и ТЕЛ); оставлено как напечатано (Р-161).",
+      "fixed": false
+    },
+    {
+      "field": "statblock.dodge",
+      "printed": "Уклонение: 15% (5/2)",
+      "expected": "15% (7/3)",
+      "note": "Уклонение не сходится с правилами 7-й редакции (ЛВК / 2); оставлено как напечатано (Р-161).",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); у PDF нет текстового слоя — текст и числа сверены по изображениям страниц; печатная страница = физическая − 3 (обложка, внутренняя обложка и выходные данные без номеров). Возраст выведен из газеты «Idaina Shinjin is killed» («1652–1679»): около 27 лет в 1679 году (вывод из текста, Р-41). Значения со звёздочкой (ПЗ 15, БкУ +2d4, Скорость 8, ПМ 20, Сглаз) — «While possessed by Elder Thing». Навыки «Let out tormented scream» и «Cry» — без механики, как напечатано (Р-126)."
+  }
+}

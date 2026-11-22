@@ -1,0 +1,82 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "thing-torments-poet-en/scene/shikigami-visit",
+  "kind": "scene",
+  "name": {
+    "ru": "Визит сикигами",
+    "en": "The Shikigami visit"
+  },
+  "aliases": [],
+  "description": {
+    "ru": "В 3 часа ночи сыщиков, которые встречались с Курои Роху, где бы они ни были, посещает сикигами — плоская бумажная кукла. Она летит и садится на сыщика или всё бьётся о стену дома, где тот находится. Когда сыщик смотрит на неё, кукла в панике падает, будто умерла. Игроки получают раздатку «Сикигами». Сыщики, не встречавшиеся с Курои, узнают о нападении только утром из газеты.\nВрезка книги: сикигами — так называют любого ёкая, которого может призвать онмёдзи; здесь — только летающие бумажные куклы (книга советует вспомнить кукол из «Унесённых призраками»).",
+    "en": null
+  },
+  "when": "Ночь после первого дня, 3:00",
+  "arc": {
+    "scenario": "thing-torments-poet-en/scenario/thing-torments-poet",
+    "part": "Ночь: нападение на дом Курои",
+    "order": 12
+  },
+  "where": [
+    {
+      "location": "thing-torments-poet-en/location/yamaguchi",
+      "note": "где бы ни были сыщики"
+    }
+  ],
+  "participants": [
+    {
+      "id": "thing-torments-poet-en/creature/shikigami",
+      "role": "посланник Курои"
+    },
+    {
+      "id": "thing-torments-poet-en/character/kuroi-rohu",
+      "role": "зовёт на помощь"
+    }
+  ],
+  "mechanics": {
+    "ru": "Увидеть «смерть» куклы — потеря 1d4 Рассудка. На дорогу до дома Курои у сыщиков 20 минут, иначе его убьют до их прихода.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Успели — «Нападение на дом Курои (во время)»; опоздали — «Дом Курои после нападения».",
+    "en": null
+  },
+  "refs": [
+    "thing-torments-poet-en/handout/shikigami",
+    "thing-torments-poet-en/location/kuroi-house",
+    "thing-torments-poet-en/scene/kuroi-assault-during",
+    "thing-torments-poet-en/scene/kuroi-assault-after",
+    "thing-torments-poet-en/handout/newspaper-dead-onmyoji-day-2"
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "thing-torments-poet-en",
+      "physical_page": 10,
+      "printed_page": 7,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Shikigami visit» и врезка о сикигами"
+    },
+    {
+      "book_id": "thing-torments-poet-en",
+      "physical_page": 29,
+      "printed_page": 26,
+      "method": "book_text",
+      "verified": true,
+      "note": "раздатка «Shikigami»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); у PDF нет текстового слоя — текст и числа сверены по изображениям страниц; печатная страница = физическая − 3 (обложка, внутренняя обложка и выходные данные без номеров). Части сценария названы нами: книга делит текст только заголовками разделов."
+  }
+}

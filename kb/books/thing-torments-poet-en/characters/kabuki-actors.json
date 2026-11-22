@@ -1,0 +1,240 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "thing-torments-poet-en/character/kabuki-actors",
+  "kind": "character",
+  "name": {
+    "ru": "Актёры кабуки",
+    "en": "Kabuki actor"
+  },
+  "aliases": [
+    "актёр кабуки"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "актёр кабуки",
+  "names": [
+    "Ивай Сёдзиро",
+    "Арасима Тамэкити",
+    "Мацуи Канроку",
+    "Хаякава Укон",
+    "Сакадзаки Гэннодзё"
+  ],
+  "occupation": {
+    "ru": "актёр кабуки",
+    "en": "Kabuki actor"
+  },
+  "occupation_ref": "coc:occupation:teatralnyy-akter",
+  "sex": null,
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "thing-torments-poet-en/character/geijutsu-teki",
+      "note": "хозяин театра",
+      "note_back": "актёры театра"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "50",
+        "value": 50
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "45",
+        "value": 45
+      },
+      "DEX": {
+        "raw": "90",
+        "value": 90
+      },
+      "APP": {
+        "raw": "80",
+        "value": 80
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "45",
+        "value": 45
+      },
+      "EDU": {
+        "raw": "35",
+        "value": 35
+      }
+    },
+    "hp": {
+      "raw": "8",
+      "value": 8
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "sanity": {
+      "raw": "45",
+      "value": 45,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+0",
+      "value": "0"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "0",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "20% (10/4)",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "45% (22/9)",
+      "value": 45,
+      "half": 22,
+      "fifth": 9
+    },
+    "skills": [
+      {
+        "name": "Японский",
+        "skill": "coc:skill:language-own",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": null,
+          "fifth": null
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Актёры театра «Чёрная утка»: днём репетируют реплики и движения за кулисами, вечером играют.",
+    "en": null
+  },
+  "legend": {
+    "ru": "По закону эпохи Эдо кабуки играют только мужчины, исполняющие и женские роли в гриме и женской одежде (врезка книги; Хранитель может ввести и актрис — на сценарий это не влияет). Трое актёров живут в театре по программе резидентов. В новой пьесе актёры в белых масках с длинными носами говорят со странным акцентом.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "thing-torments-poet-en",
+      "physical_page": 7,
+      "printed_page": 4,
+      "method": "book_text",
+      "verified": true,
+      "note": "закулисье; врезка о мужчинах в кабуки"
+    },
+    {
+      "book_id": "thing-torments-poet-en",
+      "physical_page": 8,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The mysterious play»"
+    },
+    {
+      "book_id": "thing-torments-poet-en",
+      "physical_page": 17,
+      "printed_page": 14,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Kabuki actor»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "Драка",
+      "printed": "20% (10/5)",
+      "expected": "20% (10/4)",
+      "note": "половина и пятая не следуют из процента; исправлено по правилу 7-й редакции (Р-35)",
+      "fixed": true
+    },
+    {
+      "field": "Уклонение",
+      "printed": "45% (20/10)",
+      "expected": "45% (22/9)",
+      "note": "половина и пятая не следуют из процента; исправлено по правилу 7-й редакции (Р-35)",
+      "fixed": true
+    },
+    {
+      "field": "statblock.hp",
+      "printed": "ПЗ: 8",
+      "expected": "9",
+      "note": "ПЗ не сходится с правилами 7-й редакции ((ВЫН + ТЕЛ) / 10); оставлено как напечатано (Р-161).",
+      "fixed": false
+    },
+    {
+      "field": "statblock.mp",
+      "printed": "ПМ: 10",
+      "expected": "9",
+      "note": "ПМ не сходится с правилами 7-й редакции (МОЩ / 5); оставлено как напечатано (Р-161).",
+      "fixed": false
+    },
+    {
+      "field": "statblock.build",
+      "printed": "Комплекция: 1",
+      "expected": "0",
+      "note": "Комплекция не сходится с правилами 7-й редакции (по СИЛ + ТЕЛ); оставлено как напечатано (Р-161).",
+      "fixed": false
+    },
+    {
+      "field": "statblock.move",
+      "printed": "Скорость: 8",
+      "expected": "9",
+      "note": "Скорость не сходится с правилами 7-й редакции (по СИЛ, ЛВК и ТЕЛ); оставлено как напечатано (Р-161).",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "editorial_text",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); у PDF нет текстового слоя — текст и числа сверены по изображениям страниц; печатная страница = физическая − 3 (обложка, внутренняя обложка и выходные данные без номеров). Групповой профиль (Р-74); имена придуманы (Р-151). Атака «Brawl 20% (10/5)» без урона — как напечатано."
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "thing-torments-poet-en/character/black-duck-workers",
+  "kind": "character",
+  "name": {
+    "ru": "Работники «Чёрной утки»",
+    "en": "Black Duck Kabuki house worker"
+  },
+  "aliases": [
+    "работник театра",
+    "швеи",
+    "декораторы"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "работник театра",
+  "names": [
+    "Хатидзо",
+    "Кихэй",
+    "Охару",
+    "Сэйсукэ",
+    "Окику"
+  ],
+  "sex": null,
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "thing-torments-poet-en/character/geijutsu-teki",
+      "note": "хозяин театра",
+      "note_back": "работники театра"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "65",
+        "value": 65
+      },
+      "CON": {
+        "raw": "45",
+        "value": 45
+      },
+      "SIZ": {
+        "raw": "55",
+        "value": 55
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "APP": {
+        "raw": "55",
+        "value": 55
+      },
+      "INT": {
+        "raw": "00",
+        "value": 0
+      },
+      "POW": {
+        "raw": "60",
+        "value": 60
+      },
+      "EDU": {
+        "raw": "00",
+        "value": 0
+      }
+    },
+    "hp": {
+      "raw": "9",
+      "value": 9
+    },
+    "mp": {
+      "raw": "9",
+      "value": 9
+    },
+    "sanity": {
+      "raw": "60",
+      "value": 60,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+0",
+      "value": "0"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "6",
+      "value": 6,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 6
+        }
+      ]
+    },
+    "armor": {
+      "raw": "0",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "skills": [
+      {
+        "name": "Японский",
+        "skill": "coc:skill:language-own",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": null,
+          "fifth": null
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Швеи, закройщики, танцоры массовки, декораторы и прочие работники театра «Чёрная утка».",
+    "en": null
+  },
+  "legend": {
+    "ru": "Днём заняты на трёх ярусах закулисья и не обращают внимания на сыщиков, если те не мешают работе; вечером, перед премьерой, так заняты, что привлечь их внимание очень трудно. Снаружи развешивают жёлтые украшения к премьере и не могут вспомнить настоящего названия пьесы, называя её «Странным представлением гайдзинов».",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "thing-torments-poet-en",
+      "physical_page": 6,
+      "printed_page": 3,
+      "method": "book_text",
+      "verified": true,
+      "note": "работники развешивают украшения"
+    },
+    {
+      "book_id": "thing-torments-poet-en",
+      "physical_page": 7,
+      "printed_page": 4,
+      "method": "book_text",
+      "verified": true,
+      "note": "закулисье"
+    },
+    {
+      "book_id": "thing-torments-poet-en",
+      "physical_page": 8,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "разговоры о пьесе"
+    },
+    {
+      "book_id": "thing-torments-poet-en",
+      "physical_page": 17,
+      "printed_page": 14,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Black Duck Kabuki house worker»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "Уклонение",
+      "printed": "35% (15/7)",
+      "expected": "35% (17/7)",
+      "note": "половина и пятая не следуют из процента; исправлено по правилу 7-й редакции (Р-35)",
+      "fixed": true
+    },
+    {
+      "field": "statblock.hp",
+      "printed": "ПЗ: 9",
+      "expected": "10",
+      "note": "ПЗ не сходится с правилами 7-й редакции ((ВЫН + ТЕЛ) / 10); оставлено как напечатано (Р-161).",
+      "fixed": false
+    },
+    {
+      "field": "statblock.mp",
+      "printed": "ПМ: 9",
+      "expected": "12",
+      "note": "ПМ не сходится с правилами 7-й редакции (МОЩ / 5); оставлено как напечатано (Р-161).",
+      "fixed": false
+    },
+    {
+      "field": "statblock.build",
+      "printed": "Комплекция: 1",
+      "expected": "0",
+      "note": "Комплекция не сходится с правилами 7-й редакции (по СИЛ + ТЕЛ); оставлено как напечатано (Р-161).",
+      "fixed": false
+    },
+    {
+      "field": "statblock.move",
+      "printed": "Скорость: 6",
+      "expected": "9",
+      "note": "Скорость не сходится с правилами 7-й редакции (по СИЛ, ЛВК и ТЕЛ); оставлено как напечатано (Р-161).",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "editorial_text",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); у PDF нет текстового слоя — текст и числа сверены по изображениям страниц; печатная страница = физическая − 3 (обложка, внутренняя обложка и выходные данные без номеров). Групповой профиль (Р-74); имена придуманы (Р-151). ИНТ 00 и ОБР 00 — как напечатано; атака «Brawl 50% (25/10)» без урона."
+  }
+}

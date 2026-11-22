@@ -1,0 +1,268 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "thing-torments-poet-en/character/yamaguchi-residents",
+  "kind": "character",
+  "name": {
+    "ru": "Жители Ямагути",
+    "en": "Resident of Yamaguchi city"
+  },
+  "aliases": [
+    "житель Ямагути",
+    "горожане"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "горожанин",
+  "names": [
+    "Ясубэй",
+    "Оцуру",
+    "Тёэмон",
+    "Омицу",
+    "Касукэ"
+  ],
+  "sex": null,
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "50",
+        "value": 50
+      },
+      "CON": {
+        "raw": "40",
+        "value": 40
+      },
+      "SIZ": {
+        "raw": "55",
+        "value": 55
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50
+      },
+      "APP": {
+        "raw": "60",
+        "value": 60
+      },
+      "INT": {
+        "raw": "40",
+        "value": 40
+      },
+      "POW": {
+        "raw": "60",
+        "value": 60
+      },
+      "EDU": {
+        "raw": "30",
+        "value": 30
+      }
+    },
+    "hp": {
+      "raw": "7",
+      "value": 7
+    },
+    "mp": {
+      "raw": "9",
+      "value": 9
+    },
+    "sanity": {
+      "raw": "60",
+      "value": 60,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": "0"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "6",
+      "value": 6,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 6
+        }
+      ]
+    },
+    "armor": {
+      "raw": "0",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        },
+        "damage": {
+          "raw": "1d4+БкУ",
+          "dice": "1d4",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "25% (12/5)",
+      "value": 25,
+      "half": 12,
+      "fifth": 5
+    },
+    "skills": [
+      {
+        "name": "Японский",
+        "skill": "coc:skill:language-own",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": null,
+          "fifth": null
+        }
+      },
+      {
+        "name": "Быть на заднем плане",
+        "value": {
+          "raw": "90%",
+          "value": 90,
+          "half": null,
+          "fifth": null
+        }
+      },
+      {
+        "name": "Кричать при виде ужасного",
+        "value": {
+          "raw": "90%",
+          "value": 90,
+          "half": null,
+          "fifth": null
+        }
+      },
+      {
+        "name": "Жить своей жалкой жизнью, не ведая ничего за пределами звёзд",
+        "value": {
+          "raw": "90%",
+          "value": 90,
+          "half": null,
+          "fifth": null
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Простые горожане Ямагути: крестьяне, торговцы, ремесленники, посетители кладбища и зеваки.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Почти никто вне художественных и знатных кругов не знает и не интересуется болезнью Идайны. Родственники на кладбище могут возмутиться, застав сыщиков у чужих могил, и даже позвать местную стражу, приняв их за грабителей могил. Ночью у дома Курои Роху собираются десятки встревоженных людей, но войти никто не решается.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "thing-torments-poet-en",
+      "physical_page": 5,
+      "printed_page": 2,
+      "method": "book_text",
+      "verified": true,
+      "note": "горожане не знают о болезни"
+    },
+    {
+      "book_id": "thing-torments-poet-en",
+      "physical_page": 9,
+      "printed_page": 6,
+      "method": "book_text",
+      "verified": true,
+      "note": "кладбище: родственники"
+    },
+    {
+      "book_id": "thing-torments-poet-en",
+      "physical_page": 11,
+      "printed_page": 8,
+      "method": "book_text",
+      "verified": true,
+      "note": "толпа у дома Курои"
+    },
+    {
+      "book_id": "thing-torments-poet-en",
+      "physical_page": 17,
+      "printed_page": 14,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Resident of Yamaguchi city»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "Драка",
+      "printed": "25% (15/5)",
+      "expected": "25% (12/5)",
+      "note": "половина и пятая не следуют из процента; исправлено по правилу 7-й редакции (Р-35)",
+      "fixed": true
+    },
+    {
+      "field": "Уклонение",
+      "printed": "25% (15/5)",
+      "expected": "25% (12/5)",
+      "note": "половина и пятая не следуют из процента; исправлено по правилу 7-й редакции (Р-35)",
+      "fixed": true
+    },
+    {
+      "field": "statblock.hp",
+      "printed": "ПЗ: 7",
+      "expected": "9",
+      "note": "ПЗ не сходится с правилами 7-й редакции ((ВЫН + ТЕЛ) / 10); оставлено как напечатано (Р-161).",
+      "fixed": false
+    },
+    {
+      "field": "statblock.mp",
+      "printed": "ПМ: 9",
+      "expected": "12",
+      "note": "ПМ не сходится с правилами 7-й редакции (МОЩ / 5); оставлено как напечатано (Р-161).",
+      "fixed": false
+    },
+    {
+      "field": "statblock.build",
+      "printed": "Комплекция: 1",
+      "expected": "0",
+      "note": "Комплекция не сходится с правилами 7-й редакции (по СИЛ + ТЕЛ); оставлено как напечатано (Р-161).",
+      "fixed": false
+    },
+    {
+      "field": "statblock.move",
+      "printed": "Скорость: 6",
+      "expected": "7",
+      "note": "Скорость не сходится с правилами 7-й редакции (по СИЛ, ЛВК и ТЕЛ); оставлено как напечатано (Р-161).",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "editorial_text",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); у PDF нет текстового слоя — текст и числа сверены по изображениям страниц; печатная страница = физическая − 3 (обложка, внутренняя обложка и выходные данные без номеров). Групповой профиль (Р-74); имена придуманы (Р-151). Шуточные навыки — без механики (Р-126)."
+  }
+}

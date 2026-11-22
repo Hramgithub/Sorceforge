@@ -1,0 +1,85 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "thing-torments-poet-en/scene/kuroi-house-lives",
+  "kind": "scene",
+  "name": {
+    "ru": "Дом Курои, если Курои жив",
+    "en": "Kuroi’s House and if Kuroi lives"
+  },
+  "aliases": [],
+  "description": {
+    "ru": "В доме Курои — ключи к разгадке грязных дел Старцев с Идайной. Маленькая библиотека обычных для онмёдзи трудов: книги о ёкаях, ками, демонах и способах бороться с ними и подчинять их. Рядом — исследовательский стол с образцами тех же цветов, что в комнате Идайны; среди бумаг и пролитых чернил — записи о создании заклинания в помощь Идайне: «Разорвать психическую хватку».\nЕсли сыщики спасли Курои, он очень благодарен и честно отвечает на все вопросы, рассказывает о своих попытках создать заклинание и предлагает научить сыщиков заклинанию «Связать сикигами» (4 часа). Несмотря на нападение, Курои остаётся дома и работает над заклинанием; оно будет готово через 10 часов после ухода сыщиков (улучшенный вариант: волосы окунают в воду, без потери ПЗ).",
+    "en": null
+  },
+  "when": "После нападения (в любом исходе)",
+  "arc": {
+    "scenario": "thing-torments-poet-en/scenario/thing-torments-poet",
+    "part": "Ночь: нападение на дом Курои",
+    "order": 15
+  },
+  "where": [
+    {
+      "location": "thing-torments-poet-en/location/kuroi-house",
+      "note": "библиотека и исследовательский стол"
+    }
+  ],
+  "participants": [
+    {
+      "id": "thing-torments-poet-en/character/kuroi-rohu",
+      "role": "если жив — благодарный союзник"
+    }
+  ],
+  "mechanics": {
+    "ru": "Работа в библиотеке — указания к заклинанию призыва духа («Призвать/изгнать духа»).",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Записи Курои (раздатка) дают сыщикам заклинание «Разорвать психическую хватку» — путь к исходу «Идайну исцеляет заклинание онмёдзи».",
+    "en": null
+  },
+  "refs": [
+    "thing-torments-poet-en/handout/kuroi-research-notes",
+    "thing-torments-poet-en/handout/dispel-spirit-spell",
+    "thing-torments-poet-en/item/idaina-flowers",
+    "thing-torments-poet-en/scene/ending-cured"
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "thing-torments-poet-en",
+      "physical_page": 11,
+      "printed_page": 8,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Kuroi’s House and if Kuroi lives»"
+    },
+    {
+      "book_id": "thing-torments-poet-en",
+      "physical_page": 20,
+      "printed_page": 17,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Appendix C: Spells»"
+    },
+    {
+      "book_id": "thing-torments-poet-en",
+      "physical_page": 28,
+      "printed_page": 25,
+      "method": "book_text",
+      "verified": true,
+      "note": "раздатка «Kurois research notes»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); у PDF нет текстового слоя — текст и числа сверены по изображениям страниц; печатная страница = физическая − 3 (обложка, внутренняя обложка и выходные данные без номеров). Части сценария названы нами: книга делит текст только заголовками разделов. Могут ли сыщики сами сотворить первоначальный вариант по записям, если Курои погиб, книга прямо не говорит (вывод: да — сноска заклинания о «better version» Курои, Р-41)."
+  }
+}

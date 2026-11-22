@@ -1,0 +1,126 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "star-on-the-shore-en/scene/star-cult-attack",
+  "kind": "scene",
+  "name": {
+    "ru": "Нападение культа",
+    "en": "Events: Cult Combat"
+  },
+  "aliases": [],
+  "description": {
+    "ru": "После того как глубоководные убиты, Габриэль Ран и Шэдоуз выслеживают сыщиков и нападают. Размер отряда зависит от того, сколько сыщиков ещё живы. В нападении участвуют культисты, отмеченные в списке культа звёздочкой (*): Габриэль Ран, Рэйвен «Шэдоуз» Алексис, Джастис Гордан, Пекка Мюллюлуома, Мишель Фуази, Марджори «Вулф» Остин, Кевин Райт, Морин Догерти, а также отмеченные двумя звёздочками (**) Нил Маккарт и Райан Гримсли. Культисты, которые уже выбыли из игры, отряд не пополняют: культ остаётся в меньшинстве. Если сыщики уходят туннелями, культ пытается перехватить их в T4 — часть приходит из T2, часть спускается с кладбища.\nГабриэль, оказавшись в отчаянном положении, наложит «Власть над птицами» в надежде, что Шэдоуз его спасёт.",
+    "en": null
+  },
+  "when": "После гибели глубоководных в подземной часовне",
+  "arc": {
+    "scenario": "star-on-the-shore-en/scenario/the-star-on-the-shore",
+    "part": "Развязка",
+    "order": 13
+  },
+  "where": [
+    {
+      "location": "star-on-the-shore-en/location/upper-tunnels-t4",
+      "note": "если сыщики уходят туннелями"
+    },
+    {
+      "location": "coc:location:rockport"
+    }
+  ],
+  "participants": [
+    {
+      "id": "star-on-the-shore-en/character/gabriel-rahn",
+      "role": "нападает"
+    },
+    {
+      "id": "star-on-the-shore-en/character/raven-alexis",
+      "role": "нападает"
+    },
+    {
+      "id": "star-on-the-shore-en/character/justice-gordan",
+      "role": "нападает"
+    },
+    {
+      "id": "star-on-the-shore-en/character/j-pekka-myllyluoma",
+      "role": "нападает"
+    },
+    {
+      "id": "star-on-the-shore-en/character/michel-foisy",
+      "role": "нападает"
+    },
+    {
+      "id": "star-on-the-shore-en/character/marjorie-osteen",
+      "role": "нападает"
+    },
+    {
+      "id": "star-on-the-shore-en/character/kevin-wright",
+      "role": "нападает"
+    },
+    {
+      "id": "star-on-the-shore-en/character/maurine-daugherty",
+      "role": "нападает"
+    },
+    {
+      "id": "star-on-the-shore-en/character/neil-mccarth",
+      "role": "нападает"
+    },
+    {
+      "id": "star-on-the-shore-en/character/ryan-grimsley",
+      "role": "нападает"
+    },
+    {
+      "id": "star-on-the-shore-en/character/generic-cultist",
+      "role": "статблок для культистов без своего"
+    }
+  ],
+  "mechanics": {
+    "ru": "Бой. Хранитель следит, кто из культистов уже выбыл (список культа).",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Если Габриэля победят — сбежит он или нет, — он освобождает звёздное отродье (сцена «Звёздное отродье на свободе»).",
+    "en": null
+  },
+  "refs": [
+    "star-on-the-shore-en/organization/rockport-cult",
+    "star-on-the-shore-en/scene/star-star-spawn-rampage"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "star-on-the-shore-en",
+      "physical_page": 63,
+      "printed_page": 60,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Events»: нападение после гибели глубоководных"
+    },
+    {
+      "book_id": "star-on-the-shore-en",
+      "physical_page": 65,
+      "printed_page": 62,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Cultists»: * и **"
+    },
+    {
+      "book_id": "star-on-the-shore-en",
+      "physical_page": 54,
+      "printed_page": 51,
+      "method": "book_text",
+      "verified": true,
+      "note": "T4: перехват в туннелях"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа и имена — по изображениям страниц скана без текстового слоя (печатная страница = физическая − 3). «Власть над птицами» — по описанию Габриэля (место 14, с. 28, часть town)."
+  }
+}

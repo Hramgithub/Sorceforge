@@ -1,0 +1,138 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "star-on-the-shore-en/creature/ghost-of-danny-williams",
+  "kind": "creature",
+  "name": {
+    "ru": "Призрак Дэнни Уильямса",
+    "en": "The Ghost of Danny Williams"
+  },
+  "aliases": [
+    "Дэнни Уильямс",
+    "Danny Williams"
+  ],
+  "category": "supernatural",
+  "subcategory": "призрак",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:ghost",
+      "note_back": "призрак Дэнни Уильямса в Доме ведьмы, Рокпорт («Звезда на берегу»)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "INT": {
+        "raw": "80",
+        "value": 80
+      },
+      "POW": {
+        "raw": "90",
+        "value": 90
+      }
+    },
+    "hp": {
+      "raw": "—",
+      "value": null,
+      "note": "ПЗ нет: магические атаки снижают ПМ, а не ПЗ"
+    },
+    "mp": {
+      "raw": "18",
+      "value": 18
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Обволакивание",
+          "en": "Envelope Attack"
+        },
+        "kind": "special",
+        "skill": null,
+        "chance": {
+          "raw": "встречная проверка МОЩ",
+          "value": null,
+          "half": null,
+          "fifth": null
+        },
+        "notes": "Встречная проверка МОЩ против намеченной жертвы; проигравший теряет 2d6 ПМ."
+      },
+      {
+        "name": {
+          "ru": "Телекинез",
+          "en": "Telekinesis"
+        },
+        "kind": "special",
+        "skill": null,
+        "chance": {
+          "raw": "—",
+          "value": null,
+          "half": null,
+          "fifth": null
+        },
+        "damage": {
+          "raw": "1d6",
+          "dice": "1d6",
+          "adds_db": false
+        },
+        "notes": "За 5 ПМ призрак может швырнуть через комнату мелкий предмет; цель проходит проверку Уклонения, при провале предмет наносит 1d6 урона."
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Бесплотность",
+      "raw": "The ghost is immune to all physical attacks. Magical attacks reduce MP, not HP.",
+      "summary": "Неуязвим для любых физических атак; магические атаки снижают его ПМ, а не ПЗ."
+    },
+    {
+      "name": "Привязан к дому",
+      "raw": "He is anchored to the house and may not be more than 100 feet from the house.",
+      "summary": "Привязан к Дому ведьмы и не может удаляться от него больше чем на 30 м.",
+      "refs": [
+        "star-on-the-shore-en/location/loc-16-the-witch-house"
+      ]
+    },
+    {
+      "name": "Рассеивание",
+      "raw": "If the ghost is reduced to 0 MP, he dissipates for 24 hours and then returns unless Exorcised.",
+      "summary": "Если ПМ призрака упадут до 0, он рассеивается на 24 часа, а затем возвращается, если его не изгнать."
+    },
+    {
+      "name": "Потеря сознания",
+      "raw": "If a Player is reduced to 0 MP he is unconscious.",
+      "summary": "Сыщик, чьи ПМ упали до 0, теряет сознание."
+    }
+  ],
+  "description": {
+    "ru": "Призрак мистера Дэнни Уильямса, который, по слухам, покончил с собой в Доме ведьмы, когда дом был пансионом. Он действительно обитает в доме; Синди Альварес может с ним общаться.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Если сыщики вломятся в дом, Синди убежит в лес, а призрак будет преследовать сыщиков, пока они не уйдут.",
+    "en": null
+  },
+  "habitat": "Дом ведьмы, Рокпорт",
+  "sources": [
+    {
+      "book_id": "star-on-the-shore-en",
+      "physical_page": 33,
+      "printed_page": 30,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Location 16: The Witch House»: The Ghost of Danny Williams"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); у PDF нет текстового слоя — текст и числа сверены по изображениям страниц; печатная страница = физическая − 3. Свой профиль книги (Р-75): числа отличаются от общего вида «Привидение». Урон Телекинеза 1d6 — по тексту способности. «100 feet» → 30 м (Р-64)."
+  }
+}

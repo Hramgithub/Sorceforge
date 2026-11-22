@@ -1,0 +1,135 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "star-on-the-shore-en/creature/abyss-shoggoth",
+  "kind": "creature",
+  "name": {
+    "ru": "Шоггот («Ключ к Бездне»)",
+    "en": "Shoggoth"
+  },
+  "aliases": [],
+  "category": "mythos_monster",
+  "subcategory": "служитель",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:shoggoth",
+      "note_back": "тварь из разлома в Бездну в шпиле церкви Олд-Слуп («Ключ к Бездне»)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "POW": {
+        "raw": "65",
+        "value": 65
+      }
+    },
+    "hp": {
+      "raw": "—",
+      "value": null
+    },
+    "damage_bonus": {
+      "raw": "8d6",
+      "value": "+8d6"
+    },
+    "armor": {
+      "raw": "Firearms do 1 point per hit, fire and electrical do 1/2 damage. Regenerates 2 points per round.",
+      "value": null,
+      "note": "огнестрельное оружие — 1 урона за попадание; огонь и электричество — половина урона; восстанавливает 2 ПЗ за раунд"
+    },
+    "attacks_per_round": {
+      "raw": "2",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Поглощение",
+          "en": "Engulf"
+        },
+        "kind": "attack",
+        "skill": null,
+        "chance": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "Engulf or its Damage Bonus: 8d6",
+          "dice": null,
+          "adds_db": false,
+          "extra": "поглощение или урон, равный БкУ (8d6)"
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1d6",
+        "fail": "1d20",
+        "trigger": "при виде твари в разломе или вырвавшейся из него"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Перетекание",
+      "summary": "Шоггот перетекает сквозь отверстие и за один раунд снова принимает форму по эту сторону разрыва. Эта огромная тварь способна на страшные разрушения.",
+      "raw": "A shoggoth can pour through the opening and reform on this side of the tear in one round. This huge creature can cause massive destruction."
+    },
+    {
+      "name": "Регенерация",
+      "summary": "Восстанавливает 2 ПЗ за раунд.",
+      "raw": "Regenerates 2 points per round."
+    },
+    {
+      "name": "Бегство",
+      "summary": "Получив 30 урона, бежит обратно в Бездну.",
+      "raw": "If the shoggoth suffers 30 hit points he will flee back to the Abyss."
+    }
+  ],
+  "description": {
+    "ru": "Шоггот, перетекающий сквозь разрыв из Бездны.",
+    "en": null
+  },
+  "habitat": "Бездна; пролезает в разлом в шпиле церкви Олд-Слуп (Рокпорт)",
+  "sources": [
+    {
+      "book_id": "star-on-the-shore-en",
+      "physical_page": 72,
+      "printed_page": 69,
+      "method": "book_text",
+      "verified": true,
+      "note": "таблица «Abyss Rift Random Encounter Chart (1d100)»: Shoggoth — Sanity 1d6/1d20; Power 65"
+    },
+    {
+      "book_id": "star-on-the-shore-en",
+      "physical_page": 75,
+      "printed_page": 72,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Creatures From the Abyss»: Shoggoth"
+    },
+    {
+      "book_id": "star-on-the-shore-en",
+      "physical_page": 76,
+      "printed_page": 73,
+      "method": "book_text",
+      "verified": true,
+      "note": "общее правило: подробности особых атак — в главе 14 «Книги хранителя»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); книга — скан без текстового слоя, текст и числа сверены по изображениям страниц; печатная страница = физическая − 3. Профиль книги — короткая заметка о том, как тварь ведёт себя у разлома (с. 72); МОЩ и потеря Рассудка — из таблицы случайных встреч у разлома (с. 69); характеристик и ПЗ книга не даёт — остальное по общей записи вида (instance_of, Р-75). "
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "star-on-the-shore-en/creature/abyss-formless-spawn",
+  "kind": "creature",
+  "name": {
+    "ru": "Бесформенное отродье («Ключ к Бездне»)",
+    "en": "Formless Spawn"
+  },
+  "aliases": [],
+  "category": "mythos_monster",
+  "subcategory": "служитель",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:formless-spawn",
+      "note_back": "тварь из разлома в Бездну в шпиле церкви Олд-Слуп («Ключ к Бездне»)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "POW": {
+        "raw": "50",
+        "value": 50
+      }
+    },
+    "hp": {
+      "raw": "—",
+      "value": null
+    },
+    "damage_bonus": {
+      "raw": "2d6",
+      "value": "+2d6"
+    },
+    "armor": {
+      "raw": "Immune to physical weapons",
+      "value": null,
+      "note": "неуязвимо для физического оружия"
+    },
+    "attacks_per_round": {
+      "raw": "2",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Удар хлыстом или дубиной",
+          "en": "Attack"
+        },
+        "kind": "attack",
+        "skill": null,
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "2d6+DB",
+          "dice": "2d6",
+          "adds_db": true
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d10",
+        "trigger": "при виде твари в разломе или вырвавшейся из него"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Расплавленные тени",
+      "summary": "Отродье течёт сквозь разрыв, как расплавленные тени, образуя хлысты и дубины.",
+      "raw": "The formless spawn flows through the tear like molten shadows, forming whips and clubs."
+    },
+    {
+      "name": "Оглушение",
+      "summary": "В первый раунд оглушено: осваивается на новом месте.",
+      "raw": "It will be stunned the first round as it takes in its new surroundings."
+    },
+    {
+      "name": "Возвращение",
+      "summary": "Получив 5 урона (физическое оружие на него не действует) или через 2d4 раунда возвращается в Бездну.",
+      "raw": "If it suffers 5 points of damage (Immune to physical weapons) or after 2d4 rounds it will return to the Abyss."
+    }
+  ],
+  "description": {
+    "ru": "Бесформенное отродье, протекающее сквозь разрыв из Бездны; бьёт хлыстами и дубинами из собственного тела.",
+    "en": null
+  },
+  "habitat": "Бездна; пролезает в разлом в шпиле церкви Олд-Слуп (Рокпорт)",
+  "sources": [
+    {
+      "book_id": "star-on-the-shore-en",
+      "physical_page": 72,
+      "printed_page": 69,
+      "method": "book_text",
+      "verified": true,
+      "note": "таблица «Abyss Rift Random Encounter Chart (1d100)»: Formless Spawn — Sanity 1/1d10; Power 50"
+    },
+    {
+      "book_id": "star-on-the-shore-en",
+      "physical_page": 75,
+      "printed_page": 72,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Creatures From the Abyss»: Formless Spawn"
+    },
+    {
+      "book_id": "star-on-the-shore-en",
+      "physical_page": 76,
+      "printed_page": 73,
+      "method": "book_text",
+      "verified": true,
+      "note": "общее правило: подробности особых атак — в главе 14 «Книги хранителя»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); книга — скан без текстового слоя, текст и числа сверены по изображениям страниц; печатная страница = физическая − 3. Профиль книги — короткая заметка о том, как тварь ведёт себя у разлома (с. 72); МОЩ и потеря Рассудка — из таблицы случайных встреч у разлома (с. 69); характеристик и ПЗ книга не даёт — остальное по общей записи вида (instance_of, Р-75). "
+  }
+}

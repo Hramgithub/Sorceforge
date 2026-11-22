@@ -1,0 +1,94 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "star-on-the-shore-en/scene/star-lower-tunnels",
+  "kind": "scene",
+  "name": {
+    "ru": "Нижние туннели",
+    "en": "Lower Tunnels"
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Под ямой подземной часовни — нижние туннели (6 м в высоту, 4,5 м в ширину, всего четыре помещения), полные жёлтого газа из трёх баков в LT-1. Пол LT-1 завален останками жертв за неделю. LT-2 — тёплый прозрачный бассейн со слепыми белыми рыбками, где звёздное отродье купается и пьёт. LT-3 — недостроенный тупик, куда отродье сваливает непереваренные части тел.",
+    "en": null
+  },
+  "when": "Когда сыщики спускаются в яму",
+  "arc": {
+    "scenario": "star-on-the-shore-en/scenario/the-star-on-the-shore",
+    "part": "Туннели",
+    "order": 11
+  },
+  "where": [
+    {
+      "location": "star-on-the-shore-en/location/lower-tunnels"
+    },
+    {
+      "location": "star-on-the-shore-en/location/lower-tunnels-lt-1"
+    },
+    {
+      "location": "star-on-the-shore-en/location/lower-tunnels-lt-2"
+    },
+    {
+      "location": "star-on-the-shore-en/location/lower-tunnels-lt-3"
+    }
+  ],
+  "participants": [
+    {
+      "id": "star-on-the-shore-en/creature/star-spawn",
+      "role": "может быть в LT-2 (30%) или LT-3 (20%)"
+    }
+  ],
+  "mechanics": {
+    "ru": "• Газ: больше 30 минут — штрафная кость на все проверки навыков; больше часа — сложность на две ступени выше. Баки можно уничтожить взрывчаткой; газ рассеется за 8 часов.\n• Падение в яму: проверка Удачи, чтобы не погибнуть; увидев, на что упали или куда их опустили, — проверка Рассудка 0/1d3.\n• LT-3: вонь — проверка ВЫН, иначе сыщик отступает в LT-1. В куче — останки семи человек (около двадцати, если отродье уже вырывалось в город).",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Туннель из LT-1 ведёт в логово звёздного отродья (LT-4).",
+    "en": null
+  },
+  "refs": [
+    "star-on-the-shore-en/item/gas-tanks",
+    "star-on-the-shore-en/map/lower-tunnels",
+    "star-on-the-shore-en/scene/star-star-spawn-lair"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "star-on-the-shore-en",
+      "physical_page": 59,
+      "printed_page": 56,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Lower Tunnels», LT-1–LT-3"
+    },
+    {
+      "book_id": "star-on-the-shore-en",
+      "physical_page": 61,
+      "printed_page": 58,
+      "method": "book_text",
+      "verified": true,
+      "note": "LT-3 (окончание)"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа и имена — по изображениям страниц скана без текстового слоя (печатная страница = физическая − 3). «Retreat back to T-1» в тексте LT-3 — по смыслу LT-1."
+  },
+  "errata": [
+    {
+      "field": "mechanics.ru",
+      "printed": "forced to retreat back to T-1",
+      "expected": "LT-1",
+      "note": "В LT-3 сказано отступить «в T-1»; по смыслу — в LT-1 (зал под ямой). Исправлено в тексте сцены.",
+      "fixed": true
+    }
+  ]
+}

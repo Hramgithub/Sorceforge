@@ -1,0 +1,130 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "star-on-the-shore-en/creature/abyss-dark-young",
+  "kind": "creature",
+  "name": {
+    "ru": "Щупальца тёмной молоди («Ключ к Бездне»)",
+    "en": "Dark Young"
+  },
+  "aliases": [],
+  "category": "mythos_monster",
+  "subcategory": "служитель",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:dark-young-of-shub-niggurath",
+      "note_back": "тварь из разлома в Бездну в шпиле церкви Олд-Слуп («Ключ к Бездне»)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "POW": {
+        "raw": "90",
+        "value": 90
+      }
+    },
+    "hp": {
+      "raw": "—",
+      "value": null
+    },
+    "damage_bonus": {
+      "raw": "4d6",
+      "value": "+4d6"
+    },
+    "armor": {
+      "raw": "Firearms do 1 point of damage per bullet, impale does 2. Melee weapons do normal damage.",
+      "value": null,
+      "note": "огнестрельное оружие — 1 урона за пулю, 2 при проникающем ранении; оружие ближнего боя — обычный урон"
+    },
+    "attacks_per_round": {
+      "raw": "2",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Щупальце",
+          "en": "Tentacle"
+        },
+        "kind": "attack",
+        "skill": null,
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1/2 DB",
+          "dice": null,
+          "adds_db": false,
+          "extra": "половина БкУ; при попадании хватает и высасывает 1d10+5 СИЛ за раунд"
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1d3",
+        "fail": "1d10",
+        "trigger": "при виде твари в разломе или вырвавшейся из него"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Только щупальца",
+      "summary": "Тёмная молодь слишком велика, чтобы пролезть в разрыв, но два её щупальца пролезают. Пока щупальца тянутся сквозь разрыв, его нельзя запечатать. Чтобы щупальце убралось, ему нужно нанести 10 урона (каждому из двух).",
+      "raw": "The Dark Young are too large to get through the tear, however 2 of their tentacles can make it through the tear. The seal cannot be closed while it’s tentacles are reaching through. The investigators must do 10 points to each tentacle to get it to withdraw."
+    },
+    {
+      "name": "Высасывание",
+      "summary": "Попав, тёмная молодь хватает жертву и высасывает 1d10+5 СИЛ за раунд.",
+      "raw": "If it hits, the Dark Young grabs and sucks 1d10+5 strength points per round."
+    }
+  ],
+  "description": {
+    "ru": "Два щупальца тёмной молоди Шуб-Ниггурат, просунутые сквозь разрыв из Бездны.",
+    "en": null
+  },
+  "habitat": "Бездна; пролезает в разлом в шпиле церкви Олд-Слуп (Рокпорт)",
+  "sources": [
+    {
+      "book_id": "star-on-the-shore-en",
+      "physical_page": 72,
+      "printed_page": 69,
+      "method": "book_text",
+      "verified": true,
+      "note": "таблица «Abyss Rift Random Encounter Chart (1d100)»: Dark Young — Sanity 1d3/1d10; Power 90"
+    },
+    {
+      "book_id": "star-on-the-shore-en",
+      "physical_page": 75,
+      "printed_page": 72,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Creatures From the Abyss»: Dark Young"
+    },
+    {
+      "book_id": "star-on-the-shore-en",
+      "physical_page": 76,
+      "printed_page": 73,
+      "method": "book_text",
+      "verified": true,
+      "note": "общее правило: подробности особых атак — в главе 14 «Книги хранителя»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); книга — скан без текстового слоя, текст и числа сверены по изображениям страниц; печатная страница = физическая − 3. Профиль книги — короткая заметка о том, как тварь ведёт себя у разлома (с. 72); МОЩ и потеря Рассудка — из таблицы случайных встреч у разлома (с. 69); характеристик и ПЗ книга не даёт — остальное по общей записи вида (instance_of, Р-75). "
+  }
+}

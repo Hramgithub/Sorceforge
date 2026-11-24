@@ -3,7 +3,7 @@
   "id": "the-dare-en/map/attic-map",
   "kind": "map",
   "name": {
-    "ru": "План чердака дома Барнакеров",
+    "ru": "Карта чердака дома Барнакеров",
     "en": "Attic Map"
   },
   "location": "the-dare-en/location/barnaker-house",
@@ -23,57 +23,57 @@
       "x": 50.0,
       "y": 10.0,
       "target": "the-dare-en/location/barnaker-cupola",
-      "text": "Cupola — купол"
+      "text": "Cupola — Купол"
     },
     {
       "label": "To Cupola",
       "x": 52.0,
       "y": 27.0,
       "target": "the-dare-en/location/barnaker-cupola",
-      "text": "To Cupola — лестница в купол"
+      "text": "To Cupola — К Куполу"
     },
     {
       "label": "Trap Door",
       "x": 34.0,
       "y": 33.5,
       "target": "the-dare-en/location/barnaker-large-attic-space",
-      "text": "Trap Door — люк из хозяйской спальни"
+      "text": "Trap Door — Люк (из главной спальни)"
     },
     {
       "label": "Attic",
       "x": 63.0,
       "y": 52.0,
       "target": "the-dare-en/location/barnaker-attic",
-      "text": "Attic — чердак"
+      "text": "Attic — Чердак"
     },
     {
       "label": "Areas of low ceiling",
       "x": 13.0,
       "y": 56.0,
       "target": "the-dare-en/location/barnaker-attic",
-      "text": "Areas of low ceiling — места с низким потолком"
+      "text": "Areas of low ceiling — Участки с низким потолком"
     },
     {
       "label": "Large Attic Space",
       "x": 30.0,
       "y": 60.0,
       "target": "the-dare-en/location/barnaker-large-attic-space",
-      "text": "Large Attic Space — большое чердачное помещение"
+      "text": "Large Attic Space — Большое Чердачное Помещение"
     },
     {
       "label": "Small Attic Space",
       "x": 66.0,
       "y": 71.0,
       "target": "the-dare-en/location/barnaker-small-attic-space",
-      "text": "Small Attic Space — малое чердачное помещение"
+      "text": "Small Attic Space — Небольшое Чердачное Помещение"
     },
     {
       "label": "Trap Door",
       "x": 51.0,
       "y": 85.0,
       "target": "the-dare-en/location/barnaker-small-attic-space",
-      "text": "Trap Door — люк (лаз)",
-      "note": "Какой люк второго этажа ведёт сюда, карта не уточняет; по тексту на малый чердак ведёт лаз из чулана спальни девочки."
+      "text": "Trap Door — Люк",
+      "note": "Какой люк второго этажа ведёт сюда, карта не уточняет; по тексту в небольшое чердачное помещение ведет лаз из гардероба спальни девочки."
     }
   ],
   "axes": {
@@ -83,6 +83,22 @@
     "ruleset": "core"
   },
   "sources": [
+    {
+      "book_id": "slabo-ru",
+      "physical_page": 33,
+      "printed_page": 26,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Карта чердака»"
+    },
+    {
+      "book_id": "slabo-ru",
+      "physical_page": 72,
+      "printed_page": 65,
+      "method": "book_text",
+      "verified": true,
+      "note": "приложение: «Карта чердака»"
+    },
     {
       "book_id": "the-dare-en",
       "physical_page": 29,
@@ -102,9 +118,23 @@
   ],
   "quality": {
     "needs_review": false,
-    "flags": [
-      "translated"
-    ],
-    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 7). Картинка — изображение карты из приложения «Maps and Handout» (без масштаба)."
-  }
+    "flags": [],
+    "notes": "Русский текст и имена — по официальному русскому изданию «Слабо» («Монстры Эдны», 2020; slabo-ru), числа — по оригиналу The Dare (Р-253, Р-147); печатная страница = физическая − 7 в обеих книгах. Картинка — изображение карты из приложения «Maps and Handout» (без масштаба). Наш текст (не из «Слабо»): Подписи меток: английская — как на картинке (карта оригинала), русская — как на карте «Слабо»; пояснения в скобках — наши."
+  },
+  "corrections": [
+    {
+      "field": "name.ru",
+      "from": "План чердака дома Барнакеров",
+      "to": "Карта чердака дома Барнакеров",
+      "reason": "официальная форма русского издания «Слабо» (slabo-ru); прежнее — наш перевод",
+      "ref": "Р-253"
+    },
+    {
+      "field": "названия навыков, атак и способностей в statblock",
+      "from": "наш перевод с английского (Р-251)",
+      "to": "текст официального перевода «Слабо» (с. 26; с. 65)",
+      "reason": "есть официальный русский перевод — «Слабо» («Монстры Эдны», 2020); русский текст берётся из него, числа — по оригиналу (Р-147)",
+      "ref": "Р-253"
+    }
+  ]
 }

@@ -3,7 +3,7 @@
   "id": "the-dare-en/map/basement-map",
   "kind": "map",
   "name": {
-    "ru": "План подвала дома Барнакеров",
+    "ru": "Карта подвала дома Барнакеров",
     "en": "Basement Map"
   },
   "location": "the-dare-en/location/barnaker-house",
@@ -23,56 +23,56 @@
       "x": 52.0,
       "y": 20.0,
       "target": "the-dare-en/location/under-porch",
-      "text": "Under Porch — подполье под крыльцом"
+      "text": "Under Porch — Под Крыльцом"
     },
     {
       "label": "Trap Door",
       "x": 85.0,
       "y": 22.0,
       "target": "the-dare-en/location/porch-tunnel",
-      "text": "Trap Door — люк в туннель к логову Эвелин"
+      "text": "Trap Door — Люк (в туннель к логову Эвелин)"
     },
     {
       "label": "Study",
       "x": 62.0,
       "y": 37.0,
       "target": "the-dare-en/location/barnaker-study",
-      "text": "Study — кабинет"
+      "text": "Study — Кабинет"
     },
     {
       "label": "Bedroom",
       "x": 25.0,
       "y": 46.5,
       "target": "the-dare-en/location/barnaker-basement-bedroom",
-      "text": "Bedroom — спальня"
+      "text": "Bedroom — Спальня"
     },
     {
       "label": "Pantry",
       "x": 52.0,
       "y": 63.0,
       "target": "the-dare-en/location/barnaker-pantry",
-      "text": "Pantry — кладовая"
+      "text": "Pantry — Кладовая"
     },
     {
       "label": "Workroom",
       "x": 78.0,
       "y": 63.5,
       "target": "the-dare-en/location/barnaker-workroom",
-      "text": "Workroom — мастерская"
+      "text": "Workroom — Мастерская"
     },
     {
       "label": "Bedroom Closet",
       "x": 24.0,
       "y": 69.0,
       "target": "the-dare-en/location/barnaker-basement-bedroom-closet",
-      "text": "Bedroom Closet — чулан спальни (портрет)"
+      "text": "Bedroom Closet — Гардероб Спальни (портрет)"
     },
     {
       "label": "Furnace",
       "x": 55.0,
       "y": 77.0,
       "target": "the-dare-en/location/barnaker-workroom",
-      "text": "Furnace — печь",
+      "text": "Furnace — Печь",
       "note": "По тексту печь — в мастерской; на карте нарисована у кладовой."
     },
     {
@@ -80,14 +80,14 @@
       "x": 84.0,
       "y": 75.0,
       "target": "the-dare-en/location/tunnel-entry-chamber",
-      "text": "Metal Grate (leading Down) — решётка, ведущая вниз"
+      "text": "Metal Grate (leading Down) — Металлическая Решетка (ведущая Вниз)"
     },
     {
       "label": "Coal Room",
       "x": 28.0,
       "y": 80.5,
       "target": "the-dare-en/location/barnaker-coal-room",
-      "text": "Coal Room — угольная"
+      "text": "Coal Room — Угольное Помещение"
     }
   ],
   "axes": {
@@ -97,6 +97,22 @@
     "ruleset": "core"
   },
   "sources": [
+    {
+      "book_id": "slabo-ru",
+      "physical_page": 34,
+      "printed_page": 27,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Карта подвала»"
+    },
+    {
+      "book_id": "slabo-ru",
+      "physical_page": 73,
+      "printed_page": 66,
+      "method": "book_text",
+      "verified": true,
+      "note": "приложение: «Карта подвала»"
+    },
     {
       "book_id": "the-dare-en",
       "physical_page": 30,
@@ -116,9 +132,23 @@
   ],
   "quality": {
     "needs_review": false,
-    "flags": [
-      "translated"
-    ],
-    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 7). Картинка — изображение карты из приложения «Maps and Handout» (без масштаба)."
-  }
+    "flags": [],
+    "notes": "Русский текст и имена — по официальному русскому изданию «Слабо» («Монстры Эдны», 2020; slabo-ru), числа — по оригиналу The Dare (Р-253, Р-147); печатная страница = физическая − 7 в обеих книгах. Картинка — изображение карты из приложения «Maps and Handout» (без масштаба). Наш текст (не из «Слабо»): Подписи меток: английская — как на картинке (карта оригинала), русская — как на карте «Слабо»; пояснения в скобках — наши."
+  },
+  "corrections": [
+    {
+      "field": "name.ru",
+      "from": "План подвала дома Барнакеров",
+      "to": "Карта подвала дома Барнакеров",
+      "reason": "официальная форма русского издания «Слабо» (slabo-ru); прежнее — наш перевод",
+      "ref": "Р-253"
+    },
+    {
+      "field": "названия навыков, атак и способностей в statblock",
+      "from": "наш перевод с английского (Р-251)",
+      "to": "текст официального перевода «Слабо» (с. 27; с. 66)",
+      "reason": "есть официальный русский перевод — «Слабо» («Монстры Эдны», 2020); русский текст берётся из него, числа — по оригиналу (Р-147)",
+      "ref": "Р-253"
+    }
+  ]
 }

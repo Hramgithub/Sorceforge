@@ -1,0 +1,105 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:regency-navy-surgeon",
+  "kind": "occupation",
+  "name": {
+    "ru": "Корабельный хирург (флот Регентства)",
+    "en": "Surgeon"
+  },
+  "aliases": [
+    "Корабельный хирург"
+  ],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Худшие хирурги — мясники с пилой для ампутаций, лучшие не уступают сухопутному врачу; хирургу помогают помощник с медицинской подготовкой и «лоблолли-бой» — санитар.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 4",
+    "options": [
+      [
+        [
+          "EDU",
+          4
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "хирург 30–49 (£14.4.0; полоса 2); помощник хирурга 10–29 (£9.2.0; полоса 1)",
+    "min": 10,
+    "max": 49
+  },
+  "contacts": null,
+  "skills": [
+    {
+      "raw": "Первая помощь",
+      "skill": "coc:skill:first-aid"
+    },
+    {
+      "raw": "Слух",
+      "skill": "coc:skill:listen"
+    },
+    {
+      "raw": "Медицина",
+      "skill": "coc:skill:medicine"
+    },
+    {
+      "raw": "Иностранный язык (обычно латынь)",
+      "skill": "coc:skill:language-other"
+    },
+    {
+      "raw": "Психология",
+      "skill": "coc:skill:psychology"
+    },
+    {
+      "raw": "Натурфилософия (анатомия)"
+    },
+    {
+      "raw": "один социальный навык (Запугивание, Красноречие, Обаяние или Убеждение)",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:intimidate",
+          "coc:skill:fast-talk",
+          "coc:skill:charm",
+          "coc:skill:persuade"
+        ]
+      }
+    },
+    {
+      "raw": "Внимание или Запугивание",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:spot-hidden",
+          "coc:skill:intimidate"
+        ]
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "in-strange-seas-en",
+      "physical_page": 17,
+      "printed_page": 17,
+      "method": "book_text",
+      "verified": true,
+      "note": "Surgeon"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической; обложка (физ. 1) без номера). Эпоха — Регентство и Наполеоновские войны (Regency Cthulhu, 1811–1820; в осях — «other»). Черновик общей записи профессии по таблице правила «Шаг 2. Флотские профессии» (in-strange-seas-en/rule/step-2-determine-occupation); навыки Этикет, Астрономия, Натурфилософия — Regency Cthulhu, в справочнике их нет; Парусное дело — черновик coc:skill:sail."
+  }
+}

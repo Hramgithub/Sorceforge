@@ -1,0 +1,118 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:regency-navy-commissioned-officer",
+  "kind": "occupation",
+  "name": {
+    "ru": "Офицер с патентом (флот Регентства)",
+    "en": "Commissioned Officer"
+  },
+  "aliases": [
+    "Офицер с патентом"
+  ],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Капитан — бесспорный глава корабля, порой тиран, отвечающий за исполнение приказов Адмиралтейства; лейтенанты следят за повседневными делами и возглавляют дивизионы; мичманы учатся ремеслу и в бою командуют орудийными расчётами (мичманы обычно младше 20 лет: ниже СИЛ, ТЕЛ и ОБР, больше Удачи). От офицеров ждут и умений джентльмена (Танцы, Азартные игры), а высокая Репутация — то есть высокие Средства и Этикет — помогает заслужить уважение экипажа. Средства — на действительной службе; на берегу без назначения — половинное жалованье.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 4",
+    "options": [
+      [
+        [
+          "EDU",
+          4
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "пост-капитан 30–49 (£16.16.0 в месяц; полоса 2); лейтенант 10–29 (£8.8.0; полоса 1); мичман 5–15 (£2.0.6; полоса 1); из джентри или аристократии 50–90 (полоса 4)",
+    "min": 5,
+    "max": 90
+  },
+  "contacts": null,
+  "skills": [
+    {
+      "raw": "Астрономия"
+    },
+    {
+      "raw": "Этикет"
+    },
+    {
+      "raw": "один социальный навык (Запугивание, Красноречие, Обаяние или Убеждение)",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:intimidate",
+          "coc:skill:fast-talk",
+          "coc:skill:charm",
+          "coc:skill:persuade"
+        ]
+      }
+    },
+    {
+      "raw": "Ориентирование",
+      "skill": "coc:skill:navigate"
+    },
+    {
+      "raw": "Ближний бой (меч) или Стрельба (пушка)",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:fighting",
+          "coc:skill:firearms"
+        ]
+      }
+    },
+    {
+      "raw": "Лазание или Механика",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:climb",
+          "coc:skill:mechanical-repair"
+        ]
+      }
+    },
+    {
+      "raw": "Парусное дело",
+      "skill": "coc:skill:sail"
+    },
+    {
+      "raw": "Внимание",
+      "skill": "coc:skill:spot-hidden"
+    }
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "in-strange-seas-en",
+      "physical_page": 15,
+      "printed_page": 15,
+      "method": "book_text",
+      "verified": true,
+      "note": "Commissioned Officer"
+    },
+    {
+      "book_id": "in-strange-seas-en",
+      "physical_page": 16,
+      "printed_page": 16,
+      "method": "book_text",
+      "verified": true,
+      "note": "Commissioned Officer: Credit Rating, Skills"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической; обложка (физ. 1) без номера). Эпоха — Регентство и Наполеоновские войны (Regency Cthulhu, 1811–1820; в осях — «other»). Черновик общей записи профессии по таблице правила «Шаг 2. Флотские профессии» (in-strange-seas-en/rule/step-2-determine-occupation); навыки Этикет, Астрономия, Натурфилософия — Regency Cthulhu, в справочнике их нет; Парусное дело — черновик coc:skill:sail."
+  }
+}

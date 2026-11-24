@@ -1,0 +1,100 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:regency-navy-chaplain",
+  "kind": "occupation",
+  "name": {
+    "ru": "Капеллан (флот Регентства)",
+    "en": "Chaplain"
+  },
+  "aliases": [
+    "Капеллан"
+  ],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Заботится о духовных нуждах экипажа; роль зависит от отношения капитана к вере. Читает воскресную проповедь, ободряет экипаж перед боем и в непогоду, обычно учит молодняк (математике и навигации может учить капитан).",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + МОЩ × 2",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "POW",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "30–49, ближе к верхней границе при доходе с прихода на суше (£11.10.9; полоса 2)",
+    "min": 30,
+    "max": 49
+  },
+  "contacts": null,
+  "skills": [
+    {
+      "raw": "Антропология",
+      "skill": "coc:skill:anthropology"
+    },
+    {
+      "raw": "История",
+      "skill": "coc:skill:history"
+    },
+    {
+      "raw": "Работа в библиотеке",
+      "skill": "coc:skill:library-use"
+    },
+    {
+      "raw": "два социальных навыка (Запугивание, Красноречие, Обаяние или Убеждение)",
+      "choice": {
+        "count": 2,
+        "of": [
+          "coc:skill:intimidate",
+          "coc:skill:fast-talk",
+          "coc:skill:charm",
+          "coc:skill:persuade"
+        ]
+      }
+    },
+    {
+      "raw": "Иностранный язык (например, латынь, греческий)",
+      "skill": "coc:skill:language-other"
+    },
+    {
+      "raw": "Оккультизм",
+      "skill": "coc:skill:occult"
+    },
+    {
+      "raw": "Психология",
+      "skill": "coc:skill:psychology"
+    }
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "in-strange-seas-en",
+      "physical_page": 16,
+      "printed_page": 16,
+      "method": "book_text",
+      "verified": true,
+      "note": "Chaplain"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической; обложка (физ. 1) без номера). Эпоха — Регентство и Наполеоновские войны (Regency Cthulhu, 1811–1820; в осях — «other»). Черновик общей записи профессии по таблице правила «Шаг 2. Флотские профессии» (in-strange-seas-en/rule/step-2-determine-occupation); навыки Этикет, Астрономия, Натурфилософия — Regency Cthulhu, в справочнике их нет; Парусное дело — черновик coc:skill:sail."
+  }
+}

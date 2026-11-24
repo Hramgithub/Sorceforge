@@ -1,0 +1,315 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "treasure-for-the-watcher-en/character/raymond-gilman",
+  "kind": "character",
+  "name": {
+    "ru": "Реймонд Гилман",
+    "en": "Raymond Gilman"
+  },
+  "aliases": [
+    "Raymond Gilman, Deep One Hybrid",
+    "мистер Гилман"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "основатель и мэр Девилс-Лейка",
+    "en": "Town Founder"
+  },
+  "age": {
+    "raw": "на вид за шестьдесят",
+    "value": null
+  },
+  "sex": "мужской",
+  "residence": "Девилс-Лейк",
+  "axes": {
+    "era": [
+      "wild-west"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "treasure-for-the-watcher-en/creature/deep-one-hybrids",
+      "note_back": "гибрид, основатель и мэр Девилс-Лейка"
+    },
+    {
+      "type": "relative_of",
+      "target": "treasure-for-the-watcher-en/character/thomas-gilman",
+      "note": "брат",
+      "note_back": "брат"
+    },
+    {
+      "type": "servitor_of",
+      "target": "treasure-for-the-watcher-en/creature/the-watcher",
+      "note": "божество посёлка — Даритель в озере",
+      "note_back": "предан ему, отливает для него изваяния"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "55",
+        "value": 55
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "55",
+        "value": 55
+      },
+      "APP": {
+        "raw": "20",
+        "value": 20
+      },
+      "INT": {
+        "raw": "80",
+        "value": 80
+      },
+      "POW": {
+        "raw": "110",
+        "value": 110
+      },
+      "EDU": {
+        "raw": "85",
+        "value": 85
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "22",
+      "value": 22
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Дерринджер .44",
+          "en": ".44 Derringer"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d10+2",
+          "dice": "1d10+2",
+          "adds_db": false
+        }
+      },
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45%(22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed",
+        "notes": "урон напечатан как «1d3+1d4» — 1d3 плюс его БкУ +1d4"
+      }
+    ],
+    "dodge": {
+      "raw": "30%(15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Бухгалтерское дело",
+        "skill": "coc:skill:accounting",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Плавание",
+        "skill": "coc:skill:swim",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      }
+    ],
+    "luck": {
+      "raw": "—",
+      "value": null
+    },
+    "sanity": {
+      "raw": "—",
+      "value": null,
+      "max": null
+    },
+    "spells": {
+      "raw": "Привлечь рыбу, Призыв/укрощение глубоководного, Связь со звёздным отродьем Ктулху.",
+      "items": [
+        {
+          "name": "Привлечь рыбу",
+          "spell": "coc:spell:attract-fish"
+        },
+        {
+          "name": "Призыв/укрощение глубоководного",
+          "spell": "coc:spell:summon-bind-deep-one"
+        },
+        {
+          "name": "Связь со звёздным отродьем Ктулху",
+          "spell": "coc:spell:contact-star-spawn-of-cthulhu"
+        }
+      ]
+    }
+  },
+  "description": {
+    "ru": "Гибрид глубоководного. Очень большое лицо торчит из хорошо сшитого костюма, шея будто куда-то пропала; большие выпученные глаза и широкий, словно безгубый рот. Держится отстранённо, но с чужаками ведёт себя как вежливый джентльмен. Говорит странно: конец фразы звучит так, будто он говорит под водой.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Основатель и мэр Девилс-Лейка; правит посёлком железной рукой. Около 10 лет назад вместе с братом Томасом привёл группу поселенцев из Новой Англии на берег озера Девилс-Лейк. Раньше брат помогал ему управлять посёлком, но Томас почти полностью превратился и проводит почти всё время в озере. Реймонд истово служит Стражу, но у него и свои деловые планы: расширить рыбные промыслы Девилс-Лейка и стать главным поставщиком в округе. Он безжалостный делец: людей в посёлке не хватает, и он похищает детей из резервации сиу, а детей Лейкфронта забрал после того, как глубоководные перебили там всех остальных. Он — главный организатор ограбления поезда, и планы лежат у него дома. Сыщики могут заметить, что он непоколебим в заботе о посёлке; он гордится им и охотно расскажет его историю. Встретить его можно дома или на прогулке по посёлку. В его доме висят портреты Гилмана с женщиной и бледная фотография странной пары; спросят — скажет, что это его жена и что она «отошла в мир иной».",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "treasure-for-the-watcher-en",
+      "physical_page": 3,
+      "printed_page": 3,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Background»; «Dramatis Personae»: «Raymond Gilman, Town Founder and Deep One Hybrid, appears to be in his 60’s»; портрет"
+    },
+    {
+      "book_id": "treasure-for-the-watcher-en",
+      "physical_page": 8,
+      "printed_page": 8,
+      "method": "book_text",
+      "verified": true,
+      "note": "«History»: история посёлка от Гилмана"
+    },
+    {
+      "book_id": "treasure-for-the-watcher-en",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "«7. Raymond Gilman’s House»"
+    },
+    {
+      "book_id": "treasure-for-the-watcher-en",
+      "physical_page": 13,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Raymond Gilman, Deep One Hybrid»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической, обложка без номера)."
+  },
+  "images": [
+    {
+      "file": "art/characters/treasure-raymond-gilman.webp",
+      "kind": "portrait",
+      "caption": "Реймонд Гилман",
+      "source": "Treasure for the Watcher, с. 3, «Dramatis Personae»"
+    }
+  ]
+}

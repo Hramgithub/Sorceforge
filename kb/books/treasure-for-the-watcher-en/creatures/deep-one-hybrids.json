@@ -1,0 +1,252 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "treasure-for-the-watcher-en/creature/deep-one-hybrids",
+  "kind": "creature",
+  "name": {
+    "ru": "Гибрид глубоководного (Девилс-Лейк)",
+    "en": "Average Deep One Hybrid"
+  },
+  "aliases": [
+    "поселенцы Девилс-Лейка"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "гибрид глубоководного",
+  "axes": {
+    "era": [
+      "wild-west"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:deep-one-hybrid"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "65",
+        "value": 65
+      },
+      "CON": {
+        "raw": "65",
+        "value": 65
+      },
+      "SIZ": {
+        "raw": "55",
+        "value": 55
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65
+      },
+      "APP": {
+        "raw": "35",
+        "value": 35
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "9/8 вплавь",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        },
+        {
+          "mode": "swim",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1 (без оружия, оружие)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45%(22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d3+БкУ или оружием",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Язык (речь глубоководных)",
+        "skill": "coc:skill:language-other",
+        "specialization": "речь глубоководных",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Язык (глифы Р’льеха)",
+        "skill": "coc:skill:language-other",
+        "specialization": "глифы Р’льеха",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Плавание",
+        "skill": "coc:skill:swim",
+        "value": {
+          "raw": "90%",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d4",
+        "trigger": "при виде гибрида глубоководного"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Средний гибрид сценария — так выглядят поселенцы Девилс-Лейка (80–100 жителей): у всех в разной мере один и тот же облик — выпученные глаза, широкий рот. Профиль годится для шерифа Сэмпсона, его «помощников», рабочих рыбоперерабатывающего склада и других жителей посёлка.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "treasure-for-the-watcher-en",
+      "physical_page": 13,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Average Deep One Hybrid»"
+    },
+    {
+      "book_id": "treasure-for-the-watcher-en",
+      "physical_page": 7,
+      "printed_page": 7,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Devil’s Lake»: облик жителей, 80–100 человек"
+    },
+    {
+      "book_id": "treasure-for-the-watcher-en",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "«6. Fish Processing Warehouse»: 10–15 сгорбленных работников"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.dodge",
+      "printed": "30%(12/5)",
+      "expected": "30% (15/6)",
+      "note": "половина и пятая 12/5 подходят к 25% (как у глубоководного на той же странице); верным считается напечатанный процент, доли исправлены (Р-77); возможно, опечатка в самом проценте",
+      "fixed": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической, обложка без номера). Профиль сценария со своими числами (Р-75); вид — общий «Гибрид глубоководного»."
+  }
+}

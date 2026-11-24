@@ -1,0 +1,266 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "treasure-for-the-watcher-en/creature/deep-ones",
+  "kind": "creature",
+  "name": {
+    "ru": "Глубоководный (Девилс-Лейк)",
+    "en": "Average Deep One"
+  },
+  "aliases": [
+    "Глубоководные Девилс-Лейка"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "глубоководный",
+  "axes": {
+    "era": [
+      "wild-west"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:deep-one"
+    },
+    {
+      "type": "servitor_of",
+      "target": "treasure-for-the-watcher-en/creature/the-watcher",
+      "note": "божество посёлка",
+      "note_back": "глубоководные Девилс-Лейка"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "80",
+        "value": 80
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      }
+    },
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8/10 вплавь",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        },
+        {
+          "mode": "swim",
+          "value": 10
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1 (когти, укус, оружие)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45%(22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d6+БкУ или оружием",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "notes": "глубоководные могут нападать когтями и укусом, а также пользоваться оружием, как люди; они искусно владеют копьями и трезубцами"
+      }
+    ],
+    "dodge": {
+      "raw": "25%(12/5)",
+      "value": 25,
+      "half": 12,
+      "fifth": 5
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Язык (речь глубоководных)",
+        "skill": "coc:skill:language-other",
+        "specialization": "речь глубоководных",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Язык (глифы Р’льеха)",
+        "skill": "coc:skill:language-other",
+        "specialization": "глифы Р’льеха",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Плавание",
+        "skill": "coc:skill:swim",
+        "value": {
+          "raw": "90%",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "при виде глубоководного"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Средний глубоководный сценария: живут в озере и пещерах под домами Гилманов, сторожат похищенных детей, мелькают в подвале Реймонда Гилмана. Числа отличаются от общего профиля (брони нет).",
+    "en": null
+  },
+  "legend": {
+    "ru": "Двое глубоководных охраняют десятерых детей в пещере под рыбоперерабатывающим складом. С вероятностью 50% в пещере под домом Реймонда Гилмана сидит глубоководная, очень похожая на жену Гилмана, и ест огромную целую рыбу. Томас Гилман уже превратился в глубоководного; услышав шум в доме, он поднимается из подвала с ещё одним глубоководным. В варианте Хранителя глубоководный ловит сбежавшего ребёнка в озере.",
+    "en": null
+  },
+  "habitat": "озеро Девилс-Лейк, пещеры под посёлком",
+  "sources": [
+    {
+      "book_id": "treasure-for-the-watcher-en",
+      "physical_page": 13,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Average Deep One»; рисунок"
+    },
+    {
+      "book_id": "treasure-for-the-watcher-en",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "«6. Fish Processing Warehouse»: двое глубоководных охраняют детей; «7. Raymond Gilman’s House»: глубоководный в пещере"
+    },
+    {
+      "book_id": "treasure-for-the-watcher-en",
+      "physical_page": 10,
+      "printed_page": 10,
+      "method": "book_text",
+      "verified": true,
+      "note": "«8. Thomas Gilman’s House»; «Keeper’s Option»"
+    },
+    {
+      "book_id": "treasure-for-the-watcher-en",
+      "physical_page": 12,
+      "printed_page": 12,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Rewards and Penalties»: потери за вид глубоководных"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической, обложка без номера). Профиль сценария со своими числами (Р-75); вид — общий «Глубоководный»."
+  },
+  "images": [
+    {
+      "file": "art/creatures/treasure-deep-ones.webp",
+      "kind": "art",
+      "caption": "Глубоководный с трезубцем",
+      "source": "Treasure for the Watcher, с. 13, «Characters and Monsters» (рисунок над профилем «Average Deep One»)"
+    }
+  ]
+}

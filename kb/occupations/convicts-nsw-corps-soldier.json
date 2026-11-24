@@ -1,0 +1,119 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:convicts-nsw-corps-soldier",
+  "kind": "occupation",
+  "name": {
+    "ru": "Солдат Корпуса Нового Южного Уэльса (каторжная эпоха)",
+    "en": "NSW Corps Soldier"
+  },
+  "aliases": [
+    "Солдат Корпуса Нового Южного Уэльса"
+  ],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Повседневная охрана порядка в колонии ложится в основном на нижние чины Корпуса Нового Южного Уэльса. Как сказано выше, у Корпуса ужасная репутация жестокости, а его служащие, когда им выгодно, весьма вольно толкуют приказы. Короче говоря, они насквозь продажны.\nЧины солдат Корпуса (от старшего к младшему): полковой старший сержант, сержант, капрал, барабанщик, рядовой.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + (ЛВК × 2 или СИЛ × 2)",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "DEX",
+          2
+        ]
+      ],
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "STR",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "15–45",
+    "min": 15,
+    "max": 45
+  },
+  "contacts": "другие служащие Корпуса Нового Южного Уэльса, мошенники, контрабандисты, каторжники",
+  "skills": [
+    {
+      "raw": "Обаяние/Подхалимство",
+      "skill": "coc:skill:charm"
+    },
+    {
+      "raw": "Ближний бой (драка)",
+      "skill": "coc:skill:fighting",
+      "specialization": "Драка"
+    },
+    {
+      "raw": "Стрельба (любая)",
+      "skill": "coc:skill:firearms"
+    },
+    {
+      "raw": "Азартные игры",
+      "skill": "coc:skill:gambling"
+    },
+    {
+      "raw": "Проницательность",
+      "skill": "coc:skill:insight"
+    },
+    {
+      "raw": "Верховая езда",
+      "skill": "coc:skill:ride"
+    },
+    {
+      "raw": "Внимание",
+      "skill": "coc:skill:spot-hidden"
+    },
+    {
+      "raw": "один любой другой навык как личная специальность",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "convicts-tol-05-en",
+      "physical_page": 16,
+      "printed_page": 16,
+      "method": "book_text",
+      "verified": true,
+      "note": "NSW Corps Soldier"
+    },
+    {
+      "book_id": "convicts-tol-05-en",
+      "physical_page": 17,
+      "printed_page": 17,
+      "method": "book_text",
+      "verified": true,
+      "note": "NSW Corps Soldier"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — колониальный Новый Южный Уэльс 1788–1840-х (в осях — «other»). Общая запись по правилу convicts-tol-05-en/rule/government-military-investigators. Азартные игры — coc:skill:gambling."
+  }
+}

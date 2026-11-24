@@ -1,0 +1,310 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "convicts-tol-12-en/character/burraga",
+  "kind": "character",
+  "name": {
+    "ru": "Буррага",
+    "en": "Burraga"
+  },
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "проводник-абориген",
+    "en": "Aboriginal Guide"
+  },
+  "age": {
+    "raw": "21",
+    "value": 21
+  },
+  "sex": "мужской",
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "65",
+        "value": 65
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65
+      },
+      "INT": {
+        "raw": "70",
+        "value": 70
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "POW": {
+        "raw": "65",
+        "value": 65
+      },
+      "EDU": {
+        "raw": "65",
+        "value": 65
+      }
+    },
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "mp": {
+      "raw": "13",
+      "value": 13
+    },
+    "sanity": {
+      "raw": "60",
+      "value": 60,
+      "max": null
+    },
+    "luck": {
+      "raw": "60",
+      "value": 60
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1d3 + БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Лёгкое копьё",
+          "en": "Light Spear"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (копьё)",
+        "chance": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "1d6+1 + БкУ",
+          "dice": "1d6+1",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Метательное копьё",
+          "en": "Thrown Spear"
+        },
+        "kind": "attack",
+        "skill": "Метание",
+        "chance": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "1d6+1 + ½ БкУ [дальность 24 м]",
+          "dice": "1d6+1",
+          "adds_db": true
+        },
+        "notes": "прибавляется половина БкУ"
+      }
+    ],
+    "dodge": {
+      "raw": "50% (25/10)",
+      "value": 50,
+      "half": 25,
+      "fifth": 10
+    },
+    "skills": [
+      {
+        "name": "Средства (у европейцев)",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "10%",
+          "value": 10,
+          "half": 5,
+          "fifth": 2
+        }
+      },
+      {
+        "name": "Иностранный язык (английский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "английский",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Язык (аборигенов окрестностей Сиднея)",
+        "skill": "coc:skill:language-other",
+        "specialization": "язык аборигенов окрестностей Сиднея",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Тайные знания (аборигенов)",
+        "skill": "coc:skill:lore",
+        "specialization": "знания аборигенов",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Ориентирование",
+        "skill": "coc:skill:navigate",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Выживание (буш)",
+        "skill": "coc:skill:survival",
+        "specialization": "буш",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Молодой и бойкий проводник-абориген в традиционной одежде, дальний родственник («племянник») Беннелонга; много путешествовал гонцом между местной общиной и другими, порой далёкими, группами аборигенов и знает разные языки.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Впервые встретил своего «дядю» Беннелонга в 1795 году, когда тот вернулся из Англии; последние полгода живёт около Парраматты и несколько раз в месяц ходит из буша в колонию, принося новости в обе стороны. Водил проводником местных поселенцев и готов делать это за хорошую плату. Любит слушать рассказы о далёких странах, но считает, что большинство европейцев не прожили бы в буше и недели, и старательно скрывает презрение к тем, кто, по его мнению, без него погиб бы. Беннелонг предлагает его экспедиции в проводники: «Голубые горы — не Гайд-парк».",
+    "en": null
+  },
+  "relations": [
+    {
+      "type": "relative_of",
+      "target": "convicts-cthulhu-en/character/bennelong",
+      "note": "дальний родственник, «дядя»",
+      "note_back": "дальний родственник, протеже"
+    }
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "convicts-tol-12-en",
+      "physical_page": 10,
+      "printed_page": 10,
+      "method": "book_text",
+      "verified": true,
+      "note": "«A Much-Revered Aboriginal»"
+    },
+    {
+      "book_id": "convicts-tol-12-en",
+      "physical_page": 11,
+      "printed_page": 11,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Encounter: Aboriginal Settlement»: языки Бурраги"
+    },
+    {
+      "book_id": "convicts-tol-12-en",
+      "physical_page": 21,
+      "printed_page": 21,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Burraga»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — колониальный Новый Южный Уэльс (в осях — «other»). Дальность «24 yards» → 24 м (Р-64). Метательное копьё — навык Метание (вывод из текста: в списке навыков Throw 65%)."
+  }
+}

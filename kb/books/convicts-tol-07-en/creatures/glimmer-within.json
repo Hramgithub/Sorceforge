@@ -1,0 +1,207 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "convicts-tol-07-en/creature/glimmer-within",
+  "kind": "creature",
+  "name": {
+    "ru": "Мерцание внутри",
+    "en": "The Glimmer Within"
+  },
+  "aliases": [
+    "Мерцание",
+    "the glimmer within",
+    "Glimmer"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "уникальная сущность",
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "related_to",
+      "target": "coc:creature:colour-out-of-space",
+      "note": "может быть «цветом» вроде цвета из иного мира, лишь частью большего целого (книга не уверена)",
+      "note_back": "возможно, родственная сущность — Мерцание внутри («Опасные жилы»)"
+    },
+    {
+      "type": "related_to",
+      "target": "coc:creature:shoggoth",
+      "note": "или зачаточная полувещественная форма шоггота (книга не уверена)",
+      "note_back": "возможно, зачаточная форма — Мерцание внутри («Опасные жилы»)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "N/A",
+        "value": null
+      },
+      "CON": {
+        "raw": "N/A",
+        "value": null
+      },
+      "SIZ": {
+        "raw": "05",
+        "value": 5
+      },
+      "DEX": {
+        "raw": "85",
+        "value": 85
+      },
+      "INT": {
+        "raw": "80",
+        "value": 80
+      },
+      "POW": {
+        "raw": "85",
+        "value": 85
+      }
+    },
+    "hp": {
+      "raw": "N/A",
+      "value": null
+    },
+    "mp": {
+      "raw": "16",
+      "value": 16
+    },
+    "damage_bonus": {
+      "raw": "N/A",
+      "value": null
+    },
+    "build": {
+      "raw": "-",
+      "value": null
+    },
+    "move": {
+      "raw": "4",
+      "value": 4,
+      "modes": [
+        {
+          "mode": "fly",
+          "value": 4,
+          "note": "парит светящимся туманом"
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет, но неуязвимо для физических атак",
+      "value": 0
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Питание касанием",
+          "en": "Feed By Touch"
+        },
+        "kind": "attack",
+        "skill": null,
+        "chance": {
+          "raw": "85% (42/17)",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        },
+        "damage": {
+          "raw": "1d6 + испаряющее высасывание",
+          "dice": "1d6",
+          "adds_db": false
+        },
+        "notes": "испаряющее высасывание силы (см. способности)"
+      }
+    ],
+    "dodge": {
+      "raw": "45% (22/9)",
+      "value": 45,
+      "half": 22,
+      "fifth": 9
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d4",
+        "trigger": "увидеть Мерцание внутри"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Испаряющее высасывание силы",
+      "summary": "Любое живое существо, чья плоть прямо касается Мерцания, частично испаряется: плоть возгоняется, обычно часть тела жертвы просто выкипает. Каждое касание отнимает у жертвы по 1d6×5 пунктов МОЩ, СИЛ, ВЫН и ЛВК. Если какая-то характеристика доходит до нуля, жертва целиком обращается в энергию, оставляя лишь запах озона. Каждые 5 пунктов МОЩ, потерянных жертвой, увеличивают ПМ Мерцания на 1, а его постоянную МОЩ — на 4.",
+      "raw": "Vaporising Power Drain: Any living creature whose flesh comes into direct contact with the Glimmer Within will be partially vaporised. This manifests as sublimation of flesh, typically resulting in part of the victim’s body simply boiling away. Each exposure costs the victim 1d6 × 5 points of characteristic from POW, STR, CON and DEX. If any characteristic reaches zero the victim has been entirely converted to energy, leaving behind only the smell of ozone. Each five points of POW lost by a victim cause the Glimmer’s Magic Point total to increase by 1 and its permanent POW to increase by 4."
+    },
+    {
+      "name": "Уязвимость к яркому свету",
+      "summary": "Избегает яркого лунного света (1 ПМ урона за раунд); прямой солнечный свет ещё вреднее — 1d6 ПМ урона за раунд; искусственный свет яркого фонаря — 1d3 ПМ за раунд.",
+      "raw": "Vulnerability to Bright Light: will shun bright moonlight (which causes it 1 Magic Point of damage per round); direct sunlight is more damaging still (1d6 Magic Points of damage per round of exposure). Artificial illumination from a bright lantern will cause 1d3 MP damage/round."
+    },
+    {
+      "name": "Жизнь в предмете",
+      "summary": "Может бесконечно покоиться глубоко внутри неодушевлённого предмета, при этом остро чувствуя окружение и слабых существ — добычу — поблизости. Подняться к поверхности предмета (проявляясь чуждым, тревожно бледным огнём) стоит 1 ПМ за раунд; отделиться совсем (живой светящийся туман) — 3 ПМ за раунд. Израсходовав все ПМ, оно быстро уходит в сердцевину предмета-носителя; если не дать ему вернуться, оно вскоре рассеивается. Если его не убить, ПМ восстанавливаются с обычной скоростью. Если МОЩ поднимется выше 200, у него хватит энергии покинуть Землю и вернуться в своё измерение.",
+      "raw": "The Glimmer Within’s level of activity depends on its current Magic Point total. It is able to rest deep within an inanimate object indefinitely, but to draw close to the surface of the object – or to emerge from it altogether – requires spending Magic Points. Coming to the surface (where it manifests an alien and unnervingly pale fire) costs 1 Magic Point per round, while achieving separate existence (as an animated glowing mist) costs the Glimmer Within 3 Magic Points per round. If the creature runs out of Magic Points altogether it retreats quickly to the core of its host object; if prevented from returning, it soon dissipates. Unless killed, the creature refreshes Magic Points at the normal rate."
+    }
+  ],
+  "description": {
+    "ru": "Странная потусторонняя сущность, частью существующая в нашем мире, частью где-то ещё: полувещественная разумная масса странного света. Боится яркого света и обычно прячется внутри другой материи — в сценарии в осколках камня, которые Фаддин вплавил в свои «самородки». Её единственная цель — поглощать сущность живых, чтобы красть их энергию. Может быть родственна другим, лучше описанным существам Мифов, а может быть уникальной.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Вариант A «Золото живо». Голос в голове Фаддина знает её лишь как «мерцание внутри». Найдя в каменоломне далеко за Парраматтой странный цветной камень, расколотый на три части, Фаддин коснулся его — и его разум поработила сущность. Почти всё время она дремлет в самородках, но, почуяв рядом уязвимого (одинокого или слабого), поднимается к поверхности — тогда самородки и сияют «неземным блеском». Теперь ей нужна энергия полностью испарённых людей: насытившись, она может на несколько часов выйти из самородков светящимся туманом — так она поглотила пятерых солдат Корпуса, охранявших камни. Её замысел — увести экспедицию в глушь, где помощи не будет, поглотить дюжину или больше людей и навсегда освободиться; рядом с местом находки зарыты и другие камни с Мерцанием, которые можно пробудить.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "convicts-tol-07-en",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Option A: Gold is Alive, Magic is Afoot»"
+    },
+    {
+      "book_id": "convicts-tol-07-en",
+      "physical_page": 10,
+      "printed_page": 10,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Option A» (окончание)"
+    },
+    {
+      "book_id": "convicts-tol-07-en",
+      "physical_page": 12,
+      "printed_page": 12,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Glimmer Within (Mythos Option A)»"
+    },
+    {
+      "book_id": "convicts-tol-07-en",
+      "physical_page": 13,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок и способности"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.mp",
+      "printed": "Magic Points: 16",
+      "expected": "17 (МОЩ 85 / 5)",
+      "note": "ПМ по МОЩ — 17. Оставлено как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — колониальный Новый Южный Уэльс 1788–1840-х (в осях — «other»). Скорость — светящийся туман (в книге просто «Move: 4»); вид передвижения «fly» — наш вывод из текста (Р-41). Тип «уникальная сущность» — наш."
+  }
+}

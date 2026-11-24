@@ -1,0 +1,1220 @@
+{
+  "images": [
+    {
+      "file": "art/creatures/convicts-tol-b-quicklime-zombies.webp",
+      "kind": "art",
+      "caption": "",
+      "source": "convicts-tol-06-en, с. 14 (физ. 14), «Quicklime Zombies» (иллюстрация Reuben Dodd)"
+    }
+  ],
+  "schema": "sourcefold.creature.v0",
+  "id": "convicts-tol-06-en/creature/quicklime-zombies",
+  "kind": "creature",
+  "name": {
+    "ru": "Известковые зомби",
+    "en": "Quicklime Zombies"
+  },
+  "aliases": [
+    "Известковый зомби",
+    "Quicklime Zombie",
+    "Ten Quicklime Zombies"
+  ],
+  "category": "supernatural",
+  "subcategory": "нежить",
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "form_of",
+      "target": "coc:creature:zombie",
+      "note": "разновидность зомби",
+      "note_back": "разновидность — известковые зомби («Ночь каторжных мертвецов»)"
+    }
+  ],
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "75",
+        "value": 75,
+        "roll": "(4d6+1)×5"
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50,
+        "roll": "(2d6+3)×5"
+      },
+      "SIZ": {
+        "raw": "75",
+        "value": 75,
+        "roll": "(2d6+8)×5"
+      },
+      "DEX": {
+        "raw": "45",
+        "value": 45,
+        "roll": "(2d6+2)×5"
+      },
+      "POW": {
+        "raw": "05",
+        "value": 5,
+        "roll": "05"
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "01",
+      "value": 1
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "5 (shambling)",
+      "value": 5,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 5,
+          "note": "ковыляя"
+        }
+      ]
+    },
+    "armor": {
+      "raw": "игнорирует урон, если удар не нацелен в голову и не наносит серьёзной раны; в голову — урон обычный, но со штрафным кубиком",
+      "value": 0,
+      "note": "серьёзная рана отрывает кусок плоти — едкую лужу; касание кожей — химические ожоги"
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Укус",
+          "en": "Bite"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d3 + БкУ + химические ожоги",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "notes": "химические ожоги (см. способности)"
+      }
+    ],
+    "dodge": {
+      "raw": "не уклоняются",
+      "value": null,
+      "half": null,
+      "fifth": null
+    },
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d8",
+        "trigger": "увидеть известкового зомби"
+      }
+    ]
+  },
+  "variants": [
+    {
+      "label": "Первый (One)",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "70",
+            "value": 70
+          },
+          "CON": {
+            "raw": "40",
+            "value": 40
+          },
+          "SIZ": {
+            "raw": "65",
+            "value": 65
+          },
+          "DEX": {
+            "raw": "30",
+            "value": 30
+          },
+          "POW": {
+            "raw": "05",
+            "value": 5
+          },
+          "INT": {
+            "raw": "–",
+            "value": null
+          }
+        },
+        "hp": {
+          "raw": "10",
+          "value": 10
+        },
+        "mp": {
+          "raw": "01",
+          "value": 1
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "5",
+          "value": 5,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 5
+            }
+          ]
+        },
+        "armor": {
+          "raw": "1 (известковая корка; в общем профиле — урон только в голову или серьёзной раной)",
+          "value": 1,
+          "note": "в таблице десяти зомби — «1 point lime coated skin»; касание корки вызывает химические ожоги"
+        },
+        "attacks_per_round": {
+          "raw": "1",
+          "value": 1
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Ближний бой",
+              "en": "Fighting"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "45% (22/9)",
+              "value": 45,
+              "half": 22,
+              "fifth": 9
+            },
+            "damage": {
+              "raw": "1d3 + БкУ + химические ожоги",
+              "dice": "1d3",
+              "adds_db": true
+            },
+            "notes": "укус; химические ожоги (см. способности)"
+          }
+        ],
+        "dodge": {
+          "raw": "не уклоняются",
+          "value": null,
+          "half": null,
+          "fifth": null
+        },
+        "sanity_loss": [
+          {
+            "success": "1",
+            "fail": "1d8",
+            "trigger": "увидеть известкового зомби"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Второй (Two)",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "75",
+            "value": 75
+          },
+          "CON": {
+            "raw": "35",
+            "value": 35
+          },
+          "SIZ": {
+            "raw": "90",
+            "value": 90
+          },
+          "DEX": {
+            "raw": "25",
+            "value": 25
+          },
+          "POW": {
+            "raw": "05",
+            "value": 5
+          },
+          "INT": {
+            "raw": "–",
+            "value": null
+          }
+        },
+        "hp": {
+          "raw": "12",
+          "value": 12
+        },
+        "mp": {
+          "raw": "01",
+          "value": 1
+        },
+        "damage_bonus": {
+          "raw": "+1d6",
+          "value": "+1d6"
+        },
+        "build": {
+          "raw": "2",
+          "value": 2
+        },
+        "move": {
+          "raw": "5",
+          "value": 5,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 5
+            }
+          ]
+        },
+        "armor": {
+          "raw": "1 (известковая корка; в общем профиле — урон только в голову или серьёзной раной)",
+          "value": 1,
+          "note": "в таблице десяти зомби — «1 point lime coated skin»; касание корки вызывает химические ожоги"
+        },
+        "attacks_per_round": {
+          "raw": "1",
+          "value": 1
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Ближний бой",
+              "en": "Fighting"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "45% (22/9)",
+              "value": 45,
+              "half": 22,
+              "fifth": 9
+            },
+            "damage": {
+              "raw": "1d3 + БкУ + химические ожоги",
+              "dice": "1d3",
+              "adds_db": true
+            },
+            "notes": "укус; химические ожоги (см. способности)"
+          }
+        ],
+        "dodge": {
+          "raw": "не уклоняются",
+          "value": null,
+          "half": null,
+          "fifth": null
+        },
+        "sanity_loss": [
+          {
+            "success": "1",
+            "fail": "1d8",
+            "trigger": "увидеть известкового зомби"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Третий (Three)",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "70",
+            "value": 70
+          },
+          "CON": {
+            "raw": "70",
+            "value": 70
+          },
+          "SIZ": {
+            "raw": "80",
+            "value": 80
+          },
+          "DEX": {
+            "raw": "40",
+            "value": 40
+          },
+          "POW": {
+            "raw": "05",
+            "value": 5
+          },
+          "INT": {
+            "raw": "–",
+            "value": null
+          }
+        },
+        "hp": {
+          "raw": "15",
+          "value": 15
+        },
+        "mp": {
+          "raw": "01",
+          "value": 1
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "5",
+          "value": 5,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 5
+            }
+          ]
+        },
+        "armor": {
+          "raw": "1 (известковая корка; в общем профиле — урон только в голову или серьёзной раной)",
+          "value": 1,
+          "note": "в таблице десяти зомби — «1 point lime coated skin»; касание корки вызывает химические ожоги"
+        },
+        "attacks_per_round": {
+          "raw": "1",
+          "value": 1
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Ближний бой",
+              "en": "Fighting"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "45% (22/9)",
+              "value": 45,
+              "half": 22,
+              "fifth": 9
+            },
+            "damage": {
+              "raw": "1d3 + БкУ + химические ожоги",
+              "dice": "1d3",
+              "adds_db": true
+            },
+            "notes": "укус; химические ожоги (см. способности)"
+          }
+        ],
+        "dodge": {
+          "raw": "не уклоняются",
+          "value": null,
+          "half": null,
+          "fifth": null
+        },
+        "sanity_loss": [
+          {
+            "success": "1",
+            "fail": "1d8",
+            "trigger": "увидеть известкового зомби"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Четвёртый (Four)",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "50",
+            "value": 50
+          },
+          "CON": {
+            "raw": "50",
+            "value": 50
+          },
+          "SIZ": {
+            "raw": "55",
+            "value": 55
+          },
+          "DEX": {
+            "raw": "45",
+            "value": 45
+          },
+          "POW": {
+            "raw": "05",
+            "value": 5
+          },
+          "INT": {
+            "raw": "–",
+            "value": null
+          }
+        },
+        "hp": {
+          "raw": "10",
+          "value": 10
+        },
+        "mp": {
+          "raw": "01",
+          "value": 1
+        },
+        "damage_bonus": {
+          "raw": "none",
+          "value": "0"
+        },
+        "build": {
+          "raw": "0",
+          "value": 0
+        },
+        "move": {
+          "raw": "5",
+          "value": 5,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 5
+            }
+          ]
+        },
+        "armor": {
+          "raw": "1 (известковая корка; в общем профиле — урон только в голову или серьёзной раной)",
+          "value": 1,
+          "note": "в таблице десяти зомби — «1 point lime coated skin»; касание корки вызывает химические ожоги"
+        },
+        "attacks_per_round": {
+          "raw": "1",
+          "value": 1
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Ближний бой",
+              "en": "Fighting"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "45% (22/9)",
+              "value": 45,
+              "half": 22,
+              "fifth": 9
+            },
+            "damage": {
+              "raw": "1d3 + БкУ + химические ожоги",
+              "dice": "1d3",
+              "adds_db": true
+            },
+            "notes": "укус; химические ожоги (см. способности)"
+          }
+        ],
+        "dodge": {
+          "raw": "не уклоняются",
+          "value": null,
+          "half": null,
+          "fifth": null
+        },
+        "sanity_loss": [
+          {
+            "success": "1",
+            "fail": "1d8",
+            "trigger": "увидеть известкового зомби"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Пятый (Five)",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "65",
+            "value": 65
+          },
+          "CON": {
+            "raw": "40",
+            "value": 40
+          },
+          "SIZ": {
+            "raw": "60",
+            "value": 60
+          },
+          "DEX": {
+            "raw": "55",
+            "value": 55
+          },
+          "POW": {
+            "raw": "05",
+            "value": 5
+          },
+          "INT": {
+            "raw": "–",
+            "value": null
+          }
+        },
+        "hp": {
+          "raw": "10",
+          "value": 10
+        },
+        "mp": {
+          "raw": "01",
+          "value": 1
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "5",
+          "value": 5,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 5
+            }
+          ]
+        },
+        "armor": {
+          "raw": "1 (известковая корка; в общем профиле — урон только в голову или серьёзной раной)",
+          "value": 1,
+          "note": "в таблице десяти зомби — «1 point lime coated skin»; касание корки вызывает химические ожоги"
+        },
+        "attacks_per_round": {
+          "raw": "1",
+          "value": 1
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Ближний бой",
+              "en": "Fighting"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "45% (22/9)",
+              "value": 45,
+              "half": 22,
+              "fifth": 9
+            },
+            "damage": {
+              "raw": "1d3 + БкУ + химические ожоги",
+              "dice": "1d3",
+              "adds_db": true
+            },
+            "notes": "укус; химические ожоги (см. способности)"
+          }
+        ],
+        "dodge": {
+          "raw": "не уклоняются",
+          "value": null,
+          "half": null,
+          "fifth": null
+        },
+        "sanity_loss": [
+          {
+            "success": "1",
+            "fail": "1d8",
+            "trigger": "увидеть известкового зомби"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Шестой (Six)",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "85",
+            "value": 85
+          },
+          "CON": {
+            "raw": "35",
+            "value": 35
+          },
+          "SIZ": {
+            "raw": "75",
+            "value": 75
+          },
+          "DEX": {
+            "raw": "45",
+            "value": 45
+          },
+          "POW": {
+            "raw": "05",
+            "value": 5
+          },
+          "INT": {
+            "raw": "–",
+            "value": null
+          }
+        },
+        "hp": {
+          "raw": "11",
+          "value": 11
+        },
+        "mp": {
+          "raw": "01",
+          "value": 1
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "5",
+          "value": 5,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 5
+            }
+          ]
+        },
+        "armor": {
+          "raw": "1 (известковая корка; в общем профиле — урон только в голову или серьёзной раной)",
+          "value": 1,
+          "note": "в таблице десяти зомби — «1 point lime coated skin»; касание корки вызывает химические ожоги"
+        },
+        "attacks_per_round": {
+          "raw": "1",
+          "value": 1
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Ближний бой",
+              "en": "Fighting"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "45% (22/9)",
+              "value": 45,
+              "half": 22,
+              "fifth": 9
+            },
+            "damage": {
+              "raw": "1d3 + БкУ + химические ожоги",
+              "dice": "1d3",
+              "adds_db": true
+            },
+            "notes": "укус; химические ожоги (см. способности)"
+          }
+        ],
+        "dodge": {
+          "raw": "не уклоняются",
+          "value": null,
+          "half": null,
+          "fifth": null
+        },
+        "sanity_loss": [
+          {
+            "success": "1",
+            "fail": "1d8",
+            "trigger": "увидеть известкового зомби"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Седьмой (Seven)",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "55",
+            "value": 55
+          },
+          "CON": {
+            "raw": "65",
+            "value": 65
+          },
+          "SIZ": {
+            "raw": "95",
+            "value": 95
+          },
+          "DEX": {
+            "raw": "45",
+            "value": 45
+          },
+          "POW": {
+            "raw": "05",
+            "value": 5
+          },
+          "INT": {
+            "raw": "–",
+            "value": null
+          }
+        },
+        "hp": {
+          "raw": "16",
+          "value": 16
+        },
+        "mp": {
+          "raw": "01",
+          "value": 1
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "5",
+          "value": 5,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 5
+            }
+          ]
+        },
+        "armor": {
+          "raw": "1 (известковая корка; в общем профиле — урон только в голову или серьёзной раной)",
+          "value": 1,
+          "note": "в таблице десяти зомби — «1 point lime coated skin»; касание корки вызывает химические ожоги"
+        },
+        "attacks_per_round": {
+          "raw": "1",
+          "value": 1
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Ближний бой",
+              "en": "Fighting"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "45% (22/9)",
+              "value": 45,
+              "half": 22,
+              "fifth": 9
+            },
+            "damage": {
+              "raw": "1d3 + БкУ + химические ожоги",
+              "dice": "1d3",
+              "adds_db": true
+            },
+            "notes": "укус; химические ожоги (см. способности)"
+          }
+        ],
+        "dodge": {
+          "raw": "не уклоняются",
+          "value": null,
+          "half": null,
+          "fifth": null
+        },
+        "sanity_loss": [
+          {
+            "success": "1",
+            "fail": "1d8",
+            "trigger": "увидеть известкового зомби"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Восьмой (Eight)",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "70",
+            "value": 70
+          },
+          "CON": {
+            "raw": "45",
+            "value": 45
+          },
+          "SIZ": {
+            "raw": "75",
+            "value": 75
+          },
+          "DEX": {
+            "raw": "50",
+            "value": 50
+          },
+          "POW": {
+            "raw": "05",
+            "value": 5
+          },
+          "INT": {
+            "raw": "–",
+            "value": null
+          }
+        },
+        "hp": {
+          "raw": "12",
+          "value": 12
+        },
+        "mp": {
+          "raw": "01",
+          "value": 1
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "5",
+          "value": 5,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 5
+            }
+          ]
+        },
+        "armor": {
+          "raw": "1 (известковая корка; в общем профиле — урон только в голову или серьёзной раной)",
+          "value": 1,
+          "note": "в таблице десяти зомби — «1 point lime coated skin»; касание корки вызывает химические ожоги"
+        },
+        "attacks_per_round": {
+          "raw": "1",
+          "value": 1
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Ближний бой",
+              "en": "Fighting"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "45% (22/9)",
+              "value": 45,
+              "half": 22,
+              "fifth": 9
+            },
+            "damage": {
+              "raw": "1d3 + БкУ + химические ожоги",
+              "dice": "1d3",
+              "adds_db": true
+            },
+            "notes": "укус; химические ожоги (см. способности)"
+          }
+        ],
+        "dodge": {
+          "raw": "не уклоняются",
+          "value": null,
+          "half": null,
+          "fifth": null
+        },
+        "sanity_loss": [
+          {
+            "success": "1",
+            "fail": "1d8",
+            "trigger": "увидеть известкового зомби"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Девятый (Nine)",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "40",
+            "value": 40
+          },
+          "CON": {
+            "raw": "25",
+            "value": 25
+          },
+          "SIZ": {
+            "raw": "90",
+            "value": 90
+          },
+          "DEX": {
+            "raw": "45",
+            "value": 45
+          },
+          "POW": {
+            "raw": "05",
+            "value": 5
+          },
+          "INT": {
+            "raw": "–",
+            "value": null
+          }
+        },
+        "hp": {
+          "raw": "11",
+          "value": 11
+        },
+        "mp": {
+          "raw": "01",
+          "value": 1
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "5",
+          "value": 5,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 5
+            }
+          ]
+        },
+        "armor": {
+          "raw": "1 (известковая корка; в общем профиле — урон только в голову или серьёзной раной)",
+          "value": 1,
+          "note": "в таблице десяти зомби — «1 point lime coated skin»; касание корки вызывает химические ожоги"
+        },
+        "attacks_per_round": {
+          "raw": "1",
+          "value": 1
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Ближний бой",
+              "en": "Fighting"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "45% (22/9)",
+              "value": 45,
+              "half": 22,
+              "fifth": 9
+            },
+            "damage": {
+              "raw": "1d3 + БкУ + химические ожоги",
+              "dice": "1d3",
+              "adds_db": true
+            },
+            "notes": "укус; химические ожоги (см. способности)"
+          }
+        ],
+        "dodge": {
+          "raw": "не уклоняются",
+          "value": null,
+          "half": null,
+          "fifth": null
+        },
+        "sanity_loss": [
+          {
+            "success": "1",
+            "fail": "1d8",
+            "trigger": "увидеть известкового зомби"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Десятый (Ten)",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "85",
+            "value": 85
+          },
+          "CON": {
+            "raw": "45",
+            "value": 45
+          },
+          "SIZ": {
+            "raw": "75",
+            "value": 75
+          },
+          "DEX": {
+            "raw": "30",
+            "value": 30
+          },
+          "POW": {
+            "raw": "05",
+            "value": 5
+          },
+          "INT": {
+            "raw": "–",
+            "value": null
+          }
+        },
+        "hp": {
+          "raw": "12",
+          "value": 12
+        },
+        "mp": {
+          "raw": "01",
+          "value": 1
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "5",
+          "value": 5,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 5
+            }
+          ]
+        },
+        "armor": {
+          "raw": "1 (известковая корка; в общем профиле — урон только в голову или серьёзной раной)",
+          "value": 1,
+          "note": "в таблице десяти зомби — «1 point lime coated skin»; касание корки вызывает химические ожоги"
+        },
+        "attacks_per_round": {
+          "raw": "1",
+          "value": 1
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Ближний бой",
+              "en": "Fighting"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "45% (22/9)",
+              "value": 45,
+              "half": 22,
+              "fifth": 9
+            },
+            "damage": {
+              "raw": "1d3 + БкУ + химические ожоги",
+              "dice": "1d3",
+              "adds_db": true
+            },
+            "notes": "укус; химические ожоги (см. способности)"
+          }
+        ],
+        "dodge": {
+          "raw": "не уклоняются",
+          "value": null,
+          "half": null,
+          "fifth": null
+        },
+        "sanity_loss": [
+          {
+            "success": "1",
+            "fail": "1d8",
+            "trigger": "увидеть известкового зомби"
+          }
+        ]
+      }
+    }
+  ],
+  "abilities": [
+    {
+      "name": "Химические ожоги",
+      "summary": "Зомби покрыты остатками негашёной извести — едкого порошка, вызывающего тяжёлые химические ожоги кожи и глаз; известь обезвоживает тело и замедляет разложение, поэтому зомби лучше сохранились и крепче. Ожоги бывают от самой извести или от её пыли. Кого известковый зомби укусил или схватил, тот теряет ещё 1 ПЗ за раунд, пока ожог не обработают. При проваленной проверке Удачи едкая пыль обжигает и глаза — жертва слепнет до лечения. Обычное лечение ожогов кожи и глаз — промыть водой; при критическом провале лечения глаз зрение повреждено навсегда.",
+      "raw": "Chemical Burns: Quicklime Zombies are coated with quicklime, some of which still adheres to their bodies. Quicklime is a highly caustic powder which produces vicious chemical burns when it comes into contact with skin or eyes. It dehydrates the body and can slow decomposition, which means the zombie will be better preserved and tougher. Quicklime burns can occur from the lime itself, or from its dust. If successfully bitten or grappled by a Quicklime zombie, a victim takes 1 additional Hit Point per round until the lime burn is treated. On a failed Luck roll, there is also burning to victim’s eyes from the caustic dust – this results in the victim being blinded until treated. Rinsing with water is the usual treatment for burns to skin or eyes. On a fumbled roll on eye treatment, the character has permanent vision impairment."
+    },
+    {
+      "name": "Уязвимость к воде",
+      "summary": "Негашёная известь при контакте с водой разбухает и быстро нагревается. Если окатить зомби большим количеством воды (не меньше бутылки), он получает ещё 1d6−1 урона. Если это опускает его ПЗ ниже 0, бурная реакция разрывает зомби, обдавая всех в радиусе 2 м едкой плотью: все в этой области получают химические ожоги.",
+      "raw": "Vulnerability to Water: Quicklime can swell and heat up rapidly when it comes into contact with water. Splashing the zombie with a large amount of water (at least a bottle’s worth) will cause an additional 1d6-1 damage to the creature. However, if this brings the Quicklime Zombie below 0 Hit Points, the rapid chemical reaction will cause the creature to violently explode, showering everyone in a 2 yard radius in caustic flesh. Everyone within that area receives chemical burns as described above."
+    },
+    {
+      "name": "Броня",
+      "summary": "Игнорирует урон, если удар не нацелен в голову и не наносит серьёзной раны. Удар в голову наносит обычный урон, но все такие атаки делаются со штрафным кубиком. Серьёзная рана отрывает часть плоти зомби — она падает едкой химической жижей; любая атака, при которой кожа атакующего касается зомби (или его оторванной плоти), вызывает химические ожоги. В таблице десяти зомби броня указана как «1 очко — покрытая известью кожа».",
+      "raw": "Armour: Ignores damage that does not specifically target the head and which does not deliver a Major Wound. If a head wound is achieved, damage is normal (but all such attacks are made with a penalty die). If a Major Wound is delivered, part of the Quicklime Zombie’s flesh sloughs off into a noxious pile of highly caustic chemical soup. Furthermore, any attack which leads to the attacker’s skin coming into contact with the Quicklime Zombie (or its sloughed-off flesh) will result in chemical burns as described below."
+    }
+  ],
+  "description": {
+    "ru": "Умерших каторжников в австралийских поселениях обычно хоронят нагими, засыпав слоем едкой негашёной извести (чтобы обеззаразить тела и не дать распространиться болезни). Оживлённые, такие трупы становятся известковыми зомби — мерзкими ковыляющими пародиями на мужчин и женщин, с чертами, наполовину расплавленными известью. Остатки извести дают им особые способы вредить. Каторжники обычно были сильными и грубыми, поэтому известковые зомби крупнее и мощнее обычного зомби, но так же безмозглы и тупы. Они голые, что в эту эпоху кое-кого смущает. Основной профиль — средние значения; десять готовых зомби — в вариантах.",
+    "en": null
+  },
+  "legend": {
+    "ru": "В сценарии. Поднимаются заклинанием «Воскрешение по шкуре Люцифера» из каторжных могил: четвёртая «двойная смерть» в Роксе оставила наполовину разъеденный известью труп; в ночь великого ритуала на Сиднейском кладбище встают десятки таких мертвецов.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "convicts-tol-06-en",
+      "physical_page": 14,
+      "printed_page": 14,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Statistics»: «Quicklime Zombies» (средние значения, атаки, способности) и «Ten Quicklime Zombies»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.armor",
+      "printed": "Armour: Ignores damage that does not specifically target the head… (профиль) / Armour: 1 point lime coated skin (таблица десяти зомби)",
+      "expected": "одно правило брони",
+      "note": "Профиль и таблица десяти зомби дают разную броню. В профиле — правило книги, в вариантах — 1 очко, как напечатано в таблице.",
+      "fixed": false
+    },
+    {
+      "field": "abilities[Броня]",
+      "printed": "will result in chemical burns as described below",
+      "expected": "as described above",
+      "note": "Ожоги описаны выше (в «Chemical Burns»), а не ниже.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — колониальный Новый Южный Уэльс 1788–1840-х (в осях — «other»). Числа таблицы десяти зомби сверены по изображению страницы: ПЗ, БкУ и Комплекция сходятся с характеристиками. ИНТ в таблице — «–». Уклонения нет («Quicklime Zombies do not dodge»)."
+  }
+}

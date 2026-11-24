@@ -1,0 +1,143 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:convicts-farmer-settler",
+  "kind": "occupation",
+  "name": {
+    "ru": "Фермер-поселенец (каторжная эпоха)",
+    "en": "Farmer Settler"
+  },
+  "aliases": [
+    "Фермер-поселенец"
+  ],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Профессия свободных. Большинство свободных поселенцев приезжает в новые австралийские колонии, чтобы завести ферму (в надежде разбогатеть или хотя бы начать новую жизнь). Того же добиваются и многие каторжники, отбыв срок или получив помилование. Земледелие — ещё и дополнительный доход для действующих и бывших офицеров, некоторым из которых в награду за службу дали земельные наделы.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + (ЛВК × 2 или СИЛ × 2)",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "DEX",
+          2
+        ]
+      ],
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "STR",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "30–70",
+    "min": 30,
+    "max": 70
+  },
+  "contacts": "другие свободные поселенцы, чиновники, распределённые каторжники",
+  "skills": [
+    {
+      "raw": "Искусство/ремесло (земледелие)",
+      "skill": "coc:skill:art-craft",
+      "specialization": "Земледелие"
+    },
+    {
+      "raw": "Управление лошадью, волом или повозкой",
+      "skill": "coc:skill:drive-horses-or-oxen"
+    },
+    {
+      "raw": "Стрельба (мушкет)",
+      "skill": "coc:skill:firearms",
+      "specialization": "Мушкет"
+    },
+    {
+      "raw": "Естествознание",
+      "skill": "coc:skill:natural-world"
+    },
+    {
+      "raw": "Верховая езда",
+      "skill": "coc:skill:ride"
+    },
+    {
+      "raw": "Чтение следов",
+      "skill": "coc:skill:track"
+    },
+    {
+      "raw": "один социальный навык (Обаяние, Красноречие, Запугивание или Убеждение)",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:charm",
+          "coc:skill:fast-talk",
+          "coc:skill:intimidate",
+          "coc:skill:persuade"
+        ]
+      }
+    },
+    {
+      "raw": "один любой другой навык как личная специальность",
+      "choice": {
+        "count": 1,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "convicts-cthulhu-en",
+      "physical_page": 23,
+      "printed_page": 22,
+      "method": "book_text",
+      "verified": true,
+      "note": "Farmer Settler"
+    },
+    {
+      "book_id": "convicts-cthulhu-players-en",
+      "physical_page": 23,
+      "printed_page": 22,
+      "method": "book_text",
+      "verified": true,
+      "note": "то же в Players Version"
+    },
+    {
+      "book_id": "convicts-tol-05-en",
+      "physical_page": 17,
+      "printed_page": 17,
+      "method": "book_text",
+      "verified": true,
+      "note": "Farmer Settler"
+    },
+    {
+      "book_id": "convicts-tol-05-en",
+      "physical_page": 18,
+      "printed_page": 18,
+      "method": "book_text",
+      "verified": true,
+      "note": "Farmer Settler"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21). Эпоха — колониальный Новый Южный Уэльс 1788–1840-х (в осях — «other»). Первый источник — основная книга «Convicts & Cthulhu» (с. 22, таблица правила convicts-cthulhu-en/rule/character-templates; печатная страница = физическая − 1) и Players Version; ToL #5 «The Damned & The Degenerate» (с. 17–18, правило convicts-tol-05-en/rule/free-settler-investigators; печатная = физической) перепечатывает профессию в расширенной редакции — описание и связи взяты оттуда (в основной книге их нет). Пункты навыков, Средства и список навыков — по основной книге (Р-125). Пункты навыков, Средства и список навыков ToL #5 (с. 17–18) совпадают с основной книгой (с. 22)."
+  }
+}

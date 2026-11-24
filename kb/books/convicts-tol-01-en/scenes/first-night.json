@@ -1,0 +1,118 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "convicts-tol-01-en/scene/first-night",
+  "kind": "scene",
+  "name": {
+    "ru": "Ночь первая: сбор патруля и безумец",
+    "en": "First Night"
+  },
+  "description": {
+    "ru": "Патруль собирается на закате у местной тюрьмы. Командир (лейтенант Стайлз или сыщик) зачитывает неграмотным раздатку — «Общие приказы» губернатора, чтобы все знали новые приказы. Затем патруль три часа идёт по постоянному маршруту (Сидней или Парраматта — см. сценарий, шаг «Маршрут патруля»); Хранитель бросает по таблице случайных встреч примерно раз в час.\nОбязательная встреча: по ночным улицам бродит безумец с дикими глазами — его рассудок разрушило то, что он видел: полунасекомое-полуобезьяна, как он вспоминает. Сыщики, скорее всего, решат, что он пьян. Расспросы показывают, что это Чарли Кукман, торговец обычно трезвого нрава. Он должен был подписать приёмку партии (законного) вина для склада в городе. Склад принадлежит Саймону Лорду, но его приказчик пропал; рабочие склада неохотно говорят.",
+    "en": null
+  },
+  "when": "Первая ночь, с 19:00 до 22:00",
+  "arc": {
+    "scenario": "convicts-tol-01-en/scenario/night-terrors",
+    "part": null,
+    "order": 1
+  },
+  "where": [
+    {
+      "location": "coc:location:sydney",
+      "note": "или Парраматта — по выбору Хранителя"
+    },
+    {
+      "location": "convicts-cthulhu-en/location/parramatta",
+      "note": "если патруль в Парраматте"
+    },
+    {
+      "location": "convicts-cthulhu-en/location/sydney-gaol",
+      "note": "сбор патруля у тюрьмы (в Сиднее)"
+    },
+    {
+      "location": "convicts-tol-01-en/location/lord-warehouse",
+      "note": "склад, о котором говорит Кукман"
+    }
+  ],
+  "participants": [
+    {
+      "id": "convicts-tol-01-en/character/john-styles",
+      "role": "член патруля"
+    },
+    {
+      "id": "convicts-tol-01-en/character/victor-goode",
+      "role": "член патруля"
+    },
+    {
+      "id": "convicts-tol-01-en/character/freddy-marriot",
+      "role": "член патруля"
+    },
+    {
+      "id": "convicts-tol-01-en/character/benjamin-tully",
+      "role": "член патруля"
+    },
+    {
+      "id": "convicts-tol-01-en/character/henry-selkirk",
+      "role": "член патруля"
+    },
+    {
+      "id": "convicts-tol-01-en/character/jenny-mavery",
+      "role": "член патруля"
+    },
+    {
+      "id": "convicts-tol-01-en/character/charlie-cookman",
+      "role": "безумный свидетель"
+    },
+    {
+      "id": "convicts-tol-01-en/character/hezekiah-barnes",
+      "role": "пропавший приказчик (упоминается)"
+    }
+  ],
+  "mechanics": {
+    "ru": "Случайные встречи — таблица сценария «Случайные встречи патруля» (1d3, затем 1d8), примерно одна в час; неуместный результат (охотничья партия в городе) заменяется подходящим. Как поступать с нарушителями — по раздатке «Общие приказы»; большинство задержанных сажают в караульню или тюрьму до утра.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Сыщики узнают о складе Саймона Лорда и пропавшем приказчике.",
+    "en": null
+  },
+  "refs": [
+    "convicts-tol-01-en/handout/general-orders",
+    "convicts-tol-01-en/character/charlie-cookman",
+    "convicts-tol-01-en/location/lord-warehouse",
+    "convicts-cthulhu-en/character/simeon-lord",
+    "coc:creature:dimensional-shambler",
+    "convicts-tol-01-en/scene/second-night"
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "convicts-tol-01-en",
+      "physical_page": 2,
+      "printed_page": 2,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Patrol’s Route & Encounters»"
+    },
+    {
+      "book_id": "convicts-tol-01-en",
+      "physical_page": 3,
+      "printed_page": 3,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Unfolding Adventure», «First Night»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — колониальный Новый Южный Уэльс, 1788–1809 (в осях — «other»)."
+  }
+}

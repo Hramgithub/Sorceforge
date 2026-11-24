@@ -1,0 +1,105 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:convicts-forger",
+  "kind": "occupation",
+  "name": {
+    "ru": "Подделыватель (каторжная эпоха)",
+    "en": "Forger"
+  },
+  "aliases": [
+    "Подделыватель"
+  ],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "В эпоху, когда проверить подлинность письменного документа или даже банкноты трудно, мастер подделок — очень востребованный преступник. Но власти этого ремесла не терпят: подделывателей, которым не повезло попасться (или которых выдали), обычно ждут долгие сроки в самых суровых тюрьмах. Разумеется, и за тюремными стенами умения мастера подделок остаются ценными и востребованными.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 4",
+    "options": [
+      [
+        [
+          "EDU",
+          4
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "см. выше: отбывает срок 1–10; отпускной билет 10–29; условное помилование 20–35; полное помилование 25–45",
+    "min": 1,
+    "max": 45
+  },
+  "contacts": "другие каторжники, преступные шайки в поселениях, купцы",
+  "skills": [
+    {
+      "raw": "Оценка",
+      "skill": "coc:skill:appraise"
+    },
+    {
+      "raw": "Искусство/ремесло (подделка)",
+      "skill": "coc:skill:art-craft",
+      "specialization": "Подделка"
+    },
+    {
+      "raw": "Красноречие",
+      "skill": "coc:skill:fast-talk"
+    },
+    {
+      "raw": "История",
+      "skill": "coc:skill:history"
+    },
+    {
+      "raw": "Ловкость рук",
+      "skill": "coc:skill:sleight-of-hand"
+    },
+    {
+      "raw": "Внимание",
+      "skill": "coc:skill:spot-hidden"
+    },
+    {
+      "raw": "Скрытность",
+      "skill": "coc:skill:stealth"
+    },
+    {
+      "raw": "один любой другой навык как личная специальность",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "convicts-tol-05-en",
+      "physical_page": 8,
+      "printed_page": 8,
+      "method": "book_text",
+      "verified": true,
+      "note": "Forger"
+    },
+    {
+      "book_id": "convicts-tol-05-en",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "Forger"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — колониальный Новый Южный Уэльс 1788–1840-х (в осях — «other»). Общая запись по правилу convicts-tol-05-en/rule/convict-investigators."
+  }
+}

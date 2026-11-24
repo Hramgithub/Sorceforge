@@ -1,0 +1,131 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:convicts-clever-man-or-woman",
+  "kind": "occupation",
+  "name": {
+    "ru": "Знахарь или знахарка из аборигенов (каторжная эпоха)",
+    "en": "Clever-Man or Woman"
+  },
+  "aliases": [
+    "Знахарь или знахарка",
+    "Indigenous Clever-man or Woman [traditional]",
+    "Знахарь или знахарка из аборигенов"
+  ],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Аборигенная профессия; Средства — в пределах аборигенной общины. Аборигены твёрдо верят в магию и мир духов; тех, кто умеет управлять такими силами, называют «знающими людьми» (clever men, clever women). Их одновременно чтут и боятся, и нередко важные события — добрые или дурные — приписывают делам кого-нибудь из этих почитаемых колдунов. Правила об особой магии австралийских аборигенов — в книге Chaosium «Secrets of Australia». Традиционный уклад: Средства определяют положение среди аборигенов.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + (ЛВК × 2 или МОЩ × 2)",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "DEX",
+          2
+        ]
+      ],
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "POW",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "50–99 (в аборигенной общине)",
+    "min": 50,
+    "max": 99
+  },
+  "contacts": "члены своей общины аборигенов",
+  "skills": [
+    {
+      "raw": "Знание Алчеринги"
+    },
+    {
+      "raw": "Песнь сновидений"
+    },
+    {
+      "raw": "Первая помощь",
+      "skill": "coc:skill:first-aid"
+    },
+    {
+      "raw": "Тайные знания (аборигенов)",
+      "skill": "coc:skill:lore",
+      "specialization": "Аборигены"
+    },
+    {
+      "raw": "Медицина",
+      "skill": "coc:skill:medicine"
+    },
+    {
+      "raw": "Естествознание",
+      "skill": "coc:skill:natural-world"
+    },
+    {
+      "raw": "Оккультизм, Чтение следов или Ближний бой",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:occult",
+          "coc:skill:track",
+          "coc:skill:fighting"
+        ]
+      }
+    },
+    {
+      "raw": "Выживание (буш)",
+      "skill": "coc:skill:survival",
+      "specialization": "Буш"
+    }
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "convicts-cthulhu-en",
+      "physical_page": 22,
+      "printed_page": 21,
+      "method": "book_text",
+      "verified": true,
+      "note": "Clever-Man or Woman"
+    },
+    {
+      "book_id": "convicts-cthulhu-players-en",
+      "physical_page": 22,
+      "printed_page": 21,
+      "method": "book_text",
+      "verified": true,
+      "note": "то же в Players Version"
+    },
+    {
+      "book_id": "convicts-tol-05-en",
+      "physical_page": 4,
+      "printed_page": 4,
+      "method": "book_text",
+      "verified": true,
+      "note": "Indigenous Clever-man or Woman [traditional]"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21). Эпоха — колониальный Новый Южный Уэльс 1788–1840-х (в осях — «other»). Первый источник — основная книга «Convicts & Cthulhu» (с. 21, таблица правила convicts-cthulhu-en/rule/character-templates; печатная страница = физическая − 1) и Players Version; ToL #5 «The Damned & The Degenerate» (с. 4, правило convicts-tol-05-en/rule/indigenous-investigators; печатная = физической) перепечатывает профессию в расширенной редакции — описание и связи взяты оттуда (в основной книге их нет). Пункты навыков, Средства и список навыков — по основной книге (Р-125). ToL #5 (с. 4) добавляет к Средствам: в европейской колонии — 0–5 (Средства 50–99 — только в общине аборигенов). Знание Алчеринги и Песнь сновидений — навыки «Secrets of Australia», в справочнике их нет."
+  }
+}

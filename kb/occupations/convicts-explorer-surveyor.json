@@ -1,0 +1,138 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:convicts-explorer-surveyor",
+  "kind": "occupation",
+  "name": {
+    "ru": "Исследователь/землемер (каторжная эпоха)",
+    "en": "Explorer / Surveyor"
+  },
+  "aliases": [
+    "Исследователь/землемер"
+  ],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Окрестности каторжных колоний уже неплохо изучены, но стоит отойти на несколько километров дальше от обжитых мест — и всё иначе. Каторжников, бывших каторжников, свободных поселенцев и солдат становится всё больше, и нужно искать земли, пригодные для земледелия. Методичная съёмка земель, намеченных для будущего освоения, — дело землемеров колонии. Более смелые и рискованные исследования — неведомых внутренних земель или огромного неописанного побережья — ещё опаснее.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + (НАР × 2 или ЛВК × 2 или СИЛ × 2)",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "APP",
+          2
+        ]
+      ],
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "DEX",
+          2
+        ]
+      ],
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "STR",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "45–75",
+    "min": 45,
+    "max": 75
+  },
+  "contacts": "чиновники, купцы, моряки торгового флота, следопыты или мореходы из аборигенов",
+  "skills": [
+    {
+      "raw": "Лазание или Плавание",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:climb",
+          "coc:skill:swim"
+        ]
+      }
+    },
+    {
+      "raw": "Стрельба (любая)",
+      "skill": "coc:skill:firearms"
+    },
+    {
+      "raw": "История",
+      "skill": "coc:skill:history"
+    },
+    {
+      "raw": "Иностранный язык (другой) или Пилотирование (судно)",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:language-other",
+          {
+            "skill": "coc:skill:pilot",
+            "specialization": "Судно",
+            "raw": "Пилотирование (судно)"
+          }
+        ]
+      }
+    },
+    {
+      "raw": "Естествознание",
+      "skill": "coc:skill:natural-world"
+    },
+    {
+      "raw": "Ориентирование",
+      "skill": "coc:skill:navigate"
+    },
+    {
+      "raw": "Выживание (любое)",
+      "skill": "coc:skill:survival"
+    },
+    {
+      "raw": "один любой другой навык как личная специальность",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "convicts-tol-05-en",
+      "physical_page": 12,
+      "printed_page": 12,
+      "method": "book_text",
+      "verified": true,
+      "note": "Explorer / Surveyor"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — колониальный Новый Южный Уэльс 1788–1840-х (в осях — «other»). Общая запись по правилу convicts-tol-05-en/rule/government-military-investigators."
+  }
+}

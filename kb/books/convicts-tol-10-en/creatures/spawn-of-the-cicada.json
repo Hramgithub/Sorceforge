@@ -1,0 +1,181 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "convicts-tol-10-en/creature/spawn-of-the-cicada",
+  "kind": "creature",
+  "name": {
+    "ru": "Отродье цикады",
+    "en": "Spawn of the Cicada"
+  },
+  "aliases": [
+    "Zstylzhemgni’s hatchling offspring",
+    "детёныши Зстилжемгни",
+    "рой",
+    "swarm"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "потомство Великой Древней (рой)",
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "spawn_of",
+      "target": "convicts-tol-10-en/creature/zstylzhemgni",
+      "note": "вылупляется из яиц, введённых в живых и мёртвых",
+      "note_back": "потомство"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "N/A",
+        "value": null
+      },
+      "CON": {
+        "raw": "N/A",
+        "value": null
+      },
+      "SIZ": {
+        "raw": "N/A",
+        "value": null
+      },
+      "DEX": {
+        "raw": "90",
+        "value": 90
+      },
+      "INT": {
+        "raw": "0",
+        "value": 0
+      },
+      "POW": {
+        "raw": "30",
+        "value": 30
+      }
+    },
+    "hp": {
+      "raw": "10 на каждые 20 насекомых в рое",
+      "value": null
+    },
+    "mp": {
+      "raw": "6",
+      "value": 6
+    },
+    "damage_bonus": {
+      "raw": "N/A",
+      "value": null
+    },
+    "build": {
+      "raw": "—",
+      "value": null
+    },
+    "move": {
+      "raw": "6 полёт",
+      "value": 6,
+      "modes": [
+        {
+          "mode": "fly",
+          "value": 6
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет; но рой получает лишь 1 ПЗ урона от каждой успешной физической атаки; огонь, взрывы и химия наносят обычный урон",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "см. ниже",
+      "value": null
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Рой",
+          "en": "Swarm"
+        },
+        "kind": "attack",
+        "skill": null,
+        "chance": {
+          "raw": "100% (50/20)",
+          "value": 100,
+          "half": 50,
+          "fifth": 20
+        },
+        "damage": {
+          "raw": "1d6 на каждые 20 насекомых в рое (см. ниже)",
+          "dice": "1d6",
+          "adds_db": false
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "70% (35/14)",
+      "value": 70,
+      "half": 35,
+      "fifth": 14
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d4",
+        "trigger": "увидеть рой отродья чужой цикады"
+      },
+      {
+        "success": "1d3",
+        "fail": "2d4",
+        "trigger": "носитель, из которого прогрызлось созревшее отродье"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Рой",
+      "summary": "Отродье нападает только роем, окружая человека и раз за разом жаля и кусая. Площадь роя зависит от числа насекомых: на каждые 20 насекомых — 1 кв. м (смежный с остальным роем); все жертвы на этой площади атакованы. Атака сопровождается оглушающей и ослепляющей яростью: все жертвы в зоне получают штрафную кость к проверкам навыков, связанных со зрением или слухом. ПЗ и урон роя растут на каждые 20 насекомых; рой может делиться — характеристики и накопленный урон делятся пропорционально размерам; когда ПЗ падают до нуля, все насекомые мертвы или рассеяны.",
+      "raw": "Swarm: The spawn of the cicada can only attack by assembling into a swarm surrounding an individual and repeatedly stinging and biting in a concerted effort to damage. The area that can be affected by a swarm depends on the number of insects it contains – Keepers should assume that for each 20 insects that join a swarm it can effectively cover an area of 1 square yard (contiguous with the rest of the swarm). If there are multiple victims within that area, all will be attacked. The swarm’s attack is accompanied by a deafening and blinding fury of action: all victims within the area suffer a penalty die to any sight- or hearing-related skill rolls.",
+      "refs": [
+        "coc:rule:bonus-and-penalty-dice"
+      ]
+    }
+  ],
+  "description": {
+    "ru": "Детёныши Зстилжемгни — странно светящиеся насекомые размером с мужской кулак. Быстро летают, собираясь в огромные рои; характеристики описывают рой, а не отдельное насекомое (так они и сражаются). В Файв-Доке первый рой уже вылупился: около 20 насекомых таятся в верхушках ив у пруда; каждые два часа вылупляется ещё 10+1d20, и так пять дней; набрав около 100, рои покинут пруд в поисках пищи. Заклинания, которое удаляло бы рой или невылупившиеся яйца, не существует.",
+    "en": null
+  },
+  "habitat": "Пруд за фермой Файв-Док",
+  "sources": [
+    {
+      "book_id": "convicts-tol-10-en",
+      "physical_page": 17,
+      "printed_page": 17,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Spawn of the Cicada (Zstylzhemgni’s hatchling offspring)»"
+    },
+    {
+      "book_id": "convicts-tol-10-en",
+      "physical_page": 10,
+      "printed_page": 10,
+      "method": "book_text",
+      "verified": true,
+      "note": "рои у пруда"
+    },
+    {
+      "book_id": "convicts-tol-10-en",
+      "physical_page": 15,
+      "printed_page": 15,
+      "method": "book_text",
+      "verified": true,
+      "note": "изгнание не убирает рой"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая). Уникальное существо выпуска."
+  }
+}

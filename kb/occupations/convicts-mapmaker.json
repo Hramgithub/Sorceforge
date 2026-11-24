@@ -1,0 +1,111 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:convicts-mapmaker",
+  "kind": "occupation",
+  "name": {
+    "ru": "Картограф (картограф или гидрограф) (каторжная эпоха)",
+    "en": "Mapmaker (Cartographer or Hydrographer)"
+  },
+  "aliases": [
+    "Картограф (картограф или гидрограф)"
+  ],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "У всех карт колонии и лоций её вод есть одно общее — огромные белые пятна. Хотя австралийские колонии существуют уже давно, картографирование новой земли только начинается. Готовясь к расширению обжитых земель, колониальное правительство нанимает картографов и гидрографов (составителей морских карт). Работа отчасти кабинетная, но составителям карт часто приходится ездить в глухие места — по суше или морем, — чтобы проверить свои сведения.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 4",
+    "options": [
+      [
+        [
+          "EDU",
+          4
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "30–60",
+    "min": 30,
+    "max": 60
+  },
+  "contacts": "чиновники, купцы, моряки торгового флота, следопыты или мореходы из аборигенов",
+  "skills": [
+    {
+      "raw": "Бухгалтерское дело",
+      "skill": "coc:skill:accounting"
+    },
+    {
+      "raw": "Искусство/ремесло (рисование)",
+      "skill": "coc:skill:art-craft",
+      "specialization": "Рисование"
+    },
+    {
+      "raw": "Первая помощь",
+      "skill": "coc:skill:first-aid"
+    },
+    {
+      "raw": "Работа в библиотеке",
+      "skill": "coc:skill:library-use"
+    },
+    {
+      "raw": "Слух или Выживание (любое)",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:listen",
+          "coc:skill:survival"
+        ]
+      }
+    },
+    {
+      "raw": "Ориентирование",
+      "skill": "coc:skill:navigate"
+    },
+    {
+      "raw": "Внимание",
+      "skill": "coc:skill:spot-hidden"
+    },
+    {
+      "raw": "Чтение следов или Пилотирование (судно)",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:track",
+          {
+            "skill": "coc:skill:pilot",
+            "specialization": "Судно",
+            "raw": "Пилотирование (судно)"
+          }
+        ]
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "convicts-tol-05-en",
+      "physical_page": 14,
+      "printed_page": 14,
+      "method": "book_text",
+      "verified": true,
+      "note": "Mapmaker (Cartographer or Hydrographer)"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — колониальный Новый Южный Уэльс 1788–1840-х (в осях — «other»). Общая запись по правилу convicts-tol-05-en/rule/government-military-investigators."
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:convicts-french-occult-explorer",
+  "kind": "occupation",
+  "name": {
+    "ru": "Французский оккультист-исследователь",
+    "en": "French Occult Explorer"
+  },
+  "aliases": [],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Члены тайных французских оккультных орденов (например, «Новых Мистерий»), которым поручено сопровождать морские исследовательские экспедиции в южную часть Тихого океана.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 4",
+    "options": [
+      [
+        [
+          "EDU",
+          4
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "20–50 (во французской общине; при делах с англичанами — вдвое меньше; в военное время проверка Средств — трудная)",
+    "min": 20,
+    "max": 50
+  },
+  "contacts": null,
+  "skills": [
+    {
+      "raw": "Ремесло (любое морское)",
+      "skill": "coc:skill:art-craft",
+      "specialization": "любое морское"
+    },
+    {
+      "raw": "История",
+      "skill": "coc:skill:history"
+    },
+    {
+      "raw": "Ориентирование или Религия",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:navigate",
+          "coc:skill:kc-religion"
+        ]
+      }
+    },
+    {
+      "raw": "Оккультизм",
+      "skill": "coc:skill:occult"
+    },
+    {
+      "raw": "Иностранный язык",
+      "skill": "coc:skill:language-other"
+    },
+    {
+      "raw": "Наука (астрономия)",
+      "skill": "coc:skill:science",
+      "specialization": "астрономия"
+    },
+    {
+      "raw": "один социальный навык (Обаяние/Угодничество, Красноречие, Запугивание или Убеждение)",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:charm",
+          "coc:skill:fast-talk",
+          "coc:skill:intimidate",
+          "coc:skill:persuade"
+        ]
+      }
+    },
+    {
+      "raw": "один любой другой навык",
+      "choice": {
+        "count": 1,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "convicts-tol-02-en",
+      "physical_page": 4,
+      "printed_page": 4,
+      "method": "book_text",
+      "verified": true,
+      "note": "«French Occult Explorer»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — колониальный Новый Южный Уэльс, 1788–1809 (в осях — «other»). Общая запись из «Ticket of Leave #2» (часть tol-a). «Religion» — навык Религия (coc:skill:kc-religion); «Charm/Bootlick» — Обаяние/Угодничество сеттинга."
+  }
+}

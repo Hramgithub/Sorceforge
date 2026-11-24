@@ -1,0 +1,322 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "convicts-tol-10-en/creature/zstylzhemgni",
+  "kind": "creature",
+  "name": {
+    "ru": "Зстилжемгни",
+    "en": "Zstylzhemgni"
+  },
+  "aliases": [
+    "Матриарх роёв",
+    "The Matriarch of Swarms",
+    "Matriarch of Swarms",
+    "Insect God",
+    "Бог-насекомое",
+    "Великая Древняя-насекомое"
+  ],
+  "category": "mythos_deity",
+  "subcategory": "Великий Древний",
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "125",
+        "value": 125
+      },
+      "CON": {
+        "raw": "335",
+        "value": 335
+      },
+      "SIZ": {
+        "raw": "185",
+        "value": 185
+      },
+      "DEX": {
+        "raw": "105",
+        "value": 105
+      },
+      "INT": {
+        "raw": "90",
+        "value": 90
+      },
+      "POW": {
+        "raw": "150",
+        "value": 150
+      }
+    },
+    "hp": {
+      "raw": "52",
+      "value": 52
+    },
+    "mp": {
+      "raw": "30",
+      "value": 30
+    },
+    "damage_bonus": {
+      "raw": "+3d6",
+      "value": "+3d6"
+    },
+    "build": {
+      "raw": "4",
+      "value": 4
+    },
+    "move": {
+      "raw": "15/21 полёт",
+      "value": 15,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 15
+        },
+        {
+          "mode": "fly",
+          "value": 21
+        }
+      ]
+    },
+    "armor": {
+      "raw": "15 очков: твёрдый хитиновый панцирь",
+      "value": 15
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Укус",
+          "en": "Bite"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "1d6 + БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Жало",
+          "en": "Sting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "1d6+2 + яд",
+          "dice": "1d6+2",
+          "adds_db": false,
+          "extra": "яд: 3d10 ПЗ за 1d6 раундов и паралич"
+        },
+        "notes": "см. «Ядовитое жало»"
+      },
+      {
+        "name": {
+          "ru": "Звуковой визг",
+          "en": "Sonic Screech"
+        },
+        "kind": "special",
+        "skill": null,
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "см. таблицу; поражает конус [стоит 15 ПМ]",
+          "dice": null,
+          "adds_db": false
+        },
+        "notes": "см. «Звуковой визг»"
+      },
+      {
+        "name": {
+          "ru": "Ввести яйца",
+          "en": "Inject Eggs"
+        },
+        "kind": "special",
+        "skill": null,
+        "chance": {
+          "raw": "100% (50/20)",
+          "value": 100,
+          "half": 50,
+          "fifth": 20
+        },
+        "damage": {
+          "raw": "1 ПЗ и 1d6 яиц (жертва должна быть парализована или беспомощна)",
+          "dice": null,
+          "adds_db": false
+        },
+        "notes": "см. «Ввести яйца»"
+      }
+    ],
+    "dodge": {
+      "raw": "70% (35/14)",
+      "value": 70,
+      "half": 35,
+      "fifth": 14
+    },
+    "spells": {
+      "raw": "по желанию Хранителя"
+    },
+    "sanity_loss": [
+      {
+        "success": "1d6",
+        "fail": "1d20",
+        "trigger": "увидеть гигантского насекомого — облик Зстилжемгни"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Ядовитое жало",
+      "summary": "Ужаленный человек автоматически получает чуждый яд: ещё 3d10 ПЗ урона, растянутых на 1d6 раундов; успех чрезвычайной проверки ВЫН вдвое уменьшает урон. Даже переживший урон отравлен внеземным токсином и парализован на 24 часа минус 1 час за каждые 5 очков ВЫН. Медицинская помощь парализованному (успех Первой помощи или Медицины) тоже снимает паралич.",
+      "raw": "Poison Sting: Any human stung with the insect god’s baleful stinger is automatically injected with an alien poison which inflicts 3d10 Hit Points of additional damage, spread over 1d6 rounds. If the victim makes a successful Extreme CON roll, the amount of damage is halved. Even those who survive this damage are still adversely affected by the extra-terrestrial toxin, being paralysed for 24 hours minus 1 hour for each 5 points of CON. Providing medical treatment to a paralysed individual (via a successful First Aid or Medicine skill roll) will also end the effect."
+    },
+    {
+      "name": "Звуковой визг",
+      "summary": "Бог-насекомое быстро трёт задние ноги друг о друга, издавая могучий, безумно громкий визг. Он поражает конус от тела Матриарха на 20 м по прямой; в дальнем конце конус 10 м в поперечнике. Стоит 15 ПМ. Бросок атаки определяет, направлен ли конус куда задумано; «промах» — визг всё равно звучит, но смещён от цели на 1d10 м в сторону по выбору Хранителя. Все в конусе получают урон: 0–5 м — 2d10 ПЗ и трудная проверка ВЫН, иначе от звукового давления лопаются глаза или навсегда рвутся барабанные перепонки; 6–10 м — 1d10+5 ПЗ и проверка ВЫН, иначе перелом или похожая травма; 11–20 м — 1d6 ПЗ.",
+      "raw": "Sonic Screech: The Insect God can rapidly rub its hind legs together to produce a mighty and insanely loud screeching sound. This attack affects a cone-shaped volume starting at the Matriarch’s body and extending 20 yards in a straight line; at the furthest point the cone-volume is 10 yards in diameter. Achieving this effect requires the sacrifice of 15 Magic Points. The attack roll is made to determine whether the direction of the cone is where the Matriarch intended. A “miss” means that the sonic attack still happens, but affects an area wayward from the target point by 1d10 yards in a direction of the Keeper’s choosing. Everyone caught in the cone-shaped volume suffers damage, as per the table below: 0–5 yards: 2d10 Hit Points; victim must make a Hard CON roll or either have eyeballs burst or eardrums permanently blown from the sonic pressure. 6–10 yards: 1d10+5 Hit Points; victims must make a CON roll or receive a broken bone or similar injury from the sonic assault. 11–20 yards: 1d6 Hit Points."
+    },
+    {
+      "name": "Ввести яйца",
+      "summary": "Если жертва полностью парализована или беспомощна, бог-насекомое может пропустить раунд атак и ввести ей 1d6 яиц своего потомства на несколько сантиметров в плоть: урон всего 1 ПЗ, но жертва вынашивает яйца. Если их не извлечь, через 1d6 дней они вылупятся и прогрызут себе путь наружу — 1d3 ПЗ носителю за каждое вылупившееся насекомое. До того яйца дают носителю выгоду: за каждое яйцо в теле +30 очков МОЩ и +6 ПМ (пока яйцо не вылупится).",
+      "raw": "Inject Eggs: If a victim is fully paralysed or incapacitated, the Insect God can forfeit a round of attacks to instead inject that individual with 1d6 eggs for its offspring (see below). These are injected several inches into the victim’s flesh; while this attack only causes the victim 1 Hit Point of damage, he or she will carry the creature’s eggs. Unless somehow removed, these will hatch in 1d6 days and burrow their way out of the victim’s flesh – an unpleasant process which causes the host 1d3 Hit Points of damage per newly hatched insect horror. Before that happens, however, the implanted eggs actually provide a benefit to the host in the form of extra POW and magic points. For every egg the host has within his or her body, this involves a gain of +30 points of POW and +6 Magic Points (until the egg hatches).",
+      "refs": [
+        "convicts-tol-10-en/creature/spawn-of-the-cicada",
+        "convicts-tol-10-en/item/zstylzhemgni-eggs"
+      ]
+    },
+    {
+      "name": "Пребывание в этой реальности",
+      "summary": "Наша обыденная реальность неблагоприятна для таких мерзостей: чтобы оставаться воплощённой, Великая Древняя тратит 1 ПМ за 3 минуты, что ограничивает её непрерывное пребывание на Земле. Не воплощённая, она восстанавливает 10 ПМ за каждый час, проходящий на Земле. (В сценарии: не дольше примерно 90 минут подряд, затем не меньше 3 часов перерыва.)",
+      "raw": "Remain in this Reality: The nature of our mundane reality is not conducive to foul monstrosities like Zstylzhemgni. To remain manifested, the Great Old One must spend 1 Magic Points per 3 minutes. This places an upper limit on the amount of continuous time the god may spend on Earth. When not manifested the Insect God regains 10 Magic Points for each hour that passes on Earth."
+    },
+    {
+      "name": "Знак Старших богов",
+      "summary": "Ни Матриарх, ни её отродье не могут приблизиться ближе чем на 1,7 м к тому, кто носит кольцо Элайзы Петти, и не могут на него напасть.",
+      "raw": "Neither the Matriarch of Swarms or any of its offspring can come within five feet of whoever wears the ring.",
+      "refs": [
+        "convicts-tol-10-en/item/eliza-petty-ring"
+      ]
+    }
+  ],
+  "description": {
+    "ru": "Безвестная Великая Древняя, упоминаемая лишь в горстке книг Мифов; её зовут и Матриархом роёв, и у неё, похоже, особое сродство со всеми роящимися и жалящими насекомыми. Призванная на Землю, она является огромным ужасом-насекомым — чем-то средним между исполинской цикадой и жуком-мертвоедом (или бесформенной саранчой) с размахом крыльев около 12 м, покрытым твёрдым панцирем, блестящим маслянистым отливом цвета, какого не бывает в природе. Её частые перепончатые крылья вздымают воду бурей.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Её главное упоминание — стихотворение Ричарда Л. Тирни «Миньоны Зстилжемгни» (The Minions of Zstylzhemgni), перепечатанное в сборнике Chaosium «The Book of Eibon» (CHA6026); это короткое стихотворение может служить заклинанием её призыва. Некоторые книги зовут её просто «Матриарх роёв», немногие приписывают ей непроизносимое имя Зстилжемгни. Сыщики узнают её по разрушению Файв-Дока: по одной из трёх причин (варианты Мифов) она явилась, разметала паромы и строения, ужалила и парализовала толпу, а затем начала откладывать яйца в парализованных и мёртвых у пруда за фермой.",
+    "en": null
+  },
+  "cult": {
+    "ru": "Известного культа нет — если не считать Рыцарей Асклепия, разработавших обряды, чтобы использовать её яйца (и частицы других богов и существ Мифов) для собственного магического возвышения; поэтому она особенно враждебна ордену и вечно ищет святотатцев, хотя маскирующие заклинания обычно скрывают их от неё.",
+    "en": null
+  },
+  "encounters": {
+    "ru": "В Файв-Доке является по своему распорядку: не дольше примерно 90 минут подряд, затем не меньше 3 часов перерыва; воплотившись, проводит всё время у пруда — сначала сносила туда мёртвых и парализованных, теперь накачивает их яйцами. Не парализованных людей атакует, чтобы защитить яйца и получить новых носителей; особенно яростно — тех, кто нарушил естественное развитие её яиц (законсервировал в роме или вживил «Зачарованием раны»), и преследует их повсюду. Яйца под слоем рома или под действующим (не нарушенным Знаком Старших богов) заклинанием сокрытия ей невидимы. Бой с ней будет коротким.",
+    "en": null
+  },
+  "habitat": "Иное измерение; в сценарии — пруд за фермой Файв-Док",
+  "sources": [
+    {
+      "book_id": "convicts-tol-10-en",
+      "physical_page": 15,
+      "printed_page": 15,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Matriarch of Swarms (aka Zstylzhemgni)»"
+    },
+    {
+      "book_id": "convicts-tol-10-en",
+      "physical_page": 16,
+      "printed_page": 16,
+      "method": "book_text",
+      "verified": true,
+      "note": "характеристики, «Special Powers», таблица визга"
+    },
+    {
+      "book_id": "convicts-tol-10-en",
+      "physical_page": 17,
+      "printed_page": 17,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Remain in this Reality»"
+    },
+    {
+      "book_id": "convicts-tol-10-en",
+      "physical_page": 2,
+      "printed_page": 2,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Insect Horror»"
+    },
+    {
+      "book_id": "convicts-tol-10-en",
+      "physical_page": 3,
+      "printed_page": 3,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Shriek of Doom»"
+    },
+    {
+      "book_id": "convicts-tol-10-en",
+      "physical_page": 5,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «Knights of Asclepius»"
+    },
+    {
+      "book_id": "convicts-tol-10-en",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "Знак Старших богов"
+    },
+    {
+      "book_id": "convicts-tol-10-en",
+      "physical_page": 10,
+      "printed_page": 10,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Mother’s Watch»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая). Уникальное божество выпуска; в справочнике его нет. Размах крыльев: «at least 10 yards» (с. 2) и «about 35 feet» (с. 15) — около 10–12 м. Жало напечатано без БкУ («1d6+2 + Poison») — как в книге. «1 Magic Points per 3 minutes» — так в книге. Облик: «loosely resembling a locust or cicada» (с. 2) и «a cross between a massive cicada and a carrion beetle» (с. 15)."
+  },
+  "images": [
+    {
+      "file": "art/creatures/convicts-tol-c-zstylzhemgni.webp",
+      "kind": "art",
+      "caption": "Зстилжемгни, Матриарх роёв",
+      "source": "Convicts & Cthulhu — Ticket of Leave #10, с. 16"
+    }
+  ]
+}

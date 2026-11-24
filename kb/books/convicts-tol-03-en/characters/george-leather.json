@@ -1,0 +1,260 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "convicts-tol-03-en/character/george-leather",
+  "kind": "character",
+  "name": {
+    "ru": "Джордж Лезер",
+    "en": "George Leather"
+  },
+  "aliases": [
+    "Leather"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "торговец и лодочник, контрабандист",
+    "en": null
+  },
+  "age": {
+    "raw": "49",
+    "value": 49
+  },
+  "sex": "мужской",
+  "residence": null,
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "convicts-tol-03-en/character/jonathan-jenks",
+      "note": "главарь банды",
+      "note_back": "контрабандист банды"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "55",
+        "value": 55
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "INT": {
+        "raw": "45",
+        "value": 45
+      },
+      "APP": {
+        "raw": "60",
+        "value": 60
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      },
+      "EDU": {
+        "raw": "40",
+        "value": 40
+      }
+    },
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "sanity": {
+      "raw": "50",
+      "value": 50,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "none",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d3+БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Охотничье ружьё",
+          "en": "Fowling Piece"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "4d6/2d6/1d6 [2 ствола; дальность 10/20/50 м; 3 раунда на перезарядку каждого ствола]",
+          "dice": "4d6/2d6/1d6",
+          "adds_db": false
+        },
+        "notes": "2 ствола; дальность 10/20/50 м; 3 раунда на перезарядку каждого ствола"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Уклонение",
+        "skill": "coc:skill:dodge",
+        "value": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Бухгалтерское дело",
+        "skill": "coc:skill:accounting",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Оценка",
+        "skill": "coc:skill:appraise",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Юриспруденция",
+        "skill": "coc:skill:law",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Естествознание",
+        "skill": "coc:skill:natural-world",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Ориентирование",
+        "skill": "coc:skill:navigate",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Пилотирование (лодка)",
+        "skill": "coc:skill:pilot",
+        "specialization": "лодка",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Торговец и лодочник на реке Парраматта.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Свою лодку пускает в дело контрабанды не реже, чем в законные дела. У него немало связей в Корпусе Нового Южного Уэльса и в Сиднее — для них он и возит контрабандой спиртное.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "convicts-tol-03-en",
+      "physical_page": 3,
+      "printed_page": 3,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок и описание «George Leather»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — колониальный Новый Южный Уэльс, 1788–1809 (в осях — «other»)."
+  }
+}

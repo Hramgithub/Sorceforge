@@ -1,0 +1,470 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "convicts-tol-04-en/character/job-thrasher",
+  "kind": "character",
+  "name": {
+    "ru": "Джоб Трэшер",
+    "en": "Job Thrasher"
+  },
+  "aliases": [
+    "Трэшер",
+    "Job Thrasher, Mythos Sorcerer",
+    "Who is “Job Thrasher”?"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "каторжник; в разгадке 3 — колдун Мифов",
+    "en": null
+  },
+  "sex": "мужской",
+  "residence": null,
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "convicts-cthulhu-en/character/typical-convict",
+      "note_back": "Джоб Трэшер в разгадке 2 «Исчезающего прапорщика»"
+    },
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:yog-sothoth",
+      "note": "в разгадке 3 хочет призвать его ради бессмертия",
+      "note_back": "колдун, задумавший призвать его (разгадка 3)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "40",
+        "value": 40
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "80",
+        "value": 80
+      },
+      "DEX": {
+        "raw": "45",
+        "value": 45
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "APP": {
+        "raw": "35",
+        "value": 35
+      },
+      "POW": {
+        "raw": "90",
+        "value": 90
+      },
+      "EDU": {
+        "raw": "50",
+        "value": 50
+      }
+    },
+    "hp": {
+      "raw": "15",
+      "value": 15
+    },
+    "mp": {
+      "raw": "18",
+      "value": 18
+    },
+    "sanity": {
+      "raw": "0",
+      "value": 0,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "none",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "6",
+      "value": 6,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 6
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "80% (20/8)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "1d3+БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Охотничье ружьё",
+          "en": "Fowling Piece"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "4d6/2d6/1d6 [2 ствола; дальность 10/20/50 м; 3 раунда на перезарядку каждого ствола; осечка 95+]",
+          "dice": "4d6/2d6/1d6",
+          "adds_db": false
+        },
+        "notes": "2 ствола; дальность 10/20/50 м; 3 раунда на перезарядку каждого ствола; осечка 95+"
+      },
+      {
+        "name": {
+          "ru": "Топор",
+          "en": "Axe"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (топор)",
+        "chance": {
+          "raw": "80% (20/8)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "1d8+БкУ",
+          "dice": "1d8",
+          "adds_db": true
+        }
+      }
+    ],
+    "skills": [
+      {
+        "name": "Уклонение",
+        "skill": "coc:skill:dodge",
+        "value": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Оценка",
+        "skill": "coc:skill:appraise",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Искусство/ремесло (резьба по дереву)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "резьба по дереву",
+        "value": {
+          "raw": "—",
+          "value": null,
+          "half": null,
+          "fifth": null
+        }
+      },
+      {
+        "name": "Обаяние/Угодничество",
+        "skill": "coc:skill:charm",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "10%",
+          "value": 10,
+          "half": 5,
+          "fifth": 2
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "8%",
+          "value": 8,
+          "half": 4,
+          "fifth": 1
+        }
+      },
+      {
+        "name": "Проницательность",
+        "skill": "coc:skill:insight",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Естествознание",
+        "skill": "coc:skill:natural-world",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Ориентирование",
+        "skill": "coc:skill:navigate",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Оккультизм",
+        "skill": "coc:skill:occult",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Вызов Йог-Сотота (вариант, см. ниже), Наслать слепоту, Затуманить память, Околдовать жертву (вариант, см. ниже), Кулак Йог-Сотота, Плавление плоти",
+      "items": [
+        {
+          "name": "Call Yog-Sothoth (variant)",
+          "spell": "coc:spell:call-dismiss-yog-sothoth"
+        },
+        {
+          "name": "Cause Blindness",
+          "spell": "coc:spell:cause-cure-blindness"
+        },
+        {
+          "name": "Cloud Memory",
+          "spell": "coc:spell:cloud-memory"
+        },
+        {
+          "name": "Enthrall Victim (variant)",
+          "spell": "coc:spell:enthrall-victim"
+        },
+        {
+          "name": "Fist of Yog-Sothoth",
+          "spell": "coc:spell:fist-of-yog-sothoth"
+        },
+        {
+          "name": "Melt Flesh",
+          "spell": "coc:spell:melt-flesh"
+        }
+      ]
+    }
+  },
+  "abilities": [
+    {
+      "name": "Колдовство Трэшера: вариант «Околдовать жертву»",
+      "summary": "Власть Трэшера над (сейчас безвольным) прапорщиком Добли создана вариантом заклинания «Околдовать жертву» («Зов Ктулху» 7-й редакции, с. 258). Эта гораздо более сильная магия требует нескольких недель подготовки, жертвы 10 МОЩ и изготовления ритуального средоточия — здесь это чучело, спрятанное в могиле. Если заклинатель одолеет МОЩ жертвы, несчастный становится похожим на зомби рабом, бездумно исполняющим последний устный приказ заклинателя. Влияние длится 3d6 недель, но жертва может делать новую встречную проверку МОЩ каждый день, когда не слышала голоса заклинателя; успех снимает чары. Если ритуальное средоточие уничтожено, действие заклинания обращается: сам заклинатель становится рабом своей жертвы на оставшийся срок.",
+      "raw": "The strange influence that Thrasher has over the (currently-mindless) Ensign Dobley is created by a variant version of the “Enthrall Victim” spell (see page 258 of Call of Cthulhu, 7th Edition). Thrasher’s much more powerful magic requires several weeks of preparation, the sacrifice of 10 points of POW and the preparation of a ritual focus – in this case the dummy hidden in the grave. If the caster succeeds in overcoming the victim’s POW, the poor unfortunate becomes a zombie-like slave who will mindlessly follow the last verbal instruction given by the caster. The influence lasts 3d6 weeks, although the enthralled victim can attempt a fresh opposed POW roll each day that he has not heard the voice of the caster – success breaks the spell. If the ritual focus is destroyed, the spell’s effects are reversed with the original spell-caster becoming enthralled to his victim for the balance of time remaining.",
+      "refs": [
+        "coc:spell:enthrall-victim",
+        "convicts-tol-04-en/item/dobley-dummy"
+      ]
+    },
+    {
+      "name": "Колдовство Трэшера: вариант «Вызова Йог-Сотота»",
+      "summary": "Трэшер использует безвольного Добли, чтобы исполнить важную ритуальную часть уникального заклинания призыва Йог-Сотота: вместо каменной башни эта версия требует долгого и запутанного путешествия по большой территории, во время которого очертания башни символически «вычерчиваются» по местности. Частью заклинания служит и постоянный эффект вроде «Затуманить память» («Зов Ктулху» 7-й редакции, с. 250), из-за которого Добли трудно вспомнить и легко не заметить.",
+      "raw": "Thrasher is using the mindless Dobley to enact an important ritual component of the unique spell he knows to summon Yog-Sothoth: rather than requiring a stone tower, this version requires a long and convoluted journey across a large area, during which the outlines of a tower are symbolically “drawn” across the countryside.",
+      "refs": [
+        "coc:spell:call-dismiss-yog-sothoth",
+        "coc:spell:cloud-memory",
+        "coc:creature:yog-sothoth"
+      ]
+    },
+    {
+      "name": "Стражи логова",
+      "summary": "Логово Трэшера охраняют стражи Мифов: по меньшей мере шантак в амбаре (характеристики — «Зов Ктулху» 7-й редакции, с. 306). Если на него давят или он боится, что кто-то близок к разгадке тайны прапорщика Добли, он может призвать и охотящийся ужас (с. 299).",
+      "raw": "His lair is protected by Mythos guards – he has at least a Shantak in the barn (see page 306 of Call of Cthulhu, 7th Edition for statistics). If pressed, or if he fears someone is close to unravelling the mystery of Ensign Dobley he can also summon a Hunting Horror (see page 299 of Call of Cthulhu, 7th Edition).",
+      "refs": [
+        "coc:creature:shantak",
+        "coc:creature:hunting-horror"
+      ]
+    }
+  ],
+  "description": {
+    "ru": "Каторжник лет пятидесяти, неряшливый, с красным родимым пятном на правой щеке. Среди каторжников его очень боятся: одно его имя внушает ужас.",
+    "en": null
+  },
+  "legend": {
+    "ru": "По официальным записям (судовые записи каторжников, «Convicts & Cthulhu», с. 32) каторжник Джоб Трэшер прибыл в Австралию со Вторым флотом в 1789 году на борту «Нептуна»; он из Кента, осуждён за мошенничество и подлог. По церковным записям о смертях и погребениях Трэшер умер год назад и похоронен на маленьком кладбище на окраине Сиднея; могилу, однако, раскапывали и снова засыпали. Кто он на самом деле, зависит от разгадки.\nРазгадка 1: тоже гибрид. Поселенец в последнем месте сценария помнит, что Трэшер и Добли дружили; Трэшер был приписанным к нему каторжником, и у поселенца осталась записная книжка Трэшера с черновиками писем к Добли, объясняющих его состояние и то, что ему в конце концов придётся уйти в море, где братья и сёстры поведут его. Трэшер погиб насильственной смертью — ему проломили голову (это сделал Добли). Кто-то уже раскапывал его тело, что-то ища, но не нашёл: в животе Трэшера всё ещё лежит фетиш Матери Гидры.\nРазгадка 2: убийца. Трэшер убил Добли ради его сбережений — кошелька золота, присланного матерью, — и скрыл преступление, инсценировав собственную смерть и похоронив тело Добли в «своей» могиле. Его вина и паранойя растут: он ездит по колонии, подделывая присутствие Добли, чтобы сбить чиновников со следа, и собирается уплыть на торговом судне на остров в Южных морях, подкупив бессовестного капитана, который заберёт его из последнего порта или речной стоянки. Для убийцы используйте общие характеристики «Типичного каторжника» («Convicts & Cthulhu», с. 93).\nРазгадка 3: древний и страшный колдун Мифов, инсценировавший свою смерть, чтобы уйти от внимания соперничающих культистов. В «могиле» Трэшера лежит грубое чучело-копия Добли. Трэшер превратил Добли в свою колдовскую марионетку и водит его по колонии как часть могучего заклинания, которое должно призвать Йог-Сотота; Трэшер верит, что тот дарует ему бессмертие. Его база — ферма в глубинке: номинально он служит там распределённым каторжником-работником, а на деле убил семью поселенца и сам управляет фермой. Статблок записи — этот вариант («Job Thrasher, Mythos Sorcerer»).",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "convicts-tol-04-en",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «Who is “Job Thrasher”?»"
+    },
+    {
+      "book_id": "convicts-tol-04-en",
+      "physical_page": 11,
+      "printed_page": 11,
+      "method": "book_text",
+      "verified": true,
+      "note": "Option One: «Job Thrasher»"
+    },
+    {
+      "book_id": "convicts-tol-04-en",
+      "physical_page": 12,
+      "printed_page": 12,
+      "method": "book_text",
+      "verified": true,
+      "note": "Option Two: «Job Thrasher», «Job Thrasher & The Ghostly Ensign»"
+    },
+    {
+      "book_id": "convicts-tol-04-en",
+      "physical_page": 13,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "Option Three: «Job Thrasher», «Denouement»"
+    },
+    {
+      "book_id": "convicts-tol-04-en",
+      "physical_page": 14,
+      "printed_page": 14,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Job Thrasher, Mythos Sorcerer», «Thrasher's Wizardry»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.attacks[Драка]",
+      "printed": "Brawl 80% (20/8)",
+      "expected": "80% (40/16)",
+      "note": "Доли (20/8) точно подходят к 40%; по Р-77 верным считается напечатанный процент, доли исправлены; возможна опечатка в проценте (40%).",
+      "fixed": true
+    },
+    {
+      "field": "statblock.attacks[Топор]",
+      "printed": "Axe 80% (20/8)",
+      "expected": "80% (40/16)",
+      "note": "Доли (20/8) точно подходят к 40%; по Р-77 верным считается напечатанный процент, доли исправлены; возможна опечатка в проценте (40%).",
+      "fixed": true
+    },
+    {
+      "field": "statblock.move",
+      "printed": "Move: 6",
+      "expected": "7 (СИЛ 40 и ЛВК 45 меньше ТЕЛ 80)",
+      "note": "Скорость 6 сходится с поправкой −1 на возраст 40–49 (Трэшеру около пятидесяти); оставлено как напечатано.",
+      "fixed": false
+    },
+    {
+      "field": "statblock.skills[Искусство/ремесло (резьба по дереву)]",
+      "printed": "Art/Craft (Wood Carving)",
+      "expected": null,
+      "note": "Значение навыка не напечатано.",
+      "fixed": false
+    }
+  ],
+  "corrections": [
+    {
+      "field": "statblock.attacks[Драка].chance",
+      "from": "20/8",
+      "to": "40/16",
+      "reason": "половина и пятая 80% (с. 14, «Brawl 80% (20/8)»)",
+      "ref": "Р-77"
+    },
+    {
+      "field": "statblock.attacks[Топор].chance",
+      "from": "20/8",
+      "to": "40/16",
+      "reason": "половина и пятая 80% (с. 14, «Axe 80% (20/8)»)",
+      "ref": "Р-77"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — колониальный Новый Южный Уэльс, 1788–1809 (в осях — «other»). Статблок — разгадка 3 («Job Thrasher, Mythos Sorcerer»); в разгадке 2 — «Типичный каторжник» основной книги (связь instance_of); в разгадке 1 статблока нет."
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:convicts-merchant",
+  "kind": "occupation",
+  "name": {
+    "ru": "Купец (каторжная эпоха)",
+    "en": "Merchant"
+  },
+  "aliases": [
+    "Торговец",
+    "Купец"
+  ],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Профессия свободных. Многое из того, что приходит кораблями из Англии, идёт на казённые склады, но частный ввоз товаров тоже процветает — и деньги на нём делают те, кто достаточно предприимчив, чтобы удовлетворить местный спрос. Самые успешные купцы — те, у кого в Англии есть люди, способные закупать для них товары (по бросовым ценам) и грузить их на скрипучие корабли, идущие в Австралию. Иногда наибольшую прибыль дают самые необходимые вещи — еда, ром, машины, — а иногда предметы роскоши. Как бы то ни было, чтобы получать прибыль в колониях, надо ладить с Корпусом Нового Южного Уэльса, который держит монополию на некоторые товары и любит брать изрядную пошлину с большинства остальных. Конечно, иногда товар можно добыть творчески (читай — незаконно), в обход этой системы поборов.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + (НАР × 2 или МОЩ × 2)",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "APP",
+          2
+        ]
+      ],
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "POW",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "9–70",
+    "min": 9,
+    "max": 70
+  },
+  "contacts": "другие купцы (здесь и в Англии), чиновники, Корпус Нового Южного Уэльса, контрабандисты, моряки торгового флота, суперкарго",
+  "skills": [
+    {
+      "raw": "Бухгалтерское дело",
+      "skill": "coc:skill:accounting"
+    },
+    {
+      "raw": "Оценка",
+      "skill": "coc:skill:appraise"
+    },
+    {
+      "raw": "Проницательность",
+      "skill": "coc:skill:insight"
+    },
+    {
+      "raw": "Юриспруденция",
+      "skill": "coc:skill:law"
+    },
+    {
+      "raw": "Ловкость рук",
+      "skill": "coc:skill:sleight-of-hand"
+    },
+    {
+      "raw": "Внимание",
+      "skill": "coc:skill:spot-hidden"
+    },
+    {
+      "raw": "два социальных навыка (Обаяние, Красноречие, Запугивание или Убеждение)",
+      "choice": {
+        "count": 2,
+        "of": [
+          "coc:skill:charm",
+          "coc:skill:fast-talk",
+          "coc:skill:intimidate",
+          "coc:skill:persuade"
+        ]
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "convicts-cthulhu-en",
+      "physical_page": 24,
+      "printed_page": 23,
+      "method": "book_text",
+      "verified": true,
+      "note": "Merchant"
+    },
+    {
+      "book_id": "convicts-cthulhu-players-en",
+      "physical_page": 24,
+      "printed_page": 23,
+      "method": "book_text",
+      "verified": true,
+      "note": "то же в Players Version"
+    },
+    {
+      "book_id": "convicts-tol-05-en",
+      "physical_page": 18,
+      "printed_page": 18,
+      "method": "book_text",
+      "verified": true,
+      "note": "Merchant"
+    },
+    {
+      "book_id": "convicts-tol-05-en",
+      "physical_page": 19,
+      "printed_page": 19,
+      "method": "book_text",
+      "verified": true,
+      "note": "Merchant"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21). Эпоха — колониальный Новый Южный Уэльс 1788–1840-х (в осях — «other»). Первый источник — основная книга «Convicts & Cthulhu» (с. 23, таблица правила convicts-cthulhu-en/rule/character-templates; печатная страница = физическая − 1) и Players Version; ToL #5 «The Damned & The Degenerate» (с. 18–19, правило convicts-tol-05-en/rule/free-settler-investigators; печатная = физической) перепечатывает профессию в расширенной редакции — описание и связи взяты оттуда (в основной книге их нет). Пункты навыков, Средства и список навыков — по основной книге (Р-125). Список навыков ToL #5 (с. 18–19) отличается: вместо Ловкости рук — «Ловкость рук или Чтение и письмо (английский)»."
+  }
+}

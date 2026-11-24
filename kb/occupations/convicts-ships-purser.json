@@ -1,0 +1,117 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:convicts-ships-purser",
+  "kind": "occupation",
+  "name": {
+    "ru": "Корабельный казначей (каторжная эпоха)",
+    "en": "Ship’s Purser"
+  },
+  "aliases": [
+    "Корабельный казначей"
+  ],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Одна из самых доверенных должностей на корабле вне обычной цепи командования — корабельный казначей: он отвечает за сохранность всех денег и ценностей на борту. Хитрые казначеи не прочь злоупотребить этим, чтобы набить карманы, но в большинстве своём казначей кристально честен (за это его обычно и выбирают).",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 4",
+    "options": [
+      [
+        [
+          "EDU",
+          4
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "20–50",
+    "min": 20,
+    "max": 50
+  },
+  "contacts": "флотские офицеры и нижние чины, моряки торгового флота",
+  "skills": [
+    {
+      "raw": "Бухгалтерское дело",
+      "skill": "coc:skill:accounting"
+    },
+    {
+      "raw": "Оценка",
+      "skill": "coc:skill:appraise"
+    },
+    {
+      "raw": "Юриспруденция",
+      "skill": "coc:skill:law"
+    },
+    {
+      "raw": "Слух",
+      "skill": "coc:skill:listen"
+    },
+    {
+      "raw": "Чтение и письмо (английский)",
+      "skill": "coc:skill:read-and-write-language",
+      "specialization": "Английский"
+    },
+    {
+      "raw": "Выживание (море) или Плавание",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": [
+          {
+            "skill": "coc:skill:survival",
+            "specialization": "Море",
+            "raw": "Выживание (море)"
+          },
+          "coc:skill:swim"
+        ]
+      }
+    },
+    {
+      "raw": "один социальный навык (Обаяние, Красноречие, Запугивание или Убеждение)",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:charm",
+          "coc:skill:fast-talk",
+          "coc:skill:intimidate",
+          "coc:skill:persuade"
+        ]
+      }
+    },
+    {
+      "raw": "один любой другой навык как личная специальность",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "convicts-tol-05-en",
+      "physical_page": 17,
+      "printed_page": 17,
+      "method": "book_text",
+      "verified": true,
+      "note": "Ship’s Purser"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — колониальный Новый Южный Уэльс 1788–1840-х (в осях — «other»). Общая запись по правилу convicts-tol-05-en/rule/government-military-investigators."
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:convicts-ferry-pilot",
+  "kind": "occupation",
+  "name": {
+    "ru": "Паромщик (каторжная эпоха)",
+    "en": "Ferry Pilot"
+  },
+  "aliases": [
+    "Паромщик"
+  ],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Между двумя главными поселениями Нового Южного Уэльса — Сиднеем и Парраматтой — идёт постоянный поток людей и грузов. Часть его идёт по (плохо построенной) дороге, но большая часть — паромами по водам гавани Порт-Джексон и реки Парраматта. Жизнь паромщика может быть прибыльной, но лёгкой её не назовёшь: те, кто платит больше всех за перевозку грузов, не всегда самые честные дельцы. А ещё всегда есть опасность, что прибрежные аборигены решат отомстить тебе за то, как какой-нибудь другой поселенец обошёлся с их племенем.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + (ЛВК × 2 или СИЛ × 2)",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "DEX",
+          2
+        ]
+      ],
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "STR",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "9–30",
+    "min": 9,
+    "max": 30
+  },
+  "contacts": "Корпус Нового Южного Уэльса, разъезжающие чиновники, каторжники, группы аборигенов, живущие у воды",
+  "skills": [
+    {
+      "raw": "Бухгалтерское дело",
+      "skill": "coc:skill:accounting"
+    },
+    {
+      "raw": "Механика",
+      "skill": "coc:skill:mechanical-repair"
+    },
+    {
+      "raw": "Ориентирование",
+      "skill": "coc:skill:navigate"
+    },
+    {
+      "raw": "Пилотирование (судно)",
+      "skill": "coc:skill:pilot",
+      "specialization": "Судно"
+    },
+    {
+      "raw": "Внимание",
+      "skill": "coc:skill:spot-hidden"
+    },
+    {
+      "raw": "Метание",
+      "skill": "coc:skill:throw"
+    },
+    {
+      "raw": "один социальный навык (Обаяние, Красноречие, Запугивание или Убеждение)",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:charm",
+          "coc:skill:fast-talk",
+          "coc:skill:intimidate",
+          "coc:skill:persuade"
+        ]
+      }
+    },
+    {
+      "raw": "один любой другой навык как личная специальность",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "convicts-tol-05-en",
+      "physical_page": 18,
+      "printed_page": 18,
+      "method": "book_text",
+      "verified": true,
+      "note": "Ferry Pilot"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — колониальный Новый Южный Уэльс 1788–1840-х (в осях — «other»). Общая запись по правилу convicts-tol-05-en/rule/free-settler-investigators."
+  }
+}

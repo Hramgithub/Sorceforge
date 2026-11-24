@@ -1,0 +1,114 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:convicts-fallen-aristocrat",
+  "kind": "occupation",
+  "name": {
+    "ru": "Опальный аристократ (каторжная эпоха)",
+    "en": "Fallen Aristocrat"
+  },
+  "aliases": [
+    "Опальный аристократ"
+  ],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Не все каторжники, сосланные в австралийские поселения, — люди низкого звания: некоторые из привилегированных семей. Отправленные в колонии за неугодные политические или религиозные взгляды или за ссору не с тем человеком, каторжники-аристократы вскоре оказываются в безбожной трясине проклятых и порочных. Впрочем, их деньги и прежние привилегии не совсем бесполезны: кое-кто из тюремщиков всегда рад особо относиться к каторжникам, которые могут устроить им особые выплаты — здесь или родне в Англии (о так называемых «джентльменах-каторжниках» — в одном из следующих выпусков «Отпускного билета»).",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + НАР × 2",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "APP",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "см. выше: отбывает срок 1–10; отпускной билет 10–29; условное помилование 20–35; полное помилование 25–45",
+    "min": 1,
+    "max": 45
+  },
+  "contacts": "другие каторжники, магистраты и другие чиновники, свободные поселенцы",
+  "skills": [
+    {
+      "raw": "Искусство (любое)",
+      "skill": "coc:skill:art-craft"
+    },
+    {
+      "raw": "Оценка",
+      "skill": "coc:skill:appraise"
+    },
+    {
+      "raw": "Иностранный язык",
+      "skill": "coc:skill:language-other"
+    },
+    {
+      "raw": "Чтение и письмо (английский)",
+      "skill": "coc:skill:read-and-write-language",
+      "specialization": "Английский"
+    },
+    {
+      "raw": "Верховая езда",
+      "skill": "coc:skill:ride"
+    },
+    {
+      "raw": "один социальный навык (Обаяние, Красноречие, Запугивание или Убеждение)",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:charm",
+          "coc:skill:fast-talk",
+          "coc:skill:intimidate",
+          "coc:skill:persuade"
+        ]
+      }
+    },
+    {
+      "raw": "два любых других навыка как личные специальности или навыки эпохи",
+      "skill": null,
+      "choice": {
+        "count": 2,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "convicts-tol-05-en",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "Fallen Aristocrat"
+    },
+    {
+      "book_id": "convicts-tol-05-en",
+      "physical_page": 10,
+      "printed_page": 10,
+      "method": "book_text",
+      "verified": true,
+      "note": "Fallen Aristocrat"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — колониальный Новый Южный Уэльс 1788–1840-х (в осях — «other»). Общая запись по правилу convicts-tol-05-en/rule/convict-investigators."
+  }
+}

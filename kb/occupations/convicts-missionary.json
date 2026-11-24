@@ -1,0 +1,110 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:convicts-missionary",
+  "kind": "occupation",
+  "name": {
+    "ru": "Миссионер (каторжная эпоха)",
+    "en": "Missionary"
+  },
+  "aliases": [
+    "Миссионер"
+  ],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "В эту историческую эпоху никто в Церкви ещё не решил, что коренные народы Австралии нужно «цивилизовать», обращая в христианство. Но многие места Тихого океана уже стали целью разных миссионерских орденов, и австралийские колонии — удобный перевалочный пункт для многих миссионеров, на пути к своей островной пастве или обратно.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + НАР × 2",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "APP",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "0–30",
+    "min": 0,
+    "max": 30
+  },
+  "contacts": "капелланы, священники из каторжников, мелкие чиновники и младшие магистраты",
+  "skills": [
+    {
+      "raw": "Искусство/ремесло (любое)",
+      "skill": "coc:skill:art-craft"
+    },
+    {
+      "raw": "Первая помощь",
+      "skill": "coc:skill:first-aid"
+    },
+    {
+      "raw": "Медицина",
+      "skill": "coc:skill:medicine"
+    },
+    {
+      "raw": "Механика",
+      "skill": "coc:skill:mechanical-repair"
+    },
+    {
+      "raw": "Естествознание",
+      "skill": "coc:skill:natural-world"
+    },
+    {
+      "raw": "Чтение и письмо (английский)",
+      "skill": "coc:skill:read-and-write-language",
+      "specialization": "Английский"
+    },
+    {
+      "raw": "один социальный навык (Обаяние, Красноречие, Запугивание или Убеждение)",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:charm",
+          "coc:skill:fast-talk",
+          "coc:skill:intimidate",
+          "coc:skill:persuade"
+        ]
+      }
+    },
+    {
+      "raw": "один любой другой навык как личная специальность",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "convicts-tol-05-en",
+      "physical_page": 20,
+      "printed_page": 20,
+      "method": "book_text",
+      "verified": true,
+      "note": "Missionary"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — колониальный Новый Южный Уэльс 1788–1840-х (в осях — «other»). Общая запись по правилу convicts-tol-05-en/rule/free-settler-investigators."
+  }
+}

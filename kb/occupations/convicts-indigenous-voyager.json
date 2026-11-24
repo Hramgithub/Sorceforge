@@ -1,0 +1,144 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:convicts-indigenous-voyager",
+  "kind": "occupation",
+  "name": {
+    "ru": "Мореход из аборигенов (каторжная эпоха)",
+    "en": "Indigenous Voyager"
+  },
+  "aliases": [
+    "Мореход из аборигенов"
+  ],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "В европейские морские экспедиции для исследования отдалённых краёв Австралии часто берут одного или нескольких аборигенов. Такие мореходы — и моряки, и помощники на борту, а при встрече с другими народами — неофициальные советники и посланники, примерно как проводники. Иногда мореход уже дружен с кем-то из белых на борту и отправляется в путь из любопытства и жажды приключений.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + (НАР × 2 или МОЩ × 2)",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "APP",
+          2
+        ]
+      ],
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "POW",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "10–40 в колониальном обществе; среди аборигенов — вдвое меньше: к тем, кто работает на белых, там относятся с недоверием",
+    "min": 10,
+    "max": 40
+  },
+  "contacts": "капитаны кораблей, исследователи и землемеры, моряки торгового флота и зверобои, члены своей общины аборигенов",
+  "skills": [
+    {
+      "raw": "Лазание или Слух",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:climb",
+          "coc:skill:listen"
+        ]
+      }
+    },
+    {
+      "raw": "Ближний бой или Метание",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:fighting",
+          "coc:skill:throw"
+        ]
+      }
+    },
+    {
+      "raw": "Иностранный язык (английский)",
+      "skill": "coc:skill:language-other",
+      "specialization": "Английский"
+    },
+    {
+      "raw": "Тайные знания (аборигенов)",
+      "skill": "coc:skill:lore",
+      "specialization": "Аборигены"
+    },
+    {
+      "raw": "Естествознание",
+      "skill": "coc:skill:natural-world"
+    },
+    {
+      "raw": "Ориентирование",
+      "skill": "coc:skill:navigate"
+    },
+    {
+      "raw": "Пилотирование (судно) или Управление лошадью/волом/повозкой",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": [
+          {
+            "skill": "coc:skill:pilot",
+            "specialization": "Судно",
+            "raw": "Пилотирование (судно)"
+          },
+          "coc:skill:drive-horses-or-oxen"
+        ]
+      }
+    },
+    {
+      "raw": "Выживание (буш) или Скрытность",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": [
+          {
+            "skill": "coc:skill:survival",
+            "specialization": "Буш",
+            "raw": "Выживание (буш)"
+          },
+          "coc:skill:stealth"
+        ]
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "convicts-tol-05-en",
+      "physical_page": 5,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "Indigenous Voyager"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — колониальный Новый Южный Уэльс 1788–1840-х (в осях — «other»). Общая запись по правилу convicts-tol-05-en/rule/indigenous-investigators."
+  }
+}

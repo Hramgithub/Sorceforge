@@ -1,0 +1,188 @@
+{
+  "schema": "sourcefold.scenario.v0",
+  "id": "convicts-tol-04-en/scenario/vanishing-ensign",
+  "kind": "scenario",
+  "name": {
+    "ru": "Исчезающий прапорщик",
+    "en": "The Vanishing Ensign"
+  },
+  "aliases": [
+    "Scenario Outline: The Vanishing Ensign"
+  ],
+  "part_of": "convicts-tol-04-en/scenario/grand-muster",
+  "order": 1,
+  "summary": {
+    "ru": "Набросок расследования в рамке «Великий смотр» («Ticket of Leave #4», Cthulhu Reborn, 2017). В каждом месте, куда приезжает группа смотра, в записях числится прапорщик Эрнест Добли — но никто его не видел, а помнят лишь, что он всех расспрашивал о каторжнике Джобе Трэшере, умершем год назад. Хранитель выбирает одну из трёх разгадок: Добли — гибрид глубоководного, призрак убитого Трэшером прапорщика или безвольная марионетка колдуна Трэшера, вычерчивающая по колонии путь для призыва Йог-Сотота.",
+    "en": null
+  },
+  "keeper_info": {
+    "ru": "Введение Хранителя. Пока группа смотра переезжает с места на место, сбор сведений очень скоро открывает поразительную и необъяснимую вещь: в каждом месте официальные записи числят человека по имени «прапорщик Эрнест Добли» — но никто из опрошенных, кажется, не знает, кто он, и никто не утверждает, что видел его недавно. Загадочный прапорщик, похоже, прибывал в каждое место примерно через месяц после предыдущего; его описывают как тихого, невзрачного, скрытного и загадочного. Это странное явление грозит сделать перепись неточной, на что губернатор вряд ли посмотрит благосклонно. Хуже того, если группа не найдёт правдоподобного объяснения, как такая невероятная картина может быть правдой, губернатор, скорее всего, решит, что посланная им группа либо мошенничала, либо оказалась некомпетентной; о последствиях такого внимания лучше не думать — так что у сыщиков отличная причина разгадать загадку прапорщика Добли.\nВместо одного объяснения сценарий даёт Хранителю выбор из трёх разгадок (сцены разгадок). Сценарий почти не ограничивает, где сыщики находят следы призрачного Добли: Хранитель выбирает места сам или оставляет выбор сыщикам. Даже в разгадке 1 (гибрид глубоководного) места не ограничены: любое место, куда поедет группа, достаточно близко к реке или побережью, чтобы такой человек мог там бывать.",
+    "en": null
+  },
+  "hook": {
+    "ru": "Начало — первое место смотра (обычно Дом правительства): Добли числится в книгах, но его нет.",
+    "en": null
+  },
+  "advice": {
+    "ru": "Сценарий — хорошее вводное приключение для долгой серии встреч и сценариев в рамке «Великий смотр»: расширяя поездки по Новому Южному Уэльсу, Хранитель покажет колонию во всей её протяжённости и все ужасы, которые она скрывает. Места, где находятся улики, по сути взаимозаменяемы: истинное значение загадки сыщики поймут, лишь побывав в нескольких местах и заметив странную закономерность в собранных сведениях. Финал можно придержать как награду за решение головоломки.",
+    "en": null
+  },
+  "steps": [
+    {
+      "title": "Первое место",
+      "text": "Добли числится, но отсутствует; он всех спрашивал о «Джобе Трэшере».",
+      "refs": [
+        "convicts-tol-04-en/scene/at-the-first-location",
+        "convicts-tol-04-en/character/ernest-dobley"
+      ]
+    },
+    {
+      "title": "Кто такой «Джоб Трэшер»?",
+      "text": "Судовые записи, записи о погребениях, раскопанная могила.",
+      "refs": [
+        "convicts-tol-04-en/scene/who-is-job-thrasher",
+        "convicts-tol-04-en/character/job-thrasher",
+        "convicts-tol-04-en/location/thrashers-grave"
+      ]
+    },
+    {
+      "title": "Второе и последующие места",
+      "text": "Та же аномалия всюду; особые улики выбранной разгадки.",
+      "refs": [
+        "convicts-tol-04-en/scene/at-the-second-location"
+      ]
+    },
+    {
+      "title": "Разгадка 1: гибрид глубоководного",
+      "text": "Рыбий облик, записная книжка Трэшера, фетиш Матери Гидры; Добли бежит к глубоководным.",
+      "optional": true,
+      "refs": [
+        "convicts-tol-04-en/scene/option-one-deep-one-hybrid",
+        "convicts-tol-04-en/item/thrashers-notebook",
+        "convicts-tol-04-en/item/mother-hydras-fetish",
+        "convicts-tol-04-en/character/isaac-pell"
+      ]
+    },
+    {
+      "title": "Разгадка 2: привидение",
+      "text": "Поддельные записи, ночные появления, проклятое золото; призрак ведёт к телу и к Трэшеру.",
+      "optional": true,
+      "refs": [
+        "convicts-tol-04-en/scene/option-two-ghost",
+        "convicts-tol-04-en/item/forged-service-records",
+        "convicts-tol-04-en/item/cursed-gold"
+      ]
+    },
+    {
+      "title": "Разгадка 3: чёрное колдовство",
+      "text": "Знаки на деревьях, искалеченный каторжник, ферма Трэшера с шантаком; чучело в могиле — средоточие заклинания.",
+      "optional": true,
+      "refs": [
+        "convicts-tol-04-en/scene/option-three-foul-sorcery",
+        "convicts-tol-04-en/item/dobley-dummy",
+        "convicts-tol-04-en/location/thrashers-farmstead",
+        "convicts-tol-04-en/character/ned-crowe"
+      ]
+    },
+    {
+      "title": "Последнее место",
+      "text": "Встреча с прапорщиком по развязке выбранной разгадки.",
+      "refs": [
+        "convicts-tol-04-en/scene/at-the-final-location"
+      ]
+    }
+  ],
+  "conclusion": {
+    "ru": "Исход зависит от разгадки: Добли уходит в море к глубоководным (1); тело Добли найдено, Трэшер схвачен или бежит с контрабандистами (2); Трэшера останавливают на ферме, ловят или убивают Добли, уничтожают чучело — или Йог-Сотот призван (3). Наград Рассудка книга не даёт; потери — вид Добли-гибрида 0/1d4, фетиш Матери Гидры 2/2d6.",
+    "en": null
+  },
+  "refs": [
+    "convicts-tol-04-en/character/ernest-dobley",
+    "convicts-tol-04-en/character/job-thrasher",
+    "convicts-tol-04-en/character/isaac-pell",
+    "convicts-tol-04-en/character/ned-crowe",
+    "convicts-tol-04-en/location/thrashers-grave",
+    "convicts-tol-04-en/location/thrashers-farmstead",
+    "convicts-tol-04-en/item/mother-hydras-fetish",
+    "convicts-tol-04-en/item/cursed-gold",
+    "convicts-tol-04-en/item/thrashers-notebook",
+    "convicts-tol-04-en/item/dobley-dummy",
+    "convicts-tol-04-en/item/forged-service-records",
+    "convicts-tol-04-en/scenario/grand-muster",
+    "coc:creature:deep-one-hybrid",
+    "coc:creature:ghost",
+    "coc:creature:yog-sothoth",
+    "coc:creature:dagon-i-gidra"
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "convicts-tol-04-en",
+      "physical_page": 8,
+      "printed_page": 8,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Scenario Outline: The Vanishing Ensign», «Keeper's Introduction»"
+    },
+    {
+      "book_id": "convicts-tol-04-en",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Investigations», «At the First Location», «Who is “Job Thrasher”?»"
+    },
+    {
+      "book_id": "convicts-tol-04-en",
+      "physical_page": 10,
+      "printed_page": 10,
+      "method": "book_text",
+      "verified": true,
+      "note": "«At the Second Location», «Subsequent Locations», «The Final Location», «Three Possible Mythos Solutions»"
+    },
+    {
+      "book_id": "convicts-tol-04-en",
+      "physical_page": 11,
+      "printed_page": 11,
+      "method": "book_text",
+      "verified": true,
+      "note": "разгадка 1"
+    },
+    {
+      "book_id": "convicts-tol-04-en",
+      "physical_page": 12,
+      "printed_page": 12,
+      "method": "book_text",
+      "verified": true,
+      "note": "разгадка 2"
+    },
+    {
+      "book_id": "convicts-tol-04-en",
+      "physical_page": 13,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "разгадка 3"
+    },
+    {
+      "book_id": "convicts-tol-04-en",
+      "physical_page": 14,
+      "printed_page": 14,
+      "method": "book_text",
+      "verified": true,
+      "note": "окончание разгадки 3, «Thrasher's Wizardry»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — колониальный Новый Южный Уэльс, 1788–1809 (в осях — «other»). Этап рамки «Великий смотр» (part_of)."
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:convicts-gambler-confidence-trickster",
+  "kind": "occupation",
+  "name": {
+    "ru": "Игрок/мошенник (каторжная эпоха)",
+    "en": "Gambler / Confidence Trickster"
+  },
+  "aliases": [
+    "Игрок/мошенник"
+  ],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Во все эпохи есть люди, уверенные, что сумеют обвести вокруг пальца простаков или обобрать их в азартных играх. Если такой человек оказывается не в ладах с законом или навлекает гнев кого-то из власть имущих, наказание (заслуженное или нет) обычно сурово. В австралийских колониях игроки и мошенники при желании могут и дальше заниматься своим ремеслом — и весьма прибыльно.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + НАР × 2",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "APP",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "см. выше: отбывает срок 1–10; отпускной билет 10–29; условное помилование 20–35; полное помилование 25–45",
+    "min": 1,
+    "max": 45
+  },
+  "contacts": "другие каторжники, солдаты Корпуса Нового Южного Уэльса, купцы",
+  "skills": [
+    {
+      "raw": "Уклонение",
+      "skill": "coc:skill:dodge"
+    },
+    {
+      "raw": "Маскировка",
+      "skill": "coc:skill:disguise"
+    },
+    {
+      "raw": "Проницательность",
+      "skill": "coc:skill:insight"
+    },
+    {
+      "raw": "Слух",
+      "skill": "coc:skill:listen"
+    },
+    {
+      "raw": "Ловкость рук или Азартные игры",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:sleight-of-hand",
+          "coc:skill:gambling"
+        ]
+      }
+    },
+    {
+      "raw": "Внимание",
+      "skill": "coc:skill:spot-hidden"
+    },
+    {
+      "raw": "два социальных навыка (Обаяние, Красноречие, Запугивание или Убеждение)",
+      "skill": null,
+      "choice": {
+        "count": 2,
+        "of": [
+          "coc:skill:charm",
+          "coc:skill:fast-talk",
+          "coc:skill:intimidate",
+          "coc:skill:persuade"
+        ]
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "convicts-tol-05-en",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "Gambler / Confidence Trickster"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — колониальный Новый Южный Уэльс 1788–1840-х (в осях — «other»). Общая запись по правилу convicts-tol-05-en/rule/convict-investigators. Азартные игры — coc:skill:gambling."
+  }
+}

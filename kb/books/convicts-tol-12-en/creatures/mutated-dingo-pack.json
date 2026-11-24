@@ -1,0 +1,218 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "convicts-tol-12-en/creature/mutated-dingo-pack",
+  "kind": "creature",
+  "name": {
+    "ru": "Стая динго-мутантов",
+    "en": "Mutated Dingo Pack"
+  },
+  "aliases": [
+    "динго-мутанты",
+    "Mutant Dingoes",
+    "Dingoes Ate My Elder Thing"
+  ],
+  "category": "animal",
+  "subcategory": "динго, заражённые инопланетным растительным вирусом",
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "55",
+        "value": 55
+      },
+      "SIZ": {
+        "raw": "35",
+        "value": 35
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "POW": {
+        "raw": "35",
+        "value": 35
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "7",
+      "value": 7
+    },
+    "damage_bonus": {
+      "raw": "нет",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "12",
+      "value": 12,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 12
+        }
+      ]
+    },
+    "armor": {
+      "raw": "1 (шкура); огонь игнорирует броню и наносит двойной урон",
+      "value": 1
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": null,
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d6 + заражение",
+          "dice": "1d6",
+          "adds_db": false
+        },
+        "notes": "укус; возможно заражение вирусом"
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Чтение следов по запаху (Track by Scent)",
+        "skill": "coc:skill:scent",
+        "value": {
+          "raw": "85%",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "увидеть динго-мутанта"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Бешенство",
+      "summary": "Если динго-мутант укусил и нанёс урон, он вцепляется в цель и в следующем раунде впадает в бешенство: встречная проверка СИЛ; если динго выиграл, он автоматически наносит ещё 3 урона каждый раунд, пока держится за жертву.",
+      "raw": "Frenzy: If a mutated Dingo successfully bites and inflicts damage, it will latch on to the target and go into a frenzy the following round. Make an opposed STR roll and if the dingo is successful, it will automatically inflict 3 additional points of damage each round it is still attached to its victim."
+    },
+    {
+      "name": "Заражение",
+      "summary": "Укушенный динго-мутантом может заразиться тем же вирусом (см. «Инопланетный растительный вирус»).",
+      "raw": "Infection: Anyone bitten by a mutated dingo has the potential to become infected with the same virus; see \"The Alien Plant Virus\" on \"The Alien Plant Virus\" on page 16.",
+      "refs": [
+        "convicts-tol-12-en/rule/alien-plant-virus"
+      ]
+    },
+    {
+      "name": "Растворение",
+      "summary": "Убитый динго падает и медленно растворяется: растения внутри истратили силы в яростной атаке; остаётся лишь светящийся синий осадок.",
+      "raw": "Any dingo killed will fall to the ground and begin to slowly dissolve as the plants within have exhausted their energy in this furious attack. Nothing will be left but a glowing blue residue."
+    }
+  ],
+  "description": {
+    "ru": "Стая из 2d3 динго (у всех один статблок), заражённых и изменённых вирусом: из ушей, пасти и живота растут растения и лозы. Звери обезумели, вирус дал им сверхъестественную силу и бросает их в бешенство после удачного укуса.",
+    "en": null
+  },
+  "encounters": {
+    "ru": "На 7-й день, примерно через час после обеденного привала, стая без предупреждения нападает на экспедицию. Отогнанные, больше не возвращаются. Победа над ними — +1d6 Рассудка.",
+    "en": null
+  },
+  "habitat": "предгорья Голубых гор",
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "convicts-tol-12-en",
+      "physical_page": 21,
+      "printed_page": 21,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Mutated Dingo Pack»"
+    },
+    {
+      "book_id": "convicts-tol-12-en",
+      "physical_page": 17,
+      "printed_page": 17,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Encounter: Dingoes Ate My Elder Thing»"
+    },
+    {
+      "book_id": "convicts-tol-12-en",
+      "physical_page": 20,
+      "printed_page": 20,
+      "method": "book_text",
+      "verified": true,
+      "note": "награда за победу"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.hp",
+      "printed": "Hit Points: 12",
+      "expected": "9 ((ВЫН 55 + ТЕЛ 35) / 10)",
+      "note": "ПЗ не сходятся с ВЫН и ТЕЛ; возможно, учтена сверхъестественная сила от вируса. Оставлено как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — колониальный Новый Южный Уэльс (в осях — «other»). Число зверей — «2d3 Dingoes in Pack». «Track by Scent» — по справочнику Нюх (coc:skill:scent), вывод из текста."
+  },
+  "images": [
+    {
+      "file": "art/creatures/convicts-tol-d-mutated-dingo.webp",
+      "kind": "art",
+      "caption": "Динго-мутант",
+      "source": "Convicts & Cthulhu — Ticket of Leave #12, с. 21 (физ. 21)"
+    }
+  ]
+}

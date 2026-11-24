@@ -1,0 +1,110 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:convicts-undertaker",
+  "kind": "occupation",
+  "name": {
+    "ru": "Гробовщик (каторжная эпоха)",
+    "en": "Undertaker"
+  },
+  "aliases": [
+    "Гробовщик"
+  ],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Смерть — частая гостья в колониях. Плохие условия, временами крайне «голодный паёк» и жестокие наказания делают жизнь суровой для каторжников и свободных поселенцев. Другие гибнут по смертным приговорам (обычно через повешение) за серьёзные нарушения правил колонии. Какой бы ни была причина смерти, всегда нужен кто-то, кто похоронит тело, — по крайней мере, если умерший из свободных поселенцев или из правящих сословий. (Каторжников хоронят другие каторжники, часто бросая труп в неглубокую могилу и засыпая известью.) Подробнее о погребальных обычаях каторжной и колониальной эпохи — в выпуске «Отпускного билета» «Night of the Convict Dead».",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 4",
+    "options": [
+      [
+        [
+          "EDU",
+          4
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "20–40",
+    "min": 20,
+    "max": 40
+  },
+  "contacts": "тюремная стража, врачи, каторжники",
+  "skills": [
+    {
+      "raw": "Бухгалтерское дело",
+      "skill": "coc:skill:accounting"
+    },
+    {
+      "raw": "Управление лошадью/волом/повозкой",
+      "skill": "coc:skill:drive-horses-or-oxen"
+    },
+    {
+      "raw": "История",
+      "skill": "coc:skill:history"
+    },
+    {
+      "raw": "Проницательность",
+      "skill": "coc:skill:insight"
+    },
+    {
+      "raw": "Оккультизм или Оценка",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:occult",
+          "coc:skill:appraise"
+        ]
+      }
+    },
+    {
+      "raw": "Наука (биология)",
+      "skill": "coc:skill:science",
+      "specialization": "Биология"
+    },
+    {
+      "raw": "Наука (химия)",
+      "skill": "coc:skill:science",
+      "specialization": "Химия"
+    },
+    {
+      "raw": "один социальный навык (Обаяние, Красноречие, Запугивание или Убеждение)",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:charm",
+          "coc:skill:fast-talk",
+          "coc:skill:intimidate",
+          "coc:skill:persuade"
+        ]
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "convicts-tol-05-en",
+      "physical_page": 22,
+      "printed_page": 22,
+      "method": "book_text",
+      "verified": true,
+      "note": "Undertaker"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — колониальный Новый Южный Уэльс 1788–1840-х (в осях — «other»). Общая запись по правилу convicts-tol-05-en/rule/free-settler-investigators."
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:convicts-spy",
+  "kind": "occupation",
+  "name": {
+    "ru": "Шпион (каторжная эпоха)",
+    "en": "Spy"
+  },
+  "aliases": [
+    "Шпион"
+  ],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Отношения Англии с европейскими соседями в этот момент истории напряжённые и переменчивые: все крупные морские державы деловито делят мир, решая, кто какие земли колонизирует. Страны часто воюют друг с другом, а за кулисами этих выпадов и уколов правительственные агенты — по сути шпионы — ведут более тонкую войну. Эти мужчины и женщины проникают на чужие земли, чтобы выяснить силу их обороны и стоит ли их завоёвывать. Больше всех интересуется австралийским континентом французское правительство, но это не значит, что наблюдает только оно…",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + (НАР × 2 или ЛВК × 2)",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "APP",
+          2
+        ]
+      ],
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "DEX",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "20–60",
+    "min": 20,
+    "max": 60
+  },
+  "contacts": "другие шпионы, моряки, способные передать вести на родину, высокопоставленные чиновники",
+  "skills": [
+    {
+      "raw": "Искусство/ремесло (актёрская игра) или Маскировка",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": [
+          {
+            "skill": "coc:skill:art-craft",
+            "specialization": "Актёрская игра",
+            "raw": "Искусство/ремесло (актёрская игра)"
+          },
+          "coc:skill:disguise"
+        ]
+      }
+    },
+    {
+      "raw": "Ближний бой или Стрельба",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:fighting",
+          "coc:skill:firearms"
+        ]
+      }
+    },
+    {
+      "raw": "Проницательность",
+      "skill": "coc:skill:insight"
+    },
+    {
+      "raw": "Иностранный язык (другой) или Чтение и письмо (английский)",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:language-other",
+          {
+            "skill": "coc:skill:read-and-write-language",
+            "specialization": "Английский",
+            "raw": "Чтение и письмо (английский)"
+          }
+        ]
+      }
+    },
+    {
+      "raw": "Работа в библиотеке или Ориентирование",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:library-use",
+          "coc:skill:navigate"
+        ]
+      }
+    },
+    {
+      "raw": "Слух",
+      "skill": "coc:skill:listen"
+    },
+    {
+      "raw": "Скрытность",
+      "skill": "coc:skill:stealth"
+    },
+    {
+      "raw": "один социальный навык (Обаяние, Красноречие, Запугивание или Убеждение)",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:charm",
+          "coc:skill:fast-talk",
+          "coc:skill:intimidate",
+          "coc:skill:persuade"
+        ]
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "convicts-tol-05-en",
+      "physical_page": 21,
+      "printed_page": 21,
+      "method": "book_text",
+      "verified": true,
+      "note": "Spy"
+    },
+    {
+      "book_id": "convicts-tol-05-en",
+      "physical_page": 22,
+      "printed_page": 22,
+      "method": "book_text",
+      "verified": true,
+      "note": "Spy"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — колониальный Новый Южный Уэльс 1788–1840-х (в осях — «other»). Общая запись по правилу convicts-tol-05-en/rule/free-settler-investigators."
+  }
+}

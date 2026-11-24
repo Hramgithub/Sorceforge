@@ -1,0 +1,19 @@
+{
+  "schema": "sourcefold.proposals.v0",
+  "by": "часть tol-a (Ticket of Leave #1–#4); черновики общих записей — occupation-convicts-french-naturalist-tol-a.json, occupation-convicts-french-occult-explorer-tol-a.json, spell-ritual-of-the-yellow-zombie-tol-a.json",
+  "proposals": [
+    {"target": "convicts-cthulhu-en/location/georges-river", "op": "replace", "path": "description.ru",
+     "old": "недавно здесь видели неестественно огромного зверя.",
+     "new": "недавно здесь видели неестественно огромного зверя. По «Отпускному билету № 3» (с. 4, 6): река ведёт из Ботани-Бей вверх к Бэнкс-Тауну; в эту эпоху — дикое место с густым бушем, извилистыми старицами и порой крутыми берегами; банда Дженкса грабит здесь лодочников-одиночек, флот посылает корабли ловить контрабанду, а по ночам, по слухам, здесь таятся опасные (возможно, связанные с Мифами) твари — или воин-абориген, наряженный чудовищем.",
+     "reason": "дополнение по Ticket of Leave #3 (convicts-tol-03-en, с. 4, 6); своя запись реки в выпуске не заведена, чтобы не дублировать", "ref": "Р-80"},
+    {"target": "convicts-cthulhu-en/location/georges-river", "op": "append", "path": "refs",
+     "value": "convicts-tol-03-en/scene/smuggling-on-the-georges-river",
+     "reason": "сцена «Контрабанда на реке Джорджес» (Ticket of Leave #3, с. 6)", "ref": "Р-134", "correction": false},
+    {"target": "convicts-cthulhu-en/location/georges-river", "op": "append", "path": "refs",
+     "value": "convicts-tol-03-en/location/banks-town",
+     "reason": "Бэнкс-Таун — в верховьях реки (Ticket of Leave #3, с. 6)", "ref": "Р-134", "correction": false},
+    {"target": "convicts-cthulhu-en/location/georges-river", "op": "append", "path": "sources",
+     "value": {"book_id": "convicts-tol-03-en", "physical_page": 6, "printed_page": 6, "method": "book_text", "verified": true, "note": "Ticket of Leave #3: «Smuggling on the Georges River», «Location: Banks' Town»"},
+     "reason": "источник дополнения", "ref": "Р-80", "correction": false}
+  ]
+}

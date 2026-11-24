@@ -1,0 +1,131 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:convicts-nsw-corps-officer",
+  "kind": "occupation",
+  "name": {
+    "ru": "Офицер Корпуса Нового Южного Уэльса (каторжная эпоха)",
+    "en": "NSW Corps Officer"
+  },
+  "aliases": [
+    "Офицер Корпуса Нового Южного Уэльса"
+  ],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Профессия свободных. Роль и репутация Корпуса Нового Южного Уэльса описаны в «Convicts & Cthulhu» (с. 8). Коротко: это отряд солдат королевской армии, созданный именно для охраны новой колонии, то есть военные тюремщики. Такая служба мало кого из солдат привлекала, поэтому большинство офицеров Корпуса пошли на неё либо спасаясь от чего-то худшего, либо потому, что выбора им не оставили; в частности, назначение в Корпус предлагали некоторым офицерам, признанным военным судом виновными в дезертирстве и т. п. Сказать, что Корпус воплощает худшие пороки королевской армии, — не преувеличение.\nЧины офицеров Корпуса (от старшего к младшему): подполковник, майор, адъютант, квартирмейстер, инженер-офицер, капитан, лейтенант, второй лейтенант.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + (ЛВК × 2 или СИЛ × 2)",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "DEX",
+          2
+        ]
+      ],
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "STR",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "20–70",
+    "min": 20,
+    "max": 70
+  },
+  "contacts": "другие служащие Корпуса Нового Южного Уэльса, купцы, контрабандисты, свободные поселенцы, преступные шайки",
+  "skills": [
+    {
+      "raw": "Маскировка или Уклонение",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:disguise",
+          "coc:skill:dodge"
+        ]
+      }
+    },
+    {
+      "raw": "Ближний бой",
+      "skill": "coc:skill:fighting"
+    },
+    {
+      "raw": "Стрельба",
+      "skill": "coc:skill:firearms"
+    },
+    {
+      "raw": "Первая помощь",
+      "skill": "coc:skill:first-aid"
+    },
+    {
+      "raw": "Запугивание",
+      "skill": "coc:skill:intimidate"
+    },
+    {
+      "raw": "Слух",
+      "skill": "coc:skill:listen"
+    },
+    {
+      "raw": "Скрытность",
+      "skill": "coc:skill:stealth"
+    },
+    {
+      "raw": "один любой другой навык как личная специальность",
+      "choice": {
+        "count": 1,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "convicts-cthulhu-en",
+      "physical_page": 24,
+      "printed_page": 23,
+      "method": "book_text",
+      "verified": true,
+      "note": "NSW Corps Officer"
+    },
+    {
+      "book_id": "convicts-cthulhu-players-en",
+      "physical_page": 24,
+      "printed_page": 23,
+      "method": "book_text",
+      "verified": true,
+      "note": "то же в Players Version"
+    },
+    {
+      "book_id": "convicts-tol-05-en",
+      "physical_page": 16,
+      "printed_page": 16,
+      "method": "book_text",
+      "verified": true,
+      "note": "NSW Corps Officer"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21). Эпоха — колониальный Новый Южный Уэльс 1788–1840-х (в осях — «other»). Первый источник — основная книга «Convicts & Cthulhu» (с. 23, таблица правила convicts-cthulhu-en/rule/character-templates; печатная страница = физическая − 1) и Players Version; ToL #5 «The Damned & The Degenerate» (с. 16, правило convicts-tol-05-en/rule/government-military-investigators; печатная = физической) перепечатывает профессию в расширенной редакции — описание и связи взяты оттуда (в основной книге их нет). Пункты навыков, Средства и список навыков — по основной книге (Р-125). Пункты навыков, Средства и список навыков ToL #5 (с. 16) совпадают с основной книгой (с. 23)."
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:convicts-career-criminal",
+  "kind": "occupation",
+  "name": {
+    "ru": "Закоренелый преступник (каторжная эпоха)",
+    "en": "Career Criminal"
+  },
+  "aliases": [
+    "Профессиональный преступник",
+    "Закоренелый преступник"
+  ],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Каторжная профессия. Среди осуждённых и сосланных в колонии были и почти невинные люди, впавшие в нужду, и те, у кого за плечами долгая история нарушений закона, — закоренелые преступники. Это могли быть простые воры, громилы и взломщики из низов, а могли быть утончённые воры-джентльмены (или леди), жившие за счёт высших сословий.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + (ЛВК × 2 или НАР × 2)",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "DEX",
+          2
+        ]
+      ],
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "APP",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "по положению каторжника: отбывает срок 1–10; отпускной билет 10–29; условное помилование 20–35; полное помилование 25–45",
+    "min": 1,
+    "max": 45
+  },
+  "contacts": "другие каторжники, преступные шайки в поселениях",
+  "skills": [
+    {
+      "raw": "Оценка",
+      "skill": "coc:skill:appraise"
+    },
+    {
+      "raw": "Искусство/ремесло (актёрская игра)",
+      "skill": "coc:skill:art-craft",
+      "specialization": "Актёрская игра"
+    },
+    {
+      "raw": "Проницательность",
+      "skill": "coc:skill:insight"
+    },
+    {
+      "raw": "Юриспруденция",
+      "skill": "coc:skill:law"
+    },
+    {
+      "raw": "Ловкость рук",
+      "skill": "coc:skill:sleight-of-hand"
+    },
+    {
+      "raw": "Внимание",
+      "skill": "coc:skill:spot-hidden"
+    },
+    {
+      "raw": "два социальных навыка (Обаяние, Красноречие, Запугивание или Убеждение)",
+      "choice": {
+        "count": 2,
+        "of": [
+          "coc:skill:charm",
+          "coc:skill:fast-talk",
+          "coc:skill:intimidate",
+          "coc:skill:persuade"
+        ]
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "convicts-cthulhu-en",
+      "physical_page": 23,
+      "printed_page": 22,
+      "method": "book_text",
+      "verified": true,
+      "note": "Career Criminal"
+    },
+    {
+      "book_id": "convicts-cthulhu-players-en",
+      "physical_page": 23,
+      "printed_page": 22,
+      "method": "book_text",
+      "verified": true,
+      "note": "то же в Players Version"
+    },
+    {
+      "book_id": "convicts-tol-05-en",
+      "physical_page": 6,
+      "printed_page": 6,
+      "method": "book_text",
+      "verified": true,
+      "note": "Career Criminal"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21). Эпоха — колониальный Новый Южный Уэльс 1788–1840-х (в осях — «other»). Первый источник — основная книга «Convicts & Cthulhu» (с. 22, таблица правила convicts-cthulhu-en/rule/character-templates; печатная страница = физическая − 1) и Players Version; ToL #5 «The Damned & The Degenerate» (с. 6, правило convicts-tol-05-en/rule/convict-investigators; печатная = физической) перепечатывает профессию в расширенной редакции — описание и связи взяты оттуда (в основной книге их нет). Пункты навыков, Средства и список навыков — по основной книге (Р-125). Пункты навыков, Средства и список навыков ToL #5 (с. 6) совпадают с основной книгой (с. 22)."
+  }
+}

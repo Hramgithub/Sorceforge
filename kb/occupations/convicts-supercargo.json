@@ -1,0 +1,117 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:convicts-supercargo",
+  "kind": "occupation",
+  "name": {
+    "ru": "Суперкарго (каторжная эпоха)",
+    "en": "Supercargo"
+  },
+  "aliases": [
+    "Суперкарго"
+  ],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "В век паруса суперкарго выполняет очень важную работу — охраняет ценный груз с той минуты, когда отправитель его отпустил, и до той, когда его получили на другом конце. Обычно это значит проплыть многие тысячи километров, порой на нескольких судах. Суперкарго отличается от большинства людей на корабле: его нанимает владелец груза, и отвечает он только перед ним (а не перед командой). В австралийские колонии суперкарго прибывают с ценными партиями товаров или спиртного; одни задерживаются в колониях ненадолго, другие остаются дольше, высматривая новую выгодную возможность.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + (НАР × 2 или ЛВК × 2)",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "APP",
+          2
+        ]
+      ],
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "DEX",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "20–50",
+    "min": 20,
+    "max": 50
+  },
+  "contacts": "моряки торгового флота, лавочники, купцы, флотские офицеры и казначеи",
+  "skills": [
+    {
+      "raw": "Бухгалтерское дело",
+      "skill": "coc:skill:accounting"
+    },
+    {
+      "raw": "Оценка",
+      "skill": "coc:skill:appraise"
+    },
+    {
+      "raw": "Ближний бой (драка)",
+      "skill": "coc:skill:fighting",
+      "specialization": "Драка"
+    },
+    {
+      "raw": "Проницательность",
+      "skill": "coc:skill:insight"
+    },
+    {
+      "raw": "Ориентирование",
+      "skill": "coc:skill:navigate"
+    },
+    {
+      "raw": "Чтение и письмо (английский)",
+      "skill": "coc:skill:read-and-write-language",
+      "specialization": "Английский"
+    },
+    {
+      "raw": "Внимание",
+      "skill": "coc:skill:spot-hidden"
+    },
+    {
+      "raw": "один социальный навык (Обаяние, Красноречие, Запугивание или Убеждение)",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:charm",
+          "coc:skill:fast-talk",
+          "coc:skill:intimidate",
+          "coc:skill:persuade"
+        ]
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "convicts-tol-05-en",
+      "physical_page": 22,
+      "printed_page": 22,
+      "method": "book_text",
+      "verified": true,
+      "note": "Supercargo"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — колониальный Новый Южный Уэльс 1788–1840-х (в осях — «other»). Общая запись по правилу convicts-tol-05-en/rule/free-settler-investigators."
+  }
+}

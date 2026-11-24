@@ -1,0 +1,202 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "convicts-tol-09-en/creature/orphan-school-ghosts",
+  "kind": "creature",
+  "name": {
+    "ru": "Призраки сиротской школы",
+    "en": "Orphan School Ghosts"
+  },
+  "aliases": [
+    "Orphan Ghost",
+    "призрак-сирота",
+    "ghost child",
+    "призрачный ребёнок"
+  ],
+  "category": "supernatural",
+  "subcategory": "призрак — порождение Ужаса сиротской школы",
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "spawn_of",
+      "target": "convicts-tol-09-en/creature/orphan-school-horror",
+      "note": "взрослые, поглощённые Ужасом и извергнутые призраками",
+      "note_back": "превращает взрослых в призраков"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "—",
+        "value": null
+      },
+      "CON": {
+        "raw": "—",
+        "value": null
+      },
+      "SIZ": {
+        "raw": "30",
+        "value": 30
+      },
+      "DEX": {
+        "raw": "90",
+        "value": 90
+      },
+      "INT": {
+        "raw": "15",
+        "value": 15
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      }
+    },
+    "hp": {
+      "raw": "N/A",
+      "value": null
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "damage_bonus": {
+      "raw": "N/A",
+      "value": null
+    },
+    "build": {
+      "raw": "-",
+      "value": null
+    },
+    "move": {
+      "raw": "10",
+      "value": 10,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 10
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет; призрак мгновенно уничтожается, если Ужас сиротской школы изгнан или убит",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Жатва взрослых",
+          "en": "Harvest Adults"
+        },
+        "kind": "special",
+        "skill": null,
+        "chance": {
+          "raw": "встречная МОЩ",
+          "value": null
+        },
+        "notes": "Физических атак нет; только особая сила «Жатва взрослых»."
+      }
+    ],
+    "skills": [
+      {
+        "name": "Знать детские страхи",
+        "value": {
+          "raw": "100%",
+          "value": 100,
+          "half": 50,
+          "fifth": 20
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "2",
+        "fail": "1d6",
+        "trigger": "увидеть призрака сиротской школы"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Жатва взрослых",
+      "summary": "Призраки показывают взрослой жертве её худшие детские страхи мерцающим изображением на ближайшей поверхности. Проигравший встречную проверку МОЩ погружается в них и перестаёт отличать вымысел от яви; если цель победила — призрак отступает. Погружённая жертва проходит вторую проверку МОЩ; провал — потеря 1d10 МОЩ, половина которой тут же добавляется к МОЩ призрака, половина — к МОЩ Ужаса. В отличие от Ужаса, украденная призраком МОЩ рассеивается за 24 часа, и он лишь пугает, а не вводит в кататонию. Жертва смутно помнит встречу; чтобы вспомнить подробности, нужна успешная проверка ИНТ. Над детьми у призраков власти нет — разве что напугать их видом до потери Рассудка.",
+      "raw": "Harvest Adults: The Orphan Ghosts have the power to terrorise adult victims by showing them their worst childhood fears. It projects these into as a flickering image on a nearby surface. Any target failing an Opposed POW roll while watching these images becomes immersed in them, no longer able to judge fantasy from reality. If the target wins, the Ghost retreats. Once immersed, victims must make a second POW roll. Failing this robs the victims of 1d10 POW, half of which is instantly added to the POW of the Ghost, the other half being added to the POW of the Orphan School Horror. Unlike the Horror, above, the Ghost’s stolen points of POW dissipate within 24 hours and it just terrifies victims, rather than renders them catatonic. Victims recall the encounter vaguely, but require a successful INT roll to summon forth details."
+    }
+  ],
+  "description": {
+    "ru": "Неестественно худые призрачные дети с длинными руками и пальцами; лица застыли в вечном вое безумия и боли. Безмозглые рабы Ужаса, без видимой памяти о прежней жизни — лишь с тягой произносить своё прежнее имя тихим гудящим монотоном (рабочий Биггелл расслышал «Маргарет Бёрн»). Персонал видел призрачного «ребёнка» с мерцающим зеленоватым отливом, который, убегая, огибал предметы, а не проходил сквозь них.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Призраки — итог удачного нападения Ужаса сиротской школы на взрослого. Они существуют, чтобы кормить своего мерзкого прародителя (и себя), собирая энергию взрослых душ, — как Ужас, но куда скромнее.",
+    "en": null
+  },
+  "habitat": "Школа для девочек-сирот и её окрестности (у ворот, у стены)",
+  "sources": [
+    {
+      "book_id": "convicts-tol-09-en",
+      "physical_page": 22,
+      "printed_page": 22,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Orphan School Ghosts»"
+    },
+    {
+      "book_id": "convicts-tol-09-en",
+      "physical_page": 12,
+      "printed_page": 12,
+      "method": "book_text",
+      "verified": true,
+      "note": "рассказ привратника"
+    },
+    {
+      "book_id": "convicts-tol-09-en",
+      "physical_page": 14,
+      "printed_page": 14,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Weird figures at the orphanage gate»"
+    },
+    {
+      "book_id": "convicts-tol-09-en",
+      "physical_page": 15,
+      "printed_page": 15,
+      "method": "book_text",
+      "verified": true,
+      "note": "рассказ Биггелла"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая). Уникальное существо сценария; «Know Childhood Fears» — навык существ без записи справочника."
+  },
+  "images": [
+    {
+      "file": "art/creatures/convicts-tol-c-orphan-school-ghosts.webp",
+      "kind": "art",
+      "caption": "Призраки сиротской школы в спальне",
+      "source": "Convicts & Cthulhu — Ticket of Leave #9, с. 17"
+    }
+  ]
+}

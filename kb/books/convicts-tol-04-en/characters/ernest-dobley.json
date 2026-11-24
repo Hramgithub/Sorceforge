@@ -1,0 +1,387 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "convicts-tol-04-en/character/ernest-dobley",
+  "kind": "character",
+  "name": {
+    "ru": "Эрнест Добли",
+    "en": "Ensign Ernest Dobley"
+  },
+  "aliases": [
+    "прапорщик Добли",
+    "Исчезающий прапорщик",
+    "The Vanishing Ensign",
+    "Ensign Ernest Dobley as a Deep One Hybrid",
+    "Dobley"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "прапорщик Корпуса Нового Южного Уэльса",
+    "en": null
+  },
+  "sex": "мужской",
+  "residence": null,
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "related_to",
+      "target": "coc:creature:deep-one-hybrid",
+      "note": "в разгадке 1 — гибрид глубоководного (статблок записи — этот вариант)",
+      "note_back": "Эрнест Добли (разгадка 1 «Исчезающего прапорщика»)"
+    },
+    {
+      "type": "related_to",
+      "target": "coc:creature:ghost",
+      "note": "в разгадке 2 — привидение",
+      "note_back": "Эрнест Добли (разгадка 2 «Исчезающего прапорщика»)"
+    },
+    {
+      "type": "knows",
+      "target": "convicts-tol-04-en/character/job-thrasher",
+      "note": "друг-гибрид (разгадка 1), убийца (разгадка 2) или хозяин-колдун (разгадка 3)",
+      "note_back": "предмет его одержимости"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "80",
+        "value": 80
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "25",
+        "value": 25
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "50",
+        "value": 50
+      },
+      "APP": {
+        "raw": "30",
+        "value": 30
+      },
+      "POW": {
+        "raw": "85",
+        "value": 85
+      },
+      "EDU": {
+        "raw": "45",
+        "value": 45
+      }
+    },
+    "hp": {
+      "raw": "9",
+      "value": 9
+    },
+    "mp": {
+      "raw": "17",
+      "value": 17
+    },
+    "sanity": {
+      "raw": "25",
+      "value": 25,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "none",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8*",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        },
+        {
+          "mode": "swim",
+          "value": 8,
+          "note": "может и плавать со Скоростью 8 (сноска к Move: 8*)"
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d3+БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Нож",
+          "en": "Knife"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d6+БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      }
+    ],
+    "skills": [
+      {
+        "name": "Уклонение",
+        "skill": "coc:skill:dodge",
+        "value": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "20%",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Проницательность",
+        "skill": "coc:skill:insight",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Плавание",
+        "skill": "coc:skill:swim",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      }
+    ],
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d4",
+        "trigger": "увидеть мерзкие рыбьи черты Добли; если «Слиться с фоном» заставит забыть встречу, потерянный Рассудок возвращается"
+      }
+    ]
+  },
+  "variants": [
+    {
+      "label": "Призрак (разгадка 2)",
+      "statblock": {
+        "characteristics": {
+          "INT": {
+            "raw": "50",
+            "value": 50
+          },
+          "POW": {
+            "raw": "85",
+            "value": 85
+          }
+        },
+        "hp": {
+          "raw": "—",
+          "value": null
+        }
+      }
+    }
+  ],
+  "abilities": [
+    {
+      "name": "Слиться с фоном",
+      "summary": "Уникальная способность Добли заставлять встреченных забыть встречу; действует как заклинание «Затуманить память» («Зов Ктулху» 7-й редакции, с. 250). Чтобы его забыли, Добли жертвует 1d6 ПМ и 2 Рассудка и применяет силу к любому числу свидетелей. Тот из них, у кого МОЩ выше, делает встречную проверку МОЩ против Добли. Если результат Добли выше, все свидетели забывают, что встречали его (и возвращают Рассудок, потерянный из-за его отвратительной внешности). При равной степени успеха свидетели помнят встречу, но подробности в их памяти очень смутны.",
+      "raw": "Melt Into Background: Dobley has a unique ability to cause those meeting him to forget the encounter. This functions like the spell Cloud Memory (see page 250 of Call of Cthulhu, 7th Edition). If Dobley wishes to be forgotten he needs only sacrifice 1d6 Magic Points and 2 Sanity Points to invoke the power against any number of onlookers. Whichever of his targets has the highest POW characteristic must make an opposed POW vs. POW roll with Dobley. If he gains a superior result, all observers will forget ever meeting him (and regain any Sanity Points lost to his hideous appearance). If both parties obtain the same type of result, onlookers will still remember meeting Dobley although the details of the encounter will be very fuzzy in their minds.",
+      "refs": [
+        "coc:spell:cloud-memory",
+        "coc:rule:opposed-pow-rolls"
+      ]
+    },
+    {
+      "name": "Глубокие лёгкие",
+      "summary": "Может оставаться под водой вдвое дольше обычного человека.",
+      "raw": "Deep Lungs: can remain underwater for twice as long as a normal human"
+    },
+    {
+      "name": "Призрак (разгадка 2)",
+      "summary": "В разгадке 2 призрак Добли пользуется общими силами привидений («Зов Ктулху» 7-й редакции, с. 332–333); ИНТ 50, МОЩ 85, другие характеристики не применяются. Может ли призрак прямо влиять на физический мир (например, швырять предметы по комнате), решает Хранитель.",
+      "raw": "For the ghostly form of Ensign Dobley, use the general powers of Ghosts described on page 332–333 of Call of Cthulhu, 7th Edition. Dobley’s INT is 50 and his POW is 85 – no other characteristics apply.",
+      "refs": [
+        "coc:creature:ghost"
+      ]
+    }
+  ],
+  "description": {
+    "ru": "Тихий, неприметный, скрытный и загадочный; по описаниям — невзрачный до полной безликости. Единственная заметная (и вообще запоминающаяся) причуда, кроме привычки бродить одному, — странная одержимость: каждого нового встречного он раз за разом спрашивал, не знает ли тот чего-нибудь о человеке по имени «Джоб Трэшер». Никто ни разу не ответил утвердительно, по крайней мере при всех.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Добли числится в книгах каждого места, куда приезжает группа смотра, но его нигде нет и никто не видел его в последнее время; кажется, он прибывал в каждое место примерно с месячным промежутком. Близких друзей у него не было; служба — в лучшем случае безразличная. По записи в Доме правительства — недавно прибыл в колонию, призван из Кента. Кто он на самом деле, зависит от выбранной Хранителем разгадки.\nРазгадка 1: гибрид глубоководного. Добли и его прежний товарищ Трэшер оба несли порчу глубоководных. Прапорщик не задерживался подолгу на одном месте, потому что его необычная внешность привлекала нежелательное внимание; его исчезновения приходились на периоды, когда внезапные метаморфозы искажали его облик сильнее. У него есть скрытая способность заставлять людей забывать его — возможно, некий психический дар. Добли убил Трэшера, не желая принимать того, что Трэшер ему говорил, и из страха разоблачения. Когда его найдут, он на больничном, далеко зашедший по пути превращения в глубоководного; застигнутый, бежит к ближайшей воде, где его с нетерпением ждёт целая колония глубоководных.\nРазгадка 2: привидение. Добли уже убит чернодушным Трэшером, но живёт как призрак, отчаянно жаждущий отомстить за убийство. Записи о его присутствии в разных местах — подделки Трэшера; тело Добли лежит в могиле с именем Трэшера, всё ещё в красном мундире полка Нового Южного Уэльса. Часть свидетельств о Добли — уже после его смерти: так призрак пытается привлечь внимание к жуткому преступлению. В финале призрак приведёт сыщиков к своему телу и к убежищу Трэшера.\nРазгадка 3: жертва чёрного колдовства. Добли — безвольная марионетка колдуна Трэшера и важная часть огромного ритуала Мифов: прапорщик бездумно вычерчивает огромный путь через всю колонию, который по завершении призовёт Йог-Сотота. Если Добли поймать, заклинание, притупляющее его чувства, можно обратить; если его убить — оно кончается.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "convicts-tol-04-en",
+      "physical_page": 8,
+      "printed_page": 8,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Keeper's Introduction»"
+    },
+    {
+      "book_id": "convicts-tol-04-en",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Investigations», «At the First Location»"
+    },
+    {
+      "book_id": "convicts-tol-04-en",
+      "physical_page": 10,
+      "printed_page": 10,
+      "method": "book_text",
+      "verified": true,
+      "note": "«At the Second Location», «Option One: Dobley is a Deep One Hybrid»"
+    },
+    {
+      "book_id": "convicts-tol-04-en",
+      "physical_page": 11,
+      "printed_page": 11,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Ensign Ernest Dobley as a Deep One Hybrid», «Melt Into Background», «Denouement»; иллюстрация"
+    },
+    {
+      "book_id": "convicts-tol-04-en",
+      "physical_page": 12,
+      "printed_page": 12,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Option Two: Dobley is a Ghost», «Job Thrasher & The Ghostly Ensign»"
+    },
+    {
+      "book_id": "convicts-tol-04-en",
+      "physical_page": 13,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Option Three: Dobley is the Victim of Foul Sorcery»; иллюстрация"
+    },
+    {
+      "book_id": "convicts-tol-04-en",
+      "physical_page": 14,
+      "printed_page": 14,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Thrasher's Wizardry»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.move",
+      "printed": "Move: 8*",
+      "expected": "9 (СИЛ 80 и ЛВК 50 больше ТЕЛ 25)",
+      "note": "Возраст Добли не указан; Скорость 8 сходится с поправкой −1 для 40–49 лет. Оставлено как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — колониальный Новый Южный Уэльс, 1788–1809 (в осях — «other»). Основной статблок — «Ensign Ernest Dobley as a Deep One Hybrid» (разгадка 1); вариант «Призрак» — разгадка 2 (только ИНТ и МОЩ; ПЗ не применяются). В разгадке 3 статблока нет."
+  },
+  "images": [
+    {
+      "file": "art/characters/convicts-tol-a-ernest-dobley.webp",
+      "kind": "illustration",
+      "caption": "Рыбьи черты гибрида глубоководного (рис. Reuben Dodd)",
+      "source": "Ticket of Leave #4: The Vanishing Ensign, с. 11 (физ. 11), у статблока «Ensign Ernest Dobley as a Deep One Hybrid»"
+    }
+  ]
+}

@@ -1,0 +1,368 @@
+{
+  "schema": "sourcefold.proposals.v0",
+  "by": "часть tol-c (Convicts & Cthulhu, Ticket of Leave #8–#10)",
+  "proposals": [
+    {
+      "target": "convicts-cthulhu-en/character/john-harris",
+      "op": "append",
+      "path": "sources",
+      "value": {
+        "book_id": "convicts-tol-10-en",
+        "physical_page": 4,
+        "printed_page": 4,
+        "method": "book_text",
+        "verified": true,
+        "note": "врезка «Dr. John Harris, NSW Corps Surgeon 1754-1838» (биография)"
+      },
+      "reason": "Ticket of Leave #10, с. 4: биография Харриса",
+      "ref": "Р-125"
+    },
+    {
+      "target": "convicts-cthulhu-en/character/john-harris",
+      "op": "append",
+      "path": "sources",
+      "value": {
+        "book_id": "convicts-tol-10-en",
+        "physical_page": 14,
+        "printed_page": 14,
+        "method": "book_text",
+        "verified": true,
+        "note": "статблок «Dr. John Harris, Colonial Surgeon and Naval Man, age ~50 (born 1754)»"
+      },
+      "reason": "Ticket of Leave #10, с. 14: статблок",
+      "ref": "Р-125"
+    },
+    {
+      "target": "convicts-cthulhu-en/character/john-harris",
+      "op": "append",
+      "path": "sources",
+      "value": {
+        "book_id": "convicts-tol-09-en",
+        "physical_page": 3,
+        "printed_page": 3,
+        "method": "book_text",
+        "verified": true,
+        "note": "член комитета Школы для девочек-сирот при основании (1801)"
+      },
+      "reason": "Ticket of Leave #9, с. 3",
+      "ref": "Р-125"
+    },
+    {
+      "target": "convicts-cthulhu-en/character/john-harris",
+      "op": "set",
+      "path": "statblock",
+      "after": "relations",
+      "value": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "50",
+            "value": 50
+          },
+          "CON": {
+            "raw": "55",
+            "value": 55
+          },
+          "SIZ": {
+            "raw": "70",
+            "value": 70
+          },
+          "DEX": {
+            "raw": "85",
+            "value": 85
+          },
+          "APP": {
+            "raw": "70",
+            "value": 70
+          },
+          "INT": {
+            "raw": "80",
+            "value": 80
+          },
+          "POW": {
+            "raw": "55",
+            "value": 55
+          },
+          "EDU": {
+            "raw": "80",
+            "value": 80
+          }
+        },
+        "hp": {
+          "raw": "12",
+          "value": 12
+        },
+        "mp": {
+          "raw": "11",
+          "value": 11
+        },
+        "sanity": {
+          "raw": "55",
+          "value": 55,
+          "max": null
+        },
+        "damage_bonus": {
+          "raw": "нет",
+          "value": "0"
+        },
+        "build": {
+          "raw": "0",
+          "value": 0
+        },
+        "move": {
+          "raw": "6",
+          "value": 6,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 6
+            }
+          ]
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Драка",
+              "en": "Brawl"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "55% (27/11)",
+              "value": 55,
+              "half": 27,
+              "fifth": 11
+            },
+            "damage": {
+              "raw": "1d3 + БкУ",
+              "dice": "1d3",
+              "adds_db": true
+            }
+          },
+          {
+            "name": {
+              "ru": "Скальпель",
+              "en": "Scalpel"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "55% (27/11)",
+              "value": 55,
+              "half": 27,
+              "fifth": 11
+            },
+            "damage": {
+              "raw": "1d4+3 + БкУ",
+              "dice": "1d4+3",
+              "adds_db": true
+            }
+          },
+          {
+            "name": {
+              "ru": "Карабин",
+              "en": "Carbine"
+            },
+            "kind": "attack",
+            "skill": "Стрельба (винтовка/дробовик)",
+            "chance": {
+              "raw": "40% (20/8)",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            },
+            "damage": {
+              "raw": "1d10+4 [дальность 100 м; 1 выстрел за 4 раунда; осечка 95+]",
+              "dice": "1d10+4",
+              "adds_db": false
+            }
+          }
+        ],
+        "dodge": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "skills": [
+          {
+            "name": "Бухгалтерское дело",
+            "skill": "coc:skill:accounting",
+            "value": {
+              "raw": "65%",
+              "value": 65,
+              "half": 32,
+              "fifth": 13
+            }
+          },
+          {
+            "name": "Средства",
+            "skill": "coc:skill:credit-rating",
+            "value": {
+              "raw": "90%",
+              "value": 90,
+              "half": 45,
+              "fifth": 18
+            }
+          },
+          {
+            "name": "Красноречие",
+            "skill": "coc:skill:fast-talk",
+            "value": {
+              "raw": "40%",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            }
+          },
+          {
+            "name": "Первая помощь",
+            "skill": "coc:skill:first-aid",
+            "value": {
+              "raw": "85%",
+              "value": 85,
+              "half": 42,
+              "fifth": 17
+            }
+          },
+          {
+            "name": "История",
+            "skill": "coc:skill:history",
+            "value": {
+              "raw": "50%",
+              "value": 50,
+              "half": 25,
+              "fifth": 10
+            }
+          },
+          {
+            "name": "Проницательность",
+            "skill": "coc:skill:insight",
+            "value": {
+              "raw": "60%",
+              "value": 60,
+              "half": 30,
+              "fifth": 12
+            }
+          },
+          {
+            "name": "Работа в библиотеке",
+            "skill": "coc:skill:library-use",
+            "value": {
+              "raw": "35%",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            }
+          },
+          {
+            "name": "Юриспруденция",
+            "skill": "coc:skill:law",
+            "value": {
+              "raw": "70%",
+              "value": 70,
+              "half": 35,
+              "fifth": 14
+            }
+          },
+          {
+            "name": "Медицина",
+            "skill": "coc:skill:medicine",
+            "value": {
+              "raw": "85%",
+              "value": 85,
+              "half": 42,
+              "fifth": 17
+            }
+          },
+          {
+            "name": "Ориентирование",
+            "skill": "coc:skill:navigate",
+            "value": {
+              "raw": "35%",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            }
+          },
+          {
+            "name": "Убеждение",
+            "skill": "coc:skill:persuade",
+            "value": {
+              "raw": "60%",
+              "value": 60,
+              "half": 30,
+              "fifth": 12
+            }
+          },
+          {
+            "name": "Пилотирование (корабль)",
+            "skill": "coc:skill:pilot",
+            "specialization": "корабль",
+            "value": {
+              "raw": "50%",
+              "value": 50,
+              "half": 25,
+              "fifth": 10
+            }
+          },
+          {
+            "name": "Религия",
+            "skill": "coc:skill:kc-religion",
+            "value": {
+              "raw": "50%",
+              "value": 50,
+              "half": 25,
+              "fifth": 10
+            }
+          },
+          {
+            "name": "Чтение и письмо (английский)",
+            "skill": "coc:skill:read-and-write-language",
+            "specialization": "английский",
+            "value": {
+              "raw": "85%",
+              "value": 85,
+              "half": 42,
+              "fifth": 17
+            }
+          },
+          {
+            "name": "Чтение и письмо (французский)",
+            "skill": "coc:skill:read-and-write-language",
+            "specialization": "французский",
+            "value": {
+              "raw": "35%",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            }
+          },
+          {
+            "name": "Чтение и письмо (латынь)",
+            "skill": "coc:skill:read-and-write-language",
+            "specialization": "латынь",
+            "value": {
+              "raw": "55%",
+              "value": 55,
+              "half": 27,
+              "fifth": 11
+            }
+          },
+          {
+            "name": "Внимание",
+            "skill": "coc:skill:spot-hidden",
+            "value": {
+              "raw": "60%",
+              "value": 60,
+              "half": 30,
+              "fifth": 12
+            }
+          }
+        ]
+      },
+      "reason": "Статблока в основной книге нет; статблок «Dr. John Harris, Colonial Surgeon and Naval Man, age ~50 (born 1754)» — Ticket of Leave #10, с. 14. В книге «Skills: Credit Rating Accounting 65%, Credit Rating 90%» — первое «Credit Rating» лишнее, взято Бухгалтерское дело 65%. Скорость 6 = 8 − 2 за возраст около 50 лет.",
+      "ref": "Р-125"
+    }
+  ]
+}

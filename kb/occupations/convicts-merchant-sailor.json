@@ -1,0 +1,116 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:convicts-merchant-sailor",
+  "kind": "occupation",
+  "name": {
+    "ru": "Моряк торгового флота (каторжная эпоха)",
+    "en": "Merchant Sailor"
+  },
+  "aliases": [
+    "Моряк торгового флота"
+  ],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Большинство кораблей, приходящих в австралийские колонии, идут по казённым делам — перевозят каторжников, свободных поселенцев или жизненно важные припасы. Но не все они принадлежат флоту Его Величества: множество коммерческих парусников нанимают для этих важных казённых задач, и столько же частных кораблей приходит в колонию просто ради прибыли — сбыть груз за деньги. На всех этих судах служат моряки, которые, в отличие от своих военных собратьев, вольны приходить и уходить, куда позовёт прибыль.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + (ЛВК × 2 или СИЛ × 2)",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "DEX",
+          2
+        ]
+      ],
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "STR",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "20–40",
+    "min": 20,
+    "max": 40
+  },
+  "contacts": "морские пехотинцы и флот, купцы, контрабандисты, преступные шайки",
+  "skills": [
+    {
+      "raw": "Первая помощь",
+      "skill": "coc:skill:first-aid"
+    },
+    {
+      "raw": "Механика",
+      "skill": "coc:skill:mechanical-repair"
+    },
+    {
+      "raw": "Естествознание",
+      "skill": "coc:skill:natural-world"
+    },
+    {
+      "raw": "Ориентирование",
+      "skill": "coc:skill:navigate"
+    },
+    {
+      "raw": "Пилотирование (судно)",
+      "skill": "coc:skill:pilot",
+      "specialization": "Судно"
+    },
+    {
+      "raw": "Внимание",
+      "skill": "coc:skill:spot-hidden"
+    },
+    {
+      "raw": "Плавание",
+      "skill": "coc:skill:swim"
+    },
+    {
+      "raw": "один социальный навык (Обаяние, Красноречие, Запугивание или Убеждение)",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:charm",
+          "coc:skill:fast-talk",
+          "coc:skill:intimidate",
+          "coc:skill:persuade"
+        ]
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "convicts-tol-05-en",
+      "physical_page": 19,
+      "printed_page": 19,
+      "method": "book_text",
+      "verified": true,
+      "note": "Merchant Sailor"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — колониальный Новый Южный Уэльс 1788–1840-х (в осях — «other»). Общая запись по правилу convicts-tol-05-en/rule/free-settler-investigators."
+  }
+}

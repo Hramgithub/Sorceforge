@@ -1,0 +1,290 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "convicts-tol-09-en/creature/orphan-school-horror",
+  "kind": "creature",
+  "name": {
+    "ru": "Ужас сиротской школы",
+    "en": "The Orphan School Horror"
+  },
+  "aliases": [
+    "Orphan School Horror",
+    "Female Orphan Horror",
+    "Ужас",
+    "the Horror",
+    "the Haunt"
+  ],
+  "category": "supernatural",
+  "subcategory": "бесплотная сущность (по варианту Мифов)",
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "related_to",
+      "target": "coc:creature:lloigor",
+      "note": "вариант A: проекция отрицательных чувств Ур-ллойгора",
+      "note_back": "вариант A: его осколок порождает Ужас сиротской школы"
+    },
+    {
+      "type": "related_to",
+      "target": "convicts-tol-09-en/creature/ur-lloigor",
+      "note": "вариант A: источник",
+      "note_back": "вариант A: проекция его чувств"
+    },
+    {
+      "type": "related_to",
+      "target": "coc:creature:space-eater",
+      "note": "вариант C: молодая стадия пожирателя пространства",
+      "note_back": "вариант C: молодая форма — Ужас сиротской школы"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "—",
+        "value": null
+      },
+      "CON": {
+        "raw": "—",
+        "value": null
+      },
+      "SIZ": {
+        "raw": "100",
+        "value": 100
+      },
+      "DEX": {
+        "raw": "90",
+        "value": 90
+      },
+      "INT": {
+        "raw": "75",
+        "value": 75
+      },
+      "POW": {
+        "raw": "100",
+        "value": 100
+      }
+    },
+    "hp": {
+      "raw": "N/A",
+      "value": null,
+      "note": "нет: ранить можно только погибелью"
+    },
+    "mp": {
+      "raw": "20",
+      "value": 20
+    },
+    "damage_bonus": {
+      "raw": "N/A",
+      "value": null
+    },
+    "build": {
+      "raw": "-",
+      "value": null
+    },
+    "move": {
+      "raw": "10",
+      "value": 10,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 10
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет; но Ужасу нельзя повредить ничем, кроме его погибели (см. варианты Мифов)",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Особые силы",
+          "en": "special powers"
+        },
+        "kind": "special",
+        "skill": null,
+        "chance": {
+          "raw": "встречная МОЩ",
+          "value": null
+        },
+        "notes": "Физических атак нет; нападает только особыми силами («Жатва ребёнка», «Пробудить ребёнка»)."
+      }
+    ],
+    "skills": [
+      {
+        "name": "Знать страхи",
+        "value": {
+          "raw": "100%",
+          "value": 100,
+          "half": 50,
+          "fifth": 20
+        }
+      },
+      {
+        "name": "Знать детские травмы",
+        "value": {
+          "raw": "100%",
+          "value": 100,
+          "half": 50,
+          "fifth": 20
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1d4",
+        "fail": "1d10",
+        "trigger": "увидеть Ужас сиротской школы"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Жатва ребёнка",
+      "summary": "Действует только на детей в приюте (в игре — 16 лет и младше). Ужас показывает ребёнку его худшие страхи мерцающим изображением на ближайшей поверхности. Проигравший встречную проверку МОЩ, глядя на изображения, погружается в них и перестаёт отличать вымысел от яви; если победил ребёнок — Ужас отступает. Погружённая жертва проходит ещё одну проверку МОЩ; провал — кататония на 1d10 дней и потеря 2d10 постоянной МОЩ, тут же добавляемой к МОЩ Ужаса. Очнувшись, дети помнят лишь смутные страшные ощущения.",
+      "raw": "Harvest the Child: This power works only against children in the orphanage (for game purposes anyone 16 or under). The Horror terrorises child victims by showing them their worst fears. It projects these into as a flickering image on a nearby surface. Any victim failing an Opposed POW roll while watching these images will become immersed in them, no longer able to judge fantasy from reality. Conversely, if the targeted child wins, the Horror retreats. Once immersed, victims must attempt another POW roll. Failing this sends the victim into catatonia for 1d10 days and causes them to lose 2d10 points of permanent POW, life energy which is instantly added to the POW of the Thing. When children emerge from catatonia, they will remember little except vague terrifying sensations."
+    },
+    {
+      "name": "Пробудить ребёнка",
+      "summary": "Единственная атака, действующая на взрослых. Сосредоточив силы, Ужас усиливает детские страхи и травмы цели в тысячу раз (даже в счастливом детстве были горькие минуты); жертвы настоящих детских травм переживают их заново. Встречная проверка МОЩ цели против МОЩ Ужаса: победил взрослый — Ужас отступает; проиграл — захлёстнут чувствами и беспомощен 1d10 минут. Если не помешать, Ужас за это время втягивает оглушённую жертву в своё призрачное тело, делая её бесплотной, и уносит туда, где сейчас обитает; через сутки извергает её призраком сиротской школы.",
+      "raw": "Bring Forth the Child: This is the only attack which is effective against adults. By concentrating its energies, the Horror can channel and amplify the target’s childhood fears and traumas. Even a happy childhood will have some moments of unhappiness, and these the creature seizes on to make a thousand times worse. Victims of genuine childhood trauma relive these terrible memories. Those targeted by this power must make an Opposed roll comparing their POW to the POW of the Horror. If the targeted adult wins, the horror retreats. If the target fails, they are overwhelmed with emotion and rendered helpless for 1d10 minutes. If left undisturbed, the Horror will use that time to absorbs its stunned victim into its spectral extended body, effectively turning them into an insubstantial form that it can carry away to wherever it currently dwells. One day later it excretes them as an Orphan Ghost (see below for details).",
+      "refs": [
+        "convicts-tol-09-en/creature/orphan-school-ghosts"
+      ]
+    },
+    {
+      "name": "Уязвимость к погибели",
+      "summary": "У Ужаса есть особая слабость — «погибель» (зависит от варианта Мифов). Каждое применение погибели сыщиками может ослабить или даже убить его: это встречная проверка МОЩ Ужаса против наибольшей МОЩ тех, кто пытается навредить. Если сыщики получают успех более высокой степени, Ужас теряет МОЩ; упадёт ниже нуля — он навсегда изгнан, и все его призраки тоже растворяются. Хранитель оценивает действие как малое, большое или значительное. Величина действия — встречная проверка — урон: малое — обычная встречная проверка МОЩ против МОЩ — −1d10 МОЩ; большое — встречная проверка МОЩ против МОЩ, сыщики получают бонусную кость — −1d20 МОЩ; значительное — встречная проверка МОЩ против МОЩ, сыщики получают бонусную кость — −1d100 МОЩ. Если бросок сыщиков — провал с осечкой (естественные 96–00), попытка обернулась против них: Ужас получает МОЩ, равную урону, который получил бы при успехе (+1d10 за малое, +1d20 за большое, +1d100 за значительное).",
+      "raw": "Vulnerability to the Bane: The Orphan School Horror has a special weakness (the exact nature of which will depend on the option the Keeper has chosen). Whenever this “bane” is exercised by the investigators they may weaken it, or even kill it outright. Mechanically, attempts to exercise the bane are treated as opposed rolls comparing the POW of the Orphan School Horror against the highest POW score of the individuals trying to cause it harm. If the investigators obtain a superior class of result to the Horror, the latter takes damage to its POW characteristic. If this brings its POW below zero, the Horror has been permanently banished and any attendant Orphan School Ghosts similarly dissolve into the ether. [...] Minor: Normal opposed roll of POW vs POW, -1d10 POW; Major: Opposed roll of POW vs POW where investigators get one bonus die, -1d20 POW; Significant: Opposed roll of POW vs POW where investigators get one bonus die, -1d100 POW. [...] in the event that the investigators roll is fumbled (i.e., a natural 96–00) then the attempt has backfired [...] it gains +1d10 POW from a botched minor attempt; +1d20 from a botched major action; and +1d100 POW from a botched significant action).",
+      "refs": [
+        "coc:rule:bonus-and-penalty-dice"
+      ]
+    },
+    {
+      "name": "Призрачные проявления",
+      "summary": "Помимо особых сил, бесплотная тварь всегда может: необъяснимо двигать мелкие вещи в комнате; вызывать слабые далёкие звуки играющих детей; шептать имена пропавших каторжниц, впавших в кататонию девочек или кого-то из прошлого сыщиков, кого они, по её мнению, боятся; поднимать внезапный ветер, задувающий открытую свечу или заставляющий пламя в фонаре бешено плясать; искажать тень человека до гротеска; на миг показывать в отражении лицо или голос из прошлого человека; резко менять температуру вокруг себя. Особые проявления по вариантам: A — внезапные приступы скорби и отчаяния, воспоминания о собственных проступках, холодные пятна; B — любая книга или лист бумаги медленно сочатся красной жидкостью, похожей на кровь; C — переливающиеся столбы призматического света, холодные пятна, внезапный туман в комнате.",
+      "raw": "Cause small objects to inexplicably move around inside a room, Conjure up the faint and distant sounds of children playing, Whisper the names of the missing convicts, the catatonic girls, or anyone from the investigators’ past that it believes they may be terrified by, Create a sudden wind capable of blowing out an unprotected candle or causing the flame in a lantern to dance around wildly, Warp a person’s shadow into a truly grotesque form, Briefly mimic a face or voice from a person’s past in a reflected surface, Dramatically alter the room temperature around itself."
+    }
+  ],
+  "description": {
+    "ru": "Из какого-то мерзкого измерения явилась эта тварь; она питается страхом, сожалением и ужасом, которые усиливают её силы. Тёмный бесформенный ужас, слабо светящийся болезненным зелёным сиянием. Может принимать разные облики; любимые — призрачный ребёнок-сирота (им она является детям), призрачная служанка или надзирательница (является взрослым) и безголовая многощупальцевая тварь с клубящейся тьмой в раздутой середине. В любом облике издаёт вздохи и бормотание, перемежаемые неземным криком боли и ужаса; изредка шепчет свистящее «подойди» или «моё милое дитя» — и это всё, что она говорит. Несмотря на скудную речь, она разумна — и злобна.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Месяц назад тварь прицепилась к школе и с тех пор кормится юностью и страхами её обитателей; взрослых она не убивает, а превращает в призраков-сирот, собирая армию призрачных рабов, — но для этого ей нужна энергия детских страхов. Её природа и погибель зависят от варианта Мифов: A — проекция отрицательных чувств Ур-ллойгора через врата под школой (погибель — запечатать врата землёй и камнем); B — живое воплощение страданий детей, порождённое кровоточащей красной книгой (погибель — счастье и смех); C — молодая стадия пожирателя пространства, вылупившаяся из «кокона» (погибель — камень со знаком из морского сундука Монтроза). Статблок — для «Зова Ктулху» 7-й редакции.",
+    "en": null
+  },
+  "encounters": {
+    "ru": "Сначала — едва заметные странности; чем дольше сыщики в школе, тем сильнее явления; ночью они куда сильнее, чем днём. Когда сыщики привлекут её гнев, каждый день с вероятностью 70% кто-то из них мельком видит её в облике взрослой женщины где-то в школе. Когда сыщики близки к разгадке, она бросает тонкие приёмы и заманивает их в тихие места, чтобы напасть.",
+    "en": null
+  },
+  "habitat": "Школа для девочек-сирот, Сидней (обычно — тёмный угол подвала)",
+  "sources": [
+    {
+      "book_id": "convicts-tol-09-en",
+      "physical_page": 21,
+      "printed_page": 21,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Orphan School Horror»: описание, характеристики, «Harvest the Child», «Bring Forth the Child»"
+    },
+    {
+      "book_id": "convicts-tol-09-en",
+      "physical_page": 22,
+      "printed_page": 22,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Vulnerability to the Bane», таблица"
+    },
+    {
+      "book_id": "convicts-tol-09-en",
+      "physical_page": 7,
+      "printed_page": 7,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Keeper's Introduction»"
+    },
+    {
+      "book_id": "convicts-tol-09-en",
+      "physical_page": 8,
+      "printed_page": 8,
+      "method": "book_text",
+      "verified": true,
+      "note": "цели твари"
+    },
+    {
+      "book_id": "convicts-tol-09-en",
+      "physical_page": 12,
+      "printed_page": 12,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Eerie Encounters in the Night»"
+    },
+    {
+      "book_id": "convicts-tol-09-en",
+      "physical_page": 17,
+      "printed_page": 17,
+      "method": "book_text",
+      "verified": true,
+      "note": "вариант A"
+    },
+    {
+      "book_id": "convicts-tol-09-en",
+      "physical_page": 18,
+      "printed_page": 18,
+      "method": "book_text",
+      "verified": true,
+      "note": "вариант B"
+    },
+    {
+      "book_id": "convicts-tol-09-en",
+      "physical_page": 19,
+      "printed_page": 19,
+      "method": "book_text",
+      "verified": true,
+      "note": "вариант C"
+    },
+    {
+      "book_id": "convicts-tol-09-en",
+      "physical_page": 20,
+      "printed_page": 20,
+      "method": "book_text",
+      "verified": true,
+      "note": "вариант C"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая). Уникальное существо сценария; category «supernatural» — наш выбор. В книге навыки напечатаны «Stealth Know Fears 100%, Know Childhood Trauma 100%, Stealth 60%» — первое «Stealth» лишнее. Навыки «Know Fears», «Know Childhood Trauma» — навыки существ без записи справочника. В таблице погибели у «большого» и «значительного» действия бросок напечатан одинаково. На с. 18 тварь однажды названа «Female Orphan Horror» (псевдоним)."
+  },
+  "images": [
+    {
+      "file": "art/creatures/convicts-tol-c-orphan-school-horror.webp",
+      "kind": "art",
+      "caption": "Ужас сиротской школы: безголовая многощупальцевая тварь",
+      "source": "Convicts & Cthulhu — Ticket of Leave #9, с. 21"
+    }
+  ]
+}

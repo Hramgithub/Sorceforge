@@ -1,0 +1,120 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:convicts-naval-officer",
+  "kind": "occupation",
+  "name": {
+    "ru": "Флотский офицер (каторжная эпоха)",
+    "en": "Naval Officer"
+  },
+  "aliases": [
+    "Флотский офицер"
+  ],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Служащие флота Его Величества — важная часть колонии, не в последнюю очередь потому, что Колониальное ведомство давно назначает губернатором моряка. Флотские офицеры ведают всеми морскими делами колоний и их гаваней, но участвуют и в прочих высоких политических распрях.\nЧины флотских офицеров (от старшего к младшему): капитан (6-го ранга), капитан (1-го ранга), коммандер, лейтенант, штурман, казначей, хирург, капеллан, мичман, помощник штурмана, помощник хирурга.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + (ЛВК × 2 или СИЛ × 2)",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "DEX",
+          2
+        ]
+      ],
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "STR",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "20–70",
+    "min": 20,
+    "max": 70
+  },
+  "contacts": "другие военные, команды кораблей, исследователи и землемеры",
+  "skills": [
+    {
+      "raw": "Бухгалтерское дело",
+      "skill": "coc:skill:accounting"
+    },
+    {
+      "raw": "Стрельба",
+      "skill": "coc:skill:firearms"
+    },
+    {
+      "raw": "Проницательность",
+      "skill": "coc:skill:insight"
+    },
+    {
+      "raw": "Ориентирование",
+      "skill": "coc:skill:navigate"
+    },
+    {
+      "raw": "Пилотирование (судно)",
+      "skill": "coc:skill:pilot",
+      "specialization": "Судно"
+    },
+    {
+      "raw": "Плавание",
+      "skill": "coc:skill:swim"
+    },
+    {
+      "raw": "один социальный навык (Обаяние, Красноречие, Запугивание или Убеждение)",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:charm",
+          "coc:skill:fast-talk",
+          "coc:skill:intimidate",
+          "coc:skill:persuade"
+        ]
+      }
+    },
+    {
+      "raw": "один любой другой навык как личная специальность",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "convicts-tol-05-en",
+      "physical_page": 16,
+      "printed_page": 16,
+      "method": "book_text",
+      "verified": true,
+      "note": "Naval Officer"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — колониальный Новый Южный Уэльс 1788–1840-х (в осях — «other»). Общая запись по правилу convicts-tol-05-en/rule/government-military-investigators."
+  }
+}

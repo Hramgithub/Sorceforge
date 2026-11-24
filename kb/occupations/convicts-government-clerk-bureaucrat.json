@@ -1,0 +1,112 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:convicts-government-clerk-bureaucrat",
+  "kind": "occupation",
+  "name": {
+    "ru": "Писарь/чиновник (каторжная эпоха)",
+    "en": "Government Clerk / Bureaucrat"
+  },
+  "aliases": [
+    "Писарь/чиновник"
+  ],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Управление каторжными колониями на удивление бюрократично: нужно немало служащих, чтобы как следует вести все записи, которых требует Колониальное ведомство в Лондоне. Часть этих должностей занимают младшие военные, но столько же — чистые гражданские служащие. Работа не блестящая, зато куда безопаснее многих других в колониях, и всегда есть выгода в том, чтобы распоряжаться документами колонии и решать, какие из них дойдут до власть имущих.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 4",
+    "options": [
+      [
+        [
+          "EDU",
+          4
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "30–70",
+    "min": 30,
+    "max": 70
+  },
+  "contacts": "другие чиновники, преступные шайки, помощники из каторжников",
+  "skills": [
+    {
+      "raw": "Бухгалтерское дело",
+      "skill": "coc:skill:accounting"
+    },
+    {
+      "raw": "Юриспруденция",
+      "skill": "coc:skill:law"
+    },
+    {
+      "raw": "Работа в библиотеке",
+      "skill": "coc:skill:library-use"
+    },
+    {
+      "raw": "Слух",
+      "skill": "coc:skill:listen"
+    },
+    {
+      "raw": "Убеждение или Обаяние/Подхалимство",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:persuade",
+          "coc:skill:charm"
+        ]
+      }
+    },
+    {
+      "raw": "Чтение и письмо (английский)",
+      "skill": "coc:skill:read-and-write-language",
+      "specialization": "Английский"
+    },
+    {
+      "raw": "Внимание",
+      "skill": "coc:skill:spot-hidden"
+    },
+    {
+      "raw": "один любой другой навык как научная или личная специальность",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "convicts-tol-05-en",
+      "physical_page": 12,
+      "printed_page": 12,
+      "method": "book_text",
+      "verified": true,
+      "note": "Government Clerk / Bureaucrat"
+    },
+    {
+      "book_id": "convicts-tol-05-en",
+      "physical_page": 13,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "Government Clerk / Bureaucrat"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — колониальный Новый Южный Уэльс 1788–1840-х (в осях — «other»). Общая запись по правилу convicts-tol-05-en/rule/government-military-investigators."
+  }
+}

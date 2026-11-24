@@ -1,0 +1,139 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:convicts-hunter-gatherer",
+  "kind": "occupation",
+  "name": {
+    "ru": "Охотник/собиратель из аборигенов (каторжная эпоха)",
+    "en": "Hunter/Gatherer"
+  },
+  "aliases": [
+    "Охотник-собиратель",
+    "Indigenous Hunter/Gatherer [traditional]",
+    "Охотник/собиратель из аборигенов"
+  ],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Аборигенная профессия; Средства — в пределах аборигенной общины. Большинство аборигенов хотят лишь одного — чтобы их оставили в покое жить традиционной жизнью, которой их культура следует десятки тысяч лет. В группах, предоставленных самим себе, большинство мужчин охотится (время от времени добывая кенгуру или другого зверя), а большинство женщин проводит дни, собирая овощи и ягоды (они и составляют основу пропитания племени). Подробнее о традиционном укладе аборигенов — в книге Chaosium «Secrets of Australia». Традиционный уклад: Средства определяют положение среди аборигенов.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + (ЛВК × 2 или СИЛ × 2)",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "DEX",
+          2
+        ]
+      ],
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "STR",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "0–99 (в аборигенной общине)",
+    "min": 0,
+    "max": 99
+  },
+  "contacts": "члены своей общины аборигенов, в том числе старейшины и знахари",
+  "skills": [
+    {
+      "raw": "Знание Алчеринги"
+    },
+    {
+      "raw": "Искусство/ремесло (любое)",
+      "skill": "coc:skill:art-craft"
+    },
+    {
+      "raw": "Ближний бой или Метание",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:fighting",
+          "coc:skill:throw"
+        ]
+      }
+    },
+    {
+      "raw": "Слух",
+      "skill": "coc:skill:listen"
+    },
+    {
+      "raw": "Тайные знания (аборигенов)",
+      "skill": "coc:skill:lore",
+      "specialization": "Аборигены"
+    },
+    {
+      "raw": "Естествознание",
+      "skill": "coc:skill:natural-world"
+    },
+    {
+      "raw": "Скрытность",
+      "skill": "coc:skill:stealth"
+    },
+    {
+      "raw": "Выживание (буш)",
+      "skill": "coc:skill:survival",
+      "specialization": "Буш"
+    }
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "convicts-cthulhu-en",
+      "physical_page": 22,
+      "printed_page": 21,
+      "method": "book_text",
+      "verified": true,
+      "note": "Hunter/Gatherer"
+    },
+    {
+      "book_id": "convicts-cthulhu-players-en",
+      "physical_page": 22,
+      "printed_page": 21,
+      "method": "book_text",
+      "verified": true,
+      "note": "то же в Players Version"
+    },
+    {
+      "book_id": "convicts-tol-05-en",
+      "physical_page": 4,
+      "printed_page": 4,
+      "method": "book_text",
+      "verified": true,
+      "note": "Indigenous Hunter/Gatherer [traditional]"
+    },
+    {
+      "book_id": "convicts-tol-05-en",
+      "physical_page": 5,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "Indigenous Hunter/Gatherer [traditional]"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21). Эпоха — колониальный Новый Южный Уэльс 1788–1840-х (в осях — «other»). Первый источник — основная книга «Convicts & Cthulhu» (с. 21, таблица правила convicts-cthulhu-en/rule/character-templates; печатная страница = физическая − 1) и Players Version; ToL #5 «The Damned & The Degenerate» (с. 4–5, правило convicts-tol-05-en/rule/indigenous-investigators; печатная = физической) перепечатывает профессию в расширенной редакции — описание и связи взяты оттуда (в основной книге их нет). Пункты навыков, Средства и список навыков — по основной книге (Р-125). ToL #5 (с. 4–5) добавляет к Средствам: в европейской колонии — 0–5 (Средства 0–99 — только в общине аборигенов). Знание Алчеринги и Песнь сновидений — навыки «Secrets of Australia», в справочнике их нет."
+  }
+}

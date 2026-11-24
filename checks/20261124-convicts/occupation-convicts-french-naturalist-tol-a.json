@@ -1,0 +1,128 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:convicts-french-naturalist",
+  "kind": "occupation",
+  "name": {
+    "ru": "Французский натуралист",
+    "en": "French Naturalist"
+  },
+  "aliases": [],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Французские натуралисты, как и многие английские, были одновременно исследователями, моряками, навигаторами, учёными и художниками. Многие пришли из армии или флота и могут владеть боевыми навыками. Профессия для сценариев, где некоторые или все сыщики — французские мореплаватели.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + ЛВК × 2",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "DEX",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "0–99 (во французской общине; при делах с англичанами — вдвое меньше; в военное время проверка Средств — трудная)",
+    "min": 0,
+    "max": 99
+  },
+  "contacts": null,
+  "skills": [
+    {
+      "raw": "Оценка",
+      "skill": "coc:skill:appraise"
+    },
+    {
+      "raw": "Искусство (картография или живопись)",
+      "skill": "coc:skill:art-craft",
+      "choice": {
+        "count": 1,
+        "of": [
+          {
+            "skill": "coc:skill:art-craft",
+            "specialization": "картография",
+            "raw": "Искусство (картография)"
+          },
+          {
+            "skill": "coc:skill:art-craft",
+            "specialization": "живопись",
+            "raw": "Искусство (живопись)"
+          }
+        ]
+      }
+    },
+    {
+      "raw": "Естествознание",
+      "skill": "coc:skill:natural-world"
+    },
+    {
+      "raw": "Убеждение",
+      "skill": "coc:skill:persuade"
+    },
+    {
+      "raw": "Пилотирование (корабль)",
+      "skill": "coc:skill:pilot",
+      "specialization": "корабль"
+    },
+    {
+      "raw": "Ориентирование",
+      "skill": "coc:skill:navigate"
+    },
+    {
+      "raw": "Наука (метеорология или зоология)",
+      "skill": "coc:skill:science",
+      "choice": {
+        "count": 1,
+        "of": [
+          {
+            "skill": "coc:skill:science",
+            "specialization": "метеорология",
+            "raw": "Наука (метеорология)"
+          },
+          {
+            "skill": "coc:skill:science",
+            "specialization": "зоология",
+            "raw": "Наука (зоология)"
+          }
+        ]
+      }
+    },
+    {
+      "raw": "один любой другой навык",
+      "choice": {
+        "count": 1,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "convicts-tol-02-en",
+      "physical_page": 3,
+      "printed_page": 3,
+      "method": "book_text",
+      "verified": true,
+      "note": "«New Occupations»: «French Naturalist»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — колониальный Новый Южный Уэльс, 1788–1809 (в осях — «other»). Черновик общей записи из «Ticket of Leave #2» (часть tol-a); ведущий переносит в kb/occupations. «Pilot Ship» и «Navigation» — как напечатано."
+  }
+}

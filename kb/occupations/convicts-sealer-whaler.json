@@ -1,0 +1,144 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:convicts-sealer-whaler",
+  "kind": "occupation",
+  "name": {
+    "ru": "Зверобой/китобой (каторжная эпоха)",
+    "en": "Sealer / Whaler"
+  },
+  "aliases": [
+    "Зверобой/китобой"
+  ],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Воды вокруг австралийских колоний — особенно к югу — известны как хорошие угодья и для китов, и для тюленей. В эту эпоху и те и другие — очень прибыльная добыча, так что почти столько же, сколько континент заселён, здесь ходят команды, ищущие удачи в море. Но жизнь зверобоя или китобоя сурова, и многие проводят время между плаваниями в кутежах по самым злачным портовым кабакам колоний.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + (ЛВК × 2 или СИЛ × 2)",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "DEX",
+          2
+        ]
+      ],
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "STR",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "20–50",
+    "min": 20,
+    "max": 50
+  },
+  "contacts": "моряки торгового флота, морские пехотинцы, флотские офицеры и нижние чины, купцы",
+  "skills": [
+    {
+      "raw": "Ближний бой (драка)",
+      "skill": "coc:skill:fighting",
+      "specialization": "Драка"
+    },
+    {
+      "raw": "Слух или Внимание",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:listen",
+          "coc:skill:spot-hidden"
+        ]
+      }
+    },
+    {
+      "raw": "Естествознание",
+      "skill": "coc:skill:natural-world"
+    },
+    {
+      "raw": "Ориентирование или Управление тяжёлыми машинами",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:navigate",
+          "coc:skill:heavy-machinery"
+        ]
+      }
+    },
+    {
+      "raw": "Пилотирование (судно)",
+      "skill": "coc:skill:pilot",
+      "specialization": "Судно"
+    },
+    {
+      "raw": "Наука (биология или зоология)",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": [
+          {
+            "skill": "coc:skill:science",
+            "specialization": "Биология",
+            "raw": "Наука (биология)"
+          },
+          {
+            "skill": "coc:skill:science",
+            "specialization": "Зоология",
+            "raw": "Наука (зоология)"
+          }
+        ]
+      }
+    },
+    {
+      "raw": "Скрытность",
+      "skill": "coc:skill:stealth"
+    },
+    {
+      "raw": "Выживание (любое) или Иностранный язык (другой)",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:survival",
+          "coc:skill:language-other"
+        ]
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "convicts-tol-05-en",
+      "physical_page": 20,
+      "printed_page": 20,
+      "method": "book_text",
+      "verified": true,
+      "note": "Sealer / Whaler"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — колониальный Новый Южный Уэльс 1788–1840-х (в осях — «other»). Общая запись по правилу convicts-tol-05-en/rule/free-settler-investigators."
+  }
+}

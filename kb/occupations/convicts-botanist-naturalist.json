@@ -1,0 +1,117 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:convicts-botanist-naturalist",
+  "kind": "occupation",
+  "name": {
+    "ru": "Ботаник/натуралист (каторжная эпоха)",
+    "en": "Botanist / Naturalist"
+  },
+  "aliases": [
+    "Ботаник/натуралист"
+  ],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "С точки зрения европейской науки флора и фауна Австралии совершенно чужды. В Англии велик интерес к систематическому описанию сотен странных новых видов растений и животных, которыми кишит буш вокруг колоний. Это бремя ложится на немногих учёных колонии, и как следует справиться с ним можно только на собственном опыте — в экспедициях в дикие края.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 4",
+    "options": [
+      [
+        [
+          "EDU",
+          4
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "20–80",
+    "min": 20,
+    "max": 80
+  },
+  "contacts": "чиновники, команды кораблей (торговых и военных), исследователи и землемеры, следопыты из аборигенов",
+  "skills": [
+    {
+      "raw": "Искусство/ремесло (любое)",
+      "skill": "coc:skill:art-craft"
+    },
+    {
+      "raw": "Естествознание",
+      "skill": "coc:skill:natural-world"
+    },
+    {
+      "raw": "Чтение и письмо (английский)",
+      "skill": "coc:skill:read-and-write-language",
+      "specialization": "Английский"
+    },
+    {
+      "raw": "Работа в библиотеке",
+      "skill": "coc:skill:library-use"
+    },
+    {
+      "raw": "Наука (ботаника или зоология)",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": [
+          {
+            "skill": "coc:skill:science",
+            "specialization": "Ботаника",
+            "raw": "Наука (ботаника)"
+          },
+          {
+            "skill": "coc:skill:science",
+            "specialization": "Зоология",
+            "raw": "Наука (зоология)"
+          }
+        ]
+      }
+    },
+    {
+      "raw": "один социальный навык (Обаяние, Красноречие, Запугивание или Убеждение)",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:charm",
+          "coc:skill:fast-talk",
+          "coc:skill:intimidate",
+          "coc:skill:persuade"
+        ]
+      }
+    },
+    {
+      "raw": "два любых других навыка как личные специальности",
+      "skill": null,
+      "choice": {
+        "count": 2,
+        "of": "any"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "convicts-tol-05-en",
+      "physical_page": 11,
+      "printed_page": 11,
+      "method": "book_text",
+      "verified": true,
+      "note": "Botanist / Naturalist"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — колониальный Новый Южный Уэльс 1788–1840-х (в осях — «other»). Общая запись по правилу convicts-tol-05-en/rule/government-military-investigators."
+  }
+}

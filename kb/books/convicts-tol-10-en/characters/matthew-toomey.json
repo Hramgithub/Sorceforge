@@ -1,0 +1,453 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "convicts-tol-10-en/character/matthew-toomey",
+  "kind": "character",
+  "name": {
+    "ru": "Мэтью Туми",
+    "en": "Dr. Matthew Toomey"
+  },
+  "aliases": [
+    "доктор Туми",
+    "Junior Surgeon and Cultist",
+    "Matthew Toomey"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "младший хирург и культист",
+    "en": "Junior Surgeon and Cultist"
+  },
+  "age": {
+    "raw": "34",
+    "value": 34
+  },
+  "sex": "мужской",
+  "residence": "дом в Ультимо, Сидней",
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "knows",
+      "target": "convicts-cthulhu-en/character/john-harris",
+      "note": "старший хирург, совладелец фермы Файв-Док",
+      "note_back": "младший хирург, совладелец фермы"
+    },
+    {
+      "type": "knows",
+      "target": "convicts-tol-10-en/character/george-fenby",
+      "note": "«добрый друг» и подопытный (вариант C)",
+      "note_back": "хирург, вживлявший ему яйца (вариант C)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "65",
+        "value": 65
+      },
+      "SIZ": {
+        "raw": "55",
+        "value": 55
+      },
+      "DEX": {
+        "raw": "80",
+        "value": 80
+      },
+      "APP": {
+        "raw": "45",
+        "value": 45
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "75",
+        "value": 75
+      },
+      "EDU": {
+        "raw": "70",
+        "value": 70
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "15",
+      "value": 15
+    },
+    "sanity": {
+      "raw": "15",
+      "value": 15,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d3 + БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Скальпель",
+          "en": "Scalpel"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d4+3 + БкУ",
+          "dice": "1d4+3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Пистолет кремнёвый (2)",
+          "en": "Flintlock Pistol(2)"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1d6+1 [дальность 10 м; 1 выстрел за 4 раунда; осечка 95+]",
+          "dice": "1d6+1",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:flintlock",
+        "notes": "два пистолета"
+      }
+    ],
+    "dodge": {
+      "raw": "45% (22/9)",
+      "value": 45,
+      "half": 22,
+      "fifth": 9
+    },
+    "skills": [
+      {
+        "name": "Ремесло (таксидермия)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "таксидермия",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "11%",
+          "value": 11,
+          "half": 5,
+          "fifth": 2
+        }
+      },
+      {
+        "name": "Проницательность",
+        "skill": "coc:skill:insight",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "История",
+        "skill": "coc:skill:history",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Язык (английский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "английский",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Работа в библиотеке",
+        "skill": "coc:skill:library-use",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Медицина",
+        "skill": "coc:skill:medicine",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Естествознание",
+        "skill": "coc:skill:natural-world",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Оккультизм",
+        "skill": "coc:skill:occult",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Чтение и письмо (английский)",
+        "skill": "coc:skill:read-and-write-language",
+        "specialization": "английский",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Чтение и письмо (латынь)",
+        "skill": "coc:skill:read-and-write-language",
+        "specialization": "латынь",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Наука (биология)",
+        "skill": "coc:skill:science",
+        "specialization": "биология",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Contact Chthonian, Contact Formless Spawn, Contact Sand Dweller, Enchant Wound, Summon Byakhee, Summon Nightgaunt.",
+      "items": [
+        {
+          "name": "Contact Chthonian",
+          "spell": "coc:spell:contact-chthonian"
+        },
+        {
+          "name": "Contact Formless Spawn",
+          "spell": "coc:spell:contact-formless-spawn"
+        },
+        {
+          "name": "Contact Sand Dweller",
+          "spell": "coc:spell:contact-sand-dweller"
+        },
+        {
+          "name": "Enchant Wound",
+          "spell": "coc:spell:enchant-wound"
+        },
+        {
+          "name": "Summon Byakhee",
+          "spell": "coc:spell:summon-bind-byakhee"
+        },
+        {
+          "name": "Summon Nightgaunt",
+          "spell": "coc:spell:summon-bind-nightgaunt"
+        }
+      ]
+    }
+  },
+  "background": {
+    "secret": "Высокопоставленный Рыцарь Асклепия: вживляет людям частицы существ Мифов; уже извлёк яйца Зстилжемгни у Макграта и хочет собрать как можно больше яиц у пруда.",
+    "arcane_tomes": "Древний том Мифов (в варианте B его украла Элайза Петти)."
+  },
+  "description": {
+    "ru": "Молодой и очень честолюбивый хирург из богатой бристольской семьи. Нервный, со скрытыми замыслами; член оккультного общества, кое-что знающий о Мифах Ктулху. Совладелец фермы Файв-Док вместе с Джоном Харрисом.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Учился хирургии в Лондоне, затем служил на ряде военных кораблей, начиная с «Киннера», — в основном в Индии и других восточных портах. Тогда же был посвящён в Рыцари Асклепия и быстро поднялся в ордене благодаря ловкости хирурга и бесстрашию перед чуждыми ужасами; при этом провёл ряд особенно чудовищных хирургических обрядов над индийскими мужчинами и женщинами, доверенными его попечению. В 1794 году при облаве в Калькутте на беглую рабочую команду портовые власти случайно вскрыли его кладовую и нашли «вещи», когда-то бывшие людьми, — его тайные опыты; последовал военный суд. Суд принял довод, что опыты велись ради науки и что он «тщательно брал только темнокожих», но служить в Индии ему не позволили: назначение в новую каторжную колонию сочли и удобным, и достаточно унизительным, а новое начальство о его проступках не известили. С 1796 года он в Новом Южном Уэльсе; старший хирург Джон Харрис сразу оценил его превосходную технику.\nВ сценарии. Вместе с Харрисом ведёт инструктаж и откладывает выезд до утра: на деле он хочет погрузить на паром три дюжины банок с ромом и хирургические инструменты и закончить последнее иссечение у Макграта — он уже нашёл у того под кожей яйца. У пруда поймёт, что там сотни драгоценных яиц; как он поступит — тайком собирать, нанять сыщиков ромом или погибнуть от вылупившегося отродья, — решает Хранитель. Вариант B: Элайза украла его том и шантажирует его. Вариант C: вживил яйца капеллану Фенби. Ходят слухи, что несколько месяцев назад он тайно искал «платных добровольцев» для своих опытов; каторжники в больнице замечали, что он часто задерживается по ночам «упражняться в искусстве».",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "convicts-tol-10-en",
+      "physical_page": 2,
+      "printed_page": 2,
+      "method": "book_text",
+      "verified": true,
+      "note": "владельцы фермы"
+    },
+    {
+      "book_id": "convicts-tol-10-en",
+      "physical_page": 3,
+      "printed_page": 3,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Owners of Five Dock Farm»"
+    },
+    {
+      "book_id": "convicts-tol-10-en",
+      "physical_page": 5,
+      "printed_page": 5,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Knights of Asclepius», «Getting Started»"
+    },
+    {
+      "book_id": "convicts-tol-10-en",
+      "physical_page": 6,
+      "printed_page": 6,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «Junior Surgeon, Matthew Toomey»; отсрочка выезда"
+    },
+    {
+      "book_id": "convicts-tol-10-en",
+      "physical_page": 8,
+      "printed_page": 8,
+      "method": "book_text",
+      "verified": true,
+      "note": "«About Dr Matthew Toomey»"
+    },
+    {
+      "book_id": "convicts-tol-10-en",
+      "physical_page": 10,
+      "printed_page": 10,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Toomey’s Dream Haul»"
+    },
+    {
+      "book_id": "convicts-tol-10-en",
+      "physical_page": 13,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "варианты B и C"
+    },
+    {
+      "book_id": "convicts-tol-10-en",
+      "physical_page": 14,
+      "printed_page": 14,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Dr. Matthew Toomey»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая). Навык «Language (English)» отнесён к родному языку, «R/W» — к чтению и письму (раздельные навыки сеттинга). «Summon Byakhee»/«Summon Nightgaunt» — заклинания призыва/укрощения справочника."
+  }
+}

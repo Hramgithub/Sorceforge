@@ -1,0 +1,116 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:convicts-smuggler",
+  "kind": "occupation",
+  "name": {
+    "ru": "Контрабандист (каторжная эпоха)",
+    "en": "Smuggler"
+  },
+  "aliases": [
+    "Контрабандист"
+  ],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Не все преступники австралийских колоний сидят за решёткой. У некоторых формально свободных мужчин и женщин есть все причины нарушать закон (см. «Отпускной билет» № 3: Criminal Enterprise). Самое прибыльное преступление — контрабанда, во многом из-за непомерных налогов и пошлин, которыми жадный и продажный Корпус Нового Южного Уэльса обложил ввоз многих товаров. Тот, у кого хватает связей, чтобы корабли привозили ценные товары — особенно ром — из иностранного порта, может озолотиться. Нужно лишь придумать, как незаметно выгрузить запрещённый груз на берег.",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + (НАР × 2 или ЛВК × 2)",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "APP",
+          2
+        ]
+      ],
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "DEX",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "6–70",
+    "min": 6,
+    "max": 70
+  },
+  "contacts": "преступные шайки, высшие офицеры Корпуса Нового Южного Уэльса, богатые землевладельцы",
+  "skills": [
+    {
+      "raw": "Оценка",
+      "skill": "coc:skill:appraise"
+    },
+    {
+      "raw": "Маскировка",
+      "skill": "coc:skill:disguise"
+    },
+    {
+      "raw": "Стрельба (любая)",
+      "skill": "coc:skill:firearms"
+    },
+    {
+      "raw": "Взлом",
+      "skill": "coc:skill:locksmith"
+    },
+    {
+      "raw": "Пилотирование (судно)",
+      "skill": "coc:skill:pilot",
+      "specialization": "Судно"
+    },
+    {
+      "raw": "Внимание",
+      "skill": "coc:skill:spot-hidden"
+    },
+    {
+      "raw": "Скрытность",
+      "skill": "coc:skill:stealth"
+    },
+    {
+      "raw": "один социальный навык (Обаяние, Красноречие, Запугивание или Убеждение)",
+      "skill": null,
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:charm",
+          "coc:skill:fast-talk",
+          "coc:skill:intimidate",
+          "coc:skill:persuade"
+        ]
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "convicts-tol-05-en",
+      "physical_page": 21,
+      "printed_page": 21,
+      "method": "book_text",
+      "verified": true,
+      "note": "Smuggler"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — колониальный Новый Южный Уэльс 1788–1840-х (в осях — «other»). Общая запись по правилу convicts-tol-05-en/rule/free-settler-investigators."
+  }
+}

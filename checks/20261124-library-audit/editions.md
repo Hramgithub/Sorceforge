@@ -1,0 +1,332 @@
+# Проверка меток редакций — автоматическая
+
+PDF: 1019
+
+| Метка | 7e | 6e или раньше | смешанно | нет статов | скан/нет текста |
+|---|---|---|---|---|---|
+| EN 6e | 24 | 240 | 8 | 42 | 46 |
+| EN 7e | 117 | 13 | 5 | 86 | 19 |
+| EN | 12 | 58 | 10 | 107 | 17 |
+| RU 7e | 59 | 1 | 4 | 46 | 74 |
+| RU-фан 7e | 17 | 0 | 0 | 1 | 1 |
+| RU-ИИ 7e | 7 | 0 | 0 | 0 | 0 |
+| EN 5e | 0 | 1 | 0 | 0 | 0 |
+| EN 2e | 0 | 1 | 0 | 0 | 0 |
+| EN 5.6e | 0 | 1 | 0 | 0 | 0 |
+| FR 7e | 0 | 1 | 0 | 0 | 0 |
+| DE | 0 | 1 | 0 | 0 | 0 |
+
+## Расхождения метки и признаков: 139
+
+- **метка 7e, но копирайт до 2013** — `Кампании\Horror on the Orient Express\[EN 7e] BOOK_III_-_Italy_&_Beyond_PDF.pdf` (стр. 274; 7e=826, 6e=45, статы мал/бол 9/517; © [1991])
+- **метка 7e, но копирайт до 2013** — `Кампании\Horror on the Orient Express\[EN 7e] BOOK_II_-_Through_the_Alps_PDF.pdf` (стр. 268; 7e=764, 6e=45, статы мал/бол 19/544; © [1991])
+- **метка 7e, но копирайт до 2013** — `Кампании\Horror on the Orient Express\[EN 7e] BOOK_IV_-_Constantinople_&_Consequences_PDF.pdf` (стр. 196; 7e=761, 6e=111, статы мал/бол 24/464; © [1991])
+- **метка 7e, но копирайт до 2013** — `Кампании\Horror on the Orient Express\[EN 7e] BOOK_I_-_Campaign_Book_PDF.pdf` (стр. 78; 7e=32, 6e=1, статы мал/бол 1/1; © [1991])
+- **метка 7e, но копирайт до 2013** — `Кампании\Horror on the Orient Express\[EN 7e] BOOK_V_-_Strangers_on_the_Train_PDF.pdf` (стр. 94; 7e=851, 6e=9, статы мал/бол 9/627; © [1991])
+- **метка 7e, но копирайт до 2013** — `Кампании\Horror on the Orient Express\[EN 7e] Travelers_Companion_PDF.pdf` (стр. 52; 7e=7, 6e=2, статы мал/бол 0/0; © [1991])
+- **метка 7e, но копирайт до 2013** — `Кампании\Horror on the Orient Express\Раздатка\[EN 7e] BOOK_VI_-_Handouts_PDF.pdf` (стр. 196; 7e=3, 6e=0, статы мал/бол 0/0; © [1991])
+- **метка 7e, но копирайт до 2013** — `Кампании\Маски Ньярлатхотепа (Masks of Nyarlathotep)\[EN 7e] Call of Cthulhu - Masks of Nyarlathotep.pdf` (стр. 669; 7e=2585, 6e=128, статы мал/бол 31/1522; © [1984])
+- **метка 7e, но копирайт до 2013** — `Кампании\Маски Ньярлатхотепа (Masks of Nyarlathotep)\[RU 7e] Maski_Nyarlatkhotepa_-_portrety_personazhey.pdf` (стр. 14; 7e=0, 6e=3, статы мал/бол 0/0; © [1981, 1984])
+- **метка 7e, но копирайт до 2013** — `Кампании\Маски Ньярлатхотепа (Masks of Nyarlathotep)\[RU-ИИ 7e] Masks of Nyarlathotep t1_t2 машинный.pdf` (стр. 669; 7e=2073, 6e=112, статы мал/бол 33/918; © [1984])
+- **метка 7e, но копирайт до 2013** — `Кампании\Маски Ньярлатхотепа (Masks of Nyarlathotep)\Раздатка\[RU 7e] Портреты NPC, Маски Ньярлотхотепа.pdf` (стр. 14; 7e=0, 6e=3, статы мал/бол 0/0; © [1981, 1984])
+- **метка 7e, но копирайт до 2013** — `Кампании\Побег из Инсмута (Escape from Innsmouth)\[RU 7e] исходник_Побег из Иннсмута.pdf` (стр. 187; 7e=879, 6e=7, статы мал/бол 7/588; © [1997])
+- **метка 7e, но копирайт до 2013** — `Правила\Книга сыщика (Investigator Handbook)\[EN 7e] Call Of Cthulhu 7ed - Investigator Handbook.pdf` (стр. 283; 7e=311, 6e=40, статы мал/бол 11/171; © [1993])
+- **метка 7e, но копирайт до 2013** — `Путеводители\Аркхэм (Arkham)\Карты\[RU-фан 7e] arkham_guide_for_call_of_cthulhu_rpg.pdf` (стр. 111; 7e=159, 6e=1, статы мал/бол 1/30; © [1996])
+- **метка 7e, но копирайт до 2013** — `Сеттинги\Cthulhu-Fu - Martial Arts in\[EN 7e] CoC - Cthulhu-Fu - Martial Arts in Call of Cthulhu.pdf` (стр. 3; 7e=0, 6e=0, статы мал/бол 0/0; © [2001])
+- **метка 7e, но копирайт до 2013** — `Сеттинги\Pulp Egypt\[EN 7e] Pulp Egypt - Adventures Along the Nile, 1933-1939.pdf` (стр. 180; 7e=6, 6e=4, статы мал/бол 0/0; © [2006])
+- **метка 7e, но копирайт до 2013** — `Сеттинги\Pulp Egypt\[EN 7e] Pulp Egypt - Enemies on the Horizon.pdf` (стр. 16; 7e=1, 6e=0, статы мал/бол 0/0; © [2006])
+- **метка 7e, но копирайт до 2013** — `Сеттинги\Pulp Egypt\[EN 7e] Pulp Egypt - The Charioteer's Tomb.pdf` (стр. 12; 7e=1, 6e=0, статы мал/бол 0/0; © [2006])
+- **метка 7e, но копирайт до 2013** — `Сеттинги\Pulp Egypt\[EN 7e] Pulp Egypt - The Compass of Amun-Re.pdf` (стр. 16; 7e=1, 6e=0, статы мал/бол 0/0; © [2009])
+- **метка 7e, но копирайт до 2013** — `Сеттинги\Тёмные века (Cthulhu Dark Ages)\[EN 7e] Cthulhu Dark Ages.pdf` (стр. 214; 7e=878, 6e=352, статы мал/бол 10/519; © [2004])
+- **метка 7e, но копирайт до 2013** — `Сценарии\1920's Campaign - The Drooler in the Dark\[EN 7e] Call of Cthulhu - 1920's Campaign - The Drooler in the Dark.pdf` (стр. 6; 7e=1, 6e=4, статы мал/бол 4/1; © [1996])
+- **метка 7e, но копирайт до 2013** — `Сценарии\Hung by the Chimney with Care\[EN 7e] Hung by the Chimney with Care.pdf` (стр. 12; 7e=68, 6e=0, статы мал/бол 0/40; © [1981])
+- **метка 7e, но копирайт до 2013** — `Сценарии\Pickman s Legacy\[EN 7e] Pickman_s_Legacy.pdf` (стр. 11; 7e=28, 6e=0, статы мал/бол 0/21; © [2001])
+- **метка 7e, но копирайт до 2013** — `Сценарии\Аукцион\[RU-фан 7e] Аукцион.pdf` (стр. 48; 7e=85, 6e=0, статы мал/бол 0/62; © [1983])
+- **метка 7e, но копирайт до 2013** — `Сценарии\Лечебница\[RU-фан 7e] Лечебница.pdf` (стр. 31; 7e=78, 6e=2, статы мал/бол 2/65; © [1990])
+- **метка 7e, но копирайт до 2013** — `Сценарии\Наедине с Хэллоуином (Alone on Halloween)\[RU-фан 7e] Наедине с Хэллоуином (одиночное приключение, 7-я редакция из 5-й).pdf` (стр. 254; 7e=227, 6e=9, статы мал/бол 5/116; © [1981, 1983, 1992])
+- **метка 7e, но копирайт до 2013** — `Сценарии\Террор (Terror)\[RU 7e] Террор мадкрауд.pdf` (стр. 30; 7e=29, 6e=3, статы мал/бол 0/19; © [2005])
+- **метка 7e, но копирайт до 2013** — `Сценарии\Террор (Terror)\[RU 7e] Террор.pdf` (стр. 30; 7e=0, 6e=0, статы мал/бол 0/0; © [2005])
+- **метка 7e, но копирайт до 2013** — `Сценарии\Хэллоуин в Данвиче\[RU 7e] Хэллоуин в Данвиче.pdf` (стр. 18; 7e=62, 6e=3, статы мал/бол 3/56; © [2005])
+- **метка 7e, признаки старой редакции** — `Кампании\Маски Ньярлатхотепа (Masks of Nyarlathotep)\[EN 7e] Call of Cthulhu - The Masks of Nyarlathotep Companion (Bloody Tongue Edition).pdf` (стр. 610; 7e=23, 6e=558, статы мал/бол 430/3; © [2007, 2008])
+- **метка 7e, признаки старой редакции** — `Правила\Малеус Монстрорум (Malleus Monstrorum)\[FR 7e] Malleus Monstrorum (Sans-Détour, 2015).pdf` (стр. 314; 7e=387, 6e=2581, статы мал/бол 21/387; © [1975, 1976, 1978, 1980, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2001, 2002, 2004])
+- **метка 7e, признаки старой редакции** — `Сборники\Curse of the Cthonians\[EN 7e] Call of Cthulhu - Curse of the Cthonians (updated)(1).pdf` (стр. 162; 7e=22, 6e=412, статы мал/бол 382/19; © [1984])
+- **метка 7e, признаки старой редакции** — `Сеттинги\Cthulhu Now - Secrets of Japan\[EN 7e] Cthulhu Now - Secrets of Japan.pdf` (стр. 364; 7e=57, 6e=632, статы мал/бол 481/51; © [2004, 2005])
+- **метка 7e, признаки старой редакции** — `Сеттинги\Punktown (Cyberpunk)\[EN 7e] Call of Cthulhu - Punktown (Cyberpunk).pdf` (стр. 158; 7e=23, 6e=158, статы мал/бол 120/19; © [2017])
+- **метка 7e, признаки старой редакции** — `Сеттинги\The Parapsychologist's Handbook\[EN 7e] 1920 - The Parapsychologist's Handbook [OEF].pdf` (стр. 116; 7e=8, 6e=28, статы мал/бол 11/1; © [2003])
+- **метка 7e, признаки старой редакции** — `Сценарии\1920's Campaign - Finger Biter\[EN 7e] Call of Cthulhu - 1920's Campaign - Finger Biter.pdf` (стр. 12; 7e=0, 6e=25, статы мал/бол 25/0; © [1990, 1998])
+- **метка 7e, признаки старой редакции** — `Сценарии\Arkham Now - Sample Scenario\[EN 7e] Call of Cthulhu 7ed - Arkham Now - Sample Scenario.pdf` (стр. 16; 7e=0, 6e=14, статы мал/бол 7/0; © [2010])
+- **метка 7e, признаки старой редакции** — `Сценарии\Brunholt Head\[EN 7e] Brunholt Head.pdf` (стр. 9; 7e=1, 6e=5, статы мал/бол 2/0; © [2002])
+- **метка 7e, признаки старой редакции** — `Сценарии\Canis Mysterium\[EN 7e] Call of Cthulhu 7ed - Canis Mysterium.pdf` (стр. 36; 7e=1, 6e=89, статы мал/бол 89/1; © [2013])
+- **метка 7e, признаки старой редакции** — `Сценарии\I Want You To Kill The Ice Cream Man\[EN 7e] I Want You To Kill The Ice Cream Man.pdf` (стр. 8; 7e=0, 6e=6, статы мал/бол 6/0; © [1998])
+- **метка 7e, признаки старой редакции** — `Сценарии\Miskatonic Repository - The Transmigration of the Emerald Lama\[EN 7e] Miskatonic Repository - The Transmigration of the Emerald Lama.pdf` (стр. 14; 7e=10, 6e=22, статы мал/бол 0/0; © [])
+- **метка 7e, признаки старой редакции** — `Сценарии\Now Adv - Dockside Dogs\[EN 7e] CoC - Now Adv - Dockside Dogs.pdf` (стр. 28; 7e=1, 6e=18, статы мал/бол 4/1; © [2012])
+- **метка 7e, признаки старой редакции** — `Сценарии\Now Adv - Flesh for Eihort\[EN 7e] CoC - Now Adv - Flesh for Eihort.pdf` (стр. 14; 7e=0, 6e=48, статы мал/бол 48/0; © [])
+- **метка 7e, признаки старой редакции** — `Сценарии\Призрак\[RU 7e] Призрак.pdf` (стр. 17; 7e=0, 6e=19, статы мал/бол 6/0; © [])
+- **метка старой редакции, признаки 7e** — `_Другие системы\Fate - Cthulhu in Space\[EN 6e] FATE - Cthulhu in Space [2014].pdf` (стр. 126; 7e=9, 6e=0, статы мал/бол 0/0; © [2014])
+- **метка старой редакции, признаки 7e** — `_Другие системы\Fate - Fantasy Cthulhu\[EN 6e] FATE - Fantasy Cthulhu.pdf` (стр. 144; 7e=9, 6e=4, статы мал/бол 0/0; © [])
+- **метка старой редакции, признаки 7e** — `Монографии\Golden Goblin Press - Tails of Valor (Cathulhu)\[EN 6e] Golden Goblin Press - Tails of Valor (Call of Cthulhu-Cathulhu).pdf` (стр. 84; 7e=504, 6e=74, статы мал/бол 70/296; © [2019])
+- **метка старой редакции, признаки 7e** — `Монографии\World War Cthulhu - Cold War - Covert Actions\[EN 6e] World War Cthulhu - Cold War - Covert Actions.pdf` (стр. 175; 7e=709, 6e=1, статы мал/бол 1/481; © [2017])
+- **метка старой редакции, признаки 7e** — `Монографии\World War Cthulhu - Cold War - Our American Cousins\[EN 6e] World War Cthulhu - Cold War - Our American Cousins.pdf` (стр. 126; 7e=238, 6e=0, статы мал/бол 0/190; © [2017])
+- **метка старой редакции, признаки 7e** — `Монографии\World War Cthulhu - Cold War - Section 46 Operations Manual\[EN 6e] World War Cthulhu - Cold War - Section 46 Operations Manual.pdf` (стр. 127; 7e=58, 6e=6, статы мал/бол 0/0; © [2016])
+- **метка старой редакции, признаки 7e** — `Монографии\World War Cthulhu - Cold War\[EN 6e] World War Cthulhu - Cold War.pdf` (стр. 240; 7e=494, 6e=12, статы мал/бол 1/307; © [2016])
+- **метка старой редакции, признаки 7e** — `Монографии\World War Cthulhu - London\[EN 6e] World War Cthulhu - London.pdf` (стр. 192; 7e=516, 6e=6, статы мал/бол 4/278; © [2016])
+- **метка старой редакции, признаки 7e** — `Сеттинги\Convicts & Cthulhu - Players Version\[EN 6e] Call of Cthulhu - Convicts & Cthulhu - Players Version.pdf` (стр. 57; 7e=9, 6e=0, статы мал/бол 0/0; © [2016])
+- **метка старой редакции, признаки 7e** — `Сеттинги\Convicts & Cthulhu - Ticket of Leave #08 - Gentlemen Convicts\[EN 6e] Call of Cthulhu - Convicts & Cthulhu - Ticket of Leave #08 - Gentlemen Convicts.pdf` (стр. 20; 7e=23, 6e=0, статы мал/бол 0/13; © [2017])
+- **метка старой редакции, признаки 7e** — `Сеттинги\Convicts & Cthulhu - Ticket of Leave #09 - Orphan School Horror\[EN 6e] Call of Cthulhu - Convicts & Cthulhu - Ticket of Leave #09 - Orphan School Horror.pdf` (стр. 23; 7e=14, 6e=1, статы мал/бол 1/5; © [2017])
+- **метка старой редакции, признаки 7e** — `Сеттинги\Convicts & Cthulhu - Ticket of Leave #10 - The Doom That Came To Five Dock\[EN 6e] Call of Cthulhu - Convicts & Cthulhu - Ticket of Leave #10 - The Doom That Came To Five Dock.pdf` (стр. 17; 7e=56, 6e=3, статы мал/бол 1/26; © [2018])
+- **метка старой редакции, признаки 7e** — `Сеттинги\Convicts & Cthulhu - Ticket of Leave #11 - The Dispensatory of Doctor Macdead\[EN 6e] Convicts & Cthulhu - Ticket of Leave #11 - The Dispensatory of Doctor Macdead.pdf` (стр. 25; 7e=59, 6e=0, статы мал/бол 0/34; © [2018])
+- **метка старой редакции, признаки 7e** — `Сеттинги\Convicts & Cthulhu - Ticket of Leave #12 - Fallen Stars\[EN 6e] Call of Cthulhu - Convicts & Cthulhu - Ticket of Leave #12 - Fallen Stars.pdf` (стр. 22; 7e=54, 6e=0, статы мал/бол 0/22; © [2018])
+- **метка старой редакции, признаки 7e** — `Сеттинги\Convicts & Cthulhu - Ticket of Leave #2 - Tricolour Terror\[EN 6e] Call of Cthulhu - Convicts & Cthulhu - Ticket of Leave #2 - Tricolour Terror.pdf` (стр. 6; 7e=27, 6e=0, статы мал/бол 0/24; © [2016])
+- **метка старой редакции, признаки 7e** — `Сеттинги\Convicts & Cthulhu - Ticket of Leave #3 - Criminal Enterprise\[EN 6e] Call of Cthulhu - Convicts & Cthulhu - Ticket of Leave #3 - Criminal Enterprise.pdf` (стр. 8; 7e=92, 6e=13, статы мал/бол 1/60; © [2016])
+- **метка старой редакции, признаки 7e** — `Сеттинги\Convicts & Cthulhu - Ticket of Leave #4 - The Vanishing Ensign\[EN 6e] Call of Cthulhu - Convicts & Cthulhu - Ticket of Leave #4 - The Vanishing Ensign.pdf` (стр. 14; 7e=74, 6e=2, статы мал/бол 0/32; © [2017])
+- **метка старой редакции, признаки 7e** — `Сеттинги\Convicts & Cthulhu - Ticket of Leave #5 - The Damned & The Degenerate\[EN 6e] Call of Cthulhu - Convicts & Cthulhu - Ticket of Leave #5 - The Damned & The Degenerate.pdf` (стр. 24; 7e=97, 6e=0, статы мал/бол 0/80; © [2017])
+- **метка старой редакции, признаки 7e** — `Сеттинги\Convicts & Cthulhu - Ticket of Leave #6 - Night of the Convict Dead\[EN 6e] Call of Cthulhu - Convicts & Cthulhu - Ticket of Leave #6 - Night of the Convict Dead.pdf` (стр. 15; 7e=52, 6e=10, статы мал/бол 2/27; © [2017])
+- **метка старой редакции, признаки 7e** — `Сеттинги\Convicts & Cthulhu - Ticket of Leave #7 - Seams of Peril\[EN 6e] Call of Cthulhu - Convicts & Cthulhu - Ticket of Leave #7 - Seams of Peril.pdf` (стр. 14; 7e=30, 6e=5, статы мал/бол 1/14; © [2017])
+- **метка старой редакции, признаки 7e** — `Сеттинги\Convicts & Cthulhu\[EN 6e] Call of Cthulhu - Convicts & Cthulhu.pdf` (стр. 98; 7e=154, 6e=3, статы мал/бол 1/86; © [2016])
+- **метка старой редакции, признаки 7e** — `Сеттинги\Cthulhu Now - The Stars Are Right (Upgrade Pack)\[EN 6e] Cthulhu Now - The Stars Are Right (Upgrade Pack).pdf` (стр. 67; 7e=815, 6e=104, статы мал/бол 2/490; © [2017])
+- **метка старой редакции, признаки 7e** — `Сеттинги\Тёмные века (Cthulhu Dark Ages)\[EN 6e] 1000 - Dark Ages 2nd ed.pdf` (стр. 214; 7e=878, 6e=352, статы мал/бол 10/519; © [2004])
+- **метка старой редакции, признаки 7e** — `Сценарии\Cthulhu Invictus - The Assignment\[EN 6e] Cthulhu Invictus - The Assignment.pdf` (стр. 10; 7e=39, 6e=0, статы мал/бол 0/38; © [2020])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\Challenge Magazine Omnibus\[EN] Challenge Magazine Omnibus.pdf` (стр. 90; 7e=21, 6e=255, статы мал/бол 226/18; © [])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\Delta Green - The Black Seal - Issue 02\[EN] Delta Green - The Black Seal - Issue 02.pdf` (стр. 84; 7e=13, 6e=153, статы мал/бол 148/10; © [1984, 2002, 2003])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\Delta Green - The Black Seal - Issue 03\[EN] Delta Green - The Black Seal - Issue 03.pdf` (стр. 100; 7e=7, 6e=312, статы мал/бол 243/6; © [2002, 2003, 2004])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\Dragon Magazine - R'lyeh Issue\[EN] Dragon Magazine - 'R'lyeh Issue' (Call of Cthulhu Articles).pdf` (стр. 41; 7e=3, 6e=20, статы мал/бол 3/0; © [1987, 1988, 1989, 1990, 1993])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\Film Noir, Niteside Dreams\[EN] Film Noir, Niteside Dreams.pdf` (стр. 48; 7e=0, 6e=11, статы мал/бол 3/0; © [])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\Protodimension Magazine #10 (Fall 2011)\[EN] Protodimension Magazine #10 (Fall 2011).pdf` (стр. 55; 7e=2, 6e=13, статы мал/бол 13/0; © [1991, 2009, 2011])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\Protodimension Magazine #14 (Winter 2013)\[EN] Protodimension Magazine #14 (Winter 2013).pdf` (стр. 61; 7e=3, 6e=85, статы мал/бол 82/2; © [1991, 2012, 2013])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\Protodimension Magazine #17 (Fall 2013)\[EN] Protodimension Magazine #17 (Fall 2013).pdf` (стр. 93; 7e=7, 6e=46, статы мал/бол 46/0; © [1991, 2005, 2008, 2009, 2012, 2013])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\Protodimension Magazine #18 (Winter 2014)\[EN] Protodimension Magazine #18 (Winter 2014).pdf` (стр. 57; 7e=3, 6e=6, статы мал/бол 6/0; © [1991, 2009, 2012, 2013])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\Protodimension Magazine #21 (Fall 2014)\[EN] Protodimension Magazine #21 (Fall 2014).pdf` (стр. 62; 7e=1, 6e=28, статы мал/бол 20/0; © [1991, 2012, 2013])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\Protodimension Magazine #24 (Jan 2016)\[EN] Protodimension Magazine #24  (Jan 2016).pdf` (стр. 44; 7e=3, 6e=6, статы мал/бол 6/1; © [1991, 2012, 2015])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\Protodimension Magazine #26 (Mar 2016)\[EN] Protodimension Magazine #26 (Mar 2016).pdf` (стр. 24; 7e=0, 6e=20, статы мал/бол 20/0; © [1991, 2012, 2016])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\Protodimension Magazine #28 (Halloween 2016)\[EN] Protodimension Magazine #28 (Halloween 2016).pdf` (стр. 70; 7e=0, 6e=9, статы мал/бол 9/0; © [1991, 2012, 2016])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\Protodimension Magazine #3 (Winter 2010)\[EN] Protodimension Magazine #3 (Winter 2010).pdf` (стр. 76; 7e=4, 6e=57, статы мал/бол 52/0; © [1991, 2009])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\Protodimension Magazine #7 (Winter 2011)\[EN] Protodimension Magazine #7 (Winter 2011).pdf` (стр. 73; 7e=6, 6e=22, статы мал/бол 19/2; © [1991, 2006, 2009, 2011])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\Protodimension Magazine #8 (Spring 2011)\[EN] Protodimension Magazine #8 (Spring 2011).pdf` (стр. 71; 7e=2, 6e=28, статы мал/бол 26/0; © [1991, 1992, 2006, 2008, 2009, 2010, 2011])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\Protodimension Magazine #9 (Summer 2011)\[EN] Protodimension Magazine #9 (Summer 2011).pdf` (стр. 94; 7e=0, 6e=8, статы мал/бол 8/0; © [1991, 1999, 2006, 2009, 2011])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\RobMacIntyre\[EN] RobMacIntyre.PDF` (стр. 1; 7e=0, 6e=8, статы мал/бол 8/0; © [2007])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\The Black Seal #1 - Strange Britain, Secret Country\[EN] The Black Seal #1 - Strange Britain, Secret Country.pdf` (стр. 15; 7e=0, 6e=7, статы мал/бол 7/0; © [2001, 2002])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\The Unbound Book 00\[EN] The Unbound Book 00.pdf` (стр. 45; 7e=11, 6e=75, статы мал/бол 71/10; © [1981, 2002])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\The Unbound Book 01\[EN] The Unbound Book 01.pdf` (стр. 71; 7e=11, 6e=181, статы мал/бол 169/10; © [1981])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\The Unbound Book 02\[EN] The Unbound Book 02.pdf` (стр. 42; 7e=0, 6e=45, статы мал/бол 45/0; © [1981])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\The Unspeakable Oath #06\[EN] The Unspeakable Oath #06.pdf` (стр. 84; 7e=3, 6e=38, статы мал/бол 21/0; © [])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\The Unspeakable Oath #07\[EN] The Unspeakable Oath #07.pdf` (стр. 84; 7e=2, 6e=44, статы мал/бол 28/0; © [1992])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\The Unspeakable Oath #08+09\[EN] The Unspeakable Oath #08+09.pdf` (стр. 164; 7e=22, 6e=311, статы мал/бол 290/16; © [1993])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\The Unspeakable Oath #10\[EN] The Unspeakable Oath #10.pdf` (стр. 68; 7e=3, 6e=86, статы мал/бол 80/2; © [1993, 1994])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\The Unspeakable Oath #11\[EN] The Unspeakable Oath #11.pdf` (стр. 68; 7e=9, 6e=134, статы мал/бол 112/4; © [1994])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\The Unspeakable Oath #12\[EN] The Unspeakable Oath #12 [BW].pdf` (стр. 68; 7e=7, 6e=23, статы мал/бол 14/2; © [1995])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\The Unspeakable Oath #13\[EN] The Unspeakable Oath #13 [BW].pdf` (стр. 68; 7e=2, 6e=31, статы мал/бол 12/2; © [])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\The Unspeakable Oath #14-15\[EN] The Unspeakable Oath #14-15 [BW].pdf` (стр. 132; 7e=10, 6e=67, статы мал/бол 57/5; © [])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\The Unspeakable Oath #16-17 [BW\[EN] The Unspeakable Oath #16-17 [BW.pdf` (стр. 130; 7e=12, 6e=81, статы мал/бол 81/2; © [2001])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\The Unspeakable Oath 18\[EN] The Unspeakable Oath 18.pdf` (стр. 82; 7e=8, 6e=97, статы мал/бол 82/6; © [2010])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\The Unspeakable Oath 19\[EN] The Unspeakable Oath 19.pdf` (стр. 66; 7e=3, 6e=57, статы мал/бол 46/1; © [2011])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\The Unspeakable Oath 20\[EN] The Unspeakable Oath 20.pdf` (стр. 66; 7e=2, 6e=28, статы мал/бол 18/1; © [2011])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\The Unspeakable Oath 21\[EN] The Unspeakable Oath 21.pdf` (стр. 70; 7e=2, 6e=48, статы мал/бол 48/0; © [2009, 2011, 2012])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\The Unspeakable Oath 22\[EN] The Unspeakable Oath 22.pdf` (стр. 66; 7e=7, 6e=14, статы мал/бол 9/0; © [2013])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\The Unspeakable Oath 23\[EN] The Unspeakable Oath 23.pdf` (стр. 82; 7e=3, 6e=80, статы мал/бол 67/0; © [2013])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\The Unspeakable Oath 24\[EN] The Unspeakable Oath 24.pdf` (стр. 74; 7e=2, 6e=89, статы мал/бол 77/0; © [])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\The Whisperer 01\[EN] The Whisperer 01.pdf` (стр. 32; 7e=8, 6e=63, статы мал/бол 50/7; © [1996, 1999])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\The Whisperer 04 - Dreamlands Special\[EN] The Whisperer 04 - Dreamlands Special.pdf` (стр. 36; 7e=8, 6e=86, статы мал/бол 70/8; © [1999, 2001])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\White Dwarf - Omnibus\[EN] White Dwarf - Call of Cthulhu Omnibus (OCR).pdf` (стр. 123; 7e=26, 6e=335, статы мал/бол 293/20; © [])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\Worlds of Cthulhu #2\Прегены\[EN] WoC-02-PreGenCharacters-IcarusProject.pdf` (стр. 6; 7e=2, 6e=36, статы мал/бол 36/2; © [2005])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\Worlds of Cthulhu #2\Прегены\[EN] WoC-02-PreGenCharacters-SingerFromDhol.pdf` (стр. 8; 7e=0, 6e=40, статы мал/бол 40/0; © [2005])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\woc1\[EN] WoC-01-Project_Pi_PCs.pdf` (стр. 21; 7e=0, 6e=89, статы мал/бол 71/0; © [])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\woc1\[EN] woc01_baxter.pdf` (стр. 3; 7e=0, 6e=6, статы мал/бол 0/0; © [])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\woc4\[EN] WoC-04-Aids-Cathulhu-Tricks.pdf` (стр. 5; 7e=0, 6e=7, статы мал/бол 0/0; © [2006])
+- **нет редакции в метке, по тексту 6e или раньше** — `Журналы\woc5\Раздатка\[EN] WoC-05-Handouts-Master_of_Hounds.pdf` (стр. 8; 7e=0, 6e=32, статы мал/бол 32/0; © [2007])
+- **нет редакции в метке, по тексту 6e или раньше** — `Монографии\First Book of Things\[EN] First Book of Things.pdf` (стр. 68; 7e=1, 6e=48, статы мал/бол 9/0; © [1990])
+- **нет редакции в метке, по тексту 6e или раньше** — `Монографии\The Big Book of Cults\[EN] The Big Book of Cults - 316.pdf` (стр. 104; 7e=9, 6e=188, статы мал/бол 185/8; © [2005])
+- **нет редакции в метке, по тексту 6e или раньше** — `Монографии\Undying Leaders\[EN] Undying Leaders - 343.pdf` (стр. 78; 7e=13, 6e=418, статы мал/бол 399/9; © [1989, 2007])
+- **нет редакции в метке, по тексту 6e или раньше** — `Правила\All the World's Monsters, volume 2\[EN] 2002 - All the World's Monsters, volume 2.pdf` (стр. 114; 7e=0, 6e=8, статы мал/бол 0/0; © [])
+- **нет редакции в метке, по тексту 6e или раньше** — `Правила\coc6 tables\[EN] coc6_tables.pdf` (стр. 2; 7e=0, 6e=5, статы мал/бол 0/0; © [2007])
+- **нет редакции в метке, по тексту 6e или раньше** — `Прочее\Cthulhu Now 2e DE\[DE] Cthulhu_Now_2e_DE.pdf` (стр. 277; 7e=0, 6e=22, статы мал/бол 0/0; © [2011])
+- **нет редакции в метке, по тексту 6e или раньше** — `Сборники\Тайны Кремля (Secrets of the Kremlin)\[EN] 2_Secrets of the Kremlin, 1931.pdf` (стр. 21; 7e=0, 6e=21, статы мал/бол 21/0; © [2002])
+- **нет редакции в метке, по тексту 6e или раньше** — `Сеттинги\Cyberthulhu\[EN] Cyberthulhu (future COC).pdf` (стр. 33; 7e=1, 6e=9, статы мал/бол 1/0; © [1997])
+- **нет редакции в метке, по тексту 6e или раньше** — `Сценарии\Character - LT. Gabriel Patersen\Прегены\[EN] Character - LT. Gabriel Patersen.PDF` (стр. 1; 7e=0, 6e=7, статы мал/бол 7/0; © [2007])
+- **нет редакции в метке, по тексту 6e или раньше** — `Сценарии\Character - Lucille Tay\Прегены\[EN] Character - Lucille Tay.PDF` (стр. 1; 7e=0, 6e=8, статы мал/бол 8/0; © [2007])
+- **нет редакции в метке, по тексту 6e или раньше** — `Сценарии\Character - Vikki Cantfield\Прегены\[EN] Character - Vikki Cantfield.PDF` (стр. 1; 7e=0, 6e=8, статы мал/бол 8/0; © [2007])
+- **нет редакции в метке, по тексту 6e или раньше** — `Сценарии\Тени Ленинграда (Shadows of Leningrad)\[EN] 5_Shadows of Leningrad, 1938.pdf` (стр. 49; 7e=0, 6e=22, статы мал/бол 19/0; © [])
+- **нет редакции в метке, по тексту 7e** — `Журналы\Cthulhu Lives - descriptive study of the HPL historical society\[EN] Cthulhu Lives - descriptive study of the HPL historical society.pdf` (стр. 183; 7e=6, 6e=2, статы мал/бол 0/0; © [1996, 2003])
+- **нет редакции в метке, по тексту 7e** — `Журналы\Protodimension Magazine #1 (Summer 2009)\[EN] Protodimension Magazine #1 (Summer 2009).pdf` (стр. 85; 7e=5, 6e=2, статы мал/бол 0/0; © [1991, 1995, 2009])
+- **нет редакции в метке, по тексту 7e** — `Журналы\Protodimension Magazine #2 (Fall 2009)\[EN] Protodimension Magazine #2 (Fall 2009).pdf` (стр. 79; 7e=6, 6e=0, статы мал/бол 0/0; © [1991, 2009])
+- **нет редакции в метке, по тексту 7e** — `Журналы\Weirdworks - Hypergraphia Magazine 2\[EN] Weirdworks - Hypergraphia Magazine 2.pdf` (стр. 60; 7e=19, 6e=2, статы мал/бол 0/8; © [2019])
+- **нет редакции в метке, по тексту 7e** — `Кампании\Vermis\[EN] 66021-CoC_Vermis.pdf` (стр. 200; 7e=123, 6e=4, статы мал/бол 0/30; © [2026])
+- **нет редакции в метке, по тексту 7e** — `Прочее\In strange seas\[EN] Call_of_Cthulhu_In strange seas.pdf` (стр. 31; 7e=5, 6e=0, статы мал/бол 0/0; © [2023])
+- **нет редакции в метке, по тексту 7e** — `Прочее\Occam's Razor An Anthology of Modern Day Scenarios\[EN] Occam's_Razor_An_Anthology_of_Modern_Day_Call_of_Cthulhu_Scenarios.pdf` (стр. 156; 7e=533, 6e=3, статы мал/бол 3/309; © [1981, 1983, 2021])
+- **нет редакции в метке, по тексту 7e** — `Прочее\the lst valley\[EN] Call_of_Cthulhu_the lst valley.pdf` (стр. 34; 7e=110, 6e=0, статы мал/бол 0/58; © [2020])
+- **нет редакции в метке, по тексту 7e** — `Сборники\Острые иголочки страха (Fear's Sharp Little Needles)\[EN] Dissociation.PDF` (стр. 6; 7e=13, 6e=0, статы мал/бол 0/8; © [])
+- **нет редакции в метке, по тексту 7e** — `Сценарии\Treasure for the Watcher\[EN] Treasure for the Watcher.pdf` (стр. 14; 7e=48, 6e=10, статы мал/бол 0/28; © [2021])
+- **нет редакции в метке, по тексту 7e** — `Сценарии\Некрополис (Necropolis)\[EN] Necropolis.pdf` (стр. 22; 7e=142, 6e=1, статы мал/бол 1/37; © [])
+- **нет редакции в метке, по тексту 7e** — `Сценарии\Проклятый идол Манко Капака (The Cursed Idol of Manco Capac)\[EN] The_Cursed_Idol_of_Manco_Capác_A_Classic_Call_of_Cthulhu_Scenario.pdf` (стр. 52; 7e=213, 6e=2, статы мал/бол 0/123; © [2025])
+
+## Одинаковые файлы (md5) в нескольких местах: 10
+
+-  — **разные метки**`Атмосфера\Business Cards\[EN 6e] Business Cards.pdf`; `Атмосфера\Business Cards\[EN] Business Cards.pdf`
+-  — **разные метки**`Журналы\Cthulhu Weaponry 1\[EN 6e] Cthulhu Weaponry 1.pdf`; `Журналы\Cthulhu Weaponry 1\[EN] Cthulhu Weaponry 1.pdf`
+-  — **разные метки**`Журналы\Cthulhu Weaponry 2\[EN 6e] Cthulhu Weaponry 2.pdf`; `Журналы\Cthulhu Weaponry 2\[EN] Cthulhu Weaponry 2.pdf`
+-  — **разные метки**`Журналы\Worlds of Cthulhu #2\[EN 6e] WoC-02-errata.pdf`; `Журналы\Worlds of Cthulhu #2\[EN] WoC-02-errata.pdf`
+-  — **разные метки**`Правила\Monster Master Sheet\[EN 6e] Monster Master Sheet.pdf`; `Правила\Monster Master Sheet\[EN] Monster Master Sheet.pdf`
+-  — **разные метки**`Сеттинги\Cthulhu-Fu - Martial Arts in\[EN 6e] CoC - Cthulhu-Fu - Martial Arts in Call of Cthulhu.pdf`; `Сеттинги\Cthulhu-Fu - Martial Arts in\[EN 7e] CoC - Cthulhu-Fu - Martial Arts in Call of Cthulhu.pdf`
+-  — **разные метки**`Сценарии\1920's Campaign - Finger Biter\[EN 6e] Call of Cthulhu - 1920's Campaign - Finger Biter.pdf`; `Сценарии\1920's Campaign - Finger Biter\[EN 7e] Call of Cthulhu - 1920's Campaign - Finger Biter.pdf`
+-  — **разные метки**`Сценарии\1920's Campaign - The Drooler in the Dark\[EN 6e] Call of Cthulhu - 1920's Campaign - The Drooler in the Dark.pdf`; `Сценарии\1920's Campaign - The Drooler in the Dark\[EN 7e] Call of Cthulhu - 1920's Campaign - The Drooler in the Dark.pdf`
+-  — **разные метки**`Сценарии\Brunholt Head\[EN 6e] Brunholt Head.pdf`; `Сценарии\Brunholt Head\[EN 7e] Brunholt Head.pdf`
+-  — **разные метки**`Сценарии\I Want You To Kill The Ice Cream Man\[EN 6e] I Want You To Kill The Ice Cream Man.pdf`; `Сценарии\I Want You To Kill The Ice Cream Man\[EN 7e] I Want You To Kill The Ice Cream Man.pdf`
+
+## Сканы без текста (метку нужно проверять по картинке)
+
+- `Атмосфера\Arkham Stamp\[EN] Arkham Stamp.pdf` [EN] 1 стр.
+- `Атмосфера\Investigator Mugshots\Прегены\[EN] Investigator Mugshots.pdf` [EN] 34 стр.
+- `Атмосфера\Miskatonic University Stationery\[EN] 1920 - Miskatonic University Stationery.pdf` [EN] 1 стр.
+- `Атмосфера\Paper Miniatures 2\[EN] Paper Miniatures 2.pdf` [EN] 10 стр.
+- `Журналы\The Unspeakable Oath #03\[EN] The Unspeakable Oath #03.pdf` [EN] 76 стр.
+- `Журналы\The Unspeakable Oath #4 - The Mayhem Issue\[EN] The Unspeakable Oath #4 - The Mayhem Issue.pdf` [EN] 64 стр.
+- `Журналы\The Unspeakable Oath #5 - The British Issue\[EN] The Unspeakable Oath #5 - The British Issue.pdf` [EN] 84 стр.
+- `Журналы\Worlds of Cthulhu #1\[EN] Worlds of Cthulhu #1.pdf` [EN] 132 стр.
+- `Журналы\Worlds of Cthulhu #2\[EN] Worlds of Cthulhu #2.pdf` [EN] 132 стр.
+- `Журналы\Worlds of Cthulhu #3\[EN] Worlds of Cthulhu #3.pdf` [EN] 132 стр.
+- `Журналы\Worlds of Cthulhu #4\[EN] Worlds of Cthulhu #4.pdf` [EN] 132 стр.
+- `Журналы\Worlds of Cthulhu #5\[EN] Worlds of Cthulhu #5.pdf` [EN] 128 стр.
+- `Журналы\Worlds of Cthulhu #6\[EN] Worlds of Cthulhu #6.pdf` [EN] 132 стр.
+- `Кампании\Antarctic Expedition Kit\[EN 6e] Call of Cthulhu - 1930 - Antarctic Expedition Kit.pdf` [EN 6e] 39 стр.
+- `Кампании\At Your Door\[EN 6e] Call of Cthulhu - 1990 - At Your Door.pdf` [EN 6e] 164 стр.
+- `Кампании\Call-of-Cthulhu-the-Star-on-the-Shore\[EN 7e] Call-of-Cthulhu-the-Star-on-the-Shore.pdf` [EN 7e] 99 стр.
+- `Кампании\Cthulhu Invictus - The Legacy of Arrius Lurco\Раздатка\[EN 6e] Cthulhu Invictus - The Legacy of Arrius Lurco - Maps & Handouts.pdf` [EN 6e] 12 стр.
+- `Кампании\Horror on the Orient Express\[EN 6e] Call of Cthulhu - 1920 - Horror On The Orient Express [266].pdf` [EN 6e] 266 стр.
+- `Кампании\Horror on the Orient Express\[EN 7e] Air_Routes_in_1923_PDF.pdf` [EN 7e] 1 стр.
+- `Кампании\Horror on the Orient Express\[EN 7e] Keeper_Maps_PDF.pdf` [EN 7e] 18 стр.
+- `Кампании\Horror on the Orient Express\[EN 7e] Player_Maps_PDF.pdf` [EN 7e] 13 стр.
+- `Кампании\Horror on the Orient Express\[EN 7e] Scroll_of_the_Head_PDF.pdf` [EN 7e] 1 стр.
+- `Кампании\Horror on the Orient Express\[EN 7e] Sticker_Postcard_&_Simulacrum_Pack_PDF.pdf` [EN 7e] 10 стр.
+- `Кампании\Horror on the Orient Express\[EN 7e] Train_Car_Plans_PDF.pdf` [EN 7e] 5 стр.
+- `Кампании\Horror on the Orient Express\[EN 7e] US_Passport_PDF.pdf` [EN 7e] 2 стр.
+- `Кампании\Horror on the Orient Express\Карты\[EN 7e] European_Route_Map_Hi-Res_PDF.pdf` [EN 7e] 1 стр.
+- `Кампании\Horror on the Orient Express\Карты\[EN 7e] European_Route_Map_PDF.pdf` [EN 7e] 1 стр.
+- `Кампании\Horror on the Orient Express\Раздатка\[EN 7e] 1923_Calendar_PDF.pdf` [EN 7e] 4 стр.
+- `Кампании\Shadows of Yog-Sothoth\[EN 6e] Call of Cthulhu - 1920 - Shadows Of Yog Sothoth - OLD.pdf` [EN 6e] 84 стр.
+- `Кампании\The Arkham Evil\[EN 6e] Call of Cthulhu - The Arkham Evil.pdf` [EN 6e] 65 стр.
+- `Кампании\The Walker In The Wastes\[EN 6e] Call of Cthulhu - 1920 - The Walker In The Wastes.pdf` [EN 6e] 227 стр.
+- `Кампании\Thing Torments Poet Daimyo Calls on Greatest Help will the Players Fail\[EN 7e] Call Of Cthulhu 7ed - Thing Torments Poet Daimyo Calls on Greatest Help will the Players Fail.pdf` [EN 7e] 32 стр.
+- `Кампании\Маски Ньярлатхотепа (Masks of Nyarlathotep)\[RU 7e] Masks of Nyarlathotep т2 скан.pdf` [RU 7e] 235 стр.
+- `Кампании\Маски Ньярлатхотепа (Masks of Nyarlathotep)\Карты\[RU 7e] Карта путешествий.pdf` [RU 7e] 1 стр.
+- `Кампании\Маски Ньярлатхотепа (Masks of Nyarlathotep)\Прегены\[RU 7e] Прегены Маски Ньярлатхотепа.pdf` [RU 7e] 10 стр.
+- `Кампании\Маски Ньярлатхотепа (Masks of Nyarlathotep)\Раздатка\[RU 7e] Раздатка Маски Ньярлатхотепа.pdf` [RU 7e] 84 стр.
+- `Кампании\Побег из Инсмута (Escape from Innsmouth)\[RU 7e] 4_Другие истоники информации.pdf` [RU 7e] 2 стр.
+- `Кампании\Побег из Инсмута (Escape from Innsmouth)\[RU 7e] 7_Цели рейда.pdf` [RU 7e] 70 стр.
+- `Кампании\Побег из Инсмута (Escape from Innsmouth)\[RU 7e] Дневник Джереми Кроуфорда .pdf` [RU 7e] 2 стр.
+- `Кампании\Побег из Инсмута (Escape from Innsmouth)\[RU 7e] Дневник Элизабет Кроуфорд.pdf` [RU 7e] 2 стр.
+- `Кампании\Побег из Инсмута (Escape from Innsmouth)\[RU 7e] Истории и Слухи об Инсмуте.pdf` [RU 7e] 2 стр.
+- `Кампании\Побег из Инсмута (Escape from Innsmouth)\Карты\[EN 6e] Call of Cthulhu - 1920 - Escape From Innsmouth (MAP).pdf` [EN 6e] 1 стр.
+- `Кампании\Побег из Инсмута (Escape from Innsmouth)\Карты\[RU 7e] 9_Карты Инсмута.pdf` [RU 7e] 6 стр.
+- `Кампании\Побег из Инсмута (Escape from Innsmouth)\Раздатка\[RU 7e] Arkham Advertiser_1-объединены.pdf` [RU 7e] 2 стр.
+- `Кампании\Побег из Инсмута (Escape from Innsmouth)\Раздатка\[RU 7e] карта инсмута.pdf` [RU 7e] 1 стр.
+- `Монографии\Cthulhu Live Murder at Miskatonic\[EN 6e] Cthulhu Live Murder at Miskatonic.pdf` [EN 6e] 11 стр.
+- `Монографии\This Old Haunted House\[EN] This Old Haunted House - 361.pdf` [EN] 60 стр.
+- `Правила\Character Sheet - 1920s\Прегены\[EN 7e] Call of Cthulhu 7ed - Character Sheet - 1920s.pdf` [EN 7e] 2 стр.
+- `Правила\Cthulhu Now - Secrets of Japan - Character Sheet\Прегены\[EN 6e] Cthulhu Now - Secrets of Japan - Character Sheet.pdf` [EN 6e] 2 стр.
+- `Правила\Dreamlands - Field Guide to Creatures of the Dreamlands\[EN] Dreamlands - Field Guide to Creatures of the Dreamlands.pdf` [EN] 66 стр.
+- `Правила\Field Guide to Cthulhu Monsters\[EN] Field Guide to Cthulhu Monsters.pdf` [EN] 65 стр.
+- `Правила\Книга сыщика (Investigator Handbook)\[RU 7e] Книга сыщика.pdf` [RU 7e] 269 стр.
+- `Правила\Памятки хранителя\[RU 7e] правила погони.pdf` [RU 7e] 3 стр.
+- `Правила\Памятки хранителя\Карты\[RU-фан 7e] карты происшествий.pdf` [RU-фан 7e] 12 стр.
+- `Правила\Ширма хранителя (Keeper Screen)\[EN 6e] 1920 - Keeper's Screen & A Restoration Of Evil.pdf` [EN 6e] 44 стр.
+- `Правила\Ширма хранителя (Keeper Screen)\[EN 6e] 1920 - Keepers Screen 3ed.pdf` [EN 6e] 7 стр.
+- `Правила\Ширма хранителя (Keeper Screen)\[EN 7e] Call Of Cthulhu 7ed - Keeper Screen - Front.pdf` [EN 7e] 1 стр.
+- `Правила\Ширма хранителя (Keeper Screen)\[RU 7e] ширма хранителя_v1.0.pdf` [RU 7e] 4 стр.
+- `Прочее\Death in Luxor\[EN 6e] Call_of_Cthulhu Death in Luxor.pdf` [EN 6e] 50 стр.
+- `Путеводители\Аркхэм (Arkham)\[EN 6e] 1920 - Arkham - Unveiling the Legend Haunted City.pdf` [EN 6e] 262 стр.
+- `Путеводители\Аркхэм (Arkham)\Карты\[EN 7e] CHA23182_Arkham_Insert_Maps.pdf` [EN 7e] 4 стр.
+- `Путеводители\Аркхэм (Arkham)\Карты\[EN 7e] CHA23182_Arkham_Map_Floorplans_Player.pdf` [EN 7e] 14 стр.
+- `Путеводители\Аркхэм (Arkham)\Раздатка\[EN 7e] CHA23182_Arkham_Insert_Arkham_Advertiser.pdf` [EN 7e] 4 стр.
+- `Сборники\Adventures in Arkham Country\[EN 6e] Call of Cthulhu - 1920 - Adventures In Arkham Country.pdf` [EN 6e] 133 стр.
+- `Сборники\Adventures in Arkham Country\[EN 7e] Call of Cthulhu - Adventures in Arkham Country.pdf` [EN 7e] 133 стр.
+- `Сборники\Blood Brothers\[EN 6e] Call of Cthulhu - Blood Brothers.pdf` [EN 6e] 146 стр.
+- `Сборники\Blood Brothers 2\[EN 6e] Call of Cthulhu - Blood Brothers 2.pdf` [EN 6e] 130 стр.
+- `Сборники\King of Chicago\[EN 6e] Call of Cthulhu - 1920 - King of Chicago.pdf` [EN 6e] 68 стр.
+- `Сборники\Last Rites\[EN 6e] Call of Cthulhu - 1990 - Last Rites.pdf` [EN 6e] 61 стр.
+- `Сборники\Sacraments of Evil\[EN 6e] Call of Cthulhu - 1890 - Sacraments of Evil.pdf` [EN 6e] 150 стр.
+- `Сборники\Strange Aeons\[EN 6e] Call of Cthulhu - Strange Aeons.pdf` [EN 6e] 91 стр.
+- `Сборники\Terror From The Stars\[EN 6e] Call of Cthulhu - 1920 - Terror From The Stars.pdf` [EN 6e] 42 стр.
+- `Сборники\The Asylum and Other Tales\[EN 6e] Call of Cthulhu - 1920 - The Asylum and Other Tales.pdf` [EN 6e] 78 стр.
+- `Сборники\The Great Old Ones\[EN 6e] Call of Cthulhu - 1920 - The Great Old Ones.pdf` [EN 6e] 180 стр.
+- `Сборники\The Resurrected, Vol2 - Of Keys and Gates (PAG2101)\[EN 6e] The Resurrected, Vol2 - Of Keys and Gates (PAG2101).pdf` [EN 6e] 36 стр.
+- `Сборники\Trilogy of Terror\[EN 6e] Call of Cthulhu - 1920 - Trilogy of Terror.pdf` [EN 6e] 3 стр.
+- `Сборники\Двери во тьму (Doors to Darkness)\[RU 7e] Двери во тьму.pdf` [RU 7e] 142 стр.
+- `Сборники\Двери во тьму (Doors to Darkness)\[RU 7e] советы Пугаемся вместе (Двери во тьму).pdf` [RU 7e] 45 стр.
+- `Сборники\Двери во тьму (Doors to Darkness)\Раздатка\[RU 7e] Раздатка _Развеять Мрак_ _ _None more black_.pdf` [RU 7e] 18 стр.
+- `Сборники\Другие миры\[RU 7e] Остров лучезарной надежды (Другие Миры).pdf` [RU 7e] 20 стр.
+- `Сборники\Мифы Хастура\[RU 7e] Мифы Хастура том 1.pdf` [RU 7e] 46 стр.
+- `Сборники\Мёртвый свет и другие тёмные повороты (Dead Light and Other Dark Turns)\Прегены\[RU 7e] мертвенный свет.pdf` [RU 7e] 18 стр.
+- `Сборники\Особняки безумия (Mansions of Madness)\[EN 6e] Call of Cthulhu - 1920 - Mansions Of Madness.pdf` [EN 6e] 123 стр.
+- `Сборники\Особняки безумия (Mansions of Madness)\[RU 7e] Особняки безумия_За закрытыми дверями.pdf` [RU 7e] 226 стр.
+- `Сборники\Особняки безумия (Mansions of Madness)\Раздатка\[RU 7e] 1927 Дом Мемфиса раздатка.pdf` [RU 7e] 5 стр.
+- `Сборники\Стартовый набор (Starter Set)\[RU 7e] 1923 Грань тьмы.PDF` [RU 7e] 32 стр.
+- `Сборники\Стартовый набор (Starter Set)\[RU 7e] Бумажный след.PDF` [RU 7e] 12 стр.
+- `Сборники\Стартовый набор (Starter Set)\[RU 7e] Грань тьмы.pdf` [RU 7e] 31 стр.
+- `Сборники\Стартовый набор (Starter Set)\[RU 7e] Мертвецкий стомп.PDF` [RU 7e] 28 стр.
+- `Сборники\Стартовый набор (Starter Set)\Прегены\[RU 7e] Джесси Уильямс.pdf` [RU 7e] 2 стр.
+- `Сборники\Стартовый набор (Starter Set)\Прегены\[RU 7e] Кейко Кейн.pdf` [RU 7e] 2 стр.
+- `Сборники\Стартовый набор (Starter Set)\Прегены\[RU 7e] Луиза Руссо.pdf` [RU 7e] 2 стр.
+- `Сборники\Стартовый набор (Starter Set)\Прегены\[RU 7e] Невада Джонс.pdf` [RU 7e] 2 стр.
+- `Сборники\Стартовый набор (Starter Set)\Прегены\[RU 7e] отец стефан.pdf` [RU 7e] 1 стр.
+- `Сборники\Стартовый набор (Starter Set)\Прегены\[RU 7e] Персонажи_статы.pdf` [RU 7e] 2 стр.
+- `Сборники\Стартовый набор (Starter Set)\Прегены\[RU 7e] Уэнтворт Эйвбери.pdf` [RU 7e] 2 стр.
+- `Сборники\Стартовый набор (Starter Set)\Раздатка\[RU 7e] _план_местности_ферма.pdf` [RU 7e] 1 стр.
+- `Сборники\Стартовый набор (Starter Set)\Раздатка\[RU 7e] _раздатка.pdf` [RU 7e] 11 стр.
+- `Сборники\Стартовый набор (Starter Set)\Раздатка\[RU 7e] грань 1_1.pdf` [RU 7e] 1 стр.
+- `Сборники\Стартовый набор (Starter Set)\Раздатка\[RU 7e] грань 1_2 шкатулка.pdf` [RU 7e] 1 стр.
+- `Сборники\Стартовый набор (Starter Set)\Раздатка\[RU 7e] грань 2_1.pdf` [RU 7e] 1 стр.
+- `Сборники\Стартовый набор (Starter Set)\Раздатка\[RU 7e] грань 2_2.pdf` [RU 7e] 1 стр.
+- `Сборники\Стартовый набор (Starter Set)\Раздатка\[RU 7e] грань 2_3.pdf` [RU 7e] 1 стр.
+- `Сборники\Стартовый набор (Starter Set)\Раздатка\[RU 7e] грань 2_4.pdf` [RU 7e] 1 стр.
+- `Сборники\Стартовый набор (Starter Set)\Раздатка\[RU 7e] грань 4 расшировка шкатулки.pdf` [RU 7e] 1 стр.
+- `Сборники\Стартовый набор (Starter Set)\Раздатка\[RU 7e] грань 5.pdf` [RU 7e] 1 стр.
+- `Сборники\Стартовый набор (Starter Set)\Раздатка\[RU 7e] грань 6_1.pdf` [RU 7e] 1 стр.
+- `Сборники\Стартовый набор (Starter Set)\Раздатка\[RU 7e] грань 6_2.pdf` [RU 7e] 1 стр.
+- `Сборники\Стартовый набор (Starter Set)\Раздатка\[RU 7e] грань 7 ферма.pdf` [RU 7e] 1 стр.
+- `Сборники\Стартовый набор (Starter Set)\Раздатка\[RU 7e] грань 8.pdf` [RU 7e] 1 стр.
+- `Сборники\Стартовый набор (Starter Set)\Раздатка\[RU 7e] грань 9 _невидимое.pdf` [RU 7e] 1 стр.
+- `Сборники\Черноводный ручей и Вышел срок (Missed Dues & Blackwater Creek)\[RU 7e] Черноводный ручей и Вышел срок.pdf` [RU 7e] 99 стр.
+- `Сборники\Черноводный ручей и Вышел срок (Missed Dues & Blackwater Creek)\Раздатка\[RU 7e] Черноводный Ручей (Материалы).pdf` [RU 7e] 18 стр.
+- `Сеттинги\A Sourcebook for the 1920's\[EN 6e] 1920 - A Sourcebook for the 1920's.pdf` [EN 6e] 34 стр.
+- `Сеттинги\Berlin The Wicked City\Раздатка\[EN 7e] Berlin The Wicked City Handouts.pdf` [EN 7e] 24 стр.
+- `Сеттинги\Dire Documents\[EN 6e] 1920 - Dire Documents.pdf` [EN 6e] 10 стр.
+- `Сеттинги\Dreamlands\[EN 6e] Dreamlands.pdf` [EN 6e] 129 стр.
+- `Сеттинги\Dreamlands - Map of the Dreamlands\Карты\[EN 6e] Dreamlands - Map of the Dreamlands.pdf` [EN 6e] 4 стр.
+- `Сеттинги\Gentlemen and Players (British investigators)\[EN 6e] 1920 - Gentlemen and Players (British investigators).pdf` [EN 6e] 2 стр.
+- `Сеттинги\Kingsport - The City in the Mists\[EN 6e] 1920 - Kingsport - The City in the Mists.pdf` [EN 6e] 181 стр.
+- `Сеттинги\London Maps\Карты\[EN 6e] 1920 - London Maps.pdf` [EN 6e] 15 стр.
+- `Сеттинги\Secrets of Morocco\[EN 6e] Mysteries of Morocco - 306.pdf` [EN 6e] 90 стр.
+- `Сеттинги\Terror Australis\[EN 6e] 1920 - Terror Australis.pdf` [EN 6e] 139 стр.
+- `Сеттинги\Тёмные века (Cthulhu Dark Ages)\Прегены\[RU 7e] Лист сыщика Dark Ages.pdf` [RU 7e] 2 стр.
+- `Сценарии\A Resection of Time\[EN 6e] Call of Cthulhu - 1990 - A Resection of Time.pdf` [EN 6e] 68 стр.
+- `Сценарии\Age of Cthulhu - Abominations of the Amazon\[EN 6e] Call of Cthulhu - 1920 - Age of Cthulhu - Abominations of the Amazon.pdf` [EN 6e] 24 стр.
+- `Сценарии\Dark Designs\[EN 6e] Call of Cthulhu - 1890 - Dark Designs.pdf` [EN 6e] 139 стр.
+- `Сценарии\Death in Dunwich\[EN 6e] Call of Cthulhu - 1920 - Death in Dunwich.pdf` [EN 6e] 42 стр.
+- `Сценарии\Final Flight\[EN 6e] Call of Cthulhu - 1930 - Final Flight (No OCR).pdf` [EN 6e] 34 стр.
+- `Сценарии\Letters From A Foreign Land\[EN 6e] Call of Cthulhu - 1920 - Letters From A Foreign Land.pdf` [EN 6e] 9 стр.
+- `Сценарии\Pax Chultachia\Раздатка\[RU 7e] раздатка.pdf` [RU 7e] 15 стр.
+- `Сценарии\The Book\[EN 6e] Call of Cthulhu - The Book.pdf` [EN 6e] 4 стр.
+- `Сценарии\The Horrible Secret of Monhegan Island\[EN 6e] Call of Cthulhu - 1920 - The Horrible Secret of Monhegan Island.pdf` [EN 6e] 50 стр.
+- `Сценарии\The Preacher and the Cross\[EN 6e] The Preacher and the Cross (No OCR).pdf` [EN 6e] 51 стр.
+- `Сценарии\The Resurrected, Vol1 - Grace Under Pressure (PAG2100)\[EN 6e] The Resurrected, Vol1 - Grace Under Pressure (PAG2100).pdf` [EN 6e] 41 стр.
+- `Сценарии\Viral\Прегены\[EN] pregen_spectral_Crew.pdf` [EN] 12 стр.
+- `Сценарии\Багровые письмена (Crimson Letters)\[RU 7e] багровые письмена.pdf` [RU 7e] 20 стр.
+- `Сценарии\Идол Тота\[RU 7e] 1925 Идол Тота.pdf` [RU 7e] 24 стр.
+- `Сценарии\Лечебница\Раздатка\[RU 7e] Лечебница раздатка.pdf` [RU 7e] 24 стр.
+- `Сценарии\МТС Харьков-37 (Machine Tractor Station Kharkov-37)\Раздатка\[RU 7e] Директива (Александр Плющанцев).pdf` [RU 7e] 2 стр.
+- `Сценарии\МТС Харьков-37 (Machine Tractor Station Kharkov-37)\Раздатка\[RU 7e] Справка-досье (Александр Плющанцев).pdf` [RU 7e] 2 стр.
+- `Сценарии\Наедине с тьмой (Alone Against the Dark)\[RU 7e] Наедине с Тьмой.pdf` [RU 7e] 104 стр.
+- `Сценарии\Наедине с Хэллоуином (Alone on Halloween)\[RU 7e] _Наедине с Хэллоуином (Бонус-приложение - Сравнение старых и новых иллюстраций).pdf` [RU 7e] 29 стр.
+- `Сценарии\Наедине с Хэллоуином (Alone on Halloween)\Карты\[RU 7e] Наедине с Хэллоуином (Шкала Времени и Карта).pdf` [RU 7e] 1 стр.
+- `Сценарии\Отель Скайлайн\[RU 7e] Отель _Скайлайн_ (Михаил Утенин).pdf` [RU 7e] 31 стр.
+- `Сценарии\Погасший маяк (The Lightless Beacon)\Раздатка\[RU 7e] раздатка.pdf` [RU 7e] 6 стр.
+- `Сценарии\Погоня в Поезде\[RU 7e] Погоня в поезде.pdf` [RU 7e] 22 стр.
+- `Сценарии\Среди древних деревьев\[RU 7e] среди древних деревьев.pdf` [RU 7e] 18 стр.
+- `Сценарии\Тайник Бутлегеров\[RU 7e] Тайник Бутлегеров.pdf` [RU 7e] 20 стр.
+- `Сценарии\Тайник Бутлегеров\Раздатка\[RU 7e] РаздаткаТайник Бутлегеров.pdf` [RU 7e] 7 стр.
+- `Сценарии\Тень над Провиденсом\Раздатка\[RU 7e] Раздаточные материалы, Тень над Провиденсом (Уголок Хранителя).pdf` [RU 7e] 17 стр.
+- `Сценарии\Тень над Провиденсом\Раздатка\[RU 7e] Раздаточные материалы.pdf` [RU 7e] 17 стр.
+- `Сценарии\Тень над Провиденсом\Раздатка\[RU 7e] Тень Над Провиденсом - Приглашения.pdf` [RU 7e] 2 стр.
+- `Сценарии\Холодный урожай (Cold Harvest)\Прегены\[RU 7e] холодный урожай.pdf` [RU 7e] 16 стр.
+- `Сценарии\Холодный урожай (Cold Harvest)\Раздатка\[RU 7e] Раздаточные материалы _Холодный урожай_.pdf` [RU 7e] 6 стр.
+- `Сценарии\Эликсир жизни\[RU 7e] Эликсир жизни.pdf` [RU 7e] 12 стр.
+- `Сценарии\Эликсир жизни\Раздатка\[RU 7e] Раздатка .pdf` [RU 7e] 6 стр.

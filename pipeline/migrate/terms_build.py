@@ -99,7 +99,7 @@ def main() -> int:
             t["sources"].append({"book_id": "keeper-rulebook-ru", "physical_page": g.get("physical_page"), "printed_page": g.get("page"),
                                  "method": "book_text", "verified": True, "note": "глоссарий"})
 
-    # 1c. terms chosen while translating an English book (checks/*/new-terms.json: {en, ru, aliases, avoid, domain, ref, note});
+    # 1c. terms chosen while translating an English book (checks/*/new-terms.json: {en, ru, aliases, avoid, domain, ref, note, definition?});
     #     our translation — page and book come from the record in `ref`
     by_id = {r.get("id"): r for _, r in records()}
     for nt in sorted(ROOT.glob("checks/*/new-terms.json")):
@@ -111,6 +111,7 @@ def main() -> int:
             t["aliases"] += g.get("aliases") or []
             t["avoid"] += g.get("avoid") or []
             t["domain"] = t["domain"] or g.get("domain")
+            t["definition"] = t["definition"] or g.get("definition")
             if g.get("ref"):
                 t["refs"].append(g["ref"])
             if src.get("book_id"):

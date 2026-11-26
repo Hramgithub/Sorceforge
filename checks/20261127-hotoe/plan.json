@@ -1,0 +1,328 @@
+{
+  "book_id": "hotoe-book-1-en",
+  "goal": "the campaign «Horror on the Orient Express» (Chaosium 2014, 7e) playable from the base: campaign, nineteen chapters as stages, scenes, places in shared cities, characters, items, handouts, organizations, maps with spots, tables, the passengers and investigators of Book V and the Travelers' Companion (Р-251, by the model of «Маски», Р-202).",
+  "decision": "Р-251, Р-202, Р-228, Р-190, Р-206, Р-209, Р-154, Р-208",
+  "check_dir": "checks/20261127-hotoe",
+  "models": [
+    "kb/books/masks-of-nyarlathotep-en/scenarios/masks-of-nyarlathotep.json",
+    "kb/books/masks-of-nyarlathotep-en/scenarios/england.json",
+    "kb/books/masks-of-nyarlathotep-en/scenes/egypt-arriving.json",
+    "kb/books/masks-of-nyarlathotep-en/maps/egypt-cairo.json",
+    "kb/books/star-on-the-shore-en/maps/rockport-player-map.json",
+    "kb/locations/cairo.json",
+    "kb/books/masks-of-nyarlathotep-en/handouts/egypt-carlyle-papers-1.json",
+    "kb/books/whats-in-the-cellar-en/handouts/cellar-papers-1-herald-article.json",
+    "kb/books/masks-of-nyarlathotep-en/organizations/america-cult-of-the-bloody-tongue.json",
+    "kb/books/masks-of-nyarlathotep-en/characters/abdul-nawisha.json",
+    "kb/books/lokhmotya-korolya-ru/locations/ship-viceroy-of-india.json"
+  ],
+  "extra": "## This work (Р-251 English series, campaign by the model of «Маски», Р-202/Р-228)\n\n«Horror on the Orient Express» (Chaosium 2014, 2nd edition, 7e; 1st ed. 1991; Geoff Gillan, Mark Morrison, Penelope Love and others) goes into the base whole. No Russian edition exists (the base and the owner's library were checked): the English original is the source, the Russian text is our translation (flag `translated`); official Russian forms of names and terms — glossary `python -B tools/terms.py w1 w2 …` (ONE run for all words) and existing records (Р-184); Hard/Extreme roll = «трудная/чрезвычайная проверка». The campaign name in Russian is «Ужас в Восточном экспрессе» (already used in the base). New terms of your pages — one Russian form each, used everywhere, all listed in your coverage file (English → Russian): the page-by-page translation of the books (Р-251, later, by Codex) reuses exactly these forms and your `name.ru`.\n\n### Sources (all registered; printed page = physical − 2 in the six volumes, i.e. `offset −2`; `pages.py show/grep` take printed pages)\n\n- `hotoe-book-1-en` Book I Campaign Book (76 p.), `hotoe-book-2-en` Book II Through the Alps (266 p.), `hotoe-book-3-en` Book III Italy & Beyond (272 p.), `hotoe-book-4-en` Book IV Constantinople & Consequences (194 p.), `hotoe-book-5-en` Book V Strangers on the Train (92 p.), `hotoe-book-6-handouts-en` Book VI Handouts (192 p.: player copies of the handouts and maps of Books I–IV; each page names its source as «BOOK II, PAGE 14»; even pages are blank backs). All have a text layer.\n- Scans WITHOUT a text layer (look at page images: `python -B pipeline/source/pages.py image <book> <page> --physical --dpi 60`, one page at a time; OCR with tesseract if you need the labels): `hotoe-keeper-maps-en` Keeper Maps (18 p., hi-res keeper maps: 1 London 1923, 2 London 1893, 3 Paris & western environs, 4 Paris 1923, 5 Lausanne, 6 Milan, 7 Venice, 8 Trieste, 9 Orašac, 10 Vinkovci, 11 Grotte di Postumia, 12 Belgrade, 13 the Dreamlands («Henri's Unusual Train of Dreams»), 14 Sofia, 15 Constantinople 330, 16 Constantinople 1204, 17 Constantinople 1893 (probably — compare with Book II p. 245), 18 Constantinople 1923); `hotoe-player-maps-en` Player Maps (13 p.: 1 London 1923, 2 Paris, 3 Lausanne, 4 Milan, 5 Venice, 6 Trieste, 7 Belgrade, 8 Vinkovci, 9 Sofia, 10 Constantinople 330, 11 Constantinople 1204, 12 Constantinople 1893?, 13 Constantinople 1923); `hotoe-train-car-plans-en` (5 p.), `hotoe-air-routes-en` (1), `hotoe-route-map-en` (1, European route map), `hotoe-scroll-of-the-head-en` (1), `hotoe-sticker-pack-en` (10: luggage stickers, postcards, the simulacrum cut-out), `hotoe-us-passport-en` (2), `hotoe-calendar-1923-en` (4); `hotoe-travelers-companion-en` Travelers' Companion (52 p., text layer, NO printed page numbers: `printed_page` = physical).\n- Sources of a record name the book of each page (`book_id`), e.g. a handout: the chapter page in Book II + the player copy in Book VI. Do NOT edit `pipeline/source/books.json`.\n\n### Fixed ids (all units use them; a reference to a record another unit is still writing is expected to fail `check.py` until that unit lands — list such refs in the report, do not drop them)\n\n- Records of a chapter live in the folder of the volume that prints the chapter: `kb/books/<volume>/<kinds>/`, id `<volume>/<kind>/<slug>` (the viewer shows the six volumes as one work, Р-208: `work` = `hotoe-book-1-en`).\n- Campaign: `hotoe-book-1-en/scenario/horror-on-the-orient-express` (unit campaign) — `summary`, `keeper_info` (Sedefkar, the simulacrum, Fenalik, the Brothers of the Skin, the Makryats), `hook`, `advice` (running the campaign, survival guide, optional chapters), `steps` = the chapters in order with refs to the stage records (and a step that names «Царство Террора», `tsarstvo-terrora-ru/scenario/reign-of-terror`, as the later «secret chapter» — a ref, not a stage), `conclusion`, `tables`.\n- Stages — scenario records with `part_of` = the campaign and `order` (book order; unit campaign may correct `order` by Book I «The Scenarios» p. 42–46 through proposals), optional chapters say so in `advice`: `hotoe-book-2-en/scenario/dancers-in-an-evening-fog` (1, london), `…/the-doom-train` (2, london, optional), `…/the-blood-red-fez` (3, fez, optional, 1893), `…/les-fleurs-du-mal` (4, paris), `…/the-dreamlands-express` (5, dreamlands, optional), `…/nocturne` (6, lausanne-milan), `…/note-for-note` (7, lausanne-milan); `hotoe-book-3-en/scenario/death-and-love-in-a-gondola` (8, venice), `…/the-dark-crusader` (9, crusader, optional, 1204), `…/cold-wind-blowing` (10, trieste, optional), `…/in-a-city-of-bells-and-towers` (11, zagreb-vinkovci, optional), `…/bread-and-stone` (12, zagreb-vinkovci, optional), `…/sanguis-omnia-vincet` (13, sanguis, optional, 330), `…/little-cottage-in-the-wood` (14, belgrade); `hotoe-book-4-en/scenario/repossession` (15, sofia), `…/by-the-skin-of-the-teeth` (16, constantinople), `…/blue-train-black-night` (17, return), `…/the-fog-lifts` (18, return), `…/the-simulacrum-unbound` (19, modern, optional, 2013). Each stage record: `summary`, `keeper_info`, `hook`, `advice`, `steps` with `refs`, `conclusion` (incl. Sanity rewards), `tables`; scenes have `arc` = {scenario: the stage, part: the book's section heading, order}; `where`, `participants`, `mechanics`, `outcome`.\n- Slug prefixes of every book-scoped record except characters and stage records: `campaign-` (campaign), `express-` (express), `london-` and `doom-` (london), `fez-` (fez), `paris-` (paris), `dream-` (dreamlands), `lausanne-` and `milan-` (lausanne-milan), `venice-` (venice), `crusader-` (crusader), `trieste-` (trieste), `zagreb-` and `vinkovci-` (zagreb-vinkovci), `sanguis-` (sanguis), `belgrade-` (belgrade, Orašac too), `sofia-` (sofia), `constantinople-` (constantinople), `bluetrain-` and `foglifts-` (return), `modern-` (modern), `strangers-` (strangers-1), `passengers-` (strangers-2), `investigators-` (investigators), `companion-` (companion). Slugs from the English names. Handouts `<prefix>-handout-<n>-<slug>` (the book's number: «London Handout #3» → `london-handout-3-…`; telegrams `london-telegram-<n>`, Gaslight `fez-handout-<n>`, Modern `modern-handout-<n>`…).\n- Characters: `<volume>/character/<english-name>`, no prefix; a character is made by the unit whose pages print his statblock first, in that volume; other units link and send changes (a later statblock as a `variant`, new facts) through proposals. Fixed: london — `hotoe-book-2-en/character/julius-smith` (Book II p. 30; Book IV p. 77 version → proposal of constantinople), `mehmet-makryat` (p. 30; Book IV p. 77 → constantinople proposal), `james-beddows`; paris — `hotoe-book-2-en/character/caterina-cavollaro` (p. 130; Milan p. 230 → proposal); crusader — `hotoe-book-3-en/character/sedefkar` (p. 74); constantinople — `hotoe-book-4-en/character/selim-makryat` (p. 77; 1893 Selim of Book II — fez links it and proposes). Book I describes Fenalik, Selim and Mehmet (p. 48–50) — unit campaign sends that text as proposals.\n- Records already in the base that HOTOE meets a second time (Р-154 — the lead moves them to shared ids BEFORE the units start; use these ids): `coc:character:fenalik` (now `tsarstvo-terrora-ru/character/fenalik`; 1923 statblocks Book II p. 130 → paris proposal, Book IV p. 35 → sofia proposal), `coc:character:guillaume-ghoul` (now `tsarstvo-terrora-ru/character/guillaume-ghoul`; «That Was Guillaume», Book II p. 176 → dreamlands proposal), `coc:organization:brothers-of-the-skin` (now `wwc-cold-war-en/organization/brothers-of-the-skin`; HOTOE text → proposals of campaign/london/constantinople). Shared already: `coc:item:sedefkar-simulacrum` (the whole statue; campaign proposes Book I p. 47–52), `coc:creature:skinless-one`, `coc:creature:vampire`, `coc:creature:ghoul`, spells `coc:spell:control-skin`, `call-the-skinless-one`, `call-avatar-of-the-skinless-one`, `burden-of-the-skinless-one`, `cleansing-ritual`, `detransference`, `enchant-flesh`, `graft-flesh`, `create-flesh-creeper`…, tome `coc:tome:supreme-void` (Grep `kb/spells`, `kb/tomes`, `kb/creatures`, `kb/items` first; a known creature with its own numbers here → book creature with `instance_of`).\n- The six parts of the simulacrum — book items by unit campaign: `hotoe-book-1-en/item/campaign-simulacrum-head`, `…-torso`, `…-left-arm`, `…-right-arm`, `…-left-leg`, `…-right-leg` (`part_of`-style link: `refs` to `coc:item:sedefkar-simulacrum`); the chapter that hides a part links it (`refs`, scene `outcome`) and proposes where it lies. New shared tomes: `kb/tomes/scroll-of-the-head.json` (lausanne-milan, Book II p. 195–204 + `hotoe-scroll-of-the-head-en`), `kb/tomes/scroll-of-the-body.json` (constantinople; Book I and Book IV p. 57) — only after a Grep shows they do not exist; new spells printed in your pages (e.g. Book IV p. 64 «New Spells») — new shared `kb/spells/<slug>.json` after a Grep, otherwise link.\n- Trains are `location_type: корабль` (vehicle at the top of a guide, like the airliner of «Dissociation», Р-189), cars and compartments are places under them: the Simplon-Orient Express `hotoe-book-1-en/location/express-simplon-orient-express` (express; cars `express-…`: sleeping car, dining car, fourgon, engine…, with the Train Car Plans as `map` records); other trains of a chapter (the Doom Train, the Dreamlands Express, the return train of «Blue Train, Black Night», the modern train of 2013) — the chapter's own `корабль` record.\n\n### Places (Р-190, Р-209)\n\n- Shared cities `kb/locations/<slug>.json` (id `coc:location:<slug>`, `location_type: город`, `part_of: null`, model `kb/locations/cairo.json`). **Existing — never rewrite, proposals only:** `london` (Masks districts exist: `masks-of-nyarlathotep-en/location/england-westminster`, `england-city-of-london`, `england-soho`, `england-mayfair`, `england-chelsea`, `england-covent-garden`, `england-st-pancras`, `england-limehouse`, `england-southwark`, `england-london-environs`; shared `coc:location:holborn`, `lambeth`, `british-museum`… — put London places under the district where they stand), `paris` (from «Царство Террора»: link its places — `tsarstvo-terrora-ru/location/paris-royal-library` = the Bibliothèque Nationale, `paris-charenton-asylum`, `paris-environs` (Western Environs go under it), `1789-poissy` (Poissy) — and propose 1923 facts for them), `milan` (from «Лохмотья Короля»: `lokhmotya-korolya-ru/location/milan-*` exist — link, do not duplicate), Dreamlands `ulthar`, `dylath-leen`, `celephais` (other Dreamlands lands and cities of the chapter — book records `dream-…`, Р-190). **New, each made only by its unit:** `lausanne` (lausanne-milan), `venice` (venice), `trieste` (trieste; Postumia under the book area `trieste-environs`), `zagreb` (zagreb-vinkovci, only if the chapter describes the real city; the dream city of bells is a book record `zagreb-city-of-bells`, `город`, `part_of: null`, refs to the real city), `vinkovci` (zagreb-vinkovci), `belgrade` and `orasac` (belgrade), `sofia` (sofia; the Iskur caves under the book area `sofia-environs`), `constantinople` (constantinople — one record for all eras: name «Константинополь», aliases «Стамбул», «Istanbul», «Византий», «Нова Рома»; fez (1893), crusader (1204), sanguis (330) and modern (2013) put their places under it with their own prefixes and link the city id (expected to fail until it lands); the Lydian frontier of 330 is a top area `sanguis-lydian-frontier`, `область`, `part_of: null`). A town en route that a unit needs but nobody owns (Calais, Dijon, Salzburg, Adrianople…) — Grep `kb/locations`; if it is missing, write the city draft into `checks/20261127-hotoe/new-shared-locations-<unit>.json` (the lead creates it) and give a short line in the stage `steps` meanwhile.\n- Under each city — districts by the map, places in the district where they stand; one area «Окрестности <города>» per city for places outside it (book record `<prefix>-<city>-environs`, unless one exists); list captions (`keeper_hint`) neutral — no secrets, clues or outcomes (Р-209). Historic places of another era in the same city (London 1893, Constantinople 330/1204/1893) — book places with the era in the name when they differ («Константинополь 1204: Красная башня»).\n\n### Maps (Р-206) and pictures (Р-241, Р-245)\n\n- Every keeper map of your chapter → `map` record `<volume>/map/<prefix>-<slug>`: image from the hi-res Keeper Maps PDF when it has that map, else the book page (render `pdftoppm -r 150-200`, crop with PIL, save `app/maps/hotoe-<unit>-<slug>.jpg`, quality 85, ≤ 2000 px wide), `width`/`height`, `location` = the city or area, `shows` = the place, spots on every printed number and label (tesseract `tsv`, each checked by eye on a crop); every key number gets a place record. The players' version (Player Maps PDF or Book VI) → a second `map` record `<prefix>-<slug>-players` with the same spot targets (model `kb/books/star-on-the-shore-en/maps/rockport-player-map.json`). `sources` of a map — every page that prints it: the chapter page, the «Complete Maps» page of the volume, the Keeper/Player Maps page, the Book VI page.\n- Handouts: the text as printed (English) + our full translation; the picture of the player copy from Book VI (crop) to `images` (kind `handout`) through `pipeline/art/add_images.py`; sources — chapter page + Book VI page. Portraits, creature art, item pictures — skill `.claude/skills/kb-art/SKILL.md`: mapping `checks/20261127-hotoe/art-<unit>.json`, `python -B pipeline/art/add_images.py … --dry-run` then real, apply your proposals (`pipeline/integrate/apply.py`) for your own records; atmosphere pictures → `checks/20261127-hotoe/atmosphere-<unit>.json` (the lead merges). Picture file prefix: `hotoe-<unit>-`.\n\n### Writing and checks\n\n- Statblocks as printed (Р-25); misprints kept as printed, in `errata` (Р-35), an obvious fix in `corrections`; dice `1d6` with lowercase d; distances metric even in quotes (Р-64), money as printed; `axes.era` [\"1920s\"]; the 1893 chapter [\"gaslight\"], 1204 [\"dark-ages\"], 330 [\"other\"] (Cthulhu Invictus — say «330 год, Константинополь» in the summary), 2013 [\"modern\"]; `axes.ruleset` \"core\".\n- Coverage: `checks/20261127-hotoe/<unit>.md` — every heading of your pages → record(s), «не взято» with the reason (indexes, Kickstarter lists, blank «Keeper's Entries» forms — say so), misprints, the term list English → Russian. Proposals `checks/20261127-hotoe/proposals-<unit>.json`.\n- Helper scripts only in `.cache/lead-tools/gen-hotoe-<unit>/`; paths computed from `__file__` or the repository root; library root from `pipeline/source/library.json`; never hardcoded.\n- Memory rule (owner): the PC's RAM must stay below 85 % — never run python processes in parallel; terms in ONE run (`python -B tools/terms.py w1 w2 …` or `--file`); page images one at a time; render the big Keeper/Player Maps scans one page at a time.\n- When done: `python -I -B tools/completeness.py --books <your volume> --out checks/20261127-hotoe/completeness-<unit>` and `python -I -B tools/scenario_check.py --books <your volume> --out checks/20261127-hotoe/scenario-<unit>` (other units' gaps are expected — fix and report only yours); `python -B tools/check.py kb/books/<your volume>` — 0 errors in your files.\n- Order: all units except companion may run in parallel (by the memory rule); companion runs after the chapter units (it adds the Travelers' Companion to the cities they made).",
+  "units": [
+    {
+      "name": "campaign",
+      "book_id": "hotoe-book-1-en",
+      "pages": "1-9 11-14 41-58 73-74",
+      "target": "Book I: front matter, Introduction, Book I Introduction (p. 11–14), Orientation, The Calendar, The Scenarios (p. 42–46: order of the chapters), The Sedefkar Simulacrum (p. 47–50), Sedefkar's Legacies (p. 51–52: Fenalik, Selim and Mehmet Makryat → proposals to their records), Running the Campaign, The Investigator Survival Guide; index p. 73–74 «не взято». Campaign record `hotoe-book-1-en/scenario/horror-on-the-orient-express`; the six simulacrum parts; ALSO `hotoe-book-4-en` p. 169–179 (Conversion Notes, Recommended 7th Edition Rules → book rules `hotoe-book-4-en/rule/campaign-…`; Kickstarter backers «не взято»), the props `hotoe-sticker-pack-en`, `hotoe-us-passport-en`, `hotoe-calendar-1923-en` (handouts `campaign-…` with images), `hotoe-book-6-handouts-en` p. 1–4 (cover, contents — «не взято»)",
+      "owns": [
+        "kb/books/hotoe-book-1-en/*/campaign-* (new files)",
+        "kb/books/hotoe-book-1-en/scenarios/horror-on-the-orient-express.json",
+        "kb/books/hotoe-book-4-en/*/campaign-* (new files)",
+        "app/maps/hotoe-campaign-*, app/art/** files with prefix hotoe-campaign-",
+        "checks/20261127-hotoe/campaign.md, proposals-campaign.json, art-campaign.json, atmosphere-campaign.json, new-shared-locations-campaign.json, completeness-campaign/, scenario-campaign/"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "express",
+      "book_id": "hotoe-book-1-en",
+      "pages": "10 15-40 59-72",
+      "target": "Book I: Orient Express Route Map (p. 10), Society on the Orient Express, Resources for the Keeper (staff positions), Components of a Train, Train Car Diagrams, Arrangement of the Cars, Emergency Equipment, Train Diagram, Traveling Abroad, Further Reading, Air Travel in Europe in the Early 1920s, Air Routes map, A Continent of Horrors (reading list and scenarios by country → rule/table records), Celluloid Train Terrors, News Aboard the Orient Express (headlines → table), Complete Maps p. 70–72. The train `express-simplon-orient-express` (корабль) and its cars; maps: route map (+ `hotoe-route-map-en`, Book VI p. 5–8), air routes (+ `hotoe-air-routes-en`), the five `hotoe-train-car-plans-en` sheets",
+      "owns": [
+        "kb/books/hotoe-book-1-en/*/express-* (new files)",
+        "app/maps/hotoe-express-*, app/art/** files with prefix hotoe-express-",
+        "checks/20261127-hotoe/express.md, proposals-express.json, art-express.json, atmosphere-express.json, new-shared-locations-express.json, completeness-express/, scenario-express/"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "london",
+      "book_id": "hotoe-book-2-en",
+      "pages": "1-44 233-239 241",
+      "target": "Book II front matter («не взято») and chapters «Dancers in an Evening Fog: London 1923» (p. 7–31, stage `dancers-in-an-evening-fog`: the Challenger lecture, the plot thickens, newspapers, the burned man, investigating the professor, the multiple murders, the Shop, London researches, leaving England, the British Museum, telegrams, statistics) and «The Doom Train: London and Beyond 1923» (p. 32–44, stage `the-doom-train`: the Alexis family, the bed-sitting room, train-spotters, the train set, the Doom Train and its carriages, the plan, back to earth, statistics); handouts London #1–#6, telegrams #1–#3 and the blank telegram (Book VI p. 9–20), maps: London keeper/players (Keeper Maps 1, Player Maps 1, Book II p. 12, 233–234), the Shop (p. 21, 235; Book VI p. 55), British Museum (p. 24, 241; Book VI p. 57)",
+      "owns": [
+        "kb/books/hotoe-book-2-en/scenarios/dancers-in-an-evening-fog.json",
+        "kb/books/hotoe-book-2-en/scenarios/the-doom-train.json",
+        "kb/books/hotoe-book-2-en/*/london-* (new files)",
+        "kb/books/hotoe-book-2-en/*/doom-* (new files)",
+        "kb/books/hotoe-book-2-en/characters/* whose statblock is first printed in your pages (fixed ones above)",
+        "app/maps/hotoe-london-*, app/art/** files with prefix hotoe-london-",
+        "checks/20261127-hotoe/london.md, proposals-london.json, art-london.json, atmosphere-london.json, new-shared-locations-london.json, completeness-london/, scenario-london/"
+      ],
+      "sites": "London (exists): Masks districts, British Museum; the Doom Train (корабль)"
+    },
+    {
+      "name": "fez",
+      "book_id": "hotoe-book-2-en",
+      "pages": "45-100 240 243-247",
+      "target": "«The Blood Red Fez: London 1893» (p. 45–100, stage `the-blood-red-fez`, Cthulhu by Gaslight, optional): introduction, London 1893, the 1893 diary handouts, Gaslight handouts #1–#8 (Book VI p. 21–28), the journey, Constantinople 1893, Nisra's island, Gaslight on the Orient Express, timetable, towns and stations en route, statistics, the pre-generated 1893 investigators p. 97–100 (characters with role `pregen`); maps: Durward Street (p. 50, 240; Book VI p. 59), Gaslight London keeper/players (Keeper Maps 2, p. 51, 243–244; Book VI p. 61), Gaslight Constantinople keeper/players (Keeper Maps 17, Player Maps 12, p. 71, 245–246; Book VI p. 63), Nisra's island (p. 80, 247; Book VI p. 65)",
+      "owns": [
+        "kb/books/hotoe-book-2-en/scenarios/the-blood-red-fez.json",
+        "kb/books/hotoe-book-2-en/*/fez-* (new files)",
+        "kb/books/hotoe-book-2-en/characters/* whose statblock is first printed in your pages (fixed ones above)",
+        "app/maps/hotoe-fez-*, app/art/** files with prefix hotoe-fez-",
+        "checks/20261127-hotoe/fez.md, proposals-fez.json, art-fez.json, atmosphere-fez.json, new-shared-locations-fez.json, completeness-fez/, scenario-fez/"
+      ],
+      "sites": "London 1893 (exists), Constantinople 1893 (city of unit constantinople), the 1893 Orient Express"
+    },
+    {
+      "name": "paris",
+      "book_id": "hotoe-book-2-en",
+      "pages": "101-130 242 248-253",
+      "target": "«Les Fleurs du Mal: Paris et Poissy 1923» (stage `les-fleurs-du-mal`): Bibliothèque Nationale, Paris 1923, Charenton asylum, Paris and its western environs, Poissy, Chez Lorien, all aboard, the Orient Express timetable, statistics (Fenalik's 1923 statblock → proposal to `coc:character:fenalik`); handouts Paris #1–#6 (Book VI p. 29–38); maps: Bibliothèque Nationale (p. 103, 242; Book VI p. 67), Paris keeper/players (Keeper Maps 4, Player Maps 2, p. 107, 249–250; Book VI p. 69), Western Environs (Keeper Maps 3, p. 112, 248; Book VI p. 71), Chez Lorien #1–#2 (p. 119–122, 251–253; Book VI p. 73–77)",
+      "owns": [
+        "kb/books/hotoe-book-2-en/scenarios/les-fleurs-du-mal.json",
+        "kb/books/hotoe-book-2-en/*/paris-* (new files)",
+        "kb/books/hotoe-book-2-en/characters/* whose statblock is first printed in your pages (fixed ones above)",
+        "app/maps/hotoe-paris-*, app/art/** files with prefix hotoe-paris-",
+        "checks/20261127-hotoe/paris.md, proposals-paris.json, art-paris.json, atmosphere-paris.json, new-shared-locations-paris.json, completeness-paris/, scenario-paris/"
+      ],
+      "sites": "Paris (exists) and «Царство Террора» places (Bibliothèque, Charenton, environs, Poissy) — link and propose"
+    },
+    {
+      "name": "dreamlands",
+      "book_id": "hotoe-book-2-en",
+      "pages": "131-180 254-255",
+      "target": "«The Dreamlands Express: Dreamlands 1923» (stage `the-dreamlands-express`, optional): the Dreamlands Express, strange companions, waking world investigators, the journey, Ulthar, Dylath-Leen, Zar, Aphorat, Thalarion, the land of Xura, Aira, Sona-Nyl, the Gulf of Nodens, the vengeful dead, the sorcerer and the crone, journey's end, statistics («That Was Guillaume» → proposal to `coc:character:guillaume-ghoul`); handouts Dreamlands #1–#4 and the banquet menus (Book VI p. 39–44); maps: the Dreamlands map (Keeper Maps 13, p. 148, 254; Book VI p. 81), Dreamlands trains (p. 255; Book VI p. 79)",
+      "owns": [
+        "kb/books/hotoe-book-2-en/scenarios/the-dreamlands-express.json",
+        "kb/books/hotoe-book-2-en/*/dream-* (new files)",
+        "kb/books/hotoe-book-2-en/characters/* whose statblock is first printed in your pages (fixed ones above)",
+        "app/maps/hotoe-dreamlands-*, app/art/** files with prefix hotoe-dreamlands-",
+        "checks/20261127-hotoe/dreamlands.md, proposals-dreamlands.json, art-dreamlands.json, atmosphere-dreamlands.json, new-shared-locations-dreamlands.json, completeness-dreamlands/, scenario-dreamlands/"
+      ],
+      "sites": "Ulthar, Dylath-Leen, Celephaïs (exist); other lands — book records"
+    },
+    {
+      "name": "lausanne-milan",
+      "book_id": "hotoe-book-2-en",
+      "pages": "181-232 256-264",
+      "target": "«Nocturne: Lausanne 1923» (p. 181–207, stage `nocturne`: rue St. Etienne, Lausanne 1923, the murders in rue St Etienne, dream Lausanne, for whom the bell tolls, the waking world, the Scroll of the Head, statistics) and «Note for Note: Milano 1923» (p. 208–230, stage `note-for-note`: arriving in Milan, searching for Caterina, centro di Milano, in the cathedral, death of a unionist, Teatro alla Scala, the performance, opening night, finale, statistics); Keeper's Entries p. 231–232 and index p. 262–264 «не взято»; handouts Lausanne #1–#3, Milan #1–#5 (Book VI p. 45–52); the prop `hotoe-scroll-of-the-head-en`; maps: 50 rue St. Etienne (p. 184, 256; Book VI p. 83), Lausanne keeper/players (Keeper Maps 5, Player Maps 3, p. 186, 257–258; Book VI p. 85), Milan keeper/players (Keeper Maps 6, Player Maps 4, p. 215, 259–260; Book VI p. 87), Teatro alla Scala (p. 220, 261; Book VI p. 89)",
+      "owns": [
+        "kb/books/hotoe-book-2-en/scenarios/nocturne.json",
+        "kb/books/hotoe-book-2-en/scenarios/note-for-note.json",
+        "kb/books/hotoe-book-2-en/*/lausanne-* (new files)",
+        "kb/books/hotoe-book-2-en/*/milan-* (new files)",
+        "kb/books/hotoe-book-2-en/characters/* whose statblock is first printed in your pages (fixed ones above)",
+        "kb/locations/lausanne.json (new)",
+        "kb/tomes/scroll-of-the-head.json (new)",
+        "app/maps/hotoe-lausanne-milan-*, app/art/** files with prefix hotoe-lausanne-milan-",
+        "checks/20261127-hotoe/lausanne-milan.md, proposals-lausanne-milan.json, art-lausanne-milan.json, atmosphere-lausanne-milan.json, new-shared-locations-lausanne-milan.json, completeness-lausanne-milan/, scenario-lausanne-milan/"
+      ],
+      "sites": "Lausanne (new shared city), Milan (exists)"
+    },
+    {
+      "name": "venice",
+      "book_id": "hotoe-book-3-en",
+      "pages": "1-42 240-245",
+      "target": "Book III front matter («не взято») and «Death (and Love) in a Gondola: Venezia 1923» (stage `death-and-love-in-a-gondola`): love in Venice, events in Venice, death in Venice, searching for the simulacrum, San Marco Basilica, the doll makers, Palazzo Rezzoniani, the clock tower, statistics; handouts Venice #1–#4 and the ledgers (Book VI p. 91–96); maps: Venice keeper/players (Keeper Maps 7, Player Maps 5, p. 10, 240–241), Maria's house (p. 21, 242; Book VI p. 129), Gremanci Doll Works (p. 28, 243; Book VI p. 131), Palazzo Rezzoniani (p. 33, 244; Book VI p. 133), Clock Tower (p. 37, 245; Book VI p. 135)",
+      "owns": [
+        "kb/books/hotoe-book-3-en/scenarios/death-and-love-in-a-gondola.json",
+        "kb/books/hotoe-book-3-en/*/venice-* (new files)",
+        "kb/books/hotoe-book-3-en/characters/* whose statblock is first printed in your pages (fixed ones above)",
+        "kb/locations/venice.json (new)",
+        "app/maps/hotoe-venice-*, app/art/** files with prefix hotoe-venice-",
+        "checks/20261127-hotoe/venice.md, proposals-venice.json, art-venice.json, atmosphere-venice.json, new-shared-locations-venice.json, completeness-venice/, scenario-venice/"
+      ],
+      "sites": "Venice (new shared city)"
+    },
+    {
+      "name": "crusader",
+      "book_id": "hotoe-book-3-en",
+      "pages": "43-80 246-250",
+      "target": "«The Dark Crusader: Constantinople 1204» (stage `the-dark-crusader`, Cthulhu Dark Ages, optional): the Devil's Simulare handouts (Book VI p. 97–98), Constantinople 1204, the church of St. Mokius and its cistern, the Blood Red Tower, aftermath, statistics (Sedefkar p. 74 → `hotoe-book-3-en/character/sedefkar`; the crusader investigators); maps: Constantinople 1204 keeper/players (Keeper Maps 16, Player Maps 11, p. 44, 246–247; Book VI p. 137), St. Mokius church (p. 60, 248; Book VI p. 139), cistern (p. 62, 249; Book VI p. 141), the Red Tower (p. 68, 250; Book VI p. 143)",
+      "owns": [
+        "kb/books/hotoe-book-3-en/scenarios/the-dark-crusader.json",
+        "kb/books/hotoe-book-3-en/*/crusader-* (new files)",
+        "kb/books/hotoe-book-3-en/characters/* whose statblock is first printed in your pages (fixed ones above)",
+        "app/maps/hotoe-crusader-*, app/art/** files with prefix hotoe-crusader-",
+        "checks/20261127-hotoe/crusader.md, proposals-crusader.json, art-crusader.json, atmosphere-crusader.json, new-shared-locations-crusader.json, completeness-crusader/, scenario-crusader/"
+      ],
+      "sites": "Constantinople (city of unit constantinople) in 1204"
+    },
+    {
+      "name": "trieste",
+      "book_id": "hotoe-book-3-en",
+      "pages": "81-116 252-255",
+      "target": "«Cold Wind Blowing: Trieste 1923» (stage `cold-wind-blowing`, optional): arriving in Trieste, looking up Winckelmann, research, the Termonas, in their footsteps, a memorable dinner, searching for Bacchus, the caverns at Postumia, statistics; handouts Trieste #1–#5 (Book VI p. 99–106); maps: Trieste keeper/players (Keeper Maps 8, Player Maps 6, p. 82, 252–253; Book VI p. 145), Grotte di Postumia keeper/players (Keeper Maps 11, p. 107, 254–255; Book VI p. 147)",
+      "owns": [
+        "kb/books/hotoe-book-3-en/scenarios/cold-wind-blowing.json",
+        "kb/books/hotoe-book-3-en/*/trieste-* (new files)",
+        "kb/books/hotoe-book-3-en/characters/* whose statblock is first printed in your pages (fixed ones above)",
+        "kb/locations/trieste.json (new)",
+        "app/maps/hotoe-trieste-*, app/art/** files with prefix hotoe-trieste-",
+        "checks/20261127-hotoe/trieste.md, proposals-trieste.json, art-trieste.json, atmosphere-trieste.json, new-shared-locations-trieste.json, completeness-trieste/, scenario-trieste/"
+      ],
+      "sites": "Trieste (new shared city), area `trieste-environs` (Postumia)"
+    },
+    {
+      "name": "zagreb-vinkovci",
+      "book_id": "hotoe-book-3-en",
+      "pages": "117-164 251 256-260",
+      "target": "«In a City of Bells and Towers: Dream Zagreb 1923» (p. 117–130, stage `in-a-city-of-bells-and-towers`, optional: the City of Bells, Zagreb handouts #1–#10) and «Bread and Stone: Vinkovci 1923» (p. 131–164, stage `bread-and-stone`, optional: arrival, oddness in the letter, the Hovart brothers butcher shop, the Lovacki Dvorac hunting lodge, investigations, Dr. Moric, the local authorities, the Cudoviste, the crusader's tomb, the missing reporter, the trail of clues, Lot 187, the laboratory, the Mims Sahis, leaving Vinkovci, statistics; handouts Vinkovci #1–#7); Book VI p. 107–120; maps: City of Bells keeper/players (p. 119, 256–257; Book VI p. 149), Vinkovci keeper/players (Keeper Maps 10, Player Maps 8, p. 157, 258–259; Book VI p. 155), the hunting lodge (p. 260; Book VI p. 151), Dr. Belenzada's laboratory compound (p. 156, 251; Book VI p. 153)",
+      "owns": [
+        "kb/books/hotoe-book-3-en/scenarios/in-a-city-of-bells-and-towers.json",
+        "kb/books/hotoe-book-3-en/scenarios/bread-and-stone.json",
+        "kb/books/hotoe-book-3-en/*/zagreb-* (new files)",
+        "kb/books/hotoe-book-3-en/*/vinkovci-* (new files)",
+        "kb/books/hotoe-book-3-en/characters/* whose statblock is first printed in your pages (fixed ones above)",
+        "kb/locations/zagreb.json (new)",
+        "kb/locations/vinkovci.json (new)",
+        "app/maps/hotoe-zagreb-vinkovci-*, app/art/** files with prefix hotoe-zagreb-vinkovci-",
+        "checks/20261127-hotoe/zagreb-vinkovci.md, proposals-zagreb-vinkovci.json, art-zagreb-vinkovci.json, atmosphere-zagreb-vinkovci.json, new-shared-locations-zagreb-vinkovci.json, completeness-zagreb-vinkovci/, scenario-zagreb-vinkovci/"
+      ],
+      "sites": "Vinkovci (new shared town), Zagreb (new shared city if described), the dream City of Bells (book record)"
+    },
+    {
+      "name": "sanguis",
+      "book_id": "hotoe-book-3-en",
+      "pages": "165-202 264-267",
+      "target": "«Sanguis Omnia Vincet: Constantinople 330» (stage `sanguis-omnia-vincet`, Cthulhu Invictus, optional): handouts (the account of Tillius Corvus, Book VI p. 121–124), Constantinople (Nova Roma), the crisis in Lydia, the Lydian frontier, the Voorish temple, Constantinople again, statistics (the Roman investigators — role `pregen`); maps: Constantinople 330 keeper/players (Keeper Maps 15, Player Maps 10, p. 170, 264–265; Book VI p. 157), the Lydian frontier (p. 174, 266; Book VI p. 159), the Voorish temple (p. 185, 267; Book VI p. 161)",
+      "owns": [
+        "kb/books/hotoe-book-3-en/scenarios/sanguis-omnia-vincet.json",
+        "kb/books/hotoe-book-3-en/*/sanguis-* (new files)",
+        "kb/books/hotoe-book-3-en/characters/* whose statblock is first printed in your pages (fixed ones above)",
+        "app/maps/hotoe-sanguis-*, app/art/** files with prefix hotoe-sanguis-",
+        "checks/20261127-hotoe/sanguis.md, proposals-sanguis.json, art-sanguis.json, atmosphere-sanguis.json, new-shared-locations-sanguis.json, completeness-sanguis/, scenario-sanguis/"
+      ],
+      "sites": "Constantinople (city of unit constantinople) in 330; top area `sanguis-lydian-frontier`"
+    },
+    {
+      "name": "belgrade",
+      "book_id": "hotoe-book-3-en",
+      "pages": "203-239 261-263 268-271",
+      "target": "«Little Cottage in the Wood: Beograd | Orašac 1923» (stage `little-cottage-in-the-wood`): Belgrade, Orašac, the little cottage, where next?, on to Sofia, statistics; Belgrade handout #1 (Book VI p. 125–126); maps: Belgrade keeper/players (Keeper Maps 12, Player Maps 7, p. 206, 262–263; Book VI p. 163), Orašac (Keeper Maps 9, p. 214, 261; Book VI p. 165), the cottage (p. 239); index p. 268–271 «не взято»",
+      "owns": [
+        "kb/books/hotoe-book-3-en/scenarios/little-cottage-in-the-wood.json",
+        "kb/books/hotoe-book-3-en/*/belgrade-* (new files)",
+        "kb/books/hotoe-book-3-en/characters/* whose statblock is first printed in your pages (fixed ones above)",
+        "kb/locations/belgrade.json (new)",
+        "kb/locations/orasac.json (new)",
+        "app/maps/hotoe-belgrade-*, app/art/** files with prefix hotoe-belgrade-",
+        "checks/20261127-hotoe/belgrade.md, proposals-belgrade.json, art-belgrade.json, atmosphere-belgrade.json, new-shared-locations-belgrade.json, completeness-belgrade/, scenario-belgrade/"
+      ],
+      "sites": "Belgrade and Orašac (new shared)"
+    },
+    {
+      "name": "sofia",
+      "book_id": "hotoe-book-4-en",
+      "pages": "1-38 180-181 185",
+      "target": "Book IV front matter («не взято») and «Repossession: Sofia 1923» (stage `repossession`): on the train, Sofia, the cave, leaving Sofia, Fenalik strikes, statistics (Fenalik's statblock p. 35 → proposal to `coc:character:fenalik`), alternate ambushes; maps: Sofia keeper/players (Keeper Maps 14, Player Maps 9, p. 13, 180–181), the Iskur caves (p. 23, 185; Book VI p. 183)",
+      "owns": [
+        "kb/books/hotoe-book-4-en/scenarios/repossession.json",
+        "kb/books/hotoe-book-4-en/*/sofia-* (new files)",
+        "kb/books/hotoe-book-4-en/characters/* whose statblock is first printed in your pages (fixed ones above)",
+        "kb/locations/sofia.json (new)",
+        "app/maps/hotoe-sofia-*, app/art/** files with prefix hotoe-sofia-",
+        "checks/20261127-hotoe/sofia.md, proposals-sofia.json, art-sofia.json, atmosphere-sofia.json, new-shared-locations-sofia.json, completeness-sofia/, scenario-sofia/"
+      ],
+      "sites": "Sofia (new shared city), area `sofia-environs` (Iskur caves)"
+    },
+    {
+      "name": "constantinople",
+      "book_id": "hotoe-book-4-en",
+      "pages": "39-84 182-184",
+      "target": "«By the Skin of the Teeth: Constantinople 1923» (stage `by-the-skin-of-the-teeth`): arrival, research, Beylab, Üsküdar, the shunned mosque, new spells, alternate ending, statistics (Selim Makryat, Mehmet Makryat and Julius Smith 1923 → own record / proposals), «Perfect Skin»; handouts Constantinople #1–#2 (Book VI p. 167–168); the Scroll of the Body; maps: Constantinople 1923 keeper/players (Keeper Maps 18, Player Maps 13, p. 42, 182–183; Book VI p. 185), the shunned mosque (p. 57, 184; Book VI p. 187)",
+      "owns": [
+        "kb/books/hotoe-book-4-en/scenarios/by-the-skin-of-the-teeth.json",
+        "kb/books/hotoe-book-4-en/*/constantinople-* (new files)",
+        "kb/books/hotoe-book-4-en/characters/* whose statblock is first printed in your pages (fixed ones above)",
+        "kb/locations/constantinople.json (new)",
+        "kb/tomes/scroll-of-the-body.json (new)",
+        "app/maps/hotoe-constantinople-*, app/art/** files with prefix hotoe-constantinople-",
+        "checks/20261127-hotoe/constantinople.md, proposals-constantinople.json, art-constantinople.json, atmosphere-constantinople.json, new-shared-locations-constantinople.json, completeness-constantinople/, scenario-constantinople/"
+      ],
+      "sites": "Constantinople (new shared city, all eras)"
+    },
+    {
+      "name": "return",
+      "book_id": "hotoe-book-4-en",
+      "pages": "85-126 186-187",
+      "target": "«Blue Train, Black Night: Across Europe 1923» (p. 85–114, stage `blue-train-black-night`: boarding, investigator actions, a little train of horrors, day/night one–three, return handouts #1–#2, statistics) and «The Fog Lifts: London Again 1923» (p. 115–126, stage `the-fog-lifts`: arrival in London, strangeness in Islington, Makryat's shop, return handout #3, statistics); Book VI p. 169–172; maps: train car diagram (p. 99), Makryat's shop (p. 116, 186), p. 187 (look at it)",
+      "owns": [
+        "kb/books/hotoe-book-4-en/scenarios/blue-train-black-night.json",
+        "kb/books/hotoe-book-4-en/scenarios/the-fog-lifts.json",
+        "kb/books/hotoe-book-4-en/*/bluetrain-* (new files)",
+        "kb/books/hotoe-book-4-en/*/foglifts-* (new files)",
+        "kb/books/hotoe-book-4-en/characters/* whose statblock is first printed in your pages (fixed ones above)",
+        "app/maps/hotoe-return-*, app/art/** files with prefix hotoe-return-",
+        "checks/20261127-hotoe/return.md, proposals-return.json, art-return.json, atmosphere-return.json, new-shared-locations-return.json, completeness-return/, scenario-return/"
+      ],
+      "sites": "the return train (корабль), London (exists)"
+    },
+    {
+      "name": "modern",
+      "book_id": "hotoe-book-4-en",
+      "pages": "127-168 188-192",
+      "target": "«The Simulacrum Unbound: Istanbul 2013» (stage `the-simulacrum-unbound`, Cthulhu Now, optional): modern handouts #1–#6 (Book VI p. 173–180), the modern train, the six body parts, competition winners, train car diagrams, days 1–5, Milton captured?, possibilities, statistics, Milton's spells quick reference; maps: Istanbul today keeper/players (p. 140, 188–189; Book VI p. 189), the shunned mosque 2013 (p. 160); index p. 190–192 «не взято»",
+      "owns": [
+        "kb/books/hotoe-book-4-en/scenarios/the-simulacrum-unbound.json",
+        "kb/books/hotoe-book-4-en/*/modern-* (new files)",
+        "kb/books/hotoe-book-4-en/characters/* whose statblock is first printed in your pages (fixed ones above)",
+        "app/maps/hotoe-modern-*, app/art/** files with prefix hotoe-modern-",
+        "checks/20261127-hotoe/modern.md, proposals-modern.json, art-modern.json, atmosphere-modern.json, new-shared-locations-modern.json, completeness-modern/, scenario-modern/"
+      ],
+      "sites": "Constantinople/Istanbul (city of unit constantinople) in 2013; the modern train (корабль)"
+    },
+    {
+      "name": "strangers-1",
+      "book_id": "hotoe-book-5-en",
+      "pages": "1-34",
+      "target": "Book V «Strangers on the Train», first half (the unnumbered cover pages, physical 1–2, «не взято»): Famous Faces Aboard (p. 3–4 → a rule/table record `strangers-famous-faces`), the introduction «Passengers» and key (p. 5–6), the passenger entries p. 7–34 (Simon Johns … Lady Margaret Bramwell) with their entourages — characters with statblocks as printed, the «Keeper Entries» blank forms «не взято»",
+      "owns": [
+        "kb/books/hotoe-book-5-en/*/strangers-* (new files)",
+        "kb/books/hotoe-book-5-en/characters/* whose statblock is first printed in your pages (fixed ones above)",
+        "app/maps/hotoe-strangers-1-*, app/art/** files with prefix hotoe-strangers-1-",
+        "checks/20261127-hotoe/strangers-1.md, proposals-strangers-1.json, art-strangers-1.json, atmosphere-strangers-1.json, new-shared-locations-strangers-1.json, completeness-strangers-1/, scenario-strangers-1/"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "strangers-2",
+      "book_id": "hotoe-book-5-en",
+      "pages": "35-64",
+      "target": "Book V «Strangers on the Train», second half: the passenger entries p. 35–64 (Homer Banner … the Orient Express staff — René Clement and others) with their entourages",
+      "owns": [
+        "kb/books/hotoe-book-5-en/*/passengers-* (new files)",
+        "kb/books/hotoe-book-5-en/characters/* whose statblock is first printed in your pages (fixed ones above)",
+        "app/maps/hotoe-strangers-2-*, app/art/** files with prefix hotoe-strangers-2-",
+        "checks/20261127-hotoe/strangers-2.md, proposals-strangers-2.json, art-strangers-2.json, atmosphere-strangers-2.json, new-shared-locations-strangers-2.json, completeness-strangers-2/, scenario-strangers-2/"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "investigators",
+      "book_id": "hotoe-book-5-en",
+      "pages": "65-92",
+      "target": "Book V «Investigators» p. 65–90: twelve ready investigators (the six Bradford Players characters and six from Kickstarter backers) — characters with role `pregen`; refs from the campaign record are added by the lead",
+      "owns": [
+        "kb/books/hotoe-book-5-en/*/investigators-* (new files)",
+        "kb/books/hotoe-book-5-en/characters/* whose statblock is first printed in your pages (fixed ones above)",
+        "app/maps/hotoe-investigators-*, app/art/** files with prefix hotoe-investigators-",
+        "checks/20261127-hotoe/investigators.md, proposals-investigators.json, art-investigators.json, atmosphere-investigators.json, new-shared-locations-investigators.json, completeness-investigators/, scenario-investigators/"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "companion",
+      "book_id": "hotoe-travelers-companion-en",
+      "pages": "1-52",
+      "target": "The Travelers' Companion (P. E. Jensen; runs AFTER the chapter units): preface, menu, advice to travelers, and its guides to London, Paris (with Calais), Lausanne, Italy, Milan, Venice, Trieste (with Postumia, Zagreb), Belgrade, Sofia (with Dragoman), Constantinople (with Adrianople) — the player-facing history, description, money, hotels and places of interest go to the shared cities and their existing places by proposals; a place of interest that no record holds → book record `companion-<city>-<slug>` under the shared city; travel advice, currency and customs per country → rule/table records `companion-…`",
+      "owns": [
+        "kb/books/hotoe-travelers-companion-en/*/companion-* (new files)",
+        "app/maps/hotoe-companion-*, app/art/** files with prefix hotoe-companion-",
+        "checks/20261127-hotoe/companion.md, proposals-companion.json, art-companion.json, atmosphere-companion.json, new-shared-locations-companion.json, completeness-companion/, scenario-companion/"
+      ],
+      "sites": "all shared cities of the campaign (proposals)"
+    }
+  ]
+}

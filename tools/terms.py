@@ -5,7 +5,8 @@ Lookup searches the glossary (kb/terms) and the names of all records, so a trans
 (rule) and «Hardened» (talent).
 
 Usage:
-  python tools/terms.py <word>            English or Russian, any part of the word
+  python tools/terms.py <word> [<word> …] English or Russian, any part of the word; many words in ONE run
+  python tools/terms.py --file words.txt  words one per line — never start many lookups in parallel (each loads the base)
   python tools/terms.py --review          terms that wait for the owner (status review), by domain
   python tools/terms.py --export <file>   CSV in the columns of CoC_Terminology_Decisions.csv (for other projects)
 """
@@ -24,7 +25,8 @@ BY = {"official": "офиц.", "owner": "реестр", "trusted": "фан.", "o
 def main() -> int:
     sys.stdout.reconfigure(encoding="utf-8")
     ap = argparse.ArgumentParser()
-    ap.add_argument("word", nargs="?")
+    ap.add_argument("word", nargs="*", help="one or more words; many words in ONE run — every run loads the whole base (~300 MB)")
+    ap.add_argument("--file", help="words from a file, one per line (UTF-8)")
     ap.add_argument("--review", action="store_true")
     ap.add_argument("--export")
     a = ap.parse_args()
@@ -44,10 +46,21 @@ def main() -> int:
         rv = [t for t in terms if t["status"] == "review"]
         print(f"ждут владельца: {len(rv)} из {len(terms)}; по областям: {dict(Counter(t.get('domain') for t in rv).most_common())}")
         return 0
-    if not a.word:
+    words = list(a.word)
+    if a.file:
+        words += [w.strip() for w in open(a.file, encoding="utf-8-sig") if w.strip()]
+    if not words:
         ap.print_help()
         return 1
-    q = a.word.lower()
+    for i, w in enumerate(words):
+        if len(words) > 1:
+            print(("\n" if i else "") + f"=== {w}")
+        lookup(w, terms, recs)
+    return 0
+
+
+def lookup(word: str, terms: list, recs: list) -> None:
+    q = word.lower()
     for t in terms:
         names = [t["name"]["en"], t["name"]["ru"], *(t.get("aliases") or []), *(v["ru"] for v in t.get("variants") or [])]
         if any(q in (n or "").lower() for n in names):
@@ -64,7 +77,6 @@ def main() -> int:
         if any(q in (x or "").lower() for x in (n.get("en"), n.get("ru"))):
             tr = "наш перевод" if "translated" in ((r.get("quality") or {}).get("flags") or []) else "по книге"
             print(f"[{r.get('kind')}] {n.get('en') or '—'} → {n.get('ru')}  ({tr}; {r['id']})")
-    return 0
 
 
 if __name__ == "__main__":

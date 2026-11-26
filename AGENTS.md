@@ -38,6 +38,16 @@
   `pipeline/source/library.json` (`folders[].path`). Inside the repository use paths relative to its root.
   External installs (Tesseract, Poppler) are the only exception.
 
+## Memory and parallel work
+
+- Owner's rule (2026-11-26): system RAM never above 85 %. The lead runs `tools/memguard.ps1` in the background for
+  the whole session (it stops our largest python/PDF/OCR processes above the limit, log `.cache/memguard.log`) and
+  checks `pwsh -NoProfile -File tools/memguard.ps1 -Once` before launching each helper; at most 4 helpers at once,
+  a new one only while usage is below 70 %.
+- Helpers never start many python processes at once: no parallel loops of `tools/terms.py`, `pages.py` or check
+  tools (each loads the whole base, ~300 MB). Look up many terms in one run: `python -B tools/terms.py w1 w2 …` or
+  `--file words.txt`.
+
 ## Working with the owner
 
 - Think in English; write every user-facing message in Russian.

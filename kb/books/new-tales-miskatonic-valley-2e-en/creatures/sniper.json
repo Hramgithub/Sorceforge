@@ -1,0 +1,210 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "new-tales-miskatonic-valley-2e-en/creature/sniper",
+  "kind": "creature",
+  "name": {
+    "ru": "Снайпер Ночной войны",
+    "en": "Sniper"
+  },
+  "aliases": [
+    "SNIPER, Long Distance Slayer"
+  ],
+  "category": "supernatural",
+  "subcategory": "порождение кошмара (сон Уиллсона Маккенны)",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "45",
+        "value": 45
+      },
+      "CON": {
+        "raw": "65",
+        "value": 65
+      },
+      "SIZ": {
+        "raw": "70",
+        "value": 70
+      },
+      "DEX": {
+        "raw": "55",
+        "value": 55
+      },
+      "APP": {
+        "raw": "30",
+        "value": 30
+      },
+      "INT": {
+        "raw": "25",
+        "value": 25
+      },
+      "POW": {
+        "raw": "60",
+        "value": 60
+      }
+    },
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "mp": {
+      "raw": "13",
+      "value": 13
+    },
+    "damage_bonus": {
+      "raw": "none",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "armor": {
+      "raw": "1 пункт: плотная одежда",
+      "value": 1
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Fighting (Brawl)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "1d3 + БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Штык",
+          "en": "bayonet"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "1d8+2 + БкУ",
+          "dice": "1d8+2",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:bayonet"
+      },
+      {
+        "name": {
+          "ru": "Винтовка .30-06",
+          "en": "Firearms (Rifle/Shotgun)"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "2d6+4 (винтовка .30-06)",
+          "dice": "2d6+4",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:30-06-bolt-action-rifle",
+        "notes": "Стреляет раз в два раунда."
+      }
+    ],
+    "dodge": {
+      "raw": "27% (13/5)",
+      "value": 27,
+      "half": 13,
+      "fifth": 5
+    },
+    "skills": [
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Невидимый стрелок второй ночи Ночной войны. Первый выстрел — по случайному сыщику или сопровождающему солдату, обычный урон; затем стреляет раз в два раунда. Убит — и Хранитель решает, кто он: обычный солдат-череп или враг сыщиков из прошлого, живой или мёртвый; тогда перед смертью он может, мрачно улыбаясь, отпустить остроумное или загадочное замечание о прежних встречах.",
+    "en": null
+  },
+  "legend": {
+    "ru": "В сценарии. Сцена «Снайпер!»: укрыться — проверка Удачи; заметить вспышку выстрела — трудная проверка Внимания; ответный огонь попадает только проникающим попаданием и наносит лишь обычный урон.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 136,
+      "printed_page": 136,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Sniper!»"
+    },
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 143,
+      "printed_page": 143,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «SNIPER, Long Distance Slayer»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.mp",
+      "printed": "MP: 13",
+      "expected": "12 (МОЩ 60 / 5)",
+      "note": "ПМ не сходятся с МОЩ 60; оставлено как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). ПЗ 13, БкУ и Комплекция сходятся; Уклонение 27% = ЛВК / 2. Потери Рассудка в статблоке нет. Заведён существом, а не персонажем: книга сама предлагает сделать его солдатом-черепом или врагом из прошлого сыщиков."
+  }
+}

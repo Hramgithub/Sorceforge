@@ -1,0 +1,197 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "new-tales-miskatonic-valley-2e-en/creature/ghost-gas",
+  "kind": "creature",
+  "name": {
+    "ru": "Призрачный газ",
+    "en": "The Ghost Gas"
+  },
+  "aliases": [
+    "Ghost Gas",
+    "GHOST GAS, Spectral Predator"
+  ],
+  "category": "supernatural",
+  "subcategory": "призрачный хищник (порождение сна Уиллсона Маккенны)",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "N/A",
+        "value": null
+      },
+      "CON": {
+        "raw": "N/A",
+        "value": null
+      },
+      "SIZ": {
+        "raw": "270",
+        "value": 270
+      },
+      "INT": {
+        "raw": "70",
+        "value": 70
+      },
+      "POW": {
+        "raw": "90",
+        "value": 90
+      },
+      "DEX": {
+        "raw": "90",
+        "value": 90
+      }
+    },
+    "hp": {
+      "raw": "54",
+      "value": 54
+    },
+    "mp": {
+      "raw": "18",
+      "value": 18
+    },
+    "damage_bonus": {
+      "raw": "N/A",
+      "value": null
+    },
+    "build": {
+      "raw": "N/A",
+      "value": null
+    },
+    "move": {
+      "raw": "6",
+      "value": 6,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 6
+        }
+      ]
+    },
+    "armor": {
+      "raw": "обычное оружие и холод не действуют; огонь — обычный урон; удар факелом (обычный Ближний бой (драка)) — 1d6; ракетница и взрывчатка — обычный урон",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Удушье",
+          "en": "Asphyxiation"
+        },
+        "kind": "special",
+        "skill": "особая атака",
+        "chance": {
+          "raw": "100%",
+          "value": 100,
+          "half": 50,
+          "fifth": 20
+        },
+        "damage": {
+          "raw": "1d6 ПЗ",
+          "dice": "1d6",
+          "adds_db": false
+        },
+        "notes": "Каждый внутри облака делает встречную проверку МОЩ против МОЩ газа; если газ побеждает, жертва теряет 1d6 ПЗ. За каждый отнятый пункт газ получает +1 ПЗ и +5 ТЕЛ."
+      }
+    ],
+    "skills": [
+      {
+        "name": "Почувствовать жизнь",
+        "skill": "coc:skill:sense-life",
+        "value": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d8",
+        "trigger": "увидеть Призрачный газ"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Жуткое облако иприта, оживлённое духами мёртвых: большое облако желтовато-зелёного дыма, в котором возникают и исчезают призрачные лица. Непрерывно и тихо шипит, будто хрипло выдыхает, стелясь низко над изрытой землёй. Нападает, обволакивая добычу и душа её ядовитыми парами. Его кормят слуги — люди в противогазах, сжигающие тела мёртвых солдат, чтобы газ их впитал.",
+    "en": null
+  },
+  "legend": {
+    "ru": "В сценарии. Встречается при неудачной проверке Удачи в окопах и блиндажах. В третью ночь вступает в бой Колосса из трупов с людьми в противогазами: роится у ног Колосса, вытягивая жизненные силы из его тел-составляющих; Колосс жжёт газ глазами-прожекторами, но проигрывает. Глаз-прожекторов поверженного Колосса газ опасливо избегает — сыщики могут обратить их против него (1d8 за раунд). Газ и его слуги не преследуют бегущих: им милее жечь и пожирать разбросанные трупы.",
+    "en": null
+  },
+  "abilities": [
+    {
+      "name": "Удушье",
+      "raw": "Asphyxiation 100%—Everyone within the Ghost Gas must make an opposed POW roll against the Ghost Gas’ POW. If the Gas wins the opposed roll, the victim loses 1d6 HP. For each point lost, add 1 HP and 5 SIZ to the Gas.",
+      "summary": "Все внутри облака — встречная проверка МОЩ против МОЩ газа; проигравший теряет 1d6 ПЗ, а газ за каждый отнятый пункт получает +1 ПЗ и +5 ТЕЛ."
+    },
+    {
+      "name": "Бестелесность",
+      "raw": "Armor: Normal weapons and cold don’t affect the Ghost Gas. Fire does normal damage. Striking it with a torch (normal Fighting (Brawl) skill) does 1d6 points of damage. A flare gun does normal damage against it, as do explosives.",
+      "summary": "Обычное оружие и холод газ не берут. Огонь наносит обычный урон; удар факелом (обычный навык Ближний бой (драка)) — 1d6; ракетница и взрывчатка — обычный урон.",
+      "refs": [
+        "coc:weapon:flare-gun"
+      ]
+    },
+    {
+      "name": "Почувствовать жизнь",
+      "raw": "Skills: Sense Life 55%.",
+      "summary": "Навык «Почувствовать жизнь» 55%.",
+      "refs": [
+        "coc:skill:sense-life"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 125,
+      "printed_page": 125,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Crossing the Night War»: «the Ghost Gas»"
+    },
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 129,
+      "printed_page": 129,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Ghost Gas»"
+    },
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 140,
+      "printed_page": 140,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Colossus and the Ghost Gas Fires»"
+    },
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 143,
+      "printed_page": 143,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «GHOST GAS, Spectral Predator»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). СИЛ, ВЫН, БкУ и Комплекция — «N/A»; ПЗ 54 — как напечатано (ТЕЛ 270 / 5). У атаки «Asphyxiation 100%» долей нет — посчитаны (50/20)."
+  }
+}

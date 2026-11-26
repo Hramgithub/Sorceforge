@@ -1,0 +1,262 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "year-of-the-goat-en/creature/fleshy-puddle",
+  "kind": "creature",
+  "name": {
+    "ru": "Мясистая лужа",
+    "en": "Fleshy Puddle"
+  },
+  "aliases": [
+    "Кормовая яма Шуб-Ниггурат",
+    "Feeding Pit of Shub-Niggurath",
+    "Мать Совершенства",
+    "Mother of Perfection"
+  ],
+  "category": "avatar",
+  "subcategory": "аватар Шуб-Ниггурат",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "avatar_of",
+      "target": "coc:creature:shub-niggurath",
+      "note": null,
+      "note_back": "плотский аватар в подвале спортзала GOAT («GOAT-фитнес»)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "280",
+        "value": 280
+      },
+      "CON": {
+        "raw": "260",
+        "value": 260
+      },
+      "SIZ": {
+        "raw": "200",
+        "value": 200
+      },
+      "DEX": {
+        "raw": "80",
+        "value": 80
+      },
+      "INT": {
+        "raw": "70",
+        "value": 70
+      },
+      "POW": {
+        "raw": "120",
+        "value": 120
+      }
+    },
+    "hp": {
+      "raw": "57",
+      "value": 57
+    },
+    "mp": {
+      "raw": "12",
+      "value": 12
+    },
+    "damage_bonus": {
+      "raw": "+7d6",
+      "value": "+7d6"
+    },
+    "build": {
+      "raw": "8",
+      "value": 8
+    },
+    "move": {
+      "raw": "6",
+      "value": 6,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 6
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "2 (tendrils and maws)",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (щупальце)",
+          "en": "Fighting (Tendril)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "85% (42/17)",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        },
+        "damage": {
+          "raw": "2d6+захват",
+          "dice": "2d6",
+          "adds_db": false
+        },
+        "notes": "Длинные мускулистые щупальца, бурлящие ложноножки и человеческие зубастые отверстия, открывающиеся и закрывающиеся по всей массе; атакует две цели или сосредотачивает все атаки на одном противнике. Урон «2d6+Grapple»: щупальце хватает."
+      },
+      {
+        "name": {
+          "ru": "Укус (пасть)",
+          "en": "Bite (Maw)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "1d6+7d6",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Сокрушение плотью (удар по площади)",
+          "en": "Flesh Crush (Area Slam)"
+        },
+        "kind": "special",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d10",
+          "dice": "1d10",
+          "adds_db": false
+        },
+        "notes": "1d10 урона всем целям в радиусе 3 м; проверка ЛВК, иначе цель падает («must succeed on a DEX roll or fall prone»)."
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1d4",
+        "fail": "1d8",
+        "trigger": "увидеть, как лужа плоти оживает в подвальной студии"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Противоестественная регенерация",
+      "summary": "Восстанавливает 1d6 ПЗ каждые 2 раунда, поглощая окружающую плоть, пот или брошенный спортивный инвентарь; поглотив живого человека, сразу восстанавливает 10 ПЗ.",
+      "raw": "Unnatural Regeneration (Special Ability): The feeding pit regenerates 1d6 HP every 2 rounds by absorbing ambient flesh, sweat, or discarded gymnasium gear. If it consumes a living human, it regains 10 HP instantly."
+    },
+    {
+      "name": "Скользкое от крови тело",
+      "summary": "При ударе в ближнем бою с шансом 50% брызгает едким потом: атакующий проходит проверку ЛВК, иначе получает 1d4 урона и теряет следующее действие от рвоты.",
+      "raw": "Blood-Slicked Form (Special Ability): When struck by melee attacks, the feeding pit has a 50% chance to splatter acidic sweat, forcing the attacker to make a DEX roll or suffer 1d4 points of damage and lose their next action retching."
+    },
+    {
+      "name": "Блеяние боли (речь Мифов)",
+      "summary": "Раз за бой издаёт жуткий козий напев: все слышащие проходят проверку Рассудка (потеря 1/1d8).",
+      "raw": "Bleat of Pain (Mythos Speech): Once per combat, can unleash a horrible goat-like chant that forces all hearing it to make Sanity rolls (1/1d8 loss)."
+    },
+    {
+      "name": "Хватка отродья",
+      "summary": "Сыщиков, подошедших слишком близко, масса, сгустившись в чудовищное отродье, хватает мохнатым щупальцем и пузырящейся козьей головой; вырваться — проверка СИЛ или ЛВК; провалившие две проверки подряд за два раунда поглощаются.",
+      "raw": "Investigators getting too close to the fleshy puddle cause the mass to congeal into a monstrous spawn that reaches out with a fur covered tendril and bubbling goat’s head to grab them. Investigators can use STR or DEX to break free. Investigators who fail two successive rolls over two rounds are ingested into the fleshy mass of Shub-Niggurath."
+    }
+  ],
+  "description": {
+    "ru": "Кормовая яма Шуб-Ниггурат в центре подвальной студии спортзала GOAT — чудовищная лужа разжиженной плоти, корчащееся анаболическое чрево из плоти и сухожилий, усеянное плачущими ртами, раздавленными гантелями, костяными выростами, клоками волос и кроссовками прежних жертв; в жидкой плоти покачивается очертание козьей головы. Пахнет, как спортивная сумка, запертая в сауне с гниющим животным. Тренеры бросают в неё тела умерших пленников; по ней идёт рябь в форме козьей головы. Пленники поют ей как «Матери Совершенства». Одолеть её сыщикам, скорее всего, не по силам; лишённая жертв, она зачахнет за несколько дней, а если её победить — спортзал рушится. В эпилоге названа «плотским аватаром Шуб-Ниггурат».",
+    "en": null
+  },
+  "habitat": "подвальная студия спортзала GOAT",
+  "sources": [
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 35,
+      "printed_page": 35,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Greatest of All Time», «Go Hard or Die»: описание"
+    },
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 37,
+      "printed_page": 37,
+      "method": "book_text",
+      "verified": true,
+      "note": "«What Must Be Done»; «Epilogue»: fleshy avatar of Shub-Niggurath"
+    },
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 36,
+      "printed_page": 36,
+      "method": "book_text",
+      "verified": true,
+      "note": "щупальце и козья голова"
+    },
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 39,
+      "printed_page": 39,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Characters & Monsters»: Fleshy Puddle, Feeding Pit of Shub-Niggurath"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.hp",
+      "printed": "HP 57",
+      "expected": "46 ((ВЫН 260 + ТЕЛ 200) / 10)",
+      "note": "ПЗ не сходятся с ВЫН и ТЕЛ; в записи — как напечатано (Р-36: БкУ и Комплекция между собой согласованы, большинства против напечатанного нет).",
+      "fixed": false
+    },
+    {
+      "field": "statblock.damage_bonus",
+      "printed": "DB: +7d6, Build: 8",
+      "expected": "+5d6, Комплекция 6 (СИЛ 280 + ТЕЛ 200 = 480)",
+      "note": "БкУ и Комплекция согласованы между собой, но не с СИЛ+ТЕЛ; в записи — как напечатано.",
+      "fixed": false
+    },
+    {
+      "field": "statblock.mp",
+      "printed": "MP: 12",
+      "expected": "24 (МОЩ 120 / 5)",
+      "note": "ПМ не сходятся с МОЩ; в записи — как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). НАР и ОБР напечатаны «—», Рассудок и Удача — «N/A». «10 ft radius» = 3 м (Р-64). Аватар — по эпилогу книги («the fleshy avatar of Shub-Niggurath», с. 37)."
+  },
+  "images": [
+    {
+      "file": "art/creatures/goat-ab-fleshy-puddle.webp",
+      "kind": "art",
+      "caption": "Мясистая лужа — кормовая яма Шуб-Ниггурат",
+      "source": "The Year of the Goat, с. 39 (физ. 39), «Characters & Monsters»: Fleshy Puddle"
+    }
+  ]
+}

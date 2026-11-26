@@ -1,0 +1,376 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "year-of-the-goat-en/character/carly-barlowe",
+  "kind": "character",
+  "name": {
+    "ru": "Карли Барлоу",
+    "en": "Carly Barlowe"
+  },
+  "aliases": [
+    "Coach Carly"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "тренер занятий OBSESSION в спортзале GOAT",
+    "en": "OBSESSION Coach at GOAT Gymnasium"
+  },
+  "age": {
+    "raw": "23",
+    "value": 23
+  },
+  "sex": "женский",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:shub-niggurath",
+      "note": "ради её благосклонности жертвует слабыми",
+      "note_back": "служительница («GOAT-фитнес»)"
+    },
+    {
+      "type": "works_for",
+      "target": "year-of-the-goat-en/character/tad-hart",
+      "note": "главный тренер, её кумир",
+      "note_back": "помощница тренера"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "90",
+        "value": 90
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "80",
+        "value": 80
+      },
+      "APP": {
+        "raw": "65",
+        "value": 65
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "45",
+        "value": 45
+      },
+      "EDU": {
+        "raw": "50",
+        "value": 50
+      }
+    },
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "mp": {
+      "raw": "9",
+      "value": 9
+    },
+    "sanity": {
+      "raw": "0",
+      "value": 0,
+      "max": null
+    },
+    "luck": {
+      "raw": "N/A",
+      "value": "N/A"
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "2",
+      "value": 2
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": "Fighting (Brawl)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Захват (удержание)",
+          "en": "Grapple (Hold)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "notes": "При успехе цель удержана и теряет следующее действие; вырваться — встречная проверка СИЛ. («on success, target is restrained and loses next action. Opposed STR roll to escape.»)"
+      },
+      {
+        "name": {
+          "ru": "Удушающий захват",
+          "en": "Choke Hold"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1d4+1d4",
+          "dice": "1d4",
+          "adds_db": true
+        },
+        "notes": "После успешного захвата Карли может применить удушающий: цель каждый раунд проходит проверку ВЫН, иначе получает 1d4+1d4 урона и начинает задыхаться; если удерживать ещё два раунда, цель теряет сознание. («after a successful Grapple, Carly may apply a choke hold. Target makes CON roll each round or takes 1d4+1d4 damage and begins to suffocate. If held for two additional rounds, the target loses consciousness.»)"
+      }
+    ],
+    "dodge": {
+      "raw": "60% (30/12)",
+      "value": 60,
+      "half": 30,
+      "fifth": 12
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "85%",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Медицина",
+        "skill": "coc:skill:medicine",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Оккультизм",
+        "skill": "coc:skill:occult",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Плавание",
+        "skill": "coc:skill:swim",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Изменённые мышцы",
+      "summary": "Связки и мышечные волокна Карли незаметно мутировали: она поднимает вес далеко за пределами человеческих сил (проверки СИЛ удаются автоматически, если они не встречные). После чёрного протеинового коктейля с «козьим молоком Шуб-Ниггурат» получает бонусную кость на физические проверки.",
+      "raw": "Special Abilities: Carly’s ligaments and muscle fibers have subtly mutated. She can lift well beyond human limits (STR tests succeed automatically unless opposed). Additionally, she gains a bonus die on physical rolls after drinking the black-protein shakes containing “the goat’s milk of Shub-Niggurath.”",
+      "refs": [
+        "year-of-the-goat-en/item/black-protein-shake"
+      ]
+    }
+  ],
+  "description": {
+    "ru": "Тренер занятий OBSESSION в GOAT, 23 года: программист тренировок, бывшая серебряная призёрка Олимпиады в рывке и толчке, самая горячая сторонница GOAT. Охотно жертвует слабыми членами клуба ради благосклонности Шуб-Ниггурат; уверена, что членам GOAT лучше жить короче, но сильнее и красивее. Не знает усталости и не спит, никогда не потеет; её мышцы подёргиваются, когда люди начинают выходить за свои пределы. Иногда сквозь облегающий топ GOAT видны три вывернутых позвонка — знак благословения Шуб-Ниггурат. Всегда при ней чёрный протеиновый коктейль.\nСтимул GOAT: служить Шуб-Ниггурат правой рукой Тэда. Черты: агрессивная, непреклонная, фанатичная, физически внушительная. Доводит членов клуба до предела, потому что «боль — доказательство прогресса»; боготворит Тэда Харта и беспрекословно исполняет его приказы; к неудачам беспощадна: оступившиеся «недостойны».\nВ сценарии: ведёт тренировки актов I–III, уносит тело Криса в подвал, на занятии OBSESSION бросается на сыщиков с гантелью.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 28,
+      "printed_page": 28,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Dramatis Personae»: Carly Barlowe, 23"
+    },
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 29,
+      "printed_page": 29,
+      "method": "book_text",
+      "verified": true,
+      "note": "продолжение"
+    },
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 30,
+      "printed_page": 30,
+      "method": "book_text",
+      "verified": true,
+      "note": "акт I"
+    },
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 32,
+      "printed_page": 32,
+      "method": "book_text",
+      "verified": true,
+      "note": "гибель Криса"
+    },
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 36,
+      "printed_page": 36,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Discovered»"
+    },
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 38,
+      "printed_page": 38,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Characters & Monsters»: Carly Barlowe"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.build",
+      "printed": "Build: 2",
+      "expected": "1 (СИЛ 90 + ТЕЛ 60 = 150, БкУ +1d4)",
+      "note": "Комплекция не сходится с СИЛ+ТЕЛ и с напечатанным БкУ +1d4; в записи — как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Навыки в статблоке напечатаны без половины и пятой."
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "new-tales-miskatonic-valley-2e-en/creature/malice-ygolonac",
+  "kind": "creature",
+  "name": {
+    "ru": "И’голонак («Вечная злоба»)",
+    "en": "Y’golonac (Malice Everlasting)"
+  },
+  "aliases": [
+    "Y’golonac, Great Old One",
+    "И’голонак"
+  ],
+  "category": "mythos_deity",
+  "subcategory": "Великий Древний",
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:ygolonac",
+      "note": null,
+      "note_back": "в теле Нормы Фарр («Вечная злоба»)"
+    }
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "125",
+        "value": 125
+      },
+      "CON": {
+        "raw": "625",
+        "value": 625
+      },
+      "SIZ": {
+        "raw": "125",
+        "value": 125
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "INT": {
+        "raw": "150",
+        "value": 150
+      },
+      "POW": {
+        "raw": "140",
+        "value": 140
+      }
+    },
+    "hp": {
+      "raw": "75",
+      "value": 75
+    },
+    "mp": {
+      "raw": "28",
+      "value": 28
+    },
+    "damage_bonus": {
+      "raw": "+2d6",
+      "value": "+2d6"
+    },
+    "build": {
+      "raw": "3",
+      "value": 3
+    },
+    "move": {
+      "raw": "10",
+      "value": 10,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 10
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Fighting (Brawl)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "100% (50/20)",
+          "value": 100,
+          "half": 50,
+          "fifth": 20
+        },
+        "damage": {
+          "raw": "БкУ",
+          "dice": null,
+          "adds_db": true
+        },
+        "notes": "почти человекоподобен — пинает и бьёт кулаками"
+      },
+      {
+        "name": {
+          "ru": "Укус",
+          "en": "Fighting (Bite)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "100% (50/20)",
+          "value": 100,
+          "half": 50,
+          "fifth": 20
+        },
+        "damage": {
+          "raw": "1d4 (не заживает), −5 ИНТ и −5 МОЩ за раунд",
+          "dice": "1d4",
+          "adds_db": false
+        },
+        "notes": "манёвр: против нескольких врагов пожирает их ртами на ладонях; раны не заживают сами, потеря ИНТ и МОЩ необратима — гноящиеся раны никогда не закрываются"
+      }
+    ],
+    "spells": {
+      "raw": "Summon/Bind and Contact spells, and whatever else the Keeper thinks appropriate.",
+      "items": [
+        {
+          "name": "Summon/Bind spells (заклинания призыва)",
+          "spell": "coc:spell:summon-bind"
+        },
+        {
+          "name": "Contact spells (заклинания связи)",
+          "spell": "coc:spell:contact-spells"
+        }
+      ]
+    },
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d20",
+        "trigger": "увидеть превращение человека в И’голонака"
+      },
+      {
+        "success": "1",
+        "fail": "1d10",
+        "trigger": "увидеть И’голонака"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Превращение Нормы Фарр",
+      "summary": "Выходя с парусника на пристань, Норма Фарр меняет облик: тело раздувается, голова уходит в плечи, на ладонях трёхпалых рук раскрываются хищные рты. Побеждённый, Великий Древний через мгновения вновь становится телом Нормы Фарр.",
+      "raw": "As she emerges, she begins changing form. Her body bloats, her head disappears between her shoulders and vicious mouths spring open in the palms of her three-fingered hands.",
+      "refs": [
+        "new-tales-miskatonic-valley-2e-en/character/norma-farr"
+      ]
+    }
+  ],
+  "description": {
+    "ru": "Великий Древний, явившийся в теле Нормы Фарр на пристани Кабота. Хотя 75 ПЗ — много, брони у него нет, и хорошо вооружённые и подготовленные сыщики могут его одолеть; можно и перехватить инициативу, пока он несётся по пустой пристани.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Колдун Мэттью Чандлер почитает И’голонака с 1690-х; в храме под Домом Фантов стоит его восковая статуя, а в «Откровениях Гла’аки» спрятано заклинание: при чтении двенадцатого тома Великий Древний является в чаше средней части храма. Через Мешок он шлёт колдуну своих Детей. Норму Фарр колдун избрал вместилищем для своего господина. Если И’голонак победит сыщиков, Норма вновь овладевает телом и бежит в Аркхэм с рукой Чандлера. Победа над И’голонаком — +1d10 Рассудка.",
+    "en": null
+  },
+  "habitat": "пристань Кабота (в теле Нормы Фарр); храм под Домом Фантов",
+  "sources": [
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 101,
+      "printed_page": 101,
+      "method": "book_text",
+      "verified": true,
+      "note": "Чандлер — почитатель И’голонака"
+    },
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 117,
+      "printed_page": 117,
+      "method": "book_text",
+      "verified": true,
+      "note": "храм, Мешок"
+    },
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 118,
+      "printed_page": 118,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Terror on Cabot Wharf», «Defeating Y’golonac», награды"
+    },
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 119,
+      "printed_page": 119,
+      "method": "book_text",
+      "verified": true,
+      "note": "«NPCs and Monsters»: статблок"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической, смещение 0). Сценарий «Malice Everlasting» («Вечная злоба», с. 101–120). Числа совпадают с общей записью (Malleus Monstrorum), кроме атак: одна атака за раунд, удар — БкУ, укус 1d4 без +2, потеря Рассудка 1/1d20 при превращении — отдельная запись книги (Р-75). БкУ +2d6 и Комплекция 3 не сходятся с СИЛ + ТЕЛ = 250 — как в общей записи и в Malleus (исполинский размер, Р-76)."
+  }
+}

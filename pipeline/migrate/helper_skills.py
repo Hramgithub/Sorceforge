@@ -4,8 +4,10 @@ Usage: python pipeline/migrate/helper_skills.py
 """
 import json, sys, os, re
 
-HELPER = r"C:\_Hobby\_work\git_coc\web_helper_coc_gm\public\docs\reference\data\reference_skills.json"
-OUT = r"C:\_Hobby\_work\Sorceforge\kb\skills"
+ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
+# the web helper repository sits next to this one (C:\_Hobby\_work\git_coc)
+HELPER = os.path.join(os.path.dirname(ROOT), "git_coc", "web_helper_coc_gm", "public", "docs", "reference", "data", "reference_skills.json")
+OUT = os.path.join(ROOT, "kb", "skills")
 BOOK = "keeper-rulebook-ru"
 LIST_REF = "«Книга хранителя», «Список навыков», с. 54 (физ. 51)"
 REASON = "значение по «Книге хранителя»"

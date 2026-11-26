@@ -28,6 +28,16 @@
 - Dice as `6d6`; characteristic abbreviations as in the Russian Keeper Rulebook;
   kb JSON is UTF-8, 2-space indent, LF (`pipeline/fix/normalize_terms.py`).
 
+## Scripts and paths
+
+- Lead and helper scripts that are not part of `tools/` or `pipeline/` live in `.cache/lead-tools/`
+  (gitignored; one subfolder per unit, e.g. `gen-<unit>`, `tr-<unit>`), not in a session scratchpad:
+  scratchpads are temporary and change with every session.
+- Never hardcode absolute paths in scripts, briefs or prompts. Compute them: from the script location
+  (`__file__`, `$PSScriptRoot`), from the repository root, and the owner's library root from
+  `pipeline/source/library.json` (`folders[].path`). Inside the repository use paths relative to its root.
+  External installs (Tesseract, Poppler) are the only exception.
+
 ## Working with the owner
 
 - Think in English; write every user-facing message in Russian.

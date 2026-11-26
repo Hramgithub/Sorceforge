@@ -15,7 +15,7 @@ import re
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
-DEFAULT = pathlib.Path(r"C:\_Hobby\Yandex.Disk\НРИ\1_Зов Ктулху\1_Библиотека")
+DEFAULT = pathlib.Path(json.loads((ROOT / "pipeline" / "source" / "library.json").read_text(encoding="utf-8"))["folders"][0]["path"])
 
 
 def front(text: str) -> dict:

@@ -14,7 +14,10 @@ import re
 import sys
 
 sys.stdout.reconfigure(encoding="utf-8")
-HELPER = r"C:\_Hobby\_work\git_coc\web_helper_coc_gm\public\docs\magic\data"
+import os
+# the web helper repository sits next to this one
+HELPER = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))),
+                      "git_coc", "web_helper_coc_gm", "public", "docs", "magic", "data")
 CYR = re.compile(r"[А-Яа-яЁё]")
 
 

@@ -65,6 +65,12 @@ $args2 = @('exec', '--json', '--skip-git-repo-check', '--color', 'never', '-s', 
 # no memories of other projects, no web search, no MCP servers (node_repl may take up to 2 min to start), no app plugins,
 # no desktop notify hook — the translator needs only the shell, files and image viewing.
 $args2 += @('--disable', 'memories', '-c', 'web_search="disabled"', '-c', 'notify=[]')
+# The owner's config sets PATH for Codex shells without Python (2026-11-26: Codex could not run pages.py / the checker).
+# Put the Python of this machine and the PDF/OCR tools in front of it; TOML literal string — no escaping of backslashes.
+$py = (Get-Command python -CommandType Application -ErrorAction SilentlyContinue | Select-Object -First 1).Source
+$extra = @($(if ($py) { Split-Path $py }), $(if ($py) { Join-Path (Split-Path $py) 'Scripts' })) + ($env:PATH -split ';') |
+    Where-Object { $_ -and $_ -notmatch "'" } | Select-Object -Unique
+$args2 += @('-c', "shell_environment_policy.set.PATH='$($extra -join ';')'")
 foreach ($s in 'node_repl', 'filesystem', 'microsoft-docs') { $args2 += @('-c', "mcp_servers.$s.enabled=false") }
 foreach ($p in 'documents@openai-primary-runtime', 'spreadsheets@openai-primary-runtime', 'presentations@openai-primary-runtime',
     'pdf@openai-primary-runtime', 'computer-use@openai-bundled', 'visualize@openai-bundled', 'browser@openai-bundled',

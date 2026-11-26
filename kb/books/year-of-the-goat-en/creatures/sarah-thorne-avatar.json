@@ -1,0 +1,271 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "year-of-the-goat-en/creature/sarah-thorne-avatar",
+  "kind": "creature",
+  "name": {
+    "ru": "Сара Торн — аватар Магна Матер",
+    "en": "Sarah Thorne, Avatar of the Magna Mater (Monstrous Form)"
+  },
+  "aliases": [
+    "Avatar of the Magna Mater",
+    "аватар Магна Матер",
+    "the Avatar"
+  ],
+  "category": "avatar",
+  "subcategory": "аватар Шуб-Ниггурат",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "avatar_of",
+      "target": "coc:creature:shub-niggurath",
+      "note": "Магна Матер, Великая Мать",
+      "note_back": "аватар в облике Сары Торн («Дом плоти»)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "140",
+        "value": 140
+      },
+      "CON": {
+        "raw": "120",
+        "value": 120
+      },
+      "SIZ": {
+        "raw": "110",
+        "value": 110
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "APP": {
+        "raw": "5",
+        "value": 5
+      },
+      "INT": {
+        "raw": "75",
+        "value": 75
+      },
+      "POW": {
+        "raw": "120",
+        "value": 120
+      },
+      "EDU": {
+        "raw": "70",
+        "value": 70
+      }
+    },
+    "hp": {
+      "raw": "50",
+      "value": 50
+    },
+    "mp": {
+      "raw": "100",
+      "value": 100
+    },
+    "sanity": {
+      "raw": "0",
+      "value": 0
+    },
+    "luck": {
+      "raw": "N/A",
+      "value": null
+    },
+    "damage_bonus": {
+      "raw": "+2d6",
+      "value": "+2d6"
+    },
+    "build": {
+      "raw": "3",
+      "value": 3
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "4; восстанавливает ПЗ, «съеденные» у схваченных сыщиков",
+      "value": 4
+    },
+    "attacks_per_round": {
+      "raw": "2",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": "Fighting (Brawl)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "85% (42/17)",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        },
+        "damage": {
+          "raw": "1d3+2d6",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Хватка",
+          "en": "Grab"
+        },
+        "kind": "maneuver",
+        "skill": null,
+        "chance": {
+          "raw": "85% (42/17)",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        },
+        "damage": {
+          "raw": "1d6 в первом раунде, в следующих — ещё 1d6: аватар пожирает жертву",
+          "dice": "1d6",
+          "adds_db": false
+        },
+        "notes": "ПЗ, отнятые у схваченного, аватар восстанавливает себе"
+      }
+    ],
+    "dodge": {
+      "raw": "50% (25/10)",
+      "value": 50,
+      "half": 25,
+      "fifth": 10
+    },
+    "skills": [
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1d4",
+        "fail": "1d10",
+        "trigger": "встреча с аватаром (и свидетели превращения)"
+      }
+    ],
+    "spells": {
+      "raw": "любые заклинания на усмотрение Хранителя",
+      "items": []
+    }
+  },
+  "description": {
+    "ru": "Чудовищная форма Сары Торн. Глаза Сары распахиваются пустыми провалами; кусты под ней корчатся и меняются: кора твердеет, становясь конечностями, чёрная плоть натягивается на каркас, во все стороны торчат острые шипы — растительность превращается в чудовище. Тело Сары — голова существа; по её коже раскрываются многочисленные глаза разных цветов и форм. Растительность тела образует широко разинутую пасть, полную шипов вместо зубов.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Аватар Магна Матер (Шуб-Ниггурат), который поднимется в облике Сары, когда ритуал Салли завершится. Если сыщики выведут из строя Салли или нападут на Сару, с неба раздаётся нечеловеческий крик: ритуал прерван, и аватар пробуждается. Мудрым сыщикам пора бежать — на «Камаро» из гаража, на пикапе с сенокоса, на эвакуаторе Сэмюэла (если есть ключи) или пешком. Если ритуал не прерван, призванная бурей сущность быстро расправляется с ними — и с большей частью планеты.",
+    "en": null
+  },
+  "encounters": {
+    "ru": "Амбар фермы Торнов, финал сценария; если Сара переживёт ночь — сцена после титров.",
+    "en": null
+  },
+  "habitat": "амбар фермы Торнов",
+  "sources": [
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 136,
+      "printed_page": 136,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Background»: Сара — сосуд"
+    },
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 144,
+      "printed_page": 144,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Ritual Commences»: пробуждение аватара"
+    },
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 145,
+      "printed_page": 145,
+      "method": "book_text",
+      "verified": true,
+      "note": "описание превращения, Рассудок 1d4/1d10"
+    },
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 147,
+      "printed_page": 147,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Sarah Thorne, Avatar of the Magna Mater (Monstrous Form)»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.damage_bonus, statblock.build, statblock.hp, statblock.mp",
+      "printed": "DB +2d6, Build 3, HP 50, MP 100",
+      "expected": "БкУ +4d6, Комплекция 5, ПЗ 23, ПМ 24",
+      "note": "по СИЛ 140 + ТЕЛ 110, ВЫН 120 и МОЩ 120 правила дают другие значения; ПЗ и ПМ аватара, видимо, завышены нарочно (Р-76); оставлено как напечатано (Р-161)",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Аватар сценария; связь с Шуб-Ниггурат — по тексту книги («the Magna Mater (Shub-Niggurath)»)."
+  },
+  "images": [
+    {
+      "file": "art/creatures/goat-gh-sarah-thorne-avatar.webp",
+      "kind": "art",
+      "caption": "Сара Торн на ложе из ягодных лоз",
+      "source": "The Year of the Goat, с. 147 (физ. 147), «Sarah Thorne, Avatar of the Magna Mater (Monstrous Form)»"
+    }
+  ]
+}

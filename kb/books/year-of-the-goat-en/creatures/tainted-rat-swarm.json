@@ -1,0 +1,195 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "year-of-the-goat-en/creature/tainted-rat-swarm",
+  "kind": "creature",
+  "name": {
+    "ru": "Стая осквернённых крыс",
+    "en": "Tainted Rat Swarm"
+  },
+  "aliases": [
+    "Tainted Rats",
+    "mutated rats",
+    "осквернённые крысы"
+  ],
+  "category": "animal",
+  "subcategory": "крысы, искажённые Магна Матер",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:rat-swarm",
+      "note_back": "профиль сценария «Дом плоти» (осквернённые Магна Матер)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "40",
+        "value": 40
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "35",
+        "value": 35
+      },
+      "DEX": {
+        "raw": "75",
+        "value": 75
+      },
+      "POW": {
+        "raw": "45",
+        "value": 45
+      }
+    },
+    "hp": {
+      "raw": "9",
+      "value": 9
+    },
+    "mp": {
+      "raw": "4",
+      "value": 4
+    },
+    "damage_bonus": {
+      "raw": "-1",
+      "value": -1
+    },
+    "build": {
+      "raw": "-1",
+      "value": -1
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1 (любая атака может осквернить цель — см. «Скверна Матери»)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (зубы и когти)",
+          "en": "Fighting (Teeth and Claws)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d3-1",
+          "dice": "1d3-1",
+          "adds_db": false
+        }
+      },
+      {
+        "name": {
+          "ru": "Задавить (манёвр)",
+          "en": "Overwhelm (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": null,
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "2d6-1",
+          "dice": "2d6-1",
+          "adds_db": false
+        },
+        "notes": "стаей нападают на одного по правилам манёвров, кусая и царапая; из-за численности получают одну бонусную кость к атаке"
+      }
+    ],
+    "dodge": {
+      "raw": "45% (22/9)",
+      "value": 45,
+      "half": 22,
+      "fifth": 9
+    }
+  },
+  "description": {
+    "ru": "Крысы, которых можно встретить по всей ферме Торнов: раздутые, местами облезлые, с лишними конечностями, слепыми красными глазами и расщеплёнными челюстями; на спинах пульсируют опухоли. Их писк жутко похож на плач младенцев.",
+    "en": null
+  },
+  "encounters": {
+    "ru": "Кукурузный амбар (мутировавшие крысы в кукурузе); детская — стая выходит из дыры в стене и нападает, пока сыщики в комнате.",
+    "en": null
+  },
+  "habitat": "ферма Торнов",
+  "sources": [
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 139,
+      "printed_page": 139,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Mother’s Taint»: укусы осквернённых крыс"
+    },
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 140,
+      "printed_page": 140,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Corn Crib»: мутировавшие крысы"
+    },
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 143,
+      "printed_page": 143,
+      "method": "book_text",
+      "verified": true,
+      "note": "«12. Nursery»: стая нападает"
+    },
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 147,
+      "printed_page": 147,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Tainted Rat Swarm»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.mp",
+      "printed": "4",
+      "expected": "9",
+      "note": "МОЩ 45 — ПМ 9; оставлено как напечатано (Р-161)",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Профиль сценария (Р-75): числа отличаются от общей «Стаи крыс». Любая успешная атака может вызвать «Скверну Матери» (запись правила сценария)."
+  }
+}

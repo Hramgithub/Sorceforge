@@ -1,0 +1,507 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "year-of-the-goat-en/character/gladys-appleby",
+  "kind": "character",
+  "name": {
+    "ru": "Глэдис Эпплби",
+    "en": "Gladys Appleby"
+  },
+  "aliases": [
+    "Джуди Лейбл",
+    "Judy Label",
+    "Gladys Apleby",
+    "госпожа Эпплби",
+    "Mistress Appleby",
+    "Demi-Ghoul Witch of Shub-Niggurath",
+    "ведьма-полуупырь Шуб-Ниггурат"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "Заведующая сиротским приютом Гроун-Пика; ведьма-полуупырь Шуб-Ниггурат",
+    "en": "Headmistress at Groan Peak Orphanage; Demi-Ghoul Witch of Shub-Niggurath"
+  },
+  "age": {
+    "raw": "65",
+    "value": 65
+  },
+  "sex": "женский",
+  "residence": "дом Глэдис Эпплби, бедная часть Гроун-Пика",
+  "relations": [
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:shub-niggurath",
+      "note": "ведьма Тёмной богини",
+      "note_back": "ведьма-полуупырь (Глэдис Эпплби)"
+    },
+    {
+      "type": "transforms_into",
+      "target": "coc:creature:ghoul",
+      "note": "медленно превращается в упыря",
+      "note_back": null
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "65",
+        "value": 65
+      },
+      "CON": {
+        "raw": "75",
+        "value": 75
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "APP": {
+        "raw": "45",
+        "value": 45
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "90",
+        "value": 90
+      },
+      "EDU": {
+        "raw": "80",
+        "value": 80
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "18* (+Жемчуга Матери)",
+      "value": 18
+    },
+    "sanity": {
+      "raw": "—",
+      "value": null,
+      "max": null
+    },
+    "luck": {
+      "raw": "70",
+      "value": 70
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "2 (нож, ногти или магия)",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Острые как бритва ногти",
+          "en": "Fighting (Razor-Sharp Nails)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d3+БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Хлёсткий язык Матери (нож)",
+          "en": "Mother’s Lashing tongue (Knife)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d4 за раунд",
+          "dice": "1d4",
+          "adds_db": false
+        },
+        "notes": "Порез кровоточит: −1 ПЗ в начале каждого раунда, пока не пройдена проверка Первой помощи или Медицины (см. предмет «Хлёсткий язык Матери»)."
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "armor": {
+      "raw": "Огнестрельное и метательное оружие наносит половину выброшенного урона (с округлением вниз)",
+      "value": null
+    },
+    "skills": [
+      {
+        "name": "Искусство/ремесло (хирургия)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "Хирургия",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Обаяние",
+        "skill": "coc:skill:charm",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Маскировка",
+        "skill": "coc:skill:disguise",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "90%",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        }
+      },
+      {
+        "name": "Медицина",
+        "skill": "coc:skill:medicine",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Оккультизм",
+        "skill": "coc:skill:occult",
+        "value": {
+          "raw": "85%",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Ловкость рук",
+        "skill": "coc:skill:sleight-of-hand",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Выживание (дикая местность)",
+        "skill": "coc:skill:survival",
+        "specialization": "Дикая местность",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      }
+    ],
+    "spells": {
+      "raw": "A wide selection in addition to those mentioned in her Tome. The list below includes those she would most likely use in a direct confrontation, focusing on those that do not kill or cause permanent damage: Dominate, Evil eye, Listen to Mother (Enthrall victim), Implant fear, Knot Flesh, Power Drain, and Wither Limb. The spells can be found in the Keeper Rulebook, with the exception of Knot Flesh and Power Drain, which can be located on pages 134 and 153 of The Grand Grimoire of Cthulhu Mythos Magic.",
+      "items": [
+        {
+          "name": "Dominate",
+          "spell": "coc:spell:dominate"
+        },
+        {
+          "name": "Evil eye",
+          "spell": "coc:spell:evil-eye"
+        },
+        {
+          "name": "Listen to Mother (Enthrall victim)",
+          "spell": "coc:spell:enthrall-victim"
+        },
+        {
+          "name": "Implant fear",
+          "spell": "coc:spell:implant-fear"
+        },
+        {
+          "name": "Knot Flesh",
+          "spell": "coc:spell:knot-flesh"
+        },
+        {
+          "name": "Power Drain",
+          "spell": "coc:spell:power-drain"
+        },
+        {
+          "name": "Wither Limb",
+          "spell": "coc:spell:wither-limb"
+        }
+      ]
+    }
+  },
+  "abilities": [
+    {
+      "name": "Магия",
+      "raw": "Magic (see Spells): If possible, Gladys will use her magic to end an encounter and even offer to undo the baneful effects of spells she has cast if it means letting her Ghouls go free.",
+      "summary": "По возможности Глэдис кончает встречу магией и даже предлагает снять вредные чары, если это позволит отпустить её упырей.",
+      "refs": []
+    },
+    {
+      "name": "Броня",
+      "raw": "Armor: Firearms and projectile weapons do half of rolled damage; round down any fractions.",
+      "summary": "Огнестрельное и метательное оружие наносит половину выброшенного урона, дроби отбрасываются.",
+      "refs": []
+    },
+    {
+      "name": "Смена облика",
+      "raw": "Changing looks with her Control Skin spell also enables her to take on different guises and masks her changing physiology.",
+      "summary": "Заклинанием «Управлять кожей» меняет облик (сбрасывает кожу, как змея), принимает разные личины (Джуди Лейбл) и скрывает меняющееся тело.",
+      "refs": [
+        "coc:spell:control-skin"
+      ]
+    }
+  ],
+  "background": {
+    "description": "На удивление бодрая для своих лет, с добрым морщинистым лицом обычной бабушки, кудрявыми волосами и живыми глазами.",
+    "secret": "Ведьма-полуупырь Шуб-Ниггурат: превращает детей в упырей и каждые пять лет убивает юношу, чтобы продлить себе жизнь; в облике новенькой школьницы Джуди Лейбл убила Джонни Уилсона."
+  },
+  "possessions": [
+    "«Хлёсткий язык Матери» (магический нож)",
+    "«Голодные дети Матери» (книга Мифов, гримуар и дневник)",
+    "«Жемчуга Матери» (ожерелье, запас ПМ: сейчас 24 из 30)"
+  ],
+  "description": {
+    "ru": "Известна в городе как замкнутая заведующая местным приютом, живущая одна на окраине без явных близких друзей. При этом, хоть и «новенькая» (переехала всего 15 лет назад), всеми любима за обаяние и готовность помочь; любит детей и никогда не отказывает ребёнку в беде.",
+    "en": null
+  },
+  "legend": {
+    "ru": "В 1917–1918 годах Корпус медсестёр армии США отправил во Францию 5 350 американских медсестёр в составе Американского экспедиционного корпуса — все добровольцы; они служили в лагерных госпиталях и эвакопунктах у фронта, жили в тяжёлых условиях и видели несказанные ужасы войны. Медсестра Глэдис Эпплби видела больше других: заботилась о детях, осиротевших на войне или брошенных, и столкнулась с нечеловеческими тенями, бродившими по ничейной земле между армиями, — с виду людьми, но с ужасной тягой к человеческой плоти. Когда её подопечным грозил голод, Глэдис обратилась к той же пище, что ели упыри, — к человеческой плоти — и кормила ею детей. С этого началось её падение в объятия тёмной богини Шуб-Ниггурат. В конце концов война вынесла Глэдис и сирот в безопасное место.\nВернувшись в США, она изменилась телом и разумом: просыпалась от тревожных снов и находила исписанные ею листки тёмного знания, ведущего её распространять влияние Шуб-Ниггурат, создавая упырей из людей; её тяга к жуткой пище росла. Годами она работала в разных приютах, переезжая с места на место, выбирая самых маленьких детей, чтобы растить и вскармливать их на иной путь. Новые знания дали ей способность сбрасывать кожу, как змея, и принимать иной облик. Каждые пять лет она заманивает юношу и пожирает его: это продлевает ей жизнь и силы, а его органы дают материал для превращения детей в упырей.\nПятнадцать лет назад она приехала в Гроун-Пик новой заведующей приютом. Вскоре в лесу нашли юношу, частично съеденного и без органов, — подумали на диких зверей. Через пять лет нашли другого: связанного, обескровленного, без органов, частично обглоданного (снова «зверями»); дело не раскрыто. В ночь начала сценария Глэдис в облике школьницы Джуди Лейбл только что совершила убийство, нужное, чтобы продлить жизнь ещё на пять лет и собрать материалы для ритуалов. Сама она медленно превращается в упыря — становится быстрее, сильнее, выносливее, но сохраняет человеческий облик. Убивает только по необходимости или в ритуале.\nКогда сыщики приходят к её дому, она радушно встречает их, по имени здоровается с Роуз и Томми, но в дом не пускает; врёт про адрес (Психология выявляет ложь) и отсылает к соседнему дому, а сама бежит через люк в подвале в туннели упырей. В пещере в центре туннелей она сначала уговаривает сыщиков (заклинания «Слушай маму» и «Покорение» плюс её «здравый смысл»), затем торгуется: сдастся и всё признает, если отпустят «детей»; лишь в крайнем случае угрожает. В бою велит младшим бежать. Победить Глэдис в бою или отдать под суд: +1d6 Рассудка; отпустить её или упырей: −1d6.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 207,
+      "printed_page": 207,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Mother of a Thousand Young»: «Scenario Structure»"
+    },
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 208,
+      "printed_page": 208,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Background»"
+    },
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 209,
+      "printed_page": 209,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Dramatis Personae»: Глэдис и «Judy Label»"
+    },
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 210,
+      "printed_page": 210,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Antagonist»: «Gladys Appleby, 65, Demi-Ghoul Witch of Shub-Niggurath»; Джуди на празднике"
+    },
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 213,
+      "printed_page": 213,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Judy’s Home?»"
+    },
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 214,
+      "printed_page": 214,
+      "method": "book_text",
+      "verified": true,
+      "note": "дневник, приют"
+    },
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 215,
+      "printed_page": 215,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Confrontation with Gladys»"
+    },
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 216,
+      "printed_page": 216,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Conclusion»"
+    },
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 218,
+      "printed_page": 218,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Gladys Apleby, 65»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.hp",
+      "printed": "HP 12",
+      "expected": "13 ((ВЫН 75 + ТЕЛ 60) / 10)",
+      "note": "ПЗ не сходятся с ВЫН и ТЕЛ; оставлено как напечатано.",
+      "fixed": false
+    },
+    {
+      "field": "statblock.move",
+      "printed": "Move: 9",
+      "expected": "8 (СИЛ > ТЕЛ, ЛВК = ТЕЛ), с возрастом 65 — 5",
+      "note": "Скорость не сходится с характеристиками и возрастом; оставлено как напечатано — возможно, задумано (превращение в упыря).",
+      "fixed": false
+    },
+    {
+      "field": "name",
+      "printed": "Gladys Apleby (с. 218)",
+      "expected": "Gladys Appleby",
+      "note": "Опечатка в фамилии в заголовке статблока.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической, смещение 0). Сценарий «Мать тысячи младых» (1953 год; в осях — «1940s-1980s»). Персонаж (Р-94): человек, превращающийся в упыря. Джуди Лейбл — её облик (одна запись). НАР 45 и прочерк вместо Рассудка — как напечатано. «Listen to Mother» — её название «Околдовать жертву». В заголовке статблока фамилия напечатана «Apleby»."
+  },
+  "images": [
+    {
+      "file": "art/characters/goat-kl-gladys-appleby.webp",
+      "kind": "portrait",
+      "caption": "Глэдис Эпплби",
+      "source": "The Year of the Goat, с. 210 (физ. 210), «Antagonist»"
+    }
+  ]
+}

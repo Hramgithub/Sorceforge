@@ -1,0 +1,362 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "year-of-the-goat-en/character/tilda-whistler",
+  "kind": "character",
+  "name": {
+    "ru": "Тильда Уислер",
+    "en": "Tilda Whistler"
+  },
+  "aliases": [
+    "The Reporter",
+    "Тильда"
+  ],
+  "roles": [
+    "pregen"
+  ],
+  "occupation": {
+    "ru": "Репортёр",
+    "en": "The Reporter"
+  },
+  "occupation_ref": "coc:occupation:reporter",
+  "age": {
+    "raw": "24",
+    "value": 24
+  },
+  "sex": "женский",
+  "residence": "Западный Харперс-Орчард",
+  "relations": [
+    {
+      "type": "relative_of",
+      "target": "year-of-the-goat-en/character/albert-whistler",
+      "note": "брат (пропал)",
+      "note_back": "сестра"
+    },
+    {
+      "type": "knows",
+      "target": "year-of-the-goat-en/character/quin-tooms",
+      "note": "друг",
+      "note_back": "подруга"
+    },
+    {
+      "type": "knows",
+      "target": "year-of-the-goat-en/character/coral-bags",
+      "note": "друг",
+      "note_back": "подруга"
+    },
+    {
+      "type": "knows",
+      "target": "year-of-the-goat-en/character/john-harper",
+      "note": "мэр, благодетель семьи",
+      "note_back": "журналистка, которой он помог выучиться"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "50",
+        "value": 50
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "40",
+        "value": 40
+      },
+      "DEX": {
+        "raw": "80",
+        "value": 80
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "70",
+        "value": 70
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      },
+      "EDU": {
+        "raw": "60",
+        "value": 60
+      }
+    },
+    "hp": {
+      "raw": "10",
+      "value": 10
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "sanity": {
+      "raw": "50",
+      "value": 50,
+      "max": null
+    },
+    "luck": {
+      "raw": "3d6×5",
+      "value": null,
+      "note": "игрок бросает 3d6×5"
+    },
+    "damage_bonus": {
+      "raw": "+0",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": "Fighting (Brawl)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "1d3+БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Винтовка/дробовик",
+          "en": "Rifle/Shotgun"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "4d6",
+          "dice": "4d6",
+          "adds_db": false
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Искусство/ремесло (печатная графика)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "Печатная графика",
+        "value": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Искусство/ремесло (рисунок)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "Рисунок",
+        "value": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "20% (10/4)",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "История",
+        "skill": "coc:skill:history",
+        "value": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Родной язык (английский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "Английский",
+        "value": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Работа в библиотеке",
+        "skill": "coc:skill:library-use",
+        "value": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Верховая езда",
+        "skill": "coc:skill:ride",
+        "value": {
+          "raw": "10% (5/2)",
+          "value": 10,
+          "half": 5,
+          "fifth": 2
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "20% (10/4)",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "20% (10/4)",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      }
+    ]
+  },
+  "background": {
+    "description": "Порывистая и импульсивная.",
+    "ideology": "Отче небесный, благослови мой путь.",
+    "significant_people": "Альберт Уислер (брат), Куин Тумс и Корал Бэгс (друзья), Джон Харпер (мэр), Сол и Салли (родители).",
+    "traits": "Верная и преданная сестра своего (теперь пропавшего) брата; внимательна, замечает то, что упускают другие.",
+    "phobias_manias": "Возможные приступы безумия: скотофобия — страх темноты; демономания — болезненная уверенность, что в тебя вселились демоны."
+  },
+  "possessions": [
+    "Карманный нож",
+    "Альбом и принадлежности для рисования",
+    "Сумка почтальонского образца"
+  ],
+  "legend": {
+    "ru": "Тильда и её семья — одна из многих афроамериканских семей, которых Джон Харпер принял и поселил в Западном Харперс-Орчарде; с его помощью она изучала журналистику на заочных курсах Мискатоникского университета и работает в редакции местной газеты. Когда пришло известие о смертях в Чаще у Северного Харперс-Орчарда, она тут же поехала туда на велосипеде, пробралась мимо полиции и увидела три тела на земле и странные знаки на дереве; в кустах рядом она нашла куртку своего брата Альберта. Альберт в припадке внезапного безумия напал на их общего друга Куина Тумса и исчез; Тильда намерена узнать, что случилось.\nВ сценарии ей всё время кажется, что за ней следят (проверки Слуха и Внимания): на самом деле за ней тайно наблюдает её превращающийся брат. У Чёрной вишни Альберт зовёт её присоединиться к гибридам.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "gaslight"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 189,
+      "printed_page": 189,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Dead Letters from the Orchard»: «About the Investigators» — «Tilda Whistler, 24, The Reporter»; врезка «Bouts of Madness»"
+    },
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 192,
+      "printed_page": 192,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Around West Harper’s Orchard»: Тильде кажется, что за ней следят"
+    },
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 204,
+      "printed_page": 204,
+      "method": "book_text",
+      "verified": true,
+      "note": "лист сыщика «Tilda Whistler, 24, The Reporter»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": null
+  }
+}

@@ -1,0 +1,460 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "new-tales-miskatonic-valley-2e-en/creature/mi-go-lair-workers",
+  "kind": "creature",
+  "name": {
+    "ru": "Ми-го из логова (Фоксфилд)",
+    "en": "Mi-Go #2, Mi-Go #3"
+  },
+  "aliases": [
+    "MI-GO #2",
+    "MI-GO #3",
+    "ми-го № 2",
+    "ми-го № 3"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "независимая раса",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:mi-go",
+      "note_back": "ми-го № 2 и № 3 из логова в Фоксфилде"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "55",
+        "value": 55
+      },
+      "CON": {
+        "raw": "55",
+        "value": 55
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "75",
+        "value": 75
+      },
+      "INT": {
+        "raw": "70",
+        "value": 70
+      },
+      "POW": {
+        "raw": "65",
+        "value": 65
+      }
+    },
+    "hp": {
+      "raw": "11",
+      "value": 11
+    },
+    "mp": {
+      "raw": "13",
+      "value": 13
+    },
+    "damage_bonus": {
+      "raw": "нет",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "7 / 13 полёт",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        },
+        {
+          "mode": "fly",
+          "value": 13
+        }
+      ]
+    },
+    "armor": {
+      "raw": "колющее оружие наносит минимальный урон",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "2",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Клешни (×2)",
+          "en": "Fighting (Nippers x2)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "1d6 + БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "notes": "две атаки клешнями за раунд или манёвр «Схватить»"
+      },
+      {
+        "name": {
+          "ru": "Схватить (манёвр)",
+          "en": "Seize (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "хватает жертву (её Комплекции или меньше) и уносит в небо",
+          "dice": null,
+          "adds_db": false
+        },
+        "notes": "вместо атак клешнями, с тем же шансом («or Seize mnvr (as above)»)"
+      }
+    ],
+    "dodge": {
+      "raw": "37% (18/7)",
+      "value": 37,
+      "half": 18,
+      "fifth": 7
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "увидеть ми-го"
+      }
+    ]
+  },
+  "variants": [
+    {
+      "label": "Ми-го № 2",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "55",
+            "value": 55
+          },
+          "CON": {
+            "raw": "55",
+            "value": 55
+          },
+          "SIZ": {
+            "raw": "60",
+            "value": 60
+          },
+          "DEX": {
+            "raw": "75",
+            "value": 75
+          },
+          "INT": {
+            "raw": "70",
+            "value": 70
+          },
+          "POW": {
+            "raw": "65",
+            "value": 65
+          }
+        },
+        "hp": {
+          "raw": "11",
+          "value": 11
+        },
+        "mp": {
+          "raw": "13",
+          "value": 13
+        },
+        "damage_bonus": {
+          "raw": "нет",
+          "value": "0"
+        },
+        "build": {
+          "raw": "0",
+          "value": 0
+        },
+        "move": {
+          "raw": "7 / 13 полёт",
+          "value": 7,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 7
+            },
+            {
+              "mode": "fly",
+              "value": 13
+            }
+          ]
+        },
+        "armor": {
+          "raw": "колющее оружие наносит минимальный урон",
+          "value": 0
+        },
+        "attacks_per_round": {
+          "raw": "2",
+          "value": 2
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Клешни (×2)",
+              "en": "Fighting (Nippers x2)"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "35%",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            },
+            "damage": {
+              "raw": "1d6 + БкУ",
+              "dice": "1d6",
+              "adds_db": true
+            },
+            "notes": "две атаки клешнями за раунд или манёвр «Схватить»"
+          },
+          {
+            "name": {
+              "ru": "Схватить (манёвр)",
+              "en": "Seize (mnvr)"
+            },
+            "kind": "maneuver",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "35%",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            },
+            "damage": {
+              "raw": "хватает жертву (её Комплекции или меньше) и уносит в небо",
+              "dice": null,
+              "adds_db": false
+            },
+            "notes": "вместо атак клешнями, с тем же шансом («or Seize mnvr (as above)»)"
+          }
+        ],
+        "dodge": {
+          "raw": "37% (18/7)",
+          "value": 37,
+          "half": 18,
+          "fifth": 7
+        },
+        "sanity_loss": [
+          {
+            "success": "0",
+            "fail": "1d6",
+            "trigger": "увидеть ми-го"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Ми-го № 3",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "50",
+            "value": 50
+          },
+          "CON": {
+            "raw": "60",
+            "value": 60
+          },
+          "SIZ": {
+            "raw": "60",
+            "value": 60
+          },
+          "DEX": {
+            "raw": "70",
+            "value": 70
+          },
+          "INT": {
+            "raw": "65",
+            "value": 65
+          },
+          "POW": {
+            "raw": "60",
+            "value": 60
+          }
+        },
+        "hp": {
+          "raw": "12",
+          "value": 12
+        },
+        "mp": {
+          "raw": "12",
+          "value": 12
+        },
+        "damage_bonus": {
+          "raw": "нет",
+          "value": "0"
+        },
+        "build": {
+          "raw": "0",
+          "value": 0
+        },
+        "move": {
+          "raw": "7 / 13 полёт",
+          "value": 7,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 7
+            },
+            {
+              "mode": "fly",
+              "value": 13
+            }
+          ]
+        },
+        "armor": {
+          "raw": "колющее оружие наносит минимальный урон",
+          "value": 0
+        },
+        "attacks_per_round": {
+          "raw": "2",
+          "value": 2
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Клешни (×2)",
+              "en": "Fighting (Nippers x2)"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "35%",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            },
+            "damage": {
+              "raw": "1d6 + БкУ",
+              "dice": "1d6",
+              "adds_db": true
+            },
+            "notes": "две атаки клешнями за раунд или манёвр «Схватить»"
+          },
+          {
+            "name": {
+              "ru": "Схватить (манёвр)",
+              "en": "Seize (mnvr)"
+            },
+            "kind": "maneuver",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "35%",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            },
+            "damage": {
+              "raw": "хватает жертву (её Комплекции или меньше) и уносит в небо",
+              "dice": null,
+              "adds_db": false
+            },
+            "notes": "вместо атак клешнями, с тем же шансом («or Seize mnvr (as above)»)"
+          }
+        ],
+        "dodge": {
+          "raw": "37% (18/7)",
+          "value": 37,
+          "half": 18,
+          "fifth": 7
+        },
+        "sanity_loss": [
+          {
+            "success": "0",
+            "fail": "1d6",
+            "trigger": "увидеть ми-го"
+          }
+        ]
+      }
+    }
+  ],
+  "abilities": [
+    {
+      "name": "Хватка и полёт",
+      "summary": "Грибы с Юггота могут атаковать в рукопашной двумя крабьими клешнями. Вместо этого могут схватить жертву (её Комплекции или меньше) и взлететь, чтобы сбросить её с высоты или поднять так высоко, что у неё лопнут лёгкие.",
+      "raw": "Fighting attacks: Fungi from Yuggoth may attack in hand-to-hand combat with its two crab-like claws. Seize (mnvr): Alternatively, they may try to seize the victim (of their build or smaller) and then fly into the sky to drop the victim from a height or take the victim so high that their lungs burst."
+    }
+  ],
+  "description": {
+    "ru": "Два ми-го логова, которые вместе с предводительницей сворачивают исследовательский пункт. Первого сыщика, вылезшего из тоннеля, встречают 1d3 ми-го.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Если предводительницу убьют, оба отступают через Врата в главную колонию в Вермонте. По желанию Хранителя один безоружный ми-го может прятаться за большой машиной: знаками и угрозами сыщики могут заставить его вернуть мозги детей в тела (меньше часа на ребёнка; он переставит таймер бомбы), а потом отпустить его через Врата или убить.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 92,
+      "printed_page": 92,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Horror in the Hills»: 1d3 ми-го"
+    },
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 93,
+      "printed_page": 93,
+      "method": "book_text",
+      "verified": true,
+      "note": "отступление через Врата"
+    },
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 95,
+      "printed_page": 95,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Rewards and Repercussions»: безоружный ми-го"
+    },
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 97,
+      "printed_page": 97,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблоки «MI-GO #2», «MI-GO #3»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Профиль сценария для общего вида (Р-75): характеристики, ПЗ и оружие — по статблоку на с. 97; способности вида — в общей записи «Ми-го». Шанс манёвра «Seize» в строке атак равен шансу клешней (35%). Половина и пятая клешней в книге не напечатаны. Основной статблок — ми-го № 2, варианты — № 2 и № 3 (Р-74)."
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "new-tales-miskatonic-valley-2e-en/creature/scuttler",
+  "kind": "creature",
+  "name": {
+    "ru": "Шмыгун",
+    "en": "Scuttler"
+  },
+  "aliases": [
+    "шмыгуны",
+    "Scuttlers",
+    "A TYPICAL SCUTTLER",
+    "шныры",
+    "scuttlers"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "детёныш ми-го",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "spawn_of",
+      "target": "coc:creature:mi-go",
+      "note": "недоразвитые детёныши Грибов с Юггота, висят на брюхе самок",
+      "note_back": "детёныши — шмыгуны"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "5",
+        "value": 5
+      },
+      "CON": {
+        "raw": "5",
+        "value": 5
+      },
+      "SIZ": {
+        "raw": "5",
+        "value": 5
+      },
+      "DEX": {
+        "raw": "15",
+        "value": 15
+      },
+      "INT": {
+        "raw": "5",
+        "value": 5
+      },
+      "POW": {
+        "raw": "5",
+        "value": 5
+      }
+    },
+    "hp": {
+      "raw": "1",
+      "value": 1
+    },
+    "mp": {
+      "raw": "1",
+      "value": 1
+    },
+    "damage_bonus": {
+      "raw": "нет",
+      "value": "0"
+    },
+    "build": {
+      "raw": "-2",
+      "value": -2
+    },
+    "move": {
+      "raw": "5",
+      "value": 5,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 5
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Прыжок с захватом",
+          "en": "Fighting (Jump and Grab)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "90% (45/18)",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        },
+        "damage": {
+          "raw": "1 + 1 очко яда",
+          "dice": "1",
+          "adds_db": false
+        },
+        "notes": "от атаки можно увернуться успешной проверкой Уклонения, если сыщик знает о шмыгуне"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "90%",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d3",
+        "trigger": "первая внезапная встреча"
+      },
+      {
+        "success": "0",
+        "fail": "1",
+        "trigger": "последующие встречи"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Прыжок с захватом",
+      "summary": "Шмыгун прыгает на жертву (принимая человека за взрослого ми-го), держится крошечными коготками и вонзает клыки: 1 урона и немного яда. Атака очень действенна (90%), но сыщик, который знает о шмыгуне, может увернуться успешной проверкой Уклонения. Если атака удалась, шмыгун держится и кусает снова в следующем раунде; проверка ЛВК позволяет оторвать тварь и бросить на землю, помогать могут и стоящие рядом. На земле шмыгуна раздавливают успешной трудной проверкой ЛВК (это убивает его наверняка); ещё до двух сыщиков рядом тоже могут топнуть — с трудной проверкой ЛВК.",
+      "raw": "They leap on their victims and, holding on with tiny multiple claws, sink their fangs into their victim’s flesh, causing 1 point of damage while injecting a small amount of venom. Their Jump and Grab attack is very effective (90%) but if an investigator is aware of the Scuttler, they can avoid the attack with a successful Dodge roll. If a Scuttler succeeds in its attack, it holds on to deliver another bite the next round. Investigators making a DEX roll can pull the bugger loose and throw it down. Nearby investigators can also help. Once on the ground, a scampering Scuttler can be stomped with a successful Hard DEX roll, which automatically kills the thing. Up to two additional investigators, if nearby, can also attempt a stomp, again using a Hard DEX roll to judge success."
+    },
+    {
+      "name": "Яд",
+      "summary": "Яд не смертелен, но наносит ещё 1 урона. Действие проявляется в течение десяти минут: тошнота, обычно рвота, затем лёгкий жар, местная опухоль, покраснение и боль на месте укуса в течение суток.",
+      "raw": "The poison is non-fatal but inflicts an additional 1 point of damage. The effects of the toxin show up within ten minutes. Nausea, usually leading to vomiting, followed by a slight fever and localized swelling, redness, and pain in the area of the bite for the next twenty-four hours."
+    },
+    {
+      "name": "Боится света",
+      "summary": "Шмыгуны избегают прямого солнца и прячутся в глубоком лесу или в зданиях; ночью бродят свободно. Быстрые, лазают по деревьям: голодные шмыгуны падают на сыщиков сверху, выскакивают из-за книжных полок или из кустов.",
+      "raw": "Scuttlers avoid direct sunlight and seek shelter from the light in deep woods or inside buildings. At night, they move about freely. They are quick and capable of climbing trees. Hungry Scuttlers will drop down on investigators, or scurry out from behind bookshelves, or jump from the brush and attack, mistaking the human form for a possible adult Mi-go."
+    }
+  ],
+  "description": {
+    "ru": "Маленькие серые панцирные существа длиной около 20 см, похожие на огромных клещей, — недоразвитые детёныши Грибов с Юггота. Висят множеством на брюхе самок ми-го и питаются красноватым лишайником, который там растёт. Одиночки: встреча редко бывает больше чем с одним.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Грибы с Юггота — никудышные родители и почти не обращают внимания на потомство. Детёныши часто случайно падают с матерей и бегают, отчаянно ища другую взрослую самку; часто не находят и через две недели умирают от голода, а тело быстро распадается, как у взрослых ми-го. Убитый шмыгун за полчаса растекается густой липкой жидкостью, которая полностью испаряется за следующие два часа; проверка Естествознания показывает, что это неизвестный вид.\nВ сценарии. Главный источник шмыгунов — предводительница ми-го. Чаще всего они встречаются к северу от реки, где ходят ми-го; к югу один-два могут оказаться в доме Барнса после её визитов. По выбору Хранителя 1–3 шмыгуна прячутся в руинах фабрики; в пещере ми-го их много. Питер Хылиньский зовёт их «шнырами» и бьёт палкой.",
+    "en": null
+  },
+  "habitat": "северные холмы Фоксфилда, руины фабрики Пикерингов, логово ми-го",
+  "sources": [
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 85,
+      "printed_page": 85,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Scuttlers—A Keeper’s Toy», статблок «A TYPICAL SCUTTLER»; рассказ Питера"
+    },
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 87,
+      "printed_page": 87,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Scuttlers in the Mill»"
+    },
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 93,
+      "printed_page": 93,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Entering the Chamber»: шмыгуны в пещере, детёныши на брюхе предводительницы"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.damage_bonus",
+      "printed": "DB: none",
+      "expected": "−2 (СИЛ + ТЕЛ = 10)",
+      "note": "Комплекция −2 напечатана верно, БкУ при сумме 10 должен быть −2. Оставлено как напечатано (урон укуса — ровно 1).",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Восемь дюймов — 20 см (Р-64). Русское название «шмыгун» — наш перевод термина книги «Scuttler» (выбран для этой книги)."
+  }
+}

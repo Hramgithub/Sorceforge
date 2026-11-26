@@ -1,0 +1,158 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "new-tales-miskatonic-valley-2e-en/creature/thing-from-inside-elijahs-head",
+  "kind": "creature",
+  "name": {
+    "ru": "Тварь из головы Элайджи",
+    "en": "The Thing from Inside Elijah’s Head"
+  },
+  "aliases": [],
+  "category": "mythos_monster",
+  "subcategory": "сгусток вещества бесформенного отродья",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "spawn_of",
+      "target": "coc:creature:formless-spawn",
+      "note": "сгусток вещества отродья, выросший в Элайдже",
+      "note_back": "тварь из головы Элайджи"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "80",
+        "value": 80
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "5",
+        "value": 5
+      },
+      "DEX": {
+        "raw": "100",
+        "value": 100
+      },
+      "INT": {
+        "raw": "40",
+        "value": 40
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      }
+    },
+    "hp": {
+      "raw": "7",
+      "value": 7
+    },
+    "damage_bonus": {
+      "raw": "none",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "12",
+      "value": 12,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 12
+        }
+      ]
+    },
+    "armor": {
+      "raw": "невосприимчива к любому физическому урону, уязвима для магии",
+      "value": null
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (бросается в лицо)",
+          "en": "Fighting (Fling Itself at Someone’s Face)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "по правилу «Задержка дыхания и утопление»",
+          "dice": null,
+          "adds_db": false
+        },
+        "notes": "первая атака — с бонусной костью; избежать можно Уклонением при любом уровне успеха (дать отпор нельзя)"
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d6",
+        "trigger": "увидеть бесформенную массу"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Удушение",
+      "summary": "Попав на лицо, судорожно проталкивает часть себя в горло жертвы: каждый раунд жертва проходит трудную проверку ВЫН или начинает задыхаться. Кто угодно, включая жертву, может сорвать массу с лица боевым манёвром. Упав на землю, в следующий раунд снова бросается на жертву (уклониться — успешным Уклонением). Через пять раундов или убив жертву вздрагивает, умирает и растекается.",
+      "raw": "If it lands on the person’s face, it spasmodically thrusts a portion of its substance into the person’s throat, attempting to suffocate him or her. The victim must make a Hard CON roll each round or begin to asphyxiate. … After five rounds, or after killing a victim, the spawn matter shudders, dies, and then liquefies.",
+      "refs": [
+        "coc:rule:suffocation-and-drowning",
+        "coc:rule:fighting-maneuvers"
+      ]
+    }
+  ],
+  "description": {
+    "ru": "Сгусток чёрного вещества величиной почти с мозг, который Элайджу насильно вырывает после бромида калия, — прямо в лицо ближайшему.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Помочь Элайдже после этого уже ничем нельзя.",
+    "en": null
+  },
+  "encounters": {
+    "ru": "Холм над храмом Цатхоггуа, если Элайдже дадут бромид калия.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 47,
+      "printed_page": 47,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Potassium Bromide»"
+    },
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 49,
+      "printed_page": 49,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «The Thing from Inside Elijah’s Head»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической, смещение 0). Сценарий «Wasted Youth» («Загубленная юность»). Урон книга отсылает к «Asphyxiation and drowning», «pp. 411» «Книги хранителя»; в записи правила (coc:rule:suffocation-and-drowning) английская страница — 124; с. 411 не проверена."
+  }
+}

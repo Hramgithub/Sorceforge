@@ -1,0 +1,186 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "new-tales-miskatonic-valley-2e-en/creature/hybrid-spawn",
+  "kind": "creature",
+  "name": {
+    "ru": "Отродье-гибрид",
+    "en": "The Hybrid Spawn"
+  },
+  "aliases": [
+    "Hybrid Spawn"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "бойскаут, обращённый в бесформенное отродье",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "spawn_of",
+      "target": "coc:creature:formless-spawn",
+      "note": "мальчик, слившийся с веществом отродья по заклинанию Элайджи",
+      "note_back": "отродье-гибрид из скаута"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "45",
+        "value": 45
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "90",
+        "value": 90
+      },
+      "INT": {
+        "raw": "40",
+        "value": 40
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      }
+    },
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "damage_bonus": {
+      "raw": "none",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "12",
+      "value": 12,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 12
+        }
+      ]
+    },
+    "armor": {
+      "raw": "пластичное тело даёт 1d2 защиты от любого оружия",
+      "value": "1d2"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (укус)",
+          "en": "Fighting (Bite)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d6 + БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Ближний бой (щупальце)",
+          "en": "Fighting (Tentacle)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d6 + БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Ближний бой (хлыст)",
+          "en": "Fighting (Whip)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "90% (45/18)",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        },
+        "damage": {
+          "raw": "1d6 + БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d6",
+        "trigger": "увидеть отродье-гибрид"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Бормоча и напевая на странном языке, Элайджа творит заклинание, высвобождающее слизь внутри одного из скаутов: мальчик дёргается и трясётся, кожа его вдруг темнеет, черты лица стираются, и он сливается с чёрной слизью в пластичную форму, которая устремляется вниз по склону на сыщиков. Навыков выше базовых нет.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Элайджа творит это заклинание на своих прислужников снова и снова, но между сотворениями ему нужно три раунда отдыха.",
+    "en": null
+  },
+  "encounters": {
+    "ru": "Холм над храмом Цатхоггуа, если сыщики двинутся на Элайджу.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 47,
+      "printed_page": 47,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Disrupting the Ceremony»"
+    },
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 49,
+      "printed_page": 49,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «The Hybrid Spawn»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической, смещение 0). Сценарий «Wasted Youth» («Загубленная юность»). Заклинание, обращающее скаута в отродье, в книге не названо и отдельной записью не заведено."
+  }
+}

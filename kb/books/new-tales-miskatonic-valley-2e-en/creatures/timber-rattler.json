@@ -1,0 +1,137 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "new-tales-miskatonic-valley-2e-en/creature/timber-rattler",
+  "kind": "creature",
+  "name": {
+    "ru": "Лесной гремучник",
+    "en": "Timber Rattler"
+  },
+  "aliases": [
+    "timber rattlesnake",
+    "лесной гремучий змей"
+  ],
+  "category": "animal",
+  "subcategory": "ядовитая змея",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:venomous-snake",
+      "note_back": "лесной гремучник («Загубленная юность»)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "20",
+        "value": 20
+      },
+      "CON": {
+        "raw": "35",
+        "value": 35
+      },
+      "SIZ": {
+        "raw": "10",
+        "value": 10
+      },
+      "DEX": {
+        "raw": "55",
+        "value": 55
+      },
+      "POW": {
+        "raw": "20",
+        "value": 20
+      }
+    },
+    "hp": {
+      "raw": "4",
+      "value": 4
+    },
+    "damage_bonus": {
+      "raw": "-2",
+      "value": "-2"
+    },
+    "build": {
+      "raw": "-2",
+      "value": -2
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (укус)",
+          "en": "Fighting (Bite)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d2 + БкУ + яд",
+          "dice": "1d2",
+          "adds_db": true,
+          "extra": "яд: 2d10 урона, чрезвычайная проверка ВЫН — половина урона"
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d2",
+        "trigger": null
+      }
+    ]
+  },
+  "description": {
+    "ru": "Толстый лесной гремучник; нападает без предупреждения. Яд гремучей змеи — сильный яд (таблица «Примеры ядов» «Книги хранителя», с. 129).",
+    "en": null
+  },
+  "encounters": {
+    "ru": "«6a»: если сыщики сбились с тропы и проваливают групповую проверку Удачи на каменистой низине.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 45,
+      "printed_page": 45,
+      "method": "book_text",
+      "verified": true,
+      "note": "«6. Death on the Trail», 6a"
+    },
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 48,
+      "printed_page": 48,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Timber Rattler»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической, смещение 0). Сценарий «Wasted Youth» («Загубленная юность»). ИНТ в книге — «N/A». Яд — по правилу «Яды» (coc:rule:poisons)."
+  }
+}

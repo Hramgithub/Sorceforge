@@ -1,0 +1,329 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "new-tales-miskatonic-valley-2e-en/character/elijah-corey",
+  "kind": "character",
+  "name": {
+    "ru": "Элайджа Кори",
+    "en": "Elijah Corey"
+  },
+  "aliases": [
+    "Elijay Corey",
+    "lost boy",
+    "потерянный мальчик",
+    "Zalothos-Elijah"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "школьник, бойскаут",
+    "en": "lost boy"
+  },
+  "age": {
+    "raw": "12",
+    "value": 12
+  },
+  "sex": "мужской",
+  "residence": "Аркхэм (Френч-Хилл), прежде Данвич",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "relative_of",
+      "target": "new-tales-miskatonic-valley-2e-en/character/frank-corey",
+      "note": "отец",
+      "note_back": "сын"
+    },
+    {
+      "type": "relative_of",
+      "target": "new-tales-miskatonic-valley-2e-en/character/belinda-corey",
+      "note": "мать",
+      "note_back": "сын"
+    },
+    {
+      "type": "works_for",
+      "target": "new-tales-miskatonic-valley-2e-en/creature/zalothos-reborn",
+      "note": "одержим его духом, исполняет его волю",
+      "note_back": "одержимый мальчик-носитель"
+    },
+    {
+      "type": "knows",
+      "target": "new-tales-miskatonic-valley-2e-en/character/joey-dooley",
+      "note": "одноклассник: подрались, потом подружились",
+      "note_back": "друг «деревенщины»"
+    },
+    {
+      "type": "knows",
+      "target": "new-tales-miskatonic-valley-2e-en/character/sarah-reid",
+      "note": "одноклассница по седьмому классу, которой он писал записки",
+      "note_back": "одноклассник, который пишет ей записки"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "40",
+        "value": 40
+      },
+      "CON": {
+        "raw": "55",
+        "value": 55
+      },
+      "SIZ": {
+        "raw": "40",
+        "value": 40
+      },
+      "DEX": {
+        "raw": "75",
+        "value": 75
+      },
+      "APP": {
+        "raw": "65",
+        "value": 65
+      },
+      "INT": {
+        "raw": "70",
+        "value": 70
+      },
+      "POW": {
+        "raw": "55",
+        "value": 55
+      },
+      "EDU": {
+        "raw": "35",
+        "value": 35
+      }
+    },
+    "hp": {
+      "raw": "9",
+      "value": 9
+    },
+    "mp": {
+      "raw": "11",
+      "value": 11
+    },
+    "sanity": {
+      "raw": "0",
+      "value": 0
+    },
+    "damage_bonus": {
+      "raw": "-1",
+      "value": "-1"
+    },
+    "build": {
+      "raw": "-1",
+      "value": -1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": "Fighting (Brawl)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d3 + БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Перочинный нож",
+          "en": "pocket knife"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d4 + БкУ",
+          "dice": "1d4",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:knife-small"
+      },
+      {
+        "name": {
+          "ru": "Ближний бой (копьё)",
+          "en": "Fighting (Spear)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (копьё)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d6+1 + БкУ",
+          "dice": "1d6+1",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:spear-short",
+        "notes": "самодельное копьё"
+      }
+    ],
+    "dodge": {
+      "raw": "45% (22/9)",
+      "value": 45,
+      "half": 22,
+      "fifth": 9
+    },
+    "skills": [
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Раздувание мозга (Swell Mind)",
+      "items": [
+        {
+          "name": "Swell Mind",
+          "spell": null
+        }
+      ]
+    }
+  },
+  "abilities": [
+    {
+      "name": "Неистовая хватка",
+      "summary": "При захвате или защите от захвата Элайджа считается имеющим Комплекцию 0.",
+      "raw": "Frenzied Grappler: Elijah is considered to be Build 0 when initiating or reacting to grappling maneuvers."
+    }
+  ],
+  "description": {
+    "ru": "Единственный сын Кори, двенадцати лет; семья недавно переехала из Данвича в Аркхэм. Не прижился в городе: соседские дети его не приняли, одноклассники считают «деревенщиной». Одиночка, раньше подолгу бродил по лесам и полям Данвича, собирая насекомых и камни. Комната полна его коллекций и рисунков.",
+    "en": null
+  },
+  "legend": {
+    "ru": "В Данвиче нашёл почти неподвижную лужицу чёрной слизи и унёс её домой в банке Мейсона, с которой не расставался, — не зная, что несёт в себе нежить-волшебника Залотоса. Голос, слышный только ему, соблазнял его обещаниями; через несколько месяцев после переезда Залотос обманом заставил его проглотить кусочек слизи, и с тех пор власть духа над мальчиком растёт с каждым днём. По воле Залотоса Элайджа подмешивал слизь в еду одноклассникам (помогая школьной поварихе), угостил кексом соседа Лу Марино; опыт не удался — заражённые дети буйствовали и гибли.\nВ сценарии. Новый план: в походе бойскаутов у фермы Уинтропа Элайджа подмешал остаток слизи в ужин скаутов и провёл «индейский обряд» — гиперборейское заклинание, подчинившее ему мальчиков. Ведёт их напрямик к погребённому храму Цатхоггуа (около 24 км), чтобы принести их в жертву по одному (каждая жертва — 30 минут, нужно не меньше шести) ради возрождения Залотоса. Дома в последнюю неделю почти не ел, разговаривал сам с собой, расхохотался в церкви и сказал отцу после порки: «Скоро ты уже не сможешь так со мной поступать». Если ему дать бромид калия, его рвёт сгустком чёрного вещества величиной с мозг — «Тварью из головы Элайджи»; помочь ему уже нельзя.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 29,
+      "printed_page": 29,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Keeper Information», «Zalothos in Dunwich» (напечатано «Elijay Corey»)"
+    },
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 30,
+      "printed_page": 30,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Black Ooze»: Элайджа подмешивает слизь"
+    },
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 35,
+      "printed_page": 35,
+      "method": "book_text",
+      "verified": true,
+      "note": "Дерби о драке с Джоуи; ученики об Элайдже"
+    },
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 36,
+      "printed_page": 36,
+      "method": "book_text",
+      "verified": true,
+      "note": "Хильда: «помогал на кухне»"
+    },
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 38,
+      "printed_page": 38,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Elijah Corey’s Family»"
+    },
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 40,
+      "printed_page": 40,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Elijah’s Not Here»: поведение, рисунки"
+    },
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 41,
+      "printed_page": 41,
+      "method": "book_text",
+      "verified": true,
+      "note": "«What Happened in Camp»"
+    },
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 47,
+      "printed_page": 47,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Hilltop Ritual», «The Potassium Bromide»"
+    },
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 49,
+      "printed_page": 49,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Elijah Corey, lost boy»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "name.en",
+      "printed": "Elijay Corey",
+      "expected": "Elijah Corey",
+      "note": "с. 29, «Zalothos in Dunwich»: имя напечатано с опечаткой; везде дальше — Elijah",
+      "fixed": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической, смещение 0). Сценарий «Wasted Youth» («Загубленная юность»). Заклинание «Swell Mind» — новое заклинание сценария (черновик общей записи — checks/20261126-newtales/new-shared-spells-youth.json), ссылка spell пока null."
+  }
+}

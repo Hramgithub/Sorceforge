@@ -1,0 +1,189 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "new-tales-miskatonic-valley-2e-en/creature/hyperborean-nightmare",
+  "kind": "creature",
+  "name": {
+    "ru": "Гиперборейский кошмар",
+    "en": "Hyperborean Nightmare"
+  },
+  "aliases": [
+    "feeding nightmare",
+    "кормящийся кошмар"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "существо, призванное с неведомого плана",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "40",
+        "value": 40
+      },
+      "DEX": {
+        "raw": "75",
+        "value": 75
+      },
+      "INT": {
+        "raw": "30",
+        "value": 30
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      }
+    },
+    "hp": {
+      "raw": "11",
+      "value": 11
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "damage_bonus": {
+      "raw": "none",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "4/12 полёт",
+      "value": 4,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 4
+        },
+        {
+          "mode": "fly",
+          "value": 12
+        }
+      ]
+    },
+    "armor": {
+      "raw": "2 (жёсткая шкура)",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Обвить и душить (манёвр)",
+          "en": "Fighting (Enfold and Choke)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d3 + 1d10 МОЩ (со второго раунда)",
+          "dice": "1d3",
+          "adds_db": false
+        },
+        "notes": "при успехе обвивает голову жертвы и валит её наземь; со следующего раунда — 1d3 урона и потеря 1d10 МОЩ каждый раунд"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "90%",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d6",
+        "trigger": "увидеть гиперборейский кошмар"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Обвить и душить",
+      "summary": "При успешной атаке обвивается вокруг головы жертвы и валит её на землю. В следующий раунд просовывает длинный шершавый язык ей в горло: 1d3 урона и потеря 1d10 МОЩ каждый раунд. Отодрать его почти невозможно; нападающий на него рискует задеть жертву: при смертельном ударе оружием серьёзнее ножа избыток урона переходит на жертву. Укус Чифа жертве не грозит.",
+      "raw": "Enfold and Choke (mvr): If the nightmare succeeds in an attack, it enfolds itself around its target’s head, and the victim is forced to the ground. On the following round, the nightmare forces its long, rasping tongue down the victim’s throat, causing 1d3 damage and draining 1d10 POW each round. The nightmare is nearly impossible to pry loose, and anyone attacking it endangers the struggling victim. On a killing blow with any weapon more substantial than a knife, any excess damage passes through to the victim.",
+      "refs": [
+        "coc:rule:fighting-maneuvers"
+      ]
+    },
+    {
+      "name": "Внезапная атака",
+      "summary": "Если сыщиков не предупредили (Чиф или проверка Слуха), атакует внезапно с бонусной костью, а сыщики и их спутники не могут действовать (в том числе уклоняться и отбиваться) до следующего раунда; не застигнутые врасплох сыщики с оружием наготове получают обычную прибавку к инициативе. Промахнувшись, пролетает мимо и разворачивается для нового захода.",
+      "raw": "Unless investigators had some forewarning—either Chief or a successful Listen roll—the creature gets a surprise attack with a bonus die…",
+      "refs": [
+        "coc:rule:striking-the-first-blow",
+        "coc:rule:bonus-and-penalty-dice"
+      ]
+    }
+  ],
+  "description": {
+    "ru": "Тёмная тварь вроде небольшого ската, покрытая тёмно-бурым мехом; маневрирует на широких крыльях и нападает, обвиваясь вокруг головы жертвы.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Элайджа призвал её с неведомого плана, принеся в жертву скаута, которого вырвало слизью («6. Смерть на тропе»).",
+    "en": null
+  },
+  "encounters": {
+    "ru": "«8. Смерть сверху»: в 1,6 км за Фоксфилдской дорогой прячется в ветвях над тропой и пикирует на ближайшего сыщика. Для особенно больших и крепких групп Хранитель может добавить ещё одну или несколько тварей.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 46,
+      "printed_page": 46,
+      "method": "book_text",
+      "verified": true,
+      "note": "«6. Death on the Trail», «8. Death from Above»"
+    },
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 48,
+      "printed_page": 48,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Hyperborean Nightmare»"
+    },
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 49,
+      "printed_page": 49,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок (окончание: броня, навыки, потеря Рассудка)"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической, смещение 0). Сценарий «Wasted Youth» («Загубленная юность»). В тексте сцены тварь названа «feeding nightmare», в статблоке — «Hyperborean Nightmare». Уникальное существо сценария; в общем справочнике нет."
+  }
+}

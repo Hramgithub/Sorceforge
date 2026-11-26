@@ -1,0 +1,209 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "new-tales-miskatonic-valley-2e-en/character/mary-woodbine",
+  "kind": "character",
+  "name": {
+    "ru": "Мэри Вудбайн",
+    "en": "Mary Woodbine"
+  },
+  "aliases": [],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "ученица школы Дрейпера",
+    "en": null
+  },
+  "age": {
+    "raw": "11",
+    "value": 11
+  },
+  "sex": "женский",
+  "residence": "Аркхэм, Френч-Хилл или Ривертаун",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "40",
+        "value": 40
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "40",
+        "value": 40
+      },
+      "DEX": {
+        "raw": "75",
+        "value": 75
+      },
+      "APP": {
+        "raw": "70",
+        "value": 70
+      },
+      "INT": {
+        "raw": "60",
+        "value": 60
+      },
+      "POW": {
+        "raw": "65",
+        "value": 65
+      },
+      "EDU": {
+        "raw": "30",
+        "value": 30
+      }
+    },
+    "hp": {
+      "raw": "11",
+      "value": 11
+    },
+    "sanity": {
+      "raw": "65",
+      "value": 65
+    },
+    "damage_bonus": {
+      "raw": "-1d4",
+      "value": "-1d4"
+    },
+    "build": {
+      "raw": "-1",
+      "value": -1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": "Fighting (Brawl)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d3 + БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Нож",
+          "en": "knife"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d4 + БкУ",
+          "dice": "1d4",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:knife-small",
+        "notes": "маленький кухонный нож"
+      },
+      {
+        "name": {
+          "ru": "Бросок камня",
+          "en": "Throw Rock"
+        },
+        "kind": "attack",
+        "skill": "Метание",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d3 + БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:rock-thrown",
+        "notes": "по книге 1d3 + БкУ (у камня в справочнике 1d4 + ½ БкУ)"
+      }
+    ],
+    "dodge": {
+      "raw": "65% (32/13)",
+      "value": 65,
+      "half": 32,
+      "fifth": 13
+    },
+    "skills": [
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Одиннадцатилетняя сестра-близнец Гэри, хорошенькая светловолосая девочка с косичками, заражённая чёрной слизью; маленький кухонный нож.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Пока брат громит машину, режет шины, показывает сыщикам язык и прячется; без машины — бросает камни и пытается полоснуть ножом преследователя.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 37,
+      "printed_page": 37,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «Attack of the J.D.s»: статблок «Mary Woodbine»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.damage_bonus",
+      "printed": "-1D4",
+      "expected": "-1",
+      "note": "СИЛ 40 + ТЕЛ 40 = 80 — БкУ −1 (Комплекция −1 напечатана верно); оставлено как напечатано (Р-161)",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической, смещение 0). Сценарий «Wasted Youth» («Загубленная юность»). Улица в книге не указана."
+  }
+}

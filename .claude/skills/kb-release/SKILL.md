@@ -6,7 +6,8 @@ description: Выпуск изменений базы знаний — сбор�
 # Выпуск
 
 1. `python tools/check.py` — ошибок 0.
-2. `python tools/build_viewer.py`; если менялся показ — проверить в браузере (preview `kb-viewer`, порт 8765,
+2. `python -I -B pipeline/source/catalog_sync.py` (статус «добавлено в базу» на главной; работа внутри другой книги —
+   строкой в `pipeline/source/catalog_links.json`), затем `python tools/build_viewer.py`; если менялся показ — проверить в браузере (preview `kb-viewer`, порт 8765,
    новый `?r=N` в адресе, чтобы страница не бралась из кэша).
 3. Коммит сразу (данные, `app/index.html`, если изменился; собранный `app/kb.html` в git не хранится — Р-231, он собирается заново при выкладке), push в `main`.
    Сообщение — по-английски, с номером решения; последняя строка —

@@ -74,37 +74,15 @@ KIND_RU = {"creature": "существа", "character": "персонажи", "l
 
 def progress_html(root: Path, books: dict) -> str:
     """The progress of the base (Р-210): every work of the owner's library catalogue (pipeline/source/catalog.json) —
-    «добавлено в базу» when a registered book lies in its folder and has records, otherwise «известно»."""
+    «добавлено в базу» when catalog_sync.py found its records (`added`, `in_base`), otherwise «известно»."""
     import html as h
     cat_path = root / "pipeline" / "source" / "catalog.json"
     if not cat_path.exists():
         return ""
     works = json.loads(cat_path.read_text(encoding="utf-8"))
-    # records by book and kind
-    by_book: dict = {}
-    for p in (root / "kb").rglob("*.json"):
-        try:
-            r = json.loads(p.read_text(encoding="utf-8"))
-        except (OSError, ValueError):
-            continue
-        for b in {s.get("book_id") for s in r.get("sources") or []}:
-            by_book.setdefault(b, {}).setdefault(r.get("kind"), 0)
-            by_book[b][r.get("kind")] += 1
-    # a book belongs to the work whose folder holds its file (the longest such folder)
-    folder_of = {}
-    for bid, b in books.items():
-        pdf = (b.get("pdf") or "").replace("/", "\\")
-        if "1_Библиотека\\" in pdf:
-            folder_of[bid] = pdf.split("1_Библиотека\\", 1)[1].rsplit("\\", 1)[0]
-    counts: dict = {}
-    for bid, folder in folder_of.items():
-        owners = [w for w in works if folder == w["folder"] or folder.startswith(w["folder"] + "\\")]
-        if not owners:
-            continue
-        w = max(owners, key=lambda w: len(w["folder"]))
-        for k, n in by_book.get(bid, {}).items():
-            counts.setdefault(w["folder"], {}).setdefault(k, 0)
-            counts[w["folder"]][k] += n
+    # pipeline/source/catalog_sync.py writes the status (a book in the work's folder or a hand-checked link in
+    # catalog_links.json) — run it before building, after every import
+    counts = {w["folder"]: w.get("in_base") or {} for w in works if w.get("added")}
     order = ["Правила", "Кампании", "Сборники", "Сценарии", "Сеттинги", "Монографии", "Журналы", "Путеводители",
              "Атмосфера", "Карты", "Прочее", "_Другие системы"]
     types = sorted({w["type"] for w in works}, key=lambda t: (order.index(t) if t in order else 99, t))

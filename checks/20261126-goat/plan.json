@@ -1,0 +1,88 @@
+{
+  "book_id": "year-of-the-goat-en",
+  "goal": "the scenario «The Year of the Goat, ed. Heinrich D. Moore and Evan Perlman, Chaosium Miskatonic Repository, 2026» playable from the base, a work of the English series (Р-251)",
+  "decision": "Р-251, Р-139, Р-184, Р-206, Р-241",
+  "check_dir": "checks/20261126-goat",
+  "models": [
+    "kb/books/starfall-en/scenarios/starfall.json",
+    "kb/books/starfall-en/scenes/introduction.json",
+    "kb/books/starfall-en/maps/starside-gm-map.json",
+    "kb/books/whats-in-the-cellar-en/handouts/cellar-papers-1-herald-article.json",
+    "kb/books/dveri-vo-tmu-ru/scenarios/darkness-beneath-the-hill.json"
+  ],
+  "extra": "## This work (Р-251, English works series, one at a time)\n\nSource: the English original `year-of-the-goat-en` (text layer; `python -B pipeline/source/pages.py show year-of-the-goat-en <page>`; page image `python -B pipeline/source/pages.py image year-of-the-goat-en <physical page> --physical`). Page numbers: `pagemap` often misses printed numbers in these PDFs — look at 2–3 page images and find printed vs physical; in `sources` give the printed page as printed (null for unnumbered pages). Offset is 0 (printed = physical; check on 2–3 page images). Do NOT edit `pipeline/source/books.json` — report any other offset (physical = printed − offset, e.g. «p. 3» on physical 4 → offset −1) and the lead sets it.\nRussian text — our translation (flag `translated`); official Russian forms of names and terms — glossary `python -B tools/terms.py <word>` and existing records (Р-184), e.g. Dreamlands = «Страна грёз»; Hard/Extreme roll = «трудная/чрезвычайная проверка» (official «трудный/чрезвычайный успех», never «сложная»). New terms of this book — choose one Russian form each, use it everywhere, and list them all in your report (English → Russian); the translator of the book will reuse exactly these forms.\n- FIRST: check that this scenario is not already in the base under a Russian translation (Grep key character and place names, transliterated, in `kb/books/*-ru/`; e.g. «The Haunted Clubhouse» was already there as «Маленький клуб ужасов»). If it is — do NOT create a second set: per Р-147 the translation keeps the text, the original gives the numbers; write proposals to the translation records (English sources, `name.en`, errata for translation errors) and report.\n\n- One `scenario` record (summary, keeper_info, hook, advice, steps with refs, conclusion with Sanity rewards, tables), every scene (`arc`), characters (stat blocks as printed, Р-25; pregenerated investigators are characters with role `pregen`; unnamed crowds — group profile with invented `names`, Р-151), creatures (known Mythos creatures and deities → `instance_of` the shared record, Grep `kb/creatures` first; a unique being — book record), organizations, items and clues, tomes and spells (known spells → refs to the shared `coc:spell:*`), handouts (text as printed + our full translation), places (a real city — the shared record `coc:location:<city>` if it exists (Grep first), book places `part_of` it; a fictional town — a book place with its places `part_of` it; do not create shared records in `kb/locations/`), maps (`map` records with a spot on every printed label, Р-206; every key number without a record gets a small place record).\n- Helper scripts — only in your own subfolder `.cache/lead-tools/gen-goat` of the repository (other helpers run in parallel there). Paths in scripts are never hardcoded: compute them from the script location (`__file__`, `$PSScriptRoot`) or the repository root; the library root comes from `pipeline/source/library.json`.\n- Book-scoped ids `year-of-the-goat-en/<kind>/<slug>` in `kb/books/year-of-the-goat-en/<kinds>/`.\n- Pictures (skill `.claude/skills/kb-art/SKILL.md`, Р-241, Р-245): portraits, creature art, handouts, item pictures, maps — mapping `checks/20261126-goat/art.json`, `python -B pipeline/art/add_images.py … --dry-run` then real; apply the proposals yourself (`pipeline/integrate/apply.py`) — you own this book; atmosphere pictures (cover, decoration, mood art not tied to a record) → `checks/20261126-goat/atmosphere.json` (the lead merges it). File prefix for pictures: `goat-`.\n- Lessons from earlier checks (skill kb-import, «Ошибки, которые уже находили»): every page of an entry in `sources`; handout texts in full; maps are `map` records, not atmosphere; no two records with the same `name.ru`; terms inside text agree with the record names; book misprints kept as printed, in `errata`, with the obvious ones fixed in `corrections`.\n- When done, run `python -I -B tools/completeness.py --books year-of-the-goat-en --out checks/20261126-goat/completeness` and `python -I -B tools/scenario_check.py --books year-of-the-goat-en --out checks/20261126-goat/scenario` and fix what they find; then `python -B tools/check.py kb/books/year-of-the-goat-en` — 0 errors.\n- Coverage: in `checks/20261126-goat/goat.md` list every heading of the book → the record that holds it (or «не взято» with the reason), misprints, and the term list (English → Russian).\n\n## Shared scheme of this book (6 units work in parallel — keep to it exactly)\n\nThe Year of the Goat (Chaosium Miskatonic Repository anthology; ed. Heinrich D. Moore and Evan Perlman) — twelve independent one-shots on Shub-Niggurath and fertility cults, each with its own pre-generated investigators and handouts. Each scenario is its own `scenario` record with its own scenes; ids `year-of-the-goat-en/scenario/<slug of the English title>`, scenes `year-of-the-goat-en/scene/<scenario short>-<slug>`, other records — slug of the English name (on a clash between scenarios prefix the scenario short name). Scenario shorts: maiden, fitness, caprine, bargain, sorte, convent, festival, flesh, heaven, galan, orchard, thousand. Eras differ per scenario — set by the scenario's own date (1920s / 1930s / gaslight / modern / other).\n- Shub-Niggurath, Dark Young, ghouls, etc. → `instance_of` the shared records (Grep `kb/creatures` first); avatars and unique beings — book records. Real places — Grep `kb/locations` and `kb/books/*` first.\n- New spells of a scenario («New Spells» sections): Grep `kb/spells` (name, aliases, English name) — known → refs; new → a draft in `checks/20261126-goat/new-shared-spells-<unit>.json` (the lead creates shared spells), records refer to it in text until then.\n- Front matter (credits, content warnings, contents, foreword, p. 1–9) → unit maiden: content warnings and foreword as a `rule` record of the book (advice), the rest «не взято». Back cover — unit thousand notes it.\n- Coverage file `checks/20261126-goat/goat-<unit>.md` per unit (headings → records, «Не взято», misprints, terms English → Russian); art mapping `art-<unit>.json`, atmosphere `atmosphere-<unit>.json`, proposals `proposals-<unit>.json`; picture prefix `goat-<unit>-`.\n- completeness/scenario_check: every unit runs them at the end on the whole book (others' gaps are expected — report only yours) into `checks/20261126-goat/completeness-<unit>` and `scenario-<unit>`; `python -B tools/check.py kb/books/year-of-the-goat-en` — 0 errors in your files.\n- The page-by-page translation of the book will be done separately (by Codex) from your term list and `name.ru` — so the term list in your coverage file must be complete.\n",
+  "units": [
+    {
+      "name": "ab",
+      "pages": "printed 1–46 (front matter p. 1–9; Maiden, Mother, Crone 10–26; GOAT Fitness 27–46)",
+      "target": "scenarios Maiden, Mother, Crone and GOAT Fitness + front matter",
+      "owns": [
+        "kb/books/year-of-the-goat-en/** records of these pages",
+        "app/art/* and app/maps/* files with prefix goat-ab-",
+        "checks/20261126-goat/*-ab.*",
+        "checks/20261126-goat/goat-ab.md"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "cd",
+      "pages": "printed 47–83 (The Caprine Cure 47–66; The Witch's Bargain 67–83)",
+      "target": "scenarios The Caprine Cure and The Witch's Bargain",
+      "owns": [
+        "kb/books/year-of-the-goat-en/** records of these pages",
+        "app/art/* and app/maps/* files with prefix goat-cd-",
+        "checks/20261126-goat/*-cd.*",
+        "checks/20261126-goat/goat-cd.md"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "ef",
+      "pages": "printed 84–117 (In Sorte Diaboli 84–97; The Convent of Sancta Maria Lactans 98–117)",
+      "target": "scenarios In Sorte Diaboli and The Convent of Sancta Maria Lactans",
+      "owns": [
+        "kb/books/year-of-the-goat-en/** records of these pages",
+        "app/art/* and app/maps/* files with prefix goat-ef-",
+        "checks/20261126-goat/*-ef.*",
+        "checks/20261126-goat/goat-ef.md"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "gh",
+      "pages": "printed 118–153 (The Festival of the All-Mother 118–134; The House of Flesh 135–153)",
+      "target": "scenarios The Festival of the All-Mother and The House of Flesh",
+      "owns": [
+        "kb/books/year-of-the-goat-en/** records of these pages",
+        "app/art/* and app/maps/* files with prefix goat-gh-",
+        "checks/20261126-goat/*-gh.*",
+        "checks/20261126-goat/goat-gh.md"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "ij",
+      "pages": "printed 154–186 (To Serve in Heaven 154–166; Nos Galan Gaeaf 167–186)",
+      "target": "scenarios To Serve in Heaven and Nos Galan Gaeaf",
+      "owns": [
+        "kb/books/year-of-the-goat-en/** records of these pages",
+        "app/art/* and app/maps/* files with prefix goat-ij-",
+        "checks/20261126-goat/*-ij.*",
+        "checks/20261126-goat/goat-ij.md"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "kl",
+      "pages": "printed 187–228 (Dead Letters from the Orchard 187–206; Mother of a Thousand Young 207–227; back cover 228)",
+      "target": "scenarios Dead Letters from the Orchard and Mother of a Thousand Young",
+      "owns": [
+        "kb/books/year-of-the-goat-en/** records of these pages",
+        "app/art/* and app/maps/* files with prefix goat-kl-",
+        "checks/20261126-goat/*-kl.*",
+        "checks/20261126-goat/goat-kl.md"
+      ],
+      "sites": "—"
+    }
+  ]
+}

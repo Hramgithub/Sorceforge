@@ -1,0 +1,283 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "wwc-london-en/character/alec-harper",
+  "kind": "character",
+  "name": {
+    "ru": "Алек Харпер",
+    "en": "Alec Harper"
+  },
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "вороватый охранник и начинающий чародей",
+    "en": "larcenous security guard and fledgling sorcerer"
+  },
+  "age": {
+    "raw": "57",
+    "value": 57
+  },
+  "sex": "м",
+  "residence": "Форест-Хилл",
+  "relations": [
+    {
+      "type": "rival_of",
+      "target": "wwc-london-en/character/basil-forbes",
+      "note": "охотится за его Liber Ivonis",
+      "note_back": "охранник-вор, оборвавший переговоры"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "65",
+        "value": 65
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "70",
+        "value": 70
+      },
+      "INT": {
+        "raw": "50",
+        "value": 50
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "42",
+        "value": 42
+      },
+      "APP": {
+        "raw": "40",
+        "value": 40
+      },
+      "EDU": {
+        "raw": "45",
+        "value": 45
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "+1",
+      "value": 1
+    },
+    "move": {
+      "raw": "5",
+      "value": 5,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 5
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1d3 + 1d4 damage bonus",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Дубинка",
+          "en": "Truncheon"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1d6 + 1d4 damage bonus",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:club-small"
+      }
+    ],
+    "dodge": {
+      "raw": "25% (12/5)",
+      "value": 25,
+      "half": 12,
+      "fifth": 5
+    },
+    "skills": [
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "4% (2/0)",
+          "value": 4,
+          "half": 2,
+          "fifth": 0
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Create Zombie, Contact Nyarlathotep, Brew Space Mead.",
+      "items": [
+        {
+          "name": "Create Zombie",
+          "spell": "coc:spell:create-zombie"
+        },
+        {
+          "name": "Contact Nyarlathotep",
+          "spell": "coc:spell:contact-nyarlathotep"
+        },
+        {
+          "name": "Brew Space Mead",
+          "spell": "coc:spell:brew-space-mead"
+        }
+      ]
+    }
+  },
+  "background": {
+    "description": "Полный лысеющий человек с курчавыми седыми волосами и румяными щеками. Смеётся раскатисто, хотя теперь смешного находит меньше.",
+    "traits": "Где бы ни был, навязчиво проверяет двери и окна, будто ждёт, что вот-вот что-то вломится.",
+    "secret": "Как играть: задавайте прямые вопросы — кто сыщики, кто их послал, чего хотят; сомневайтесь в ответах, даже правдивых. Если кто-то намекнёт на оккультные знания, сразу становитесь неискренне угодливы и пытайтесь выведать сведения."
+  },
+  "description": {
+    "ru": "Охранник Британского музея, вынесший восемь книг Мифов из запретного собрания, спрятанного в туннелях у станции «Олдвич».",
+    "en": null
+  },
+  "legend": {
+    "ru": "Никогда не проявлял склонностей к учёбе или эзотерике, но чтение украденного пробудило в нём что-то: ему снятся мёртвые миры, искривлённые башни и богоподобные существа, чья мощь может стать его, если он научится правильно направлять волю. Жена Джейн, 35 лет замужем за этим добрым простым человеком, боится его перемены. Среди книг — экземпляр Liber Ivonis, за которым охотится Бэзил Форбс; Харпер прервал с ним связь. После того как бьякхи Форбса унёс его соседку Глэдис Уайз, Харпер усилил занятия, надеясь вызвать себе защиту, и прикидывает, кого из соседских детей хватятся меньше всех.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "wwc-london-en",
+      "physical_page": 97,
+      "printed_page": 97,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The British Museum Restricted Collection»"
+    },
+    {
+      "book_id": "wwc-london-en",
+      "physical_page": 98,
+      "printed_page": 98,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Alec Harper», статблок"
+    }
+  ],
+  "errata": [
+    {
+      "field": "Драка",
+      "printed": "55% (22/11)",
+      "expected": "55% (27/11)",
+      "note": "половина и пятая не следуют из процента; исправлено по правилу 7-й редакции (Р-35)",
+      "fixed": true
+    },
+    {
+      "field": "Дубинка",
+      "printed": "55% (22/11)",
+      "expected": "55% (27/11)",
+      "note": "половина и пятая не следуют из процента; исправлено по правилу 7-й редакции (Р-35)",
+      "fixed": true
+    },
+    {
+      "field": "Мифы Ктулху",
+      "printed": "4% (2/1)",
+      "expected": "4% (2/0)",
+      "note": "половина и пятая не следуют из процента; исправлено по правилу 7-й редакции (Р-35); напечатанные доли подходят к 5% — возможно, опечатка в самом проценте (Р-77)",
+      "fixed": true
+    },
+    {
+      "field": "Внимание",
+      "printed": "50% (25/12)",
+      "expected": "50% (25/10)",
+      "note": "половина и пятая не следуют из процента; исправлено по правилу 7-й редакции (Р-35)",
+      "fixed": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической, смещение 0). Эпоха — Лондон Второй мировой войны (1939–1945, Блиц); в осях — «1940s-1980s» (общая схема линейки World War Cthulhu). Рассудка в статблоке нет."
+  },
+  "images": [
+    {
+      "file": "art/characters/wwc-london-b-alec-harper.webp",
+      "kind": "portrait",
+      "caption": "Алек Харпер",
+      "source": "World War Cthulhu: London, с. 98 (физ. 98), раздел «Alec Harper»"
+    }
+  ]
+}

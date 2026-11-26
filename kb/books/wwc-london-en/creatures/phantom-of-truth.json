@@ -1,0 +1,201 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "wwc-london-en/creature/phantom-of-truth",
+  "kind": "creature",
+  "name": {
+    "ru": "Призрак истины",
+    "en": "The Phantom of Truth, Herald of the King in Yellow"
+  },
+  "aliases": [
+    "Чужак",
+    "the Stranger"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "вестник Короля в жёлтом",
+  "relations": [
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:king-in-yellow",
+      "note": "вестник Короля",
+      "note_back": "вестник — Призрак истины («Лондон»)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "75",
+        "value": 75
+      },
+      "CON": {
+        "raw": "200",
+        "value": 200
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "INT": {
+        "raw": "125",
+        "value": 125
+      },
+      "POW": {
+        "raw": "100",
+        "value": 100
+      },
+      "DEX": {
+        "raw": "90",
+        "value": 90
+      }
+    },
+    "hp": {
+      "raw": "26",
+      "value": 26
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "+1",
+      "value": 1
+    },
+    "move": {
+      "raw": "9 (can appear/disappear at will)",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "Нет, но ранить Призрака можно только зачарованным оружием (например, жертвенным клинком).",
+      "value": null
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Fighting (Brawl)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "1d6 + 1d4 damage bonus",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Присоединиться к танцу",
+          "en": "Join the Dance"
+        },
+        "kind": "special",
+        "skill": null,
+        "chance": {
+          "raw": "встречная МОЩ",
+          "value": null
+        },
+        "notes": "Особая атака: широкий жест руки — встречная проверка МОЩ против всех в поле зрения; проигравшие теряют 1d100 МОЩ; у кого МОЩ падает до 0 и ниже, одежда превращается в бальный костюм, на лице — Бледная маска, они танцуют под никому больше не слышный вальс и, скрывшись из виду, исчезают навсегда."
+      }
+    ],
+    "dodge": {
+      "raw": "90% (45/18)",
+      "value": 90,
+      "half": 45,
+      "fifth": 18
+    },
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d6",
+        "trigger": "увидеть Призрака истины"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Носит табард с Жёлтым знаком поверх жёлтых одежд с капюшоном. Лицо сначала кажется фарфоровой маской, но, заглянув в его нечеловеческие глаза, понимаешь, что маски нет. Куда идёт Призрак, туда следует Король в жёлтом, расширяя владения Каркозы.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Вестник Короля в жёлтом и «Чужак» пьесы, который на маскараде во дворце Йхтилла объявляет о приходе Короля. Постановка пьесы вызывает его: в первом акте он вселяется в актёра, играющего Призрака, а если того убить — в любого присутствующего, кто прочёл второй акт и не устоял (тот теряет 1d100 МОЩ за раунд, превращаясь в Призрака; остановить можно, лишь убив сосуд до потери всей МОЩ). Как вестник, он может покинуть эхо и выйти на улицы Лондона. Каждая атака против него (с любым результатом) заставляет его в следующем раунде применить «Присоединиться к танцу» к атаковавшему. Изгнать его можно, лишь уничтожив или убив всех актёров в зале: тогда он застывает как статуя и через раунд взрывается фарфоровыми осколками (1d6 урона всем в пределах 3 м).",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "wwc-london-en",
+      "physical_page": 135,
+      "printed_page": 135,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Introduction»"
+    },
+    {
+      "book_id": "wwc-london-en",
+      "physical_page": 146,
+      "printed_page": 146,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Phantom of Truth», статблок"
+    },
+    {
+      "book_id": "wwc-london-en",
+      "physical_page": 155,
+      "printed_page": 155,
+      "method": "book_text",
+      "verified": true,
+      "note": "сосуд для Призрака"
+    },
+    {
+      "book_id": "wwc-london-en",
+      "physical_page": 166,
+      "printed_page": 166,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Phantom of Truth»"
+    },
+    {
+      "book_id": "wwc-london-en",
+      "physical_page": 167,
+      "printed_page": 167,
+      "method": "book_text",
+      "verified": true,
+      "note": "уничтожение"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической, смещение 0). Эпоха — Лондон Второй мировой войны (1939–1945, Блиц); в осях — «1940s-1980s» (общая схема линейки World War Cthulhu). Сценарий «Пленённая публика». 10 футов — 3 м (Р-64). Рассудок 1/1d6 — как напечатано."
+  },
+  "images": [
+    {
+      "file": "art/creatures/wwc-london-b-phantom-of-truth.webp",
+      "kind": "art",
+      "caption": "Призрак истины",
+      "source": "World War Cthulhu: London, с. 166 (физ. 166), раздел «The Phantom of Truth»"
+    }
+  ]
+}

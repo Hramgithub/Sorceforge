@@ -1,0 +1,210 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "wwc-covert-actions-en/character/ilya-kuznetsov",
+  "kind": "character",
+  "name": {
+    "ru": "Илья Дмитриевич Кузнецов",
+    "en": "Ilya Dmitrovich Kuznetsov"
+  },
+  "aliases": [
+    "Ilya Dmitrovich Kuznetsov, Victim of Corruption",
+    "Илья",
+    "дедушка"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "пенсионер; нечистый покойник",
+    "en": null
+  },
+  "sex": "мужской",
+  "residence": "квартира Кузнецовых",
+  "relations": [
+    {
+      "type": "relative_of",
+      "target": "wwc-covert-actions-en/character/pyotr-kuznetsov",
+      "note": "внук",
+      "note_back": "дед"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "70",
+        "value": 70
+      },
+      "INT": {
+        "raw": "60",
+        "value": 60
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет; от колющего оружия получает лишь 1 урон (порченая плоть)",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (когти, укус)",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "1d4 + 1d4 бонус к урону",
+          "dice": "1d4",
+          "adds_db": true
+        },
+        "notes": "Рвёт удлинившимися когтями или кусает."
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d4",
+        "trigger": "увидеть Илью"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Порча",
+      "raw": "Corruption: As a victim of Koschei/Chort, Ilya has a 75% chance to infect anyone he does damage to with his bare hands or teeth.",
+      "summary": "Голыми руками и зубами заражает с вероятностью 75% (встречная проверка ВЫН); брызги при его гибели — 50%."
+    },
+    {
+      "name": "Рост",
+      "raw": "For every point of damage that Ilya takes, his SIZ increases by 1 point.",
+      "summary": "За каждый полученный пункт урона его ТЕЛ растёт на 1 (ПЗ не растут, но может вырасти бонус к урону) — нечистые силы вздуваются в нём. Доведённый до 0 ПЗ, тело взрывается гноем и ошмётками на 7 метров вокруг; трудная проверка Уклонения позволяет увернуться."
+    }
+  ],
+  "description": {
+    "ru": "Дед Петра Кузнецова. Мёртвым лежит в ванне под полотенцами — один из двух «дедушек» в квартире; теперь он нечистый покойник. Русские нечистые покойники похожи на западных зомби тем, что это мертвецы, которым не дают по-настоящему умереть, но не во всём: это не безмозглые шаркающие твари — они двигаются, как при жизни, и используют тактику.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Когда Кощей/Чёрт вернулся в квартиру и бросил «Бессмертного» в камин, Илья вышел из своей комнаты, узнал существо и насмешливо сказал: его внук напечатал сотни таких книг, так что Кощей/Чёрт обречён. Существо убило его, уложило в ванну под полотенца и приняло его облик.\nВ сценарии. Если сыщики уберут полотенца в ванне, нападут на Кощея/Чёрта или задержатся слишком долго, им грозит встреча с Ильёй.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 161,
+      "printed_page": 161,
+      "method": "book_text",
+      "verified": true,
+      "note": "«What Magda Knows»: прадед"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 162,
+      "printed_page": 162,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Kuznetsov Apartment»"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 163,
+      "printed_page": 163,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Grandfather»"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 164,
+      "printed_page": 164,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Ilya Dmitrovich Kuznetsov, Victim of Corruption», статблок"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.move",
+      "printed": "8",
+      "expected": "7",
+      "note": "Скорость не сходится с правилами 7-й редакции; оставлено как напечатано (Р-161).",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — 1970-е (Р-252: 1940s-1980s). В книге «A Difficult Dodge roll» — трудная проверка Уклонения."
+  },
+  "images": [
+    {
+      "file": "art/characters/wwc-covert-b-ilya-kuznetsov.webp",
+      "kind": "portrait",
+      "caption": "Илья Кузнецов, нечистый покойник",
+      "source": "World War Cthulhu: Cold War — Covert Actions, с. 164 (физ. 164), портрет при статблоке"
+    }
+  ]
+}

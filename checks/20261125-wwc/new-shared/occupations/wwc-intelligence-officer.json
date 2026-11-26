@@ -1,0 +1,99 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:wwc-intelligence-officer",
+  "kind": "occupation",
+  "name": {
+    "ru": "Офицер разведки (World War Cthulhu)",
+    "en": "Intelligence Officer"
+  },
+  "aliases": [
+    "Офицер разведки"
+  ],
+  "group": null,
+  "lovecraftian": false,
+  "description": {
+    "ru": "Кадровый офицер разведки, завербованный вскоре после окончания одного из лучших университетов Британии (скорее всего Оксфорда или Кембриджа) и с тех пор служащий в разведке; профессия прямого набора World War Cthulhu: Cold War, по механике наравне с прежними карьерами. На следующем шаге получает специализацию (ещё 200 пунктов навыков).",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 4",
+    "options": [
+      [
+        [
+          "EDU",
+          4
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "20–70",
+    "min": 20,
+    "max": 70
+  },
+  "contacts": "Однокашники по школе и университету, другие сотрудники разведок.",
+  "skills": [
+    {
+      "raw": "один социальный навык (Обаяние, Красноречие, Запугивание или Убеждение)",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:charm",
+          "coc:skill:fast-talk",
+          "coc:skill:intimidate",
+          "coc:skill:persuade"
+        ]
+      }
+    },
+    {
+      "raw": "Юриспруденция",
+      "skill": "coc:skill:law"
+    },
+    {
+      "raw": "Знание организаций",
+      "skill": "coc:skill:organisation-knowledge"
+    },
+    {
+      "raw": "Иностранный язык",
+      "skill": "coc:skill:language-other"
+    },
+    {
+      "raw": "Психология",
+      "skill": "coc:skill:psychology"
+    },
+    {
+      "raw": "Внимание",
+      "skill": "coc:skill:spot-hidden"
+    },
+    {
+      "raw": "Шпионское ремесло",
+      "skill": "coc:skill:tradecraft"
+    },
+    {
+      "raw": "ещё один любой навык как личная специальность или навык эпохи"
+    }
+  ],
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "wwc-cold-war-en",
+      "physical_page": 30,
+      "printed_page": 30,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Direct Recruits»; «Intelligence Officer»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической, смещение 0). Эпоха — 1970-е годы (World War Cthulhu: Cold War; в осях — «1940s-1980s»). Черновик общей записи профессии (часть cw-a); текст — по правилу wwc-cold-war-en/rule/step-five-occupation-skills-and-trust. Специализации шага шестого — не профессии, а подготовка (таблица правила wwc-cold-war-en/rule/step-six-specialised-intelligence-agency-training)."
+  }
+}

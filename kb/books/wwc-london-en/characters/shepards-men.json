@@ -1,0 +1,193 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "wwc-london-en/character/shepards-men",
+  "kind": "character",
+  "name": {
+    "ru": "Люди Шепарда",
+    "en": "Shepard’s Men"
+  },
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "наёмный громила банды Шепарда",
+  "names": [
+    "Малыш Дейв",
+    "Большой Дейв",
+    "Эдди",
+    "Джек Пасть"
+  ],
+  "occupation": {
+    "ru": "громила банды Шепарда",
+    "en": "Hired muscle, little more than potential faces for ghouls"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "wwc-london-en/character/frankie-shepard",
+      "note": "главарь",
+      "note_back": "громилы"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "65",
+        "value": 65
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "70",
+        "value": 70
+      },
+      "INT": {
+        "raw": "50",
+        "value": 50
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "52",
+        "value": 52
+      },
+      "APP": {
+        "raw": "40",
+        "value": 40
+      },
+      "EDU": {
+        "raw": "45",
+        "value": 45
+      }
+    },
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "+1",
+      "value": 1
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1d3 + 1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "skills": [
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Профиль для любого безымянного члена банды Шепарда — наёмная сила, «немногим больше, чем будущие лица для упырей». Имена — из книги: Little Dave, Big Dave, Eddie, Jack the Gob.",
+    "en": null
+  },
+  "legend": {
+    "ru": "В банде тяжёлый кризис духа: необъяснимые исчезновения, внезапные странные перемены в людях (уходят в себя, перестают говорить с прежними друзьями). Ещё не заменённые тайно сговариваются, как выйти из-под власти Фрэнки, чтобы и с ними не случилось ничего ужасного. Ловкие сыщики могут вбить клин между Фрэнки и его людьми — получить сведения, заставить отвернуться или даже восстать против главаря: подходящая проверка Обаяния, Красноречия, Запугивания или Убеждения (смотря по подходу); доказательства истинной природы упырей, подкуп или угроза ареста дают бонусные кости. Заменённые упырями банду не предадут; распознать их без Мази истинного зрения трудно: трудная проверка Внимания уловит безошибочный трупный запах под густым дешёвым лосьоном, проверка Психологии — что манеры громилы — заученное подражание человеку.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "wwc-london-en",
+      "physical_page": 182,
+      "printed_page": 182,
+      "method": "book_text",
+      "verified": true,
+      "note": "в пабе"
+    },
+    {
+      "book_id": "wwc-london-en",
+      "physical_page": 183,
+      "printed_page": 183,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Shepard’s Men», статблок"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической, смещение 0). Эпоха — Лондон Второй мировой войны (1939–1945, Блиц); в осях — «1940s-1980s» (общая схема линейки World War Cthulhu). Сценарий «Мясная торговля». Групповой профиль; имена напечатаны в книге (Р-151 — не придуманы)."
+  }
+}

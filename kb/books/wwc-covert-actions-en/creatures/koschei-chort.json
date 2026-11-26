@@ -1,0 +1,301 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "wwc-covert-actions-en/creature/koschei-chort",
+  "kind": "creature",
+  "name": {
+    "ru": "Кощей/Чёрт",
+    "en": "Koschei/Chort"
+  },
+  "aliases": [
+    "Koschei the Deathless",
+    "Кощей Бессмертный",
+    "Chort",
+    "Чёрт",
+    "the Deathless",
+    "Бессмертный",
+    "Koschei/Chort, Legacy of a Time Long Ago",
+    "«Дедушка»"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "отколовшаяся часть Абхота",
+  "relations": [
+    {
+      "type": "spawn_of",
+      "target": "coc:creature:abhoth",
+      "note": "кусок Абхота, отколовшийся и принявший свой облик",
+      "note_back": "отколовшаяся часть — Кощей/Чёрт"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "200",
+        "value": 200
+      },
+      "SIZ": {
+        "raw": "70",
+        "value": 70
+      },
+      "INT": {
+        "raw": "95",
+        "value": 95
+      },
+      "POW": {
+        "raw": "150",
+        "value": 150
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      }
+    },
+    "hp": {
+      "raw": "27",
+      "value": 27
+    },
+    "mp": {
+      "raw": "30",
+      "value": 30
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "3",
+      "value": 3
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет; доведённый до 0 ПЗ, рассыпается стаей чёрных мух, которая улетает и собирается вновь через 1d4 раунда",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Fighting (Brawl)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "1d4 + 1d4 бонус к урону + риск заражения",
+          "dice": "1d4",
+          "adds_db": true
+        },
+        "notes": "риск заражения (порча 99%)"
+      },
+      {
+        "name": {
+          "ru": "Старая кавалерийская сабля",
+          "en": "Fighting (Old Cavalry Sabre)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (меч)",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "1d8 + 1 + 1d4 бонус к урону",
+          "dice": "1d8+1",
+          "adds_db": true
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Koschei/Chort knows Corruption of Chort (see pg. 170) and any other spells the Keeper desires.",
+      "items": [
+        {
+          "name": "Corruption of Chort",
+          "spell": "coc:spell:corruption-of-chort"
+        }
+      ]
+    },
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d3",
+        "trigger": "увидеть Кощея/Чёрта в истинном облике (в облике жертвы — по состоянию тела)"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Принять облик",
+      "raw": "Assume Form: Koschei/Chort can take the form of any person he’s infected.",
+      "summary": "Может принять облик любого заражённого им человека — только внешне: без памяти и личности жертвы; от облика слегка пахнет тленом."
+    },
+    {
+      "name": "Порча",
+      "raw": "Corruption: Koschei/Chort has a 99% chance of infecting any victim he touches or breathes upon.",
+      "summary": "С вероятностью 99% заражает любого, кого коснётся или на кого дохнёт: жертва делает проверку ВЫН против 99%. Распространять ли болезнь, он решает сам — может коснуться, не заразив. Правила заражения — «Заражение порчей Кощея»."
+    },
+    {
+      "name": "Чёрные мухи",
+      "raw": "if reduced to 0 HP, Koschei/Chort shatters into a flock of black flies that buzzes away to reform in 1d4 rounds",
+      "summary": "Доведённый до 0 ПЗ, рассыпается стаей чёрных мух и собирается вновь через 1d4 раунда. Чёрные мухи всегда вьются вокруг него и его жертв. Окончательно его губит лишь уничтожение сердца обрядом «Убийца мёртвых»."
+    },
+    {
+      "name": "Бой",
+      "raw": "Koschei/Chort prefers to attack his foes by hand",
+      "summary": "Предпочитает бить врагов руками, чтобы разносить порчу; очень умён и при необходимости берётся за оружие (старая кавалерийская сабля)."
+    }
+  ],
+  "description": {
+    "ru": "В истинном облике — очень высокий измождённый старик с жидкими белыми волосами и длинными, почти скелетными пальцами; кожа в старческих пятнах туго обтягивает кости и местами изодрана и обтрёпана; в глубине глаз горит нечестивый красный огонь. С виду — дряхлый «дедушка» со слабым неприятным запахом.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Кощей и Чёрт — существа из самых тёмных глубин русского подсознания. Кощей Бессмертный — древний старик, живущий вечно, пока его сердце не найдено и не уничтожено; он охотится на женщин и детей, забирая их в плен, чтобы продлевать свою жизнь. Чёрт — «кам», древнее существо, существовавшее до начала времён, позже отождествлённое с христианским дьяволом; он сеет болезни и мор по земле. Фольклор многое понимает верно, а многое — нет: Кощей и Чёрт — не разные существа, а две стороны одной монеты, первобытного страха; оба — кусок Абхота, отколовшийся и принявший свой облик.\nВо время Гражданской войны культ смерти, вставший на сторону белых, призвал его из глубин времени; он не помог белым, но прибавил к своему счёту много тел, пока белый солдат, Ботаник Икс, не нашёл обряд, вернувший его в могилу. В 1970-е Пётр Кузнецов напечатал рассказ Ботаника Икс «Бессмертный» и случайно призвал существо: почувствовав, что Пётр — не могучий волхв, оно убило его и детей, бросило тела на путях, сожгло «Бессмертного» в камине, чтобы никто не узнал, как его изгнать, убило деда Илью и приняло его облик. Теперь бродит по Москве в поисках добычи и экземпляров книги; соблазнило печатников Архива обещанием бессмертия. Его сердце спрятано в тайной бане под мостом у Большой Ордынки; если сердце уничтожить, он будет изгнан обратно в глубины Абхота навсегда.",
+    "en": null
+  },
+  "encounters": {
+    "ru": "Признаки его активности: чёрные мухи (всё больше по ходу сценария), странно искорёженная кованая ограда, разговоры милиционеров о странном трупе, разлагающаяся собака, всё ещё бродящая в поисках объедков. В квартире Кузнецовых он играет выжившего из ума старика, пытается коснуться сыщиков, чтобы заразить; ответы туманны (думает, что внук с детьми ушли на рынок; кажется, внук собирает книги). Если на него напасть, выпрыгивает в окно, хотя это четвёртый этаж.",
+    "en": null
+  },
+  "cult": {
+    "ru": "Культ смерти Гражданской войны; в сценарии — заражённые слуги: Илья Кузнецов, Архив, Книга и Слово.",
+    "en": null
+  },
+  "habitat": "Москва; логово — баня под мостом у Большой Ордынки",
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 149,
+      "printed_page": 149,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Keeper’s Background»"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 152,
+      "printed_page": 152,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «Black Flies»"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 161,
+      "printed_page": 161,
+      "method": "book_text",
+      "verified": true,
+      "note": "тела, дыра в тепловозе"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 162,
+      "printed_page": 162,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «The Infection»; квартира"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 163,
+      "printed_page": 163,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Grandfather», «Koschei/Chort», «Special Powers»"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 164,
+      "printed_page": 164,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Koschei/Chort, Legacy of a Time Long Ago»"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 165,
+      "printed_page": 165,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «The Unclean»"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 167,
+      "printed_page": 167,
+      "method": "book_text",
+      "verified": true,
+      "note": "Архив и его товарищи"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 169,
+      "printed_page": 169,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Bathhouse»"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 170,
+      "printed_page": 170,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Bessmertny», «On Spoiling»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.build",
+      "printed": "Build: 3",
+      "expected": "1",
+      "note": "При СИЛ 70 и ТЕЛ 70 (сумма 140) Комплекция по правилам 1 (БкУ +1d4 напечатан верно). Оставлено как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — 1970-е (Р-252: 1940s-1980s). «Corruption of Chort» в книге — «то же, что Shriveling, только поражённая конечность начинает гнить»; ссылка — на вариант coc:spell:corruption-of-chort (variant_of «Иссушение»)."
+  },
+  "images": [
+    {
+      "file": "art/creatures/wwc-covert-b-koschei-chort.webp",
+      "kind": "art",
+      "caption": "Кощей/Чёрт в облике старика",
+      "source": "World War Cthulhu: Cold War — Covert Actions, с. 163 (физ. 163), иллюстрация при статье"
+    }
+  ]
+}

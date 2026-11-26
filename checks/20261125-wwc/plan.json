@@ -1,0 +1,104 @@
+{
+  "book_id": "wwc-cold-war-en",
+  "goal": "the scenario «World War Cthulhu: Cold War line and London (Cubicle 7, 2016–2017)» playable from the base, a work of the English series (Р-251)",
+  "decision": "Р-251, Р-139, Р-184, Р-206, Р-241",
+  "check_dir": "checks/20261125-wwc",
+  "models": [
+    "kb/books/starfall-en/scenarios/starfall.json",
+    "kb/books/starfall-en/scenes/introduction.json",
+    "kb/books/starfall-en/maps/starside-gm-map.json",
+    "kb/books/whats-in-the-cellar-en/handouts/cellar-papers-1-herald-article.json",
+    "kb/books/dveri-vo-tmu-ru/scenarios/darkness-beneath-the-hill.json"
+  ],
+  "extra": "## This work (Р-251, English works series, one at a time)\n\nSource: the English original `wwc-cold-war-en` (text layer; `python -B pipeline/source/pages.py show wwc-cold-war-en <page>`; page image `python -B pipeline/source/pages.py image wwc-cold-war-en <physical page> --physical`). Page numbers: `pagemap` often misses printed numbers in these PDFs — look at 2–3 page images and find printed vs physical; in `sources` give the printed page as printed (null for unnumbered pages). Do NOT edit `pipeline/source/books.json` — report the offset (physical = printed − offset, e.g. «p. 3» on physical 4 → offset −1) and the lead sets it.\nRussian text — our translation (flag `translated`); official Russian forms of names and terms — glossary `python -B tools/terms.py <word>` and existing records (Р-184), e.g. Dreamlands = «Страна грёз»; Hard/Extreme roll = «трудная/чрезвычайная проверка» (official «трудный/чрезвычайный успех», never «сложная»). New terms of this book — choose one Russian form each, use it everywhere, and list them all in your report (English → Russian); the translator of the book will reuse exactly these forms.\n- FIRST: check that this scenario is not already in the base under a Russian translation (Grep key character and place names, transliterated, in `kb/books/*-ru/`; e.g. «The Haunted Clubhouse» was already there as «Маленький клуб ужасов»). If it is — do NOT create a second set: per Р-147 the translation keeps the text, the original gives the numbers; write proposals to the translation records (English sources, `name.en`, errata for translation errors) and report.\n- Five books, 8 units — see «Shared scheme» below.\n- One `scenario` record (summary, keeper_info, hook, advice, steps with refs, conclusion with Sanity rewards, tables), every scene (`arc`), characters (stat blocks as printed, Р-25; pregenerated investigators are characters with role `pregen`; unnamed crowds — group profile with invented `names`, Р-151), creatures (known Mythos creatures and deities → `instance_of` the shared record, Grep `kb/creatures` first; a unique being — book record), organizations, items and clues, tomes and spells (known spells → refs to the shared `coc:spell:*`), handouts (text as printed + our full translation), places (a real city — the shared record `coc:location:<city>` if it exists (Grep first), book places `part_of` it; a fictional town — a book place with its places `part_of` it; do not create shared records in `kb/locations/`), maps (`map` records with a spot on every printed label, Р-206; every key number without a record gets a small place record).\n- Helper scripts — only in your own scratchpad subfolder `gen-wwc` (other helpers run in parallel and use the same scratchpad).\n- Book-scoped ids: see «Shared scheme» (each registered book has its own folder).\n- Pictures (skill `.claude/skills/kb-art/SKILL.md`, Р-241, Р-245): portraits, creature art, handouts, item pictures, maps — mapping `checks/20261125-wwc/art.json`, `python -B pipeline/art/add_images.py … --dry-run` then real; apply the proposals yourself (`pipeline/integrate/apply.py`) — you own this book; atmosphere pictures (cover, decoration, mood art not tied to a record) → `checks/20261125-wwc/atmosphere.json` (the lead merges it). File prefix for pictures: `wwc-`.\n- Lessons from earlier checks (skill kb-import, «Ошибки, которые уже находили»): every page of an entry in `sources`; handout texts in full; maps are `map` records, not atmosphere; no two records with the same `name.ru`; terms inside text agree with the record names; book misprints kept as printed, in `errata`, with the obvious ones fixed in `corrections`.\n- When done, run `python -I -B tools/completeness.py --books wwc-cold-war-en --out checks/20261125-wwc/completeness` and `python -I -B tools/scenario_check.py --books wwc-cold-war-en --out checks/20261125-wwc/scenario` and fix what they find; then `python -B tools/check.py kb/books/wwc-cold-war-en` — 0 errors.\n- Coverage: in `checks/20261125-wwc/wwc.md` list every heading of the book → the record that holds it (or «не взято» with the reason), misprints, and the term list (English → Russian).\n\n## Shared scheme of this line (8 units work in waves, ≤6 at once — keep to it exactly)\n\nWorld War Cthulhu (Cubicle 7, 2016–2017) — 7e; the library labels say [EN 6e], WRONG (the books use 7e: Hard/Extreme, bonus/penalty dice, 7e stat blocks; Cold War even has a «Using Earlier Editions» appendix). Five registered books, each with its own folder `kb/books/<book>/`, ids `<book>/<kind>/<slug>`:\n- `wwc-cold-war-en` (Cold War core, 1970s espionage, 240 pp.), `wwc-covert-actions-en` (six missions, 175 pp.), `wwc-our-american-cousins-en` (US intelligence, 126 pp.), `wwc-section-46-en` (Section 46 Operations Manual, tradecraft, 127 pp.), `wwc-london-en` (WW2 London, Blitz, 192 pp.).\n- Era: Cold War books — `1940s-1980s` (1970s); London — `1930s`/`1940s-1980s`? → use `1940s-1980s` (1939–1945) and say so in notes.\n- These are mostly SETTING/RULES books with scenarios inside: follow `.claude/skills/kb-rules-book/SKILL.md` for rules/setting chapters and the scenario parts of this brief for scenarios/missions (each mission/scenario = `scenario` record with scenes; a campaign = scenario with `part_of` children).\n- **Owners of line-wide entities** (others refer by these ids; dangling until they exist — list them; no stubs): unit `cw-a` owns in `wwc-cold-war-en`: `organization/section-46`, `organization/n` (the WW2 network «N»; London refers to it), `character/h` (the presence H, if the book treats it as a being), intelligence agencies as organizations (`organization/<slug>`: mi6, cia, kgb, gru, stasi…), the rules of Trust and tradecraft that the core book defines (`rule/<slug>`), occupations (drafts only: `checks/20261125-wwc/new-shared/occupations/*.json` with id `coc:occupation:wwc-<slug>`; skills likewise `coc:skill:<slug>` — Grep kb/skills first). Unit `cw-b` owns the Keeper-side of the core book: theatres of operations, Mythos threats/cults, NPCs, rules and equipment of the Keeper chapter, the Istanbul campaign «The Intersections», appendices.\n- Shared real places: Grep `kb/locations` (London, Istanbul, Moscow, Berlin…) and use shared records; book places `part_of` them.\n- Coverage file `checks/20261125-wwc/wwc-<unit>.md`; art mapping `art-<unit>.json`, atmosphere `atmosphere-<unit>.json`, proposals `proposals-<unit>.json`; picture prefix `wwc-<unit>-`.\n- completeness/scenario_check on your book(s) into `checks/20261125-wwc/completeness-<unit>` / `scenario-<unit>`; `python -B tools/check.py kb/books/<book>` — 0 errors in your files except dangling refs to other units' scheme ids.\n",
+  "units": [
+    {
+      "name": "cw-a",
+      "pages": "Cold War: front matter and all PLAYER chapters up to (not including) the Keeper's section — see the contents (phys. 2–3): introduction, history, investigator creation, intelligence primer, covert operations",
+      "target": "player side of the Cold War core book",
+      "owns": [
+        "kb/books/wwc-cold-war-en/** records of these pages",
+        "app/art/* and app/maps/* files with prefix wwc-cw-a-",
+        "checks/20261125-wwc/*-cw-a.*"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "cw-b",
+      "pages": "Cold War: the KEEPER's section to the end — theatres, Mythos threats, NPCs, rules and equipment, The Intersections campaign (Istanbul), appendices (Fortean events, glossary, earlier editions), character sheet",
+      "target": "Keeper side of the Cold War core book and its campaign",
+      "owns": [
+        "kb/books/wwc-cold-war-en/** records of these pages",
+        "app/art/* and app/maps/* files with prefix wwc-cw-b-",
+        "checks/20261125-wwc/*-cw-b.*"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "covert-a",
+      "pages": "Covert Actions: front matter and missions 1–3 (see contents)",
+      "target": "missions 1–3",
+      "owns": [
+        "kb/books/wwc-covert-actions-en/** records of these pages",
+        "app/art/* and app/maps/* files with prefix wwc-covert-a-",
+        "checks/20261125-wwc/*-covert-a.*"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "covert-b",
+      "pages": "Covert Actions: missions 4–6 to the end",
+      "target": "missions 4–6",
+      "owns": [
+        "kb/books/wwc-covert-actions-en/** records of these pages",
+        "app/art/* and app/maps/* files with prefix wwc-covert-b-",
+        "checks/20261125-wwc/*-covert-b.*"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "cousins",
+      "pages": "Our American Cousins, all pages",
+      "target": "the whole book",
+      "owns": [
+        "kb/books/wwc-our-american-cousins-en/** records of these pages",
+        "app/art/* and app/maps/* files with prefix wwc-cousins-",
+        "checks/20261125-wwc/*-cousins.*"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "s46",
+      "pages": "Section 46 Operations Manual, all pages (incl. pregens appendix)",
+      "target": "the whole book",
+      "owns": [
+        "kb/books/wwc-section-46-en/** records of these pages",
+        "app/art/* and app/maps/* files with prefix wwc-s46-",
+        "checks/20261125-wwc/*-s46.*"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "london-a",
+      "pages": "London: front matter to the end of the setting chapters (before the Mythos threats / scenarios — see contents)",
+      "target": "setting side of London",
+      "owns": [
+        "kb/books/wwc-london-en/** records of these pages",
+        "app/art/* and app/maps/* files with prefix wwc-london-a-",
+        "checks/20261125-wwc/*-london-a.*"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "london-b",
+      "pages": "London: Mythos threats, scenario advice, the three scenarios, Fortean events, appendices to the end",
+      "target": "Keeper side of London and its three scenarios",
+      "owns": [
+        "kb/books/wwc-london-en/** records of these pages",
+        "app/art/* and app/maps/* files with prefix wwc-london-b-",
+        "checks/20261125-wwc/*-london-b.*"
+      ],
+      "sites": "—"
+    }
+  ]
+}

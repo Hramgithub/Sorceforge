@@ -1,0 +1,299 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "wwc-our-american-cousins-en/character/jan-schuster",
+  "kind": "character",
+  "name": {
+    "ru": "Ян Шустер",
+    "en": "Jan Schuster"
+  },
+  "aliases": [],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "гауптман (капитан) Фольксполицай, агент МВД ГДР",
+    "en": "Volkspolizei Hauptmann"
+  },
+  "age": {
+    "raw": "29",
+    "value": 29
+  },
+  "sex": "мужской",
+  "residence": "Восточный Берлин",
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "wwc-our-american-cousins-en/organization/volkspolizei",
+      "note": "гауптман",
+      "note_back": "гауптман, «секретарь» полковника Кремера"
+    },
+    {
+      "type": "rival_of",
+      "target": "wwc-our-american-cousins-en/character/wolfgang-kraehmer",
+      "note": "следит за его лояльностью под видом секретаря",
+      "note_back": "приставленный к нему соглядатай"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "50",
+        "value": 50
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "70",
+        "value": 70
+      },
+      "POW": {
+        "raw": "60",
+        "value": 60
+      },
+      "EDU": {
+        "raw": "60",
+        "value": 60
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "sanity": {
+      "raw": "65",
+      "value": 65,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Пистолет",
+          "en": "Guns (Handgun)"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d10",
+          "dice": "1d10",
+          "adds_db": false
+        }
+      },
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Fighting (Brawl)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50%, (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": false
+        }
+      }
+    ],
+    "skills": [
+      {
+        "name": "Вождение автомобиля",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "Drive 40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "Intimidation 70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Иностранный язык (русский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "русский",
+        "value": {
+          "raw": "Language (Russian) 50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Юриспруденция",
+        "skill": "coc:skill:law",
+        "value": {
+          "raw": "Law 50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "Psychology 70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "Spot Hidden 60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "Stealth 40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Доверие (Министерство внутренних дел)",
+        "value": {
+          "raw": "Trust: Ministry of the interior 60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Доверие (Штази)",
+        "value": {
+          "raw": "Trust: Stasi 20%",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      }
+    ]
+  },
+  "background": {
+    "description": "Коротко стриженные чёрные волосы, очки в оправе, тихий, но холодный и властный голос; безупречная форма.",
+    "ideology": "Идеология.",
+    "traits": "Холоден и, где нужно, беспощаден. Полон решимости добраться до истины и не бросит линию допроса.",
+    "secret": "Видит восточногерманское государство окружённым врагами и сделает всё, чтобы выкорчевать их, кем бы они ни были. Слегка параноидален к тем, кто хранит секреты рядом с ним; поиск «правды» для него важнее даже службы государству."
+  },
+  "description": {
+    "ru": "Капитан Фольксполицай и агент МВД ГДР, приставленный «секретарём» к полковнику Кремеру; ведёт допросы.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Живёт отдельно от жены и двоих детей: его одержимость работой и поиском «правды» оттолкнула её; сам он считал её недостаточно верной и преданной государству. Вооружён. Под видом секретаря следит за лояльностью полковника Кремера: того ни в чём не подозревают, но вне подозрений никто, особенно власть имущие.\nЕсли сыщиков допрашивает Фольксполицай, допрашивает Шустер. Скажи они что-то явно глупое — их арестуют, и для них сценарий кончается. Глупостью считается любой намёк на шпионские связи — их или полковника Кремера, — а также упоминание Мифов: Шустер проверит такие нити, даже безумные на вид, но уже без сыщиков. Избежать тюрьмы после допроса можно достаточно убедительной историей или неопровержимыми доказательствами деятельности Мифов (но чтобы Шустер хотя бы согласился на них взглянуть, нужна проверка Убеждения, а посвящение его в тайну будет иметь последствия). Все социальные проверки, чтобы сойти с рук лжи, — трудные из-за его высокой Психологии. Даже убедив его в невиновности, сыщики получат хвост из Фольксполицай — довольно заметный: никаких проверок, чтобы его заметить, не нужно.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "wwc-our-american-cousins-en",
+      "physical_page": 104,
+      "printed_page": 104,
+      "method": "book_text",
+      "verified": true,
+      "note": "«secretary» Jan Schuster"
+    },
+    {
+      "book_id": "wwc-our-american-cousins-en",
+      "physical_page": 105,
+      "printed_page": 105,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Jan Schuster, Volkspolizei Hauptmann», статблок"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.move",
+      "printed": "8",
+      "expected": "7",
+      "note": "Скорость по правилам 7-й редакции (ЛВК, СИЛ, ТЕЛ, возраст) — 7; напечатано 8; оставлено как в книге (Р-161).",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — 1970-е, Холодная война (в осях — «1940s-1980s»). Сценарий «Брокенский призрак» (с. 88–114). «Trust» — навык «Доверие» (World War Cthulhu: Cold War). Навык «Guns (Handgun)» — так в книге (Firearms)."
+  },
+  "images": [
+    {
+      "file": "art/characters/wwc-cousins-jan-schuster.webp",
+      "kind": "portrait",
+      "caption": "Ян Шустер",
+      "source": "World War Cthulhu: Cold War — Our American Cousins, с. 105 (физ. 105), «Jan Schuster, Volkspolizei Hauptmann»"
+    }
+  ]
+}

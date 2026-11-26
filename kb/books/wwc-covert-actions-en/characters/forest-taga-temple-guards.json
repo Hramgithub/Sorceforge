@@ -1,0 +1,302 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "wwc-covert-actions-en/character/forest-taga-temple-guards",
+  "kind": "character",
+  "name": {
+    "ru": "Стражи святого места тага",
+    "en": "Taga Guards"
+  },
+  "aliases": [
+    "стражи ущелья"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "страж святого места тага",
+  "names": [
+    "Се Ран",
+    "Ку Тал",
+    "Бо Нак",
+    "Ти Ла"
+  ],
+  "occupation": {
+    "ru": "страж святого места",
+    "en": null
+  },
+  "sex": "мужской",
+  "residence": "тупиковое ущелье",
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "75",
+        "value": 75
+      },
+      "SIZ": {
+        "raw": "55",
+        "value": 55
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "70",
+        "value": 70
+      },
+      "DEX": {
+        "raw": "80",
+        "value": 80
+      },
+      "APP": {
+        "raw": "35",
+        "value": 35
+      },
+      "EDU": {
+        "raw": "30",
+        "value": 30
+      }
+    },
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "sanity": {
+      "raw": "0",
+      "value": 0,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "+1",
+      "value": 1
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Дротик",
+          "en": "Throw (Javelin)"
+        },
+        "kind": "attack",
+        "skill": "Метание",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d8+1 + половина 1d4 бонуса к урону",
+          "dice": "1d8+1",
+          "adds_db": true
+        },
+        "notes": "половина БкУ"
+      },
+      {
+        "name": {
+          "ru": "Копьё",
+          "en": "Fighting (Spear)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (копьё)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d8 + 1d4 бонус к урону",
+          "dice": "1d8",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Дубинка",
+          "en": "Fighting (Brawl/Club)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d6 + 1d4 бонус к урону",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Fighting (Brawl)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d6 + 1d4 бонус к урону",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "skills": [
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "28%",
+          "value": 28,
+          "half": 14,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Прятаться",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Красться",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Call/Dismiss Ti-Taki-Ti, Summon/Bind Byakhee.",
+      "items": [
+        {
+          "name": "Call/Dismiss Ti-Taki-Ti",
+          "spell": "coc:spell:call-dismiss-ti-taki-ti"
+        },
+        {
+          "name": "Summon/Bind Byakhee",
+          "spell": "coc:spell:summon-bind-byakhee"
+        }
+      ]
+    }
+  },
+  "background": {
+    "ideology": "Фанатизм.",
+    "secret": "Двое стражей боятся друг друга больше, чем Та Тока: каждый видит в другом более опасного претендента на место вождя. Если один падёт, другой не станет его спасать и может попытаться бежать — раз сыщики дошли сюда, Та Ток, наверное, мёртв, и выживший станет следующим вождём."
+  },
+  "description": {
+    "ru": "Двое стражей с зашитыми ртами и в диковинных глиняных шлемах; шлемы им ничуть не мешают. Своей внезапной атакой эти безгласные враги наводят ужас.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Из самых умелых охотников: время от времени Ти-Таки-Ти забирает одного из стражей и оставляет безжизненную оболочку, поэтому Та Ток следит, чтобы среди них были самые опасные его соперники. Умелые и беспощадные убийцы; считают святым долгом убивать всех чужаков.\nВ сценарии. Прячутся в подлеске у входа в ущелье, ждут молча и нападают, когда сыщики ступают на святую землю; яростно преследуют бегущих, не отступают и не сдаются (фанатизм и знание своей участи в случае неудачи). Если с сыщиками Ба Бенг, он снова помогает убить двух соперников.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 115,
+      "printed_page": 115,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Box Canyon», «Taga Guards»"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 116,
+      "printed_page": 116,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "editorial_text",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — 1970-е (Р-252: 1940s-1980s). Групповой профиль (двое); имена придуманы (Р-151). Заклинание «Call/Dismiss Ti-Taki-Ti» — новое (coc:spell:call-dismiss-ti-taki-ti)."
+  },
+  "errata": [
+    {
+      "field": "Дротик",
+      "printed": "45% (23/9)",
+      "expected": "45% (22/9)",
+      "note": "половина и пятая не следуют из процента; исправлено по правилу 7-й редакции (Р-35)",
+      "fixed": true
+    },
+    {
+      "field": "Драка",
+      "printed": "45% (23/9)",
+      "expected": "45% (22/9)",
+      "note": "половина и пятая не следуют из процента; исправлено по правилу 7-й редакции (Р-35)",
+      "fixed": true
+    },
+    {
+      "field": "Уклонение",
+      "printed": "35% (18/7)",
+      "expected": "35% (17/7)",
+      "note": "половина и пятая не следуют из процента; исправлено по правилу 7-й редакции (Р-35)",
+      "fixed": true
+    }
+  ],
+  "images": [
+    {
+      "file": "art/characters/wwc-covert-b-forest-taga-temple-guards.webp",
+      "kind": "portrait",
+      "caption": "Страж святого места тага",
+      "source": "World War Cthulhu: Cold War — Covert Actions, с. 116 (физ. 116), портрет при статблоке"
+    }
+  ]
+}

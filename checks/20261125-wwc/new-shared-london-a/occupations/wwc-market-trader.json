@@ -1,0 +1,110 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:wwc-market-trader",
+  "kind": "occupation",
+  "name": {
+    "ru": "Рыночный торговец",
+    "en": "Market Trader"
+  },
+  "aliases": [
+    "Market Trader"
+  ],
+  "group": "Мелкий торговец",
+  "lovecraftian": false,
+  "description": {
+    "ru": "Вы работаете за рыночным прилавком. Каждый прилавок торгует одним видом товара: фруктами и овощами, рыбой, одеждой, цветами, сладостями, мясом и т. д. Если прилавок семейный, за ним стоят родственники. Вы слышите все местные новости и сплетни и знаете в лицо многих в округе. По желанию у вас могут быть связи на чёрном рынке. Пример профессии World War Cthulhu: London для Лондона военного времени (шаг пятый, «Довоенные профессии и навыки»).",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + (НАР × 2 или ЛВК × 2)",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "APP",
+          2
+        ]
+      ],
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "DEX",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "20–30",
+    "min": 20,
+    "max": 30
+  },
+  "contacts": "Местные жители и предприятия, местная полиция, поставщики, покупатели.",
+  "skills": [
+    {
+      "raw": "Бухгалтерское дело",
+      "skill": "coc:skill:accounting"
+    },
+    {
+      "raw": "два социальных навыка (Обаяние, Красноречие, Запугивание или Убеждение)",
+      "choice": {
+        "count": 2,
+        "of": [
+          "coc:skill:charm",
+          "coc:skill:fast-talk",
+          "coc:skill:intimidate",
+          "coc:skill:persuade"
+        ]
+      }
+    },
+    {
+      "raw": "Слух",
+      "skill": "coc:skill:listen"
+    },
+    {
+      "raw": "Механика",
+      "skill": "coc:skill:mechanical-repair"
+    },
+    {
+      "raw": "Ориентирование",
+      "skill": "coc:skill:navigate"
+    },
+    {
+      "raw": "Психология",
+      "skill": "coc:skill:psychology"
+    },
+    {
+      "raw": "Внимание",
+      "skill": "coc:skill:spot-hidden"
+    }
+  ],
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "wwc-london-en",
+      "physical_page": 18,
+      "printed_page": 18,
+      "method": "book_text",
+      "verified": true,
+      "note": "шаг пятый: «Market Trader»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической, смещение 0). Эпоха — Лондон Второй мировой войны (1939–1945, Блиц); в осях — «1940s-1980s» (общая схема линейки World War Cthulhu). Черновик общей записи профессии (часть london-a линейки World War Cthulhu); переносит ведущий."
+  }
+}

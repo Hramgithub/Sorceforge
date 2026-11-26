@@ -1,0 +1,976 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "wwc-covert-actions-en/creature/adlet",
+  "kind": "creature",
+  "name": {
+    "ru": "Адлет",
+    "en": "Adlet"
+  },
+  "aliases": [
+    "Adlets",
+    "адлеты",
+    "striped ones",
+    "painted ones",
+    "«полосатые»",
+    "«раскрашенные»"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "подвид упырей (Арктика)",
+  "relations": [
+    {
+      "type": "form_of",
+      "target": "coc:creature:ghoul",
+      "note": "подвид упырей",
+      "note_back": "арктический подвид — адлеты"
+    },
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:ithaqua",
+      "note": "большинство племён адлетов поклоняются Итакуа",
+      "note_back": "адлеты"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "80",
+        "value": 80
+      },
+      "CON": {
+        "raw": "65",
+        "value": 65
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65
+      }
+    },
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "mp": {
+      "raw": "13",
+      "value": 13
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "огнестрельное оружие и метательные снаряды наносят половину выпавшего урона, дроби отбрасываются",
+      "value": null
+    },
+    "attacks_per_round": {
+      "raw": "3",
+      "value": 3
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Когти",
+          "en": "Fighting (Brawl/Claws)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "1d6 + 1d4 бонус к урону",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Укус",
+          "en": "Fighting (Brawl/Bite)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1d4 + 1d4 бонус к урону",
+          "dice": "1d4",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Копьё",
+          "en": "Fighting (Spear)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (копьё)",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1d8+1 + 1d4 бонус к урону",
+          "dice": "1d8+1",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Лук",
+          "en": "Firearms (Bow)"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (лук)",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1d6 + половина 1d4 бонуса к урону",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "notes": "половина БкУ"
+      }
+    ],
+    "dodge": {
+      "raw": "45%",
+      "value": 45,
+      "half": 22,
+      "fifth": 9
+    },
+    "skills": [
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Иностранный язык (адлетов)",
+        "skill": "coc:skill:language-other",
+        "specialization": "адлетов",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Естествознание",
+        "skill": "coc:skill:natural-world",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Ориентирование",
+        "skill": "coc:skill:navigate",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Выживание",
+        "skill": "coc:skill:survival",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "увидеть адлета"
+      }
+    ]
+  },
+  "variants": [
+    {
+      "label": "Воин адлетов (Adlet Warrior)",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "80",
+            "value": 80
+          },
+          "CON": {
+            "raw": "65",
+            "value": 65
+          },
+          "SIZ": {
+            "raw": "65",
+            "value": 65
+          },
+          "INT": {
+            "raw": "65",
+            "value": 65
+          },
+          "POW": {
+            "raw": "65",
+            "value": 65
+          },
+          "DEX": {
+            "raw": "65",
+            "value": 65
+          }
+        },
+        "hp": {
+          "raw": "13",
+          "value": 13
+        },
+        "mp": {
+          "raw": "13",
+          "value": 13
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "9",
+          "value": 9,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 9
+            }
+          ]
+        },
+        "armor": {
+          "raw": "огнестрельное оружие и метательные снаряды наносят половину выпавшего урона, дроби отбрасываются",
+          "value": null
+        },
+        "attacks_per_round": {
+          "raw": "3",
+          "value": 3
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Когти",
+              "en": "Fighting (Brawl/Claws)"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "65% (32/13)",
+              "value": 65,
+              "half": 32,
+              "fifth": 13
+            },
+            "damage": {
+              "raw": "1d6 + 1d4 бонус к урону",
+              "dice": "1d6",
+              "adds_db": true
+            }
+          },
+          {
+            "name": {
+              "ru": "Укус",
+              "en": "Fighting (Brawl/Bite)"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "55% (27/11)",
+              "value": 55,
+              "half": 27,
+              "fifth": 11
+            },
+            "damage": {
+              "raw": "1d4 + 1d4 бонус к урону",
+              "dice": "1d4",
+              "adds_db": true
+            }
+          },
+          {
+            "name": {
+              "ru": "Копьё",
+              "en": "Fighting (Spear)"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (копьё)",
+            "chance": {
+              "raw": "55% (27/11)",
+              "value": 55,
+              "half": 27,
+              "fifth": 11
+            },
+            "damage": {
+              "raw": "1d8+1 + 1d4 бонус к урону",
+              "dice": "1d8+1",
+              "adds_db": true
+            }
+          },
+          {
+            "name": {
+              "ru": "Лук",
+              "en": "Firearms (Bow)"
+            },
+            "kind": "attack",
+            "skill": "Стрельба (лук)",
+            "chance": {
+              "raw": "55% (27/11)",
+              "value": 55,
+              "half": 27,
+              "fifth": 11
+            },
+            "damage": {
+              "raw": "1d6 + половина 1d4 бонуса к урону",
+              "dice": "1d6",
+              "adds_db": true
+            },
+            "notes": "половина БкУ"
+          }
+        ],
+        "dodge": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "skills": [
+          {
+            "name": "Прыжки",
+            "skill": "coc:skill:jump",
+            "value": {
+              "raw": "75%",
+              "value": 75,
+              "half": 37,
+              "fifth": 15
+            }
+          },
+          {
+            "name": "Иностранный язык (адлетов)",
+            "skill": "coc:skill:language-other",
+            "specialization": "адлетов",
+            "value": {
+              "raw": "50%",
+              "value": 50,
+              "half": 25,
+              "fifth": 10
+            }
+          },
+          {
+            "name": "Слух",
+            "skill": "coc:skill:listen",
+            "value": {
+              "raw": "55%",
+              "value": 55,
+              "half": 27,
+              "fifth": 11
+            }
+          },
+          {
+            "name": "Естествознание",
+            "skill": "coc:skill:natural-world",
+            "value": {
+              "raw": "75%",
+              "value": 75,
+              "half": 37,
+              "fifth": 15
+            }
+          },
+          {
+            "name": "Ориентирование",
+            "skill": "coc:skill:navigate",
+            "value": {
+              "raw": "65%",
+              "value": 65,
+              "half": 32,
+              "fifth": 13
+            }
+          },
+          {
+            "name": "Внимание",
+            "skill": "coc:skill:spot-hidden",
+            "value": {
+              "raw": "65%",
+              "value": 65,
+              "half": 32,
+              "fifth": 13
+            }
+          },
+          {
+            "name": "Скрытность",
+            "skill": "coc:skill:stealth",
+            "value": {
+              "raw": "55%",
+              "value": 55,
+              "half": 27,
+              "fifth": 11
+            }
+          },
+          {
+            "name": "Выживание",
+            "skill": "coc:skill:survival",
+            "value": {
+              "raw": "65%",
+              "value": 65,
+              "half": 32,
+              "fifth": 13
+            }
+          },
+          {
+            "name": "Метание",
+            "skill": "coc:skill:throw",
+            "value": {
+              "raw": "55%",
+              "value": 55,
+              "half": 27,
+              "fifth": 11
+            }
+          },
+          {
+            "name": "Чтение следов",
+            "skill": "coc:skill:track",
+            "value": {
+              "raw": "65%",
+              "value": 65,
+              "half": 32,
+              "fifth": 13
+            }
+          }
+        ],
+        "sanity_loss": [
+          {
+            "success": "0",
+            "fail": "1d6",
+            "trigger": "увидеть адлета"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Шаман адлетов (Adlet Shaman)",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "80",
+            "value": 80
+          },
+          "CON": {
+            "raw": "65",
+            "value": 65
+          },
+          "SIZ": {
+            "raw": "65",
+            "value": 65
+          },
+          "INT": {
+            "raw": "65",
+            "value": 65
+          },
+          "POW": {
+            "raw": "65",
+            "value": 65
+          },
+          "DEX": {
+            "raw": "65",
+            "value": 65
+          }
+        },
+        "hp": {
+          "raw": "13",
+          "value": 13
+        },
+        "mp": {
+          "raw": "13",
+          "value": 13
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "9",
+          "value": 9,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 9
+            }
+          ]
+        },
+        "armor": {
+          "raw": "огнестрельное оружие и метательные снаряды наносят половину выпавшего урона, дроби отбрасываются",
+          "value": null
+        },
+        "attacks_per_round": {
+          "raw": "3",
+          "value": 3
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Когти",
+              "en": "Fighting (Brawl/Claws)"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "65% (32/13)",
+              "value": 65,
+              "half": 32,
+              "fifth": 13
+            },
+            "damage": {
+              "raw": "1d6 + 1d4 бонус к урону",
+              "dice": "1d6",
+              "adds_db": true
+            }
+          },
+          {
+            "name": {
+              "ru": "Укус",
+              "en": "Fighting (Brawl/Bite)"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "55% (27/11)",
+              "value": 55,
+              "half": 27,
+              "fifth": 11
+            },
+            "damage": {
+              "raw": "1d4 + 1d4 бонус к урону",
+              "dice": "1d4",
+              "adds_db": true
+            }
+          },
+          {
+            "name": {
+              "ru": "Жертвенный кинжал",
+              "en": "Fighting (Knife/Sacrificial Dagger)"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (нож)",
+            "chance": {
+              "raw": "55% (27/11)",
+              "value": 55,
+              "half": 27,
+              "fifth": 11
+            },
+            "damage": {
+              "raw": "1d4 + 1d4 бонус к урону",
+              "dice": "1d4",
+              "adds_db": true
+            }
+          }
+        ],
+        "dodge": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "skills": [
+          {
+            "name": "Прыжки",
+            "skill": "coc:skill:jump",
+            "value": {
+              "raw": "75%",
+              "value": 75,
+              "half": 37,
+              "fifth": 15
+            }
+          },
+          {
+            "name": "Иностранный язык (адлетов)",
+            "skill": "coc:skill:language-other",
+            "specialization": "адлетов",
+            "value": {
+              "raw": "50%",
+              "value": 50,
+              "half": 25,
+              "fifth": 10
+            }
+          },
+          {
+            "name": "Слух",
+            "skill": "coc:skill:listen",
+            "value": {
+              "raw": "55%",
+              "value": 55,
+              "half": 27,
+              "fifth": 11
+            }
+          },
+          {
+            "name": "Естествознание",
+            "skill": "coc:skill:natural-world",
+            "value": {
+              "raw": "75%",
+              "value": 75,
+              "half": 37,
+              "fifth": 15
+            }
+          },
+          {
+            "name": "Ориентирование",
+            "skill": "coc:skill:navigate",
+            "value": {
+              "raw": "65%",
+              "value": 65,
+              "half": 32,
+              "fifth": 13
+            }
+          },
+          {
+            "name": "Внимание",
+            "skill": "coc:skill:spot-hidden",
+            "value": {
+              "raw": "65%",
+              "value": 65,
+              "half": 32,
+              "fifth": 13
+            }
+          },
+          {
+            "name": "Скрытность",
+            "skill": "coc:skill:stealth",
+            "value": {
+              "raw": "55%",
+              "value": 55,
+              "half": 27,
+              "fifth": 11
+            }
+          },
+          {
+            "name": "Выживание",
+            "skill": "coc:skill:survival",
+            "value": {
+              "raw": "65%",
+              "value": 65,
+              "half": 32,
+              "fifth": 13
+            }
+          },
+          {
+            "name": "Метание",
+            "skill": "coc:skill:throw",
+            "value": {
+              "raw": "55%",
+              "value": 55,
+              "half": 27,
+              "fifth": 11
+            }
+          },
+          {
+            "name": "Чтение следов",
+            "skill": "coc:skill:track",
+            "value": {
+              "raw": "65%",
+              "value": 65,
+              "half": 32,
+              "fifth": 13
+            }
+          }
+        ],
+        "spells": {
+          "raw": "Call Ithaqua, Consume Likeness, Enchant Sacrificial Dagger.",
+          "items": [
+            {
+              "name": "Call Ithaqua",
+              "spell": "coc:spell:call-dismiss-ithaqua"
+            },
+            {
+              "name": "Consume Likeness",
+              "spell": "coc:spell:consume-likeness"
+            },
+            {
+              "name": "Enchant Sacrificial Dagger",
+              "spell": "coc:spell:enchant-sacrificial-dagger"
+            }
+          ]
+        },
+        "sanity_loss": [
+          {
+            "success": "0",
+            "fail": "1d6",
+            "trigger": "увидеть адлета"
+          }
+        ]
+      }
+    }
+  ],
+  "abilities": [
+    {
+      "name": "Прыжки",
+      "raw": "Leaping: Adlet roll a bonus die on all Jump rolls.",
+      "summary": "Адлеты бросают бонусную кость на все проверки Прыжков."
+    },
+    {
+      "name": "Чутьё охотника",
+      "raw": "Hunter’s Senses: Adlet roll a bonus die on Listen and Spot Hidden rolls.",
+      "summary": "Бонусная кость на проверки Слуха и Внимания."
+    },
+    {
+      "name": "Шкура",
+      "raw": "Armour: Firearms and projectiles do half rolled damage, round fractions down.",
+      "summary": "Огнестрельное оружие и метательные снаряды наносят половину выпавшего урона, с округлением вниз."
+    },
+    {
+      "name": "Буря Итакуа",
+      "raw": "Under the cover of the storm, a storm they summoned",
+      "summary": "Шаманы древними страшными обрядами призывают силу Великого Вендиго: из ясного неба поднимается буря, под прикрытием которой адлеты нападают. Кто в такой буре ест человечину, рискует Проклятием вендиго."
+    },
+    {
+      "name": "Разум",
+      "raw": "No mindless beasts, the Adlets can use tools",
+      "summary": "Не безмозглые звери: делают орудия, строят сложные планы, общаются, собираются в большие организованные отряды, обходят ловушки; не самоубийцы — предпочитают скрытность, быстрые удары и свои природные способности."
+    }
+  ],
+  "description": {
+    "ru": "Псоподобные людоеды из легенд инуитов и дене, «полосатые» или «раскрашенные». Как все упыри, похожи на псов: длинные нижние конечности с коленями назад, лохматая шерсть, острые клыки в выступающей морде; но они и человекоподобны — прямая, хоть и сутулая, осанка, руки, способные к тонкой работе, умение говорить, планировать и думать. Носят одежду из дублёных шкур и звериных костей.",
+    "en": null
+  },
+  "legend": {
+    "ru": "У инуитов и дене северной Канады издавна есть предания о племенах псоподобных людей, бродивших по лесам и арктическим пустошам: свирепые воины и великие охотники, они выходили из глуши хватать одиноких охотников, а порой собирались толпой и нападали на целые деревни. Охотились и на карибу, лося и другую дичь, но предпочитали людей — псоголовые были людоедами. Правда страшнее: адлеты, как их зовут инуиты, — племя упырей, осевшее в высокой Арктике; как и инуиты, они расселились по Полярному кругу от хребта Брукса на Аляске до Якутии в Советском Союзе. Большинство племён адлетов поклоняются Итакуа; знает ли или заботится ли об этом Великий Древний, неизвестно, но их шаманы древними обрядами умеют призывать силу Великого Вендиго.\nАдлеты довольны жизнью на мёрзлом севере, далеко от людей: расстояние и местность защищают их, а сами они хорошо приспособлены к холоду. Изредка человечина — в основном местные инуиты — утоляет их голод; попадается и более редкое мясо: Арктика вечно притягивает смелых и любопытных — норманнов в долгих плаваниях, искателей прохода в Тихий океан, порой трапперов. Не все чужаки стали пищей: немногие оказались так же жадны и голодны, как северные упыри. Кто ест человечину в земле Итакуа, может подхватить Проклятие вендиго: большинство постепенно превращаются в адлетов и уходят на север, гонимые безумными видениями и голодом; счастливцы сохраняют человеческий облик, оставаясь адлетами умом и душой, и передают порченую кровь потомкам, разнося семена проклятия далеко от Арктики.\nВ последнее время в Арктике всплеск активности: новые технологии и нужды гонят людей на север. Разведка нефти сильно встревожила адлетов, как и перемещения войск; линия DEW — тяжкое оскорбление и угроза, но страх быть обнаруженными смягчается голодом: изолированные базы полны вкусного мяса, которое легко добыть.\nНападение на PIN-EB: зов крови Олсена привёл его на север, и сотня адлетов ответила ему. Шаманы принесли в ритуальное пиршество десятки своих, чтобы узнать волю Итакуа (как обычно, неясно), но узнали, что Олсен — схождение нескольких порченных вендиго родов и подходящая жертва, чтобы открыть давно закрытые врата в Арктике и выпустить аватар Ходящего по ветрам. Под прикрытием вызванной бури адлеты, как никогда в новые времена, массой напали на базу, но, увлёкшись бойней и голодом, забыли искать Избранного и, боясь «летающих зверей» людей, ушли до конца бури. Второй отряд меньше: не все хотят возвращаться — лучшее мясо уже взято; шаманы кроваво наводят дисциплину. Во вторую бурю нападают 15 воинов и 3 шамана.",
+    "en": null
+  },
+  "cult": {
+    "ru": "Шаманы адлетов поклоняются Итакуа (Великому Вендиго, Владыке арктических ветров, Пожирателю плоти); заклинания шамана — «Вызов Итакуа», «Поглощение образа», «Зачаровать жертвенный кинжал». Ритуальное принесение в жертву и поедание Олсена должно впустить аватар Итакуа и новый ледниковый период.",
+    "en": null
+  },
+  "habitat": "Полярный круг: от хребта Брукса (Аляска) до Якутии; высокая Арктика Канады",
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 122,
+      "printed_page": 122,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Introduction»"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 126,
+      "printed_page": 126,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Layovers»: легенды"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 128,
+      "printed_page": 128,
+      "method": "book_text",
+      "verified": true,
+      "note": "«What Happened at PIN-EB»"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 129,
+      "printed_page": 129,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Adlets»"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 135,
+      "printed_page": 135,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Following the Adlets’ Trail»"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 146,
+      "printed_page": 146,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Adlet Warrior», «Adlet Shaman»"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 147,
+      "printed_page": 147,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Second Raiding Party», «Running the Raid»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "Когти",
+      "printed": "65% (33/13)",
+      "expected": "65% (32/13)",
+      "note": "половина и пятая не следуют из процента; исправлено по правилу 7-й редакции (Р-35)",
+      "fixed": true
+    },
+    {
+      "field": "Укус",
+      "printed": "55% (28/11)",
+      "expected": "55% (27/11)",
+      "note": "половина и пятая не следуют из процента; исправлено по правилу 7-й редакции (Р-35)",
+      "fixed": true
+    },
+    {
+      "field": "Копьё",
+      "printed": "55% (28/11)",
+      "expected": "55% (27/11)",
+      "note": "половина и пятая не следуют из процента; исправлено по правилу 7-й редакции (Р-35)",
+      "fixed": true
+    },
+    {
+      "field": "Лук",
+      "printed": "55% (28/11)",
+      "expected": "55% (27/11)",
+      "note": "половина и пятая не следуют из процента; исправлено по правилу 7-й редакции (Р-35)",
+      "fixed": true
+    },
+    {
+      "field": "Жертвенный кинжал",
+      "printed": "55% (28/11)",
+      "expected": "55% (27/11)",
+      "note": "половина и пятая не следуют из процента; исправлено по правилу 7-й редакции (Р-35)",
+      "fixed": true
+    },
+    {
+      "field": "statblock.move",
+      "printed": "9",
+      "expected": "8",
+      "note": "Скорость не сходится с правилами 7-й редакции; оставлено как напечатано (Р-161).",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — 1970-е (Р-252: 1940s-1980s). Основной статблок — «Adlet Warrior»; «Adlet Shaman» — второй вариант (числа те же, другие атаки и заклинания). «Dodge 45%» напечатан среди навыков. «Call Ithaqua» — ссылка на «Вызов/изгнание Итакуа»."
+  },
+  "images": [
+    {
+      "file": "art/creatures/wwc-covert-b-adlet.webp",
+      "kind": "art",
+      "caption": "Налёт адлетов в буре",
+      "source": "World War Cthulhu: Cold War — Covert Actions, с. 146 (физ. 146), иллюстрация над статблоками адлетов"
+    }
+  ]
+}

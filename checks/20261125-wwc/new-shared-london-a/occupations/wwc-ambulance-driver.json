@@ -1,0 +1,104 @@
+{
+  "schema": "sourcefold.occupation.v0",
+  "id": "coc:occupation:wwc-ambulance-driver",
+  "kind": "occupation",
+  "name": {
+    "ru": "Водитель скорой помощи",
+    "en": "Ambulance Driver"
+  },
+  "aliases": [
+    "Ambulance Driver"
+  ],
+  "group": "Водитель",
+  "lovecraftian": false,
+  "description": {
+    "ru": "Вы работаете в одной из крупных лондонских больниц и возите больных и раненых по оживлённым улицам. Работа требует исчерпывающего знания лондонских улиц (навык Ориентирование): мало знать маршрут — нужно знать короткие пути и объезды, когда дорога перекрыта или забита. Обычно вы работаете сменами с ещё одним сотрудником. Часто вы первый медик на месте, и вам приходится оказывать первую помощь. Стоит вложить пункты в Механику, чтобы обслуживать машину: кто-то может умереть, пока вы ждёте механика. Пример профессии World War Cthulhu: London для Лондона военного времени (шаг пятый, «Довоенные профессии и навыки»).",
+    "en": null
+  },
+  "skill_points": {
+    "raw": "ОБР × 2 + ЛВК × 2",
+    "options": [
+      [
+        [
+          "EDU",
+          2
+        ],
+        [
+          "DEX",
+          2
+        ]
+      ]
+    ]
+  },
+  "credit_rating": {
+    "raw": "9–30",
+    "min": 9,
+    "max": 30
+  },
+  "contacts": "Работники больниц, врачи, медсёстры, общественные работники.",
+  "skills": [
+    {
+      "raw": "Вождение автомобиля",
+      "skill": "coc:skill:drive-auto"
+    },
+    {
+      "raw": "Первая помощь",
+      "skill": "coc:skill:first-aid"
+    },
+    {
+      "raw": "Слух",
+      "skill": "coc:skill:listen"
+    },
+    {
+      "raw": "Механика",
+      "skill": "coc:skill:mechanical-repair"
+    },
+    {
+      "raw": "Ориентирование",
+      "skill": "coc:skill:navigate"
+    },
+    {
+      "raw": "один социальный навык (Обаяние, Красноречие, Запугивание или Убеждение)",
+      "choice": {
+        "count": 1,
+        "of": [
+          "coc:skill:charm",
+          "coc:skill:fast-talk",
+          "coc:skill:intimidate",
+          "coc:skill:persuade"
+        ]
+      }
+    },
+    {
+      "raw": "Психология",
+      "skill": "coc:skill:psychology"
+    },
+    {
+      "raw": "Внимание",
+      "skill": "coc:skill:spot-hidden"
+    }
+  ],
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "wwc-london-en",
+      "physical_page": 15,
+      "printed_page": 15,
+      "method": "book_text",
+      "verified": true,
+      "note": "шаг пятый: «Ambulance Driver»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической, смещение 0). Эпоха — Лондон Второй мировой войны (1939–1945, Блиц); в осях — «1940s-1980s» (общая схема линейки World War Cthulhu). Черновик общей записи профессии (часть london-a линейки World War Cthulhu); переносит ведущий."
+  }
+}

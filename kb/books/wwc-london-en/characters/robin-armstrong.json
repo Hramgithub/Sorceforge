@@ -1,0 +1,252 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "wwc-london-en/character/robin-armstrong",
+  "kind": "character",
+  "name": {
+    "ru": "Робин Армстронг",
+    "en": "Detective Robin Armstrong"
+  },
+  "aliases": [
+    "детектив Армстронг"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "полицейский детектив",
+    "en": "Police Detective"
+  },
+  "age": {
+    "raw": "46",
+    "value": 46
+  },
+  "sex": "м",
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "wwc-cold-war-en/character/n",
+      "note": "N (если сыщики — агенты Сети N)",
+      "note_back": "контакт в полиции"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "INT": {
+        "raw": "80",
+        "value": 80
+      },
+      "POW": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65
+      },
+      "APP": {
+        "raw": "55",
+        "value": 55
+      },
+      "EDU": {
+        "raw": "75",
+        "value": 75
+      }
+    },
+    "hp": {
+      "raw": "11",
+      "value": 11
+    },
+    "mp": {
+      "raw": "12",
+      "value": 12
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": "0"
+    },
+    "build": {
+      "raw": "+0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "sanity": {
+      "raw": "60",
+      "value": 60,
+      "max": null
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Fighting (Brawl)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:unarmed"
+      }
+    ],
+    "dodge": {
+      "raw": "50% (25/10)",
+      "value": 50,
+      "half": 25,
+      "fifth": 10
+    },
+    "skills": [
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      }
+    ]
+  },
+  "background": {
+    "description": "Стройный; тонкие аккуратные усики; редеющие волосы; бледно-карие глаза; угловатые черты; редко показывает чувства; профессионал.",
+    "traits": "Как играть: не показывайте чувств; внимательно слушайте и смотрите; никогда не перебивайте; говорите спокойно и точно.",
+    "secret": "Сначала скептичен к сыщикам (если они не из Сети N), но сдаётся перед доказательствами Мифов; будучи в Сети N или получив доказательства, полностью встаёт на их сторону и даёт любые сведения и помощь."
+  },
+  "description": {
+    "ru": "Детектив из полицейского участка «Кингс-Кросс», ведущий дело об убийстве Бриджеса; если сыщики — Вспомогательные агенты, он — один из контактов N и их вход в официальное расследование.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Дальнейшая помощь: доступ к телу, сведения об убийстве Дэвис, дела 1905 года; документы «Особого отдела» для агентов N. Если сыщиков арестуют у Грейвса, он приходит в камеру; успешная проверка Убеждения или Средств убеждает его обыскать Ганновер-террас; столкнувшись со сверхъестественным, он признаёт, что ему не по силам, и забирает сыщиков под свою ответственность; даёт доступ к полицейским архивам и может поставить несколько полицейских в среду вечером, но крупных операций без улик не устроит. Если сыщики — из Сети N, освобождает их без уговоров, но не рискует привлекать других полицейских.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "wwc-london-en",
+      "physical_page": 145,
+      "printed_page": 145,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Detective Robin Armstrong»"
+    },
+    {
+      "book_id": "wwc-london-en",
+      "physical_page": 146,
+      "printed_page": 146,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок"
+    },
+    {
+      "book_id": "wwc-london-en",
+      "physical_page": 149,
+      "printed_page": 149,
+      "method": "book_text",
+      "verified": true,
+      "note": "Network N"
+    },
+    {
+      "book_id": "wwc-london-en",
+      "physical_page": 162,
+      "printed_page": 162,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «Police Involvement»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической, смещение 0). Эпоха — Лондон Второй мировой войны (1939–1945, Блиц); в осях — «1940s-1980s» (общая схема линейки World War Cthulhu). Сценарий «Пленённая публика»."
+  },
+  "images": [
+    {
+      "file": "art/characters/wwc-london-b-robin-armstrong.webp",
+      "kind": "portrait",
+      "caption": "Детектив Робин Армстронг",
+      "source": "World War Cthulhu: London, с. 145 (физ. 145), раздел «Detective Robin Armstrong»"
+    }
+  ]
+}

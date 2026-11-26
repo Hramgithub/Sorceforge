@@ -1,0 +1,416 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "wwc-covert-actions-en/character/billie-fanmoore",
+  "kind": "character",
+  "name": {
+    "ru": "Билли Фанмур",
+    "en": "Billie Fanmoore"
+  },
+  "aliases": [
+    "Фанмур",
+    "Billie Fanmoore, Freelance Journalist"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "журналистка-фрилансер",
+    "en": "Freelance Journalist"
+  },
+  "age": {
+    "raw": "22",
+    "value": 22
+  },
+  "sex": "женский",
+  "residence": "дом Фанмуров, Бетнал-Грин, Лондон",
+  "relations": [
+    {
+      "type": "relative_of",
+      "target": "wwc-covert-actions-en/character/leonard-fanmoore",
+      "note": "отец",
+      "note_back": "дочь, ухаживает за ним"
+    },
+    {
+      "type": "knows",
+      "target": "wwc-covert-actions-en/character/alexia-sentsova",
+      "note": "любовница на саммите в Эдинбурге («Алекс»); посадила в неё нейронное семя",
+      "note_back": "любовница; сосуд для видений"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "30",
+        "value": 30
+      },
+      "SIZ": {
+        "raw": "40",
+        "value": 40
+      },
+      "DEX": {
+        "raw": "75",
+        "value": 75
+      },
+      "APP": {
+        "raw": "30",
+        "value": 30
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "75",
+        "value": 75
+      },
+      "EDU": {
+        "raw": "70",
+        "value": 70
+      }
+    },
+    "hp": {
+      "raw": "7",
+      "value": 7
+    },
+    "mp": {
+      "raw": "15",
+      "value": 15
+    },
+    "sanity": {
+      "raw": "15",
+      "value": 15,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "нет",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Fighting (Brawl)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Нож",
+          "en": "Knife"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d4+2",
+          "dice": "1d4+2",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:knife-medium"
+      }
+    ],
+    "dodge": {
+      "raw": "50% (25/10)",
+      "value": 50,
+      "half": 25,
+      "fifth": 10
+    },
+    "skills": [
+      {
+        "name": "Обращение с животными",
+        "skill": "coc:skill:animal-handling",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "10%",
+          "value": 10,
+          "half": 5,
+          "fifth": 2
+        }
+      },
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Работа в библиотеке",
+        "skill": "coc:skill:library-use",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Оккультизм",
+        "skill": "coc:skill:occult",
+        "value": {
+          "raw": "20%",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Искусство/ремесло (фотография)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "фотография",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Выживание",
+        "skill": "coc:skill:survival",
+        "value": {
+          "raw": "20%",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Доверие (Великая Раса Йит)",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Доверие (пресса)",
+        "value": {
+          "raw": "20%",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Clutch of Nyogtha.",
+      "items": [
+        {
+          "name": "Clutch of Nyogtha",
+          "spell": "coc:spell:clutch-of-nyogtha"
+        }
+      ]
+    }
+  },
+  "background": {
+    "description": "Широко раскрытые глаза, растрёпана, пахнет нечистотами. Кожа исцарапана и изрезана цифрами. Покрыта струпьями, чёрные волосы выпадают клочьями.",
+    "ideology": "Мотивация — самолюбие.",
+    "traits": "Дёргается, расчёсывает руки и лицо, рвёт на себе волосы, если не строчит тарабарщину на бумаге и не вырезает на коже 234 и 402. Голос — хриплый шёпот, переходящий в злобный визг, чем сильнее её задевают.",
+    "secret": "Раздвоена: хочет избавиться от безумия видений и одновременно рвётся разоблачить продажных пэров. Не знает, кто посылает видения; считает, что пэры лишь водятся с Советами, а парящий жёлтый осьминог — метафора, и что кто-то избрал её для разоблачения. Микросхема, посаженная Сенцовой, толкает её навредить Ховенхэму и Гуджону. Освободить её от нейронного семени можно только операцией на мозге."
+  },
+  "possessions": [
+    "авторучка",
+    "карман, полный чернильных картриджей",
+    "разделочный нож"
+  ],
+  "description": {
+    "ru": "Журналистка-фрилансер, 22 года, сиделка больного отца. Совсем недавно окончила Кардиффский университет, где состояла в «Фонде новых социалистов» и агитировала за Гарольда Вильсона. Фриланс выбрала, потому что постоянная работа в большой газете кажется ей душной, бюрократичной и зависимой от мнения редактора. Её звезда восходила: несколько крупных газет купили её репортажи об эдинбургском саммите по договору о нераспространении ядерного оружия в апреле — мае 1970 года, но с мая она ничего не публиковала. Мать умерла от рака в 1964 году. Теперь она будто живёт в своём мире: боится закрыть глаза, потому что во сне её осаждают видения Хастура и продажных пэров; постоянно пишет, рисует и глотает кофеиновые таблетки. Вернуть её к ясности можно, упомянув собаку или отца: она плачет и просит позволить ей позаботиться о них, а потом снова впадает в манию.",
+    "en": null
+  },
+  "legend": {
+    "ru": "После связи с Алексией Сенцовой на саммите она видит пророческие сны: лица пэров, частоты, паб и жуткий пузатый осьминогоподобный трёхглазый образ, щупальца которого тянутся к разумам ста государственных мужей. Йитианка посадила в неё нейронное семя, о котором Билли не знает. Через четыре месяца бессонных ночей она нашла паб из снов и узнала в нём двух пэров; одержимая, проследила Ховенхэма до его усадьбы в Хемел-Хемпстеде и тайком записала, как он связывается с русскими по шифрованной длинноволновой рации; Ховенхэм заметил её и прогнал, не поняв, что она узнала. Решив, что её жизнь в опасности, она предложила репортаж знакомому из «Дейли миррор», пригрозив иначе дискредитировать пэров сама; из-за её тона, разговоров о видениях и угроз «Дейли миррор» сообщила в SIS. Всю ночь она обзванивает газеты, намекая на большую сенсацию.\nВ сценарии. Сыщики находят её в подвале-бомбоубежище. Она молчит, только визжит и иногда поёт куски «Happy Together» группы The Turtles (1967); трудная проверка «Убеждения» ненадолго выводит её из спутанности (см. сцену «Подвал Фанмуров»). Если её удерживают, она изрыгает Хватку Ниогты с русским акцентом и пытается сбежать в ночь. В убежище, оказавшись в одной комнате с Гуджоном, бросится его убивать; в одиночестве царапает кожу и стены до сломанных ногтей, а оставшись с одним стражем, применяет Хватку Ниогты и ломает себе что угодно, лишь бы сбежать. Если она на свободе, видения приведут её в павильон Открытого чемпионата (см. сцену «Открытый чемпионат»).",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 6,
+      "printed_page": 6,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Background»"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 7,
+      "printed_page": 7,
+      "method": "book_text",
+      "verified": true,
+      "note": "брифинг"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 10,
+      "printed_page": 10,
+      "method": "book_text",
+      "verified": true,
+      "note": "сведения о Фанмур"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 11,
+      "printed_page": 11,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Cellar»"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 12,
+      "printed_page": 12,
+      "method": "book_text",
+      "verified": true,
+      "entry_page": 12,
+      "note": "статблок «Billie Fanmoore, Freelance Journalist, Age 22»"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 13,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок (продолжение)"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 19,
+      "printed_page": 19,
+      "method": "book_text",
+      "verified": true,
+      "note": "в убежище"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 23,
+      "printed_page": 23,
+      "method": "book_text",
+      "verified": true,
+      "note": "на Открытом чемпионате"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — 1970-е (1940s-1980s, Р-252). «Photography» — навык «Искусство/ремесло (фотография)». Строки «Trust» — навыки «Доверие»."
+  },
+  "errata": [
+    {
+      "field": "Нож",
+      "printed": "50% (50/10)",
+      "expected": "50% (25/10)",
+      "note": "половина и пятая не следуют из процента; исправлено по правилу 7-й редакции (Р-35)",
+      "fixed": true
+    }
+  ],
+  "images": [
+    {
+      "file": "art/characters/wwc-covert-a-billie-fanmoore.webp",
+      "kind": "portrait",
+      "caption": "",
+      "source": "World War Cthulhu: Cold War — Covert Actions, с. 12 (физ. 12): портрет"
+    }
+  ]
+}

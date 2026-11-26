@@ -1,0 +1,411 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "wwc-london-en/character/aurora-williams",
+  "kind": "character",
+  "name": {
+    "ru": "Аврора Уильямс",
+    "en": "Aurora Williams"
+  },
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "дилетантка и пиромантка",
+    "en": "Dilettante and Pyromancer"
+  },
+  "age": {
+    "raw": "30",
+    "value": 30
+  },
+  "sex": "ж",
+  "residence": "Гринвич",
+  "relations": [
+    {
+      "type": "rival_of",
+      "target": "wwc-london-en/character/joseph-dunbar",
+      "note": "бывший адвокат, «предатель»",
+      "note_back": "бывшая клиентка, жаждущая мести"
+    },
+    {
+      "type": "rival_of",
+      "target": "wwc-london-en/character/thomas-whitaker",
+      "note": "владелец сгоревшего отеля",
+      "note_back": "пострадавшая от пожара в его отеле"
+    },
+    {
+      "type": "rival_of",
+      "target": "wwc-london-en/character/paul-chamberlain",
+      "note": "хирург, не вернувший ей лицо",
+      "note_back": "бывшая пациентка"
+    },
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:fthaggua",
+      "note": "надеется стать его огненным вампиром",
+      "note_back": "пиромантка, вызывающая его"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "INT": {
+        "raw": "85",
+        "value": 85
+      },
+      "POW": {
+        "raw": "75",
+        "value": 75
+      },
+      "DEX": {
+        "raw": "75",
+        "value": 75
+      },
+      "APP": {
+        "raw": "75",
+        "value": 75
+      },
+      "EDU": {
+        "raw": "80",
+        "value": 80
+      }
+    },
+    "hp": {
+      "raw": "11",
+      "value": 11
+    },
+    "damage_bonus": {
+      "raw": "None",
+      "value": "0"
+    },
+    "build": {
+      "raw": "+0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "sanity": {
+      "raw": "25",
+      "value": 25,
+      "max": null
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1d3+DB",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Пистолет .32",
+          "en": "Handgun (.32 Auto)"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d8",
+          "dice": "1d8",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:32-automatic"
+      }
+    ],
+    "dodge": {
+      "raw": "50% (25/10)",
+      "value": 50,
+      "half": 25,
+      "fifth": 10
+    },
+    "skills": [
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "90%",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "6%",
+          "value": 6,
+          "half": 3,
+          "fifth": 1
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Иностранный язык (французский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "французский",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Иностранный язык (немецкий)",
+        "skill": "coc:skill:language-other",
+        "specialization": "немецкий",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Иностранный язык (греческий)",
+        "skill": "coc:skill:language-other",
+        "specialization": "греческий",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Иностранный язык (итальянский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "итальянский",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Иностранный язык (латынь)",
+        "skill": "coc:skill:language-other",
+        "specialization": "латынь",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Иностранный язык (испанский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "испанский",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Call/Dismiss Fthaggua, Candle Communication, Cloak of Fire, Contact Fthaggua, Create Fire Vampire, Fire Walk, Pyromancy, Summon/Bind Fire Vampire.",
+      "items": [
+        {
+          "name": "Call/Dismiss Fthaggua",
+          "spell": null
+        },
+        {
+          "name": "Candle Communication",
+          "spell": "coc:spell:candle-communication"
+        },
+        {
+          "name": "Cloak of Fire",
+          "spell": "coc:spell:cloak-of-fire"
+        },
+        {
+          "name": "Contact Fthaggua",
+          "spell": null
+        },
+        {
+          "name": "Create Fire Vampire",
+          "spell": "coc:spell:create-fire-vampire"
+        },
+        {
+          "name": "Fire Walk",
+          "spell": "coc:spell:fire-walk"
+        },
+        {
+          "name": "Pyromancy",
+          "spell": "coc:spell:pyromancy"
+        },
+        {
+          "name": "Summon/Bind Fire Vampire",
+          "spell": "coc:spell:summon-bind-fire-vampire"
+        }
+      ]
+    }
+  },
+  "background": {
+    "description": "Стройная, красивая, движется с достоинством и грацией. Длинные огненно-рыжие волосы закрывают одну сторону лица, длинные оперные перчатки скрывают обожжённые руки. Кроме лица, кожа нигде не видна; лицо гладкое и бесстрастное, почти как фарфоровая маска.",
+    "traits": "Говорит очень тихо и осторожно, не отводя глаз от собеседника; лицо всегда бесстрастно; старается не моргать.",
+    "secret": "Верит, что близится конец света, и единственный способ пережить апокалипсис — стать огненным вампиром и служить Фтаггуа. Убьёт любого, кто попытается помешать ей спасти себя и своих последователей. В доме нет ни одного зеркала: она не хочет мучиться видом своего отражения — увидев его во время обряда, она закричит и сорвёт заклинание."
+  },
+  "description": {
+    "ru": "Наследница судоходной компании «Уильямс шиппинг», изуродованная пожаром в отеле «Альпийский» в 1937 году; затворница из Гринвича, пиромантка, задумавшая вызвать Фтаггуа в первую ночь Блица.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Родилась в Лондоне в семье, сколотившей состояние на всемирной судоходной сети (компания «Уильямс шиппинг»); два её дяди имели крупные политические связи, помогавшие компании получать большие контракты. Когда родители погибли в катастрофе на лодке, она унаследовала компанию и немалую часть огромного семейного состояния. С юности могла купить что угодно, путешествовала по Европе, Америкам, Африке и Азии, а красота её кружила головы по всему миру; компанией управляли директора. Мечта оборвалась зимней ночью 1937 года в швейцарских Альпах: в отеле «Альпийский» на кухне вспыхнул пожар, её придавило горящими обломками кровли, и, хотя её быстро спасли, она получила страшные ожоги большей части тела, включая лицо. Лучшие врачи и пластический хирург доктор Пол Чемберлен сделали что могли, но из-за повреждения мышц её лицо навсегда лишилось выражения — маска, изображающая жизнь, которую не снять. Она искала виноватых: владельцем отеля был Томас Уитакер, сэкономивший на противопожарной защите; её адвокат Джозеф Данбар готовил иск, но принял щедрое мировое соглашение — Уильямс хотела протащить Уитакера через суд и разорить, и сочла это предательством, тем более что Данбар потом стал главным юристом гостиничной группы Уитакера в Англии. Иск против Чемберлена новые юристы признали безнадёжным. Пристыженная своим видом, она вернулась в Лондон затворницей, купила дом в Гринвиче и наняла множество слуг из рабочего класса, ставших её друзьями. Одержимая огнём, она велела слугам искать по книжным лавкам Лондона книги об огне и связанных с ним мистических искусствах; так ей досталась «Книга всех запретных искусств» Йоханнеса Хартлиба с немецкими заметками на полях. Поздней осенью 1939 года на складе компании в доках она призвала и связала огненного вампира, затем гаданием по огню увидела гибель Лондона и мира в пламени и, связавшись с Фтаггуа, Вестником Ктугхи, договорилась: если она призовёт Фтаггуа на Землю, когда в небе будет Фомальгаут (следующий сентябрь), он превратит её и девять преданных слуг в огненных вампиров и унесёт с мёртвой Земли. Фтаггуа не сказал, что затем подожжёт весь Лондон как маяк для своего господина Ктугхи. Чтобы самой не погибнуть от обряда, она решила превратить в огненных вампиров Чемберлена, Данбара и Уитакера и истратить их на обряд.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "wwc-london-en",
+      "physical_page": 105,
+      "printed_page": 105,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Background»"
+    },
+    {
+      "book_id": "wwc-london-en",
+      "physical_page": 106,
+      "printed_page": 106,
+      "method": "book_text",
+      "verified": true,
+      "note": "предыстория"
+    },
+    {
+      "book_id": "wwc-london-en",
+      "physical_page": 107,
+      "printed_page": 107,
+      "method": "book_text",
+      "verified": true,
+      "note": "предыстория; «Non-player Characters»"
+    },
+    {
+      "book_id": "wwc-london-en",
+      "physical_page": 108,
+      "printed_page": 108,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Aurora Williams», статблок"
+    },
+    {
+      "book_id": "wwc-london-en",
+      "physical_page": 128,
+      "printed_page": 128,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Returning to the Williams Residence»; врезка «The Assassination Tactic»"
+    },
+    {
+      "book_id": "wwc-london-en",
+      "physical_page": 133,
+      "printed_page": 133,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Arrival at the Warehouse»"
+    },
+    {
+      "book_id": "wwc-london-en",
+      "physical_page": 134,
+      "printed_page": 134,
+      "method": "book_text",
+      "verified": true,
+      "note": "ритуал и зеркало"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической, смещение 0). Эпоха — Лондон Второй мировой войны (1939–1945, Блиц); в осях — «1940s-1980s» (общая схема линейки World War Cthulhu). Сценарий «Полуночный восход». Новые заклинания Создание огненного вампира, Огненный путь, Пиромантия — общие записи справочника; «Вызов/изгнание Фтаггуа» и «Связь с Фтаггуа» книга только называет — записей нет (spell: null)."
+  },
+  "images": [
+    {
+      "file": "art/characters/wwc-london-b-aurora-williams.webp",
+      "kind": "portrait",
+      "caption": "Аврора Уильямс",
+      "source": "World War Cthulhu: London, с. 108 (физ. 108), раздел «Aurora Williams»"
+    }
+  ]
+}

@@ -1,0 +1,396 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "wwc-cold-war-en/character/vadim-kazakov",
+  "kind": "character",
+  "name": {
+    "ru": "Вадим Казаков",
+    "en": "Vadim Kazakov"
+  },
+  "aliases": [
+    "Vadim Kazakov, \"Defecting\" KGB Agent",
+    "«Адам»",
+    "«Джон»"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "«перебежчик» КГБ",
+    "en": "\"Defecting\" KGB Agent"
+  },
+  "age": {
+    "raw": "45",
+    "value": 45
+  },
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "wwc-cold-war-en/organization/kgb"
+    },
+    {
+      "type": "works_for",
+      "target": "wwc-cold-war-en/character/fyodor-yakovlev",
+      "note": "куратор",
+      "note_back": "агент"
+    },
+    {
+      "type": "works_for",
+      "target": "wwc-cold-war-en/organization/odessa-marine-exports",
+      "note": "легенда — торговый представитель"
+    },
+    {
+      "type": "rival_of",
+      "target": "wwc-cold-war-en/character/vladimir-tumanov",
+      "note": "ненавидящий его сослуживец",
+      "note_back": "ненавистный сослуживец"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "75",
+        "value": 75
+      },
+      "CON": {
+        "raw": "65",
+        "value": 65
+      },
+      "SIZ": {
+        "raw": "70",
+        "value": 70
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "APP": {
+        "raw": "65",
+        "value": 65
+      },
+      "INT": {
+        "raw": "80",
+        "value": 80
+      },
+      "POW": {
+        "raw": "55",
+        "value": 55
+      },
+      "EDU": {
+        "raw": "80",
+        "value": 80
+      }
+    },
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "1d4"
+    },
+    "build": {
+      "raw": "+1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d3+dB",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Пистолет",
+          "en": "Handgun"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "1d10",
+          "dice": "1d10",
+          "adds_db": false
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "50% (25/10)",
+      "value": 50,
+      "half": 25,
+      "fifth": 10
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Маскировка",
+        "skill": "coc:skill:disguise",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Вождение автомобиля",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Военное дело",
+        "skill": "coc:skill:military-science",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Ориентирование",
+        "skill": "coc:skill:navigate",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Пилотирование",
+        "skill": "coc:skill:pilot",
+        "specialization": "лодка",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Плавание",
+        "skill": "coc:skill:swim",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Шпионское ремесло",
+        "skill": "coc:skill:tradecraft",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Иностранный язык",
+        "skill": "coc:skill:language-other",
+        "specialization": "английский",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Иностранный язык",
+        "skill": "coc:skill:language-other",
+        "specialization": "турецкий",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Доверие",
+        "specialization": "КГБ",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      }
+    ],
+    "sanity": {
+      "raw": "55",
+      "value": 55,
+      "max": null
+    }
+  },
+  "background": {
+    "secret": "Ложный перебежчик по плану Петрова; убил Эрдогана Бадема; готов сдать свою сеть и Туманова."
+  },
+  "description": {
+    "ru": "Мускулистый, ухоженный, опрятный, с крепким рукопожатием и уверенной улыбкой.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Бывший офицер советского флота (капитан первого ранга), Казаков завербован КГБ пять лет назад за близкое знание Чёрного моря. Его легенда — торговый представитель «Одесского морского экспорта» (ОМЭ), подконтрольной КГБ компании на Украине: он ездит по городам Черноморья, сводя компании, которым нужны морские перевозки, и в переговорах узнаёт о западных деловых интересах, докладывая куратору Фёдору Яковлеву.\nПодробности. Яковлев тоже бывший моряк; ему подчиняются Казаков и Туманов, которые порой бывают в Стамбуле одновременно, но с разными заданиями. Оба создали сети контактов в местном бизнесе, но у Казакова есть и своя сеть для сбора сведений о соперничающих разведках (Памела Кортни, Стюарт Джеймсон, Вахит Матараджи, Сыдыка Арап, Сулейман Экмекчи; прежде — Эрдоган и Несим Бадем). Мотивация: идеология.\nТайны и цели. Казаков познакомился с Ильёй Петровым четыре года назад на операции в Стамбуле. Петров сыграл на его патриотизме и убедил, что план вывести Турцию из НАТО даст советскому флоту огромное преимущество в Чёрном море. Операция не санкционирована, начальство о ней не знает, и Казаков понимает, что ради легенды придётся пожертвовать своими контактами и Владимиром Тумановым. Шесть недель назад он убил Эрдогана Бадема и инсценировал пытки (см. сцену «Гибель Бадемов»). Его «история» для Запада — ядерная боеголовка Чёрного братства на «Сердце Гаваны».\nКак играть. Будьте как можно спокойнее, холоднее и бесстрастнее. Долго и тяжело смотрите на сыщиков. Не повышайте голос, не расстраивайтесь, не злитесь.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "wwc-cold-war-en",
+      "physical_page": 169,
+      "printed_page": 169,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Kazakov's Story»"
+    },
+    {
+      "book_id": "wwc-cold-war-en",
+      "physical_page": 180,
+      "printed_page": 180,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Vadim Kazakov», статблок"
+    },
+    {
+      "book_id": "wwc-cold-war-en",
+      "physical_page": 181,
+      "printed_page": 181,
+      "method": "book_text",
+      "verified": true,
+      "note": "окончание статблока"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — 1970-е, Холодная война (в осях — «1940s-1980s»). Персонаж кампании «Перекрёстки» (Intersections)."
+  },
+  "images": [
+    {
+      "file": "art/characters/wwc-cw-b-vadim-kazakov.webp",
+      "kind": "portrait",
+      "caption": "Вадим Казаков",
+      "source": "World War Cthulhu: Cold War, с. 180"
+    }
+  ]
+}

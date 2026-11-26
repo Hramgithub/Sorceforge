@@ -1,0 +1,320 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "wwc-covert-actions-en/character/lo-kan",
+  "kind": "character",
+  "name": {
+    "ru": "Ло Кан",
+    "en": null
+  },
+  "aliases": [
+    "Taga Hunter",
+    "охотник тага",
+    "Taga Hunter, Age 22"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "охотник тага",
+    "en": "Taga Hunter"
+  },
+  "age": {
+    "raw": "22",
+    "value": 22
+  },
+  "sex": "мужской",
+  "residence": "земли тага",
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "wwc-covert-actions-en/organization/taga",
+      "note": "племя",
+      "note_back": "охотник"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "65",
+        "value": 65
+      },
+      "SIZ": {
+        "raw": "55",
+        "value": 55
+      },
+      "INT": {
+        "raw": "60",
+        "value": 60
+      },
+      "POW": {
+        "raw": "55",
+        "value": 55
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65
+      },
+      "APP": {
+        "raw": "35",
+        "value": 35
+      },
+      "EDU": {
+        "raw": "30",
+        "value": 30
+      }
+    },
+    "hp": {
+      "raw": "10 (12)",
+      "value": 12,
+      "note": "10 — текущие ПЗ (охотник ранен и измотан борьбой со свиньёй), 12 — максимум; вывод из текста (Р-41)"
+    },
+    "sanity": {
+      "raw": "00",
+      "value": 0,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "+1",
+      "value": 1
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Дротик",
+          "en": "Throw (Javelin)"
+        },
+        "kind": "attack",
+        "skill": "Метание",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d8+1 + половина 1d4 бонуса к урону",
+          "dice": "1d8+1",
+          "adds_db": true
+        },
+        "notes": "половина БкУ"
+      },
+      {
+        "name": {
+          "ru": "Копьё",
+          "en": "Fighting (Spear)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (копьё)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d8 + 1d4 бонус к урону",
+          "dice": "1d8",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Дубинка",
+          "en": "Fighting (Brawl/Club)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d6 + 1d4 бонус к урону",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Нож",
+          "en": "Fighting (Knife)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (нож)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d4+2 + 1d4 бонус к урону",
+          "dice": "1d4+2",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Fighting (Brawl)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d6 + 1d4 бонус к урону",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "33% (16/6)",
+      "value": 33,
+      "half": 16,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "12%",
+          "value": 12,
+          "half": 6,
+          "fifth": 2
+        }
+      },
+      {
+        "name": "Прятаться",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Красться",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      }
+    ]
+  },
+  "background": {
+    "ideology": "Фанатизм.",
+    "traits": "Ненавидит всех, кто вторгается в земли его народа; увидев сыщиков, думает только о том, чтобы они заплатили за святотатство.",
+    "secret": "Враждебен, но измотан; хочет подманить чужаков на расстояние удара ножом."
+  },
+  "possessions": [
+    "нож Хендерсона"
+  ],
+  "description": {
+    "ru": "Лицо охотника тага страшно: окровавленное, с зашитыми губами. Руки в запёкшейся крови.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Охотник тага. Охотников в племени почитают — выше них только вождь и бог.\nВ сценарии. Сыщики слышат поблизости пронзительный визг и звуки борьбы: охотник добивает крупную дикую свинью, которую покалечил, — копьё застряло у неё в рёбрах, и он пытается прикончить её ножом; оба слишком поглощены друг другом и не замечают сыщиков. Они на крошечной поляне; кровь стекает по древку и собирается в лужицу, когда зверь замирает. Охотник измотан, но враждебен: показывает на свинью и слабо улыбается, притворяется раненым, чтобы сыщики подошли ближе и он мог броситься с ножом. Безжалостный убийца, он не ждёт пощады и бьётся, пока не погибнет он или враги. Его нож — нож Хендерсона из экспедиции Мейсона.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 109,
+      "printed_page": 109,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Hunter»; «Taga Hunter, Age 22»"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 110,
+      "printed_page": 110,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок, нож"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "editorial_text",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — 1970-е (Р-252: 1940s-1980s). Имя придумано (Р-150), в книге — «Taga Hunter, Age 22». ПЗ напечатаны «10 (12)»."
+  },
+  "errata": [
+    {
+      "field": "Дротик",
+      "printed": "45% (23/9)",
+      "expected": "45% (22/9)",
+      "note": "половина и пятая не следуют из процента; исправлено по правилу 7-й редакции (Р-35)",
+      "fixed": true
+    },
+    {
+      "field": "Драка",
+      "printed": "45% (23/9)",
+      "expected": "45% (22/9)",
+      "note": "половина и пятая не следуют из процента; исправлено по правилу 7-й редакции (Р-35)",
+      "fixed": true
+    },
+    {
+      "field": "Уклонение",
+      "printed": "33% (17/7)",
+      "expected": "33% (16/6)",
+      "note": "половина и пятая не следуют из процента; исправлено по правилу 7-й редакции (Р-35)",
+      "fixed": true
+    }
+  ],
+  "images": [
+    {
+      "file": "art/characters/wwc-covert-b-lo-kan.webp",
+      "kind": "illustration",
+      "caption": "Охотник тага добивает дикую свинью",
+      "source": "World War Cthulhu: Cold War — Covert Actions, с. 110 (физ. 110), иллюстрация к «The Hunter»"
+    }
+  ]
+}

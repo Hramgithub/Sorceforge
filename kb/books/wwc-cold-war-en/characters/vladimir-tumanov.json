@@ -1,0 +1,371 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "wwc-cold-war-en/character/vladimir-tumanov",
+  "kind": "character",
+  "name": {
+    "ru": "Владимир Туманов",
+    "en": "Vladimir Tumanov"
+  },
+  "aliases": [
+    "Vladimir Tumanov, Loyal KGB Agent"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "верный агент КГБ",
+    "en": "Loyal KGB Agent"
+  },
+  "age": {
+    "raw": "48",
+    "value": 48
+  },
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "wwc-cold-war-en/organization/kgb"
+    },
+    {
+      "type": "works_for",
+      "target": "wwc-cold-war-en/character/fyodor-yakovlev",
+      "note": "куратор",
+      "note_back": "агент"
+    },
+    {
+      "type": "works_for",
+      "target": "wwc-cold-war-en/organization/odessa-marine-exports",
+      "note": "легенда — торговый представитель"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "55",
+        "value": 55
+      },
+      "DEX": {
+        "raw": "55",
+        "value": 55
+      },
+      "APP": {
+        "raw": "55",
+        "value": 55
+      },
+      "INT": {
+        "raw": "85",
+        "value": 85
+      },
+      "POW": {
+        "raw": "60",
+        "value": 60
+      },
+      "EDU": {
+        "raw": "80",
+        "value": 80
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "1d3+dB",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Пистолет",
+          "en": "Handgun"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "1d10",
+          "dice": "1d10",
+          "adds_db": false
+        }
+      },
+      {
+        "name": {
+          "ru": "Винтовка",
+          "en": "Rifle"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "2d6+4",
+          "dice": "2d6+4",
+          "adds_db": false
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "55% (27/11)",
+      "value": 55,
+      "half": 27,
+      "fifth": 11
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Вождение автомобиля",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Военное дело",
+        "skill": "coc:skill:military-science",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Ориентирование",
+        "skill": "coc:skill:navigate",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Пилотирование",
+        "skill": "coc:skill:pilot",
+        "specialization": "лодка",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Плавание",
+        "skill": "coc:skill:swim",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Шпионское ремесло",
+        "skill": "coc:skill:tradecraft",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Иностранный язык",
+        "skill": "coc:skill:language-other",
+        "specialization": "английский",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Иностранный язык",
+        "skill": "coc:skill:language-other",
+        "specialization": "турецкий",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Доверие",
+        "specialization": "КГБ",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      }
+    ],
+    "sanity": {
+      "raw": "60",
+      "value": 60,
+      "max": null
+    }
+  },
+  "background": {
+    "secret": "Послан проверить Казакова и убьёт его, если переход настоящий."
+  },
+  "description": {
+    "ru": "Среднего сложения, обветренное лицо, глубоко посаженные синие узкие глаза; держится с выправкой военного.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Как и Казаков, Туманов — бывший офицер советского флота (капитан второго ранга); обоих завербовали по одной причине — за знание Черноморья. Туманов тоже работает торговым представителем ОМЭ, заключая контракты для клиентов, которым нужны перевозки по Чёрному морю. Он верен Советскому Союзу и толковый агент КГБ, регулярно бывает в Стамбулу.\nПодробности. Туманов тоже подчиняется Яковлеву в Одессе и собирает сведения о западных деловых интересах в регионе. Приказы выполняет буквально, без отклонений. О плане Петрова и о его присутствии в Стамбуле не знает. Мотивация: принуждение.\nТайны и цели. Яковлев послал Туманова проверить слухи, что Казаков хочет перейти на Запад. Туманов ненавидит Казакова: его возмущает, что младшего повысили над ним на флоте. Если Казаков действительно собирается перебежать, Туманов намерен его убить — что лишь поможет плану Петрова, придав веса словам Казакова.\nКак играть. Тщательно обдумывайте каждое слово, делайте паузу перед ответом. Если торопят — поднимите палец и выразительно посмотрите на сыщиков: терпение.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "wwc-cold-war-en",
+      "physical_page": 181,
+      "printed_page": 181,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Vladimir Tumanov, Loyal KGB Agent», статблок"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — 1970-е, Холодная война (в осях — «1940s-1980s»). Персонаж кампании «Перекрёстки» (Intersections)."
+  },
+  "images": [
+    {
+      "file": "art/characters/wwc-cw-b-vladimir-tumanov.webp",
+      "kind": "portrait",
+      "caption": "Владимир Туманов",
+      "source": "World War Cthulhu: Cold War, с. 181"
+    }
+  ]
+}

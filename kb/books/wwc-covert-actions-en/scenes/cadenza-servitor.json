@@ -1,0 +1,72 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "wwc-covert-actions-en/scene/cadenza-servitor",
+  "kind": "scene",
+  "name": {
+    "ru": "Служитель Внешних богов",
+    "en": "Optional Encounter: Servitors of the Outer Gods"
+  },
+  "aliases": [],
+  "description": {
+    "ru": "Необязательная встреча. Когда терпение Тру'нембры иссякает, она посылает служителя Внешних богов («Книга хранителя», с. 304) помочь искать музыканта. «Слух» улавливает мелодию народной песни «Линкольнширский браконьер», которую играет на флейте кто-то в пустом уголке базы неподалёку (например, в генераторной станции чисел, пустом ангаре и т. п.) — это служитель. Служителю не вредит немагическое оружие, и такие атаки его не провоцируют. Он надеется, что его музыка привлечёт музыканта; если подошедший не играет на инструменте, служитель через раунд уходит, открывая Врата к оркестру Двора Азатота. «Внимание» мельком показывает уходящий вдаль ряд комнат с музыкантами, играющими на своих инструментах; на усмотрение Хранителя некоторые видимые музыканты могут быть не людьми — тогда проверки Рассудка по их расам.",
+    "en": null
+  },
+  "when": null,
+  "arc": {
+    "scenario": "wwc-covert-actions-en/scenario/cadenza",
+    "part": "База ВВС Акротири",
+    "order": 19
+  },
+  "where": [
+    {
+      "location": "wwc-covert-actions-en/location/numbers-station-generator-room",
+      "note": "или пустой ангар"
+    },
+    {
+      "location": "wwc-covert-actions-en/location/akrotiri-aircraft-hangars",
+      "note": "пустой ангар"
+    }
+  ],
+  "participants": [
+    {
+      "id": "coc:creature:servitor-of-outer-gods",
+      "role": "играет на флейте «Линкольнширского браконьера»"
+    }
+  ],
+  "mechanics": {
+    "ru": "Обнаружить — «Слух». Всякий, кто слышит какофонию из Врат, — проверка Рассудка (1/1d4). Разглядеть комнаты оркестра — «Внимание».",
+    "en": null
+  },
+  "refs": [
+    "coc:spell:summon-bind-servitor-of-the-outer-gods",
+    "coc:spell:create-gate",
+    "wwc-covert-actions-en/scene/cadenza-court-of-azathoth"
+  ],
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 89,
+      "printed_page": 89,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «Optional Encounter: Servitors of the Outer Gods»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — 1970-е (1940s-1980s, Р-252)."
+  },
+  "outcome": {
+    "ru": "Служитель уходит Вратами к оркестру Двора Азатота или находит музыканта.",
+    "en": null
+  }
+}

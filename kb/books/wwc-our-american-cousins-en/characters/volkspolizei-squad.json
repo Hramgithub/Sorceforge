@@ -1,0 +1,299 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "wwc-our-american-cousins-en/character/volkspolizei-squad",
+  "kind": "character",
+  "name": {
+    "ru": "Наряд Фольксполицай",
+    "en": "Volkspolizei Squad"
+  },
+  "aliases": [],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "полицейский наряд ГДР",
+  "names": [
+    "Клаус Рихтер",
+    "Юрген Беккер",
+    "Дитмар Хоффман",
+    "Петер Шульц",
+    "Хорст Вагнер",
+    "Ральф Циммерман"
+  ],
+  "occupation": {
+    "ru": "полицейские Фольксполицай",
+    "en": "Volkspolizei"
+  },
+  "sex": "мужской",
+  "residence": "Восточный Берлин",
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "wwc-our-american-cousins-en/organization/volkspolizei",
+      "note": "служба",
+      "note_back": "наряд"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "50",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "APP": {
+        "raw": "40",
+        "value": 40
+      },
+      "INT": {
+        "raw": "40",
+        "value": 40
+      },
+      "POW": {
+        "raw": "40",
+        "value": 40
+      },
+      "EDU": {
+        "raw": "40",
+        "value": 40
+      }
+    },
+    "hp": {
+      "raw": "10",
+      "value": 10
+    },
+    "sanity": {
+      "raw": "55",
+      "value": 55,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "1d4",
+      "value": "1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Дубинка",
+          "en": "Fighting (Baton)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (дубинка)",
+        "chance": {
+          "raw": "50%, (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d6+1d4 damage bonus",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Пистолет-пулемёт",
+          "en": "Firearms (SMG)"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет-пулемёт)",
+        "chance": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "2d6",
+          "dice": "2d6",
+          "adds_db": false
+        }
+      },
+      {
+        "name": {
+          "ru": "Пистолет",
+          "en": "Firearms (handgun)"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d6",
+          "dice": "1d6",
+          "adds_db": false
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "35%",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "skills": [
+      {
+        "name": "Вождение автомобиля",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "Drive Auto 40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "Intimidate 40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Юриспруденция",
+        "skill": "coc:skill:law",
+        "value": {
+          "raw": "Law 40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "Spot Hidden 50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Доверие (Фольксполицай)",
+        "value": {
+          "raw": "Trust: Volkspolizei 50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Наряд Народной полиции ГДР — по два полицейских на каждого сыщика; является, если сыщики устроят в Восточном Берлине переполох.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Если сыщики наделают шума в Восточном Берлине, является наряд Фольксполицай, чтобы забрать их на допрос; если станет совсем жарко, сыщикам придётся бежать — тут пригодятся правила погони. Допрос ведёт капитан Ян Шустер.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "wwc-our-american-cousins-en",
+      "physical_page": 103,
+      "printed_page": 103,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Volkspolizei»"
+    },
+    {
+      "book_id": "wwc-our-american-cousins-en",
+      "physical_page": 104,
+      "printed_page": 104,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Volkspolizei Squad», статблок; врезка «The Volkspolizei»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.attacks[Дубинка]",
+      "printed": "50%, (22/9)",
+      "expected": "50%, (25/10)",
+      "note": "Половина и пятая не сходятся с 50% — исправлены в записи (Р-35). Напечатанные доли точно подходят к 45%: возможна опечатка в проценте; процент оставлен как напечатан (Р-77).",
+      "fixed": true
+    },
+    {
+      "field": "statblock.damage_bonus",
+      "printed": "1d4",
+      "expected": "0",
+      "note": "БкУ не сходится с характеристиками (по правилам — 0); оставлено как напечатано (Р-161).",
+      "fixed": false
+    },
+    {
+      "field": "statblock.build",
+      "printed": "1",
+      "expected": "0",
+      "note": "Комплекция не сходится с характеристиками (по правилам — 0); оставлено как напечатано (Р-161).",
+      "fixed": false
+    },
+    {
+      "field": "statblock.move",
+      "printed": "8",
+      "expected": "9",
+      "note": "Скорость по правилам 7-й редакции (ЛВК, СИЛ, ТЕЛ, возраст) — 9; напечатано 8; оставлено как в книге (Р-161).",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "editorial_text",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — 1970-е, Холодная война (в осях — «1940s-1980s»). Сценарий «Брокенский призрак» (с. 88–114). «Trust» — навык «Доверие» (World War Cthulhu: Cold War). Групповой профиль (Р-151): имена придуманы, в книге — «Volkspolizei Squad (Two per player character)». Урон пистолета напечатан 1d6 (у остальных персонажей сценария — 1d10); оставлен как в книге."
+  },
+  "images": [
+    {
+      "file": "art/characters/wwc-cousins-volkspolizei-squad.webp",
+      "kind": "portrait",
+      "caption": "Наряд Фольксполицай",
+      "source": "World War Cthulhu: Cold War — Our American Cousins, с. 104 (физ. 104), «Volkspolizei Squad»"
+    }
+  ]
+}

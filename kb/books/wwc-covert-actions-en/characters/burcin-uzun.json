@@ -1,0 +1,443 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "wwc-covert-actions-en/character/burcin-uzun",
+  "kind": "character",
+  "name": {
+    "ru": "Бурчин Узун",
+    "en": "Burçin Uzun"
+  },
+  "aliases": [
+    "Эврен Картал",
+    "Evren Kartal",
+    "Узун",
+    "Burçin Uzun, Art Thief"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "воровка произведений искусства",
+    "en": "Art Thief"
+  },
+  "age": {
+    "raw": "38",
+    "value": 38
+  },
+  "sex": "женский",
+  "residence": "галерея Дикмена, Лимасол",
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "wwc-covert-actions-en/character/mr-snow",
+      "note": "платит за кражи и заказал шантаж Масгрейва",
+      "note_back": "исполнительница"
+    },
+    {
+      "type": "works_for",
+      "target": "wwc-covert-actions-en/character/aydin-dikmen",
+      "note": "крадёт для него, делят доход",
+      "note_back": "сообщница"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "65",
+        "value": 65
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "50",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "80",
+        "value": 80
+      },
+      "APP": {
+        "raw": "65",
+        "value": 65
+      },
+      "INT": {
+        "raw": "75",
+        "value": 75
+      },
+      "POW": {
+        "raw": "60",
+        "value": 60
+      },
+      "EDU": {
+        "raw": "70",
+        "value": 70
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "12",
+      "value": 12
+    },
+    "sanity": {
+      "raw": "60",
+      "value": 60,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "нет",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Fighting (Brawl)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d3+БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Пистолет",
+          "en": "Firearms (Handgun)"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d10",
+          "dice": "1d10",
+          "adds_db": false
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "70% (35/14)",
+      "value": 70,
+      "half": 35,
+      "fifth": 14
+    },
+    "skills": [
+      {
+        "name": "Искусство/ремесло (подделка)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "подделка",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Обаяние",
+        "skill": "coc:skill:charm",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Электрика",
+        "skill": "coc:skill:electrical-repair",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Взлом",
+        "skill": "coc:skill:locksmith",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Механика",
+        "skill": "coc:skill:mechanical-repair",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Ловкость рук",
+        "skill": "coc:skill:sleight-of-hand",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Иностранный язык (арабский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "арабский",
+        "value": {
+          "raw": "20%",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Иностранный язык (французский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "французский",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Иностранный язык (нидерландский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "нидерландский",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Иностранный язык (английский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "английский",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Иностранный язык (греческий)",
+        "skill": "coc:skill:language-other",
+        "specialization": "греческий",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Иностранный язык (итальянский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "итальянский",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Иностранный язык (русский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "русский",
+        "value": {
+          "raw": "20%",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      }
+    ]
+  },
+  "background": {
+    "description": "Тихая, неприметная, состоятельная.",
+    "ideology": "Мотивация — деньги.",
+    "traits": "Сначала изображает невинность, но под давлением бросает притворство. Расчётливая деловая женщина, способная выторговать что угодно. Мило улыбается, говорит медленно, мягко, но чётко. Уверена в себе.",
+    "secret": "Шантажирует Масгрейва (назвавшись художницей Эврен Картал), чтобы получить сведения о ядерных боеголовках базы. Будет сотрудничать с любым, кто заплатит. Не зная, на кого работает мистер Сноу, понимает, что это может быть опасно; подозревает, что он из какой-то разведки, но он этого никогда не подтверждал."
+  },
+  "description": {
+    "ru": "Турецкая воровка произведений искусства, 38 лет, два года живёт на Кипре. Любит азарт краж и роскошь, которую они дают, предпочитает дорогую одежду и выставляет богатство напоказ; не в восторге от своего положения, но старается обратить его себе на пользу.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Два года назад бежала из Анкары после неудачной кражи; «мистер Сноу» вмешался и спрятал её у Айдына Дикмена, турецкого арт-дилера на Кипре. Навсегда в долгу у Сноу, она с тех пор выполняет его заказы на кражи — он щедро платит; а ещё крадёт для Дикмена, который продаёт вещи на чёрном рынке и делит с ней доход. 2 марта 1974 года взялась за заказ Сноу шантажировать Масгрейва (см. запись Масгрейва). Сейчас они с Дикменом в Лиси грабят церковь Святого Евфимиана под прикрытием вторжения и в 10:00 20 июля улетают гидросамолётом с причала напротив галереи.\nВ сценарии. Если сыщики вмешаются у причала, при угрозе насилием или под дулом сдаётся; если есть шанс сбежать пешком — бежит (возможна погоня по улицам и в зоны боёв), но на сыщиков не нападает. На допросе в охраняемой комнате штаба готова рассказать, что знает о мистере Сноу, в обмен на гарантии защиты; правдиво говорит, что действовала одна и о диверсиях на базе ничего не знает; так как Сноу всегда сам выходит на связь, где он сейчас — неизвестно. Хранитель может вложить ей знания о Сноу как зацепку для будущих сценариев. Её и Дикмена можно без осложнений отправить ближайшим рейсом в Лондон, согласно приказу.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 63,
+      "printed_page": 63,
+      "method": "book_text",
+      "verified": true,
+      "note": "брифинг: «Evren Kartal»"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 66,
+      "printed_page": 66,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Blackmailed Officer»"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 67,
+      "printed_page": 67,
+      "method": "book_text",
+      "verified": true,
+      "note": "хронология"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 74,
+      "printed_page": 74,
+      "method": "book_text",
+      "verified": true,
+      "note": "Илиас о ней"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 75,
+      "printed_page": 75,
+      "method": "book_text",
+      "verified": true,
+      "note": "Keeper’s Note"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 76,
+      "printed_page": 76,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Confronting Uzun», «Burçin Uzun, Art Thief, Age 38»"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 77,
+      "printed_page": 77,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — 1970-е (1940s-1980s, Р-252). «Art/Craft (Forgery)» — «Искусство/ремесло (подделка)». Строка «Trust: None» — как напечатано."
+  },
+  "images": [
+    {
+      "file": "art/characters/wwc-covert-a-burcin-uzun.webp",
+      "kind": "portrait",
+      "caption": "",
+      "source": "World War Cthulhu: Cold War — Covert Actions, с. 77 (физ. 77): портрет"
+    }
+  ]
+}

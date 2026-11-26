@@ -1,0 +1,369 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "wwc-covert-actions-en/character/thomas-musgrave",
+  "kind": "character",
+  "name": {
+    "ru": "Томас Масгрейв",
+    "en": "Thomas Musgrave"
+  },
+  "aliases": [
+    "Масгрейв",
+    "Wing Commander Thomas Musgrave, Second in Command"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "винг-коммандер, заместитель командира базы",
+    "en": "Second in Command"
+  },
+  "age": {
+    "raw": "42",
+    "value": 42
+  },
+  "sex": "мужской",
+  "residence": "база ВВС Акротири (с семьёй)",
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "wwc-covert-actions-en/character/george-knight",
+      "note": "командир базы",
+      "note_back": "заместитель"
+    },
+    {
+      "type": "rival_of",
+      "target": "wwc-covert-actions-en/character/burcin-uzun",
+      "note": "шантажистка («Эврен Картал»)",
+      "note_back": "жертва шантажа"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "55",
+        "value": 55
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "50",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "90",
+        "value": 90
+      },
+      "POW": {
+        "raw": "60",
+        "value": 60
+      },
+      "EDU": {
+        "raw": "85",
+        "value": 85
+      }
+    },
+    "hp": {
+      "raw": "10",
+      "value": 10
+    },
+    "mp": {
+      "raw": "12",
+      "value": 12
+    },
+    "sanity": {
+      "raw": "60",
+      "value": 60,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "нет",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Fighting (Brawl)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d3+БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Пистолет",
+          "en": "Firearms (Handgun)"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "1d10",
+          "dice": "1d10",
+          "adds_db": false
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "45% (22/9)",
+      "value": 45,
+      "half": 22,
+      "fifth": 9
+    },
+    "skills": [
+      {
+        "name": "Командование",
+        "skill": "coc:skill:command",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Военное дело",
+        "skill": "coc:skill:military-science",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Пилотирование",
+        "skill": "coc:skill:pilot",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Шпионское ремесло",
+        "skill": "coc:skill:tradecraft",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Иностранный язык (греческий)",
+        "skill": "coc:skill:language-other",
+        "specialization": "греческий",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Иностранный язык (турецкий)",
+        "skill": "coc:skill:language-other",
+        "specialization": "турецкий",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Доверие (SIS)",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      }
+    ]
+  },
+  "background": {
+    "description": "Спокойный, вежливый, профессиональный.",
+    "ideology": "Мотивация — идеология.",
+    "significant_people": "Жена Ребекка, дети Джеймс и Аманда — живут с ним на базе.",
+    "traits": "Всегда очень серьёзен, понимая важность базы; легкомыслию здесь не место; дураков не терпит. Каждое действие — тщательно спланированный ход; перед ответом делает короткую паузу; всегда спокоен и собран.",
+    "secret": "Знал, что любая попытка скрыть своё положение провалится, и рассказал о шантаже только SIS, не Найту; если Найт узнает, он боится за карьеру и брак. Искренне считает технические сбои диверсией."
+  },
+  "description": {
+    "ru": "Винг-коммандер, заместитель групп-кэптена Найта на Акротири, 42 года; блестящий тактик и опытный пилот «Вулкана». Связан с ядерными операциями с 1960 года, когда британское ядерное сдерживание разделили между Королевским флотом и ВВС; на Акротири — с 1969 года, когда ядерная роль ВВС стала более тактической.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Четыре месяца назад Бурчин Узун взялась за заказ мистера Сноу — подставить Масгрейва для компрометирующих фото: под именем художницы Эврен Картал познакомилась с ним в отпуске в баре-кафе «Марина» в Лимасоле. 13 июля, опоив его подмешанным в алкоголь наркотиком, отвела в дешёвый гостиничный номер, приготовленный Сноу; были сделаны снимки. Масгрейв проснулся один с копиями фото и запиской с ультиматумом Сноу: чтобы снимки не увидели начальство и семья, он должен передать Узун сведения о ядерных боеголовках базы — карты хранения, характеристики и серийные номера, список имеющих доступ. 15 июля случился переворот, Национальная гвардия заняла Лимасол, и ВВС объявили город закрытым для персонала: Масгрейв смог тянуть время, Узун неохотно согласилась. После «нападения» на Фредерикса и технических сбоев (причина — Тру'нембра) он ошибочно решил, что диверсанты Картал пытаются украсть ядерную боеголовку, и через голову Найта доложил SIS, признавшись в шантаже.\nВ сценарии. Встречает сыщиков с Палмером в ангаре; по пути в штаб отсылает Палмера покурить и сообщает: никто на базе о его беде не знает, и он просит так и оставить; Картал он ничего не передавал; даёт «Полароид» с её фото в марине Лимасола и адрес бара, где они встречались; выхлопотал у Найта 24-часовые пропуска для сыщиков (во время изоляции их выдаёт только Найт), они в штабе. «Психология» подтверждает, что он говорит правду.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 63,
+      "printed_page": 63,
+      "method": "book_text",
+      "verified": true,
+      "note": "брифинг"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 66,
+      "printed_page": 66,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Blackmailed Officer»"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 67,
+      "printed_page": 67,
+      "method": "book_text",
+      "verified": true,
+      "note": "хронология"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 69,
+      "printed_page": 69,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Reception»"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 70,
+      "printed_page": 70,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Wing Commander Thomas Musgrave, Second in Command, Age 42»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — 1970-е (1940s-1980s, Р-252). «Command» — «Командование», «Military Science» — «Военное дело», «Tradecraft» — «Шпионское ремесло» (без ссылок на справочник)."
+  },
+  "images": [
+    {
+      "file": "art/characters/wwc-covert-a-thomas-musgrave.webp",
+      "kind": "portrait",
+      "caption": "",
+      "source": "World War Cthulhu: Cold War — Covert Actions, с. 70 (физ. 70): портрет"
+    }
+  ]
+}

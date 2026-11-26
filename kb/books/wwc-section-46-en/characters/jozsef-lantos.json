@@ -1,0 +1,501 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "wwc-section-46-en/character/jozsef-lantos",
+  "kind": "character",
+  "name": {
+    "ru": "Йожеф Лантош",
+    "en": "József Lantos"
+  },
+  "aliases": [
+    "Joseph Downs",
+    "Джозеф Даунс",
+    "Jozsef Lantos",
+    "Лантош"
+  ],
+  "roles": [
+    "pregen"
+  ],
+  "occupation": {
+    "ru": "Офицер разведки (полевой офицер)",
+    "en": "Intelligence Officer (Field Officer)"
+  },
+  "occupation_ref": "coc:occupation:wwc-intelligence-officer",
+  "age": {
+    "raw": "28",
+    "value": 28
+  },
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "wwc-cold-war-en/organization/mi6",
+      "note": "ведомство (SIS)",
+      "note_back": "полевой офицер"
+    },
+    {
+      "type": "works_for",
+      "target": "wwc-cold-war-en/organization/section-46",
+      "note": "тайная служба",
+      "note_back": "сотрудник; готовый сыщик «Наставления по операциям»"
+    },
+    {
+      "type": "relative_of",
+      "target": "wwc-section-46-en/character/clarence-downs",
+      "note": "приёмный отец",
+      "note_back": "приёмный сын"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "50",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "80",
+        "value": 80
+      },
+      "APP": {
+        "raw": "70",
+        "value": 70
+      },
+      "INT": {
+        "raw": "60",
+        "value": 60
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      },
+      "EDU": {
+        "raw": "40",
+        "value": 40
+      }
+    },
+    "hp": {
+      "raw": "11",
+      "value": 11
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "sanity": {
+      "raw": "48",
+      "value": 48,
+      "max": null
+    },
+    "luck": {
+      "raw": "50",
+      "value": 50
+    },
+    "damage_bonus": {
+      "raw": "нет",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "dodge": {
+      "raw": "60% (30/12)",
+      "value": 60,
+      "half": 30,
+      "fifth": 12
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Безоружный бой",
+          "en": "Unarmed"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d3+БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "notes": "Атак за раунд: 1."
+      },
+      {
+        "name": {
+          "ru": "Нож выкидной",
+          "en": "Switchblade"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "—",
+          "value": null
+        },
+        "damage": {
+          "raw": "1d4",
+          "dice": "1d4",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:knife-small",
+        "notes": "В листе шанс не указан — по Ближнему бою (драка) 60%; урон в листе без БкУ (у Лантоша БкУ нет)."
+      }
+    ],
+    "skills": [
+      {
+        "name": "Обаяние",
+        "skill": "coc:skill:charm",
+        "value": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "1% (0/0)",
+          "value": 1,
+          "half": 0,
+          "fifth": 0
+        }
+      },
+      {
+        "name": "Маскировка",
+        "skill": "coc:skill:disguise",
+        "value": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Вождение автомобиля",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Электрика",
+        "skill": "coc:skill:electrical-repair",
+        "value": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Ближний бой (драка)",
+        "skill": "coc:skill:fighting",
+        "specialization": "Драка",
+        "value": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Иностранный язык (английский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "английский",
+        "value": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Иностранный язык (русский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "русский",
+        "value": {
+          "raw": "21% (10/4)",
+          "value": 21,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Юриспруденция",
+        "skill": "coc:skill:law",
+        "value": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Взлом",
+        "skill": "coc:skill:locksmith",
+        "value": {
+          "raw": "21% (10/4)",
+          "value": 21,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Механика",
+        "skill": "coc:skill:mechanical-repair",
+        "value": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Ориентирование",
+        "skill": "coc:skill:navigate",
+        "value": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Знание организаций (Советский Союз)",
+        "skill": "coc:skill:organisation-knowledge",
+        "specialization": "Советский Союз",
+        "value": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Знание организаций (Восточная Европа)",
+        "skill": "coc:skill:organisation-knowledge",
+        "specialization": "Восточная Европа",
+        "value": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Связь",
+        "skill": "coc:skill:signals",
+        "value": {
+          "raw": "21% (10/4)",
+          "value": 21,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Шпионское ремесло",
+        "skill": "coc:skill:tradecraft",
+        "value": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Доверие (SIS)",
+        "value": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Доверие (Секция 46)",
+        "value": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      }
+    ]
+  },
+  "background": {
+    "description": "Высокий, темноволосый, с острыми умными глазами; красив и пользуется этим. Прирождённый подражатель: венгерский акцент заметен, когда он его не скрывает, но обычно говорит с безупречным английским произношением.",
+    "ideology": "Советы виновны в гибели слишком многих, кого Лантош любил, и должны заплатить. Почему шпион: убеждения — те же.",
+    "traits": "Говорит обдуманно и осторожно, надолго замолкая, обдумывая, что сказать дальше.",
+    "significant_people": "Приёмный отец Кларенс Даунс — офицер SIS, вывезший Лантоша из Венгрии во время неудавшейся революции 1956 года после гибели его семьи.",
+    "meaningful_locations": "«Золотой лев» в Сохо — гей-бар, где Лантош изредка проводит вечер, когда уверен, что никто из службы безопасности за ним не следит.",
+    "treasured_possessions": "Часы брата — единственная память о семье.",
+    "encounters": "Обыскивая конспиративную квартиру Штази в Западном Берлине, Лантош встретил неопрятного старика со странно вытянутыми чертами, который, видимо, туда вломился; старик напал, Лантош в панике ударил его ножом, и нападавший растёкся лужей мерзкой жидкости, кишащей червями."
+  },
+  "possessions": [
+    "Золотая зажигалка",
+    "Хороший выбор стильных костюмов",
+    "Часы брата",
+    "Нож выкидной"
+  ],
+  "wealth": {
+    "spending_level": "£20 (уровень жизни: средний)",
+    "cash": "£160",
+    "assets": "£4 000"
+  },
+  "description": {
+    "ru": "Готовый сыщик: венгерский эмигрант 28 лет, полевой офицер SIS, мастер обмана и подражания.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Младший брат одного из студенческих вожаков демонстраций, с которых началось восстание 1956 года в Венгрии. Когда Советы убили остальных членов семьи, Лантоша вывез из Венгрии Кларенс Даунс — агент SIS, работавший с его братом. Даунс усыновил его и вырастил в Англии, но Лантош не забывает, откуда он. Происхождение, знание языков и склонность к обману сделали его естественным кандидатом для SIS; агентом он работает с окончания университета.\nПервая встреча с Мифами: нарушив прямой приказ, Лантош проник в дом в Западном Берлине, который связной назвал конспиративной квартирой Штази. Вместо венгерского двойного агента, которого он выслеживал, там был старик, живущий в омерзительной грязи, со странно вытянутым лицом и ртом, открывавшимся слишком широко, когда он вскрикнул от испуга. Старик, спотыкаясь, двинулся к Лантошу, протягивая руки с острыми грязными ногтями; Лантош в панике выстрелил, и старик упал и медленно растворился в лужу мерзкой жидкости, кишащей мелкими червеобразными тварями. Лантош не доложил об этом начальству, но короткое психиатрическое лечение, которое ему понадобилось, привлекло к нему внимание соратников N.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "wwc-section-46-en",
+      "physical_page": 117,
+      "printed_page": 117,
+      "method": "book_text",
+      "verified": true,
+      "note": "досье «József Lantos»: национальность, возраст, внешность, биография, убеждения, черты, первая встреча с Мифами"
+    },
+    {
+      "book_id": "wwc-section-46-en",
+      "physical_page": 118,
+      "printed_page": 118,
+      "method": "book_text",
+      "verified": true,
+      "note": "лист персонажа (лицевая сторона): характеристики, ПЗ, Рассудок, Удача, ПМ, навыки, оружие; числа сверены по изображению страницы"
+    },
+    {
+      "book_id": "wwc-section-46-en",
+      "physical_page": 119,
+      "printed_page": 119,
+      "method": "book_text",
+      "verified": true,
+      "note": "лист персонажа (оборот): предыстория, снаряжение, деньги, Доверие; сверено по изображению страницы"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.skills[Мифы Ктулху]",
+      "printed": "1% (1/1)",
+      "expected": "1% (0/0)",
+      "note": "Половина и пятая 1% в листе напечатаны как «1/1»; исправлено по округлению вниз (Р-35).",
+      "fixed": true
+    },
+    {
+      "field": "statblock.hp",
+      "printed": "11",
+      "expected": "10",
+      "note": "ПЗ = (ВЫН 50 + ТЕЛ 50) / 10 = 10; в листе отмечено 11.",
+      "fixed": false
+    },
+    {
+      "field": "background.encounters",
+      "printed": "panicked and stabbed his assailant (с. 119)",
+      "expected": "panicked and shot him (с. 117)",
+      "note": "В досье (с. 117) Лантош застрелил старика, на обороте листа (с. 119) — ударил ножом; в записи — оба места как напечатаны.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической, смещение 0; обложка и полосы глав без номера). Эпоха — холодная война, 1970-е (в осях — «1940s-1980s»); метка библиотеки [EN 6e] неверна — книга по правилам 7-й редакции. Лист готового сыщика (приложение «Pre-generated Characters»): страница-досье с портретом и лист персонажа «World War Cthulhu: Cold War» (две стороны). В атаках листа шанс для оружия не проставлен — указан навык; навыки «Шпионское ремесло», «Связь», «Знание организаций», «Военное дело» и «Доверие» — правила «World War Cthulhu: Cold War» (записей навыков в базе пока нет; ссылки добавить, когда появятся). Профессия «Intelligence Officer» и специализации — из «World War Cthulhu: Cold War» (occupation_ref — coc:occupation:wwc-intelligence-officer). Родной язык (по ОБР) в листе не заполнен. Национальность — венгр; ведомство — SIS; тип личности — «Мыслитель» (Thinker). В Англии живёт под именем Джозеф Даунс."
+  },
+  "images": [
+    {
+      "file": "art/characters/wwc-s46-jozsef-lantos.webp",
+      "kind": "portrait",
+      "caption": "Йожеф Лантош",
+      "source": "World War Cthulhu: Cold War — Section 46 Operations Manual, с. 117 (физ. 117), досье «József Lantos/Joseph Downs»"
+    }
+  ]
+}

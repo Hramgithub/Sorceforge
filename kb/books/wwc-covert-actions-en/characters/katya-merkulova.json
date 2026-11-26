@@ -1,0 +1,442 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "wwc-covert-actions-en/character/katya-merkulova",
+  "kind": "character",
+  "name": {
+    "ru": "Катя Стефановна Меркулова",
+    "en": "Katya Stefanovna Merkulova"
+  },
+  "aliases": [
+    "Katya Stefanovna Merkulova, KGB assassin",
+    "«Гадюка»",
+    "Adder",
+    "«Ужас»",
+    "Dread",
+    "Катя Стефановна"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "снайпер-ликвидатор КГБ",
+    "en": "KGB assassin"
+  },
+  "age": {
+    "raw": "28",
+    "value": 28
+  },
+  "sex": "женский",
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "wwc-cold-war-en/organization/kgb",
+      "note": "служба",
+      "note_back": "снайпер"
+    },
+    {
+      "type": "works_for",
+      "target": "wwc-cold-war-en/organization/n",
+      "note": "тайный осведомитель «Ужас»",
+      "note_back": "крот в КГБ «Ужас»"
+    },
+    {
+      "type": "relative_of",
+      "target": "wwc-covert-actions-en/character/dmitry-merkulov",
+      "note": "отец",
+      "note_back": "дочь"
+    },
+    {
+      "type": "relative_of",
+      "target": "wwc-covert-actions-en/character/natalya-merkulova",
+      "note": "мать (убита ею)",
+      "note_back": "дочь"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "75",
+        "value": 75
+      },
+      "CON": {
+        "raw": "75",
+        "value": 75
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "INT": {
+        "raw": "70",
+        "value": 70
+      },
+      "POW": {
+        "raw": "55",
+        "value": 55
+      },
+      "DEX": {
+        "raw": "95",
+        "value": 95
+      },
+      "APP": {
+        "raw": "75",
+        "value": 75
+      },
+      "EDU": {
+        "raw": "60",
+        "value": 60
+      }
+    },
+    "hp": {
+      "raw": "14",
+      "value": 14
+    },
+    "sanity": {
+      "raw": "55",
+      "value": 55,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "нет",
+      "value": "0"
+    },
+    "build": {
+      "raw": "+0",
+      "value": 0
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Fighting (Brawl)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "1d3+БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Винтовка",
+          "en": "Firearms (Rifle)"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "95% (47/19)",
+          "value": 95,
+          "half": 47,
+          "fifth": 19
+        },
+        "damage": {
+          "raw": "2d6+1",
+          "dice": "2d6+1",
+          "adds_db": false
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "60% (30/12)",
+      "value": 60,
+      "half": 30,
+      "fifth": 12
+    },
+    "skills": [
+      {
+        "name": "Сокрытие",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Прятаться",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Военное дело",
+        "skill": "coc:skill:military-science",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Знание организаций (Советский Союз)",
+        "skill": "coc:skill:organisation-knowledge",
+        "specialization": "Советский Союз",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Шпионское ремесло",
+        "skill": "coc:skill:tradecraft",
+        "value": {
+          "raw": "85%",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        }
+      },
+      {
+        "name": "Иностранный язык (английский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "английский",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Доверие (КГБ)",
+        "value": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      }
+    ]
+  },
+  "background": {
+    "ideology": "Идеология.",
+    "significant_people": "Отец; Костин (второй отец); N.",
+    "meaningful_locations": "Могила отца на Новодевичьем кладбище.",
+    "traits": "Не смотрит сыщикам в глаза — смотрит мимо или сквозь; фразы короткие и по делу; с теми, кому не доверяет, не говорит длинными сложными предложениями. Не любит хвастаться, особенно нарушением приказа. Визитная карточка — две незажжённые спички в каждом гнезде.",
+    "secret": "Её цель — защитить Костина: готова умереть за него. Разрывается между Костиным и N; может стать для сыщиков союзницей или их погибелью — смотря как к ним отнесётся. Заслужить её доверие трудно: нужно доказать, что действуешь в её интересах, а не играешь на них."
+  },
+  "description": {
+    "ru": "Спортивного сложения, с вечно отсутствующим взглядом, устремлённым вдаль; говорит отрывисто; всегда видно, что ей нужно куда-то спешить. Без дешёвой сигареты в зубах её не увидишь (курит «Памир»).",
+    "en": null
+  },
+  "legend": {
+    "ru": "Снайпер высшего класса, ликвидатор КГБ; натовское кодовое имя «Гадюка»; для Секции 46 — «Ужас» (Dread), тайный осведомитель N, которого N очень оберегает. Родилась в Лондоне у русских родителей, в пять лет вернулась в Советский Союз. Её отец Дмитрий Иванович Меркулов — высокопоставленный коммунистический чиновник, много охотившийся на даче; Катя рано научилась стрелять и занималась биатлоном, её ждали Олимпийские игры, пока Костин, увидев её стрельбу на показательных выступлениях, не завербовал её в КГБ. Всегда любила одиночество — отсюда тяга к охоте и снайперскому делу: можно служить государству, не будучи среди людей. Доверяет лишь троим — отцу, Костину и N; уверена, что все остальные предадут. Первое убийство — в 12 лет: её мать подпала под влияние Культа Красного царя и собиралась принести отца в жертву на семейной даче; Катя спасла отца и перебила культистов по указаниям N. Отец так и не оправился и (по одной версии книги) живёт в советской психбольнице; N позаботился, чтобы он был с почестями похоронен на Новодевичьем кладбище, и Катя подолгу сидит у его могилы. N не дал ей забыть увиденное, но и не дал о нём заговорить; когда она пришла в КГБ, присвоил ей кодовое имя «Ужас»; она изредка передаёт N сведения, но с той ночи больше не выходила в поле для Секции 46. По досье НАТО: дата рождения неизвестна; подтверждённые ликвидации во время греческой хунты и Пражской весны (одна из жертв в Греции — товарищ по группе, подозреваемый в передаче сведений агенту ЦРУ); в КГБ её привёл «Буян» в середине 1960-х после смерти родителей; родители погибли одновременно около 12 лет назад.\nВ сценарии. Вопреки приказу Костина держаться подальше, засела в куполе павильона «Космос»; список спрятала под каской на Могиле Неизвестного Солдата и будет им торговаться. Во время засады стреляет по агентам КГБ — промах (неудача) может пробить голову Костину, что надолго ударит по её рассудку. Застигнутая, защищается врукопашную, но, поняв, что противник не из КГБ, прекращает бой. Если Костин у сыщиков — соглашается принести список; если у КГБ — требует его спасать, даже штурмом Лубянки.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 150,
+      "printed_page": 150,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Dread»"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 153,
+      "printed_page": 153,
+      "method": "book_text",
+      "verified": true,
+      "note": "в куполе «Космоса»"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 154,
+      "printed_page": 154,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Searching the Exhibit»"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 155,
+      "printed_page": 155,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Katya Stefanovna Merkulova, KGB assassin»"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 156,
+      "printed_page": 156,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок, «Other Clues»"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 158,
+      "printed_page": 158,
+      "method": "book_text",
+      "verified": true,
+      "note": "купол, «Finding Adder»"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 165,
+      "printed_page": 165,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Research»"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 166,
+      "printed_page": 166,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Return of Merkulova»"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 172,
+      "printed_page": 172,
+      "method": "book_text",
+      "verified": true,
+      "note": "раздатка 3"
+    }
+  ],
+  "errata": [
+    {
+      "field": "background",
+      "printed": "отец «spends his life in a Soviet mental hospital» (с. 155); «N also ensured her father was buried in Novodevichy» (с. 155); «Katya did kill her mother, but her father was already dead» (с. 165); раздатка 3: оба родителя умерли 12 лет назад; «Research»: газета 16 лет назад",
+      "expected": "одна версия",
+      "note": "Книга противоречит себе о судьбе отца (в психбольнице / похоронен / уже был мёртв) и о времени смерти родителей (12 или 16 лет назад). Хранитель выбирает версию.",
+      "fixed": false
+    },
+    {
+      "field": "Доверие (KGB)",
+      "printed": "70% (35/4)",
+      "expected": "70% (35/14)",
+      "note": "половина и пятая не следуют из процента; исправлено по правилу 7-й редакции (Р-35)",
+      "fixed": true
+    },
+    {
+      "field": "statblock.damage_bonus",
+      "printed": "нет",
+      "expected": "+1d4",
+      "note": "БкУ не сходится с правилами 7-й редакции; оставлено как напечатано (Р-161).",
+      "fixed": false
+    },
+    {
+      "field": "statblock.build",
+      "printed": "+0",
+      "expected": "1",
+      "note": "Комплекция не сходится с правилами 7-й редакции; оставлено как напечатано (Р-161).",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — 1970-е (Р-252: 1940s-1980s). Навыки «Военное дело», «Знание организаций», «Сокрытие», «Шпионское ремесло» — навыки линейки World War Cthulhu; ссылок на справочник нет."
+  },
+  "images": [
+    {
+      "file": "art/characters/wwc-covert-b-katya-merkulova.webp",
+      "kind": "portrait",
+      "caption": "Катя Меркулова",
+      "source": "World War Cthulhu: Cold War — Covert Actions, с. 155 (физ. 155), портрет при статблоке"
+    }
+  ]
+}

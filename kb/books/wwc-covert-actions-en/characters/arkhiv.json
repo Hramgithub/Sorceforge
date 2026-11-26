@@ -1,0 +1,245 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "wwc-covert-actions-en/character/arkhiv",
+  "kind": "character",
+  "name": {
+    "ru": "Архив",
+    "en": "Arkhiv"
+  },
+  "aliases": [
+    "Archiv",
+    "Arkiv"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "подпольный печатник (самиздат)",
+    "en": null
+  },
+  "sex": "мужской",
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "wwc-covert-actions-en/creature/koschei-chort",
+      "note": "развращён обещанием бессмертия",
+      "note_back": "заражённый слуга"
+    },
+    {
+      "type": "knows",
+      "target": "wwc-covert-actions-en/character/pyotr-kuznetsov",
+      "note": "знакомый самиздатчик",
+      "note_back": "знакомый печатник"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "80",
+        "value": 80
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "70",
+        "value": 70
+      },
+      "INT": {
+        "raw": "50",
+        "value": 50
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65
+      }
+    },
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет; от колющего оружия получает лишь 1 урон (порченая плоть)",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1 (или больше с оружием)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d4 + 1d4 бонус к урону",
+          "dice": "1d4",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Пистолет Макарова",
+          "en": "Makarov"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d10",
+          "dice": "1d10",
+          "adds_db": false
+        },
+        "notes": "В книге шанс для пистолета не указан отдельно; дан как у «Fighting 60%» — вывод из текста (Р-41)."
+      },
+      {
+        "name": {
+          "ru": "Ложноножки ихора",
+          "en": "pseudopods"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d4",
+          "dice": "1d4",
+          "adds_db": false
+        },
+        "notes": "Когда Архив получает урон, из тела сочится чёрный ихор, формирует ложноножки и атакует; заражают порчей с вероятностью 75%."
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d4",
+        "trigger": "увидеть, как появляются ложноножки"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Порча",
+      "raw": "Corruption: As a victim of Koschei/Chort, Arkiv has a 75% chance to infect anyone he does damage to with his pseudopods.",
+      "summary": "Ложноножки заражают порчей с вероятностью 75% (встречная проверка ВЫН жертвы)."
+    },
+    {
+      "name": "Лужа ихора",
+      "raw": "When Arkiv is reduced to 0 hit points, his body melts into a puddle of black ichor",
+      "summary": "Доведённый до 0 ПЗ, тело растекается лужей чёрного ихора, которая носится по комнате в поисках целей с тем же шансом атаки, что у Архива, но существует вне тела лишь 1d4 раунда."
+    }
+  ],
+  "description": {
+    "ru": "Носит тяжёлый одеколон, чтобы перебить слабый запах тления от сгнившей груди. Встречается только там, где не видно его лица, — ради плащ-и-кинжальной позы, а не потому, что гниёт лицо: разрушены грудь и живот.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Псевдоним подпольного печатника, главы небольшого коллектива, издающего авторов XIX века и халтурные переводы западных книг; знал Кузнецова. Кощей/Чёрт, ища «Бессмертного», заворожил его и двух товарищей обещаниями бессмертия и превратил в существ, подобных Илье. Они пытались вломиться в печатню Кузнецова, но не одолели прочную дверь — и вдруг Архив узнал, что кто-то ищет вход в тайное логово Кузнецова: такой шанс нельзя упустить.\nВ сценарии. Через Абрамова (или поиски в среде самиздата) встречается с сыщиками в прокуренном кафе, узком переулке или где они захотят; приходит один, Книга и Слово остаются — их лица слишком изуродованы. Играет в загадки и выманивает взятку за сведения; хочет, чтобы сыщики открыли дверь печатни, но старается не выдать нетерпения. Потом трое следуют за сыщиками на расстоянии (они знают, где печатня, и не спешат, но боятся опоздать, пока сыщики не унесли все экземпляры) и нападают в самый удобный момент, используя темноту, колонны и свои новые силы.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 158,
+      "printed_page": 158,
+      "method": "book_text",
+      "verified": true,
+      "note": "Абрамов сводит с Архивом"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 165,
+      "printed_page": 165,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Research»"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 167,
+      "printed_page": 167,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Meeting Arkhiv»"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 168,
+      "printed_page": 168,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Arkhiv Attacks», статблок «Arkhiv»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.dodge",
+      "printed": "30% (15/6)",
+      "expected": "не ниже 32%",
+      "note": "Уклонение ниже половины ЛВК (базового значения навыка); оставлено как напечатано (Р-161).",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — 1970-е (Р-252: 1940s-1980s). Псевдоним «Arkhiv» (Архив); в тексте также «Archiv», «Arkiv». Атака пистолетом без отдельного шанса."
+  }
+}

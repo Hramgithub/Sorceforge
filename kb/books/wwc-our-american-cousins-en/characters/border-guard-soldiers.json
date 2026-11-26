@@ -1,0 +1,293 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "wwc-our-american-cousins-en/character/border-guard-soldiers",
+  "kind": "character",
+  "name": {
+    "ru": "Солдаты пограничной охраны ГДР",
+    "en": "Border Guard Soldiers"
+  },
+  "aliases": [],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "пограничник ГДР",
+  "names": [
+    "Михаэль Краузе",
+    "Торстен Ланге",
+    "Андреас Шредер",
+    "Уве Келлер",
+    "Франк Нойман",
+    "Штефан Брандт"
+  ],
+  "occupation": {
+    "ru": "солдаты пограничных войск",
+    "en": "Border Guard Soldiers"
+  },
+  "sex": "мужской",
+  "residence": "Брокен (7-я Ширкеская пограничная рота 20-го пограничного полка)",
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "wwc-our-american-cousins-en/organization/gdr-border-troops",
+      "note": "служба",
+      "note_back": "солдаты патрулей"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "50",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "APP": {
+        "raw": "40",
+        "value": 40
+      },
+      "INT": {
+        "raw": "40",
+        "value": 40
+      },
+      "POW": {
+        "raw": "40",
+        "value": 40
+      },
+      "EDU": {
+        "raw": "40",
+        "value": 40
+      }
+    },
+    "hp": {
+      "raw": "10",
+      "value": 10
+    },
+    "sanity": {
+      "raw": "55",
+      "value": 55,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "1d4",
+      "value": "1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Дубинка",
+          "en": "Fighting (Baton)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (дубинка)",
+        "chance": {
+          "raw": "40%, (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d6 + 1d4 damage bonus",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Винтовка",
+          "en": "Firearms (rifle)"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "40%, (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "2d6",
+          "dice": "2d6",
+          "adds_db": false
+        }
+      },
+      {
+        "name": {
+          "ru": "Пистолет-пулемёт (в вертолётном патруле)",
+          "en": "submachine gun"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет-пулемёт)",
+        "chance": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "2d6",
+          "dice": "2d6",
+          "adds_db": false
+        },
+        "notes": "В вертолётных патрулях у одного солдата пистолет-пулемёт (Damage 2d6, ROF 3); шанс не напечатан — взят как у винтовки (вывод из текста, Р-41)."
+      }
+    ],
+    "dodge": {
+      "raw": "35%",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "skills": [
+      {
+        "name": "Обращение с животными",
+        "skill": "coc:skill:animal-handling",
+        "value": {
+          "raw": "Animal Handling 45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "Intimidate 30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "Spot Hidden 40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Доверие (Фольксполицай)",
+        "value": {
+          "raw": "Trust: Volkspolizei 30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Доверие (Штази)",
+        "value": {
+          "raw": "Trust: Stasi 10%",
+          "value": 10,
+          "half": 5,
+          "fifth": 2
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Пограничники, охраняющие Брокен: как армейская пехота, но легче вооружены; есть вертолёты и гранатомёты РПГ-7; патрулируют с немецкими овчарками; приказ — стрелять на поражение.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Главная задача — не дать бежать через границу на Запад, но они начеку и к прочим странностям. Группа, поднимающаяся к Брокену, делает групповую проверку Удачи, чтобы не наткнуться на патруль (можно спрятаться в тумане проверкой Скрытности). Обычный патруль — пятеро солдат, пять собак и унтер-офицер; в вертолётных — один солдат с пистолетом-пулемётом (урон 2d6, темп 3), собак нет.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "wwc-our-american-cousins-en",
+      "physical_page": 109,
+      "printed_page": 109,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Border Guard Soldiers», патрули"
+    },
+    {
+      "book_id": "wwc-our-american-cousins-en",
+      "physical_page": 110,
+      "printed_page": 110,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.damage_bonus",
+      "printed": "1d4",
+      "expected": "0",
+      "note": "БкУ не сходится с характеристиками (по правилам — 0); оставлено как напечатано (Р-161).",
+      "fixed": false
+    },
+    {
+      "field": "statblock.build",
+      "printed": "1",
+      "expected": "0",
+      "note": "Комплекция не сходится с характеристиками (по правилам — 0); оставлено как напечатано (Р-161).",
+      "fixed": false
+    },
+    {
+      "field": "statblock.move",
+      "printed": "8",
+      "expected": "9",
+      "note": "Скорость по правилам 7-й редакции (ЛВК, СИЛ, ТЕЛ, возраст) — 9; напечатано 8; оставлено как в книге (Р-161).",
+      "fixed": false
+    }
+  ],
+  "corrections": [
+    {
+      "field": "statblock.attacks[Пистолет-пулемёт (в вертолётном патруле)]",
+      "from": null,
+      "to": "40%, 2d6",
+      "reason": "Шанс пистолета-пулемёта в книге не напечатан (с. 109: «Damage 2d6, ROF 3»); взят по навыку стрельбы из винтовки — вывод из текста (Р-41).",
+      "ref": "Р-41"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "editorial_text",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — 1970-е, Холодная война (в осях — «1940s-1980s»). Сценарий «Брокенский призрак» (с. 88–114). «Trust» — навык «Доверие» (World War Cthulhu: Cold War). Групповой профиль (Р-151): имена придуманы."
+  }
+}

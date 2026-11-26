@@ -1,0 +1,356 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "wwc-cold-war-en/character/vahit-mataraci",
+  "kind": "character",
+  "name": {
+    "ru": "Вахит Матараджи",
+    "en": "Vahit Mataracı"
+  },
+  "aliases": [
+    "Vahit Mataracı, Senior Polis Detective"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "старший детектив полиции",
+    "en": "Senior Polis Detective"
+  },
+  "age": {
+    "raw": "38",
+    "value": 38
+  },
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "wwc-cold-war-en/organization/egm",
+      "note": "старший детектив"
+    },
+    {
+      "type": "works_for",
+      "target": "wwc-cold-war-en/character/hayri-akzambak",
+      "note": "начальник",
+      "note_back": "подчинённый"
+    },
+    {
+      "type": "knows",
+      "target": "wwc-cold-war-en/character/vadim-kazakov",
+      "note": "источник обмена сведениями",
+      "note_back": "осведомитель в полиции"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "65",
+        "value": 65
+      },
+      "CON": {
+        "raw": "65",
+        "value": 65
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "75",
+        "value": 75
+      },
+      "POW": {
+        "raw": "55",
+        "value": 55
+      },
+      "EDU": {
+        "raw": "80",
+        "value": 80
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "1d4"
+    },
+    "build": {
+      "raw": "+1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1d3 + 1d4",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Пистолет",
+          "en": "Handgun"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1d10",
+          "dice": "1d10",
+          "adds_db": false
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "45% (22/9)",
+      "value": 45,
+      "half": 22,
+      "fifth": 9
+    },
+    "skills": [
+      {
+        "name": "Вождение автомобиля",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Юриспруденция",
+        "skill": "coc:skill:law",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Работа в библиотеке",
+        "skill": "coc:skill:library-use",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Иностранный язык",
+        "skill": "coc:skill:language-other",
+        "specialization": "арабский",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Иностранный язык",
+        "skill": "coc:skill:language-other",
+        "specialization": "английский",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Иностранный язык",
+        "skill": "coc:skill:language-other",
+        "specialization": "французский",
+        "value": {
+          "raw": "20%",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Иностранный язык",
+        "skill": "coc:skill:language-other",
+        "specialization": "немецкий",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Иностранный язык",
+        "skill": "coc:skill:language-other",
+        "specialization": "русский",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Доверие",
+        "specialization": "МИТ",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      }
+    ],
+    "sanity": {
+      "raw": "55",
+      "value": 55,
+      "max": null
+    }
+  },
+  "background": {
+    "secret": "Тайно меняется сведениями с Казаковым, чтобы мешать ЦРУ и SIS; копает под Биниджи."
+  },
+  "description": {
+    "ru": "Неряшливый, злой и неуступчивый с любым иностранцем.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Старший детектив стамбульской полиции, близкий к Акзамбаку. Многие его дела последних лет — расследование последствий операций разведок (взломов, перестрелок и т. п.); каждый раз ему не хватало улик, чтобы предъявить обвинение агентам, хотя он знал, что виноваты они. Он бдительно наблюдает, ожидая, когда агент оступится.\nПодробности. Яростно патриотичен: считает, что турки должны контролировать происходящее в своей стране, а не служить площадкой шпионам в конфликте, который, по его мнению, не имеет к Турции отношения. Мотивация: идеология.\nТайны и цели. Полгода назад к нему обратился Казаков под своим именем: детектив будет передавать ему сведения о действиях разведок, попавших в поле зрения полиции, а взамен Казаков даст сведения от Кортни и Джеймсона, чтобы Матараджи пристальнее следил за британскими и американскими агентами. Полицейское присутствие рядом с их контактами сделает их бесполезнее как источники и сорвёт дела ЦРУ и SIS. Матараджи согласился и с тех пор держит контакты под наблюдением. Его заинтересовало, откуда у Абдуллы Биниджи такая жизнь; Биниджи может нанять Мелика Аксоя, чтобы убрать его (см. сцену «Покушение»).\nКак играть. Смотрите на сыщиков свысока, с презрением и враждебностью. Вы хотите, чтобы они как можно скорее убрались из вашего города.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "wwc-cold-war-en",
+      "physical_page": 183,
+      "printed_page": 183,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Vahit Mataracı, Senior Polis Detective», статблок"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — 1970-е, Холодная война (в осях — «1940s-1980s»). Персонаж кампании «Перекрёстки» (Intersections)."
+  },
+  "images": [
+    {
+      "file": "art/characters/wwc-cw-b-vahit-mataraci.webp",
+      "kind": "portrait",
+      "caption": "Вахит Матараджи",
+      "source": "World War Cthulhu: Cold War, с. 183"
+    }
+  ]
+}

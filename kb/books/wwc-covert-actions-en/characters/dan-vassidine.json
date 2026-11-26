@@ -1,0 +1,463 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "wwc-covert-actions-en/character/dan-vassidine",
+  "kind": "character",
+  "name": {
+    "ru": "Дэн Вассидайн",
+    "en": "Dan Vassidine"
+  },
+  "aliases": [
+    "Вассидайн",
+    "Dan Vassidine, SIS Handler"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "куратор SIS",
+    "en": "SIS Handler"
+  },
+  "age": {
+    "raw": "64",
+    "value": 64
+  },
+  "sex": "мужской",
+  "residence": "Лондон",
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "wwc-cold-war-en/organization/mi6",
+      "note": "служит в SIS; фактическое звание — контр-адмирал",
+      "note_back": null
+    },
+    {
+      "type": "knows",
+      "target": "wwc-covert-actions-en/character/seyton-hovenham",
+      "note": "бывший капитан флота, к которому он привязан",
+      "note_back": "куратор операции «Лужа»"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "80",
+        "value": 80
+      },
+      "POW": {
+        "raw": "65",
+        "value": 65
+      },
+      "EDU": {
+        "raw": "76",
+        "value": 76
+      }
+    },
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "mp": {
+      "raw": "13",
+      "value": 13
+    },
+    "sanity": {
+      "raw": "65",
+      "value": 65,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "нет",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "5",
+      "value": 5,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 5
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Fighting (Brawl)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Пистолет",
+          "en": "Firearms (Handgun)"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1d10",
+          "dice": "1d10",
+          "adds_db": false
+        }
+      },
+      {
+        "name": {
+          "ru": "Винтовка",
+          "en": "Firearms (Rifle)"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "2d6+4",
+          "dice": "2d6+4",
+          "adds_db": false
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "55% (27/11)",
+      "value": 55,
+      "half": 27,
+      "fifth": 11
+    },
+    "skills": [
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Вождение автомобиля",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Электроника",
+        "skill": "coc:skill:electronics",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "История",
+        "skill": "coc:skill:history",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Работа в библиотеке",
+        "skill": "coc:skill:library-use",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Ориентирование",
+        "skill": "coc:skill:navigate",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Оккультизм",
+        "skill": "coc:skill:occult",
+        "value": {
+          "raw": "15%",
+          "value": 15,
+          "half": 7,
+          "fifth": 3
+        }
+      },
+      {
+        "name": "Пилотирование (судно)",
+        "skill": "coc:skill:pilot",
+        "specialization": "судно",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Выживание",
+        "skill": "coc:skill:survival",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Шпионское ремесло",
+        "skill": "coc:skill:tradecraft",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Иностранный язык (немецкий)",
+        "skill": "coc:skill:language-other",
+        "specialization": "немецкий",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Иностранный язык (русский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "русский",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Доверие (Королевский военно-морской флот)",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Доверие (SIS)",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      }
+    ]
+  },
+  "background": {
+    "description": "Усталый, пресытившийся, всё по уставу. Лысый, с подковой белых волос на затылке и аккуратной белой бородой.",
+    "ideology": "Мотивация — идеология.",
+    "traits": "Прямая спина, волевой подбородок, смотрит любому в глаза; заканчивая фразу, опускает указательный палец на стол или колено. Сыплет морскими выражениями: «расчистить палубу», «операция пошла вверх тормашками», «отправить врагов за борт».",
+    "secret": "Знает всё о двух продажных пэрах Фанмур: он один из тех, кто сделал их невольными слугами SIS. Предлагал открыто перевербовать их, но N отменил это и запустил операцию «Лужа». Понимает ценность ложных сведений о морских операциях в Северном море, которые пэры передают Советам; если пэры поймут, что ими манипулируют, считает, что SIS должна шантажом заставить их служить дальше. Казнь агентов считает расточительством и не доверяет вмешательству Секции 46."
+  },
+  "description": {
+    "ru": "Куратор SIS, 64 года. Производит впечатление строгого профессионала, но по-настоящему ему наскучили тайные операции: на заданиях он часто будто думает о другом. Известен флотским жаргоном; куратор, которого в Сенчури-хаусе никто не видит. Не терпит неподчинения.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Всю Вторую мировую войну и два десятилетия после неё служил в Отделе военно-морской разведки до его роспуска в 1964 году. Верно служит SIS, но теперь проходит задания как во сне, дожидаясь разрешения уйти в отставку; фактическое звание — контр-адмирал.\nВ сценарии. Поздним вечером 8 июля 1970 года собирает сыщиков в ночлежке в Биллингсгейте и ставит задачу заставить замолчать журналистку Билли Фанмур; затем на кладбище Боу забирает добытое и даёт дополнение к инструктажу. По вызову приезжает в убежище под Стратфордом: при Ховенхэме теряет самообладание (он привязан к бывшему капитану флота, несмотря на его двуличие), требует, чтобы оба пэра поехали на Открытый чемпионат в Сент-Эндрюс. Сны считает неважными («кто бы ни слал «видения», он на нашей стороне»). Если всплывает членство Гуджона в культе, выводит сыщиков и серьёзно говорит, что операции с пленным культистом всегда кончаются плохо; вручает одному из сыщиков пистолет и приказывает допросить культиста не дольше минуты о его библиотеке, сообщниках и грозящих опасностях, а если ответов нет — казнить на месте.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 7,
+      "printed_page": 7,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Briefings»"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 8,
+      "printed_page": 8,
+      "method": "book_text",
+      "verified": true,
+      "note": "брифинг, кладбище Боу"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Dan Vassidine, SIS Handler, Age 64»"
+    },
+    {
+      "book_id": "wwc-covert-actions-en",
+      "physical_page": 20,
+      "printed_page": 20,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Return of Vassidine»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Эпоха — 1970-е (1940s-1980s, Р-252). Строки «Trust» статблока — навыки «Доверие» (правило «Холодной войны»); «Tradecraft» — «Шпионское ремесло»."
+  },
+  "errata": [
+    {
+      "field": "Драка",
+      "printed": "65% (33/13)",
+      "expected": "65% (32/13)",
+      "note": "половина и пятая не следуют из процента; исправлено по правилу 7-й редакции (Р-35)",
+      "fixed": true
+    },
+    {
+      "field": "Пистолет",
+      "printed": "55% (28/11)",
+      "expected": "55% (27/11)",
+      "note": "половина и пятая не следуют из процента; исправлено по правилу 7-й редакции (Р-35)",
+      "fixed": true
+    },
+    {
+      "field": "Уклонение",
+      "printed": "55% (28/11)",
+      "expected": "55% (27/11)",
+      "note": "половина и пятая не следуют из процента; исправлено по правилу 7-й редакции (Р-35)",
+      "fixed": true
+    }
+  ],
+  "images": [
+    {
+      "file": "art/characters/wwc-covert-a-dan-vassidine.webp",
+      "kind": "portrait",
+      "caption": "",
+      "source": "World War Cthulhu: Cold War — Covert Actions, с. 9 (физ. 9): портрет"
+    }
+  ]
+}

@@ -1,0 +1,396 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "wwc-london-en/character/taylor-graves",
+  "kind": "character",
+  "name": {
+    "ru": "Тейлор Грейвс",
+    "en": "Taylor Graves"
+  },
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "литературный критик",
+    "en": "Literary Critic"
+  },
+  "age": {
+    "raw": "61",
+    "value": 61
+  },
+  "sex": "м",
+  "residence": "Ганновер-террас, 1",
+  "relations": [
+    {
+      "type": "rival_of",
+      "target": "wwc-london-en/character/thomas-franklin",
+      "note": "свидетель, сорвавший представление 1905 года",
+      "note_back": "выживший из труппы, которого он 36 лет ищет"
+    },
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:king-in-yellow",
+      "note": "Король, которому он служит",
+      "note_back": "критик, готовящий постановку пьесы"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "50",
+        "value": 50
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "55",
+        "value": 55
+      },
+      "INT": {
+        "raw": "85",
+        "value": 85
+      },
+      "POW": {
+        "raw": "75",
+        "value": 75
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "APP": {
+        "raw": "55",
+        "value": 55
+      },
+      "EDU": {
+        "raw": "85",
+        "value": 85
+      }
+    },
+    "hp": {
+      "raw": "10",
+      "value": 10
+    },
+    "mp": {
+      "raw": "15",
+      "value": 15
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": "0"
+    },
+    "build": {
+      "raw": "+0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "sanity": {
+      "raw": "0",
+      "value": 0,
+      "max": null
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Fighting (Brawl)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d3+DB",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Жертвенный нож",
+          "en": "Sacrificial Knife"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d4+2+DB",
+          "dice": "1d4+2",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "60% (30/12)",
+      "value": 60,
+      "half": 30,
+      "fifth": 12
+    },
+    "skills": [
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "32%",
+          "value": 32,
+          "half": 16,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Иностранный язык (французский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "французский",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Иностранный язык (латынь)",
+        "skill": "coc:skill:language-other",
+        "specialization": "латынь",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Echo of the Past, Enchant Sacrificial Blade, Summon/Bind Servitor of the Outer Gods, Summoning Circle, Words of Power, Wrack.",
+      "items": [
+        {
+          "name": "Echo of the Past",
+          "spell": "coc:spell:echo-of-the-past"
+        },
+        {
+          "name": "Enchant Sacrificial Blade",
+          "spell": "coc:spell:enchant-sacrificial-blade"
+        },
+        {
+          "name": "Summon/Bind Servitor of the Outer Gods",
+          "spell": "coc:spell:summon-bind-servitor-of-the-outer-gods"
+        },
+        {
+          "name": "Summoning Circle",
+          "spell": "coc:spell:summoning-circle"
+        },
+        {
+          "name": "Words of Power",
+          "spell": "coc:spell:words-of-power"
+        },
+        {
+          "name": "Wrack",
+          "spell": "coc:spell:wrack"
+        }
+      ]
+    }
+  },
+  "abilities": [
+    {
+      "name": "Эхо прошлого (заклинание)",
+      "raw": "The caster reaches back through time at a chosen location and creates a copy (an “echo”) of a past moment that occurred there. [...] The caster spends a number of POW as per the Time Gate spell (see the Call of Cthulhu rulebook) for how distant the moment is. For this instance, any moment up to 100 years ago requires 5 POW. The caster spends 1 Magic Point for every 5 minutes they wish to copy and loses 1d10 SAN. The caster must then make an Extreme POW roll to complete the spell. [...] For every link established, the difficulty of the POW roll is reduced by one level. If reduced to a Regular POW roll (requiring 2 links), every additional link adds a bonus die to the casting. If the caster only achieved a Hard Success when requiring an Extreme success, they miss the desired moment by a few nights, or months with just a Regular success. Regular fails result in being out by a number of years. Fumbles result in overshooting by such a degree that the caster loses a further 1d20 POW and must make a Luck roll to avoid attracting the attention of a Hound of Tindalos.",
+      "summary": "Создаёт в выбранном месте копию («эхо») прошлого мгновения вне обычного течения времени; все, кто в зоне действия, входят в эхо и по его окончании возвращаются туда, откуда ушли. Зону определяет Хранитель — здесь это весь отель «Пикадилли», который на время становится Сент-Джеймс-холлом. За пределами зоны времени и пространства нет — бездна, Двор Азатота, Тиндал или Каркоза; кто окажется снаружи, когда эхо кончится, остаётся там навсегда. В эхо уносят то, что было при себе, и возвращаются с этим же; взятое из эха исчезает (могущественные сущности могут покинуть эхо). Эхо можно менять вмешательством, но лишь внутри него — истинную историю это не меняет. Цена: МОЩ по таблице заклинания Врата времени по давности (до 100 лет — 5 МОЩ), 1 ПМ за каждые 5 минут копии и 1d10 Рассудка; затем чрезвычайная проверка МОЩ. Связи с мигом снижают сложность на уровень каждая (та же календарная ночь; люди или вещи из того мига; группа от 10 человек, воспроизводящая события; заранее воспроизведённое событие, повлиявшее на исход); после обычной сложности (2 связи) каждая следующая — бонусная кость. Трудный успех при нужном чрезвычайном — промах на несколько ночей, обычный — на месяцы, провал — на годы; критический провал — заклинатель теряет ещё 1d20 МОЩ и проходит проверку Удачи, иначе привлекает гончую Тиндала.",
+      "refs": [
+        "coc:spell:time-gate",
+        "coc:creature:hound-of-tindalos",
+        "wwc-london-en/location/piccadilly-hotel",
+        "wwc-london-en/location/st-jamess-hall"
+      ]
+    },
+    {
+      "name": "Зачаровать жертвенный клинок (заклинание)",
+      "raw": "This enchantment allows a knife to harvest magic points from those it kills. The ritual involves the blade being bathed in blood under the light of a full moon after being used to perform human sacrifice. The spell costs 10 POW and 1d6 Sanity points. When the knife inflicts a killing blow, the wielder makes an opposed POW roll against the victim. Success drains the victim’s remaining Magic Points into the knife and stores them indefinitely for later use. The knife can hold magic points equal to its creator’s POW. The knife can be used by anyone to harvest Magic Points. Only its creator can access the stored Magic Points.",
+      "summary": "Цена: 10 МОЩ и 1d6 Рассудка. Клинок после человеческого жертвоприношения омывают кровью при полной луне. Нанеся смертельный удар, владелец проходит встречную проверку МОЩ против жертвы; при успехе оставшиеся ПМ жертвы уходят в нож и хранятся бессрочно. Нож вмещает ПМ, равные МОЩ создателя; собирать ПМ может любой, тратить — только создатель.",
+      "refs": [
+        "wwc-london-en/item/sacrificial-blade"
+      ]
+    },
+    {
+      "name": "Круг призыва (заклинание)",
+      "raw": "This spell costs 10 POW and 1d6 Sanity Points to cast. The caster must know a Summon spell. Bind spells are not a requirement. This spell enchants a circle inscribed on the ground, containing a myriad lines and curves, with a single Summon spell. Anyone approaching the circle is drained of 1d20 Magic Points and 1d8 Sanity Points every round, causing the lines and curves to glow. When the total number of Magic Points drained from all present (taking several rounds for an individual, less for a group) is equal to the average Magic Points of the entity corresponding to the enchanted spell, the entity appears. [...] A Summoning Circle is always active and effects all who approach it. The Circle’s creator may suspend its effect for 1 minute by spending 1 Magic Point.",
+      "summary": "Цена: 10 МОЩ и 1d6 Рассудка; заклинатель должен знать заклинание призыва (укрощения — не обязательно). Зачаровывает начертанный на земле круг одним заклинанием призыва. Всякий, кто приблизится, каждый раунд теряет 1d20 ПМ и 1d8 Рассудка, линии светятся; когда сумма выкачанных ПМ сравняется со средними ПМ существа, оно является — не связанным (можно попытаться укротить, иначе оно враждебно ко всем и уходит). Кончились ПМ — остаток берётся из ПЗ. Круг активен всегда; создатель может приостановить его на минуту за 1 ПМ. Используется группами культистов и как ловушка.",
+      "refs": [
+        "wwc-london-en/location/graves-basement",
+        "coc:creature:servitor-of-outer-gods"
+      ]
+    }
+  ],
+  "background": {
+    "description": "Хорошо сохранился — многие дают ему чуть за пятьдесят. Серебрящиеся волосы с проседью, безупречно одет, держится с достоинством и уверенностью.",
+    "traits": "Как играть: радуйтесь и улыбайтесь — вам это нравится; говорите почти снисходительно; упивайтесь своим самолюбием.",
+    "secret": "Верит, что «Король в жёлтом» откроет миру правду о вселенной: человечество не должно жить в неведении; он просветит мир, и Король наградит его."
+  },
+  "description": {
+    "ru": "Литературный критик, живущий в Ганновер-террас у озера Риджентс-парка; единственный выживший из труппы, пытавшейся поставить «Короля в жёлтом» в 1905 году, 36 лет готовивший вторую попытку.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Летом 1904 года 25-летний Грейвс, восходящая звезда лондонской критики, начавший писать о театре, познакомился с продюсером Саймоном Фэрфаксом и пьесой «Король в жёлтом» и пал под её растлевающим влиянием. Получил маленькую роль стражника дворца, но много помогал за сценой — нашёл площадку, Сент-Джеймс-холл. 12 февраля 1905 года учуял газ и бежал за сцену, ранил Франклина в ногу в схватке у входа и скрылся домой. С середины 1905 года пишет только о литературе; рецензирует для крупных газет и журналов, но почти не появляется на людях — имя знают, лицо нет. С ноября 1925 по февраль 1926 года еженедельно (каждый понедельник, весь день) переписывал пьесу из экземпляра Фэрфакса в Британской библиотеке и отпечатал копии на всю труппу; до 1937 года набрал 15 актёров. Репетиции в его кабинете в конце 1937 года открыли врата в Каркозу, где труппа встретила Призрака истины, одобрившего новую попытку. В «Истинной магии» Грейвс нашёл упоминание о заклинании воссоздания прошлого, известном лишь Внешним богам, и обряд призыва служителя Внешних богов; Стивен Нэш отдал в жертву жену и двух дочерей, и служитель научил Грейвса Эху прошлого. Почти три года ушло на подготовку: труппа воссоздаёт события 1905 года, и всякий, кто попытается им помешать, повторит путь Франклина и его друзей — и тем поможет заклинанию. Грейвс поселился в люксе отеля «Пикадилли» 7 февраля 1941 года под своим именем. Если сыщики раскроют его в отеле, он прикинется уцелевшим из тех, кто сорвал представление в 1905 году, и может применить Слова власти; встречавшие Франклина легко увидят обман, но под действием заклинания нужна проверка Рассудка, чтобы его разглядеть (провал — растерянность, успех — 1d3 Рассудка и прозрение). В бою за сценой сначала применяет Разрушение, затем добивает; когда кончатся ПМ, берёт жертвенный клинок (в нём 12 ПМ после убийства Паркер); бьётся до смерти, а его молодая копия из 1905 года защищает его.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "wwc-london-en",
+      "physical_page": 135,
+      "printed_page": 135,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Background»: Act One"
+    },
+    {
+      "book_id": "wwc-london-en",
+      "physical_page": 137,
+      "printed_page": 137,
+      "method": "book_text",
+      "verified": true,
+      "note": "Act Two"
+    },
+    {
+      "book_id": "wwc-london-en",
+      "physical_page": 138,
+      "printed_page": 138,
+      "method": "book_text",
+      "verified": true,
+      "note": "Echo of the Past"
+    },
+    {
+      "book_id": "wwc-london-en",
+      "physical_page": 139,
+      "printed_page": 139,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Taylor Graves», статблок"
+    },
+    {
+      "book_id": "wwc-london-en",
+      "physical_page": 142,
+      "printed_page": 142,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «New Spells»"
+    },
+    {
+      "book_id": "wwc-london-en",
+      "physical_page": 143,
+      "printed_page": 143,
+      "method": "book_text",
+      "verified": true,
+      "note": "окончание"
+    },
+    {
+      "book_id": "wwc-london-en",
+      "physical_page": 163,
+      "printed_page": 163,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Set-up», «The Troupe Acts»"
+    },
+    {
+      "book_id": "wwc-london-en",
+      "physical_page": 166,
+      "printed_page": 166,
+      "method": "book_text",
+      "verified": true,
+      "note": "бой за сценой"
+    },
+    {
+      "book_id": "wwc-london-en",
+      "physical_page": 167,
+      "printed_page": 167,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «Contingencies»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической, смещение 0). Эпоха — Лондон Второй мировой войны (1939–1945, Блиц); в осях — «1940s-1980s» (общая схема линейки World War Cthulhu). Сценарий «Пленённая публика». Новые заклинания (Эхо прошлого, Зачаровать жертвенный клинок, Круг призыва) — общие записи справочника заклинаний; полный текст — в способностях."
+  },
+  "images": [
+    {
+      "file": "art/characters/wwc-london-b-taylor-graves.webp",
+      "kind": "portrait",
+      "caption": "Тейлор Грейвс",
+      "source": "World War Cthulhu: London, с. 139 (физ. 139), раздел «Taylor Graves»"
+    }
+  ]
+}

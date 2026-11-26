@@ -1,0 +1,100 @@
+{
+  "book_id": "new-tales-miskatonic-valley-2e-en",
+  "goal": "the scenario «New Tales of the Miskatonic Valley 2E, Stygian Fox, 2019» playable from the base, a work of the English series (Р-251)",
+  "decision": "Р-251, Р-139, Р-184, Р-206, Р-241",
+  "check_dir": "checks/20261126-newtales",
+  "models": [
+    "kb/books/starfall-en/scenarios/starfall.json",
+    "kb/books/starfall-en/scenes/introduction.json",
+    "kb/books/starfall-en/maps/starside-gm-map.json",
+    "kb/books/whats-in-the-cellar-en/handouts/cellar-papers-1-herald-article.json",
+    "kb/books/dveri-vo-tmu-ru/scenarios/darkness-beneath-the-hill.json"
+  ],
+  "extra": "## This work (Р-251, English works series, one at a time)\n\nSource: the English original `new-tales-miskatonic-valley-2e-en` (text layer; `python -B pipeline/source/pages.py show new-tales-miskatonic-valley-2e-en <page>`; page image `python -B pipeline/source/pages.py image new-tales-miskatonic-valley-2e-en <physical page> --physical`). Page numbers: `pagemap` often misses printed numbers in these PDFs — look at 2–3 page images and find printed vs physical; in `sources` give the printed page as printed (null for unnumbered pages). Offset is 0 (printed = physical; check on 2–3 page images). Do NOT edit `pipeline/source/books.json` — report any other offset (physical = printed − offset, e.g. «p. 3» on physical 4 → offset −1) and the lead sets it.\nRussian text — our translation (flag `translated`); official Russian forms of names and terms — glossary `python -B tools/terms.py <word>` and existing records (Р-184), e.g. Dreamlands = «Страна грёз»; Hard/Extreme roll = «трудная/чрезвычайная проверка» (official «трудный/чрезвычайный успех», never «сложная»). New terms of this book — choose one Russian form each, use it everywhere, and list them all in your report (English → Russian); the translator of the book will reuse exactly these forms.\n- FIRST: check that this scenario is not already in the base under a Russian translation (Grep key character and place names, transliterated, in `kb/books/*-ru/`; e.g. «The Haunted Clubhouse» was already there as «Маленький клуб ужасов»). If it is — do NOT create a second set: per Р-147 the translation keeps the text, the original gives the numbers; write proposals to the translation records (English sources, `name.en`, errata for translation errors) and report.\n\n- One `scenario` record (summary, keeper_info, hook, advice, steps with refs, conclusion with Sanity rewards, tables), every scene (`arc`), characters (stat blocks as printed, Р-25; pregenerated investigators are characters with role `pregen`; unnamed crowds — group profile with invented `names`, Р-151), creatures (known Mythos creatures and deities → `instance_of` the shared record, Grep `kb/creatures` first; a unique being — book record), organizations, items and clues, tomes and spells (known spells → refs to the shared `coc:spell:*`), handouts (text as printed + our full translation), places (a real city — the shared record `coc:location:<city>` if it exists (Grep first), book places `part_of` it; a fictional town — a book place with its places `part_of` it; do not create shared records in `kb/locations/`), maps (`map` records with a spot on every printed label, Р-206; every key number without a record gets a small place record).\n- Helper scripts — only in your own subfolder `.cache/lead-tools/gen-newtales` of the repository (other helpers run in parallel there). Paths in scripts are never hardcoded: compute them from the script location (`__file__`, `$PSScriptRoot`) or the repository root; the library root comes from `pipeline/source/library.json`.\n- Book-scoped ids `new-tales-miskatonic-valley-2e-en/<kind>/<slug>` in `kb/books/new-tales-miskatonic-valley-2e-en/<kinds>/`.\n- Pictures (skill `.claude/skills/kb-art/SKILL.md`, Р-241, Р-245): portraits, creature art, handouts, item pictures, maps — mapping `checks/20261126-newtales/art.json`, `python -B pipeline/art/add_images.py … --dry-run` then real; apply the proposals yourself (`pipeline/integrate/apply.py`) — you own this book; atmosphere pictures (cover, decoration, mood art not tied to a record) → `checks/20261126-newtales/atmosphere.json` (the lead merges it). File prefix for pictures: `newtales-`.\n- Lessons from earlier checks (skill kb-import, «Ошибки, которые уже находили»): every page of an entry in `sources`; handout texts in full; maps are `map` records, not atmosphere; no two records with the same `name.ru`; terms inside text agree with the record names; book misprints kept as printed, in `errata`, with the obvious ones fixed in `corrections`.\n- When done, run `python -I -B tools/completeness.py --books new-tales-miskatonic-valley-2e-en --out checks/20261126-newtales/completeness` and `python -I -B tools/scenario_check.py --books new-tales-miskatonic-valley-2e-en --out checks/20261126-newtales/scenario` and fix what they find; then `python -B tools/check.py kb/books/new-tales-miskatonic-valley-2e-en` — 0 errors.\n- Coverage: in `checks/20261126-newtales/newtales.md` list every heading of the book → the record that holds it (or «не взято» with the reason), misprints, and the term list (English → Russian).\n\n## Shared scheme of this book (7 units work in parallel — keep to it exactly)\n\nNew Tales of the Miskatonic Valley, 2nd edition (Stygian Fox, 2019; 1st ed. Miskatonic River Press 2008; Tom Lynch, Keith Herber, Kevin Ross, Christopher Smith Adair, Oscar Rios, Seth Skorkowsky) — seven 1920s scenarios in Lovecraft Country, each its own `scenario` record with its own scenes; ids `new-tales-miskatonic-valley-2e-en/scenario/<slug of the English title>`, scenes `new-tales-miskatonic-valley-2e-en/scene/<unit>-<slug>`, other records — slug of the English name (on a clash prefix the unit name). Units: reeling (Arkham), youth (Arkham), industry (Dunwich), proof (Foxfield), malice (Kingsport), nightwar (Kingsport), mother (Innsmouth).\n- Lovecraft Country places: the shared records exist — Grep `kb/locations` (Arkham and its districts/places from the Arkham guide, Kingsport, Innsmouth, Dunwich, Foxfield?, Miskatonic University, Arkham Advertiser…) and link to them (`part_of`, refs); never duplicate a shared place — a change to it goes to proposals.\n- The appendix «Handouts, Maps & Pre-gens» (p. 162–236): handouts p. 163–178 are titled by scenario («<Scenario> Papers #N») — each unit takes its own. Pages 179–199 are maps, plans and an «Arkham Advertiser» newspaper (no text layer — look at page images; an OCR index of the first lines is in `.cache/lead-tools/newtales-index.txt`): each unit looks through p. 179–199 at small images (`--dpi 60`, one page at a time) and takes the maps/handouts of its own scenario; the Arkham Advertiser (p. 194–199) is unit reeling's (it lists who uses which article in its report). Pages 200–236 are the pre-generated investigators of the book (6 pages each, no text layer — OCR or read the images) — unit reeling makes them characters with role `pregen` (shared by all scenarios of the book; refs from each scenario record are added by the lead). Kickstarter backers p. 237–240 — «не взято».\n- Front matter (credits p. 3, contents p. 4, foreword «The Thing on My Doorstep» p. 5–6) → unit reeling: the foreword as a `rule` record of the book (the history of the book), the rest «не взято».\n- Unit mother: «A Mother's Love» is ALREADY in the base from the owner's Russian translation (`kb/books/mothers-love-ru/`, Р-223, numbers flagged unverified). Per Р-147 do NOT create a second set: the translation keeps its text, the original gives the numbers — write proposals to the `mothers-love-ru` records (English `sources` with pages of this book, `name.en`, checked numbers with `corrections` where the translation's number differs, errata for translation errors, pictures/maps of this book for those records) and only create records for what the translation does not have at all (report them). Its handouts p. 178 and maps of the appendix likewise go to the translation's records by proposals.\n- Coverage file `checks/20261126-newtales/newtales-<unit>.md` per unit (headings → records, «Не взято», misprints, terms English → Russian); art mapping `art-<unit>.json`, atmosphere `atmosphere-<unit>.json`, proposals `proposals-<unit>.json`, spell drafts `new-shared-spells-<unit>.json`; picture prefix `newtales-<unit>-`.\n- Memory rule (owner): the PC's RAM must stay below 85 % — never run python processes in parallel; look up terms in ONE run (`python -B tools/terms.py w1 w2 …` or `--file`); page images one at a time.\n- completeness/scenario_check: every unit runs them at the end on the whole book (others' gaps are expected — report only yours) into `checks/20261126-newtales/completeness-<unit>` and `scenario-<unit>`; `python -B tools/check.py kb/books/new-tales-miskatonic-valley-2e-en` — 0 errors in your files.\n- The page-by-page translation of the book will be done separately (by Codex) from your term list and `name.ru` — so the term list in your coverage file must be complete.\n",
+  "units": [
+    {
+      "name": "reeling",
+      "pages": "printed 1–28 (front matter 1–6, The Reeling Midnight 9–28), handouts 163–164, Arkham Advertiser 194–199, pre-gens 200–236",
+      "target": "scenario The Reeling Midnight + front matter + the book's pre-generated investigators + the newspaper",
+      "owns": [
+        "kb/books/new-tales-miskatonic-valley-2e-en/** records of these pages",
+        "app/art/* and app/maps/* files with prefix newtales-reeling-",
+        "checks/20261126-newtales/*-reeling.*",
+        "checks/20261126-newtales/newtales-reeling.md"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "youth",
+      "pages": "printed 29–52 (Wasted Youth), handouts 165–167, its maps in 179–193",
+      "target": "scenario Wasted Youth",
+      "owns": [
+        "kb/books/new-tales-miskatonic-valley-2e-en/** records of these pages",
+        "app/art/* and app/maps/* files with prefix newtales-youth-",
+        "checks/20261126-newtales/*-youth.*",
+        "checks/20261126-newtales/newtales-youth.md"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "industry",
+      "pages": "printed 53–72 (Spirit of Industry), handouts 168–169, its maps in 179–193",
+      "target": "scenario Spirit of Industry",
+      "owns": [
+        "kb/books/new-tales-miskatonic-valley-2e-en/** records of these pages",
+        "app/art/* and app/maps/* files with prefix newtales-industry-",
+        "checks/20261126-newtales/*-industry.*",
+        "checks/20261126-newtales/newtales-industry.md"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "proof",
+      "pages": "printed 73–100 (Proof of Life), handouts 165, 170, its maps in 179–193",
+      "target": "scenario Proof of Life",
+      "owns": [
+        "kb/books/new-tales-miskatonic-valley-2e-en/** records of these pages",
+        "app/art/* and app/maps/* files with prefix newtales-proof-",
+        "checks/20261126-newtales/*-proof.*",
+        "checks/20261126-newtales/newtales-proof.md"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "malice",
+      "pages": "printed 101–120 (Malice Everlasting), handouts 171–175, its maps in 179–193",
+      "target": "scenario Malice Everlasting",
+      "owns": [
+        "kb/books/new-tales-miskatonic-valley-2e-en/** records of these pages",
+        "app/art/* and app/maps/* files with prefix newtales-malice-",
+        "checks/20261126-newtales/*-malice.*",
+        "checks/20261126-newtales/newtales-malice.md"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "nightwar",
+      "pages": "printed 121–146 (The Night War), handouts 176–177, its maps in 179–193",
+      "target": "scenario The Night War",
+      "owns": [
+        "kb/books/new-tales-miskatonic-valley-2e-en/** records of these pages",
+        "app/art/* and app/maps/* files with prefix newtales-nightwar-",
+        "checks/20261126-newtales/*-nightwar.*",
+        "checks/20261126-newtales/newtales-nightwar.md"
+      ],
+      "sites": "—"
+    },
+    {
+      "name": "mother",
+      "pages": "printed 147–161 (A Mother's Love), handout 178, its maps in 179–193",
+      "target": "A Mother's Love — proposals to the existing translation records (Р-147)",
+      "owns": [
+        "kb/books/new-tales-miskatonic-valley-2e-en/** records of these pages",
+        "app/art/* and app/maps/* files with prefix newtales-mother-",
+        "checks/20261126-newtales/*-mother.*",
+        "checks/20261126-newtales/newtales-mother.md"
+      ],
+      "sites": "—"
+    }
+  ]
+}

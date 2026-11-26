@@ -1,0 +1,276 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "year-of-the-goat-en/character/forsaken-villagers",
+  "kind": "character",
+  "name": {
+    "ru": "Покинутые селяне",
+    "en": "The Forsaken Villagers"
+  },
+  "aliases": [
+    "Lost Souls of the Fens",
+    "Потерянные души Топей"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "потерянная душа Топей",
+  "names": [
+    "Джоан Тиндалл",
+    "Уильям Пейдж",
+    "Марджери Купер",
+    "Томас Нотт",
+    "Элис Хардинг",
+    "Джон Сэдлер"
+  ],
+  "age": {
+    "raw": "на вид 30–60",
+    "value": null
+  },
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "45",
+        "value": 45
+      },
+      "CON": {
+        "raw": "40",
+        "value": 40
+      },
+      "SIZ": {
+        "raw": "50",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "35",
+        "value": 35
+      },
+      "APP": {
+        "raw": "30",
+        "value": 30
+      },
+      "INT": {
+        "raw": "60",
+        "value": 60
+      },
+      "POW": {
+        "raw": "40",
+        "value": 40
+      },
+      "EDU": {
+        "raw": "35",
+        "value": 35
+      }
+    },
+    "hp": {
+      "raw": "9",
+      "value": 9
+    },
+    "mp": {
+      "raw": "8",
+      "value": 8
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "sanity": {
+      "raw": "20",
+      "value": 20,
+      "max": null
+    },
+    "luck": {
+      "raw": "—",
+      "value": null
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ржавый нож или дубинка",
+          "en": "Rusty Knife or Club"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d6+БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      },
+      {
+        "name": {
+          "ru": "Отчаянный захват",
+          "en": "Desperate Grapple"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "notes": "Удерживает, урона нет."
+      }
+    ],
+    "dodge": {
+      "raw": "25% (12/5)",
+      "value": 25,
+      "half": 12,
+      "fifth": 5
+    },
+    "skills": [
+      {
+        "name": "Уклонение",
+        "skill": "coc:skill:dodge",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Ближний бой (драка)",
+        "skill": "coc:skill:fighting",
+        "specialization": "Драка",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Выживание",
+        "skill": "coc:skill:survival",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d3",
+        "trigger": "понять, что эти селяне уже не вполне люди"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Онемевшие к боли",
+      "raw": "Armor: None, but years of suffering have numbed them to pain (can continue fighting for 1 round after reaching 0 HP).",
+      "summary": "Дойдя до 0 ПЗ, сражаются ещё 1 раунд."
+    },
+    {
+      "name": "Потерянный разум",
+      "raw": "Lost Minds: Most villagers are deeply broken and unable to process reality normally. Any attempts to reason with them using Persuade or Charm are at a penalty die unless the investigator references a shared trauma.",
+      "summary": "Большинство селян глубоко сломлены и не воспринимают реальность нормально: Убеждение и Обаяние против них — со штрафной костью, если сыщик не сошлётся на общую травму."
+    },
+    {
+      "name": "Отмеченные Лилит",
+      "raw": "Touched by Lilith: Many of them are already corrupted — some display minor mutations, such as veins that pulse with darkness, elongated fingers, or voices that echo strangely.",
+      "summary": "Многие уже испорчены: у некоторых мелкие мутации — пульсирующие тьмой вены, удлинённые пальцы, странно отдающиеся эхом голоса."
+    }
+  ],
+  "description": {
+    "ru": "Потерянные души Топей, на вид 30–60 лет: селяне из уничтоженной Лилит деревни, застрявшие в её кошмарном пейзаже. Глубоко сломлены, многие уже изменены Лилит. В призрачной деревне — толпа, требующая казни ведьмы («Смерть ведьме! Очистим землю!»).",
+    "en": null
+  },
+  "legend": {
+    "ru": "Толпу можно настроить друг против друга Красноречием или другими навыками (отвлечение, «Тайком»), остановить трудным успехом Обаяния, Убеждения или Красноречия («Переговоры»). Статблок дан в разделе персонажей; книга прямо не говорит, в какой сцене селяне сражаются, — вероятно, в призрачной деревне (вывод из текста, Р-41).",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 73,
+      "printed_page": 73,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Scene 1: The Ghostly Village»: толпа"
+    },
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 74,
+      "printed_page": 74,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Sneak», «Parley»"
+    },
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 80,
+      "printed_page": 80,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «The Forsaken Villagers, appear 30s-60s, Lost Souls of the Fens»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "editorial_text"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической, смещение 0 проверено по изображениям с. 47, 61, 62). Эпоха — Гражданская война в Англии, 1640-е («A Dark Ages Call of Cthulhu Scenario»; в осях — «other»). Групповой профиль: имена придуманы (Р-151); в книге безымянные «The Forsaken Villagers». Особые правила «Lost Minds» и «Touched by Lilith» — способности."
+  }
+}

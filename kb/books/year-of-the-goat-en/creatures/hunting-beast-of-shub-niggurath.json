@@ -1,0 +1,259 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "year-of-the-goat-en/creature/hunting-beast-of-shub-niggurath",
+  "kind": "creature",
+  "name": {
+    "ru": "Зверь-охотник Шуб-Ниггурат",
+    "en": "Hunting Beast of Shub Niggurath"
+  },
+  "aliases": [
+    "Звери-охотники",
+    "Hunting Beasts",
+    "Transformed Goat Monstrosities",
+    "Превращённые козлоподобные чудовища"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "превращённые козлоподобные чудовища",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "spawn_of",
+      "target": "coc:creature:shub-niggurath",
+      "note": "превращены силой Матери — бывшие гости и культисты курорта",
+      "note_back": "звери-охотники курорта «Кэприн-Спрингс» («Козье снадобье»)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "90",
+        "value": 90
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "APP": {
+        "raw": "30",
+        "value": 30
+      },
+      "INT": {
+        "raw": "20",
+        "value": 20
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      },
+      "EDU": {
+        "raw": "0",
+        "value": 0
+      }
+    },
+    "hp": {
+      "raw": "15",
+      "value": 15
+    },
+    "mp": {
+      "raw": "0",
+      "value": 0
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "sanity": {
+      "raw": "0",
+      "value": 0,
+      "max": null
+    },
+    "luck": {
+      "raw": "—",
+      "value": null,
+      "note": "в книге «N/A»"
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "2 (когти и зубы)",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Когти и зубы",
+          "en": "Claws and Teeth"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "1d6+1d4",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Козий вопль",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d6",
+        "trigger": "увидеть зверя-охотника"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Покрытые жёсткой чёрной шерстью чудовища с козьими ногами, острыми когтями и клыками — бывшие гости и культисты курорта, превращённые силой Шуб-Ниггурат. Бродят в лесах вокруг курорта, издают звериные вопли, не дают гостям сбежать и охраняют курорт. Безмозглые, но хитрые хищники, поклоняющиеся Шуб-Ниггурат каждым кровавым убийством.",
+    "en": null
+  },
+  "legend": {
+    "ru": "В зверя-охотника превращается сыщик, выпивший снадобье из сочетания «Рост + Превращение + Превращение» (исход «Зверь охоты», с. 59): СИЛ, ЛВК и ВЫН +30, Рассудок 0, его уводят в лес бродить на воле.",
+    "en": null
+  },
+  "habitat": "леса вокруг курорта «Кэприн-Спрингс»",
+  "sources": [
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 51,
+      "printed_page": 51,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Grounds»: бывшие гости и культисты, превращённые в зверей-охотников"
+    },
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 59,
+      "printed_page": 59,
+      "method": "book_text",
+      "verified": true,
+      "note": "исход «Beast of the Hunt»"
+    },
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 60,
+      "printed_page": 60,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Hunting Beast of Shub Niggurath, Transformed Goat Monstrosities»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.dodge",
+      "printed": "35% (15/6)",
+      "expected": "35% (17/7)",
+      "note": "половина и пятая напечатаны неверно; исправлено по проценту 35% (Р-35); напечатанные доли подходят к 30% — возможна опечатка в проценте (Р-77)",
+      "fixed": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической, смещение 0 проверено по изображениям с. 47, 61, 62). Навык «Козий вопль» (Goat Scream) без механики в книге — текстом, без записи справочника (Р-126). ПМ 0 при МОЩ 50 — как напечатано. Удача «N/A»."
+  }
+}

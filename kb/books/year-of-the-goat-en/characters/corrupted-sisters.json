@@ -1,0 +1,297 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "year-of-the-goat-en/character/corrupted-sisters",
+  "kind": "character",
+  "name": {
+    "ru": "Порченые сёстры",
+    "en": "Corrupted Sister"
+  },
+  "aliases": [
+    "Mid-Transformation into Satyrs",
+    "порченая сестра",
+    "сёстры-бернардинки"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "сестра на полпути к превращению в сатира",
+  "names": [
+    "сестра Агата",
+    "сестра Беатриса",
+    "сестра Сесилия",
+    "сестра Юдифь",
+    "сестра Урсула"
+  ],
+  "occupation": {
+    "ru": "монахиня-бернардинка",
+    "en": "Bernardine Sister"
+  },
+  "age": {
+    "raw": "various ages",
+    "value": null,
+    "note": "разного возраста"
+  },
+  "sex": "женский",
+  "residence": "монастырь Санкта Мария Лактанс",
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "year-of-the-goat-en/character/mother-superior-mary",
+      "note": "мать-настоятельница",
+      "note_back": "сёстры обители"
+    },
+    {
+      "type": "transforms_into",
+      "target": "year-of-the-goat-en/creature/convent-satyr",
+      "note": "последняя стадия порчи",
+      "note_back": "прежде — сёстры обители"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "55",
+        "value": 55
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "30",
+        "value": 30
+      },
+      "APP": {
+        "raw": "25",
+        "value": 25
+      },
+      "INT": {
+        "raw": "30",
+        "value": 30
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      },
+      "EDU": {
+        "raw": "10",
+        "value": 10
+      }
+    },
+    "hp": {
+      "raw": "10",
+      "value": 10
+    },
+    "mp": {
+      "raw": "8",
+      "value": 8
+    },
+    "sanity": {
+      "raw": "0",
+      "value": 0,
+      "max": 99
+    },
+    "luck": {
+      "raw": "N/A",
+      "value": null
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": "Fighting (Brawl)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": false
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "45% (22/9)",
+      "value": 45,
+      "half": 22,
+      "fifth": 9
+    },
+    "skills": [
+      {
+        "name": "Проницательность",
+        "skill": "coc:skill:insight",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Ловкость рук",
+        "skill": "coc:skill:sleight-of-hand",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1",
+        "trigger": "увидеть, как обнажается порча сестры"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Сёстры обители, которым близко превращение в сатиров, но которые пока в основном сохраняют человеческий облик. Порча разная — от увеличенных наружных органов до чрезмерного оволосения; всё это можно спрятать под одеждой.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Одна такая сестра на последней стадии превращения лежит в запертой келье в конце коридора; мать-настоятельница выдаёт её за больную потливой горячкой. Если сыщики обнажат её тело, прикованная к постели сестра-сатир нападает, а сестра Мария созывает других сатиров (см. акт III).",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 104,
+      "printed_page": 104,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Sisters’ Cells»: сестра в последней стадии превращения"
+    },
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 108,
+      "printed_page": 108,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Corrupted Sister, various ages, Mid-Transformation into Satyrs»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.attacks[Ближний бой (драка)]",
+      "printed": "60% (30/6)",
+      "expected": "60% (30/12)",
+      "note": "Половина и пятая не сходятся с процентом; исправлены по проценту (Р-35).",
+      "fixed": true
+    },
+    {
+      "field": "statblock.hp",
+      "printed": "HP 10",
+      "expected": "12 ((ВЫН 60 + ТЕЛ 65) / 10)",
+      "note": "ПЗ не сходятся с ВЫН и ТЕЛ; оставлено как напечатано (Р-161).",
+      "fixed": false
+    },
+    {
+      "field": "statblock.mp",
+      "printed": "MP: 8",
+      "expected": "10 (МОЩ 50 / 5)",
+      "note": "ПМ не сходятся с МОЩ; оставлено как напечатано (Р-161).",
+      "fixed": false
+    },
+    {
+      "field": "statblock.move",
+      "printed": "Move: 8",
+      "expected": "7 (СИЛ и ЛВК меньше ТЕЛ)",
+      "note": "Оставлено как напечатано (Р-161).",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "editorial_text",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Групповой профиль (Р-74); имена придуманы (Р-151). Во вводке статблока — «Some of the Covent» (так в книге). Урон 1d3 без БкУ — как напечатано."
+  }
+}

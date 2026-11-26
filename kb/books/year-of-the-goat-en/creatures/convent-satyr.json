@@ -1,0 +1,254 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "year-of-the-goat-en/creature/convent-satyr",
+  "kind": "creature",
+  "name": {
+    "ru": "Сатир монастыря Санкта Мария Лактанс",
+    "en": "Satyr"
+  },
+  "aliases": [
+    "Satyr, indeterminate age",
+    "Monstrous creature of Shub-Niggurath",
+    "сатиры",
+    "Satyrs",
+    "благословенные сатиры Шуб-Ниггурат"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "чудовищное создание Шуб-Ниггурат",
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:lesser-satyr-gof-nn-hupadgh",
+      "note": null,
+      "note_back": "профиль сценария «Монастырь Санкта Мария Лактанс»: сёстры, превращённые молоком Шуб-Ниггурат"
+    },
+    {
+      "type": "servitor_of",
+      "target": "year-of-the-goat-en/character/mother-superior-mary",
+      "note": "подчиняются матери-настоятельнице",
+      "note_back": "сатиры обители"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "90",
+        "value": 90
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "80",
+        "value": 80
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "60",
+        "value": 60
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      },
+      "EDU": {
+        "raw": "N/A",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "15",
+      "value": 15
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "sanity": {
+      "raw": "0",
+      "value": 0,
+      "max": 99
+    },
+    "luck": {
+      "raw": "N/A",
+      "value": null
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "1 (свалявшаяся шерсть)",
+      "value": 1
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Укус/когти",
+          "en": "Bite/Claw"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d6+БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d3",
+        "trigger": "увидеть сатира"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Высшее выражение порчи, порождённой поклонением Тёмной Матери Шуб-Ниггурат: каждый сатир — неповторимая гротескная пародия на природу, тело в свалявшихся космах шерсти, с распухшими, разросшимися наружными органами, которые пульсируют неестественной жизненной силой. Козлоногие, ходят с цоканьем копыт.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Сатирами становятся сёстры обители, испорченные молоком Шуб-Ниггурат. Ночью их ведёт мать-настоятельница: сатиров вдвое больше, чем сыщиков; после первого раунда боя Мария приказывает брать сыщиков живыми — сатиры пытаются схватить их, связать или оглушить. Во время церемонии сатиры пляшут вокруг поляны в экстазе предвкушения; при погоне по лесу сатир из засады пытается схватить сыщика, а раненый отступает в лес.",
+    "en": null
+  },
+  "habitat": "монастырь Санкта Мария Лактанс и окрестный лес (Кент)",
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 104,
+      "printed_page": 104,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Sisters’ Cells»: Satyrs"
+    },
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 105,
+      "printed_page": 105,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Act III»: сатиры нападают; «The Ceremony»"
+    },
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 106,
+      "printed_page": 106,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Escaping Certain Death», «The Pursuit»"
+    },
+    {
+      "book_id": "year-of-the-goat-en",
+      "physical_page": 108,
+      "printed_page": 108,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Satyr, indeterminate age, Monstrous creature of Shub-Niggurath»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.damage_bonus",
+      "printed": "DB: 0 Build: 0",
+      "expected": "+1d4 / 1 (СИЛ 60 + ТЕЛ 65 = 125)",
+      "note": "БкУ и Комплекция согласны между собой, но не с суммой СИЛ и ТЕЛ; оставлено как напечатано (Р-36).",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической). Связь instance_of с общим «Меньший сатир / Гоф’нн Хупадгх» — вывод из текста (Р-41): Malleus называет так существ, порождённых молоком Шуб-Ниггурат; числа сценария другие — отдельная запись книги (Р-75). EDU «N/A»."
+  }
+}

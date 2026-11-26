@@ -16,8 +16,10 @@ import argparse
 import csv
 import sys
 from collections import Counter
+from pathlib import Path
 
-from kblib import records
+sys.path.insert(0, str(Path(__file__).resolve().parent))  # works with `python -I` too (isolated mode drops the script dir)
+from kblib import records  # noqa: E402
 
 BY = {"official": "офиц.", "owner": "реестр", "trusted": "фан.", "ours": "наш", "rejected": "отвергнут"}
 

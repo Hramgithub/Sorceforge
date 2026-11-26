@@ -1,0 +1,261 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "new-tales-miskatonic-valley-2e-en/creature/avatar-of-atlach-nacha",
+  "kind": "creature",
+  "name": {
+    "ru": "Аватар Атлач-Начи (Ариадна)",
+    "en": "Avatar of Atlach-Nacha, Formerly Ariadne"
+  },
+  "aliases": [
+    "Ariadne Mad",
+    "Ариадна в безумии",
+    "паучья форма Ариадны"
+  ],
+  "category": "avatar",
+  "subcategory": "аватар Атлач-Начи",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "avatar_of",
+      "target": "coc:creature:atlach-nacha",
+      "note": null,
+      "note_back": "Ариадна Варга, обращённая в «Шальной полуночи»"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "125",
+        "value": 125
+      },
+      "CON": {
+        "raw": "150",
+        "value": 150
+      },
+      "SIZ": {
+        "raw": "70",
+        "value": 70
+      },
+      "DEX": {
+        "raw": "150",
+        "value": 150
+      },
+      "INT": {
+        "raw": "100",
+        "value": 100
+      },
+      "POW": {
+        "raw": "100",
+        "value": 100
+      }
+    },
+    "hp": {
+      "raw": "22",
+      "value": 22
+    },
+    "mp": {
+      "raw": "20",
+      "value": 20
+    },
+    "damage_bonus": {
+      "raw": "+1d6",
+      "value": "+1d6"
+    },
+    "build": {
+      "raw": "2",
+      "value": 2
+    },
+    "move": {
+      "raw": "15",
+      "value": 15,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 15
+        }
+      ]
+    },
+    "armor": {
+      "raw": "2 points of hairy spider chitin",
+      "value": 2
+    },
+    "attacks_per_round": {
+      "raw": "6 attacks if standing, 2 if crawling, or 8 when pouncing on a victim",
+      "value": "6 attacks if standing, 2 if crawling, or 8 when pouncing on a victim"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Укус",
+          "en": "Fighting (Bite)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "1d6",
+          "dice": "1d6",
+          "adds_db": false
+        },
+        "notes": "Успешный укус пробивает любую броню и впрыскивает парализующий яд: чрезвычайная проверка ВЫН снимает паралич и вдвое уменьшает урон."
+      },
+      {
+        "name": {
+          "ru": "Удар (лапами)",
+          "en": "Fighting (Strike)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "1d6 + db",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "notes": "6 атак, если стоит; 2 — если ползёт; 8 — когда набрасывается на жертву."
+      },
+      {
+        "name": {
+          "ru": "Опутать паутиной",
+          "en": "Ensnare in Webbing"
+        },
+        "kind": "special",
+        "skill": null,
+        "chance": {
+          "raw": "60% (30/15)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "notes": "Опутывает жертву паутиной с СИЛ 100."
+      }
+    ],
+    "dodge": {
+      "raw": "60% (30/12)",
+      "value": 60,
+      "half": 30,
+      "fifth": 12
+    },
+    "skills": [
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Ловкость рук",
+        "skill": "coc:skill:sleight-of-hand",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Contact Atlach-Nacha, Summon/Bind Leng Spider",
+      "items": [
+        {
+          "name": "Contact Atlach-Nacha",
+          "spell": "coc:spell:contact-atlach-nacha"
+        },
+        {
+          "name": "Summon/Bind Leng Spider",
+          "spell": null
+        }
+      ]
+    },
+    "sanity_loss": [
+      {
+        "success": "1d3",
+        "fail": "1d6+3",
+        "trigger": "увидеть аватара"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Ариадна Варга в безумии — больше паук, чем женщина: носится по полу на восьми бешено машущих лапах; лицо не её, а нечестивой паучьей морды с пятью горящими красными глазами и острыми жвалами, с которых капает яд. Ей хватает сил поднять над головой взрослого мужчину и швырнуть его в преследователей. Убитая, падает на спину, поджав восемь лап, как дохлый паук, и снова превращается в изрешечённую пулями молодую женщину.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Подсознание Ариадны заключило во сне договор с Атлач-Начей, паучьим божеством времени, и время от времени берёт над ней верх. В этом облике она убила Роджера Хадсона и Брэдфорда Тейлора, а в «последний вальс» — Золтана Варгу. Её дети — паучата с человеческими лицами — прячутся на чердаке; раненая, она рвётся к ним («Дети! Я иду к вам!»), но не может протиснуться в люк чердака («Мои малыши…»).",
+    "en": null
+  },
+  "encounters": {
+    "ru": "Из окна будуара: сыщик, высунувшийся в окно и посмотревший вниз (или проваливший проверку Уклонения, если посмотрел сначала вверх), получает два удара лапами по 2d6; если оба удачны, она утаскивает его на крышу, там бьёт ещё двумя лапами и кусает и бросает мёртвым или без сознания (видевшие это теряют 1/1d2 Рассудка). Затем она врывается в дом через парадную дверь, хватает Стюарта Портмана, бросает его в нападающих, уходит через библиотеку к кухне, носится по дому, нападая на гостей, и пробивается к люку чердака на втором этаже.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 27,
+      "printed_page": 27,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Ariadne’s Boudoir», «Ariadne Mad», «Trapped»"
+    },
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 28,
+      "printed_page": 28,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Avatar of Atlach-Nacha, Formerly Ariadne»"
+    },
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 25,
+      "printed_page": 25,
+      "method": "book_text",
+      "verified": true,
+      "note": "иллюстрация «The Last Waltz»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической, смещение 0 проверено по изображениям с. 8, 19, 162). Профиль из сценария — сама Ариадна в паучьем облике; шаблон божества — общая запись «Атлач-Нача». Заклинания «Summon/Bind Leng Spider» в справочнике нет (книга лишь называет его) — ссылка пустая, кандидат в общую запись. Процент удара лапами напечатан без долей («70%»), доли посчитаны."
+  },
+  "images": [
+    {
+      "file": "art/creatures/newtales-reeling-avatar-of-atlach-nacha.webp",
+      "kind": "art",
+      "caption": "Ариадна в паучьем облике на лестнице",
+      "source": "New Tales of the Miskatonic Valley 2E, «The Last Waltz», с. 25 (физ. 25)"
+    }
+  ]
+}

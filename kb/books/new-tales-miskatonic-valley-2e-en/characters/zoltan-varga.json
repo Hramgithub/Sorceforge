@@ -1,0 +1,395 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "new-tales-miskatonic-valley-2e-en/character/zoltan-varga",
+  "kind": "character",
+  "name": {
+    "ru": "Золтан Варга",
+    "en": "Zoltan Varga"
+  },
+  "aliases": [
+    "Девон Маккой",
+    "Devon McCoy",
+    "дядя Золтан",
+    "Zoltan Varga, Master Con Artist",
+    "Zoltan Varga, a.k.a. Devon McCoy"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "мошенник",
+    "en": "Master Con Artist"
+  },
+  "age": {
+    "raw": "55",
+    "value": 55
+  },
+  "sex": "мужской",
+  "residence": "дом 863 по Холси-стрит, Ист-Таун, Аркхэм (снят на время аферы)",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "knows",
+      "target": "new-tales-miskatonic-valley-2e-en/character/ariadne-varga",
+      "note": "возлюбленная, ученица и сообщница («племянница»)",
+      "note_back": "возлюбленный, наставник и сообщник («дядя Золтан»)"
+    },
+    {
+      "type": "rival_of",
+      "target": "new-tales-miskatonic-valley-2e-en/character/hal-partland",
+      "note": "шантажист",
+      "note_back": "жертва шантажа"
+    },
+    {
+      "type": "knows",
+      "target": "new-tales-miskatonic-valley-2e-en/character/sylvia-addison",
+      "note": "богатая вдова, жертва аферы",
+      "note_back": "друг, которого она еженедельно принимает"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "75",
+        "value": 75
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "55",
+        "value": 55
+      },
+      "APP": {
+        "raw": "75",
+        "value": 75
+      },
+      "INT": {
+        "raw": "80",
+        "value": 80
+      },
+      "POW": {
+        "raw": "65",
+        "value": 65
+      },
+      "EDU": {
+        "raw": "65",
+        "value": 65
+      }
+    },
+    "hp": {
+      "raw": "14",
+      "value": 14
+    },
+    "mp": {
+      "raw": "13",
+      "value": 13
+    },
+    "sanity": {
+      "raw": "65",
+      "value": 65,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "5",
+      "value": 5,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 5
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Fighting (Brawl)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d3 + db",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Нож",
+          "en": "knife"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d4 + db",
+          "dice": "1d4",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:knife-small"
+      },
+      {
+        "name": {
+          "ru": "Револьвер .38 «курносый»",
+          "en": ".38 Snub Nose Revolver"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1d10",
+          "dice": "1d10",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:38-revolver"
+      }
+    ],
+    "dodge": {
+      "raw": "27% (13/5)",
+      "value": 27,
+      "half": 13,
+      "fifth": 5
+    },
+    "skills": [
+      {
+        "name": "Обаяние",
+        "skill": "coc:skill:charm",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Обаяние (сразить гостя наповал)",
+        "skill": "coc:skill:charm",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "specialization": "Charm Socks Off Guest"
+      },
+      {
+        "name": "Обаяние (соблазнить пожилую даму)",
+        "skill": "coc:skill:charm",
+        "value": {
+          "raw": "95%",
+          "value": 95,
+          "half": 47,
+          "fifth": 19
+        },
+        "specialization": "Charm Pants Off Older Women"
+      },
+      {
+        "name": "Маскировка",
+        "skill": "coc:skill:disguise",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "85%",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        }
+      },
+      {
+        "name": "Родной язык (английский)",
+        "skill": "coc:skill:language-own",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "specialization": "Английский"
+      },
+      {
+        "name": "Иностранный язык (венгерский)",
+        "skill": "coc:skill:language-other",
+        "value": {
+          "raw": "10%",
+          "value": 10,
+          "half": 5,
+          "fifth": 2
+        },
+        "specialization": "Венгерский"
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "95%",
+          "value": 95,
+          "half": 47,
+          "fifth": 19
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      }
+    ]
+  },
+  "background": {
+    "secret": "На самом деле Девон Маккой, мошенник из Бостона; не венгр и не дядя Ариадны. Аферу собирается закончить через несколько дней и уехать с Ариадной в Мексику."
+  },
+  "description": {
+    "ru": "Обаятельный пожилой господин; встречает гостей щелчком каблуков и коротким поклоном, восторгается Америкой и говорит, что, если они с племянницей не вернут поместье в Венгрии, непременно поселятся в «прелестном» Аркхэме. Разговор о себе уводит в сторону и исподволь выясняет имена и занятия собеседников: «А чем вы зарабатываете на жизнь, сэр?» — спрашивает он каждого нового знакомого. Почти непроницаем для Психологии и совершенно не поддаётся Обаянию, Красноречию и Убеждению; успешная проверка Психологии показывает лишь, что Варга оценивает сыщика и ловко направляет разговор в свою сторону. Того, кто неосторожно пытается что-то у него выведать, он кормит выдумками и мысленно ставит против его имени галочку — доверия больше не будет.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Девон Маккой вырос на южной окраине Бостона, на суровых улицах, но рано понял, что голова кормит лучше кулаков. В семнадцать лет ушёл в дорогу с наставником — карточным шулером, которого немногие друзья звали «Гарри Шляпа», а сотни других людей знали под дюжиной разных имён. К тому времени, как Гарри застрелили в задней комнате бара в Кливленде, Девон уже выучил всё, чему тот мог научить. В отличие от наставника, наглого и сквернословящего пьяницы, Девон был обаятелен и приятно улыбался; карты для него — лишь средство, а не жульничество «схватил и беги», ради которого жил и умер учитель.\nМеньше года назад в Бостоне он встретил Ариадну Мэдден и, хотя был почти вдвое старше, влюбился в неё. Аркхэмскую аферу он считает вершиной своей карьеры: под видом венгерских аристократов, изгнанных после Великой войны, пара три месяца назад сняла обветшалый, но ещё годный особняк на Холси-стрит, 863, в бедной части города; Варга связался со своими «голубями» — двумя пожилыми богатыми аркхэмцами, которых заранее размягчил долгой перепиской, — и устраивал вечера с бренди и бриджем для солидной публики. Деньги якобы идут в фонд на тяжбу о возврате венгерских имений. Через несколько дней благодетели передадут ему больше 35 000 долларов наличными, и они с Ариадной скроются — в Мексику, где этих денег хватит им на долгие годы.\nАриадна скучала и стала звать на вечера своих гостей, к его неудовольствию; однажды в ссоре она даже пригрозила раскрыть их обман. Последние недели она уходит из дома поздно ночью и до утра бродит по улицам; на его требования объясниться не отвечает. Он боится, что она не выдерживает долгой игры, но твёрдо решил довести аферу до конца.\nРаз в неделю он ужинает (и «развлекается») у богатой вдовы Сильвии Аддисон в Аптауне — она уже дала немного денег на его «фонд» и вот-вот передаст больше 10 000 долларов; по средам играет в бридж с состоятельными господами в Аптауне и уже «обработал» двоих. Бостонский фотограф Хэл Партленд шантажирует его снимками, которые Ариадна когда-то сделала для «журналов для джентльменов»; в четверг Варга выкупает у него негативы и сжигает их дома в камине. Бостонская полиция знает Маккоя: в 1922 году его осудили на год за пособничество в пирамиде Понци, были и другие аресты.\nФинал: в «последний вальс» Золтан ссорится с Ариадной в её спальне, и она, обратившись, высасывает его: сыщики находят его иссохшим, с отслаивающейся серой кожей; умирая, он шепчет «Ариадна…» и извергает кровь с разжиженными внутренностями. Самые крупные паучата на чердаке похожи лицом на Золтана.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 9,
+      "printed_page": 9,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Keeper Information», «Zoltan Varga, a.k.a. Devon McCoy»"
+    },
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 10,
+      "printed_page": 10,
+      "method": "book_text",
+      "verified": true,
+      "note": "продолжение биографии"
+    },
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 14,
+      "printed_page": 14,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «Meet Zoltan Varga»"
+    },
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 20,
+      "printed_page": 20,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Tailing Zoltan»: распорядок недели"
+    },
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 21,
+      "printed_page": 21,
+      "method": "book_text",
+      "verified": true,
+      "note": "«A Sleazy Photographer», «More Boston Information»"
+    },
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 26,
+      "printed_page": 26,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Zoltan and Ariadne», «A Confrontation»"
+    },
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 27,
+      "printed_page": 27,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Ariadne’s Boudoir»: смерть Золтана"
+    },
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 28,
+      "printed_page": 28,
+      "method": "book_text",
+      "verified": true,
+      "note": "«NPCs and Monsters»: статблоки"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физической, смещение 0 проверено по изображениям с. 8, 19, 162). Навыки «Charm Socks Off Guest» и «Charm Pants Off Older Women» — шуточные разновидности Обаяния, как в книге (специализация — английское название). Скорость 5 — с возрастной поправкой (55 лет): по СИЛ 60, ЛВК 55, ТЕЛ 65 базовая 7, минус 2 за возраст 50–59. Атака ножом — тем же навыком Драки (в книге «or knife 1d4 + db»)."
+  }
+}

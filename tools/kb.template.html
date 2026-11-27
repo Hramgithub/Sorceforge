@@ -209,7 +209,7 @@ a { color:var(--accent); }
   <select id="cat" aria-label="Фильтр"></select>
   <select id="occ" aria-label="Профессия" hidden></select>
   <select id="mech" aria-label="Механика" hidden><option value="">Все механики</option><option value="мгновенное">Мгновенные</option><option value="поддерживаемое">Поддерживаемые</option><option value="ритуал">Ритуалы</option></select>
- <select id="era" aria-label="Эпоха" hidden><option value="">Все эпохи</option><option value="1920s">1920-е</option><option value="1930s">1930-е</option><option value="1940s-1980s">1940–1980-е</option><option value="modern">Современность</option></select>
+ <select id="era" aria-label="Эпоха" hidden><option value="">Все эпохи</option><option value="gaslight">Газовый свет</option><option value="1920s">1920-е</option><option value="1930s">1930-е</option><option value="1940s-1980s">1940–1980-е</option><option value="modern">Современность</option></select>
   <span id="count" class="muted"></span>
 </span></nav>
 <main>
@@ -879,7 +879,7 @@ function weaponCard(c) {
   const rows = [['Навык', sk], ['Урон', esc(d.raw) + ([DB_RU[d.db], d.impaling ? 'пронзающее' : ''].filter(Boolean).length ? ` <span class="muted">(${[DB_RU[d.db], d.impaling ? 'пронзающее' : ''].filter(Boolean).join(', ')})</span>` : '')],
     ['Дальность', esc(c.range)], ['Атак за раунд', esc(c.attacks)], ['Боезапас', esc(c.ammo)], ['Осечка', esc(c.malfunction)],
     ['Калибр', esc(caliberOf(c))], ['Перезарядка', esc(c.reload)], ['Доступность', esc(c.availability)],
-    ['Цена в 1920-х', esc(c.cost?.['1920s'])], ['Цена в 1930-х', esc(c.cost?.['1930s'])], ['Цена сейчас', esc(c.cost?.modern)]].filter(([, v]) => v);
+    ['Цена в эпоху Газового света', esc(c.cost?.gaslight)], ['Цена в 1920-х', esc(c.cost?.['1920s'])], ['Цена в 1930-х', esc(c.cost?.['1930s'])], ['Цена в 1940–1980-х', esc(c.cost?.['1940s-1980s'])], ['Цена сейчас', esc(c.cost?.modern)]].filter(([, v]) => v);
   return `<h2>${esc(c.name.ru)}</h2>
     <div class="sub">${esc(c.name.en||'')} · ${WGROUP[c.group]||''}${(c.aliases||[]).length ? ' · также: ' + c.aliases.map(esc).join(', ') : ''}</div>
     ${flags(c)}

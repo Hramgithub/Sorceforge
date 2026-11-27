@@ -32,7 +32,8 @@
   "cost": {
     "1920s": "$2",
     "1930s": "$2",
-    "modern": "$5"
+    "modern": "$5",
+    "1940s-1980s": "£4/12s — £10 (чёрный рынок Лондона, шашка с 30-секундным фитилём)"
   },
   "caliber": null,
   "availability": "1920-е, наши дни",
@@ -44,7 +45,8 @@
     "era": [
       "1920s",
       "modern",
-      "1930s"
+      "1930s",
+      "1940s-1980s"
     ],
     "ruleset": "core"
   },
@@ -80,6 +82,14 @@
       "method": "book_text",
       "verified": true,
       "note": "гл. 15 «References», «Weapon Lists»: строка «Dynamite Stick*» — цена 1930-х $2; остальные числа совпадают с записью (сверено по изображению страницы)"
+    },
+    {
+      "book_id": "wwc-london-en",
+      "physical_page": 76,
+      "printed_page": 76,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Black Market Goods»: Dynamite, 1 stick with 30 second fuse — £4/12s — £10"
     }
   ],
   "source_variants": [
@@ -132,6 +142,27 @@
       "to": "1930s",
       "reason": "оружие есть в списках оружия «Pulp Cthulhu» с ценой 1930-х (гл. 15 «Weapon Lists», с. 260); запись получила cost.1930s и источник Pulp — эпоха 1930-х",
       "ref": "Р-242"
+    },
+    {
+      "field": "axes.era",
+      "from": null,
+      "to": "1940s-1980s",
+      "reason": "оружие есть в книге «World War Cthulhu: London» (цены чёрного рынка, с. 76) — эпоха книги добавлена (Р-261)",
+      "ref": "Р-261"
+    },
+    {
+      "field": "sources",
+      "from": null,
+      "to": "wwc-london-en, с. 76",
+      "reason": "оружие напечатано в книге «World War Cthulhu: London» (с. 76) с теми же числами (Р-261)",
+      "ref": "Р-261"
+    },
+    {
+      "field": "cost.1940s-1980s",
+      "from": null,
+      "to": "£4/12s — £10 (чёрный рынок Лондона, шашка с 30-секундным фитилём)",
+      "reason": "цена эпохи книги — «World War Cthulhu: London» (цены чёрного рынка, с. 76) (Р-261)",
+      "ref": "Р-261"
     }
   ]
 }

@@ -1,0 +1,266 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "hotoe-book-3-en/character/vinkovci-police-officers",
+  "kind": "character",
+  "name": {
+    "ru": "Полицейские Винковци",
+    "en": "Police Officers, Vinkovci Police Station"
+  },
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "полицейский Винковци",
+  "names": [
+    "Иво Ковачич",
+    "Анте Бабич",
+    "Марко Петрович",
+    "Стипе Юрич",
+    "Душан Николич",
+    "Томислав Хорват"
+  ],
+  "occupation": {
+    "ru": "полицейские участка Винковци (60% хорваты, 40% сербы)",
+    "en": "Vinkovci Police Station (60% Croat / 40% Serb)"
+  },
+  "occupation_ref": "coc:occupation:patrulnyy-politseyskiy",
+  "residence": "Винковци",
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "65",
+        "value": 65
+      },
+      "CON": {
+        "raw": "65",
+        "value": 65
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "55",
+        "value": 55
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "55",
+        "value": 55
+      },
+      "EDU": {
+        "raw": "60",
+        "value": 60
+      }
+    },
+    "hp": {
+      "raw": "13",
+      "value": 13
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "luck": {
+      "raw": "—",
+      "value": null
+    },
+    "sanity": {
+      "raw": "55",
+      "value": 55
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d4+1d4",
+          "dice": "1d4",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Дубинка",
+          "en": "Club"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d6+1d4",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:club-small"
+      },
+      {
+        "name": {
+          "ru": "Револьвер 8-мм «Гассер» M98",
+          "en": "8-mm Gaserov M98 revolver"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d8",
+          "dice": "1d8",
+          "adds_db": false
+        },
+        "notes": "в книге: «Shots 8»"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "30%",
+          "value": 30
+        }
+      },
+      {
+        "name": "Юриспруденция",
+        "skill": "coc:skill:law",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "35%",
+          "value": 35
+        }
+      },
+      {
+        "name": "Иностранный язык (немецкий)",
+        "skill": "coc:skill:language-other",
+        "specialization": "Немецкий",
+        "value": {
+          "raw": "20%",
+          "value": 20
+        }
+      },
+      {
+        "name": "Родной язык (сербохорватский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "Сербохорватский",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Типовой профиль полицейского участка Винковци: шестьдесят процентов — хорваты, сорок — сербы.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Глава «Хлеб и камень». Дюжина полицейских, некоторые с винтовками, встречает Восточный экспресс на вокзале; проверяют паспорта. Полиция занята охотой на Народную армию правосудия; смерть Морича считает несчастным случаем на охоте, убийства Фемич и Андрич списывает на ЛПВ, а настойчивых сыщиков забирает на допрос. При отъезде сыщиков трое полицейских с дубинками избивают на перроне хорвата.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 164,
+      "printed_page": 162,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Statistics»"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 137,
+      "printed_page": 135,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Arrival»"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 148,
+      "printed_page": 146,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Local Authorities»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.attacks[Револьвер 8-мм «Гассер» M98]",
+      "printed": "8-mm Gaserov M98 revolver 40% Damage 1D8, Shots 8",
+      "expected": "8-mm Gasser M98 revolver 40% (20/8), damage 1d8",
+      "note": "название искажено (австрийский револьвер Rast & Gasser M1898); половина и пятая доли не напечатаны — дополнены (Р-35)",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "editorial_text",
+      "parse_uncertain"
+    ],
+    "notes": "Наш перевод (Р-251). Групповой профиль (Р-74); готовые имена придуманы (Р-151): хорватские и сербские. «8-mm Gaserov M98» — как напечатано; в таблице оружия «Книги хранителя» такого револьвера нет."
+  }
+}

@@ -1,0 +1,233 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "hotoe-book-4-en/creature/foglifts-skinless-one",
+  "kind": "creature",
+  "name": {
+    "ru": "Бескожий («Ужас в Восточном экспрессе»)",
+    "en": "The Skinless One (Horror on the Orient Express)"
+  },
+  "aliases": [
+    "Бескожий",
+    "The Skinless One",
+    "аспект Ньярлатхотепа"
+  ],
+  "category": "avatar",
+  "subcategory": "аватар Ньярлатхотепа",
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:skinless-one",
+      "note_back": "профиль Бескожего в кампании «Ужас в Восточном экспрессе» (кн. IV, с. 126)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "100",
+        "value": 100
+      },
+      "CON": {
+        "raw": "100",
+        "value": 100
+      },
+      "SIZ": {
+        "raw": "100",
+        "value": 100
+      },
+      "INT": {
+        "raw": "430",
+        "value": 430
+      },
+      "POW": {
+        "raw": "500",
+        "value": 500
+      },
+      "DEX": {
+        "raw": "20",
+        "value": 20
+      },
+      "APP": {
+        "raw": "0",
+        "value": 0
+      }
+    },
+    "hp": {
+      "raw": "20",
+      "value": 20
+    },
+    "mp": {
+      "raw": "100",
+      "value": 100
+    },
+    "damage_bonus": {
+      "raw": "+1d6 (not applicable)",
+      "value": "+1d6",
+      "note": "не применяется"
+    },
+    "build": {
+      "raw": "2",
+      "value": 2
+    },
+    "move": {
+      "raw": "10",
+      "value": 10,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 10
+        }
+      ]
+    },
+    "armor": {
+      "raw": "Anyone who shoots or strikes at The Skinless One develops an unbearable itch in the weapon hand, causing an involuntary miss. Attacks of any kind always do minimum damage. Attacks which manage to eliminate all hit points dispel The Skinless One, but it may return with full hit points in 1d6 rounds.",
+      "value": null,
+      "note": "у стреляющего или бьющего начинается невыносимый зуд в руке с оружием — невольный промах; любые атаки наносят минимальный урон; атаки, снявшие все ПЗ, рассеивают Бескожего, но через 1d6 раундов он может вернуться с полными ПЗ"
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Свежующий взгляд",
+          "en": "Skinning Gaze"
+        },
+        "kind": "special",
+        "skill": null,
+        "chance": {
+          "raw": "100% (50/20)",
+          "value": 100,
+          "half": 50,
+          "fifth": 20
+        },
+        "damage": {
+          "raw": "4d6",
+          "dice": "4d6",
+          "adds_db": false
+        },
+        "notes": "стоит 1 ПМ; встречная проверка МОЩ"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Искусство (свежевание людей)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "Свежевание людей",
+        "value": {
+          "raw": "100%",
+          "value": 100
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "100%",
+          "value": 100
+        }
+      }
+    ],
+    "spells": {
+      "raw": "The Skinless One knows all Mythos spells, except those peculiar to other gods.",
+      "items": []
+    },
+    "sanity_loss": [
+      {
+        "success": "1d10",
+        "fail": "1d100",
+        "trigger": "увидеть Бескожего"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Свежующий взгляд",
+      "raw": "Skinning Gaze: The Skinning Gaze affects a human at the cost of 1 magic point. If the target’s POW is overcome with an opposed roll, all of the target’s skin falls away like loose clothing. The victim’s movement thereafter is intensely painful, and the victim loses 1 hit point per round until dead.",
+      "summary": "За 1 ПМ действует на человека: если МОЩ цели побеждена во встречной проверке, вся кожа спадает с неё, как свободная одежда; каждое движение затем мучительно, и жертва теряет 1 ПЗ за раунд до смерти."
+    },
+    {
+      "name": "Зуд",
+      "summary": "Вокруг бога потрескивает сила; у любого человека в пределах 100 м начинает зудеть кожа."
+    }
+  ],
+  "description": {
+    "ru": "Аспект Ньярлатхотепа: мускулистый человек ростом 2,4 м без кожи, иногда с третьим глазом посреди лба. Обычно является лишь затем, чтобы присутствовать на церемониях и принимать жертвы.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Глава «Туман рассеивается»: призванный возрождённым Макрьятом, является в круг на полу кабинета лавки — за ним клубится вихрь светящихся оранжевых облаков и тёмного дыма. Не подчиняется Макрьяту, потому что Симулякр никто не носит («NONE WEARS THE SIMULACRUM»), и ломает брошенные ему части Симулякра («THE USURPER IS UNWORTHY. MY GIFT IS SUNDERED.»; «THE GIFT OF SKIN IS REVOKED.»).",
+    "en": null
+  },
+  "cult": {
+    "ru": "Братья кожи посвятили себя поклонению Бескожему. Их средоточие — Константинополь; группы есть в Милане, Винковци, Софии, Будапеште и других городах Европы, а также на Ближнем Востоке.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "hotoe-book-4-en",
+      "physical_page": 128,
+      "printed_page": 126,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Skinless One»: статблок, культ, иные черты"
+    },
+    {
+      "book_id": "hotoe-book-4-en",
+      "physical_page": 121,
+      "printed_page": 119,
+      "method": "book_text",
+      "verified": true,
+      "note": "явление"
+    },
+    {
+      "book_id": "hotoe-book-4-en",
+      "physical_page": 122,
+      "printed_page": 120,
+      "method": "book_text",
+      "verified": true,
+      "note": "Бескожий ломает Симулякр"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.build",
+      "printed": "1",
+      "expected": "2",
+      "note": "Комплекция 1 при СИЛ 100 + ТЕЛ 100 = 200 и БкУ +1d6 (с. 126): по большинству исправлено на 2 (Р-36).",
+      "fixed": true
+    }
+  ],
+  "corrections": [
+    {
+      "field": "statblock.build",
+      "from": "1",
+      "to": "2",
+      "reason": "СИЛ + ТЕЛ = 200 и БкУ +1d6 согласованы, напечатанная Комплекция 1 — нет (кн. IV, с. 126, сверено по странице)",
+      "ref": "Р-36"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2). Профиль сценария со своими числами (ЛВК 20, ИНТ 430, 1 атака за раунд, Свежующий взгляд 100%) — отдельная запись со связью `instance_of` (Р-75, Р-79); общий профиль — Malleus Monstrorum. Меры — метрические (Р-64): «eight-foot-tall» → 2,4 м, «100 yards» → 100 м."
+  },
+  "images": [
+    {
+      "file": "art/creatures/hotoe-return-skinless-one.webp",
+      "kind": "art",
+      "caption": "Бескожий",
+      "source": "Horror on the Orient Express, Book IV: Constantinople & Consequences, с. 120 (физ. 122)"
+    }
+  ]
+}

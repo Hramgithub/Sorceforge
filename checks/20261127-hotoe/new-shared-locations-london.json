@@ -1,0 +1,63 @@
+{
+  "about": "Черновики общих городов, нужных части london и отсутствующих в kb/locations (Grep 2026-11-27): создаёт ведущий. Дувр — новый. Кале уже предложен частью express (new-shared-locations-express.json); ниже — дополнение для него.",
+  "records": [
+    {
+      "schema": "sourcefold.location.v0",
+      "id": "coc:location:dover",
+      "kind": "location",
+      "name": {
+        "ru": "Дувр",
+        "en": "Dover"
+      },
+      "location_type": "город",
+      "part_of": null,
+      "keeper_hint": "порт на Ла-Манше, паром в Кале",
+      "description": {
+        "ru": "1923 год, «Ужас в Восточном экспрессе». Порт графства Кент на Ла-Манше. Поезд из Лондона идёт сюда неспешно, но без остановок через Кент и травы Ромни-Марша — чуть меньше двух часов (впервые едущих англичан удивляет такой бросок). В Дувре пассажиры садятся на паром к французскому берегу, в Кале: на пароме общие салоны, но можно заранее заказать отдельную каюту первого или второго класса; билет первого класса «Ориент-экспресса» каюты первого класса на пароме не гарантирует (билеты первого класса на поезд к парому — чуть меньше £6). Переправа обычно занимает несколько часов, но бурное море и сильные шторма порой сильно её затягивают.",
+        "en": null
+      },
+      "refs": [
+        "hotoe-book-2-en/scenario/dancers-in-an-evening-fog",
+        "hotoe-book-2-en/scene/london-leaving-england"
+      ],
+      "axes": {
+        "era": [
+          "1920s"
+        ],
+        "ruleset": "core"
+      },
+      "sources": [
+        {
+          "book_id": "hotoe-book-2-en",
+          "physical_page": 25,
+          "printed_page": 23,
+          "method": "book_text",
+          "verified": true,
+          "note": "«Leaving England»: Dover, ferry, Boat-Train"
+        }
+      ],
+      "quality": {
+        "needs_review": false,
+        "flags": [
+          "translated"
+        ],
+        "notes": "Черновик части london: русский текст — наш перевод с английского оригинала (Р-251, Р-21)."
+      }
+    }
+  ],
+  "additions": [
+    {
+      "target": "coc:location:calais",
+      "path": "description.ru",
+      "text": "Пассажиры «Ориент-экспресса» из Лондона садятся в Кале не в сам экспресс, а в поезд, в составе которого есть вагоны, потом прицепляемые к основному составу «Симплон-Ориент-экспресса», — обычно их два, «вагоны Кале» (Calais coaches). Паром из Дувра идёт несколько часов, в бурю дольше (кн. II, с. 23).",
+      "source": {
+        "book_id": "hotoe-book-2-en",
+        "physical_page": 25,
+        "printed_page": 23,
+        "method": "book_text",
+        "verified": true,
+        "note": "«Leaving England»: Calais, Calais coaches"
+      }
+    }
+  ]
+}

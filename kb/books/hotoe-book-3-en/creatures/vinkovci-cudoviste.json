@@ -1,0 +1,323 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "hotoe-book-3-en/creature/vinkovci-cudoviste",
+  "kind": "creature",
+  "name": {
+    "ru": "Чудовиште",
+    "en": "Cudoviste"
+  },
+  "aliases": [
+    "Cudoviste, Lesser Servitor",
+    "чудовище (сербохорв.)",
+    "Cudoviste, Surgical abominations",
+    "хирургические мерзости"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "младший служитель",
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "hotoe-book-3-en/character/goran-belenzada",
+      "note": "создатель и хозяин",
+      "note_back": "его создания"
+    }
+  ],
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "130",
+        "value": 130,
+        "roll": "(4d6+12)×5"
+      },
+      "CON": {
+        "raw": "130",
+        "value": 130,
+        "roll": "(4d6+12)×5"
+      },
+      "SIZ": {
+        "raw": "82",
+        "value": 82,
+        "roll": "(3d6+6)×5"
+      },
+      "DEX": {
+        "raw": "14",
+        "value": 14,
+        "roll": "4d6"
+      },
+      "POW": {
+        "raw": "52",
+        "value": 52,
+        "roll": "3d6×5"
+      }
+    },
+    "hp": {
+      "raw": "21",
+      "value": 21
+    },
+    "damage_bonus": {
+      "raw": "+2d6",
+      "value": "+2d6"
+    },
+    "build": {
+      "raw": "3",
+      "value": 3
+    },
+    "move": {
+      "raw": "12",
+      "value": 12,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 12
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет, но огнестрельное оружие наносит половину урона",
+      "value": 0,
+      "note": "половина урона от огнестрельного оружия"
+    },
+    "luck": {
+      "raw": "—",
+      "value": null
+    },
+    "attacks_per_round": {
+      "raw": "2",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Коготь",
+          "en": "Claw"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d6+db",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "notes": "тип руки — бросок 1d4 (см. способности)"
+      },
+      {
+        "name": {
+          "ru": "Ближний бой (укус)",
+          "en": "Fighting (Bite)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d4+db",
+          "dice": "1d4",
+          "adds_db": true
+        },
+        "notes": "тип головы — бросок 1d6 (см. способности)"
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "65%",
+          "value": 65
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Маскировка",
+        "skill": "coc:skill:disguise",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      },
+      {
+        "name": "Чтение следов (по запаху)",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d6",
+        "trigger": "при виде чудовиште"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Стойкость к пулям",
+      "summary": "Брони нет, но огнестрельное оружие наносит чудовиште лишь половину урона.",
+      "raw": "Armor: None, but takes half damage from firearms."
+    },
+    {
+      "name": "Ловкие убийцы",
+      "summary": "Быстры и проворны: прыгают на большие расстояния и лазают по отвесным стенам; отличные следопыты, идут по следу добычи по запаху; издали могут скрыть облик большими шляпами и длинными пальто.",
+      "raw": "These creatures are quick and nimble, able to leap great distances and climb sheer surfaces. Cudoviste are also excellent trackers, able to follow their quarry by scent. From a distance Cudoviste can conceal their appearance somewhat with the aid of large garments such as hats and long coats."
+    },
+    {
+      "name": "Речь",
+      "summary": "Общаются гортанными стонами и звериными звуками, которые понимает только тот, кто держит Мимс Сахис.",
+      "raw": "The creatures communicate through guttural moans and animal sounds which can only be understood by someone holding the Mims Sahis.",
+      "refs": [
+        "hotoe-book-1-en/item/campaign-mims-sahis"
+      ]
+    },
+    {
+      "name": "Руки (тип когтя), 1d4",
+      "summary": "1 — медведь; 2 — рысь; 3 — шимпанзе или горилла; 4 — человеческие руки, кончающиеся и кистью, и раздвоенным свиным копытом.",
+      "raw": "Roll 1d4 for Arms (Claw Type): 1—Bear; 2—Lynx; 3—Chimpanzee / Gorilla; 4—Human with arms ending in both a hand and cloven pig’s foot"
+    },
+    {
+      "name": "Голова (тип укуса), 1d6",
+      "summary": "1 — волк или собака; 2 — свинья или кабан; 3 — шимпанзе или горилла; 4 — овца или муфлон; 5 — медведь; 6 — человеческий труп с двумя нижними челюстями.",
+      "raw": "Roll 1d6 for Head (Bite Type): 1—Wolf or Dog; 2—Pig or Boar; 3—Chimpanzee or Gorilla; 4—Sheep or Mouflon; 5—Bear; 6—Human cadaver with two lower jaws"
+    }
+  ],
+  "description": {
+    "ru": "Чудовиште («чудовище» по-сербохорватски) — существа, сшитые из частей живых животных и человеческих трупов силой Мимс Сахиса: творения сербского медицинского исследователя доктора Горана Белензады, итог его опытов с вурским артефактом. Мерзости природы — не вполне звери и не люди, не живые и не мёртвые. Каждое физически уникально, но у всех много общего: скрытные убийцы невероятной силы, наносящие свирепые удары, неестественно стойкие к физическому вреду. В бою бьют кулаком или когтем и кусают или бодают — смотря из каких животных собраны (таблицы рук и головы — в способностях). Первое чудовиште, которое охотится на сыщиков, — голова дикого кабана и верх тела равнинной гориллы, пришитые к низу человеческого трупа; ходит в длинном пальто и шляпе.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Глава «Хлеб и камень». После встречи с сыщиками Белензада создаёт первое чудовиште и велит ему найти и убить тех, кто к нему приходил; пока оно охотится, делает ещё несколько для охраны лаборатории. Чудовиште не слишком умно, но достаточно хитро, чтобы ждать удобного случая: охотится ночью, подстерегает изолированных и уязвимых, по одному-двое, ждёт возле охотничьей усадьбы. Пока доктора не остановят, Винковци преследует одно чудовиште; убитое заменяется новым. Местный водопроводчик Винко Сервенка видел его на крыше — газета «Цибалис» шутливо пишет об этом (Винковци 4). В лаборатории: не меньше одного у псарни и одного рядом с хирургической; если доктор сломлен, он подзывает их свистом и одного за другим застреливает.",
+    "en": null
+  },
+  "habitat": "Винковци: лаборатория доктора Белензады, ночные улицы",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 166,
+      "printed_page": 164,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Statistics»: охранники, чудовиште"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 147,
+      "printed_page": 145,
+      "method": "book_text",
+      "verified": true,
+      "note": "создание чудовиште"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 149,
+      "printed_page": 147,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Cudoviste»"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 150,
+      "printed_page": 148,
+      "method": "book_text",
+      "verified": true,
+      "note": "первое чудовиште"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 156,
+      "printed_page": 154,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Facility’s Cudoviste»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.build",
+      "printed": "Average Build: 0",
+      "expected": "3",
+      "note": "СИЛ+ТЕЛ = 212: БкУ +2d6 (напечатан) и Комплекция 3; Комплекция 0 расходится с двумя согласованными — исправлено по большинству (Р-36)",
+      "fixed": true
+    },
+    {
+      "field": "statblock.characteristics.DEX",
+      "printed": "14 (4D6)",
+      "expected": "70 ((4d6)×5)?",
+      "note": "бросок и среднее согласованы (4d6 → 14), но без ×5, в отличие от остальных характеристик; возможно, пропущено ×5 — оставлено как напечатано (Р-37)",
+      "fixed": false
+    }
+  ],
+  "corrections": [
+    {
+      "field": "statblock.build",
+      "from": "0",
+      "to": "3",
+      "reason": "Комплекция по СИЛ+ТЕЛ 212 (как и напечатанный БкУ +2d6), с. 164",
+      "ref": "Р-36"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Наш перевод (Р-251). Средние значения вида (averages); ИНТ, НАР, ОБР не напечатаны. Таблицы рук и голов — в способностях."
+  },
+  "images": [
+    {
+      "file": "art/creatures/hotoe-zagreb-vinkovci-vinkovci-cudoviste.webp",
+      "kind": "art",
+      "caption": "Чудовиште",
+      "source": "Horror on the Orient Express, Book III, с. 147 (физ. 149)"
+    }
+  ]
+}

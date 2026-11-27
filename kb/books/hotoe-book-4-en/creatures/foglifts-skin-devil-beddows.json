@@ -1,0 +1,254 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "hotoe-book-4-en/creature/foglifts-skin-devil-beddows",
+  "kind": "creature",
+  "name": {
+    "ru": "Кожаный дьявол (бывший Беддоуз)",
+    "en": "Skin Devil, Formerly Known as Beddows"
+  },
+  "aliases": [
+    "Кожаный дьявол Макрьята",
+    "The Lurker On The Ceiling",
+    "Притаившийся на потолке"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "низшая раса-служитель",
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "hotoe-book-3-en/creature/crusader-skin-devil",
+      "note_back": "кожаный дьявол из Беддоуза, страж лавки Макрьята (1923)"
+    },
+    {
+      "type": "spawn_of",
+      "target": "coc:creature:skinless-one",
+      "note": "сотворён Мехметом Макрьятом из плоти и костей Джеймса Беддоуза"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "85",
+        "value": 85
+      },
+      "CON": {
+        "raw": "20",
+        "value": 20
+      },
+      "SIZ": {
+        "raw": "45",
+        "value": 45
+      },
+      "INT": {
+        "raw": "35",
+        "value": 35
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "100",
+        "value": 100
+      }
+    },
+    "hp": {
+      "raw": "6",
+      "value": 6
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "7/18 Fly",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        },
+        {
+          "mode": "fly",
+          "value": 18,
+          "note": "на самом деле неуклюже прыгает и планирует"
+        }
+      ]
+    },
+    "armor": {
+      "raw": "2 points of bone and skin",
+      "value": 2,
+      "note": "2 пункта (кость и кожа)"
+    },
+    "attacks_per_round": {
+      "raw": "2",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Сосание",
+          "en": "Suck"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d4 per round",
+          "dice": "1d4",
+          "adds_db": false
+        },
+        "notes": "сначала нужен успешный захват (Ближний бой (захват)); оторвать — встречная проверка СИЛ"
+      },
+      {
+        "name": {
+          "ru": "Удар кишкой",
+          "en": "Bowel Flail"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d4 plus 1 per round until washed off. On Extreme success Choke",
+          "dice": "1d4",
+          "adds_db": false
+        },
+        "notes": "кишка взрывается на жертве; при чрезвычайном успехе — удушение"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "75%",
+          "value": 75
+        }
+      },
+      {
+        "name": "Маскировка (под дьявола)",
+        "skill": "coc:skill:disguise",
+        "value": {
+          "raw": "85%",
+          "value": 85
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "75%",
+          "value": 75
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      }
+    ],
+    "spells": {
+      "raw": "None",
+      "items": []
+    },
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d10",
+        "trigger": "увидеть кожаного дьявола (хуже от того, что в его грубо собранных чертах узнаётся лицо Беддоуза)"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Сосание",
+      "raw": "Suck: Skin Devils put their toothless maws onto victims and suck, pulling flesh and even bones into themselves. This does 1d4 damage per round. They must make a successful Fighting (Grapple) roll to grab hold. They can be dislodged with an opposed STR roll. Whatever is sucked away turns up in the Skin Devil’s bowel in 1d6 rounds.",
+      "summary": "Прикладывает беззубую пасть к жертве и всасывает плоть и даже кости: 1d4 урона за раунд. Сначала нужен успешный захват; оторвать — встречная проверка СИЛ. Высосанное через 1d6 раундов оказывается в кишке дьявола."
+    },
+    {
+      "name": "Удар кишкой",
+      "raw": "Bowel Flail: The bowel is dropped out of the creature and hurled or flung. The bowel explodes over any victim it hits. The contents of the bowel burn for 1d4 points and continue to burn for one hit point per round until washed off. An Extreme success means the long gut has wrapped around the victim’s neck. Use Asphyxiation rules to determine damage. Once the bowel has been exploded then it can no longer be retrieved or used again. Note that Skin Devils have to suck on a victim to get bowel contents if their bowels start at empty. There is a 50% chance a given Skin Devil will have a full bowel.",
+      "summary": "Вываливает кишку и швыряет её; она взрывается на жертве: содержимое жжёт на 1d4 и затем по 1 ПЗ за раунд, пока не смыто. Чрезвычайный успех — длинная кишка обвивает шею: урон по правилам удушья. Взорванную кишку нельзя подобрать и использовать снова. Пустую кишку дьявол наполняет, высасывая жертву; с вероятностью 50% кишка полна.",
+      "refs": [
+        "coc:rule:suffocation-and-drowning"
+      ]
+    }
+  ],
+  "description": {
+    "ru": "Кожаные дьяволы — мерзкие магические конструкты из кожи, костей и внутренностей жертвы, в данном случае Беддоуза: прыгающие твари с волочащимися кишками, которыми они бьют, как дубинками, с рогами и когтями из кости. Прыгают и планируют на рваной коже, растянутой в подобие перепончатых крыльев (выглядит как полёт, но это неуклюжие прыжки). Подробнее о кожаных дьяволах — глава «Тёмный крестоносец».",
+    "en": null
+  },
+  "legend": {
+    "ru": "Глава «Туман рассеивается» (Лондон, 1923). Перед отъездом Мехмет убил несчастного Беддоуза и сотворил из его плоти и костей кожаного дьявола, чтобы стеречь лавку и подкрепить уловку, подготовленную наверху. В последние дни, чуя близкий апофеоз Бескожего, он выходит искать жертву: в подвале паба «Герб переплётчика» схватил бродягу, который едва не вырвался, и убил его когтями (на потолке подвала остались глубокие царапины); учтя ошибку, похитил Артура Боумена и держит его наверху. Таится на потолке верхней комнаты, удирая от света: по выбору Хранителя падает на первого поднявшегося по лестнице сыщика или ждёт, пока все столпятся у свитка; сначала швыряет взрывающуюся кишку, затем падает с раскрытой пастью, чтобы высосать жизнь из первого сыщика. Тот, кто светит фонарём на потолок, сразу его замечает. Если сыщики опередили Мехмета в Лондоне, им сначала придётся справиться с ним.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "hotoe-book-4-en",
+      "physical_page": 127,
+      "printed_page": 125,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Skin Devil, Formerly Known as Beddows»: статблок"
+    },
+    {
+      "book_id": "hotoe-book-4-en",
+      "physical_page": 120,
+      "printed_page": 118,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Lurker On The Ceiling»"
+    },
+    {
+      "book_id": "hotoe-book-4-en",
+      "physical_page": 119,
+      "printed_page": 117,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Homeless Man»"
+    },
+    {
+      "book_id": "hotoe-book-4-en",
+      "physical_page": 124,
+      "printed_page": 122,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Beating Makryat to London»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2). Профиль известного вида со своими числами (Р-75, Р-79): связь `instance_of` с кожаным дьяволом главы «Тёмный крестоносец». Бывший Беддоуз — `hotoe-book-2-en/character/james-beddows` (запись части london)."
+  }
+}

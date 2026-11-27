@@ -1,0 +1,294 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "hotoe-book-3-en/creature/belgrade-walker-in-the-woods",
+  "kind": "creature",
+  "name": {
+    "ru": "Бродящий в лесу, аватар Шуб-Ниггурат",
+    "en": "Walker in the Woods, Avatar of Shub-Niggurath"
+  },
+  "aliases": [
+    "Walker in the Woods",
+    "Бродящий",
+    "the Walker",
+    "cottage-thing"
+  ],
+  "category": "avatar",
+  "subcategory": "аватар Шуб-Ниггурат",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "avatar_of",
+      "target": "coc:creature:shub-niggurath"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "250",
+        "value": 250
+      },
+      "CON": {
+        "raw": "600",
+        "value": 600
+      },
+      "SIZ": {
+        "raw": "490",
+        "value": 490
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50
+      },
+      "POW": {
+        "raw": "75",
+        "value": 75
+      },
+      "INT": {
+        "raw": "Special",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "109",
+      "value": 109
+    },
+    "damage_bonus": {
+      "raw": "+8d6",
+      "value": "+8d6"
+    },
+    "build": {
+      "raw": "9",
+      "value": 9
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "armor": {
+      "raw": "composed of non-terrene material and make-up, so that any successful firearm attack inflicts only 1 point of damage. A firearm impale does 2 points of damage. Shotguns are an exception, doing minimal possible damage, whatever that is. Hand-to-hand weapons inflict normal damage; attacks based on heat, blast, corrosion, electrical charge or poisoning have no effect.",
+      "value": null,
+      "note": "неземное вещество: успешное попадание из огнестрельного оружия — 1 пункт урона, пронзающее — 2; дробовик — минимально возможный урон; оружие ближнего боя — обычный урон; жар, взрыв, едкие вещества, электричество и яд не действуют"
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Удар щупальцем",
+          "en": "Tentacle Sweep"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "½ db",
+          "dice": null,
+          "adds_db": true
+        },
+        "notes": "половина БкУ; из-за громадного тела против целей на земле может пустить в ход лишь два щупальца; щупальце может поднять предмет размером с автомобиль"
+      },
+      {
+        "name": {
+          "ru": "Растаптывание",
+          "en": "Trample"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "db",
+          "dice": null,
+          "adds_db": true
+        },
+        "notes": "раз в раунд топчет всё на своём пути"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Искусство (Песнь морока)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "Песнь морока",
+        "value": {
+          "raw": "100%",
+          "value": 100
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "80%",
+          "value": 80
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1d6",
+        "fail": "1d20",
+        "trigger": "увидеть истинный облик"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Песнь морока",
+      "summary": "Спящий или вынашивающий, Бродящий ртами у основания щупалец непрерывно поёт на частоте, обычно неуловимой для человеческого уха (чрезвычайный успех Слуха на миг улавливает странный мелодичный свист на грани восприятия). Песнь действует как заклинание «Пение души»: все в её пределах видят и слышат только то, что хочет Бродящий, а когда за ним ухаживают Баба-яги — то, что хотят жрицы: в римские времена — величественное живое святилище Чёрной Козы Чащоб, в последние века — скромную деревенскую избушку с толстой соломенной крышей и изгородью из шиповника. Проснувшись, он перестаёт петь, и открывается истинный облик.",
+      "raw": "Song of Delusion: When dormant or brooding, the Walker uses its mouths, located at the base of each tentacle, to constantly sing at a pitch normally undetectable to human ears. A Extreme Listen momentarily detects a weird, melodious piping at the edge of human perception. The song creates an ambient effect similar to the Soul Singing spell…",
+      "refs": [
+        "coc:spell:soul-singing"
+      ]
+    },
+    {
+      "name": "Сеть волокон",
+      "summary": "Пока Бродящий укоренён и спит, его волокна прикрепляются ко всему в радиусе около 70 м; здоровье и плодовитость всего прикреплённого усиливаются. Проснувшись, он использует жизнь всего прикреплённого, чтобы быстро стать деятельным.",
+      "raw": "Filament Network: While settled in the ground and dormant, the Walker’s filaments attach themselves to everything in a 200-foot radius."
+    },
+    {
+      "name": "Разум Бродящего",
+      "summary": "Сам по себе обладает простым сознанием и реагирует только на голод, боль, вибрацию и потребность разродиться. Старшая жрица Баба-яг (Старуха) делится с ним своим знанием мира; пока она жива и в сознании, Баба-яги направляют его.",
+      "raw": "The Walker’s Intelligence: By itself, the Walker has a simple level of consciousness, reacting only as necessary to hunger, pain, vibration, and the need to spawn.",
+      "refs": [
+        "hotoe-book-3-en/character/grandmother"
+      ]
+    },
+    {
+      "name": "Нерест",
+      "summary": "Насытившись, входит в фазу вынашивания: частично зарывается в глухой лес и спит до ста лет, увеличиваясь вдесятеро; в конце за одну ночь выпускает тысячу взрослых Тёмных молодых, которые выходят, пожирая его изнутри.",
+      "raw": "Spawning: When fully fed, the Walker enters a gestation phase…releasing one thousand fully-mature Dark Young (who emerge by consuming it from within) over the course of a single night.",
+      "refs": [
+        "coc:creature:dark-young-of-shub-niggurath"
+      ]
+    },
+    {
+      "name": "Атаки",
+      "summary": "Множество щупалец мечется вокруг и может задеть противников; раз в раунд может растоптать всё на своём пути.",
+      "raw": "Fighting Attacks: The Walker has a multitude of tentacles, which flail around and may hit opponents. Trample: Once per round, the Walker may trample everything in its path."
+    }
+  ],
+  "description": {
+    "ru": "Громадное древовидное существо: на первый взгляд объёмом со зрелый баобаб, а верёвчатой поверхностью — как фикус или мангровое дерево. Обычно скрыто в густом лесу; венец толстых верёвочных усиков вплетён в окрестную листву. Может по нужде или приказу вытащить себя из земли на двух могучих, но странно тонких птичьих или козлиных ногах и двигаться с удивительной скоростью; тогда его волокна вытягивают жизнь из всего, к чему были прикреплены, оставляя лишь сморщенные бесплодные остатки некогда плодородной рощи. Увенчан шестью огромными щупальцами толщиной с ногу слона и длиной больше 10 м. Сейчас спит и принимает облик избушки, где живут Бабушка и Кчерка.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Глава «Избушка в лесу» (1923). Матка Тёмной молоди Шуб-Ниггурат: разрешаясь, рождает её десятками; его выводковая камера размером с двухэтажный дом, и если жрицы ублажают и служат ему, он уступает часть камеры им под убежище или жилище. Пока он укоренён и спит, вокруг буйно растёт всё живое: миллионы его волокон пронизывают всё живое на сотни метров вокруг. Ему нужны регулярные жертвы; голод, не утолённый годами, не даёт ему разродиться, и Баба-яги стареют. Насытившись, он входит в фазу вынашивания: частично зарывается в глухой лес и спит до века, за это время увеличиваясь вдесятеро; в конце он за одну ночь выпускает тысячу взрослых Тёмных молодых, которые выходят, пожирая его изнутри. Проснувшись, избушка встаёт на огромные узловатые ноги; после бегства сыщиков Баба-яга на нём преследует поезд до болгарской границы, и сыщики видят его в последний раз — избушкой у ручья с ветвями-венцом.",
+    "en": null
+  },
+  "cult": {
+    "ru": "Баба-яги — троица жриц, служащих Чёрной Козе Чащоб, последние наследницы древнего культа, возникшего здесь в доримские времена. Некогда влиятельный от восточных Альп до Чёрного моря, культ съёжился до этого уголка Балкан. Их кощунственный долг — кормить древний аватар Шуб-Ниггурат, живущий в лесу, и принимать роды его потомства. В награду за преданность аватар продлевает жрицам жизнь, но лишь пока получает регулярные жертвы.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 239,
+      "printed_page": 237,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Walker in the Woods, Avatar of Shub-Niggurath»"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 240,
+      "printed_page": 238,
+      "method": "book_text",
+      "verified": true,
+      "note": "Sanity Loss"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 215,
+      "printed_page": 213,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Orašac: Keeper Information»"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 222,
+      "printed_page": 220,
+      "method": "book_text",
+      "verified": true,
+      "note": "избушка — спящий аватар"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 228,
+      "printed_page": 226,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Blow the House Down»"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 229,
+      "printed_page": 227,
+      "method": "book_text",
+      "verified": true,
+      "note": "внутри и снаружи"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 230,
+      "printed_page": 228,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Escape»"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 232,
+      "printed_page": 230,
+      "method": "book_text",
+      "verified": true,
+      "note": "охота"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 234,
+      "printed_page": 232,
+      "method": "book_text",
+      "verified": true,
+      "note": "«On to Sofia»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по изображению страницы книги. Уникальный аватар сценария — запись книги со связью avatar_of (Р-108). Меры переведены (Р-64): больше 30 футов → больше 10 м, радиус 200 футов → около 70 м, сотни футов → сотни метров. Урон атак — БкУ (+8d6) или его половина. ИНТ — «Special»."
+  },
+  "images": [
+    {
+      "file": "art/creatures/hotoe-belgrade-walker-in-the-woods.webp",
+      "kind": "art",
+      "caption": "Избушка на ногах и Баба-яга",
+      "source": "Horror on the Orient Express, кн. III «Italy & Beyond» (англ., 7e), с. 229 (физ. 231)"
+    }
+  ]
+}

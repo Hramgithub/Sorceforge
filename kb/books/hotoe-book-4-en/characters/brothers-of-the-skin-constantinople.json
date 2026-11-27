@@ -1,0 +1,876 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "hotoe-book-4-en/character/brothers-of-the-skin-constantinople",
+  "kind": "character",
+  "name": {
+    "ru": "Братья кожи, безумные культисты (Константинополь)",
+    "en": "Brothers of the Skin, 12 Madman Cultists"
+  },
+  "aliases": [
+    "12 Madman Cultists"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "безумный культист",
+  "names": [
+    "Эмин",
+    "Кемаль",
+    "Решат",
+    "Орхан",
+    "Явуз",
+    "Неджати"
+  ],
+  "occupation": {
+    "ru": "культисты Братьев кожи",
+    "en": null
+  },
+  "sex": "мужской",
+  "residence": "Константинополь",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "hotoe-book-4-en/character/selim-makryat",
+      "note": "глава культа",
+      "note_back": "рядовые Братья в Константинополе"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {},
+    "hp": {
+      "raw": "—",
+      "value": null
+    },
+    "mp": {
+      "raw": "12",
+      "value": 12
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Культовый нож для свежевания",
+          "en": "Cult Skinning Knife"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d3+2+1d4",
+          "dice": "1d3+2",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "25% (12/5)",
+      "value": 25,
+      "half": 12,
+      "fifth": 5
+    },
+    "skills": [
+      {
+        "name": "Искусство (свежевание людей)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "Свежевание людей",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Родной язык (турецкий)",
+        "skill": "coc:skill:language-own",
+        "specialization": "Турецкий",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Control Skin, plus Transfer Body Part at the keeper’s discretion. Some may know an additional spell or two, such as Create Skin Beast.",
+      "items": [
+        {
+          "name": "Control Skin",
+          "spell": "coc:spell:control-skin"
+        },
+        {
+          "name": "Transfer Body Part",
+          "spell": "coc:spell:transfer-body-part"
+        },
+        {
+          "name": "Create Skin Beast",
+          "spell": "coc:spell:create-skin-beast"
+        }
+      ]
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1",
+        "trigger": "встреча с Братом с явными пришитыми частями"
+      },
+      {
+        "success": "0",
+        "fail": "1d4",
+        "trigger": "если пришитые части узнаются как части друга или знакомого"
+      }
+    ]
+  },
+  "variants": [
+    {
+      "label": "Один",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "80",
+            "value": 80
+          },
+          "CON": {
+            "raw": "75",
+            "value": 75
+          },
+          "SIZ": {
+            "raw": "45",
+            "value": 45
+          },
+          "DEX": {
+            "raw": "80",
+            "value": 80
+          },
+          "POW": {
+            "raw": "40",
+            "value": 40
+          }
+        },
+        "hp": {
+          "raw": "12",
+          "value": 12
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "8",
+          "value": 8,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 8
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "Два",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "75",
+            "value": 75
+          },
+          "CON": {
+            "raw": "40",
+            "value": 40
+          },
+          "SIZ": {
+            "raw": "65",
+            "value": 65
+          },
+          "DEX": {
+            "raw": "80",
+            "value": 80
+          },
+          "POW": {
+            "raw": "70",
+            "value": 70
+          }
+        },
+        "hp": {
+          "raw": "10",
+          "value": 10
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "8",
+          "value": 8,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 8
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "Три",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "55",
+            "value": 55
+          },
+          "CON": {
+            "raw": "65",
+            "value": 65
+          },
+          "SIZ": {
+            "raw": "80",
+            "value": 80
+          },
+          "DEX": {
+            "raw": "75",
+            "value": 75
+          },
+          "POW": {
+            "raw": "30",
+            "value": 30
+          }
+        },
+        "hp": {
+          "raw": "14",
+          "value": 14
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "8",
+          "value": 8,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 8
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "Четыре",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "70",
+            "value": 70
+          },
+          "CON": {
+            "raw": "65",
+            "value": 65
+          },
+          "SIZ": {
+            "raw": "55",
+            "value": 55
+          },
+          "DEX": {
+            "raw": "75",
+            "value": 75
+          },
+          "POW": {
+            "raw": "55",
+            "value": 55
+          }
+        },
+        "hp": {
+          "raw": "12",
+          "value": 12
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "8",
+          "value": 8,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 8
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "Пять",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "75",
+            "value": 75
+          },
+          "CON": {
+            "raw": "45",
+            "value": 45
+          },
+          "SIZ": {
+            "raw": "60",
+            "value": 60
+          },
+          "DEX": {
+            "raw": "70",
+            "value": 70
+          },
+          "POW": {
+            "raw": "45",
+            "value": 45
+          }
+        },
+        "hp": {
+          "raw": "10",
+          "value": 10
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "8",
+          "value": 8,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 8
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "Шесть",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "65",
+            "value": 65
+          },
+          "CON": {
+            "raw": "70",
+            "value": 70
+          },
+          "SIZ": {
+            "raw": "60",
+            "value": 60
+          },
+          "DEX": {
+            "raw": "70",
+            "value": 70
+          },
+          "POW": {
+            "raw": "55",
+            "value": 55
+          }
+        },
+        "hp": {
+          "raw": "13",
+          "value": 13
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "8",
+          "value": 8,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 8
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "Семь",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "65",
+            "value": 65
+          },
+          "CON": {
+            "raw": "55",
+            "value": 55
+          },
+          "SIZ": {
+            "raw": "60",
+            "value": 60
+          },
+          "DEX": {
+            "raw": "65",
+            "value": 65
+          },
+          "POW": {
+            "raw": "50",
+            "value": 50
+          }
+        },
+        "hp": {
+          "raw": "11",
+          "value": 11
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "8",
+          "value": 8,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 8
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "Восемь",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "65",
+            "value": 65
+          },
+          "CON": {
+            "raw": "60",
+            "value": 60
+          },
+          "SIZ": {
+            "raw": "70",
+            "value": 70
+          },
+          "DEX": {
+            "raw": "65",
+            "value": 65
+          },
+          "POW": {
+            "raw": "55",
+            "value": 55
+          }
+        },
+        "hp": {
+          "raw": "13",
+          "value": 13
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "8",
+          "value": 8,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 8
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "Девять",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "55",
+            "value": 55
+          },
+          "CON": {
+            "raw": "55",
+            "value": 55
+          },
+          "SIZ": {
+            "raw": "70",
+            "value": 70
+          },
+          "DEX": {
+            "raw": "60",
+            "value": 60
+          },
+          "POW": {
+            "raw": "35",
+            "value": 35
+          }
+        },
+        "hp": {
+          "raw": "12",
+          "value": 12
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "8",
+          "value": 8,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 8
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "Десять",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "70",
+            "value": 70
+          },
+          "CON": {
+            "raw": "70",
+            "value": 70
+          },
+          "SIZ": {
+            "raw": "65",
+            "value": 65
+          },
+          "DEX": {
+            "raw": "60",
+            "value": 60
+          },
+          "POW": {
+            "raw": "55",
+            "value": 55
+          }
+        },
+        "hp": {
+          "raw": "13",
+          "value": 13
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "8",
+          "value": 8,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 8
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "Одиннадцать",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "65",
+            "value": 65
+          },
+          "CON": {
+            "raw": "40",
+            "value": 40
+          },
+          "SIZ": {
+            "raw": "65",
+            "value": 65
+          },
+          "DEX": {
+            "raw": "55",
+            "value": 55
+          },
+          "POW": {
+            "raw": "45",
+            "value": 45
+          }
+        },
+        "hp": {
+          "raw": "10",
+          "value": 10
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "8",
+          "value": 8,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 8
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "Двенадцать",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "70",
+            "value": 70
+          },
+          "CON": {
+            "raw": "85",
+            "value": 85
+          },
+          "SIZ": {
+            "raw": "75",
+            "value": 75
+          },
+          "DEX": {
+            "raw": "55",
+            "value": 55
+          },
+          "POW": {
+            "raw": "50",
+            "value": 50
+          }
+        },
+        "hp": {
+          "raw": "16",
+          "value": 16
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "8",
+          "value": 8,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 8
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "description": {
+    "ru": "Рядовые Братья кожи в Константинополе. У многих — пришитые части тел мертвецов: по желанию Хранителя это усиливает навыки. Руки: СИЛ 90, БкУ 1d6. Уши: Слух 60%. Глаза: Внимание 60%, видят в темноте. Лицо: НАР от 15 до 90. Пальцы: ЛВК 80, Ловкость рук 60%. Кисти: СИЛ 80, Ятаган (скимитар) 40%, урон 1d6+2+1d4. Ноги: Скорость 9, Удар ногой 40%, урон 1d6+1d4. Язык: может петь на нечеловеческом языке.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Глава «На волосок». Шпионы культа — гостиничные служащие, таксисты, полицейские, железнодорожники; при попытке кражи симулякра Селим посылает в старый и новый город не больше дюжины (крупную банду заметят военные). На засаду на кладбище Ускюдара выходят сорок Братьев (по двое на сыщика, и каждый раунд подходят ещё), в Отверженной мечети на обряде — больше трёхсот. Захваченным сыщикам отрезают части тел для новых «деталей». Ловкие Братья «женского» облика — мужчины, переделанные пересадками.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "hotoe-book-4-en",
+      "physical_page": 77,
+      "printed_page": 75,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Statistics»: Brothers of the Skin, 12 Madman Cultists (таблица, части тел)"
+    },
+    {
+      "book_id": "hotoe-book-4-en",
+      "physical_page": 78,
+      "printed_page": 76,
+      "method": "book_text",
+      "verified": true,
+      "note": "Fingers, Hands, Legs, Tongue"
+    },
+    {
+      "book_id": "hotoe-book-4-en",
+      "physical_page": 42,
+      "printed_page": 40,
+      "method": "book_text",
+      "verified": true,
+      "note": "шпионская сеть"
+    },
+    {
+      "book_id": "hotoe-book-4-en",
+      "physical_page": 46,
+      "printed_page": 44,
+      "method": "book_text",
+      "verified": true,
+      "note": "не больше дюжины"
+    },
+    {
+      "book_id": "hotoe-book-4-en",
+      "physical_page": 59,
+      "printed_page": 57,
+      "method": "book_text",
+      "verified": true,
+      "note": "сорок Братьев на кладбище"
+    },
+    {
+      "book_id": "hotoe-book-4-en",
+      "physical_page": 69,
+      "printed_page": 67,
+      "method": "book_text",
+      "verified": true,
+      "note": "больше трёхсот в мечети"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "editorial_text",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2). Групповой профиль (Р-74): основной профиль — общие Комплекция, БкУ, ПМ, Скорость, атака и навыки (характеристики и ПЗ — только в строках); 12 строк таблицы — варианты. Имена придуманы (Р-151). Ятаган, культовый нож — оружие книги без записи справочника. Заклинание «Create Skin Beast» — общая запись «Создание кожаного зверя» (заведено при сведении, Р-154)."
+  },
+  "errata": [
+    {
+      "field": "statblock.dodge",
+      "printed": "25% (12/5)",
+      "expected": "не ниже половины ЛВК (27–40%)",
+      "note": "Уклонение 25% ниже половины ЛВК любого из двенадцати Братьев (ЛВК 55–80, с. 75); оставлено как напечатано.",
+      "fixed": false
+    }
+  ]
+}

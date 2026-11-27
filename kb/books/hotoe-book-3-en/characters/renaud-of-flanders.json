@@ -1,0 +1,370 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "hotoe-book-3-en/character/renaud-of-flanders",
+  "kind": "character",
+  "name": {
+    "ru": "Рено Фландрский",
+    "en": "Renaud of Flanders"
+  },
+  "roles": [
+    "pregen"
+  ],
+  "occupation": {
+    "ru": "франкский рыцарь-ветеран",
+    "en": "Veteran Frankish Knight"
+  },
+  "age": {
+    "raw": "49",
+    "value": 49
+  },
+  "sex": "мужской",
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "hotoe-book-3-en/character/baldwin-of-flanders",
+      "note": "сеньор; Рено всю жизнь служит его семье",
+      "note_back": "рыцарь-ветеран, всю жизнь служит его семье"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "65",
+        "value": 65
+      },
+      "CON": {
+        "raw": "80",
+        "value": 80
+      },
+      "SIZ": {
+        "raw": "65",
+        "value": 65
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "APP": {
+        "raw": "55",
+        "value": 55
+      },
+      "INT": {
+        "raw": "50",
+        "value": 50
+      },
+      "POW": {
+        "raw": "65",
+        "value": 65
+      },
+      "EDU": {
+        "raw": "55",
+        "value": 55
+      }
+    },
+    "hp": {
+      "raw": "14",
+      "value": 14
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "7",
+      "value": 7,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 7
+        }
+      ]
+    },
+    "armor": {
+      "raw": "Chain mail (1d8-points of protection)",
+      "value": "1d8",
+      "note": "кольчуга, броня 1d8"
+    },
+    "luck": {
+      "raw": "75",
+      "value": 75
+    },
+    "sanity": {
+      "raw": "65",
+      "value": 65,
+      "max": null
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Франкский меч",
+          "en": "Frankish Sword"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (меч)",
+        "chance": {
+          "raw": "75% (37/15)",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        },
+        "damage": {
+          "raw": "1d8+1d4",
+          "dice": "1d8",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:sword-long"
+      },
+      {
+        "name": {
+          "ru": "Копьё (кавалерийское)",
+          "en": "Lance"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (копьё)",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1d8 + урон от лошади",
+          "dice": "1d8",
+          "adds_db": false,
+          "extra": "плюс урон от лошади"
+        },
+        "weapon": "coc:weapon:spear-cavalry-lance",
+        "notes": "урон 1d8 плюс урон лошади (так в книге; БкУ не указан)"
+      },
+      {
+        "name": {
+          "ru": "Щит",
+          "en": "Shield"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой (щит)",
+        "chance": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "блокирует атаки, 25 ПЗ",
+          "dice": null,
+          "adds_db": false
+        },
+        "notes": "блокирует атаки; у щита 25 ПЗ"
+      }
+    ],
+    "dodge": {
+      "raw": "48% (24/9)",
+      "value": 48,
+      "half": 24,
+      "fifth": 9
+    },
+    "skills": [
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Другие королевства (Константинополь)",
+        "skill": "coc:skill:other-kingdoms",
+        "specialization": "Константинополь",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Пилотирование (лодка)",
+        "skill": "coc:skill:pilot",
+        "specialization": "Лодка",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Ремонт/Разработка",
+        "skill": "coc:skill:repair-devise",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Верховая езда",
+        "skill": "coc:skill:ride",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Статус",
+        "skill": "coc:skill:status",
+        "value": {
+          "raw": "15%",
+          "value": 15,
+          "half": 7,
+          "fifth": 3
+        }
+      },
+      {
+        "name": "Иностранный язык (греческий)",
+        "skill": "coc:skill:language-other",
+        "specialization": "Греческий",
+        "value": {
+          "raw": "10%",
+          "value": 10,
+          "half": 5,
+          "fifth": 2
+        }
+      },
+      {
+        "name": "Родной язык (франкский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "Франкский",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      },
+      {
+        "name": "Иностранный язык (итальянский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "Итальянский",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      }
+    ]
+  },
+  "background": {
+    "description": "Грубого вида, шрамы на лице, редеющие волосы.",
+    "ideology": "Не до идеалов. Он здесь ради добычи.",
+    "significant_people": "Его сеньор и отряд.",
+    "traits": "Всё повидал, всех убил. Дисциплинирован и послушен.",
+    "injuries": "Много шрамов и ожогов от долгой войны."
+  },
+  "possessions": [
+    "оружие, доспех",
+    "верховая лошадь",
+    "походный набор для перевязки"
+  ],
+  "description": {
+    "ru": "Франкский рыцарь-ветеран, 49 лет, циник многих кампаний.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Пошёл в поход ради добычи и положения. Его не смущает, что другие здесь ради веры, но и разделять их взгляды он не склонен. Несмотря на цинизм — дисциплинированный воин, без колебаний выполняет ясные приказы и одёргивает недисциплинированных: только вместе бойцы вернутся домой невредимыми. Как ветеран, умеет полевое лечение и всегда перевяжет товарищей. Всю жизнь служит семье графа Балдуина и непоколебимо верен.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 80,
+      "printed_page": 78,
+      "method": "book_text",
+      "verified": true,
+      "note": "предгенерированный сыщик «Тёмного крестоносца» (раздел «Investigators», с. 76–80)"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 81,
+      "printed_page": 79,
+      "method": "book_text",
+      "verified": true,
+      "note": "Notes"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.dodge",
+      "printed": "48% (24/10)",
+      "expected": "48% (24/9)",
+      "note": "пятая часть 48 — 9 (48 // 5); в книге 10. Исправлено в записи (Р-35).",
+      "fixed": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Предгенерированный сыщик, автор — тестер Ангус Лидстоун (Additional Thanks, с. 50)."
+  },
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "hotoe-book-5-en/character/jean-renour",
+  "kind": "character",
+  "name": {
+    "ru": "Жан Ренур",
+    "en": "Jean Renour"
+  },
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "кондитер (персонал поезда)",
+    "en": "Pastry Chef"
+  },
+  "age": {
+    "raw": "28",
+    "value": 28
+  },
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "hotoe-book-5-en/character/paul-deguerre",
+      "note": "шеф-повар",
+      "note_back": "кондитер на кухне"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "60",
+        "value": 60
+      },
+      "CON": {
+        "raw": "65",
+        "value": 65
+      },
+      "SIZ": {
+        "raw": "60",
+        "value": 60
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65
+      },
+      "APP": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "55",
+        "value": 55
+      },
+      "POW": {
+        "raw": "75",
+        "value": 75
+      },
+      "EDU": {
+        "raw": "45",
+        "value": 45
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "sanity": {
+      "raw": "70",
+      "value": 70
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Кухонный нож",
+          "en": "Kitchen Knife"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "75% (37/15)",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        },
+        "damage": {
+          "raw": "1d6",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "32% (16/6)",
+      "value": 32,
+      "half": 16,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Искусство/ремесло (украшение блюд)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "Украшение блюд",
+        "value": {
+          "raw": "55%",
+          "value": 55
+        }
+      },
+      {
+        "name": "Искусство/ремесло (выпечка)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "Выпечка",
+        "value": {
+          "raw": "75%",
+          "value": 75
+        }
+      },
+      {
+        "name": "Родной язык (французский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "Французский",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Кондитер на кухне Поля Дегерра: выпечка и украшение блюд.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Свита Поля Дегерра (с. 62). Книга не даёт о нём ничего, кроме статблока; описание — по статблоку.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "hotoe-book-5-en",
+      "physical_page": 64,
+      "printed_page": 62,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Entourage» Поля Дегерра"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.move",
+      "printed": "9",
+      "expected": "8",
+      "note": "СИЛ 60 равна ТЕЛ 60, ЛВК 65 больше — Скорость 8; возраст 28 лет поправки не даёт. Оставлено как напечатано (Р-161).",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2). Пассажир из «Strangers on the Train» (книга V): по книге (с. 5) — не обязателен для сценариев, нужен для побочных линий Хранителя или как замена погибшему или обезумевшему сыщику. «Art (…)» — Искусство/ремесло. Описание выведено из статблока (Р-41)."
+  }
+}

@@ -1,0 +1,390 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "hotoe-book-3-en/character/damanais-of-savaria",
+  "kind": "character",
+  "name": {
+    "ru": "Даманаис из Саварии",
+    "en": "Damanais of Savaria"
+  },
+  "aliases": [],
+  "roles": [
+    "pregen"
+  ],
+  "occupation": {
+    "ru": "копейщик Фальконес",
+    "en": "Falcones Spearman"
+  },
+  "age": {
+    "raw": "36",
+    "value": 36
+  },
+  "sex": "мужской",
+  "residence": "Константинополь (Нова Рома), 330 год",
+  "birthplace": "Савария",
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "hotoe-book-3-en/character/tillius-corvus",
+      "note": "командир",
+      "note_back": "солдат его отряда"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "75",
+        "value": 75
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "70",
+        "value": 70
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65
+      },
+      "APP": {
+        "raw": "60",
+        "value": 60
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "65",
+        "value": 65
+      },
+      "EDU": {
+        "raw": "70",
+        "value": 70
+      }
+    },
+    "hp": {
+      "raw": "14",
+      "value": 14
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "6 (лорика скваммата, чешуйчатый доспех)",
+      "value": 6,
+      "note": "Armor: 6-point Lorica Squamata scale armor"
+    },
+    "luck": {
+      "raw": "55",
+      "value": 55
+    },
+    "sanity": {
+      "raw": "70",
+      "value": 70,
+      "max": null
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "1d3 + 1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Гаста (тяжёлое колющее копьё)",
+          "en": "Hasta (heavy thrusting spear)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "85% (42/17)",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        },
+        "damage": {
+          "raw": "1d6 + 1d4",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:spear-long",
+        "notes": "двуручное"
+      },
+      {
+        "name": {
+          "ru": "Верут (метательное копьё)",
+          "en": "Verrutum (throwing spear)"
+        },
+        "kind": "attack",
+        "skill": "Метание",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d6 + 1d2",
+          "dice": "1d6",
+          "adds_db": false,
+          "extra": "+половина БкУ (1d2)"
+        },
+        "weapon": "coc:weapon:spear-thrown",
+        "notes": "базовая дальность 25 м"
+      },
+      {
+        "name": {
+          "ru": "Средний овальный щит",
+          "en": "Medium Oval Shield"
+        },
+        "kind": "special",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "notes": "блокирует атаки, отражает метательные снаряды, 25 ПЗ"
+      }
+    ],
+    "dodge": {
+      "raw": "45% (22/9)",
+      "value": 45,
+      "half": 22,
+      "fifth": 9
+    },
+    "skills": [
+      {
+        "name": "Гражданские дела",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Управление повозкой",
+        "skill": "coc:skill:drive-horses-or-oxen",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      },
+      {
+        "name": "Империя",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "35%",
+          "value": 35
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "55%",
+          "value": 55
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "35%",
+          "value": 35
+        }
+      },
+      {
+        "name": "Ремонт/Разработка",
+        "skill": "coc:skill:repair-devise",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      },
+      {
+        "name": "Статус",
+        "skill": "coc:skill:status",
+        "value": {
+          "raw": "25%",
+          "value": 25
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "75%",
+          "value": 75
+        }
+      },
+      {
+        "name": "Тактика",
+        "value": {
+          "raw": "35%",
+          "value": 35
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Родной язык (латынь)",
+        "skill": "coc:skill:language-own",
+        "specialization": "Латынь",
+        "value": {
+          "raw": "65%",
+          "value": 65
+        }
+      }
+    ]
+  },
+  "background": {
+    "description": "Статный, с правильными сильными чертами.",
+    "ideology": "За легион!",
+    "significant_people": "Товарищи-легионеры.",
+    "traits": "Образцовый солдат, сын рабыни; надеется на небоевую должность."
+  },
+  "possessions": [
+    "доспех (лёгкая нагрузка)",
+    "оружие",
+    "шесть верутов (метательных копий)"
+  ],
+  "description": {
+    "ru": "Статный, с правильными сильными чертами.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Образцовый солдат: пока другие пили, он упражнялся, точил оружие и чинил доспехи; первым вызывается в караул и последним просит отпуск. На самом деле ему всего 33: он соврал о возрасте, чтобы пойти в армию в 14 лет. Подал прошение о небоевой должности — офицера снабжения, — но, несмотря на послужной список, знает, что шансов мало: его мать была отпущенной на волю фракийской рабыней, а таких мест немного и желающих много, и Даманаис боится, что ему не хватает происхождения и связей.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 200,
+      "printed_page": 198,
+      "method": "book_text",
+      "verified": true,
+      "note": "раздел «Investigators»: «The Men of Fortes Falcones, an Exploratores Auxiliaries unit»"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 201,
+      "printed_page": 199,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Damanais of Savaria, Age 36, Falcones Spearman»"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 202,
+      "printed_page": 200,
+      "method": "book_text",
+      "verified": true,
+      "note": "доспех, навыки, предыстория"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 196,
+      "printed_page": 194,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «Additional Thanks»: прегенов создали первые тестировщики"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.armor",
+      "printed": "6-point Lorica Squamata scale armor",
+      "expected": "1d6 (Lorica Squamata, 1d6 по таблице с. 169)",
+      "note": "таблица доспехов (с. 169) даёт лорике скваммате 1d6 — оставлено как напечатано",
+      "fixed": false
+    },
+    {
+      "field": "statblock.sanity",
+      "printed": "70",
+      "expected": "65",
+      "note": "начальный Рассудок сыщика равен МОЩ (65); напечатано 70 — оставлено как напечатано",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по страницам книги (печатная страница = физическая − 2). Готовый сыщик сценария (Р-251). Навыки Cthulhu Invictus «Империя», «Гражданские дела», «Тактика», «Зелья» записей в справочнике не имеют и остаются текстом (Р-126). Навык «Drive» (в книге без уточнения) связан с «Управление лошадью или волом» (вывод: в 330 году — повозки; Р-41). «Civic» — так в книге (у Корва — «Civics»). Возраст по статблоку 36, настоящий — 33 (по предыстории)."
+  }
+}

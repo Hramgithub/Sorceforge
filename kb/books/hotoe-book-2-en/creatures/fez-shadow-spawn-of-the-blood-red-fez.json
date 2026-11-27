@@ -1,0 +1,216 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "hotoe-book-2-en/creature/fez-shadow-spawn-of-the-blood-red-fez",
+  "kind": "creature",
+  "name": {
+    "ru": "Теневое отродье Кроваво-красной фески",
+    "en": "Shadow Spawn of the Blood Red Fez"
+  },
+  "aliases": [
+    "теневая тварь фески",
+    "Shadow creature"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "младшая раса слуг",
+  "axes": {
+    "era": [
+      "gaslight"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "spawn_of",
+      "target": "hotoe-book-2-en/item/fez-blood-red-fez",
+      "note": "порождается носителем фески на второй стадии",
+      "note_back": "порождает теневых отродий"
+    }
+  ],
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "47",
+        "value": 47,
+        "roll": "(1d6+6)×5"
+      },
+      "CON": {
+        "raw": "52",
+        "value": 52,
+        "roll": "3d6×5"
+      },
+      "SIZ": {
+        "raw": "77",
+        "value": 77,
+        "roll": "(1d6+12)×5"
+      },
+      "DEX": {
+        "raw": "95",
+        "value": 95,
+        "roll": "(2d6+12)×5"
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "INT": {
+        "raw": "65",
+        "value": 65,
+        "roll": "(2d6+6)×5"
+      },
+      "POW": {
+        "raw": "52",
+        "value": 52,
+        "roll": "3d6×5"
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "10",
+      "value": 10
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "18, призрачное скольжение",
+      "value": 18,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 18,
+          "note": "призрачное скольжение"
+        }
+      ]
+    },
+    "armor": {
+      "raw": "неуязвимо для любого физического оружия и урона; зачарованное оружие, магия и прочие сверхъестественные силы действуют как обычно",
+      "value": null
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "90% (45/18)",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        },
+        "damage": {
+          "raw": "1d4",
+          "dice": "1d4",
+          "adds_db": true
+        },
+        "notes": "рвёт и царапает"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "95%",
+          "value": 95
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Пустота тени.",
+      "items": [
+        {
+          "name": "Shadow Void",
+          "spell": "coc:spell:shadow-void"
+        }
+      ]
+    },
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d6",
+        "trigger": "при виде теневого отродья Кроваво-красной фески; ещё 1 пункт, если оно похоже на знакомого свидетелю"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Свет",
+      "summary": "Если ударить отродье прямо источником света (например, фонарём), оно теряет 1d6 ПЗ.",
+      "raw": "If struck directly with a light source such as a lantern, the Shadow Spawn loses 1d6 hit points."
+    },
+    {
+      "name": "Отступление",
+      "summary": "Раненые отродья через 1d4 раунда отступают к своему носителю.",
+      "raw": "If these creatures are injured they will retreat to their host in 1d4 rounds."
+    }
+  ],
+  "description": {
+    "ru": "Появляется, когда носитель Кроваво-красной фески переходит на вторую стадию (носитель невольно порождает 1d3 отродий). Смутно человекоподобно, но в основном призрачно и двумерно: растянутая пасть, рваные крылья, длинные уродливые руки и ноги; тревожно похоже на того, кто носит породившую его феску (знающие носителя теряют ещё 1 пункт Рассудка). Сущность, порождённая нечистым союзом фески и носителя, но и самостоятельная — у неё свои МОЩ и ИНТ.",
+    "en": null
+  },
+  "legend": {
+    "ru": "В тёмные часы отродья бродят вокруг носителя и нападают, если их задеть; усыпив носителя, их можно остановить. Раненые, через 1d4 раунда возвращаются к своему носителю. В поезде отродья Скотта Майерса в полночь первой ночи бродят по всему составу и возвращаются в купе Майерса (раненые — сразу, остальные — на рассвете, сразу после Страсбурга); во вторую ночь рыщут агрессивнее. Во время трапез одно отродье стережёт Майерса, окутывая купе 6 тьмой.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "hotoe-book-2-en",
+      "physical_page": 57,
+      "printed_page": 55,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Day Two: Shadows of the Fez»"
+    },
+    {
+      "book_id": "hotoe-book-2-en",
+      "physical_page": 95,
+      "printed_page": 93,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Shadow Spawn of the Blood Red Fez»"
+    },
+    {
+      "book_id": "hotoe-book-2-en",
+      "physical_page": 96,
+      "printed_page": 94,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2)."
+  },
+  "images": [
+    {
+      "file": "art/creatures/hotoe-fez-shadow-spawn.webp",
+      "kind": "illustration",
+      "caption": "Теневое отродье в спальном вагоне",
+      "source": "Horror on the Orient Express, кн. II (англ., 7e), с. 64 (физ. 66)"
+    }
+  ]
+}

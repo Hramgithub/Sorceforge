@@ -1,0 +1,188 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "hotoe-book-5-en/character/winston",
+  "kind": "character",
+  "name": {
+    "ru": "Уинстон",
+    "en": "Winston"
+  },
+  "aliases": [
+    "мопс Уинстон"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "верный мопс",
+    "en": "Loyal Pug"
+  },
+  "age": {
+    "raw": "3",
+    "value": 3
+  },
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "hotoe-book-5-en/character/christopher-macias",
+      "note": "хозяин",
+      "note_back": "мопс"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "35",
+        "value": 35
+      },
+      "CON": {
+        "raw": "55",
+        "value": 55
+      },
+      "SIZ": {
+        "raw": "20",
+        "value": 20
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65
+      },
+      "POW": {
+        "raw": "35",
+        "value": 35
+      }
+    },
+    "hp": {
+      "raw": "7",
+      "value": 7
+    },
+    "damage_bonus": {
+      "raw": "-2",
+      "value": -2
+    },
+    "build": {
+      "raw": "-2",
+      "value": -2
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Укус",
+          "en": "Bite"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "damage": {
+          "raw": "1d4-2",
+          "dice": "1d4",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "32% (16/6)",
+      "value": 32,
+      "half": 16,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Громко лаять",
+        "value": {
+          "raw": "90%",
+          "value": 90
+        }
+      },
+      {
+        "name": "Апорт",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Нюх",
+        "skill": "coc:skill:scent",
+        "value": {
+          "raw": "90%",
+          "value": 90
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Мопс Кристофера Масиаса, 3 года. Верный спутник хозяина: тот возит его с собой в отпуск на Восточном экспрессе и на остановках поезда водит к ближайшим историческим местам.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "hotoe-book-5-en",
+      "physical_page": 84,
+      "printed_page": 82,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Strangers on the Train», «Investigators»: графа «Entourage» Кристофера Масиаса"
+    },
+    {
+      "book_id": "hotoe-book-5-en",
+      "physical_page": 83,
+      "printed_page": 81,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Strangers on the Train», «Investigators»: заметки о Масиасе («Notes»)"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2). Спутник готового сыщика (графа «Entourage»). Навыки «Bark Noisily» (Громко лаять) и «Fetch» (Апорт) без механики — текстом, без ссылок (Р-126). Урон укуса «1d4 –2» напечатан с уже учтённым БкУ −2."
+  },
+  "images": [
+    {
+      "file": "art/characters/hotoe-investigators-winston.webp",
+      "kind": "portrait",
+      "caption": "",
+      "source": "Horror on the Orient Express, кн. V «Strangers on the Train» (англ., 7e), с. 82 (физ. 84)"
+    }
+  ]
+}

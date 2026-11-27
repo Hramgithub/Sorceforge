@@ -1,0 +1,610 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "hotoe-book-2-en/character/madame-bruja",
+  "kind": "character",
+  "name": {
+    "ru": "Мадам Бруха",
+    "en": "Madame Bruja"
+  },
+  "aliases": [
+    "Старуха",
+    "The Crone",
+    "Бруха"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "старуха из легенды о «Сердце влюблённых»; нежить-сновидица",
+    "en": "old crone"
+  },
+  "sex": "женский",
+  "residence": "Страна грёз (веками странствует по ней)",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "rival_of",
+      "target": "hotoe-book-2-en/character/the-sorcerer",
+      "note": "Колдун, убийца её дочери, веками преследующий её ради Сердца влюблённых",
+      "note_back": "Старуха, мать убитой жены; прячет от него Сердце влюблённых"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "75",
+        "value": 75
+      },
+      "CON": {
+        "raw": "100",
+        "value": 100
+      },
+      "SIZ": {
+        "raw": "70",
+        "value": 70
+      },
+      "DEX": {
+        "raw": "80",
+        "value": 80
+      },
+      "APP": {
+        "raw": "65",
+        "value": 65
+      },
+      "INT": {
+        "raw": "125",
+        "value": 125
+      },
+      "POW": {
+        "raw": "100",
+        "value": 100
+      },
+      "EDU": {
+        "raw": "80",
+        "value": 80
+      }
+    },
+    "hp": {
+      "raw": "20",
+      "value": 20
+    },
+    "mp": {
+      "raw": "20",
+      "value": 20
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "6",
+      "value": 6,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 6
+        }
+      ]
+    },
+    "sanity": {
+      "raw": "0",
+      "value": 0
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Саквояж",
+          "en": "Valise"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d4+1d4",
+          "dice": "1d4",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "25% (12/5)",
+      "value": 25,
+      "half": 12,
+      "fifth": 5
+    },
+    "skills": [
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "33%",
+          "value": 33
+        }
+      },
+      {
+        "name": "Тайные знания (сновидения)",
+        "skill": "coc:skill:lore",
+        "specialization": "Сновидения",
+        "value": {
+          "raw": "42%",
+          "value": 42
+        }
+      },
+      {
+        "name": "Сновидение",
+        "skill": "coc:skill:dreaming",
+        "value": {
+          "raw": "47%",
+          "value": 47
+        }
+      },
+      {
+        "name": "История",
+        "skill": "coc:skill:history",
+        "value": {
+          "raw": "30%",
+          "value": 30
+        }
+      },
+      {
+        "name": "Удержать саквояж",
+        "value": {
+          "raw": "95%",
+          "value": 95
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Зловещее проклятье Азатота.",
+      "items": [
+        {
+          "name": "Dread Curse of Azathoth",
+          "spell": "coc:spell:dread-curse-of-azathoth"
+        }
+      ]
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "0",
+        "trigger": "при виде мадам Брухи в сновидческом облике"
+      }
+    ]
+  },
+  "variants": [
+    {
+      "label": "Человеческий сновидческий облик (Human Dream Form)",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "75",
+            "value": 75
+          },
+          "CON": {
+            "raw": "100",
+            "value": 100
+          },
+          "SIZ": {
+            "raw": "70",
+            "value": 70
+          },
+          "DEX": {
+            "raw": "80",
+            "value": 80
+          },
+          "APP": {
+            "raw": "65",
+            "value": 65
+          },
+          "INT": {
+            "raw": "125",
+            "value": 125
+          },
+          "POW": {
+            "raw": "100",
+            "value": 100
+          },
+          "EDU": {
+            "raw": "80",
+            "value": 80
+          }
+        },
+        "hp": {
+          "raw": "20",
+          "value": 20
+        },
+        "mp": {
+          "raw": "20",
+          "value": 20
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "6",
+          "value": 6,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 6
+            }
+          ]
+        },
+        "sanity": {
+          "raw": "0",
+          "value": 0
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Саквояж",
+              "en": "Valise"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "50% (25/10)",
+              "value": 50,
+              "half": 25,
+              "fifth": 10
+            },
+            "damage": {
+              "raw": "1d4+1d4",
+              "dice": "1d4",
+              "adds_db": true
+            }
+          }
+        ],
+        "dodge": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        },
+        "skills": [
+          {
+            "name": "Мифы Ктулху",
+            "skill": "coc:skill:cthulhu-mythos",
+            "value": {
+              "raw": "33%",
+              "value": 33
+            }
+          },
+          {
+            "name": "Тайные знания (сновидения)",
+            "skill": "coc:skill:lore",
+            "specialization": "Сновидения",
+            "value": {
+              "raw": "42%",
+              "value": 42
+            }
+          },
+          {
+            "name": "Сновидение",
+            "skill": "coc:skill:dreaming",
+            "value": {
+              "raw": "47%",
+              "value": 47
+            }
+          },
+          {
+            "name": "История",
+            "skill": "coc:skill:history",
+            "value": {
+              "raw": "30%",
+              "value": 30
+            }
+          },
+          {
+            "name": "Удержать саквояж",
+            "value": {
+              "raw": "95%",
+              "value": 95
+            }
+          },
+          {
+            "name": "Убеждение",
+            "skill": "coc:skill:persuade",
+            "value": {
+              "raw": "50%",
+              "value": 50
+            }
+          }
+        ],
+        "spells": {
+          "raw": "Зловещее проклятье Азатота.",
+          "items": [
+            {
+              "name": "Dread Curse of Azathoth",
+              "spell": "coc:spell:dread-curse-of-azathoth"
+            }
+          ]
+        },
+        "sanity_loss": [
+          {
+            "success": "0",
+            "fail": "0",
+            "trigger": "при виде мадам Брухи в сновидческом облике"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Облик Старухи (Crone Form)",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "100",
+            "value": 100
+          },
+          "CON": {
+            "raw": "100",
+            "value": 100
+          },
+          "SIZ": {
+            "raw": "100",
+            "value": 100
+          },
+          "DEX": {
+            "raw": "50",
+            "value": 50
+          },
+          "APP": {
+            "raw": "10",
+            "value": 10
+          },
+          "INT": {
+            "raw": "125",
+            "value": 125
+          },
+          "POW": {
+            "raw": "100",
+            "value": 100
+          },
+          "EDU": {
+            "raw": "80",
+            "value": 80
+          }
+        },
+        "hp": {
+          "raw": "20",
+          "value": 20
+        },
+        "mp": {
+          "raw": "20",
+          "value": 20
+        },
+        "damage_bonus": {
+          "raw": "+1d6",
+          "value": "+1d6"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "6",
+          "value": 6,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 6
+            }
+          ]
+        },
+        "armor": {
+          "raw": "любое оружие наносит минимальный урон; при 0 ПЗ её разрывает на части, но она жива; по-настоящему убить её можно, только спалив дотла",
+          "value": 0
+        },
+        "sanity": {
+          "raw": "0",
+          "value": 0
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Захват рёбрами",
+              "en": "Ribcage Grapple"
+            },
+            "kind": "maneuver",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "85% (42/17)",
+              "value": 85,
+              "half": 42,
+              "fifth": 17
+            },
+            "damage": {
+              "raw": "1d4 за раунд",
+              "dice": "1d4",
+              "adds_db": false
+            },
+            "notes": "душит, нанося 1d4 урона за раунд; вырваться — встречная проверка СИЛ"
+          }
+        ],
+        "dodge": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        },
+        "spells": {
+          "raw": "Зловещее проклятье Азатота.",
+          "items": [
+            {
+              "name": "Dread Curse of Azathoth",
+              "spell": "coc:spell:dread-curse-of-azathoth"
+            }
+          ]
+        },
+        "sanity_loss": [
+          {
+            "success": "0",
+            "fail": "1d4",
+            "trigger": "при виде мадам Брухи в облике Старухи"
+          }
+        ]
+      }
+    }
+  ],
+  "abilities": [
+    {
+      "name": "Неуязвимость Старухи",
+      "summary": "В облике Старухи любое оружие наносит ей минимальный урон; при 0 ПЗ её разрывает на части, но она жива; по-настоящему убить её можно, только спалив дотла.",
+      "raw": "Armor: All weapons do minimum damage; once her hit points are reduced to zero she is dismembered but she is still alive. She can only be truly killed by being burned to ash."
+    },
+    {
+      "name": "Сердце вместо сердца",
+      "summary": "Камень, который ищет Колдун, занял место её собственного сердца; саквояж в форме сердца пуст и служит обманкой. В финале она разрывает себе рёбра и вырывает Сердце влюблённых.",
+      "raw": "The case she clutches so tightly is empty, a mere distraction. The stone the Sorcerer seeks has taken the place of her own heart.",
+      "refs": [
+        "hotoe-book-2-en/item/dream-lovers-heart"
+      ]
+    }
+  ],
+  "possessions": [
+    "небольшой саквояж в форме сердца (пустой)",
+    "Сердце влюблённых — в груди"
+  ],
+  "description": {
+    "ru": "Чопорная старая дама в елизаветинском платье: накрахмаленные брыжи, широкая юбка из тёмной дорогой ткани, высокий елизаветинский воротник и вдовий траур. Суровое лицо худое, как череп, глаза тёмные, в тенях. Стискивает маленький саквояж в форме сердца, который редко выпускает из рук и никогда — из виду. Бормочет мрачные намёки на свою беду, будто говорит сама с собой («Я никогда не отдам ему его», «Я не потеряю её дважды»). В облике Старухи — обугленный труп с дикой гривой серебристых волос, сквозь проплешины виден голый череп. Садится на поезд в Ултаре.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Она — Старуха из легенды «Сердце влюблённых» («Раздатка Страны грёз 2»): мать девушки, которую Колдун вместе с любовником растерзал; молитвами у церкви, построенной на древнем римском капище, она получила светящийся рубин в форме двух сплетённых сердец, спрятала его в груди, под пыткой не выдала и была сожжена как ведьма с проклятием: «Ненависть сильнее любви, а смерть сильнее жизни. Только во снах ты найдёшь его». Её телесное «я» давно погибло страшной смертью, но сновидческое живёт; Колдун веками преследует её в Стране грёз, и его упорство начинает приносить плоды — несколько раз он почти завладел Сердцем. Давно поглощённая ненавистью и ослеплённая злобой, она едет бросить Сердце влюблённых в Бездну Ноденса, чтобы навсегда помешать Колдуну. Кажется неодобрительной и осуждающей, но строга только к мужчинам («Вы, мужчины, только и хотите владеть женщинами»): мужчинам нужны такт и искреннее участие. Под действием чая или чего покрепче мстительно бормочет о неумолимом враге. Ей нравится вольный нрав Жужи — та напоминает ей дочь; на расспросы признаётся, что потеряла дочь, и даёт мрачные советы, каких можно ждать от матери в таком горе. Артефакт сна — Сердце влюблённых. Легенда о Сердце испанская: на пути Восточного экспресса о ней никто не слышал.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "hotoe-book-2-en",
+      "physical_page": 136,
+      "printed_page": 134,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Passengers»: суровая пожилая женщина с саквояжем-сердцем"
+    },
+    {
+      "book_id": "hotoe-book-2-en",
+      "physical_page": 145,
+      "printed_page": 143,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Madame Bruja»: облик, «Story»"
+    },
+    {
+      "book_id": "hotoe-book-2-en",
+      "physical_page": 146,
+      "printed_page": 144,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Story» (окончание), «Dream Artifact»"
+    },
+    {
+      "book_id": "hotoe-book-2-en",
+      "physical_page": 151,
+      "printed_page": 149,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Waking World Investigations: Madame Bruja»"
+    },
+    {
+      "book_id": "hotoe-book-2-en",
+      "physical_page": 159,
+      "printed_page": 157,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Madame Bruja’s Compartment»"
+    },
+    {
+      "book_id": "hotoe-book-2-en",
+      "physical_page": 160,
+      "printed_page": 158,
+      "method": "book_text",
+      "verified": true,
+      "note": "признание: она — Старуха"
+    },
+    {
+      "book_id": "hotoe-book-2-en",
+      "physical_page": 176,
+      "printed_page": 174,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Madame Bruja» в финале"
+    },
+    {
+      "book_id": "hotoe-book-2-en",
+      "physical_page": 178,
+      "printed_page": 176,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблоки «Madame Bruja, Human Dream Form» и «Madame Bruja, Crone Form»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.hp",
+      "printed": "20",
+      "expected": "17",
+      "note": "Человеческий облик: (ВЫН 100 + ТЕЛ 70) / 10 = 17, напечатано 20 (с. 176); в облике Старухи 20 сходится. Оставлено как напечатано (Р-161)."
+    },
+    {
+      "field": "variants[1].statblock.build",
+      "printed": "1",
+      "expected": "2",
+      "note": "Облик Старухи: СИЛ 100 + ТЕЛ 100 = 200 — БкУ +1d6 и Комплекция 2; напечатаны +1d6 и Комплекция 1 (с. 176). Оставлено как напечатано."
+    },
+    {
+      "field": "statblock.dodge",
+      "printed": "25% (25/10)",
+      "expected": "25% (12/5)",
+      "note": "В обоих обликах доли уклонения «25/10» подходят к 50%; верным считается напечатанный процент 25%, доли исправлены (Р-35, Р-77); возможно, задумано 50%.",
+      "fixed": true
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2)."
+  },
+  "images": [
+    {
+      "file": "art/characters/hotoe-dreamlands-madame-bruja.webp",
+      "kind": "portrait",
+      "caption": "Мадам Бруха",
+      "source": "Horror on the Orient Express, Book II, с. 143"
+    }
+  ]
+}

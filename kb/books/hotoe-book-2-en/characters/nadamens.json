@@ -1,0 +1,233 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "hotoe-book-2-en/character/nadamens",
+  "kind": "character",
+  "name": {
+    "ru": "Надаменс",
+    "en": "Nadamens"
+  },
+  "aliases": [
+    "старший рыцарь Серанниана"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "старший рыцарь Серанниана, страж короля Куранеса",
+    "en": "Senior Knight of Serannian"
+  },
+  "sex": "мужской",
+  "residence": "Серанниан",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "hotoe-book-2-en/character/king-kuranes",
+      "note": "король, которому он служит",
+      "note_back": "старший рыцарь Серанниана, страж"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "85",
+        "value": 85
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "80",
+        "value": 80
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "APP": {
+        "raw": "75",
+        "value": 75
+      },
+      "INT": {
+        "raw": "50",
+        "value": 50
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      },
+      "EDU": {
+        "raw": "35",
+        "value": 35
+      }
+    },
+    "hp": {
+      "raw": "14",
+      "value": 14
+    },
+    "build": {
+      "raw": "2",
+      "value": 2
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "9 (начищенные латы с поддоспешником)",
+      "value": 9
+    },
+    "sanity": {
+      "raw": "75",
+      "value": 75
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Копьё",
+          "en": "Lance"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "75% (37/15)",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        },
+        "damage": {
+          "raw": "1d10+3d6 (верхом)",
+          "dice": "1d10+3d6",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:spear-cavalry-lance",
+        "notes": "урон — если рыцарь верхом"
+      },
+      {
+        "name": {
+          "ru": "Тяжёлая булава",
+          "en": "Heavy Mace"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "1d10+1d4",
+          "dice": "1d10",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:mace"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Искусство (лютня)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "Лютня",
+        "value": {
+          "raw": "56%",
+          "value": 56
+        }
+      },
+      {
+        "name": "Искусство (любовь)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "Любовь",
+        "value": {
+          "raw": "46%",
+          "value": 46
+        }
+      },
+      {
+        "name": "Ораторское искусство",
+        "value": {
+          "raw": "70%",
+          "value": 70
+        }
+      },
+      {
+        "name": "Верховая езда",
+        "skill": "coc:skill:ride",
+        "value": {
+          "raw": "87%",
+          "value": 87
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "65%",
+          "value": 65
+        }
+      }
+    ]
+  },
+  "possessions": [
+    "булава из чистейшего адаманта, краснеющая в присутствии предателя"
+  ],
+  "description": {
+    "ru": "Второй рыцарь из свиты короля Куранеса в поезде. Его булава — из чистейшего адаманта и становится кроваво-красной в присутствии предателя.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "hotoe-book-2-en",
+      "physical_page": 170,
+      "printed_page": 168,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Royal Passenger»"
+    },
+    {
+      "book_id": "hotoe-book-2-en",
+      "physical_page": 180,
+      "printed_page": 178,
+      "method": "book_text",
+      "verified": true,
+      "note": "«King Kurane’s Guardians»"
+    },
+    {
+      "book_id": "hotoe-book-2-en",
+      "physical_page": 181,
+      "printed_page": 179,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Nadamens, Senior Knight of Serannian»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.damage_bonus",
+      "printed": null,
+      "expected": "+1d6",
+      "note": "Строки «Damage Bonus» нет (с. 179); СИЛ 85 + ТЕЛ 80 = 165 — БкУ +1d6 и Комплекция 2 (Комплекция напечатана 2), а урон булавы напечатан «1d10 + 1d4». Оставлено как напечатано."
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2)."
+  }
+}

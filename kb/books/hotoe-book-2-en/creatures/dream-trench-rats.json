@@ -1,0 +1,197 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "hotoe-book-2-en/creature/dream-trench-rats",
+  "kind": "creature",
+  "name": {
+    "ru": "Окопные крысы",
+    "en": "Trench Rats, Leprous Horde"
+  },
+  "aliases": [
+    "Trench Rats",
+    "Прокажённая орда"
+  ],
+  "category": "animal",
+  "subcategory": "крысы (кошмар)",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:rat-swarm",
+      "note_back": "окопные крысы из сундука Каракова («Экспресс Страны грёз»)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "45",
+        "value": 45
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "50",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "75",
+        "value": 75
+      },
+      "INT": {
+        "raw": "15",
+        "value": 15
+      },
+      "POW": {
+        "raw": "50",
+        "value": 50
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет, но каждая успешная атака убивает лишь одну крысу (1 урон стае)",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1,
+      "note": "зубами и когтями"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": false
+        }
+      },
+      {
+        "name": {
+          "ru": "Задавить числом (манёвр)",
+          "en": "Overwhelm (fighting maneuver)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "2d6",
+          "dice": "2d6",
+          "adds_db": false
+        },
+        "notes": "стаей нападают на одного и задавливают его по правилам манёвров; из-за численности получают бонусную кость к атаке"
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "90%",
+          "value": 90
+        }
+      },
+      {
+        "name": "Плавание",
+        "skill": "coc:skill:swim",
+        "value": {
+          "raw": "90%",
+          "value": 90
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1",
+        "trigger": "при виде нападения орды"
+      }
+    ]
+  },
+  "description": {
+    "ru": "Стая раздувшихся тошнотворных окопных крыс, разжиревших на трупах; некоторые держат в зубах посиневшие гниющие остатки людей. Обезумели от голода. Вырываются из сундука Каракова в багажном вагоне по 1d10 за раунд, пока сундук не закроют, и конца им нет, как подтвердят все ужасы Западного фронта. Если кошки Ултара ещё в поезде, начинается великая война кошек и крыс по всему поезду.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "hotoe-book-2-en",
+      "physical_page": 145,
+      "printed_page": 143,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Dream Artifact: Karakov’s Trunk»: крысы"
+    },
+    {
+      "book_id": "hotoe-book-2-en",
+      "physical_page": 173,
+      "printed_page": 171,
+      "method": "book_text",
+      "verified": true,
+      "note": "кошки разделываются с крысами"
+    },
+    {
+      "book_id": "hotoe-book-2-en",
+      "physical_page": 182,
+      "printed_page": 180,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Trench Rats, Leprous Horde»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2). Потеря Рассудка напечатана «0/1» с английским сокращением Рассудка."
+  }
+}

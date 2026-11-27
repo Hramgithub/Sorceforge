@@ -1,0 +1,343 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "hotoe-book-3-en/character/martinus-de-lisles",
+  "kind": "character",
+  "name": {
+    "ru": "Мартинус де Лиль",
+    "en": "Martinus de l’Isles"
+  },
+  "roles": [
+    "pregen"
+  ],
+  "occupation": {
+    "ru": "молодой франкский рыцарь",
+    "en": "Young Frankish Knight"
+  },
+  "age": {
+    "raw": "19",
+    "value": 19
+  },
+  "sex": "мужской",
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "hotoe-book-3-en/character/baldwin-of-flanders",
+      "note": "сеньор, граф Балдуин Фландрский",
+      "note_back": "вассал графа"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "55",
+        "value": 55
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "APP": {
+        "raw": "70",
+        "value": 70
+      },
+      "INT": {
+        "raw": "45",
+        "value": 45
+      },
+      "POW": {
+        "raw": "75",
+        "value": 75
+      },
+      "EDU": {
+        "raw": "55",
+        "value": 55
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "Chain mail (1d8-points of protection)",
+      "value": "1d8",
+      "note": "кольчуга, броня 1d8"
+    },
+    "luck": {
+      "raw": "55",
+      "value": 55
+    },
+    "sanity": {
+      "raw": "75",
+      "value": 75,
+      "max": null
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Франкский меч",
+          "en": "Frankish Sword"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (меч)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d8+1d4",
+          "dice": "1d8",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:sword-long"
+      },
+      {
+        "name": {
+          "ru": "Копьё (кавалерийское)",
+          "en": "Lance"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (копьё)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d8 + урон от лошади",
+          "dice": "1d8",
+          "adds_db": false,
+          "extra": "плюс урон от лошади"
+        },
+        "weapon": "coc:weapon:spear-cavalry-lance",
+        "notes": "урон 1d8 плюс урон лошади (так в книге; БкУ не указан)"
+      },
+      {
+        "name": {
+          "ru": "Щит",
+          "en": "Shield"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой (щит)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "блокирует атаки, 25 ПЗ",
+          "dice": null,
+          "adds_db": false
+        },
+        "notes": "блокирует атаки; у щита 25 ПЗ"
+      }
+    ],
+    "dodge": {
+      "raw": "39% (19/7)",
+      "value": 39,
+      "half": 19,
+      "fifth": 7
+    },
+    "skills": [
+      {
+        "name": "Искусство/ремесло (сказки)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "Сказки",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Искусство/ремесло (плотничество)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "Плотничество",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Естествознание",
+        "skill": "coc:skill:natural-world-dark-ages",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Ориентирование",
+        "skill": "coc:skill:navigate",
+        "value": {
+          "raw": "20%",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Ремонт/Разработка",
+        "skill": "coc:skill:repair-devise",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Верховая езда",
+        "skill": "coc:skill:ride",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Статус",
+        "skill": "coc:skill:status",
+        "value": {
+          "raw": "20%",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "20%",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Родной язык (франкский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "Франкский",
+        "value": {
+          "raw": "55%",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        }
+      }
+    ]
+  },
+  "background": {
+    "description": "Молод, красив, белокур. Рыцарь с картинки.",
+    "ideology": "Юношеский идеализм и верность семье. Недолюбливает венецианцев.",
+    "significant_people": "Его любимая дома.",
+    "traits": "Простодушен, но не доверяет чужакам из других краёв.",
+    "injuries": "Нет."
+  },
+  "possessions": [
+    "доспех, оружие",
+    "верховая лошадь",
+    "2 серебряные марки",
+    "бурдюк с вином",
+    "прядь волос невесты, присланная из дома, — почти реликвия",
+    "грубое распятие"
+  ],
+  "description": {
+    "ru": "Молодой франкский рыцарь, 19 лет, вырос в сельском имении; умеет строить (особенно жилища), знает природу и ремонт.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Пошёл в поход вслед за любимым дядей Бернадусом (старшим братом матери) и видел, как тот пал при осаде Зары. Простая душа, глубоко не доверяет тем, кто не из его края и не на службе графа Балдуина; особенно не любит венецианцев, отчасти виня их в смерти дяди — ведь это их желание взять Зару привело туда поход. По-крестьянски суеверен, считает, что за большинством бед стоят черти и злые духи, и знает уйму по большей части бесполезных обрядов против них.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 81,
+      "printed_page": 79,
+      "method": "book_text",
+      "verified": true,
+      "note": "предгенерированный сыщик «Тёмного крестоносца» (раздел «Investigators», с. 76–80)"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Предгенерированный сыщик (Additional Thanks, с. 50, его автора не называет). Атаки «драка» (Brawl) в статблоке Мартинуса нет."
+  },
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  }
+}

@@ -1,0 +1,264 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "hotoe-book-4-en/creature/sofia-living-hand",
+  "kind": "creature",
+  "name": {
+    "ru": "Живая рука",
+    "en": "Living Hand"
+  },
+  "aliases": [
+    "Живые руки",
+    "Living Hands",
+    "Crawling Horror",
+    "Ползучий ужас",
+    "оживлённая отрубленная кисть"
+  ],
+  "category": "supernatural",
+  "subcategory": "ползучий ужас, творение Братьев кожи",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "servitor_of",
+      "target": "coc:organization:brothers-of-the-skin",
+      "note": "творение Братьев кожи",
+      "note_back": "живые руки — их творения"
+    }
+  ],
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "85",
+        "value": 85,
+        "roll": "(3d6+6)×5"
+      },
+      "CON": {
+        "raw": "52",
+        "value": 52,
+        "roll": "3d6×5"
+      },
+      "SIZ": {
+        "raw": "5",
+        "value": 5,
+        "roll": "1d2×5"
+      },
+      "INT": {
+        "raw": "None",
+        "value": null,
+        "roll": "нет"
+      },
+      "POW": {
+        "raw": "52",
+        "value": 52,
+        "roll": "(2d6+4)×5"
+      },
+      "DEX": {
+        "raw": "95",
+        "value": 95,
+        "roll": "(2d6+12)×5"
+      }
+    },
+    "hp": {
+      "raw": "5",
+      "value": 5
+    },
+    "damage_bonus": {
+      "raw": "None",
+      "value": "нет"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "10",
+      "value": 10,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 10
+        }
+      ]
+    },
+    "armor": {
+      "raw": "None, but takes minimum damage from piercing weapons and firearms.",
+      "value": 0,
+      "note": "нет, но от колющего оружия и огнестрела получает минимальный урон"
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1,
+      "note": "царапает, выдавливает глаза, рвёт когтями и душит"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (когти)",
+          "en": "Fighting (Claw)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "1d4",
+          "dice": "1d4",
+          "adds_db": false
+        }
+      },
+      {
+        "name": {
+          "ru": "Удушение (боевой манёвр)",
+          "en": "Choke (fighting maneuver)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "1d4 за раунд",
+          "dice": "1d4",
+          "adds_db": false
+        },
+        "notes": "если удушение удалось, рука сжимает горло жертвы: 1d4 урона каждый раунд, пока жертва не потеряет сознание или руку не оторвут (встречная проверка СИЛ); атаки других по руке — трудные, чтобы не ранить жертву"
+      }
+    ],
+    "dodge": {
+      "raw": "45% (22/9)",
+      "value": 45,
+      "half": 22,
+      "fifth": 9
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d4",
+        "trigger": "при виде живой руки"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Устойчивость нежити",
+      "summary": "Очень устойчива к колющим атакам (минимальный урон от колющего оружия и огнестрела), но получает полный урон от дробящих: раздробленные кости обездвиживают её. При 0 ПЗ остаётся одушевлённой, но не может двигаться и атаковать; уничтожить её окончательно можно только физически — огнём, кислотой или другими растворителями.",
+      "raw": "As undead creations they are quite resistant to piercing attacks, but take full damage from bludgeoning attacks as shattering their many bones renders then helpless. Living Hands reduced to zero hit points are still animate but unable to move or attack. To completely kill a Living Hand they must be physically destroyed with fire, acid, or other solvents."
+    },
+    {
+      "name": "Ловкость и скрытность",
+      "summary": "Быстрые, сверхъестественно сильные, прыгают примерно на 2 м, лазают по отвесным поверхностям, как летучие мыши, цепляясь силой и ногтями; из-за малого размера их трудно заметить; пролезают в крошечные отверстия и отпирают двери и окна.",
+      "raw": "They are quick, supernaturally strong and able to jump about six feet. Living Hands can also scale sheer surfaces, like bats, using their strength and nails."
+    }
+  ],
+  "description": {
+    "ru": "Отрубленная человеческая кисть, оживлённая магией: холодная мёртвая плоть, которой вернули подобие жизни. В «Изъятии» руки тёплые, слегка пахнут горелой плотью (после печных ходов или дымохода) и похожи на трупные; бегают по комнате на пальцах, прыгают в лицо, вцепляются в горло. Используются для тихих убийств удушением, кражи мелочей и проникновения в запертые помещения.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Творения Братьев кожи. В Софии стая рук нападает ночью на спящих сыщиков (отель «Де ла Бюльгари» или гостиница «У камина»), чтобы вырвать глаз одного из них для заклинания «Проклятое око»; рука с глазом накатывает его на культю запястья, где кожа обхватывает его, как жуткое новое веко, и убегает к ждущим культистам.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "hotoe-book-4-en",
+      "physical_page": 34,
+      "printed_page": 32,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Statistics»: Living Hands, Living Hand, Crawling Horror"
+    },
+    {
+      "book_id": "hotoe-book-4-en",
+      "physical_page": 35,
+      "printed_page": 33,
+      "method": "book_text",
+      "verified": true,
+      "note": "окончание статблока"
+    },
+    {
+      "book_id": "hotoe-book-4-en",
+      "physical_page": 16,
+      "printed_page": 14,
+      "method": "book_text",
+      "verified": true,
+      "note": "«A Restless Night in Sofia»"
+    },
+    {
+      "book_id": "hotoe-book-4-en",
+      "physical_page": 17,
+      "printed_page": 15,
+      "method": "book_text",
+      "verified": true,
+      "note": "бегство руки"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.characteristics",
+      "printed": "СИЛ 85 ((3d6+6)×5), ТЕЛ 5 (1d2×5), МОЩ 52 ((2d6+4)×5)",
+      "expected": "средние по броску: СИЛ 82, ТЕЛ 7, МОЩ 55",
+      "note": "напечатанные средние не сходятся с бросками (с. 32); при этом ПЗ 5 сходится с ВЫН 52 и ТЕЛ 5 — значения оставлены как напечатано (Р-37)",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Существо этой книги (Р-74). «INT None» — у руки нет интеллекта. ПМ не даны. Шесть футов прыжка — около 2 м (Р-64)."
+  },
+  "images": [
+    {
+      "file": "art/creatures/hotoe-sofia-living-hand.webp",
+      "kind": "illustration",
+      "caption": "Живая рука нападает!",
+      "source": "Horror on the Orient Express, кн. IV «Constantinople & Consequences» (англ., 7e), с. 14 (физ. 16), подпись «An animated hand attacks!»"
+    }
+  ]
+}

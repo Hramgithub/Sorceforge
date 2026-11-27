@@ -1,0 +1,217 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "hotoe-book-2-en/character/kapok",
+  "kind": "character",
+  "name": {
+    "ru": "Капок",
+    "en": "Kapok"
+  },
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "зловещий турецкий слуга",
+    "en": "Sinister Turkish servant"
+  },
+  "age": {
+    "raw": "50",
+    "value": 50
+  },
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "gaslight"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "hotoe-book-2-en/character/hieronymus-menkaph",
+      "note": "хозяин",
+      "note_back": "верный слуга"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "85",
+        "value": 85
+      },
+      "CON": {
+        "raw": "75",
+        "value": 75
+      },
+      "SIZ": {
+        "raw": "80",
+        "value": 80
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "APP": {
+        "raw": "30",
+        "value": 30
+      },
+      "INT": {
+        "raw": "75",
+        "value": 75
+      },
+      "POW": {
+        "raw": "45",
+        "value": 45
+      },
+      "EDU": {
+        "raw": "50",
+        "value": 50
+      }
+    },
+    "hp": {
+      "raw": "16",
+      "value": 16
+    },
+    "damage_bonus": {
+      "raw": "+1d6",
+      "value": "+1d6"
+    },
+    "build": {
+      "raw": "2",
+      "value": 2
+    },
+    "move": {
+      "raw": "6",
+      "value": 6,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 6
+        }
+      ]
+    },
+    "sanity": {
+      "raw": "0",
+      "value": 0
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "1d3+1d6",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Ятаган",
+          "en": "Yatagan"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (меч)",
+        "chance": {
+          "raw": "75% (37/15)",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        },
+        "damage": {
+          "raw": "1d6+1d6",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:sword-light"
+      }
+    ],
+    "dodge": {
+      "raw": "46% (23/9)",
+      "value": 46,
+      "half": 23,
+      "fifth": 9
+    },
+    "skills": [
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Иностранный язык (английский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "Английский",
+        "value": {
+          "raw": "30%",
+          "value": 30
+        }
+      },
+      {
+        "name": "Родной язык (турецкий)",
+        "skill": "coc:skill:language-own",
+        "specialization": "Турецкий",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Высокий, жилистый, неразговорчивый турок; молчаливый и послушный, ждёт лишь приказа хозяина, чтобы ударить. Купе 5 спального вагона № 1 (вместе с Егоровым); вместе с Менкафом часто сидит в купе Майерсов, стережёт миссис Майерс.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Верный слуга Менкафа. Двое его товарищей в фесках едут в соседнем вагоне. При нужде сам наденет Кроваво-красную феску: Менкаф дал ему достаточно знаний, чтобы управлять феской, если придётся его заменить. Если переживёт поездку, может возглавить культистов на обмене пленником.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "hotoe-book-2-en",
+      "physical_page": 67,
+      "printed_page": 65,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Кроваво-красная феска»: пассажиры поезда Париж — Константинополь: купе 5"
+    },
+    {
+      "book_id": "hotoe-book-2-en",
+      "physical_page": 94,
+      "printed_page": 92,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок"
+    }
+  ],
+  "errata": [
+    {
+      "field": "age",
+      "printed": "AGE 42 (с. 65) и Age 50 (статблок, с. 92)",
+      "expected": "одно значение",
+      "note": "возраст в описании пассажиров и в статблоке расходится; в записи — 50 по статблоку",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2). Язык в статблоке напечатан «(English) 30%» — английский записан как иностранный."
+  }
+}

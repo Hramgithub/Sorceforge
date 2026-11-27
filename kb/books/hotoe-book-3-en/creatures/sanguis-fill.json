@@ -1,0 +1,279 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "hotoe-book-3-en/creature/sanguis-fill",
+  "kind": "creature",
+  "name": {
+    "ru": "Филл (ур-ринна даути)",
+    "en": "Fill (ur-rinna dauthi)"
+  },
+  "aliases": [
+    "Fill",
+    "филлы",
+    "живые кожи"
+  ],
+  "category": "supernatural",
+  "subcategory": "ур-ринна даути, низший служитель",
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "transforms_into",
+      "target": "hotoe-book-3-en/creature/sanguis-grimmitha",
+      "note": "выпив 100 ТЕЛ крови"
+    },
+    {
+      "type": "spawn_of",
+      "target": "hotoe-book-3-en/creature/sanguis-mustrigg",
+      "note": "встаёт из жертвы валериановой чумы, которую начал Мустригг"
+    },
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:skinless-one",
+      "note_back": "ур-ринна даути — дар Бескожего"
+    }
+  ],
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "80",
+        "value": 80,
+        "roll": "(3d6+6)×5"
+      },
+      "CON": {
+        "raw": "77",
+        "value": 77,
+        "roll": "(1d6+12)×5"
+      },
+      "SIZ": {
+        "raw": "52",
+        "value": 52,
+        "roll": "3d6×5"
+      },
+      "DEX": {
+        "raw": "95",
+        "value": 95,
+        "roll": "(2d6+12)×5"
+      },
+      "INT": {
+        "raw": "35",
+        "value": 35,
+        "roll": "2d6×5"
+      },
+      "POW": {
+        "raw": "47",
+        "value": 47,
+        "roll": "(1d6+6)×5"
+      }
+    },
+    "hp": {
+      "raw": "11 - 12",
+      "value": 12,
+      "note": "напечатано «11 - 12»; по средним (ВЫН 77 + ТЕЛ 52) ÷ 10 = 12"
+    },
+    "mp": {
+      "raw": "9",
+      "value": 9
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "5 slithering",
+      "value": 5,
+      "modes": [
+        {
+          "mode": "other",
+          "value": 5,
+          "note": "ползком"
+        }
+      ]
+    },
+    "armor": {
+      "raw": "2 (кожистая шкура)",
+      "value": 2,
+      "note": "2-point leathery skin, immune to blunt weapons, impaling weapons do half damage. Swords do normal damage."
+    },
+    "attacks_per_round": {
+      "raw": "2",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d4 + 1d4",
+          "dice": "1d4",
+          "adds_db": true
+        },
+        "notes": "кусает и обвивает жертву, удерживая её, пока пьёт кровь"
+      },
+      {
+        "name": {
+          "ru": "Укус с захватом (боевой приём)",
+          "en": "Bite and hold (fighting maneuver)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "drain 1d3 hit points per round, ignoring armor",
+          "dice": null,
+          "adds_db": false,
+          "extra": "высасывает 1d3 ПЗ крови в раунд, игнорирует броню"
+        },
+        "notes": "укушенная цель удержана и теряет 1d3 ПЗ крови каждый раунд, броня не помогает"
+      }
+    ],
+    "dodge": {
+      "raw": "47% (23/9)",
+      "value": 47,
+      "half": 23,
+      "fifth": 9
+    },
+    "skills": [
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d6",
+        "trigger": "увидеть филла"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Валерианова чума",
+      "summary": "Распространяется любым успешным уроном от атаки: жертва заражается валериановой чумой с шансом 80% (правила болезни — запись «Валерианова чума»).",
+      "refs": [
+        "hotoe-book-3-en/rule/sanguis-valerian-plague"
+      ]
+    },
+    {
+      "name": "Солнечный свет",
+      "summary": "От солнечного света плоть ур-ринна даути растворяется в зловонный пар: каждый раунд под прямым солнечным светом — 1d3 урона. Твари активны в основном ночью.",
+      "raw": "Sunlight causes the flesh of these creatures to dissolve into a rancid vapor. Each round of contact with direct sunlight causes 1d3 points of damage to ur-rinna dauthi."
+    },
+    {
+      "name": "Неуязвимость",
+      "summary": "Броня 2 (кожистая шкура); неуязвим для дробящего оружия, колющее наносит половину урона, мечи — полный урон.",
+      "raw": "Armor: 2-point leathery skin, immune to blunt weapons, impaling weapons do half damage. Swords do normal damage."
+    },
+    {
+      "name": "Превращение",
+      "summary": "Выпив 100 очков ТЕЛ крови, филл бурно превращается в гриммиту.",
+      "raw": "after draining 100 SIZ points of blood a fill transforms, quite violently, into a creature called a Grimmitha.",
+      "refs": [
+        "hotoe-book-3-en/creature/sanguis-grimmitha"
+      ]
+    }
+  ],
+  "description": {
+    "ru": "Живая человеческая кожа — вторая форма ур-ринна даути («восставших мертвецов»). Филлы похожи на кожистые мешки из человеческой кожи, которые ползают, как осьминог на суше, или ковыляют, как марионетки. Скрытные противники: прячутся и пролезают в узкие места. В бою хватают противника резиновыми конечностями и кусают заострёнными кожистыми краями того, что было губами и веками. Пешие солдаты Армии кожи и крови.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Филл (по-готски «кожа») встаёт из умершего от валериановой чумы: кожа оживает и отделяется от трупа. Филлы жаждут человеческой крови и, выпив 100 очков ТЕЛ крови, бурно превращаются в гриммиту. Их укус тоже разносит валерианову чуму. Четыре филла прячутся под грудой трупов в канаве у временного лагеря у форпоста Гилиан: днём, если их потревожить, дерутся как загнанные крысы, не покидая тени канавы; после темноты двое нападают, остальные уползают по кровавому следу; когда начнётся штурм форпоста, они нападут на беженцев. В бою за форпост — 5 филлов на каждого сыщика (с поправками); в гробнице Вурского храма — 7 раненых филлов (по 5 ПЗ) или половина из 60 тварей.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 197,
+      "printed_page": 195,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «Fill (ur-rinna dauthi), Foot soldier of the Army of Skin and Blood, Lesser Servitor»"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 183,
+      "printed_page": 181,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «The Origins of The Order of the Flayed»: ур-ринна даути, слабости"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 182,
+      "printed_page": 180,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Living Skins»"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 186,
+      "printed_page": 184,
+      "method": "book_text",
+      "verified": true,
+      "note": "число противников"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 189,
+      "printed_page": 187,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Tomb»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.characteristics.STR",
+      "printed": "80 ((3d6+6)×5)",
+      "expected": "82 (среднее (3d6+6)×5 = 82,5)",
+      "note": "среднее СИЛ не сходится с броском; оставлено как напечатано (БкУ и Комплекция те же)",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по страницам книги (печатная страница = физическая − 2). «Fill» по-готски «кожа» — русская форма «филл» (новый термин). ПЗ напечатаны «11 - 12»; значение — по средним (12)."
+  },
+  "images": [
+    {
+      "file": "art/creatures/hotoe-sanguis-fill.webp",
+      "kind": "art",
+      "caption": "Филл",
+      "source": "Ужас в Восточном экспрессе, т. III (англ., 7e), с. 195 (физ. 197)"
+    }
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "hotoe-book-4-en/creature/modern-meat-simulacrum",
+  "kind": "creature",
+  "name": {
+    "ru": "Мясной симулякр",
+    "en": "Meat Simulacrum"
+  },
+  "aliases": [
+    "Meat Simulacrum, Servant of Nyarlathotep",
+    "Мясной Симулякр"
+  ],
+  "category": "supernatural",
+  "subcategory": "слуга Ньярлатхотепа (создание Милтона)",
+  "axes": {
+    "era": [
+      "modern"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:nyarlathotep",
+      "note": "господин",
+      "note_back": "слуга (2013)"
+    },
+    {
+      "type": "related_to",
+      "target": "coc:item:sedefkar-simulacrum",
+      "note": "подражание уничтоженному Симулякру Седефкара",
+      "note_back": "подражание 2013 года"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "90",
+        "value": 90
+      },
+      "CON": {
+        "raw": "80",
+        "value": 80
+      },
+      "SIZ": {
+        "raw": "80",
+        "value": 80
+      },
+      "DEX": {
+        "raw": "65",
+        "value": 65
+      },
+      "INT": {
+        "raw": "90",
+        "value": 90
+      },
+      "POW": {
+        "raw": "40",
+        "value": 40
+      }
+    },
+    "hp": {
+      "raw": "16",
+      "value": 16
+    },
+    "mp": {
+      "raw": "5 (15)",
+      "value": 5
+    },
+    "damage_bonus": {
+      "raw": "+1d6",
+      "value": "+1d6"
+    },
+    "build": {
+      "raw": "+2",
+      "value": 2
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "5-point armour against kinetic attacks",
+      "value": 5,
+      "note": "только против кинетических атак"
+    },
+    "attacks_per_round": {
+      "raw": "2",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d6+1d6",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "notes": "Бьёт руками и ногами, может пользоваться оружием."
+      },
+      {
+        "name": {
+          "ru": "Большой нож",
+          "en": "Large Knife"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d8+1d6",
+          "dice": "1d8",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:knife-large"
+      }
+    ],
+    "dodge": {
+      "raw": "32% (16/6)",
+      "value": 32,
+      "half": 16,
+      "fifth": 6
+    },
+    "spells": {
+      "raw": "Cloud Memory, Contact Nyarlathotep, Control Skin, Create Gate, Dominate, Melt Flesh, Ritual of Cleansing, Ritual of Enactment, Send Dreams, Call The Skinless One (without needing the usual sacrifices).",
+      "items": [
+        {
+          "name": "Cloud Memory",
+          "spell": "coc:spell:cloud-memory"
+        },
+        {
+          "name": "Contact Nyarlathotep",
+          "spell": "coc:spell:contact-nyarlathotep"
+        },
+        {
+          "name": "Control Skin",
+          "spell": "coc:spell:control-skin"
+        },
+        {
+          "name": "Create Gate",
+          "spell": "coc:spell:create-gate"
+        },
+        {
+          "name": "Dominate",
+          "spell": "coc:spell:dominate"
+        },
+        {
+          "name": "Melt Flesh",
+          "spell": "coc:spell:melt-flesh"
+        },
+        {
+          "name": "Ritual of Cleansing",
+          "spell": "coc:spell:ritual-of-cleansing"
+        },
+        {
+          "name": "Ritual of Enactment",
+          "spell": "coc:spell:ritual-of-enactment"
+        },
+        {
+          "name": "Send Dreams",
+          "spell": "coc:spell:send-dream"
+        },
+        {
+          "name": "Call The Skinless One",
+          "spell": "coc:spell:call-the-skinless-one"
+        }
+      ]
+    },
+    "sanity_loss": [
+      {
+        "success": "1",
+        "fail": "1d6",
+        "trigger": "увидеть Мясной симулякр в первоначальном, незамаскированном облике"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Маскировка (чужая кожа)",
+      "summary": "Может принять облик другого человека, надев его кожу: получает голос и походку, но не навыки и память; все характеристики прежние, кроме НАР и ТЕЛ — они как у нового тела. Одну кожу можно надеть лишь раз: сменённая кожа больше не годится, хотя, возможно, её можно опознать.",
+      "raw": "Disguise: Ability to assume the identity of another human by donning the skin of that person. This confers the voice and walk of that person, but not his or her skills and memories. All statistics remain the same, except for APP and SIZ, which conform to those of the new body. The Meat Simulacrum cannot wear any skin more than once, once changed the old skin is no longer wearable, though it is perhaps identifiable."
+    },
+    {
+      "name": "Вызов Бескожего",
+      "summary": "Знает заклинание «Вызов Бескожего» и творит его без обычных жертвоприношений.",
+      "raw": "Call The Skinless One (without needing the usual sacrifices).",
+      "refs": [
+        "coc:spell:call-the-skinless-one",
+        "coc:creature:skinless-one"
+      ]
+    },
+    {
+      "name": "Бегство",
+      "summary": "Ранение до половины ПЗ или ниже — пытается бежать, чтобы однажды вернуться и отомстить.",
+      "raw": "If wounded and reduced to half or fewer hit points, it will attempt to flee if able, perhaps one day to return and seek revenge."
+    }
+  ],
+  "description": {
+    "ru": "Чудовище, собранное Джоном Милтоном из шести частей тел убитых пассажиров (левая и правая руки, левая и правая ноги, торс и голова — как у уничтоженного Симулякра Седефкара). Когда Милтона убивают (или он убивает себя) в Отверженной мечети, его дух по Ритуалу свершения вселяется в симулякр: части тел поднимаются, как на невидимых руках, плывут к кругу крови — сначала торс, затем ноги и руки, последней голова — и сцепляются, как жуткий кукольный театр; веки открываются, и на месте глаз — чёрные провалы (свидетели — 1/1d6 Рассудка). Предотвратить: каждому персонажу одна попытка схватить часть тела (Ближний бой; очень добрый Хранитель — обычная ЛВК); довольно схватить и уничтожить одну часть (сжечь, раздавить), и дух Милтона уходит в небытие. Статблок — симулякр на «слабой» мощи: дух Милтона ещё не овладел всей силой; при будущей встрече способности должны быть заметно сильнее. Нападает на всех в мечети, видя в их смерти достойную дань. Если вырвется в стамбульскую ночь — Хранитель может вернуть его позже (возможно, он возродит Братьев кожи или будет мстить).",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "hotoe-book-4-en",
+      "physical_page": 164,
+      "printed_page": 162,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Ritual of Enactment», «The Meat Simulacrum», статблок"
+    },
+    {
+      "book_id": "hotoe-book-4-en",
+      "physical_page": 165,
+      "printed_page": 163,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок (окончание), «Possibilities»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.mp",
+      "printed": "Magic Points: 5 (15)",
+      "expected": null,
+      "note": "При МОЩ 40 ПМ должно быть 8; книга печатает «5 (15)» — вероятно, 5 сейчас и 15 у полной силы (как ПМ Милтона). Оставлено как напечатано."
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2). Глава «The Simulacrum Unbound: Istanbul 2013» (Cthulhu Now, 2013 год). Мясной симулякр — не предмет, а существо со статблоком; образец — Симулякр Седефкара (coc:item:sedefkar-simulacrum)."
+  }
+}

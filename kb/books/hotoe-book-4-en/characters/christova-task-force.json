@@ -1,0 +1,323 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "hotoe-book-4-en/character/christova-task-force",
+  "kind": "character",
+  "name": {
+    "ru": "Опергруппа майора Христова",
+    "en": "Major Christova's Task Force"
+  },
+  "aliases": [
+    "Bulgarian Special Inspectors",
+    "люди майора Христова",
+    "Major Christova's Men"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "stock_type": "болгарский специальный инспектор",
+  "names": [
+    "Тома Генов",
+    "Самуил Борисов",
+    "Ян Николаев",
+    "Христо Янев",
+    "Димитр Маринов"
+  ],
+  "occupation": {
+    "ru": "болгарские специальные инспекторы",
+    "en": "Bulgarian Special Inspectors"
+  },
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "hotoe-book-4-en/character/vasil-christova",
+      "note": "командир",
+      "note_back": "его опергруппа"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "75",
+        "value": 75
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "70",
+        "value": 70
+      },
+      "DEX": {
+        "raw": "55",
+        "value": 55
+      },
+      "APP": {
+        "raw": "55",
+        "value": 55
+      },
+      "INT": {
+        "raw": "55",
+        "value": 55
+      },
+      "POW": {
+        "raw": "75",
+        "value": 75
+      },
+      "EDU": {
+        "raw": "60",
+        "value": 60
+      }
+    },
+    "hp": {
+      "raw": "14",
+      "value": 14
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "sanity": {
+      "raw": "75",
+      "value": 75
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "65% (32/13)",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Револьвер «Наган» M1895",
+          "en": "Nagant M1895 Revolver"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d8",
+          "dice": "1d8",
+          "adds_db": false
+        },
+        "notes": "3/2 выстрела за раунд, 7 патронов"
+      },
+      {
+        "name": {
+          "ru": "Дробовик «Винчестер» модель 97 «Тренч»",
+          "en": "Winchester Model 97 Trench shotgun"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "4d6",
+          "dice": "4d6",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:winchester-m1897",
+        "notes": "Тома Генов и Самуил Борисов: 1 выстрел, 6 патронов"
+      },
+      {
+        "name": {
+          "ru": "Карабин «Винчестер» модель 94",
+          "en": "Winchester Model 94 carbine"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "55% (27/11)",
+          "value": 55,
+          "half": 27,
+          "fifth": 11
+        },
+        "damage": {
+          "raw": "2d6+4",
+          "dice": "2d6+4",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:30-lever-action-carbine",
+        "notes": "Ян Николаев и Христо Янев: 1 выстрел, 4 патрона"
+      },
+      {
+        "name": {
+          "ru": "Пистолет-пулемёт «Беретта» M1919",
+          "en": "Beretta M1919 submachine gun"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет-пулемёт)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d10",
+          "dice": "1d10",
+          "adds_db": false
+        },
+        "notes": "Димитр Маринов: 1 очередь, 25 патронов"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Юриспруденция",
+        "skill": "coc:skill:law",
+        "value": {
+          "raw": "55%",
+          "value": 55
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "25%",
+          "value": 25
+        }
+      },
+      {
+        "name": "Родной язык (болгарский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "Болгарский",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Болгарские специальные инспекторы опергруппы майора Христова — пятеро хорошо вооружённых людей с короткими карабинами, полицейскими дробовиками и даже пистолетом-пулемётом; лица мрачны, но решительны. Скрытны, подозрительны и пока безуспешны в борьбе с «Мясниками»; культ время от времени ради забавы убивает кого-то из них.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Двое вооружённых сопровождают майора с вокзала; в убежище (заброшенной пекарне) майора встречают его люди и врач. У пещеры пятеро идут в бой с майором и пленных брать не собираются. Хранителю советуют дать Детям Феналика убить нескольких, если не всех; спасённые сыщиками люди майора — повод для его уважения.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "hotoe-book-4-en",
+      "physical_page": 35,
+      "printed_page": 33,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Statistics»: Major Christova's Task Force; Toma Genov & Samuil Borisov; Yan Nikolaev & Hristo Yanev; Dimitar Marinov"
+    },
+    {
+      "book_id": "hotoe-book-4-en",
+      "physical_page": 15,
+      "printed_page": 13,
+      "method": "book_text",
+      "verified": true,
+      "note": "сопровождение майора"
+    },
+    {
+      "book_id": "hotoe-book-4-en",
+      "physical_page": 17,
+      "printed_page": 15,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Butchers»"
+    },
+    {
+      "book_id": "hotoe-book-4-en",
+      "physical_page": 23,
+      "printed_page": 21,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Safe House»"
+    },
+    {
+      "book_id": "hotoe-book-4-en",
+      "physical_page": 24,
+      "printed_page": 22,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Major Christova's Men»"
+    },
+    {
+      "book_id": "hotoe-book-4-en",
+      "physical_page": 27,
+      "printed_page": 25,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Bloodthirsty Dead»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Групповой профиль (Р-74): имена пятерых напечатаны в книге (с. 33), у каждой пары своё оружие — в атаках с пометкой. Уклонение в книге не дано. ПМ не даны."
+  }
+}

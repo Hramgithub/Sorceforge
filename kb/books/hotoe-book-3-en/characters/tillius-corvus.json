@@ -1,0 +1,783 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "hotoe-book-3-en/character/tillius-corvus",
+  "kind": "character",
+  "name": {
+    "ru": "Тиллий Корв",
+    "en": "Tillius Corvus"
+  },
+  "aliases": [],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "трибун-комит, командир Фортес Фальконес",
+    "en": "Tribuni Comites, Commander of Fortes Falcones"
+  },
+  "age": {
+    "raw": "скоро 40",
+    "value": null,
+    "note": "«approaching his 40th birthday»"
+  },
+  "sex": "мужской",
+  "residence": "Константинополь (Нова Рома), 330 год",
+  "birthplace": "род из провинции Галлия",
+  "axes": {
+    "era": [
+      "other"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "transforms_into",
+      "target": "coc:character:fenalik",
+      "note": "после смерти Унвена Га-Валита становится вампиром, позже — Феналиком",
+      "note_back": "Феналик до обращения — римский командир Тиллий Корв (330 год)"
+    },
+    {
+      "type": "works_for",
+      "target": "hotoe-book-3-en/character/alexius-gemellus",
+      "note": "магистр армии, отдаёт приказ о походе в Лидию",
+      "note_back": "трибун-комит, командир отряда Фортес Фальконес"
+    },
+    {
+      "type": "knows",
+      "target": "hotoe-book-3-en/character/eudocia",
+      "note": "невеста, затем жена — и первая жертва на свадьбе",
+      "note_back": "жених, затем муж и убийца"
+    },
+    {
+      "type": "rival_of",
+      "target": "hotoe-book-3-en/character/unwen-ga-walith",
+      "note": "убивает его в последней битве",
+      "note_back": "наносит ему смертельный удар"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "80",
+        "value": 80
+      },
+      "CON": {
+        "raw": "75",
+        "value": 75
+      },
+      "SIZ": {
+        "raw": "75",
+        "value": 75
+      },
+      "DEX": {
+        "raw": "70",
+        "value": 70
+      },
+      "APP": {
+        "raw": "65",
+        "value": 65
+      },
+      "INT": {
+        "raw": "85",
+        "value": 85
+      },
+      "POW": {
+        "raw": "70",
+        "value": 70
+      },
+      "EDU": {
+        "raw": "97",
+        "value": 97
+      }
+    },
+    "hp": {
+      "raw": "15",
+      "value": 15
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "1d8 (лорика хамата, кольчуга)",
+      "value": null,
+      "note": "Armor: 1d8-point Lorica Hamata chain mail; против колющего и дробящего — 1d4 (врезка о вспомогательных войсках, с. 169)"
+    },
+    "sanity": {
+      "raw": "70",
+      "value": 70,
+      "max": null
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "1d3 + 1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Спата (длинный меч)",
+          "en": "Spatha (Long Sword)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "85% (42/17)",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        },
+        "damage": {
+          "raw": "1d8 + 1d4",
+          "dice": "1d8",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:sword-long"
+      },
+      {
+        "name": {
+          "ru": "Гаста (тяжёлое колющее копьё)",
+          "en": "Hasta (Heavy Thrusting Spear)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "85% (42/17)",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        },
+        "damage": {
+          "raw": "1d10 + 1d4",
+          "dice": "1d10",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:spear-long",
+        "notes": "двуручное"
+      },
+      {
+        "name": {
+          "ru": "Средний круглый щит",
+          "en": "Medium Round Shield"
+        },
+        "kind": "special",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "weapon": "coc:weapon:shield-round-wooden",
+        "notes": "блокирует атаки, отражает метательные снаряды, 25 ПЗ"
+      }
+    ],
+    "dodge": {
+      "raw": "32% (16/6)",
+      "value": 32,
+      "half": 16,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "30%",
+          "value": 30
+        }
+      },
+      {
+        "name": "Гражданские дела",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      },
+      {
+        "name": "Империя",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Проницательность",
+        "skill": "coc:skill:insight",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Ориентирование",
+        "skill": "coc:skill:navigate",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "70%",
+          "value": 70
+        }
+      },
+      {
+        "name": "Статус",
+        "skill": "coc:skill:status",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "80%",
+          "value": 80
+        }
+      },
+      {
+        "name": "Тактика",
+        "value": {
+          "raw": "65%",
+          "value": 65
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Иностранный язык (греческий)",
+        "skill": "coc:skill:language-other",
+        "specialization": "Греческий",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Иностранный язык (германский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "Германский",
+        "value": {
+          "raw": "30%",
+          "value": 30
+        }
+      },
+      {
+        "name": "Иностранный язык (готский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "Готский",
+        "value": {
+          "raw": "35%",
+          "value": 35
+        }
+      },
+      {
+        "name": "Родной язык (латынь)",
+        "skill": "coc:skill:language-own",
+        "specialization": "Латынь",
+        "value": {
+          "raw": "97%",
+          "value": 97
+        }
+      }
+    ]
+  },
+  "variants": [
+    {
+      "label": "Тиллий Корв, византийский вампир (после пробуждения)",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "160",
+            "value": 160
+          },
+          "CON": {
+            "raw": "75",
+            "value": 75
+          },
+          "SIZ": {
+            "raw": "95",
+            "value": 95
+          },
+          "DEX": {
+            "raw": "80",
+            "value": 80
+          },
+          "APP": {
+            "raw": "60",
+            "value": 60
+          },
+          "INT": {
+            "raw": "85",
+            "value": 85
+          },
+          "POW": {
+            "raw": "70",
+            "value": 70
+          },
+          "EDU": {
+            "raw": "97",
+            "value": 97
+          }
+        },
+        "hp": {
+          "raw": "17",
+          "value": 17
+        },
+        "damage_bonus": {
+          "raw": "+2d6",
+          "value": "+2d6"
+        },
+        "build": {
+          "raw": "3",
+          "value": 3
+        },
+        "move": {
+          "raw": "14",
+          "value": 14,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 14
+            }
+          ]
+        },
+        "armor": {
+          "raw": "нет",
+          "value": 0
+        },
+        "sanity": {
+          "raw": "0",
+          "value": 0,
+          "max": null
+        },
+        "attacks_per_round": {
+          "raw": "1",
+          "value": 1
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Укус/когти",
+              "en": "Bite/Claw"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "80% (40/16)",
+              "value": 80,
+              "half": 40,
+              "fifth": 16
+            },
+            "damage": {
+              "raw": "1d4 + 2d6",
+              "dice": "1d4",
+              "adds_db": true
+            },
+            "notes": "высасывание крови — см. способности"
+          },
+          {
+            "name": {
+              "ru": "Спата (длинный меч)",
+              "en": "Spatha (Long Sword)"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "90% (45/18)",
+              "value": 90,
+              "half": 45,
+              "fifth": 18
+            },
+            "damage": {
+              "raw": "1d8 + 2d6",
+              "dice": "1d8",
+              "adds_db": true
+            },
+            "weapon": "coc:weapon:sword-long"
+          },
+          {
+            "name": {
+              "ru": "Средний круглый щит",
+              "en": "Medium Round Shield"
+            },
+            "kind": "special",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "75% (37/15)",
+              "value": 75,
+              "half": 37,
+              "fifth": 15
+            },
+            "weapon": "coc:weapon:shield-round-wooden",
+            "notes": "блокирует атаки, отражает метательные снаряды, 25 ПЗ"
+          }
+        ],
+        "dodge": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "skills": [
+          {
+            "name": "Лазание",
+            "skill": "coc:skill:climb",
+            "value": {
+              "raw": "30%",
+              "value": 30
+            }
+          },
+          {
+            "name": "Гражданские дела",
+            "value": {
+              "raw": "50%",
+              "value": 50
+            }
+          },
+          {
+            "name": "Империя",
+            "value": {
+              "raw": "45%",
+              "value": 45
+            }
+          },
+          {
+            "name": "Проницательность",
+            "skill": "coc:skill:insight",
+            "value": {
+              "raw": "50%",
+              "value": 50
+            }
+          },
+          {
+            "name": "Прыжки",
+            "skill": "coc:skill:jump",
+            "value": {
+              "raw": "40%",
+              "value": 40
+            }
+          },
+          {
+            "name": "Слух",
+            "skill": "coc:skill:listen",
+            "value": {
+              "raw": "45%",
+              "value": 45
+            }
+          },
+          {
+            "name": "Ориентирование",
+            "skill": "coc:skill:navigate",
+            "value": {
+              "raw": "45%",
+              "value": 45
+            }
+          },
+          {
+            "name": "Убеждение",
+            "skill": "coc:skill:persuade",
+            "value": {
+              "raw": "60%",
+              "value": 60
+            }
+          },
+          {
+            "name": "Внимание",
+            "skill": "coc:skill:spot-hidden",
+            "value": {
+              "raw": "70%",
+              "value": 70
+            }
+          },
+          {
+            "name": "Статус",
+            "skill": "coc:skill:status",
+            "value": {
+              "raw": "45%",
+              "value": 45
+            }
+          },
+          {
+            "name": "Скрытность",
+            "skill": "coc:skill:stealth",
+            "value": {
+              "raw": "80%",
+              "value": 80
+            }
+          },
+          {
+            "name": "Тактика",
+            "value": {
+              "raw": "65%",
+              "value": 65
+            }
+          },
+          {
+            "name": "Чтение следов",
+            "skill": "coc:skill:track",
+            "value": {
+              "raw": "60%",
+              "value": 60
+            }
+          },
+          {
+            "name": "Иностранный язык (греческий)",
+            "skill": "coc:skill:language-other",
+            "specialization": "Греческий",
+            "value": {
+              "raw": "40%",
+              "value": 40
+            }
+          },
+          {
+            "name": "Иностранный язык (германский)",
+            "skill": "coc:skill:language-other",
+            "specialization": "Германский",
+            "value": {
+              "raw": "30%",
+              "value": 30
+            }
+          },
+          {
+            "name": "Иностранный язык (готский)",
+            "skill": "coc:skill:language-other",
+            "specialization": "Готский",
+            "value": {
+              "raw": "35%",
+              "value": 35
+            }
+          },
+          {
+            "name": "Родной язык (латынь)",
+            "skill": "coc:skill:language-own",
+            "specialization": "Латынь",
+            "value": {
+              "raw": "97%",
+              "value": 97
+            }
+          }
+        ],
+        "sanity_loss": [
+          {
+            "success": "1d4",
+            "fail": "2d6",
+            "trigger": "увидеть страшное перерождение Тиллия Корва (тем, кто знал его при жизни)"
+          },
+          {
+            "success": "1",
+            "fail": "1d8",
+            "trigger": "тем, кто не знал его при жизни"
+          }
+        ]
+      }
+    }
+  ],
+  "abilities": [
+    {
+      "name": "Регенерация (вампир)",
+      "summary": "Восстанавливает 1 ПЗ за раунд, но под прямым солнечным светом не восстанавливается вовсе.",
+      "raw": "Regeneration: regenerates 1 hit point per round, but does not regenerate at all in direct sunlight."
+    },
+    {
+      "name": "Высасывание крови (вампир)",
+      "summary": "Если укус вампира наносит урон, удержание укуса подавляет любое сопротивление жертвы и каждый раунд высасывает из неё 2d10 СИЛ (кровь).",
+      "raw": "Blood Drain: if a vampire's Bite attack does damage, maintaining the Bite stifles any resistance from the target, and drains 2d10 STR (blood) from the victim each round."
+    },
+    {
+      "name": "Излюбленные облики (вампир)",
+      "summary": "Летучая мышь, туман.",
+      "raw": "Shapes Favored: bat, mist.",
+      "refs": [
+        "coc:creature:vampire"
+      ]
+    },
+    {
+      "name": "Настоящее имя",
+      "summary": "Феналик не помнит, кем был; если напомнить ему римское имя и происхождение, он на миг застывает в замешательстве (сценарий «Изъятие»).",
+      "raw": "If confronted with his true Roman name and origins, Fenalik becomes momentarily stunned in confusion"
+    }
+  ],
+  "background": {
+    "description": "Высокий, широкоплечий, гладко выбритый; светло-каштановые волосы, острые серые глаза, загорелая кожа.",
+    "significant_people": "Госпожа Евдокия, невеста; его люди из Фортес Фальконес.",
+    "traits": "Бережёт своих людей; не ищет славы; спрашивает мнения подчинённых.",
+    "secret": "Обречён: после смерти Унвена станет вампиром Феналиком и убьёт всех, кто знал его при жизни."
+  },
+  "description": {
+    "ru": "Трибун-комит, командир отряда Фортес Фальконес. Высокий широкоплечий гладко выбритый мужчина со светло-каштановыми волосами — лишь недавно, с приближением отставки, он стал отпускать их длиннее. Красив, с острыми серыми глазами, кожа потемнела от бесчисленных часов под солнцем. Ещё крепок и опасен в бою, но ему скоро сорок. Не женат, детей нет; собирается жениться на богатой вдове госпоже Евдокии, когда выйдет в отставку. После смерти Унвена — бледный, отрешённый, затем византийский вампир.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Прирождённый римский гражданин, ведущий род из провинции Галлия. Годы войн его люди не раз смотрели в лицо смерти, потеряли бессчётно друзей и пролили много крови, но храбрый командир всегда берёг их: сражался рядом, прикрывал спины, не выполнял приказы, если они вели его людей на верную смерть, — и всякий раз это сходило ему с рук; вёл к победе, когда их ждало лишь поражение. Он поднялся по службе в грязи, крови и пыли рядом со своими солдатами. Звание комита (из «Ордена спутников») пожаловал ему сам Константин; оно делает его старшим полковым командиром. Вместе со своими людьми должен выйти в отставку вскоре после торжественного открытия Нова Ромы.\nВ сценарии «Sanguis Omnia Vincet» Корв ведёт сыщиков в Лидию, но двигатель сюжета — сами сыщики: он много лет служил с ними, доверяет их чутью и спрашивает их мнения; приказывать — не его способ, хотя Хранитель может устами Корва отговаривать от неудачных решений или отдавать приказы, чтобы история не стояла (например, патрулировать окрестности, проверить лагеря беженцев, расспросить врачей о чуме). В бою — дисциплинированный воин, прикрывающий товарищей слева и справа; не ищет славы и не рвётся в герои, а просто старается сохранить своих людей живыми и выполнить задачу.\nВ последней битве именно Корв наносит Унвену Га-Валиту смертельный удар и оказывается залит фонтаном его крови; часть силы Бескожего переходит к нему, и, пока он лежит в беспамятстве, его естественная жизнь кончается и начинается противоестественная. Он восстаёт вампиром, но не таким, как другие: с годами его силы растут, становясь тоньше и полнее, а пока он лишь учится владеть своими тёмными дарами. До конца дней его будет тянуть к силе Бескожего, хотя он сам этого не понимает и отрицал бы, узнав: вещи, священные для Бескожего, кажутся ему успокаивающими и родными, а их почитателей он иррационально ненавидит. Поклонники Бескожего, знающие его происхождение, презирают вампира: для них Тиллий Корв убил их величайшего пророка и украл тёмный дар, который Бескожий дал их вере. На свадьбе на барже «Плетора» он убивает невесту и гостей и улетает летучей мышью.\nК 1923 году вампир, бывший Тиллием Корвом, уже не помнит своего настоящего имени и происхождения. Он давно принял имя, которое дали ему перепуганные турецкие крестьяне в IV и V веках, когда он бесчинствовал по Турции и Венгрии: их словом для нечистого, злого, больного и жестокого — Феналик. Если напомнить ему его настоящее римское имя и происхождение, Феналик на миг застывает в замешательстве — это может решить вопрос жизни и смерти (уловка используется в сценарии «Изъятие», София 1923).",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 200,
+      "printed_page": 198,
+      "method": "book_text",
+      "verified": true,
+      "entry_page": 168,
+      "note": "статблоки «Tillius Corvus, Byzantine Vampire» и «Tribuni Comites Tillius Corvus, Commander of Fortes Falcones»"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 168,
+      "printed_page": 166,
+      "method": "book_text",
+      "verified": true,
+      "note": "трибун-комит Тиллий Корв (портрет)"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 170,
+      "printed_page": 168,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «Tribuni Comites Tillius Corvus»"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 171,
+      "printed_page": 169,
+      "method": "book_text",
+      "verified": true,
+      "note": "окончание врезки: госпожа Евдокия"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 177,
+      "printed_page": 175,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «Running Tribuni Comites Tillius Corvus»"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 192,
+      "printed_page": 190,
+      "method": "book_text",
+      "verified": true,
+      "note": "«A Hero Falls»"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 195,
+      "printed_page": 193,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «A Villain Rises»"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 196,
+      "printed_page": 194,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Byzantine Vampire»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.dodge",
+      "printed": "32% (16/6)",
+      "expected": "не ниже 35% (ЛВК 70 ÷ 2)",
+      "note": "базовое Уклонение — половина ЛВК; оставлено как напечатано",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по страницам книги (печатная страница = физическая − 2). Основной статблок — человек (трибун-комит), вариант — византийский вампир; оба на с. 198. Связь с общим Феналиком — `transforms_into` (Р-254: Феналик — общая запись, его 330 год — предложение). Броня «1d8-point» — по таблице лорик (с. 169: кольчуга 1d8, против колющего и дробящего 1d4). Навыки Cthulhu Invictus «Империя», «Гражданские дела», «Тактика» записей в справочнике не имеют и остаются текстом (Р-126)."
+  },
+  "images": [
+    {
+      "file": "art/characters/hotoe-sanguis-tillius-corvus.webp",
+      "kind": "portrait",
+      "caption": "Трибун-комит Тиллий Корв",
+      "source": "Ужас в Восточном экспрессе, т. III (англ., 7e), с. 166 (физ. 168)"
+    },
+    {
+      "file": "art/characters/hotoe-sanguis-tillius-corvus-vampire-2.webp",
+      "kind": "illustration",
+      "caption": "«Свадебное безумие!» — Корв-вампир на свадьбе",
+      "source": "Ужас в Восточном экспрессе, т. III (англ., 7e), с. 192 (физ. 194)"
+    }
+  ]
+}

@@ -1,0 +1,666 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "hotoe-book-3-en/creature/belgrade-dark-young",
+  "kind": "creature",
+  "name": {
+    "ru": "Тёмная молодь Шуб-Ниггурат («Избушка в лесу»)",
+    "en": "Dark Young of Shub-Niggurath"
+  },
+  "aliases": [
+    "Dark Young",
+    "Тёмная молодь"
+  ],
+  "category": "mythos_monster",
+  "subcategory": "служитель",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:dark-young-of-shub-niggurath",
+      "note_back": "трое у избушки в лесу («Избушка в лесу»)"
+    },
+    {
+      "type": "spawn_of",
+      "target": "hotoe-book-3-en/creature/belgrade-walker-in-the-woods",
+      "note": "отродье Бродящего в лесу",
+      "note_back": "его выводок"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "220",
+        "value": 220
+      },
+      "CON": {
+        "raw": "85",
+        "value": 85
+      },
+      "SIZ": {
+        "raw": "220",
+        "value": 220
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "POW": {
+        "raw": "110",
+        "value": 110
+      }
+    },
+    "hp": {
+      "raw": "30",
+      "value": 30
+    },
+    "damage_bonus": {
+      "raw": "+4d6",
+      "value": "+4d6"
+    },
+    "build": {
+      "raw": "5",
+      "value": 5
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "non-Earthly material and make-up, so that any successful hit with a firearm attack does only 1 point of damage per bullet (2 points for an impale). Hand-to-hand weapons do normal damage. Attacks dependent on heat, blast, corrosion, electrical charge or poisoning have no effect.",
+      "value": null,
+      "note": "неземное вещество: огнестрельное оружие — 1 пункт за пулю (2 при пронзании); ближний бой — обычный урон; жар, взрыв, едкие вещества, электричество и яд не действуют"
+    },
+    "attacks_per_round": {
+      "raw": "5. It may only use its Trample attack once per round.",
+      "value": 5,
+      "note": "растаптывание — раз в раунд"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Захват",
+          "en": "Grab"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "—",
+          "value": null,
+          "half": null,
+          "fifth": null
+        },
+        "damage": {
+          "raw": "1d10+5 STR drain per round",
+          "dice": null,
+          "adds_db": false
+        },
+        "notes": "боевой приём: схваченный и удерживаемый теряет 1d10+5 СИЛ за раунд"
+      },
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "80% (40/16)",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        },
+        "damage": {
+          "raw": "db",
+          "dice": null,
+          "adds_db": true
+        },
+        "notes": "урон — БкУ"
+      },
+      {
+        "name": {
+          "ru": "Растаптывание",
+          "en": "Trample"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "2d6+db",
+          "dice": "2d6",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Скрытность (бонусная кость в лесу)",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "80%",
+          "value": 80
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "1d3",
+        "fail": "1d10",
+        "trigger": "увидеть Тёмного молодого"
+      }
+    ]
+  },
+  "variants": [
+    {
+      "label": "Первая",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "220",
+            "value": 220
+          },
+          "CON": {
+            "raw": "85",
+            "value": 85
+          },
+          "SIZ": {
+            "raw": "220",
+            "value": 220
+          },
+          "DEX": {
+            "raw": "60",
+            "value": 60
+          },
+          "POW": {
+            "raw": "110",
+            "value": 110
+          }
+        },
+        "hp": {
+          "raw": "30",
+          "value": 30
+        },
+        "damage_bonus": {
+          "raw": "+4d6",
+          "value": "+4d6"
+        },
+        "build": {
+          "raw": "5",
+          "value": 5
+        },
+        "move": {
+          "raw": "8",
+          "value": 8,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 8
+            }
+          ]
+        },
+        "armor": {
+          "raw": "non-Earthly material and make-up, so that any successful hit with a firearm attack does only 1 point of damage per bullet (2 points for an impale). Hand-to-hand weapons do normal damage. Attacks dependent on heat, blast, corrosion, electrical charge or poisoning have no effect.",
+          "value": null,
+          "note": "неземное вещество: огнестрельное оружие — 1 пункт за пулю (2 при пронзании); ближний бой — обычный урон; жар, взрыв, едкие вещества, электричество и яд не действуют"
+        },
+        "attacks_per_round": {
+          "raw": "5. It may only use its Trample attack once per round.",
+          "value": 5,
+          "note": "растаптывание — раз в раунд"
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Захват",
+              "en": "Grab"
+            },
+            "kind": "maneuver",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "—",
+              "value": null,
+              "half": null,
+              "fifth": null
+            },
+            "damage": {
+              "raw": "1d10+5 STR drain per round",
+              "dice": null,
+              "adds_db": false
+            },
+            "notes": "боевой приём: схваченный и удерживаемый теряет 1d10+5 СИЛ за раунд"
+          },
+          {
+            "name": {
+              "ru": "Ближний бой",
+              "en": "Fighting"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "80% (40/16)",
+              "value": 80,
+              "half": 40,
+              "fifth": 16
+            },
+            "damage": {
+              "raw": "db",
+              "dice": null,
+              "adds_db": true
+            },
+            "notes": "урон — БкУ"
+          },
+          {
+            "name": {
+              "ru": "Растаптывание",
+              "en": "Trample"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "40% (20/8)",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            },
+            "damage": {
+              "raw": "2d6+db",
+              "dice": "2d6",
+              "adds_db": true
+            }
+          }
+        ],
+        "dodge": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "skills": [
+          {
+            "name": "Скрытность (бонусная кость в лесу)",
+            "skill": "coc:skill:stealth",
+            "value": {
+              "raw": "80%",
+              "value": 80
+            }
+          }
+        ],
+        "sanity_loss": [
+          {
+            "success": "1d3",
+            "fail": "1d10",
+            "trigger": "увидеть Тёмного молодого"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Вторая",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "230",
+            "value": 230
+          },
+          "CON": {
+            "raw": "90",
+            "value": 90
+          },
+          "SIZ": {
+            "raw": "210",
+            "value": 210
+          },
+          "DEX": {
+            "raw": "110",
+            "value": 110
+          },
+          "POW": {
+            "raw": "105",
+            "value": 105
+          }
+        },
+        "hp": {
+          "raw": "30",
+          "value": 30
+        },
+        "damage_bonus": {
+          "raw": "+4d6",
+          "value": "+4d6"
+        },
+        "build": {
+          "raw": "5",
+          "value": 5
+        },
+        "move": {
+          "raw": "8",
+          "value": 8,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 8
+            }
+          ]
+        },
+        "armor": {
+          "raw": "non-Earthly material and make-up, so that any successful hit with a firearm attack does only 1 point of damage per bullet (2 points for an impale). Hand-to-hand weapons do normal damage. Attacks dependent on heat, blast, corrosion, electrical charge or poisoning have no effect.",
+          "value": null,
+          "note": "неземное вещество: огнестрельное оружие — 1 пункт за пулю (2 при пронзании); ближний бой — обычный урон; жар, взрыв, едкие вещества, электричество и яд не действуют"
+        },
+        "attacks_per_round": {
+          "raw": "5. It may only use its Trample attack once per round.",
+          "value": 5,
+          "note": "растаптывание — раз в раунд"
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Захват",
+              "en": "Grab"
+            },
+            "kind": "maneuver",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "—",
+              "value": null,
+              "half": null,
+              "fifth": null
+            },
+            "damage": {
+              "raw": "1d10+5 STR drain per round",
+              "dice": null,
+              "adds_db": false
+            },
+            "notes": "боевой приём: схваченный и удерживаемый теряет 1d10+5 СИЛ за раунд"
+          },
+          {
+            "name": {
+              "ru": "Ближний бой",
+              "en": "Fighting"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "80% (40/16)",
+              "value": 80,
+              "half": 40,
+              "fifth": 16
+            },
+            "damage": {
+              "raw": "db",
+              "dice": null,
+              "adds_db": true
+            },
+            "notes": "урон — БкУ"
+          },
+          {
+            "name": {
+              "ru": "Растаптывание",
+              "en": "Trample"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "40% (20/8)",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            },
+            "damage": {
+              "raw": "2d6+db",
+              "dice": "2d6",
+              "adds_db": true
+            }
+          }
+        ],
+        "dodge": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "skills": [
+          {
+            "name": "Скрытность (бонусная кость в лесу)",
+            "skill": "coc:skill:stealth",
+            "value": {
+              "raw": "80%",
+              "value": 80
+            }
+          }
+        ],
+        "sanity_loss": [
+          {
+            "success": "1d3",
+            "fail": "1d10",
+            "trigger": "увидеть Тёмного молодого"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Третья",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "210",
+            "value": 210
+          },
+          "CON": {
+            "raw": "95",
+            "value": 95
+          },
+          "SIZ": {
+            "raw": "230",
+            "value": 230
+          },
+          "DEX": {
+            "raw": "95",
+            "value": 95
+          },
+          "POW": {
+            "raw": "135",
+            "value": 135
+          }
+        },
+        "hp": {
+          "raw": "32",
+          "value": 32
+        },
+        "damage_bonus": {
+          "raw": "+4d6",
+          "value": "+4d6"
+        },
+        "build": {
+          "raw": "5",
+          "value": 5
+        },
+        "move": {
+          "raw": "8",
+          "value": 8,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 8
+            }
+          ]
+        },
+        "armor": {
+          "raw": "non-Earthly material and make-up, so that any successful hit with a firearm attack does only 1 point of damage per bullet (2 points for an impale). Hand-to-hand weapons do normal damage. Attacks dependent on heat, blast, corrosion, electrical charge or poisoning have no effect.",
+          "value": null,
+          "note": "неземное вещество: огнестрельное оружие — 1 пункт за пулю (2 при пронзании); ближний бой — обычный урон; жар, взрыв, едкие вещества, электричество и яд не действуют"
+        },
+        "attacks_per_round": {
+          "raw": "5. It may only use its Trample attack once per round.",
+          "value": 5,
+          "note": "растаптывание — раз в раунд"
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Захват",
+              "en": "Grab"
+            },
+            "kind": "maneuver",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "—",
+              "value": null,
+              "half": null,
+              "fifth": null
+            },
+            "damage": {
+              "raw": "1d10+5 STR drain per round",
+              "dice": null,
+              "adds_db": false
+            },
+            "notes": "боевой приём: схваченный и удерживаемый теряет 1d10+5 СИЛ за раунд"
+          },
+          {
+            "name": {
+              "ru": "Ближний бой",
+              "en": "Fighting"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "80% (40/16)",
+              "value": 80,
+              "half": 40,
+              "fifth": 16
+            },
+            "damage": {
+              "raw": "db",
+              "dice": null,
+              "adds_db": true
+            },
+            "notes": "урон — БкУ"
+          },
+          {
+            "name": {
+              "ru": "Растаптывание",
+              "en": "Trample"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "40% (20/8)",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            },
+            "damage": {
+              "raw": "2d6+db",
+              "dice": "2d6",
+              "adds_db": true
+            }
+          }
+        ],
+        "dodge": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "skills": [
+          {
+            "name": "Скрытность (бонусная кость в лесу)",
+            "skill": "coc:skill:stealth",
+            "value": {
+              "raw": "80%",
+              "value": 80
+            }
+          }
+        ],
+        "sanity_loss": [
+          {
+            "success": "1d3",
+            "fail": "1d10",
+            "trigger": "увидеть Тёмного молодого"
+          }
+        ]
+      }
+    }
+  ],
+  "description": {
+    "ru": "Три Тёмных молодых, отродье Бродящего в лесу: шагающие деревья со ртами, зубами и извивающимися щупальцами.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Глава «Избушка в лесу» (1923). На пение Бабушки и Кчерки (Мифы Ктулху: в нём каденция и страшные слоги пастушьих кличей жутких людей Ленга) из лесной тени выходят три Тёмных молодых, чтобы скормить сыщиков своей матери. За опушку леса не преследуют. Звук костяной дудки-свистка на пике заставляет их вибрировать в такт: на 1d4 раунда они обезумевают и теряют устойчивость. Если Бабушка пытается их усмирить после свиста, один из них отшвыривает её в ствол старого дуба. При крахе проверки бегства из леса сыщики могут встретить разъярённого Тёмного молодого.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 240,
+      "printed_page": 238,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Dark Young of Shub-Niggurath»"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 224,
+      "printed_page": 222,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «The Bone Pipe-Whistle»"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 228,
+      "printed_page": 226,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Fresh Air»"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 229,
+      "printed_page": 227,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Outside the Cottage, After»"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 231,
+      "printed_page": 229,
+      "method": "book_text",
+      "verified": true,
+      "note": "крах, опушка"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по изображению страницы книги. Профиль сценария со своими числами — запись книги со связью instance_of (Р-75, Р-79); три варианта из таблицы. Шанс захвата в книге не напечатан. ПЗ 30 у первой: (ВЫН 85 + ТЕЛ 220) / 10 = 30,5 → 30."
+  }
+}

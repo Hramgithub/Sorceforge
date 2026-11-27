@@ -1,0 +1,492 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "hotoe-book-3-en/character/branko-jankovic",
+  "kind": "character",
+  "name": {
+    "ru": "Бранко Янкович",
+    "en": "Branko Jankovic"
+  },
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "охранник лаборатории Белензады, ветеран (немой хрипящий словенец без правого глаза)",
+    "en": "Loyal Veteran, Dr. Belenzada’s Guard"
+  },
+  "occupation_ref": "coc:occupation:soldat",
+  "age": {
+    "raw": "30",
+    "value": 30
+  },
+  "sex": "мужской",
+  "residence": "Винковци, лаборатория доктора Белензады",
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "hotoe-book-3-en/character/goran-belenzada",
+      "note": "хирург, спасший ему жизнь; хозяин лаборатории",
+      "note_back": "охранник лаборатории"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "25",
+        "value": 25
+      },
+      "SIZ": {
+        "raw": "70",
+        "value": 70
+      },
+      "POW": {
+        "raw": "75",
+        "value": 75
+      },
+      "DEX": {
+        "raw": "45",
+        "value": 45
+      }
+    },
+    "hp": {
+      "raw": "9",
+      "value": 9
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "luck": {
+      "raw": "—",
+      "value": null
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d4+db",
+          "dice": "1d4",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Дубинка",
+          "en": "Club"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d4+db",
+          "dice": "1d4",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:club-small",
+        "notes": "в книге урон дубинки 1d4+БкУ"
+      },
+      {
+        "name": {
+          "ru": "Револьвер .38",
+          "en": ".38 Revolver"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d10",
+          "dice": "1d10",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:38-revolver"
+      },
+      {
+        "name": {
+          "ru": "Карабин «Репетир» M95",
+          "en": "Repetier M95 carbine"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "2d6+4",
+          "dice": "2d6+4",
+          "adds_db": false
+        }
+      }
+    ],
+    "skills": [
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "35%",
+          "value": 35
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Иностранный язык (немецкий)",
+        "skill": "coc:skill:language-other",
+        "specialization": "Немецкий",
+        "value": {
+          "raw": "15%",
+          "value": 15
+        }
+      },
+      {
+        "name": "Родной язык (сербохорватский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "Сербохорватский",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      }
+    ]
+  },
+  "variants": [
+    {
+      "label": "После операции (с. 154, 164)",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "70",
+            "value": 70
+          },
+          "CON": {
+            "raw": "60",
+            "value": 60
+          },
+          "SIZ": {
+            "raw": "70",
+            "value": 70
+          },
+          "POW": {
+            "raw": "75",
+            "value": 75
+          },
+          "DEX": {
+            "raw": "45",
+            "value": 45
+          }
+        },
+        "hp": {
+          "raw": "13",
+          "value": 13
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "8",
+          "value": 8,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 8
+            }
+          ]
+        },
+        "luck": {
+          "raw": "—",
+          "value": null
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Ближний бой (драка)",
+              "en": "Brawl"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "60% (30/12)",
+              "value": 60,
+              "half": 30,
+              "fifth": 12
+            },
+            "damage": {
+              "raw": "1d4+db",
+              "dice": "1d4",
+              "adds_db": true
+            },
+            "weapon": "coc:weapon:unarmed"
+          },
+          {
+            "name": {
+              "ru": "Дубинка",
+              "en": "Club"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "60% (30/12)",
+              "value": 60,
+              "half": 30,
+              "fifth": 12
+            },
+            "damage": {
+              "raw": "1d4+db",
+              "dice": "1d4",
+              "adds_db": true
+            },
+            "weapon": "coc:weapon:club-small",
+            "notes": "в книге урон дубинки 1d4+БкУ"
+          },
+          {
+            "name": {
+              "ru": "Револьвер .38",
+              "en": ".38 Revolver"
+            },
+            "kind": "attack",
+            "skill": "Стрельба (пистолет)",
+            "chance": {
+              "raw": "50% (25/10)",
+              "value": 50,
+              "half": 25,
+              "fifth": 10
+            },
+            "damage": {
+              "raw": "1d10",
+              "dice": "1d10",
+              "adds_db": false
+            },
+            "weapon": "coc:weapon:38-revolver"
+          },
+          {
+            "name": {
+              "ru": "Карабин «Репетир» M95",
+              "en": "Repetier M95 carbine"
+            },
+            "kind": "attack",
+            "skill": "Стрельба (винтовка/дробовик)",
+            "chance": {
+              "raw": "50% (25/10)",
+              "value": 50,
+              "half": 25,
+              "fifth": 10
+            },
+            "damage": {
+              "raw": "2d6+4",
+              "dice": "2d6+4",
+              "adds_db": false
+            }
+          }
+        ],
+        "skills": [
+          {
+            "name": "Слух",
+            "skill": "coc:skill:listen",
+            "value": {
+              "raw": "50%",
+              "value": 50
+            }
+          },
+          {
+            "name": "Внимание",
+            "skill": "coc:skill:spot-hidden",
+            "value": {
+              "raw": "50%",
+              "value": 50
+            }
+          },
+          {
+            "name": "Скрытность",
+            "skill": "coc:skill:stealth",
+            "value": {
+              "raw": "35%",
+              "value": 35
+            }
+          },
+          {
+            "name": "Метание",
+            "skill": "coc:skill:throw",
+            "value": {
+              "raw": "45%",
+              "value": 45
+            }
+          },
+          {
+            "name": "Чтение следов",
+            "skill": "coc:skill:track",
+            "value": {
+              "raw": "45%",
+              "value": 45
+            }
+          },
+          {
+            "name": "Иностранный язык (немецкий)",
+            "skill": "coc:skill:language-other",
+            "specialization": "Немецкий",
+            "value": {
+              "raw": "15%",
+              "value": 15
+            }
+          },
+          {
+            "name": "Родной язык (сербохорватский)",
+            "skill": "coc:skill:language-own",
+            "specialization": "Сербохорватский",
+            "value": {
+              "raw": "60%",
+              "value": 60
+            }
+          }
+        ],
+        "sanity_loss": [
+          {
+            "success": "1",
+            "fail": "1d4",
+            "trigger": "при виде пришитых конечностей шимпанзе (после операции)"
+          }
+        ]
+      }
+    }
+  ],
+  "description": {
+    "ru": "Немой хрипящий словенец без правого глаза (раны от шрапнели и почти смертельная испанка). После операции у него снова два глаза — левый от того же шимпанзе — и новые лёгкие.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Глава «Хлеб и камень». Один из трёх увечных ветеранов, которые живут в лаборатории доктора Белензады, охраняют её и следят за хозяйством; каждый обязан доктору жизнью — он первым лечил их раны на поле боя. Никого не пускают бродить по лаборатории без личного разрешения доктора, гостей не оставляют без присмотра; все вооружены и, несмотря на увечья, метко стреляют из пистолета. Обычно один на посту в караулке, другой обходит территорию, третий спит. После визита сыщиков доктор «восстанавливает» их тела органами и конечностями шимпанзе, и они ещё преданнее ему.",
+    "en": null
+  },
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 166,
+      "printed_page": 164,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Statistics»: охранники, чудовиште"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 145,
+      "printed_page": 143,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Veterans»"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 146,
+      "printed_page": 144,
+      "method": "book_text",
+      "verified": true,
+      "note": "имена и увечья"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 156,
+      "printed_page": 154,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Restored Guards»"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 158,
+      "printed_page": 156,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Guard House»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Наш перевод (Р-251). Профиль «Dr. Belenzada’s Guards» — таблица на троих; основной статблок — до операции, вариант — после (значения со звёздочкой). ИНТ, НАР, ОБР, Рассудок не напечатаны. Карабина «Repetier M95» в таблице оружия «Книги хранителя» нет. Совпадение фамилии с Карелом и Нежей Жупан (Волки Винковци) — в книге связи нет."
+  }
+}

@@ -1,0 +1,599 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "hotoe-book-3-en/character/sedefkar",
+  "kind": "character",
+  "name": {
+    "ru": "Седефкар",
+    "en": "Sedefkar"
+  },
+  "aliases": [
+    "Тёмный крестоносец",
+    "The Dark Crusader",
+    "Седефкар, нестареющий колдун"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "нестареющий колдун, владелец симулякра",
+    "en": "Ageless sorcerer and owner of the simulacrum"
+  },
+  "sex": "мужской",
+  "relations": [
+    {
+      "type": "servitor_of",
+      "target": "coc:creature:skinless-one",
+      "note": "божество, которому он предан",
+      "note_back": "преданный слуга, мечтающий стать аватаром"
+    },
+    {
+      "type": "rival_of",
+      "target": "coc:character:fenalik",
+      "note": "охотится за его симулякром",
+      "note_back": "владелец симулякра, за которым охотится"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "50",
+        "value": 50
+      },
+      "CON": {
+        "raw": "65",
+        "value": 65
+      },
+      "SIZ": {
+        "raw": "55",
+        "value": 55
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "APP": {
+        "raw": "35*",
+        "value": 35
+      },
+      "INT": {
+        "raw": "90",
+        "value": 90
+      },
+      "POW": {
+        "raw": "125",
+        "value": 125
+      },
+      "EDU": {
+        "raw": "92",
+        "value": 92
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "25 plus 25 stored in the Mims Sahis",
+      "value": 25,
+      "note": "и ещё 25 ПМ хранятся в Мимс Сахисе"
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": "0"
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "armor": {
+      "raw": "If Sedefkar wears the simulacrum he is immune to the first 10 points of damage from any kinetic attack.",
+      "value": 10,
+      "note": "в симулякре — неуязвим к первым 10 пунктам урона любой кинетической атаки; кольчуга в облике рыцаря — магическая иллюзия"
+    },
+    "sanity": {
+      "raw": "0",
+      "value": 0,
+      "max": null
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Мимс Сахис",
+          "en": "Mims Sahis"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "87% (43/17)",
+          "value": 87,
+          "half": 43,
+          "fifth": 17
+        },
+        "damage": {
+          "raw": "2d4",
+          "dice": "2d4",
+          "adds_db": true
+        },
+        "notes": "игнорирует броню; «Кричащий порез»; действует как малый нож, урон 2d4+БкУ"
+      },
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "87% (43/17)",
+          "value": 87,
+          "half": 43,
+          "fifth": 17
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Франкский меч",
+          "en": "Frankish Sword"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (меч)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d8+1",
+          "dice": "1d8+1",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:sword-long"
+      },
+      {
+        "name": {
+          "ru": "Арбалет",
+          "en": "Crossbow"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (лук)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "2d6",
+          "dice": "2d6",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:crossbow"
+      }
+    ],
+    "dodge": {
+      "raw": "60% (30/12)",
+      "value": 60,
+      "half": 30,
+      "fifth": 12
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "50%",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        }
+      },
+      {
+        "name": "Мифы Ктулху",
+        "skill": "coc:skill:cthulhu-mythos",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Маскировка",
+        "skill": "coc:skill:disguise",
+        "value": {
+          "raw": "99%",
+          "value": 99,
+          "half": 49,
+          "fifth": 19
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "История",
+        "skill": "coc:skill:history",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Работа в библиотеке",
+        "skill": "coc:skill:library-use",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Лингвист",
+        "value": {
+          "raw": "20%",
+          "value": 20,
+          "half": 10,
+          "fifth": 4
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Оккультизм",
+        "skill": "coc:skill:occult",
+        "value": {
+          "raw": "35%",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Карманная кража",
+        "value": {
+          "raw": "25%",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        }
+      },
+      {
+        "name": "Наука (фармакология)",
+        "skill": "coc:skill:science",
+        "specialization": "Фармакология",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Свежевание людей",
+        "value": {
+          "raw": "90%",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "85%",
+          "value": 85,
+          "half": 42,
+          "fifth": 17
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "80%",
+          "value": 80,
+          "half": 40,
+          "fifth": 16
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Чтение следов",
+        "skill": "coc:skill:track",
+        "value": {
+          "raw": "40%",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        }
+      },
+      {
+        "name": "Лечение ядов",
+        "value": {
+          "raw": "30%",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        }
+      },
+      {
+        "name": "Родной язык (арабский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "Арабский",
+        "value": {
+          "raw": "90%",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        }
+      },
+      {
+        "name": "Иностранный язык (английский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "Английский",
+        "value": {
+          "raw": "60%",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        }
+      },
+      {
+        "name": "Иностранный язык (франкский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "Франкский",
+        "value": {
+          "raw": "45%",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        }
+      },
+      {
+        "name": "Иностранный язык (греческий)",
+        "skill": "coc:skill:language-other",
+        "specialization": "Греческий",
+        "value": {
+          "raw": "70%",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        }
+      },
+      {
+        "name": "Иностранный язык (турецкий)",
+        "skill": "coc:skill:language-other",
+        "specialization": "Турецкий",
+        "value": {
+          "raw": "90%",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Burden of The Skinless One**, Call Skinless One*, Contact Skinless One*, Control Skin*, Create Skin Devil**, Melt Flesh*, Skin of The Skinless One**, Summon/Bind Dimensional Shambler, Summon/Bind Fire Vampire, Transfer Body Part*, Turn To Skin.* (* new spell detailed in Constantinople chapter of the 1923 campaign; **new spell detailed below)",
+      "items": [
+        {
+          "name": "Burden of The Skinless One",
+          "spell": "coc:spell:burden-of-the-skinless-one"
+        },
+        {
+          "name": "Call Skinless One",
+          "spell": "coc:spell:call-the-skinless-one"
+        },
+        {
+          "name": "Contact Skinless One"
+        },
+        {
+          "name": "Control Skin",
+          "spell": "coc:spell:control-skin"
+        },
+        {
+          "name": "Create Skin Devil",
+          "spell": "coc:spell:create-skin-devil"
+        },
+        {
+          "name": "Melt Flesh",
+          "spell": "coc:spell:melt-flesh"
+        },
+        {
+          "name": "Skin of The Skinless One",
+          "spell": "coc:spell:skin-of-the-skinless-one"
+        },
+        {
+          "name": "Summon/Bind Dimensional Shambler",
+          "spell": "coc:spell:summon-bind-dimensional-shambler"
+        },
+        {
+          "name": "Summon/Bind Fire Vampire",
+          "spell": "coc:spell:summon-bind-fire-vampire"
+        },
+        {
+          "name": "Transfer Body Part",
+          "spell": "coc:spell:transfer-body-part"
+        },
+        {
+          "name": "Turn To Skin"
+        }
+      ]
+    }
+  },
+  "abilities": [
+    {
+      "name": "Мимс Сахис",
+      "raw": "The Mims Sahis’ unnaturally sharp edge ignores armor. It performs as a small knife but does 2d4+db damage. 50% of the damage caused by this weapon cannot be healed by natural means, becoming a permanent injury carried until the victim’s death, unless healed by arcane means including holy ritual.",
+      "refs": [
+        "hotoe-book-1-en/item/campaign-mims-sahis"
+      ],
+      "summary": "Неестественно острое лезвие игнорирует броню; нож действует как малый нож, но наносит 2d4+БкУ. Половина нанесённого им урона не лечится естественным путём и становится постоянной раной до смерти жертвы, если её не исцелить тайными средствами, в том числе святым обрядом. В ноже хранятся ещё 25 ПМ Седефкара. Подробнее о ноже — сценарий «Хлеб и камень» (Винковци)."
+    },
+    {
+      "name": "Кричащий порез",
+      "raw": "Victims suffering as little as one hit point of damage from the cursed knife must make a Hard CON roll or fall to the ground paralyzed in shrieking pain. Victims can try each round to shrug off the pain. One successful roll will make them immune for the rest of the combat.",
+      "summary": "За десятилетия Седефкар отточил владение Мимс Сахисом. Жертва, получившая от проклятого ножа хотя бы 1 ПЗ урона, проходит трудную проверку ВЫН или падает, парализованная воющей болью. Каждый раунд можно пытаться стряхнуть боль; одна успешная проверка даёт неуязвимость к этому эффекту до конца боя."
+    },
+    {
+      "name": "Симулякр",
+      "raw": "If Sedefkar wears the simulacrum he is immune to the first 10 points of damage from any kinetic attack. Though he appears to wear chain mail in his knightly disguise, this is an illusion of magic.",
+      "summary": "В симулякре Седефкар неуязвим к первым 10 пунктам урона любой кинетической атаки; кольчуга, которую видят на нём в облике рыцаря, — магическая иллюзия. В облике Тёмного крестоносца НАР 60. Он владеет симулякром грубее, чем позже Братья кожи: успешная проверка Внимания в свете алтаря показывает стык — успешное попадание трудного уровня сбивает пластину брони, последующее обычное попадание в то же место выбивает часть симулякра (таблица «Попадание по частям тела», 1d6).",
+      "refs": [
+        "coc:item:sedefkar-simulacrum"
+      ]
+    }
+  ],
+  "description": {
+    "ru": "Нестареющий колдун, сельджукский турок, открыватель симулякра. Тайно живёт в городе десятилетиями (в Красной башне — примерно с 1201 года) и предан Бескожему. Ко времени сценария безумен: отверг всякое общество людей как пустое, полагается только на кожаных дьяволов, Мимс Сахис и симулякр и верит, что Бескожий сам придёт ему на помощь в крайности. Тщеславен и жесток. Носит симулякр и кожу рыцаря Бонифация сэра Готмариса; выдают его восточные, а не европейские манеры. Предпочитает Мимс Сахис; меч — только в облике Готмариса.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Запертый в городе, когда крестоносцы высадились и осадили его, Седефкар обратил медленную гибель Константинополя себе на пользу. Обрядом «Бремя Бескожего» он навлёк на город влияние Бескожего, которое разжигает бесчинства и резню; надевая симулякр и кожу сэра Готмариса, заманивает франкских и венецианских жертв и убивает их ритуальным ножом Мимс Сахис. Его обряд должен завершиться утром четвёртого дня грабежа: Бескожий, напившись боли и страдания, придёт опустошить остатки города и наградит Седефкара, сделав его своим аватаром. Для этого каждый закат и рассвет нужна жертва, а на верхнем этаже башни поддерживается алтарь. Через связь с Бескожим он знает о стычках культа и сыщиков, а ритуал «Обнаружение Бескожего» выдаёт их ему; одного из сыщиков он решил сделать следующей жертвой. План в три шага: натравить на сыщиков латников Готмариса, наслать кожаных дьяволов, если те войдут в башню, и добить уцелевших на последнем этаже. Умирая, произносит: «Проклятие этому вонючему походу!» — и его тело оседает гнилыми внутренностями в мешке кожи. Позднее «Дьявольское подобие» называет его «развращённым турком Седефкаром»; его свитки и симулякр уходят к Феналику, нож — в Зару и Винковци. Если сыщики проиграют, попытка стать аватаром проваливается, а одуревшего Седефкара убивают обезумевшие венецианцы.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 76,
+      "printed_page": 74,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Sedefkar, Ageless sorcerer and owner of the simulacrum»; раздел «Statistics», с. 72–80"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 77,
+      "printed_page": 75,
+      "method": "book_text",
+      "verified": true,
+      "note": "заклинания (окончание)"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 51,
+      "printed_page": 49,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Keeper's Background»"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 65,
+      "printed_page": 63,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «Sedefkar's Plan»"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 69,
+      "printed_page": 67,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Sir Gautmaris», «The Simulare»"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 71,
+      "printed_page": 69,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Fight with Sedefkar»"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 72,
+      "printed_page": 70,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Sedefkar Defeated»"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 68,
+      "printed_page": 66,
+      "method": "book_text",
+      "verified": true,
+      "note": "врезка «What if the investigators fail?»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Статблок 1204 года (Р-254: персонаж заводится по первому статблоку — Book III, с. 74). «Contact Skinless One» и «Turn To Skin» описаны в главе Константинополя (Book IV, с. 64; часть constantinople) — ссылки на заклинания поставит сведение. Навыки «Skin Human», «Linguist», «Pick Pocket», «Treat Poison» — без записей справочника. НАР «35*» — 60 в облике Тёмного крестоносца."
+  },
+  "axes": {
+    "era": [
+      "dark-ages"
+    ],
+    "ruleset": "core"
+  }
+}

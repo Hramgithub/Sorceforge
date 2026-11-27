@@ -1,0 +1,501 @@
+{
+  "schema": "sourcefold.proposals.v0",
+  "by": "часть sofia (Horror on the Orient Express, кн. IV, «Изъятие»)",
+  "proposals": [
+    {
+      "target": "coc:character:fenalik",
+      "op": "append",
+      "path": "variants",
+      "value": {
+        "label": "1923 год («Изъятие», кн. IV «Ужаса в Восточном экспрессе», с. 35)",
+        "statblock": {
+          "averages": false,
+          "characteristics": {
+            "STR": {
+              "raw": "160",
+              "value": 160
+            },
+            "CON": {
+              "raw": "70",
+              "value": 70
+            },
+            "SIZ": {
+              "raw": "95",
+              "value": 95
+            },
+            "DEX": {
+              "raw": "80",
+              "value": 80
+            },
+            "APP": {
+              "raw": "15",
+              "value": 15
+            },
+            "INT": {
+              "raw": "85",
+              "value": 85
+            },
+            "POW": {
+              "raw": "70",
+              "value": 70
+            },
+            "EDU": {
+              "raw": "99",
+              "value": 99
+            }
+          },
+          "hp": {
+            "raw": "17+",
+            "value": 17,
+            "note": "+ восстанавливает 1 ПЗ за раунд, но совсем не регенерирует под прямыми лучами солнца"
+          },
+          "damage_bonus": {
+            "raw": "+2d6",
+            "value": "+2d6"
+          },
+          "build": {
+            "raw": "3",
+            "value": 3
+          },
+          "move": {
+            "raw": "10",
+            "value": 10,
+            "modes": [
+              {
+                "mode": "walk",
+                "value": 10
+              }
+            ]
+          },
+          "armor": {
+            "raw": "0, but can reform after hit points are exceeded.",
+            "value": 0,
+            "note": "брони нет, но восстанавливается, когда ПЗ исчерпаны"
+          },
+          "sanity": {
+            "raw": "0",
+            "value": 0
+          },
+          "attacks_per_round": {
+            "raw": "1",
+            "value": 1,
+            "note": "человек — 1 (когти, укус или взгляд); тигр или волк — когти и укус одновременно; летучая мышь — только укус; туман — только взгляд; рядом с чесноком все навыки и атаки — трудные"
+          },
+          "attacks": [
+            {
+              "name": {
+                "ru": "Ближний бой (Укус)",
+                "en": "Bite"
+              },
+              "kind": "attack",
+              "skill": "Ближний бой",
+              "chance": {
+                "raw": "80% (40/16)",
+                "value": 80,
+                "half": 40,
+                "fifth": 16
+              },
+              "damage": {
+                "raw": "1d4 + см. примеч.",
+                "dice": "1d4",
+                "adds_db": false
+              },
+              "notes": "если укус наносит урон, удерживая жертву, Феналик подавляет всякое сопротивление и высасывает 2d10 СИЛ (крови) каждый следующий раунд"
+            },
+            {
+              "name": {
+                "ru": "Ближний бой (Когти)",
+                "en": "Claw"
+              },
+              "kind": "attack",
+              "skill": "Ближний бой",
+              "chance": {
+                "raw": "80% (40/16)",
+                "value": 80,
+                "half": 40,
+                "fifth": 16
+              },
+              "damage": {
+                "raw": "1d4+2d6",
+                "dice": "1d4",
+                "adds_db": true
+              },
+              "notes": "при встречной проверке магических пунктов касание высасывает 1d3 ПМ и передаёт их вампиру; каждый следующий успех — ещё 1d3; полученные ПМ исчезают на рассвете"
+            },
+            {
+              "name": {
+                "ru": "Взгляд",
+                "en": "Gaze"
+              },
+              "kind": "special",
+              "skill": null,
+              "chance": {
+                "raw": "Opposed POW roll",
+                "value": null
+              },
+              "notes": "встречная проверка МОЩ: цель загипнотизирована и выполняет простые указания; если они самоубийственны, в начале каждого раунда цель может пройти проверку ИНТ, чтобы очнуться"
+            }
+          ],
+          "dodge": {
+            "raw": "70% (35/14)",
+            "value": 70,
+            "half": 35,
+            "fifth": 14
+          },
+          "skills": [
+            {
+              "name": "Лазание",
+              "skill": "coc:skill:climb",
+              "value": {
+                "raw": "95%",
+                "value": 95
+              }
+            },
+            {
+              "name": "Красноречие",
+              "skill": "coc:skill:fast-talk",
+              "value": {
+                "raw": "95%",
+                "value": 95
+              }
+            },
+            {
+              "name": "История",
+              "skill": "coc:skill:history",
+              "value": {
+                "raw": "70%",
+                "value": 70
+              }
+            },
+            {
+              "name": "Прыжки",
+              "skill": "coc:skill:jump",
+              "value": {
+                "raw": "70%",
+                "value": 70
+              }
+            },
+            {
+              "name": "Слух",
+              "skill": "coc:skill:listen",
+              "value": {
+                "raw": "85%",
+                "value": 85
+              }
+            },
+            {
+              "name": "Оккультизм",
+              "skill": "coc:skill:occult",
+              "value": {
+                "raw": "35%",
+                "value": 35
+              }
+            },
+            {
+              "name": "Убеждение",
+              "skill": "coc:skill:persuade",
+              "value": {
+                "raw": "75%",
+                "value": 75
+              }
+            },
+            {
+              "name": "Чутьё (Scent)",
+              "value": {
+                "raw": "83%",
+                "value": 83
+              }
+            },
+            {
+              "name": "Внимание",
+              "skill": "coc:skill:spot-hidden",
+              "value": {
+                "raw": "70%",
+                "value": 70
+              }
+            },
+            {
+              "name": "Скрытность",
+              "skill": "coc:skill:stealth",
+              "value": {
+                "raw": "80%",
+                "value": 80
+              }
+            },
+            {
+              "name": "Чтение следов",
+              "skill": "coc:skill:track",
+              "value": {
+                "raw": "60%",
+                "value": 60
+              }
+            },
+            {
+              "name": "Иностранный язык (английский)",
+              "skill": "coc:skill:language-other",
+              "specialization": "Английский",
+              "value": {
+                "raw": "35%",
+                "value": 35
+              }
+            },
+            {
+              "name": "Иностранный язык (французский)",
+              "skill": "coc:skill:language-other",
+              "specialization": "Французский",
+              "value": {
+                "raw": "80%",
+                "value": 80
+              }
+            },
+            {
+              "name": "Иностранный язык (итальянский)",
+              "skill": "coc:skill:language-other",
+              "specialization": "Итальянский",
+              "value": {
+                "raw": "60%",
+                "value": 60
+              }
+            },
+            {
+              "name": "Родной язык (латынь)",
+              "skill": "coc:skill:language-own",
+              "specialization": "Латынь",
+              "value": {
+                "raw": "85%",
+                "value": 85
+              }
+            },
+            {
+              "name": "Иностранный язык (русский)",
+              "skill": "coc:skill:language-other",
+              "specialization": "Русский",
+              "value": {
+                "raw": "65%",
+                "value": 65
+              }
+            },
+            {
+              "name": "Иностранный язык (турецкий)",
+              "skill": "coc:skill:language-other",
+              "specialization": "Турецкий",
+              "value": {
+                "raw": "75%",
+                "value": 75
+              }
+            }
+          ],
+          "sanity_loss": [
+            {
+              "success": "1",
+              "fail": "1d8",
+              "trigger": "при виде Феналика"
+            },
+            {
+              "success": "1",
+              "fail": "1d6",
+              "trigger": "первое наблюдение смены облика"
+            }
+          ]
+        }
+      },
+      "reason": "Статблок 1923 года (Horror on the Orient Express, кн. IV, с. 35: «Fenalik, Semi-Immortal Vampire, Previous Owner of the Sedefkar Simulacrum») — вариант записи (Р-125); основной статблок остаётся по «Царству Террора»",
+      "ref": "Р-254"
+    },
+    {
+      "target": "coc:character:fenalik",
+      "op": "replace",
+      "path": "legend.ru",
+      "old": " «Повторное владение»). Статблоки 330 года (человек и византийский вампир) — в записи «Тиллий Корв».",
+      "new": " «Повторное владение»). Статблоки 330 года (человек и византийский вампир) — в записи «Тиллий Корв».\nВ 1923 году («Ужас в Восточном экспрессе», кн. IV, «Изъятие», с. 7, 34–35). Некогда римский трибун Тиллий Корв, почти девятьсот лет вампир таился на окраинах человеческого общества, охотясь и будучи добычей; обретя Симулякр Седефкара в 1204 году, вернулся в общество, но в конце концов вкусы выдали его, и последние полтораста лет он провёл взаперти в Шарантонской лечебнице. Теперь он — искажённая насмешка над человеком: одичавший истощённый ужас с пергаментной кожей в сети шрамов и узловатых вен, непристойно длинными руками с бритвенными когтями; челюсти выдаются вперёд, как морда, тонкие губы не скрывают безумного нагромождения клыков, нос давно сгнил, оставив вонючую яму, глаза выпучены и горят злом его лет. Он не может выходить днём: прямой солнечный свет стоит ему 1d3 ПЗ за раунд; плотно закутавшись, особенно в туман или бурю, он может ненадолго выходить чуть до заката и после восхода; в симулякре мог бы ходить и днём. Древний знак хи-ро может заставить его помедлить (память о службе при Константине), распятие для него мало что значит; никакие моральные или общественные призывы на него не действуют. Любимые облики — летучая мышь, туман, тигр, волк. Близость чеснока делает все его навыки и атаки трудными. Он следует за сыщиками до Софии, вырезает болгарских Братьев кожи в их пещерном храме, обращает часть убитых в протовампиров и в последнюю ночь пути к Константинополю нападает на сыщиков за собранным симулякром (статблок 1923 года — вариант записи). Убитый постоянным уроном, он взрывается зловонным пеплом.",
+      "reason": "Новые факты книги IV «Ужаса в Восточном экспрессе» (с. 7, 34–35) — абзацем (Р-125)",
+      "ref": "Р-254"
+    },
+    {
+      "target": "coc:character:fenalik",
+      "op": "append",
+      "path": "sources",
+      "correction": false,
+      "value": {
+        "book_id": "hotoe-book-4-en",
+        "physical_page": 36,
+        "printed_page": 34,
+        "method": "book_text",
+        "verified": true,
+        "note": "«Ужас в Восточном экспрессе», «Изъятие»: «Fenalik the Vampire» (история, внешность)"
+      },
+      "reason": "источник варианта 1923 года",
+      "ref": "Р-254"
+    },
+    {
+      "target": "coc:character:fenalik",
+      "op": "append",
+      "path": "sources",
+      "correction": false,
+      "value": {
+        "book_id": "hotoe-book-4-en",
+        "physical_page": 37,
+        "printed_page": 35,
+        "method": "book_text",
+        "verified": true,
+        "note": "«Ужас в Восточном экспрессе», «Изъятие»: «Notes», статблок 1923 года"
+      },
+      "reason": "источник варианта 1923 года",
+      "ref": "Р-254"
+    },
+    {
+      "target": "coc:character:fenalik",
+      "op": "append",
+      "path": "errata",
+      "value": {
+        "field": "variants[1923].statblock.attacks[Ближний бой (Укус)].notes",
+        "printed": "maintaining the Bile",
+        "expected": "maintaining the Bite",
+        "note": "опечатка в сноске к укусу (кн. IV, с. 35)",
+        "fixed": true
+      },
+      "reason": "опечатка книги IV (с. 35)",
+      "ref": "Р-35"
+    },
+    {
+      "target": "coc:character:fenalik",
+      "op": "append",
+      "path": "errata",
+      "value": {
+        "field": "variants[1923].statblock.attacks",
+        "printed": "proximity to the herb halves all of the vampire's skills (p. 29)",
+        "expected": "Proximity to garlic reduces all of his skills and attacks to Hard difficulty (p. 35)",
+        "note": "кн. IV: текст главы (с. 29) и заметки к статблоку (с. 35) по-разному описывают действие чеснока; в варианте — по заметкам статблока",
+        "fixed": false
+      },
+      "reason": "противоречие внутри книги IV",
+      "ref": "Р-32"
+    },
+    {
+      "target": "coc:character:fenalik",
+      "op": "append",
+      "path": "quality.flags",
+      "correction": false,
+      "value": "parse_uncertain",
+      "reason": "у записи появляются errata (Р-141)",
+      "ref": "Р-141"
+    },
+    {
+      "target": "coc:character:fenalik",
+      "op": "append",
+      "path": "images",
+      "correction": false,
+      "value": {
+        "file": "art/characters/hotoe-sofia-fenalik-1923.webp",
+        "kind": "portrait",
+        "caption": "Феналик в 1923 году",
+        "source": "Horror on the Orient Express, кн. IV «Constantinople & Consequences» (англ., 7e), с. 35 (физ. 37), статблок «Fenalik the Vampire»"
+      },
+      "reason": "другой облик Феналика (1923 год); копия сделана pipeline/art/add_images.py (art-sofia.json)",
+      "ref": "Р-165"
+    },
+    {
+      "target": "hotoe-book-1-en/item/campaign-simulacrum-head",
+      "op": "set",
+      "path": "found_at",
+      "value": [
+        {
+          "location": "hotoe-book-4-en/location/sofia-place-of-the-head",
+          "note": "тайник под чесноком в пещере у реки Искыр («Изъятие», кн. IV, с. 24)"
+        },
+        {
+          "location": "hotoe-book-4-en/location/sofia-university-storage-room",
+          "note": "до похищения — у профессора-академика Чеденко (кн. IV, с. 18)"
+        }
+      ],
+      "reason": "Точное место головы в главе «Изъятие» (кн. IV, с. 18, 24) вместо города",
+      "ref": "Р-254"
+    },
+    {
+      "target": "hotoe-book-1-en/item/campaign-simulacrum-head",
+      "op": "append",
+      "path": "refs",
+      "correction": false,
+      "value": "hotoe-book-4-en/scene/sofia-the-cave",
+      "reason": "сцена, где голову находят",
+      "ref": "Р-254"
+    },
+    {
+      "target": "hotoe-book-1-en/item/campaign-simulacrum-head",
+      "op": "append",
+      "path": "sources",
+      "correction": false,
+      "value": {
+        "book_id": "hotoe-book-4-en",
+        "physical_page": 26,
+        "printed_page": 24,
+        "method": "book_text",
+        "verified": true,
+        "note": "«Изъятие»: «The Hiding Place» — где лежит голова"
+      },
+      "reason": "источник места",
+      "ref": "Р-254"
+    },
+    {
+      "target": "tsarstvo-terrora-ru/creature/proto-vampire",
+      "op": "append",
+      "path": "sources",
+      "correction": false,
+      "value": {
+        "book_id": "hotoe-book-4-en",
+        "physical_page": 36,
+        "printed_page": 34,
+        "method": "book_text",
+        "verified": true,
+        "note": "«Ужас в Восточном экспрессе», «Изъятие»: «Proto-Vampires, The Children of Fenalik» — тот же профиль"
+      },
+      "reason": "Профиль книги IV (с. 34) совпадает с этим (Р-75, Р-79); кандидат в общую запись (Р-154)",
+      "ref": "Р-154"
+    },
+    {
+      "target": "tsarstvo-terrora-ru/creature/proto-vampire",
+      "op": "append",
+      "path": "aliases",
+      "correction": false,
+      "value": "Children of Fenalik",
+      "reason": "название книги IV (с. 34)",
+      "ref": "Р-96"
+    },
+    {
+      "target": "coc:organization:brothers-of-the-skin",
+      "op": "append",
+      "path": "refs",
+      "correction": false,
+      "value": "hotoe-book-4-en/organization/sofia-butchers",
+      "reason": "болгарская ячейка Братьев кожи («Изъятие», кн. IV, с. 15)",
+      "ref": "Р-254"
+    },
+    {
+      "target": "hotoe-book-1-en/item/campaign-mims-sahis",
+      "op": "append",
+      "path": "refs",
+      "correction": false,
+      "value": "hotoe-book-4-en/rule/sofia-special-weapons",
+      "reason": "действие ножа на Феналика (кн. IV, с. 29)",
+      "ref": "Р-254"
+    },
+    {
+      "target": "hotoe-book-2-en/item/dream-lovers-heart",
+      "op": "append",
+      "path": "refs",
+      "correction": false,
+      "value": "hotoe-book-4-en/rule/sofia-special-weapons",
+      "reason": "действие Сердца на Феналика (кн. IV, с. 29)",
+      "ref": "Р-254"
+    },
+    {
+      "target": "hotoe-book-1-en/location/express-fourgon",
+      "op": "append",
+      "path": "refs",
+      "correction": false,
+      "value": "hotoe-book-4-en/item/sofia-fenaliks-coffin",
+      "reason": "гроб Феналика в заднем фургоне («Изъятие», кн. IV, с. 30)",
+      "ref": "Р-254"
+    }
+  ]
+}

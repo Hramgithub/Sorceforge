@@ -1,0 +1,209 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "hotoe-book-5-en/character/matilda-simpson",
+  "kind": "character",
+  "name": {
+    "ru": "Матильда Симпсон",
+    "en": "Matilda Simpson"
+  },
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "горничная-матрона",
+    "en": "Matronly Maid"
+  },
+  "occupation_ref": "coc:occupation:prisluga",
+  "sex": "женский",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "hotoe-book-5-en/character/daisy-cannon",
+      "note": "хозяйка; о ней докладывает её матери",
+      "note_back": "горничная (докладывает её матери)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "55",
+        "value": 55
+      },
+      "CON": {
+        "raw": "50",
+        "value": 50
+      },
+      "SIZ": {
+        "raw": "45",
+        "value": 45
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "APP": {
+        "raw": "65",
+        "value": 65
+      },
+      "INT": {
+        "raw": "70",
+        "value": 70
+      },
+      "POW": {
+        "raw": "40",
+        "value": 40
+      },
+      "EDU": {
+        "raw": "80",
+        "value": 80
+      }
+    },
+    "hp": {
+      "raw": "9",
+      "value": 9
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "sanity": {
+      "raw": "35",
+      "value": 35
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "62% (31/12)",
+          "value": 62,
+          "half": 31,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Пощёчина",
+          "en": "Slap"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "62% (31/12)",
+          "value": 62,
+          "half": 31,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d3-2",
+          "dice": "1d3-2",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Распекать",
+        "value": {
+          "raw": "76%",
+          "value": 76
+        }
+      },
+      {
+        "name": "Докладывать матери Дейзи",
+        "value": {
+          "raw": "83%",
+          "value": 83
+        }
+      },
+      {
+        "name": "Следовать за Дейзи",
+        "value": {
+          "raw": "32%",
+          "value": 32
+        }
+      },
+      {
+        "name": "Родной язык (английский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "Английский",
+        "value": {
+          "raw": "80%",
+          "value": 80
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Горничная Дейзи Кэннон, дама солидная: умеет распечь, раздаёт пощёчины и усердно докладывает обо всём матери Дейзи, хотя угнаться за хозяйкой ей удаётся не всегда.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Свита Дейзи Кэннон (с. 42). Книга не даёт о ней ничего, кроме статблока; описание — по названиям навыков.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "hotoe-book-5-en",
+      "physical_page": 44,
+      "printed_page": 42,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Entourage» Дейзи Кэннон"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.move",
+      "printed": "8",
+      "expected": "9",
+      "note": "СИЛ 55 и ЛВК 60 больше ТЕЛ 45 — Скорость 9; возраст в книге не указан, 8 возможна с поправкой за возраст 40–49 лет («матрона»). Оставлено как напечатано (Р-161).",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2). Пассажир из «Strangers on the Train» (книга V): по книге (с. 5) — не обязателен для сценариев, нужен для побочных линий Хранителя или как замена погибшему или обезумевшему сыщику. Шуточные навыки книги без механики оставлены текстом без ссылок (Р-126). Описание выведено из названий навыков статблока (Р-41). Возраст в книге не указан."
+  }
+}

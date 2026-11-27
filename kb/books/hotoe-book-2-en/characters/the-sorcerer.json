@@ -1,0 +1,280 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "hotoe-book-2-en/character/the-sorcerer",
+  "kind": "character",
+  "name": {
+    "ru": "Дон Эстебан де Альмагро",
+    "en": null
+  },
+  "aliases": [
+    "Колдун",
+    "The Sorcerer"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "колдун, жуткая нежить",
+    "en": "Eldritch Undead Horror"
+  },
+  "sex": "мужской",
+  "residence": "Страна грёз (веками преследует Старуху); родом из испанской легенды",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "100",
+        "value": 100
+      },
+      "CON": {
+        "raw": "100",
+        "value": 100
+      },
+      "SIZ": {
+        "raw": "100",
+        "value": 100
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50
+      },
+      "INT": {
+        "raw": "25",
+        "value": 25
+      },
+      "POW": {
+        "raw": "90",
+        "value": 90
+      }
+    },
+    "hp": {
+      "raw": "20",
+      "value": 20
+    },
+    "mp": {
+      "raw": "90",
+      "value": 90
+    },
+    "damage_bonus": {
+      "raw": "+1d6",
+      "value": "+1d6"
+    },
+    "armor": {
+      "raw": "любое оружие наносит минимальный урон; при 0 ПЗ его разрывает на части, но он жив; по-настоящему убить его можно, только спалив дотла или Сердцем влюблённых",
+      "value": 0
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Гипноз",
+          "en": "Hypnotize"
+        },
+        "kind": "special",
+        "skill": null,
+        "chance": {
+          "raw": "встречная проверка МОЩ",
+          "value": null
+        },
+        "notes": "встречная проверка МОЩ: жертва попадает под власть Колдуна и может пытаться освободиться каждый раунд; Колдун может пожертвовать 5 МОЩ, чтобы сделать власть постоянной"
+      },
+      {
+        "name": {
+          "ru": "Когти",
+          "en": "Claws"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "70% (35/14)",
+          "value": 70,
+          "half": 35,
+          "fifth": 14
+        },
+        "damage": {
+          "raw": "1d4+1d6",
+          "dice": "1d4",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "25% (12/5)",
+      "value": 25,
+      "half": 12,
+      "fifth": 5
+    },
+    "skills": [
+      {
+        "name": "Вожделеть Сердце влюблённых",
+        "value": {
+          "raw": "100%",
+          "value": 100
+        }
+      },
+      {
+        "name": "Оккультизм",
+        "skill": "coc:skill:occult",
+        "value": {
+          "raw": "99%",
+          "value": 99
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "70%",
+          "value": 70
+        }
+      }
+    ],
+    "spells": {
+      "raw": "Плавление плоти, Взрыв мозга, Призыв шантака, Разрушение; другие — на усмотрение Хранителя.",
+      "items": [
+        {
+          "name": "Melt Flesh",
+          "spell": "coc:spell:melt-flesh"
+        },
+        {
+          "name": "Mindblast",
+          "spell": "coc:spell:mindblast"
+        },
+        {
+          "name": "Summon Shantak",
+          "spell": "coc:spell:summon-bind"
+        },
+        {
+          "name": "Wrack",
+          "spell": "coc:spell:wrack"
+        }
+      ]
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d4",
+        "trigger": "при виде Колдуна"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Гипноз взглядом",
+      "summary": "Встретив чей-то взгляд, Колдун противопоставляет свою МОЩ МОЩи жертвы; успех — жертва загипнотизирована и исполняет его волю: он всегда знает, где она и что вокруг, и может приказывать ей в любой момент, оставляя жить обычной жизнью до поры. У подвластного глаза пустеют и наливаются искрящимся багровым светом; жертва может противопоставлять МОЩ каждый раз, когда Колдун принуждает её к новому поступку.",
+      "raw": "If he meets someone’s eye, he opposes his POW with theirs. Success means he has hypnotized them and they will do his bidding. … A mesmerized soul can oppose his POW every time the Sorcerer compels them to some new act."
+    },
+    {
+      "name": "Неуязвимость",
+      "summary": "Любое оружие наносит минимальный урон; при 0 ПЗ его разрывает на части, но он жив; убить его можно, только спалив дотла или Сердцем влюблённых.",
+      "raw": "Armor: All weapons do minimum damage. Once his hit points are reduced to zero he is dismembered but still alive. He can only be truly killed by being burned to cinders or with the Lovers’ Heart.",
+      "refs": [
+        "hotoe-book-2-en/item/dream-lovers-heart"
+      ]
+    }
+  ],
+  "description": {
+    "ru": "Почерневший неживой труп с горящими красными гипнотическими глазами; кости черепа и скелета видны сквозь прорехи мумифицированной обугленной плоти. Скользит по перрону, стуча пяточными костями.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Колдун из легенды «Сердце влюблённых» («Раздатка Страны грёз 2»): поздно и глупо женился, застал молодую жену с любовником, призвал тёмные силы, растерзал обоих и сжёг их сердца; возжелал рубин Старухи, сжёг её как ведьму, обезумел от вожделения к потерянному камню и, решив, что разгадал её насмешку, сжёг себя заживо в собственном склепе. Веками преследует мадам Бруху в Стране грёз. Околдовал Миронима-Мера и подослал его на поезд украсть Сердце. Сам ехать не может: он уже проехал на поезде к Бездне Ноденса и выбросил свою человечность (это и есть его отсутствующий артефакт сна), а по уговору Анри с Ноденсом второй раз ездить нельзя. Ждёт у станции Талариона, пытается сесть, гипнотизирует Анри; бежит от эйдолона Лати и от любой атаки. Над Бездной Ноденса нападает на поезд с шестью шантаками; прямо не нападает ни на Анри, ни на пассажиров, кроме Старухи, боясь разгневать бога бездны. Исследовать его в Мире яви трудно: Хранитель может дать легенду о Сердце влюблённых так же, как при поисках о мадам Брухе.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "hotoe-book-2-en",
+      "physical_page": 146,
+      "printed_page": 144,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Lovers’ Heart» (Раздатка 2)"
+    },
+    {
+      "book_id": "hotoe-book-2-en",
+      "physical_page": 147,
+      "printed_page": 145,
+      "method": "book_text",
+      "verified": true,
+      "note": "Колдун околдовал Миронима-Мера"
+    },
+    {
+      "book_id": "hotoe-book-2-en",
+      "physical_page": 149,
+      "printed_page": 147,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Sorcerer»: облик, гипноз, «Story», «Dream Artifact»"
+    },
+    {
+      "book_id": "hotoe-book-2-en",
+      "physical_page": 151,
+      "printed_page": 149,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Waking World Investigations: The Sorcerer»"
+    },
+    {
+      "book_id": "hotoe-book-2-en",
+      "physical_page": 165,
+      "printed_page": 163,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Meeting the Sorcerer»"
+    },
+    {
+      "book_id": "hotoe-book-2-en",
+      "physical_page": 172,
+      "printed_page": 170,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Timeline of the Attack»"
+    },
+    {
+      "book_id": "hotoe-book-2-en",
+      "physical_page": 175,
+      "printed_page": 173,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Sorcerer and the Crone»"
+    },
+    {
+      "book_id": "hotoe-book-2-en",
+      "physical_page": 176,
+      "printed_page": 174,
+      "method": "book_text",
+      "verified": true,
+      "note": "Сердце влюблённых сжигает Колдуна"
+    },
+    {
+      "book_id": "hotoe-book-2-en",
+      "physical_page": 182,
+      "printed_page": 180,
+      "method": "book_text",
+      "verified": true,
+      "note": "статблок «The Sorcerer, Eldritch Undead Horror»"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.mp",
+      "printed": "90",
+      "expected": "18",
+      "note": "ПМ напечатаны 90 при МОЩ 90 (обычно МОЩ/5 = 18); возможно, задумано. Комплекции и Скорости в статблоке нет (по СИЛ 100 + ТЕЛ 100 — Комплекция 2)."
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "editorial_text",
+      "parse_uncertain"
+    ],
+    "notes": "Имя придумано (Р-150), в книге — «The Sorcerer» («Колдун»); легенда испанская. Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 2). «Summon Shantak» — отдельной записи заклинания нет, ссылка на семейство «Заклинания призыва» (coc:spell:summon-bind)."
+  }
+}

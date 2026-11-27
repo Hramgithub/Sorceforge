@@ -1,0 +1,516 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "hotoe-book-3-en/creature/venice-automatons",
+  "kind": "creature",
+  "name": {
+    "ru": "Автоматы часовой башни",
+    "en": "The Automatons"
+  },
+  "aliases": [
+    "часовые автоматы",
+    "automatons",
+    "clockwork figures"
+  ],
+  "category": "supernatural",
+  "subcategory": "часовые автоматы (механизм, не Мифы)",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "100",
+        "value": 100
+      },
+      "SIZ": {
+        "raw": "100",
+        "value": 100
+      },
+      "DEX": {
+        "raw": "60/90*",
+        "value": 60
+      }
+    },
+    "hp": {
+      "raw": "20 each",
+      "value": 20
+    },
+    "attacks": [],
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "часовые фигуры безумно оживают и нападают (механические движения, застывшие лица)"
+      },
+      {
+        "success": "0",
+        "fail": "1",
+        "trigger": "рёв мехов Льва — в первый раз"
+      }
+    ]
+  },
+  "variants": [
+    {
+      "label": "(1) Смерть",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "100",
+            "value": 100
+          },
+          "SIZ": {
+            "raw": "100",
+            "value": 100
+          },
+          "DEX": {
+            "raw": "60",
+            "value": 60
+          }
+        },
+        "hp": {
+          "raw": "20",
+          "value": 20
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Коса",
+              "en": "Scythe"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "50% (25/10)",
+              "value": 50,
+              "half": 25,
+              "fifth": 10
+            },
+            "damage": {
+              "raw": "1d6",
+              "dice": "1d6",
+              "adds_db": false
+            },
+            "notes": "по ногам; при попадании — проверка ВЫН, иначе не может ходить 1d4 дня; успешная Первая помощь превращает дни в минуты"
+          }
+        ]
+      }
+    },
+    {
+      "label": "(2) Ангел",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "100",
+            "value": 100
+          },
+          "SIZ": {
+            "raw": "100",
+            "value": 100
+          },
+          "DEX": {
+            "raw": "60",
+            "value": 60
+          }
+        },
+        "hp": {
+          "raw": "20",
+          "value": 20
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Труба",
+              "en": "Trumpet"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "50% (25/10)",
+              "value": 50,
+              "half": 25,
+              "fifth": 10
+            },
+            "damage": {
+              "raw": "1d4",
+              "dice": "1d4",
+              "adds_db": false
+            },
+            "notes": "по голове; при попадании — проверка ВЫН, иначе без сознания 1d4 часа; успешная Первая помощь превращает часы в минуты"
+          }
+        ]
+      }
+    },
+    {
+      "label": "(3) Турок",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "100",
+            "value": 100
+          },
+          "SIZ": {
+            "raw": "100",
+            "value": 100
+          },
+          "DEX": {
+            "raw": "60",
+            "value": 60
+          }
+        },
+        "hp": {
+          "raw": "20",
+          "value": 20
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Ятаган",
+              "en": "Scimitar"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "50% (25/10)",
+              "value": 50,
+              "half": 25,
+              "fifth": 10
+            },
+            "damage": {
+              "raw": "1d6+2",
+              "dice": "1d6+2",
+              "adds_db": false
+            },
+            "notes": "по корпусу",
+            "weapon": "coc:weapon:scimitar"
+          }
+        ]
+      }
+    },
+    {
+      "label": "(4) Солдат",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "100",
+            "value": 100
+          },
+          "SIZ": {
+            "raw": "100",
+            "value": 100
+          },
+          "DEX": {
+            "raw": "60",
+            "value": 60
+          }
+        },
+        "hp": {
+          "raw": "20",
+          "value": 20
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Меч",
+              "en": "Sword"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "50% (25/10)",
+              "value": 50,
+              "half": 25,
+              "fifth": 10
+            },
+            "damage": {
+              "raw": "1d8",
+              "dice": "1d8",
+              "adds_db": false
+            },
+            "notes": "по корпусу; на нём — Левая нога Симулякра"
+          }
+        ]
+      }
+    },
+    {
+      "label": "(5) Убийца",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "100",
+            "value": 100
+          },
+          "SIZ": {
+            "raw": "100",
+            "value": 100
+          },
+          "DEX": {
+            "raw": "60",
+            "value": 60
+          }
+        },
+        "hp": {
+          "raw": "20",
+          "value": 20
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Дубина",
+              "en": "Club"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "50% (25/10)",
+              "value": 50,
+              "half": 25,
+              "fifth": 10
+            },
+            "damage": {
+              "raw": "1d6",
+              "dice": "1d6",
+              "adds_db": false
+            },
+            "notes": "по корпусу"
+          }
+        ]
+      }
+    },
+    {
+      "label": "(6) Лев",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "100",
+            "value": 100
+          },
+          "SIZ": {
+            "raw": "100",
+            "value": 100
+          },
+          "DEX": {
+            "raw": "60",
+            "value": 60
+          }
+        },
+        "hp": {
+          "raw": "20",
+          "value": 20
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Лапа",
+              "en": "Paw"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "50% (25/10)",
+              "value": 50,
+              "half": 25,
+              "fifth": 10
+            },
+            "damage": {
+              "raw": "1d4",
+              "dice": "1d4",
+              "adds_db": false
+            },
+            "notes": "по корпусу; внутренние мехи ревут при атаке — потеря Рассудка 0/1 от неожиданности в первый раз"
+          }
+        ]
+      }
+    },
+    {
+      "label": "(7) Сельская девушка",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "100",
+            "value": 100
+          },
+          "SIZ": {
+            "raw": "100",
+            "value": 100
+          },
+          "DEX": {
+            "raw": "90",
+            "value": 90
+          }
+        },
+        "hp": {
+          "raw": "20",
+          "value": 20
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Кокетливый пируэт (пинок)",
+              "en": "Flirty Pirouette (Kick)"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "50% (25/10)",
+              "value": 50,
+              "half": 25,
+              "fifth": 10
+            },
+            "damage": {
+              "raw": "1d6",
+              "dice": "1d6",
+              "adds_db": false
+            },
+            "notes": "по корпусу; жертву отбрасывает на 2d6 × 30 см (1d6 × 30 см, если сыщик проходит проверку ТЕЛ) — опасно у открытых дверей"
+          }
+        ]
+      }
+    },
+    {
+      "label": "(8) Сельский парень",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "100",
+            "value": 100
+          },
+          "SIZ": {
+            "raw": "100",
+            "value": 100
+          },
+          "DEX": {
+            "raw": "90",
+            "value": 90
+          }
+        },
+        "hp": {
+          "raw": "20",
+          "value": 20
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Поворот, поклон и любовное объятие (драка)",
+              "en": "Spin, Bow and Amorous Embrace (Brawl)"
+            },
+            "kind": "maneuver",
+            "skill": "Ближний бой",
+            "chance": {
+              "raw": "50% (25/10)",
+              "value": 50,
+              "half": 25,
+              "fifth": 10
+            },
+            "damage": {
+              "raw": "no damage",
+              "dice": null,
+              "adds_db": false
+            },
+            "notes": "захват: вырваться — встречная проверка СИЛ против СИЛ 100, иначе прижат и со скоростью отнесён к дверям башни; в следующем раунде двери распахиваются, Парень кружится, кланяется и разводит руки в пустоту — проверка ЛВК, чтобы ухватиться за бруствер, иначе падение с высоты пяти этажей (6d6); ухватившемуся нужна проверка Лазания или чья-то рука, прежде чем он сможет делать что-то кроме как держаться"
+          }
+        ]
+      }
+    }
+  ],
+  "abilities": [
+    {
+      "name": "Механизм",
+      "summary": "Каждый автомат выдерживает 20 урона, прежде чем развалится или выйдет из строя. Всё оружие наносит обычный урон, но пронзающих попаданий нет.",
+      "raw": "Each automaton can take 20 points of damage before falling to pieces or being effectively disabled. All weapons do normal damage except that no impales occur."
+    },
+    {
+      "name": "Без бонуса к урону",
+      "summary": "Автоматы бьют без цели — бонус к урону не прибавляется.",
+      "raw": "Damage Bonus: The automaton attack without purpose. No damage bonus applies."
+    },
+    {
+      "name": "Чья атака",
+      "summary": "Хранитель может следить, какой сыщик ближе к какому автомату, и бросать атаки соответственно; иначе атакующий выбирается броском 1d8 по списку (1 — Смерть … 8 — Сельский парень). В нападении каждый сыщик в механизме выдерживает две атаки случайных автоматов, каждая — один раунд.",
+      "raw": "Attacks: The Keeper may choose to track which investigator is closest to which automaton, and roll attacks accordingly. Otherwise, attacks can be randomised by rolling 1d8 and choosing the listed automaton."
+    },
+    {
+      "name": "Ловкость",
+      "summary": "У шести автоматов ЛВК 60, у Сельской девушки и Сельского парня — ЛВК 90.",
+      "raw": "DEX 60/90*. Six automatons have DEX 60; Rustic Lass and Rustic Lad have DEX 90."
+    }
+  ],
+  "description": {
+    "ru": "Восемь позолоченных гротескных фигур больше человеческого роста в часовом механизме башни палаццо Реццониани (набор сделан мастерами Гременчи летом 1857 года): Смерть с косой, Ангел с трубой, Турок с ятаганом, Крылатый лев, Кондотьер (Солдат) с мечом, Наёмный убийца с огромной дубиной, Сельская девушка и Сельский парень. В четверти часа выходят на балкон под циферблатом, бьют в колокол и разыгрывают свои «поединки». У Ангела, Убийцы и Смерти ноги закрыты и вырезаны цельно; на Солдате — Левая нога Симулякра Седефкара. При попытке снять ногу механизм идёт вразнос, и фигуры нападают.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Автоматы — не существа Мифов: нарушенный механизм рассыпается, а сыщикам, провалившим проверку Рассудка, кажется, что фигуры ожили. В конце концов они разбиваются вдребезги. Днём искусственный человек не кажется особенно опасным (подпись к иллюстрации, с. 27).",
+    "en": null
+  },
+  "habitat": "часовая башня палаццо Реццониани, Венеция",
+  "sources": [
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 43,
+      "printed_page": 41,
+      "method": "book_text",
+      "verified": true,
+      "entry_page": 43,
+      "note": "«The Automatons»: статблок и атаки"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 37,
+      "printed_page": 35,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Automatons»: пары и выходы"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 38,
+      "printed_page": 36,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Searching the Statues», «The Automatons Attack»"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 33,
+      "printed_page": 31,
+      "method": "book_text",
+      "verified": true,
+      "note": "набор 1857 года"
+    },
+    {
+      "book_id": "hotoe-book-3-en",
+      "physical_page": 29,
+      "printed_page": 27,
+      "method": "book_text",
+      "verified": true,
+      "note": "иллюстрация"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21). Механические фигуры, не живые и не Мифы: в записи существа ради статблока (Р-94: безымянное чудовище — существо); категория supernatural — ближайшая из возможных. ВЫН, ИНТ, МОЩ и прочее книга не даёт. Отброс Сельской девушки в книге — «2d6 feet (or 1d6 …)», переведён в сантиметры (Р-64). Групповой профиль (Р-74): основной статблок — общий (ЛВК 60), варианты — восемь фигур со своим оружием."
+  },
+  "images": [
+    {
+      "file": "art/creatures/hotoe-venice-automatons.webp",
+      "kind": "art",
+      "caption": "Днём искусственный человек не кажется особенно опасным",
+      "source": "Horror on the Orient Express, книга III, с. 27 (физ. 29)"
+    }
+  ]
+}

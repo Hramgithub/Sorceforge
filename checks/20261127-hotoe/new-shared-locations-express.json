@@ -1,0 +1,47 @@
+{
+  "about": "Черновики общих городов на пути Симплон-Ориент-экспресса, которых нет в kb/locations (Grep 2026-11-27): создаёт ведущий. Пока записи нет, остановки — строки таблицы «Остановки в пути» поезда hotoe-book-1-en/location/express-simplon-orient-express, а метки карты маршрутов ведут на поезд; после создания метки «Calais» и «Edirne»/«Edirne (Adrianople)» карты hotoe-book-1-en/map/express-route-map можно перевести на город, а в строки таблицы добавить refs. Часть companion дополнит их по «Travelers' Companion» (Париж с Кале, Константинополь с Адрианополем).",
+  "records": [
+    {
+      "schema": "sourcefold.location.v0",
+      "id": "coc:location:calais",
+      "kind": "location",
+      "name": {"ru": "Кале", "en": "Calais"},
+      "location_type": "город",
+      "part_of": null,
+      "keeper_hint": "порт на Ла-Манше, начало пути Симплон-Ориент-экспресса",
+      "description": {
+        "ru": "1923 год, «Ужас в Восточном экспрессе». Крупный транзитный порт для пассажиров и почты через Ла-Манш. Англо-французский таможенный пункт на пути Симплон-Ориент-экспресса: французская полиция проверяет визы и паспорта. Отсюда идёт спальный вагон «Кале» (Кале — Константинополь): едущих из Константинополя в Кале сажают в него.",
+        "en": null
+      },
+      "refs": ["hotoe-book-1-en/location/express-simplon-orient-express", "hotoe-book-1-en/map/express-route-map"],
+      "axes": {"era": ["1920s"], "ruleset": "core"},
+      "sources": [
+        {"book_id": "hotoe-book-1-en", "physical_page": 31, "printed_page": 29, "method": "book_text", "verified": true, "note": "«Stops Along the Way»: Calais"},
+        {"book_id": "hotoe-book-1-en", "physical_page": 30, "printed_page": 28, "method": "book_text", "verified": true, "note": "«Arrangement of the Cars»: вагон «Кале»"},
+        {"book_id": "hotoe-book-1-en", "physical_page": 12, "printed_page": 10, "method": "book_text", "verified": true, "note": "карта маршрутов"}
+      ],
+      "quality": {"needs_review": false, "flags": ["translated"], "notes": "Черновик части express: русский текст — наш перевод с английского оригинала (Р-251, Р-21)."}
+    },
+    {
+      "schema": "sourcefold.location.v0",
+      "id": "coc:location:adrianople",
+      "kind": "location",
+      "name": {"ru": "Адрианополь", "en": "Adrianople"},
+      "aliases": ["Эдирне", "Edirne"],
+      "location_type": "город",
+      "part_of": null,
+      "keeper_hint": "город во Фракии на пути Симплон-Ориент-экспресса",
+      "description": {
+        "ru": "1923 год, «Ужас в Восточном экспрессе». Город во Фракии на пути Симплон-Ориент-экспресса между Свиленградом и Константинополем; в книге — греческий таможенный пункт, где полиция проверяет визы и паспорта пассажиров. На карте маршрутов — «Edirne (Adrianople)» на врезке «Фракия и Босфор».",
+        "en": null
+      },
+      "refs": ["hotoe-book-1-en/location/express-simplon-orient-express", "hotoe-book-1-en/map/express-route-map", "coc:location:constantinople"],
+      "axes": {"era": ["1920s"], "ruleset": "core"},
+      "sources": [
+        {"book_id": "hotoe-book-1-en", "physical_page": 34, "printed_page": 32, "method": "book_text", "verified": true, "note": "«Stops Along the Way»: Adrianople (Edirne)"},
+        {"book_id": "hotoe-book-1-en", "physical_page": 12, "printed_page": 10, "method": "book_text", "verified": true, "note": "карта маршрутов, врезка C"}
+      ],
+      "quality": {"needs_review": false, "flags": ["translated"], "notes": "Черновик части express: русский текст — наш перевод с английского оригинала (Р-251, Р-21)."}
+    }
+  ]
+}

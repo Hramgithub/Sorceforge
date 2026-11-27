@@ -1,0 +1,112 @@
+{
+  "schema": "sourcefold.location.v0",
+  "id": "coc:location:green-park",
+  "kind": "location",
+  "name": {
+    "ru": "Парк Грин",
+    "en": "Green Park"
+  },
+  "location_type": "место",
+  "part_of": "coc:location:westminster",
+  "number": "38",
+  "description": {
+    "ru": "Пункт 38 ключа карты Центрального Лондона (с. 189). В тексте главы «Англия» не описан.\n«World War Cthulhu: London» (Лондон 1939–1945, с. 72): Грин-парк лежит у Букингемского дворца между Гайд-парком и Сент-Джеймсским парком; необычен тем, что в нём нет ни озёр, ни зданий — в основном старые деревья. Как и во многих парках Лондона, здесь стоит зенитная батарея; её расположение нестандартно и неоптимально — якобы из-за деревьев (см. также врезку «Внизу у зенитной батареи в полночь», с. 43).",
+    "en": null
+  },
+  "tables": [
+    {
+      "title": "Зацепка (Plot Hook)",
+      "kind": "зацепки",
+      "dice": null,
+      "intro": null,
+      "rows": [
+        {
+          "roll": null,
+          "text": "N заметил, что расположение зенитной батареи складывается в тайные символы, якобы применимые в колдовстве. Не желая рисковать, N хочет это исправить — руками своих вспомогательных агентов, взорвав главный склад боеприпасов батареи. Разумеется, эта военная диверсия полностью отрицаема: если сыщиков поймают, они сами по себе."
+        }
+      ],
+      "source": {
+        "book_id": "wwc-london-en",
+        "physical_page": 72,
+        "printed_page": 72,
+        "method": "book_text",
+        "verified": true,
+        "note": "«Plot Hook»"
+      }
+    }
+  ],
+  "axes": {
+    "era": [
+      "1920s",
+      "1940s-1980s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "masks-of-nyarlathotep-en",
+      "physical_page": 192,
+      "printed_page": 189,
+      "method": "book_text",
+      "verified": true,
+      "note": "ключ карты Центрального Лондона: пункт 38 «Green Park»"
+    },
+    {
+      "book_id": "masks-of-nyarlathotep-ru-players",
+      "physical_page": 53,
+      "printed_page": 53,
+      "method": "book_text",
+      "verified": true,
+      "note": "название — по официальной русской карте Лондона (там пункт 36: на ней нет пунктов 15 и 18)"
+    },
+    {
+      "book_id": "wwc-london-en",
+      "physical_page": 72,
+      "printed_page": 72,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Green Park, The City of Westminster»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Запись заведена для метки карты (Р-206); описание — наш перевод (Р-21)."
+  },
+  "corrections": [
+    {
+      "field": "part_of",
+      "from": "coc:location:london",
+      "to": "coc:location:westminster",
+      "reason": "Р-209: место отнесено к району «Вестминстер» по географии Лондона, вывод (Р-41): парк к югу от Пикадилли, в Сент-Джеймсе — Вестминстер. Книга не раскладывает места карты по районам.",
+      "ref": "Р-209"
+    },
+    {
+      "field": "description.ru",
+      "from": "В тексте главы «Англия» не описан.",
+      "to": "В тексте главы «Англия» не описан.\n«World War Cthulhu: London» (Лондон 1939–1945, с. 72): Грин-парк лежит у Букингемского дворца между Гайд-парком и Сент-Джеймсским парком; необычен тем, что в нём нет ни озёр, ни зданий — в основном старые деревья. Как и во многих парках Лондона, здесь стоит зенитная батарея; её расположение нестандартно и неоптимально — якобы из-за деревьев (см. также врезку «Внизу у зенитной батареи в полночь», с. 43).",
+      "reason": "World War Cthulhu: London, с. 72: место в Лондоне Второй мировой войны",
+      "ref": "Р-251"
+    },
+    {
+      "field": "tables",
+      "from": null,
+      "to": "[{\"title\": \"Зацепка (Plot Hook)\", \"kind\": \"зацепки\", \"dice\": null, \"intro\": null, \"rows\": [{\"roll\": null, \"text\": \"N заметил, что расположение зенитной батареи складывается в тайные символы, якобы применимые в колдовстве. Не желая рисковать, N хочет это исправить — руками своих вспомогательных агентов, взорвав главный склад боеприпасов батареи. Разумеется, эта военная диверсия полностью отрицаема: если сыщиков поймают, они сами по себе.\"}], \"source\": {\"book_id\": \"wwc-london-en\", \"physical_page\": 72, \"printed_page\": 72, \"method\": \"book_text\", \"verified\": true, \"note\": \"«Plot Hook»\"}}]",
+      "reason": "завязка книги для места (Р-136)",
+      "ref": "Р-251"
+    },
+    {
+      "field": "id",
+      "from": "masks-of-nyarlathotep-en/location/england-green-park",
+      "to": "coc:location:green-park",
+      "reason": "Р-258: объект встречается в нескольких книгах — общая запись (Р-154)",
+      "ref": "Р-258"
+    }
+  ],
+  "refs": [
+    "wwc-london-en/rule/defences-and-countermeasures",
+    "wwc-london-en/organization/network-n-auxiliaries"
+  ]
+}

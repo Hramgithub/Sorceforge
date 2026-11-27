@@ -1,0 +1,99 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "coc:character:nadine-long",
+  "kind": "character",
+  "name": {
+    "ru": "Надин Лонг",
+    "en": "Nadine Long"
+  },
+  "aliases": [
+    "Диана Лонг",
+    "Mrs. Diane Long"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "заведующая абонементом и справочным отделом",
+    "en": "head of circulation and reference"
+  },
+  "occupation_ref": "coc:occupation:bibliotekar",
+  "age": {
+    "raw": "44",
+    "value": 44
+  },
+  "sex": "женский",
+  "residence": "Аркхэм",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "coc:character:henry-armitage",
+      "note": "директор библиотеки",
+      "note_back": "заведующая абонементом"
+    }
+  ],
+  "description": {
+    "ru": "Заведует абонементом и справочным отделом библиотеки Орна и следит за её повседневной работой.\nВ «A Time to Harvest» (эпизод 2, 1930): миссис Диана Лонг, заведующая справочным отделом, ведёт повседневные дела библиотеки Орна и больше всех общается со студентами.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "arkham-en",
+      "physical_page": 176,
+      "printed_page": 175,
+      "method": "book_text",
+      "verified": true
+    },
+    {
+      "book_id": "time-to-harvest-2-en",
+      "physical_page": 37,
+      "printed_page": 37,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Orne Library»: «Mrs. Diane Long, Head Reference Librarian»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": null
+  },
+  "corrections": [
+    {
+      "field": "aliases",
+      "from": null,
+      "to": "[\"Диана Лонг\", \"Mrs. Diane Long\"]",
+      "reason": "так названа в A Time to Harvest (месяц 2, с. 37): «Mrs. Diane Long, Head Reference Librarian» — та же должность, вывод из текста (Р-41)",
+      "ref": "Р-41"
+    },
+    {
+      "field": "description.ru",
+      "from": "рна и следит за её повседневной работой.",
+      "to": "рна и следит за её повседневной работой.\nВ «A Time to Harvest» (эпизод 2, 1930): миссис Диана Лонг, заведующая справочным отделом, ведёт повседневные дела библиотеки Орна и больше всех общается со студентами.",
+      "reason": "A Time to Harvest, месяц 2, с. 37",
+      "ref": "Р-41"
+    },
+    {
+      "field": "sources",
+      "from": null,
+      "to": "{\"book_id\": \"time-to-harvest-2-en\", \"physical_page\": 37, \"printed_page\": 37, \"method\": \"book_text\", \"verified\": true, \"note\": \"«Orne Library»: «Mrs. Diane Long, Head Reference Librarian»\"}",
+      "reason": "источник: A Time to Harvest, месяц 2, с. 37",
+      "ref": "Р-125"
+    },
+    {
+      "field": "id",
+      "from": "arkham-en/character/campus-nadine-long",
+      "to": "coc:character:nadine-long",
+      "reason": "Р-258: объект встречается в нескольких книгах — общая запись (Р-154)",
+      "ref": "Р-258"
+    }
+  ]
+}

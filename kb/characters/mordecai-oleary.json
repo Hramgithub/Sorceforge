@@ -1,0 +1,744 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "coc:character:mordecai-oleary",
+  "kind": "character",
+  "name": {
+    "ru": "Мордехай О’Лири",
+    "en": "Mordecai “Hammer” O’Leary"
+  },
+  "aliases": [
+    "Молоток",
+    "Hammer",
+    "Мордехай «Молоток» О’Лири",
+    "О’Лири",
+    "Мордехай О’Лири по кличке Молоток"
+  ],
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "помощник босса преступного мира\n«Черноводный ручей»: многообещающий мафиози; помощник босса, отвечает за Университетский район",
+    "en": "Lieutenant of Crime"
+  },
+  "age": {
+    "raw": "32",
+    "value": 32
+  },
+  "sex": "мужской",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "85",
+        "value": 85
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "70",
+        "value": 70
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50
+      },
+      "APP": {
+        "raw": "60",
+        "value": 60
+      },
+      "INT": {
+        "raw": "80",
+        "value": 80
+      },
+      "POW": {
+        "raw": "60",
+        "value": 60
+      },
+      "EDU": {
+        "raw": "30",
+        "value": 30
+      }
+    },
+    "hp": {
+      "raw": "14",
+      "value": 14
+    },
+    "mp": {
+      "raw": "12",
+      "value": 12
+    },
+    "sanity": {
+      "raw": "55",
+      "value": 55,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d3+1d4",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Молоток-гвоздодёр",
+          "en": "Claw hammer"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "60% (30/12)",
+          "value": 60,
+          "half": 30,
+          "fifth": 12
+        },
+        "damage": {
+          "raw": "1d6+1d4",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "notes": "фирменный молоток; оружия «молоток-гвоздодёр» в справочнике нет"
+      },
+      {
+        "name": {
+          "ru": "Пистолет автоматический .32",
+          "en": ".32 auto"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (пистолет)",
+        "chance": {
+          "raw": "50% (25/10)",
+          "value": 50,
+          "half": 25,
+          "fifth": 10
+        },
+        "damage": {
+          "raw": "1d8",
+          "dice": "1d8",
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:32-automatic"
+      },
+      {
+        "name": {
+          "ru": "Дробовик двуствольный 20-го калибра",
+          "en": "20-g shotgun (2B)"
+        },
+        "kind": "attack",
+        "skill": "Стрельба (винтовка/дробовик)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "4d6/2d6/1d6",
+          "dice": null,
+          "adds_db": false
+        },
+        "weapon": "coc:weapon:shotgun-20-gauge-2b"
+      }
+    ],
+    "dodge": {
+      "raw": "30% (15/6)",
+      "value": 30,
+      "half": 15,
+      "fifth": 6
+    },
+    "skills": [
+      {
+        "name": "Оценка (алкоголь)",
+        "skill": "coc:skill:appraise",
+        "specialization": "алкоголь",
+        "value": {
+          "raw": "70%",
+          "value": 70
+        }
+      },
+      {
+        "name": "Обаяние",
+        "skill": "coc:skill:charm",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "51%",
+          "value": 51
+        }
+      },
+      {
+        "name": "Вождение автомобиля",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Первая помощь",
+        "skill": "coc:skill:first-aid",
+        "value": {
+          "raw": "35%",
+          "value": 35
+        }
+      },
+      {
+        "name": "Запугивание",
+        "skill": "coc:skill:intimidate",
+        "value": {
+          "raw": "70%",
+          "value": 70
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Механика",
+        "skill": "coc:skill:mechanical-repair",
+        "value": {
+          "raw": "20%",
+          "value": 20
+        }
+      },
+      {
+        "name": "Ориентирование (Аркхэм)",
+        "skill": "coc:skill:navigate",
+        "specialization": "Аркхэм",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Убеждение",
+        "skill": "coc:skill:persuade",
+        "value": {
+          "raw": "30%",
+          "value": 30
+        }
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "35%",
+          "value": 35
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "35%",
+          "value": 35
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "35%",
+          "value": 35
+        }
+      },
+      {
+        "name": "Родной язык (английский)",
+        "skill": "coc:skill:language-own",
+        "specialization": "английский",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Иностранный язык (итальянский)",
+        "skill": "coc:skill:language-other",
+        "specialization": "итальянский",
+        "value": {
+          "raw": "50%",
+          "value": 50
+        }
+      }
+    ]
+  },
+  "background": {
+    "traits": "Честолюбив, расчётлив и жесток."
+  },
+  "possessions": [
+    "Молоток-гвоздодёр",
+    "Плотницкий молоток"
+  ],
+  "description": {
+    "ru": "Злобного вида американец ирландского происхождения: щегольски одет, гладко выбрит, волосы зачёсаны назад и набриолинены, нехорошая ухмылка. Тайная власть пекарни Хогана (716): ведёт отсюда преступные дела из заднего кабинета и каждую неделю отсылает деньги своему боссу О’Банниону.\n«Черноводный ручей»: Зловещего вида ирландец с вытянутым лицом: стильный, гладко выбрит, прилизанные волосы, злобная ухмылка. Его фирменный знак — старый плотницкий молоток, которым он раздаёт наказания, угрожает, а при случае и убивает.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Один из помощников Дэнни О’Банниона (транспортная компания «Лаки Кловер», 412), отвечает за район Кампус. На этом месте недавно: пробился наверх от уличных афер к игорному рэкету. Мечтает однажды стать боссом всего Аркхэма. Его фирменный знак — молоток, которым он наказывает тех, кто перешёл ему дорогу.\n«Черноводный ручей»: Мордехай О’Лири по кличке Молоток работает на Дэнни О’Банниона и отвечает за Университетский район Аркхэма. Он лишь недавно стал помощником босса, пробившись из уличных сутенёров в рэкетиры игорного бизнеса; мечтает захватить весь город и уверен, что однажды займёт место О’Банниона и станет боссом всей мафии Аркхэма. А пока хватается за любую возможность: сделать кому-нибудь одолжение, чтобы тот остался в долгу, или безжалостно выбивать самые выгодные сделки. Любой, кто подведёт О’Лири, получает молотком по рукам (или по голове, если тот всерьёз рассердится).\nЛипкий Джек Фултон обязан платить О’Лири за право «работать» в его районе и предъявлять ему лучшее из украденного. Узнав, что Джек втайне провернул три кражи за одну ночь и не заплатил, О’Лири в четверг 26 октября 1922 года вызывает сыщиков (которые у него в долгу) в свой кабинет в дальнем помещении пекарни Хогана на Саут-Френч-Хилл-стрит: пусть найдут Джека, выяснят, что он стащил и кто его нанял, и вернут долю — деньгами или товаром — до конца недели. На вопросы не отвечает; за правым плечом у него стоит Гвоздь О’Кифи.\nВ «Очень больших трудностях» Хранитель может привести О’Лири с бандитами в квартиру Джека; войдя в здание, они, скорее всего, сойдут с ума и попытаются убить себя или других. Если сыщики заберут краденые вещи и передадут О’Лири, они получают +1d4 пункта рассудка.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "arkham-en",
+      "physical_page": 198,
+      "printed_page": 197,
+      "method": "book_text",
+      "verified": true,
+      "note": "716 Hogan’s Bakery: Notable Folk; врезка «Mordecai “Hammer” O’Leary, Lieutenant of Crime, age 32» — статблок"
+    },
+    {
+      "book_id": "chernovodnyy-ruchey-ru",
+      "physical_page": 75,
+      "printed_page": 76,
+      "method": "book_text",
+      "verified": true,
+      "note": "приложение 1 «Персонажи Хранителя»: «Мордехай О’Лири (Молоток), 32 года, многообещающий мафиози» — статблок"
+    },
+    {
+      "book_id": "chernovodnyy-ruchey-ru",
+      "physical_page": 57,
+      "printed_page": 58,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Предыстория», «Текущая ситуация»"
+    },
+    {
+      "book_id": "chernovodnyy-ruchey-ru",
+      "physical_page": 59,
+      "printed_page": 60,
+      "method": "book_text",
+      "verified": true,
+      "note": "иллюстрация; «Разговор с О’Лири», «Появление сыщиков»"
+    },
+    {
+      "book_id": "chernovodnyy-ruchey-ru",
+      "physical_page": 60,
+      "printed_page": 61,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Разговор с О’Лири» (с. 61)"
+    },
+    {
+      "book_id": "chernovodnyy-ruchey-ru",
+      "physical_page": 61,
+      "printed_page": 62,
+      "method": "book_text",
+      "verified": true,
+      "note": "О’Лири в кабинете, Гвоздь О’Кифи"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Пункты магии напечатаны (12), Удача — нет. Тот же персонаж — в сценарии «Вышел срок» («Missed Dues»), там другой статблок (дробовик 12-го калибра) — кандидат на слияние (Р-154). Иностранный язык (итальянский) 50% — как напечатано. Слита запись coc:character:mordecai-oleary («Черноводный ручей», Р-258): age: у «Черноводный ручей» — {\"raw\": \"32 года\", \"value\": 32}; статблок «Черноводный ручей» — вариантом; background: у «Черноводный ручей» — {\"traits\": \"Сперва стреляет, потом спрашивает.\"}. Статблок — приложение 1 (с. 76). Профессия справочника — подсказка (вывод из текста, Р-41): «многообещающий мафиози», помощник босса. «Ближний бой (молоток)» — как напечатано, без ссылки на оружие (молотка в справочнике нет). Пункты магии и Удача не напечатаны."
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "coc:character:danny-obannion",
+      "note": "босс",
+      "note_back": "лейтенант"
+    },
+    {
+      "type": "works_for",
+      "target": "coc:character:danny-obannion",
+      "note": "босс мафии Аркхэма",
+      "note_back": "помощник босса, отвечает за Университетский район"
+    }
+  ],
+  "images": [
+    {
+      "file": "art/characters/arkham-frenchhill-mordecai-oleary.webp",
+      "kind": "portrait",
+      "caption": null,
+      "source": "Arkham (Chaosium, 2023), с. 197 (физ. 198)"
+    },
+    {
+      "file": "art/characters/chr-mordekhay-oliri.webp",
+      "kind": "portrait",
+      "caption": "",
+      "source": "Черноводный ручей, с. 60 (физ. 59)"
+    }
+  ],
+  "corrections": [
+    {
+      "field": "id",
+      "from": "arkham-en/character/frenchhill-mordecai-oleary",
+      "to": "coc:character:mordecai-oleary",
+      "reason": "Р-258: объект встречается в нескольких книгах — общая запись (Р-154)",
+      "ref": "Р-258"
+    },
+    {
+      "field": "id",
+      "from": "chernovodnyy-ruchey-ru/character/dues-mordekhay-oliri",
+      "to": "coc:character:mordecai-oleary",
+      "reason": "Р-258: объект встречается в нескольких книгах — общая запись (Р-154); запись слита",
+      "ref": "Р-258"
+    }
+  ],
+  "occupation_ref": "coc:occupation:glavar-bandy",
+  "residence": "Аркхэм",
+  "variants": [
+    {
+      "label": "Черноводный ручей",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "85",
+            "value": 85
+          },
+          "CON": {
+            "raw": "70",
+            "value": 70
+          },
+          "SIZ": {
+            "raw": "70",
+            "value": 70
+          },
+          "DEX": {
+            "raw": "50",
+            "value": 50
+          },
+          "APP": {
+            "raw": "60",
+            "value": 60
+          },
+          "INT": {
+            "raw": "80",
+            "value": 80
+          },
+          "POW": {
+            "raw": "60",
+            "value": 60
+          },
+          "EDU": {
+            "raw": "30",
+            "value": 30
+          }
+        },
+        "hp": {
+          "raw": "14",
+          "value": 14
+        },
+        "sanity": {
+          "raw": "55",
+          "value": 55,
+          "max": null
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "1d4"
+        },
+        "build": {
+          "raw": "1",
+          "value": 1
+        },
+        "move": {
+          "raw": "8",
+          "value": 8,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 8
+            }
+          ]
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Ближний бой (драка)",
+              "en": null
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "60% (30/12)",
+              "value": 60,
+              "half": 30,
+              "fifth": 12
+            },
+            "damage": {
+              "raw": "1d3 + 1d4",
+              "dice": "1d3",
+              "adds_db": true
+            },
+            "weapon": "coc:weapon:unarmed"
+          },
+          {
+            "name": {
+              "ru": "Ближний бой (молоток)",
+              "en": null
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "60% (30/12)",
+              "value": 60,
+              "half": 30,
+              "fifth": 12
+            },
+            "damage": {
+              "raw": "1d6 + 1d4",
+              "dice": "1d6",
+              "adds_db": true
+            },
+            "notes": "плотницкий молоток; оружия «молоток» в справочнике нет"
+          },
+          {
+            "name": {
+              "ru": "Стрельба (дробовик 12-го калибра)",
+              "en": null
+            },
+            "kind": "attack",
+            "skill": "Стрельба (винтовка/дробовик)",
+            "chance": {
+              "raw": "40% (20/8)",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            },
+            "damage": {
+              "raw": "4d6/2d6/1d6",
+              "dice": null,
+              "adds_db": false
+            },
+            "weapon": "coc:weapon:shotgun-12-gauge-2b"
+          },
+          {
+            "name": {
+              "ru": "Стрельба (пистолет 32-го калибра)",
+              "en": null
+            },
+            "kind": "attack",
+            "skill": "Стрельба (пистолет)",
+            "chance": {
+              "raw": "50% (25/10)",
+              "value": 50,
+              "half": 25,
+              "fifth": 10
+            },
+            "damage": {
+              "raw": "1d8",
+              "dice": "1d8",
+              "adds_db": false
+            },
+            "weapon": "coc:weapon:32-automatic"
+          }
+        ],
+        "dodge": {
+          "raw": "30% (15/6)",
+          "value": 30,
+          "half": 15,
+          "fifth": 6
+        },
+        "skills": [
+          {
+            "name": "Внимание",
+            "skill": "coc:skill:spot-hidden",
+            "value": {
+              "raw": "35%",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            }
+          },
+          {
+            "name": "Вождение автомобиля",
+            "skill": "coc:skill:drive-auto",
+            "value": {
+              "raw": "45%",
+              "value": 45,
+              "half": 22,
+              "fifth": 9
+            }
+          },
+          {
+            "name": "Запугивание",
+            "skill": "coc:skill:intimidate",
+            "value": {
+              "raw": "70%",
+              "value": 70,
+              "half": 35,
+              "fifth": 14
+            }
+          },
+          {
+            "name": "Лазание",
+            "skill": "coc:skill:climb",
+            "value": {
+              "raw": "40%",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            }
+          },
+          {
+            "name": "Метание",
+            "skill": "coc:skill:throw",
+            "value": {
+              "raw": "35%",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            }
+          },
+          {
+            "name": "Механика",
+            "skill": "coc:skill:mechanical-repair",
+            "value": {
+              "raw": "20%",
+              "value": 20,
+              "half": 10,
+              "fifth": 4
+            }
+          },
+          {
+            "name": "Обаяние",
+            "skill": "coc:skill:charm",
+            "value": {
+              "raw": "40%",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            }
+          },
+          {
+            "name": "Оценка (алкоголь)",
+            "skill": "coc:skill:appraise",
+            "specialization": "Алкоголь",
+            "value": {
+              "raw": "70%",
+              "value": 70,
+              "half": 35,
+              "fifth": 14
+            }
+          },
+          {
+            "name": "Первая помощь",
+            "skill": "coc:skill:first-aid",
+            "value": {
+              "raw": "35%",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            }
+          },
+          {
+            "name": "Психология",
+            "skill": "coc:skill:psychology",
+            "value": {
+              "raw": "45%",
+              "value": 45,
+              "half": 22,
+              "fifth": 9
+            }
+          },
+          {
+            "name": "Скрытность",
+            "skill": "coc:skill:stealth",
+            "value": {
+              "raw": "35%",
+              "value": 35,
+              "half": 17,
+              "fifth": 7
+            }
+          },
+          {
+            "name": "Слух",
+            "skill": "coc:skill:listen",
+            "value": {
+              "raw": "40%",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            }
+          },
+          {
+            "name": "Убеждение",
+            "skill": "coc:skill:persuade",
+            "value": {
+              "raw": "30%",
+              "value": 30,
+              "half": 15,
+              "fifth": 6
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

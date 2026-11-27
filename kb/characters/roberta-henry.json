@@ -1,0 +1,391 @@
+{
+  "schema": "sourcefold.character.v0",
+  "id": "coc:character:roberta-henry",
+  "kind": "character",
+  "name": {
+    "ru": "Роберта Генри",
+    "en": "Roberta Henry"
+  },
+  "roles": [
+    "npc"
+  ],
+  "occupation": {
+    "ru": "репортёр-расследователь «Аркхэм Адвертайзер»",
+    "en": "Investigative Reporter"
+  },
+  "age": {
+    "raw": "23",
+    "value": 23
+  },
+  "sex": "женский",
+  "residence": "Аркхэм",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "works_for",
+      "target": "coc:character:harvey-gedney",
+      "note": "издатель и главный редактор",
+      "note_back": "репортёр"
+    },
+    {
+      "type": "knows",
+      "target": "new-tales-miskatonic-valley-2e-en/character/floyd-tobey",
+      "note": "коллега-внештатник; злится, что он написал «её» материал",
+      "note_back": "коллега по «Адвертайзер»"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "50",
+        "value": 50
+      },
+      "CON": {
+        "raw": "70",
+        "value": 70
+      },
+      "SIZ": {
+        "raw": "50",
+        "value": 50
+      },
+      "DEX": {
+        "raw": "75",
+        "value": 75
+      },
+      "APP": {
+        "raw": "70",
+        "value": 70
+      },
+      "INT": {
+        "raw": "80",
+        "value": 80
+      },
+      "POW": {
+        "raw": "75",
+        "value": 75
+      },
+      "EDU": {
+        "raw": "65",
+        "value": 65
+      }
+    },
+    "hp": {
+      "raw": "12",
+      "value": 12
+    },
+    "mp": {
+      "raw": "15",
+      "value": 15
+    },
+    "sanity": {
+      "raw": "75",
+      "value": 75,
+      "max": null
+    },
+    "damage_bonus": {
+      "raw": "0",
+      "value": 0
+    },
+    "build": {
+      "raw": "0",
+      "value": 0
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "attacks_per_round": {
+      "raw": "1",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Драка",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "35% (17/7)",
+          "value": 35,
+          "half": 17,
+          "fifth": 7
+        },
+        "damage": {
+          "raw": "1d3",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      }
+    ],
+    "dodge": {
+      "raw": "37% (18/7)",
+      "value": 37,
+      "half": 18,
+      "fifth": 7
+    },
+    "skills": [
+      {
+        "name": "Искусство/ремесло (фотография)",
+        "skill": "coc:skill:art-craft",
+        "value": {
+          "raw": "20%",
+          "value": 20
+        },
+        "specialization": "фотография"
+      },
+      {
+        "name": "Обаяние",
+        "skill": "coc:skill:charm",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "55%",
+          "value": 55
+        }
+      },
+      {
+        "name": "Средства",
+        "skill": "coc:skill:credit-rating",
+        "value": {
+          "raw": "25%",
+          "value": 25
+        }
+      },
+      {
+        "name": "Вождение автомобиля",
+        "skill": "coc:skill:drive-auto",
+        "value": {
+          "raw": "55%",
+          "value": 55
+        }
+      },
+      {
+        "name": "Красноречие",
+        "skill": "coc:skill:fast-talk",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Прыжки",
+        "skill": "coc:skill:jump",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "40%",
+          "value": 40
+        }
+      },
+      {
+        "name": "Механика",
+        "skill": "coc:skill:mechanical-repair",
+        "value": {
+          "raw": "20%",
+          "value": 20
+        }
+      },
+      {
+        "name": "Ориентирование (Аркхэм)",
+        "skill": "coc:skill:navigate",
+        "value": {
+          "raw": "30%",
+          "value": 30
+        },
+        "specialization": "Аркхэм"
+      },
+      {
+        "name": "Психология",
+        "skill": "coc:skill:psychology",
+        "value": {
+          "raw": "25%",
+          "value": 25
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Скрытность",
+        "skill": "coc:skill:stealth",
+        "value": {
+          "raw": "45%",
+          "value": 45
+        }
+      },
+      {
+        "name": "Метание",
+        "skill": "coc:skill:throw",
+        "value": {
+          "raw": "35%",
+          "value": 35
+        }
+      }
+    ]
+  },
+  "background": {
+    "traits": "Стремится сделать себе имя, способная и решительная; стальные нервы, всегда готова постоять за себя и других."
+  },
+  "description": {
+    "ru": "Белая женщина ниже среднего роста, с причёской в духе Клары Боу и карими глазами; стильно, но недорого одевается, с толикой здравой практичности.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Одна из двух редакторов-репортёров «Адвертайзер». Приехала два года назад и утвердилась обаянием и напором, но её регулярно злит, что Харви Гедни переписывает её материалы (особенно те, что могут задеть слишком многих). Честолюбива и ищет истории, которые прибавят ей известности.\nПо путеводителю Hort (с. 25): сейчас при полной поддержке Гедни собирает материал о бутлегерских операциях в Аркхэме — и без намёков на коррупцию в аркхэмской полиции он не обойдётся.\nВ «Загубленной юности» (New Tales of the Miskatonic Valley, с. 31): ведущий репортёр, автор заметок о погоне Джоуи Дули и о Билли Уошберне (раздатки «Загубленная юность» 1 и 3). Если у сыщиков нет с ней общей истории, отмахивается, что больше ничего не знает (проверка Психологии: знает больше, но молчит); всё ещё злится, что была в отъезде, когда случилась история Лу Марино, и «её» материал написал внештатник Флойд Тоби.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "arkham-en",
+      "physical_page": 92,
+      "printed_page": 91,
+      "method": "book_text",
+      "verified": true,
+      "note": "«131 Arkham Advertiser»: Notable Folk; профиль Roberta Henry"
+    },
+    {
+      "book_id": "arkham-guide-hort-ru",
+      "physical_page": 25,
+      "printed_page": 25,
+      "method": "book_text",
+      "verified": true,
+      "note": "128. «Аркхэм Адвертайзер» (с. 25): абзац, пометка"
+    },
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 31,
+      "printed_page": 31,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Wasted Youth»: «The Arkham Advertiser» — ведущий репортёр, автор заметок 1 и 3"
+    },
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 164,
+      "printed_page": 164,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Wasted Youth Papers #1»: «By Roberta Henry»"
+    },
+    {
+      "book_id": "new-tales-miskatonic-valley-2e-en",
+      "physical_page": 166,
+      "printed_page": 166,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Wasted Youth Papers #3»: «By Roberta Henry»"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Путеводитель Hort (с. 25): статблок у Hort другой: СИЛ 50 ВЫН 70 ТЕЛ 50 ЛВК 75 НАР 75 ИНТ 75 МОЩ 75 ОБР 65, Рассудок 61, ПЗ 12, БкУ 0, Комплекция 0, Скорость 8, ПМ 13; Средства 25%, Лазание 55%, Красноречие 60%, Убеждение 60%, Вождение 60%, Работа в библиотеке 35%, Искусство/ремесло (фотография) 15%, Психология 25%, Внимание 45%, Слух 40%, Флирт 70%, «Одеться подобающим образом» 55%, «Польстить пожилым леди» 75%; в записи — по книге 2023 (Р-234)."
+  },
+  "corrections": [
+    {
+      "field": "legend.ru",
+      "from": "стории, которые прибавят ей известности.",
+      "to": "стории, которые прибавят ей известности.\nПо путеводителю Hort (с. 25): сейчас при полной поддержке Гедни собирает материал о бутлегерских операциях в Аркхэме — и без намёков на коррупцию в аркхэмской полиции он не обойдётся.",
+      "reason": "факты, которых нет в книге 2023: путеводитель Hort (arkham-guide-hort-ru, с. 25) — дополнение к книге 2023 (Р-234)",
+      "ref": "Р-234"
+    },
+    {
+      "field": "quality.notes",
+      "from": null,
+      "to": "Путеводитель Hort (с. 25): статблок у Hort другой: СИЛ 50 ВЫН 70 ТЕЛ 50 ЛВК 75 НАР 75 ИНТ 75 МОЩ 75 ОБР 65, Рассудок 61, ПЗ 12, БкУ 0, Комплекция 0, Скорость 8, ПМ 13; Средства 25%, Лазание 55%, Красноречие 60%, Убеждение 60%, Вождение 60%, Работа в библиотеке 35%, Искусство/ремесло (фотография) 15%, Психология 25%, Внимание 45%, Слух 40%, Флирт 70%, «Одеться подобающим образом» 55%, «Польстить пожилым леди» 75%; в записи — по книге 2023 (Р-234).",
+      "reason": "расхождения с книгой 2023 и данные Hort — только пометкой: путеводитель Hort (arkham-guide-hort-ru, с. 25) — дополнение к книге 2023 (Р-234)",
+      "ref": "Р-234"
+    },
+    {
+      "field": "sources",
+      "from": null,
+      "to": "{\"book_id\": \"arkham-guide-hort-ru\", \"physical_page\": 25, \"printed_page\": 25, \"method\": \"book_text\", \"verified\": true, \"note\": \"128. «Аркхэм Адвертайзер» (с. 25): абзац, пометка\"}",
+      "reason": "источник дополнения: путеводитель Hort (arkham-guide-hort-ru, с. 25) — дополнение к книге 2023 (Р-234)",
+      "ref": "Р-234"
+    },
+    {
+      "field": "sources",
+      "from": null,
+      "to": "{\"book_id\": \"new-tales-miskatonic-valley-2e-en\", \"physical_page\": 31, \"printed_page\": 31, \"method\": \"book_text\", \"verified\": true, \"note\": \"«Wasted Youth»: «The Arkham Advertiser» — ведущий репортёр, автор заметок 1 и 3\"}",
+      "reason": "новый источник: «Wasted Youth»",
+      "ref": "Р-139"
+    },
+    {
+      "field": "sources",
+      "from": null,
+      "to": "{\"book_id\": \"new-tales-miskatonic-valley-2e-en\", \"physical_page\": 164, \"printed_page\": 164, \"method\": \"book_text\", \"verified\": true, \"note\": \"«Wasted Youth Papers #1»: «By Roberta Henry»\"}",
+      "reason": "новый источник: «Wasted Youth»",
+      "ref": "Р-139"
+    },
+    {
+      "field": "sources",
+      "from": null,
+      "to": "{\"book_id\": \"new-tales-miskatonic-valley-2e-en\", \"physical_page\": 166, \"printed_page\": 166, \"method\": \"book_text\", \"verified\": true, \"note\": \"«Wasted Youth Papers #3»: «By Roberta Henry»\"}",
+      "reason": "новый источник: «Wasted Youth»",
+      "ref": "Р-139"
+    },
+    {
+      "field": "legend.ru",
+      "from": "и без намёков на коррупцию в аркхэмской полиции он не обойдётся.",
+      "to": "и без намёков на коррупцию в аркхэмской полиции он не обойдётся.\nВ «Загубленной юности» (New Tales of the Miskatonic Valley, с. 31): ведущий репортёр, автор заметок о погоне Джоуи Дули и о Билли Уошберне (раздатки «Загубленная юность» 1 и 3). Если у сыщиков нет с ней общей истории, отмахивается, что больше ничего не знает (проверка Психологии: знает больше, но молчит); всё ещё злится, что была в отъезде, когда случилась история Лу Марино, и «её» материал написал внештатник Флойд Тоби.",
+      "reason": "сведения сценария «Wasted Youth» (с. 31)",
+      "ref": "Р-139"
+    },
+    {
+      "field": "relations",
+      "from": null,
+      "to": "{\"type\": \"knows\", \"target\": \"new-tales-miskatonic-valley-2e-en/character/floyd-tobey\", \"note\": \"коллега-внештатник; злится, что он написал «её» материал\", \"note_back\": \"коллега по «Адвертайзер»\"}",
+      "reason": "связь со сценарием «Wasted Youth» (с. 31)",
+      "ref": "Р-139"
+    },
+    {
+      "field": "id",
+      "from": "arkham-en/character/northside-roberta-henry",
+      "to": "coc:character:roberta-henry",
+      "reason": "Р-258: объект встречается в нескольких книгах — общая запись (Р-154)",
+      "ref": "Р-258"
+    }
+  ],
+  "images": [
+    {
+      "file": "art/characters/arkham-northside-roberta-henry.webp",
+      "kind": "portrait",
+      "caption": null,
+      "source": "Arkham (Chaosium, 2023), с. 91 (физ. 92)"
+    }
+  ]
+}

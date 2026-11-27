@@ -1,0 +1,619 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "children-of-fear-en/creature/gates-kueitzumen",
+  "kind": "creature",
+  "name": {
+    "ru": "Куэйцзымэнь, верные слуги мёртвых",
+    "en": "Kueitzumen, faithful servants of the dead"
+  },
+  "aliases": [
+    "куэйцзы",
+    "kueitzu",
+    "Kueitzumen",
+    "ожившие минци",
+    "терракотовые слуги"
+  ],
+  "category": "supernatural",
+  "subcategory": "ожившие погребальные статуэтки (юн минци)",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": true,
+    "characteristics": {
+      "STR": {
+        "raw": "17",
+        "value": 17,
+        "roll": "1d6×5"
+      },
+      "CON": {
+        "raw": "25",
+        "value": 25,
+        "roll": "(1d3+3)×5"
+      },
+      "SIZ": {
+        "raw": "15",
+        "value": 15,
+        "roll": "15"
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50,
+        "roll": "3d6×5"
+      },
+      "INT": {
+        "raw": "25",
+        "value": 25,
+        "roll": "(1d3+3)×5"
+      },
+      "POW": {
+        "raw": "17",
+        "value": 17,
+        "roll": "1d6×5"
+      }
+    },
+    "hp": {
+      "raw": "3–5",
+      "value": null
+    },
+    "mp": {
+      "raw": "3",
+      "value": 3
+    },
+    "damage_bonus": {
+      "raw": "–2",
+      "value": -2
+    },
+    "build": {
+      "raw": "–2",
+      "value": -2
+    },
+    "move": {
+      "raw": "9",
+      "value": 9,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 9
+        }
+      ]
+    },
+    "armor": {
+      "raw": "none; any damage incurred by a kueitzu returns it immediately to its terracotta form, broken in the location it received the hit that sent it to its final rest. Once broken, a kueitzu cannot reanimate, even if repaired.",
+      "value": 0,
+      "note": "брони нет; любой урон тотчас возвращает куэйцзы в терракотовую форму, разбитую там, куда пришёлся удар; разбитая куэйцзы не оживает, даже если её починить"
+    },
+    "attacks_per_round": {
+      "raw": "1 (knife and other weapons)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой",
+          "en": "Fighting"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        },
+        "damage": {
+          "raw": "1d3–2 (min 1)",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed",
+        "notes": "не меньше 1"
+      },
+      {
+        "name": {
+          "ru": "Маленький нож",
+          "en": "small knife"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "25% (12/5)",
+          "value": 25,
+          "half": 12,
+          "fifth": 5
+        },
+        "damage": {
+          "raw": "1d4–2",
+          "dice": "1d4",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:knife-small"
+      }
+    ],
+    "dodge": {
+      "raw": "55% (27/11)",
+      "value": 55,
+      "half": 27,
+      "fifth": 11
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "встреча с куэйцзы"
+      }
+    ]
+  },
+  "variants": [
+    {
+      "label": "Образец 1",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "20",
+            "value": 20
+          },
+          "CON": {
+            "raw": "30",
+            "value": 30
+          },
+          "SIZ": {
+            "raw": "15",
+            "value": 15
+          },
+          "DEX": {
+            "raw": "60",
+            "value": 60
+          },
+          "INT": {
+            "raw": "30",
+            "value": 30
+          },
+          "POW": {
+            "raw": "30",
+            "value": 30
+          }
+        },
+        "hp": {
+          "raw": "4",
+          "value": 4
+        },
+        "mp": {
+          "raw": "6",
+          "value": 6
+        },
+        "damage_bonus": {
+          "raw": "–2",
+          "value": -2
+        },
+        "build": {
+          "raw": "–2",
+          "value": -2
+        },
+        "move": {
+          "raw": "9",
+          "value": 9,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 9
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "Образец 2",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "5",
+            "value": 5
+          },
+          "CON": {
+            "raw": "30",
+            "value": 30
+          },
+          "SIZ": {
+            "raw": "15",
+            "value": 15
+          },
+          "DEX": {
+            "raw": "50",
+            "value": 50
+          },
+          "INT": {
+            "raw": "20",
+            "value": 20
+          },
+          "POW": {
+            "raw": "15",
+            "value": 15
+          }
+        },
+        "hp": {
+          "raw": "4",
+          "value": 4
+        },
+        "mp": {
+          "raw": "3",
+          "value": 3
+        },
+        "damage_bonus": {
+          "raw": "–2",
+          "value": -2
+        },
+        "build": {
+          "raw": "–2",
+          "value": -2
+        },
+        "move": {
+          "raw": "9",
+          "value": 9,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 9
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "Образец 3",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "30",
+            "value": 30
+          },
+          "CON": {
+            "raw": "30",
+            "value": 30
+          },
+          "SIZ": {
+            "raw": "15",
+            "value": 15
+          },
+          "DEX": {
+            "raw": "35",
+            "value": 35
+          },
+          "INT": {
+            "raw": "30",
+            "value": 30
+          },
+          "POW": {
+            "raw": "15",
+            "value": 15
+          }
+        },
+        "hp": {
+          "raw": "4",
+          "value": 4
+        },
+        "mp": {
+          "raw": "3",
+          "value": 3
+        },
+        "damage_bonus": {
+          "raw": "–2",
+          "value": -2
+        },
+        "build": {
+          "raw": "–2",
+          "value": -2
+        },
+        "move": {
+          "raw": "9",
+          "value": 9,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 9
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "Образец 4",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "10",
+            "value": 10
+          },
+          "CON": {
+            "raw": "20",
+            "value": 20
+          },
+          "SIZ": {
+            "raw": "15",
+            "value": 15
+          },
+          "DEX": {
+            "raw": "50",
+            "value": 50
+          },
+          "INT": {
+            "raw": "25",
+            "value": 25
+          },
+          "POW": {
+            "raw": "10",
+            "value": 10
+          }
+        },
+        "hp": {
+          "raw": "3",
+          "value": 3
+        },
+        "mp": {
+          "raw": "2",
+          "value": 2
+        },
+        "damage_bonus": {
+          "raw": "–2",
+          "value": -2
+        },
+        "build": {
+          "raw": "–2",
+          "value": -2
+        },
+        "move": {
+          "raw": "9",
+          "value": 9,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 9
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "Образец 5",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "15",
+            "value": 15
+          },
+          "CON": {
+            "raw": "25",
+            "value": 25
+          },
+          "SIZ": {
+            "raw": "15",
+            "value": 15
+          },
+          "DEX": {
+            "raw": "45",
+            "value": 45
+          },
+          "INT": {
+            "raw": "20",
+            "value": 20
+          },
+          "POW": {
+            "raw": "30",
+            "value": 30
+          }
+        },
+        "hp": {
+          "raw": "4",
+          "value": 4
+        },
+        "mp": {
+          "raw": "6",
+          "value": 6
+        },
+        "damage_bonus": {
+          "raw": "–2",
+          "value": -2
+        },
+        "build": {
+          "raw": "–2",
+          "value": -2
+        },
+        "move": {
+          "raw": "9",
+          "value": 9,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 9
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "Образец 6",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "20",
+            "value": 20
+          },
+          "CON": {
+            "raw": "25",
+            "value": 25
+          },
+          "SIZ": {
+            "raw": "15",
+            "value": 15
+          },
+          "DEX": {
+            "raw": "55",
+            "value": 55
+          },
+          "INT": {
+            "raw": "20",
+            "value": 20
+          },
+          "POW": {
+            "raw": "25",
+            "value": 25
+          }
+        },
+        "hp": {
+          "raw": "4",
+          "value": 4
+        },
+        "mp": {
+          "raw": "5",
+          "value": 5
+        },
+        "damage_bonus": {
+          "raw": "–2",
+          "value": -2
+        },
+        "build": {
+          "raw": "–2",
+          "value": -2
+        },
+        "move": {
+          "raw": "9",
+          "value": 9,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 9
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "abilities": [
+    {
+      "name": "Терракотовая форма",
+      "raw": "Small and fragile, the kueitzumen are easily damaged, meaning that they prefer to run rather than fight; however, in their spectral form, complete with arms, they can wield small weapons, such as knives.",
+      "summary": "Маленькие и хрупкие, куэйцзымэнь легко ломаются и предпочитают бегство бою; но в призрачном облике, с руками, могут орудовать небольшим оружием вроде ножей. Пойманная куэйцзы на глазах превращается в голую безрукую терракотовую куклу (проверка Рассудка 0/1d6)."
+    },
+    {
+      "name": "Плата за взятое",
+      "raw": "the kueitzumen are not common criminals, and they never take an item without paying for it with ming ch’ien",
+      "summary": "Куэйцзымэнь не простые воры: забирая вещь, они всегда оставляют плату — глиняные монетки-минцянь (уменьшенные баньляны).",
+      "refs": [
+        "children-of-fear-en/item/gates-ming-chien"
+      ]
+    },
+    {
+      "name": "Миниатюрные животные",
+      "raw": "Human figurines were not the only types of yung found in Han tombs. Miniature dogs, sheep, pigs, camels, horses, cows, and even chickens were all included … Simply adjust the relevant statistics for each creature to one-third of the average value stated in their description, although their DEX should remain as is.",
+      "summary": "В ханьских гробницах были не только человеческие фигурки-юн: по желанию Хранителя сыщики могут встретить и уменьшенных стражей гробницы — собак, овец, свиней, верблюдов, лошадей, коров и даже кур. Их характеристики — треть средних значений из описания животного, кроме ЛВК, которая остаётся прежней."
+    }
+  ],
+  "description": {
+    "ru": "Терракотовые фигурки высотой около 60 см, вылепленные вручную; анатомическая проработка этих миниатюрных людей изумительна. У каждой были деревянные руки, которым придавали позу по роли в загробном хозяйстве покойного, и халат по чину. Руки и одежда давно истлели, остались терракотовое тело и следы краски на чертах лица и причёсках — пока куэйцзымэнь не пробуждает кража вещей из гробницы хозяина: тогда они являются в изначальном облике, полностью одетые (в шелка эпохи Хань), чтобы вернуть или заменить вещи, нужные хозяину для удобной загробной жизни. Преданы своему господину и после смерти.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Глава 2, часть первая. Куэйцзымэнь (ед. ч. — куэйцзы) делали при жизни господина или госпожи, чтобы похоронить с ними; сначала это были обычные юн минци (правило «Духовные предметы и погребальный инвентарь»). Когда Сай На разграбил курган своего предка к западу от Сиани, группа таких кукольных терракотовых слуг пробудилась и ищет замену украденным вещам: по ночам они проникают в гостиницы и дома и уносят мелкие вещи, малоценные, но очень дорогие владельцу (трость профессора Джонсона, фарфоровую подушку паломника, шёлковую шапочку Ми Ханя), оставляя вместо них глиняные монетки. Остановить их можно, только вернув украденное Сай На (или найдя подходящую замену) и убедив его больше не грабить гробницу, — иначе будут являться новые куэйцзымэнь. Если вещи заменить до того, как забирать похищенное, куклы не оживают. Повреждённая куэйцзы навсегда становится безжизненной. По желанию Хранителя куэйцзымэнь в конце концов расправляются с Сай На.",
+    "en": null
+  },
+  "habitat": "Сиань: курганы к западу от города (гробница предка Сай На)",
+  "sources": [
+    {
+      "book_id": "children-of-fear-en",
+      "physical_page": 55,
+      "printed_page": 54,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Kueitzumen, faithful servants of the dead»: описание, черты"
+    },
+    {
+      "book_id": "children-of-fear-en",
+      "physical_page": 68,
+      "printed_page": 67,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Encounters of the Ming-ch’i Kind», «The Hunt is On»"
+    },
+    {
+      "book_id": "children-of-fear-en",
+      "physical_page": 69,
+      "printed_page": 68,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Their Final Rest»"
+    },
+    {
+      "book_id": "children-of-fear-en",
+      "physical_page": 70,
+      "printed_page": 69,
+      "method": "book_text",
+      "verified": true,
+      "note": "как их остановить"
+    },
+    {
+      "book_id": "children-of-fear-en",
+      "physical_page": 95,
+      "printed_page": 94,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Creatures and Monsters»: статблок"
+    },
+    {
+      "book_id": "children-of-fear-en",
+      "physical_page": 96,
+      "printed_page": 95,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Sample Kueitzumen»: таблица шести образцов"
+    }
+  ],
+  "errata": [
+    {
+      "field": "statblock.characteristics.DEX",
+      "printed": "50 (3D6)5",
+      "expected": "52 (3d6×5)",
+      "note": "среднее 3d6×5 — 52,5; напечатано 50 (с. 94). Оставлено как напечатано.",
+      "fixed": false
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); печатная страница = физическая − 1. Средние: ПЗ напечатаны диапазоном «3–5» (по средним ВЫН и ТЕЛ — 4); ПМ среднее — вывод из МОЩ 17 (в книге не напечатано, Р-41). Таблица образцов 1–6 — варианты (Р-74); ловкость уклонения и атаки у образцов — общие."
+  },
+  "corrections": [
+    {
+      "field": "statblock.mp",
+      "from": null,
+      "to": "3",
+      "reason": "в профиле с. 94 ПМ нет; МОЩ 17 / 5 = 3 — вывод из текста (Р-41)",
+      "ref": "Р-41"
+    }
+  ],
+  "images": [
+    {
+      "file": "art/creatures/cof-gates-kueitzumen.webp",
+      "kind": "art",
+      "caption": "куэйцзы в терракотовой форме",
+      "source": "Дети страха (англ., 7e), с. 54 (физ. 55)"
+    },
+    {
+      "file": "art/creatures/cof-gates-kueitzumen-spectral-2.webp",
+      "kind": "art",
+      "caption": "куэйцзы в призрачном облике",
+      "source": "Дети страха (англ., 7e), с. 95 (физ. 96)"
+    }
+  ]
+}

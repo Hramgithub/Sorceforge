@@ -1,0 +1,202 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "children-of-fear-en/creature/song-asiatic-black-bear",
+  "kind": "creature",
+  "name": {
+    "ru": "Гималайский медведь",
+    "en": "Asiatic Black Bear, opportunistic scavenger"
+  },
+  "aliases": [
+    "Asiatic Black Bear",
+    "азиатский чёрный медведь"
+  ],
+  "category": "animal",
+  "subcategory": "медведь",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "instance_of",
+      "target": "coc:creature:bear",
+      "note_back": "гималайский медведь (глава 3 «Детей страха»)"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "90",
+        "value": 90
+      },
+      "CON": {
+        "raw": "60",
+        "value": 60
+      },
+      "SIZ": {
+        "raw": "100",
+        "value": 100
+      },
+      "DEX": {
+        "raw": "60",
+        "value": 60
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "INT": {
+        "raw": "—",
+        "value": null
+      },
+      "POW": {
+        "raw": "60",
+        "value": 60
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "16",
+      "value": 16
+    },
+    "mp": {
+      "raw": "—",
+      "value": null
+    },
+    "damage_bonus": {
+      "raw": "+1d6",
+      "value": "+1d6"
+    },
+    "build": {
+      "raw": "2",
+      "value": 2
+    },
+    "move": {
+      "raw": "12",
+      "value": 12,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 12
+        }
+      ]
+    },
+    "luck": {
+      "raw": "—",
+      "value": null
+    },
+    "sanity": {
+      "raw": "—",
+      "value": null
+    },
+    "armor": {
+      "raw": "3 (мех и хрящи)",
+      "value": 3
+    },
+    "attacks_per_round": {
+      "raw": "2",
+      "value": 2
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d3+1d6",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "notes": "когти и укус"
+      }
+    ],
+    "dodge": {
+      "raw": "25% (12/5)",
+      "value": 25,
+      "half": 12,
+      "fifth": 5
+    },
+    "skills": [
+      {
+        "name": "Лазание",
+        "skill": "coc:skill:climb",
+        "value": {
+          "raw": "60%",
+          "value": 60
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "75%",
+          "value": 75
+        }
+      },
+      {
+        "name": "Чутьё на добычу",
+        "skill": "coc:skill:scent-prey",
+        "value": {
+          "raw": "70%",
+          "value": 70
+        }
+      }
+    ]
+  },
+  "description": {
+    "ru": "Гималайский (азиатский чёрный) медведь, падальщик при случае. Атак за раунд: 2 (когти и укус).",
+    "en": null
+  },
+  "legend": {
+    "ru": "Необязательная встреча «Возрождённая великанша»: медведь доедает труп старого пастуха у дороги на Гилгит. От большой группы удирает, на малую делает ложный бросок; на того, кто побежит или притворится мёртвым, нападает сразу. Встать против него — совмещённая проверка СИЛ и МОЩ: при успехе медведь отступает.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "children-of-fear-en",
+      "physical_page": 151,
+      "printed_page": 150,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Asiatic Black Bear, opportunistic scavenger»"
+    },
+    {
+      "book_id": "children-of-fear-en",
+      "physical_page": 112,
+      "printed_page": 111,
+      "method": "book_text",
+      "verified": true,
+      "note": "встреча с медведем"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по страницам книги (печатная страница = физическая − 1). Арт — с. 150."
+  },
+  "images": [
+    {
+      "file": "art/creatures/cof-song-asiatic-black-bear.webp",
+      "kind": "art",
+      "caption": "Asiatic Black Bear",
+      "source": "The Children of Fear (англ., 7e), с. 150 (физ. 151)"
+    }
+  ]
+}

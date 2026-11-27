@@ -1,0 +1,241 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "children-of-fear-en/creature/bones-scorpion-demon",
+  "kind": "creature",
+  "name": {
+    "ru": "Демон-скорпион",
+    "en": "Scorpion Demon"
+  },
+  "aliases": [
+    "Scorpion Demon, arachnid terror",
+    "Scorpion Demon, oversized arachnid terror",
+    "демон-скорпион, паукообразный ужас"
+  ],
+  "category": "supernatural",
+  "subcategory": "дхармапала (гневный дух-хранитель)",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "110",
+        "value": 110
+      },
+      "CON": {
+        "raw": "100",
+        "value": 100
+      },
+      "SIZ": {
+        "raw": "80",
+        "value": 80
+      },
+      "DEX": {
+        "raw": "50",
+        "value": 50
+      },
+      "APP": {
+        "raw": "—",
+        "value": null
+      },
+      "INT": {
+        "raw": "—",
+        "value": null
+      },
+      "POW": {
+        "raw": "80",
+        "value": 80
+      },
+      "EDU": {
+        "raw": "—",
+        "value": null
+      }
+    },
+    "hp": {
+      "raw": "18",
+      "value": 18
+    },
+    "mp": {
+      "raw": "16",
+      "value": 16
+    },
+    "damage_bonus": {
+      "raw": "+1d6",
+      "value": "+1d6"
+    },
+    "build": {
+      "raw": "2",
+      "value": 2
+    },
+    "move": {
+      "raw": "8",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        }
+      ]
+    },
+    "luck": {
+      "raw": "—",
+      "value": null
+    },
+    "armor": {
+      "raw": "3 пункта (хитиновая чешуйчатая броня)",
+      "value": 3
+    },
+    "attacks_per_round": {
+      "raw": "3 (клешни и жало)",
+      "value": 3
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой: клешня",
+          "en": "Fighting (pincer)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d6+БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        },
+        "notes": "дважды за раунд (или один захват)"
+      },
+      {
+        "name": {
+          "ru": "Ближний бой: жало",
+          "en": "Fighting (stinger)"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "1d3+1d10 (яд)",
+          "dice": "1d3+1d10",
+          "adds_db": false
+        },
+        "notes": "раз за раунд; яд жала: чрезвычайная проверка ВЫН — успех вдвое снижает урон от яда (половина 1d10, с округлением вниз), но 1d3 от удара остаются; иначе удар и яд вместе — 1d10+1d3"
+      },
+      {
+        "name": {
+          "ru": "Захват (манёвр)",
+          "en": "Grab (mnvr)"
+        },
+        "kind": "maneuver",
+        "skill": "Ближний бой",
+        "chance": {
+          "raw": "45% (22/9)",
+          "value": 45,
+          "half": 22,
+          "fifth": 9
+        },
+        "damage": {
+          "raw": "3d3+БкУ",
+          "dice": "3d3",
+          "adds_db": true
+        },
+        "notes": "вместо двух ударов клешнями хватает цель и тащит к девяти пастям, чтобы сожрать"
+      }
+    ],
+    "dodge": {
+      "raw": "35% (17/7)",
+      "value": 35,
+      "half": 17,
+      "fifth": 7
+    },
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d6",
+        "trigger": "встретить демона-скорпиона"
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Тертон",
+      "summary": "демоны-скорпионы чувствуют силу, исходящую от священных и магических текстов; по приказу ведут призвавшего к таким предметам, если те в пределах 80 м от места ритуала призыва",
+      "raw": "Terton: scorpion demons are sensitive to the power given off by sacred and magical texts and, if so instructed, can lead their summoner to such items provided they are within a radius of 80 yards from where the summoning ritual took place."
+    },
+    {
+      "name": "Три атаки за раунд",
+      "summary": "дважды бьёт клешнями (или делает один захват) и раз жалит; может поразить до трёх разных жертв, если все цели близко друг к другу. Призванный и связанный демон достаточно умён, чтобы выполнять простые команды и защищать призвавшего от земных и потусторонних угроз; если связывание не удалось, жалит один раз и уходит.",
+      "raw": "Attacks twice with its pincers (or performs one grab) and once with its stinger per round. It can strike up to three separate victims, as long as the all the targets are within close range of one another. Summoned scorpion demons are sufficiently intelligent to follow straightforward commands and defend their summoner against a variety of worldly and otherworldly threats, if properly bound. If the binding fails, the scorpion demon attacks once with its stinger and then leaves.",
+      "refs": [
+        "coc:spell:summon-bind-scorpion-demon"
+      ]
+    },
+    {
+      "name": "Яд жала",
+      "summary": "задетый жалом делает чрезвычайную проверку ВЫН: успех — урон от яда вдвое меньше (половина 1d10, с округлением вниз), но 1d3 от удара остаются; провал — удар и яд вместе наносят 1d10+1d3",
+      "raw": "Stinger Poison: if hit by the scorpion demon’s stinger, the victim should make an Extreme CON roll, with success halving the poison damage (half of 1d10, round down), although they still suffer 1d3 damage from the hit; otherwise, the poison and hit combined inflict 1d10+1d3 damage."
+    }
+  ],
+  "description": {
+    "ru": "Гигантский демон в иссиня-чёрной броне из скорпионьей шкуры: 9 голов и 27 глаз, 18 клешней и большое кроваво-красное жало, чью силу на священных изображениях символизирует кровь (или яд) на острие пурбы (трёхгранного кинжала). Гневный и защищающий. Выступает как дхармапала (гневное божество или дух-хранитель) или как открыватель тантрической мудрости; призванный, обычно берёт на себя первую роль.",
+    "en": null
+  },
+  "legend": {
+    "ru": "Скорпионы играют много ролей в индийской и тибетской мифологии: чаще воплощают дурное — болезнь, осквернение, разрушение, — но служат и талисманами при усмирении опасных духов. По преданию, в древнем месте кремации у Раджагрихи Падмасамбхава получил знание о пурбе от ужасного существа-скорпиона (с. 161).\nГлава 4 «Старые кости»: Агхор Калидасджи может призвать демона, чтобы защитить свою территорию от воров, — если сыщики попытаются взять кости из его места кремации или иначе разозлят его (необязательная встреча для боевых или пульп-групп, с. 167; ночной набег, с. 168). Победа над демоном-скорпионом даёт +1d6 Рассудка.",
+    "en": null
+  },
+  "sources": [
+    {
+      "book_id": "children-of-fear-en",
+      "physical_page": 158,
+      "printed_page": 157,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Scorpion Demon, oversized arachnid terror» (действующие лица)"
+    },
+    {
+      "book_id": "children-of-fear-en",
+      "physical_page": 168,
+      "printed_page": 167,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Optional Encounter: The Scorpion Demon»"
+    },
+    {
+      "book_id": "children-of-fear-en",
+      "physical_page": 185,
+      "printed_page": 184,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Creatures and Monsters»: Scorpion Demon, arachnid terror — статблок"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1). Уникальное существо главы (не связано с обычным скорпионом справочника). Числа сходятся: ПЗ (100+80)/10 = 18, ПМ 80/5 = 16, СИЛ+ТЕЛ 190 → БкУ +1d6, Комплекция 2. Меры переведены (Р-64): 80 ярдов → 80 м."
+  },
+  "images": [
+    {
+      "file": "art/creatures/cof-bones-scorpion-demon.webp",
+      "kind": "art",
+      "caption": "Демон-скорпион",
+      "source": "The Children of Fear (англ., 7e), с. 184 (физ. 185)"
+    }
+  ]
+}

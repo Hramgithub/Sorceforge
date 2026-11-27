@@ -1,0 +1,89 @@
+{
+  "schema": "sourcefold.scene.v0",
+  "id": "children-of-fear-en/scene/bones-scorpion-demon-encounter",
+  "kind": "scene",
+  "name": {
+    "ru": "Необязательная встреча: демон-скорпион",
+    "en": "Optional Encounter: The Scorpion Demon"
+  },
+  "description": {
+    "ru": "Если сыщики в основном боевые (или пульп) и игрокам по душе сверхъестественная драка, Агхор Калидасджи может призвать демона-скорпиона против потенциальных воров — если они попытаются взять кости из его места кремации или иначе его разозлят. Так же он поступает, если ночной набег на его место кремации раскрыт («Чёрт, которого знаешь»): как страж места кремации, он призывает демона-скорпиона, убедившись, кто нарушители.",
+    "en": null
+  },
+  "when": "Если сыщики пытаются взять кости в месте кремации садху или иначе его злят.",
+  "arc": {
+    "scenario": "children-of-fear-en/scenario/old-bones",
+    "part": "The Ash-Smeared Sadhu",
+    "order": 5
+  },
+  "where": [
+    {
+      "location": "children-of-fear-en/location/bones-northeast-charnel-ground",
+      "note": "место кремации садху"
+    }
+  ],
+  "participants": [
+    {
+      "id": "children-of-fear-en/character/aghor-kalidasji",
+      "role": "призывает демона"
+    },
+    {
+      "id": "children-of-fear-en/creature/bones-scorpion-demon",
+      "role": "защищает место кремации"
+    }
+  ],
+  "mechanics": {
+    "ru": "Профиль — запись «Демон-скорпион» (с. 184): Рассудок 0/1d6 при встрече; три атаки за раунд, яд жала (чрезвычайная проверка ВЫН), броня 3. Заклинание «Призыв/укрощение демона-скорпиона» (приложение B). Победа над демоном — +1d6 Рассудка; убийство Агхора Калидасджи — −1d6 Рассудка.",
+    "en": null
+  },
+  "outcome": {
+    "ru": "Бой или бегство; если связывание не удалось, демон жалит один раз и уходит.",
+    "en": null
+  },
+  "refs": [
+    "children-of-fear-en/scenario/old-bones",
+    "children-of-fear-en/creature/bones-scorpion-demon",
+    "children-of-fear-en/character/aghor-kalidasji",
+    "coc:spell:summon-bind-scorpion-demon",
+    "children-of-fear-en/scene/bones-the-devil-you-know"
+  ],
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "sources": [
+    {
+      "book_id": "children-of-fear-en",
+      "physical_page": 168,
+      "printed_page": 167,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Optional Encounter: The Scorpion Demon»"
+    },
+    {
+      "book_id": "children-of-fear-en",
+      "physical_page": 169,
+      "printed_page": 168,
+      "method": "book_text",
+      "verified": true,
+      "note": "ночной набег"
+    },
+    {
+      "book_id": "children-of-fear-en",
+      "physical_page": 185,
+      "printed_page": 184,
+      "method": "book_text",
+      "verified": true,
+      "note": "профиль"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); числа — по странице книги (печатная страница = физическая − 1)."
+  }
+}

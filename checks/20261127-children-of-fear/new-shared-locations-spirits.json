@@ -1,0 +1,167 @@
+{
+  "about": "Черновики общих городов части spirits, которых нет в kb/locations (проверено 2026-11-27): создаёт ведущий. Пока записей нет, города упомянуты текстом: Бихар-Шариф — в сцене children-of-fear-en/scene/spirits-finds-tent и области children-of-fear-en/location/spirits-nalanda; Бахтиярпур — в сцене spirits-getting-to-patna и месте spirits-nalanda-village; Калькутта — у Дэниела Мортимера и в сцене spirits-finds-tent. Калькутту уже предлагает часть bones (new-shared-locations-bones.json) — здесь только сведения главы 7 для слияния в один черновик. Город Патна (coc:location:patna) часть spirits создала сама.",
+  "records": [
+    {
+      "schema": "sourcefold.location.v0",
+      "id": "coc:location:bihar-sharif",
+      "kind": "location",
+      "name": {
+        "ru": "Бихар-Шариф",
+        "en": "Bihar Sharif"
+      },
+      "location_type": "город",
+      "part_of": null,
+      "keeper_hint": "ближайший к Наланде городок с полицией",
+      "description": {
+        "ru": "1920-е, «Дети страха» (гл. 7 «Духи земли»). Городок в 13 км от руин университета Наланда. Если сыщики буянят на раскопках, Дэниел Мортимер шлёт гонца в Бихар-Шариф к местным властям — оттуда приезжает полиция, а весть доходит до Токабхаи (у неё есть агенты на раскопках Наланды или в Бихар-Шарифе).",
+        "en": null
+      },
+      "refs": [
+        "children-of-fear-en/scenario/spirits-of-the-earth",
+        "children-of-fear-en/scene/spirits-finds-tent",
+        "children-of-fear-en/location/spirits-nalanda",
+        "children-of-fear-en/organization/campaign-tokabhaya"
+      ],
+      "axes": {
+        "era": [
+          "1920s"
+        ],
+        "ruleset": "core"
+      },
+      "sources": [
+        {
+          "book_id": "children-of-fear-en",
+          "physical_page": 279,
+          "printed_page": 278,
+          "method": "book_text",
+          "verified": true,
+          "note": "гонец в Бихар-Шариф, полиция покрывает 13 км"
+        },
+        {
+          "book_id": "children-of-fear-en",
+          "physical_page": 289,
+          "printed_page": 288,
+          "method": "book_text",
+          "verified": true,
+          "note": "агенты Токабхаи на раскопках или в Бихар-Шарифе"
+        }
+      ],
+      "quality": {
+        "needs_review": false,
+        "flags": [
+          "translated"
+        ],
+        "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); печатная страница = физическая − 1. Черновик части spirits; описан только тем, что даёт глава 7."
+      }
+    },
+    {
+      "schema": "sourcefold.location.v0",
+      "id": "coc:location:bakhtiyarpur",
+      "kind": "location",
+      "name": {
+        "ru": "Бахтиярпур",
+        "en": "Bakhtiyarpur"
+      },
+      "location_type": "город",
+      "part_of": null,
+      "keeper_hint": "пересадочная станция между Наландой/Раджгиром и линией Хаура — Дели",
+      "description": {
+        "ru": "1920-е, «Дети страха» (гл. 4 и 7). Станция, где Бахтиярпур-Бихарская лёгкая железная дорога (от Раджгира и деревни Наланда) встречается с главной линией Хаура (Калькутта) — Дели; здесь пересаживаются на поезд до станции Гулзарбагх в Патне (весь путь от Наланды — около двух с половиной часов).",
+        "en": null
+      },
+      "refs": [
+        "children-of-fear-en/scene/spirits-getting-to-patna",
+        "children-of-fear-en/location/spirits-nalanda-village",
+        "coc:location:patna",
+        "coc:location:rajgir"
+      ],
+      "axes": {
+        "era": [
+          "1920s"
+        ],
+        "ruleset": "core"
+      },
+      "sources": [
+        {
+          "book_id": "children-of-fear-en",
+          "physical_page": 287,
+          "printed_page": 286,
+          "method": "book_text",
+          "verified": true,
+          "note": "«Getting to Patna»: пересадка в Бахтиярпуре"
+        }
+      ],
+      "quality": {
+        "needs_review": false,
+        "flags": [
+          "translated"
+        ],
+        "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21). Черновик части spirits; глава 4 («Getting to Sitavana», с. 158) говорит о той же дороге — сверить с частью bones."
+      }
+    },
+    {
+      "schema": "sourcefold.location.v0",
+      "id": "coc:location:calcutta",
+      "kind": "location",
+      "name": {
+        "ru": "Калькутта",
+        "en": "Calcutta"
+      },
+      "aliases": [
+        "Колката",
+        "Kolkata"
+      ],
+      "location_type": "город",
+      "part_of": null,
+      "keeper_hint": "дополнение главы 7 к черновику части bones",
+      "description": {
+        "ru": "1920-е, «Дети страха» (гл. 7). Около 560 км к юго-востоку от Патны. Здесь родился Дэниел Мортимер; Азиатское общество Бенгалии (Парк-стрит, 1) хранит сокровищницу индийских артефактов и рукописей, а самые ценные вещи общества — в Индийском музее, куда отправляют и интересные находки раскопок Наланды. Линия Хаура (Калькутта) — Дели проходит через Бахтиярпур и станцию Гулзарбагх в Патне.",
+        "en": null
+      },
+      "refs": [
+        "children-of-fear-en/character/daniel-mortimer",
+        "children-of-fear-en/scene/spirits-finds-tent",
+        "coc:location:patna"
+      ],
+      "axes": {
+        "era": [
+          "1920s"
+        ],
+        "ruleset": "core"
+      },
+      "sources": [
+        {
+          "book_id": "children-of-fear-en",
+          "physical_page": 273,
+          "printed_page": 272,
+          "method": "book_text",
+          "verified": true,
+          "note": "Мортимер родился в Калькутте; Азиатское общество Бенгалии, Индийский музей"
+        },
+        {
+          "book_id": "children-of-fear-en",
+          "physical_page": 278,
+          "printed_page": 277,
+          "method": "book_text",
+          "verified": true,
+          "note": "находки Наланды — в Индийский музей в Калькутте"
+        },
+        {
+          "book_id": "children-of-fear-en",
+          "physical_page": 285,
+          "printed_page": 284,
+          "method": "book_text",
+          "verified": true,
+          "note": "Патна — около 560 км к северо-западу от Калькутты"
+        }
+      ],
+      "quality": {
+        "needs_review": false,
+        "flags": [
+          "translated"
+        ],
+        "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21). Сведения главы 7 для слияния с черновиком Калькутты части bones (один город, Р-80)."
+      }
+    }
+  ]
+}

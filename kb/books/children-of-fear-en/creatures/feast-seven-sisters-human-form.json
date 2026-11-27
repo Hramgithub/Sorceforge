@@ -1,0 +1,1673 @@
+{
+  "schema": "sourcefold.creature.v0",
+  "id": "children-of-fear-en/creature/feast-seven-sisters-human-form",
+  "kind": "creature",
+  "name": {
+    "ru": "Семь Сестёр (человеческий облик)",
+    "en": "The Seven Sisters, Dakini in Human Form"
+  },
+  "aliases": [
+    "Дакини в человеческом облике",
+    "Семь Сестёр",
+    "The Seven Sisters",
+    "Dakini in Human Form",
+    "кхандромы",
+    "khandromas"
+  ],
+  "category": "supernatural",
+  "subcategory": "дакини (кхандрома), мирская",
+  "axes": {
+    "era": [
+      "1920s"
+    ],
+    "ruleset": "core"
+  },
+  "relations": [
+    {
+      "type": "form_of",
+      "target": "children-of-fear-en/creature/feast-seven-sisters-demon-form",
+      "note": "демонический облик тех же Сестёр",
+      "note_back": "прекрасный человеческий облик тех же Сестёр"
+    }
+  ],
+  "statblock": {
+    "averages": false,
+    "characteristics": {
+      "STR": {
+        "raw": "70",
+        "value": 70
+      },
+      "CON": {
+        "raw": "75",
+        "value": 75
+      },
+      "SIZ": {
+        "raw": "70",
+        "value": 70
+      },
+      "DEX": {
+        "raw": "100",
+        "value": 100
+      },
+      "INT": {
+        "raw": "75",
+        "value": 75
+      },
+      "APP": {
+        "raw": "100",
+        "value": 100
+      },
+      "POW": {
+        "raw": "85",
+        "value": 85
+      }
+    },
+    "hp": {
+      "raw": "14",
+      "value": 14
+    },
+    "mp": {
+      "raw": "17",
+      "value": 17
+    },
+    "damage_bonus": {
+      "raw": "+1d4",
+      "value": "+1d4"
+    },
+    "build": {
+      "raw": "+1",
+      "value": 1
+    },
+    "move": {
+      "raw": "8/12",
+      "value": 8,
+      "modes": [
+        {
+          "mode": "walk",
+          "value": 8
+        },
+        {
+          "mode": "fly",
+          "value": 12
+        }
+      ]
+    },
+    "armor": {
+      "raw": "нет",
+      "value": 0
+    },
+    "attacks_per_round": {
+      "raw": "1 (катари или сила)",
+      "value": 1
+    },
+    "attacks": [
+      {
+        "name": {
+          "ru": "Ближний бой (драка)",
+          "en": "Brawl"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d3+БкУ",
+          "dice": "1d3",
+          "adds_db": true
+        },
+        "weapon": "coc:weapon:unarmed"
+      },
+      {
+        "name": {
+          "ru": "Катари",
+          "en": "katari"
+        },
+        "kind": "attack",
+        "skill": "Ближний бой (драка)",
+        "chance": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "damage": {
+          "raw": "1d6+БкУ",
+          "dice": "1d6",
+          "adds_db": true
+        }
+      }
+    ],
+    "dodge": {
+      "raw": "40% (20/8)",
+      "value": 40,
+      "half": 20,
+      "fifth": 8
+    },
+    "skills": [
+      {
+        "name": "Искусство/ремесло (танец)",
+        "skill": "coc:skill:art-craft",
+        "specialization": "танец",
+        "value": {
+          "raw": "90%",
+          "value": 90,
+          "half": 45,
+          "fifth": 18
+        }
+      },
+      {
+        "name": "Слух",
+        "skill": "coc:skill:listen",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Внимание",
+        "skill": "coc:skill:spot-hidden",
+        "value": {
+          "raw": "65%",
+          "value": 65,
+          "half": 32,
+          "fifth": 13
+        }
+      },
+      {
+        "name": "Иностранный язык (любой, по необходимости)",
+        "skill": "coc:skill:language-other",
+        "specialization": "любой (по необходимости)",
+        "value": {
+          "raw": "75%",
+          "value": 75,
+          "half": 37,
+          "fifth": 15
+        }
+      },
+      {
+        "name": "Родной язык (кхандро дайиг — сумеречный язык дакини)",
+        "skill": "coc:skill:language-own",
+        "specialization": "кхандро дайиг",
+        "value": {
+          "raw": "95%",
+          "value": 95,
+          "half": 47,
+          "fifth": 19
+        }
+      }
+    ],
+    "sanity_loss": [
+      {
+        "success": "0",
+        "fail": "1d3",
+        "trigger": "встреча с дакини в человеческом облике"
+      }
+    ],
+    "spells": {
+      "raw": "Summon Khandroma* (*см. приложение B).",
+      "items": [
+        {
+          "name": "Summon Khandroma",
+          "spell": "coc:spell:summon-bind-khandroma"
+        }
+      ]
+    }
+  },
+  "variants": [
+    {
+      "label": "1 — красная кожа",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "70",
+            "value": 70
+          },
+          "CON": {
+            "raw": "75",
+            "value": 75
+          },
+          "SIZ": {
+            "raw": "70",
+            "value": 70
+          },
+          "DEX": {
+            "raw": "100",
+            "value": 100
+          },
+          "INT": {
+            "raw": "75",
+            "value": 75
+          },
+          "APP": {
+            "raw": "100",
+            "value": 100
+          },
+          "POW": {
+            "raw": "85",
+            "value": 85
+          }
+        },
+        "hp": {
+          "raw": "14",
+          "value": 14
+        },
+        "mp": {
+          "raw": "17",
+          "value": 17
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "+1",
+          "value": 1
+        },
+        "move": {
+          "raw": "8/12",
+          "value": 8,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 8
+            },
+            {
+              "mode": "fly",
+              "value": 12
+            }
+          ]
+        },
+        "armor": {
+          "raw": "нет",
+          "value": 0
+        },
+        "attacks_per_round": {
+          "raw": "1 (катари или сила)",
+          "value": 1
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Ближний бой (драка)",
+              "en": "Brawl"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "40% (20/8)",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            },
+            "damage": {
+              "raw": "1d3+БкУ",
+              "dice": "1d3",
+              "adds_db": true
+            },
+            "weapon": "coc:weapon:unarmed"
+          },
+          {
+            "name": {
+              "ru": "Катари",
+              "en": "katari"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "40% (20/8)",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            },
+            "damage": {
+              "raw": "1d6+БкУ",
+              "dice": "1d6",
+              "adds_db": true
+            }
+          }
+        ],
+        "dodge": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "skills": [
+          {
+            "name": "Искусство/ремесло (танец)",
+            "skill": "coc:skill:art-craft",
+            "specialization": "танец",
+            "value": {
+              "raw": "90%",
+              "value": 90,
+              "half": 45,
+              "fifth": 18
+            }
+          },
+          {
+            "name": "Слух",
+            "skill": "coc:skill:listen",
+            "value": {
+              "raw": "65%",
+              "value": 65,
+              "half": 32,
+              "fifth": 13
+            }
+          },
+          {
+            "name": "Внимание",
+            "skill": "coc:skill:spot-hidden",
+            "value": {
+              "raw": "65%",
+              "value": 65,
+              "half": 32,
+              "fifth": 13
+            }
+          },
+          {
+            "name": "Иностранный язык (любой, по необходимости)",
+            "skill": "coc:skill:language-other",
+            "specialization": "любой (по необходимости)",
+            "value": {
+              "raw": "75%",
+              "value": 75,
+              "half": 37,
+              "fifth": 15
+            }
+          },
+          {
+            "name": "Родной язык (кхандро дайиг — сумеречный язык дакини)",
+            "skill": "coc:skill:language-own",
+            "specialization": "кхандро дайиг",
+            "value": {
+              "raw": "95%",
+              "value": 95,
+              "half": 47,
+              "fifth": 19
+            }
+          }
+        ],
+        "sanity_loss": [
+          {
+            "success": "0",
+            "fail": "1d3",
+            "trigger": "встреча с дакини в человеческом облике"
+          }
+        ],
+        "spells": {
+          "raw": "Summon Khandroma* (*см. приложение B).",
+          "items": [
+            {
+              "name": "Summon Khandroma",
+              "spell": "coc:spell:summon-bind-khandroma"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "2 — синяя кожа",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "80",
+            "value": 80
+          },
+          "CON": {
+            "raw": "70",
+            "value": 70
+          },
+          "SIZ": {
+            "raw": "65",
+            "value": 65
+          },
+          "DEX": {
+            "raw": "100",
+            "value": 100
+          },
+          "INT": {
+            "raw": "65",
+            "value": 65
+          },
+          "APP": {
+            "raw": "100",
+            "value": 100
+          },
+          "POW": {
+            "raw": "80",
+            "value": 80
+          }
+        },
+        "hp": {
+          "raw": "13",
+          "value": 13
+        },
+        "mp": {
+          "raw": "16",
+          "value": 16
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "+1",
+          "value": 1
+        },
+        "move": {
+          "raw": "8/12",
+          "value": 8,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 8
+            },
+            {
+              "mode": "fly",
+              "value": 12
+            }
+          ]
+        },
+        "armor": {
+          "raw": "нет",
+          "value": 0
+        },
+        "attacks_per_round": {
+          "raw": "1 (катари или сила)",
+          "value": 1
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Ближний бой (драка)",
+              "en": "Brawl"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "40% (20/8)",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            },
+            "damage": {
+              "raw": "1d3+БкУ",
+              "dice": "1d3",
+              "adds_db": true
+            },
+            "weapon": "coc:weapon:unarmed"
+          },
+          {
+            "name": {
+              "ru": "Катари",
+              "en": "katari"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "40% (20/8)",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            },
+            "damage": {
+              "raw": "1d6+БкУ",
+              "dice": "1d6",
+              "adds_db": true
+            }
+          }
+        ],
+        "dodge": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "skills": [
+          {
+            "name": "Искусство/ремесло (танец)",
+            "skill": "coc:skill:art-craft",
+            "specialization": "танец",
+            "value": {
+              "raw": "90%",
+              "value": 90,
+              "half": 45,
+              "fifth": 18
+            }
+          },
+          {
+            "name": "Слух",
+            "skill": "coc:skill:listen",
+            "value": {
+              "raw": "65%",
+              "value": 65,
+              "half": 32,
+              "fifth": 13
+            }
+          },
+          {
+            "name": "Внимание",
+            "skill": "coc:skill:spot-hidden",
+            "value": {
+              "raw": "65%",
+              "value": 65,
+              "half": 32,
+              "fifth": 13
+            }
+          },
+          {
+            "name": "Иностранный язык (любой, по необходимости)",
+            "skill": "coc:skill:language-other",
+            "specialization": "любой (по необходимости)",
+            "value": {
+              "raw": "75%",
+              "value": 75,
+              "half": 37,
+              "fifth": 15
+            }
+          },
+          {
+            "name": "Родной язык (кхандро дайиг — сумеречный язык дакини)",
+            "skill": "coc:skill:language-own",
+            "specialization": "кхандро дайиг",
+            "value": {
+              "raw": "95%",
+              "value": 95,
+              "half": 47,
+              "fifth": 19
+            }
+          }
+        ],
+        "sanity_loss": [
+          {
+            "success": "0",
+            "fail": "1d3",
+            "trigger": "встреча с дакини в человеческом облике"
+          }
+        ],
+        "spells": {
+          "raw": "Summon Khandroma* (*см. приложение B).",
+          "items": [
+            {
+              "name": "Summon Khandroma",
+              "spell": "coc:spell:summon-bind-khandroma"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "3 — чёрная кожа",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "60",
+            "value": 60
+          },
+          "CON": {
+            "raw": "55",
+            "value": 55
+          },
+          "SIZ": {
+            "raw": "50",
+            "value": 50
+          },
+          "DEX": {
+            "raw": "65",
+            "value": 65
+          },
+          "INT": {
+            "raw": "65",
+            "value": 65
+          },
+          "APP": {
+            "raw": "95",
+            "value": 95
+          },
+          "POW": {
+            "raw": "65",
+            "value": 65
+          }
+        },
+        "hp": {
+          "raw": "10",
+          "value": 10
+        },
+        "mp": {
+          "raw": "13",
+          "value": 13
+        },
+        "damage_bonus": {
+          "raw": "0",
+          "value": "0"
+        },
+        "build": {
+          "raw": "0",
+          "value": 0
+        },
+        "move": {
+          "raw": "8/12",
+          "value": 8,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 8
+            },
+            {
+              "mode": "fly",
+              "value": 12
+            }
+          ]
+        },
+        "armor": {
+          "raw": "нет",
+          "value": 0
+        },
+        "attacks_per_round": {
+          "raw": "1 (катари или сила)",
+          "value": 1
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Ближний бой (драка)",
+              "en": "Brawl"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "40% (20/8)",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            },
+            "damage": {
+              "raw": "1d3+БкУ",
+              "dice": "1d3",
+              "adds_db": true
+            },
+            "weapon": "coc:weapon:unarmed"
+          },
+          {
+            "name": {
+              "ru": "Катари",
+              "en": "katari"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "40% (20/8)",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            },
+            "damage": {
+              "raw": "1d6+БкУ",
+              "dice": "1d6",
+              "adds_db": true
+            }
+          }
+        ],
+        "dodge": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "skills": [
+          {
+            "name": "Искусство/ремесло (танец)",
+            "skill": "coc:skill:art-craft",
+            "specialization": "танец",
+            "value": {
+              "raw": "90%",
+              "value": 90,
+              "half": 45,
+              "fifth": 18
+            }
+          },
+          {
+            "name": "Слух",
+            "skill": "coc:skill:listen",
+            "value": {
+              "raw": "65%",
+              "value": 65,
+              "half": 32,
+              "fifth": 13
+            }
+          },
+          {
+            "name": "Внимание",
+            "skill": "coc:skill:spot-hidden",
+            "value": {
+              "raw": "65%",
+              "value": 65,
+              "half": 32,
+              "fifth": 13
+            }
+          },
+          {
+            "name": "Иностранный язык (любой, по необходимости)",
+            "skill": "coc:skill:language-other",
+            "specialization": "любой (по необходимости)",
+            "value": {
+              "raw": "75%",
+              "value": 75,
+              "half": 37,
+              "fifth": 15
+            }
+          },
+          {
+            "name": "Родной язык (кхандро дайиг — сумеречный язык дакини)",
+            "skill": "coc:skill:language-own",
+            "specialization": "кхандро дайиг",
+            "value": {
+              "raw": "95%",
+              "value": 95,
+              "half": 47,
+              "fifth": 19
+            }
+          }
+        ],
+        "sanity_loss": [
+          {
+            "success": "0",
+            "fail": "1d3",
+            "trigger": "встреча с дакини в человеческом облике"
+          }
+        ],
+        "spells": {
+          "raw": "Summon Khandroma* (*см. приложение B).",
+          "items": [
+            {
+              "name": "Summon Khandroma",
+              "spell": "coc:spell:summon-bind-khandroma"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "4 — белая кожа",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "75",
+            "value": 75
+          },
+          "CON": {
+            "raw": "70",
+            "value": 70
+          },
+          "SIZ": {
+            "raw": "50",
+            "value": 50
+          },
+          "DEX": {
+            "raw": "70",
+            "value": 70
+          },
+          "INT": {
+            "raw": "60",
+            "value": 60
+          },
+          "APP": {
+            "raw": "85",
+            "value": 85
+          },
+          "POW": {
+            "raw": "70",
+            "value": 70
+          }
+        },
+        "hp": {
+          "raw": "12",
+          "value": 12
+        },
+        "mp": {
+          "raw": "14",
+          "value": 14
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "+1",
+          "value": 1
+        },
+        "move": {
+          "raw": "8/12",
+          "value": 8,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 8
+            },
+            {
+              "mode": "fly",
+              "value": 12
+            }
+          ]
+        },
+        "armor": {
+          "raw": "нет",
+          "value": 0
+        },
+        "attacks_per_round": {
+          "raw": "1 (катари или сила)",
+          "value": 1
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Ближний бой (драка)",
+              "en": "Brawl"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "40% (20/8)",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            },
+            "damage": {
+              "raw": "1d3+БкУ",
+              "dice": "1d3",
+              "adds_db": true
+            },
+            "weapon": "coc:weapon:unarmed"
+          },
+          {
+            "name": {
+              "ru": "Катари",
+              "en": "katari"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "40% (20/8)",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            },
+            "damage": {
+              "raw": "1d6+БкУ",
+              "dice": "1d6",
+              "adds_db": true
+            }
+          }
+        ],
+        "dodge": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "skills": [
+          {
+            "name": "Искусство/ремесло (танец)",
+            "skill": "coc:skill:art-craft",
+            "specialization": "танец",
+            "value": {
+              "raw": "90%",
+              "value": 90,
+              "half": 45,
+              "fifth": 18
+            }
+          },
+          {
+            "name": "Слух",
+            "skill": "coc:skill:listen",
+            "value": {
+              "raw": "65%",
+              "value": 65,
+              "half": 32,
+              "fifth": 13
+            }
+          },
+          {
+            "name": "Внимание",
+            "skill": "coc:skill:spot-hidden",
+            "value": {
+              "raw": "65%",
+              "value": 65,
+              "half": 32,
+              "fifth": 13
+            }
+          },
+          {
+            "name": "Иностранный язык (любой, по необходимости)",
+            "skill": "coc:skill:language-other",
+            "specialization": "любой (по необходимости)",
+            "value": {
+              "raw": "75%",
+              "value": 75,
+              "half": 37,
+              "fifth": 15
+            }
+          },
+          {
+            "name": "Родной язык (кхандро дайиг — сумеречный язык дакини)",
+            "skill": "coc:skill:language-own",
+            "specialization": "кхандро дайиг",
+            "value": {
+              "raw": "95%",
+              "value": 95,
+              "half": 47,
+              "fifth": 19
+            }
+          }
+        ],
+        "sanity_loss": [
+          {
+            "success": "0",
+            "fail": "1d3",
+            "trigger": "встреча с дакини в человеческом облике"
+          }
+        ],
+        "spells": {
+          "raw": "Summon Khandroma* (*см. приложение B).",
+          "items": [
+            {
+              "name": "Summon Khandroma",
+              "spell": "coc:spell:summon-bind-khandroma"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "5 — розовая кожа",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "80",
+            "value": 80
+          },
+          "CON": {
+            "raw": "65",
+            "value": 65
+          },
+          "SIZ": {
+            "raw": "55",
+            "value": 55
+          },
+          "DEX": {
+            "raw": "95",
+            "value": 95
+          },
+          "INT": {
+            "raw": "65",
+            "value": 65
+          },
+          "APP": {
+            "raw": "120",
+            "value": 120
+          },
+          "POW": {
+            "raw": "60",
+            "value": 60
+          }
+        },
+        "hp": {
+          "raw": "12",
+          "value": 12
+        },
+        "mp": {
+          "raw": "12",
+          "value": 12
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "+1",
+          "value": 1
+        },
+        "move": {
+          "raw": "8/12",
+          "value": 8,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 8
+            },
+            {
+              "mode": "fly",
+              "value": 12
+            }
+          ]
+        },
+        "armor": {
+          "raw": "нет",
+          "value": 0
+        },
+        "attacks_per_round": {
+          "raw": "1 (катари или сила)",
+          "value": 1
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Ближний бой (драка)",
+              "en": "Brawl"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "40% (20/8)",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            },
+            "damage": {
+              "raw": "1d3+БкУ",
+              "dice": "1d3",
+              "adds_db": true
+            },
+            "weapon": "coc:weapon:unarmed"
+          },
+          {
+            "name": {
+              "ru": "Катари",
+              "en": "katari"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "40% (20/8)",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            },
+            "damage": {
+              "raw": "1d6+БкУ",
+              "dice": "1d6",
+              "adds_db": true
+            }
+          }
+        ],
+        "dodge": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "skills": [
+          {
+            "name": "Искусство/ремесло (танец)",
+            "skill": "coc:skill:art-craft",
+            "specialization": "танец",
+            "value": {
+              "raw": "90%",
+              "value": 90,
+              "half": 45,
+              "fifth": 18
+            }
+          },
+          {
+            "name": "Слух",
+            "skill": "coc:skill:listen",
+            "value": {
+              "raw": "65%",
+              "value": 65,
+              "half": 32,
+              "fifth": 13
+            }
+          },
+          {
+            "name": "Внимание",
+            "skill": "coc:skill:spot-hidden",
+            "value": {
+              "raw": "65%",
+              "value": 65,
+              "half": 32,
+              "fifth": 13
+            }
+          },
+          {
+            "name": "Иностранный язык (любой, по необходимости)",
+            "skill": "coc:skill:language-other",
+            "specialization": "любой (по необходимости)",
+            "value": {
+              "raw": "75%",
+              "value": 75,
+              "half": 37,
+              "fifth": 15
+            }
+          },
+          {
+            "name": "Родной язык (кхандро дайиг — сумеречный язык дакини)",
+            "skill": "coc:skill:language-own",
+            "specialization": "кхандро дайиг",
+            "value": {
+              "raw": "95%",
+              "value": 95,
+              "half": 47,
+              "fifth": 19
+            }
+          }
+        ],
+        "sanity_loss": [
+          {
+            "success": "0",
+            "fail": "1d3",
+            "trigger": "встреча с дакини в человеческом облике"
+          }
+        ],
+        "spells": {
+          "raw": "Summon Khandroma* (*см. приложение B).",
+          "items": [
+            {
+              "name": "Summon Khandroma",
+              "spell": "coc:spell:summon-bind-khandroma"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "6 — розовая кожа",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "75",
+            "value": 75
+          },
+          "CON": {
+            "raw": "60",
+            "value": 60
+          },
+          "SIZ": {
+            "raw": "55",
+            "value": 55
+          },
+          "DEX": {
+            "raw": "85",
+            "value": 85
+          },
+          "INT": {
+            "raw": "60",
+            "value": 60
+          },
+          "APP": {
+            "raw": "100",
+            "value": 100
+          },
+          "POW": {
+            "raw": "65",
+            "value": 65
+          }
+        },
+        "hp": {
+          "raw": "11",
+          "value": 11
+        },
+        "mp": {
+          "raw": "13",
+          "value": 13
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "+1",
+          "value": 1
+        },
+        "move": {
+          "raw": "8/12",
+          "value": 8,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 8
+            },
+            {
+              "mode": "fly",
+              "value": 12
+            }
+          ]
+        },
+        "armor": {
+          "raw": "нет",
+          "value": 0
+        },
+        "attacks_per_round": {
+          "raw": "1 (катари или сила)",
+          "value": 1
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Ближний бой (драка)",
+              "en": "Brawl"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "40% (20/8)",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            },
+            "damage": {
+              "raw": "1d3+БкУ",
+              "dice": "1d3",
+              "adds_db": true
+            },
+            "weapon": "coc:weapon:unarmed"
+          },
+          {
+            "name": {
+              "ru": "Катари",
+              "en": "katari"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "40% (20/8)",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            },
+            "damage": {
+              "raw": "1d6+БкУ",
+              "dice": "1d6",
+              "adds_db": true
+            }
+          }
+        ],
+        "dodge": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "skills": [
+          {
+            "name": "Искусство/ремесло (танец)",
+            "skill": "coc:skill:art-craft",
+            "specialization": "танец",
+            "value": {
+              "raw": "90%",
+              "value": 90,
+              "half": 45,
+              "fifth": 18
+            }
+          },
+          {
+            "name": "Слух",
+            "skill": "coc:skill:listen",
+            "value": {
+              "raw": "65%",
+              "value": 65,
+              "half": 32,
+              "fifth": 13
+            }
+          },
+          {
+            "name": "Внимание",
+            "skill": "coc:skill:spot-hidden",
+            "value": {
+              "raw": "65%",
+              "value": 65,
+              "half": 32,
+              "fifth": 13
+            }
+          },
+          {
+            "name": "Иностранный язык (любой, по необходимости)",
+            "skill": "coc:skill:language-other",
+            "specialization": "любой (по необходимости)",
+            "value": {
+              "raw": "75%",
+              "value": 75,
+              "half": 37,
+              "fifth": 15
+            }
+          },
+          {
+            "name": "Родной язык (кхандро дайиг — сумеречный язык дакини)",
+            "skill": "coc:skill:language-own",
+            "specialization": "кхандро дайиг",
+            "value": {
+              "raw": "95%",
+              "value": 95,
+              "half": 47,
+              "fifth": 19
+            }
+          }
+        ],
+        "sanity_loss": [
+          {
+            "success": "0",
+            "fail": "1d3",
+            "trigger": "встреча с дакини в человеческом облике"
+          }
+        ],
+        "spells": {
+          "raw": "Summon Khandroma* (*см. приложение B).",
+          "items": [
+            {
+              "name": "Summon Khandroma",
+              "spell": "coc:spell:summon-bind-khandroma"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "7 — розовая кожа",
+      "statblock": {
+        "averages": false,
+        "characteristics": {
+          "STR": {
+            "raw": "75",
+            "value": 75
+          },
+          "CON": {
+            "raw": "70",
+            "value": 70
+          },
+          "SIZ": {
+            "raw": "55",
+            "value": 55
+          },
+          "DEX": {
+            "raw": "70",
+            "value": 70
+          },
+          "INT": {
+            "raw": "60",
+            "value": 60
+          },
+          "APP": {
+            "raw": "85",
+            "value": 85
+          },
+          "POW": {
+            "raw": "85",
+            "value": 85
+          }
+        },
+        "hp": {
+          "raw": "12",
+          "value": 12
+        },
+        "mp": {
+          "raw": "17",
+          "value": 17
+        },
+        "damage_bonus": {
+          "raw": "+1d4",
+          "value": "+1d4"
+        },
+        "build": {
+          "raw": "+1",
+          "value": 1
+        },
+        "move": {
+          "raw": "8/12",
+          "value": 8,
+          "modes": [
+            {
+              "mode": "walk",
+              "value": 8
+            },
+            {
+              "mode": "fly",
+              "value": 12
+            }
+          ]
+        },
+        "armor": {
+          "raw": "нет",
+          "value": 0
+        },
+        "attacks_per_round": {
+          "raw": "1 (катари или сила)",
+          "value": 1
+        },
+        "attacks": [
+          {
+            "name": {
+              "ru": "Ближний бой (драка)",
+              "en": "Brawl"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "40% (20/8)",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            },
+            "damage": {
+              "raw": "1d3+БкУ",
+              "dice": "1d3",
+              "adds_db": true
+            },
+            "weapon": "coc:weapon:unarmed"
+          },
+          {
+            "name": {
+              "ru": "Катари",
+              "en": "katari"
+            },
+            "kind": "attack",
+            "skill": "Ближний бой (драка)",
+            "chance": {
+              "raw": "40% (20/8)",
+              "value": 40,
+              "half": 20,
+              "fifth": 8
+            },
+            "damage": {
+              "raw": "1d6+БкУ",
+              "dice": "1d6",
+              "adds_db": true
+            }
+          }
+        ],
+        "dodge": {
+          "raw": "40% (20/8)",
+          "value": 40,
+          "half": 20,
+          "fifth": 8
+        },
+        "skills": [
+          {
+            "name": "Искусство/ремесло (танец)",
+            "skill": "coc:skill:art-craft",
+            "specialization": "танец",
+            "value": {
+              "raw": "90%",
+              "value": 90,
+              "half": 45,
+              "fifth": 18
+            }
+          },
+          {
+            "name": "Слух",
+            "skill": "coc:skill:listen",
+            "value": {
+              "raw": "65%",
+              "value": 65,
+              "half": 32,
+              "fifth": 13
+            }
+          },
+          {
+            "name": "Внимание",
+            "skill": "coc:skill:spot-hidden",
+            "value": {
+              "raw": "65%",
+              "value": 65,
+              "half": 32,
+              "fifth": 13
+            }
+          },
+          {
+            "name": "Иностранный язык (любой, по необходимости)",
+            "skill": "coc:skill:language-other",
+            "specialization": "любой (по необходимости)",
+            "value": {
+              "raw": "75%",
+              "value": 75,
+              "half": 37,
+              "fifth": 15
+            }
+          },
+          {
+            "name": "Родной язык (кхандро дайиг — сумеречный язык дакини)",
+            "skill": "coc:skill:language-own",
+            "specialization": "кхандро дайиг",
+            "value": {
+              "raw": "95%",
+              "value": 95,
+              "half": 47,
+              "fifth": 19
+            }
+          }
+        ],
+        "sanity_loss": [
+          {
+            "success": "0",
+            "fail": "1d3",
+            "trigger": "встреча с дакини в человеческом облике"
+          }
+        ],
+        "spells": {
+          "raw": "Summon Khandroma* (*см. приложение B).",
+          "items": [
+            {
+              "name": "Summon Khandroma",
+              "spell": "coc:spell:summon-bind-khandroma"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "abilities": [
+    {
+      "name": "Взгляд смотрящего",
+      "raw": "Eye of the Beholder: may assume whatever form their target finds most appealing in order to effectively use their wiles against them. The result may be to cause distraction, pause, or garner a particular emotion (in all likelihood causing an investigator to stop their next attack). The target must succeed with an opposed POW roll to negate the dakini’s manipulation.",
+      "summary": "Принимает облик, самый привлекательный для цели, чтобы пустить в ход свои чары: отвлечь, заставить замешкаться или вызвать нужное чувство (скорее всего, сыщик прервёт свою следующую атаку). Цель отменяет воздействие успешной встречной проверкой МОЩ."
+    },
+    {
+      "name": "Невидимость",
+      "raw": "Invisibility: unless a dakini wishes to be seen, it can remain invisible; although may be revealed by the Powder of Ibn-Ghazi. The dakini may become visible with the expenditure of 1 magic point. Attempts to hit an invisible dakini suffer one penalty die.",
+      "summary": "Если дакини не хочет, чтобы её видели, она остаётся невидимой; её может раскрыть Порошок Ибн-Гази. Стать видимой стоит 1 пункт магии. Попытки попасть по невидимой дакини — со штрафной костью.",
+      "refs": [
+        "coc:spell:powder-of-ibn-ghazi"
+      ]
+    },
+    {
+      "name": "Соблазнительный танец",
+      "raw": "Seductive Dance: a dakini in its beautiful human guise has the power to entrance a true human with their seductive dance. Unless the target succeeds with an opposed POW roll, they fall under the dakini’s spell for 1d6 rounds and are frozen to the spot, unable to move or act.",
+      "summary": "В прекрасном человеческом облике дакини может заворожить человека соблазнительным танцем: если цель не выиграет встречную проверку МОЩ, она на 1d6 раундов попадает под чары дакини и застывает на месте, не в силах двигаться и действовать."
+    }
+  ],
+  "description": {
+    "ru": "Семь Сестёр — по тантрической мудрости мирские дакини (по-тибетски кхандромы, «небесные танцовщицы»): священные духи индуизма и ваджраяны, которые, как иногда думают, питаются человеческой плотью. Они существуют в двух обличьях — прекрасных женщин и/или мужчин (даков; по-тибетски паво — «воин») и демонических плотоядных «других я». Глаза у них светятся неземным зелёным светом (в человеческом облике это менее заметно). У трёх розовая кожа цвета сахарной ваты, у остальных — чёрная как полночь, белая как выбеленная кость, кобальтово-синяя и ярко-красная. Они танцуют нагими, если не считать украшений из резной кости (пояс, ожерелье, браслеты на плечах, запястьях и щиколотках) и корон с пятью маленькими черепами. Каждого слышат на его родном языке. Бьются катари (ритуальными ножами для свежевания); кроме ножей, у них много мистических сил.\nПрофили выстроены по таблице книги «Dakini in Human Form» (столбцы 1–7, по цвету кожи); основной статблок — профиль 1 (красная Сестра, которая берёт в пару Тензина Калсанга).",
+    "en": null
+  },
+  "legend": {
+    "ru": "Гневные и мстительные, Семь Сестёр призваны защищать Тибет от иномирных угроз; в менее гневных обличьях они наставницы божественной тайны. Более заурядных дакини можно призвать и подчинить соответствующим заклинанием, но Семь Сестёр — среди самых могущественных в своём роду и взяли на себя долг стражей и защитниц своей страны: они являются, где и когда нужны, и глуп тот смертный, кто попытается подчинить их своим целям. Сёстры знают, что с поиском Тензина Калсанга не всё ладно, и полны решимости положить ему конец любой ценой: они знают, что миссия скомпрометирована и сыщики работают на Царя Страха. По законам, которые их связывают, они сначала испытывают сыщиков пиром, затем милостью, затем угрозами и лишь потом насилием (глава 5, «Свидание с дакини»). Позже, когда сыщики поймут ошибку, Сёстры могут даже стать их союзницами против Триумвирата; иначе считается, что Токабхая разобралась с ними.",
+    "en": null
+  },
+  "habitat": "Тибет; являются там, где нужны, — в главе 5 в сухой долине между Дерге и Чамдо",
+  "sources": [
+    {
+      "book_id": "children-of-fear-en",
+      "physical_page": 222,
+      "printed_page": 221,
+      "method": "book_text",
+      "verified": true,
+      "entry_page": 221,
+      "note": "таблица «Dakini in Human Form», силы"
+    },
+    {
+      "book_id": "children-of-fear-en",
+      "physical_page": 221,
+      "printed_page": 220,
+      "method": "book_text",
+      "verified": true,
+      "note": "«The Seven Sisters, divine protectors»"
+    },
+    {
+      "book_id": "children-of-fear-en",
+      "physical_page": 199,
+      "printed_page": 198,
+      "method": "book_text",
+      "verified": true,
+      "note": "«Dramatis Personae»: The Seven Sisters"
+    },
+    {
+      "book_id": "children-of-fear-en",
+      "physical_page": 215,
+      "printed_page": 214,
+      "method": "book_text",
+      "verified": true,
+      "note": "облик Сестёр"
+    }
+  ],
+  "errata": [
+    {
+      "field": "variants.3.statblock.damage_bonus",
+      "printed": "DB 0, Build 0 (столбец 4, белая Сестра)",
+      "expected": "+1d4, Комплекция 1",
+      "note": "СИЛ 75 + ТЕЛ 50 = 125 — по таблице БкУ это +1d4 и Комплекция 1 (125–164); две согласованные характеристики против производного числа — исправлено по большинству (Р-36).",
+      "fixed": true
+    }
+  ],
+  "corrections": [
+    {
+      "field": "variants.3.statblock.damage_bonus",
+      "from": "0",
+      "to": "+1d4",
+      "reason": "Книга, с. 221: СИЛ 75 + ТЕЛ 50 = 125 → БкУ +1d4 (несходящееся число исправлено по большинству)",
+      "ref": "Р-36"
+    },
+    {
+      "field": "variants.3.statblock.build",
+      "from": "0",
+      "to": "1",
+      "reason": "Книга, с. 221: СИЛ 75 + ТЕЛ 50 = 125 → Комплекция 1",
+      "ref": "Р-36"
+    }
+  ],
+  "quality": {
+    "needs_review": false,
+    "flags": [
+      "translated",
+      "parse_uncertain"
+    ],
+    "notes": "Русский текст — наш перевод с английского оригинала (Р-251, Р-21); печатная страница = физическая − 1. Скорость «8/12» (ходьба/полёт) — как напечатано. Заклинание Summon Khandroma — запись приложения B «Summon/Bind Khandroma» (часть appendix)."
+  },
+  "images": [
+    {
+      "file": "art/creatures/cof-feast-seven-sisters-human-form.webp",
+      "kind": "art",
+      "caption": "Одна из Семи Сестёр",
+      "source": "Дети страха (англ., 7e), с. 197 (физ. 198)"
+    }
+  ]
+}

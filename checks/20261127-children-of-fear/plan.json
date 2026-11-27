@@ -1,0 +1,177 @@
+{
+  "book_id": "children-of-fear-en",
+  "goal": "the campaign «The Children of Fear» (Chaosium 2020, 7e) playable from the base: campaign, eight chapters as stages, scenes, places in shared cities and wild regions, characters, creatures, items, handouts (incl. «What Your Investigator Knows»), organizations, maps with spots (keeper and player versions), tables, spells, generic NPCs and the six pre-generated investigators (Р-251, by the model of «Маски», Р-202, and «Ужаса в Восточном экспрессе», Р-254).",
+  "decision": "Р-251, Р-202, Р-228, Р-254, Р-190, Р-206, Р-209, Р-154, Р-151",
+  "check_dir": "checks/20261127-children-of-fear",
+  "models": [
+    "kb/books/masks-of-nyarlathotep-en/scenarios/masks-of-nyarlathotep.json",
+    "kb/books/masks-of-nyarlathotep-en/scenarios/england.json",
+    "kb/books/masks-of-nyarlathotep-en/scenes/egypt-arriving.json",
+    "kb/books/masks-of-nyarlathotep-en/maps/egypt-cairo.json",
+    "kb/books/star-on-the-shore-en/maps/rockport-player-map.json",
+    "kb/books/lokhmotya-korolya-ru/maps/india-india-and-nepal.json",
+    "kb/locations/cairo.json",
+    "kb/locations/benares.json",
+    "kb/books/lokhmotya-korolya-ru/locations/india-nautanwa.json",
+    "kb/books/masks-of-nyarlathotep-en/handouts/egypt-carlyle-papers-1.json",
+    "kb/books/whats-in-the-cellar-en/handouts/cellar-papers-1-herald-article.json",
+    "kb/books/masks-of-nyarlathotep-en/organizations/america-cult-of-the-bloody-tongue.json",
+    "kb/books/masks-of-nyarlathotep-en/characters/abdul-nawisha.json",
+    "kb/books/new-tales-miskatonic-valley-2e-en/characters/derby-hoboes.json"
+  ],
+  "extra": "## This work (Р-251 English series, campaign by the model of «Маски», Р-202/Р-228/Р-254)\n\n«The Children of Fear» (Chaosium 2020, 7e; Lynne Hardy with Mike Mason, Sam Riordan and others; optional Pulp Cthulhu notes) goes into the base whole: a 1920s campaign across Asia (September 1923 onward) — Peking, Sian, Tun-huang, the Taklamakan and the Silk Roads, the Northwest Frontier (Chakdara, Peshawar), Bihar (Rajgir, Nalanda, Patna), Kham in Tibet (Derge), Pemakö, Assam. No Russian edition exists (the base, `3_КБ\\_Каталог.csv`, `2_Обработка` and the library were checked): the English original is the source, the Russian text is our translation (flag `translated`); official Russian forms of names and terms — glossary `python -B tools/terms.py w1 w2 …` (ONE run for all words) and existing records (Р-184); Hard/Extreme roll = «трудная/чрезвычайная проверка». Work title in Russian: «Дети страха» (`work_title` in the book register); the cult Tokabhaya = «Токабхая» («Дети страха»); the King of Fear = «Царь Страха» (unless the owner decides otherwise — the lead tells you). Tibetan, Sanskrit and Chinese terms (lama, rinpoche, dakini/khandroma, thangka, terma, kangling, damaru, kapala, tsampa, baeyul…) — the book's Glossary p. 24–28 is the reference; one Russian form each, used everywhere, all listed in your coverage file (English → Russian): the page-by-page translation of the book (Р-251, later, by Codex) reuses exactly these forms and your `name.ru`. Place names: the 1920s forms the book uses (Peking, Sian, Tun-huang, Kansu) in `name.en`, the usual Russian form in `name.ru` (Пекин, Сиань, Дуньхуан, Ганьсу), modern and other forms (Beijing, Xi'an, Chang'an, Dunhuang) in `aliases`.\n\n### Source (registered; printed page = physical − 1, i.e. `offset −1`; `pages.py show/grep` take printed pages)\n\n- `children-of-fear-en` — one PDF, 418 physical pages, text layer. NO text layer (only a caption) on: the handouts of Appendix F (p. 363–382 — the handout text is inside the picture; the same picture usually also stands on the chapter page), Appendix C «What Your Investigator Knows» (p. 348–353), the Player Maps (p. 383–398). Read them from page images (`python -B pipeline/source/pages.py image children-of-fear-en <page> --dpi 100`, one page at a time) or OCR (tesseract), and check every OCR line by eye.\n- Do NOT edit `pipeline/source/books.json`.\n\n### Fixed ids (all units use them; a reference to a record another unit is still writing is expected to fail `check.py` until that unit lands — list such refs in the report, do not drop them)\n\n- All records live in `kb/books/children-of-fear-en/<kinds>/`, id `children-of-fear-en/<kind>/<slug>`.\n- Campaign: `children-of-fear-en/scenario/the-children-of-fear` (unit campaign) — `summary`, `keeper_info` (Agartha and Shambhala, the King of Fear, the Tokabhaya and the Triumvirate, the false ritual and Tenzin Kalsang's sacrifice; the Keeper's Mythos options of «Keeper Considerations» → `advice`), `hook`, `advice` (investigator motivations, dark materials, naming conventions, pulp notes), `steps` = the eight chapters in order with refs to the stage records (say that Chapters 3–5 may be played in any order), `conclusion`, `tables`.\n- Stages — scenario records with `part_of` = the campaign and `order`: `children-of-fear-en/scenario/the-city-of-decaying-splendor` (1, peking), `…/to-the-gates-of-the-sun` (2, gates), `…/song-of-the-lost-and-forgotten` (3, song), `…/old-bones` (4, bones), `…/feast-and-famine` (5, feast), `…/liberation` (6, liberation), `…/spirits-of-the-earth` (7, spirits), `…/the-heart-of-the-world` (8, heart). Each stage record: `summary`, `keeper_info`, `hook` («Set Up»), `advice`, `steps` with `refs`, `conclusion` (incl. «Rewards» — Sanity rewards and development), `tables`; scenes have `arc` = {scenario: the stage, part: the book's section heading («Part One: Chang'an», «Start: The Lecture»…), order}; `where`, `participants`, `mechanics`, `outcome`. «Moving On» sections → the last step/scene of the stage with refs to the next stages.\n- Slug prefixes of every book-scoped record except named characters and stage records: `campaign-` (campaign), `peking-` (peking), `gates-` (gates), `song-` (song), `bones-` (bones), `feast-` (feast), `liberation-` (liberation), `spirits-` (spirits), `heart-` (heart), `appendix-` (appendix). Slugs from the English names. Handouts by the book's name: «Handout: Decaying Splendor 3» → `peking-handout-3-<slug>`, «Gates 1» → `gates-handout-1-…`, «Song N» → `song-handout-N-…`, «Bones N» → `bones-handout-N-…`, «Feast N» → `feast-handout-N-…`, «Liberation 3a» → `liberation-handout-3a-…`, «Spirits 2b» → `spirits-handout-2b-…`; «What Your Investigator Knows N» (Appendix C) → `<prefix>-knows-N-<slug>` of the unit that owns it (below).\n- Characters: named — `children-of-fear-en/character/<english-name>`, no prefix; group profiles and types (Appendix A «Bandit», «Porters», «Six sample pisachas»…) — `children-of-fear-en/character/<prefix>-<slug>` with invented `names` (Р-151). A character is made by the unit whose pages print his statblock first; other units link and send changes (a later statblock as a `variant`, new facts) through proposals. Fixed: peking — `wang-enlai` (p. 36, 48); gates — `langdon-warner` (p. 91), `tenzin-kalsang` (p. 75, 92), `wang-yuanlu`; liberation — the Triumvirate `hine-roimata`, `mariam-sandrine`, `andrei-osipovich-vitsin` (p. 230–231, 263–264), `frank-kingdon-ward` if the box gives him; appendix — the historical figures of Appendix A (`ferdynand-antoni-ossendowski`, `mildred-cable`, `roman-von-ungern-sternberg`, `ekai-kawaguchi`) and the six pre-generated investigators of Appendix G (role `pregen`, «Pulp adjustments» kept in their text; refs from the campaign record are added by the lead). The campaign's «Dramatis Personae» (p. 17–22) text about characters other units make → campaign's proposals.\n- Campaign-wide records of unit campaign: organization `children-of-fear-en/organization/campaign-tokabhaya` (the Children of Fear; the Triumvirate described in it, its members linked), creature `children-of-fear-en/creature/campaign-king-of-fear` (Lord of Agartha; the Keeper's options — avatar of Ubbo-Sathla, Nyogtha, Mordiggian, Azathoth's agents… — in its text with refs to `coc:creature:ubbo-sathla`, `coc:creature:nyogtha`, `coc:creature:mordiggian`, `coc:creature:azathoth`, `coc:creature:yog-sothoth`), places `children-of-fear-en/location/campaign-agartha` and `children-of-fear-en/location/campaign-shambhala` (otherworldly kingdoms, `область`, `part_of: null` — book records like the Dreamlands lands, Р-190; places of Shambhala in Chapter 6 go under `campaign-shambhala`), the Glossary (p. 24–28) as a book `rule` record `campaign-glossary`. Chapters link these ids; Sisirama (Chapter 7) is spirits' creature with refs to `campaign-king-of-fear`; the Lords of Shambhala (p. 267) — liberation's record `children-of-fear-en/creature/liberation-lords-of-shambhala`.\n- Spells: Appendix B (p. 340–346) is the full text; unit appendix writes it. Existing shared spells — link and send the book's version by proposals (sources, variant text): `coc:spell:alter-weather`, `bind-animal`, `cause-disease`, `curse-folk`, `healing-folk`, `possession`, `telepathy`, `warding-the-eye`, `warmth-of-mind`, `wandering-soul`, `create-gate` (Close Gate is its counterpart — Grep, propose or create), `quicken` (Fleetness of Foot is its variant — Grep). New shared `kb/spells/<slug>.json` (after a Grep shows they do not exist), ids fixed so chapters can link them now: `coc:spell:close-gate`, `the-closing-of-the-way`, `enchant-sacred-instruments`, `mask-of-reason`, `observation-from-afar`, `open-the-gates-of-agartha`, `send-vision`, `summon-bind-khandroma`, `summon-bind-scorpion-demon`, `sword-siddhi`. A spell printed only in a chapter (e.g. the Liturgy of Death ritual, p. 242) — the chapter unit, after a Grep.\n- Creatures: shared already (Grep `kb/creatures` first) — `coc:creature:mi-go`, `ghoul`, `rat-thing`, `skeleton`, `scorpion`, `fire-vampire`, `mordiggian`, `ubbo-sathla`, `nyogtha`, `azathoth`, `yog-sothoth`, animals `camel`, `horse`, `bear`, `tiger`, `venomous-snake`…; a known species with its own numbers here (the Abominable Mi-go and the sample migyu, the pisachas as ghouls, the Rat King's rat-things) → book creature with `instance_of` the shared record; unique beings (the scorpion demon, Shri Chitipati, the dakini, the Yakshini and her snakes, the walking portraits, the kueitzumen, Sisirama) → book creatures of the unit whose pages print them.\n- Tomes and items: Grep `kb/tomes` and `kb/items` first (e.g. `coc:tome:book-of-dzyan` exists); the ritual implements and relics of a chapter (alms bowls, kangling, damaru, kapalas, khatvanga, rilbus, Ashoka's treasure…) — items of the chapter that makes them, later chapters link them.\n\n### Places (Р-190, Р-209)\n\n- Shared cities `kb/locations/<slug>.json` (id `coc:location:<slug>`, `location_type: город`, `part_of: null`, model `kb/locations/cairo.json`). **Existing — never rewrite, proposals only:** `benares`, `bombay`, `shanghai`, `hong-kong`. Warning: `coc:location:sarnath` is Lovecraft's Dreamlands city — the Indian Sarnath (near Benares) is NOT that record; if you need it, write a draft `sarnath-india` into the new-shared-locations file. **New, each made only by its unit:** `peking` (peking), `sian` and `tun-huang` (gates), `peshawar` and `chakdara` (song; `khotan`, `kashgar`, `turfan` too if the chapter describes them as places, otherwise a draft), `rajgir` (bones), `derge` (feast), `patna` (spirits), `dibrugarh` and `sadiya` (heart, if described). A town en route that a unit needs but nobody owns (Lanchow, Hami, Yarkand, Leh, Gilgit, Srinagar, Rawalpindi, Lahore, Calcutta, Delhi, Darjeeling, Gangtok, Lhasa, Tsetang, Bihar Sharif, Gaya…) — Grep `kb/locations`; if it is missing, write the city draft into `checks/20261127-children-of-fear/new-shared-locations-<unit>.json` (the lead creates it) and give a short line in the stage `steps` meanwhile.\n- Wild regions crossed by the journey — book areas (`область`, `part_of: null`) of the unit whose chapter describes them, with the region's places under them: `gates-kansu-corridor`, `song-tarim-basin` (the Taklamakan, the Northern and Southern routes), `song-mountain-passes`, `bones-rajgir-environs` (Vulture's Peak, Sitavana charnel ground), `feast-kham`, `liberation-pemako` (the Valley of the White Ape under it), `spirits-nalanda` (the ruins of Nalanda University), `heart-assam` (Danakosha Lake, the tea gardens, the jungle). Lake Danakosha of Chapter 3 (Swat) and Danakosha Lake of Chapter 8 (Assam) are two places — `song-…` and `heart-…`.\n- Under each city — districts by the map, places in the district where they stand; one area «Окрестности <города>» per city for places outside it (book record `<prefix>-<city>-environs`, unless one exists); list captions (`keeper_hint`) neutral — no secrets, clues or outcomes (Р-209).\n\n### Maps (Р-206) and pictures (Р-241, Р-245)\n\n- Every keeper map → `map` record `children-of-fear-en/map/<prefix>-<slug>`: image from the book page (render `pdftoppm -r 150-200`, crop with PIL, save `app/maps/cof-<unit>-<slug>.jpg`, quality 85, ≤ 2000 px wide; a two-page spread — join both halves), `width`/`height`, `location` = the city or area, `shows` = the place, spots on every printed number and label (tesseract `tsv`, each checked by eye on a crop); every key number gets a place record. The player version (Appendix F p. 383–398, «Player version maps») → a second `map` record `<prefix>-<slug>-players` with the same spot targets (model `kb/books/star-on-the-shore-en/maps/rockport-player-map.json`). `sources` of a map — the keeper page and the player page. Keeper maps (index p. 412) and player pages: Central Asia 1923 p. 26–27 / 384–385 (campaign), City of Peking p. 33 / 383 (peking), City of Sian p. 57 / 386 and Kansu Corridor 1923 p. 70 / 387 (gates), Northern and Southern Silk Roads 1924 p. 99 / 388, Mountain Passes p. 110 / 389, City of Peshawar p. 127 / 390, Peshawar Museum 1924 p. 129 / 391 (song), Northern India and the Himalayas 1924 p. 159 / 392 (bones), Northern India and the Tibetan Plateau 1924 p. 199 / 393 (feast), Tibet and the Pemakö Region 1924 p. 234 / 394 (liberation), Nalanda University p. 277 / 395, City of Patna p. 285 / 396, Sitala Devi Mandir p. 291 / 397 (spirits), Assam and surrounding territories p. 307 / 398 (heart).\n- Handouts: the text as printed (English, read from the image) + our full translation; the picture (crop of the Appendix F copy, or of the chapter page when that is clearer) to `images` (kind `handout`) through `pipeline/art/add_images.py`; sources — chapter page + Appendix F page (index p. 412 gives both). Portraits, creature art, item pictures — skill `.claude/skills/kb-art/SKILL.md`: mapping `checks/20261127-children-of-fear/art-<unit>.json`, `python -B pipeline/art/add_images.py … --dry-run` then real, apply your proposals (`pipeline/integrate/apply.py`) for your own records; atmosphere pictures (chapter openers «Opposite: …», mood art) → `checks/20261127-children-of-fear/atmosphere-<unit>.json` (the lead merges). Picture file prefix: `cof-<unit>-`.\n\n### Writing and checks\n\n- Statblocks as printed (Р-25); misprints kept as printed, in `errata` (Р-35), an obvious fix in `corrections` (e.g. «OSSENDOWKSI» p. 327); dice `1d6` with lowercase d; distances metric even in quotes (Р-64), money as printed (the book's «About Money» p. 30 — rule record of peking); `axes.era` [\"1920s\"]; `axes.ruleset` \"core\" (Pulp Cthulhu options stay in the text of `advice`/«Pulp adjustments»). Sensitive material (human remains, sacrifice, cannibalism) — as printed, with the book's own safety advice kept.\n- Real history boxes (Taking Liberties, The Jade Marshal, Sir Marc Aurel Stein, Wellcome's Man in India, The Plant Hunter…) — `rule` records of the chapter or text of the place/character they describe; none dropped (owner's rule: no silent drops).\n- Coverage: `checks/20261127-children-of-fear/<unit>.md` — every heading of your pages → record(s), «не взято» with the reason (index, contributor biographies, back cover — say so), misprints, the term list English → Russian. Proposals `checks/20261127-children-of-fear/proposals-<unit>.json`.\n- Helper scripts only in `.cache/lead-tools/gen-cof-<unit>/`; paths computed from `__file__` or the repository root; library root from `pipeline/source/library.json`; never hardcoded.\n- Memory rule (owner): the PC's RAM must stay below 85 % — never run python processes in parallel; terms in ONE run (`python -B tools/terms.py w1 w2 …` or `--file`); page images one at a time.\n- When done: `python -I -B tools/completeness.py --books children-of-fear-en --out checks/20261127-children-of-fear/completeness-<unit>` and `python -I -B tools/scenario_check.py --books children-of-fear-en --out checks/20261127-children-of-fear/scenario-<unit>` (other units' gaps are expected — fix and report only yours); `python -B tools/check.py kb/books/children-of-fear-en` — 0 errors in your files.\n- Order: all ten units may run in parallel (by the memory rule); refs between units are fixed above.",
+  "units": [
+    {
+      "name": "campaign",
+      "book_id": "children-of-fear-en",
+      "pages": "1-28 354-362 406-417",
+      "target": "Front matter (cover, title, credits, copyright, contents — «не взято»), Foreword (p. 6), Introduction (p. 7–8), Campaign Overview (p. 9–28): Background, The Twin Cities (Shambhala, Agartha), Uncovering the Truth, The Tokabhaya, Opening the Way, Keeper Considerations (the Mythos options), Dramatis Personae, Investigator Motivations, A Rich and Varied Tapestry, Glossary (p. 24–28) → campaign record `children-of-fear-en/scenario/the-children-of-fear`, `campaign-tokabhaya`, `campaign-king-of-fear`, `campaign-agartha`, `campaign-shambhala`, `campaign-glossary` and rule records `campaign-…`; map Central Asia 1923 keeper/players (p. 26–27 / 384–385); Appendix D Travel (p. 354–361: expedition costs, hiring a caravan, travel-time tables → `table`/`rule` records `campaign-…`), Appendix E Resources (p. 362 → rule record `campaign-resources`); index p. 406–412, contributor biographies p. 413–415, cover art and back cover p. 416–417 «не взято»",
+      "owns": [
+        "kb/books/children-of-fear-en/*/campaign-* (new files)",
+        "kb/books/children-of-fear-en/scenarios/the-children-of-fear.json",
+        "app/maps/cof-campaign-*, app/art/** files with prefix cof-campaign-",
+        "checks/20261127-children-of-fear/campaign.md, proposals-campaign.json, art-campaign.json, atmosphere-campaign.json, new-shared-locations-campaign.json, completeness-campaign/, scenario-campaign/"
+      ],
+      "sites": "Agartha, Shambhala (book areas); Central Asia"
+    },
+    {
+      "name": "peking",
+      "book_id": "children-of-fear-en",
+      "pages": "29-50 347 363-365 383",
+      "target": "Chapter 1 «The City of Decaying Splendor» (Peking, China; p. 29–50, stage `the-city-of-decaying-splendor`): China — the Middle Kingdom, About Money, Peking — the Northern Capital (the Jade Marshal, avenues and alleyways, timeline, weather), Set Up: An Educational Invitation, Dramatis Personae, Start: The Lecture (the American School of Archaeology, late arrivals, rising tensions, a conversation over canapés), Making Plans (an unseasonable storm, Prof. Wang's office, sights of Peking, expedition logistics), On the Road, Non-Player Characters (Wang Enlai, Sgt Hsu Te-Chu'an and his soldiers, the chauffeur…); handouts Decaying Splendor 1–4 (p. 35, 42, 43; Appendix F p. 363–365), What Your Investigator Knows 1: Peking (p. 347, image); maps: City of Peking keeper/players (p. 33 / 383)",
+      "owns": [
+        "kb/books/children-of-fear-en/scenarios/the-city-of-decaying-splendor.json",
+        "kb/books/children-of-fear-en/*/peking-* (new files)",
+        "kb/books/children-of-fear-en/characters/* whose statblock is first printed in your pages (fixed ones above)",
+        "kb/locations/peking.json (new)",
+        "app/maps/cof-peking-*, app/art/** files with prefix cof-peking-",
+        "checks/20261127-children-of-fear/peking.md, proposals-peking.json, art-peking.json, atmosphere-peking.json, new-shared-locations-peking.json, completeness-peking/, scenario-peking/"
+      ],
+      "sites": "Peking (new shared city), Yenching University"
+    },
+    {
+      "name": "gates",
+      "book_id": "children-of-fear-en",
+      "pages": "51-96 348 366-369 386-387",
+      "target": "Chapter 2 «To the Gates of the Sun» (Sian and Tun-huang; p. 51–96, stage `to-the-gates-of-the-sun`): Part One: Chang'an (the Monastery of Flourishing Teaching, Set Up: Hiring and Firing, Dramatis Personae, Start: A Damp Reception, In the Hereafter — out and about, spirit articles and grave goods, Sai Na's stall, truth and consequences, delicate negotiations, encounters of the ming-ch'i kind), Between Sian and Tun-huang (the Kansu Corridor, an uncivil war), Part Two: The Blazing Beacon (Sir Marc Aurel Stein, Set Up: Hidden Treasures, Dramatis Personae, Start: A Warm Welcome — the Caves of the Thousand Buddhas, Tenzin Kalsang's invitation, step by step, rewards), Characters and Monsters (Langdon Warner, Tenzin Kalsang, Thaddeus Johnson, Sai Na, Shen Chu, the Mi family, Babanin, porters; creatures and the sample kueitzumen); handouts Gates 1–5 (p. 52, 78, 83, 85, 87; p. 366–369), What Your Investigator Knows 2: Sian and the Kansu Corridor (p. 348, image); maps: City of Sian (p. 57 / 386), Kansu Corridor 1923 (p. 70 / 387)",
+      "owns": [
+        "kb/books/children-of-fear-en/scenarios/to-the-gates-of-the-sun.json",
+        "kb/books/children-of-fear-en/*/gates-* (new files)",
+        "kb/books/children-of-fear-en/characters/* whose statblock is first printed in your pages (fixed ones above)",
+        "kb/locations/sian.json (new)",
+        "kb/locations/tun-huang.json (new)",
+        "app/maps/cof-gates-*, app/art/** files with prefix cof-gates-",
+        "checks/20261127-children-of-fear/gates.md, proposals-gates.json, art-gates.json, atmosphere-gates.json, new-shared-locations-gates.json, completeness-gates/, scenario-gates/"
+      ],
+      "sites": "Sian and Tun-huang (new shared), area `gates-kansu-corridor`, the Caves of the Thousand Buddhas"
+    },
+    {
+      "name": "song",
+      "book_id": "children-of-fear-en",
+      "pages": "97-152 349-350 369-373 388-391",
+      "target": "Chapter 3 «Song of the Lost and Forgotten» (p. 97–152, stage `song-of-the-lost-and-forgotten`): Part One: The Land of Death (the Taklamakan, the black storm, the Tarim Basin, the Northern Route — the painted ruins, Turfan; the Southern Route — Khotan, the people you meet, the Rat King (optional)), Part Two: The Mountains (from Kashgar, the giantess reborn — Shri Badat and Yathini, the mountain passes, the Runner (optional), the high passes), Part Three: Still Waters (Chakdara, Set Up: Smoke and Mirrors, Dramatis Personae, the caste system, Guru Singh's warriors, Start: Reflections — the stupa, Peshawar, the Peshawar Museum and the alms bowls, the club, the man from the ministry, doing time, unwelcome guests, mark of a god), Moving On (the river of life, Wellcome's man in India), Rewards, Characters and Monsters (Suraj Dhar, Isminder Veer Singh, Robert Moorcroft, Hasina Moiz, Dr Paira Mall…; the Rat King, six sample pisachas, walking portraits, animals); handouts Song 1–6 (p. 98, 114, 128, 130, 133, 136; p. 369–372), What Your Investigator Knows 3: Tarim Basin (p. 349) and 4: The Northwest Frontier (p. 350, images); maps: Northern and Southern Silk Roads 1924 (p. 99 / 388), Mountain Passes (p. 110 / 389), City of Peshawar (p. 127 / 390), Peshawar Museum 1924 (p. 129 / 391)",
+      "owns": [
+        "kb/books/children-of-fear-en/scenarios/song-of-the-lost-and-forgotten.json",
+        "kb/books/children-of-fear-en/*/song-* (new files)",
+        "kb/books/children-of-fear-en/characters/* whose statblock is first printed in your pages (fixed ones above)",
+        "kb/locations/peshawar.json (new)",
+        "kb/locations/chakdara.json (new)",
+        "kb/locations/khotan.json (new)",
+        "kb/locations/kashgar.json (new)",
+        "kb/locations/turfan.json (new)",
+        "app/maps/cof-song-*, app/art/** files with prefix cof-song-",
+        "checks/20261127-children-of-fear/song.md, proposals-song.json, art-song.json, atmosphere-song.json, new-shared-locations-song.json, completeness-song/, scenario-song/"
+      ],
+      "sites": "areas `song-tarim-basin`, `song-mountain-passes`; Peshawar and Chakdara (new shared), Khotan/Kashgar/Turfan (new shared if described)"
+    },
+    {
+      "name": "bones",
+      "book_id": "children-of-fear-en",
+      "pages": "153-186 351 373-375 392",
+      "target": "Chapter 4 «Old Bones» (Bihar and Orissa; p. 153–186, stage `old-bones`): The Jewel in Many Crowns (holy ground, the royal mountain, a land of kings), Set Up: Hot and Cold, Dramatis Personae (Aghor Kalidasji, Sanjit Chopra), weather, respect for the dead, Getting to Sitavana (glorious steam, Northern India), Start: Beneath the Trees (Rajgir), The Ash-Smeared Sadhu, The Bone Collectors (the scorpion demon, the bamboo grove), A Dark Harvest, Fife and Drum (skeleton watchers, lords of the dead, instrument creation summary — kangling and damaru, kapalas), Moving On, Rewards, Characters and Monsters (the scorpion demon, Shri Chitipati, skeletons and dancing dead); handouts Bones 1–5 (p. 162–165, 175; p. 373–375), What Your Investigator Knows 5: Bihar and Orissa (p. 351, image; spirits links it); map: Northern India and the Himalayas 1924 (p. 159 / 392)",
+      "owns": [
+        "kb/books/children-of-fear-en/scenarios/old-bones.json",
+        "kb/books/children-of-fear-en/*/bones-* (new files)",
+        "kb/books/children-of-fear-en/characters/* whose statblock is first printed in your pages (fixed ones above)",
+        "kb/locations/rajgir.json (new)",
+        "app/maps/cof-bones-*, app/art/** files with prefix cof-bones-",
+        "checks/20261127-children-of-fear/bones.md, proposals-bones.json, art-bones.json, atmosphere-bones.json, new-shared-locations-bones.json, completeness-bones/, scenario-bones/"
+      ],
+      "sites": "Rajgir (new shared), area `bones-rajgir-environs` (Sitavana, Vulture's Peak)"
+    },
+    {
+      "name": "feast",
+      "book_id": "children-of-fear-en",
+      "pages": "187-224 352 375-377 393",
+      "target": "Chapter 5 «Feast and Famine» (Kham, Tibet; p. 187–224, stage `feast-and-famine`): The Land of Snows (secrets of Tibet, a developing empire, pundits, the lay of the land, religion in Tibet, an age of exploration, traveling in Tibet, summary justice, seats of government), The Land of Benevolence, Set Up: Up on High, Dramatis Personae, Tibetan weather, Getting to Derge (from Rajgir — Sikkim, the Tea Horse Road; from Peshawar; from China; on the road to Derge), Start: The Book Sanctuary (the Derge printing house, Tibetan books and scrolls, paper, rudam, thangkas), A Change of Scenery, A Bitter Pill (tormas), Date with a Dakini (the gathering circle, consent is everything, fight or flight), Moving On, Rewards, Characters and Monsters (Yonten Phuntsok, Kunchen Chodak; the dakini in human and demon form); handouts Feast 1–3 (p. 207, 212, 213; p. 375–377), What Your Investigator Knows 6: Tibet (p. 352, image); map: Northern India and the Tibetan Plateau 1924 (p. 199 / 393)",
+      "owns": [
+        "kb/books/children-of-fear-en/scenarios/feast-and-famine.json",
+        "kb/books/children-of-fear-en/*/feast-* (new files)",
+        "kb/books/children-of-fear-en/characters/* whose statblock is first printed in your pages (fixed ones above)",
+        "kb/locations/derge.json (new)",
+        "app/maps/cof-feast-*, app/art/** files with prefix cof-feast-",
+        "checks/20261127-children-of-fear/feast.md, proposals-feast.json, art-feast.json, atmosphere-feast.json, new-shared-locations-feast.json, completeness-feast/, scenario-feast/"
+      ],
+      "sites": "Derge (new shared), area `feast-kham`"
+    },
+    {
+      "name": "liberation",
+      "book_id": "children-of-fear-en",
+      "pages": "225-268 353 378-380 394",
+      "target": "Chapter 6 «Liberation» (Pemakö, Tibet; p. 225–268, stage `liberation`): The Lotus Displayed (hidden gems, a disputed border, a most perplexing riddle, a confusion of names, the Plant Hunter), Set Up: Where the Goddess Lies, Dramatis Personae (the Triumvirate in disguise), Getting to Pemakö, Start: In the Shadow of the Blazing Meteor, The Abominable Snowmen (optional), Seemingly Simian (optional), A Poisoned Chalice (optional), The Most Secret Place (the Liturgy of Death, running the ritual, summary of the ritual), Foiling the Tokabhaya, Paradise Found? (welcome to Shangri-La — Shambhala, healing properties, new horizons), Moving On, Rewards, Characters and Monsters (Hine Roimata, Mariam Sandrine, Andrei Vitsin; Abominable Mi-go and their matter-dissolving horn, six sample migyu, the Lords of Shambhala); handouts Liberation 1, 2, 3a, 3b (p. 228, 245, 260, 261; p. 378–380), What Your Investigator Knows 7: Pemakö (p. 353, image); map: Tibet and the Pemakö Region 1924 (p. 234 / 394)",
+      "owns": [
+        "kb/books/children-of-fear-en/scenarios/liberation.json",
+        "kb/books/children-of-fear-en/*/liberation-* (new files)",
+        "kb/books/children-of-fear-en/characters/* whose statblock is first printed in your pages (fixed ones above)",
+        "app/maps/cof-liberation-*, app/art/** files with prefix cof-liberation-",
+        "checks/20261127-children-of-fear/liberation.md, proposals-liberation.json, art-liberation.json, atmosphere-liberation.json, new-shared-locations-liberation.json, completeness-liberation/, scenario-liberation/"
+      ],
+      "sites": "area `liberation-pemako` (Valley of the White Ape); Shambhala (`campaign-shambhala`)"
+    },
+    {
+      "name": "spirits",
+      "book_id": "children-of-fear-en",
+      "pages": "269-302 377 381-382 395-397",
+      "target": "Chapter 7 «Spirits of the Earth» (Nalanda and Patna; p. 269–302, stage `spirits-of-the-earth`): The Heart of an Empire (here we go again, the gateway to hell, spreading the word, fire and brimstone, an ill wind), Set Up: A Steep Learning Curve, Dramatis Personae, Start: The Tree of Life (Nalanda University, the gathering storm, snakes and ladders, king of fruits, digging deep, the perfect union), Heaven and Hell (prying eyes, getting to Patna, the cooling one — Sitala Devi, one big happy family, the charnel god), Descent into the Underworld (Patala, Ashoka's Hell Chambers, the five-fold tether, the fifth agony), Moving On (Ashoka's treasure), Rewards, Characters and Monsters (Kumari Ma, Daniel Mortimer, Vidyapati, Gulrukh Chaudhary, Narayana Prasad; the Yakshini and her snakes, Sisirama, the pisacha escort); handouts Spirits 1, 2a, 2b (p. 273, 282, 283; p. 381–382, 377); maps: Nalanda University (p. 277 / 395), City of Patna (p. 285 / 396), Sitala Devi Mandir (p. 291 / 397)",
+      "owns": [
+        "kb/books/children-of-fear-en/scenarios/spirits-of-the-earth.json",
+        "kb/books/children-of-fear-en/*/spirits-* (new files)",
+        "kb/books/children-of-fear-en/characters/* whose statblock is first printed in your pages (fixed ones above)",
+        "kb/locations/patna.json (new)",
+        "app/maps/cof-spirits-*, app/art/** files with prefix cof-spirits-",
+        "checks/20261127-children-of-fear/spirits.md, proposals-spirits.json, art-spirits.json, atmosphere-spirits.json, new-shared-locations-spirits.json, completeness-spirits/, scenario-spirits/"
+      ],
+      "sites": "Patna (new shared), area `spirits-nalanda`"
+    },
+    {
+      "name": "heart",
+      "book_id": "children-of-fear-en",
+      "pages": "303-324 398",
+      "target": "Chapter 8 «The Heart of the World» (Assam; p. 303–324, stage `the-heart-of-the-world`): To the Land of the Dawn-Lit Mountains (a nice cup of cha, Assam's weather, time for tea, the Dewan of tea), Set Up: The Final Flush, Getting to Danakosha Lake, Dramatis Personae, any old port, rich pickings, Brahma's son, Start: A Face in the Crowd (hill tribes of Assam, jumping to conclusions, an unexpected meeting, written in the leaves), The Red Tide (into the jungle, a safe refuge, toxic guests — fire vampires (optional)), The End is Nigh (no good deed, running the final ritual, an old familiar face, bad pennies, summary of the final ritual, all's not so well), Non-Player Characters (Sonam Dhargey…), Rewards — the campaign's end (later statblocks of the Triumvirate → proposals to liberation's records); map: Assam and surrounding territories (p. 307 / 398)",
+      "owns": [
+        "kb/books/children-of-fear-en/scenarios/the-heart-of-the-world.json",
+        "kb/books/children-of-fear-en/*/heart-* (new files)",
+        "kb/books/children-of-fear-en/characters/* whose statblock is first printed in your pages (fixed ones above)",
+        "kb/locations/dibrugarh.json (new)",
+        "kb/locations/sadiya.json (new)",
+        "app/maps/cof-heart-*, app/art/** files with prefix cof-heart-",
+        "checks/20261127-children-of-fear/heart.md, proposals-heart.json, art-heart.json, atmosphere-heart.json, new-shared-locations-heart.json, completeness-heart/, scenario-heart/"
+      ],
+      "sites": "area `heart-assam` (Danakosha Lake); Dibrugarh/Sadiya (new shared if described)"
+    },
+    {
+      "name": "appendix",
+      "book_id": "children-of-fear-en",
+      "pages": "325-346 399-405",
+      "target": "Appendix A Non-Player Characters (p. 325–339: generic profiles — archaeologist, bandit, explorer, government bureaucrat and runner, holy person/mystic, hotel staff (porter, concierge, maid), librarian, local guide, missionary, monk/nun (novice, dob-dob, Nepalese monks), railway policeman, refugee, politically active student, religious pilgrim, ruffian, spy, thief, street child, treasure hunter, tribal member (poisoned arrows) → group profiles `appendix-…` with `names` (Р-151); historical figures Ferdynand Ossendowski, Mildred Cable, Baron Roman von Ungern-Sternberg, Ekai Kawaguchi → named characters); Appendix B Spells (p. 340–346: all twenty spells and the Weather Components table — new shared spells and proposals to existing ones, ids fixed above); Appendix G Pre-Generated Investigators (p. 399–405: Chang Mei, Dr Eudora Lockhart, Charles Lockhart, Michael Li, Timur Stepanovich Repin, Sofian Bazaz-Wain — role `pregen`, with their Pulp adjustments)",
+      "owns": [
+        "kb/books/children-of-fear-en/*/appendix-* (new files)",
+        "kb/books/children-of-fear-en/characters/* whose statblock is first printed in your pages (fixed ones above)",
+        "kb/spells/<slug>.json of Appendix B (new, ids fixed above)",
+        "app/maps/cof-appendix-*, app/art/** files with prefix cof-appendix-",
+        "checks/20261127-children-of-fear/appendix.md, proposals-appendix.json, art-appendix.json, atmosphere-appendix.json, new-shared-locations-appendix.json, completeness-appendix/, scenario-appendix/"
+      ],
+      "sites": "—"
+    }
+  ]
+}

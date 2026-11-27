@@ -59,7 +59,11 @@ def register(a) -> None:
         sys.exit(f"нет файла {pdf}")
     lib_doc = json.loads(BOOKS.with_name("library.json").read_text(encoding="utf-8"))
     # the owner's files carry the edition in front of the name: «[RU 7e] …», «[RU-ИИ 7e] …», «[EN 6e] …» (Р-164)
-    tag = re.match(r"^\[([A-Za-zА-Яа-я-]+)", pdf.name)
+    tag = re.match(r"^\[([A-Za-zА-Яа-я-]+)(?: ([^\]]+))?\]", pdf.name)
+    # after the language comes the edition («7e», «6e»…) or, for a book not for Call of Cthulhu, its system (Р-262)
+    if tag and tag.group(2) and not re.fullmatch(r"\d+(\.\d+)?e", tag.group(2)) and not a.edition:
+        sys.exit(f"{pdf.name}: книга не по системе «Зов Ктулху» («{tag.group(2)}», Р-262) — не источник базы; "
+                 "укажи --edition, если владелец решил иначе")
     by_tag = lib_doc.get("tags", {}).get(tag.group(1)) if tag else None
     if by_tag == "machine" or re.search("машинн", pdf.name, re.I):
         sys.exit(f"{pdf.name}: машинный перевод — не источник (Р-147)")
